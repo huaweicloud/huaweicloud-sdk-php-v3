@@ -21,22 +21,22 @@ class CreateScalingPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * result  操作结果。 - succeeded：操作成功 - 操作失败时返回的错误码信息如[错误码](https://support.huaweicloud.com/api-mrs/ErrorCode.html)所示。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'result' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * result  操作结果。 - succeeded：操作成功 - 操作失败时返回的错误码信息如[错误码](https://support.huaweicloud.com/api-mrs/ErrorCode.html)所示。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'result' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class CreateScalingPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * result  操作结果。 - succeeded：操作成功 - 操作失败时返回的错误码信息如[错误码](https://support.huaweicloud.com/api-mrs/ErrorCode.html)所示。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'result' => 'result'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * result  操作结果。 - succeeded：操作成功 - 操作失败时返回的错误码信息如[错误码](https://support.huaweicloud.com/api-mrs/ErrorCode.html)所示。
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'result' => 'setResult'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * result  操作结果。 - succeeded：操作成功 - 操作失败时返回的错误码信息如[错误码](https://support.huaweicloud.com/api-mrs/ErrorCode.html)所示。
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'result' => 'getResult'
     ];
 
     /**
@@ -148,7 +148,7 @@ class CreateScalingPolicyResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class CreateScalingPolicyResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets result
+    *  操作结果。 - succeeded：操作成功 - 操作失败时返回的错误码信息如[错误码](https://support.huaweicloud.com/api-mrs/ErrorCode.html)所示。
     *
     * @return string|null
     */
-    public function getBody()
+    public function getResult()
     {
-        return $this->container['body'];
+        return $this->container['result'];
     }
 
     /**
-    * Sets body
+    * Sets result
     *
-    * @param string|null $body body
+    * @param string|null $result 操作结果。 - succeeded：操作成功 - 操作失败时返回的错误码信息如[错误码](https://support.huaweicloud.com/api-mrs/ErrorCode.html)所示。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setResult($result)
     {
-        $this->container['body'] = $body;
+        $this->container['result'] = $result;
         return $this;
     }
 

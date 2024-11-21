@@ -20,8 +20,8 @@ class Common implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pvc  pvc开关。
-    * pvcVersion  pvc版本。
+    * pvc  高清低码开关。
+    * pvcVersion  高清低码版本。
     * videoCodec  视频编码格式。
     * audioCodec  音频编码格式(有效值范围) - 1：AUDIO_CODECTYPE_AAC - 2：AUDIO_CODECTYPE_HEAAC1 - 3：AUDIO_CODECTYPE_HEAAC2 - 4：AUDIO_CODECTYPE_MP3  默认值为1。
     * hlsInterval  分片时长(默认为5秒)。
@@ -38,8 +38,8 @@ class Common implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pvc  pvc开关。
-    * pvcVersion  pvc版本。
+    * pvc  高清低码开关。
+    * pvcVersion  高清低码版本。
     * videoCodec  视频编码格式。
     * audioCodec  音频编码格式(有效值范围) - 1：AUDIO_CODECTYPE_AAC - 2：AUDIO_CODECTYPE_HEAAC1 - 3：AUDIO_CODECTYPE_HEAAC2 - 4：AUDIO_CODECTYPE_MP3  默认值为1。
     * hlsInterval  分片时长(默认为5秒)。
@@ -77,8 +77,8 @@ class Common implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pvc  pvc开关。
-    * pvcVersion  pvc版本。
+    * pvc  高清低码开关。
+    * pvcVersion  高清低码版本。
     * videoCodec  视频编码格式。
     * audioCodec  音频编码格式(有效值范围) - 1：AUDIO_CODECTYPE_AAC - 2：AUDIO_CODECTYPE_HEAAC1 - 3：AUDIO_CODECTYPE_HEAAC2 - 4：AUDIO_CODECTYPE_MP3  默认值为1。
     * hlsInterval  分片时长(默认为5秒)。
@@ -95,8 +95,8 @@ class Common implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pvc  pvc开关。
-    * pvcVersion  pvc版本。
+    * pvc  高清低码开关。
+    * pvcVersion  高清低码版本。
     * videoCodec  视频编码格式。
     * audioCodec  音频编码格式(有效值范围) - 1：AUDIO_CODECTYPE_AAC - 2：AUDIO_CODECTYPE_HEAAC1 - 3：AUDIO_CODECTYPE_HEAAC2 - 4：AUDIO_CODECTYPE_MP3  默认值为1。
     * hlsInterval  分片时长(默认为5秒)。
@@ -113,8 +113,8 @@ class Common implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pvc  pvc开关。
-    * pvcVersion  pvc版本。
+    * pvc  高清低码开关。
+    * pvcVersion  高清低码版本。
     * videoCodec  视频编码格式。
     * audioCodec  音频编码格式(有效值范围) - 1：AUDIO_CODECTYPE_AAC - 2：AUDIO_CODECTYPE_HEAAC1 - 3：AUDIO_CODECTYPE_HEAAC2 - 4：AUDIO_CODECTYPE_MP3  默认值为1。
     * hlsInterval  分片时长(默认为5秒)。
@@ -300,7 +300,7 @@ class Common implements ModelInterface, ArrayAccess
 
     /**
     * Gets pvc
-    *  pvc开关。
+    *  高清低码开关。
     *
     * @return string
     */
@@ -312,7 +312,7 @@ class Common implements ModelInterface, ArrayAccess
     /**
     * Sets pvc
     *
-    * @param string $pvc pvc开关。
+    * @param string $pvc 高清低码开关。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class Common implements ModelInterface, ArrayAccess
 
     /**
     * Gets pvcVersion
-    *  pvc版本。
+    *  高清低码版本。
     *
     * @return string|null
     */
@@ -336,7 +336,7 @@ class Common implements ModelInterface, ArrayAccess
     /**
     * Sets pvcVersion
     *
-    * @param string|null $pvcVersion pvc版本。
+    * @param string|null $pvcVersion 高清低码版本。
     *
     * @return $this
     */

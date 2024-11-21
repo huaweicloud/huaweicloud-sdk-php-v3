@@ -25,6 +25,7 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
     * roleId  奇妙问角色ID。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
             'appSecret' => 'string',
             'roleId' => 'string',
             'sisRegion' => 'int',
-            'sisProjectId' => 'string'
+            'sisProjectId' => 'string',
+            'enableHotWords' => 'bool'
     ];
 
     /**
@@ -43,6 +45,7 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
     * roleId  奇妙问角色ID。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
         'appSecret' => null,
         'roleId' => null,
         'sisRegion' => null,
-        'sisProjectId' => null
+        'sisProjectId' => null,
+        'enableHotWords' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
     * roleId  奇妙问角色ID。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
             'appSecret' => 'app_secret',
             'roleId' => 'role_id',
             'sisRegion' => 'sis_region',
-            'sisProjectId' => 'sis_project_id'
+            'sisProjectId' => 'sis_project_id',
+            'enableHotWords' => 'enable_hot_words'
     ];
 
     /**
@@ -100,6 +106,7 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
     * roleId  奇妙问角色ID。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
             'appSecret' => 'setAppSecret',
             'roleId' => 'setRoleId',
             'sisRegion' => 'setSisRegion',
-            'sisProjectId' => 'setSisProjectId'
+            'sisProjectId' => 'setSisProjectId',
+            'enableHotWords' => 'setEnableHotWords'
     ];
 
     /**
@@ -118,6 +126,7 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
     * roleId  奇妙问角色ID。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
             'appSecret' => 'getAppSecret',
             'roleId' => 'getRoleId',
             'sisRegion' => 'getSisRegion',
-            'sisProjectId' => 'getSisProjectId'
+            'sisProjectId' => 'getSisProjectId',
+            'enableHotWords' => 'getEnableHotWords'
     ];
 
     /**
@@ -192,6 +202,7 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
         $this->container['roleId'] = isset($data['roleId']) ? $data['roleId'] : null;
         $this->container['sisRegion'] = isset($data['sisRegion']) ? $data['sisRegion'] : null;
         $this->container['sisProjectId'] = isset($data['sisProjectId']) ? $data['sisProjectId'] : null;
+        $this->container['enableHotWords'] = isset($data['enableHotWords']) ? $data['enableHotWords'] : null;
     }
 
     /**
@@ -229,8 +240,8 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
             if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -363,6 +374,30 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
     public function setSisProjectId($sisProjectId)
     {
         $this->container['sisProjectId'] = $sisProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets enableHotWords
+    *  是否开启热词
+    *
+    * @return bool|null
+    */
+    public function getEnableHotWords()
+    {
+        return $this->container['enableHotWords'];
+    }
+
+    /**
+    * Sets enableHotWords
+    *
+    * @param bool|null $enableHotWords 是否开启热词
+    *
+    * @return $this
+    */
+    public function setEnableHotWords($enableHotWords)
+    {
+        $this->container['enableHotWords'] = $enableHotWords;
         return $this;
     }
 

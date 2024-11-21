@@ -37,6 +37,7 @@ class Vault implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class Vault implements ModelInterface, ArrayAccess
             'autoExpand' => 'bool',
             'smnNotify' => 'bool',
             'threshold' => 'int',
-            'sysLockSourceService' => 'string'
+            'sysLockSourceService' => 'string',
+            'locked' => 'bool'
     ];
 
     /**
@@ -79,6 +81,7 @@ class Vault implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class Vault implements ModelInterface, ArrayAccess
         'autoExpand' => null,
         'smnNotify' => null,
         'threshold' => 'int32',
-        'sysLockSourceService' => null
+        'sysLockSourceService' => null,
+        'locked' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class Vault implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class Vault implements ModelInterface, ArrayAccess
             'autoExpand' => 'auto_expand',
             'smnNotify' => 'smn_notify',
             'threshold' => 'threshold',
-            'sysLockSourceService' => 'sys_lock_source_service'
+            'sysLockSourceService' => 'sys_lock_source_service',
+            'locked' => 'locked'
     ];
 
     /**
@@ -184,6 +190,7 @@ class Vault implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class Vault implements ModelInterface, ArrayAccess
             'autoExpand' => 'setAutoExpand',
             'smnNotify' => 'setSmnNotify',
             'threshold' => 'setThreshold',
-            'sysLockSourceService' => 'setSysLockSourceService'
+            'sysLockSourceService' => 'setSysLockSourceService',
+            'locked' => 'setLocked'
     ];
 
     /**
@@ -226,6 +234,7 @@ class Vault implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class Vault implements ModelInterface, ArrayAccess
             'autoExpand' => 'getAutoExpand',
             'smnNotify' => 'getSmnNotify',
             'threshold' => 'getThreshold',
-            'sysLockSourceService' => 'getSysLockSourceService'
+            'sysLockSourceService' => 'getSysLockSourceService',
+            'locked' => 'getLocked'
     ];
 
     /**
@@ -324,6 +334,7 @@ class Vault implements ModelInterface, ArrayAccess
         $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : null;
         $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
         $this->container['sysLockSourceService'] = isset($data['sysLockSourceService']) ? $data['sysLockSourceService'] : null;
+        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
     }
 
     /**
@@ -795,6 +806,30 @@ class Vault implements ModelInterface, ArrayAccess
     public function setSysLockSourceService($sysLockSourceService)
     {
         $this->container['sysLockSourceService'] = $sysLockSourceService;
+        return $this;
+    }
+
+    /**
+    * Gets locked
+    *  用于标识该存储库是否已锁定
+    *
+    * @return bool|null
+    */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+    * Sets locked
+    *
+    * @param bool|null $locked 用于标识该存储库是否已锁定
+    *
+    * @return $this
+    */
+    public function setLocked($locked)
+    {
+        $this->container['locked'] = $locked;
         return $this;
     }
 

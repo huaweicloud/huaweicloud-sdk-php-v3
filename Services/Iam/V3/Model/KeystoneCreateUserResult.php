@@ -23,6 +23,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     * domainId  IAM用户所属账号ID。
     * name  IAM用户名。
     * description  IAM用户描述信息。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
     * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
     * links  links
     * id  IAM用户ID。
@@ -34,6 +35,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
             'domainId' => 'string',
             'name' => 'string',
             'description' => 'string',
+            'pwdStatus' => 'bool',
             'passwordExpiresAt' => 'string',
             'links' => '\HuaweiCloud\SDK\Iam\V3\Model\LinksSelf',
             'id' => 'string',
@@ -45,6 +47,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     * domainId  IAM用户所属账号ID。
     * name  IAM用户名。
     * description  IAM用户描述信息。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
     * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
     * links  links
     * id  IAM用户ID。
@@ -56,6 +59,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
         'domainId' => null,
         'name' => null,
         'description' => null,
+        'pwdStatus' => null,
         'passwordExpiresAt' => null,
         'links' => null,
         'id' => null,
@@ -88,6 +92,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     * domainId  IAM用户所属账号ID。
     * name  IAM用户名。
     * description  IAM用户描述信息。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
     * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
     * links  links
     * id  IAM用户ID。
@@ -99,6 +104,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
             'domainId' => 'domain_id',
             'name' => 'name',
             'description' => 'description',
+            'pwdStatus' => 'pwd_status',
             'passwordExpiresAt' => 'password_expires_at',
             'links' => 'links',
             'id' => 'id',
@@ -110,6 +116,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     * domainId  IAM用户所属账号ID。
     * name  IAM用户名。
     * description  IAM用户描述信息。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
     * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
     * links  links
     * id  IAM用户ID。
@@ -121,6 +128,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
             'domainId' => 'setDomainId',
             'name' => 'setName',
             'description' => 'setDescription',
+            'pwdStatus' => 'setPwdStatus',
             'passwordExpiresAt' => 'setPasswordExpiresAt',
             'links' => 'setLinks',
             'id' => 'setId',
@@ -132,6 +140,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     * domainId  IAM用户所属账号ID。
     * name  IAM用户名。
     * description  IAM用户描述信息。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
     * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
     * links  links
     * id  IAM用户ID。
@@ -143,6 +152,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
             'domainId' => 'getDomainId',
             'name' => 'getName',
             'description' => 'getDescription',
+            'pwdStatus' => 'getPwdStatus',
             'passwordExpiresAt' => 'getPasswordExpiresAt',
             'links' => 'getLinks',
             'id' => 'getId',
@@ -210,6 +220,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['pwdStatus'] = isset($data['pwdStatus']) ? $data['pwdStatus'] : null;
         $this->container['passwordExpiresAt'] = isset($data['passwordExpiresAt']) ? $data['passwordExpiresAt'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -325,6 +336,30 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets pwdStatus
+    *  IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
+    *
+    * @return bool|null
+    */
+    public function getPwdStatus()
+    {
+        return $this->container['pwdStatus'];
+    }
+
+    /**
+    * Sets pwdStatus
+    *
+    * @param bool|null $pwdStatus IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
+    *
+    * @return $this
+    */
+    public function setPwdStatus($pwdStatus)
+    {
+        $this->container['pwdStatus'] = $pwdStatus;
         return $this;
     }
 

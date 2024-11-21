@@ -33,6 +33,7 @@ class VaultOrder implements ModelInterface, ArrayAccess
     * smnNotify  当容量到达阈值，是否启用通知
     * parameters  parameters
     * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）。
+    * locked  用于标识当前存储库是否已锁定
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class VaultOrder implements ModelInterface, ArrayAccess
             'threshold' => 'int',
             'smnNotify' => 'bool',
             'parameters' => '\HuaweiCloud\SDK\Cbr\V1\Model\VaultCreateParameters',
-            'autoExpand' => 'bool'
+            'autoExpand' => 'bool',
+            'locked' => 'bool'
     ];
 
     /**
@@ -67,6 +69,7 @@ class VaultOrder implements ModelInterface, ArrayAccess
     * smnNotify  当容量到达阈值，是否启用通知
     * parameters  parameters
     * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）。
+    * locked  用于标识当前存储库是否已锁定
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class VaultOrder implements ModelInterface, ArrayAccess
         'threshold' => 'int32',
         'smnNotify' => null,
         'parameters' => null,
-        'autoExpand' => null
+        'autoExpand' => null,
+        'locked' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class VaultOrder implements ModelInterface, ArrayAccess
     * smnNotify  当容量到达阈值，是否启用通知
     * parameters  parameters
     * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）。
+    * locked  用于标识当前存储库是否已锁定
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class VaultOrder implements ModelInterface, ArrayAccess
             'threshold' => 'threshold',
             'smnNotify' => 'smn_notify',
             'parameters' => 'parameters',
-            'autoExpand' => 'auto_expand'
+            'autoExpand' => 'auto_expand',
+            'locked' => 'locked'
     ];
 
     /**
@@ -156,6 +162,7 @@ class VaultOrder implements ModelInterface, ArrayAccess
     * smnNotify  当容量到达阈值，是否启用通知
     * parameters  parameters
     * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）。
+    * locked  用于标识当前存储库是否已锁定
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class VaultOrder implements ModelInterface, ArrayAccess
             'threshold' => 'setThreshold',
             'smnNotify' => 'setSmnNotify',
             'parameters' => 'setParameters',
-            'autoExpand' => 'setAutoExpand'
+            'autoExpand' => 'setAutoExpand',
+            'locked' => 'setLocked'
     ];
 
     /**
@@ -190,6 +198,7 @@ class VaultOrder implements ModelInterface, ArrayAccess
     * smnNotify  当容量到达阈值，是否启用通知
     * parameters  parameters
     * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）。
+    * locked  用于标识当前存储库是否已锁定
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class VaultOrder implements ModelInterface, ArrayAccess
             'threshold' => 'getThreshold',
             'smnNotify' => 'getSmnNotify',
             'parameters' => 'getParameters',
-            'autoExpand' => 'getAutoExpand'
+            'autoExpand' => 'getAutoExpand',
+            'locked' => 'getLocked'
     ];
 
     /**
@@ -280,6 +290,7 @@ class VaultOrder implements ModelInterface, ArrayAccess
         $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : null;
         $this->container['parameters'] = isset($data['parameters']) ? $data['parameters'] : null;
         $this->container['autoExpand'] = isset($data['autoExpand']) ? $data['autoExpand'] : null;
+        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
     }
 
     /**
@@ -631,6 +642,30 @@ class VaultOrder implements ModelInterface, ArrayAccess
     public function setAutoExpand($autoExpand)
     {
         $this->container['autoExpand'] = $autoExpand;
+        return $this;
+    }
+
+    /**
+    * Gets locked
+    *  用于标识当前存储库是否已锁定
+    *
+    * @return bool|null
+    */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+    * Sets locked
+    *
+    * @param bool|null $locked 用于标识当前存储库是否已锁定
+    *
+    * @return $this
+    */
+    public function setLocked($locked)
+    {
+        $this->container['locked'] = $locked;
         return $this;
     }
 

@@ -757,6 +757,9 @@ class EvsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xClientToken'] !== null) {
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }

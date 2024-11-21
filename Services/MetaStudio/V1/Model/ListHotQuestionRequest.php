@@ -28,6 +28,7 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * robotId  机器人ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'limit' => 'int',
             'sortDir' => 'string',
-            'robotId' => 'string'
+            'robotId' => 'string',
+            'language' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * robotId  机器人ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
         'offset' => 'uint32',
         'limit' => 'uint32',
         'sortDir' => null,
-        'robotId' => null
+        'robotId' => null,
+        'language' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * robotId  机器人ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'limit' => 'limit',
             'sortDir' => 'sort_dir',
-            'robotId' => 'robot_id'
+            'robotId' => 'robot_id',
+            'language' => 'language'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * robotId  机器人ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'sortDir' => 'setSortDir',
-            'robotId' => 'setRobotId'
+            'robotId' => 'setRobotId',
+            'language' => 'setLanguage'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * robotId  机器人ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'sortDir' => 'getSortDir',
-            'robotId' => 'getRobotId'
+            'robotId' => 'getRobotId',
+            'language' => 'getLanguage'
     ];
 
     /**
@@ -199,7 +209,22 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const LANGUAGE_CN = 'CN';
+    const LANGUAGE_EN = 'EN';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLanguageAllowableValues()
+    {
+        return [
+            self::LANGUAGE_CN,
+            self::LANGUAGE_EN,
+        ];
+    }
 
 
     /**
@@ -225,6 +250,7 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
     }
 
     /**
@@ -286,6 +312,14 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['robotId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'robotId', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getLanguageAllowableValues();
+                if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'language', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -489,6 +523,30 @@ class ListHotQuestionRequest implements ModelInterface, ArrayAccess
     public function setRobotId($robotId)
     {
         $this->container['robotId'] = $robotId;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  智能交互语言  * CN:中文  * EN:英文
+    *
+    * @return string|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param string|null $language 智能交互语言  * CN:中文  * EN:英文
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 

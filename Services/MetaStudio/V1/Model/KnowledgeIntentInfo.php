@@ -21,7 +21,7 @@ class KnowledgeIntentInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * intentId  意图ID。
-    * name  你是谁。
+    * name  主题。
     * identify  意图标识。
     * answer  问题答案。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -41,7 +41,7 @@ class KnowledgeIntentInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * intentId  意图ID。
-    * name  你是谁。
+    * name  主题。
     * identify  意图标识。
     * answer  问题答案。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -82,7 +82,7 @@ class KnowledgeIntentInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * intentId  意图ID。
-    * name  你是谁。
+    * name  主题。
     * identify  意图标识。
     * answer  问题答案。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -102,7 +102,7 @@ class KnowledgeIntentInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * intentId  意图ID。
-    * name  你是谁。
+    * name  主题。
     * identify  意图标识。
     * answer  问题答案。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -122,7 +122,7 @@ class KnowledgeIntentInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * intentId  意图ID。
-    * name  你是谁。
+    * name  主题。
     * identify  意图标识。
     * answer  问题答案。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -289,7 +289,7 @@ class KnowledgeIntentInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  你是谁。
+    *  主题。
     *
     * @return string|null
     */
@@ -301,7 +301,7 @@ class KnowledgeIntentInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 你是谁。
+    * @param string|null $name 主题。
     *
     * @return $this
     */

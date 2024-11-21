@@ -30,6 +30,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * to  查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
     * offset  分页偏移量
     * limit  分页大小
+    * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             'from' => 'string',
             'to' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'orderBy' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * to  查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
     * offset  分页偏移量
     * limit  分页大小
+    * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
         'from' => null,
         'to' => null,
         'offset' => null,
-        'limit' => null
+        'limit' => null,
+        'orderBy' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * to  查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
     * offset  分页偏移量
     * limit  分页大小
+    * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             'from' => 'from',
             'to' => 'to',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'orderBy' => 'order_by'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * to  查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
     * offset  分页偏移量
     * limit  分页大小
+    * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             'from' => 'setFrom',
             'to' => 'setTo',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'orderBy' => 'setOrderBy'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * to  查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
     * offset  分页偏移量
     * limit  分页大小
+    * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             'from' => 'getFrom',
             'to' => 'getTo',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'orderBy' => 'getOrderBy'
     ];
 
     /**
@@ -219,7 +229,26 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ORDER_BY_FIRST_ALARM_TIME = 'first_alarm_time';
+    const ORDER_BY_UPDATE_TIME = 'update_time';
+    const ORDER_BY_ALARM_LEVEL = 'alarm_level';
+    const ORDER_BY_RECORD_ID = 'record_id';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getOrderByAllowableValues()
+    {
+        return [
+            self::ORDER_BY_FIRST_ALARM_TIME,
+            self::ORDER_BY_UPDATE_TIME,
+            self::ORDER_BY_ALARM_LEVEL,
+            self::ORDER_BY_RECORD_ID,
+        ];
+    }
 
 
     /**
@@ -247,6 +276,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
         $this->container['to'] = isset($data['to']) ? $data['to'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['orderBy'] = isset($data['orderBy']) ? $data['orderBy'] : null;
     }
 
     /**
@@ -320,6 +350,14 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getOrderByAllowableValues();
+                if (!is_null($this->container['orderBy']) && !in_array($this->container['orderBy'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'orderBy', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -571,6 +609,30 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets orderBy
+    *  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
+    *
+    * @return string|null
+    */
+    public function getOrderBy()
+    {
+        return $this->container['orderBy'];
+    }
+
+    /**
+    * Sets orderBy
+    *
+    * @param string|null $orderBy 按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
+    *
+    * @return $this
+    */
+    public function setOrderBy($orderBy)
+    {
+        $this->container['orderBy'] = $orderBy;
         return $this;
     }
 

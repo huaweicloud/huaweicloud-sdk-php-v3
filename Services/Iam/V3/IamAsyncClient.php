@@ -1532,11 +1532,11 @@ class IamAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['*/*']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['*/*'],
                 []
             );
         }

@@ -29,6 +29,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     * actionEnabled  是否发送通知，值为true或者false。
     * beginTime  产生时间,UTC时间
     * endTime  结束时间，UTC时间
+    * firstAlarmTime  第一次告警时间戳，UTC时间
+    * lastAlarmTime  最后一次告警时间，UTC时间
+    * alarmRecoveryTime  告警恢复时间，UTC时间
     * metric  metric
     * condition  condition
     * additionalInfo  additionalInfo
@@ -48,6 +51,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
             'actionEnabled' => 'bool',
             'beginTime' => '\DateTime',
             'endTime' => '\DateTime',
+            'firstAlarmTime' => '\DateTime',
+            'lastAlarmTime' => '\DateTime',
+            'alarmRecoveryTime' => '\DateTime',
             'metric' => '\HuaweiCloud\SDK\Ces\V2\Model\Metric',
             'condition' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmCondition',
             'additionalInfo' => '\HuaweiCloud\SDK\Ces\V2\Model\AdditionalInfo',
@@ -67,6 +73,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     * actionEnabled  是否发送通知，值为true或者false。
     * beginTime  产生时间,UTC时间
     * endTime  结束时间，UTC时间
+    * firstAlarmTime  第一次告警时间戳，UTC时间
+    * lastAlarmTime  最后一次告警时间，UTC时间
+    * alarmRecoveryTime  告警恢复时间，UTC时间
     * metric  metric
     * condition  condition
     * additionalInfo  additionalInfo
@@ -86,6 +95,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
         'actionEnabled' => null,
         'beginTime' => 'date-time',
         'endTime' => 'date-time',
+        'firstAlarmTime' => 'date-time',
+        'lastAlarmTime' => 'date-time',
+        'alarmRecoveryTime' => 'date-time',
         'metric' => null,
         'condition' => null,
         'additionalInfo' => null,
@@ -126,6 +138,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     * actionEnabled  是否发送通知，值为true或者false。
     * beginTime  产生时间,UTC时间
     * endTime  结束时间，UTC时间
+    * firstAlarmTime  第一次告警时间戳，UTC时间
+    * lastAlarmTime  最后一次告警时间，UTC时间
+    * alarmRecoveryTime  告警恢复时间，UTC时间
     * metric  metric
     * condition  condition
     * additionalInfo  additionalInfo
@@ -145,6 +160,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
             'actionEnabled' => 'action_enabled',
             'beginTime' => 'begin_time',
             'endTime' => 'end_time',
+            'firstAlarmTime' => 'first_alarm_time',
+            'lastAlarmTime' => 'last_alarm_time',
+            'alarmRecoveryTime' => 'alarm_recovery_time',
             'metric' => 'metric',
             'condition' => 'condition',
             'additionalInfo' => 'additional_info',
@@ -164,6 +182,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     * actionEnabled  是否发送通知，值为true或者false。
     * beginTime  产生时间,UTC时间
     * endTime  结束时间，UTC时间
+    * firstAlarmTime  第一次告警时间戳，UTC时间
+    * lastAlarmTime  最后一次告警时间，UTC时间
+    * alarmRecoveryTime  告警恢复时间，UTC时间
     * metric  metric
     * condition  condition
     * additionalInfo  additionalInfo
@@ -183,6 +204,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
             'actionEnabled' => 'setActionEnabled',
             'beginTime' => 'setBeginTime',
             'endTime' => 'setEndTime',
+            'firstAlarmTime' => 'setFirstAlarmTime',
+            'lastAlarmTime' => 'setLastAlarmTime',
+            'alarmRecoveryTime' => 'setAlarmRecoveryTime',
             'metric' => 'setMetric',
             'condition' => 'setCondition',
             'additionalInfo' => 'setAdditionalInfo',
@@ -202,6 +226,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     * actionEnabled  是否发送通知，值为true或者false。
     * beginTime  产生时间,UTC时间
     * endTime  结束时间，UTC时间
+    * firstAlarmTime  第一次告警时间戳，UTC时间
+    * lastAlarmTime  最后一次告警时间，UTC时间
+    * alarmRecoveryTime  告警恢复时间，UTC时间
     * metric  metric
     * condition  condition
     * additionalInfo  additionalInfo
@@ -221,6 +248,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
             'actionEnabled' => 'getActionEnabled',
             'beginTime' => 'getBeginTime',
             'endTime' => 'getEndTime',
+            'firstAlarmTime' => 'getFirstAlarmTime',
+            'lastAlarmTime' => 'getLastAlarmTime',
+            'alarmRecoveryTime' => 'getAlarmRecoveryTime',
             'metric' => 'getMetric',
             'condition' => 'getCondition',
             'additionalInfo' => 'getAdditionalInfo',
@@ -332,6 +362,9 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
         $this->container['actionEnabled'] = isset($data['actionEnabled']) ? $data['actionEnabled'] : null;
         $this->container['beginTime'] = isset($data['beginTime']) ? $data['beginTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['firstAlarmTime'] = isset($data['firstAlarmTime']) ? $data['firstAlarmTime'] : null;
+        $this->container['lastAlarmTime'] = isset($data['lastAlarmTime']) ? $data['lastAlarmTime'] : null;
+        $this->container['alarmRecoveryTime'] = isset($data['alarmRecoveryTime']) ? $data['alarmRecoveryTime'] : null;
         $this->container['metric'] = isset($data['metric']) ? $data['metric'] : null;
         $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
         $this->container['additionalInfo'] = isset($data['additionalInfo']) ? $data['additionalInfo'] : null;
@@ -609,6 +642,78 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets firstAlarmTime
+    *  第一次告警时间戳，UTC时间
+    *
+    * @return \DateTime|null
+    */
+    public function getFirstAlarmTime()
+    {
+        return $this->container['firstAlarmTime'];
+    }
+
+    /**
+    * Sets firstAlarmTime
+    *
+    * @param \DateTime|null $firstAlarmTime 第一次告警时间戳，UTC时间
+    *
+    * @return $this
+    */
+    public function setFirstAlarmTime($firstAlarmTime)
+    {
+        $this->container['firstAlarmTime'] = $firstAlarmTime;
+        return $this;
+    }
+
+    /**
+    * Gets lastAlarmTime
+    *  最后一次告警时间，UTC时间
+    *
+    * @return \DateTime|null
+    */
+    public function getLastAlarmTime()
+    {
+        return $this->container['lastAlarmTime'];
+    }
+
+    /**
+    * Sets lastAlarmTime
+    *
+    * @param \DateTime|null $lastAlarmTime 最后一次告警时间，UTC时间
+    *
+    * @return $this
+    */
+    public function setLastAlarmTime($lastAlarmTime)
+    {
+        $this->container['lastAlarmTime'] = $lastAlarmTime;
+        return $this;
+    }
+
+    /**
+    * Gets alarmRecoveryTime
+    *  告警恢复时间，UTC时间
+    *
+    * @return \DateTime|null
+    */
+    public function getAlarmRecoveryTime()
+    {
+        return $this->container['alarmRecoveryTime'];
+    }
+
+    /**
+    * Sets alarmRecoveryTime
+    *
+    * @param \DateTime|null $alarmRecoveryTime 告警恢复时间，UTC时间
+    *
+    * @return $this
+    */
+    public function setAlarmRecoveryTime($alarmRecoveryTime)
+    {
+        $this->container['alarmRecoveryTime'] = $alarmRecoveryTime;
         return $this;
     }
 

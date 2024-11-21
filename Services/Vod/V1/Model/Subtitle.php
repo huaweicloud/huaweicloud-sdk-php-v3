@@ -23,6 +23,7 @@ class Subtitle implements ModelInterface, ArrayAccess
     * id  字幕id。  取值范围：[1,8]。
     * type  字幕文件类型，目前暂只支持“SRT”。
     * language  字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+    * name  subtitle name
     * md5  字幕文件的MD5值。
     * description  字幕描述。
     *
@@ -32,6 +33,7 @@ class Subtitle implements ModelInterface, ArrayAccess
             'id' => 'int',
             'type' => 'string',
             'language' => 'string',
+            'name' => 'string',
             'md5' => 'string',
             'description' => 'string'
     ];
@@ -41,6 +43,7 @@ class Subtitle implements ModelInterface, ArrayAccess
     * id  字幕id。  取值范围：[1,8]。
     * type  字幕文件类型，目前暂只支持“SRT”。
     * language  字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+    * name  subtitle name
     * md5  字幕文件的MD5值。
     * description  字幕描述。
     *
@@ -50,6 +53,7 @@ class Subtitle implements ModelInterface, ArrayAccess
         'id' => null,
         'type' => null,
         'language' => null,
+        'name' => null,
         'md5' => null,
         'description' => null
     ];
@@ -80,6 +84,7 @@ class Subtitle implements ModelInterface, ArrayAccess
     * id  字幕id。  取值范围：[1,8]。
     * type  字幕文件类型，目前暂只支持“SRT”。
     * language  字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+    * name  subtitle name
     * md5  字幕文件的MD5值。
     * description  字幕描述。
     *
@@ -89,6 +94,7 @@ class Subtitle implements ModelInterface, ArrayAccess
             'id' => 'id',
             'type' => 'type',
             'language' => 'language',
+            'name' => 'name',
             'md5' => 'md5',
             'description' => 'description'
     ];
@@ -98,6 +104,7 @@ class Subtitle implements ModelInterface, ArrayAccess
     * id  字幕id。  取值范围：[1,8]。
     * type  字幕文件类型，目前暂只支持“SRT”。
     * language  字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+    * name  subtitle name
     * md5  字幕文件的MD5值。
     * description  字幕描述。
     *
@@ -107,6 +114,7 @@ class Subtitle implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'type' => 'setType',
             'language' => 'setLanguage',
+            'name' => 'setName',
             'md5' => 'setMd5',
             'description' => 'setDescription'
     ];
@@ -116,6 +124,7 @@ class Subtitle implements ModelInterface, ArrayAccess
     * id  字幕id。  取值范围：[1,8]。
     * type  字幕文件类型，目前暂只支持“SRT”。
     * language  字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+    * name  subtitle name
     * md5  字幕文件的MD5值。
     * description  字幕描述。
     *
@@ -125,6 +134,7 @@ class Subtitle implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'type' => 'getType',
             'language' => 'getLanguage',
+            'name' => 'getName',
             'md5' => 'getMd5',
             'description' => 'getDescription'
     ];
@@ -218,6 +228,7 @@ class Subtitle implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['md5'] = isset($data['md5']) ? $data['md5'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
@@ -338,6 +349,30 @@ class Subtitle implements ModelInterface, ArrayAccess
     public function setLanguage($language)
     {
         $this->container['language'] = $language;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  subtitle name
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name subtitle name
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
         return $this;
     }
 

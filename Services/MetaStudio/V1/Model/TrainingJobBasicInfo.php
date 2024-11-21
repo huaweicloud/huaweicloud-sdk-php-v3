@@ -28,7 +28,7 @@ class TrainingJobBasicInfo implements ModelInterface, ArrayAccess
     * coverDownloadUrl  分身数字人模型封面下载URL。URL有效期24小时。
     * lastUpdateTime  用户最近一次更新任务的时间（包括租户创建或者重新提交），格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”
     * createTime  创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”
-    * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    * contact  分身数字人训练任务创建者的手机号。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
@@ -70,7 +70,7 @@ class TrainingJobBasicInfo implements ModelInterface, ArrayAccess
     * coverDownloadUrl  分身数字人模型封面下载URL。URL有效期24小时。
     * lastUpdateTime  用户最近一次更新任务的时间（包括租户创建或者重新提交），格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”
     * createTime  创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”
-    * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    * contact  分身数字人训练任务创建者的手机号。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
@@ -133,7 +133,7 @@ class TrainingJobBasicInfo implements ModelInterface, ArrayAccess
     * coverDownloadUrl  分身数字人模型封面下载URL。URL有效期24小时。
     * lastUpdateTime  用户最近一次更新任务的时间（包括租户创建或者重新提交），格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”
     * createTime  创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”
-    * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    * contact  分身数字人训练任务创建者的手机号。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
@@ -175,7 +175,7 @@ class TrainingJobBasicInfo implements ModelInterface, ArrayAccess
     * coverDownloadUrl  分身数字人模型封面下载URL。URL有效期24小时。
     * lastUpdateTime  用户最近一次更新任务的时间（包括租户创建或者重新提交），格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”
     * createTime  创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”
-    * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    * contact  分身数字人训练任务创建者的手机号。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
@@ -217,7 +217,7 @@ class TrainingJobBasicInfo implements ModelInterface, ArrayAccess
     * coverDownloadUrl  分身数字人模型封面下载URL。URL有效期24小时。
     * lastUpdateTime  用户最近一次更新任务的时间（包括租户创建或者重新提交），格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”
     * createTime  创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”
-    * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    * contact  分身数字人训练任务创建者的手机号。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
@@ -786,7 +786,7 @@ class TrainingJobBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets contact
-    *  分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    *  分身数字人训练任务创建者的手机号。
     *
     * @return string|null
     */
@@ -798,7 +798,7 @@ class TrainingJobBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets contact
     *
-    * @param string|null $contact 分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    * @param string|null $contact 分身数字人训练任务创建者的手机号。
     *
     * @return $this
     */

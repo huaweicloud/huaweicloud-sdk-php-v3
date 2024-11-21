@@ -23,6 +23,7 @@ class ShowHotQuestionResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * hotQuestionId  热点问题ID。
     * hotQuestion  热点问题。
+    * language  language
     * robotId  机器人ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -33,6 +34,7 @@ class ShowHotQuestionResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'hotQuestionId' => 'string',
             'hotQuestion' => 'string',
+            'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'robotId' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string',
@@ -43,6 +45,7 @@ class ShowHotQuestionResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * hotQuestionId  热点问题ID。
     * hotQuestion  热点问题。
+    * language  language
     * robotId  机器人ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -53,6 +56,7 @@ class ShowHotQuestionResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'hotQuestionId' => null,
         'hotQuestion' => null,
+        'language' => null,
         'robotId' => null,
         'createTime' => null,
         'updateTime' => null,
@@ -84,6 +88,7 @@ class ShowHotQuestionResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * hotQuestionId  热点问题ID。
     * hotQuestion  热点问题。
+    * language  language
     * robotId  机器人ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -94,6 +99,7 @@ class ShowHotQuestionResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'hotQuestionId' => 'hot_question_id',
             'hotQuestion' => 'hot_question',
+            'language' => 'language',
             'robotId' => 'robot_id',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
@@ -104,6 +110,7 @@ class ShowHotQuestionResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * hotQuestionId  热点问题ID。
     * hotQuestion  热点问题。
+    * language  language
     * robotId  机器人ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -114,6 +121,7 @@ class ShowHotQuestionResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'hotQuestionId' => 'setHotQuestionId',
             'hotQuestion' => 'setHotQuestion',
+            'language' => 'setLanguage',
             'robotId' => 'setRobotId',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
@@ -124,6 +132,7 @@ class ShowHotQuestionResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * hotQuestionId  热点问题ID。
     * hotQuestion  热点问题。
+    * language  language
     * robotId  机器人ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -134,6 +143,7 @@ class ShowHotQuestionResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'hotQuestionId' => 'getHotQuestionId',
             'hotQuestion' => 'getHotQuestion',
+            'language' => 'getLanguage',
             'robotId' => 'getRobotId',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
@@ -200,6 +210,7 @@ class ShowHotQuestionResponse implements ModelInterface, ArrayAccess
     {
         $this->container['hotQuestionId'] = isset($data['hotQuestionId']) ? $data['hotQuestionId'] : null;
         $this->container['hotQuestion'] = isset($data['hotQuestion']) ? $data['hotQuestion'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
@@ -303,6 +314,30 @@ class ShowHotQuestionResponse implements ModelInterface, ArrayAccess
     public function setHotQuestion($hotQuestion)
     {
         $this->container['hotQuestion'] = $hotQuestion;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  language
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null $language language
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 

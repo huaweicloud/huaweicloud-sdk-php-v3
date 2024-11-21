@@ -12,6 +12,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
      */
     const ZH_CN = 'zh_CN';
     const EN_US = 'en_US';
+    const CN = 'CN';
+    const EN = 'EN';
     
     /**
      * Gets allowable values of the enum
@@ -22,6 +24,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
         return [
             self::ZH_CN,
             self::EN_US,
+            self::CN,
+            self::EN,
         ];
     }
 }

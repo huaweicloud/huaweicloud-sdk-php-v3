@@ -25,7 +25,7 @@ class UnscopedTokenInfo implements ModelInterface, ArrayAccess
     * issuedAt  生成时间。
     * user  user
     * roles  roles信息。
-    * catalog  catalog信息。
+    * catalog  catalog
     *
     * @var string[]
     */
@@ -35,7 +35,7 @@ class UnscopedTokenInfo implements ModelInterface, ArrayAccess
             'issuedAt' => 'string',
             'user' => '\HuaweiCloud\SDK\Iam\V3\Model\FederationUserBody',
             'roles' => '\HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoRoles[]',
-            'catalog' => '\HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalog[]'
+            'catalog' => '\HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalog'
     ];
 
     /**
@@ -45,7 +45,7 @@ class UnscopedTokenInfo implements ModelInterface, ArrayAccess
     * issuedAt  生成时间。
     * user  user
     * roles  roles信息。
-    * catalog  catalog信息。
+    * catalog  catalog
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class UnscopedTokenInfo implements ModelInterface, ArrayAccess
     * issuedAt  生成时间。
     * user  user
     * roles  roles信息。
-    * catalog  catalog信息。
+    * catalog  catalog
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class UnscopedTokenInfo implements ModelInterface, ArrayAccess
     * issuedAt  生成时间。
     * user  user
     * roles  roles信息。
-    * catalog  catalog信息。
+    * catalog  catalog
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class UnscopedTokenInfo implements ModelInterface, ArrayAccess
     * issuedAt  生成时间。
     * user  user
     * roles  roles信息。
-    * catalog  catalog信息。
+    * catalog  catalog
     *
     * @var string[]
     */
@@ -361,9 +361,9 @@ class UnscopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets catalog
-    *  catalog信息。
+    *  catalog
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalog[]|null
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalog|null
     */
     public function getCatalog()
     {
@@ -373,7 +373,7 @@ class UnscopedTokenInfo implements ModelInterface, ArrayAccess
     /**
     * Sets catalog
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalog[]|null $catalog catalog信息。
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalog|null $catalog catalog
     *
     * @return $this
     */

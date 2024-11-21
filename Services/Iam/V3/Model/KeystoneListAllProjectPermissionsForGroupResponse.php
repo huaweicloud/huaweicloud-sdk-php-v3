@@ -23,28 +23,24 @@ class KeystoneListAllProjectPermissionsForGroupResponse implements ModelInterfac
     * Array of property to type mappings. Used for (de)serialization
     * links  links
     * roles  权限信息列表。
-    * totalNumber  在查询参数存在domain_id时，返回自定义策略总数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'links' => '\HuaweiCloud\SDK\Iam\V3\Model\Links',
-            'roles' => '\HuaweiCloud\SDK\Iam\V3\Model\RoleResult[]',
-            'totalNumber' => 'int'
+            'roles' => '\HuaweiCloud\SDK\Iam\V3\Model\InheritedRoleResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * links  links
     * roles  权限信息列表。
-    * totalNumber  在查询参数存在domain_id时，返回自定义策略总数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'links' => null,
-        'roles' => null,
-        'totalNumber' => 'int32'
+        'roles' => null
     ];
 
     /**
@@ -72,42 +68,36 @@ class KeystoneListAllProjectPermissionsForGroupResponse implements ModelInterfac
     * and the value is the original name
     * links  links
     * roles  权限信息列表。
-    * totalNumber  在查询参数存在domain_id时，返回自定义策略总数
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'links' => 'links',
-            'roles' => 'roles',
-            'totalNumber' => 'total_number'
+            'roles' => 'roles'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * links  links
     * roles  权限信息列表。
-    * totalNumber  在查询参数存在domain_id时，返回自定义策略总数
     *
     * @var string[]
     */
     protected static $setters = [
             'links' => 'setLinks',
-            'roles' => 'setRoles',
-            'totalNumber' => 'setTotalNumber'
+            'roles' => 'setRoles'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * links  links
     * roles  权限信息列表。
-    * totalNumber  在查询参数存在domain_id时，返回自定义策略总数
     *
     * @var string[]
     */
     protected static $getters = [
             'links' => 'getLinks',
-            'roles' => 'getRoles',
-            'totalNumber' => 'getTotalNumber'
+            'roles' => 'getRoles'
     ];
 
     /**
@@ -170,7 +160,6 @@ class KeystoneListAllProjectPermissionsForGroupResponse implements ModelInterfac
     {
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
-        $this->container['totalNumber'] = isset($data['totalNumber']) ? $data['totalNumber'] : null;
     }
 
     /**
@@ -223,7 +212,7 @@ class KeystoneListAllProjectPermissionsForGroupResponse implements ModelInterfac
     * Gets roles
     *  权限信息列表。
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\RoleResult[]|null
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\InheritedRoleResult[]|null
     */
     public function getRoles()
     {
@@ -233,37 +222,13 @@ class KeystoneListAllProjectPermissionsForGroupResponse implements ModelInterfac
     /**
     * Sets roles
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\RoleResult[]|null $roles 权限信息列表。
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\InheritedRoleResult[]|null $roles 权限信息列表。
     *
     * @return $this
     */
     public function setRoles($roles)
     {
         $this->container['roles'] = $roles;
-        return $this;
-    }
-
-    /**
-    * Gets totalNumber
-    *  在查询参数存在domain_id时，返回自定义策略总数
-    *
-    * @return int|null
-    */
-    public function getTotalNumber()
-    {
-        return $this->container['totalNumber'];
-    }
-
-    /**
-    * Sets totalNumber
-    *
-    * @param int|null $totalNumber 在查询参数存在domain_id时，返回自定义策略总数
-    *
-    * @return $this
-    */
-    public function setTotalNumber($totalNumber)
-    {
-        $this->container['totalNumber'] = $totalNumber;
         return $this;
     }
 

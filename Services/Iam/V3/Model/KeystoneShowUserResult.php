@@ -29,6 +29,7 @@ class KeystoneShowUserResult implements ModelInterface, ArrayAccess
     * links  links
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class KeystoneShowUserResult implements ModelInterface, ArrayAccess
             'passwordExpiresAt' => 'string',
             'links' => '\HuaweiCloud\SDK\Iam\V3\Model\Links',
             'id' => 'string',
-            'enabled' => 'bool'
+            'enabled' => 'bool',
+            'accessMode' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class KeystoneShowUserResult implements ModelInterface, ArrayAccess
     * links  links
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class KeystoneShowUserResult implements ModelInterface, ArrayAccess
         'passwordExpiresAt' => null,
         'links' => null,
         'id' => null,
-        'enabled' => null
+        'enabled' => null,
+        'accessMode' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class KeystoneShowUserResult implements ModelInterface, ArrayAccess
     * links  links
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class KeystoneShowUserResult implements ModelInterface, ArrayAccess
             'passwordExpiresAt' => 'password_expires_at',
             'links' => 'links',
             'id' => 'id',
-            'enabled' => 'enabled'
+            'enabled' => 'enabled',
+            'accessMode' => 'access_mode'
     ];
 
     /**
@@ -128,6 +134,7 @@ class KeystoneShowUserResult implements ModelInterface, ArrayAccess
     * links  links
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class KeystoneShowUserResult implements ModelInterface, ArrayAccess
             'passwordExpiresAt' => 'setPasswordExpiresAt',
             'links' => 'setLinks',
             'id' => 'setId',
-            'enabled' => 'setEnabled'
+            'enabled' => 'setEnabled',
+            'accessMode' => 'setAccessMode'
     ];
 
     /**
@@ -154,6 +162,7 @@ class KeystoneShowUserResult implements ModelInterface, ArrayAccess
     * links  links
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class KeystoneShowUserResult implements ModelInterface, ArrayAccess
             'passwordExpiresAt' => 'getPasswordExpiresAt',
             'links' => 'getLinks',
             'id' => 'getId',
-            'enabled' => 'getEnabled'
+            'enabled' => 'getEnabled',
+            'accessMode' => 'getAccessMode'
     ];
 
     /**
@@ -236,6 +246,7 @@ class KeystoneShowUserResult implements ModelInterface, ArrayAccess
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
+        $this->container['accessMode'] = isset($data['accessMode']) ? $data['accessMode'] : null;
     }
 
     /**
@@ -491,6 +502,30 @@ class KeystoneShowUserResult implements ModelInterface, ArrayAccess
     public function setEnabled($enabled)
     {
         $this->container['enabled'] = $enabled;
+        return $this;
+    }
+
+    /**
+    * Gets accessMode
+    *  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+    *
+    * @return string|null
+    */
+    public function getAccessMode()
+    {
+        return $this->container['accessMode'];
+    }
+
+    /**
+    * Sets accessMode
+    *
+    * @param string|null $accessMode IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+    *
+    * @return $this
+    */
+    public function setAccessMode($accessMode)
+    {
+        $this->container['accessMode'] = $accessMode;
         return $this;
     }
 

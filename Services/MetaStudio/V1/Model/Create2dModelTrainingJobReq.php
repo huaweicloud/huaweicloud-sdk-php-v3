@@ -21,7 +21,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    * contact  分身数字人训练任务创建者的手机号。
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
@@ -59,7 +59,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    * contact  分身数字人训练任务创建者的手机号。
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
@@ -118,7 +118,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    * contact  分身数字人训练任务创建者的手机号。
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
@@ -156,7 +156,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    * contact  分身数字人训练任务创建者的手机号。
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
@@ -194,7 +194,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    * contact  分身数字人训练任务创建者的手机号。
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
@@ -466,7 +466,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets contact
-    *  分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    *  分身数字人训练任务创建者的手机号。
     *
     * @return string|null
     */
@@ -478,7 +478,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets contact
     *
-    * @param string|null $contact 分身数字人训练任务创建者联系方式，如手机或邮箱等。
+    * @param string|null $contact 分身数字人训练任务创建者的手机号。
     *
     * @return $this
     */

@@ -20,6 +20,10 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * createTime  
+    * xdomainId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xdomainType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * isDomainOwner  IAM用户是否为账号管理员。
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     * name  新IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * password  IAM用户新密码。 - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 必须满足账户设置中[密码策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0607.html)的要求。 - 新密码不能与当前密码相同。
@@ -35,6 +39,10 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'createTime' => 'string',
+            'xdomainId' => 'string',
+            'xdomainType' => 'string',
+            'isDomainOwner' => 'bool',
             'accessMode' => 'string',
             'name' => 'string',
             'password' => 'string',
@@ -50,6 +58,10 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * createTime  
+    * xdomainId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xdomainType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * isDomainOwner  IAM用户是否为账号管理员。
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     * name  新IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * password  IAM用户新密码。 - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 必须满足账户设置中[密码策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0607.html)的要求。 - 新密码不能与当前密码相同。
@@ -65,6 +77,10 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'createTime' => null,
+        'xdomainId' => null,
+        'xdomainType' => null,
+        'isDomainOwner' => null,
         'accessMode' => null,
         'name' => null,
         'password' => 'password',
@@ -101,6 +117,10 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * createTime  
+    * xdomainId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xdomainType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * isDomainOwner  IAM用户是否为账号管理员。
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     * name  新IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * password  IAM用户新密码。 - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 必须满足账户设置中[密码策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0607.html)的要求。 - 新密码不能与当前密码相同。
@@ -116,6 +136,10 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'createTime' => 'create_time',
+            'xdomainId' => 'xdomain_id',
+            'xdomainType' => 'xdomain_type',
+            'isDomainOwner' => 'is_domain_owner',
             'accessMode' => 'access_mode',
             'name' => 'name',
             'password' => 'password',
@@ -131,6 +155,10 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * createTime  
+    * xdomainId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xdomainType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * isDomainOwner  IAM用户是否为账号管理员。
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     * name  新IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * password  IAM用户新密码。 - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 必须满足账户设置中[密码策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0607.html)的要求。 - 新密码不能与当前密码相同。
@@ -146,6 +174,10 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'createTime' => 'setCreateTime',
+            'xdomainId' => 'setXdomainId',
+            'xdomainType' => 'setXdomainType',
+            'isDomainOwner' => 'setIsDomainOwner',
             'accessMode' => 'setAccessMode',
             'name' => 'setName',
             'password' => 'setPassword',
@@ -161,6 +193,10 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * createTime  
+    * xdomainId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xdomainType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * isDomainOwner  IAM用户是否为账号管理员。
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     * name  新IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * password  IAM用户新密码。 - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 必须满足账户设置中[密码策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0607.html)的要求。 - 新密码不能与当前密码相同。
@@ -176,6 +212,10 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'createTime' => 'getCreateTime',
+            'xdomainId' => 'getXdomainId',
+            'xdomainType' => 'getXdomainType',
+            'isDomainOwner' => 'getIsDomainOwner',
             'accessMode' => 'getAccessMode',
             'name' => 'getName',
             'password' => 'getPassword',
@@ -247,6 +287,10 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['xdomainId'] = isset($data['xdomainId']) ? $data['xdomainId'] : null;
+        $this->container['xdomainType'] = isset($data['xdomainType']) ? $data['xdomainType'] : null;
+        $this->container['isDomainOwner'] = isset($data['isDomainOwner']) ? $data['isDomainOwner'] : null;
         $this->container['accessMode'] = isset($data['accessMode']) ? $data['accessMode'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
@@ -280,6 +324,102 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets createTime
+    *  
+    *
+    * @return string|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param string|null $createTime 
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets xdomainId
+    *  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    *
+    * @return string|null
+    */
+    public function getXdomainId()
+    {
+        return $this->container['xdomainId'];
+    }
+
+    /**
+    * Sets xdomainId
+    *
+    * @param string|null $xdomainId IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    *
+    * @return $this
+    */
+    public function setXdomainId($xdomainId)
+    {
+        $this->container['xdomainId'] = $xdomainId;
+        return $this;
+    }
+
+    /**
+    * Gets xdomainType
+    *  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    *
+    * @return string|null
+    */
+    public function getXdomainType()
+    {
+        return $this->container['xdomainType'];
+    }
+
+    /**
+    * Sets xdomainType
+    *
+    * @param string|null $xdomainType IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    *
+    * @return $this
+    */
+    public function setXdomainType($xdomainType)
+    {
+        $this->container['xdomainType'] = $xdomainType;
+        return $this;
+    }
+
+    /**
+    * Gets isDomainOwner
+    *  IAM用户是否为账号管理员。
+    *
+    * @return bool|null
+    */
+    public function getIsDomainOwner()
+    {
+        return $this->container['isDomainOwner'];
+    }
+
+    /**
+    * Sets isDomainOwner
+    *
+    * @param bool|null $isDomainOwner IAM用户是否为账号管理员。
+    *
+    * @return $this
+    */
+    public function setIsDomainOwner($isDomainOwner)
+    {
+        $this->container['isDomainOwner'] = $isDomainOwner;
+        return $this;
     }
 
     /**

@@ -494,8 +494,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }

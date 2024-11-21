@@ -22,28 +22,24 @@ class RulesLocal implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * user  user
     * group  group
-    * groups  联邦用户在本系统中所属用户组列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'user' => '\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalUser',
-            'group' => '\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalGroup',
-            'groups' => 'string'
+            'group' => '\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalGroup'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * user  user
     * group  group
-    * groups  联邦用户在本系统中所属用户组列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'user' => null,
-        'group' => null,
-        'groups' => null
+        'group' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class RulesLocal implements ModelInterface, ArrayAccess
     * and the value is the original name
     * user  user
     * group  group
-    * groups  联邦用户在本系统中所属用户组列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'user' => 'user',
-            'group' => 'group',
-            'groups' => 'groups'
+            'group' => 'group'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * user  user
     * group  group
-    * groups  联邦用户在本系统中所属用户组列表
     *
     * @var string[]
     */
     protected static $setters = [
             'user' => 'setUser',
-            'group' => 'setGroup',
-            'groups' => 'setGroups'
+            'group' => 'setGroup'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * user  user
     * group  group
-    * groups  联邦用户在本系统中所属用户组列表
     *
     * @var string[]
     */
     protected static $getters = [
             'user' => 'getUser',
-            'group' => 'getGroup',
-            'groups' => 'getGroups'
+            'group' => 'getGroup'
     ];
 
     /**
@@ -169,7 +159,6 @@ class RulesLocal implements ModelInterface, ArrayAccess
     {
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['group'] = isset($data['group']) ? $data['group'] : null;
-        $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
     }
 
     /**
@@ -239,30 +228,6 @@ class RulesLocal implements ModelInterface, ArrayAccess
     public function setGroup($group)
     {
         $this->container['group'] = $group;
-        return $this;
-    }
-
-    /**
-    * Gets groups
-    *  联邦用户在本系统中所属用户组列表
-    *
-    * @return string|null
-    */
-    public function getGroups()
-    {
-        return $this->container['groups'];
-    }
-
-    /**
-    * Sets groups
-    *
-    * @param string|null $groups 联邦用户在本系统中所属用户组列表
-    *
-    * @return $this
-    */
-    public function setGroups($groups)
-    {
-        $this->container['groups'] = $groups;
         return $this;
     }
 

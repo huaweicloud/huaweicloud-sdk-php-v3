@@ -25,7 +25,8 @@ class MetaData implements ModelInterface, ArrayAccess
     * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
     * videoSize  视频文件大小。  单位：字节。
     * width  视频宽度（单位：像素）。 - 编码为H.264的取值范围：[32,3840]之间2的倍数。 - 编码为H.265的取值范围：[320,3840]之间4的倍数。
-    * hight  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    * hight  视频高度（单位：像素）。该字段会逐渐废弃，请使用height字段。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    * height  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
     * bitRate  视频平均码率。
     * frameRate  帧率（单位：帧每秒）。  取值如下： - FRAMERATE_AUTO = 1, - FRAMERATE_10 = 2, - FRAMERATE_15 = 3, - FRAMERATE_2397 = 4, // 23.97 fps - FRAMERATE_24 = 5, - FRAMERATE_25 = 6, - FRAMERATE_2997 = 7, // 29.97 fps - FRAMERATE_30 = 8, - FRAMERATE_50 = 9, - FRAMERATE_60 = 10  默认值：1。  单位：帧每秒。
     * quality  清晰度。  取值如下： - FULL_HD：超高清 - HD：高清 - SD：标清 - FLUENT：流畅 - AD：自适应 - 2K - 4K
@@ -40,6 +41,7 @@ class MetaData implements ModelInterface, ArrayAccess
             'videoSize' => 'int',
             'width' => 'int',
             'hight' => 'int',
+            'height' => 'int',
             'bitRate' => 'int',
             'frameRate' => 'int',
             'quality' => 'string',
@@ -53,7 +55,8 @@ class MetaData implements ModelInterface, ArrayAccess
     * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
     * videoSize  视频文件大小。  单位：字节。
     * width  视频宽度（单位：像素）。 - 编码为H.264的取值范围：[32,3840]之间2的倍数。 - 编码为H.265的取值范围：[320,3840]之间4的倍数。
-    * hight  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    * hight  视频高度（单位：像素）。该字段会逐渐废弃，请使用height字段。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    * height  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
     * bitRate  视频平均码率。
     * frameRate  帧率（单位：帧每秒）。  取值如下： - FRAMERATE_AUTO = 1, - FRAMERATE_10 = 2, - FRAMERATE_15 = 3, - FRAMERATE_2397 = 4, // 23.97 fps - FRAMERATE_24 = 5, - FRAMERATE_25 = 6, - FRAMERATE_2997 = 7, // 29.97 fps - FRAMERATE_30 = 8, - FRAMERATE_50 = 9, - FRAMERATE_60 = 10  默认值：1。  单位：帧每秒。
     * quality  清晰度。  取值如下： - FULL_HD：超高清 - HD：高清 - SD：标清 - FLUENT：流畅 - AD：自适应 - 2K - 4K
@@ -68,6 +71,7 @@ class MetaData implements ModelInterface, ArrayAccess
         'videoSize' => 'int64',
         'width' => 'int64',
         'hight' => 'int64',
+        'height' => 'int64',
         'bitRate' => 'int64',
         'frameRate' => 'int64',
         'quality' => null,
@@ -102,7 +106,8 @@ class MetaData implements ModelInterface, ArrayAccess
     * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
     * videoSize  视频文件大小。  单位：字节。
     * width  视频宽度（单位：像素）。 - 编码为H.264的取值范围：[32,3840]之间2的倍数。 - 编码为H.265的取值范围：[320,3840]之间4的倍数。
-    * hight  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    * hight  视频高度（单位：像素）。该字段会逐渐废弃，请使用height字段。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    * height  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
     * bitRate  视频平均码率。
     * frameRate  帧率（单位：帧每秒）。  取值如下： - FRAMERATE_AUTO = 1, - FRAMERATE_10 = 2, - FRAMERATE_15 = 3, - FRAMERATE_2397 = 4, // 23.97 fps - FRAMERATE_24 = 5, - FRAMERATE_25 = 6, - FRAMERATE_2997 = 7, // 29.97 fps - FRAMERATE_30 = 8, - FRAMERATE_50 = 9, - FRAMERATE_60 = 10  默认值：1。  单位：帧每秒。
     * quality  清晰度。  取值如下： - FULL_HD：超高清 - HD：高清 - SD：标清 - FLUENT：流畅 - AD：自适应 - 2K - 4K
@@ -117,6 +122,7 @@ class MetaData implements ModelInterface, ArrayAccess
             'videoSize' => 'video_size',
             'width' => 'width',
             'hight' => 'hight',
+            'height' => 'height',
             'bitRate' => 'bit_rate',
             'frameRate' => 'frame_rate',
             'quality' => 'quality',
@@ -130,7 +136,8 @@ class MetaData implements ModelInterface, ArrayAccess
     * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
     * videoSize  视频文件大小。  单位：字节。
     * width  视频宽度（单位：像素）。 - 编码为H.264的取值范围：[32,3840]之间2的倍数。 - 编码为H.265的取值范围：[320,3840]之间4的倍数。
-    * hight  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    * hight  视频高度（单位：像素）。该字段会逐渐废弃，请使用height字段。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    * height  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
     * bitRate  视频平均码率。
     * frameRate  帧率（单位：帧每秒）。  取值如下： - FRAMERATE_AUTO = 1, - FRAMERATE_10 = 2, - FRAMERATE_15 = 3, - FRAMERATE_2397 = 4, // 23.97 fps - FRAMERATE_24 = 5, - FRAMERATE_25 = 6, - FRAMERATE_2997 = 7, // 29.97 fps - FRAMERATE_30 = 8, - FRAMERATE_50 = 9, - FRAMERATE_60 = 10  默认值：1。  单位：帧每秒。
     * quality  清晰度。  取值如下： - FULL_HD：超高清 - HD：高清 - SD：标清 - FLUENT：流畅 - AD：自适应 - 2K - 4K
@@ -145,6 +152,7 @@ class MetaData implements ModelInterface, ArrayAccess
             'videoSize' => 'setVideoSize',
             'width' => 'setWidth',
             'hight' => 'setHight',
+            'height' => 'setHeight',
             'bitRate' => 'setBitRate',
             'frameRate' => 'setFrameRate',
             'quality' => 'setQuality',
@@ -158,7 +166,8 @@ class MetaData implements ModelInterface, ArrayAccess
     * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
     * videoSize  视频文件大小。  单位：字节。
     * width  视频宽度（单位：像素）。 - 编码为H.264的取值范围：[32,3840]之间2的倍数。 - 编码为H.265的取值范围：[320,3840]之间4的倍数。
-    * hight  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    * hight  视频高度（单位：像素）。该字段会逐渐废弃，请使用height字段。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    * height  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
     * bitRate  视频平均码率。
     * frameRate  帧率（单位：帧每秒）。  取值如下： - FRAMERATE_AUTO = 1, - FRAMERATE_10 = 2, - FRAMERATE_15 = 3, - FRAMERATE_2397 = 4, // 23.97 fps - FRAMERATE_24 = 5, - FRAMERATE_25 = 6, - FRAMERATE_2997 = 7, // 29.97 fps - FRAMERATE_30 = 8, - FRAMERATE_50 = 9, - FRAMERATE_60 = 10  默认值：1。  单位：帧每秒。
     * quality  清晰度。  取值如下： - FULL_HD：超高清 - HD：高清 - SD：标清 - FLUENT：流畅 - AD：自适应 - 2K - 4K
@@ -173,6 +182,7 @@ class MetaData implements ModelInterface, ArrayAccess
             'videoSize' => 'getVideoSize',
             'width' => 'getWidth',
             'hight' => 'getHight',
+            'height' => 'getHeight',
             'bitRate' => 'getBitRate',
             'frameRate' => 'getFrameRate',
             'quality' => 'getQuality',
@@ -359,6 +369,7 @@ class MetaData implements ModelInterface, ArrayAccess
         $this->container['videoSize'] = isset($data['videoSize']) ? $data['videoSize'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['hight'] = isset($data['hight']) ? $data['hight'] : null;
+        $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['bitRate'] = isset($data['bitRate']) ? $data['bitRate'] : null;
         $this->container['frameRate'] = isset($data['frameRate']) ? $data['frameRate'] : null;
         $this->container['quality'] = isset($data['quality']) ? $data['quality'] : null;
@@ -525,7 +536,7 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Gets hight
-    *  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    *  视频高度（单位：像素）。该字段会逐渐废弃，请使用height字段。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
     *
     * @return int|null
     */
@@ -537,13 +548,37 @@ class MetaData implements ModelInterface, ArrayAccess
     /**
     * Sets hight
     *
-    * @param int|null $hight 视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    * @param int|null $hight 视频高度（单位：像素）。该字段会逐渐废弃，请使用height字段。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
     *
     * @return $this
     */
     public function setHight($hight)
     {
         $this->container['hight'] = $hight;
+        return $this;
+    }
+
+    /**
+    * Gets height
+    *  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    *
+    * @return int|null
+    */
+    public function getHeight()
+    {
+        return $this->container['height'];
+    }
+
+    /**
+    * Sets height
+    *
+    * @param int|null $height 视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
+    *
+    * @return $this
+    */
+    public function setHeight($height)
+    {
+        $this->container['height'] = $height;
         return $this;
     }
 

@@ -28,7 +28,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言  * zh_CN:简体中文  * en_US:英语
+    * language  智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言  * zh_CN:简体中文  * en_US:英语
+    * language  智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言  * zh_CN:简体中文  * en_US:英语
+    * language  智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言  * zh_CN:简体中文  * en_US:英语
+    * language  智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言  * zh_CN:简体中文  * en_US:英语
+    * language  智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
     *
     * @var string[]
     */
@@ -211,6 +211,8 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     }
     const LANGUAGE_ZH_CN = 'zh_CN';
     const LANGUAGE_EN_US = 'en_US';
+    const LANGUAGE_CN = 'CN';
+    const LANGUAGE_EN = 'EN';
     
 
     /**
@@ -223,6 +225,8 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
         return [
             self::LANGUAGE_ZH_CN,
             self::LANGUAGE_EN_US,
+            self::LANGUAGE_CN,
+            self::LANGUAGE_EN,
         ];
     }
 
@@ -528,7 +532,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  智能交互语言  * zh_CN:简体中文  * en_US:英语
+    *  智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
     *
     * @return string|null
     */
@@ -540,7 +544,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 智能交互语言  * zh_CN:简体中文  * en_US:英语
+    * @param string|null $language 智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
     *
     * @return $this
     */

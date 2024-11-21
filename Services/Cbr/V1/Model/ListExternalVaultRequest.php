@@ -199,20 +199,7 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const PROTECT_TYPE_BACKUPREPLICATIONHYBRID = 'backup;replication;hybrid';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getProtectTypeAllowableValues()
-    {
-        return [
-            self::PROTECT_TYPE_BACKUPREPLICATIONHYBRID,
-        ];
-    }
 
 
     /**
@@ -257,14 +244,6 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-            $allowedValues = $this->getProtectTypeAllowableValues();
-                if (!is_null($this->container['protectType']) && !in_array($this->container['protectType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'protectType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['regionId'] === null) {
             $invalidProperties[] = "'regionId' can't be null";
         }

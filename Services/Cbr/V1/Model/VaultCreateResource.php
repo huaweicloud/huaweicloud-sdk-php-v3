@@ -44,6 +44,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     *
     * @var string[]
     */
@@ -71,7 +72,8 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'demandBilling' => 'bool',
             'cbcDeleteCount' => 'int',
             'frozen' => 'bool',
-            'sysLockSourceService' => 'string'
+            'sysLockSourceService' => 'string',
+            'locked' => 'bool'
     ];
 
     /**
@@ -100,6 +102,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     *
     * @var string[]
     */
@@ -127,7 +130,8 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
         'demandBilling' => null,
         'cbcDeleteCount' => 'int32',
         'frozen' => null,
-        'sysLockSourceService' => null
+        'sysLockSourceService' => null,
+        'locked' => null
     ];
 
     /**
@@ -177,6 +181,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     *
     * @var string[]
     */
@@ -204,7 +209,8 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'demandBilling' => 'demand_billing',
             'cbcDeleteCount' => 'cbc_delete_count',
             'frozen' => 'frozen',
-            'sysLockSourceService' => 'sys_lock_source_service'
+            'sysLockSourceService' => 'sys_lock_source_service',
+            'locked' => 'locked'
     ];
 
     /**
@@ -233,6 +239,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     *
     * @var string[]
     */
@@ -260,7 +267,8 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'demandBilling' => 'setDemandBilling',
             'cbcDeleteCount' => 'setCbcDeleteCount',
             'frozen' => 'setFrozen',
-            'sysLockSourceService' => 'setSysLockSourceService'
+            'sysLockSourceService' => 'setSysLockSourceService',
+            'locked' => 'setLocked'
     ];
 
     /**
@@ -289,6 +297,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     *
     * @var string[]
     */
@@ -316,7 +325,8 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'demandBilling' => 'getDemandBilling',
             'cbcDeleteCount' => 'getCbcDeleteCount',
             'frozen' => 'getFrozen',
-            'sysLockSourceService' => 'getSysLockSourceService'
+            'sysLockSourceService' => 'getSysLockSourceService',
+            'locked' => 'getLocked'
     ];
 
     /**
@@ -401,6 +411,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
         $this->container['cbcDeleteCount'] = isset($data['cbcDeleteCount']) ? $data['cbcDeleteCount'] : null;
         $this->container['frozen'] = isset($data['frozen']) ? $data['frozen'] : null;
         $this->container['sysLockSourceService'] = isset($data['sysLockSourceService']) ? $data['sysLockSourceService'] : null;
+        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
     }
 
     /**
@@ -1046,6 +1057,30 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     public function setSysLockSourceService($sysLockSourceService)
     {
         $this->container['sysLockSourceService'] = $sysLockSourceService;
+        return $this;
+    }
+
+    /**
+    * Gets locked
+    *  用于标识该存储库是否已锁定
+    *
+    * @return bool|null
+    */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+    * Sets locked
+    *
+    * @param bool|null $locked 用于标识该存储库是否已锁定
+    *
+    * @return $this
+    */
+    public function setLocked($locked)
+    {
+        $this->container['locked'] = $locked;
         return $this;
     }
 

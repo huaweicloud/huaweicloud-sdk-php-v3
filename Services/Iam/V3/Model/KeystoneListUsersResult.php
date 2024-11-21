@@ -30,6 +30,7 @@ class KeystoneListUsersResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class KeystoneListUsersResult implements ModelInterface, ArrayAccess
             'links' => '\HuaweiCloud\SDK\Iam\V3\Model\Links',
             'id' => 'string',
             'enabled' => 'bool',
-            'pwdStrength' => 'string'
+            'pwdStrength' => 'string',
+            'accessMode' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class KeystoneListUsersResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class KeystoneListUsersResult implements ModelInterface, ArrayAccess
         'links' => null,
         'id' => null,
         'enabled' => null,
-        'pwdStrength' => null
+        'pwdStrength' => null,
+        'accessMode' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class KeystoneListUsersResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class KeystoneListUsersResult implements ModelInterface, ArrayAccess
             'links' => 'links',
             'id' => 'id',
             'enabled' => 'enabled',
-            'pwdStrength' => 'pwd_strength'
+            'pwdStrength' => 'pwd_strength',
+            'accessMode' => 'access_mode'
     ];
 
     /**
@@ -135,6 +141,7 @@ class KeystoneListUsersResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class KeystoneListUsersResult implements ModelInterface, ArrayAccess
             'links' => 'setLinks',
             'id' => 'setId',
             'enabled' => 'setEnabled',
-            'pwdStrength' => 'setPwdStrength'
+            'pwdStrength' => 'setPwdStrength',
+            'accessMode' => 'setAccessMode'
     ];
 
     /**
@@ -163,6 +171,7 @@ class KeystoneListUsersResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class KeystoneListUsersResult implements ModelInterface, ArrayAccess
             'links' => 'getLinks',
             'id' => 'getId',
             'enabled' => 'getEnabled',
-            'pwdStrength' => 'getPwdStrength'
+            'pwdStrength' => 'getPwdStrength',
+            'accessMode' => 'getAccessMode'
     ];
 
     /**
@@ -247,6 +257,7 @@ class KeystoneListUsersResult implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['pwdStrength'] = isset($data['pwdStrength']) ? $data['pwdStrength'] : null;
+        $this->container['accessMode'] = isset($data['accessMode']) ? $data['accessMode'] : null;
     }
 
     /**
@@ -526,6 +537,30 @@ class KeystoneListUsersResult implements ModelInterface, ArrayAccess
     public function setPwdStrength($pwdStrength)
     {
         $this->container['pwdStrength'] = $pwdStrength;
+        return $this;
+    }
+
+    /**
+    * Gets accessMode
+    *  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+    *
+    * @return string|null
+    */
+    public function getAccessMode()
+    {
+        return $this->container['accessMode'];
+    }
+
+    /**
+    * Sets accessMode
+    *
+    * @param string|null $accessMode IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+    *
+    * @return $this
+    */
+    public function setAccessMode($accessMode)
+    {
+        $this->container['accessMode'] = $accessMode;
         return $this;
     }
 

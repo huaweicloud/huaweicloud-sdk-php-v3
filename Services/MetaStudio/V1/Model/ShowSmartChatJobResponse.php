@@ -32,11 +32,13 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * voiceConfigList  语音配置参数列表。
     * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
     * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * chatAccessAddress  智能交互接入地址。
     * isTransparent  是否透明背景
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -53,11 +55,13 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCRoomInfoList',
             'chatSubtitleConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatSubtitleConfig',
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatVideoConfig',
+            'voiceConfigList' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatVoiceConfig[]',
             'chatState' => 'int',
             'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'chatVideoType' => 'string',
             'chatAccessAddress' => 'string',
             'isTransparent' => 'bool',
+            'defaultLanguage' => 'string',
             'xRequestId' => 'string'
     ];
 
@@ -74,11 +78,13 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * voiceConfigList  语音配置参数列表。
     * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
     * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * chatAccessAddress  智能交互接入地址。
     * isTransparent  是否透明背景
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -95,11 +101,13 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
         'rtcRoomInfo' => null,
         'chatSubtitleConfig' => null,
         'videoConfig' => null,
+        'voiceConfigList' => null,
         'chatState' => null,
         'language' => null,
         'chatVideoType' => null,
         'chatAccessAddress' => null,
         'isTransparent' => null,
+        'defaultLanguage' => null,
         'xRequestId' => null
     ];
 
@@ -137,11 +145,13 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * voiceConfigList  语音配置参数列表。
     * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
     * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * chatAccessAddress  智能交互接入地址。
     * isTransparent  是否透明背景
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -158,11 +168,13 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => 'rtc_room_info',
             'chatSubtitleConfig' => 'chat_subtitle_config',
             'videoConfig' => 'video_config',
+            'voiceConfigList' => 'voice_config_list',
             'chatState' => 'chat_state',
             'language' => 'language',
             'chatVideoType' => 'chat_video_type',
             'chatAccessAddress' => 'chat_access_address',
             'isTransparent' => 'is_transparent',
+            'defaultLanguage' => 'default_language',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -179,11 +191,13 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * voiceConfigList  语音配置参数列表。
     * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
     * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * chatAccessAddress  智能交互接入地址。
     * isTransparent  是否透明背景
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -200,11 +214,13 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => 'setRtcRoomInfo',
             'chatSubtitleConfig' => 'setChatSubtitleConfig',
             'videoConfig' => 'setVideoConfig',
+            'voiceConfigList' => 'setVoiceConfigList',
             'chatState' => 'setChatState',
             'language' => 'setLanguage',
             'chatVideoType' => 'setChatVideoType',
             'chatAccessAddress' => 'setChatAccessAddress',
             'isTransparent' => 'setIsTransparent',
+            'defaultLanguage' => 'setDefaultLanguage',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -221,11 +237,13 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * voiceConfigList  语音配置参数列表。
     * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
     * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * chatAccessAddress  智能交互接入地址。
     * isTransparent  是否透明背景
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -242,11 +260,13 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => 'getRtcRoomInfo',
             'chatSubtitleConfig' => 'getChatSubtitleConfig',
             'videoConfig' => 'getVideoConfig',
+            'voiceConfigList' => 'getVoiceConfigList',
             'chatState' => 'getChatState',
             'language' => 'getLanguage',
             'chatVideoType' => 'getChatVideoType',
             'chatAccessAddress' => 'getChatAccessAddress',
             'isTransparent' => 'getIsTransparent',
+            'defaultLanguage' => 'getDefaultLanguage',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -299,6 +319,8 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     const CHAT_VIDEO_TYPE_COMPUTER = 'COMPUTER';
     const CHAT_VIDEO_TYPE_MOBILE = 'MOBILE';
     const CHAT_VIDEO_TYPE_HUB = 'HUB';
+    const DEFAULT_LANGUAGE_CN = 'CN';
+    const DEFAULT_LANGUAGE_EN = 'EN';
     
 
     /**
@@ -332,6 +354,19 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDefaultLanguageAllowableValues()
+    {
+        return [
+            self::DEFAULT_LANGUAGE_CN,
+            self::DEFAULT_LANGUAGE_EN,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -359,11 +394,13 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
         $this->container['rtcRoomInfo'] = isset($data['rtcRoomInfo']) ? $data['rtcRoomInfo'] : null;
         $this->container['chatSubtitleConfig'] = isset($data['chatSubtitleConfig']) ? $data['chatSubtitleConfig'] : null;
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
+        $this->container['voiceConfigList'] = isset($data['voiceConfigList']) ? $data['voiceConfigList'] : null;
         $this->container['chatState'] = isset($data['chatState']) ? $data['chatState'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['chatVideoType'] = isset($data['chatVideoType']) ? $data['chatVideoType'] : null;
         $this->container['chatAccessAddress'] = isset($data['chatAccessAddress']) ? $data['chatAccessAddress'] : null;
         $this->container['isTransparent'] = isset($data['isTransparent']) ? $data['isTransparent'] : null;
+        $this->container['defaultLanguage'] = isset($data['defaultLanguage']) ? $data['defaultLanguage'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -451,6 +488,14 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['chatAccessAddress']) && (mb_strlen($this->container['chatAccessAddress']) < 1)) {
                 $invalidProperties[] = "invalid value for 'chatAccessAddress', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getDefaultLanguageAllowableValues();
+                if (!is_null($this->container['defaultLanguage']) && !in_array($this->container['defaultLanguage'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'defaultLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -730,6 +775,30 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets voiceConfigList
+    *  语音配置参数列表。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatVoiceConfig[]|null
+    */
+    public function getVoiceConfigList()
+    {
+        return $this->container['voiceConfigList'];
+    }
+
+    /**
+    * Sets voiceConfigList
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatVoiceConfig[]|null $voiceConfigList 语音配置参数列表。
+    *
+    * @return $this
+    */
+    public function setVoiceConfigList($voiceConfigList)
+    {
+        $this->container['voiceConfigList'] = $voiceConfigList;
+        return $this;
+    }
+
+    /**
     * Gets chatState
     *  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
     *
@@ -846,6 +915,30 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     public function setIsTransparent($isTransparent)
     {
         $this->container['isTransparent'] = $isTransparent;
+        return $this;
+    }
+
+    /**
+    * Gets defaultLanguage
+    *  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
+    *
+    * @return string|null
+    */
+    public function getDefaultLanguage()
+    {
+        return $this->container['defaultLanguage'];
+    }
+
+    /**
+    * Sets defaultLanguage
+    *
+    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
+    *
+    * @return $this
+    */
+    public function setDefaultLanguage($defaultLanguage)
+    {
+        $this->container['defaultLanguage'] = $defaultLanguage;
         return $this;
     }
 

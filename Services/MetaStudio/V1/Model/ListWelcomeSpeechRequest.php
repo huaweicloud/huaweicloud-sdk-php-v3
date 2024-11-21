@@ -27,6 +27,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * robotId  应用ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'robotId' => 'string'
+            'robotId' => 'string',
+            'language' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * robotId  应用ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
         'xAppUserId' => null,
         'offset' => 'uint32',
         'limit' => 'uint32',
-        'robotId' => null
+        'robotId' => null,
+        'language' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * robotId  应用ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'X-App-UserId',
             'offset' => 'offset',
             'limit' => 'limit',
-            'robotId' => 'robot_id'
+            'robotId' => 'robot_id',
+            'language' => 'language'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * robotId  应用ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'setXAppUserId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'robotId' => 'setRobotId'
+            'robotId' => 'setRobotId',
+            'language' => 'setLanguage'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * robotId  应用ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'getXAppUserId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'robotId' => 'getRobotId'
+            'robotId' => 'getRobotId',
+            'language' => 'getLanguage'
     ];
 
     /**
@@ -189,7 +199,22 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const LANGUAGE_CN = 'CN';
+    const LANGUAGE_EN = 'EN';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLanguageAllowableValues()
+    {
+        return [
+            self::LANGUAGE_CN,
+            self::LANGUAGE_EN,
+        ];
+    }
 
 
     /**
@@ -214,6 +239,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
     }
 
     /**
@@ -269,6 +295,14 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['robotId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'robotId', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getLanguageAllowableValues();
+                if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'language', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -448,6 +482,30 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     public function setRobotId($robotId)
     {
         $this->container['robotId'] = $robotId;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  智能交互语言  * CN:中文  * EN:英文
+    *
+    * @return string|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param string|null $language 智能交互语言  * CN:中文  * EN:英文
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 

@@ -26,7 +26,7 @@ class ListAgenciesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'agencies' => '\HuaweiCloud\SDK\Iam\V3\Model\AgencyResult[]'
+            'agencies' => '\HuaweiCloud\SDK\Iam\V3\Model\AgencyListResult[]'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ListAgenciesResponse implements ModelInterface, ArrayAccess
     * Gets agencies
     *  委托信息列表。
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyResult[]|null
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyListResult[]|null
     */
     public function getAgencies()
     {
@@ -187,7 +187,7 @@ class ListAgenciesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets agencies
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\AgencyResult[]|null $agencies 委托信息列表。
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\AgencyListResult[]|null $agencies 委托信息列表。
     *
     * @return $this
     */

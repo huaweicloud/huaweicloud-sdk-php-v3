@@ -25,6 +25,7 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * robotId  应用ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'string',
             'xProjectId' => 'string',
             'xAppUserId' => 'string',
-            'robotId' => 'string'
+            'robotId' => 'string',
+            'language' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * robotId  应用ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
         'xSdkDate' => null,
         'xProjectId' => null,
         'xAppUserId' => null,
-        'robotId' => null
+        'robotId' => null,
+        'language' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * robotId  应用ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'X-Sdk-Date',
             'xProjectId' => 'X-Project-Id',
             'xAppUserId' => 'X-App-UserId',
-            'robotId' => 'robot_id'
+            'robotId' => 'robot_id',
+            'language' => 'language'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * robotId  应用ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'setXSdkDate',
             'xProjectId' => 'setXProjectId',
             'xAppUserId' => 'setXAppUserId',
-            'robotId' => 'setRobotId'
+            'robotId' => 'setRobotId',
+            'language' => 'setLanguage'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * robotId  应用ID。
+    * language  智能交互语言  * CN:中文  * EN:英文
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'getXSdkDate',
             'xProjectId' => 'getXProjectId',
             'xAppUserId' => 'getXAppUserId',
-            'robotId' => 'getRobotId'
+            'robotId' => 'getRobotId',
+            'language' => 'getLanguage'
     ];
 
     /**
@@ -169,7 +179,22 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const LANGUAGE_CN = 'CN';
+    const LANGUAGE_EN = 'EN';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLanguageAllowableValues()
+    {
+        return [
+            self::LANGUAGE_CN,
+            self::LANGUAGE_EN,
+        ];
+    }
 
 
     /**
@@ -192,6 +217,7 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
         $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
     }
 
     /**
@@ -235,6 +261,14 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['robotId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'robotId', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getLanguageAllowableValues();
+                if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'language', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -366,6 +400,30 @@ class ShowWelcomeSpeechSwitchRequest implements ModelInterface, ArrayAccess
     public function setRobotId($robotId)
     {
         $this->container['robotId'] = $robotId;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  智能交互语言  * CN:中文  * EN:英文
+    *
+    * @return string|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param string|null $language 智能交互语言  * CN:中文  * EN:英文
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 

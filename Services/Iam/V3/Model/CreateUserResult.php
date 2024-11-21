@@ -38,6 +38,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
     * xdomainType  运营主体。
     * id  IAM用户ID。
     * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
+    * defaultProjectId  用户默认的项目ID。
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class CreateUserResult implements ModelInterface, ArrayAccess
             'xdomainId' => 'string',
             'xdomainType' => 'string',
             'id' => 'string',
-            'passwordExpiresAt' => 'string'
+            'passwordExpiresAt' => 'string',
+            'defaultProjectId' => 'string'
     ];
 
     /**
@@ -82,6 +84,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
     * xdomainType  运营主体。
     * id  IAM用户ID。
     * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
+    * defaultProjectId  用户默认的项目ID。
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class CreateUserResult implements ModelInterface, ArrayAccess
         'xdomainId' => null,
         'xdomainType' => null,
         'id' => null,
-        'passwordExpiresAt' => null
+        'passwordExpiresAt' => null,
+        'defaultProjectId' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
     * xdomainType  运营主体。
     * id  IAM用户ID。
     * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
+    * defaultProjectId  用户默认的项目ID。
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class CreateUserResult implements ModelInterface, ArrayAccess
             'xdomainId' => 'xdomain_id',
             'xdomainType' => 'xdomain_type',
             'id' => 'id',
-            'passwordExpiresAt' => 'password_expires_at'
+            'passwordExpiresAt' => 'password_expires_at',
+            'defaultProjectId' => 'default_project_id'
     ];
 
     /**
@@ -191,6 +197,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
     * xdomainType  运营主体。
     * id  IAM用户ID。
     * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
+    * defaultProjectId  用户默认的项目ID。
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class CreateUserResult implements ModelInterface, ArrayAccess
             'xdomainId' => 'setXdomainId',
             'xdomainType' => 'setXdomainType',
             'id' => 'setId',
-            'passwordExpiresAt' => 'setPasswordExpiresAt'
+            'passwordExpiresAt' => 'setPasswordExpiresAt',
+            'defaultProjectId' => 'setDefaultProjectId'
     ];
 
     /**
@@ -235,6 +243,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
     * xdomainType  运营主体。
     * id  IAM用户ID。
     * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
+    * defaultProjectId  用户默认的项目ID。
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class CreateUserResult implements ModelInterface, ArrayAccess
             'xdomainId' => 'getXdomainId',
             'xdomainType' => 'getXdomainType',
             'id' => 'getId',
-            'passwordExpiresAt' => 'getPasswordExpiresAt'
+            'passwordExpiresAt' => 'getPasswordExpiresAt',
+            'defaultProjectId' => 'getDefaultProjectId'
     ];
 
     /**
@@ -335,6 +345,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
         $this->container['xdomainType'] = isset($data['xdomainType']) ? $data['xdomainType'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['passwordExpiresAt'] = isset($data['passwordExpiresAt']) ? $data['passwordExpiresAt'] : null;
+        $this->container['defaultProjectId'] = isset($data['defaultProjectId']) ? $data['defaultProjectId'] : null;
     }
 
     /**
@@ -800,6 +811,30 @@ class CreateUserResult implements ModelInterface, ArrayAccess
     public function setPasswordExpiresAt($passwordExpiresAt)
     {
         $this->container['passwordExpiresAt'] = $passwordExpiresAt;
+        return $this;
+    }
+
+    /**
+    * Gets defaultProjectId
+    *  用户默认的项目ID。
+    *
+    * @return string|null
+    */
+    public function getDefaultProjectId()
+    {
+        return $this->container['defaultProjectId'];
+    }
+
+    /**
+    * Sets defaultProjectId
+    *
+    * @param string|null $defaultProjectId 用户默认的项目ID。
+    *
+    * @return $this
+    */
+    public function setDefaultProjectId($defaultProjectId)
+    {
+        $this->container['defaultProjectId'] = $defaultProjectId;
         return $this;
     }
 

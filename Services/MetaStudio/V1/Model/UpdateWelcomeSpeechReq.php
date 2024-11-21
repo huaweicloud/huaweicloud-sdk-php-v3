@@ -21,21 +21,25 @@ class UpdateWelcomeSpeechReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * welcomeSpeech  欢迎词。
+    * enableWelcomeSpeech  欢迎词功能开关。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'welcomeSpeech' => 'string'
+            'welcomeSpeech' => 'string',
+            'enableWelcomeSpeech' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * welcomeSpeech  欢迎词。
+    * enableWelcomeSpeech  欢迎词功能开关。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'welcomeSpeech' => null
+        'welcomeSpeech' => null,
+        'enableWelcomeSpeech' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class UpdateWelcomeSpeechReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * welcomeSpeech  欢迎词。
+    * enableWelcomeSpeech  欢迎词功能开关。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'welcomeSpeech' => 'welcome_speech'
+            'welcomeSpeech' => 'welcome_speech',
+            'enableWelcomeSpeech' => 'enable_welcome_speech'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * welcomeSpeech  欢迎词。
+    * enableWelcomeSpeech  欢迎词功能开关。
     *
     * @var string[]
     */
     protected static $setters = [
-            'welcomeSpeech' => 'setWelcomeSpeech'
+            'welcomeSpeech' => 'setWelcomeSpeech',
+            'enableWelcomeSpeech' => 'setEnableWelcomeSpeech'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * welcomeSpeech  欢迎词。
+    * enableWelcomeSpeech  欢迎词功能开关。
     *
     * @var string[]
     */
     protected static $getters = [
-            'welcomeSpeech' => 'getWelcomeSpeech'
+            'welcomeSpeech' => 'getWelcomeSpeech',
+            'enableWelcomeSpeech' => 'getEnableWelcomeSpeech'
     ];
 
     /**
@@ -148,6 +158,7 @@ class UpdateWelcomeSpeechReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['welcomeSpeech'] = isset($data['welcomeSpeech']) ? $data['welcomeSpeech'] : null;
+        $this->container['enableWelcomeSpeech'] = isset($data['enableWelcomeSpeech']) ? $data['enableWelcomeSpeech'] : null;
     }
 
     /**
@@ -199,6 +210,30 @@ class UpdateWelcomeSpeechReq implements ModelInterface, ArrayAccess
     public function setWelcomeSpeech($welcomeSpeech)
     {
         $this->container['welcomeSpeech'] = $welcomeSpeech;
+        return $this;
+    }
+
+    /**
+    * Gets enableWelcomeSpeech
+    *  欢迎词功能开关。
+    *
+    * @return bool|null
+    */
+    public function getEnableWelcomeSpeech()
+    {
+        return $this->container['enableWelcomeSpeech'];
+    }
+
+    /**
+    * Sets enableWelcomeSpeech
+    *
+    * @param bool|null $enableWelcomeSpeech 欢迎词功能开关。
+    *
+    * @return $this
+    */
+    public function setEnableWelcomeSpeech($enableWelcomeSpeech)
+    {
+        $this->container['enableWelcomeSpeech'] = $enableWelcomeSpeech;
         return $this;
     }
 

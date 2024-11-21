@@ -22,24 +22,28 @@ class UpdateWelcomeSpeechSwitchReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * robotId  应用ID。
     * enableWelcomeSpeech  欢迎词功能开关。
+    * language  language
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'robotId' => 'string',
-            'enableWelcomeSpeech' => 'bool'
+            'enableWelcomeSpeech' => 'bool',
+            'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * robotId  应用ID。
     * enableWelcomeSpeech  欢迎词功能开关。
+    * language  language
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'robotId' => null,
-        'enableWelcomeSpeech' => null
+        'enableWelcomeSpeech' => null,
+        'language' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class UpdateWelcomeSpeechSwitchReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * robotId  应用ID。
     * enableWelcomeSpeech  欢迎词功能开关。
+    * language  language
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'robotId' => 'robot_id',
-            'enableWelcomeSpeech' => 'enable_welcome_speech'
+            'enableWelcomeSpeech' => 'enable_welcome_speech',
+            'language' => 'language'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * robotId  应用ID。
     * enableWelcomeSpeech  欢迎词功能开关。
+    * language  language
     *
     * @var string[]
     */
     protected static $setters = [
             'robotId' => 'setRobotId',
-            'enableWelcomeSpeech' => 'setEnableWelcomeSpeech'
+            'enableWelcomeSpeech' => 'setEnableWelcomeSpeech',
+            'language' => 'setLanguage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * robotId  应用ID。
     * enableWelcomeSpeech  欢迎词功能开关。
+    * language  language
     *
     * @var string[]
     */
     protected static $getters = [
             'robotId' => 'getRobotId',
-            'enableWelcomeSpeech' => 'getEnableWelcomeSpeech'
+            'enableWelcomeSpeech' => 'getEnableWelcomeSpeech',
+            'language' => 'getLanguage'
     ];
 
     /**
@@ -159,6 +169,7 @@ class UpdateWelcomeSpeechSwitchReq implements ModelInterface, ArrayAccess
     {
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
         $this->container['enableWelcomeSpeech'] = isset($data['enableWelcomeSpeech']) ? $data['enableWelcomeSpeech'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
     }
 
     /**
@@ -240,6 +251,30 @@ class UpdateWelcomeSpeechSwitchReq implements ModelInterface, ArrayAccess
     public function setEnableWelcomeSpeech($enableWelcomeSpeech)
     {
         $this->container['enableWelcomeSpeech'] = $enableWelcomeSpeech;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  language
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null $language language
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 

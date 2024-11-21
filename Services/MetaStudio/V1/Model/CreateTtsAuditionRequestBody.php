@@ -25,6 +25,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。 默认值100，最小值50，最大值200。
     * volume  音量。 默认值140，最小值90，最大值240。
+    * businessType  业务场景，多个入口调用试听接口时的业务场景
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             'emotion' => 'string',
             'speed' => 'int',
             'pitch' => 'int',
-            'volume' => 'int'
+            'volume' => 'int',
+            'businessType' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。 默认值100，最小值50，最大值200。
     * volume  音量。 默认值140，最小值90，最大值240。
+    * businessType  业务场景，多个入口调用试听接口时的业务场景
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
         'emotion' => null,
         'speed' => 'int32',
         'pitch' => 'int32',
-        'volume' => 'int32'
+        'volume' => 'int32',
+        'businessType' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。 默认值100，最小值50，最大值200。
     * volume  音量。 默认值140，最小值90，最大值240。
+    * businessType  业务场景，多个入口调用试听接口时的业务场景
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             'emotion' => 'emotion',
             'speed' => 'speed',
             'pitch' => 'pitch',
-            'volume' => 'volume'
+            'volume' => 'volume',
+            'businessType' => 'business_type'
     ];
 
     /**
@@ -100,6 +106,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。 默认值100，最小值50，最大值200。
     * volume  音量。 默认值140，最小值90，最大值240。
+    * businessType  业务场景，多个入口调用试听接口时的业务场景
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             'emotion' => 'setEmotion',
             'speed' => 'setSpeed',
             'pitch' => 'setPitch',
-            'volume' => 'setVolume'
+            'volume' => 'setVolume',
+            'businessType' => 'setBusinessType'
     ];
 
     /**
@@ -118,6 +126,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。 默认值100，最小值50，最大值200。
     * volume  音量。 默认值140，最小值90，最大值240。
+    * businessType  业务场景，多个入口调用试听接口时的业务场景
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             'emotion' => 'getEmotion',
             'speed' => 'getSpeed',
             'pitch' => 'getPitch',
-            'volume' => 'getVolume'
+            'volume' => 'getVolume',
+            'businessType' => 'getBusinessType'
     ];
 
     /**
@@ -192,6 +202,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
         $this->container['speed'] = isset($data['speed']) ? $data['speed'] : null;
         $this->container['pitch'] = isset($data['pitch']) ? $data['pitch'] : null;
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
+        $this->container['businessType'] = isset($data['businessType']) ? $data['businessType'] : null;
     }
 
     /**
@@ -240,6 +251,12 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['volume']) && ($this->container['volume'] < 90)) {
                 $invalidProperties[] = "invalid value for 'volume', must be bigger than or equal to 90.";
+            }
+            if (!is_null($this->container['businessType']) && (mb_strlen($this->container['businessType']) > 1000)) {
+                $invalidProperties[] = "invalid value for 'businessType', the character length must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['businessType']) && (mb_strlen($this->container['businessType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'businessType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -372,6 +389,30 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     public function setVolume($volume)
     {
         $this->container['volume'] = $volume;
+        return $this;
+    }
+
+    /**
+    * Gets businessType
+    *  业务场景，多个入口调用试听接口时的业务场景
+    *
+    * @return string|null
+    */
+    public function getBusinessType()
+    {
+        return $this->container['businessType'];
+    }
+
+    /**
+    * Sets businessType
+    *
+    * @param string|null $businessType 业务场景，多个入口调用试听接口时的业务场景
+    *
+    * @return $this
+    */
+    public function setBusinessType($businessType)
+    {
+        $this->container['businessType'] = $businessType;
         return $this;
     }
 

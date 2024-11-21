@@ -27,6 +27,7 @@ class VaultUpdate implements ModelInterface, ArrayAccess
     * autoExpand  是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
     * smnNotify  发送smn通知开关
     * threshold  存储库容量阈值，存储库已用容量和总容量的百分比超过该值，若smn_notify为开，将发送相关通知。
+    * locked  用于标识当前存储库是否已锁定
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class VaultUpdate implements ModelInterface, ArrayAccess
             'bindRules' => '\HuaweiCloud\SDK\Cbr\V1\Model\VaultBindRules',
             'autoExpand' => 'bool',
             'smnNotify' => 'bool',
-            'threshold' => 'int'
+            'threshold' => 'int',
+            'locked' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class VaultUpdate implements ModelInterface, ArrayAccess
     * autoExpand  是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
     * smnNotify  发送smn通知开关
     * threshold  存储库容量阈值，存储库已用容量和总容量的百分比超过该值，若smn_notify为开，将发送相关通知。
+    * locked  用于标识当前存储库是否已锁定
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class VaultUpdate implements ModelInterface, ArrayAccess
         'bindRules' => null,
         'autoExpand' => null,
         'smnNotify' => null,
-        'threshold' => 'int32'
+        'threshold' => 'int32',
+        'locked' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class VaultUpdate implements ModelInterface, ArrayAccess
     * autoExpand  是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
     * smnNotify  发送smn通知开关
     * threshold  存储库容量阈值，存储库已用容量和总容量的百分比超过该值，若smn_notify为开，将发送相关通知。
+    * locked  用于标识当前存储库是否已锁定
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class VaultUpdate implements ModelInterface, ArrayAccess
             'bindRules' => 'bind_rules',
             'autoExpand' => 'auto_expand',
             'smnNotify' => 'smn_notify',
-            'threshold' => 'threshold'
+            'threshold' => 'threshold',
+            'locked' => 'locked'
     ];
 
     /**
@@ -114,6 +120,7 @@ class VaultUpdate implements ModelInterface, ArrayAccess
     * autoExpand  是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
     * smnNotify  发送smn通知开关
     * threshold  存储库容量阈值，存储库已用容量和总容量的百分比超过该值，若smn_notify为开，将发送相关通知。
+    * locked  用于标识当前存储库是否已锁定
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class VaultUpdate implements ModelInterface, ArrayAccess
             'bindRules' => 'setBindRules',
             'autoExpand' => 'setAutoExpand',
             'smnNotify' => 'setSmnNotify',
-            'threshold' => 'setThreshold'
+            'threshold' => 'setThreshold',
+            'locked' => 'setLocked'
     ];
 
     /**
@@ -136,6 +144,7 @@ class VaultUpdate implements ModelInterface, ArrayAccess
     * autoExpand  是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
     * smnNotify  发送smn通知开关
     * threshold  存储库容量阈值，存储库已用容量和总容量的百分比超过该值，若smn_notify为开，将发送相关通知。
+    * locked  用于标识当前存储库是否已锁定
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class VaultUpdate implements ModelInterface, ArrayAccess
             'bindRules' => 'getBindRules',
             'autoExpand' => 'getAutoExpand',
             'smnNotify' => 'getSmnNotify',
-            'threshold' => 'getThreshold'
+            'threshold' => 'getThreshold',
+            'locked' => 'getLocked'
     ];
 
     /**
@@ -214,6 +224,7 @@ class VaultUpdate implements ModelInterface, ArrayAccess
         $this->container['autoExpand'] = isset($data['autoExpand']) ? $data['autoExpand'] : null;
         $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : null;
         $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
+        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
     }
 
     /**
@@ -418,6 +429,30 @@ class VaultUpdate implements ModelInterface, ArrayAccess
     public function setThreshold($threshold)
     {
         $this->container['threshold'] = $threshold;
+        return $this;
+    }
+
+    /**
+    * Gets locked
+    *  用于标识当前存储库是否已锁定
+    *
+    * @return bool|null
+    */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+    * Sets locked
+    *
+    * @param bool|null $locked 用于标识当前存储库是否已锁定
+    *
+    * @return $this
+    */
+    public function setLocked($locked)
+    {
+        $this->container['locked'] = $locked;
         return $this;
     }
 

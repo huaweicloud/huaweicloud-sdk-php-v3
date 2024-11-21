@@ -21,37 +21,37 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  终端节点ID。
-    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
-    * region  终端节点所属区域。
-    * regionId  终端节点所属区域ID。
-    * url  终端节点的URL。
+    * name  服务名称。
+    * type  该接口所属服务。
+    * endpoints  endpoints
+    * description  description
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
-            'interface' => 'string',
-            'region' => 'string',
-            'regionId' => 'string',
-            'url' => 'string'
+            'name' => 'string',
+            'type' => 'string',
+            'endpoints' => '\HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalogEndpoints[]',
+            'description' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  终端节点ID。
-    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
-    * region  终端节点所属区域。
-    * regionId  终端节点所属区域ID。
-    * url  终端节点的URL。
+    * name  服务名称。
+    * type  该接口所属服务。
+    * endpoints  endpoints
+    * description  description
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
-        'interface' => null,
-        'region' => null,
-        'regionId' => null,
-        'url' => null
+        'name' => null,
+        'type' => null,
+        'endpoints' => null,
+        'description' => null
     ];
 
     /**
@@ -78,55 +78,55 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  终端节点ID。
-    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
-    * region  终端节点所属区域。
-    * regionId  终端节点所属区域ID。
-    * url  终端节点的URL。
+    * name  服务名称。
+    * type  该接口所属服务。
+    * endpoints  endpoints
+    * description  description
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
-            'interface' => 'interface',
-            'region' => 'region',
-            'regionId' => 'region_id',
-            'url' => 'url'
+            'name' => 'name',
+            'type' => 'type',
+            'endpoints' => 'endpoints',
+            'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  终端节点ID。
-    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
-    * region  终端节点所属区域。
-    * regionId  终端节点所属区域ID。
-    * url  终端节点的URL。
+    * name  服务名称。
+    * type  该接口所属服务。
+    * endpoints  endpoints
+    * description  description
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
-            'interface' => 'setInterface',
-            'region' => 'setRegion',
-            'regionId' => 'setRegionId',
-            'url' => 'setUrl'
+            'name' => 'setName',
+            'type' => 'setType',
+            'endpoints' => 'setEndpoints',
+            'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  终端节点ID。
-    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
-    * region  终端节点所属区域。
-    * regionId  终端节点所属区域ID。
-    * url  终端节点的URL。
+    * name  服务名称。
+    * type  该接口所属服务。
+    * endpoints  endpoints
+    * description  description
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
-            'interface' => 'getInterface',
-            'region' => 'getRegion',
-            'regionId' => 'getRegionId',
-            'url' => 'getUrl'
+            'name' => 'getName',
+            'type' => 'getType',
+            'endpoints' => 'getEndpoints',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -188,10 +188,10 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['interface'] = isset($data['interface']) ? $data['interface'] : null;
-        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
-        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['endpoints'] = isset($data['endpoints']) ? $data['endpoints'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -241,98 +241,98 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets interface
-    *  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
+    * Gets name
+    *  服务名称。
     *
     * @return string|null
     */
-    public function getInterface()
+    public function getName()
     {
-        return $this->container['interface'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets interface
+    * Sets name
     *
-    * @param string|null $interface 接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
+    * @param string|null $name 服务名称。
     *
     * @return $this
     */
-    public function setInterface($interface)
+    public function setName($name)
     {
-        $this->container['interface'] = $interface;
+        $this->container['name'] = $name;
         return $this;
     }
 
     /**
-    * Gets region
-    *  终端节点所属区域。
+    * Gets type
+    *  该接口所属服务。
     *
     * @return string|null
     */
-    public function getRegion()
+    public function getType()
     {
-        return $this->container['region'];
+        return $this->container['type'];
     }
 
     /**
-    * Sets region
+    * Sets type
     *
-    * @param string|null $region 终端节点所属区域。
+    * @param string|null $type 该接口所属服务。
     *
     * @return $this
     */
-    public function setRegion($region)
+    public function setType($type)
     {
-        $this->container['region'] = $region;
+        $this->container['type'] = $type;
         return $this;
     }
 
     /**
-    * Gets regionId
-    *  终端节点所属区域ID。
+    * Gets endpoints
+    *  endpoints
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalogEndpoints[]|null
     */
-    public function getRegionId()
+    public function getEndpoints()
     {
-        return $this->container['regionId'];
+        return $this->container['endpoints'];
     }
 
     /**
-    * Sets regionId
+    * Sets endpoints
     *
-    * @param string|null $regionId 终端节点所属区域ID。
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalogEndpoints[]|null $endpoints endpoints
     *
     * @return $this
     */
-    public function setRegionId($regionId)
+    public function setEndpoints($endpoints)
     {
-        $this->container['regionId'] = $regionId;
+        $this->container['endpoints'] = $endpoints;
         return $this;
     }
 
     /**
-    * Gets url
-    *  终端节点的URL。
+    * Gets description
+    *  description
     *
-    * @return string|null
+    * @return object|null
     */
-    public function getUrl()
+    public function getDescription()
     {
-        return $this->container['url'];
+        return $this->container['description'];
     }
 
     /**
-    * Sets url
+    * Sets description
     *
-    * @param string|null $url 终端节点的URL。
+    * @param object|null $description description
     *
     * @return $this
     */
-    public function setUrl($url)
+    public function setDescription($description)
     {
-        $this->container['url'] = $url;
+        $this->container['description'] = $description;
         return $this;
     }
 

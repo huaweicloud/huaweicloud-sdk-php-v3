@@ -22,24 +22,28 @@ class CreateHotQuestionReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * robotId  机器人ID。
     * hotQuestion  热点问题。
+    * language  language
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'robotId' => 'string',
-            'hotQuestion' => 'string'
+            'hotQuestion' => 'string',
+            'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * robotId  机器人ID。
     * hotQuestion  热点问题。
+    * language  language
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'robotId' => null,
-        'hotQuestion' => null
+        'hotQuestion' => null,
+        'language' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class CreateHotQuestionReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * robotId  机器人ID。
     * hotQuestion  热点问题。
+    * language  language
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'robotId' => 'robot_id',
-            'hotQuestion' => 'hot_question'
+            'hotQuestion' => 'hot_question',
+            'language' => 'language'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * robotId  机器人ID。
     * hotQuestion  热点问题。
+    * language  language
     *
     * @var string[]
     */
     protected static $setters = [
             'robotId' => 'setRobotId',
-            'hotQuestion' => 'setHotQuestion'
+            'hotQuestion' => 'setHotQuestion',
+            'language' => 'setLanguage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * robotId  机器人ID。
     * hotQuestion  热点问题。
+    * language  language
     *
     * @var string[]
     */
     protected static $getters = [
             'robotId' => 'getRobotId',
-            'hotQuestion' => 'getHotQuestion'
+            'hotQuestion' => 'getHotQuestion',
+            'language' => 'getLanguage'
     ];
 
     /**
@@ -159,6 +169,7 @@ class CreateHotQuestionReq implements ModelInterface, ArrayAccess
     {
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
         $this->container['hotQuestion'] = isset($data['hotQuestion']) ? $data['hotQuestion'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
     }
 
     /**
@@ -246,6 +257,30 @@ class CreateHotQuestionReq implements ModelInterface, ArrayAccess
     public function setHotQuestion($hotQuestion)
     {
         $this->container['hotQuestion'] = $hotQuestion;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  language
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null $language language
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 

@@ -22,6 +22,8 @@ class WelcomeSpeechInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * welcomeSpeechId  欢迎词ID。
     * welcomeSpeech  欢迎词。
+    * enableWelcomeSpeech  欢迎词功能开关。
+    * language  language
     * robotId  应用ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -31,6 +33,8 @@ class WelcomeSpeechInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'welcomeSpeechId' => 'string',
             'welcomeSpeech' => 'string',
+            'enableWelcomeSpeech' => 'bool',
+            'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'robotId' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string'
@@ -40,6 +44,8 @@ class WelcomeSpeechInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * welcomeSpeechId  欢迎词ID。
     * welcomeSpeech  欢迎词。
+    * enableWelcomeSpeech  欢迎词功能开关。
+    * language  language
     * robotId  应用ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -49,6 +55,8 @@ class WelcomeSpeechInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'welcomeSpeechId' => null,
         'welcomeSpeech' => null,
+        'enableWelcomeSpeech' => null,
+        'language' => null,
         'robotId' => null,
         'createTime' => null,
         'updateTime' => null
@@ -79,6 +87,8 @@ class WelcomeSpeechInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * welcomeSpeechId  欢迎词ID。
     * welcomeSpeech  欢迎词。
+    * enableWelcomeSpeech  欢迎词功能开关。
+    * language  language
     * robotId  应用ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -88,6 +98,8 @@ class WelcomeSpeechInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'welcomeSpeechId' => 'welcome_speech_id',
             'welcomeSpeech' => 'welcome_speech',
+            'enableWelcomeSpeech' => 'enable_welcome_speech',
+            'language' => 'language',
             'robotId' => 'robot_id',
             'createTime' => 'create_time',
             'updateTime' => 'update_time'
@@ -97,6 +109,8 @@ class WelcomeSpeechInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * welcomeSpeechId  欢迎词ID。
     * welcomeSpeech  欢迎词。
+    * enableWelcomeSpeech  欢迎词功能开关。
+    * language  language
     * robotId  应用ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -106,6 +120,8 @@ class WelcomeSpeechInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'welcomeSpeechId' => 'setWelcomeSpeechId',
             'welcomeSpeech' => 'setWelcomeSpeech',
+            'enableWelcomeSpeech' => 'setEnableWelcomeSpeech',
+            'language' => 'setLanguage',
             'robotId' => 'setRobotId',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime'
@@ -115,6 +131,8 @@ class WelcomeSpeechInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * welcomeSpeechId  欢迎词ID。
     * welcomeSpeech  欢迎词。
+    * enableWelcomeSpeech  欢迎词功能开关。
+    * language  language
     * robotId  应用ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -124,6 +142,8 @@ class WelcomeSpeechInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'welcomeSpeechId' => 'getWelcomeSpeechId',
             'welcomeSpeech' => 'getWelcomeSpeech',
+            'enableWelcomeSpeech' => 'getEnableWelcomeSpeech',
+            'language' => 'getLanguage',
             'robotId' => 'getRobotId',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime'
@@ -189,6 +209,8 @@ class WelcomeSpeechInfo implements ModelInterface, ArrayAccess
     {
         $this->container['welcomeSpeechId'] = isset($data['welcomeSpeechId']) ? $data['welcomeSpeechId'] : null;
         $this->container['welcomeSpeech'] = isset($data['welcomeSpeech']) ? $data['welcomeSpeech'] : null;
+        $this->container['enableWelcomeSpeech'] = isset($data['enableWelcomeSpeech']) ? $data['enableWelcomeSpeech'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
@@ -291,6 +313,54 @@ class WelcomeSpeechInfo implements ModelInterface, ArrayAccess
     public function setWelcomeSpeech($welcomeSpeech)
     {
         $this->container['welcomeSpeech'] = $welcomeSpeech;
+        return $this;
+    }
+
+    /**
+    * Gets enableWelcomeSpeech
+    *  欢迎词功能开关。
+    *
+    * @return bool|null
+    */
+    public function getEnableWelcomeSpeech()
+    {
+        return $this->container['enableWelcomeSpeech'];
+    }
+
+    /**
+    * Sets enableWelcomeSpeech
+    *
+    * @param bool|null $enableWelcomeSpeech 欢迎词功能开关。
+    *
+    * @return $this
+    */
+    public function setEnableWelcomeSpeech($enableWelcomeSpeech)
+    {
+        $this->container['enableWelcomeSpeech'] = $enableWelcomeSpeech;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  language
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null $language language
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 

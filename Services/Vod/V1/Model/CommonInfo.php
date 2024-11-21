@@ -20,7 +20,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pvc  pvc开关<br/>
+    * pvc  高清低码开关<br/>
     * videoCodec  视频编码格式<br/>
     * audioCodec  音频编码格式<br/> AAC：AAC格式 (default)<br/> HEAAC1：HEAAC1格式<br/> HEAAC2：HEAAC2格式<br/> MP3：MP3格式<br/>
     * isBlackCut  黑边剪裁类型<br/>
@@ -28,6 +28,10 @@ class CommonInfo implements ModelInterface, ArrayAccess
     * hlsInterval  分片时长(默认为5秒)<br/>
     * upsample  上采样<br/>
     * adaptation  SHORT：短边自适应<br/> LONG：长边自适应<br/> NONE：宽高自适应<br/>
+    * preset  编码质量等级，取值[0,2] 0表示当前现网方式默认方式，1表示转码效率优先，2表示转码质量优先。<br/>
+    * maxIframesInterval  I帧最大间隔，取值范围：[2，10]。默认值：5，单位秒。<br/>
+    * hlsAudioSeparate  转码后音频是否独立存储。<br/>
+    * hlsSegmentType  分片的封装格式，目前支持TS和FMP4，默认TS格式。
     *
     * @var string[]
     */
@@ -39,12 +43,16 @@ class CommonInfo implements ModelInterface, ArrayAccess
             'format' => 'string',
             'hlsInterval' => 'int',
             'upsample' => 'bool',
-            'adaptation' => 'string'
+            'adaptation' => 'string',
+            'preset' => 'int',
+            'maxIframesInterval' => 'int',
+            'hlsAudioSeparate' => 'bool',
+            'hlsSegmentType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pvc  pvc开关<br/>
+    * pvc  高清低码开关<br/>
     * videoCodec  视频编码格式<br/>
     * audioCodec  音频编码格式<br/> AAC：AAC格式 (default)<br/> HEAAC1：HEAAC1格式<br/> HEAAC2：HEAAC2格式<br/> MP3：MP3格式<br/>
     * isBlackCut  黑边剪裁类型<br/>
@@ -52,6 +60,10 @@ class CommonInfo implements ModelInterface, ArrayAccess
     * hlsInterval  分片时长(默认为5秒)<br/>
     * upsample  上采样<br/>
     * adaptation  SHORT：短边自适应<br/> LONG：长边自适应<br/> NONE：宽高自适应<br/>
+    * preset  编码质量等级，取值[0,2] 0表示当前现网方式默认方式，1表示转码效率优先，2表示转码质量优先。<br/>
+    * maxIframesInterval  I帧最大间隔，取值范围：[2，10]。默认值：5，单位秒。<br/>
+    * hlsAudioSeparate  转码后音频是否独立存储。<br/>
+    * hlsSegmentType  分片的封装格式，目前支持TS和FMP4，默认TS格式。
     *
     * @var string[]
     */
@@ -63,7 +75,11 @@ class CommonInfo implements ModelInterface, ArrayAccess
         'format' => null,
         'hlsInterval' => null,
         'upsample' => null,
-        'adaptation' => null
+        'adaptation' => null,
+        'preset' => 'int32',
+        'maxIframesInterval' => 'int32',
+        'hlsAudioSeparate' => null,
+        'hlsSegmentType' => null
     ];
 
     /**
@@ -89,7 +105,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pvc  pvc开关<br/>
+    * pvc  高清低码开关<br/>
     * videoCodec  视频编码格式<br/>
     * audioCodec  音频编码格式<br/> AAC：AAC格式 (default)<br/> HEAAC1：HEAAC1格式<br/> HEAAC2：HEAAC2格式<br/> MP3：MP3格式<br/>
     * isBlackCut  黑边剪裁类型<br/>
@@ -97,6 +113,10 @@ class CommonInfo implements ModelInterface, ArrayAccess
     * hlsInterval  分片时长(默认为5秒)<br/>
     * upsample  上采样<br/>
     * adaptation  SHORT：短边自适应<br/> LONG：长边自适应<br/> NONE：宽高自适应<br/>
+    * preset  编码质量等级，取值[0,2] 0表示当前现网方式默认方式，1表示转码效率优先，2表示转码质量优先。<br/>
+    * maxIframesInterval  I帧最大间隔，取值范围：[2，10]。默认值：5，单位秒。<br/>
+    * hlsAudioSeparate  转码后音频是否独立存储。<br/>
+    * hlsSegmentType  分片的封装格式，目前支持TS和FMP4，默认TS格式。
     *
     * @var string[]
     */
@@ -108,12 +128,16 @@ class CommonInfo implements ModelInterface, ArrayAccess
             'format' => 'format',
             'hlsInterval' => 'hls_interval',
             'upsample' => 'upsample',
-            'adaptation' => 'adaptation'
+            'adaptation' => 'adaptation',
+            'preset' => 'preset',
+            'maxIframesInterval' => 'max_iframes_interval',
+            'hlsAudioSeparate' => 'hls_audio_separate',
+            'hlsSegmentType' => 'hls_segment_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pvc  pvc开关<br/>
+    * pvc  高清低码开关<br/>
     * videoCodec  视频编码格式<br/>
     * audioCodec  音频编码格式<br/> AAC：AAC格式 (default)<br/> HEAAC1：HEAAC1格式<br/> HEAAC2：HEAAC2格式<br/> MP3：MP3格式<br/>
     * isBlackCut  黑边剪裁类型<br/>
@@ -121,6 +145,10 @@ class CommonInfo implements ModelInterface, ArrayAccess
     * hlsInterval  分片时长(默认为5秒)<br/>
     * upsample  上采样<br/>
     * adaptation  SHORT：短边自适应<br/> LONG：长边自适应<br/> NONE：宽高自适应<br/>
+    * preset  编码质量等级，取值[0,2] 0表示当前现网方式默认方式，1表示转码效率优先，2表示转码质量优先。<br/>
+    * maxIframesInterval  I帧最大间隔，取值范围：[2，10]。默认值：5，单位秒。<br/>
+    * hlsAudioSeparate  转码后音频是否独立存储。<br/>
+    * hlsSegmentType  分片的封装格式，目前支持TS和FMP4，默认TS格式。
     *
     * @var string[]
     */
@@ -132,12 +160,16 @@ class CommonInfo implements ModelInterface, ArrayAccess
             'format' => 'setFormat',
             'hlsInterval' => 'setHlsInterval',
             'upsample' => 'setUpsample',
-            'adaptation' => 'setAdaptation'
+            'adaptation' => 'setAdaptation',
+            'preset' => 'setPreset',
+            'maxIframesInterval' => 'setMaxIframesInterval',
+            'hlsAudioSeparate' => 'setHlsAudioSeparate',
+            'hlsSegmentType' => 'setHlsSegmentType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pvc  pvc开关<br/>
+    * pvc  高清低码开关<br/>
     * videoCodec  视频编码格式<br/>
     * audioCodec  音频编码格式<br/> AAC：AAC格式 (default)<br/> HEAAC1：HEAAC1格式<br/> HEAAC2：HEAAC2格式<br/> MP3：MP3格式<br/>
     * isBlackCut  黑边剪裁类型<br/>
@@ -145,6 +177,10 @@ class CommonInfo implements ModelInterface, ArrayAccess
     * hlsInterval  分片时长(默认为5秒)<br/>
     * upsample  上采样<br/>
     * adaptation  SHORT：短边自适应<br/> LONG：长边自适应<br/> NONE：宽高自适应<br/>
+    * preset  编码质量等级，取值[0,2] 0表示当前现网方式默认方式，1表示转码效率优先，2表示转码质量优先。<br/>
+    * maxIframesInterval  I帧最大间隔，取值范围：[2，10]。默认值：5，单位秒。<br/>
+    * hlsAudioSeparate  转码后音频是否独立存储。<br/>
+    * hlsSegmentType  分片的封装格式，目前支持TS和FMP4，默认TS格式。
     *
     * @var string[]
     */
@@ -156,7 +192,11 @@ class CommonInfo implements ModelInterface, ArrayAccess
             'format' => 'getFormat',
             'hlsInterval' => 'getHlsInterval',
             'upsample' => 'getUpsample',
-            'adaptation' => 'getAdaptation'
+            'adaptation' => 'getAdaptation',
+            'preset' => 'getPreset',
+            'maxIframesInterval' => 'getMaxIframesInterval',
+            'hlsAudioSeparate' => 'getHlsAudioSeparate',
+            'hlsSegmentType' => 'getHlsSegmentType'
     ];
 
     /**
@@ -215,6 +255,8 @@ class CommonInfo implements ModelInterface, ArrayAccess
     const ADAPTATION_SHORT = 'SHORT';
     const ADAPTATION_LONG = 'LONG';
     const ADAPTATION_NONE = 'NONE';
+    const HLS_SEGMENT_TYPE_TS = 'TS';
+    const HLS_SEGMENT_TYPE_FMP4 = 'FMP4';
     
 
     /**
@@ -277,6 +319,19 @@ class CommonInfo implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getHlsSegmentTypeAllowableValues()
+    {
+        return [
+            self::HLS_SEGMENT_TYPE_TS,
+            self::HLS_SEGMENT_TYPE_FMP4,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -301,6 +356,10 @@ class CommonInfo implements ModelInterface, ArrayAccess
         $this->container['hlsInterval'] = isset($data['hlsInterval']) ? $data['hlsInterval'] : null;
         $this->container['upsample'] = isset($data['upsample']) ? $data['upsample'] : null;
         $this->container['adaptation'] = isset($data['adaptation']) ? $data['adaptation'] : null;
+        $this->container['preset'] = isset($data['preset']) ? $data['preset'] : null;
+        $this->container['maxIframesInterval'] = isset($data['maxIframesInterval']) ? $data['maxIframesInterval'] : null;
+        $this->container['hlsAudioSeparate'] = isset($data['hlsAudioSeparate']) ? $data['hlsAudioSeparate'] : null;
+        $this->container['hlsSegmentType'] = isset($data['hlsSegmentType']) ? $data['hlsSegmentType'] : null;
     }
 
     /**
@@ -344,19 +403,24 @@ class CommonInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['hlsInterval'] === null) {
-            $invalidProperties[] = "'hlsInterval' can't be null";
-        }
-            if (($this->container['hlsInterval'] > 10)) {
+            if (!is_null($this->container['hlsInterval']) && ($this->container['hlsInterval'] > 10)) {
                 $invalidProperties[] = "invalid value for 'hlsInterval', must be smaller than or equal to 10.";
             }
-            if (($this->container['hlsInterval'] < 2)) {
+            if (!is_null($this->container['hlsInterval']) && ($this->container['hlsInterval'] < 2)) {
                 $invalidProperties[] = "invalid value for 'hlsInterval', must be bigger than or equal to 2.";
             }
             $allowedValues = $this->getAdaptationAllowableValues();
                 if (!is_null($this->container['adaptation']) && !in_array($this->container['adaptation'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'adaptation', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getHlsSegmentTypeAllowableValues();
+                if (!is_null($this->container['hlsSegmentType']) && !in_array($this->container['hlsSegmentType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'hlsSegmentType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -377,7 +441,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pvc
-    *  pvc开关<br/>
+    *  高清低码开关<br/>
     *
     * @return bool
     */
@@ -389,7 +453,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pvc
     *
-    * @param bool $pvc pvc开关<br/>
+    * @param bool $pvc 高清低码开关<br/>
     *
     * @return $this
     */
@@ -499,7 +563,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     * Gets hlsInterval
     *  分片时长(默认为5秒)<br/>
     *
-    * @return int
+    * @return int|null
     */
     public function getHlsInterval()
     {
@@ -509,7 +573,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hlsInterval
     *
-    * @param int $hlsInterval 分片时长(默认为5秒)<br/>
+    * @param int|null $hlsInterval 分片时长(默认为5秒)<br/>
     *
     * @return $this
     */
@@ -564,6 +628,102 @@ class CommonInfo implements ModelInterface, ArrayAccess
     public function setAdaptation($adaptation)
     {
         $this->container['adaptation'] = $adaptation;
+        return $this;
+    }
+
+    /**
+    * Gets preset
+    *  编码质量等级，取值[0,2] 0表示当前现网方式默认方式，1表示转码效率优先，2表示转码质量优先。<br/>
+    *
+    * @return int|null
+    */
+    public function getPreset()
+    {
+        return $this->container['preset'];
+    }
+
+    /**
+    * Sets preset
+    *
+    * @param int|null $preset 编码质量等级，取值[0,2] 0表示当前现网方式默认方式，1表示转码效率优先，2表示转码质量优先。<br/>
+    *
+    * @return $this
+    */
+    public function setPreset($preset)
+    {
+        $this->container['preset'] = $preset;
+        return $this;
+    }
+
+    /**
+    * Gets maxIframesInterval
+    *  I帧最大间隔，取值范围：[2，10]。默认值：5，单位秒。<br/>
+    *
+    * @return int|null
+    */
+    public function getMaxIframesInterval()
+    {
+        return $this->container['maxIframesInterval'];
+    }
+
+    /**
+    * Sets maxIframesInterval
+    *
+    * @param int|null $maxIframesInterval I帧最大间隔，取值范围：[2，10]。默认值：5，单位秒。<br/>
+    *
+    * @return $this
+    */
+    public function setMaxIframesInterval($maxIframesInterval)
+    {
+        $this->container['maxIframesInterval'] = $maxIframesInterval;
+        return $this;
+    }
+
+    /**
+    * Gets hlsAudioSeparate
+    *  转码后音频是否独立存储。<br/>
+    *
+    * @return bool|null
+    */
+    public function getHlsAudioSeparate()
+    {
+        return $this->container['hlsAudioSeparate'];
+    }
+
+    /**
+    * Sets hlsAudioSeparate
+    *
+    * @param bool|null $hlsAudioSeparate 转码后音频是否独立存储。<br/>
+    *
+    * @return $this
+    */
+    public function setHlsAudioSeparate($hlsAudioSeparate)
+    {
+        $this->container['hlsAudioSeparate'] = $hlsAudioSeparate;
+        return $this;
+    }
+
+    /**
+    * Gets hlsSegmentType
+    *  分片的封装格式，目前支持TS和FMP4，默认TS格式。
+    *
+    * @return string|null
+    */
+    public function getHlsSegmentType()
+    {
+        return $this->container['hlsSegmentType'];
+    }
+
+    /**
+    * Sets hlsSegmentType
+    *
+    * @param string|null $hlsSegmentType 分片的封装格式，目前支持TS和FMP4，默认TS格式。
+    *
+    * @return $this
+    */
+    public function setHlsSegmentType($hlsSegmentType)
+    {
+        $this->container['hlsSegmentType'] = $hlsSegmentType;
         return $this;
     }
 

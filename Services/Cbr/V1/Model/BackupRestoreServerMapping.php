@@ -20,7 +20,7 @@ class BackupRestoreServerMapping implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * backupId  卷备份ID，可以通过控制台或者“查询指定备份”接口获取。
+    * backupId  卷备份ID，可以通过控制台查看云服务器备份详情中磁盘级备份的ID；或“查询指定备份”接口，获取备份中children内的磁盘级备份的ID。
     * volumeId  待恢复目标卷ID
     *
     * @var string[]
@@ -32,7 +32,7 @@ class BackupRestoreServerMapping implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * backupId  卷备份ID，可以通过控制台或者“查询指定备份”接口获取。
+    * backupId  卷备份ID，可以通过控制台查看云服务器备份详情中磁盘级备份的ID；或“查询指定备份”接口，获取备份中children内的磁盘级备份的ID。
     * volumeId  待恢复目标卷ID
     *
     * @var string[]
@@ -65,7 +65,7 @@ class BackupRestoreServerMapping implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * backupId  卷备份ID，可以通过控制台或者“查询指定备份”接口获取。
+    * backupId  卷备份ID，可以通过控制台查看云服务器备份详情中磁盘级备份的ID；或“查询指定备份”接口，获取备份中children内的磁盘级备份的ID。
     * volumeId  待恢复目标卷ID
     *
     * @var string[]
@@ -77,7 +77,7 @@ class BackupRestoreServerMapping implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * backupId  卷备份ID，可以通过控制台或者“查询指定备份”接口获取。
+    * backupId  卷备份ID，可以通过控制台查看云服务器备份详情中磁盘级备份的ID；或“查询指定备份”接口，获取备份中children内的磁盘级备份的ID。
     * volumeId  待恢复目标卷ID
     *
     * @var string[]
@@ -89,7 +89,7 @@ class BackupRestoreServerMapping implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * backupId  卷备份ID，可以通过控制台或者“查询指定备份”接口获取。
+    * backupId  卷备份ID，可以通过控制台查看云服务器备份详情中磁盘级备份的ID；或“查询指定备份”接口，获取备份中children内的磁盘级备份的ID。
     * volumeId  待恢复目标卷ID
     *
     * @var string[]
@@ -191,7 +191,7 @@ class BackupRestoreServerMapping implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupId
-    *  卷备份ID，可以通过控制台或者“查询指定备份”接口获取。
+    *  卷备份ID，可以通过控制台查看云服务器备份详情中磁盘级备份的ID；或“查询指定备份”接口，获取备份中children内的磁盘级备份的ID。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class BackupRestoreServerMapping implements ModelInterface, ArrayAccess
     /**
     * Sets backupId
     *
-    * @param string $backupId 卷备份ID，可以通过控制台或者“查询指定备份”接口获取。
+    * @param string $backupId 卷备份ID，可以通过控制台查看云服务器备份详情中磁盘级备份的ID；或“查询指定备份”接口，获取备份中children内的磁盘级备份的ID。
     *
     * @return $this
     */

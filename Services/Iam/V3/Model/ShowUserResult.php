@@ -38,6 +38,8 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
     * description  IAM用户描述信息
+    * pwdCreateTime  IAM用户密码创建更新时间。
+    * modifyPwdTime  IAM用户更新时间。
     *
     * @var string[]
     */
@@ -59,7 +61,9 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'pwdStrength' => 'string',
             'isDomainOwner' => 'bool',
             'accessMode' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'pwdCreateTime' => 'string',
+            'modifyPwdTime' => 'string'
     ];
 
     /**
@@ -82,6 +86,8 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
     * description  IAM用户描述信息
+    * pwdCreateTime  IAM用户密码创建更新时间。
+    * modifyPwdTime  IAM用户更新时间。
     *
     * @var string[]
     */
@@ -103,7 +109,9 @@ class ShowUserResult implements ModelInterface, ArrayAccess
         'pwdStrength' => null,
         'isDomainOwner' => null,
         'accessMode' => null,
-        'description' => null
+        'description' => null,
+        'pwdCreateTime' => null,
+        'modifyPwdTime' => null
     ];
 
     /**
@@ -147,6 +155,8 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
     * description  IAM用户描述信息
+    * pwdCreateTime  IAM用户密码创建更新时间。
+    * modifyPwdTime  IAM用户更新时间。
     *
     * @var string[]
     */
@@ -168,7 +178,9 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'pwdStrength' => 'pwd_strength',
             'isDomainOwner' => 'is_domain_owner',
             'accessMode' => 'access_mode',
-            'description' => 'description'
+            'description' => 'description',
+            'pwdCreateTime' => 'pwd_create_time',
+            'modifyPwdTime' => 'modify_pwd_time'
     ];
 
     /**
@@ -191,6 +203,8 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
     * description  IAM用户描述信息
+    * pwdCreateTime  IAM用户密码创建更新时间。
+    * modifyPwdTime  IAM用户更新时间。
     *
     * @var string[]
     */
@@ -212,7 +226,9 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'pwdStrength' => 'setPwdStrength',
             'isDomainOwner' => 'setIsDomainOwner',
             'accessMode' => 'setAccessMode',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'pwdCreateTime' => 'setPwdCreateTime',
+            'modifyPwdTime' => 'setModifyPwdTime'
     ];
 
     /**
@@ -235,6 +251,8 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
     * description  IAM用户描述信息
+    * pwdCreateTime  IAM用户密码创建更新时间。
+    * modifyPwdTime  IAM用户更新时间。
     *
     * @var string[]
     */
@@ -256,7 +274,9 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'pwdStrength' => 'getPwdStrength',
             'isDomainOwner' => 'getIsDomainOwner',
             'accessMode' => 'getAccessMode',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'pwdCreateTime' => 'getPwdCreateTime',
+            'modifyPwdTime' => 'getModifyPwdTime'
     ];
 
     /**
@@ -335,6 +355,8 @@ class ShowUserResult implements ModelInterface, ArrayAccess
         $this->container['isDomainOwner'] = isset($data['isDomainOwner']) ? $data['isDomainOwner'] : null;
         $this->container['accessMode'] = isset($data['accessMode']) ? $data['accessMode'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['pwdCreateTime'] = isset($data['pwdCreateTime']) ? $data['pwdCreateTime'] : null;
+        $this->container['modifyPwdTime'] = isset($data['modifyPwdTime']) ? $data['modifyPwdTime'] : null;
     }
 
     /**
@@ -812,6 +834,54 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets pwdCreateTime
+    *  IAM用户密码创建更新时间。
+    *
+    * @return string|null
+    */
+    public function getPwdCreateTime()
+    {
+        return $this->container['pwdCreateTime'];
+    }
+
+    /**
+    * Sets pwdCreateTime
+    *
+    * @param string|null $pwdCreateTime IAM用户密码创建更新时间。
+    *
+    * @return $this
+    */
+    public function setPwdCreateTime($pwdCreateTime)
+    {
+        $this->container['pwdCreateTime'] = $pwdCreateTime;
+        return $this;
+    }
+
+    /**
+    * Gets modifyPwdTime
+    *  IAM用户更新时间。
+    *
+    * @return string|null
+    */
+    public function getModifyPwdTime()
+    {
+        return $this->container['modifyPwdTime'];
+    }
+
+    /**
+    * Sets modifyPwdTime
+    *
+    * @param string|null $modifyPwdTime IAM用户更新时间。
+    *
+    * @return $this
+    */
+    public function setModifyPwdTime($modifyPwdTime)
+    {
+        $this->container['modifyPwdTime'] = $modifyPwdTime;
         return $this;
     }
 

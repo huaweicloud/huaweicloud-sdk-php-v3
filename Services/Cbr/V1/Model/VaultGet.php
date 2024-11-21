@@ -37,6 +37,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -60,6 +61,7 @@ class VaultGet implements ModelInterface, ArrayAccess
             'smnNotify' => 'bool',
             'threshold' => 'int',
             'sysLockSourceService' => 'string',
+            'locked' => 'bool',
             'updatedAt' => 'string',
             'version' => 'string'
     ];
@@ -83,6 +85,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -106,6 +109,7 @@ class VaultGet implements ModelInterface, ArrayAccess
         'smnNotify' => null,
         'threshold' => 'int32',
         'sysLockSourceService' => null,
+        'locked' => null,
         'updatedAt' => null,
         'version' => null
     ];
@@ -150,6 +154,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -173,6 +178,7 @@ class VaultGet implements ModelInterface, ArrayAccess
             'smnNotify' => 'smn_notify',
             'threshold' => 'threshold',
             'sysLockSourceService' => 'sys_lock_source_service',
+            'locked' => 'locked',
             'updatedAt' => 'updated_at',
             'version' => 'version'
     ];
@@ -196,6 +202,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -219,6 +226,7 @@ class VaultGet implements ModelInterface, ArrayAccess
             'smnNotify' => 'setSmnNotify',
             'threshold' => 'setThreshold',
             'sysLockSourceService' => 'setSysLockSourceService',
+            'locked' => 'setLocked',
             'updatedAt' => 'setUpdatedAt',
             'version' => 'setVersion'
     ];
@@ -242,6 +250,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * sysLockSourceService  用于标识SMB服务
+    * locked  用于标识该存储库是否已锁定
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -265,6 +274,7 @@ class VaultGet implements ModelInterface, ArrayAccess
             'smnNotify' => 'getSmnNotify',
             'threshold' => 'getThreshold',
             'sysLockSourceService' => 'getSysLockSourceService',
+            'locked' => 'getLocked',
             'updatedAt' => 'getUpdatedAt',
             'version' => 'getVersion'
     ];
@@ -344,6 +354,7 @@ class VaultGet implements ModelInterface, ArrayAccess
         $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : null;
         $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
         $this->container['sysLockSourceService'] = isset($data['sysLockSourceService']) ? $data['sysLockSourceService'] : null;
+        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
@@ -820,6 +831,30 @@ class VaultGet implements ModelInterface, ArrayAccess
     public function setSysLockSourceService($sysLockSourceService)
     {
         $this->container['sysLockSourceService'] = $sysLockSourceService;
+        return $this;
+    }
+
+    /**
+    * Gets locked
+    *  用于标识该存储库是否已锁定
+    *
+    * @return bool|null
+    */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+    * Sets locked
+    *
+    * @param bool|null $locked 用于标识该存储库是否已锁定
+    *
+    * @return $this
+    */
+    public function setLocked($locked)
+    {
+        $this->container['locked'] = $locked;
         return $this;
     }
 

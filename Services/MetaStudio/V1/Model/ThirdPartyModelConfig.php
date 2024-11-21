@@ -27,6 +27,7 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             'isStream' => 'bool',
             'chatRounds' => 'int',
             'sisRegion' => 'int',
-            'sisProjectId' => 'string'
+            'sisProjectId' => 'string',
+            'enableHotWords' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
         'isStream' => null,
         'chatRounds' => null,
         'sisRegion' => null,
-        'sisProjectId' => null
+        'sisProjectId' => null,
+        'enableHotWords' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             'isStream' => 'is_stream',
             'chatRounds' => 'chat_rounds',
             'sisRegion' => 'sis_region',
-            'sisProjectId' => 'sis_project_id'
+            'sisProjectId' => 'sis_project_id',
+            'enableHotWords' => 'enable_hot_words'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             'isStream' => 'setIsStream',
             'chatRounds' => 'setChatRounds',
             'sisRegion' => 'setSisRegion',
-            'sisProjectId' => 'setSisProjectId'
+            'sisProjectId' => 'setSisProjectId',
+            'enableHotWords' => 'setEnableHotWords'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             'isStream' => 'getIsStream',
             'chatRounds' => 'getChatRounds',
             'sisRegion' => 'getSisRegion',
-            'sisProjectId' => 'getSisProjectId'
+            'sisProjectId' => 'getSisProjectId',
+            'enableHotWords' => 'getEnableHotWords'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
         $this->container['chatRounds'] = isset($data['chatRounds']) ? $data['chatRounds'] : null;
         $this->container['sisRegion'] = isset($data['sisRegion']) ? $data['sisRegion'] : null;
         $this->container['sisProjectId'] = isset($data['sisProjectId']) ? $data['sisProjectId'] : null;
+        $this->container['enableHotWords'] = isset($data['enableHotWords']) ? $data['enableHotWords'] : null;
     }
 
     /**
@@ -257,8 +268,8 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -439,6 +450,30 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     public function setSisProjectId($sisProjectId)
     {
         $this->container['sisProjectId'] = $sisProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets enableHotWords
+    *  是否开启热词
+    *
+    * @return bool|null
+    */
+    public function getEnableHotWords()
+    {
+        return $this->container['enableHotWords'];
+    }
+
+    /**
+    * Sets enableHotWords
+    *
+    * @param bool|null $enableHotWords 是否开启热词
+    *
+    * @return $this
+    */
+    public function setEnableHotWords($enableHotWords)
+    {
+        $this->container['enableHotWords'] = $enableHotWords;
         return $this;
     }
 
