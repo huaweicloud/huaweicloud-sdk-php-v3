@@ -20,20 +20,26 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * limit  指定查询返回记录条数，默认值10。
+    * offset  索引位置，从offset指定的下一条数据开始查询。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * limit  指定查询返回记录条数，默认值10。
+    * offset  索引位置，从offset指定的下一条数据开始查询。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'limit' => null,
+        'offset' => null
     ];
 
     /**
@@ -59,29 +65,38 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * limit  指定查询返回记录条数，默认值10。
+    * offset  索引位置，从offset指定的下一条数据开始查询。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * limit  指定查询返回记录条数，默认值10。
+    * offset  索引位置，从offset指定的下一条数据开始查询。
     *
     * @var string[]
     */
     protected static $setters = [
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * limit  指定查询返回记录条数，默认值10。
+    * offset  索引位置，从offset指定的下一条数据开始查询。
     *
     * @var string[]
     */
     protected static $getters = [
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -142,6 +157,8 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -164,6 +181,54 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets limit
+    *  指定查询返回记录条数，默认值10。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 指定查询返回记录条数，默认值10。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  索引位置，从offset指定的下一条数据开始查询。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 索引位置，从offset指定的下一条数据开始查询。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
     }
 
     /**

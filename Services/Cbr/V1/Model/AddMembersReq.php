@@ -21,21 +21,25 @@ class AddMembersReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * members  列表，待添加备份共享成员的project_id。
+    * domains  列表，待添加备份共享成员的domain_id。 > 该特性目前属于公测阶段，部分region可能无法使用.
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'members' => 'string[]'
+            'members' => 'string[]',
+            'domains' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * members  列表，待添加备份共享成员的project_id。
+    * domains  列表，待添加备份共享成员的domain_id。 > 该特性目前属于公测阶段，部分region可能无法使用.
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'members' => null
+        'members' => null,
+        'domains' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class AddMembersReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * members  列表，待添加备份共享成员的project_id。
+    * domains  列表，待添加备份共享成员的domain_id。 > 该特性目前属于公测阶段，部分region可能无法使用.
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'members' => 'members'
+            'members' => 'members',
+            'domains' => 'domains'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * members  列表，待添加备份共享成员的project_id。
+    * domains  列表，待添加备份共享成员的domain_id。 > 该特性目前属于公测阶段，部分region可能无法使用.
     *
     * @var string[]
     */
     protected static $setters = [
-            'members' => 'setMembers'
+            'members' => 'setMembers',
+            'domains' => 'setDomains'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * members  列表，待添加备份共享成员的project_id。
+    * domains  列表，待添加备份共享成员的domain_id。 > 该特性目前属于公测阶段，部分region可能无法使用.
     *
     * @var string[]
     */
     protected static $getters = [
-            'members' => 'getMembers'
+            'members' => 'getMembers',
+            'domains' => 'getDomains'
     ];
 
     /**
@@ -148,6 +158,7 @@ class AddMembersReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['members'] = isset($data['members']) ? $data['members'] : null;
+        $this->container['domains'] = isset($data['domains']) ? $data['domains'] : null;
     }
 
     /**
@@ -158,9 +169,6 @@ class AddMembersReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['members'] === null) {
-            $invalidProperties[] = "'members' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -179,7 +187,7 @@ class AddMembersReq implements ModelInterface, ArrayAccess
     * Gets members
     *  列表，待添加备份共享成员的project_id。
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getMembers()
     {
@@ -189,13 +197,37 @@ class AddMembersReq implements ModelInterface, ArrayAccess
     /**
     * Sets members
     *
-    * @param string[] $members 列表，待添加备份共享成员的project_id。
+    * @param string[]|null $members 列表，待添加备份共享成员的project_id。
     *
     * @return $this
     */
     public function setMembers($members)
     {
         $this->container['members'] = $members;
+        return $this;
+    }
+
+    /**
+    * Gets domains
+    *  列表，待添加备份共享成员的domain_id。 > 该特性目前属于公测阶段，部分region可能无法使用.
+    *
+    * @return string[]|null
+    */
+    public function getDomains()
+    {
+        return $this->container['domains'];
+    }
+
+    /**
+    * Sets domains
+    *
+    * @param string[]|null $domains 列表，待添加备份共享成员的domain_id。 > 该特性目前属于公测阶段，部分region可能无法使用.
+    *
+    * @return $this
+    */
+    public function setDomains($domains)
+    {
+        $this->container['domains'] = $domains;
         return $this;
     }
 

@@ -164,8 +164,8 @@ class ListUnblockQuotaStatisticsRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['domainId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['domainId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['domainId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }

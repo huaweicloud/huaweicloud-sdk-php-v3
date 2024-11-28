@@ -190,8 +190,8 @@ class ShowUnblockRecordResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }

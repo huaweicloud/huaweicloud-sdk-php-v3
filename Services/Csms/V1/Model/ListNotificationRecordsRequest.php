@@ -20,26 +20,20 @@ class ListNotificationRecordsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  每页返回的个数。  默认值：50。
-    * marker  分页查询起始的事件通知记录时间，为空时为查询第一页
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'limit' => 'string',
-            'marker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  每页返回的个数。  默认值：50。
-    * marker  分页查询起始的事件通知记录时间，为空时为查询第一页
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'limit' => null,
-        'marker' => null
     ];
 
     /**
@@ -65,38 +59,29 @@ class ListNotificationRecordsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  每页返回的个数。  默认值：50。
-    * marker  分页查询起始的事件通知记录时间，为空时为查询第一页
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'limit' => 'limit',
-            'marker' => 'marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  每页返回的个数。  默认值：50。
-    * marker  分页查询起始的事件通知记录时间，为空时为查询第一页
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'limit' => 'setLimit',
-            'marker' => 'setMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  每页返回的个数。  默认值：50。
-    * marker  分页查询起始的事件通知记录时间，为空时为查询第一页
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'limit' => 'getLimit',
-            'marker' => 'getMarker'
     ];
 
     /**
@@ -157,8 +142,6 @@ class ListNotificationRecordsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -169,15 +152,6 @@ class ListNotificationRecordsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) > 4)) {
-                $invalidProperties[] = "invalid value for 'limit', the character length must be smaller than or equal to 4.";
-            }
-            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) < 1)) {
-                $invalidProperties[] = "invalid value for 'limit', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['marker']) && !preg_match("/^[0-9]{13}$/", $this->container['marker'])) {
-                $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /^[0-9]{13}$/.";
-            }
         return $invalidProperties;
     }
 
@@ -190,54 +164,6 @@ class ListNotificationRecordsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets limit
-    *  每页返回的个数。  默认值：50。
-    *
-    * @return string|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param string|null $limit 每页返回的个数。  默认值：50。
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets marker
-    *  分页查询起始的事件通知记录时间，为空时为查询第一页
-    *
-    * @return string|null
-    */
-    public function getMarker()
-    {
-        return $this->container['marker'];
-    }
-
-    /**
-    * Sets marker
-    *
-    * @param string|null $marker 分页查询起始的事件通知记录时间，为空时为查询第一页
-    *
-    * @return $this
-    */
-    public function setMarker($marker)
-    {
-        $this->container['marker'] = $marker;
-        return $this;
     }
 
     /**

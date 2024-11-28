@@ -27,6 +27,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * login  login
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * nodeNicSpecUpdate  nodeNicSpecUpdate
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
             'initializedConditions' => 'string[]',
             'login' => '\HuaweiCloud\SDK\Cce\V3\Model\Login',
             'serverEnterpriseProjectId' => 'string',
-            'nodeNicSpecUpdate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeSpecUpdateNodeNicSpecUpdate'
+            'nodeNicSpecUpdate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeSpecUpdateNodeNicSpecUpdate',
+            'securityReinforcementType' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * login  login
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * nodeNicSpecUpdate  nodeNicSpecUpdate
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
         'initializedConditions' => null,
         'login' => null,
         'serverEnterpriseProjectId' => null,
-        'nodeNicSpecUpdate' => null
+        'nodeNicSpecUpdate' => null,
+        'securityReinforcementType' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * login  login
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * nodeNicSpecUpdate  nodeNicSpecUpdate
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
             'initializedConditions' => 'initializedConditions',
             'login' => 'login',
             'serverEnterpriseProjectId' => 'serverEnterpriseProjectID',
-            'nodeNicSpecUpdate' => 'nodeNicSpecUpdate'
+            'nodeNicSpecUpdate' => 'nodeNicSpecUpdate',
+            'securityReinforcementType' => 'securityReinforcementType'
     ];
 
     /**
@@ -114,6 +120,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * login  login
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * nodeNicSpecUpdate  nodeNicSpecUpdate
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
             'initializedConditions' => 'setInitializedConditions',
             'login' => 'setLogin',
             'serverEnterpriseProjectId' => 'setServerEnterpriseProjectId',
-            'nodeNicSpecUpdate' => 'setNodeNicSpecUpdate'
+            'nodeNicSpecUpdate' => 'setNodeNicSpecUpdate',
+            'securityReinforcementType' => 'setSecurityReinforcementType'
     ];
 
     /**
@@ -136,6 +144,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * login  login
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * nodeNicSpecUpdate  nodeNicSpecUpdate
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
             'initializedConditions' => 'getInitializedConditions',
             'login' => 'getLogin',
             'serverEnterpriseProjectId' => 'getServerEnterpriseProjectId',
-            'nodeNicSpecUpdate' => 'getNodeNicSpecUpdate'
+            'nodeNicSpecUpdate' => 'getNodeNicSpecUpdate',
+            'securityReinforcementType' => 'getSecurityReinforcementType'
     ];
 
     /**
@@ -189,7 +199,22 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SECURITY_REINFORCEMENT_TYPE_NULL = 'null';
+    const SECURITY_REINFORCEMENT_TYPE_CYBERSECURITY = 'cybersecurity';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSecurityReinforcementTypeAllowableValues()
+    {
+        return [
+            self::SECURITY_REINFORCEMENT_TYPE_NULL,
+            self::SECURITY_REINFORCEMENT_TYPE_CYBERSECURITY,
+        ];
+    }
 
 
     /**
@@ -214,6 +239,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
         $this->container['login'] = isset($data['login']) ? $data['login'] : null;
         $this->container['serverEnterpriseProjectId'] = isset($data['serverEnterpriseProjectId']) ? $data['serverEnterpriseProjectId'] : null;
         $this->container['nodeNicSpecUpdate'] = isset($data['nodeNicSpecUpdate']) ? $data['nodeNicSpecUpdate'] : null;
+        $this->container['securityReinforcementType'] = isset($data['securityReinforcementType']) ? $data['securityReinforcementType'] : null;
     }
 
     /**
@@ -233,6 +259,14 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
         if ($this->container['userTags'] === null) {
             $invalidProperties[] = "'userTags' can't be null";
         }
+            $allowedValues = $this->getSecurityReinforcementTypeAllowableValues();
+                if (!is_null($this->container['securityReinforcementType']) && !in_array($this->container['securityReinforcementType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'securityReinforcementType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -412,6 +446,30 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     public function setNodeNicSpecUpdate($nodeNicSpecUpdate)
     {
         $this->container['nodeNicSpecUpdate'] = $nodeNicSpecUpdate;
+        return $this;
+    }
+
+    /**
+    * Gets securityReinforcementType
+    *  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getSecurityReinforcementType()
+    {
+        return $this->container['securityReinforcementType'];
+    }
+
+    /**
+    * Sets securityReinforcementType
+    *
+    * @param string|null $securityReinforcementType **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setSecurityReinforcementType($securityReinforcementType)
+    {
+        $this->container['securityReinforcementType'] = $securityReinforcementType;
         return $this;
     }
 

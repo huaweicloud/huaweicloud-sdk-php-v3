@@ -25,6 +25,7 @@ class UpdateSecretRequestBody implements ModelInterface, ArrayAccess
     * autoRotation  自动轮转  取值：true 开启 false 关
     * rotationPeriod  轮转周期  约束：6小时-8,760小时 （365天）  类型：Integer[unit] ，Integer表示时间长度 。unit表示时间单位，d（天）、h（小时）、m（分钟）、s（秒）。例如 1d 表示一天，24h也表示一天  说明：当开启自动轮转时，必须填写该值
     * eventSubscriptions  凭据订阅的事件列表，当前最大可订阅一个事件。当事件包含的基础事件触发时，通知消息将发送到事件对应的通知主题。
+    * rotationFuncUrn  FunctionGraph函数的urn。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class UpdateSecretRequestBody implements ModelInterface, ArrayAccess
             'description' => 'string',
             'autoRotation' => 'bool',
             'rotationPeriod' => 'string',
-            'eventSubscriptions' => 'string[]'
+            'eventSubscriptions' => 'string[]',
+            'rotationFuncUrn' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class UpdateSecretRequestBody implements ModelInterface, ArrayAccess
     * autoRotation  自动轮转  取值：true 开启 false 关
     * rotationPeriod  轮转周期  约束：6小时-8,760小时 （365天）  类型：Integer[unit] ，Integer表示时间长度 。unit表示时间单位，d（天）、h（小时）、m（分钟）、s（秒）。例如 1d 表示一天，24h也表示一天  说明：当开启自动轮转时，必须填写该值
     * eventSubscriptions  凭据订阅的事件列表，当前最大可订阅一个事件。当事件包含的基础事件触发时，通知消息将发送到事件对应的通知主题。
+    * rotationFuncUrn  FunctionGraph函数的urn。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class UpdateSecretRequestBody implements ModelInterface, ArrayAccess
         'description' => null,
         'autoRotation' => null,
         'rotationPeriod' => null,
-        'eventSubscriptions' => null
+        'eventSubscriptions' => null,
+        'rotationFuncUrn' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class UpdateSecretRequestBody implements ModelInterface, ArrayAccess
     * autoRotation  自动轮转  取值：true 开启 false 关
     * rotationPeriod  轮转周期  约束：6小时-8,760小时 （365天）  类型：Integer[unit] ，Integer表示时间长度 。unit表示时间单位，d（天）、h（小时）、m（分钟）、s（秒）。例如 1d 表示一天，24h也表示一天  说明：当开启自动轮转时，必须填写该值
     * eventSubscriptions  凭据订阅的事件列表，当前最大可订阅一个事件。当事件包含的基础事件触发时，通知消息将发送到事件对应的通知主题。
+    * rotationFuncUrn  FunctionGraph函数的urn。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class UpdateSecretRequestBody implements ModelInterface, ArrayAccess
             'description' => 'description',
             'autoRotation' => 'auto_rotation',
             'rotationPeriod' => 'rotation_period',
-            'eventSubscriptions' => 'event_subscriptions'
+            'eventSubscriptions' => 'event_subscriptions',
+            'rotationFuncUrn' => 'rotation_func_urn'
     ];
 
     /**
@@ -100,6 +106,7 @@ class UpdateSecretRequestBody implements ModelInterface, ArrayAccess
     * autoRotation  自动轮转  取值：true 开启 false 关
     * rotationPeriod  轮转周期  约束：6小时-8,760小时 （365天）  类型：Integer[unit] ，Integer表示时间长度 。unit表示时间单位，d（天）、h（小时）、m（分钟）、s（秒）。例如 1d 表示一天，24h也表示一天  说明：当开启自动轮转时，必须填写该值
     * eventSubscriptions  凭据订阅的事件列表，当前最大可订阅一个事件。当事件包含的基础事件触发时，通知消息将发送到事件对应的通知主题。
+    * rotationFuncUrn  FunctionGraph函数的urn。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class UpdateSecretRequestBody implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'autoRotation' => 'setAutoRotation',
             'rotationPeriod' => 'setRotationPeriod',
-            'eventSubscriptions' => 'setEventSubscriptions'
+            'eventSubscriptions' => 'setEventSubscriptions',
+            'rotationFuncUrn' => 'setRotationFuncUrn'
     ];
 
     /**
@@ -118,6 +126,7 @@ class UpdateSecretRequestBody implements ModelInterface, ArrayAccess
     * autoRotation  自动轮转  取值：true 开启 false 关
     * rotationPeriod  轮转周期  约束：6小时-8,760小时 （365天）  类型：Integer[unit] ，Integer表示时间长度 。unit表示时间单位，d（天）、h（小时）、m（分钟）、s（秒）。例如 1d 表示一天，24h也表示一天  说明：当开启自动轮转时，必须填写该值
     * eventSubscriptions  凭据订阅的事件列表，当前最大可订阅一个事件。当事件包含的基础事件触发时，通知消息将发送到事件对应的通知主题。
+    * rotationFuncUrn  FunctionGraph函数的urn。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class UpdateSecretRequestBody implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'autoRotation' => 'getAutoRotation',
             'rotationPeriod' => 'getRotationPeriod',
-            'eventSubscriptions' => 'getEventSubscriptions'
+            'eventSubscriptions' => 'getEventSubscriptions',
+            'rotationFuncUrn' => 'getRotationFuncUrn'
     ];
 
     /**
@@ -192,6 +202,7 @@ class UpdateSecretRequestBody implements ModelInterface, ArrayAccess
         $this->container['autoRotation'] = isset($data['autoRotation']) ? $data['autoRotation'] : null;
         $this->container['rotationPeriod'] = isset($data['rotationPeriod']) ? $data['rotationPeriod'] : null;
         $this->container['eventSubscriptions'] = isset($data['eventSubscriptions']) ? $data['eventSubscriptions'] : null;
+        $this->container['rotationFuncUrn'] = isset($data['rotationFuncUrn']) ? $data['rotationFuncUrn'] : null;
     }
 
     /**
@@ -351,6 +362,30 @@ class UpdateSecretRequestBody implements ModelInterface, ArrayAccess
     public function setEventSubscriptions($eventSubscriptions)
     {
         $this->container['eventSubscriptions'] = $eventSubscriptions;
+        return $this;
+    }
+
+    /**
+    * Gets rotationFuncUrn
+    *  FunctionGraph函数的urn。
+    *
+    * @return string|null
+    */
+    public function getRotationFuncUrn()
+    {
+        return $this->container['rotationFuncUrn'];
+    }
+
+    /**
+    * Sets rotationFuncUrn
+    *
+    * @param string|null $rotationFuncUrn FunctionGraph函数的urn。
+    *
+    * @return $this
+    */
+    public function setRotationFuncUrn($rotationFuncUrn)
+    {
+        $this->container['rotationFuncUrn'] = $rotationFuncUrn;
         return $this;
     }
 

@@ -45,6 +45,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
+    * encryptionConfig  encryptionConfig
     *
     * @var string[]
     */
@@ -73,7 +74,8 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'enableMasterVolumeEncryption' => 'bool',
             'enableDistMgt' => 'bool',
             'deletionProtection' => 'bool',
-            'configurationsOverride' => '\HuaweiCloud\SDK\Cce\V3\Model\PackageConfiguration[]'
+            'configurationsOverride' => '\HuaweiCloud\SDK\Cce\V3\Model\PackageConfiguration[]',
+            'encryptionConfig' => '\HuaweiCloud\SDK\Cce\V3\Model\EncryptionConfig'
     ];
 
     /**
@@ -103,6 +105,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
+    * encryptionConfig  encryptionConfig
     *
     * @var string[]
     */
@@ -131,7 +134,8 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         'enableMasterVolumeEncryption' => null,
         'enableDistMgt' => null,
         'deletionProtection' => null,
-        'configurationsOverride' => null
+        'configurationsOverride' => null,
+        'encryptionConfig' => null
     ];
 
     /**
@@ -182,6 +186,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
+    * encryptionConfig  encryptionConfig
     *
     * @var string[]
     */
@@ -210,7 +215,8 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'enableMasterVolumeEncryption' => 'enableMasterVolumeEncryption',
             'enableDistMgt' => 'enableDistMgt',
             'deletionProtection' => 'deletionProtection',
-            'configurationsOverride' => 'configurationsOverride'
+            'configurationsOverride' => 'configurationsOverride',
+            'encryptionConfig' => 'encryptionConfig'
     ];
 
     /**
@@ -240,6 +246,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
+    * encryptionConfig  encryptionConfig
     *
     * @var string[]
     */
@@ -268,7 +275,8 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'enableMasterVolumeEncryption' => 'setEnableMasterVolumeEncryption',
             'enableDistMgt' => 'setEnableDistMgt',
             'deletionProtection' => 'setDeletionProtection',
-            'configurationsOverride' => 'setConfigurationsOverride'
+            'configurationsOverride' => 'setConfigurationsOverride',
+            'encryptionConfig' => 'setEncryptionConfig'
     ];
 
     /**
@@ -298,6 +306,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
+    * encryptionConfig  encryptionConfig
     *
     * @var string[]
     */
@@ -326,7 +335,8 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'enableMasterVolumeEncryption' => 'getEnableMasterVolumeEncryption',
             'enableDistMgt' => 'getEnableDistMgt',
             'deletionProtection' => 'getDeletionProtection',
-            'configurationsOverride' => 'getConfigurationsOverride'
+            'configurationsOverride' => 'getConfigurationsOverride',
+            'encryptionConfig' => 'getEncryptionConfig'
     ];
 
     /**
@@ -457,6 +467,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         $this->container['enableDistMgt'] = isset($data['enableDistMgt']) ? $data['enableDistMgt'] : null;
         $this->container['deletionProtection'] = isset($data['deletionProtection']) ? $data['deletionProtection'] : null;
         $this->container['configurationsOverride'] = isset($data['configurationsOverride']) ? $data['configurationsOverride'] : null;
+        $this->container['encryptionConfig'] = isset($data['encryptionConfig']) ? $data['encryptionConfig'] : null;
     }
 
     /**
@@ -1120,6 +1131,30 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     public function setConfigurationsOverride($configurationsOverride)
     {
         $this->container['configurationsOverride'] = $configurationsOverride;
+        return $this;
+    }
+
+    /**
+    * Gets encryptionConfig
+    *  encryptionConfig
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\EncryptionConfig|null
+    */
+    public function getEncryptionConfig()
+    {
+        return $this->container['encryptionConfig'];
+    }
+
+    /**
+    * Sets encryptionConfig
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\EncryptionConfig|null $encryptionConfig encryptionConfig
+    *
+    * @return $this
+    */
+    public function setEncryptionConfig($encryptionConfig)
+    {
+        $this->container['encryptionConfig'] = $encryptionConfig;
         return $this;
     }
 

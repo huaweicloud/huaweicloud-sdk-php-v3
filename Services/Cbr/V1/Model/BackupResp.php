@@ -26,7 +26,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * expiredAt  过期时间，例如:\"2020-02-05T10:38:34.209782\"
     * extendInfo  extendInfo
     * id  备份ID
-    * imageType  备份类型
+    * imageType  [备份类型。取值为backup和replication。](tag:hws,hws_hk,ocb) [备份类型。取值为backup。](tag:g42,hk_g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
     * name  备份名称
     * parentId  父备份ID
     * projectId  项目ID
@@ -35,15 +35,16 @@ class BackupResp implements ModelInterface, ArrayAccess
     * resourceId  资源ID
     * resourceName  资源名称
     * resourceSize  资源大小，单位为GB
-    * resourceType  资源类型: 云服务器: OS::Nova::Server, 云硬盘: OS::Cinder::Volume, 云桌面：OS::Workspace::DesktopV2
-    * status  备份状态
+    * resourceType  [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
+    * status  备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
     * updatedAt  更新时间，例如:\"2020-02-05T10:38:34.209782\"
     * vaultId  存储库ID
     * replicationRecords  复制记录
     * enterpriseProjectId  企业项目id,默认为‘0’。
-    * providerId  备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
+    * providerId  备份提供商ID，用于区分备份对象。当前取值包含： [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。](tag:hws,hws_hk) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。](tag:ocb,tlf,sbc,fcs_vm,g42,tm,dt,cmcc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。86a80900-71bf-4961-956a-d52df944f84a，该值代表备份对象为Workspace。](tag:ctc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。](tag:hcso_dt)
     * children  子副本列表
     * incremental  是否是增备
+    * version  备份副本快照类型
     *
     * @var string[]
     */
@@ -71,7 +72,8 @@ class BackupResp implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'providerId' => 'string',
             'children' => '\HuaweiCloud\SDK\Cbr\V1\Model\BackupResp[]',
-            'incremental' => 'bool'
+            'incremental' => 'bool',
+            'version' => 'int'
     ];
 
     /**
@@ -82,7 +84,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * expiredAt  过期时间，例如:\"2020-02-05T10:38:34.209782\"
     * extendInfo  extendInfo
     * id  备份ID
-    * imageType  备份类型
+    * imageType  [备份类型。取值为backup和replication。](tag:hws,hws_hk,ocb) [备份类型。取值为backup。](tag:g42,hk_g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
     * name  备份名称
     * parentId  父备份ID
     * projectId  项目ID
@@ -91,15 +93,16 @@ class BackupResp implements ModelInterface, ArrayAccess
     * resourceId  资源ID
     * resourceName  资源名称
     * resourceSize  资源大小，单位为GB
-    * resourceType  资源类型: 云服务器: OS::Nova::Server, 云硬盘: OS::Cinder::Volume, 云桌面：OS::Workspace::DesktopV2
-    * status  备份状态
+    * resourceType  [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
+    * status  备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
     * updatedAt  更新时间，例如:\"2020-02-05T10:38:34.209782\"
     * vaultId  存储库ID
     * replicationRecords  复制记录
     * enterpriseProjectId  企业项目id,默认为‘0’。
-    * providerId  备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
+    * providerId  备份提供商ID，用于区分备份对象。当前取值包含： [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。](tag:hws,hws_hk) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。](tag:ocb,tlf,sbc,fcs_vm,g42,tm,dt,cmcc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。86a80900-71bf-4961-956a-d52df944f84a，该值代表备份对象为Workspace。](tag:ctc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。](tag:hcso_dt)
     * children  子副本列表
     * incremental  是否是增备
+    * version  备份副本快照类型
     *
     * @var string[]
     */
@@ -127,7 +130,8 @@ class BackupResp implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'providerId' => null,
         'children' => null,
-        'incremental' => null
+        'incremental' => null,
+        'version' => 'int32'
     ];
 
     /**
@@ -159,7 +163,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * expiredAt  过期时间，例如:\"2020-02-05T10:38:34.209782\"
     * extendInfo  extendInfo
     * id  备份ID
-    * imageType  备份类型
+    * imageType  [备份类型。取值为backup和replication。](tag:hws,hws_hk,ocb) [备份类型。取值为backup。](tag:g42,hk_g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
     * name  备份名称
     * parentId  父备份ID
     * projectId  项目ID
@@ -168,15 +172,16 @@ class BackupResp implements ModelInterface, ArrayAccess
     * resourceId  资源ID
     * resourceName  资源名称
     * resourceSize  资源大小，单位为GB
-    * resourceType  资源类型: 云服务器: OS::Nova::Server, 云硬盘: OS::Cinder::Volume, 云桌面：OS::Workspace::DesktopV2
-    * status  备份状态
+    * resourceType  [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
+    * status  备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
     * updatedAt  更新时间，例如:\"2020-02-05T10:38:34.209782\"
     * vaultId  存储库ID
     * replicationRecords  复制记录
     * enterpriseProjectId  企业项目id,默认为‘0’。
-    * providerId  备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
+    * providerId  备份提供商ID，用于区分备份对象。当前取值包含： [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。](tag:hws,hws_hk) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。](tag:ocb,tlf,sbc,fcs_vm,g42,tm,dt,cmcc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。86a80900-71bf-4961-956a-d52df944f84a，该值代表备份对象为Workspace。](tag:ctc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。](tag:hcso_dt)
     * children  子副本列表
     * incremental  是否是增备
+    * version  备份副本快照类型
     *
     * @var string[]
     */
@@ -204,7 +209,8 @@ class BackupResp implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'providerId' => 'provider_id',
             'children' => 'children',
-            'incremental' => 'incremental'
+            'incremental' => 'incremental',
+            'version' => 'version'
     ];
 
     /**
@@ -215,7 +221,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * expiredAt  过期时间，例如:\"2020-02-05T10:38:34.209782\"
     * extendInfo  extendInfo
     * id  备份ID
-    * imageType  备份类型
+    * imageType  [备份类型。取值为backup和replication。](tag:hws,hws_hk,ocb) [备份类型。取值为backup。](tag:g42,hk_g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
     * name  备份名称
     * parentId  父备份ID
     * projectId  项目ID
@@ -224,15 +230,16 @@ class BackupResp implements ModelInterface, ArrayAccess
     * resourceId  资源ID
     * resourceName  资源名称
     * resourceSize  资源大小，单位为GB
-    * resourceType  资源类型: 云服务器: OS::Nova::Server, 云硬盘: OS::Cinder::Volume, 云桌面：OS::Workspace::DesktopV2
-    * status  备份状态
+    * resourceType  [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
+    * status  备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
     * updatedAt  更新时间，例如:\"2020-02-05T10:38:34.209782\"
     * vaultId  存储库ID
     * replicationRecords  复制记录
     * enterpriseProjectId  企业项目id,默认为‘0’。
-    * providerId  备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
+    * providerId  备份提供商ID，用于区分备份对象。当前取值包含： [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。](tag:hws,hws_hk) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。](tag:ocb,tlf,sbc,fcs_vm,g42,tm,dt,cmcc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。86a80900-71bf-4961-956a-d52df944f84a，该值代表备份对象为Workspace。](tag:ctc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。](tag:hcso_dt)
     * children  子副本列表
     * incremental  是否是增备
+    * version  备份副本快照类型
     *
     * @var string[]
     */
@@ -260,7 +267,8 @@ class BackupResp implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'providerId' => 'setProviderId',
             'children' => 'setChildren',
-            'incremental' => 'setIncremental'
+            'incremental' => 'setIncremental',
+            'version' => 'setVersion'
     ];
 
     /**
@@ -271,7 +279,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * expiredAt  过期时间，例如:\"2020-02-05T10:38:34.209782\"
     * extendInfo  extendInfo
     * id  备份ID
-    * imageType  备份类型
+    * imageType  [备份类型。取值为backup和replication。](tag:hws,hws_hk,ocb) [备份类型。取值为backup。](tag:g42,hk_g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
     * name  备份名称
     * parentId  父备份ID
     * projectId  项目ID
@@ -280,15 +288,16 @@ class BackupResp implements ModelInterface, ArrayAccess
     * resourceId  资源ID
     * resourceName  资源名称
     * resourceSize  资源大小，单位为GB
-    * resourceType  资源类型: 云服务器: OS::Nova::Server, 云硬盘: OS::Cinder::Volume, 云桌面：OS::Workspace::DesktopV2
-    * status  备份状态
+    * resourceType  [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
+    * status  备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
     * updatedAt  更新时间，例如:\"2020-02-05T10:38:34.209782\"
     * vaultId  存储库ID
     * replicationRecords  复制记录
     * enterpriseProjectId  企业项目id,默认为‘0’。
-    * providerId  备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
+    * providerId  备份提供商ID，用于区分备份对象。当前取值包含： [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。](tag:hws,hws_hk) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。](tag:ocb,tlf,sbc,fcs_vm,g42,tm,dt,cmcc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。86a80900-71bf-4961-956a-d52df944f84a，该值代表备份对象为Workspace。](tag:ctc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。](tag:hcso_dt)
     * children  子副本列表
     * incremental  是否是增备
+    * version  备份副本快照类型
     *
     * @var string[]
     */
@@ -316,7 +325,8 @@ class BackupResp implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'providerId' => 'getProviderId',
             'children' => 'getChildren',
-            'incremental' => 'getIncremental'
+            'incremental' => 'getIncremental',
+            'version' => 'getVersion'
     ];
 
     /**
@@ -359,11 +369,6 @@ class BackupResp implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const IMAGE_TYPE_BACKUP = 'backup';
-    const IMAGE_TYPE_REPLICATION = 'replication';
-    const RESOURCE_TYPE_OSNOVASERVER = 'OS::Nova::Server';
-    const RESOURCE_TYPE_OSCINDERVOLUME = 'OS::Cinder::Volume';
-    const RESOURCE_TYPE_OSWORKSPACEDESKTOP_V2 = 'OS::Workspace::DesktopV2';
     const STATUS_AVAILABLE = 'available';
     const STATUS_PROTECTING = 'protecting';
     const STATUS_DELETING = 'deleting';
@@ -373,33 +378,6 @@ class BackupResp implements ModelInterface, ArrayAccess
     const STATUS_WAITING_DELETE = 'waiting_delete';
     const STATUS_WAITING_RESTORE = 'waiting_restore';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getImageTypeAllowableValues()
-    {
-        return [
-            self::IMAGE_TYPE_BACKUP,
-            self::IMAGE_TYPE_REPLICATION,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getResourceTypeAllowableValues()
-    {
-        return [
-            self::RESOURCE_TYPE_OSNOVASERVER,
-            self::RESOURCE_TYPE_OSCINDERVOLUME,
-            self::RESOURCE_TYPE_OSWORKSPACEDESKTOP_V2,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -460,6 +438,7 @@ class BackupResp implements ModelInterface, ArrayAccess
         $this->container['providerId'] = isset($data['providerId']) ? $data['providerId'] : null;
         $this->container['children'] = isset($data['children']) ? $data['children'] : null;
         $this->container['incremental'] = isset($data['incremental']) ? $data['incremental'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
 
     /**
@@ -491,14 +470,6 @@ class BackupResp implements ModelInterface, ArrayAccess
         if ($this->container['imageType'] === null) {
             $invalidProperties[] = "'imageType' can't be null";
         }
-            $allowedValues = $this->getImageTypeAllowableValues();
-                if (!is_null($this->container['imageType']) && !in_array($this->container['imageType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'imageType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
@@ -526,14 +497,6 @@ class BackupResp implements ModelInterface, ArrayAccess
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
-            $allowedValues = $this->getResourceTypeAllowableValues();
-                if (!is_null($this->container['resourceType']) && !in_array($this->container['resourceType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'resourceType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
@@ -714,7 +677,7 @@ class BackupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageType
-    *  备份类型
+    *  [备份类型。取值为backup和replication。](tag:hws,hws_hk,ocb) [备份类型。取值为backup。](tag:g42,hk_g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
     *
     * @return string
     */
@@ -726,7 +689,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     /**
     * Sets imageType
     *
-    * @param string $imageType 备份类型
+    * @param string $imageType [备份类型。取值为backup和replication。](tag:hws,hws_hk,ocb) [备份类型。取值为backup。](tag:g42,hk_g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
     *
     * @return $this
     */
@@ -930,7 +893,7 @@ class BackupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型: 云服务器: OS::Nova::Server, 云硬盘: OS::Cinder::Volume, 云桌面：OS::Workspace::DesktopV2
+    *  [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
     *
     * @return string
     */
@@ -942,7 +905,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型: 云服务器: OS::Nova::Server, 云硬盘: OS::Cinder::Volume, 云桌面：OS::Workspace::DesktopV2
+    * @param string $resourceType [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
     *
     * @return $this
     */
@@ -954,7 +917,7 @@ class BackupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  备份状态
+    *  备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
     *
     * @return string
     */
@@ -966,7 +929,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 备份状态
+    * @param string $status 备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
     *
     * @return $this
     */
@@ -1074,7 +1037,7 @@ class BackupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets providerId
-    *  备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
+    *  备份提供商ID，用于区分备份对象。当前取值包含： [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。](tag:hws,hws_hk) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。](tag:ocb,tlf,sbc,fcs_vm,g42,tm,dt,cmcc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。86a80900-71bf-4961-956a-d52df944f84a，该值代表备份对象为Workspace。](tag:ctc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。](tag:hcso_dt)
     *
     * @return string
     */
@@ -1086,7 +1049,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     /**
     * Sets providerId
     *
-    * @param string $providerId 备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
+    * @param string $providerId 备份提供商ID，用于区分备份对象。当前取值包含： [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。](tag:hws,hws_hk) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。](tag:ocb,tlf,sbc,fcs_vm,g42,tm,dt,cmcc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。86a80900-71bf-4961-956a-d52df944f84a，该值代表备份对象为Workspace。](tag:ctc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。](tag:hcso_dt)
     *
     * @return $this
     */
@@ -1141,6 +1104,30 @@ class BackupResp implements ModelInterface, ArrayAccess
     public function setIncremental($incremental)
     {
         $this->container['incremental'] = $incremental;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  备份副本快照类型
+    *
+    * @return int|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param int|null $version 备份副本快照类型
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
         return $this;
     }
 

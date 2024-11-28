@@ -30,6 +30,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * voiceName  声音名称。
     * tag  任务标签。
     * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
+    * batchName  批次名称。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'jobId' => 'string',
             'voiceName' => 'string',
             'tag' => 'string',
-            'jobType' => 'string'
+            'jobType' => 'string',
+            'batchName' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * voiceName  声音名称。
     * tag  任务标签。
     * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
+    * batchName  批次名称。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
         'jobId' => null,
         'voiceName' => null,
         'tag' => null,
-        'jobType' => null
+        'jobType' => null,
+        'batchName' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * voiceName  声音名称。
     * tag  任务标签。
     * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
+    * batchName  批次名称。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'jobId' => 'job_id',
             'voiceName' => 'voice_name',
             'tag' => 'tag',
-            'jobType' => 'job_type'
+            'jobType' => 'job_type',
+            'batchName' => 'batch_name'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * voiceName  声音名称。
     * tag  任务标签。
     * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
+    * batchName  批次名称。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'jobId' => 'setJobId',
             'voiceName' => 'setVoiceName',
             'tag' => 'setTag',
-            'jobType' => 'setJobType'
+            'jobType' => 'setJobType',
+            'batchName' => 'setBatchName'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * voiceName  声音名称。
     * tag  任务标签。
     * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
+    * batchName  批次名称。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'jobId' => 'getJobId',
             'voiceName' => 'getVoiceName',
             'tag' => 'getTag',
-            'jobType' => 'getJobType'
+            'jobType' => 'getJobType',
+            'batchName' => 'getBatchName'
     ];
 
     /**
@@ -247,6 +257,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
         $this->container['voiceName'] = isset($data['voiceName']) ? $data['voiceName'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
+        $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
     }
 
     /**
@@ -316,6 +327,12 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'jobType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['batchName']) && (mb_strlen($this->container['batchName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'batchName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['batchName']) && (mb_strlen($this->container['batchName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'batchName', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -568,6 +585,30 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     public function setJobType($jobType)
     {
         $this->container['jobType'] = $jobType;
+        return $this;
+    }
+
+    /**
+    * Gets batchName
+    *  批次名称。
+    *
+    * @return string|null
+    */
+    public function getBatchName()
+    {
+        return $this->container['batchName'];
+    }
+
+    /**
+    * Sets batchName
+    *
+    * @param string|null $batchName 批次名称。
+    *
+    * @return $this
+    */
+    public function setBatchName($batchName)
+    {
+        $this->container['batchName'] = $batchName;
         return $this;
     }
 

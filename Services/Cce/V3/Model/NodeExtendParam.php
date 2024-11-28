@@ -41,6 +41,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * systemReservedMem  节点内存预留，系统组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * initNodePassword  节点密码，作为响应参数时，固定展示星号。
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'agencyName' => 'string',
             'kubeReservedMem' => 'int',
             'systemReservedMem' => 'int',
-            'initNodePassword' => 'string'
+            'initNodePassword' => 'string',
+            'securityReinforcementType' => 'string'
     ];
 
     /**
@@ -91,6 +93,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * systemReservedMem  节点内存预留，系统组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * initNodePassword  节点密码，作为响应参数时，固定展示星号。
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
         'agencyName' => null,
         'kubeReservedMem' => 'int32',
         'systemReservedMem' => 'int32',
-        'initNodePassword' => null
+        'initNodePassword' => null,
+        'securityReinforcementType' => null
     ];
 
     /**
@@ -162,6 +166,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * systemReservedMem  节点内存预留，系统组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * initNodePassword  节点密码，作为响应参数时，固定展示星号。
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'agencyName' => 'agency_name',
             'kubeReservedMem' => 'kubeReservedMem',
             'systemReservedMem' => 'systemReservedMem',
-            'initNodePassword' => 'init-node-password'
+            'initNodePassword' => 'init-node-password',
+            'securityReinforcementType' => 'securityReinforcementType'
     ];
 
     /**
@@ -212,6 +218,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * systemReservedMem  节点内存预留，系统组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * initNodePassword  节点密码，作为响应参数时，固定展示星号。
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'agencyName' => 'setAgencyName',
             'kubeReservedMem' => 'setKubeReservedMem',
             'systemReservedMem' => 'setSystemReservedMem',
-            'initNodePassword' => 'setInitNodePassword'
+            'initNodePassword' => 'setInitNodePassword',
+            'securityReinforcementType' => 'setSecurityReinforcementType'
     ];
 
     /**
@@ -262,6 +270,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * systemReservedMem  节点内存预留，系统组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * initNodePassword  节点密码，作为响应参数时，固定展示星号。
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'agencyName' => 'getAgencyName',
             'kubeReservedMem' => 'getKubeReservedMem',
             'systemReservedMem' => 'getSystemReservedMem',
-            'initNodePassword' => 'getInitNodePassword'
+            'initNodePassword' => 'getInitNodePassword',
+            'securityReinforcementType' => 'getSecurityReinforcementType'
     ];
 
     /**
@@ -329,7 +339,22 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SECURITY_REINFORCEMENT_TYPE_NULL = 'null';
+    const SECURITY_REINFORCEMENT_TYPE_CYBERSECURITY = 'cybersecurity';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSecurityReinforcementTypeAllowableValues()
+    {
+        return [
+            self::SECURITY_REINFORCEMENT_TYPE_NULL,
+            self::SECURITY_REINFORCEMENT_TYPE_CYBERSECURITY,
+        ];
+    }
 
 
     /**
@@ -368,6 +393,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
         $this->container['kubeReservedMem'] = isset($data['kubeReservedMem']) ? $data['kubeReservedMem'] : null;
         $this->container['systemReservedMem'] = isset($data['systemReservedMem']) ? $data['systemReservedMem'] : null;
         $this->container['initNodePassword'] = isset($data['initNodePassword']) ? $data['initNodePassword'] : null;
+        $this->container['securityReinforcementType'] = isset($data['securityReinforcementType']) ? $data['securityReinforcementType'] : null;
     }
 
     /**
@@ -384,6 +410,14 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             if (!is_null($this->container['dockerBaseSize']) && ($this->container['dockerBaseSize'] < 10)) {
                 $invalidProperties[] = "invalid value for 'dockerBaseSize', must be bigger than or equal to 10.";
             }
+            $allowedValues = $this->getSecurityReinforcementTypeAllowableValues();
+                if (!is_null($this->container['securityReinforcementType']) && !in_array($this->container['securityReinforcementType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'securityReinforcementType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -899,6 +933,30 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     public function setInitNodePassword($initNodePassword)
     {
         $this->container['initNodePassword'] = $initNodePassword;
+        return $this;
+    }
+
+    /**
+    * Gets securityReinforcementType
+    *  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getSecurityReinforcementType()
+    {
+        return $this->container['securityReinforcementType'];
+    }
+
+    /**
+    * Sets securityReinforcementType
+    *
+    * @param string|null $securityReinforcementType **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setSecurityReinforcementType($securityReinforcementType)
+    {
+        $this->container['securityReinforcementType'] = $securityReinforcementType;
         return $this;
     }
 

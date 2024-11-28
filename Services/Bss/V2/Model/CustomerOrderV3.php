@@ -36,6 +36,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * contractId  合同ID。
     * amountInfo  amountInfo
     * userName  订单创建者名称。 如果是客户自己下单，则此处返回下单操作员的登录名称；如果是运营人员从后台下单，则此处返回“运营人员”；如果是运营系统自动触发下单，则此处返回“运营系统”。
+    * pendingPaymentEndTime  订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
             'currency' => 'string',
             'contractId' => 'string',
             'amountInfo' => '\HuaweiCloud\SDK\Bss\V2\Model\AmountInfomationV2',
-            'userName' => 'string'
+            'userName' => 'string',
+            'pendingPaymentEndTime' => 'string'
     ];
 
     /**
@@ -76,6 +78,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * contractId  合同ID。
     * amountInfo  amountInfo
     * userName  订单创建者名称。 如果是客户自己下单，则此处返回下单操作员的登录名称；如果是运营人员从后台下单，则此处返回“运营人员”；如果是运营系统自动触发下单，则此处返回“运营系统”。
+    * pendingPaymentEndTime  订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
         'currency' => null,
         'contractId' => null,
         'amountInfo' => null,
-        'userName' => null
+        'userName' => null,
+        'pendingPaymentEndTime' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * contractId  合同ID。
     * amountInfo  amountInfo
     * userName  订单创建者名称。 如果是客户自己下单，则此处返回下单操作员的登录名称；如果是运营人员从后台下单，则此处返回“运营人员”；如果是运营系统自动触发下单，则此处返回“运营系统”。
+    * pendingPaymentEndTime  订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
             'currency' => 'currency',
             'contractId' => 'contract_id',
             'amountInfo' => 'amount_info',
-            'userName' => 'user_name'
+            'userName' => 'user_name',
+            'pendingPaymentEndTime' => 'pending_payment_end_time'
     ];
 
     /**
@@ -177,6 +183,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * contractId  合同ID。
     * amountInfo  amountInfo
     * userName  订单创建者名称。 如果是客户自己下单，则此处返回下单操作员的登录名称；如果是运营人员从后台下单，则此处返回“运营人员”；如果是运营系统自动触发下单，则此处返回“运营系统”。
+    * pendingPaymentEndTime  订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
             'currency' => 'setCurrency',
             'contractId' => 'setContractId',
             'amountInfo' => 'setAmountInfo',
-            'userName' => 'setUserName'
+            'userName' => 'setUserName',
+            'pendingPaymentEndTime' => 'setPendingPaymentEndTime'
     ];
 
     /**
@@ -217,6 +225,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * contractId  合同ID。
     * amountInfo  amountInfo
     * userName  订单创建者名称。 如果是客户自己下单，则此处返回下单操作员的登录名称；如果是运营人员从后台下单，则此处返回“运营人员”；如果是运营系统自动触发下单，则此处返回“运营系统”。
+    * pendingPaymentEndTime  订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
             'currency' => 'getCurrency',
             'contractId' => 'getContractId',
             'amountInfo' => 'getAmountInfo',
-            'userName' => 'getUserName'
+            'userName' => 'getUserName',
+            'pendingPaymentEndTime' => 'getPendingPaymentEndTime'
     ];
 
     /**
@@ -313,6 +323,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
         $this->container['contractId'] = isset($data['contractId']) ? $data['contractId'] : null;
         $this->container['amountInfo'] = isset($data['amountInfo']) ? $data['amountInfo'] : null;
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
+        $this->container['pendingPaymentEndTime'] = isset($data['pendingPaymentEndTime']) ? $data['pendingPaymentEndTime'] : null;
     }
 
     /**
@@ -323,6 +334,12 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['pendingPaymentEndTime']) && (mb_strlen($this->container['pendingPaymentEndTime']) > 20)) {
+                $invalidProperties[] = "invalid value for 'pendingPaymentEndTime', the character length must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['pendingPaymentEndTime']) && (mb_strlen($this->container['pendingPaymentEndTime']) < 0)) {
+                $invalidProperties[] = "invalid value for 'pendingPaymentEndTime', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -718,6 +735,30 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     public function setUserName($userName)
     {
         $this->container['userName'] = $userName;
+        return $this;
+    }
+
+    /**
+    * Gets pendingPaymentEndTime
+    *  订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    *
+    * @return string|null
+    */
+    public function getPendingPaymentEndTime()
+    {
+        return $this->container['pendingPaymentEndTime'];
+    }
+
+    /**
+    * Sets pendingPaymentEndTime
+    *
+    * @param string|null $pendingPaymentEndTime 订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    *
+    * @return $this
+    */
+    public function setPendingPaymentEndTime($pendingPaymentEndTime)
+    {
+        $this->container['pendingPaymentEndTime'] = $pendingPaymentEndTime;
         return $this;
     }
 

@@ -201,6 +201,9 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
     }
     const PROTECTABLE_TYPE_SERVER = 'server';
     const PROTECTABLE_TYPE_DISK = 'disk';
+    const PROTECTABLE_TYPE_TURBO = 'turbo';
+    const PROTECTABLE_TYPE_WORKSPACE = 'workspace';
+    const PROTECTABLE_TYPE_WORKSPACE_V2 = 'workspace_v2';
     
 
     /**
@@ -213,6 +216,9 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
         return [
             self::PROTECTABLE_TYPE_SERVER,
             self::PROTECTABLE_TYPE_DISK,
+            self::PROTECTABLE_TYPE_TURBO,
+            self::PROTECTABLE_TYPE_WORKSPACE,
+            self::PROTECTABLE_TYPE_WORKSPACE_V2,
         ];
     }
 

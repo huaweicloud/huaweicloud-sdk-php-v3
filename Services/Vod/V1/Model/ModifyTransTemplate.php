@@ -244,15 +244,9 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 128)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 128.";
             }
-        if ($this->container['qualityInfoList'] === null) {
-            $invalidProperties[] = "'qualityInfoList' can't be null";
-        }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
             }
-        if ($this->container['common'] === null) {
-            $invalidProperties[] = "'common' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -367,7 +361,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     * Gets qualityInfoList
     *  画质配置信息列表<br/>
     *
-    * @return \HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[]
+    * @return \HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[]|null
     */
     public function getQualityInfoList()
     {
@@ -377,7 +371,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets qualityInfoList
     *
-    * @param \HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[] $qualityInfoList 画质配置信息列表<br/>
+    * @param \HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[]|null $qualityInfoList 画质配置信息列表<br/>
     *
     * @return $this
     */
@@ -439,7 +433,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     * Gets common
     *  common
     *
-    * @return \HuaweiCloud\SDK\Vod\V1\Model\CommonInfo
+    * @return \HuaweiCloud\SDK\Vod\V1\Model\CommonInfo|null
     */
     public function getCommon()
     {
@@ -449,7 +443,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets common
     *
-    * @param \HuaweiCloud\SDK\Vod\V1\Model\CommonInfo $common common
+    * @param \HuaweiCloud\SDK\Vod\V1\Model\CommonInfo|null $common common
     *
     * @return $this
     */

@@ -421,6 +421,69 @@ class CbrClient extends Client
     }
 
     /**
+     * 变更
+     *
+     * 订单更新，调用该接口更新包周期产品订单信息,返回待支付订单信息。
+     * &gt; 该接口目前属于公测阶段，部分region暂时无法使用
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeOrder($request)
+    {
+        return $this->changeOrderWithHttpInfo($request);
+    }
+
+    public function changeOrderWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/orders/change';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ChangeOrderResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ChangeOrderRequest');
+    }
+
+    /**
      * 查询agent状态
      *
      * 检查应用一致性Agent状态
@@ -2025,6 +2088,12 @@ class CbrClient extends Client
         if ($localVarParams['operationType'] !== null) {
             $queryParams['operation_type'] = $localVarParams['operationType'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=UTF-8', 'application/json']
@@ -2089,11 +2158,11 @@ class CbrClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -4335,9 +4404,9 @@ class CbrClient extends Client
     }
 
     /**
-     * 变更
+     * 变更（废弃）
      *
-     * 订单更新，支付cbc订单后，调用该接口更新包周期产品订单信息。
+     * 订单更新，支付cbc订单后，调用该接口更新包周期产品订单信息。该接口已废弃。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

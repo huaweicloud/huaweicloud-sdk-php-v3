@@ -26,7 +26,7 @@ class ProductDetailInfo implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     * createTime  商品创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * updateTime  商品更新时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * state  商品状态枚举 * ACTIVED：已激活 * UNACTIVED：未激活 * BLOCK: 被冻结，商品不可用 * DELETED：已删除
@@ -54,7 +54,7 @@ class ProductDetailInfo implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     * createTime  商品创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * updateTime  商品更新时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * state  商品状态枚举 * ACTIVED：已激活 * UNACTIVED：未激活 * BLOCK: 被冻结，商品不可用 * DELETED：已删除
@@ -103,7 +103,7 @@ class ProductDetailInfo implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     * createTime  商品创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * updateTime  商品更新时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * state  商品状态枚举 * ACTIVED：已激活 * UNACTIVED：未激活 * BLOCK: 被冻结，商品不可用 * DELETED：已删除
@@ -131,7 +131,7 @@ class ProductDetailInfo implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     * createTime  商品创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * updateTime  商品更新时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * state  商品状态枚举 * ACTIVED：已激活 * UNACTIVED：未激活 * BLOCK: 被冻结，商品不可用 * DELETED：已删除
@@ -159,7 +159,7 @@ class ProductDetailInfo implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     * createTime  商品创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * updateTime  商品更新时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * state  商品状态枚举 * ACTIVED：已激活 * UNACTIVED：未激活 * BLOCK: 被冻结，商品不可用 * DELETED：已删除
@@ -474,7 +474,7 @@ class ProductDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetList
-    *  素材资产列表
+    *  资产列表,仅支持图片、视频、音频资产
     *
     * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ProductMediaDetailInfo[]|null
     */
@@ -486,7 +486,7 @@ class ProductDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetList
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ProductMediaDetailInfo[]|null $assetList 素材资产列表
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ProductMediaDetailInfo[]|null $assetList 资产列表,仅支持图片、视频、音频资产
     *
     * @return $this
     */

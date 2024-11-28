@@ -40,6 +40,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * phone  手机号
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
+    * allocatedResource  allocatedResource
     *
     * @var string[]
     */
@@ -62,7 +63,8 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
             'tag' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\JobTag',
             'phone' => 'string',
             'dhtmsJobId' => 'string',
-            'batchName' => 'string'
+            'batchName' => 'string',
+            'allocatedResource' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceTrainingAllocatedResource'
     ];
 
     /**
@@ -86,6 +88,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * phone  手机号
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
+    * allocatedResource  allocatedResource
     *
     * @var string[]
     */
@@ -108,7 +111,8 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
         'tag' => null,
         'phone' => null,
         'dhtmsJobId' => null,
-        'batchName' => null
+        'batchName' => null,
+        'allocatedResource' => null
     ];
 
     /**
@@ -153,6 +157,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * phone  手机号
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
+    * allocatedResource  allocatedResource
     *
     * @var string[]
     */
@@ -175,7 +180,8 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
             'tag' => 'tag',
             'phone' => 'phone',
             'dhtmsJobId' => 'dhtms_job_id',
-            'batchName' => 'batch_name'
+            'batchName' => 'batch_name',
+            'allocatedResource' => 'allocated_resource'
     ];
 
     /**
@@ -199,6 +205,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * phone  手机号
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
+    * allocatedResource  allocatedResource
     *
     * @var string[]
     */
@@ -221,7 +228,8 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
             'tag' => 'setTag',
             'phone' => 'setPhone',
             'dhtmsJobId' => 'setDhtmsJobId',
-            'batchName' => 'setBatchName'
+            'batchName' => 'setBatchName',
+            'allocatedResource' => 'setAllocatedResource'
     ];
 
     /**
@@ -245,6 +253,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * phone  手机号
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
+    * allocatedResource  allocatedResource
     *
     * @var string[]
     */
@@ -267,7 +276,8 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
             'tag' => 'getTag',
             'phone' => 'getPhone',
             'dhtmsJobId' => 'getDhtmsJobId',
-            'batchName' => 'getBatchName'
+            'batchName' => 'getBatchName',
+            'allocatedResource' => 'getAllocatedResource'
     ];
 
     /**
@@ -347,6 +357,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['dhtmsJobId'] = isset($data['dhtmsJobId']) ? $data['dhtmsJobId'] : null;
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
+        $this->container['allocatedResource'] = isset($data['allocatedResource']) ? $data['allocatedResource'] : null;
     }
 
     /**
@@ -914,6 +925,30 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     public function setBatchName($batchName)
     {
         $this->container['batchName'] = $batchName;
+        return $this;
+    }
+
+    /**
+    * Gets allocatedResource
+    *  allocatedResource
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceTrainingAllocatedResource|null
+    */
+    public function getAllocatedResource()
+    {
+        return $this->container['allocatedResource'];
+    }
+
+    /**
+    * Sets allocatedResource
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceTrainingAllocatedResource|null $allocatedResource allocatedResource
+    *
+    * @return $this
+    */
+    public function setAllocatedResource($allocatedResource)
+    {
+        $this->container['allocatedResource'] = $allocatedResource;
         return $this;
     }
 

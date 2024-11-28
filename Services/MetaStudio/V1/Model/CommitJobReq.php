@@ -27,6 +27,8 @@ class CommitJobReq implements ModelInterface, ArrayAccess
     * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
     * phone  手机号
     * appUserId  第三方用户id
+    * outputLanguage  模型输出语言类型
+    * customText  自定义试听文本
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class CommitJobReq implements ModelInterface, ArrayAccess
             'voiceName' => 'string',
             'language' => 'string',
             'phone' => 'string',
-            'appUserId' => 'string'
+            'appUserId' => 'string',
+            'outputLanguage' => 'string',
+            'customText' => 'string'
     ];
 
     /**
@@ -49,6 +53,8 @@ class CommitJobReq implements ModelInterface, ArrayAccess
     * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
     * phone  手机号
     * appUserId  第三方用户id
+    * outputLanguage  模型输出语言类型
+    * customText  自定义试听文本
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class CommitJobReq implements ModelInterface, ArrayAccess
         'voiceName' => null,
         'language' => null,
         'phone' => null,
-        'appUserId' => null
+        'appUserId' => null,
+        'outputLanguage' => null,
+        'customText' => null
     ];
 
     /**
@@ -92,6 +100,8 @@ class CommitJobReq implements ModelInterface, ArrayAccess
     * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
     * phone  手机号
     * appUserId  第三方用户id
+    * outputLanguage  模型输出语言类型
+    * customText  自定义试听文本
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class CommitJobReq implements ModelInterface, ArrayAccess
             'voiceName' => 'voice_name',
             'language' => 'language',
             'phone' => 'phone',
-            'appUserId' => 'app_user_id'
+            'appUserId' => 'app_user_id',
+            'outputLanguage' => 'output_language',
+            'customText' => 'custom_text'
     ];
 
     /**
@@ -114,6 +126,8 @@ class CommitJobReq implements ModelInterface, ArrayAccess
     * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
     * phone  手机号
     * appUserId  第三方用户id
+    * outputLanguage  模型输出语言类型
+    * customText  自定义试听文本
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class CommitJobReq implements ModelInterface, ArrayAccess
             'voiceName' => 'setVoiceName',
             'language' => 'setLanguage',
             'phone' => 'setPhone',
-            'appUserId' => 'setAppUserId'
+            'appUserId' => 'setAppUserId',
+            'outputLanguage' => 'setOutputLanguage',
+            'customText' => 'setCustomText'
     ];
 
     /**
@@ -136,6 +152,8 @@ class CommitJobReq implements ModelInterface, ArrayAccess
     * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
     * phone  手机号
     * appUserId  第三方用户id
+    * outputLanguage  模型输出语言类型
+    * customText  自定义试听文本
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class CommitJobReq implements ModelInterface, ArrayAccess
             'voiceName' => 'getVoiceName',
             'language' => 'getLanguage',
             'phone' => 'getPhone',
-            'appUserId' => 'getAppUserId'
+            'appUserId' => 'getAppUserId',
+            'outputLanguage' => 'getOutputLanguage',
+            'customText' => 'getCustomText'
     ];
 
     /**
@@ -229,6 +249,8 @@ class CommitJobReq implements ModelInterface, ArrayAccess
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['appUserId'] = isset($data['appUserId']) ? $data['appUserId'] : null;
+        $this->container['outputLanguage'] = isset($data['outputLanguage']) ? $data['outputLanguage'] : null;
+        $this->container['customText'] = isset($data['customText']) ? $data['customText'] : null;
     }
 
     /**
@@ -276,6 +298,18 @@ class CommitJobReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['appUserId']) && (mb_strlen($this->container['appUserId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'appUserId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['outputLanguage']) && (mb_strlen($this->container['outputLanguage']) > 32)) {
+                $invalidProperties[] = "invalid value for 'outputLanguage', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['outputLanguage']) && (mb_strlen($this->container['outputLanguage']) < 1)) {
+                $invalidProperties[] = "invalid value for 'outputLanguage', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['customText']) && (mb_strlen($this->container['customText']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'customText', the character length must be smaller than or equal to 4096.";
+            }
+            if (!is_null($this->container['customText']) && (mb_strlen($this->container['customText']) < 1)) {
+                $invalidProperties[] = "invalid value for 'customText', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -456,6 +490,54 @@ class CommitJobReq implements ModelInterface, ArrayAccess
     public function setAppUserId($appUserId)
     {
         $this->container['appUserId'] = $appUserId;
+        return $this;
+    }
+
+    /**
+    * Gets outputLanguage
+    *  模型输出语言类型
+    *
+    * @return string|null
+    */
+    public function getOutputLanguage()
+    {
+        return $this->container['outputLanguage'];
+    }
+
+    /**
+    * Sets outputLanguage
+    *
+    * @param string|null $outputLanguage 模型输出语言类型
+    *
+    * @return $this
+    */
+    public function setOutputLanguage($outputLanguage)
+    {
+        $this->container['outputLanguage'] = $outputLanguage;
+        return $this;
+    }
+
+    /**
+    * Gets customText
+    *  自定义试听文本
+    *
+    * @return string|null
+    */
+    public function getCustomText()
+    {
+        return $this->container['customText'];
+    }
+
+    /**
+    * Sets customText
+    *
+    * @param string|null $customText 自定义试听文本
+    *
+    * @return $this
+    */
+    public function setCustomText($customText)
+    {
+        $this->container['customText'] = $customText;
         return $this;
     }
 

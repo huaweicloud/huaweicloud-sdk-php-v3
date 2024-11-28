@@ -25,7 +25,7 @@ class ProductBasicInfo implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ProductBasicInfo implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ProductBasicInfo implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ProductBasicInfo implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ProductBasicInfo implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     *
     * @var string[]
     */
@@ -364,7 +364,7 @@ class ProductBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetList
-    *  素材资产列表
+    *  资产列表,仅支持图片、视频、音频资产
     *
     * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ProductMediaInfo[]|null
     */
@@ -376,7 +376,7 @@ class ProductBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetList
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ProductMediaInfo[]|null $assetList 素材资产列表
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ProductMediaInfo[]|null $assetList 资产列表,仅支持图片、视频、音频资产
     *
     * @return $this
     */

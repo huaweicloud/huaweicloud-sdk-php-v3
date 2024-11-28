@@ -21,14 +21,14 @@ class Record implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * eventName  凭据名称。
-    * triggerEventType  凭据类型  取值 ： COMMON ：通用凭据 RDS ：RDS凭据
+    * triggerEventType  事件类型。 - SECRET_VERSION_CREATED:版本创建 - SECRET_VERSION_EXPIRED:版本过期 - SECRET_ROTATED:凭据轮转成功 - SECRET_DELETED:凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败
     * createTime  事件通知记录的创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
     * secretName  凭据名称。
-    * secretType  凭据类型  取值 ： COMMON ：通用凭据(默认)。用于应用系统中的各种敏感信息储存。         RDS ：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。
+    * secretType  凭据类型  - COMMON：通用凭据(默认)。用于应用系统中的各种敏感信息储存。 - RDS：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。（已不支持，使用RDS-FG替代） - RDS-FG：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。 - GaussDB-FG：GaussDB凭据。专门针对GaussDB的凭据，用于存储GaussDB的账号信息。
     * notificationTargetName  事件通知的对象名称。
     * notificationTargetId  事件通知的对象ID。
-    * notificationContent  凭据的描述信息。
-    * notificationStatus  凭据类型  取值 ： SUCCESS ：事件通知成功。         FAIL ：事件通知失败。         INVALID ：事件通知配置主题信息无效或不正确，无法触发通知。
+    * notificationContent  事件通知的内容。
+    * notificationStatus  事件通知状态。  - SUCCESS：事件通知成功。 - FAIL：事件通知失败。 - INVALID：事件通知配置主题信息无效或不正确，无法触发通知。
     *
     * @var string[]
     */
@@ -47,14 +47,14 @@ class Record implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * eventName  凭据名称。
-    * triggerEventType  凭据类型  取值 ： COMMON ：通用凭据 RDS ：RDS凭据
+    * triggerEventType  事件类型。 - SECRET_VERSION_CREATED:版本创建 - SECRET_VERSION_EXPIRED:版本过期 - SECRET_ROTATED:凭据轮转成功 - SECRET_DELETED:凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败
     * createTime  事件通知记录的创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
     * secretName  凭据名称。
-    * secretType  凭据类型  取值 ： COMMON ：通用凭据(默认)。用于应用系统中的各种敏感信息储存。         RDS ：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。
+    * secretType  凭据类型  - COMMON：通用凭据(默认)。用于应用系统中的各种敏感信息储存。 - RDS：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。（已不支持，使用RDS-FG替代） - RDS-FG：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。 - GaussDB-FG：GaussDB凭据。专门针对GaussDB的凭据，用于存储GaussDB的账号信息。
     * notificationTargetName  事件通知的对象名称。
     * notificationTargetId  事件通知的对象ID。
-    * notificationContent  凭据的描述信息。
-    * notificationStatus  凭据类型  取值 ： SUCCESS ：事件通知成功。         FAIL ：事件通知失败。         INVALID ：事件通知配置主题信息无效或不正确，无法触发通知。
+    * notificationContent  事件通知的内容。
+    * notificationStatus  事件通知状态。  - SUCCESS：事件通知成功。 - FAIL：事件通知失败。 - INVALID：事件通知配置主题信息无效或不正确，无法触发通知。
     *
     * @var string[]
     */
@@ -94,14 +94,14 @@ class Record implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * eventName  凭据名称。
-    * triggerEventType  凭据类型  取值 ： COMMON ：通用凭据 RDS ：RDS凭据
+    * triggerEventType  事件类型。 - SECRET_VERSION_CREATED:版本创建 - SECRET_VERSION_EXPIRED:版本过期 - SECRET_ROTATED:凭据轮转成功 - SECRET_DELETED:凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败
     * createTime  事件通知记录的创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
     * secretName  凭据名称。
-    * secretType  凭据类型  取值 ： COMMON ：通用凭据(默认)。用于应用系统中的各种敏感信息储存。         RDS ：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。
+    * secretType  凭据类型  - COMMON：通用凭据(默认)。用于应用系统中的各种敏感信息储存。 - RDS：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。（已不支持，使用RDS-FG替代） - RDS-FG：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。 - GaussDB-FG：GaussDB凭据。专门针对GaussDB的凭据，用于存储GaussDB的账号信息。
     * notificationTargetName  事件通知的对象名称。
     * notificationTargetId  事件通知的对象ID。
-    * notificationContent  凭据的描述信息。
-    * notificationStatus  凭据类型  取值 ： SUCCESS ：事件通知成功。         FAIL ：事件通知失败。         INVALID ：事件通知配置主题信息无效或不正确，无法触发通知。
+    * notificationContent  事件通知的内容。
+    * notificationStatus  事件通知状态。  - SUCCESS：事件通知成功。 - FAIL：事件通知失败。 - INVALID：事件通知配置主题信息无效或不正确，无法触发通知。
     *
     * @var string[]
     */
@@ -120,14 +120,14 @@ class Record implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * eventName  凭据名称。
-    * triggerEventType  凭据类型  取值 ： COMMON ：通用凭据 RDS ：RDS凭据
+    * triggerEventType  事件类型。 - SECRET_VERSION_CREATED:版本创建 - SECRET_VERSION_EXPIRED:版本过期 - SECRET_ROTATED:凭据轮转成功 - SECRET_DELETED:凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败
     * createTime  事件通知记录的创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
     * secretName  凭据名称。
-    * secretType  凭据类型  取值 ： COMMON ：通用凭据(默认)。用于应用系统中的各种敏感信息储存。         RDS ：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。
+    * secretType  凭据类型  - COMMON：通用凭据(默认)。用于应用系统中的各种敏感信息储存。 - RDS：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。（已不支持，使用RDS-FG替代） - RDS-FG：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。 - GaussDB-FG：GaussDB凭据。专门针对GaussDB的凭据，用于存储GaussDB的账号信息。
     * notificationTargetName  事件通知的对象名称。
     * notificationTargetId  事件通知的对象ID。
-    * notificationContent  凭据的描述信息。
-    * notificationStatus  凭据类型  取值 ： SUCCESS ：事件通知成功。         FAIL ：事件通知失败。         INVALID ：事件通知配置主题信息无效或不正确，无法触发通知。
+    * notificationContent  事件通知的内容。
+    * notificationStatus  事件通知状态。  - SUCCESS：事件通知成功。 - FAIL：事件通知失败。 - INVALID：事件通知配置主题信息无效或不正确，无法触发通知。
     *
     * @var string[]
     */
@@ -146,14 +146,14 @@ class Record implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * eventName  凭据名称。
-    * triggerEventType  凭据类型  取值 ： COMMON ：通用凭据 RDS ：RDS凭据
+    * triggerEventType  事件类型。 - SECRET_VERSION_CREATED:版本创建 - SECRET_VERSION_EXPIRED:版本过期 - SECRET_ROTATED:凭据轮转成功 - SECRET_DELETED:凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败
     * createTime  事件通知记录的创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
     * secretName  凭据名称。
-    * secretType  凭据类型  取值 ： COMMON ：通用凭据(默认)。用于应用系统中的各种敏感信息储存。         RDS ：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。
+    * secretType  凭据类型  - COMMON：通用凭据(默认)。用于应用系统中的各种敏感信息储存。 - RDS：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。（已不支持，使用RDS-FG替代） - RDS-FG：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。 - GaussDB-FG：GaussDB凭据。专门针对GaussDB的凭据，用于存储GaussDB的账号信息。
     * notificationTargetName  事件通知的对象名称。
     * notificationTargetId  事件通知的对象ID。
-    * notificationContent  凭据的描述信息。
-    * notificationStatus  凭据类型  取值 ： SUCCESS ：事件通知成功。         FAIL ：事件通知失败。         INVALID ：事件通知配置主题信息无效或不正确，无法触发通知。
+    * notificationContent  事件通知的内容。
+    * notificationStatus  事件通知状态。  - SUCCESS：事件通知成功。 - FAIL：事件通知失败。 - INVALID：事件通知配置主题信息无效或不正确，无法触发通知。
     *
     * @var string[]
     */
@@ -209,7 +209,62 @@ class Record implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TRIGGER_EVENT_TYPE_SECRET_VERSION_CREATED = 'SECRET_VERSION_CREATED';
+    const TRIGGER_EVENT_TYPE_SECRET_VERSION_EXPIRED = 'SECRET_VERSION_EXPIRED';
+    const TRIGGER_EVENT_TYPE_SECRET_ROTATED = 'SECRET_ROTATED';
+    const TRIGGER_EVENT_TYPE_SECRET_DELETED = 'SECRET_DELETED';
+    const TRIGGER_EVENT_TYPE_SECRET_ROTATED_FAILED = 'SECRET_ROTATED_FAILED';
+    const SECRET_TYPE_COMMON = 'COMMON';
+    const SECRET_TYPE_RDS_FG = 'RDS-FG';
+    const SECRET_TYPE_GAUSS_DB_FG = 'GaussDB-FG';
+    const NOTIFICATION_STATUS_SUCCESS = 'SUCCESS';
+    const NOTIFICATION_STATUS_FAIL = 'FAIL';
+    const NOTIFICATION_STATUS_INVALID = 'INVALID';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTriggerEventTypeAllowableValues()
+    {
+        return [
+            self::TRIGGER_EVENT_TYPE_SECRET_VERSION_CREATED,
+            self::TRIGGER_EVENT_TYPE_SECRET_VERSION_EXPIRED,
+            self::TRIGGER_EVENT_TYPE_SECRET_ROTATED,
+            self::TRIGGER_EVENT_TYPE_SECRET_DELETED,
+            self::TRIGGER_EVENT_TYPE_SECRET_ROTATED_FAILED,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSecretTypeAllowableValues()
+    {
+        return [
+            self::SECRET_TYPE_COMMON,
+            self::SECRET_TYPE_RDS_FG,
+            self::SECRET_TYPE_GAUSS_DB_FG,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getNotificationStatusAllowableValues()
+    {
+        return [
+            self::NOTIFICATION_STATUS_SUCCESS,
+            self::NOTIFICATION_STATUS_FAIL,
+            self::NOTIFICATION_STATUS_INVALID,
+        ];
+    }
 
 
     /**
@@ -249,12 +304,14 @@ class Record implements ModelInterface, ArrayAccess
             if (!is_null($this->container['eventName']) && !preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['eventName'])) {
                 $invalidProperties[] = "invalid value for 'eventName', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
             }
-            if (!is_null($this->container['triggerEventType']) && (mb_strlen($this->container['triggerEventType']) > 20)) {
-                $invalidProperties[] = "invalid value for 'triggerEventType', the character length must be smaller than or equal to 20.";
+            $allowedValues = $this->getTriggerEventTypeAllowableValues();
+                if (!is_null($this->container['triggerEventType']) && !in_array($this->container['triggerEventType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'triggerEventType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['triggerEventType']) && (mb_strlen($this->container['triggerEventType']) < 6)) {
-                $invalidProperties[] = "invalid value for 'triggerEventType', the character length must be bigger than or equal to 6.";
-            }
+
             if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 13)) {
                 $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 13.";
             }
@@ -264,12 +321,14 @@ class Record implements ModelInterface, ArrayAccess
             if (!is_null($this->container['secretName']) && !preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['secretName'])) {
                 $invalidProperties[] = "invalid value for 'secretName', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
             }
-            if (!is_null($this->container['secretType']) && (mb_strlen($this->container['secretType']) > 20)) {
-                $invalidProperties[] = "invalid value for 'secretType', the character length must be smaller than or equal to 20.";
+            $allowedValues = $this->getSecretTypeAllowableValues();
+                if (!is_null($this->container['secretType']) && !in_array($this->container['secretType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'secretType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['secretType']) && (mb_strlen($this->container['secretType']) < 6)) {
-                $invalidProperties[] = "invalid value for 'secretType', the character length must be bigger than or equal to 6.";
-            }
+
             if (!is_null($this->container['notificationTargetName']) && !preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['notificationTargetName'])) {
                 $invalidProperties[] = "invalid value for 'notificationTargetName', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
             }
@@ -282,12 +341,14 @@ class Record implements ModelInterface, ArrayAccess
             if (!is_null($this->container['notificationContent']) && (mb_strlen($this->container['notificationContent']) < 0)) {
                 $invalidProperties[] = "invalid value for 'notificationContent', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['notificationStatus']) && (mb_strlen($this->container['notificationStatus']) > 20)) {
-                $invalidProperties[] = "invalid value for 'notificationStatus', the character length must be smaller than or equal to 20.";
+            $allowedValues = $this->getNotificationStatusAllowableValues();
+                if (!is_null($this->container['notificationStatus']) && !in_array($this->container['notificationStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'notificationStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['notificationStatus']) && (mb_strlen($this->container['notificationStatus']) < 6)) {
-                $invalidProperties[] = "invalid value for 'notificationStatus', the character length must be bigger than or equal to 6.";
-            }
+
         return $invalidProperties;
     }
 
@@ -328,7 +389,7 @@ class Record implements ModelInterface, ArrayAccess
 
     /**
     * Gets triggerEventType
-    *  凭据类型  取值 ： COMMON ：通用凭据 RDS ：RDS凭据
+    *  事件类型。 - SECRET_VERSION_CREATED:版本创建 - SECRET_VERSION_EXPIRED:版本过期 - SECRET_ROTATED:凭据轮转成功 - SECRET_DELETED:凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败
     *
     * @return string|null
     */
@@ -340,7 +401,7 @@ class Record implements ModelInterface, ArrayAccess
     /**
     * Sets triggerEventType
     *
-    * @param string|null $triggerEventType 凭据类型  取值 ： COMMON ：通用凭据 RDS ：RDS凭据
+    * @param string|null $triggerEventType 事件类型。 - SECRET_VERSION_CREATED:版本创建 - SECRET_VERSION_EXPIRED:版本过期 - SECRET_ROTATED:凭据轮转成功 - SECRET_DELETED:凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败
     *
     * @return $this
     */
@@ -400,7 +461,7 @@ class Record implements ModelInterface, ArrayAccess
 
     /**
     * Gets secretType
-    *  凭据类型  取值 ： COMMON ：通用凭据(默认)。用于应用系统中的各种敏感信息储存。         RDS ：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。
+    *  凭据类型  - COMMON：通用凭据(默认)。用于应用系统中的各种敏感信息储存。 - RDS：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。（已不支持，使用RDS-FG替代） - RDS-FG：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。 - GaussDB-FG：GaussDB凭据。专门针对GaussDB的凭据，用于存储GaussDB的账号信息。
     *
     * @return string|null
     */
@@ -412,7 +473,7 @@ class Record implements ModelInterface, ArrayAccess
     /**
     * Sets secretType
     *
-    * @param string|null $secretType 凭据类型  取值 ： COMMON ：通用凭据(默认)。用于应用系统中的各种敏感信息储存。         RDS ：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。
+    * @param string|null $secretType 凭据类型  - COMMON：通用凭据(默认)。用于应用系统中的各种敏感信息储存。 - RDS：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。（已不支持，使用RDS-FG替代） - RDS-FG：RDS凭据 。专门针对RDS的凭据，用于存储RDS的账号信息。 - GaussDB-FG：GaussDB凭据。专门针对GaussDB的凭据，用于存储GaussDB的账号信息。
     *
     * @return $this
     */
@@ -472,7 +533,7 @@ class Record implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationContent
-    *  凭据的描述信息。
+    *  事件通知的内容。
     *
     * @return string|null
     */
@@ -484,7 +545,7 @@ class Record implements ModelInterface, ArrayAccess
     /**
     * Sets notificationContent
     *
-    * @param string|null $notificationContent 凭据的描述信息。
+    * @param string|null $notificationContent 事件通知的内容。
     *
     * @return $this
     */
@@ -496,7 +557,7 @@ class Record implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationStatus
-    *  凭据类型  取值 ： SUCCESS ：事件通知成功。         FAIL ：事件通知失败。         INVALID ：事件通知配置主题信息无效或不正确，无法触发通知。
+    *  事件通知状态。  - SUCCESS：事件通知成功。 - FAIL：事件通知失败。 - INVALID：事件通知配置主题信息无效或不正确，无法触发通知。
     *
     * @return string|null
     */
@@ -508,7 +569,7 @@ class Record implements ModelInterface, ArrayAccess
     /**
     * Sets notificationStatus
     *
-    * @param string|null $notificationStatus 凭据类型  取值 ： SUCCESS ：事件通知成功。         FAIL ：事件通知失败。         INVALID ：事件通知配置主题信息无效或不正确，无法触发通知。
+    * @param string|null $notificationStatus 事件通知状态。  - SUCCESS：事件通知成功。 - FAIL：事件通知失败。 - INVALID：事件通知配置主题信息无效或不正确，无法触发通知。
     *
     * @return $this
     */

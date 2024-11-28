@@ -21,21 +21,25 @@ class AgentAddPathReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * addPath  增加备份路径详情
+    * excludePath  增加排除目录 > 该特性目前处于公测阶段，部分region可能无法使用。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'addPath' => 'string[]'
+            'addPath' => 'string[]',
+            'excludePath' => '\HuaweiCloud\SDK\Cbr\V1\Model\ExcludePath[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * addPath  增加备份路径详情
+    * excludePath  增加排除目录 > 该特性目前处于公测阶段，部分region可能无法使用。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'addPath' => null
+        'addPath' => null,
+        'excludePath' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class AgentAddPathReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * addPath  增加备份路径详情
+    * excludePath  增加排除目录 > 该特性目前处于公测阶段，部分region可能无法使用。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'addPath' => 'add_path'
+            'addPath' => 'add_path',
+            'excludePath' => 'exclude_path'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * addPath  增加备份路径详情
+    * excludePath  增加排除目录 > 该特性目前处于公测阶段，部分region可能无法使用。
     *
     * @var string[]
     */
     protected static $setters = [
-            'addPath' => 'setAddPath'
+            'addPath' => 'setAddPath',
+            'excludePath' => 'setExcludePath'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * addPath  增加备份路径详情
+    * excludePath  增加排除目录 > 该特性目前处于公测阶段，部分region可能无法使用。
     *
     * @var string[]
     */
     protected static $getters = [
-            'addPath' => 'getAddPath'
+            'addPath' => 'getAddPath',
+            'excludePath' => 'getExcludePath'
     ];
 
     /**
@@ -148,6 +158,7 @@ class AgentAddPathReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['addPath'] = isset($data['addPath']) ? $data['addPath'] : null;
+        $this->container['excludePath'] = isset($data['excludePath']) ? $data['excludePath'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class AgentAddPathReq implements ModelInterface, ArrayAccess
     public function setAddPath($addPath)
     {
         $this->container['addPath'] = $addPath;
+        return $this;
+    }
+
+    /**
+    * Gets excludePath
+    *  增加排除目录 > 该特性目前处于公测阶段，部分region可能无法使用。
+    *
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\ExcludePath[]|null
+    */
+    public function getExcludePath()
+    {
+        return $this->container['excludePath'];
+    }
+
+    /**
+    * Sets excludePath
+    *
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\ExcludePath[]|null $excludePath 增加排除目录 > 该特性目前处于公测阶段，部分region可能无法使用。
+    *
+    * @return $this
+    */
+    public function setExcludePath($excludePath)
+    {
+        $this->container['excludePath'] = $excludePath;
         return $this;
     }
 

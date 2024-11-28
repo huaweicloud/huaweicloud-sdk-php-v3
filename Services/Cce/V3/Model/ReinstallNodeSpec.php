@@ -31,6 +31,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * extendParam  extendParam
     * hostnameConfig  hostnameConfig
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
             'lifecycle' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeLifecycleConfig',
             'initializedConditions' => 'string[]',
             'extendParam' => '\HuaweiCloud\SDK\Cce\V3\Model\ReinstallExtendParam',
-            'hostnameConfig' => '\HuaweiCloud\SDK\Cce\V3\Model\HostnameConfig'
+            'hostnameConfig' => '\HuaweiCloud\SDK\Cce\V3\Model\HostnameConfig',
+            'securityReinforcementType' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * extendParam  extendParam
     * hostnameConfig  hostnameConfig
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
         'lifecycle' => null,
         'initializedConditions' => null,
         'extendParam' => null,
-        'hostnameConfig' => null
+        'hostnameConfig' => null,
+        'securityReinforcementType' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * extendParam  extendParam
     * hostnameConfig  hostnameConfig
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
             'lifecycle' => 'lifecycle',
             'initializedConditions' => 'initializedConditions',
             'extendParam' => 'extendParam',
-            'hostnameConfig' => 'hostnameConfig'
+            'hostnameConfig' => 'hostnameConfig',
+            'securityReinforcementType' => 'securityReinforcementType'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * extendParam  extendParam
     * hostnameConfig  hostnameConfig
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
             'lifecycle' => 'setLifecycle',
             'initializedConditions' => 'setInitializedConditions',
             'extendParam' => 'setExtendParam',
-            'hostnameConfig' => 'setHostnameConfig'
+            'hostnameConfig' => 'setHostnameConfig',
+            'securityReinforcementType' => 'setSecurityReinforcementType'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * extendParam  extendParam
     * hostnameConfig  hostnameConfig
+    * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
             'lifecycle' => 'getLifecycle',
             'initializedConditions' => 'getInitializedConditions',
             'extendParam' => 'getExtendParam',
-            'hostnameConfig' => 'getHostnameConfig'
+            'hostnameConfig' => 'getHostnameConfig',
+            'securityReinforcementType' => 'getSecurityReinforcementType'
     ];
 
     /**
@@ -229,7 +239,22 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SECURITY_REINFORCEMENT_TYPE_NULL = 'null';
+    const SECURITY_REINFORCEMENT_TYPE_CYBERSECURITY = 'cybersecurity';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSecurityReinforcementTypeAllowableValues()
+    {
+        return [
+            self::SECURITY_REINFORCEMENT_TYPE_NULL,
+            self::SECURITY_REINFORCEMENT_TYPE_CYBERSECURITY,
+        ];
+    }
 
 
     /**
@@ -258,6 +283,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
         $this->container['initializedConditions'] = isset($data['initializedConditions']) ? $data['initializedConditions'] : null;
         $this->container['extendParam'] = isset($data['extendParam']) ? $data['extendParam'] : null;
         $this->container['hostnameConfig'] = isset($data['hostnameConfig']) ? $data['hostnameConfig'] : null;
+        $this->container['securityReinforcementType'] = isset($data['securityReinforcementType']) ? $data['securityReinforcementType'] : null;
     }
 
     /**
@@ -274,6 +300,14 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
         if ($this->container['login'] === null) {
             $invalidProperties[] = "'login' can't be null";
         }
+            $allowedValues = $this->getSecurityReinforcementTypeAllowableValues();
+                if (!is_null($this->container['securityReinforcementType']) && !in_array($this->container['securityReinforcementType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'securityReinforcementType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -549,6 +583,30 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     public function setHostnameConfig($hostnameConfig)
     {
         $this->container['hostnameConfig'] = $hostnameConfig;
+        return $this;
+    }
+
+    /**
+    * Gets securityReinforcementType
+    *  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getSecurityReinforcementType()
+    {
+        return $this->container['securityReinforcementType'];
+    }
+
+    /**
+    * Sets securityReinforcementType
+    *
+    * @param string|null $securityReinforcementType **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setSecurityReinforcementType($securityReinforcementType)
+    {
+        $this->container['securityReinforcementType'] = $securityReinforcementType;
         return $this;
     }
 

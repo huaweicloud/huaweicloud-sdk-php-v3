@@ -23,24 +23,28 @@ class RotateSecretResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * versionId  凭据的版本号标识符。
     * secretName  凭据的名称。
+    * rotationTaskId  凭据轮转任务ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'versionId' => 'string',
-            'secretName' => 'string'
+            'secretName' => 'string',
+            'rotationTaskId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * versionId  凭据的版本号标识符。
     * secretName  凭据的名称。
+    * rotationTaskId  凭据轮转任务ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'versionId' => null,
-        'secretName' => null
+        'secretName' => null,
+        'rotationTaskId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class RotateSecretResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * versionId  凭据的版本号标识符。
     * secretName  凭据的名称。
+    * rotationTaskId  凭据轮转任务ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'versionId' => 'version_id',
-            'secretName' => 'secret_name'
+            'secretName' => 'secret_name',
+            'rotationTaskId' => 'rotation_task_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * versionId  凭据的版本号标识符。
     * secretName  凭据的名称。
+    * rotationTaskId  凭据轮转任务ID。
     *
     * @var string[]
     */
     protected static $setters = [
             'versionId' => 'setVersionId',
-            'secretName' => 'setSecretName'
+            'secretName' => 'setSecretName',
+            'rotationTaskId' => 'setRotationTaskId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * versionId  凭据的版本号标识符。
     * secretName  凭据的名称。
+    * rotationTaskId  凭据轮转任务ID。
     *
     * @var string[]
     */
     protected static $getters = [
             'versionId' => 'getVersionId',
-            'secretName' => 'getSecretName'
+            'secretName' => 'getSecretName',
+            'rotationTaskId' => 'getRotationTaskId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class RotateSecretResponse implements ModelInterface, ArrayAccess
     {
         $this->container['versionId'] = isset($data['versionId']) ? $data['versionId'] : null;
         $this->container['secretName'] = isset($data['secretName']) ? $data['secretName'] : null;
+        $this->container['rotationTaskId'] = isset($data['rotationTaskId']) ? $data['rotationTaskId'] : null;
     }
 
     /**
@@ -175,6 +186,9 @@ class RotateSecretResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['secretName']) && !preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['secretName'])) {
                 $invalidProperties[] = "invalid value for 'secretName', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
+            }
+            if (!is_null($this->container['rotationTaskId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['rotationTaskId'])) {
+                $invalidProperties[] = "invalid value for 'rotationTaskId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
         return $invalidProperties;
     }
@@ -235,6 +249,30 @@ class RotateSecretResponse implements ModelInterface, ArrayAccess
     public function setSecretName($secretName)
     {
         $this->container['secretName'] = $secretName;
+        return $this;
+    }
+
+    /**
+    * Gets rotationTaskId
+    *  凭据轮转任务ID。
+    *
+    * @return string|null
+    */
+    public function getRotationTaskId()
+    {
+        return $this->container['rotationTaskId'];
+    }
+
+    /**
+    * Sets rotationTaskId
+    *
+    * @param string|null $rotationTaskId 凭据轮转任务ID。
+    *
+    * @return $this
+    */
+    public function setRotationTaskId($rotationTaskId)
+    {
+        $this->container['rotationTaskId'] = $rotationTaskId;
         return $this;
     }
 

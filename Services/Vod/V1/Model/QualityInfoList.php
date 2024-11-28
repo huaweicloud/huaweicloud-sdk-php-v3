@@ -169,9 +169,6 @@ class QualityInfoList implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['video'] === null) {
-            $invalidProperties[] = "'video' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -190,7 +187,7 @@ class QualityInfoList implements ModelInterface, ArrayAccess
     * Gets video
     *  video
     *
-    * @return \HuaweiCloud\SDK\Vod\V1\Model\VideoInfo
+    * @return \HuaweiCloud\SDK\Vod\V1\Model\VideoInfo|null
     */
     public function getVideo()
     {
@@ -200,7 +197,7 @@ class QualityInfoList implements ModelInterface, ArrayAccess
     /**
     * Sets video
     *
-    * @param \HuaweiCloud\SDK\Vod\V1\Model\VideoInfo $video video
+    * @param \HuaweiCloud\SDK\Vod\V1\Model\VideoInfo|null $video video
     *
     * @return $this
     */

@@ -29,7 +29,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
-    * beautyLevel  美白等级。默认值0，不美白。
     * isFlexus  是否是基础版的形象训练
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
@@ -48,7 +47,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'batchName' => 'string',
             'tags' => 'string[]',
             'modelVersion' => 'string',
-            'beautyLevel' => 'int',
             'isFlexus' => 'bool',
             'isOnlyHumanModel' => 'bool',
             'audioSourceType' => 'string',
@@ -67,7 +65,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
-    * beautyLevel  美白等级。默认值0，不美白。
     * isFlexus  是否是基础版的形象训练
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
@@ -86,7 +83,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
         'batchName' => null,
         'tags' => null,
         'modelVersion' => null,
-        'beautyLevel' => 'int32',
         'isFlexus' => null,
         'isOnlyHumanModel' => null,
         'audioSourceType' => null,
@@ -126,7 +122,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
-    * beautyLevel  美白等级。默认值0，不美白。
     * isFlexus  是否是基础版的形象训练
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
@@ -145,7 +140,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'batchName' => 'batch_name',
             'tags' => 'tags',
             'modelVersion' => 'model_version',
-            'beautyLevel' => 'beauty_level',
             'isFlexus' => 'is_flexus',
             'isOnlyHumanModel' => 'is_only_human_model',
             'audioSourceType' => 'audio_source_type',
@@ -164,7 +158,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
-    * beautyLevel  美白等级。默认值0，不美白。
     * isFlexus  是否是基础版的形象训练
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
@@ -183,7 +176,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'batchName' => 'setBatchName',
             'tags' => 'setTags',
             'modelVersion' => 'setModelVersion',
-            'beautyLevel' => 'setBeautyLevel',
             'isFlexus' => 'setIsFlexus',
             'isOnlyHumanModel' => 'setIsOnlyHumanModel',
             'audioSourceType' => 'setAudioSourceType',
@@ -202,7 +194,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
-    * beautyLevel  美白等级。默认值0，不美白。
     * isFlexus  是否是基础版的形象训练
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
@@ -221,7 +212,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'batchName' => 'getBatchName',
             'tags' => 'getTags',
             'modelVersion' => 'getModelVersion',
-            'beautyLevel' => 'getBeautyLevel',
             'isFlexus' => 'getIsFlexus',
             'isOnlyHumanModel' => 'getIsOnlyHumanModel',
             'audioSourceType' => 'getAudioSourceType',
@@ -347,7 +337,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['modelVersion'] = isset($data['modelVersion']) ? $data['modelVersion'] : null;
-        $this->container['beautyLevel'] = isset($data['beautyLevel']) ? $data['beautyLevel'] : null;
         $this->container['isFlexus'] = isset($data['isFlexus']) ? $data['isFlexus'] : null;
         $this->container['isOnlyHumanModel'] = isset($data['isOnlyHumanModel']) ? $data['isOnlyHumanModel'] : null;
         $this->container['audioSourceType'] = isset($data['audioSourceType']) ? $data['audioSourceType'] : null;
@@ -412,12 +401,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['beautyLevel']) && ($this->container['beautyLevel'] > 3)) {
-                $invalidProperties[] = "invalid value for 'beautyLevel', must be smaller than or equal to 3.";
-            }
-            if (!is_null($this->container['beautyLevel']) && ($this->container['beautyLevel'] < 0)) {
-                $invalidProperties[] = "invalid value for 'beautyLevel', must be bigger than or equal to 0.";
-            }
             $allowedValues = $this->getAudioSourceTypeAllowableValues();
                 if (!is_null($this->container['audioSourceType']) && !in_array($this->container['audioSourceType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -653,30 +636,6 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     public function setModelVersion($modelVersion)
     {
         $this->container['modelVersion'] = $modelVersion;
-        return $this;
-    }
-
-    /**
-    * Gets beautyLevel
-    *  美白等级。默认值0，不美白。
-    *
-    * @return int|null
-    */
-    public function getBeautyLevel()
-    {
-        return $this->container['beautyLevel'];
-    }
-
-    /**
-    * Sets beautyLevel
-    *
-    * @param int|null $beautyLevel 美白等级。默认值0，不美白。
-    *
-    * @return $this
-    */
-    public function setBeautyLevel($beautyLevel)
-    {
-        $this->container['beautyLevel'] = $beautyLevel;
         return $this;
     }
 

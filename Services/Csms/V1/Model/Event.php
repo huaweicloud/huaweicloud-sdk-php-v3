@@ -193,6 +193,7 @@ class Event implements ModelInterface, ArrayAccess
     const EVENT_TYPES_SECRET_VERSION_EXPIRED = 'SECRET_VERSION_EXPIRED';
     const EVENT_TYPES_SECRET_ROTATED = 'SECRET_ROTATED';
     const EVENT_TYPES_SECRET_DELETED = 'SECRET_DELETED';
+    const EVENT_TYPES_SECRET_ROTATED_FAILED = 'SECRET_ROTATED_FAILED';
     const STATE_ENABLED = 'ENABLED';
     const STATE_DISABLED = 'DISABLED';
     
@@ -209,6 +210,7 @@ class Event implements ModelInterface, ArrayAccess
             self::EVENT_TYPES_SECRET_VERSION_EXPIRED,
             self::EVENT_TYPES_SECRET_ROTATED,
             self::EVENT_TYPES_SECRET_DELETED,
+            self::EVENT_TYPES_SECRET_ROTATED_FAILED,
         ];
     }
 

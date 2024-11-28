@@ -21,19 +21,19 @@ class ComputeFlavorGroup implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * groupType  性能规格，包含以下状态：  normal：通用增强型。 normal2：通用增强Ⅱ型。 armFlavors：鲲鹏通用增强型。 dedicicateNormal（dedicatedNormalLocalssd）：x86独享型。 armLocalssd：鲲鹏通用型。 normalLocalssd：x86通用型。 general：通用型。 dedicated 对于PostgreSQL引擎：独享型
-    * computeFlavors  computeFlavors
+    * computeFlavors  计算规格列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'groupType' => 'string',
-            'computeFlavors' => '\HuaweiCloud\SDK\Rds\V3\Model\ComputeFlavor'
+            'computeFlavors' => '\HuaweiCloud\SDK\Rds\V3\Model\ComputeFlavor[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groupType  性能规格，包含以下状态：  normal：通用增强型。 normal2：通用增强Ⅱ型。 armFlavors：鲲鹏通用增强型。 dedicicateNormal（dedicatedNormalLocalssd）：x86独享型。 armLocalssd：鲲鹏通用型。 normalLocalssd：x86通用型。 general：通用型。 dedicated 对于PostgreSQL引擎：独享型
-    * computeFlavors  computeFlavors
+    * computeFlavors  计算规格列表
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ComputeFlavorGroup implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * groupType  性能规格，包含以下状态：  normal：通用增强型。 normal2：通用增强Ⅱ型。 armFlavors：鲲鹏通用增强型。 dedicicateNormal（dedicatedNormalLocalssd）：x86独享型。 armLocalssd：鲲鹏通用型。 normalLocalssd：x86通用型。 general：通用型。 dedicated 对于PostgreSQL引擎：独享型
-    * computeFlavors  computeFlavors
+    * computeFlavors  计算规格列表
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ComputeFlavorGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * groupType  性能规格，包含以下状态：  normal：通用增强型。 normal2：通用增强Ⅱ型。 armFlavors：鲲鹏通用增强型。 dedicicateNormal（dedicatedNormalLocalssd）：x86独享型。 armLocalssd：鲲鹏通用型。 normalLocalssd：x86通用型。 general：通用型。 dedicated 对于PostgreSQL引擎：独享型
-    * computeFlavors  computeFlavors
+    * computeFlavors  计算规格列表
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ComputeFlavorGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * groupType  性能规格，包含以下状态：  normal：通用增强型。 normal2：通用增强Ⅱ型。 armFlavors：鲲鹏通用增强型。 dedicicateNormal（dedicatedNormalLocalssd）：x86独享型。 armLocalssd：鲲鹏通用型。 normalLocalssd：x86通用型。 general：通用型。 dedicated 对于PostgreSQL引擎：独享型
-    * computeFlavors  computeFlavors
+    * computeFlavors  计算规格列表
     *
     * @var string[]
     */
@@ -215,9 +215,9 @@ class ComputeFlavorGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets computeFlavors
-    *  computeFlavors
+    *  计算规格列表
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\ComputeFlavor
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\ComputeFlavor[]
     */
     public function getComputeFlavors()
     {
@@ -227,7 +227,7 @@ class ComputeFlavorGroup implements ModelInterface, ArrayAccess
     /**
     * Sets computeFlavors
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\ComputeFlavor $computeFlavors computeFlavors
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\ComputeFlavor[] $computeFlavors 计算规格列表
     *
     * @return $this
     */

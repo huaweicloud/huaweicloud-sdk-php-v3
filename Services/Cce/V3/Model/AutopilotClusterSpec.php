@@ -43,7 +43,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
     * extendParam  extendParam
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
-    * deletionProtection  集群删除保护，开启后禁止用户通过API或console调用删除集群，true表示开启，默认值false关闭。
     *
     * @var string[]
     */
@@ -70,8 +69,7 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
             'kubeProxyMode' => 'string',
             'az' => 'string',
             'extendParam' => '\HuaweiCloud\SDK\Cce\V3\Model\AutopilotClusterExtendParam',
-            'configurationsOverride' => '\HuaweiCloud\SDK\Cce\V3\Model\AutopilotPackageConfiguration[]',
-            'deletionProtection' => 'bool'
+            'configurationsOverride' => '\HuaweiCloud\SDK\Cce\V3\Model\AutopilotPackageConfiguration[]'
     ];
 
     /**
@@ -99,7 +97,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
     * extendParam  extendParam
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
-    * deletionProtection  集群删除保护，开启后禁止用户通过API或console调用删除集群，true表示开启，默认值false关闭。
     *
     * @var string[]
     */
@@ -126,8 +123,7 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
         'kubeProxyMode' => null,
         'az' => null,
         'extendParam' => null,
-        'configurationsOverride' => null,
-        'deletionProtection' => null
+        'configurationsOverride' => null
     ];
 
     /**
@@ -176,7 +172,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
     * extendParam  extendParam
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
-    * deletionProtection  集群删除保护，开启后禁止用户通过API或console调用删除集群，true表示开启，默认值false关闭。
     *
     * @var string[]
     */
@@ -203,8 +198,7 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
             'kubeProxyMode' => 'kubeProxyMode',
             'az' => 'az',
             'extendParam' => 'extendParam',
-            'configurationsOverride' => 'configurationsOverride',
-            'deletionProtection' => 'deletionProtection'
+            'configurationsOverride' => 'configurationsOverride'
     ];
 
     /**
@@ -232,7 +226,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
     * extendParam  extendParam
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
-    * deletionProtection  集群删除保护，开启后禁止用户通过API或console调用删除集群，true表示开启，默认值false关闭。
     *
     * @var string[]
     */
@@ -259,8 +252,7 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
             'kubeProxyMode' => 'setKubeProxyMode',
             'az' => 'setAz',
             'extendParam' => 'setExtendParam',
-            'configurationsOverride' => 'setConfigurationsOverride',
-            'deletionProtection' => 'setDeletionProtection'
+            'configurationsOverride' => 'setConfigurationsOverride'
     ];
 
     /**
@@ -288,7 +280,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
     * extendParam  extendParam
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
-    * deletionProtection  集群删除保护，开启后禁止用户通过API或console调用删除集群，true表示开启，默认值false关闭。
     *
     * @var string[]
     */
@@ -315,8 +306,7 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
             'kubeProxyMode' => 'getKubeProxyMode',
             'az' => 'getAz',
             'extendParam' => 'getExtendParam',
-            'configurationsOverride' => 'getConfigurationsOverride',
-            'deletionProtection' => 'getDeletionProtection'
+            'configurationsOverride' => 'getConfigurationsOverride'
     ];
 
     /**
@@ -439,7 +429,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
         $this->container['az'] = isset($data['az']) ? $data['az'] : null;
         $this->container['extendParam'] = isset($data['extendParam']) ? $data['extendParam'] : null;
         $this->container['configurationsOverride'] = isset($data['configurationsOverride']) ? $data['configurationsOverride'] : null;
-        $this->container['deletionProtection'] = isset($data['deletionProtection']) ? $data['deletionProtection'] : null;
     }
 
     /**
@@ -1055,30 +1044,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     public function setConfigurationsOverride($configurationsOverride)
     {
         $this->container['configurationsOverride'] = $configurationsOverride;
-        return $this;
-    }
-
-    /**
-    * Gets deletionProtection
-    *  集群删除保护，开启后禁止用户通过API或console调用删除集群，true表示开启，默认值false关闭。
-    *
-    * @return bool|null
-    */
-    public function getDeletionProtection()
-    {
-        return $this->container['deletionProtection'];
-    }
-
-    /**
-    * Sets deletionProtection
-    *
-    * @param bool|null $deletionProtection 集群删除保护，开启后禁止用户通过API或console调用删除集群，true表示开启，默认值false关闭。
-    *
-    * @return $this
-    */
-    public function setDeletionProtection($deletionProtection)
-    {
-        $this->container['deletionProtection'] = $deletionProtection;
         return $this;
     }
 

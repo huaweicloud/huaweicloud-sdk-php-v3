@@ -370,12 +370,6 @@ class CommonInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['pvc'] === null) {
-            $invalidProperties[] = "'pvc' can't be null";
-        }
-        if ($this->container['videoCodec'] === null) {
-            $invalidProperties[] = "'videoCodec' can't be null";
-        }
             $allowedValues = $this->getVideoCodecAllowableValues();
                 if (!is_null($this->container['videoCodec']) && !in_array($this->container['videoCodec'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -443,7 +437,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     * Gets pvc
     *  高清低码开关<br/>
     *
-    * @return bool
+    * @return bool|null
     */
     public function getPvc()
     {
@@ -453,7 +447,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pvc
     *
-    * @param bool $pvc 高清低码开关<br/>
+    * @param bool|null $pvc 高清低码开关<br/>
     *
     * @return $this
     */
@@ -467,7 +461,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     * Gets videoCodec
     *  视频编码格式<br/>
     *
-    * @return string
+    * @return string|null
     */
     public function getVideoCodec()
     {
@@ -477,7 +471,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     /**
     * Sets videoCodec
     *
-    * @param string $videoCodec 视频编码格式<br/>
+    * @param string|null $videoCodec 视频编码格式<br/>
     *
     * @return $this
     */

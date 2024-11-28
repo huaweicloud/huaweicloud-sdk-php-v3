@@ -26,7 +26,6 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
     * stream  流名
     * videoFramerate  展示流视频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"video_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         21,         22       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:07Z\",       \"data_list\": [         13,         34,         21       ]     }   ]
     * videoBitrate  展示流视频码率情况，码率单位为Kbps。  如果出现断流则会出现多个时间段流信息，如： ``` \"video_bitrate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         1326,         1268,         775       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:07Z\",       \"data_list\": [         1021,         2022       ]     }   ]
-    * audioFramerate  展示流音频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"audio_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         10,         17       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:06Z\",       \"data_list\": [         31,         33       ]     }   ]
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -37,7 +36,6 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
             'stream' => 'string',
             'videoFramerate' => '\HuaweiCloud\SDK\Live\V2\Model\StreamDetail[]',
             'videoBitrate' => '\HuaweiCloud\SDK\Live\V2\Model\StreamDetail[]',
-            'audioFramerate' => '\HuaweiCloud\SDK\Live\V2\Model\StreamDetail[]',
             'xRequestId' => 'string'
     ];
 
@@ -48,7 +46,6 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
     * stream  流名
     * videoFramerate  展示流视频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"video_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         21,         22       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:07Z\",       \"data_list\": [         13,         34,         21       ]     }   ]
     * videoBitrate  展示流视频码率情况，码率单位为Kbps。  如果出现断流则会出现多个时间段流信息，如： ``` \"video_bitrate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         1326,         1268,         775       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:07Z\",       \"data_list\": [         1021,         2022       ]     }   ]
-    * audioFramerate  展示流音频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"audio_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         10,         17       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:06Z\",       \"data_list\": [         31,         33       ]     }   ]
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -59,7 +56,6 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
         'stream' => null,
         'videoFramerate' => null,
         'videoBitrate' => null,
-        'audioFramerate' => null,
         'xRequestId' => null
     ];
 
@@ -91,7 +87,6 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
     * stream  流名
     * videoFramerate  展示流视频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"video_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         21,         22       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:07Z\",       \"data_list\": [         13,         34,         21       ]     }   ]
     * videoBitrate  展示流视频码率情况，码率单位为Kbps。  如果出现断流则会出现多个时间段流信息，如： ``` \"video_bitrate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         1326,         1268,         775       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:07Z\",       \"data_list\": [         1021,         2022       ]     }   ]
-    * audioFramerate  展示流音频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"audio_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         10,         17       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:06Z\",       \"data_list\": [         31,         33       ]     }   ]
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -102,7 +97,6 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
             'stream' => 'stream',
             'videoFramerate' => 'video_framerate',
             'videoBitrate' => 'video_bitrate',
-            'audioFramerate' => 'audio_framerate',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -113,7 +107,6 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
     * stream  流名
     * videoFramerate  展示流视频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"video_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         21,         22       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:07Z\",       \"data_list\": [         13,         34,         21       ]     }   ]
     * videoBitrate  展示流视频码率情况，码率单位为Kbps。  如果出现断流则会出现多个时间段流信息，如： ``` \"video_bitrate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         1326,         1268,         775       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:07Z\",       \"data_list\": [         1021,         2022       ]     }   ]
-    * audioFramerate  展示流音频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"audio_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         10,         17       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:06Z\",       \"data_list\": [         31,         33       ]     }   ]
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -124,7 +117,6 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
             'stream' => 'setStream',
             'videoFramerate' => 'setVideoFramerate',
             'videoBitrate' => 'setVideoBitrate',
-            'audioFramerate' => 'setAudioFramerate',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -135,7 +127,6 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
     * stream  流名
     * videoFramerate  展示流视频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"video_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         21,         22       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:07Z\",       \"data_list\": [         13,         34,         21       ]     }   ]
     * videoBitrate  展示流视频码率情况，码率单位为Kbps。  如果出现断流则会出现多个时间段流信息，如： ``` \"video_bitrate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         1326,         1268,         775       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:07Z\",       \"data_list\": [         1021,         2022       ]     }   ]
-    * audioFramerate  展示流音频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"audio_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         10,         17       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:06Z\",       \"data_list\": [         31,         33       ]     }   ]
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -146,7 +137,6 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
             'stream' => 'getStream',
             'videoFramerate' => 'getVideoFramerate',
             'videoBitrate' => 'getVideoBitrate',
-            'audioFramerate' => 'getAudioFramerate',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -213,7 +203,6 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
         $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
         $this->container['videoFramerate'] = isset($data['videoFramerate']) ? $data['videoFramerate'] : null;
         $this->container['videoBitrate'] = isset($data['videoBitrate']) ? $data['videoBitrate'] : null;
-        $this->container['audioFramerate'] = isset($data['audioFramerate']) ? $data['audioFramerate'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -374,30 +363,6 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
     public function setVideoBitrate($videoBitrate)
     {
         $this->container['videoBitrate'] = $videoBitrate;
-        return $this;
-    }
-
-    /**
-    * Gets audioFramerate
-    *  展示流音频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"audio_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         10,         17       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:06Z\",       \"data_list\": [         31,         33       ]     }   ]
-    *
-    * @return \HuaweiCloud\SDK\Live\V2\Model\StreamDetail[]|null
-    */
-    public function getAudioFramerate()
-    {
-        return $this->container['audioFramerate'];
-    }
-
-    /**
-    * Sets audioFramerate
-    *
-    * @param \HuaweiCloud\SDK\Live\V2\Model\StreamDetail[]|null $audioFramerate 展示流音频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"audio_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         10,         17       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:06Z\",       \"data_list\": [         31,         33       ]     }   ]
-    *
-    * @return $this
-    */
-    public function setAudioFramerate($audioFramerate)
-    {
-        $this->container['audioFramerate'] = $audioFramerate;
         return $this;
     }
 

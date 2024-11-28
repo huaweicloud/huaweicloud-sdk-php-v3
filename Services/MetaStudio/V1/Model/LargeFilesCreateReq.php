@@ -24,7 +24,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
     * fileSize  文件总的大小，最小1，最大536870912000。
     * fileType  文件类型（默认提取文件后缀）。
     * assetId  资产ID。
-    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件
+    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件 * PACKAGE：打包后的资产文件
     * fileMultipartCount  ORI4K文件分段上传数量，默认值为1
     *
     * @var string[]
@@ -44,7 +44,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
     * fileSize  文件总的大小，最小1，最大536870912000。
     * fileType  文件类型（默认提取文件后缀）。
     * assetId  资产ID。
-    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件
+    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件 * PACKAGE：打包后的资产文件
     * fileMultipartCount  ORI4K文件分段上传数量，默认值为1
     *
     * @var string[]
@@ -85,7 +85,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
     * fileSize  文件总的大小，最小1，最大536870912000。
     * fileType  文件类型（默认提取文件后缀）。
     * assetId  资产ID。
-    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件
+    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件 * PACKAGE：打包后的资产文件
     * fileMultipartCount  ORI4K文件分段上传数量，默认值为1
     *
     * @var string[]
@@ -105,7 +105,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
     * fileSize  文件总的大小，最小1，最大536870912000。
     * fileType  文件类型（默认提取文件后缀）。
     * assetId  资产ID。
-    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件
+    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件 * PACKAGE：打包后的资产文件
     * fileMultipartCount  ORI4K文件分段上传数量，默认值为1
     *
     * @var string[]
@@ -125,7 +125,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
     * fileSize  文件总的大小，最小1，最大536870912000。
     * fileType  文件类型（默认提取文件后缀）。
     * assetId  资产ID。
-    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件
+    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件 * PACKAGE：打包后的资产文件
     * fileMultipartCount  ORI4K文件分段上传数量，默认值为1
     *
     * @var string[]
@@ -373,7 +373,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetFileCategory
-    *  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件
+    *  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件 * PACKAGE：打包后的资产文件
     *
     * @return string
     */
@@ -385,7 +385,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets assetFileCategory
     *
-    * @param string $assetFileCategory 文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件
+    * @param string $assetFileCategory 文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件 * PACKAGE：打包后的资产文件
     *
     * @return $this
     */

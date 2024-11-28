@@ -21,7 +21,7 @@ class ListSecretEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * limit  每页返回的个数。  默认值：50。
-    * marker  分页查询起始的资源id，为空时为查询第一页
+    * marker  分页查询起始的事件名称，为空时为查询第一页
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ListSecretEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * limit  每页返回的个数。  默认值：50。
-    * marker  分页查询起始的资源id，为空时为查询第一页
+    * marker  分页查询起始的事件名称，为空时为查询第一页
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ListSecretEventsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * limit  每页返回的个数。  默认值：50。
-    * marker  分页查询起始的资源id，为空时为查询第一页
+    * marker  分页查询起始的事件名称，为空时为查询第一页
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ListSecretEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * limit  每页返回的个数。  默认值：50。
-    * marker  分页查询起始的资源id，为空时为查询第一页
+    * marker  分页查询起始的事件名称，为空时为查询第一页
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ListSecretEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * limit  每页返回的个数。  默认值：50。
-    * marker  分页查询起始的资源id，为空时为查询第一页
+    * marker  分页查询起始的事件名称，为空时为查询第一页
     *
     * @var string[]
     */
@@ -175,8 +175,8 @@ class ListSecretEventsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['marker']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['marker'])) {
-                $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
+            if (!is_null($this->container['marker']) && !preg_match("/^[a-zA-Z0-9._-]{1,64}$/", $this->container['marker'])) {
+                $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /^[a-zA-Z0-9._-]{1,64}$/.";
             }
         return $invalidProperties;
     }
@@ -218,7 +218,7 @@ class ListSecretEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  分页查询起始的资源id，为空时为查询第一页
+    *  分页查询起始的事件名称，为空时为查询第一页
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class ListSecretEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker 分页查询起始的资源id，为空时为查询第一页
+    * @param string|null $marker 分页查询起始的事件名称，为空时为查询第一页
     *
     * @return $this
     */

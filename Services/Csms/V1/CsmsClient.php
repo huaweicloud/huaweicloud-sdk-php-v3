@@ -92,6 +92,68 @@ class CsmsClient extends Client
     }
 
     /**
+     * 创建服务委托
+     *
+     * 创建服务委托。用于创建凭据管理服务相关委托和函数工作流相关委托。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAgency($request)
+    {
+        return $this->createAgencyWithHttpInfo($request);
+    }
+
+    public function createAgencyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/csms/agencies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\V1\Model\CreateAgencyResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\V1\Model\CreateAgencyRequest');
+    }
+
+    /**
      * 创建凭据
      *
      * 创建新的凭据，并将凭据值存入凭据的初始版本。
@@ -761,12 +823,6 @@ class CsmsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
-        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -1047,6 +1103,80 @@ class CsmsClient extends Client
     }
 
     /**
+     * 查询任务列表
+     *
+     * 查询任务列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecretTask($request)
+    {
+        return $this->listSecretTaskWithHttpInfo($request);
+    }
+
+    public function listSecretTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/csms/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['secretName'] !== null) {
+            $queryParams['secret_name'] = $localVarParams['secretName'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $queryParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\V1\Model\ListSecretTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\V1\Model\ListSecretTaskRequest');
+    }
+
+    /**
      * 查询凭据的版本列表
      *
      * 查询指定凭据下的版本列表信息。
@@ -1307,6 +1437,68 @@ class CsmsClient extends Client
     }
 
     /**
+     * 查看是否有服务委托
+     *
+     * 查看是否有服务委托
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAgency($request)
+    {
+        return $this->showAgencyWithHttpInfo($request);
+    }
+
+    public function showAgencyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/csms/agencies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['secretType'] !== null) {
+            $queryParams['secret_type'] = $localVarParams['secretType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\V1\Model\ShowAgencyResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\V1\Model\ShowAgencyRequest');
+    }
+
+    /**
      * 查询凭据
      *
      * 查询指定凭据的信息。
@@ -1428,6 +1620,74 @@ class CsmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Csms\V1\Model\ShowSecretEventResponse',
             $requestType='\HuaweiCloud\SDK\Csms\V1\Model\ShowSecretEventRequest');
+    }
+
+    /**
+     * 获取凭据轮转函数模板
+     *
+     * 获取凭据轮转函数模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSecretFunctionTemplates($request)
+    {
+        return $this->showSecretFunctionTemplatesWithHttpInfo($request);
+    }
+
+    public function showSecretFunctionTemplatesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/csms/function-templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['secretType'] !== null) {
+            $queryParams['secret_type'] = $localVarParams['secretType'];
+        }
+        if ($localVarParams['secretSubType'] !== null) {
+            $queryParams['secret_sub_type'] = $localVarParams['secretSubType'];
+        }
+        if ($localVarParams['engine'] !== null) {
+            $queryParams['engine'] = $localVarParams['engine'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\V1\Model\ShowSecretFunctionTemplatesResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\V1\Model\ShowSecretFunctionTemplatesRequest');
     }
 
     /**

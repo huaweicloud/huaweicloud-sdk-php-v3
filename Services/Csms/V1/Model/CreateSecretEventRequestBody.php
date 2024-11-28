@@ -21,7 +21,7 @@ class CreateSecretEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  新创建事件通知的名称。  约束：取值范围为1到64个字符，满足正则匹配“^[a-zA-Z0-9_-]{1,64}$”。
-    * eventTypes  本次事件通知的基础事件列表，基础事件类型如下。  SECRET_VERSION_CREATED：版本创建 SECRET_VERSION_EXPIRED：版本过期 SECRET_ROTATED：凭据轮转 SECRET_DELETED：凭据删除  列表包含的基础事件类型不能重复。
+    * eventTypes  本次事件通知的基础事件列表，基础事件类型如下。  - SECRET_VERSION_CREATED：版本创建 - SECRET_VERSION_EXPIRED：版本过期 - SECRET_ROTATED：凭据轮转 - SECRET_DELETED：凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败  列表包含的基础事件类型不能重复。
     * state  控制事件是否生效，只有启用状态才能触发包含的基础事件类型  ENABLED：启用 DISABLED：禁用
     * notification  notification
     *
@@ -37,7 +37,7 @@ class CreateSecretEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  新创建事件通知的名称。  约束：取值范围为1到64个字符，满足正则匹配“^[a-zA-Z0-9_-]{1,64}$”。
-    * eventTypes  本次事件通知的基础事件列表，基础事件类型如下。  SECRET_VERSION_CREATED：版本创建 SECRET_VERSION_EXPIRED：版本过期 SECRET_ROTATED：凭据轮转 SECRET_DELETED：凭据删除  列表包含的基础事件类型不能重复。
+    * eventTypes  本次事件通知的基础事件列表，基础事件类型如下。  - SECRET_VERSION_CREATED：版本创建 - SECRET_VERSION_EXPIRED：版本过期 - SECRET_ROTATED：凭据轮转 - SECRET_DELETED：凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败  列表包含的基础事件类型不能重复。
     * state  控制事件是否生效，只有启用状态才能触发包含的基础事件类型  ENABLED：启用 DISABLED：禁用
     * notification  notification
     *
@@ -74,7 +74,7 @@ class CreateSecretEventRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  新创建事件通知的名称。  约束：取值范围为1到64个字符，满足正则匹配“^[a-zA-Z0-9_-]{1,64}$”。
-    * eventTypes  本次事件通知的基础事件列表，基础事件类型如下。  SECRET_VERSION_CREATED：版本创建 SECRET_VERSION_EXPIRED：版本过期 SECRET_ROTATED：凭据轮转 SECRET_DELETED：凭据删除  列表包含的基础事件类型不能重复。
+    * eventTypes  本次事件通知的基础事件列表，基础事件类型如下。  - SECRET_VERSION_CREATED：版本创建 - SECRET_VERSION_EXPIRED：版本过期 - SECRET_ROTATED：凭据轮转 - SECRET_DELETED：凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败  列表包含的基础事件类型不能重复。
     * state  控制事件是否生效，只有启用状态才能触发包含的基础事件类型  ENABLED：启用 DISABLED：禁用
     * notification  notification
     *
@@ -90,7 +90,7 @@ class CreateSecretEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  新创建事件通知的名称。  约束：取值范围为1到64个字符，满足正则匹配“^[a-zA-Z0-9_-]{1,64}$”。
-    * eventTypes  本次事件通知的基础事件列表，基础事件类型如下。  SECRET_VERSION_CREATED：版本创建 SECRET_VERSION_EXPIRED：版本过期 SECRET_ROTATED：凭据轮转 SECRET_DELETED：凭据删除  列表包含的基础事件类型不能重复。
+    * eventTypes  本次事件通知的基础事件列表，基础事件类型如下。  - SECRET_VERSION_CREATED：版本创建 - SECRET_VERSION_EXPIRED：版本过期 - SECRET_ROTATED：凭据轮转 - SECRET_DELETED：凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败  列表包含的基础事件类型不能重复。
     * state  控制事件是否生效，只有启用状态才能触发包含的基础事件类型  ENABLED：启用 DISABLED：禁用
     * notification  notification
     *
@@ -106,7 +106,7 @@ class CreateSecretEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  新创建事件通知的名称。  约束：取值范围为1到64个字符，满足正则匹配“^[a-zA-Z0-9_-]{1,64}$”。
-    * eventTypes  本次事件通知的基础事件列表，基础事件类型如下。  SECRET_VERSION_CREATED：版本创建 SECRET_VERSION_EXPIRED：版本过期 SECRET_ROTATED：凭据轮转 SECRET_DELETED：凭据删除  列表包含的基础事件类型不能重复。
+    * eventTypes  本次事件通知的基础事件列表，基础事件类型如下。  - SECRET_VERSION_CREATED：版本创建 - SECRET_VERSION_EXPIRED：版本过期 - SECRET_ROTATED：凭据轮转 - SECRET_DELETED：凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败  列表包含的基础事件类型不能重复。
     * state  控制事件是否生效，只有启用状态才能触发包含的基础事件类型  ENABLED：启用 DISABLED：禁用
     * notification  notification
     *
@@ -159,9 +159,30 @@ class CreateSecretEventRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const EVENT_TYPES_SECRET_VERSION_CREATED = 'SECRET_VERSION_CREATED';
+    const EVENT_TYPES_SECRET_VERSION_EXPIRED = 'SECRET_VERSION_EXPIRED';
+    const EVENT_TYPES_SECRET_ROTATED = 'SECRET_ROTATED';
+    const EVENT_TYPES_SECRET_DELETED = 'SECRET_DELETED';
+    const EVENT_TYPES_SECRET_ROTATED_FAILED = 'SECRET_ROTATED_FAILED';
     const STATE_ENABLED = 'ENABLED';
     const STATE_DISABLED = 'DISABLED';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEventTypesAllowableValues()
+    {
+        return [
+            self::EVENT_TYPES_SECRET_VERSION_CREATED,
+            self::EVENT_TYPES_SECRET_VERSION_EXPIRED,
+            self::EVENT_TYPES_SECRET_ROTATED,
+            self::EVENT_TYPES_SECRET_DELETED,
+            self::EVENT_TYPES_SECRET_ROTATED_FAILED,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -269,7 +290,7 @@ class CreateSecretEventRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventTypes
-    *  本次事件通知的基础事件列表，基础事件类型如下。  SECRET_VERSION_CREATED：版本创建 SECRET_VERSION_EXPIRED：版本过期 SECRET_ROTATED：凭据轮转 SECRET_DELETED：凭据删除  列表包含的基础事件类型不能重复。
+    *  本次事件通知的基础事件列表，基础事件类型如下。  - SECRET_VERSION_CREATED：版本创建 - SECRET_VERSION_EXPIRED：版本过期 - SECRET_ROTATED：凭据轮转 - SECRET_DELETED：凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败  列表包含的基础事件类型不能重复。
     *
     * @return string[]
     */
@@ -281,7 +302,7 @@ class CreateSecretEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets eventTypes
     *
-    * @param string[] $eventTypes 本次事件通知的基础事件列表，基础事件类型如下。  SECRET_VERSION_CREATED：版本创建 SECRET_VERSION_EXPIRED：版本过期 SECRET_ROTATED：凭据轮转 SECRET_DELETED：凭据删除  列表包含的基础事件类型不能重复。
+    * @param string[] $eventTypes 本次事件通知的基础事件列表，基础事件类型如下。  - SECRET_VERSION_CREATED：版本创建 - SECRET_VERSION_EXPIRED：版本过期 - SECRET_ROTATED：凭据轮转 - SECRET_DELETED：凭据删除 - SECRET_ROTATED_FAILED:凭据轮转失败  列表包含的基础事件类型不能重复。
     *
     * @return $this
     */

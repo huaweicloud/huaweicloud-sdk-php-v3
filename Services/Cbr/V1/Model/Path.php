@@ -24,6 +24,7 @@ class Path implements ModelInterface, ArrayAccess
     * status  路径状态，有available和remove两种状态
     * agentId  该路径所属于的客户端ID
     * dirPath  路径详情
+    * excludePaths  排除目录列表，多个路径之间以英文逗号分隔 > 该特性目前处于公测阶段，部分region可能无法使用。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class Path implements ModelInterface, ArrayAccess
             'id' => 'string',
             'status' => 'string',
             'agentId' => 'string',
-            'dirPath' => 'string'
+            'dirPath' => 'string',
+            'excludePaths' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class Path implements ModelInterface, ArrayAccess
     * status  路径状态，有available和remove两种状态
     * agentId  该路径所属于的客户端ID
     * dirPath  路径详情
+    * excludePaths  排除目录列表，多个路径之间以英文逗号分隔 > 该特性目前处于公测阶段，部分region可能无法使用。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class Path implements ModelInterface, ArrayAccess
         'id' => null,
         'status' => null,
         'agentId' => null,
-        'dirPath' => null
+        'dirPath' => null,
+        'excludePaths' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class Path implements ModelInterface, ArrayAccess
     * status  路径状态，有available和remove两种状态
     * agentId  该路径所属于的客户端ID
     * dirPath  路径详情
+    * excludePaths  排除目录列表，多个路径之间以英文逗号分隔 > 该特性目前处于公测阶段，部分region可能无法使用。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class Path implements ModelInterface, ArrayAccess
             'id' => 'id',
             'status' => 'status',
             'agentId' => 'agent_id',
-            'dirPath' => 'dir_path'
+            'dirPath' => 'dir_path',
+            'excludePaths' => 'exclude_paths'
     ];
 
     /**
@@ -93,6 +99,7 @@ class Path implements ModelInterface, ArrayAccess
     * status  路径状态，有available和remove两种状态
     * agentId  该路径所属于的客户端ID
     * dirPath  路径详情
+    * excludePaths  排除目录列表，多个路径之间以英文逗号分隔 > 该特性目前处于公测阶段，部分region可能无法使用。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class Path implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'status' => 'setStatus',
             'agentId' => 'setAgentId',
-            'dirPath' => 'setDirPath'
+            'dirPath' => 'setDirPath',
+            'excludePaths' => 'setExcludePaths'
     ];
 
     /**
@@ -109,6 +117,7 @@ class Path implements ModelInterface, ArrayAccess
     * status  路径状态，有available和remove两种状态
     * agentId  该路径所属于的客户端ID
     * dirPath  路径详情
+    * excludePaths  排除目录列表，多个路径之间以英文逗号分隔 > 该特性目前处于公测阶段，部分region可能无法使用。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class Path implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'status' => 'getStatus',
             'agentId' => 'getAgentId',
-            'dirPath' => 'getDirPath'
+            'dirPath' => 'getDirPath',
+            'excludePaths' => 'getExcludePaths'
     ];
 
     /**
@@ -181,6 +191,7 @@ class Path implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['agentId'] = isset($data['agentId']) ? $data['agentId'] : null;
         $this->container['dirPath'] = isset($data['dirPath']) ? $data['dirPath'] : null;
+        $this->container['excludePaths'] = isset($data['excludePaths']) ? $data['excludePaths'] : null;
     }
 
     /**
@@ -298,6 +309,30 @@ class Path implements ModelInterface, ArrayAccess
     public function setDirPath($dirPath)
     {
         $this->container['dirPath'] = $dirPath;
+        return $this;
+    }
+
+    /**
+    * Gets excludePaths
+    *  排除目录列表，多个路径之间以英文逗号分隔 > 该特性目前处于公测阶段，部分region可能无法使用。
+    *
+    * @return string|null
+    */
+    public function getExcludePaths()
+    {
+        return $this->container['excludePaths'];
+    }
+
+    /**
+    * Sets excludePaths
+    *
+    * @param string|null $excludePaths 排除目录列表，多个路径之间以英文逗号分隔 > 该特性目前处于公测阶段，部分region可能无法使用。
+    *
+    * @return $this
+    */
+    public function setExcludePaths($excludePaths)
+    {
+        $this->container['excludePaths'] = $excludePaths;
         return $this;
     }
 

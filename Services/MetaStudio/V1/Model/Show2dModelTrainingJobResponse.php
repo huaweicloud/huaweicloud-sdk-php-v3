@@ -61,7 +61,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * inferenceDataProcessEyeCorrectionMarkInfo  inferenceDataProcessEyeCorrectionMarkInfo
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * workerType  转编译任务机型
-    * beautyLevel  美白等级。默认值0，不美白。
     * voiceTrainJobId  声音训练任务id。
     * flexusRetryCount  flexus版本任务剩余可以重训的次数，每重训一次减1，减到0时不可再重训。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
@@ -112,7 +111,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'inferenceDataProcessEyeCorrectionMarkInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\InferenceEyeCorrectionMarkInfo',
             'isBackgroundReplacement' => 'bool',
             'workerType' => 'string[]',
-            'beautyLevel' => 'int',
             'voiceTrainJobId' => 'string',
             'flexusRetryCount' => 'int',
             'audioSourceType' => 'string',
@@ -163,7 +161,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * inferenceDataProcessEyeCorrectionMarkInfo  inferenceDataProcessEyeCorrectionMarkInfo
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * workerType  转编译任务机型
-    * beautyLevel  美白等级。默认值0，不美白。
     * voiceTrainJobId  声音训练任务id。
     * flexusRetryCount  flexus版本任务剩余可以重训的次数，每重训一次减1，减到0时不可再重训。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
@@ -214,7 +211,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
         'inferenceDataProcessEyeCorrectionMarkInfo' => null,
         'isBackgroundReplacement' => null,
         'workerType' => null,
-        'beautyLevel' => 'int32',
         'voiceTrainJobId' => null,
         'flexusRetryCount' => 'int32',
         'audioSourceType' => null,
@@ -286,7 +282,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * inferenceDataProcessEyeCorrectionMarkInfo  inferenceDataProcessEyeCorrectionMarkInfo
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * workerType  转编译任务机型
-    * beautyLevel  美白等级。默认值0，不美白。
     * voiceTrainJobId  声音训练任务id。
     * flexusRetryCount  flexus版本任务剩余可以重训的次数，每重训一次减1，减到0时不可再重训。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
@@ -337,7 +332,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'inferenceDataProcessEyeCorrectionMarkInfo' => 'inference_data_process_eye_correction_mark_info',
             'isBackgroundReplacement' => 'is_background_replacement',
             'workerType' => 'worker_type',
-            'beautyLevel' => 'beauty_level',
             'voiceTrainJobId' => 'voice_train_job_id',
             'flexusRetryCount' => 'flexus_retry_count',
             'audioSourceType' => 'audio_source_type',
@@ -388,7 +382,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * inferenceDataProcessEyeCorrectionMarkInfo  inferenceDataProcessEyeCorrectionMarkInfo
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * workerType  转编译任务机型
-    * beautyLevel  美白等级。默认值0，不美白。
     * voiceTrainJobId  声音训练任务id。
     * flexusRetryCount  flexus版本任务剩余可以重训的次数，每重训一次减1，减到0时不可再重训。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
@@ -439,7 +432,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'inferenceDataProcessEyeCorrectionMarkInfo' => 'setInferenceDataProcessEyeCorrectionMarkInfo',
             'isBackgroundReplacement' => 'setIsBackgroundReplacement',
             'workerType' => 'setWorkerType',
-            'beautyLevel' => 'setBeautyLevel',
             'voiceTrainJobId' => 'setVoiceTrainJobId',
             'flexusRetryCount' => 'setFlexusRetryCount',
             'audioSourceType' => 'setAudioSourceType',
@@ -490,7 +482,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * inferenceDataProcessEyeCorrectionMarkInfo  inferenceDataProcessEyeCorrectionMarkInfo
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * workerType  转编译任务机型
-    * beautyLevel  美白等级。默认值0，不美白。
     * voiceTrainJobId  声音训练任务id。
     * flexusRetryCount  flexus版本任务剩余可以重训的次数，每重训一次减1，减到0时不可再重训。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
@@ -541,7 +532,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'inferenceDataProcessEyeCorrectionMarkInfo' => 'getInferenceDataProcessEyeCorrectionMarkInfo',
             'isBackgroundReplacement' => 'getIsBackgroundReplacement',
             'workerType' => 'getWorkerType',
-            'beautyLevel' => 'getBeautyLevel',
             'voiceTrainJobId' => 'getVoiceTrainJobId',
             'flexusRetryCount' => 'getFlexusRetryCount',
             'audioSourceType' => 'getAudioSourceType',
@@ -802,7 +792,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
         $this->container['inferenceDataProcessEyeCorrectionMarkInfo'] = isset($data['inferenceDataProcessEyeCorrectionMarkInfo']) ? $data['inferenceDataProcessEyeCorrectionMarkInfo'] : null;
         $this->container['isBackgroundReplacement'] = isset($data['isBackgroundReplacement']) ? $data['isBackgroundReplacement'] : null;
         $this->container['workerType'] = isset($data['workerType']) ? $data['workerType'] : null;
-        $this->container['beautyLevel'] = isset($data['beautyLevel']) ? $data['beautyLevel'] : null;
         $this->container['voiceTrainJobId'] = isset($data['voiceTrainJobId']) ? $data['voiceTrainJobId'] : null;
         $this->container['flexusRetryCount'] = isset($data['flexusRetryCount']) ? $data['flexusRetryCount'] : null;
         $this->container['audioSourceType'] = isset($data['audioSourceType']) ? $data['audioSourceType'] : null;
@@ -989,12 +978,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['markableVideoDownloadUrl']) && (mb_strlen($this->container['markableVideoDownloadUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'markableVideoDownloadUrl', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['beautyLevel']) && ($this->container['beautyLevel'] > 3)) {
-                $invalidProperties[] = "invalid value for 'beautyLevel', must be smaller than or equal to 3.";
-            }
-            if (!is_null($this->container['beautyLevel']) && ($this->container['beautyLevel'] < 0)) {
-                $invalidProperties[] = "invalid value for 'beautyLevel', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['voiceTrainJobId']) && (mb_strlen($this->container['voiceTrainJobId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'voiceTrainJobId', the character length must be smaller than or equal to 64.";
@@ -1987,30 +1970,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     public function setWorkerType($workerType)
     {
         $this->container['workerType'] = $workerType;
-        return $this;
-    }
-
-    /**
-    * Gets beautyLevel
-    *  美白等级。默认值0，不美白。
-    *
-    * @return int|null
-    */
-    public function getBeautyLevel()
-    {
-        return $this->container['beautyLevel'];
-    }
-
-    /**
-    * Sets beautyLevel
-    *
-    * @param int|null $beautyLevel 美白等级。默认值0，不美白。
-    *
-    * @return $this
-    */
-    public function setBeautyLevel($beautyLevel)
-    {
-        $this->container['beautyLevel'] = $beautyLevel;
         return $this;
     }
 

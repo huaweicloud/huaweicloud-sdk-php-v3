@@ -22,6 +22,8 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * assetId  媒资ID
     * defaultLanguage  字幕默认语言(字幕必须存在)
+    * repackageMode  外挂模式，不传默认取值为0  取值如下： -0：表示添加的字幕会外挂上历史产物 -1：表示添加的字幕不会外挂上历史产物
+    * deleteMode  删除模式，不传默认取值为0  取值如下： -0：表示删除字幕会清除历史产物携带的字幕信息 -1：表示删除字幕不清除历史产物携带的字幕信息
     * addSubtitles  需新增或修改的字幕
     * deleteSubtitles  需删除的字幕，language不能与add_subtitles重复
     *
@@ -30,6 +32,8 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'assetId' => 'string',
             'defaultLanguage' => 'string',
+            'repackageMode' => 'string',
+            'deleteMode' => 'string',
             'addSubtitles' => '\HuaweiCloud\SDK\Vod\V1\Model\AddSubtitle[]',
             'deleteSubtitles' => '\HuaweiCloud\SDK\Vod\V1\Model\DeleteSubtitle[]'
     ];
@@ -38,6 +42,8 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * assetId  媒资ID
     * defaultLanguage  字幕默认语言(字幕必须存在)
+    * repackageMode  外挂模式，不传默认取值为0  取值如下： -0：表示添加的字幕会外挂上历史产物 -1：表示添加的字幕不会外挂上历史产物
+    * deleteMode  删除模式，不传默认取值为0  取值如下： -0：表示删除字幕会清除历史产物携带的字幕信息 -1：表示删除字幕不清除历史产物携带的字幕信息
     * addSubtitles  需新增或修改的字幕
     * deleteSubtitles  需删除的字幕，language不能与add_subtitles重复
     *
@@ -46,6 +52,8 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'assetId' => null,
         'defaultLanguage' => null,
+        'repackageMode' => null,
+        'deleteMode' => null,
         'addSubtitles' => null,
         'deleteSubtitles' => null
     ];
@@ -75,6 +83,8 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * assetId  媒资ID
     * defaultLanguage  字幕默认语言(字幕必须存在)
+    * repackageMode  外挂模式，不传默认取值为0  取值如下： -0：表示添加的字幕会外挂上历史产物 -1：表示添加的字幕不会外挂上历史产物
+    * deleteMode  删除模式，不传默认取值为0  取值如下： -0：表示删除字幕会清除历史产物携带的字幕信息 -1：表示删除字幕不清除历史产物携带的字幕信息
     * addSubtitles  需新增或修改的字幕
     * deleteSubtitles  需删除的字幕，language不能与add_subtitles重复
     *
@@ -83,6 +93,8 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'assetId' => 'asset_id',
             'defaultLanguage' => 'default_language',
+            'repackageMode' => 'repackage_mode',
+            'deleteMode' => 'delete_mode',
             'addSubtitles' => 'add_subtitles',
             'deleteSubtitles' => 'delete_subtitles'
     ];
@@ -91,6 +103,8 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * assetId  媒资ID
     * defaultLanguage  字幕默认语言(字幕必须存在)
+    * repackageMode  外挂模式，不传默认取值为0  取值如下： -0：表示添加的字幕会外挂上历史产物 -1：表示添加的字幕不会外挂上历史产物
+    * deleteMode  删除模式，不传默认取值为0  取值如下： -0：表示删除字幕会清除历史产物携带的字幕信息 -1：表示删除字幕不清除历史产物携带的字幕信息
     * addSubtitles  需新增或修改的字幕
     * deleteSubtitles  需删除的字幕，language不能与add_subtitles重复
     *
@@ -99,6 +113,8 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     protected static $setters = [
             'assetId' => 'setAssetId',
             'defaultLanguage' => 'setDefaultLanguage',
+            'repackageMode' => 'setRepackageMode',
+            'deleteMode' => 'setDeleteMode',
             'addSubtitles' => 'setAddSubtitles',
             'deleteSubtitles' => 'setDeleteSubtitles'
     ];
@@ -107,6 +123,8 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * assetId  媒资ID
     * defaultLanguage  字幕默认语言(字幕必须存在)
+    * repackageMode  外挂模式，不传默认取值为0  取值如下： -0：表示添加的字幕会外挂上历史产物 -1：表示添加的字幕不会外挂上历史产物
+    * deleteMode  删除模式，不传默认取值为0  取值如下： -0：表示删除字幕会清除历史产物携带的字幕信息 -1：表示删除字幕不清除历史产物携带的字幕信息
     * addSubtitles  需新增或修改的字幕
     * deleteSubtitles  需删除的字幕，language不能与add_subtitles重复
     *
@@ -115,6 +133,8 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     protected static $getters = [
             'assetId' => 'getAssetId',
             'defaultLanguage' => 'getDefaultLanguage',
+            'repackageMode' => 'getRepackageMode',
+            'deleteMode' => 'getDeleteMode',
             'addSubtitles' => 'getAddSubtitles',
             'deleteSubtitles' => 'getDeleteSubtitles'
     ];
@@ -159,7 +179,37 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const REPACKAGE_MODE__0 = '0';
+    const REPACKAGE_MODE__1 = '1';
+    const DELETE_MODE__0 = '0';
+    const DELETE_MODE__1 = '1';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRepackageModeAllowableValues()
+    {
+        return [
+            self::REPACKAGE_MODE__0,
+            self::REPACKAGE_MODE__1,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDeleteModeAllowableValues()
+    {
+        return [
+            self::DELETE_MODE__0,
+            self::DELETE_MODE__1,
+        ];
+    }
 
 
     /**
@@ -179,6 +229,8 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     {
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['defaultLanguage'] = isset($data['defaultLanguage']) ? $data['defaultLanguage'] : null;
+        $this->container['repackageMode'] = isset($data['repackageMode']) ? $data['repackageMode'] : null;
+        $this->container['deleteMode'] = isset($data['deleteMode']) ? $data['deleteMode'] : null;
         $this->container['addSubtitles'] = isset($data['addSubtitles']) ? $data['addSubtitles'] : null;
         $this->container['deleteSubtitles'] = isset($data['deleteSubtitles']) ? $data['deleteSubtitles'] : null;
     }
@@ -197,6 +249,22 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['defaultLanguage']) && (mb_strlen($this->container['defaultLanguage']) > 32)) {
                 $invalidProperties[] = "invalid value for 'defaultLanguage', the character length must be smaller than or equal to 32.";
             }
+            $allowedValues = $this->getRepackageModeAllowableValues();
+                if (!is_null($this->container['repackageMode']) && !in_array($this->container['repackageMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'repackageMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getDeleteModeAllowableValues();
+                if (!is_null($this->container['deleteMode']) && !in_array($this->container['deleteMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'deleteMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -256,6 +324,54 @@ class SubtitleModifyReq implements ModelInterface, ArrayAccess
     public function setDefaultLanguage($defaultLanguage)
     {
         $this->container['defaultLanguage'] = $defaultLanguage;
+        return $this;
+    }
+
+    /**
+    * Gets repackageMode
+    *  外挂模式，不传默认取值为0  取值如下： -0：表示添加的字幕会外挂上历史产物 -1：表示添加的字幕不会外挂上历史产物
+    *
+    * @return string|null
+    */
+    public function getRepackageMode()
+    {
+        return $this->container['repackageMode'];
+    }
+
+    /**
+    * Sets repackageMode
+    *
+    * @param string|null $repackageMode 外挂模式，不传默认取值为0  取值如下： -0：表示添加的字幕会外挂上历史产物 -1：表示添加的字幕不会外挂上历史产物
+    *
+    * @return $this
+    */
+    public function setRepackageMode($repackageMode)
+    {
+        $this->container['repackageMode'] = $repackageMode;
+        return $this;
+    }
+
+    /**
+    * Gets deleteMode
+    *  删除模式，不传默认取值为0  取值如下： -0：表示删除字幕会清除历史产物携带的字幕信息 -1：表示删除字幕不清除历史产物携带的字幕信息
+    *
+    * @return string|null
+    */
+    public function getDeleteMode()
+    {
+        return $this->container['deleteMode'];
+    }
+
+    /**
+    * Sets deleteMode
+    *
+    * @param string|null $deleteMode 删除模式，不传默认取值为0  取值如下： -0：表示删除字幕会清除历史产物携带的字幕信息 -1：表示删除字幕不清除历史产物携带的字幕信息
+    *
+    * @return $this
+    */
+    public function setDeleteMode($deleteMode)
+    {
+        $this->container['deleteMode'] = $deleteMode;
         return $this;
     }
 

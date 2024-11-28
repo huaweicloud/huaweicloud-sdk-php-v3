@@ -21,21 +21,29 @@ class ListOrganizationPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * operationType  组织策略类型
+    * limit  每页显示的条目数量，正整数
+    * offset  偏移值，正整数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'operationType' => 'string'
+            'operationType' => 'string',
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * operationType  组织策略类型
+    * limit  每页显示的条目数量，正整数
+    * offset  偏移值，正整数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'operationType' => null
+        'operationType' => null,
+        'limit' => 'int32',
+        'offset' => 'int32'
     ];
 
     /**
@@ -62,31 +70,43 @@ class ListOrganizationPoliciesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * operationType  组织策略类型
+    * limit  每页显示的条目数量，正整数
+    * offset  偏移值，正整数
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'operationType' => 'operation_type'
+            'operationType' => 'operation_type',
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * operationType  组织策略类型
+    * limit  每页显示的条目数量，正整数
+    * offset  偏移值，正整数
     *
     * @var string[]
     */
     protected static $setters = [
-            'operationType' => 'setOperationType'
+            'operationType' => 'setOperationType',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * operationType  组织策略类型
+    * limit  每页显示的条目数量，正整数
+    * offset  偏移值，正整数
     *
     * @var string[]
     */
     protected static $getters = [
-            'operationType' => 'getOperationType'
+            'operationType' => 'getOperationType',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ListOrganizationPoliciesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['operationType'] = isset($data['operationType']) ? $data['operationType'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -196,6 +218,54 @@ class ListOrganizationPoliciesRequest implements ModelInterface, ArrayAccess
     public function setOperationType($operationType)
     {
         $this->container['operationType'] = $operationType;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页显示的条目数量，正整数
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页显示的条目数量，正整数
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  偏移值，正整数
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 偏移值，正整数
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

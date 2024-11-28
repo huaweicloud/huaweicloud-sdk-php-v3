@@ -20,7 +20,7 @@ class DeleteOrganizationPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * organizationPolicyId  资源策略ID
+    * organizationPolicyId  组织策略ID
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteOrganizationPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * organizationPolicyId  资源策略ID
+    * organizationPolicyId  组织策略ID
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteOrganizationPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * organizationPolicyId  资源策略ID
+    * organizationPolicyId  组织策略ID
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteOrganizationPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * organizationPolicyId  资源策略ID
+    * organizationPolicyId  组织策略ID
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteOrganizationPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * organizationPolicyId  资源策略ID
+    * organizationPolicyId  组织策略ID
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DeleteOrganizationPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets organizationPolicyId
-    *  资源策略ID
+    *  组织策略ID
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class DeleteOrganizationPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets organizationPolicyId
     *
-    * @param string $organizationPolicyId 资源策略ID
+    * @param string $organizationPolicyId 组织策略ID
     *
     * @return $this
     */

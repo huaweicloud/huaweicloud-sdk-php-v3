@@ -25,7 +25,7 @@ class UpdateProductRequestBody implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     * state  商品状态枚举 * ACTIVED：已激活 * UNACTIVED：未激活
     *
     * @var string[]
@@ -47,7 +47,7 @@ class UpdateProductRequestBody implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     * state  商品状态枚举 * ACTIVED：已激活 * UNACTIVED：未激活
     *
     * @var string[]
@@ -90,7 +90,7 @@ class UpdateProductRequestBody implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     * state  商品状态枚举 * ACTIVED：已激活 * UNACTIVED：未激活
     *
     * @var string[]
@@ -112,7 +112,7 @@ class UpdateProductRequestBody implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     * state  商品状态枚举 * ACTIVED：已激活 * UNACTIVED：未激活
     *
     * @var string[]
@@ -134,7 +134,7 @@ class UpdateProductRequestBody implements ModelInterface, ArrayAccess
     * tags  标签。单个标签16字节，多个用逗号分隔，最多50个。
     * cover  cover
     * textList  文本列表
-    * assetList  素材资产列表
+    * assetList  资产列表,仅支持图片、视频、音频资产
     * state  商品状态枚举 * ACTIVED：已激活 * UNACTIVED：未激活
     *
     * @var string[]
@@ -398,7 +398,7 @@ class UpdateProductRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetList
-    *  素材资产列表
+    *  资产列表,仅支持图片、视频、音频资产
     *
     * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ProductMediaInfo[]|null
     */
@@ -410,7 +410,7 @@ class UpdateProductRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets assetList
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ProductMediaInfo[]|null $assetList 素材资产列表
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ProductMediaInfo[]|null $assetList 资产列表,仅支持图片、视频、音频资产
     *
     * @return $this
     */

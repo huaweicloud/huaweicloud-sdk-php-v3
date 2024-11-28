@@ -37,6 +37,9 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * effectiveTime  资源生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expireTime  资源过期时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expirePolicy  资源到期后的扣费策略： 0：到期进入宽限期1：到期转按需2：到期后自动删除（从生效中直接删除）3：到期后自动续费4：到期后冻结5：到期后删除（从保留期删除）  说明： 只有“3”表示该资源是自动续订，其他情况下，都是非自动续订下的到期策略。
+    * productSpecDesc  产品规格描述
+    * specSize  线性大小
+    * specSizeMeasureId  线性大小单位
     *
     * @var string[]
     */
@@ -57,7 +60,10 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'status' => 'int',
             'effectiveTime' => 'string',
             'expireTime' => 'string',
-            'expirePolicy' => 'int'
+            'expirePolicy' => 'int',
+            'productSpecDesc' => 'string',
+            'specSize' => 'float',
+            'specSizeMeasureId' => 'int'
     ];
 
     /**
@@ -79,6 +85,9 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * effectiveTime  资源生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expireTime  资源过期时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expirePolicy  资源到期后的扣费策略： 0：到期进入宽限期1：到期转按需2：到期后自动删除（从生效中直接删除）3：到期后自动续费4：到期后冻结5：到期后删除（从保留期删除）  说明： 只有“3”表示该资源是自动续订，其他情况下，都是非自动续订下的到期策略。
+    * productSpecDesc  产品规格描述
+    * specSize  线性大小
+    * specSizeMeasureId  线性大小单位
     *
     * @var string[]
     */
@@ -99,7 +108,10 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
         'status' => 'int32',
         'effectiveTime' => null,
         'expireTime' => null,
-        'expirePolicy' => 'int32'
+        'expirePolicy' => 'int32',
+        'productSpecDesc' => null,
+        'specSize' => 'bigdecimal',
+        'specSizeMeasureId' => 'int32'
     ];
 
     /**
@@ -142,6 +154,9 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * effectiveTime  资源生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expireTime  资源过期时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expirePolicy  资源到期后的扣费策略： 0：到期进入宽限期1：到期转按需2：到期后自动删除（从生效中直接删除）3：到期后自动续费4：到期后冻结5：到期后删除（从保留期删除）  说明： 只有“3”表示该资源是自动续订，其他情况下，都是非自动续订下的到期策略。
+    * productSpecDesc  产品规格描述
+    * specSize  线性大小
+    * specSizeMeasureId  线性大小单位
     *
     * @var string[]
     */
@@ -162,7 +177,10 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'status' => 'status',
             'effectiveTime' => 'effective_time',
             'expireTime' => 'expire_time',
-            'expirePolicy' => 'expire_policy'
+            'expirePolicy' => 'expire_policy',
+            'productSpecDesc' => 'product_spec_desc',
+            'specSize' => 'spec_size',
+            'specSizeMeasureId' => 'spec_size_measure_id'
     ];
 
     /**
@@ -184,6 +202,9 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * effectiveTime  资源生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expireTime  资源过期时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expirePolicy  资源到期后的扣费策略： 0：到期进入宽限期1：到期转按需2：到期后自动删除（从生效中直接删除）3：到期后自动续费4：到期后冻结5：到期后删除（从保留期删除）  说明： 只有“3”表示该资源是自动续订，其他情况下，都是非自动续订下的到期策略。
+    * productSpecDesc  产品规格描述
+    * specSize  线性大小
+    * specSizeMeasureId  线性大小单位
     *
     * @var string[]
     */
@@ -204,7 +225,10 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'effectiveTime' => 'setEffectiveTime',
             'expireTime' => 'setExpireTime',
-            'expirePolicy' => 'setExpirePolicy'
+            'expirePolicy' => 'setExpirePolicy',
+            'productSpecDesc' => 'setProductSpecDesc',
+            'specSize' => 'setSpecSize',
+            'specSizeMeasureId' => 'setSpecSizeMeasureId'
     ];
 
     /**
@@ -226,6 +250,9 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * effectiveTime  资源生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expireTime  资源过期时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expirePolicy  资源到期后的扣费策略： 0：到期进入宽限期1：到期转按需2：到期后自动删除（从生效中直接删除）3：到期后自动续费4：到期后冻结5：到期后删除（从保留期删除）  说明： 只有“3”表示该资源是自动续订，其他情况下，都是非自动续订下的到期策略。
+    * productSpecDesc  产品规格描述
+    * specSize  线性大小
+    * specSizeMeasureId  线性大小单位
     *
     * @var string[]
     */
@@ -246,7 +273,10 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'effectiveTime' => 'getEffectiveTime',
             'expireTime' => 'getExpireTime',
-            'expirePolicy' => 'getExpirePolicy'
+            'expirePolicy' => 'getExpirePolicy',
+            'productSpecDesc' => 'getProductSpecDesc',
+            'specSize' => 'getSpecSize',
+            'specSizeMeasureId' => 'getSpecSizeMeasureId'
     ];
 
     /**
@@ -324,6 +354,9 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
         $this->container['effectiveTime'] = isset($data['effectiveTime']) ? $data['effectiveTime'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['expirePolicy'] = isset($data['expirePolicy']) ? $data['expirePolicy'] : null;
+        $this->container['productSpecDesc'] = isset($data['productSpecDesc']) ? $data['productSpecDesc'] : null;
+        $this->container['specSize'] = isset($data['specSize']) ? $data['specSize'] : null;
+        $this->container['specSizeMeasureId'] = isset($data['specSizeMeasureId']) ? $data['specSizeMeasureId'] : null;
     }
 
     /**
@@ -334,6 +367,12 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['productSpecDesc']) && (mb_strlen($this->container['productSpecDesc']) > 512)) {
+                $invalidProperties[] = "invalid value for 'productSpecDesc', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['productSpecDesc']) && (mb_strlen($this->container['productSpecDesc']) < 0)) {
+                $invalidProperties[] = "invalid value for 'productSpecDesc', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -753,6 +792,78 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     public function setExpirePolicy($expirePolicy)
     {
         $this->container['expirePolicy'] = $expirePolicy;
+        return $this;
+    }
+
+    /**
+    * Gets productSpecDesc
+    *  产品规格描述
+    *
+    * @return string|null
+    */
+    public function getProductSpecDesc()
+    {
+        return $this->container['productSpecDesc'];
+    }
+
+    /**
+    * Sets productSpecDesc
+    *
+    * @param string|null $productSpecDesc 产品规格描述
+    *
+    * @return $this
+    */
+    public function setProductSpecDesc($productSpecDesc)
+    {
+        $this->container['productSpecDesc'] = $productSpecDesc;
+        return $this;
+    }
+
+    /**
+    * Gets specSize
+    *  线性大小
+    *
+    * @return float|null
+    */
+    public function getSpecSize()
+    {
+        return $this->container['specSize'];
+    }
+
+    /**
+    * Sets specSize
+    *
+    * @param float|null $specSize 线性大小
+    *
+    * @return $this
+    */
+    public function setSpecSize($specSize)
+    {
+        $this->container['specSize'] = $specSize;
+        return $this;
+    }
+
+    /**
+    * Gets specSizeMeasureId
+    *  线性大小单位
+    *
+    * @return int|null
+    */
+    public function getSpecSizeMeasureId()
+    {
+        return $this->container['specSizeMeasureId'];
+    }
+
+    /**
+    * Sets specSizeMeasureId
+    *
+    * @param int|null $specSizeMeasureId 线性大小单位
+    *
+    * @return $this
+    */
+    public function setSpecSizeMeasureId($specSizeMeasureId)
+    {
+        $this->container['specSizeMeasureId'] = $specSizeMeasureId;
         return $this;
     }
 

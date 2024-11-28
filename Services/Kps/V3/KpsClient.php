@@ -151,6 +151,130 @@ class KpsClient extends Client
     }
 
     /**
+     * 批量导出密钥对私钥
+     *
+     * 批量导出密钥对私钥，单次最多导出10条数据
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchExportPrivateKey($request)
+    {
+        return $this->batchExportPrivateKeyWithHttpInfo($request);
+    }
+
+    public function batchExportPrivateKeyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/keypairs/private-key/batch-export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/octet-stream']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/octet-stream'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kps\V3\Model\BatchExportPrivateKeyResponse',
+            $requestType='\HuaweiCloud\SDK\Kps\V3\Model\BatchExportPrivateKeyRequest');
+    }
+
+    /**
+     * 批量导入SSH密钥对
+     *
+     * 批量导入SSH密钥对,单次批量导入不得超过10条记录。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchImportKeypair($request)
+    {
+        return $this->batchImportKeypairWithHttpInfo($request);
+    }
+
+    public function batchImportKeypairWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/keypairs/batch-import';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kps\V3\Model\BatchImportKeypairResponse',
+            $requestType='\HuaweiCloud\SDK\Kps\V3\Model\BatchImportKeypairRequest');
+    }
+
+    /**
      * 清除私钥
      *
      * 清除SSH密钥对私钥。

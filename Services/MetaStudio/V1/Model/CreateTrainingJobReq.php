@@ -29,6 +29,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * phone  手机号
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
+    * outputLanguage  模型输出语言类型
+    * customText  自定义试听文本
     *
     * @var string[]
     */
@@ -41,7 +43,9 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             'createType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateType',
             'phone' => 'string',
             'dhtmsJobId' => 'string',
-            'batchName' => 'string'
+            'batchName' => 'string',
+            'outputLanguage' => 'string',
+            'customText' => 'string'
     ];
 
     /**
@@ -55,6 +59,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * phone  手机号
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
+    * outputLanguage  模型输出语言类型
+    * customText  自定义试听文本
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
         'createType' => null,
         'phone' => null,
         'dhtmsJobId' => null,
-        'batchName' => null
+        'batchName' => null,
+        'outputLanguage' => null,
+        'customText' => null
     ];
 
     /**
@@ -102,6 +110,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * phone  手机号
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
+    * outputLanguage  模型输出语言类型
+    * customText  自定义试听文本
     *
     * @var string[]
     */
@@ -114,7 +124,9 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             'createType' => 'create_type',
             'phone' => 'phone',
             'dhtmsJobId' => 'dhtms_job_id',
-            'batchName' => 'batch_name'
+            'batchName' => 'batch_name',
+            'outputLanguage' => 'output_language',
+            'customText' => 'custom_text'
     ];
 
     /**
@@ -128,6 +140,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * phone  手机号
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
+    * outputLanguage  模型输出语言类型
+    * customText  自定义试听文本
     *
     * @var string[]
     */
@@ -140,7 +154,9 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             'createType' => 'setCreateType',
             'phone' => 'setPhone',
             'dhtmsJobId' => 'setDhtmsJobId',
-            'batchName' => 'setBatchName'
+            'batchName' => 'setBatchName',
+            'outputLanguage' => 'setOutputLanguage',
+            'customText' => 'setCustomText'
     ];
 
     /**
@@ -154,6 +170,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * phone  手机号
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
+    * outputLanguage  模型输出语言类型
+    * customText  自定义试听文本
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             'createType' => 'getCreateType',
             'phone' => 'getPhone',
             'dhtmsJobId' => 'getDhtmsJobId',
-            'batchName' => 'getBatchName'
+            'batchName' => 'getBatchName',
+            'outputLanguage' => 'getOutputLanguage',
+            'customText' => 'getCustomText'
     ];
 
     /**
@@ -251,6 +271,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['dhtmsJobId'] = isset($data['dhtmsJobId']) ? $data['dhtmsJobId'] : null;
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
+        $this->container['outputLanguage'] = isset($data['outputLanguage']) ? $data['outputLanguage'] : null;
+        $this->container['customText'] = isset($data['customText']) ? $data['customText'] : null;
     }
 
     /**
@@ -307,6 +329,18 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['batchName']) && (mb_strlen($this->container['batchName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'batchName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['outputLanguage']) && (mb_strlen($this->container['outputLanguage']) > 32)) {
+                $invalidProperties[] = "invalid value for 'outputLanguage', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['outputLanguage']) && (mb_strlen($this->container['outputLanguage']) < 1)) {
+                $invalidProperties[] = "invalid value for 'outputLanguage', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['customText']) && (mb_strlen($this->container['customText']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'customText', the character length must be smaller than or equal to 4096.";
+            }
+            if (!is_null($this->container['customText']) && (mb_strlen($this->container['customText']) < 1)) {
+                $invalidProperties[] = "invalid value for 'customText', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -535,6 +569,54 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     public function setBatchName($batchName)
     {
         $this->container['batchName'] = $batchName;
+        return $this;
+    }
+
+    /**
+    * Gets outputLanguage
+    *  模型输出语言类型
+    *
+    * @return string|null
+    */
+    public function getOutputLanguage()
+    {
+        return $this->container['outputLanguage'];
+    }
+
+    /**
+    * Sets outputLanguage
+    *
+    * @param string|null $outputLanguage 模型输出语言类型
+    *
+    * @return $this
+    */
+    public function setOutputLanguage($outputLanguage)
+    {
+        $this->container['outputLanguage'] = $outputLanguage;
+        return $this;
+    }
+
+    /**
+    * Gets customText
+    *  自定义试听文本
+    *
+    * @return string|null
+    */
+    public function getCustomText()
+    {
+        return $this->container['customText'];
+    }
+
+    /**
+    * Sets customText
+    *
+    * @param string|null $customText 自定义试听文本
+    *
+    * @return $this
+    */
+    public function setCustomText($customText)
+    {
+        $this->container['customText'] = $customText;
         return $this;
     }
 
