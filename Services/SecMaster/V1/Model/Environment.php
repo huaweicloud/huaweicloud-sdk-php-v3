@@ -23,7 +23,7 @@ class Environment implements ModelInterface, ArrayAccess
     * type  环境供应商，HWCP/HWC/AWS/Azure/GCP等。
     * domainId  租户账号ID，用来标识事件所属租户。
     * projectId  租户项目ID，用来标识事件所属项目区域。
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    * regionId  数据源产品所在区域。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class Environment implements ModelInterface, ArrayAccess
     * type  环境供应商，HWCP/HWC/AWS/Azure/GCP等。
     * domainId  租户账号ID，用来标识事件所属租户。
     * projectId  租户项目ID，用来标识事件所属项目区域。
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    * regionId  数据源产品所在区域。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class Environment implements ModelInterface, ArrayAccess
     * type  环境供应商，HWCP/HWC/AWS/Azure/GCP等。
     * domainId  租户账号ID，用来标识事件所属租户。
     * projectId  租户项目ID，用来标识事件所属项目区域。
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    * regionId  数据源产品所在区域。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class Environment implements ModelInterface, ArrayAccess
     * type  环境供应商，HWCP/HWC/AWS/Azure/GCP等。
     * domainId  租户账号ID，用来标识事件所属租户。
     * projectId  租户项目ID，用来标识事件所属项目区域。
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    * regionId  数据源产品所在区域。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class Environment implements ModelInterface, ArrayAccess
     * type  环境供应商，HWCP/HWC/AWS/Azure/GCP等。
     * domainId  租户账号ID，用来标识事件所属租户。
     * projectId  租户项目ID，用来标识事件所属项目区域。
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    * regionId  数据源产品所在区域。
     *
     * @var string[]
     */
@@ -309,7 +309,7 @@ class Environment implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    *  数据源产品所在区域。
     *
     * @return string|null
     */
@@ -321,7 +321,7 @@ class Environment implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string|null $regionId 数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    * @param string|null $regionId 数据源产品所在区域。
     *
     * @return $this
     */

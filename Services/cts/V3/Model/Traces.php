@@ -43,6 +43,8 @@ class Traces implements ModelInterface, ArrayAccess
     * resourceUrl  云资源的详情页面的访问链接（不含endpoint）
     * enterpriseProjectId  标识资源所在的企业项目ID。
     * resourceAccountId  标识资源所在的账号ID。仅在跨租户操作资源时有值。
+    * readOnly  标识用户请求是不是只读。
+    * operationId  记录事件对应的操作ID。
     *
     * @var string[]
     */
@@ -69,7 +71,9 @@ class Traces implements ModelInterface, ArrayAccess
             'endpoint' => 'string',
             'resourceUrl' => 'string',
             'enterpriseProjectId' => 'string',
-            'resourceAccountId' => 'string'
+            'resourceAccountId' => 'string',
+            'readOnly' => 'bool',
+            'operationId' => 'string'
     ];
 
     /**
@@ -97,6 +101,8 @@ class Traces implements ModelInterface, ArrayAccess
     * resourceUrl  云资源的详情页面的访问链接（不含endpoint）
     * enterpriseProjectId  标识资源所在的企业项目ID。
     * resourceAccountId  标识资源所在的账号ID。仅在跨租户操作资源时有值。
+    * readOnly  标识用户请求是不是只读。
+    * operationId  记录事件对应的操作ID。
     *
     * @var string[]
     */
@@ -123,7 +129,9 @@ class Traces implements ModelInterface, ArrayAccess
         'endpoint' => null,
         'resourceUrl' => null,
         'enterpriseProjectId' => null,
-        'resourceAccountId' => null
+        'resourceAccountId' => null,
+        'readOnly' => null,
+        'operationId' => null
     ];
 
     /**
@@ -172,6 +180,8 @@ class Traces implements ModelInterface, ArrayAccess
     * resourceUrl  云资源的详情页面的访问链接（不含endpoint）
     * enterpriseProjectId  标识资源所在的企业项目ID。
     * resourceAccountId  标识资源所在的账号ID。仅在跨租户操作资源时有值。
+    * readOnly  标识用户请求是不是只读。
+    * operationId  记录事件对应的操作ID。
     *
     * @var string[]
     */
@@ -198,7 +208,9 @@ class Traces implements ModelInterface, ArrayAccess
             'endpoint' => 'endpoint',
             'resourceUrl' => 'resource_url',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'resourceAccountId' => 'resource_account_id'
+            'resourceAccountId' => 'resource_account_id',
+            'readOnly' => 'read_only',
+            'operationId' => 'operation_id'
     ];
 
     /**
@@ -226,6 +238,8 @@ class Traces implements ModelInterface, ArrayAccess
     * resourceUrl  云资源的详情页面的访问链接（不含endpoint）
     * enterpriseProjectId  标识资源所在的企业项目ID。
     * resourceAccountId  标识资源所在的账号ID。仅在跨租户操作资源时有值。
+    * readOnly  标识用户请求是不是只读。
+    * operationId  记录事件对应的操作ID。
     *
     * @var string[]
     */
@@ -252,7 +266,9 @@ class Traces implements ModelInterface, ArrayAccess
             'endpoint' => 'setEndpoint',
             'resourceUrl' => 'setResourceUrl',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'resourceAccountId' => 'setResourceAccountId'
+            'resourceAccountId' => 'setResourceAccountId',
+            'readOnly' => 'setReadOnly',
+            'operationId' => 'setOperationId'
     ];
 
     /**
@@ -280,6 +296,8 @@ class Traces implements ModelInterface, ArrayAccess
     * resourceUrl  云资源的详情页面的访问链接（不含endpoint）
     * enterpriseProjectId  标识资源所在的企业项目ID。
     * resourceAccountId  标识资源所在的账号ID。仅在跨租户操作资源时有值。
+    * readOnly  标识用户请求是不是只读。
+    * operationId  记录事件对应的操作ID。
     *
     * @var string[]
     */
@@ -306,7 +324,9 @@ class Traces implements ModelInterface, ArrayAccess
             'endpoint' => 'getEndpoint',
             'resourceUrl' => 'getResourceUrl',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'resourceAccountId' => 'getResourceAccountId'
+            'resourceAccountId' => 'getResourceAccountId',
+            'readOnly' => 'getReadOnly',
+            'operationId' => 'getOperationId'
     ];
 
     /**
@@ -407,6 +427,8 @@ class Traces implements ModelInterface, ArrayAccess
         $this->container['resourceUrl'] = isset($data['resourceUrl']) ? $data['resourceUrl'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['resourceAccountId'] = isset($data['resourceAccountId']) ? $data['resourceAccountId'] : null;
+        $this->container['readOnly'] = isset($data['readOnly']) ? $data['readOnly'] : null;
+        $this->container['operationId'] = isset($data['operationId']) ? $data['operationId'] : null;
     }
 
     /**
@@ -550,6 +572,12 @@ class Traces implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['resourceAccountId']) && (mb_strlen($this->container['resourceAccountId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'resourceAccountId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['operationId']) && (mb_strlen($this->container['operationId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'operationId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['operationId']) && (mb_strlen($this->container['operationId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'operationId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -1114,6 +1142,54 @@ class Traces implements ModelInterface, ArrayAccess
     public function setResourceAccountId($resourceAccountId)
     {
         $this->container['resourceAccountId'] = $resourceAccountId;
+        return $this;
+    }
+
+    /**
+    * Gets readOnly
+    *  标识用户请求是不是只读。
+    *
+    * @return bool|null
+    */
+    public function getReadOnly()
+    {
+        return $this->container['readOnly'];
+    }
+
+    /**
+    * Sets readOnly
+    *
+    * @param bool|null $readOnly 标识用户请求是不是只读。
+    *
+    * @return $this
+    */
+    public function setReadOnly($readOnly)
+    {
+        $this->container['readOnly'] = $readOnly;
+        return $this;
+    }
+
+    /**
+    * Gets operationId
+    *  记录事件对应的操作ID。
+    *
+    * @return string|null
+    */
+    public function getOperationId()
+    {
+        return $this->container['operationId'];
+    }
+
+    /**
+    * Sets operationId
+    *
+    * @param string|null $operationId 记录事件对应的操作ID。
+    *
+    * @return $this
+    */
+    public function setOperationId($operationId)
+    {
+        $this->container['operationId'] = $operationId;
         return $this;
     }
 

@@ -6027,6 +6027,9 @@ class DdsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['entityId'] !== null) {
+            $queryParams['entity_id'] = $localVarParams['entityId'];
+        }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }

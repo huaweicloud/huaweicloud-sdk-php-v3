@@ -30,7 +30,6 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
-    * extra  extra
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
@@ -46,7 +45,6 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
             'id' => 'string',
             'enabled' => 'bool',
             'pwdStrength' => 'string',
-            'extra' => '\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUserResultExtra',
             'accessMode' => 'string'
     ];
 
@@ -62,7 +60,6 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
-    * extra  extra
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
@@ -78,7 +75,6 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
         'id' => null,
         'enabled' => null,
         'pwdStrength' => null,
-        'extra' => null,
         'accessMode' => null
     ];
 
@@ -115,7 +111,6 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
-    * extra  extra
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
@@ -131,7 +126,6 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
             'id' => 'id',
             'enabled' => 'enabled',
             'pwdStrength' => 'pwd_strength',
-            'extra' => 'extra',
             'accessMode' => 'access_mode'
     ];
 
@@ -147,7 +141,6 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
-    * extra  extra
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
@@ -163,7 +156,6 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'enabled' => 'setEnabled',
             'pwdStrength' => 'setPwdStrength',
-            'extra' => 'setExtra',
             'accessMode' => 'setAccessMode'
     ];
 
@@ -179,7 +171,6 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
-    * extra  extra
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
     *
     * @var string[]
@@ -195,7 +186,6 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'enabled' => 'getEnabled',
             'pwdStrength' => 'getPwdStrength',
-            'extra' => 'getExtra',
             'accessMode' => 'getAccessMode'
     ];
 
@@ -267,7 +257,6 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['pwdStrength'] = isset($data['pwdStrength']) ? $data['pwdStrength'] : null;
-        $this->container['extra'] = isset($data['extra']) ? $data['extra'] : null;
         $this->container['accessMode'] = isset($data['accessMode']) ? $data['accessMode'] : null;
     }
 
@@ -548,30 +537,6 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
     public function setPwdStrength($pwdStrength)
     {
         $this->container['pwdStrength'] = $pwdStrength;
-        return $this;
-    }
-
-    /**
-    * Gets extra
-    *  extra
-    *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\KeystoneUserResultExtra|null
-    */
-    public function getExtra()
-    {
-        return $this->container['extra'];
-    }
-
-    /**
-    * Sets extra
-    *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\KeystoneUserResultExtra|null $extra extra
-    *
-    * @return $this
-    */
-    public function setExtra($extra)
-    {
-        $this->container['extra'] = $extra;
         return $this;
     }
 

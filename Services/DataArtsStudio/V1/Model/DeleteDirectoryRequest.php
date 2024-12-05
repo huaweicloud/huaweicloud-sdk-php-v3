@@ -23,7 +23,7 @@ class DeleteDirectoryRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * ids  实体ID数组，填写String类型替代Long类型。
+    * ids  实体ID数组，ID字符串。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class DeleteDirectoryRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * ids  实体ID数组，填写String类型替代Long类型。
+    * ids  实体ID数组，ID字符串。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class DeleteDirectoryRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * ids  实体ID数组，填写String类型替代Long类型。
+    * ids  实体ID数组，ID字符串。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class DeleteDirectoryRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * ids  实体ID数组，填写String类型替代Long类型。
+    * ids  实体ID数组，ID字符串。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class DeleteDirectoryRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * ids  实体ID数组，填写String类型替代Long类型。
+    * ids  实体ID数组，ID字符串。
     *
     * @var string[]
     */
@@ -303,7 +303,7 @@ class DeleteDirectoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ids
-    *  实体ID数组，填写String类型替代Long类型。
+    *  实体ID数组，ID字符串。
     *
     * @return string[]
     */
@@ -315,7 +315,7 @@ class DeleteDirectoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param string[] $ids 实体ID数组，填写String类型替代Long类型。
+    * @param string[] $ids 实体ID数组，ID字符串。
     *
     * @return $this
     */

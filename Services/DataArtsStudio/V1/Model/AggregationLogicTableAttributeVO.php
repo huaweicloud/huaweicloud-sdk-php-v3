@@ -20,8 +20,8 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * aggregationLogicTableId  所属汇总表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * aggregationLogicTableId  所属汇总表ID，ID字符串。
     * ordinal  序号。
     * nameEn  字段名。
     * nameCh  业务属性。
@@ -37,7 +37,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     * refId  属性关联对象的id
     * refNameCh  属性关联对象的中文名
     * refNameEn  属性关联对象的英文名
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
@@ -70,8 +70,8 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * aggregationLogicTableId  所属汇总表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * aggregationLogicTableId  所属汇总表ID，ID字符串。
     * ordinal  序号。
     * nameEn  字段名。
     * nameCh  业务属性。
@@ -87,7 +87,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     * refId  属性关联对象的id
     * refNameCh  属性关联对象的中文名
     * refNameEn  属性关联对象的英文名
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
@@ -141,8 +141,8 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
-    * aggregationLogicTableId  所属汇总表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * aggregationLogicTableId  所属汇总表ID，ID字符串。
     * ordinal  序号。
     * nameEn  字段名。
     * nameCh  业务属性。
@@ -158,7 +158,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     * refId  属性关联对象的id
     * refNameCh  属性关联对象的中文名
     * refNameEn  属性关联对象的英文名
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
@@ -191,8 +191,8 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
-    * aggregationLogicTableId  所属汇总表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * aggregationLogicTableId  所属汇总表ID，ID字符串。
     * ordinal  序号。
     * nameEn  字段名。
     * nameCh  业务属性。
@@ -208,7 +208,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     * refId  属性关联对象的id
     * refNameCh  属性关联对象的中文名
     * refNameEn  属性关联对象的英文名
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
@@ -241,8 +241,8 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
-    * aggregationLogicTableId  所属汇总表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * aggregationLogicTableId  所属汇总表ID，ID字符串。
     * ordinal  序号。
     * nameEn  字段名。
     * nameCh  业务属性。
@@ -258,7 +258,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     * refId  属性关联对象的id
     * refNameCh  属性关联对象的中文名
     * refNameEn  属性关联对象的英文名
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
@@ -433,7 +433,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -445,7 +445,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets aggregationLogicTableId
-    *  所属汇总表ID，填写String类型替代Long类型。
+    *  所属汇总表ID，ID字符串。
     *
     * @return string|null
     */
@@ -469,7 +469,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets aggregationLogicTableId
     *
-    * @param string|null $aggregationLogicTableId 所属汇总表ID，填写String类型替代Long类型。
+    * @param string|null $aggregationLogicTableId 所属汇总表ID，ID字符串。
     *
     * @return $this
     */
@@ -841,7 +841,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowId
-    *  关联的数据标准的ID，填写String类型替代Long类型。
+    *  关联的数据标准的ID，ID字符串。
     *
     * @return string|null
     */
@@ -853,7 +853,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowId
     *
-    * @param string|null $standRowId 关联的数据标准的ID，填写String类型替代Long类型。
+    * @param string|null $standRowId 关联的数据标准的ID，ID字符串。
     *
     * @return $this
     */

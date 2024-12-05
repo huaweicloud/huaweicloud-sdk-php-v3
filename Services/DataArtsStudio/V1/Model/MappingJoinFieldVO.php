@@ -20,8 +20,8 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * field1Id  属性1ID，填写String类型替代Long类型。
-    * field2Id  属性2ID，填写String类型替代Long类型。
+    * field1Id  属性1ID，ID字符串。
+    * field2Id  属性2ID，ID字符串。
     * field1Name  属性1名称。
     * field2Name  属性2名称。
     *
@@ -36,8 +36,8 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * field1Id  属性1ID，填写String类型替代Long类型。
-    * field2Id  属性2ID，填写String类型替代Long类型。
+    * field1Id  属性1ID，ID字符串。
+    * field2Id  属性2ID，ID字符串。
     * field1Name  属性1名称。
     * field2Name  属性2名称。
     *
@@ -73,8 +73,8 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * field1Id  属性1ID，填写String类型替代Long类型。
-    * field2Id  属性2ID，填写String类型替代Long类型。
+    * field1Id  属性1ID，ID字符串。
+    * field2Id  属性2ID，ID字符串。
     * field1Name  属性1名称。
     * field2Name  属性2名称。
     *
@@ -89,8 +89,8 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * field1Id  属性1ID，填写String类型替代Long类型。
-    * field2Id  属性2ID，填写String类型替代Long类型。
+    * field1Id  属性1ID，ID字符串。
+    * field2Id  属性2ID，ID字符串。
     * field1Name  属性1名称。
     * field2Name  属性2名称。
     *
@@ -105,8 +105,8 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * field1Id  属性1ID，填写String类型替代Long类型。
-    * field2Id  属性2ID，填写String类型替代Long类型。
+    * field1Id  属性1ID，ID字符串。
+    * field2Id  属性2ID，ID字符串。
     * field1Name  属性1名称。
     * field2Name  属性2名称。
     *
@@ -219,7 +219,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets field1Id
-    *  属性1ID，填写String类型替代Long类型。
+    *  属性1ID，ID字符串。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets field1Id
     *
-    * @param string $field1Id 属性1ID，填写String类型替代Long类型。
+    * @param string $field1Id 属性1ID，ID字符串。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets field2Id
-    *  属性2ID，填写String类型替代Long类型。
+    *  属性2ID，ID字符串。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets field2Id
     *
-    * @param string $field2Id 属性2ID，填写String类型替代Long类型。
+    * @param string $field2Id 属性2ID，ID字符串。
     *
     * @return $this
     */

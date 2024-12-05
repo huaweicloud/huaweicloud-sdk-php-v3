@@ -20,12 +20,12 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  事实表ID，填写String类型替代Long类型。
+    * id  事实表ID，ID字符串。
     * tbName  表名称。
     * tbLogicName  逻辑实体名。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
     * description  描述。
     * dwName  数据连接名称，只读，创建和更新时无需填写。
     * owner  资产责任人。
@@ -69,12 +69,12 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * obsLocation  外表路径
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -146,12 +146,12 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  事实表ID，填写String类型替代Long类型。
+    * id  事实表ID，ID字符串。
     * tbName  表名称。
     * tbLogicName  逻辑实体名。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
     * description  描述。
     * dwName  数据连接名称，只读，创建和更新时无需填写。
     * owner  资产责任人。
@@ -195,12 +195,12 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * obsLocation  外表路径
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -293,12 +293,12 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  事实表ID，填写String类型替代Long类型。
+    * id  事实表ID，ID字符串。
     * tbName  表名称。
     * tbLogicName  逻辑实体名。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
     * description  描述。
     * dwName  数据连接名称，只读，创建和更新时无需填写。
     * owner  资产责任人。
@@ -342,12 +342,12 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * obsLocation  外表路径
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -419,12 +419,12 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  事实表ID，填写String类型替代Long类型。
+    * id  事实表ID，ID字符串。
     * tbName  表名称。
     * tbLogicName  逻辑实体名。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
     * description  描述。
     * dwName  数据连接名称，只读，创建和更新时无需填写。
     * owner  资产责任人。
@@ -468,12 +468,12 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * obsLocation  外表路径
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -545,12 +545,12 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  事实表ID，填写String类型替代Long类型。
+    * id  事实表ID，ID字符串。
     * tbName  表名称。
     * tbLogicName  逻辑实体名。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
     * description  描述。
     * dwName  数据连接名称，只读，创建和更新时无需填写。
     * owner  资产责任人。
@@ -594,12 +594,12 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * obsLocation  外表路径
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -880,7 +880,7 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  事实表ID，填写String类型替代Long类型。
+    *  事实表ID，ID字符串。
     *
     * @return string|null
     */
@@ -892,7 +892,7 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 事实表ID，填写String类型替代Long类型。
+    * @param string|null $id 事实表ID，ID字符串。
     *
     * @return $this
     */
@@ -952,7 +952,7 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID，只读，填写String类型替代Long类型。
+    *  主题域分组ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -964,7 +964,7 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param string|null $l1Id 主题域分组ID，只读，填写String类型替代Long类型。
+    * @param string|null $l1Id 主题域分组ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -1000,7 +1000,7 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象guid，填写String类型替代Long类型。
+    *  业务对象guid，ID字符串。
     *
     * @return string
     */
@@ -1012,7 +1012,7 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string $l3Id 业务对象guid，填写String类型替代Long类型。
+    * @param string $l3Id 业务对象guid，ID字符串。
     *
     * @return $this
     */
@@ -2056,7 +2056,7 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityId
-    *  质量ID，填写String类型替代Long类型。
+    *  质量ID，ID字符串。
     *
     * @return string|null
     */
@@ -2068,7 +2068,7 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityId
     *
-    * @param string|null $qualityId 质量ID，填写String类型替代Long类型。
+    * @param string|null $qualityId 质量ID，ID字符串。
     *
     * @return $this
     */
@@ -2152,7 +2152,7 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets devVersion
-    *  开发环境版本，填写String类型替代Long类型。
+    *  开发环境版本，ID字符串。
     *
     * @return string|null
     */
@@ -2164,7 +2164,7 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets devVersion
     *
-    * @param string|null $devVersion 开发环境版本，填写String类型替代Long类型。
+    * @param string|null $devVersion 开发环境版本，ID字符串。
     *
     * @return $this
     */
@@ -2176,7 +2176,7 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets prodVersion
-    *  生产环境版本，填写String类型替代Long类型。
+    *  生产环境版本，ID字符串。
     *
     * @return string|null
     */
@@ -2188,7 +2188,7 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets prodVersion
     *
-    * @param string|null $prodVersion 生产环境版本，填写String类型替代Long类型。
+    * @param string|null $prodVersion 生产环境版本，ID字符串。
     *
     * @return $this
     */

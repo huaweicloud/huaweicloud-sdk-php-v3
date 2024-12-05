@@ -21,6 +21,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
+    * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
     * name  告警规则名称
     * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
@@ -36,6 +37,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'alarmId' => 'string',
+            'recordId' => 'string',
             'name' => 'string',
             'status' => 'string',
             'level' => 'int',
@@ -51,6 +53,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
+    * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
     * name  告警规则名称
     * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
@@ -66,6 +69,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'alarmId' => null,
+        'recordId' => null,
         'name' => null,
         'status' => null,
         'level' => null,
@@ -102,6 +106,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
+    * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
     * name  告警规则名称
     * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
@@ -117,6 +122,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'alarmId' => 'alarm_id',
+            'recordId' => 'record_id',
             'name' => 'name',
             'status' => 'status',
             'level' => 'level',
@@ -132,6 +138,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
+    * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
     * name  告警规则名称
     * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
@@ -147,6 +154,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'alarmId' => 'setAlarmId',
+            'recordId' => 'setRecordId',
             'name' => 'setName',
             'status' => 'setStatus',
             'level' => 'setLevel',
@@ -162,6 +170,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
+    * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
     * name  告警规则名称
     * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
@@ -177,6 +186,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'alarmId' => 'getAlarmId',
+            'recordId' => 'getRecordId',
             'name' => 'getName',
             'status' => 'getStatus',
             'level' => 'getLevel',
@@ -267,6 +277,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['alarmId'] = isset($data['alarmId']) ? $data['alarmId'] : null;
+        $this->container['recordId'] = isset($data['recordId']) ? $data['recordId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['level'] = isset($data['level']) ? $data['level'] : null;
@@ -292,6 +303,12 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['alarmId']) && (mb_strlen($this->container['alarmId']) < 24)) {
                 $invalidProperties[] = "invalid value for 'alarmId', the character length must be bigger than or equal to 24.";
+            }
+            if (!is_null($this->container['recordId']) && (mb_strlen($this->container['recordId']) > 24)) {
+                $invalidProperties[] = "invalid value for 'recordId', the character length must be smaller than or equal to 24.";
+            }
+            if (!is_null($this->container['recordId']) && (mb_strlen($this->container['recordId']) < 24)) {
+                $invalidProperties[] = "invalid value for 'recordId', the character length must be bigger than or equal to 24.";
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 128)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 128.";
@@ -393,6 +410,30 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     public function setAlarmId($alarmId)
     {
         $this->container['alarmId'] = $alarmId;
+        return $this;
+    }
+
+    /**
+    * Gets recordId
+    *  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
+    *
+    * @return string|null
+    */
+    public function getRecordId()
+    {
+        return $this->container['recordId'];
+    }
+
+    /**
+    * Sets recordId
+    *
+    * @param string|null $recordId 告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
+    *
+    * @return $this
+    */
+    public function setRecordId($recordId)
+    {
+        $this->container['recordId'] = $recordId;
         return $this;
     }
 

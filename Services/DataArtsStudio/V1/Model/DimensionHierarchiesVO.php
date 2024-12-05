@@ -20,7 +20,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * name  层级名称。
     * attrs  层级包含的属性。
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -42,7 +42,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * name  层级名称。
     * attrs  层级包含的属性。
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -85,7 +85,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * name  层级名称。
     * attrs  层级包含的属性。
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -107,7 +107,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * name  层级名称。
     * attrs  层级包含的属性。
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -129,7 +129,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * name  层级名称。
     * attrs  层级包含的属性。
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -246,7 +246,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -258,7 +258,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */

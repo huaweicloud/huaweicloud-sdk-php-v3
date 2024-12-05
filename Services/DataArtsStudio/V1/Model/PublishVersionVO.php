@@ -20,11 +20,11 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  版本ID，填写String类型替代Long类型。
+    * id  版本ID，ID字符串。
     * versionName  版本名称。
     * versionTag  版本标记，只读。
     * description  版本描述。
-    * bizId  业务对象ID，填写String类型替代Long类型。
+    * bizId  业务对象ID，ID字符串。
     * bizType  bizType
     * bizInfo  业务详情，只读。
     * bizInfoVo  业务对象。
@@ -78,11 +78,11 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  版本ID，填写String类型替代Long类型。
+    * id  版本ID，ID字符串。
     * versionName  版本名称。
     * versionTag  版本标记，只读。
     * description  版本描述。
-    * bizId  业务对象ID，填写String类型替代Long类型。
+    * bizId  业务对象ID，ID字符串。
     * bizType  bizType
     * bizInfo  业务详情，只读。
     * bizInfoVo  业务对象。
@@ -157,11 +157,11 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  版本ID，填写String类型替代Long类型。
+    * id  版本ID，ID字符串。
     * versionName  版本名称。
     * versionTag  版本标记，只读。
     * description  版本描述。
-    * bizId  业务对象ID，填写String类型替代Long类型。
+    * bizId  业务对象ID，ID字符串。
     * bizType  bizType
     * bizInfo  业务详情，只读。
     * bizInfoVo  业务对象。
@@ -215,11 +215,11 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  版本ID，填写String类型替代Long类型。
+    * id  版本ID，ID字符串。
     * versionName  版本名称。
     * versionTag  版本标记，只读。
     * description  版本描述。
-    * bizId  业务对象ID，填写String类型替代Long类型。
+    * bizId  业务对象ID，ID字符串。
     * bizType  bizType
     * bizInfo  业务详情，只读。
     * bizInfoVo  业务对象。
@@ -273,11 +273,11 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  版本ID，填写String类型替代Long类型。
+    * id  版本ID，ID字符串。
     * versionName  版本名称。
     * versionTag  版本标记，只读。
     * description  版本描述。
-    * bizId  业务对象ID，填写String类型替代Long类型。
+    * bizId  业务对象ID，ID字符串。
     * bizType  bizType
     * bizInfo  业务详情，只读。
     * bizInfoVo  业务对象。
@@ -444,7 +444,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  版本ID，填写String类型替代Long类型。
+    *  版本ID，ID字符串。
     *
     * @return string|null
     */
@@ -456,7 +456,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 版本ID，填写String类型替代Long类型。
+    * @param string|null $id 版本ID，ID字符串。
     *
     * @return $this
     */
@@ -540,7 +540,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务对象ID，填写String类型替代Long类型。
+    *  业务对象ID，ID字符串。
     *
     * @return string|null
     */
@@ -552,7 +552,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param string|null $bizId 业务对象ID，填写String类型替代Long类型。
+    * @param string|null $bizId 业务对象ID，ID字符串。
     *
     * @return $this
     */

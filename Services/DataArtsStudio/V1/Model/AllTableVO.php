@@ -20,7 +20,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  l1的ID，填写String类型替代Long类型。
+    * id  l1的ID，ID字符串。
     * name  l1名称。
     * tbLogicGuid  表发布后对应的逻辑实体guid。
     * qualityId  质量ID。
@@ -46,9 +46,9 @@ class AllTableVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
+    * l3Id  业务对象ID，只读，ID字符串。
     * newBiz  newBiz
     * physicalTable  physicalTable
     * devPhysicalTable  devPhysicalTable
@@ -60,13 +60,13 @@ class AllTableVO implements ModelInterface, ArrayAccess
     * materialization  materialization
     * publishToDlm  publishToDlm
     * summaryStatus  summaryStatus
-    * standardCount  标准数量，只读，填写String类型替代Long类型。
+    * standardCount  标准数量，只读，ID字符串。
     * alias  别名。
     * apiId  汇总表API ID。
     * workspaceId  工作空间ID。
     * workspaceName  工作空间名称。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -128,7 +128,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  l1的ID，填写String类型替代Long类型。
+    * id  l1的ID，ID字符串。
     * name  l1名称。
     * tbLogicGuid  表发布后对应的逻辑实体guid。
     * qualityId  质量ID。
@@ -154,9 +154,9 @@ class AllTableVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
+    * l3Id  业务对象ID，只读，ID字符串。
     * newBiz  newBiz
     * physicalTable  physicalTable
     * devPhysicalTable  devPhysicalTable
@@ -168,13 +168,13 @@ class AllTableVO implements ModelInterface, ArrayAccess
     * materialization  materialization
     * publishToDlm  publishToDlm
     * summaryStatus  summaryStatus
-    * standardCount  标准数量，只读，填写String类型替代Long类型。
+    * standardCount  标准数量，只读，ID字符串。
     * alias  别名。
     * apiId  汇总表API ID。
     * workspaceId  工作空间ID。
     * workspaceName  工作空间名称。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -257,7 +257,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  l1的ID，填写String类型替代Long类型。
+    * id  l1的ID，ID字符串。
     * name  l1名称。
     * tbLogicGuid  表发布后对应的逻辑实体guid。
     * qualityId  质量ID。
@@ -283,9 +283,9 @@ class AllTableVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
+    * l3Id  业务对象ID，只读，ID字符串。
     * newBiz  newBiz
     * physicalTable  physicalTable
     * devPhysicalTable  devPhysicalTable
@@ -297,13 +297,13 @@ class AllTableVO implements ModelInterface, ArrayAccess
     * materialization  materialization
     * publishToDlm  publishToDlm
     * summaryStatus  summaryStatus
-    * standardCount  标准数量，只读，填写String类型替代Long类型。
+    * standardCount  标准数量，只读，ID字符串。
     * alias  别名。
     * apiId  汇总表API ID。
     * workspaceId  工作空间ID。
     * workspaceName  工作空间名称。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -365,7 +365,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  l1的ID，填写String类型替代Long类型。
+    * id  l1的ID，ID字符串。
     * name  l1名称。
     * tbLogicGuid  表发布后对应的逻辑实体guid。
     * qualityId  质量ID。
@@ -391,9 +391,9 @@ class AllTableVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
+    * l3Id  业务对象ID，只读，ID字符串。
     * newBiz  newBiz
     * physicalTable  physicalTable
     * devPhysicalTable  devPhysicalTable
@@ -405,13 +405,13 @@ class AllTableVO implements ModelInterface, ArrayAccess
     * materialization  materialization
     * publishToDlm  publishToDlm
     * summaryStatus  summaryStatus
-    * standardCount  标准数量，只读，填写String类型替代Long类型。
+    * standardCount  标准数量，只读，ID字符串。
     * alias  别名。
     * apiId  汇总表API ID。
     * workspaceId  工作空间ID。
     * workspaceName  工作空间名称。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -473,7 +473,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  l1的ID，填写String类型替代Long类型。
+    * id  l1的ID，ID字符串。
     * name  l1名称。
     * tbLogicGuid  表发布后对应的逻辑实体guid。
     * qualityId  质量ID。
@@ -499,9 +499,9 @@ class AllTableVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
+    * l3Id  业务对象ID，只读，ID字符串。
     * newBiz  newBiz
     * physicalTable  physicalTable
     * devPhysicalTable  devPhysicalTable
@@ -513,13 +513,13 @@ class AllTableVO implements ModelInterface, ArrayAccess
     * materialization  materialization
     * publishToDlm  publishToDlm
     * summaryStatus  summaryStatus
-    * standardCount  标准数量，只读，填写String类型替代Long类型。
+    * standardCount  标准数量，只读，ID字符串。
     * alias  别名。
     * apiId  汇总表API ID。
     * workspaceId  工作空间ID。
     * workspaceName  工作空间名称。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -716,7 +716,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  l1的ID，填写String类型替代Long类型。
+    *  l1的ID，ID字符串。
     *
     * @return string|null
     */
@@ -728,7 +728,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id l1的ID，填写String类型替代Long类型。
+    * @param string|null $id l1的ID，ID字符串。
     *
     * @return $this
     */
@@ -1340,7 +1340,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID，只读，填写String类型替代Long类型。
+    *  主题域分组ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -1352,7 +1352,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param string|null $l1Id 主题域分组ID，只读，填写String类型替代Long类型。
+    * @param string|null $l1Id 主题域分组ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -1388,7 +1388,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象ID，只读，填写String类型替代Long类型。
+    *  业务对象ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -1400,7 +1400,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string|null $l3Id 业务对象ID，只读，填写String类型替代Long类型。
+    * @param string|null $l3Id 业务对象ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -1676,7 +1676,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standardCount
-    *  标准数量，只读，填写String类型替代Long类型。
+    *  标准数量，只读，ID字符串。
     *
     * @return string|null
     */
@@ -1688,7 +1688,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets standardCount
     *
-    * @param string|null $standardCount 标准数量，只读，填写String类型替代Long类型。
+    * @param string|null $standardCount 标准数量，只读，ID字符串。
     *
     * @return $this
     */
@@ -1796,7 +1796,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets devVersion
-    *  开发环境版本，填写String类型替代Long类型。
+    *  开发环境版本，ID字符串。
     *
     * @return string|null
     */
@@ -1808,7 +1808,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets devVersion
     *
-    * @param string|null $devVersion 开发环境版本，填写String类型替代Long类型。
+    * @param string|null $devVersion 开发环境版本，ID字符串。
     *
     * @return $this
     */
@@ -1820,7 +1820,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets prodVersion
-    *  生产环境版本，填写String类型替代Long类型。
+    *  生产环境版本，ID字符串。
     *
     * @return string|null
     */
@@ -1832,7 +1832,7 @@ class AllTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets prodVersion
     *
-    * @param string|null $prodVersion 生产环境版本，填写String类型替代Long类型。
+    * @param string|null $prodVersion 生产环境版本，ID字符串。
     *
     * @return $this
     */

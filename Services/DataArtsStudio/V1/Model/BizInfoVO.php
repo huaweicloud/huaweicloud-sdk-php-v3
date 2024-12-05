@@ -20,7 +20,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizType  bizType
     * envType  envType
     *
@@ -34,7 +34,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizType  bizType
     * envType  envType
     *
@@ -69,7 +69,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizType  bizType
     * envType  envType
     *
@@ -83,7 +83,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizType  bizType
     * envType  envType
     *
@@ -97,7 +97,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizType  bizType
     * envType  envType
     *
@@ -202,7 +202,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务ID，填写String类型替代Long类型。
+    *  业务ID，ID字符串。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param string $bizId 业务ID，填写String类型替代Long类型。
+    * @param string $bizId 业务ID，ID字符串。
     *
     * @return $this
     */

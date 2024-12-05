@@ -35,7 +35,7 @@ class ListFunctionAsyncInvocationsResult implements ModelInterface, ArrayAccess
             'errorMessage' => 'string',
             'errorCode' => 'int',
             'startTime' => '\DateTime',
-            'endTime' => '\DateTime'
+            'endTime' => 'string'
     ];
 
     /**
@@ -55,7 +55,7 @@ class ListFunctionAsyncInvocationsResult implements ModelInterface, ArrayAccess
         'errorMessage' => null,
         'errorCode' => null,
         'startTime' => 'date-time',
-        'endTime' => 'date-time'
+        'endTime' => null
     ];
 
     /**
@@ -380,7 +380,7 @@ class ListFunctionAsyncInvocationsResult implements ModelInterface, ArrayAccess
     * Gets endTime
     *  异步调用结束时间（格式为YYYY-MM-DD'T'HH:mm:ss,UTC时间）。
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getEndTime()
     {
@@ -390,7 +390,7 @@ class ListFunctionAsyncInvocationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param \DateTime|null $endTime 异步调用结束时间（格式为YYYY-MM-DD'T'HH:mm:ss,UTC时间）。
+    * @param string|null $endTime 异步调用结束时间（格式为YYYY-MM-DD'T'HH:mm:ss,UTC时间）。
     *
     * @return $this
     */

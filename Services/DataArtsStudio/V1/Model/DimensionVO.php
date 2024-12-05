@@ -20,18 +20,18 @@ class DimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * dimensionType  维度类型。 枚举值：   - COMMON: 普通维度   - LOOKUP: 码表维度   - HIERARCHIES: 层级维度
     * nameCh  业务属性。
     * description  描述。
     * createBy  创建人。
     * updateBy  更新人。
-    * codeTableId  引用码表ID，填写String类型替代Long类型。
+    * codeTableId  引用码表ID，ID字符串。
     * codeTable  codeTable
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * hierarchies  层级属性。
     * status  status
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -52,8 +52,8 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * alias  别名。
     * selfDefinedFields  自定义项。
     * configs  其他配置
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -102,18 +102,18 @@ class DimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * dimensionType  维度类型。 枚举值：   - COMMON: 普通维度   - LOOKUP: 码表维度   - HIERARCHIES: 层级维度
     * nameCh  业务属性。
     * description  描述。
     * createBy  创建人。
     * updateBy  更新人。
-    * codeTableId  引用码表ID，填写String类型替代Long类型。
+    * codeTableId  引用码表ID，ID字符串。
     * codeTable  codeTable
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * hierarchies  层级属性。
     * status  status
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -134,8 +134,8 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * alias  别名。
     * selfDefinedFields  自定义项。
     * configs  其他配置
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -205,18 +205,18 @@ class DimensionVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * dimensionType  维度类型。 枚举值：   - COMMON: 普通维度   - LOOKUP: 码表维度   - HIERARCHIES: 层级维度
     * nameCh  业务属性。
     * description  描述。
     * createBy  创建人。
     * updateBy  更新人。
-    * codeTableId  引用码表ID，填写String类型替代Long类型。
+    * codeTableId  引用码表ID，ID字符串。
     * codeTable  codeTable
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * hierarchies  层级属性。
     * status  status
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -237,8 +237,8 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * alias  别名。
     * selfDefinedFields  自定义项。
     * configs  其他配置
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -287,18 +287,18 @@ class DimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * dimensionType  维度类型。 枚举值：   - COMMON: 普通维度   - LOOKUP: 码表维度   - HIERARCHIES: 层级维度
     * nameCh  业务属性。
     * description  描述。
     * createBy  创建人。
     * updateBy  更新人。
-    * codeTableId  引用码表ID，填写String类型替代Long类型。
+    * codeTableId  引用码表ID，ID字符串。
     * codeTable  codeTable
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * hierarchies  层级属性。
     * status  status
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -319,8 +319,8 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * alias  别名。
     * selfDefinedFields  自定义项。
     * configs  其他配置
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -369,18 +369,18 @@ class DimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * dimensionType  维度类型。 枚举值：   - COMMON: 普通维度   - LOOKUP: 码表维度   - HIERARCHIES: 层级维度
     * nameCh  业务属性。
     * description  描述。
     * createBy  创建人。
     * updateBy  更新人。
-    * codeTableId  引用码表ID，填写String类型替代Long类型。
+    * codeTableId  引用码表ID，ID字符串。
     * codeTable  codeTable
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * hierarchies  层级属性。
     * status  status
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -401,8 +401,8 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * alias  别名。
     * selfDefinedFields  自定义项。
     * configs  其他配置
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -660,7 +660,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -672,7 +672,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -828,7 +828,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeTableId
-    *  引用码表ID，填写String类型替代Long类型。
+    *  引用码表ID，ID字符串。
     *
     * @return string|null
     */
@@ -840,7 +840,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets codeTableId
     *
-    * @param string|null $codeTableId 引用码表ID，填写String类型替代Long类型。
+    * @param string|null $codeTableId 引用码表ID，ID字符串。
     *
     * @return $this
     */
@@ -876,7 +876,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID，只读，填写String类型替代Long类型。
+    *  主题域分组ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -888,7 +888,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param string|null $l1Id 主题域分组ID，只读，填写String类型替代Long类型。
+    * @param string|null $l1Id 主题域分组ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -924,7 +924,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象ID，填写String类型替代Long类型。
+    *  业务对象ID，ID字符串。
     *
     * @return string
     */
@@ -936,7 +936,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string $l3Id 业务对象ID，填写String类型替代Long类型。
+    * @param string $l3Id 业务对象ID，ID字符串。
     *
     * @return $this
     */
@@ -1428,7 +1428,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets devVersion
-    *  开发环境版本，填写String类型替代Long类型。
+    *  开发环境版本，ID字符串。
     *
     * @return string|null
     */
@@ -1440,7 +1440,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets devVersion
     *
-    * @param string|null $devVersion 开发环境版本，填写String类型替代Long类型。
+    * @param string|null $devVersion 开发环境版本，ID字符串。
     *
     * @return $this
     */
@@ -1452,7 +1452,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets prodVersion
-    *  生产环境版本，填写String类型替代Long类型。
+    *  生产环境版本，ID字符串。
     *
     * @return string|null
     */
@@ -1464,7 +1464,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets prodVersion
     *
-    * @param string|null $prodVersion 生产环境版本，填写String类型替代Long类型。
+    * @param string|null $prodVersion 生产环境版本，ID字符串。
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码ID，填写String类型替代Long类型。
-    * tableId  表ID，只读，填写String类型替代Long类型。
-    * attrId  属性ID，只读，填写String类型替代Long类型。
+    * id  编码ID，ID字符串。
+    * tableId  表ID，只读，ID字符串。
+    * attrId  属性ID，只读，ID字符串。
     * bizType  bizType
-    * dataQualityId  质量ID，填写String类型替代Long类型。
+    * dataQualityId  质量ID，ID字符串。
     * showControl  是否要显示正则表达式。
     * dataQualityName  质量名称。
     * alertConf  告警配置。
@@ -60,11 +60,11 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码ID，填写String类型替代Long类型。
-    * tableId  表ID，只读，填写String类型替代Long类型。
-    * attrId  属性ID，只读，填写String类型替代Long类型。
+    * id  编码ID，ID字符串。
+    * tableId  表ID，只读，ID字符串。
+    * attrId  属性ID，只读，ID字符串。
     * bizType  bizType
-    * dataQualityId  质量ID，填写String类型替代Long类型。
+    * dataQualityId  质量ID，ID字符串。
     * showControl  是否要显示正则表达式。
     * dataQualityName  质量名称。
     * alertConf  告警配置。
@@ -121,11 +121,11 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码ID，填写String类型替代Long类型。
-    * tableId  表ID，只读，填写String类型替代Long类型。
-    * attrId  属性ID，只读，填写String类型替代Long类型。
+    * id  编码ID，ID字符串。
+    * tableId  表ID，只读，ID字符串。
+    * attrId  属性ID，只读，ID字符串。
     * bizType  bizType
-    * dataQualityId  质量ID，填写String类型替代Long类型。
+    * dataQualityId  质量ID，ID字符串。
     * showControl  是否要显示正则表达式。
     * dataQualityName  质量名称。
     * alertConf  告警配置。
@@ -161,11 +161,11 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码ID，填写String类型替代Long类型。
-    * tableId  表ID，只读，填写String类型替代Long类型。
-    * attrId  属性ID，只读，填写String类型替代Long类型。
+    * id  编码ID，ID字符串。
+    * tableId  表ID，只读，ID字符串。
+    * attrId  属性ID，只读，ID字符串。
     * bizType  bizType
-    * dataQualityId  质量ID，填写String类型替代Long类型。
+    * dataQualityId  质量ID，ID字符串。
     * showControl  是否要显示正则表达式。
     * dataQualityName  质量名称。
     * alertConf  告警配置。
@@ -201,11 +201,11 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码ID，填写String类型替代Long类型。
-    * tableId  表ID，只读，填写String类型替代Long类型。
-    * attrId  属性ID，只读，填写String类型替代Long类型。
+    * id  编码ID，ID字符串。
+    * tableId  表ID，只读，ID字符串。
+    * attrId  属性ID，只读，ID字符串。
     * bizType  bizType
-    * dataQualityId  质量ID，填写String类型替代Long类型。
+    * dataQualityId  质量ID，ID字符串。
     * showControl  是否要显示正则表达式。
     * dataQualityName  质量名称。
     * alertConf  告警配置。
@@ -342,7 +342,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码ID，填写String类型替代Long类型。
+    *  编码ID，ID字符串。
     *
     * @return string|null
     */
@@ -354,7 +354,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码ID，填写String类型替代Long类型。
+    * @param string|null $id 编码ID，ID字符串。
     *
     * @return $this
     */
@@ -366,7 +366,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableId
-    *  表ID，只读，填写String类型替代Long类型。
+    *  表ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -378,7 +378,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableId
     *
-    * @param string|null $tableId 表ID，只读，填写String类型替代Long类型。
+    * @param string|null $tableId 表ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -390,7 +390,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets attrId
-    *  属性ID，只读，填写String类型替代Long类型。
+    *  属性ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -402,7 +402,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets attrId
     *
-    * @param string|null $attrId 属性ID，只读，填写String类型替代Long类型。
+    * @param string|null $attrId 属性ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -438,7 +438,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataQualityId
-    *  质量ID，填写String类型替代Long类型。
+    *  质量ID，ID字符串。
     *
     * @return string
     */
@@ -450,7 +450,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataQualityId
     *
-    * @param string $dataQualityId 质量ID，填写String类型替代Long类型。
+    * @param string $dataQualityId 质量ID，ID字符串。
     *
     * @return $this
     */

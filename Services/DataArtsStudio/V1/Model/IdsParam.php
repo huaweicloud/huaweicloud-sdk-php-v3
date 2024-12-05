@@ -20,7 +20,7 @@ class IdsParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ids  ID列表，填写String类型替代Long类型。
+    * ids  ID列表，ID字符串。
     * delTypes  删除物理表。 枚举值：   - PHYSICAL_TABLE: 关系建模
     *
     * @var string[]
@@ -32,7 +32,7 @@ class IdsParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ids  ID列表，填写String类型替代Long类型。
+    * ids  ID列表，ID字符串。
     * delTypes  删除物理表。 枚举值：   - PHYSICAL_TABLE: 关系建模
     *
     * @var string[]
@@ -65,7 +65,7 @@ class IdsParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ids  ID列表，填写String类型替代Long类型。
+    * ids  ID列表，ID字符串。
     * delTypes  删除物理表。 枚举值：   - PHYSICAL_TABLE: 关系建模
     *
     * @var string[]
@@ -77,7 +77,7 @@ class IdsParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ids  ID列表，填写String类型替代Long类型。
+    * ids  ID列表，ID字符串。
     * delTypes  删除物理表。 枚举值：   - PHYSICAL_TABLE: 关系建模
     *
     * @var string[]
@@ -89,7 +89,7 @@ class IdsParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ids  ID列表，填写String类型替代Long类型。
+    * ids  ID列表，ID字符串。
     * delTypes  删除物理表。 枚举值：   - PHYSICAL_TABLE: 关系建模
     *
     * @var string[]
@@ -209,7 +209,7 @@ class IdsParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets ids
-    *  ID列表，填写String类型替代Long类型。
+    *  ID列表，ID字符串。
     *
     * @return string[]
     */
@@ -221,7 +221,7 @@ class IdsParam implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param string[] $ids ID列表，填写String类型替代Long类型。
+    * @param string[] $ids ID列表，ID字符串。
     *
     * @return $this
     */

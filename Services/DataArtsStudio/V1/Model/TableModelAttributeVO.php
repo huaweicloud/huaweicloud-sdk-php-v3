@@ -20,7 +20,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -36,18 +36,18 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     * extendField  是否继承的属性。
     * notNull  是否不为空。
     * ordinal  序号。
-    * tableModelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * tableModelId  所属关系建模的模型ID，ID字符串。
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * tags  表标签，只读。
     * secrecyLevels  密级
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * code  逻辑属性编码
-    * relatedLogicAttrId  关联逻辑属性ID，填写String类型替代Long类型。
+    * relatedLogicAttrId  关联逻辑属性ID，ID字符串。
     * relatedLogicAttrName  关联逻辑实体属性中文名称
     * relatedLogicAttrNameEn  关联逻辑实体属性英文名称
     *
@@ -88,7 +88,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -104,18 +104,18 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     * extendField  是否继承的属性。
     * notNull  是否不为空。
     * ordinal  序号。
-    * tableModelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * tableModelId  所属关系建模的模型ID，ID字符串。
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * tags  表标签，只读。
     * secrecyLevels  密级
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * code  逻辑属性编码
-    * relatedLogicAttrId  关联逻辑属性ID，填写String类型替代Long类型。
+    * relatedLogicAttrId  关联逻辑属性ID，ID字符串。
     * relatedLogicAttrName  关联逻辑实体属性中文名称
     * relatedLogicAttrNameEn  关联逻辑实体属性英文名称
     *
@@ -177,7 +177,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -193,18 +193,18 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     * extendField  是否继承的属性。
     * notNull  是否不为空。
     * ordinal  序号。
-    * tableModelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * tableModelId  所属关系建模的模型ID，ID字符串。
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * tags  表标签，只读。
     * secrecyLevels  密级
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * code  逻辑属性编码
-    * relatedLogicAttrId  关联逻辑属性ID，填写String类型替代Long类型。
+    * relatedLogicAttrId  关联逻辑属性ID，ID字符串。
     * relatedLogicAttrName  关联逻辑实体属性中文名称
     * relatedLogicAttrNameEn  关联逻辑实体属性英文名称
     *
@@ -245,7 +245,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -261,18 +261,18 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     * extendField  是否继承的属性。
     * notNull  是否不为空。
     * ordinal  序号。
-    * tableModelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * tableModelId  所属关系建模的模型ID，ID字符串。
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * tags  表标签，只读。
     * secrecyLevels  密级
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * code  逻辑属性编码
-    * relatedLogicAttrId  关联逻辑属性ID，填写String类型替代Long类型。
+    * relatedLogicAttrId  关联逻辑属性ID，ID字符串。
     * relatedLogicAttrName  关联逻辑实体属性中文名称
     * relatedLogicAttrNameEn  关联逻辑实体属性英文名称
     *
@@ -313,7 +313,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -329,18 +329,18 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     * extendField  是否继承的属性。
     * notNull  是否不为空。
     * ordinal  序号。
-    * tableModelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * tableModelId  所属关系建模的模型ID，ID字符串。
     * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * tags  表标签，只读。
     * secrecyLevels  密级
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * code  逻辑属性编码
-    * relatedLogicAttrId  关联逻辑属性ID，填写String类型替代Long类型。
+    * relatedLogicAttrId  关联逻辑属性ID，ID字符串。
     * relatedLogicAttrName  关联逻辑实体属性中文名称
     * relatedLogicAttrNameEn  关联逻辑实体属性英文名称
     *
@@ -535,7 +535,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -547,7 +547,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -919,7 +919,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableModelId
-    *  所属关系建模的模型ID，填写String类型替代Long类型。
+    *  所属关系建模的模型ID，ID字符串。
     *
     * @return string|null
     */
@@ -931,7 +931,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableModelId
     *
-    * @param string|null $tableModelId 所属关系建模的模型ID，填写String类型替代Long类型。
+    * @param string|null $tableModelId 所属关系建模的模型ID，ID字符串。
     *
     * @return $this
     */
@@ -1039,7 +1039,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowId
-    *  关联的数据标准的ID，填写String类型替代Long类型。
+    *  关联的数据标准的ID，ID字符串。
     *
     * @return string|null
     */
@@ -1051,7 +1051,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowId
     *
-    * @param string|null $standRowId 关联的数据标准的ID，填写String类型替代Long类型。
+    * @param string|null $standRowId 关联的数据标准的ID，ID字符串。
     *
     * @return $this
     */
@@ -1183,7 +1183,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets relatedLogicAttrId
-    *  关联逻辑属性ID，填写String类型替代Long类型。
+    *  关联逻辑属性ID，ID字符串。
     *
     * @return string|null
     */
@@ -1195,7 +1195,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets relatedLogicAttrId
     *
-    * @param string|null $relatedLogicAttrId 关联逻辑属性ID，填写String类型替代Long类型。
+    * @param string|null $relatedLogicAttrId 关联逻辑属性ID，ID字符串。
     *
     * @return $this
     */

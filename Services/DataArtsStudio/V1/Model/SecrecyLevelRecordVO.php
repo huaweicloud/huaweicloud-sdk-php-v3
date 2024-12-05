@@ -20,13 +20,13 @@ class SecrecyLevelRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  属性关联密级的ID，填写String类型替代Long类型。
-    * secrecyLevelId  密级的ID，填写String类型替代Long类型。
+    * id  属性关联密级的ID，ID字符串。
+    * secrecyLevelId  密级的ID，ID字符串。
     * secrecyLevelName  密级名称。
     * uuid  数据安全主键。
     * slevel  密级等级。
     * description  密级描述。
-    * bizId  业务对象ID，填写String类型替代Long类型。
+    * bizId  业务对象ID，ID字符串。
     * bizType  bizType
     * createBy  创建者。
     * updateBy  更新者。
@@ -52,13 +52,13 @@ class SecrecyLevelRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  属性关联密级的ID，填写String类型替代Long类型。
-    * secrecyLevelId  密级的ID，填写String类型替代Long类型。
+    * id  属性关联密级的ID，ID字符串。
+    * secrecyLevelId  密级的ID，ID字符串。
     * secrecyLevelName  密级名称。
     * uuid  数据安全主键。
     * slevel  密级等级。
     * description  密级描述。
-    * bizId  业务对象ID，填写String类型替代Long类型。
+    * bizId  业务对象ID，ID字符串。
     * bizType  bizType
     * createBy  创建者。
     * updateBy  更新者。
@@ -105,13 +105,13 @@ class SecrecyLevelRecordVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  属性关联密级的ID，填写String类型替代Long类型。
-    * secrecyLevelId  密级的ID，填写String类型替代Long类型。
+    * id  属性关联密级的ID，ID字符串。
+    * secrecyLevelId  密级的ID，ID字符串。
     * secrecyLevelName  密级名称。
     * uuid  数据安全主键。
     * slevel  密级等级。
     * description  密级描述。
-    * bizId  业务对象ID，填写String类型替代Long类型。
+    * bizId  业务对象ID，ID字符串。
     * bizType  bizType
     * createBy  创建者。
     * updateBy  更新者。
@@ -137,13 +137,13 @@ class SecrecyLevelRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  属性关联密级的ID，填写String类型替代Long类型。
-    * secrecyLevelId  密级的ID，填写String类型替代Long类型。
+    * id  属性关联密级的ID，ID字符串。
+    * secrecyLevelId  密级的ID，ID字符串。
     * secrecyLevelName  密级名称。
     * uuid  数据安全主键。
     * slevel  密级等级。
     * description  密级描述。
-    * bizId  业务对象ID，填写String类型替代Long类型。
+    * bizId  业务对象ID，ID字符串。
     * bizType  bizType
     * createBy  创建者。
     * updateBy  更新者。
@@ -169,13 +169,13 @@ class SecrecyLevelRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  属性关联密级的ID，填写String类型替代Long类型。
-    * secrecyLevelId  密级的ID，填写String类型替代Long类型。
+    * id  属性关联密级的ID，ID字符串。
+    * secrecyLevelId  密级的ID，ID字符串。
     * secrecyLevelName  密级名称。
     * uuid  数据安全主键。
     * slevel  密级等级。
     * description  密级描述。
-    * bizId  业务对象ID，填写String类型替代Long类型。
+    * bizId  业务对象ID，ID字符串。
     * bizType  bizType
     * createBy  创建者。
     * updateBy  更新者。
@@ -310,7 +310,7 @@ class SecrecyLevelRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  属性关联密级的ID，填写String类型替代Long类型。
+    *  属性关联密级的ID，ID字符串。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class SecrecyLevelRecordVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 属性关联密级的ID，填写String类型替代Long类型。
+    * @param string|null $id 属性关联密级的ID，ID字符串。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class SecrecyLevelRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets secrecyLevelId
-    *  密级的ID，填写String类型替代Long类型。
+    *  密级的ID，ID字符串。
     *
     * @return string
     */
@@ -346,7 +346,7 @@ class SecrecyLevelRecordVO implements ModelInterface, ArrayAccess
     /**
     * Sets secrecyLevelId
     *
-    * @param string $secrecyLevelId 密级的ID，填写String类型替代Long类型。
+    * @param string $secrecyLevelId 密级的ID，ID字符串。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class SecrecyLevelRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务对象ID，填写String类型替代Long类型。
+    *  业务对象ID，ID字符串。
     *
     * @return string
     */
@@ -466,7 +466,7 @@ class SecrecyLevelRecordVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param string $bizId 业务对象ID，填写String类型替代Long类型。
+    * @param string $bizId 业务对象ID，ID字符串。
     *
     * @return $this
     */

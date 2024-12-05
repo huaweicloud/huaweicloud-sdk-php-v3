@@ -26,7 +26,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     * descriptionEn  属性英文描述。
     * label  属性标签。
     * disabled  是否禁用。
-    * id  数据标准ID，填写String类型替代Long类型。
+    * id  数据标准ID，ID字符串。
     * actived  是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。
     * required  是否必填。true：必填，false：非必填。
     * searchable  是否可搜索。true表示在数据标准列表页面可搜索，false表示在数据标准列表页面不可搜索。
@@ -70,7 +70,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     * descriptionEn  属性英文描述。
     * label  属性标签。
     * disabled  是否禁用。
-    * id  数据标准ID，填写String类型替代Long类型。
+    * id  数据标准ID，ID字符串。
     * actived  是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。
     * required  是否必填。true：必填，false：非必填。
     * searchable  是否可搜索。true表示在数据标准列表页面可搜索，false表示在数据标准列表页面不可搜索。
@@ -135,7 +135,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     * descriptionEn  属性英文描述。
     * label  属性标签。
     * disabled  是否禁用。
-    * id  数据标准ID，填写String类型替代Long类型。
+    * id  数据标准ID，ID字符串。
     * actived  是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。
     * required  是否必填。true：必填，false：非必填。
     * searchable  是否可搜索。true表示在数据标准列表页面可搜索，false表示在数据标准列表页面不可搜索。
@@ -179,7 +179,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     * descriptionEn  属性英文描述。
     * label  属性标签。
     * disabled  是否禁用。
-    * id  数据标准ID，填写String类型替代Long类型。
+    * id  数据标准ID，ID字符串。
     * actived  是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。
     * required  是否必填。true：必填，false：非必填。
     * searchable  是否可搜索。true表示在数据标准列表页面可搜索，false表示在数据标准列表页面不可搜索。
@@ -223,7 +223,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     * descriptionEn  属性英文描述。
     * label  属性标签。
     * disabled  是否禁用。
-    * id  数据标准ID，填写String类型替代Long类型。
+    * id  数据标准ID，ID字符串。
     * actived  是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。
     * required  是否必填。true：必填，false：非必填。
     * searchable  是否可搜索。true表示在数据标准列表页面可搜索，false表示在数据标准列表页面不可搜索。
@@ -511,7 +511,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  数据标准ID，填写String类型替代Long类型。
+    *  数据标准ID，ID字符串。
     *
     * @return string|null
     */
@@ -523,7 +523,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 数据标准ID，填写String类型替代Long类型。
+    * @param string|null $id 数据标准ID，ID字符串。
     *
     * @return $this
     */

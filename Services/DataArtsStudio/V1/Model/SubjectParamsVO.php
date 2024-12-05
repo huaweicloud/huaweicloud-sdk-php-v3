@@ -20,7 +20,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
+    * id  编码。更新时必填，创建时可以为空，ID字符串。
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息，业务对象必填。
@@ -28,7 +28,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     * dataOwner  数据owner部门。
     * dataOwnerList  数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
     * level  层级。取值范围1-7。
-    * parentId  上层主题ID，首层则为空，填写String类型替代Long类型。
+    * parentId  上层主题ID，首层则为空，ID字符串。
     * selfDefinedFields  自定义项。主题的自定义属性。
     *
     * @var string[]
@@ -48,7 +48,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
+    * id  编码。更新时必填，创建时可以为空，ID字符串。
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息，业务对象必填。
@@ -56,7 +56,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     * dataOwner  数据owner部门。
     * dataOwnerList  数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
     * level  层级。取值范围1-7。
-    * parentId  上层主题ID，首层则为空，填写String类型替代Long类型。
+    * parentId  上层主题ID，首层则为空，ID字符串。
     * selfDefinedFields  自定义项。主题的自定义属性。
     *
     * @var string[]
@@ -97,7 +97,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
+    * id  编码。更新时必填，创建时可以为空，ID字符串。
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息，业务对象必填。
@@ -105,7 +105,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     * dataOwner  数据owner部门。
     * dataOwnerList  数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
     * level  层级。取值范围1-7。
-    * parentId  上层主题ID，首层则为空，填写String类型替代Long类型。
+    * parentId  上层主题ID，首层则为空，ID字符串。
     * selfDefinedFields  自定义项。主题的自定义属性。
     *
     * @var string[]
@@ -125,7 +125,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
+    * id  编码。更新时必填，创建时可以为空，ID字符串。
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息，业务对象必填。
@@ -133,7 +133,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     * dataOwner  数据owner部门。
     * dataOwnerList  数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
     * level  层级。取值范围1-7。
-    * parentId  上层主题ID，首层则为空，填写String类型替代Long类型。
+    * parentId  上层主题ID，首层则为空，ID字符串。
     * selfDefinedFields  自定义项。主题的自定义属性。
     *
     * @var string[]
@@ -153,7 +153,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
+    * id  编码。更新时必填，创建时可以为空，ID字符串。
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息，业务对象必填。
@@ -161,7 +161,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     * dataOwner  数据owner部门。
     * dataOwnerList  数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
     * level  层级。取值范围1-7。
-    * parentId  上层主题ID，首层则为空，填写String类型替代Long类型。
+    * parentId  上层主题ID，首层则为空，ID字符串。
     * selfDefinedFields  自定义项。主题的自定义属性。
     *
     * @var string[]
@@ -318,7 +318,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
+    *  编码。更新时必填，创建时可以为空，ID字符串。
     *
     * @return string|null
     */
@@ -330,7 +330,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
+    * @param string|null $id 编码。更新时必填，创建时可以为空，ID字符串。
     *
     * @return $this
     */
@@ -510,7 +510,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
-    *  上层主题ID，首层则为空，填写String类型替代Long类型。
+    *  上层主题ID，首层则为空，ID字符串。
     *
     * @return string|null
     */
@@ -522,7 +522,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string|null $parentId 上层主题ID，首层则为空，填写String类型替代Long类型。
+    * @param string|null $parentId 上层主题ID，首层则为空，ID字符串。
     *
     * @return $this
     */

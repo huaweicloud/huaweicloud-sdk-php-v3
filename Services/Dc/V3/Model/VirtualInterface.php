@@ -25,7 +25,6 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * adminStateUp  管理状态：true或false
     * bandwidth  虚拟接口接入带宽
     * createTime  虚拟接口创建时间
-    * updateTime  虚拟接口更新时间
     * description  虚拟接口的描述
     * directConnectId  物理专线的ID
     * serviceType  接入网关的类型：包括VGW,GDGW,LGW等
@@ -66,7 +65,6 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             'adminStateUp' => 'bool',
             'bandwidth' => 'int',
             'createTime' => '\DateTime',
-            'updateTime' => '\DateTime',
             'description' => 'string',
             'directConnectId' => 'string',
             'serviceType' => 'string',
@@ -107,7 +105,6 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * adminStateUp  管理状态：true或false
     * bandwidth  虚拟接口接入带宽
     * createTime  虚拟接口创建时间
-    * updateTime  虚拟接口更新时间
     * description  虚拟接口的描述
     * directConnectId  物理专线的ID
     * serviceType  接入网关的类型：包括VGW,GDGW,LGW等
@@ -148,7 +145,6 @@ class VirtualInterface implements ModelInterface, ArrayAccess
         'adminStateUp' => null,
         'bandwidth' => 'int32',
         'createTime' => 'date-time',
-        'updateTime' => 'date-time',
         'description' => null,
         'directConnectId' => null,
         'serviceType' => null,
@@ -210,7 +206,6 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * adminStateUp  管理状态：true或false
     * bandwidth  虚拟接口接入带宽
     * createTime  虚拟接口创建时间
-    * updateTime  虚拟接口更新时间
     * description  虚拟接口的描述
     * directConnectId  物理专线的ID
     * serviceType  接入网关的类型：包括VGW,GDGW,LGW等
@@ -251,7 +246,6 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             'adminStateUp' => 'admin_state_up',
             'bandwidth' => 'bandwidth',
             'createTime' => 'create_time',
-            'updateTime' => 'update_time',
             'description' => 'description',
             'directConnectId' => 'direct_connect_id',
             'serviceType' => 'service_type',
@@ -292,7 +286,6 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * adminStateUp  管理状态：true或false
     * bandwidth  虚拟接口接入带宽
     * createTime  虚拟接口创建时间
-    * updateTime  虚拟接口更新时间
     * description  虚拟接口的描述
     * directConnectId  物理专线的ID
     * serviceType  接入网关的类型：包括VGW,GDGW,LGW等
@@ -333,7 +326,6 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             'adminStateUp' => 'setAdminStateUp',
             'bandwidth' => 'setBandwidth',
             'createTime' => 'setCreateTime',
-            'updateTime' => 'setUpdateTime',
             'description' => 'setDescription',
             'directConnectId' => 'setDirectConnectId',
             'serviceType' => 'setServiceType',
@@ -374,7 +366,6 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * adminStateUp  管理状态：true或false
     * bandwidth  虚拟接口接入带宽
     * createTime  虚拟接口创建时间
-    * updateTime  虚拟接口更新时间
     * description  虚拟接口的描述
     * directConnectId  物理专线的ID
     * serviceType  接入网关的类型：包括VGW,GDGW,LGW等
@@ -415,7 +406,6 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             'adminStateUp' => 'getAdminStateUp',
             'bandwidth' => 'getBandwidth',
             'createTime' => 'getCreateTime',
-            'updateTime' => 'getUpdateTime',
             'description' => 'getDescription',
             'directConnectId' => 'getDirectConnectId',
             'serviceType' => 'getServiceType',
@@ -559,7 +549,6 @@ class VirtualInterface implements ModelInterface, ArrayAccess
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['directConnectId'] = isset($data['directConnectId']) ? $data['directConnectId'] : null;
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
@@ -816,30 +805,6 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
-        return $this;
-    }
-
-    /**
-    * Gets updateTime
-    *  虚拟接口更新时间
-    *
-    * @return \DateTime|null
-    */
-    public function getUpdateTime()
-    {
-        return $this->container['updateTime'];
-    }
-
-    /**
-    * Sets updateTime
-    *
-    * @param \DateTime|null $updateTime 虚拟接口更新时间
-    *
-    * @return $this
-    */
-    public function setUpdateTime($updateTime)
-    {
-        $this->container['updateTime'] = $updateTime;
         return $this;
     }
 

@@ -25,7 +25,7 @@ class DeleteResultData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'value' => 'string'
+            'value' => 'int'
     ];
 
     /**
@@ -176,7 +176,7 @@ class DeleteResultData implements ModelInterface, ArrayAccess
     * Gets value
     *  成功删除的对象个数
     *
-    * @return string|null
+    * @return int|null
     */
     public function getValue()
     {
@@ -186,7 +186,7 @@ class DeleteResultData implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 成功删除的对象个数
+    * @param int|null $value 成功删除的对象个数
     *
     * @return $this
     */

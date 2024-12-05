@@ -20,7 +20,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述
@@ -29,15 +29,15 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * groupCode  颗粒度编码，只读。
     * compoundType  复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
     * comparisonType  比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
-    * metricIds  指标信息，填写String类型替代Long类型。
+    * metricIds  指标信息，ID字符串。
     * metricNames  指标名称信息。
-    * compoundMetricIds  复合指标信息，填写String类型替代Long类型。
+    * compoundMetricIds  复合指标信息，ID字符串。
     * compoundMetricNames  复合指标名称信息
-    * calFnIds  引用函数ID，填写String类型替代Long类型。
+    * calFnIds  引用函数ID，ID字符串。
     * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * dataType  字段类型。
     * createBy  创建人。
     * updateBy  更新人。
@@ -50,7 +50,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
+    * summaryTableId  汇总表ID，只读，ID字符串。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述
@@ -99,15 +99,15 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * groupCode  颗粒度编码，只读。
     * compoundType  复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
     * comparisonType  比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
-    * metricIds  指标信息，填写String类型替代Long类型。
+    * metricIds  指标信息，ID字符串。
     * metricNames  指标名称信息。
-    * compoundMetricIds  复合指标信息，填写String类型替代Long类型。
+    * compoundMetricIds  复合指标信息，ID字符串。
     * compoundMetricNames  复合指标名称信息
-    * calFnIds  引用函数ID，填写String类型替代Long类型。
+    * calFnIds  引用函数ID，ID字符串。
     * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * dataType  字段类型。
     * createBy  创建人。
     * updateBy  更新人。
@@ -120,7 +120,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
+    * summaryTableId  汇总表ID，只读，ID字符串。
     *
     * @var string[]
     */
@@ -181,7 +181,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述
@@ -190,15 +190,15 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * groupCode  颗粒度编码，只读。
     * compoundType  复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
     * comparisonType  比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
-    * metricIds  指标信息，填写String类型替代Long类型。
+    * metricIds  指标信息，ID字符串。
     * metricNames  指标名称信息。
-    * compoundMetricIds  复合指标信息，填写String类型替代Long类型。
+    * compoundMetricIds  复合指标信息，ID字符串。
     * compoundMetricNames  复合指标名称信息
-    * calFnIds  引用函数ID，填写String类型替代Long类型。
+    * calFnIds  引用函数ID，ID字符串。
     * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * dataType  字段类型。
     * createBy  创建人。
     * updateBy  更新人。
@@ -211,7 +211,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
+    * summaryTableId  汇总表ID，只读，ID字符串。
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述
@@ -260,15 +260,15 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * groupCode  颗粒度编码，只读。
     * compoundType  复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
     * comparisonType  比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
-    * metricIds  指标信息，填写String类型替代Long类型。
+    * metricIds  指标信息，ID字符串。
     * metricNames  指标名称信息。
-    * compoundMetricIds  复合指标信息，填写String类型替代Long类型。
+    * compoundMetricIds  复合指标信息，ID字符串。
     * compoundMetricNames  复合指标名称信息
-    * calFnIds  引用函数ID，填写String类型替代Long类型。
+    * calFnIds  引用函数ID，ID字符串。
     * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * dataType  字段类型。
     * createBy  创建人。
     * updateBy  更新人。
@@ -281,7 +281,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
+    * summaryTableId  汇总表ID，只读，ID字符串。
     *
     * @var string[]
     */
@@ -321,7 +321,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述
@@ -330,15 +330,15 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * groupCode  颗粒度编码，只读。
     * compoundType  复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
     * comparisonType  比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
-    * metricIds  指标信息，填写String类型替代Long类型。
+    * metricIds  指标信息，ID字符串。
     * metricNames  指标名称信息。
-    * compoundMetricIds  复合指标信息，填写String类型替代Long类型。
+    * compoundMetricIds  复合指标信息，ID字符串。
     * compoundMetricNames  复合指标名称信息
-    * calFnIds  引用函数ID，填写String类型替代Long类型。
+    * calFnIds  引用函数ID，ID字符串。
     * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * dataType  字段类型。
     * createBy  创建人。
     * updateBy  更新人。
@@ -351,7 +351,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
+    * summaryTableId  汇总表ID，只读，ID字符串。
     *
     * @var string[]
     */
@@ -546,6 +546,9 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
         if ($this->container['dimensionGroup'] === null) {
             $invalidProperties[] = "'dimensionGroup' can't be null";
         }
+        if ($this->container['compoundType'] === null) {
+            $invalidProperties[] = "'compoundType' can't be null";
+        }
             $allowedValues = $this->getCompoundTypeAllowableValues();
                 if (!is_null($this->container['compoundType']) && !in_array($this->container['compoundType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -562,11 +565,11 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['metricIds'] === null) {
-            $invalidProperties[] = "'metricIds' can't be null";
+        if ($this->container['l3Id'] === null) {
+            $invalidProperties[] = "'l3Id' can't be null";
         }
-        if ($this->container['calExp'] === null) {
-            $invalidProperties[] = "'calExp' can't be null";
+        if ($this->container['dataType'] === null) {
+            $invalidProperties[] = "'dataType' can't be null";
         }
         return $invalidProperties;
     }
@@ -584,7 +587,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -596,7 +599,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -754,7 +757,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * Gets compoundType
     *  复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
     *
-    * @return string|null
+    * @return string
     */
     public function getCompoundType()
     {
@@ -764,7 +767,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets compoundType
     *
-    * @param string|null $compoundType 复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
+    * @param string $compoundType 复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
     *
     * @return $this
     */
@@ -800,9 +803,9 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricIds
-    *  指标信息，填写String类型替代Long类型。
+    *  指标信息，ID字符串。
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getMetricIds()
     {
@@ -812,7 +815,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets metricIds
     *
-    * @param string[] $metricIds 指标信息，填写String类型替代Long类型。
+    * @param string[]|null $metricIds 指标信息，ID字符串。
     *
     * @return $this
     */
@@ -848,7 +851,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets compoundMetricIds
-    *  复合指标信息，填写String类型替代Long类型。
+    *  复合指标信息，ID字符串。
     *
     * @return string[]|null
     */
@@ -860,7 +863,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets compoundMetricIds
     *
-    * @param string[]|null $compoundMetricIds 复合指标信息，填写String类型替代Long类型。
+    * @param string[]|null $compoundMetricIds 复合指标信息，ID字符串。
     *
     * @return $this
     */
@@ -896,7 +899,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets calFnIds
-    *  引用函数ID，填写String类型替代Long类型。
+    *  引用函数ID，ID字符串。
     *
     * @return string[]|null
     */
@@ -908,7 +911,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets calFnIds
     *
-    * @param string[]|null $calFnIds 引用函数ID，填写String类型替代Long类型。
+    * @param string[]|null $calFnIds 引用函数ID，ID字符串。
     *
     * @return $this
     */
@@ -922,7 +925,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * Gets calExp
     *  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getCalExp()
     {
@@ -932,7 +935,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets calExp
     *
-    * @param string $calExp 计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
+    * @param string|null $calExp 计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
     *
     * @return $this
     */
@@ -944,7 +947,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID，只读，填写String类型替代Long类型。
+    *  主题域分组ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -956,7 +959,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param string|null $l1Id 主题域分组ID，只读，填写String类型替代Long类型。
+    * @param string|null $l1Id 主题域分组ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -992,9 +995,9 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象ID，填写String类型替代Long类型。
+    *  业务对象ID，ID字符串。
     *
-    * @return string|null
+    * @return string
     */
     public function getL3Id()
     {
@@ -1004,7 +1007,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string|null $l3Id 业务对象ID，填写String类型替代Long类型。
+    * @param string $l3Id 业务对象ID，ID字符串。
     *
     * @return $this
     */
@@ -1018,7 +1021,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     * Gets dataType
     *  字段类型。
     *
-    * @return string|null
+    * @return string
     */
     public function getDataType()
     {
@@ -1028,7 +1031,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataType
     *
-    * @param string|null $dataType 字段类型。
+    * @param string $dataType 字段类型。
     *
     * @return $this
     */
@@ -1304,7 +1307,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets summaryTableId
-    *  汇总表ID，只读，填写String类型替代Long类型。
+    *  汇总表ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -1316,7 +1319,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets summaryTableId
     *
-    * @param string|null $summaryTableId 汇总表ID，只读，填写String类型替代Long类型。
+    * @param string|null $summaryTableId 汇总表ID，只读，ID字符串。
     *
     * @return $this
     */

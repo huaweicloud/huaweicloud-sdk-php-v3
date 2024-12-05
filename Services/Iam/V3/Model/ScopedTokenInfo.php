@@ -39,7 +39,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
             'domain' => '\HuaweiCloud\SDK\Iam\V3\Model\DomainInfo',
             'project' => '\HuaweiCloud\SDK\Iam\V3\Model\ProjectInfo',
             'roles' => '\HuaweiCloud\SDK\Iam\V3\Model\ScopedTokenInfoRoles[]',
-            'catalog' => '\HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalogEndpoints[]'
+            'catalog' => '\HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoEndpoints[]'
     ];
 
     /**
@@ -439,7 +439,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
     * Gets catalog
     *  catalog信息
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalogEndpoints[]
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoEndpoints[]
     */
     public function getCatalog()
     {
@@ -449,7 +449,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
     /**
     * Sets catalog
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalogEndpoints[] $catalog catalog信息
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoEndpoints[] $catalog catalog信息
     *
     * @return $this
     */

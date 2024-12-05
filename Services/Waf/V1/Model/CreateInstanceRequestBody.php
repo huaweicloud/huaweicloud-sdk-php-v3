@@ -33,6 +33,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * count  申请的独享引擎数量
     * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
     * antiAffinity  是否开启反亲和。仅资源租户独享实例支持该特性。
+    * tags  TMS标签信息
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'securityGroup' => 'string[]',
             'count' => 'int',
             'resTenant' => 'bool',
-            'antiAffinity' => 'bool'
+            'antiAffinity' => 'bool',
+            'tags' => '\HuaweiCloud\SDK\Waf\V1\Model\TmsResourceTag[]'
     ];
 
     /**
@@ -67,6 +69,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * count  申请的独享引擎数量
     * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
     * antiAffinity  是否开启反亲和。仅资源租户独享实例支持该特性。
+    * tags  TMS标签信息
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         'securityGroup' => null,
         'count' => 'int32',
         'resTenant' => null,
-        'antiAffinity' => null
+        'antiAffinity' => null,
+        'tags' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * count  申请的独享引擎数量
     * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
     * antiAffinity  是否开启反亲和。仅资源租户独享实例支持该特性。
+    * tags  TMS标签信息
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'securityGroup' => 'security_group',
             'count' => 'count',
             'resTenant' => 'res_tenant',
-            'antiAffinity' => 'anti_affinity'
+            'antiAffinity' => 'anti_affinity',
+            'tags' => 'tags'
     ];
 
     /**
@@ -156,6 +162,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * count  申请的独享引擎数量
     * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
     * antiAffinity  是否开启反亲和。仅资源租户独享实例支持该特性。
+    * tags  TMS标签信息
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'securityGroup' => 'setSecurityGroup',
             'count' => 'setCount',
             'resTenant' => 'setResTenant',
-            'antiAffinity' => 'setAntiAffinity'
+            'antiAffinity' => 'setAntiAffinity',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -190,6 +198,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * count  申请的独享引擎数量
     * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
     * antiAffinity  是否开启反亲和。仅资源租户独享实例支持该特性。
+    * tags  TMS标签信息
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'securityGroup' => 'getSecurityGroup',
             'count' => 'getCount',
             'resTenant' => 'getResTenant',
-            'antiAffinity' => 'getAntiAffinity'
+            'antiAffinity' => 'getAntiAffinity',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -280,6 +290,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['resTenant'] = isset($data['resTenant']) ? $data['resTenant'] : null;
         $this->container['antiAffinity'] = isset($data['antiAffinity']) ? $data['antiAffinity'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -640,6 +651,30 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setAntiAffinity($antiAffinity)
     {
         $this->container['antiAffinity'] = $antiAffinity;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  TMS标签信息
+    *
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\TmsResourceTag[]|null $tags TMS标签信息
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

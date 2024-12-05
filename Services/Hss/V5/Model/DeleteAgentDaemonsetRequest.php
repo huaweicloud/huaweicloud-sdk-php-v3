@@ -23,7 +23,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
     * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * clusterId  集群id
-    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce |    - hss： hss服务    - cce： cce服务
+    * invokedService  调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
     * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * clusterId  集群id
-    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce |    - hss： hss服务    - cce： cce服务
+    * invokedService  调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
     * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * clusterId  集群id
-    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce |    - hss： hss服务    - cce： cce服务
+    * invokedService  调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
     * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * clusterId  集群id
-    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce |    - hss： hss服务    - cce： cce服务
+    * invokedService  调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
     * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * clusterId  集群id
-    * invokedService  调用服务，标识cce免费体检报告，cce调用传参为cce |    - hss： hss服务    - cce： cce服务
+    * invokedService  调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
     *
     * @var string[]
     */
@@ -321,7 +321,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets invokedService
-    *  调用服务，标识cce免费体检报告，cce调用传参为cce |    - hss： hss服务    - cce： cce服务
+    *  调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class DeleteAgentDaemonsetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets invokedService
     *
-    * @param string|null $invokedService 调用服务，标识cce免费体检报告，cce调用传参为cce |    - hss： hss服务    - cce： cce服务
+    * @param string|null $invokedService 调用服务,默认hss，cce集成防护调用场景使用，包括:    - hss： hss服务    - cce： cce服务，cce集成防护调用需要传参cce
     *
     * @return $this
     */

@@ -29,7 +29,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     * checkName  基线名称
     * checkType  基线类型
     * checkRuleId  检查项id
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
@@ -59,7 +59,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     * checkName  基线名称
     * checkType  基线类型
     * checkRuleId  检查项id
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
@@ -110,7 +110,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     * checkName  基线名称
     * checkType  基线类型
     * checkRuleId  检查项id
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
@@ -140,7 +140,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     * checkName  基线名称
     * checkType  基线类型
     * checkRuleId  检查项id
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
@@ -170,7 +170,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     * checkName  基线名称
     * checkType  基线类型
     * checkRuleId  检查项id
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
@@ -587,7 +587,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets standard
-    *  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    *  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     *
     * @return string
     */
@@ -599,7 +599,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets standard
     *
-    * @param string $standard 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * @param string $standard 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     *
     * @return $this
     */

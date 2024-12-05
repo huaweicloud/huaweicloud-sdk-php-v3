@@ -21,10 +21,10 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * values  属性信息。
-    * id  数据标准的ID，填写String类型替代Long类型。
-    * directoryId  标准所属目录，填写String类型替代Long类型。
+    * id  数据标准的ID，ID字符串。
+    * directoryId  标准所属目录，ID字符串。
     * directoryPath  目录树。
-    * rowId  标准行的ID，填写String类型替代Long类型。
+    * rowId  标准行的ID，ID字符串。
     * status  status
     * approvalInfo  approvalInfo
     * newBiz  newBiz
@@ -55,10 +55,10 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * values  属性信息。
-    * id  数据标准的ID，填写String类型替代Long类型。
-    * directoryId  标准所属目录，填写String类型替代Long类型。
+    * id  数据标准的ID，ID字符串。
+    * directoryId  标准所属目录，ID字符串。
     * directoryPath  目录树。
-    * rowId  标准行的ID，填写String类型替代Long类型。
+    * rowId  标准行的ID，ID字符串。
     * status  status
     * approvalInfo  approvalInfo
     * newBiz  newBiz
@@ -110,10 +110,10 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * values  属性信息。
-    * id  数据标准的ID，填写String类型替代Long类型。
-    * directoryId  标准所属目录，填写String类型替代Long类型。
+    * id  数据标准的ID，ID字符串。
+    * directoryId  标准所属目录，ID字符串。
     * directoryPath  目录树。
-    * rowId  标准行的ID，填写String类型替代Long类型。
+    * rowId  标准行的ID，ID字符串。
     * status  status
     * approvalInfo  approvalInfo
     * newBiz  newBiz
@@ -144,10 +144,10 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * values  属性信息。
-    * id  数据标准的ID，填写String类型替代Long类型。
-    * directoryId  标准所属目录，填写String类型替代Long类型。
+    * id  数据标准的ID，ID字符串。
+    * directoryId  标准所属目录，ID字符串。
     * directoryPath  目录树。
-    * rowId  标准行的ID，填写String类型替代Long类型。
+    * rowId  标准行的ID，ID字符串。
     * status  status
     * approvalInfo  approvalInfo
     * newBiz  newBiz
@@ -178,10 +178,10 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * values  属性信息。
-    * id  数据标准的ID，填写String类型替代Long类型。
-    * directoryId  标准所属目录，填写String类型替代Long类型。
+    * id  数据标准的ID，ID字符串。
+    * directoryId  标准所属目录，ID字符串。
     * directoryPath  目录树。
-    * rowId  标准行的ID，填写String类型替代Long类型。
+    * rowId  标准行的ID，ID字符串。
     * status  status
     * approvalInfo  approvalInfo
     * newBiz  newBiz
@@ -336,7 +336,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  数据标准的ID，填写String类型替代Long类型。
+    *  数据标准的ID，ID字符串。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 数据标准的ID，填写String类型替代Long类型。
+    * @param string|null $id 数据标准的ID，ID字符串。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryId
-    *  标准所属目录，填写String类型替代Long类型。
+    *  标准所属目录，ID字符串。
     *
     * @return string
     */
@@ -372,7 +372,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Sets directoryId
     *
-    * @param string $directoryId 标准所属目录，填写String类型替代Long类型。
+    * @param string $directoryId 标准所属目录，ID字符串。
     *
     * @return $this
     */
@@ -408,7 +408,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets rowId
-    *  标准行的ID，填写String类型替代Long类型。
+    *  标准行的ID，ID字符串。
     *
     * @return string|null
     */
@@ -420,7 +420,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Sets rowId
     *
-    * @param string|null $rowId 标准行的ID，填写String类型替代Long类型。
+    * @param string|null $rowId 标准行的ID，ID字符串。
     *
     * @return $this
     */

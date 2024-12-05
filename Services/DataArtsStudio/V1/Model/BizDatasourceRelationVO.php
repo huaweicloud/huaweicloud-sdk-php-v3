@@ -20,8 +20,8 @@ class BizDatasourceRelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * bizId  业务对象信息，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * bizId  业务对象信息，ID字符串。
     * bizType  bizType
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
     * dwId  数据连接ID。
@@ -46,8 +46,8 @@ class BizDatasourceRelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * bizId  业务对象信息，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * bizId  业务对象信息，ID字符串。
     * bizType  bizType
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
     * dwId  数据连接ID。
@@ -93,8 +93,8 @@ class BizDatasourceRelationVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
-    * bizId  业务对象信息，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * bizId  业务对象信息，ID字符串。
     * bizType  bizType
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
     * dwId  数据连接ID。
@@ -119,8 +119,8 @@ class BizDatasourceRelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
-    * bizId  业务对象信息，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * bizId  业务对象信息，ID字符串。
     * bizType  bizType
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
     * dwId  数据连接ID。
@@ -145,8 +145,8 @@ class BizDatasourceRelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
-    * bizId  业务对象信息，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * bizId  业务对象信息，ID字符串。
     * bizType  bizType
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
     * dwId  数据连接ID。
@@ -268,7 +268,7 @@ class BizDatasourceRelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -280,7 +280,7 @@ class BizDatasourceRelationVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -292,7 +292,7 @@ class BizDatasourceRelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务对象信息，填写String类型替代Long类型。
+    *  业务对象信息，ID字符串。
     *
     * @return string|null
     */
@@ -304,7 +304,7 @@ class BizDatasourceRelationVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param string|null $bizId 业务对象信息，填写String类型替代Long类型。
+    * @param string|null $bizId 业务对象信息，ID字符串。
     *
     * @return $this
     */

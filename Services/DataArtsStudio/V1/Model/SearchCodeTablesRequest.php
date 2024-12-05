@@ -26,7 +26,7 @@ class SearchCodeTablesRequest implements ModelInterface, ArrayAccess
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
-    * directoryId  目录ID，填写String类型替代Long类型。
+    * directoryId  目录ID，ID字符串。
     * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -58,7 +58,7 @@ class SearchCodeTablesRequest implements ModelInterface, ArrayAccess
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
-    * directoryId  目录ID，填写String类型替代Long类型。
+    * directoryId  目录ID，ID字符串。
     * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -111,7 +111,7 @@ class SearchCodeTablesRequest implements ModelInterface, ArrayAccess
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
-    * directoryId  目录ID，填写String类型替代Long类型。
+    * directoryId  目录ID，ID字符串。
     * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -143,7 +143,7 @@ class SearchCodeTablesRequest implements ModelInterface, ArrayAccess
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
-    * directoryId  目录ID，填写String类型替代Long类型。
+    * directoryId  目录ID，ID字符串。
     * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -175,7 +175,7 @@ class SearchCodeTablesRequest implements ModelInterface, ArrayAccess
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
-    * directoryId  目录ID，填写String类型替代Long类型。
+    * directoryId  目录ID，ID字符串。
     * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -506,7 +506,7 @@ class SearchCodeTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryId
-    *  目录ID，填写String类型替代Long类型。
+    *  目录ID，ID字符串。
     *
     * @return string|null
     */
@@ -518,7 +518,7 @@ class SearchCodeTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets directoryId
     *
-    * @param string|null $directoryId 目录ID，填写String类型替代Long类型。
+    * @param string|null $directoryId 目录ID，ID字符串。
     *
     * @return $this
     */

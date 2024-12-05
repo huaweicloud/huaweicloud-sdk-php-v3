@@ -20,8 +20,8 @@ class StatisticStandardCoverageVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * allColNum  字段总数，填写String类型替代Long类型。
-    * colNum  关联标准字段数，填写String类型替代Long类型。
+    * allColNum  字段总数，ID字符串。
+    * colNum  关联标准字段数，ID字符串。
     * coverage  标准覆盖率。
     * details  引用表数组。
     *
@@ -36,8 +36,8 @@ class StatisticStandardCoverageVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * allColNum  字段总数，填写String类型替代Long类型。
-    * colNum  关联标准字段数，填写String类型替代Long类型。
+    * allColNum  字段总数，ID字符串。
+    * colNum  关联标准字段数，ID字符串。
     * coverage  标准覆盖率。
     * details  引用表数组。
     *
@@ -73,8 +73,8 @@ class StatisticStandardCoverageVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * allColNum  字段总数，填写String类型替代Long类型。
-    * colNum  关联标准字段数，填写String类型替代Long类型。
+    * allColNum  字段总数，ID字符串。
+    * colNum  关联标准字段数，ID字符串。
     * coverage  标准覆盖率。
     * details  引用表数组。
     *
@@ -89,8 +89,8 @@ class StatisticStandardCoverageVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * allColNum  字段总数，填写String类型替代Long类型。
-    * colNum  关联标准字段数，填写String类型替代Long类型。
+    * allColNum  字段总数，ID字符串。
+    * colNum  关联标准字段数，ID字符串。
     * coverage  标准覆盖率。
     * details  引用表数组。
     *
@@ -105,8 +105,8 @@ class StatisticStandardCoverageVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * allColNum  字段总数，填写String类型替代Long类型。
-    * colNum  关联标准字段数，填写String类型替代Long类型。
+    * allColNum  字段总数，ID字符串。
+    * colNum  关联标准字段数，ID字符串。
     * coverage  标准覆盖率。
     * details  引用表数组。
     *
@@ -207,7 +207,7 @@ class StatisticStandardCoverageVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets allColNum
-    *  字段总数，填写String类型替代Long类型。
+    *  字段总数，ID字符串。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class StatisticStandardCoverageVO implements ModelInterface, ArrayAccess
     /**
     * Sets allColNum
     *
-    * @param string|null $allColNum 字段总数，填写String类型替代Long类型。
+    * @param string|null $allColNum 字段总数，ID字符串。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class StatisticStandardCoverageVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets colNum
-    *  关联标准字段数，填写String类型替代Long类型。
+    *  关联标准字段数，ID字符串。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class StatisticStandardCoverageVO implements ModelInterface, ArrayAccess
     /**
     * Sets colNum
     *
-    * @param string|null $colNum 关联标准字段数，填写String类型替代Long类型。
+    * @param string|null $colNum 关联标准字段数，ID字符串。
     *
     * @return $this
     */

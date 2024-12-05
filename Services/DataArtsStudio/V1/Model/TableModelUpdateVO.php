@@ -20,9 +20,9 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
-    * parentTableId  父表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * modelId  所属关系建模的模型ID，ID字符串。
+    * parentTableId  父表ID，ID字符串。
     * parentTableName  父表名称，只读。
     * parentTableCode  父表编码，只读。
     * model  model
@@ -44,8 +44,8 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * logicTbGuid  逻辑实体的guid，只读。
     * description  描述。
     * status  status
-    * logicTbId  逻辑实体的ID，填写String类型替代Long类型。
-    * bizCatalogId  归属的业务分类的ID，填写String类型替代Long类型。
+    * logicTbId  逻辑实体的ID，ID字符串。
+    * bizCatalogId  归属的业务分类的ID，ID字符串。
     * catalogPath  归属的业务分类的路径，格式： {\"l1Id\":\"958408897973161984\",\"l2Id\":\"958408897973161985\",\"l3Id\":\"958408897973161986\"}。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
@@ -62,9 +62,9 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
+    * l3Id  业务对象ID，只读，ID字符串。
     * partitionConf  分区表达式
     * dlfTaskId  DLF作业ID。
     * useRecentlyPartition  是否使用最新分区。
@@ -74,7 +74,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * dirtyOutPrefix  异常表前缀。
     * dirtyOutSuffix  异常表后缀。
     * qualityOwner  质量责任人。
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
     * isPartition  是否分区表，只读。
@@ -87,8 +87,8 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * summaryStatus  summaryStatus
     * alias  别名。
     * selfDefinedFields  自定义项。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -176,9 +176,9 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
-    * parentTableId  父表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * modelId  所属关系建模的模型ID，ID字符串。
+    * parentTableId  父表ID，ID字符串。
     * parentTableName  父表名称，只读。
     * parentTableCode  父表编码，只读。
     * model  model
@@ -200,8 +200,8 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * logicTbGuid  逻辑实体的guid，只读。
     * description  描述。
     * status  status
-    * logicTbId  逻辑实体的ID，填写String类型替代Long类型。
-    * bizCatalogId  归属的业务分类的ID，填写String类型替代Long类型。
+    * logicTbId  逻辑实体的ID，ID字符串。
+    * bizCatalogId  归属的业务分类的ID，ID字符串。
     * catalogPath  归属的业务分类的路径，格式： {\"l1Id\":\"958408897973161984\",\"l2Id\":\"958408897973161985\",\"l3Id\":\"958408897973161986\"}。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
@@ -218,9 +218,9 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
+    * l3Id  业务对象ID，只读，ID字符串。
     * partitionConf  分区表达式
     * dlfTaskId  DLF作业ID。
     * useRecentlyPartition  是否使用最新分区。
@@ -230,7 +230,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * dirtyOutPrefix  异常表前缀。
     * dirtyOutSuffix  异常表后缀。
     * qualityOwner  质量责任人。
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
     * isPartition  是否分区表，只读。
@@ -243,8 +243,8 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * summaryStatus  summaryStatus
     * alias  别名。
     * selfDefinedFields  自定义项。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -353,9 +353,9 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
-    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
-    * parentTableId  父表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * modelId  所属关系建模的模型ID，ID字符串。
+    * parentTableId  父表ID，ID字符串。
     * parentTableName  父表名称，只读。
     * parentTableCode  父表编码，只读。
     * model  model
@@ -377,8 +377,8 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * logicTbGuid  逻辑实体的guid，只读。
     * description  描述。
     * status  status
-    * logicTbId  逻辑实体的ID，填写String类型替代Long类型。
-    * bizCatalogId  归属的业务分类的ID，填写String类型替代Long类型。
+    * logicTbId  逻辑实体的ID，ID字符串。
+    * bizCatalogId  归属的业务分类的ID，ID字符串。
     * catalogPath  归属的业务分类的路径，格式： {\"l1Id\":\"958408897973161984\",\"l2Id\":\"958408897973161985\",\"l3Id\":\"958408897973161986\"}。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
@@ -395,9 +395,9 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
+    * l3Id  业务对象ID，只读，ID字符串。
     * partitionConf  分区表达式
     * dlfTaskId  DLF作业ID。
     * useRecentlyPartition  是否使用最新分区。
@@ -407,7 +407,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * dirtyOutPrefix  异常表前缀。
     * dirtyOutSuffix  异常表后缀。
     * qualityOwner  质量责任人。
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
     * isPartition  是否分区表，只读。
@@ -420,8 +420,8 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * summaryStatus  summaryStatus
     * alias  别名。
     * selfDefinedFields  自定义项。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -509,9 +509,9 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
-    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
-    * parentTableId  父表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * modelId  所属关系建模的模型ID，ID字符串。
+    * parentTableId  父表ID，ID字符串。
     * parentTableName  父表名称，只读。
     * parentTableCode  父表编码，只读。
     * model  model
@@ -533,8 +533,8 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * logicTbGuid  逻辑实体的guid，只读。
     * description  描述。
     * status  status
-    * logicTbId  逻辑实体的ID，填写String类型替代Long类型。
-    * bizCatalogId  归属的业务分类的ID，填写String类型替代Long类型。
+    * logicTbId  逻辑实体的ID，ID字符串。
+    * bizCatalogId  归属的业务分类的ID，ID字符串。
     * catalogPath  归属的业务分类的路径，格式： {\"l1Id\":\"958408897973161984\",\"l2Id\":\"958408897973161985\",\"l3Id\":\"958408897973161986\"}。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
@@ -551,9 +551,9 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
+    * l3Id  业务对象ID，只读，ID字符串。
     * partitionConf  分区表达式
     * dlfTaskId  DLF作业ID。
     * useRecentlyPartition  是否使用最新分区。
@@ -563,7 +563,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * dirtyOutPrefix  异常表前缀。
     * dirtyOutSuffix  异常表后缀。
     * qualityOwner  质量责任人。
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
     * isPartition  是否分区表，只读。
@@ -576,8 +576,8 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * summaryStatus  summaryStatus
     * alias  别名。
     * selfDefinedFields  自定义项。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -665,9 +665,9 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
-    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
-    * parentTableId  父表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * modelId  所属关系建模的模型ID，ID字符串。
+    * parentTableId  父表ID，ID字符串。
     * parentTableName  父表名称，只读。
     * parentTableCode  父表编码，只读。
     * model  model
@@ -689,8 +689,8 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * logicTbGuid  逻辑实体的guid，只读。
     * description  描述。
     * status  status
-    * logicTbId  逻辑实体的ID，填写String类型替代Long类型。
-    * bizCatalogId  归属的业务分类的ID，填写String类型替代Long类型。
+    * logicTbId  逻辑实体的ID，ID字符串。
+    * bizCatalogId  归属的业务分类的ID，ID字符串。
     * catalogPath  归属的业务分类的路径，格式： {\"l1Id\":\"958408897973161984\",\"l2Id\":\"958408897973161985\",\"l3Id\":\"958408897973161986\"}。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
@@ -707,9 +707,9 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
+    * l3Id  业务对象ID，只读，ID字符串。
     * partitionConf  分区表达式
     * dlfTaskId  DLF作业ID。
     * useRecentlyPartition  是否使用最新分区。
@@ -719,7 +719,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * dirtyOutPrefix  异常表前缀。
     * dirtyOutSuffix  异常表后缀。
     * qualityOwner  质量责任人。
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
     * isPartition  是否分区表，只读。
@@ -732,8 +732,8 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     * summaryStatus  summaryStatus
     * alias  别名。
     * selfDefinedFields  自定义项。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -1045,7 +1045,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string
     */
@@ -1057,7 +1057,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 编码，填写String类型替代Long类型。
+    * @param string $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -1069,7 +1069,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelId
-    *  所属关系建模的模型ID，填写String类型替代Long类型。
+    *  所属关系建模的模型ID，ID字符串。
     *
     * @return string
     */
@@ -1081,7 +1081,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets modelId
     *
-    * @param string $modelId 所属关系建模的模型ID，填写String类型替代Long类型。
+    * @param string $modelId 所属关系建模的模型ID，ID字符串。
     *
     * @return $this
     */
@@ -1093,7 +1093,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentTableId
-    *  父表ID，填写String类型替代Long类型。
+    *  父表ID，ID字符串。
     *
     * @return string|null
     */
@@ -1105,7 +1105,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentTableId
     *
-    * @param string|null $parentTableId 父表ID，填写String类型替代Long类型。
+    * @param string|null $parentTableId 父表ID，ID字符串。
     *
     * @return $this
     */
@@ -1621,7 +1621,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicTbId
-    *  逻辑实体的ID，填写String类型替代Long类型。
+    *  逻辑实体的ID，ID字符串。
     *
     * @return string|null
     */
@@ -1633,7 +1633,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets logicTbId
     *
-    * @param string|null $logicTbId 逻辑实体的ID，填写String类型替代Long类型。
+    * @param string|null $logicTbId 逻辑实体的ID，ID字符串。
     *
     * @return $this
     */
@@ -1645,7 +1645,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizCatalogId
-    *  归属的业务分类的ID，填写String类型替代Long类型。
+    *  归属的业务分类的ID，ID字符串。
     *
     * @return string|null
     */
@@ -1657,7 +1657,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizCatalogId
     *
-    * @param string|null $bizCatalogId 归属的业务分类的ID，填写String类型替代Long类型。
+    * @param string|null $bizCatalogId 归属的业务分类的ID，ID字符串。
     *
     * @return $this
     */
@@ -2053,7 +2053,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID，只读，填写String类型替代Long类型。
+    *  主题域分组ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -2065,7 +2065,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param string|null $l1Id 主题域分组ID，只读，填写String类型替代Long类型。
+    * @param string|null $l1Id 主题域分组ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -2101,7 +2101,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象ID，只读，填写String类型替代Long类型。
+    *  业务对象ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -2113,7 +2113,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string|null $l3Id 业务对象ID，只读，填写String类型替代Long类型。
+    * @param string|null $l3Id 业务对象ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -2341,7 +2341,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityId
-    *  质量ID，填写String类型替代Long类型。
+    *  质量ID，ID字符串。
     *
     * @return string|null
     */
@@ -2353,7 +2353,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityId
     *
-    * @param string|null $qualityId 质量ID，填写String类型替代Long类型。
+    * @param string|null $qualityId 质量ID，ID字符串。
     *
     * @return $this
     */
@@ -2653,7 +2653,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets devVersion
-    *  开发环境版本，填写String类型替代Long类型。
+    *  开发环境版本，ID字符串。
     *
     * @return string|null
     */
@@ -2665,7 +2665,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets devVersion
     *
-    * @param string|null $devVersion 开发环境版本，填写String类型替代Long类型。
+    * @param string|null $devVersion 开发环境版本，ID字符串。
     *
     * @return $this
     */
@@ -2677,7 +2677,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets prodVersion
-    *  生产环境版本，填写String类型替代Long类型。
+    *  生产环境版本，ID字符串。
     *
     * @return string|null
     */
@@ -2689,7 +2689,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets prodVersion
     *
-    * @param string|null $prodVersion 生产环境版本，填写String类型替代Long类型。
+    * @param string|null $prodVersion 生产环境版本，ID字符串。
     *
     * @return $this
     */

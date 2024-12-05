@@ -26,13 +26,11 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  付费模式 | on_demand 按需 free 免费
-    * autoUpgrade  开启agent自动升级
+    * chargingMode  付费模式：   on_demand 按需   free 免费
     * preferPacketCycle  优先使用包周期配额；默认0
-    * vpcId  vpc id
-    * protectType  cce protection type
-    * protectStatus  protection status
-    * clusterType  cluster type
+    * protectType  cce集群防护类型
+    * protectStatus  防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
+    * clusterType  集群类型
     * failReason  fail reason
     *
     * @var string[]
@@ -45,9 +43,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
             'nodeTotalNum' => 'int',
             'clusterName' => 'string',
             'chargingMode' => 'string',
-            'autoUpgrade' => 'bool',
             'preferPacketCycle' => 'int',
-            'vpcId' => 'string',
             'protectType' => 'string',
             'protectStatus' => 'string',
             'clusterType' => 'string',
@@ -62,13 +58,11 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  付费模式 | on_demand 按需 free 免费
-    * autoUpgrade  开启agent自动升级
+    * chargingMode  付费模式：   on_demand 按需   free 免费
     * preferPacketCycle  优先使用包周期配额；默认0
-    * vpcId  vpc id
-    * protectType  cce protection type
-    * protectStatus  protection status
-    * clusterType  cluster type
+    * protectType  cce集群防护类型
+    * protectStatus  防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
+    * clusterType  集群类型
     * failReason  fail reason
     *
     * @var string[]
@@ -81,9 +75,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
         'nodeTotalNum' => null,
         'clusterName' => null,
         'chargingMode' => null,
-        'autoUpgrade' => null,
         'preferPacketCycle' => null,
-        'vpcId' => null,
         'protectType' => null,
         'protectStatus' => null,
         'clusterType' => null,
@@ -119,13 +111,11 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  付费模式 | on_demand 按需 free 免费
-    * autoUpgrade  开启agent自动升级
+    * chargingMode  付费模式：   on_demand 按需   free 免费
     * preferPacketCycle  优先使用包周期配额；默认0
-    * vpcId  vpc id
-    * protectType  cce protection type
-    * protectStatus  protection status
-    * clusterType  cluster type
+    * protectType  cce集群防护类型
+    * protectStatus  防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
+    * clusterType  集群类型
     * failReason  fail reason
     *
     * @var string[]
@@ -138,9 +128,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
             'nodeTotalNum' => 'node_total_num',
             'clusterName' => 'cluster_name',
             'chargingMode' => 'charging_mode',
-            'autoUpgrade' => 'auto_upgrade',
             'preferPacketCycle' => 'prefer_packet_cycle',
-            'vpcId' => 'vpc_id',
             'protectType' => 'protect_type',
             'protectStatus' => 'protect_status',
             'clusterType' => 'cluster_type',
@@ -155,13 +143,11 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  付费模式 | on_demand 按需 free 免费
-    * autoUpgrade  开启agent自动升级
+    * chargingMode  付费模式：   on_demand 按需   free 免费
     * preferPacketCycle  优先使用包周期配额；默认0
-    * vpcId  vpc id
-    * protectType  cce protection type
-    * protectStatus  protection status
-    * clusterType  cluster type
+    * protectType  cce集群防护类型
+    * protectStatus  防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
+    * clusterType  集群类型
     * failReason  fail reason
     *
     * @var string[]
@@ -174,9 +160,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
             'nodeTotalNum' => 'setNodeTotalNum',
             'clusterName' => 'setClusterName',
             'chargingMode' => 'setChargingMode',
-            'autoUpgrade' => 'setAutoUpgrade',
             'preferPacketCycle' => 'setPreferPacketCycle',
-            'vpcId' => 'setVpcId',
             'protectType' => 'setProtectType',
             'protectStatus' => 'setProtectStatus',
             'clusterType' => 'setClusterType',
@@ -191,13 +175,11 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     * unprotectNodeNum  集群防护中断节点数量
     * nodeTotalNum  集群节点总数
     * clusterName  集群名称
-    * chargingMode  付费模式 | on_demand 按需 free 免费
-    * autoUpgrade  开启agent自动升级
+    * chargingMode  付费模式：   on_demand 按需   free 免费
     * preferPacketCycle  优先使用包周期配额；默认0
-    * vpcId  vpc id
-    * protectType  cce protection type
-    * protectStatus  protection status
-    * clusterType  cluster type
+    * protectType  cce集群防护类型
+    * protectStatus  防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
+    * clusterType  集群类型
     * failReason  fail reason
     *
     * @var string[]
@@ -210,9 +192,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
             'nodeTotalNum' => 'getNodeTotalNum',
             'clusterName' => 'getClusterName',
             'chargingMode' => 'getChargingMode',
-            'autoUpgrade' => 'getAutoUpgrade',
             'preferPacketCycle' => 'getPreferPacketCycle',
-            'vpcId' => 'getVpcId',
             'protectType' => 'getProtectType',
             'protectStatus' => 'getProtectStatus',
             'clusterType' => 'getClusterType',
@@ -284,9 +264,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
         $this->container['nodeTotalNum'] = isset($data['nodeTotalNum']) ? $data['nodeTotalNum'] : null;
         $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
-        $this->container['autoUpgrade'] = isset($data['autoUpgrade']) ? $data['autoUpgrade'] : null;
         $this->container['preferPacketCycle'] = isset($data['preferPacketCycle']) ? $data['preferPacketCycle'] : null;
-        $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['protectType'] = isset($data['protectType']) ? $data['protectType'] : null;
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
         $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
@@ -339,9 +317,6 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['preferPacketCycle']) && ($this->container['preferPacketCycle'] < 0)) {
                 $invalidProperties[] = "invalid value for 'preferPacketCycle', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['vpcId']) && !preg_match("/^.*$/", $this->container['vpcId'])) {
-                $invalidProperties[] = "invalid value for 'vpcId', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['protectType']) && !preg_match("/^.*$/", $this->container['protectType'])) {
                 $invalidProperties[] = "invalid value for 'protectType', must be conform to the pattern /^.*$/.";
@@ -515,7 +490,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  付费模式 | on_demand 按需 free 免费
+    *  付费模式：   on_demand 按需   free 免费
     *
     * @return string|null
     */
@@ -527,37 +502,13 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 付费模式 | on_demand 按需 free 免费
+    * @param string|null $chargingMode 付费模式：   on_demand 按需   free 免费
     *
     * @return $this
     */
     public function setChargingMode($chargingMode)
     {
         $this->container['chargingMode'] = $chargingMode;
-        return $this;
-    }
-
-    /**
-    * Gets autoUpgrade
-    *  开启agent自动升级
-    *
-    * @return bool|null
-    */
-    public function getAutoUpgrade()
-    {
-        return $this->container['autoUpgrade'];
-    }
-
-    /**
-    * Sets autoUpgrade
-    *
-    * @param bool|null $autoUpgrade 开启agent自动升级
-    *
-    * @return $this
-    */
-    public function setAutoUpgrade($autoUpgrade)
-    {
-        $this->container['autoUpgrade'] = $autoUpgrade;
         return $this;
     }
 
@@ -586,32 +537,8 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets vpcId
-    *  vpc id
-    *
-    * @return string|null
-    */
-    public function getVpcId()
-    {
-        return $this->container['vpcId'];
-    }
-
-    /**
-    * Sets vpcId
-    *
-    * @param string|null $vpcId vpc id
-    *
-    * @return $this
-    */
-    public function setVpcId($vpcId)
-    {
-        $this->container['vpcId'] = $vpcId;
-        return $this;
-    }
-
-    /**
     * Gets protectType
-    *  cce protection type
+    *  cce集群防护类型
     *
     * @return string|null
     */
@@ -623,7 +550,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectType
     *
-    * @param string|null $protectType cce protection type
+    * @param string|null $protectType cce集群防护类型
     *
     * @return $this
     */
@@ -635,7 +562,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  protection status
+    *  防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
     *
     * @return string|null
     */
@@ -647,7 +574,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus protection status
+    * @param string|null $protectStatus 防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
     *
     * @return $this
     */
@@ -659,7 +586,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  cluster type
+    *  集群类型
     *
     * @return string|null
     */
@@ -671,7 +598,7 @@ class ClusterConfigResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType cluster type
+    * @param string|null $clusterType 集群类型
     *
     * @return $this
     */

@@ -33,6 +33,7 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     * columnName  列名称
     * rowLevelSecurity  行级策略。无效参数，待下线。
     * url  url路径名称, MRS存算分离或者HIVE指定location场景下使用。
+    * autoSync  是否自动触发同步, 默认false
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
             'tableName' => 'string',
             'columnName' => 'string',
             'rowLevelSecurity' => 'string',
-            'url' => 'string'
+            'url' => 'string',
+            'autoSync' => 'bool'
     ];
 
     /**
@@ -67,6 +69,7 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     * columnName  列名称
     * rowLevelSecurity  行级策略。无效参数，待下线。
     * url  url路径名称, MRS存算分离或者HIVE指定location场景下使用。
+    * autoSync  是否自动触发同步, 默认false
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
         'tableName' => null,
         'columnName' => null,
         'rowLevelSecurity' => null,
-        'url' => null
+        'url' => null,
+        'autoSync' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     * columnName  列名称
     * rowLevelSecurity  行级策略。无效参数，待下线。
     * url  url路径名称, MRS存算分离或者HIVE指定location场景下使用。
+    * autoSync  是否自动触发同步, 默认false
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
             'tableName' => 'table_name',
             'columnName' => 'column_name',
             'rowLevelSecurity' => 'row_level_security',
-            'url' => 'url'
+            'url' => 'url',
+            'autoSync' => 'auto_sync'
     ];
 
     /**
@@ -156,6 +162,7 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     * columnName  列名称
     * rowLevelSecurity  行级策略。无效参数，待下线。
     * url  url路径名称, MRS存算分离或者HIVE指定location场景下使用。
+    * autoSync  是否自动触发同步, 默认false
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
             'tableName' => 'setTableName',
             'columnName' => 'setColumnName',
             'rowLevelSecurity' => 'setRowLevelSecurity',
-            'url' => 'setUrl'
+            'url' => 'setUrl',
+            'autoSync' => 'setAutoSync'
     ];
 
     /**
@@ -190,6 +198,7 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     * columnName  列名称
     * rowLevelSecurity  行级策略。无效参数，待下线。
     * url  url路径名称, MRS存算分离或者HIVE指定location场景下使用。
+    * autoSync  是否自动触发同步, 默认false
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
             'tableName' => 'getTableName',
             'columnName' => 'getColumnName',
             'rowLevelSecurity' => 'getRowLevelSecurity',
-            'url' => 'getUrl'
+            'url' => 'getUrl',
+            'autoSync' => 'getAutoSync'
     ];
 
     /**
@@ -339,6 +349,7 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
         $this->container['columnName'] = isset($data['columnName']) ? $data['columnName'] : null;
         $this->container['rowLevelSecurity'] = isset($data['rowLevelSecurity']) ? $data['rowLevelSecurity'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['autoSync'] = isset($data['autoSync']) ? $data['autoSync'] : null;
     }
 
     /**
@@ -748,6 +759,30 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     public function setUrl($url)
     {
         $this->container['url'] = $url;
+        return $this;
+    }
+
+    /**
+    * Gets autoSync
+    *  是否自动触发同步, 默认false
+    *
+    * @return bool|null
+    */
+    public function getAutoSync()
+    {
+        return $this->container['autoSync'];
+    }
+
+    /**
+    * Sets autoSync
+    *
+    * @param bool|null $autoSync 是否自动触发同步, 默认false
+    *
+    * @return $this
+    */
+    public function setAutoSync($autoSync)
+    {
+        $this->container['autoSync'] = $autoSync;
         return $this;
     }
 

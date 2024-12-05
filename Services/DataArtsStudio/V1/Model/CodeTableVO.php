@@ -20,11 +20,11 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  码表ID，填写String类型替代Long类型。
+    * id  码表ID，ID字符串。
     * nameEn  表名称，英文名。
     * nameCh  表名称，中文名。
     * tbVersion  表版本。
-    * directoryId  目录ID，填写String类型替代Long类型。
+    * directoryId  目录ID，ID字符串。
     * directoryPath  目录树。
     * description  描述。
     * createBy  创建人。
@@ -56,11 +56,11 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  码表ID，填写String类型替代Long类型。
+    * id  码表ID，ID字符串。
     * nameEn  表名称，英文名。
     * nameCh  表名称，中文名。
     * tbVersion  表版本。
-    * directoryId  目录ID，填写String类型替代Long类型。
+    * directoryId  目录ID，ID字符串。
     * directoryPath  目录树。
     * description  描述。
     * createBy  创建人。
@@ -113,11 +113,11 @@ class CodeTableVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  码表ID，填写String类型替代Long类型。
+    * id  码表ID，ID字符串。
     * nameEn  表名称，英文名。
     * nameCh  表名称，中文名。
     * tbVersion  表版本。
-    * directoryId  目录ID，填写String类型替代Long类型。
+    * directoryId  目录ID，ID字符串。
     * directoryPath  目录树。
     * description  描述。
     * createBy  创建人。
@@ -149,11 +149,11 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  码表ID，填写String类型替代Long类型。
+    * id  码表ID，ID字符串。
     * nameEn  表名称，英文名。
     * nameCh  表名称，中文名。
     * tbVersion  表版本。
-    * directoryId  目录ID，填写String类型替代Long类型。
+    * directoryId  目录ID，ID字符串。
     * directoryPath  目录树。
     * description  描述。
     * createBy  创建人。
@@ -185,11 +185,11 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  码表ID，填写String类型替代Long类型。
+    * id  码表ID，ID字符串。
     * nameEn  表名称，英文名。
     * nameCh  表名称，中文名。
     * tbVersion  表版本。
-    * directoryId  目录ID，填写String类型替代Long类型。
+    * directoryId  目录ID，ID字符串。
     * directoryPath  目录树。
     * description  描述。
     * createBy  创建人。
@@ -347,7 +347,7 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  码表ID，填写String类型替代Long类型。
+    *  码表ID，ID字符串。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class CodeTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 码表ID，填写String类型替代Long类型。
+    * @param string|null $id 码表ID，ID字符串。
     *
     * @return $this
     */
@@ -443,7 +443,7 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryId
-    *  目录ID，填写String类型替代Long类型。
+    *  目录ID，ID字符串。
     *
     * @return string
     */
@@ -455,7 +455,7 @@ class CodeTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets directoryId
     *
-    * @param string $directoryId 目录ID，填写String类型替代Long类型。
+    * @param string $directoryId 目录ID，ID字符串。
     *
     * @return $this
     */

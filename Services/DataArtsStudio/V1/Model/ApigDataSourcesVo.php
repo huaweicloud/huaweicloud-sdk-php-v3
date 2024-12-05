@@ -20,21 +20,29 @@ class ApigDataSourcesVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * mode  企业模式空间下的数据连接还是简单模式空间下的连接,0:简单模式，1：企业模式
+    * visible  连接是否可见,0：不可见，1：可见
     * dataSourceVos  数据源结构体
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'mode' => 'int',
+            'visible' => 'int',
             'dataSourceVos' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApigDataSourceVo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * mode  企业模式空间下的数据连接还是简单模式空间下的连接,0:简单模式，1：企业模式
+    * visible  连接是否可见,0：不可见，1：可见
     * dataSourceVos  数据源结构体
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'mode' => null,
+        'visible' => null,
         'dataSourceVos' => null
     ];
 
@@ -61,31 +69,43 @@ class ApigDataSourcesVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * mode  企业模式空间下的数据连接还是简单模式空间下的连接,0:简单模式，1：企业模式
+    * visible  连接是否可见,0：不可见，1：可见
     * dataSourceVos  数据源结构体
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'mode' => 'mode',
+            'visible' => 'visible',
             'dataSourceVos' => 'data_source_vos'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * mode  企业模式空间下的数据连接还是简单模式空间下的连接,0:简单模式，1：企业模式
+    * visible  连接是否可见,0：不可见，1：可见
     * dataSourceVos  数据源结构体
     *
     * @var string[]
     */
     protected static $setters = [
+            'mode' => 'setMode',
+            'visible' => 'setVisible',
             'dataSourceVos' => 'setDataSourceVos'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * mode  企业模式空间下的数据连接还是简单模式空间下的连接,0:简单模式，1：企业模式
+    * visible  连接是否可见,0：不可见，1：可见
     * dataSourceVos  数据源结构体
     *
     * @var string[]
     */
     protected static $getters = [
+            'mode' => 'getMode',
+            'visible' => 'getVisible',
             'dataSourceVos' => 'getDataSourceVos'
     ];
 
@@ -147,6 +167,8 @@ class ApigDataSourcesVo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['visible'] = isset($data['visible']) ? $data['visible'] : null;
         $this->container['dataSourceVos'] = isset($data['dataSourceVos']) ? $data['dataSourceVos'] : null;
     }
 
@@ -158,6 +180,18 @@ class ApigDataSourcesVo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['mode']) && ($this->container['mode'] > 1)) {
+                $invalidProperties[] = "invalid value for 'mode', must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['mode']) && ($this->container['mode'] < 0)) {
+                $invalidProperties[] = "invalid value for 'mode', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['visible']) && ($this->container['visible'] > 1)) {
+                $invalidProperties[] = "invalid value for 'visible', must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['visible']) && ($this->container['visible'] < 0)) {
+                $invalidProperties[] = "invalid value for 'visible', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -170,6 +204,54 @@ class ApigDataSourcesVo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets mode
+    *  企业模式空间下的数据连接还是简单模式空间下的连接,0:简单模式，1：企业模式
+    *
+    * @return int|null
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param int|null $mode 企业模式空间下的数据连接还是简单模式空间下的连接,0:简单模式，1：企业模式
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets visible
+    *  连接是否可见,0：不可见，1：可见
+    *
+    * @return int|null
+    */
+    public function getVisible()
+    {
+        return $this->container['visible'];
+    }
+
+    /**
+    * Sets visible
+    *
+    * @param int|null $visible 连接是否可见,0：不可见，1：可见
+    *
+    * @return $this
+    */
+    public function setVisible($visible)
+    {
+        $this->container['visible'] = $visible;
+        return $this;
     }
 
     /**

@@ -20,10 +20,10 @@ class DataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * type  数据源类型，取值范围如下： 1 - 系统 2 - 第三方产品 3 - 租户私有产品
     * domainId  数据源产品所属管理账号的ID，最大36个字符。
     * projectId  数据源产品所属项目的ID，最大36个字符。
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    * regionId  数据源产品所在区域。
     * companyName  数据源产品所属公司的名称。
     * productName  数据源产品的名称。
     * productFeature  产品功能特性名称，用来指明检测到当前事件的产品的功能特性。
@@ -42,10 +42,10 @@ class DataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * type  数据源类型，取值范围如下： 1 - 系统 2 - 第三方产品 3 - 租户私有产品
     * domainId  数据源产品所属管理账号的ID，最大36个字符。
     * projectId  数据源产品所属项目的ID，最大36个字符。
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    * regionId  数据源产品所在区域。
     * companyName  数据源产品所属公司的名称。
     * productName  数据源产品的名称。
     * productFeature  产品功能特性名称，用来指明检测到当前事件的产品的功能特性。
@@ -85,10 +85,10 @@ class DataSource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * type  数据源类型，取值范围如下： 1 - 系统 2 - 第三方产品 3 - 租户私有产品
     * domainId  数据源产品所属管理账号的ID，最大36个字符。
     * projectId  数据源产品所属项目的ID，最大36个字符。
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    * regionId  数据源产品所在区域。
     * companyName  数据源产品所属公司的名称。
     * productName  数据源产品的名称。
     * productFeature  产品功能特性名称，用来指明检测到当前事件的产品的功能特性。
@@ -107,10 +107,10 @@ class DataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * type  数据源类型，取值范围如下： 1 - 系统 2 - 第三方产品 3 - 租户私有产品
     * domainId  数据源产品所属管理账号的ID，最大36个字符。
     * projectId  数据源产品所属项目的ID，最大36个字符。
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    * regionId  数据源产品所在区域。
     * companyName  数据源产品所属公司的名称。
     * productName  数据源产品的名称。
     * productFeature  产品功能特性名称，用来指明检测到当前事件的产品的功能特性。
@@ -129,10 +129,10 @@ class DataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * type  数据源类型，取值范围如下： 1 - 系统 2 - 第三方产品 3 - 租户私有产品
     * domainId  数据源产品所属管理账号的ID，最大36个字符。
     * projectId  数据源产品所属项目的ID，最大36个字符。
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    * regionId  数据源产品所在区域。
     * companyName  数据源产品所属公司的名称。
     * productName  数据源产品的名称。
     * productFeature  产品功能特性名称，用来指明检测到当前事件的产品的功能特性。
@@ -288,7 +288,7 @@ class DataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    *  数据源类型，取值范围如下： 1 - 系统 2 - 第三方产品 3 - 租户私有产品
     *
     * @return int|null
     */
@@ -300,7 +300,7 @@ class DataSource implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type 数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * @param int|null $type 数据源类型，取值范围如下： 1 - 系统 2 - 第三方产品 3 - 租户私有产品
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class DataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    *  数据源产品所在区域。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class DataSource implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string|null $regionId 数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义。
+    * @param string|null $regionId 数据源产品所在区域。
     *
     * @return $this
     */

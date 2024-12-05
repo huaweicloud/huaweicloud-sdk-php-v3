@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Iam\V3\Model;
+namespace HuaweiCloud\SDK\Dc\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UnscopedTokenInfoCatalogEndpoints implements ModelInterface, ArrayAccess
+class BindGlobalEipsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,42 +17,34 @@ class UnscopedTokenInfoCatalogEndpoints implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UnscopedTokenInfo_catalog_endpoints';
+    protected static $openAPIModelName = 'BindGlobalEipsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  终端节点ID。
-    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
-    * region  终端节点所属区域。
-    * regionId  终端节点所属区域ID。
-    * url  终端节点的URL。
+    * requestId  请求ID
+    * globalEips  globalEips
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'interface' => 'string',
-            'region' => 'string',
-            'regionId' => 'string',
-            'url' => 'string'
+            'requestId' => 'string',
+            'globalEips' => '\HuaweiCloud\SDK\Dc\V3\Model\ListBindingGeip',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  终端节点ID。
-    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
-    * region  终端节点所属区域。
-    * regionId  终端节点所属区域ID。
-    * url  终端节点的URL。
+    * requestId  请求ID
+    * globalEips  globalEips
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'interface' => null,
-        'region' => null,
-        'regionId' => null,
-        'url' => null
+        'requestId' => null,
+        'globalEips' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -77,56 +70,44 @@ class UnscopedTokenInfoCatalogEndpoints implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  终端节点ID。
-    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
-    * region  终端节点所属区域。
-    * regionId  终端节点所属区域ID。
-    * url  终端节点的URL。
+    * requestId  请求ID
+    * globalEips  globalEips
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'interface' => 'interface',
-            'region' => 'region',
-            'regionId' => 'region_id',
-            'url' => 'url'
+            'requestId' => 'request_id',
+            'globalEips' => 'global_eips',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  终端节点ID。
-    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
-    * region  终端节点所属区域。
-    * regionId  终端节点所属区域ID。
-    * url  终端节点的URL。
+    * requestId  请求ID
+    * globalEips  globalEips
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'interface' => 'setInterface',
-            'region' => 'setRegion',
-            'regionId' => 'setRegionId',
-            'url' => 'setUrl'
+            'requestId' => 'setRequestId',
+            'globalEips' => 'setGlobalEips',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  终端节点ID。
-    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
-    * region  终端节点所属区域。
-    * regionId  终端节点所属区域ID。
-    * url  终端节点的URL。
+    * requestId  请求ID
+    * globalEips  globalEips
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'interface' => 'getInterface',
-            'region' => 'getRegion',
-            'regionId' => 'getRegionId',
-            'url' => 'getUrl'
+            'requestId' => 'getRequestId',
+            'globalEips' => 'getGlobalEips',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -187,11 +168,9 @@ class UnscopedTokenInfoCatalogEndpoints implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['interface'] = isset($data['interface']) ? $data['interface'] : null;
-        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
-        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['globalEips'] = isset($data['globalEips']) ? $data['globalEips'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -217,122 +196,74 @@ class UnscopedTokenInfoCatalogEndpoints implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  终端节点ID。
+    * Gets requestId
+    *  请求ID
     *
     * @return string|null
     */
-    public function getId()
+    public function getRequestId()
     {
-        return $this->container['id'];
+        return $this->container['requestId'];
     }
 
     /**
-    * Sets id
+    * Sets requestId
     *
-    * @param string|null $id 终端节点ID。
+    * @param string|null $requestId 请求ID
     *
     * @return $this
     */
-    public function setId($id)
+    public function setRequestId($requestId)
     {
-        $this->container['id'] = $id;
+        $this->container['requestId'] = $requestId;
         return $this;
     }
 
     /**
-    * Gets interface
-    *  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
+    * Gets globalEips
+    *  globalEips
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Dc\V3\Model\ListBindingGeip|null
     */
-    public function getInterface()
+    public function getGlobalEips()
     {
-        return $this->container['interface'];
+        return $this->container['globalEips'];
     }
 
     /**
-    * Sets interface
+    * Sets globalEips
     *
-    * @param string|null $interface 接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\ListBindingGeip|null $globalEips globalEips
     *
     * @return $this
     */
-    public function setInterface($interface)
+    public function setGlobalEips($globalEips)
     {
-        $this->container['interface'] = $interface;
+        $this->container['globalEips'] = $globalEips;
         return $this;
     }
 
     /**
-    * Gets region
-    *  终端节点所属区域。
+    * Gets xRequestId
+    *  xRequestId
     *
     * @return string|null
     */
-    public function getRegion()
+    public function getXRequestId()
     {
-        return $this->container['region'];
+        return $this->container['xRequestId'];
     }
 
     /**
-    * Sets region
+    * Sets xRequestId
     *
-    * @param string|null $region 终端节点所属区域。
+    * @param string|null $xRequestId xRequestId
     *
     * @return $this
     */
-    public function setRegion($region)
+    public function setXRequestId($xRequestId)
     {
-        $this->container['region'] = $region;
-        return $this;
-    }
-
-    /**
-    * Gets regionId
-    *  终端节点所属区域ID。
-    *
-    * @return string|null
-    */
-    public function getRegionId()
-    {
-        return $this->container['regionId'];
-    }
-
-    /**
-    * Sets regionId
-    *
-    * @param string|null $regionId 终端节点所属区域ID。
-    *
-    * @return $this
-    */
-    public function setRegionId($regionId)
-    {
-        $this->container['regionId'] = $regionId;
-        return $this;
-    }
-
-    /**
-    * Gets url
-    *  终端节点的URL。
-    *
-    * @return string|null
-    */
-    public function getUrl()
-    {
-        return $this->container['url'];
-    }
-
-    /**
-    * Sets url
-    *
-    * @param string|null $url 终端节点的URL。
-    *
-    * @return $this
-    */
-    public function setUrl($url)
-    {
-        $this->container['url'] = $url;
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

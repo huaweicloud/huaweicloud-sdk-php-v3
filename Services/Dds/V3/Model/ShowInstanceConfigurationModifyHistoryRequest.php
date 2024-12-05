@@ -21,6 +21,7 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
+    * entityId  实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
     * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 取值必须为数字，不能为负数。
     * limit  查询个数上限值。 - 取值范围: 1~100。 - 不传该参数时，默认查询前100条信息。
     *
@@ -28,6 +29,7 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
+            'entityId' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
@@ -35,6 +37,7 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
+    * entityId  实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
     * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 取值必须为数字，不能为负数。
     * limit  查询个数上限值。 - 取值范围: 1~100。 - 不传该参数时，默认查询前100条信息。
     *
@@ -42,6 +45,7 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
+        'entityId' => null,
         'offset' => 'int32',
         'limit' => 'int32'
     ];
@@ -70,6 +74,7 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
+    * entityId  实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
     * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 取值必须为数字，不能为负数。
     * limit  查询个数上限值。 - 取值范围: 1~100。 - 不传该参数时，默认查询前100条信息。
     *
@@ -77,6 +82,7 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
+            'entityId' => 'entity_id',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
@@ -84,6 +90,7 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
+    * entityId  实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
     * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 取值必须为数字，不能为负数。
     * limit  查询个数上限值。 - 取值范围: 1~100。 - 不传该参数时，默认查询前100条信息。
     *
@@ -91,6 +98,7 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
+            'entityId' => 'setEntityId',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
@@ -98,6 +106,7 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
+    * entityId  实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
     * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 取值必须为数字，不能为负数。
     * limit  查询个数上限值。 - 取值范围: 1~100。 - 不传该参数时，默认查询前100条信息。
     *
@@ -105,6 +114,7 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
+            'entityId' => 'getEntityId',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -168,6 +178,7 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['entityId'] = isset($data['entityId']) ? $data['entityId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -182,6 +193,9 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
         $invalidProperties = [];
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
+        }
+        if ($this->container['entityId'] === null) {
+            $invalidProperties[] = "'entityId' can't be null";
         }
         return $invalidProperties;
     }
@@ -218,6 +232,30 @@ class ShowInstanceConfigurationModifyHistoryRequest implements ModelInterface, A
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets entityId
+    *  实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
+    *
+    * @return string
+    */
+    public function getEntityId()
+    {
+        return $this->container['entityId'];
+    }
+
+    /**
+    * Sets entityId
+    *
+    * @param string $entityId 实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
+    *
+    * @return $this
+    */
+    public function setEntityId($entityId)
+    {
+        $this->container['entityId'] = $entityId;
         return $this;
     }
 

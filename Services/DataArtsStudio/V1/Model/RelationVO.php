@@ -20,9 +20,9 @@ class RelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * sourceTableId  源表ID，填写String类型替代Long类型。
-    * targetTableId  目标表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * sourceTableId  源表ID，ID字符串。
+    * targetTableId  目标表ID，ID字符串。
     * name  关系名称。
     * sourceTableName  源表名称。
     * targetTableName  目的表名称。
@@ -58,9 +58,9 @@ class RelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * sourceTableId  源表ID，填写String类型替代Long类型。
-    * targetTableId  目标表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * sourceTableId  源表ID，ID字符串。
+    * targetTableId  目标表ID，ID字符串。
     * name  关系名称。
     * sourceTableName  源表名称。
     * targetTableName  目的表名称。
@@ -117,9 +117,9 @@ class RelationVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
-    * sourceTableId  源表ID，填写String类型替代Long类型。
-    * targetTableId  目标表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * sourceTableId  源表ID，ID字符串。
+    * targetTableId  目标表ID，ID字符串。
     * name  关系名称。
     * sourceTableName  源表名称。
     * targetTableName  目的表名称。
@@ -155,9 +155,9 @@ class RelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
-    * sourceTableId  源表ID，填写String类型替代Long类型。
-    * targetTableId  目标表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * sourceTableId  源表ID，ID字符串。
+    * targetTableId  目标表ID，ID字符串。
     * name  关系名称。
     * sourceTableName  源表名称。
     * targetTableName  目的表名称。
@@ -193,9 +193,9 @@ class RelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
-    * sourceTableId  源表ID，填写String类型替代Long类型。
-    * targetTableId  目标表ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * sourceTableId  源表ID，ID字符串。
+    * targetTableId  目标表ID，ID字符串。
     * name  关系名称。
     * sourceTableName  源表名称。
     * targetTableName  目的表名称。
@@ -331,7 +331,7 @@ class RelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -343,7 +343,7 @@ class RelationVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class RelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceTableId
-    *  源表ID，填写String类型替代Long类型。
+    *  源表ID，ID字符串。
     *
     * @return string|null
     */
@@ -367,7 +367,7 @@ class RelationVO implements ModelInterface, ArrayAccess
     /**
     * Sets sourceTableId
     *
-    * @param string|null $sourceTableId 源表ID，填写String类型替代Long类型。
+    * @param string|null $sourceTableId 源表ID，ID字符串。
     *
     * @return $this
     */
@@ -379,7 +379,7 @@ class RelationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetTableId
-    *  目标表ID，填写String类型替代Long类型。
+    *  目标表ID，ID字符串。
     *
     * @return string|null
     */
@@ -391,7 +391,7 @@ class RelationVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetTableId
     *
-    * @param string|null $targetTableId 目标表ID，填写String类型替代Long类型。
+    * @param string|null $targetTableId 目标表ID，ID字符串。
     *
     * @return $this
     */

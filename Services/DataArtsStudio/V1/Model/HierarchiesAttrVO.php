@@ -20,13 +20,13 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * hierarchiesId  层级ID，填写String类型替代Long类型。
-    * attrId  属性ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * hierarchiesId  层级ID，ID字符串。
+    * attrId  属性ID，ID字符串。
     * level  层次。
     * attrNameEn  引用属性编码。
     * attrNameCh  引用属性名称，只读。
-    * detailAttrIds  详情属性ID，填写String类型替代Long类型。
+    * detailAttrIds  详情属性ID，ID字符串。
     * detailAttrNameEns  详情属性英文。
     * detailAttrNameChs  详情属性中文，只读。
     * attr  attr
@@ -50,13 +50,13 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * hierarchiesId  层级ID，填写String类型替代Long类型。
-    * attrId  属性ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * hierarchiesId  层级ID，ID字符串。
+    * attrId  属性ID，ID字符串。
     * level  层次。
     * attrNameEn  引用属性编码。
     * attrNameCh  引用属性名称，只读。
-    * detailAttrIds  详情属性ID，填写String类型替代Long类型。
+    * detailAttrIds  详情属性ID，ID字符串。
     * detailAttrNameEns  详情属性英文。
     * detailAttrNameChs  详情属性中文，只读。
     * attr  attr
@@ -101,13 +101,13 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
-    * hierarchiesId  层级ID，填写String类型替代Long类型。
-    * attrId  属性ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * hierarchiesId  层级ID，ID字符串。
+    * attrId  属性ID，ID字符串。
     * level  层次。
     * attrNameEn  引用属性编码。
     * attrNameCh  引用属性名称，只读。
-    * detailAttrIds  详情属性ID，填写String类型替代Long类型。
+    * detailAttrIds  详情属性ID，ID字符串。
     * detailAttrNameEns  详情属性英文。
     * detailAttrNameChs  详情属性中文，只读。
     * attr  attr
@@ -131,13 +131,13 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
-    * hierarchiesId  层级ID，填写String类型替代Long类型。
-    * attrId  属性ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * hierarchiesId  层级ID，ID字符串。
+    * attrId  属性ID，ID字符串。
     * level  层次。
     * attrNameEn  引用属性编码。
     * attrNameCh  引用属性名称，只读。
-    * detailAttrIds  详情属性ID，填写String类型替代Long类型。
+    * detailAttrIds  详情属性ID，ID字符串。
     * detailAttrNameEns  详情属性英文。
     * detailAttrNameChs  详情属性中文，只读。
     * attr  attr
@@ -161,13 +161,13 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
-    * hierarchiesId  层级ID，填写String类型替代Long类型。
-    * attrId  属性ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * hierarchiesId  层级ID，ID字符串。
+    * attrId  属性ID，ID字符串。
     * level  层次。
     * attrNameEn  引用属性编码。
     * attrNameCh  引用属性名称，只读。
-    * detailAttrIds  详情属性ID，填写String类型替代Long类型。
+    * detailAttrIds  详情属性ID，ID字符串。
     * detailAttrNameEns  详情属性英文。
     * detailAttrNameChs  详情属性中文，只读。
     * attr  attr
@@ -284,7 +284,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -296,7 +296,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets hierarchiesId
-    *  层级ID，填写String类型替代Long类型。
+    *  层级ID，ID字符串。
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets hierarchiesId
     *
-    * @param string|null $hierarchiesId 层级ID，填写String类型替代Long类型。
+    * @param string|null $hierarchiesId 层级ID，ID字符串。
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets attrId
-    *  属性ID，填写String类型替代Long类型。
+    *  属性ID，ID字符串。
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets attrId
     *
-    * @param string|null $attrId 属性ID，填写String类型替代Long类型。
+    * @param string|null $attrId 属性ID，ID字符串。
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets detailAttrIds
-    *  详情属性ID，填写String类型替代Long类型。
+    *  详情属性ID，ID字符串。
     *
     * @return string[]|null
     */
@@ -440,7 +440,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets detailAttrIds
     *
-    * @param string[]|null $detailAttrIds 详情属性ID，填写String类型替代Long类型。
+    * @param string[]|null $detailAttrIds 详情属性ID，ID字符串。
     *
     * @return $this
     */

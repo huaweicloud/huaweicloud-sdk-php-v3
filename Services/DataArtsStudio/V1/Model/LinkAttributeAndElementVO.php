@@ -20,9 +20,9 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ids  属性ID列表，填写String类型替代Long类型。
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
-    * tableId  表ID，填写String类型替代Long类型。
+    * ids  属性ID列表，ID字符串。
+    * standRowId  关联的数据标准的ID，ID字符串。
+    * tableId  表ID，ID字符串。
     * bizType  表类型，默认是TABLE_MODEL。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表
     *
     * @var string[]
@@ -36,9 +36,9 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ids  属性ID列表，填写String类型替代Long类型。
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
-    * tableId  表ID，填写String类型替代Long类型。
+    * ids  属性ID列表，ID字符串。
+    * standRowId  关联的数据标准的ID，ID字符串。
+    * tableId  表ID，ID字符串。
     * bizType  表类型，默认是TABLE_MODEL。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表
     *
     * @var string[]
@@ -73,9 +73,9 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ids  属性ID列表，填写String类型替代Long类型。
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
-    * tableId  表ID，填写String类型替代Long类型。
+    * ids  属性ID列表，ID字符串。
+    * standRowId  关联的数据标准的ID，ID字符串。
+    * tableId  表ID，ID字符串。
     * bizType  表类型，默认是TABLE_MODEL。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表
     *
     * @var string[]
@@ -89,9 +89,9 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ids  属性ID列表，填写String类型替代Long类型。
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
-    * tableId  表ID，填写String类型替代Long类型。
+    * ids  属性ID列表，ID字符串。
+    * standRowId  关联的数据标准的ID，ID字符串。
+    * tableId  表ID，ID字符串。
     * bizType  表类型，默认是TABLE_MODEL。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表
     *
     * @var string[]
@@ -105,9 +105,9 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ids  属性ID列表，填写String类型替代Long类型。
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
-    * tableId  表ID，填写String类型替代Long类型。
+    * ids  属性ID列表，ID字符串。
+    * standRowId  关联的数据标准的ID，ID字符串。
+    * tableId  表ID，ID字符串。
     * bizType  表类型，默认是TABLE_MODEL。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表
     *
     * @var string[]
@@ -248,7 +248,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ids
-    *  属性ID列表，填写String类型替代Long类型。
+    *  属性ID列表，ID字符串。
     *
     * @return string[]
     */
@@ -260,7 +260,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param string[] $ids 属性ID列表，填写String类型替代Long类型。
+    * @param string[] $ids 属性ID列表，ID字符串。
     *
     * @return $this
     */
@@ -272,7 +272,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowId
-    *  关联的数据标准的ID，填写String类型替代Long类型。
+    *  关联的数据标准的ID，ID字符串。
     *
     * @return string
     */
@@ -284,7 +284,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowId
     *
-    * @param string $standRowId 关联的数据标准的ID，填写String类型替代Long类型。
+    * @param string $standRowId 关联的数据标准的ID，ID字符串。
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableId
-    *  表ID，填写String类型替代Long类型。
+    *  表ID，ID字符串。
     *
     * @return string
     */
@@ -308,7 +308,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableId
     *
-    * @param string $tableId 表ID，填写String类型替代Long类型。
+    * @param string $tableId 表ID，ID字符串。
     *
     * @return $this
     */

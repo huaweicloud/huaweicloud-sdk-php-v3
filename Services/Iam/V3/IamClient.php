@@ -3155,6 +3155,68 @@ class IamClient extends Client
     }
 
     /**
+     * 查询联邦用户可以访问的项目列表
+     *
+     * 该接口可以用于查询联邦用户可以访问的项目列表。
+     * 
+     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     * &gt; - 推荐使用[查询IAM用户可以访问的项目列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;IAM&amp;api&#x3D;KeystoneListAccessibleProjectsToUser)，该接口可以返回相同的响应格式。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function keystoneListFederationProjects($request)
+    {
+        return $this->keystoneListFederationProjectsWithHttpInfo($request);
+    }
+
+    public function keystoneListFederationProjectsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/OS-FEDERATION/projects';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListFederationProjectsResponse',
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListFederationProjectsRequest');
+    }
+
+    /**
      * 查询用户组列表
      *
      * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组列表。

@@ -25,7 +25,7 @@ use HuaweiCloud\SDK\Core\Http\HttpConfig;
 use HuaweiCloud\SDK\Core\SdkRequest;
 use HuaweiCloud\SDK\Iam\V3\IamClient;
 
-define('DEFAULT_ENDPOINT_REG', '/^[a-z][a-z0-9-]+(\\.[a-z]{2,}-[a-z]+-\\d{1,2})?\\.(my)?(huaweicloud|myhwclouds).(com|cn)$/');
+define('DEFAULT_ENDPOINT_REG', '/^[a-z][a-z0-9-]+(\.[a-z]{2,}-[a-z]+-\d{1,2})?\.(my)?(huaweicloud|myhwclouds).(com|cn)$/');
 class Credentials implements ICredentials
 {
     protected $ak;

@@ -20,11 +20,11 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterType  cce集群类型 | existing 存量集群 adding 新增集群
+    * clusterType  cce集群类型：   existing 存量集群   adding 新增集群
     * clusterId  集群id
     * clusterName  集群名称
-    * chargingMode  付费模式 | on_demand 按需 free_security_check 免费安全体检
-    * cceProtectionType  cce防护类型 | cluster_level 集群级别防护 node_level 节点级别防护
+    * chargingMode  付费模式：   on_demand 按需   free_security_check 免费安全体检
+    * cceProtectionType  cce防护类型：   cluster_level 集群级别防护   node_level 节点级别防护
     * preferPacketCycle  优先使用包周期配额；默认false
     *
     * @var string[]
@@ -40,11 +40,11 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterType  cce集群类型 | existing 存量集群 adding 新增集群
+    * clusterType  cce集群类型：   existing 存量集群   adding 新增集群
     * clusterId  集群id
     * clusterName  集群名称
-    * chargingMode  付费模式 | on_demand 按需 free_security_check 免费安全体检
-    * cceProtectionType  cce防护类型 | cluster_level 集群级别防护 node_level 节点级别防护
+    * chargingMode  付费模式：   on_demand 按需   free_security_check 免费安全体检
+    * cceProtectionType  cce防护类型：   cluster_level 集群级别防护   node_level 节点级别防护
     * preferPacketCycle  优先使用包周期配额；默认false
     *
     * @var string[]
@@ -81,11 +81,11 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterType  cce集群类型 | existing 存量集群 adding 新增集群
+    * clusterType  cce集群类型：   existing 存量集群   adding 新增集群
     * clusterId  集群id
     * clusterName  集群名称
-    * chargingMode  付费模式 | on_demand 按需 free_security_check 免费安全体检
-    * cceProtectionType  cce防护类型 | cluster_level 集群级别防护 node_level 节点级别防护
+    * chargingMode  付费模式：   on_demand 按需   free_security_check 免费安全体检
+    * cceProtectionType  cce防护类型：   cluster_level 集群级别防护   node_level 节点级别防护
     * preferPacketCycle  优先使用包周期配额；默认false
     *
     * @var string[]
@@ -101,11 +101,11 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterType  cce集群类型 | existing 存量集群 adding 新增集群
+    * clusterType  cce集群类型：   existing 存量集群   adding 新增集群
     * clusterId  集群id
     * clusterName  集群名称
-    * chargingMode  付费模式 | on_demand 按需 free_security_check 免费安全体检
-    * cceProtectionType  cce防护类型 | cluster_level 集群级别防护 node_level 节点级别防护
+    * chargingMode  付费模式：   on_demand 按需   free_security_check 免费安全体检
+    * cceProtectionType  cce防护类型：   cluster_level 集群级别防护   node_level 节点级别防护
     * preferPacketCycle  优先使用包周期配额；默认false
     *
     * @var string[]
@@ -121,11 +121,11 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterType  cce集群类型 | existing 存量集群 adding 新增集群
+    * clusterType  cce集群类型：   existing 存量集群   adding 新增集群
     * clusterId  集群id
     * clusterName  集群名称
-    * chargingMode  付费模式 | on_demand 按需 free_security_check 免费安全体检
-    * cceProtectionType  cce防护类型 | cluster_level 集群级别防护 node_level 节点级别防护
+    * chargingMode  付费模式：   on_demand 按需   free_security_check 免费安全体检
+    * cceProtectionType  cce防护类型：   cluster_level 集群级别防护   node_level 节点级别防护
     * preferPacketCycle  优先使用包周期配额；默认false
     *
     * @var string[]
@@ -316,7 +316,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  cce集群类型 | existing 存量集群 adding 新增集群
+    *  cce集群类型：   existing 存量集群   adding 新增集群
     *
     * @return string|null
     */
@@ -328,7 +328,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType cce集群类型 | existing 存量集群 adding 新增集群
+    * @param string|null $clusterType cce集群类型：   existing 存量集群   adding 新增集群
     *
     * @return $this
     */
@@ -388,7 +388,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  付费模式 | on_demand 按需 free_security_check 免费安全体检
+    *  付费模式：   on_demand 按需   free_security_check 免费安全体检
     *
     * @return string|null
     */
@@ -400,7 +400,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 付费模式 | on_demand 按需 free_security_check 免费安全体检
+    * @param string|null $chargingMode 付费模式：   on_demand 按需   free_security_check 免费安全体检
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets cceProtectionType
-    *  cce防护类型 | cluster_level 集群级别防护 node_level 节点级别防护
+    *  cce防护类型：   cluster_level 集群级别防护   node_level 节点级别防护
     *
     * @return string|null
     */
@@ -424,7 +424,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets cceProtectionType
     *
-    * @param string|null $cceProtectionType cce防护类型 | cluster_level 集群级别防护 node_level 节点级别防护
+    * @param string|null $cceProtectionType cce防护类型：   cluster_level 集群级别防护   node_level 节点级别防护
     *
     * @return $this
     */

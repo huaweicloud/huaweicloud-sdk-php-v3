@@ -20,8 +20,8 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  码表字段ID，填写String类型替代Long类型。
-    * fdId  所属码表属性ID，填写String类型替代Long类型。
+    * id  码表字段ID，ID字符串。
+    * fdId  所属码表属性ID，ID字符串。
     * fdValue  码表属性值。
     * ordinal  序号。
     * description  描述。
@@ -38,8 +38,8 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  码表字段ID，填写String类型替代Long类型。
-    * fdId  所属码表属性ID，填写String类型替代Long类型。
+    * id  码表字段ID，ID字符串。
+    * fdId  所属码表属性ID，ID字符串。
     * fdValue  码表属性值。
     * ordinal  序号。
     * description  描述。
@@ -77,8 +77,8 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  码表字段ID，填写String类型替代Long类型。
-    * fdId  所属码表属性ID，填写String类型替代Long类型。
+    * id  码表字段ID，ID字符串。
+    * fdId  所属码表属性ID，ID字符串。
     * fdValue  码表属性值。
     * ordinal  序号。
     * description  描述。
@@ -95,8 +95,8 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  码表字段ID，填写String类型替代Long类型。
-    * fdId  所属码表属性ID，填写String类型替代Long类型。
+    * id  码表字段ID，ID字符串。
+    * fdId  所属码表属性ID，ID字符串。
     * fdValue  码表属性值。
     * ordinal  序号。
     * description  描述。
@@ -113,8 +113,8 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  码表字段ID，填写String类型替代Long类型。
-    * fdId  所属码表属性ID，填写String类型替代Long类型。
+    * id  码表字段ID，ID字符串。
+    * fdId  所属码表属性ID，ID字符串。
     * fdValue  码表属性值。
     * ordinal  序号。
     * description  描述。
@@ -221,7 +221,7 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  码表字段ID，填写String类型替代Long类型。
+    *  码表字段ID，ID字符串。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 码表字段ID，填写String类型替代Long类型。
+    * @param string|null $id 码表字段ID，ID字符串。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdId
-    *  所属码表属性ID，填写String类型替代Long类型。
+    *  所属码表属性ID，ID字符串。
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets fdId
     *
-    * @param string|null $fdId 所属码表属性ID，填写String类型替代Long类型。
+    * @param string|null $fdId 所属码表属性ID，ID字符串。
     *
     * @return $this
     */

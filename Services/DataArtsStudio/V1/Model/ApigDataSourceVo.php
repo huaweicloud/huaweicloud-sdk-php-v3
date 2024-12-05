@@ -27,6 +27,8 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
     * agentName  代理名称id（若使用代理连接则必填）
     * envType  0：开发模式 1：生产模式。默认为0
     * supportService  1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
+    * dwCategory  标签信息
+    * description  连接描述信息
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
             'agentId' => 'string',
             'agentName' => 'string',
             'envType' => 'int',
-            'supportService' => 'int'
+            'supportService' => 'int',
+            'dwCategory' => 'string',
+            'description' => 'string'
     ];
 
     /**
@@ -49,6 +53,8 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
     * agentName  代理名称id（若使用代理连接则必填）
     * envType  0：开发模式 1：生产模式。默认为0
     * supportService  1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
+    * dwCategory  标签信息
+    * description  连接描述信息
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
         'agentId' => null,
         'agentName' => null,
         'envType' => null,
-        'supportService' => null
+        'supportService' => null,
+        'dwCategory' => null,
+        'description' => null
     ];
 
     /**
@@ -92,6 +100,8 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
     * agentName  代理名称id（若使用代理连接则必填）
     * envType  0：开发模式 1：生产模式。默认为0
     * supportService  1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
+    * dwCategory  标签信息
+    * description  连接描述信息
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
             'agentId' => 'agent_id',
             'agentName' => 'agent_name',
             'envType' => 'env_type',
-            'supportService' => 'supportService'
+            'supportService' => 'supportService',
+            'dwCategory' => 'dw_category',
+            'description' => 'description'
     ];
 
     /**
@@ -114,6 +126,8 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
     * agentName  代理名称id（若使用代理连接则必填）
     * envType  0：开发模式 1：生产模式。默认为0
     * supportService  1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
+    * dwCategory  标签信息
+    * description  连接描述信息
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
             'agentId' => 'setAgentId',
             'agentName' => 'setAgentName',
             'envType' => 'setEnvType',
-            'supportService' => 'setSupportService'
+            'supportService' => 'setSupportService',
+            'dwCategory' => 'setDwCategory',
+            'description' => 'setDescription'
     ];
 
     /**
@@ -136,6 +152,8 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
     * agentName  代理名称id（若使用代理连接则必填）
     * envType  0：开发模式 1：生产模式。默认为0
     * supportService  1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
+    * dwCategory  标签信息
+    * description  连接描述信息
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
             'agentId' => 'getAgentId',
             'agentName' => 'getAgentName',
             'envType' => 'getEnvType',
-            'supportService' => 'getSupportService'
+            'supportService' => 'getSupportService',
+            'dwCategory' => 'getDwCategory',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -214,6 +234,8 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
         $this->container['agentName'] = isset($data['agentName']) ? $data['agentName'] : null;
         $this->container['envType'] = isset($data['envType']) ? $data['envType'] : null;
         $this->container['supportService'] = isset($data['supportService']) ? $data['supportService'] : null;
+        $this->container['dwCategory'] = isset($data['dwCategory']) ? $data['dwCategory'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -265,6 +287,18 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['supportService']) && ($this->container['supportService'] < 1)) {
                 $invalidProperties[] = "invalid value for 'supportService', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['dwCategory']) && (mb_strlen($this->container['dwCategory']) > 128)) {
+                $invalidProperties[] = "invalid value for 'dwCategory', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['dwCategory']) && (mb_strlen($this->container['dwCategory']) < 1)) {
+                $invalidProperties[] = "invalid value for 'dwCategory', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 4096.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -445,6 +479,54 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
     public function setSupportService($supportService)
     {
         $this->container['supportService'] = $supportService;
+        return $this;
+    }
+
+    /**
+    * Gets dwCategory
+    *  标签信息
+    *
+    * @return string|null
+    */
+    public function getDwCategory()
+    {
+        return $this->container['dwCategory'];
+    }
+
+    /**
+    * Sets dwCategory
+    *
+    * @param string|null $dwCategory 标签信息
+    *
+    * @return $this
+    */
+    public function setDwCategory($dwCategory)
+    {
+        $this->container['dwCategory'] = $dwCategory;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  连接描述信息
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 连接描述信息
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

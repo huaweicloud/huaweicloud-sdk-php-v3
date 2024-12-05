@@ -20,11 +20,11 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  审批单ID，填写String类型替代Long类型。
+    * id  审批单ID，ID字符串。
     * tenantId  项目ID，获取方式参考接口路径参数“project_id”。
     * nameCh  业务中文名。
     * nameEn  业务英文名。
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizType  bizType
     * bizInfo  序列化之后的业务详情，类型是string。
     * bizInfoObj  业务详情，类型是object。
@@ -72,11 +72,11 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  审批单ID，填写String类型替代Long类型。
+    * id  审批单ID，ID字符串。
     * tenantId  项目ID，获取方式参考接口路径参数“project_id”。
     * nameCh  业务中文名。
     * nameEn  业务英文名。
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizType  bizType
     * bizInfo  序列化之后的业务详情，类型是string。
     * bizInfoObj  业务详情，类型是object。
@@ -145,11 +145,11 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  审批单ID，填写String类型替代Long类型。
+    * id  审批单ID，ID字符串。
     * tenantId  项目ID，获取方式参考接口路径参数“project_id”。
     * nameCh  业务中文名。
     * nameEn  业务英文名。
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizType  bizType
     * bizInfo  序列化之后的业务详情，类型是string。
     * bizInfoObj  业务详情，类型是object。
@@ -197,11 +197,11 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  审批单ID，填写String类型替代Long类型。
+    * id  审批单ID，ID字符串。
     * tenantId  项目ID，获取方式参考接口路径参数“project_id”。
     * nameCh  业务中文名。
     * nameEn  业务英文名。
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizType  bizType
     * bizInfo  序列化之后的业务详情，类型是string。
     * bizInfoObj  业务详情，类型是object。
@@ -249,11 +249,11 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  审批单ID，填写String类型替代Long类型。
+    * id  审批单ID，ID字符串。
     * tenantId  项目ID，获取方式参考接口路径参数“project_id”。
     * nameCh  业务中文名。
     * nameEn  业务英文名。
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizType  bizType
     * bizInfo  序列化之后的业务详情，类型是string。
     * bizInfoObj  业务详情，类型是object。
@@ -405,7 +405,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  审批单ID，填写String类型替代Long类型。
+    *  审批单ID，ID字符串。
     *
     * @return string|null
     */
@@ -417,7 +417,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 审批单ID，填写String类型替代Long类型。
+    * @param string|null $id 审批单ID，ID字符串。
     *
     * @return $this
     */
@@ -501,7 +501,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务ID，填写String类型替代Long类型。
+    *  业务ID，ID字符串。
     *
     * @return string|null
     */
@@ -513,7 +513,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param string|null $bizId 业务ID，填写String类型替代Long类型。
+    * @param string|null $bizId 业务ID，ID字符串。
     *
     * @return $this
     */

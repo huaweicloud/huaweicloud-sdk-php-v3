@@ -25,7 +25,7 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
-    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * modelId  所属关系建模的模型ID，ID字符串。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
-    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * modelId  所属关系建模的模型ID，ID字符串。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
-    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * modelId  所属关系建模的模型ID，ID字符串。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
-    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * modelId  所属关系建模的模型ID，ID字符串。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
-    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * modelId  所属关系建模的模型ID，ID字符串。
     *
     * @var string[]
     */
@@ -376,7 +376,7 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelId
-    *  所属关系建模的模型ID，填写String类型替代Long类型。
+    *  所属关系建模的模型ID，ID字符串。
     *
     * @return string
     */
@@ -388,7 +388,7 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets modelId
     *
-    * @param string $modelId 所属关系建模的模型ID，填写String类型替代Long类型。
+    * @param string $modelId 所属关系建模的模型ID，ID字符串。
     *
     * @return $this
     */

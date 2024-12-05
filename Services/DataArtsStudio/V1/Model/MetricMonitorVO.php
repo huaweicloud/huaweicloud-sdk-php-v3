@@ -20,13 +20,13 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * otherMetricIds  其他指标ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * otherMetricIds  其他指标ID，ID字符串。
     * otherMetricNames  其他指标名称，只读。
     * otherCompoundMetricIds  其他复合指标ID。
     * otherCompoundMetricNames  其他复合指标名称。
     * expression  告警表达式。
-    * metricId  挂载指ID，填写String类型替代Long类型。
+    * metricId  挂载指ID，ID字符串。
     * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
@@ -46,13 +46,13 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * otherMetricIds  其他指标ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * otherMetricIds  其他指标ID，ID字符串。
     * otherMetricNames  其他指标名称，只读。
     * otherCompoundMetricIds  其他复合指标ID。
     * otherCompoundMetricNames  其他复合指标名称。
     * expression  告警表达式。
-    * metricId  挂载指ID，填写String类型替代Long类型。
+    * metricId  挂载指ID，ID字符串。
     * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
@@ -93,13 +93,13 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
-    * otherMetricIds  其他指标ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * otherMetricIds  其他指标ID，ID字符串。
     * otherMetricNames  其他指标名称，只读。
     * otherCompoundMetricIds  其他复合指标ID。
     * otherCompoundMetricNames  其他复合指标名称。
     * expression  告警表达式。
-    * metricId  挂载指ID，填写String类型替代Long类型。
+    * metricId  挂载指ID，ID字符串。
     * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
@@ -119,13 +119,13 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
-    * otherMetricIds  其他指标ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * otherMetricIds  其他指标ID，ID字符串。
     * otherMetricNames  其他指标名称，只读。
     * otherCompoundMetricIds  其他复合指标ID。
     * otherCompoundMetricNames  其他复合指标名称。
     * expression  告警表达式。
-    * metricId  挂载指ID，填写String类型替代Long类型。
+    * metricId  挂载指ID，ID字符串。
     * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
@@ -145,13 +145,13 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
-    * otherMetricIds  其他指标ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * otherMetricIds  其他指标ID，ID字符串。
     * otherMetricNames  其他指标名称，只读。
     * otherCompoundMetricIds  其他复合指标ID。
     * otherCompoundMetricNames  其他复合指标名称。
     * expression  告警表达式。
-    * metricId  挂载指ID，填写String类型替代Long类型。
+    * metricId  挂载指ID，ID字符串。
     * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
@@ -265,7 +265,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -277,7 +277,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -289,7 +289,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets otherMetricIds
-    *  其他指标ID，填写String类型替代Long类型。
+    *  其他指标ID，ID字符串。
     *
     * @return string[]|null
     */
@@ -301,7 +301,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets otherMetricIds
     *
-    * @param string[]|null $otherMetricIds 其他指标ID，填写String类型替代Long类型。
+    * @param string[]|null $otherMetricIds 其他指标ID，ID字符串。
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricId
-    *  挂载指ID，填写String类型替代Long类型。
+    *  挂载指ID，ID字符串。
     *
     * @return string|null
     */
@@ -421,7 +421,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets metricId
     *
-    * @param string|null $metricId 挂载指ID，填写String类型替代Long类型。
+    * @param string|null $metricId 挂载指ID，ID字符串。
     *
     * @return $this
     */

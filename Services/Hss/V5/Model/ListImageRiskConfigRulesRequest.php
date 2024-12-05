@@ -29,7 +29,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * imageName  镜像名称
     * imageVersion  镜像版本名称
     * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
@@ -65,7 +65,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * imageName  镜像名称
     * imageVersion  镜像版本名称
     * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
@@ -122,7 +122,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * imageName  镜像名称
     * imageVersion  镜像版本名称
     * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
@@ -158,7 +158,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * imageName  镜像名称
     * imageVersion  镜像版本名称
     * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
@@ -194,7 +194,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * imageName  镜像名称
     * imageVersion  镜像版本名称
     * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
@@ -632,7 +632,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets standard
-    *  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    *  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     *
     * @return string
     */
@@ -644,7 +644,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets standard
     *
-    * @param string $standard 标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * @param string $standard 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     *
     * @return $this
     */

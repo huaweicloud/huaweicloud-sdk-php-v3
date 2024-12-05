@@ -29,7 +29,6 @@ class KeystoneUpdateUserByAdminResult implements ModelInterface, ArrayAccess
     * links  links
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
-    * extra  extra
     *
     * @var string[]
     */
@@ -42,8 +41,7 @@ class KeystoneUpdateUserByAdminResult implements ModelInterface, ArrayAccess
             'passwordExpiresAt' => 'string',
             'links' => '\HuaweiCloud\SDK\Iam\V3\Model\LinksSelf',
             'id' => 'string',
-            'enabled' => 'bool',
-            'extra' => '\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUserResultExtra'
+            'enabled' => 'bool'
     ];
 
     /**
@@ -57,7 +55,6 @@ class KeystoneUpdateUserByAdminResult implements ModelInterface, ArrayAccess
     * links  links
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
-    * extra  extra
     *
     * @var string[]
     */
@@ -70,8 +67,7 @@ class KeystoneUpdateUserByAdminResult implements ModelInterface, ArrayAccess
         'passwordExpiresAt' => null,
         'links' => null,
         'id' => null,
-        'enabled' => null,
-        'extra' => null
+        'enabled' => null
     ];
 
     /**
@@ -106,7 +102,6 @@ class KeystoneUpdateUserByAdminResult implements ModelInterface, ArrayAccess
     * links  links
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
-    * extra  extra
     *
     * @var string[]
     */
@@ -119,8 +114,7 @@ class KeystoneUpdateUserByAdminResult implements ModelInterface, ArrayAccess
             'passwordExpiresAt' => 'password_expires_at',
             'links' => 'links',
             'id' => 'id',
-            'enabled' => 'enabled',
-            'extra' => 'extra'
+            'enabled' => 'enabled'
     ];
 
     /**
@@ -134,7 +128,6 @@ class KeystoneUpdateUserByAdminResult implements ModelInterface, ArrayAccess
     * links  links
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
-    * extra  extra
     *
     * @var string[]
     */
@@ -147,8 +140,7 @@ class KeystoneUpdateUserByAdminResult implements ModelInterface, ArrayAccess
             'passwordExpiresAt' => 'setPasswordExpiresAt',
             'links' => 'setLinks',
             'id' => 'setId',
-            'enabled' => 'setEnabled',
-            'extra' => 'setExtra'
+            'enabled' => 'setEnabled'
     ];
 
     /**
@@ -162,7 +154,6 @@ class KeystoneUpdateUserByAdminResult implements ModelInterface, ArrayAccess
     * links  links
     * id  IAM用户ID。
     * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
-    * extra  extra
     *
     * @var string[]
     */
@@ -175,8 +166,7 @@ class KeystoneUpdateUserByAdminResult implements ModelInterface, ArrayAccess
             'passwordExpiresAt' => 'getPasswordExpiresAt',
             'links' => 'getLinks',
             'id' => 'getId',
-            'enabled' => 'getEnabled',
-            'extra' => 'getExtra'
+            'enabled' => 'getEnabled'
     ];
 
     /**
@@ -246,7 +236,6 @@ class KeystoneUpdateUserByAdminResult implements ModelInterface, ArrayAccess
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
-        $this->container['extra'] = isset($data['extra']) ? $data['extra'] : null;
     }
 
     /**
@@ -502,30 +491,6 @@ class KeystoneUpdateUserByAdminResult implements ModelInterface, ArrayAccess
     public function setEnabled($enabled)
     {
         $this->container['enabled'] = $enabled;
-        return $this;
-    }
-
-    /**
-    * Gets extra
-    *  extra
-    *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\KeystoneUserResultExtra|null
-    */
-    public function getExtra()
-    {
-        return $this->container['extra'];
-    }
-
-    /**
-    * Sets extra
-    *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\KeystoneUserResultExtra|null $extra extra
-    *
-    * @return $this
-    */
-    public function setExtra($extra)
-    {
-        $this->container['extra'] = $extra;
         return $this;
     }
 

@@ -27,12 +27,12 @@ class ListDerivativeIndexesRequest implements ModelInterface, ArrayAccess
     * createBy  按创建者查询。
     * approver  按审核人查询。
     * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
-    * dimensionId  依据维度ID查维度属性，填写String类型替代Long类型。
+    * dimensionId  依据维度ID查维度属性，ID字符串。
     * dimensionGroup  依据维度颗粒度查维度属性。
-    * atomicIndexId  依据原子指标ID查维度属性，填写String类型替代Long类型。
+    * atomicIndexId  依据原子指标ID查维度属性，ID字符串。
     * allMetrics  是否查询复合指标
     * dwType  数据连接类型
-    * l3Id  业务对象l3的ID，填写String类型替代Long类型。
+    * l3Id  业务对象l3的ID，ID字符串。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
@@ -69,12 +69,12 @@ class ListDerivativeIndexesRequest implements ModelInterface, ArrayAccess
     * createBy  按创建者查询。
     * approver  按审核人查询。
     * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
-    * dimensionId  依据维度ID查维度属性，填写String类型替代Long类型。
+    * dimensionId  依据维度ID查维度属性，ID字符串。
     * dimensionGroup  依据维度颗粒度查维度属性。
-    * atomicIndexId  依据原子指标ID查维度属性，填写String类型替代Long类型。
+    * atomicIndexId  依据原子指标ID查维度属性，ID字符串。
     * allMetrics  是否查询复合指标
     * dwType  数据连接类型
-    * l3Id  业务对象l3的ID，填写String类型替代Long类型。
+    * l3Id  业务对象l3的ID，ID字符串。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
@@ -132,12 +132,12 @@ class ListDerivativeIndexesRequest implements ModelInterface, ArrayAccess
     * createBy  按创建者查询。
     * approver  按审核人查询。
     * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
-    * dimensionId  依据维度ID查维度属性，填写String类型替代Long类型。
+    * dimensionId  依据维度ID查维度属性，ID字符串。
     * dimensionGroup  依据维度颗粒度查维度属性。
-    * atomicIndexId  依据原子指标ID查维度属性，填写String类型替代Long类型。
+    * atomicIndexId  依据原子指标ID查维度属性，ID字符串。
     * allMetrics  是否查询复合指标
     * dwType  数据连接类型
-    * l3Id  业务对象l3的ID，填写String类型替代Long类型。
+    * l3Id  业务对象l3的ID，ID字符串。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
@@ -174,12 +174,12 @@ class ListDerivativeIndexesRequest implements ModelInterface, ArrayAccess
     * createBy  按创建者查询。
     * approver  按审核人查询。
     * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
-    * dimensionId  依据维度ID查维度属性，填写String类型替代Long类型。
+    * dimensionId  依据维度ID查维度属性，ID字符串。
     * dimensionGroup  依据维度颗粒度查维度属性。
-    * atomicIndexId  依据原子指标ID查维度属性，填写String类型替代Long类型。
+    * atomicIndexId  依据原子指标ID查维度属性，ID字符串。
     * allMetrics  是否查询复合指标
     * dwType  数据连接类型
-    * l3Id  业务对象l3的ID，填写String类型替代Long类型。
+    * l3Id  业务对象l3的ID，ID字符串。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
@@ -216,12 +216,12 @@ class ListDerivativeIndexesRequest implements ModelInterface, ArrayAccess
     * createBy  按创建者查询。
     * approver  按审核人查询。
     * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
-    * dimensionId  依据维度ID查维度属性，填写String类型替代Long类型。
+    * dimensionId  依据维度ID查维度属性，ID字符串。
     * dimensionGroup  依据维度颗粒度查维度属性。
-    * atomicIndexId  依据原子指标ID查维度属性，填写String类型替代Long类型。
+    * atomicIndexId  依据原子指标ID查维度属性，ID字符串。
     * allMetrics  是否查询复合指标
     * dwType  数据连接类型
-    * l3Id  业务对象l3的ID，填写String类型替代Long类型。
+    * l3Id  业务对象l3的ID，ID字符串。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
@@ -585,7 +585,7 @@ class ListDerivativeIndexesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionId
-    *  依据维度ID查维度属性，填写String类型替代Long类型。
+    *  依据维度ID查维度属性，ID字符串。
     *
     * @return string|null
     */
@@ -597,7 +597,7 @@ class ListDerivativeIndexesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionId
     *
-    * @param string|null $dimensionId 依据维度ID查维度属性，填写String类型替代Long类型。
+    * @param string|null $dimensionId 依据维度ID查维度属性，ID字符串。
     *
     * @return $this
     */
@@ -633,7 +633,7 @@ class ListDerivativeIndexesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets atomicIndexId
-    *  依据原子指标ID查维度属性，填写String类型替代Long类型。
+    *  依据原子指标ID查维度属性，ID字符串。
     *
     * @return string|null
     */
@@ -645,7 +645,7 @@ class ListDerivativeIndexesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets atomicIndexId
     *
-    * @param string|null $atomicIndexId 依据原子指标ID查维度属性，填写String类型替代Long类型。
+    * @param string|null $atomicIndexId 依据原子指标ID查维度属性，ID字符串。
     *
     * @return $this
     */
@@ -705,7 +705,7 @@ class ListDerivativeIndexesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象l3的ID，填写String类型替代Long类型。
+    *  业务对象l3的ID，ID字符串。
     *
     * @return string|null
     */
@@ -717,7 +717,7 @@ class ListDerivativeIndexesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string|null $l3Id 业务对象l3的ID，填写String类型替代Long类型。
+    * @param string|null $l3Id 业务对象l3的ID，ID字符串。
     *
     * @return $this
     */

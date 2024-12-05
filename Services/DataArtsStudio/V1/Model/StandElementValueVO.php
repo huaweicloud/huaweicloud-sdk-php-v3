@@ -22,10 +22,10 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * fdName  属性名称。
     * fdValue  属性值。
-    * fdId  属性定义的ID，填写String类型替代Long类型。
-    * directoryId  标准所属目录，填写String类型替代Long类型。
-    * rowId  标准所属行，填写String类型替代Long类型。
-    * id  数据标准的ID，填写String类型替代Long类型。
+    * fdId  属性定义的ID，ID字符串。
+    * directoryId  标准所属目录，ID字符串。
+    * rowId  标准所属行，ID字符串。
+    * id  数据标准的ID，ID字符串。
     * status  status
     * createBy  创建人。
     * updateBy  更新人。
@@ -52,10 +52,10 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * fdName  属性名称。
     * fdValue  属性值。
-    * fdId  属性定义的ID，填写String类型替代Long类型。
-    * directoryId  标准所属目录，填写String类型替代Long类型。
-    * rowId  标准所属行，填写String类型替代Long类型。
-    * id  数据标准的ID，填写String类型替代Long类型。
+    * fdId  属性定义的ID，ID字符串。
+    * directoryId  标准所属目录，ID字符串。
+    * rowId  标准所属行，ID字符串。
+    * id  数据标准的ID，ID字符串。
     * status  status
     * createBy  创建人。
     * updateBy  更新人。
@@ -103,10 +103,10 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     * and the value is the original name
     * fdName  属性名称。
     * fdValue  属性值。
-    * fdId  属性定义的ID，填写String类型替代Long类型。
-    * directoryId  标准所属目录，填写String类型替代Long类型。
-    * rowId  标准所属行，填写String类型替代Long类型。
-    * id  数据标准的ID，填写String类型替代Long类型。
+    * fdId  属性定义的ID，ID字符串。
+    * directoryId  标准所属目录，ID字符串。
+    * rowId  标准所属行，ID字符串。
+    * id  数据标准的ID，ID字符串。
     * status  status
     * createBy  创建人。
     * updateBy  更新人。
@@ -133,10 +133,10 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * fdName  属性名称。
     * fdValue  属性值。
-    * fdId  属性定义的ID，填写String类型替代Long类型。
-    * directoryId  标准所属目录，填写String类型替代Long类型。
-    * rowId  标准所属行，填写String类型替代Long类型。
-    * id  数据标准的ID，填写String类型替代Long类型。
+    * fdId  属性定义的ID，ID字符串。
+    * directoryId  标准所属目录，ID字符串。
+    * rowId  标准所属行，ID字符串。
+    * id  数据标准的ID，ID字符串。
     * status  status
     * createBy  创建人。
     * updateBy  更新人。
@@ -163,10 +163,10 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * fdName  属性名称。
     * fdValue  属性值。
-    * fdId  属性定义的ID，填写String类型替代Long类型。
-    * directoryId  标准所属目录，填写String类型替代Long类型。
-    * rowId  标准所属行，填写String类型替代Long类型。
-    * id  数据标准的ID，填写String类型替代Long类型。
+    * fdId  属性定义的ID，ID字符串。
+    * directoryId  标准所属目录，ID字符串。
+    * rowId  标准所属行，ID字符串。
+    * id  数据标准的ID，ID字符串。
     * status  status
     * createBy  创建人。
     * updateBy  更新人。
@@ -335,7 +335,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdId
-    *  属性定义的ID，填写String类型替代Long类型。
+    *  属性定义的ID，ID字符串。
     *
     * @return string|null
     */
@@ -347,7 +347,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets fdId
     *
-    * @param string|null $fdId 属性定义的ID，填写String类型替代Long类型。
+    * @param string|null $fdId 属性定义的ID，ID字符串。
     *
     * @return $this
     */
@@ -359,7 +359,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryId
-    *  标准所属目录，填写String类型替代Long类型。
+    *  标准所属目录，ID字符串。
     *
     * @return string|null
     */
@@ -371,7 +371,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets directoryId
     *
-    * @param string|null $directoryId 标准所属目录，填写String类型替代Long类型。
+    * @param string|null $directoryId 标准所属目录，ID字符串。
     *
     * @return $this
     */
@@ -383,7 +383,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets rowId
-    *  标准所属行，填写String类型替代Long类型。
+    *  标准所属行，ID字符串。
     *
     * @return string|null
     */
@@ -395,7 +395,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets rowId
     *
-    * @param string|null $rowId 标准所属行，填写String类型替代Long类型。
+    * @param string|null $rowId 标准所属行，ID字符串。
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  数据标准的ID，填写String类型替代Long类型。
+    *  数据标准的ID，ID字符串。
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 数据标准的ID，填写String类型替代Long类型。
+    * @param string|null $id 数据标准的ID，ID字符串。
     *
     * @return $this
     */

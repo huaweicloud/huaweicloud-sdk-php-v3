@@ -333,8 +333,8 @@ class AlarmCondition implements ModelInterface, ArrayAccess
         if ($this->container['count'] === null) {
             $invalidProperties[] = "'count' can't be null";
         }
-            if (($this->container['count'] > 100)) {
-                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 100.";
+            if (($this->container['count'] > 180)) {
+                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 180.";
             }
             if (($this->container['count'] < 1)) {
                 $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 1.";

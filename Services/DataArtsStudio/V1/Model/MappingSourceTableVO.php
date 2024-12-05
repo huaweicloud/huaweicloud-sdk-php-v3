@@ -20,8 +20,8 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * table1Id  表1ID，填写String类型替代Long类型。
-    * table2Id  表2ID，填写String类型替代Long类型。
+    * table1Id  表1ID，ID字符串。
+    * table2Id  表2ID，ID字符串。
     * table1Name  表1名称。
     * table2Name  表2名称。
     * joinType  关联类型。 枚举值：   - LEFT: 左外连接   - RIGHT: 右外连接   - INNER: 内连接   - FULL: 全连接
@@ -40,8 +40,8 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * table1Id  表1ID，填写String类型替代Long类型。
-    * table2Id  表2ID，填写String类型替代Long类型。
+    * table1Id  表1ID，ID字符串。
+    * table2Id  表2ID，ID字符串。
     * table1Name  表1名称。
     * table2Name  表2名称。
     * joinType  关联类型。 枚举值：   - LEFT: 左外连接   - RIGHT: 右外连接   - INNER: 内连接   - FULL: 全连接
@@ -81,8 +81,8 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * table1Id  表1ID，填写String类型替代Long类型。
-    * table2Id  表2ID，填写String类型替代Long类型。
+    * table1Id  表1ID，ID字符串。
+    * table2Id  表2ID，ID字符串。
     * table1Name  表1名称。
     * table2Name  表2名称。
     * joinType  关联类型。 枚举值：   - LEFT: 左外连接   - RIGHT: 右外连接   - INNER: 内连接   - FULL: 全连接
@@ -101,8 +101,8 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * table1Id  表1ID，填写String类型替代Long类型。
-    * table2Id  表2ID，填写String类型替代Long类型。
+    * table1Id  表1ID，ID字符串。
+    * table2Id  表2ID，ID字符串。
     * table1Name  表1名称。
     * table2Name  表2名称。
     * joinType  关联类型。 枚举值：   - LEFT: 左外连接   - RIGHT: 右外连接   - INNER: 内连接   - FULL: 全连接
@@ -121,8 +121,8 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * table1Id  表1ID，填写String类型替代Long类型。
-    * table2Id  表2ID，填写String类型替代Long类型。
+    * table1Id  表1ID，ID字符串。
+    * table2Id  表2ID，ID字符串。
     * table1Name  表1名称。
     * table2Name  表2名称。
     * joinType  关联类型。 枚举值：   - LEFT: 左外连接   - RIGHT: 右外连接   - INNER: 内连接   - FULL: 全连接
@@ -268,7 +268,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets table1Id
-    *  表1ID，填写String类型替代Long类型。
+    *  表1ID，ID字符串。
     *
     * @return string
     */
@@ -280,7 +280,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets table1Id
     *
-    * @param string $table1Id 表1ID，填写String类型替代Long类型。
+    * @param string $table1Id 表1ID，ID字符串。
     *
     * @return $this
     */
@@ -292,7 +292,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets table2Id
-    *  表2ID，填写String类型替代Long类型。
+    *  表2ID，ID字符串。
     *
     * @return string|null
     */
@@ -304,7 +304,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets table2Id
     *
-    * @param string|null $table2Id 表2ID，填写String类型替代Long类型。
+    * @param string|null $table2Id 表2ID，ID字符串。
     *
     * @return $this
     */

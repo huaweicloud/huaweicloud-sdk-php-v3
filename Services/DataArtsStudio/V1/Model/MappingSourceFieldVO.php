@@ -20,7 +20,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * targetFieldId  目标字段ID，当前表的某个字段，填写String类型替代Long类型。
+    * targetFieldId  目标字段ID，当前表的某个字段，ID字符串。
     * targetFieldName  目标字段编码。
     * fieldIds  来源字段ID，多个ID以逗号分隔。
     * transformExpression  转换表达式。
@@ -40,7 +40,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * targetFieldId  目标字段ID，当前表的某个字段，填写String类型替代Long类型。
+    * targetFieldId  目标字段ID，当前表的某个字段，ID字符串。
     * targetFieldName  目标字段编码。
     * fieldIds  来源字段ID，多个ID以逗号分隔。
     * transformExpression  转换表达式。
@@ -81,7 +81,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * targetFieldId  目标字段ID，当前表的某个字段，填写String类型替代Long类型。
+    * targetFieldId  目标字段ID，当前表的某个字段，ID字符串。
     * targetFieldName  目标字段编码。
     * fieldIds  来源字段ID，多个ID以逗号分隔。
     * transformExpression  转换表达式。
@@ -101,7 +101,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * targetFieldId  目标字段ID，当前表的某个字段，填写String类型替代Long类型。
+    * targetFieldId  目标字段ID，当前表的某个字段，ID字符串。
     * targetFieldName  目标字段编码。
     * fieldIds  来源字段ID，多个ID以逗号分隔。
     * transformExpression  转换表达式。
@@ -121,7 +121,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * targetFieldId  目标字段ID，当前表的某个字段，填写String类型替代Long类型。
+    * targetFieldId  目标字段ID，当前表的某个字段，ID字符串。
     * targetFieldName  目标字段编码。
     * fieldIds  来源字段ID，多个ID以逗号分隔。
     * transformExpression  转换表达式。
@@ -232,7 +232,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetFieldId
-    *  目标字段ID，当前表的某个字段，填写String类型替代Long类型。
+    *  目标字段ID，当前表的某个字段，ID字符串。
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetFieldId
     *
-    * @param string|null $targetFieldId 目标字段ID，当前表的某个字段，填写String类型替代Long类型。
+    * @param string|null $targetFieldId 目标字段ID，当前表的某个字段，ID字符串。
     *
     * @return $this
     */

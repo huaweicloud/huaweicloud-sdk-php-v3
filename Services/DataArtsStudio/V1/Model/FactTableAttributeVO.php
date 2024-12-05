@@ -20,10 +20,10 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * factLogicTableId  所属事实表ID，只读，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * factLogicTableId  所属事实表ID，只读，ID字符串。
     * ordinal  序号。
-    * dimensionId  维度ID，填写String类型替代Long类型。
+    * dimensionId  维度ID，ID字符串。
     * role  维度角色。
     * dimension  dimension
     * isPrimaryKey  是否主键。
@@ -38,7 +38,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     * nameCh  中文名。
     * notNull  是否不为空。
     * attributeType  attributeType
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
@@ -74,10 +74,10 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * factLogicTableId  所属事实表ID，只读，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * factLogicTableId  所属事实表ID，只读，ID字符串。
     * ordinal  序号。
-    * dimensionId  维度ID，填写String类型替代Long类型。
+    * dimensionId  维度ID，ID字符串。
     * role  维度角色。
     * dimension  dimension
     * isPrimaryKey  是否主键。
@@ -92,7 +92,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     * nameCh  中文名。
     * notNull  是否不为空。
     * attributeType  attributeType
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
@@ -149,10 +149,10 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
-    * factLogicTableId  所属事实表ID，只读，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * factLogicTableId  所属事实表ID，只读，ID字符串。
     * ordinal  序号。
-    * dimensionId  维度ID，填写String类型替代Long类型。
+    * dimensionId  维度ID，ID字符串。
     * role  维度角色。
     * dimension  dimension
     * isPrimaryKey  是否主键。
@@ -167,7 +167,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     * nameCh  中文名。
     * notNull  是否不为空。
     * attributeType  attributeType
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
@@ -203,10 +203,10 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
-    * factLogicTableId  所属事实表ID，只读，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * factLogicTableId  所属事实表ID，只读，ID字符串。
     * ordinal  序号。
-    * dimensionId  维度ID，填写String类型替代Long类型。
+    * dimensionId  维度ID，ID字符串。
     * role  维度角色。
     * dimension  dimension
     * isPrimaryKey  是否主键。
@@ -221,7 +221,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     * nameCh  中文名。
     * notNull  是否不为空。
     * attributeType  attributeType
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
@@ -257,10 +257,10 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
-    * factLogicTableId  所属事实表ID，只读，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * factLogicTableId  所属事实表ID，只读，ID字符串。
     * ordinal  序号。
-    * dimensionId  维度ID，填写String类型替代Long类型。
+    * dimensionId  维度ID，ID字符串。
     * role  维度角色。
     * dimension  dimension
     * isPrimaryKey  是否主键。
@@ -275,7 +275,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     * nameCh  中文名。
     * notNull  是否不为空。
     * attributeType  attributeType
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * alias  别名。
@@ -461,7 +461,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -473,7 +473,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -485,7 +485,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets factLogicTableId
-    *  所属事实表ID，只读，填写String类型替代Long类型。
+    *  所属事实表ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -497,7 +497,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets factLogicTableId
     *
-    * @param string|null $factLogicTableId 所属事实表ID，只读，填写String类型替代Long类型。
+    * @param string|null $factLogicTableId 所属事实表ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -533,7 +533,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionId
-    *  维度ID，填写String类型替代Long类型。
+    *  维度ID，ID字符串。
     *
     * @return string|null
     */
@@ -545,7 +545,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionId
     *
-    * @param string|null $dimensionId 维度ID，填写String类型替代Long类型。
+    * @param string|null $dimensionId 维度ID，ID字符串。
     *
     * @return $this
     */
@@ -893,7 +893,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowId
-    *  关联的数据标准的ID，填写String类型替代Long类型。
+    *  关联的数据标准的ID，ID字符串。
     *
     * @return string|null
     */
@@ -905,7 +905,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowId
     *
-    * @param string|null $standRowId 关联的数据标准的ID，填写String类型替代Long类型。
+    * @param string|null $standRowId 关联的数据标准的ID，ID字符串。
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * success  成功数，填写String类型替代Long类型。
-    * failed  失败数，填写String类型替代Long类型。
-    * running  同步中，填写String类型替代Long类型。
-    * other  未同步数，填写String类型替代Long类型。
+    * success  成功数，ID字符串。
+    * failed  失败数，ID字符串。
+    * running  同步中，ID字符串。
+    * other  未同步数，ID字符串。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * success  成功数，填写String类型替代Long类型。
-    * failed  失败数，填写String类型替代Long类型。
-    * running  同步中，填写String类型替代Long类型。
-    * other  未同步数，填写String类型替代Long类型。
+    * success  成功数，ID字符串。
+    * failed  失败数，ID字符串。
+    * running  同步中，ID字符串。
+    * other  未同步数，ID字符串。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * success  成功数，填写String类型替代Long类型。
-    * failed  失败数，填写String类型替代Long类型。
-    * running  同步中，填写String类型替代Long类型。
-    * other  未同步数，填写String类型替代Long类型。
+    * success  成功数，ID字符串。
+    * failed  失败数，ID字符串。
+    * running  同步中，ID字符串。
+    * other  未同步数，ID字符串。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * success  成功数，填写String类型替代Long类型。
-    * failed  失败数，填写String类型替代Long类型。
-    * running  同步中，填写String类型替代Long类型。
-    * other  未同步数，填写String类型替代Long类型。
+    * success  成功数，ID字符串。
+    * failed  失败数，ID字符串。
+    * running  同步中，ID字符串。
+    * other  未同步数，ID字符串。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * success  成功数，填写String类型替代Long类型。
-    * failed  失败数，填写String类型替代Long类型。
-    * running  同步中，填写String类型替代Long类型。
-    * other  未同步数，填写String类型替代Long类型。
+    * success  成功数，ID字符串。
+    * failed  失败数，ID字符串。
+    * running  同步中，ID字符串。
+    * other  未同步数，ID字符串。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets success
-    *  成功数，填写String类型替代Long类型。
+    *  成功数，ID字符串。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
     /**
     * Sets success
     *
-    * @param string|null $success 成功数，填写String类型替代Long类型。
+    * @param string|null $success 成功数，ID字符串。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets failed
-    *  失败数，填写String类型替代Long类型。
+    *  失败数，ID字符串。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
     /**
     * Sets failed
     *
-    * @param string|null $failed 失败数，填写String类型替代Long类型。
+    * @param string|null $failed 失败数，ID字符串。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets running
-    *  同步中，填写String类型替代Long类型。
+    *  同步中，ID字符串。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
     /**
     * Sets running
     *
-    * @param string|null $running 同步中，填写String类型替代Long类型。
+    * @param string|null $running 同步中，ID字符串。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets other
-    *  未同步数，填写String类型替代Long类型。
+    *  未同步数，ID字符串。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class SyncStatusStatisticVO implements ModelInterface, ArrayAccess
     /**
     * Sets other
     *
-    * @param string|null $other 未同步数，填写String类型替代Long类型。
+    * @param string|null $other 未同步数，ID字符串。
     *
     * @return $this
     */

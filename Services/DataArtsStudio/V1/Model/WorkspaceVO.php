@@ -20,7 +20,7 @@ class WorkspaceVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编号，填写String类型替代Long类型。
+    * id  编号，ID字符串。
     * name  工作区名字。
     * description  描述。
     * isPhysical  是否为物理表。
@@ -60,7 +60,7 @@ class WorkspaceVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编号，填写String类型替代Long类型。
+    * id  编号，ID字符串。
     * name  工作区名字。
     * description  描述。
     * isPhysical  是否为物理表。
@@ -121,7 +121,7 @@ class WorkspaceVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编号，填写String类型替代Long类型。
+    * id  编号，ID字符串。
     * name  工作区名字。
     * description  描述。
     * isPhysical  是否为物理表。
@@ -161,7 +161,7 @@ class WorkspaceVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编号，填写String类型替代Long类型。
+    * id  编号，ID字符串。
     * name  工作区名字。
     * description  描述。
     * isPhysical  是否为物理表。
@@ -201,7 +201,7 @@ class WorkspaceVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编号，填写String类型替代Long类型。
+    * id  编号，ID字符串。
     * name  工作区名字。
     * description  描述。
     * isPhysical  是否为物理表。
@@ -377,7 +377,7 @@ class WorkspaceVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编号，填写String类型替代Long类型。
+    *  编号，ID字符串。
     *
     * @return string|null
     */
@@ -389,7 +389,7 @@ class WorkspaceVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编号，填写String类型替代Long类型。
+    * @param string|null $id 编号，ID字符串。
     *
     * @return $this
     */

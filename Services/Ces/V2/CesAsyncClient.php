@@ -1655,6 +1655,9 @@ class CesAsyncClient extends Client
         if ($localVarParams['alarmId'] !== null) {
             $queryParams['alarm_id'] = $localVarParams['alarmId'];
         }
+        if ($localVarParams['recordId'] !== null) {
+            $queryParams['record_id'] = $localVarParams['recordId'];
+        }
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }

@@ -20,10 +20,10 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * tagId  标签ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * tagId  标签ID，ID字符串。
     * tagName  标签名称。
-    * bizId  实体ID，填写String类型替代Long类型。
+    * bizId  实体ID，ID字符串。
     * bizType  bizType
     * createBy  创建人。
     * updateBy  更新人。
@@ -46,10 +46,10 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * tagId  标签ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * tagId  标签ID，ID字符串。
     * tagName  标签名称。
-    * bizId  实体ID，填写String类型替代Long类型。
+    * bizId  实体ID，ID字符串。
     * bizType  bizType
     * createBy  创建人。
     * updateBy  更新人。
@@ -93,10 +93,10 @@ class TagRecordVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
-    * tagId  标签ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * tagId  标签ID，ID字符串。
     * tagName  标签名称。
-    * bizId  实体ID，填写String类型替代Long类型。
+    * bizId  实体ID，ID字符串。
     * bizType  bizType
     * createBy  创建人。
     * updateBy  更新人。
@@ -119,10 +119,10 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
-    * tagId  标签ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * tagId  标签ID，ID字符串。
     * tagName  标签名称。
-    * bizId  实体ID，填写String类型替代Long类型。
+    * bizId  实体ID，ID字符串。
     * bizType  bizType
     * createBy  创建人。
     * updateBy  更新人。
@@ -145,10 +145,10 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
-    * tagId  标签ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * tagId  标签ID，ID字符串。
     * tagName  标签名称。
-    * bizId  实体ID，填写String类型替代Long类型。
+    * bizId  实体ID，ID字符串。
     * bizType  bizType
     * createBy  创建人。
     * updateBy  更新人。
@@ -271,7 +271,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -283,7 +283,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -295,7 +295,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagId
-    *  标签ID，填写String类型替代Long类型。
+    *  标签ID，ID字符串。
     *
     * @return string
     */
@@ -307,7 +307,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
     /**
     * Sets tagId
     *
-    * @param string $tagId 标签ID，填写String类型替代Long类型。
+    * @param string $tagId 标签ID，ID字符串。
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  实体ID，填写String类型替代Long类型。
+    *  实体ID，ID字符串。
     *
     * @return string
     */
@@ -355,7 +355,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param string $bizId 实体ID，填写String类型替代Long类型。
+    * @param string $bizId 实体ID，ID字符串。
     *
     * @return $this
     */

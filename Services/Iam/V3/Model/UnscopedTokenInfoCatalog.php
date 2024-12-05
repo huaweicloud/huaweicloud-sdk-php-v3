@@ -24,7 +24,6 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
     * name  服务名称。
     * type  该接口所属服务。
     * endpoints  endpoints
-    * description  description
     *
     * @var string[]
     */
@@ -32,8 +31,7 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'type' => 'string',
-            'endpoints' => '\HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalogEndpoints[]',
-            'description' => 'object'
+            'endpoints' => '\HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoEndpoints[]'
     ];
 
     /**
@@ -42,7 +40,6 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
     * name  服务名称。
     * type  该接口所属服务。
     * endpoints  endpoints
-    * description  description
     *
     * @var string[]
     */
@@ -50,8 +47,7 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'type' => null,
-        'endpoints' => null,
-        'description' => null
+        'endpoints' => null
     ];
 
     /**
@@ -81,7 +77,6 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
     * name  服务名称。
     * type  该接口所属服务。
     * endpoints  endpoints
-    * description  description
     *
     * @var string[]
     */
@@ -89,8 +84,7 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'type' => 'type',
-            'endpoints' => 'endpoints',
-            'description' => 'description'
+            'endpoints' => 'endpoints'
     ];
 
     /**
@@ -99,7 +93,6 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
     * name  服务名称。
     * type  该接口所属服务。
     * endpoints  endpoints
-    * description  description
     *
     * @var string[]
     */
@@ -107,8 +100,7 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'type' => 'setType',
-            'endpoints' => 'setEndpoints',
-            'description' => 'setDescription'
+            'endpoints' => 'setEndpoints'
     ];
 
     /**
@@ -117,7 +109,6 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
     * name  服务名称。
     * type  该接口所属服务。
     * endpoints  endpoints
-    * description  description
     *
     * @var string[]
     */
@@ -125,8 +116,7 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'type' => 'getType',
-            'endpoints' => 'getEndpoints',
-            'description' => 'getDescription'
+            'endpoints' => 'getEndpoints'
     ];
 
     /**
@@ -191,7 +181,6 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['endpoints'] = isset($data['endpoints']) ? $data['endpoints'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -292,7 +281,7 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
     * Gets endpoints
     *  endpoints
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalogEndpoints[]|null
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoEndpoints[]|null
     */
     public function getEndpoints()
     {
@@ -302,37 +291,13 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
     /**
     * Sets endpoints
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalogEndpoints[]|null $endpoints endpoints
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoEndpoints[]|null $endpoints endpoints
     *
     * @return $this
     */
     public function setEndpoints($endpoints)
     {
         $this->container['endpoints'] = $endpoints;
-        return $this;
-    }
-
-    /**
-    * Gets description
-    *  description
-    *
-    * @return object|null
-    */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-    * Sets description
-    *
-    * @param object|null $description description
-    *
-    * @return $this
-    */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
         return $this;
     }
 

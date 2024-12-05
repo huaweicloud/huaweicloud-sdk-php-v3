@@ -272,10 +272,13 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
+            if ((mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 128)) {
@@ -284,6 +287,15 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['addressFamily'] === null) {
+            $invalidProperties[] = "'addressFamily' can't be null";
+        }
+        if ($this->container['localGatewayIp'] === null) {
+            $invalidProperties[] = "'localGatewayIp' can't be null";
+        }
+        if ($this->container['remoteGatewayIp'] === null) {
+            $invalidProperties[] = "'remoteGatewayIp' can't be null";
+        }
             $allowedValues = $this->getRouteModeAllowableValues();
                 if (!is_null($this->container['routeMode']) && !in_array($this->container['routeMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -301,10 +313,13 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
             if (!is_null($this->container['bgpAsn']) && ($this->container['bgpAsn'] < 1)) {
                 $invalidProperties[] = "invalid value for 'bgpAsn', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['vifId']) && (mb_strlen($this->container['vifId']) > 36)) {
+        if ($this->container['vifId'] === null) {
+            $invalidProperties[] = "'vifId' can't be null";
+        }
+            if ((mb_strlen($this->container['vifId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'vifId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['vifId']) && (mb_strlen($this->container['vifId']) < 36)) {
+            if ((mb_strlen($this->container['vifId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'vifId', the character length must be bigger than or equal to 36.";
             }
         return $invalidProperties;
@@ -325,7 +340,7 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
     * Gets name
     *  VIF对等体名字
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -335,7 +350,7 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name VIF对等体名字
+    * @param string $name VIF对等体名字
     *
     * @return $this
     */
@@ -373,7 +388,7 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
     * Gets addressFamily
     *  接口的地址簇类型，ipv4，ipv6
     *
-    * @return string|null
+    * @return string
     */
     public function getAddressFamily()
     {
@@ -383,7 +398,7 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
     /**
     * Sets addressFamily
     *
-    * @param string|null $addressFamily 接口的地址簇类型，ipv4，ipv6
+    * @param string $addressFamily 接口的地址簇类型，ipv4，ipv6
     *
     * @return $this
     */
@@ -397,7 +412,7 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
     * Gets localGatewayIp
     *  VIF对等体云侧接口地址
     *
-    * @return string|null
+    * @return string
     */
     public function getLocalGatewayIp()
     {
@@ -407,7 +422,7 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
     /**
     * Sets localGatewayIp
     *
-    * @param string|null $localGatewayIp VIF对等体云侧接口地址
+    * @param string $localGatewayIp VIF对等体云侧接口地址
     *
     * @return $this
     */
@@ -421,7 +436,7 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
     * Gets remoteGatewayIp
     *  VIF对等体客户侧接口地址
     *
-    * @return string|null
+    * @return string
     */
     public function getRemoteGatewayIp()
     {
@@ -431,7 +446,7 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
     /**
     * Sets remoteGatewayIp
     *
-    * @param string|null $remoteGatewayIp VIF对等体客户侧接口地址
+    * @param string $remoteGatewayIp VIF对等体客户侧接口地址
     *
     * @return $this
     */
@@ -541,7 +556,7 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
     * Gets vifId
     *  vif对等体对应的虚拟接口ID
     *
-    * @return string|null
+    * @return string
     */
     public function getVifId()
     {
@@ -551,7 +566,7 @@ class CreateVifPeer implements ModelInterface, ArrayAccess
     /**
     * Sets vifId
     *
-    * @param string|null $vifId vif对等体对应的虚拟接口ID
+    * @param string $vifId vif对等体对应的虚拟接口ID
     *
     * @return $this
     */

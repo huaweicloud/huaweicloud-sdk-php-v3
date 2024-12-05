@@ -20,7 +20,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameCh  自定义项中文名称。
     * nameEn  自定义项英文名称。
     * notNull  是否必填。
@@ -52,7 +52,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameCh  自定义项中文名称。
     * nameEn  自定义项英文名称。
     * notNull  是否必填。
@@ -105,7 +105,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameCh  自定义项中文名称。
     * nameEn  自定义项英文名称。
     * notNull  是否必填。
@@ -137,7 +137,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameCh  自定义项中文名称。
     * nameEn  自定义项英文名称。
     * notNull  是否必填。
@@ -169,7 +169,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameCh  自定义项中文名称。
     * nameEn  自定义项英文名称。
     * notNull  是否必填。
@@ -346,7 +346,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -358,7 +358,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ApproverVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  审批单ID，填写String类型替代Long类型。
+    * id  审批单ID，ID字符串。
     * approverName  审批人姓名。
     * userId  审批人ID。
     * userName  审批人名称。
@@ -52,7 +52,7 @@ class ApproverVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  审批单ID，填写String类型替代Long类型。
+    * id  审批单ID，ID字符串。
     * approverName  审批人姓名。
     * userId  审批人ID。
     * userName  审批人名称。
@@ -105,7 +105,7 @@ class ApproverVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  审批单ID，填写String类型替代Long类型。
+    * id  审批单ID，ID字符串。
     * approverName  审批人姓名。
     * userId  审批人ID。
     * userName  审批人名称。
@@ -137,7 +137,7 @@ class ApproverVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  审批单ID，填写String类型替代Long类型。
+    * id  审批单ID，ID字符串。
     * approverName  审批人姓名。
     * userId  审批人ID。
     * userName  审批人名称。
@@ -169,7 +169,7 @@ class ApproverVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  审批单ID，填写String类型替代Long类型。
+    * id  审批单ID，ID字符串。
     * approverName  审批人姓名。
     * userId  审批人ID。
     * userName  审批人名称。
@@ -323,7 +323,7 @@ class ApproverVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  审批单ID，填写String类型替代Long类型。
+    *  审批单ID，ID字符串。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class ApproverVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 审批单ID，填写String类型替代Long类型。
+    * @param string|null $id 审批单ID，ID字符串。
     *
     * @return $this
     */

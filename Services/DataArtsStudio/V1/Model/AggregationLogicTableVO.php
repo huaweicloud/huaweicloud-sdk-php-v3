@@ -20,12 +20,12 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
+    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，ID字符串。
     * tbName  汇总表英文名称，对应实际的物理表名。
     * tbLogicName  汇总表的中文名，用于展示使用。
-    * l1Id  主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，创建和更新时无需填写，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  汇总表所属主题的ID，必填，填写String类型替代Long类型。
+    * l3Id  汇总表所属主题的ID，必填，ID字符串。
     * description  汇总表描述信息。
     * owner  汇总表的资产责任人。
     * secretType  secretType
@@ -69,7 +69,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * preCombineField  版本字段。
     * tableType  表类型。
     * dlfTaskId  DLF作业ID。
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * reversed  是否是逆向的，只读。
     * tableVersion  为2时，表示汇总表是汇总生成的，只读。
     * partitionConf  分区表达式。
@@ -82,8 +82,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * selfDefinedFields  自定义项。
     * apiId  API ID。
     * sql  汇总表绑定的SQL。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -162,12 +162,12 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
+    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，ID字符串。
     * tbName  汇总表英文名称，对应实际的物理表名。
     * tbLogicName  汇总表的中文名，用于展示使用。
-    * l1Id  主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，创建和更新时无需填写，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  汇总表所属主题的ID，必填，填写String类型替代Long类型。
+    * l3Id  汇总表所属主题的ID，必填，ID字符串。
     * description  汇总表描述信息。
     * owner  汇总表的资产责任人。
     * secretType  secretType
@@ -211,7 +211,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * preCombineField  版本字段。
     * tableType  表类型。
     * dlfTaskId  DLF作业ID。
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * reversed  是否是逆向的，只读。
     * tableVersion  为2时，表示汇总表是汇总生成的，只读。
     * partitionConf  分区表达式。
@@ -224,8 +224,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * selfDefinedFields  自定义项。
     * apiId  API ID。
     * sql  汇总表绑定的SQL。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -325,12 +325,12 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
+    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，ID字符串。
     * tbName  汇总表英文名称，对应实际的物理表名。
     * tbLogicName  汇总表的中文名，用于展示使用。
-    * l1Id  主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，创建和更新时无需填写，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  汇总表所属主题的ID，必填，填写String类型替代Long类型。
+    * l3Id  汇总表所属主题的ID，必填，ID字符串。
     * description  汇总表描述信息。
     * owner  汇总表的资产责任人。
     * secretType  secretType
@@ -374,7 +374,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * preCombineField  版本字段。
     * tableType  表类型。
     * dlfTaskId  DLF作业ID。
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * reversed  是否是逆向的，只读。
     * tableVersion  为2时，表示汇总表是汇总生成的，只读。
     * partitionConf  分区表达式。
@@ -387,8 +387,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * selfDefinedFields  自定义项。
     * apiId  API ID。
     * sql  汇总表绑定的SQL。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -467,12 +467,12 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
+    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，ID字符串。
     * tbName  汇总表英文名称，对应实际的物理表名。
     * tbLogicName  汇总表的中文名，用于展示使用。
-    * l1Id  主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，创建和更新时无需填写，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  汇总表所属主题的ID，必填，填写String类型替代Long类型。
+    * l3Id  汇总表所属主题的ID，必填，ID字符串。
     * description  汇总表描述信息。
     * owner  汇总表的资产责任人。
     * secretType  secretType
@@ -516,7 +516,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * preCombineField  版本字段。
     * tableType  表类型。
     * dlfTaskId  DLF作业ID。
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * reversed  是否是逆向的，只读。
     * tableVersion  为2时，表示汇总表是汇总生成的，只读。
     * partitionConf  分区表达式。
@@ -529,8 +529,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * selfDefinedFields  自定义项。
     * apiId  API ID。
     * sql  汇总表绑定的SQL。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -609,12 +609,12 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
+    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，ID字符串。
     * tbName  汇总表英文名称，对应实际的物理表名。
     * tbLogicName  汇总表的中文名，用于展示使用。
-    * l1Id  主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，创建和更新时无需填写，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  汇总表所属主题的ID，必填，填写String类型替代Long类型。
+    * l3Id  汇总表所属主题的ID，必填，ID字符串。
     * description  汇总表描述信息。
     * owner  汇总表的资产责任人。
     * secretType  secretType
@@ -658,7 +658,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * preCombineField  版本字段。
     * tableType  表类型。
     * dlfTaskId  DLF作业ID。
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * reversed  是否是逆向的，只读。
     * tableVersion  为2时，表示汇总表是汇总生成的，只读。
     * partitionConf  分区表达式。
@@ -671,8 +671,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * selfDefinedFields  自定义项。
     * apiId  API ID。
     * sql  汇总表绑定的SQL。
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串。
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -1003,7 +1003,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
+    *  汇总表的唯一系统ID，更新时必填，创建时不须填写，ID字符串。
     *
     * @return string|null
     */
@@ -1015,7 +1015,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
+    * @param string|null $id 汇总表的唯一系统ID，更新时必填，创建时不须填写，ID字符串。
     *
     * @return $this
     */
@@ -1075,7 +1075,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
+    *  主题域分组ID，只读，创建和更新时无需填写，ID字符串。
     *
     * @return string|null
     */
@@ -1087,7 +1087,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param string|null $l1Id 主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
+    * @param string|null $l1Id 主题域分组ID，只读，创建和更新时无需填写，ID字符串。
     *
     * @return $this
     */
@@ -1123,7 +1123,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  汇总表所属主题的ID，必填，填写String类型替代Long类型。
+    *  汇总表所属主题的ID，必填，ID字符串。
     *
     * @return string
     */
@@ -1135,7 +1135,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string $l3Id 汇总表所属主题的ID，必填，填写String类型替代Long类型。
+    * @param string $l3Id 汇总表所属主题的ID，必填，ID字符串。
     *
     * @return $this
     */
@@ -2179,7 +2179,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityId
-    *  质量ID，填写String类型替代Long类型。
+    *  质量ID，ID字符串。
     *
     * @return string|null
     */
@@ -2191,7 +2191,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityId
     *
-    * @param string|null $qualityId 质量ID，填写String类型替代Long类型。
+    * @param string|null $qualityId 质量ID，ID字符串。
     *
     * @return $this
     */
@@ -2491,7 +2491,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets devVersion
-    *  开发环境版本，填写String类型替代Long类型。
+    *  开发环境版本，ID字符串。
     *
     * @return string|null
     */
@@ -2503,7 +2503,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets devVersion
     *
-    * @param string|null $devVersion 开发环境版本，填写String类型替代Long类型。
+    * @param string|null $devVersion 开发环境版本，ID字符串。
     *
     * @return $this
     */
@@ -2515,7 +2515,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets prodVersion
-    *  生产环境版本，填写String类型替代Long类型。
+    *  生产环境版本，ID字符串。
     *
     * @return string|null
     */
@@ -2527,7 +2527,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets prodVersion
     *
-    * @param string|null $prodVersion 生产环境版本，填写String类型替代Long类型。
+    * @param string|null $prodVersion 生产环境版本，ID字符串。
     *
     * @return $this
     */

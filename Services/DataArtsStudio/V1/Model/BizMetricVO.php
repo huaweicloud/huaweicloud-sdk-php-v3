@@ -20,13 +20,13 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，更新时必填，创建时为空，填写String类型替代Long类型。
+    * id  编码，更新时必填，创建时为空，ID字符串。
     * name  指标名称。
     * code  指标编码，只读。
     * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的ID，填写String类型替代Long类型。
+    * bizCatalogId  归属的流程架构的ID，ID字符串。
     * bizCatalogPath  归属的流程架构路径，只读。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
@@ -37,7 +37,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     * generalFilters  统计口径和修饰词。
     * intervalType  刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
     * applyScenario  应用场景。
-    * technicalMetric  关联技术指标，填写String类型替代Long类型。
+    * technicalMetric  关联技术指标，ID字符串。
     * technicalMetricName  关联技术指标名称，只读。
     * technicalMetricType  technicalMetricType
     * measure  度量对象。
@@ -104,13 +104,13 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，更新时必填，创建时为空，填写String类型替代Long类型。
+    * id  编码，更新时必填，创建时为空，ID字符串。
     * name  指标名称。
     * code  指标编码，只读。
     * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的ID，填写String类型替代Long类型。
+    * bizCatalogId  归属的流程架构的ID，ID字符串。
     * bizCatalogPath  归属的流程架构路径，只读。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
@@ -121,7 +121,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     * generalFilters  统计口径和修饰词。
     * intervalType  刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
     * applyScenario  应用场景。
-    * technicalMetric  关联技术指标，填写String类型替代Long类型。
+    * technicalMetric  关联技术指标，ID字符串。
     * technicalMetricName  关联技术指标名称，只读。
     * technicalMetricType  technicalMetricType
     * measure  度量对象。
@@ -209,13 +209,13 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，更新时必填，创建时为空，填写String类型替代Long类型。
+    * id  编码，更新时必填，创建时为空，ID字符串。
     * name  指标名称。
     * code  指标编码，只读。
     * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的ID，填写String类型替代Long类型。
+    * bizCatalogId  归属的流程架构的ID，ID字符串。
     * bizCatalogPath  归属的流程架构路径，只读。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
@@ -226,7 +226,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     * generalFilters  统计口径和修饰词。
     * intervalType  刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
     * applyScenario  应用场景。
-    * technicalMetric  关联技术指标，填写String类型替代Long类型。
+    * technicalMetric  关联技术指标，ID字符串。
     * technicalMetricName  关联技术指标名称，只读。
     * technicalMetricType  technicalMetricType
     * measure  度量对象。
@@ -293,13 +293,13 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，更新时必填，创建时为空，填写String类型替代Long类型。
+    * id  编码，更新时必填，创建时为空，ID字符串。
     * name  指标名称。
     * code  指标编码，只读。
     * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的ID，填写String类型替代Long类型。
+    * bizCatalogId  归属的流程架构的ID，ID字符串。
     * bizCatalogPath  归属的流程架构路径，只读。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
@@ -310,7 +310,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     * generalFilters  统计口径和修饰词。
     * intervalType  刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
     * applyScenario  应用场景。
-    * technicalMetric  关联技术指标，填写String类型替代Long类型。
+    * technicalMetric  关联技术指标，ID字符串。
     * technicalMetricName  关联技术指标名称，只读。
     * technicalMetricType  technicalMetricType
     * measure  度量对象。
@@ -377,13 +377,13 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，更新时必填，创建时为空，填写String类型替代Long类型。
+    * id  编码，更新时必填，创建时为空，ID字符串。
     * name  指标名称。
     * code  指标编码，只读。
     * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的ID，填写String类型替代Long类型。
+    * bizCatalogId  归属的流程架构的ID，ID字符串。
     * bizCatalogPath  归属的流程架构路径，只读。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
@@ -394,7 +394,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     * generalFilters  统计口径和修饰词。
     * intervalType  刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
     * applyScenario  应用场景。
-    * technicalMetric  关联技术指标，填写String类型替代Long类型。
+    * technicalMetric  关联技术指标，ID字符串。
     * technicalMetricName  关联技术指标名称，只读。
     * technicalMetricType  technicalMetricType
     * measure  度量对象。
@@ -717,7 +717,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，更新时必填，创建时为空，填写String类型替代Long类型。
+    *  编码，更新时必填，创建时为空，ID字符串。
     *
     * @return string|null
     */
@@ -729,7 +729,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，更新时必填，创建时为空，填写String类型替代Long类型。
+    * @param string|null $id 编码，更新时必填，创建时为空，ID字符串。
     *
     * @return $this
     */
@@ -861,7 +861,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizCatalogId
-    *  归属的流程架构的ID，填写String类型替代Long类型。
+    *  归属的流程架构的ID，ID字符串。
     *
     * @return string
     */
@@ -873,7 +873,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizCatalogId
     *
-    * @param string $bizCatalogId 归属的流程架构的ID，填写String类型替代Long类型。
+    * @param string $bizCatalogId 归属的流程架构的ID，ID字符串。
     *
     * @return $this
     */
@@ -1125,7 +1125,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets technicalMetric
-    *  关联技术指标，填写String类型替代Long类型。
+    *  关联技术指标，ID字符串。
     *
     * @return string|null
     */
@@ -1137,7 +1137,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets technicalMetric
     *
-    * @param string|null $technicalMetric 关联技术指标，填写String类型替代Long类型。
+    * @param string|null $technicalMetric 关联技术指标，ID字符串。
     *
     * @return $this
     */

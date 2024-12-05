@@ -24,6 +24,7 @@ class PermissionSetMemberCreateDTO implements ModelInterface, ArrayAccess
     * memberId  成员id
     * memberName  成员名称
     * workspace  工作空间
+    * autoSync  是否自动触发同步, 默认false
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class PermissionSetMemberCreateDTO implements ModelInterface, ArrayAccess
             'memberType' => 'string',
             'memberId' => 'string',
             'memberName' => 'string',
-            'workspace' => 'string'
+            'workspace' => 'string',
+            'autoSync' => 'bool'
     ];
 
     /**
@@ -40,6 +42,7 @@ class PermissionSetMemberCreateDTO implements ModelInterface, ArrayAccess
     * memberId  成员id
     * memberName  成员名称
     * workspace  工作空间
+    * autoSync  是否自动触发同步, 默认false
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class PermissionSetMemberCreateDTO implements ModelInterface, ArrayAccess
         'memberType' => null,
         'memberId' => null,
         'memberName' => null,
-        'workspace' => null
+        'workspace' => null,
+        'autoSync' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class PermissionSetMemberCreateDTO implements ModelInterface, ArrayAccess
     * memberId  成员id
     * memberName  成员名称
     * workspace  工作空间
+    * autoSync  是否自动触发同步, 默认false
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class PermissionSetMemberCreateDTO implements ModelInterface, ArrayAccess
             'memberType' => 'member_type',
             'memberId' => 'member_id',
             'memberName' => 'member_name',
-            'workspace' => 'workspace'
+            'workspace' => 'workspace',
+            'autoSync' => 'auto_sync'
     ];
 
     /**
@@ -93,6 +99,7 @@ class PermissionSetMemberCreateDTO implements ModelInterface, ArrayAccess
     * memberId  成员id
     * memberName  成员名称
     * workspace  工作空间
+    * autoSync  是否自动触发同步, 默认false
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class PermissionSetMemberCreateDTO implements ModelInterface, ArrayAccess
             'memberType' => 'setMemberType',
             'memberId' => 'setMemberId',
             'memberName' => 'setMemberName',
-            'workspace' => 'setWorkspace'
+            'workspace' => 'setWorkspace',
+            'autoSync' => 'setAutoSync'
     ];
 
     /**
@@ -109,6 +117,7 @@ class PermissionSetMemberCreateDTO implements ModelInterface, ArrayAccess
     * memberId  成员id
     * memberName  成员名称
     * workspace  工作空间
+    * autoSync  是否自动触发同步, 默认false
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class PermissionSetMemberCreateDTO implements ModelInterface, ArrayAccess
             'memberType' => 'getMemberType',
             'memberId' => 'getMemberId',
             'memberName' => 'getMemberName',
-            'workspace' => 'getWorkspace'
+            'workspace' => 'getWorkspace',
+            'autoSync' => 'getAutoSync'
     ];
 
     /**
@@ -198,6 +208,7 @@ class PermissionSetMemberCreateDTO implements ModelInterface, ArrayAccess
         $this->container['memberId'] = isset($data['memberId']) ? $data['memberId'] : null;
         $this->container['memberName'] = isset($data['memberName']) ? $data['memberName'] : null;
         $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
+        $this->container['autoSync'] = isset($data['autoSync']) ? $data['autoSync'] : null;
     }
 
     /**
@@ -341,6 +352,30 @@ class PermissionSetMemberCreateDTO implements ModelInterface, ArrayAccess
     public function setWorkspace($workspace)
     {
         $this->container['workspace'] = $workspace;
+        return $this;
+    }
+
+    /**
+    * Gets autoSync
+    *  是否自动触发同步, 默认false
+    *
+    * @return bool|null
+    */
+    public function getAutoSync()
+    {
+        return $this->container['autoSync'];
+    }
+
+    /**
+    * Sets autoSync
+    *
+    * @param bool|null $autoSync 是否自动触发同步, 默认false
+    *
+    * @return $this
+    */
+    public function setAutoSync($autoSync)
+    {
+        $this->container['autoSync'] = $autoSync;
         return $this;
     }
 

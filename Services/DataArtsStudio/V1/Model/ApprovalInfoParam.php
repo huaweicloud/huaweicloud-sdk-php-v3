@@ -20,7 +20,7 @@ class ApprovalInfoParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ids  审批单ID列表，填写String类型替代Long类型。
+    * ids  审批单ID列表，ID字符串。
     * msg  审批单信息，审批人填写的审批意见。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ApprovalInfoParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ids  审批单ID列表，填写String类型替代Long类型。
+    * ids  审批单ID列表，ID字符串。
     * msg  审批单信息，审批人填写的审批意见。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ApprovalInfoParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ids  审批单ID列表，填写String类型替代Long类型。
+    * ids  审批单ID列表，ID字符串。
     * msg  审批单信息，审批人填写的审批意见。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ApprovalInfoParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ids  审批单ID列表，填写String类型替代Long类型。
+    * ids  审批单ID列表，ID字符串。
     * msg  审批单信息，审批人填写的审批意见。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ApprovalInfoParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ids  审批单ID列表，填写String类型替代Long类型。
+    * ids  审批单ID列表，ID字符串。
     * msg  审批单信息，审批人填写的审批意见。
     *
     * @var string[]
@@ -194,7 +194,7 @@ class ApprovalInfoParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets ids
-    *  审批单ID列表，填写String类型替代Long类型。
+    *  审批单ID列表，ID字符串。
     *
     * @return string[]
     */
@@ -206,7 +206,7 @@ class ApprovalInfoParam implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param string[] $ids 审批单ID列表，填写String类型替代Long类型。
+    * @param string[] $ids 审批单ID列表，ID字符串。
     *
     * @return $this
     */

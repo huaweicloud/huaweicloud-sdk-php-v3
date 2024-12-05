@@ -20,9 +20,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * dimensionId  维度ID，只读，填写String类型替代Long类型。
-    * codeTableFieldId  码表属性ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * dimensionId  维度ID，只读，ID字符串。
+    * codeTableFieldId  码表属性ID，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -35,7 +35,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     * isPartitionKey  是否分区。
     * ordinal  序号。
     * notNull  是否不为空。
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * secrecyLevels  密级
@@ -76,9 +76,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * dimensionId  维度ID，只读，填写String类型替代Long类型。
-    * codeTableFieldId  码表属性ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * dimensionId  维度ID，只读，ID字符串。
+    * codeTableFieldId  码表属性ID，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -91,7 +91,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     * isPartitionKey  是否分区。
     * ordinal  序号。
     * notNull  是否不为空。
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * secrecyLevels  密级
@@ -153,9 +153,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
-    * dimensionId  维度ID，只读，填写String类型替代Long类型。
-    * codeTableFieldId  码表属性ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * dimensionId  维度ID，只读，ID字符串。
+    * codeTableFieldId  码表属性ID，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -168,7 +168,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     * isPartitionKey  是否分区。
     * ordinal  序号。
     * notNull  是否不为空。
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * secrecyLevels  密级
@@ -209,9 +209,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
-    * dimensionId  维度ID，只读，填写String类型替代Long类型。
-    * codeTableFieldId  码表属性ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * dimensionId  维度ID，只读，ID字符串。
+    * codeTableFieldId  码表属性ID，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -224,7 +224,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     * isPartitionKey  是否分区。
     * ordinal  序号。
     * notNull  是否不为空。
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * secrecyLevels  密级
@@ -265,9 +265,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
-    * dimensionId  维度ID，只读，填写String类型替代Long类型。
-    * codeTableFieldId  码表属性ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * dimensionId  维度ID，只读，ID字符串。
+    * codeTableFieldId  码表属性ID，ID字符串。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -280,7 +280,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     * isPartitionKey  是否分区。
     * ordinal  序号。
     * notNull  是否不为空。
-    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowId  关联的数据标准的ID，ID字符串。
     * standRowName  关联的数据标准名称，只读。
     * qualityInfos  质量信息，只读。
     * secrecyLevels  密级
@@ -466,7 +466,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -478,7 +478,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -490,7 +490,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionId
-    *  维度ID，只读，填写String类型替代Long类型。
+    *  维度ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -502,7 +502,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionId
     *
-    * @param string|null $dimensionId 维度ID，只读，填写String类型替代Long类型。
+    * @param string|null $dimensionId 维度ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -514,7 +514,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeTableFieldId
-    *  码表属性ID，填写String类型替代Long类型。
+    *  码表属性ID，ID字符串。
     *
     * @return string|null
     */
@@ -526,7 +526,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets codeTableFieldId
     *
-    * @param string|null $codeTableFieldId 码表属性ID，填写String类型替代Long类型。
+    * @param string|null $codeTableFieldId 码表属性ID，ID字符串。
     *
     * @return $this
     */
@@ -826,7 +826,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowId
-    *  关联的数据标准的ID，填写String类型替代Long类型。
+    *  关联的数据标准的ID，ID字符串。
     *
     * @return string|null
     */
@@ -838,7 +838,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowId
     *
-    * @param string|null $standRowId 关联的数据标准的ID，填写String类型替代Long类型。
+    * @param string|null $standRowId 关联的数据标准的ID，ID字符串。
     *
     * @return $this
     */

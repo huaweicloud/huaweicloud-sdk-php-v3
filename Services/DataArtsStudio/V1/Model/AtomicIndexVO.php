@@ -20,20 +20,20 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  原子指标英文名。
     * nameCh  原子指标英文名。
     * description  描述。
     * createBy  创建人。
     * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
-    * calFnIds  引用函数ID，填写String类型替代Long类型。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * calFnIds  引用函数ID，ID字符串。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
-    * tableId  事实表ID，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
+    * tableId  事实表ID，ID字符串。
     * tbName  事实表名称。
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
-    * fieldIds  字段ID信息，填写String类型替代Long类型。
+    * fieldIds  字段ID信息，ID字符串。
     * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
@@ -76,20 +76,20 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  原子指标英文名。
     * nameCh  原子指标英文名。
     * description  描述。
     * createBy  创建人。
     * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
-    * calFnIds  引用函数ID，填写String类型替代Long类型。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * calFnIds  引用函数ID，ID字符串。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
-    * tableId  事实表ID，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
+    * tableId  事实表ID，ID字符串。
     * tbName  事实表名称。
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
-    * fieldIds  字段ID信息，填写String类型替代Long类型。
+    * fieldIds  字段ID信息，ID字符串。
     * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
@@ -153,20 +153,20 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  原子指标英文名。
     * nameCh  原子指标英文名。
     * description  描述。
     * createBy  创建人。
     * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
-    * calFnIds  引用函数ID，填写String类型替代Long类型。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * calFnIds  引用函数ID，ID字符串。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
-    * tableId  事实表ID，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
+    * tableId  事实表ID，ID字符串。
     * tbName  事实表名称。
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
-    * fieldIds  字段ID信息，填写String类型替代Long类型。
+    * fieldIds  字段ID信息，ID字符串。
     * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
@@ -209,20 +209,20 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  原子指标英文名。
     * nameCh  原子指标英文名。
     * description  描述。
     * createBy  创建人。
     * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
-    * calFnIds  引用函数ID，填写String类型替代Long类型。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * calFnIds  引用函数ID，ID字符串。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
-    * tableId  事实表ID，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
+    * tableId  事实表ID，ID字符串。
     * tbName  事实表名称。
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
-    * fieldIds  字段ID信息，填写String类型替代Long类型。
+    * fieldIds  字段ID信息，ID字符串。
     * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
@@ -265,20 +265,20 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  原子指标英文名。
     * nameCh  原子指标英文名。
     * description  描述。
     * createBy  创建人。
     * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
-    * calFnIds  引用函数ID，填写String类型替代Long类型。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * calFnIds  引用函数ID，ID字符串。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
-    * tableId  事实表ID，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
+    * tableId  事实表ID，ID字符串。
     * tbName  事实表名称。
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
-    * fieldIds  字段ID信息，填写String类型替代Long类型。
+    * fieldIds  字段ID信息，ID字符串。
     * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
@@ -463,7 +463,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -607,7 +607,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets calFnIds
-    *  引用函数ID，填写String类型替代Long类型。
+    *  引用函数ID，ID字符串。
     *
     * @return string[]|null
     */
@@ -619,7 +619,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets calFnIds
     *
-    * @param string[]|null $calFnIds 引用函数ID，填写String类型替代Long类型。
+    * @param string[]|null $calFnIds 引用函数ID，ID字符串。
     *
     * @return $this
     */
@@ -631,7 +631,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID，只读，填写String类型替代Long类型。
+    *  主题域分组ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -643,7 +643,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param string|null $l1Id 主题域分组ID，只读，填写String类型替代Long类型。
+    * @param string|null $l1Id 主题域分组ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -679,7 +679,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象guid，填写String类型替代Long类型。
+    *  业务对象guid，ID字符串。
     *
     * @return string
     */
@@ -691,7 +691,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string $l3Id 业务对象guid，填写String类型替代Long类型。
+    * @param string $l3Id 业务对象guid，ID字符串。
     *
     * @return $this
     */
@@ -703,7 +703,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableId
-    *  事实表ID，填写String类型替代Long类型。
+    *  事实表ID，ID字符串。
     *
     * @return string
     */
@@ -715,7 +715,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableId
     *
-    * @param string $tableId 事实表ID，填写String类型替代Long类型。
+    * @param string $tableId 事实表ID，ID字符串。
     *
     * @return $this
     */
@@ -775,7 +775,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fieldIds
-    *  字段ID信息，填写String类型替代Long类型。
+    *  字段ID信息，ID字符串。
     *
     * @return string[]
     */
@@ -787,7 +787,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets fieldIds
     *
-    * @param string[] $fieldIds 字段ID信息，填写String类型替代Long类型。
+    * @param string[] $fieldIds 字段ID信息，ID字符串。
     *
     * @return $this
     */

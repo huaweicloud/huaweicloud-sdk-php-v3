@@ -36,9 +36,9 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * level  层级信息。
     * ordinal  序号。
     * owner  责任人。
-    * parentId  父目录ID，木有则为根目录，填写String类型替代Long类型。
-    * swapOrderId  同层排序，目标节点的ID，填写String类型替代Long类型。
-    * id  主题ID，填写String类型替代Long类型。
+    * parentId  父目录ID，木有则为根目录，ID字符串。
+    * swapOrderId  同层排序，目标节点的ID，ID字符串。
+    * id  主题ID，ID字符串。
     * qualifiedId  认证ID，自动生成。
     * fromPublic  是否来自公共层。
     * createBy  创建人。
@@ -100,9 +100,9 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * level  层级信息。
     * ordinal  序号。
     * owner  责任人。
-    * parentId  父目录ID，木有则为根目录，填写String类型替代Long类型。
-    * swapOrderId  同层排序，目标节点的ID，填写String类型替代Long类型。
-    * id  主题ID，填写String类型替代Long类型。
+    * parentId  父目录ID，木有则为根目录，ID字符串。
+    * swapOrderId  同层排序，目标节点的ID，ID字符串。
+    * id  主题ID，ID字符串。
     * qualifiedId  认证ID，自动生成。
     * fromPublic  是否来自公共层。
     * createBy  创建人。
@@ -185,9 +185,9 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * level  层级信息。
     * ordinal  序号。
     * owner  责任人。
-    * parentId  父目录ID，木有则为根目录，填写String类型替代Long类型。
-    * swapOrderId  同层排序，目标节点的ID，填写String类型替代Long类型。
-    * id  主题ID，填写String类型替代Long类型。
+    * parentId  父目录ID，木有则为根目录，ID字符串。
+    * swapOrderId  同层排序，目标节点的ID，ID字符串。
+    * id  主题ID，ID字符串。
     * qualifiedId  认证ID，自动生成。
     * fromPublic  是否来自公共层。
     * createBy  创建人。
@@ -249,9 +249,9 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * level  层级信息。
     * ordinal  序号。
     * owner  责任人。
-    * parentId  父目录ID，木有则为根目录，填写String类型替代Long类型。
-    * swapOrderId  同层排序，目标节点的ID，填写String类型替代Long类型。
-    * id  主题ID，填写String类型替代Long类型。
+    * parentId  父目录ID，木有则为根目录，ID字符串。
+    * swapOrderId  同层排序，目标节点的ID，ID字符串。
+    * id  主题ID，ID字符串。
     * qualifiedId  认证ID，自动生成。
     * fromPublic  是否来自公共层。
     * createBy  创建人。
@@ -313,9 +313,9 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * level  层级信息。
     * ordinal  序号。
     * owner  责任人。
-    * parentId  父目录ID，木有则为根目录，填写String类型替代Long类型。
-    * swapOrderId  同层排序，目标节点的ID，填写String类型替代Long类型。
-    * id  主题ID，填写String类型替代Long类型。
+    * parentId  父目录ID，木有则为根目录，ID字符串。
+    * swapOrderId  同层排序，目标节点的ID，ID字符串。
+    * id  主题ID，ID字符串。
     * qualifiedId  认证ID，自动生成。
     * fromPublic  是否来自公共层。
     * createBy  创建人。
@@ -867,7 +867,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
-    *  父目录ID，木有则为根目录，填写String类型替代Long类型。
+    *  父目录ID，木有则为根目录，ID字符串。
     *
     * @return string|null
     */
@@ -879,7 +879,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string|null $parentId 父目录ID，木有则为根目录，填写String类型替代Long类型。
+    * @param string|null $parentId 父目录ID，木有则为根目录，ID字符串。
     *
     * @return $this
     */
@@ -891,7 +891,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets swapOrderId
-    *  同层排序，目标节点的ID，填写String类型替代Long类型。
+    *  同层排序，目标节点的ID，ID字符串。
     *
     * @return string|null
     */
@@ -903,7 +903,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets swapOrderId
     *
-    * @param string|null $swapOrderId 同层排序，目标节点的ID，填写String类型替代Long类型。
+    * @param string|null $swapOrderId 同层排序，目标节点的ID，ID字符串。
     *
     * @return $this
     */
@@ -915,7 +915,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  主题ID，填写String类型替代Long类型。
+    *  主题ID，ID字符串。
     *
     * @return string|null
     */
@@ -927,7 +927,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 主题ID，填写String类型替代Long类型。
+    * @param string|null $id 主题ID，ID字符串。
     *
     * @return $this
     */

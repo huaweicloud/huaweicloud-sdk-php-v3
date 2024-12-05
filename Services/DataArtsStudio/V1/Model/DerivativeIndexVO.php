@@ -20,19 +20,19 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  中文名。
     * description  描述，只读。
     * createBy  创建人。
     * dataType  字段类型。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
     * status  status
-    * atomicIndexId  原子指标ID，填写String类型替代Long类型。
-    * timeConditionId  时间限定ID，填写String类型替代Long类型。
-    * timeFieldId  时间限定关联字段ID，填写String类型替代Long类型。
+    * atomicIndexId  原子指标ID，ID字符串。
+    * timeConditionId  时间限定ID，ID字符串。
+    * timeFieldId  时间限定关联字段ID，ID字符串。
     * timeFieldName  时间限定关联字段名称，只读。
     * commonConditions  通用限定信息。
     * dimensionGroups  维度组(颗粒度)。
@@ -44,7 +44,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
+    * summaryTableId  汇总表ID，只读，ID字符串。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -82,19 +82,19 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  中文名。
     * description  描述，只读。
     * createBy  创建人。
     * dataType  字段类型。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
     * status  status
-    * atomicIndexId  原子指标ID，填写String类型替代Long类型。
-    * timeConditionId  时间限定ID，填写String类型替代Long类型。
-    * timeFieldId  时间限定关联字段ID，填写String类型替代Long类型。
+    * atomicIndexId  原子指标ID，ID字符串。
+    * timeConditionId  时间限定ID，ID字符串。
+    * timeFieldId  时间限定关联字段ID，ID字符串。
     * timeFieldName  时间限定关联字段名称，只读。
     * commonConditions  通用限定信息。
     * dimensionGroups  维度组(颗粒度)。
@@ -106,7 +106,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
+    * summaryTableId  汇总表ID，只读，ID字符串。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -165,19 +165,19 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  中文名。
     * description  描述，只读。
     * createBy  创建人。
     * dataType  字段类型。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
     * status  status
-    * atomicIndexId  原子指标ID，填写String类型替代Long类型。
-    * timeConditionId  时间限定ID，填写String类型替代Long类型。
-    * timeFieldId  时间限定关联字段ID，填写String类型替代Long类型。
+    * atomicIndexId  原子指标ID，ID字符串。
+    * timeConditionId  时间限定ID，ID字符串。
+    * timeFieldId  时间限定关联字段ID，ID字符串。
     * timeFieldName  时间限定关联字段名称，只读。
     * commonConditions  通用限定信息。
     * dimensionGroups  维度组(颗粒度)。
@@ -189,7 +189,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
+    * summaryTableId  汇总表ID，只读，ID字符串。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -227,19 +227,19 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  中文名。
     * description  描述，只读。
     * createBy  创建人。
     * dataType  字段类型。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
     * status  status
-    * atomicIndexId  原子指标ID，填写String类型替代Long类型。
-    * timeConditionId  时间限定ID，填写String类型替代Long类型。
-    * timeFieldId  时间限定关联字段ID，填写String类型替代Long类型。
+    * atomicIndexId  原子指标ID，ID字符串。
+    * timeConditionId  时间限定ID，ID字符串。
+    * timeFieldId  时间限定关联字段ID，ID字符串。
     * timeFieldName  时间限定关联字段名称，只读。
     * commonConditions  通用限定信息。
     * dimensionGroups  维度组(颗粒度)。
@@ -251,7 +251,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
+    * summaryTableId  汇总表ID，只读，ID字符串。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -289,19 +289,19 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
+    * id  编码，ID字符串。
     * nameEn  字段名。
     * nameCh  中文名。
     * description  描述，只读。
     * createBy  创建人。
     * dataType  字段类型。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * l3Id  业务对象guid，ID字符串。
     * status  status
-    * atomicIndexId  原子指标ID，填写String类型替代Long类型。
-    * timeConditionId  时间限定ID，填写String类型替代Long类型。
-    * timeFieldId  时间限定关联字段ID，填写String类型替代Long类型。
+    * atomicIndexId  原子指标ID，ID字符串。
+    * timeConditionId  时间限定ID，ID字符串。
+    * timeFieldId  时间限定关联字段ID，ID字符串。
     * timeFieldName  时间限定关联字段名称，只读。
     * commonConditions  通用限定信息。
     * dimensionGroups  维度组(颗粒度)。
@@ -313,7 +313,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
+    * summaryTableId  汇总表ID，只读，ID字符串。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -487,7 +487,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -499,7 +499,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -631,7 +631,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID，只读，填写String类型替代Long类型。
+    *  主题域分组ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -643,7 +643,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param string|null $l1Id 主题域分组ID，只读，填写String类型替代Long类型。
+    * @param string|null $l1Id 主题域分组ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -679,7 +679,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象guid，填写String类型替代Long类型。
+    *  业务对象guid，ID字符串。
     *
     * @return string
     */
@@ -691,7 +691,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string $l3Id 业务对象guid，填写String类型替代Long类型。
+    * @param string $l3Id 业务对象guid，ID字符串。
     *
     * @return $this
     */
@@ -727,7 +727,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets atomicIndexId
-    *  原子指标ID，填写String类型替代Long类型。
+    *  原子指标ID，ID字符串。
     *
     * @return string
     */
@@ -739,7 +739,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets atomicIndexId
     *
-    * @param string $atomicIndexId 原子指标ID，填写String类型替代Long类型。
+    * @param string $atomicIndexId 原子指标ID，ID字符串。
     *
     * @return $this
     */
@@ -751,7 +751,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeConditionId
-    *  时间限定ID，填写String类型替代Long类型。
+    *  时间限定ID，ID字符串。
     *
     * @return string|null
     */
@@ -763,7 +763,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets timeConditionId
     *
-    * @param string|null $timeConditionId 时间限定ID，填写String类型替代Long类型。
+    * @param string|null $timeConditionId 时间限定ID，ID字符串。
     *
     * @return $this
     */
@@ -775,7 +775,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeFieldId
-    *  时间限定关联字段ID，填写String类型替代Long类型。
+    *  时间限定关联字段ID，ID字符串。
     *
     * @return string|null
     */
@@ -787,7 +787,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets timeFieldId
     *
-    * @param string|null $timeFieldId 时间限定关联字段ID，填写String类型替代Long类型。
+    * @param string|null $timeFieldId 时间限定关联字段ID，ID字符串。
     *
     * @return $this
     */
@@ -1063,7 +1063,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets summaryTableId
-    *  汇总表ID，只读，填写String类型替代Long类型。
+    *  汇总表ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -1075,7 +1075,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets summaryTableId
     *
-    * @param string|null $summaryTableId 汇总表ID，只读，填写String类型替代Long类型。
+    * @param string|null $summaryTableId 汇总表ID，只读，ID字符串。
     *
     * @return $this
     */

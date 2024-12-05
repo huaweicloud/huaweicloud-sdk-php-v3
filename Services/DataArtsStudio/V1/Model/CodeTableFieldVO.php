@@ -20,8 +20,8 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  码表字段ID，填写String类型替代Long类型。
-    * codeTableId  所属码表ID，填写String类型替代Long类型。
+    * id  码表字段ID，ID字符串。
+    * codeTableId  所属码表ID，ID字符串。
     * ordinal  序号。
     * nameEn  字段名，英文。
     * nameCh  字段名，中文。
@@ -52,8 +52,8 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  码表字段ID，填写String类型替代Long类型。
-    * codeTableId  所属码表ID，填写String类型替代Long类型。
+    * id  码表字段ID，ID字符串。
+    * codeTableId  所属码表ID，ID字符串。
     * ordinal  序号。
     * nameEn  字段名，英文。
     * nameCh  字段名，中文。
@@ -105,8 +105,8 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  码表字段ID，填写String类型替代Long类型。
-    * codeTableId  所属码表ID，填写String类型替代Long类型。
+    * id  码表字段ID，ID字符串。
+    * codeTableId  所属码表ID，ID字符串。
     * ordinal  序号。
     * nameEn  字段名，英文。
     * nameCh  字段名，中文。
@@ -137,8 +137,8 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  码表字段ID，填写String类型替代Long类型。
-    * codeTableId  所属码表ID，填写String类型替代Long类型。
+    * id  码表字段ID，ID字符串。
+    * codeTableId  所属码表ID，ID字符串。
     * ordinal  序号。
     * nameEn  字段名，英文。
     * nameCh  字段名，中文。
@@ -169,8 +169,8 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  码表字段ID，填写String类型替代Long类型。
-    * codeTableId  所属码表ID，填写String类型替代Long类型。
+    * id  码表字段ID，ID字符串。
+    * codeTableId  所属码表ID，ID字符串。
     * ordinal  序号。
     * nameEn  字段名，英文。
     * nameCh  字段名，中文。
@@ -325,7 +325,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  码表字段ID，填写String类型替代Long类型。
+    *  码表字段ID，ID字符串。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 码表字段ID，填写String类型替代Long类型。
+    * @param string|null $id 码表字段ID，ID字符串。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeTableId
-    *  所属码表ID，填写String类型替代Long类型。
+    *  所属码表ID，ID字符串。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets codeTableId
     *
-    * @param string|null $codeTableId 所属码表ID，填写String类型替代Long类型。
+    * @param string|null $codeTableId 所属码表ID，ID字符串。
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  批量审批ID，填写String类型替代Long类型。
+    * id  批量审批ID，ID字符串。
     * tenantId  项目ID。
-    * groupId  组ID，填写String类型替代Long类型。
+    * groupId  组ID，ID字符串。
     * bizName  业务名。
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
     * operationType  类型。
     * bizInfo  业务详情。
@@ -60,11 +60,11 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  批量审批ID，填写String类型替代Long类型。
+    * id  批量审批ID，ID字符串。
     * tenantId  项目ID。
-    * groupId  组ID，填写String类型替代Long类型。
+    * groupId  组ID，ID字符串。
     * bizName  业务名。
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
     * operationType  类型。
     * bizInfo  业务详情。
@@ -121,11 +121,11 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  批量审批ID，填写String类型替代Long类型。
+    * id  批量审批ID，ID字符串。
     * tenantId  项目ID。
-    * groupId  组ID，填写String类型替代Long类型。
+    * groupId  组ID，ID字符串。
     * bizName  业务名。
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
     * operationType  类型。
     * bizInfo  业务详情。
@@ -161,11 +161,11 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  批量审批ID，填写String类型替代Long类型。
+    * id  批量审批ID，ID字符串。
     * tenantId  项目ID。
-    * groupId  组ID，填写String类型替代Long类型。
+    * groupId  组ID，ID字符串。
     * bizName  业务名。
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
     * operationType  类型。
     * bizInfo  业务详情。
@@ -201,11 +201,11 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  批量审批ID，填写String类型替代Long类型。
+    * id  批量审批ID，ID字符串。
     * tenantId  项目ID。
-    * groupId  组ID，填写String类型替代Long类型。
+    * groupId  组ID，ID字符串。
     * bizName  业务名。
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
     * operationType  类型。
     * bizInfo  业务详情。
@@ -364,7 +364,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  批量审批ID，填写String类型替代Long类型。
+    *  批量审批ID，ID字符串。
     *
     * @return string|null
     */
@@ -376,7 +376,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 批量审批ID，填写String类型替代Long类型。
+    * @param string|null $id 批量审批ID，ID字符串。
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  组ID，填写String类型替代Long类型。
+    *  组ID，ID字符串。
     *
     * @return string|null
     */
@@ -424,7 +424,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 组ID，填写String类型替代Long类型。
+    * @param string|null $groupId 组ID，ID字符串。
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务ID，填写String类型替代Long类型。
+    *  业务ID，ID字符串。
     *
     * @return string|null
     */
@@ -472,7 +472,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param string|null $bizId 业务ID，填写String类型替代Long类型。
+    * @param string|null $bizId 业务ID，ID字符串。
     *
     * @return $this
     */

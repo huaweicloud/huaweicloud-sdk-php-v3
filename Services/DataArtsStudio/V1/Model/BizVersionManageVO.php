@@ -20,9 +20,9 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID信息，填写String类型替代Long类型。
+    * id  ID信息，ID字符串。
     * bizType  bizType
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizInfo  业务对象信息。
     * status  status
     * bizVersion  业务版本，只读。
@@ -44,9 +44,9 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID信息，填写String类型替代Long类型。
+    * id  ID信息，ID字符串。
     * bizType  bizType
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizInfo  业务对象信息。
     * status  status
     * bizVersion  业务版本，只读。
@@ -89,9 +89,9 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID信息，填写String类型替代Long类型。
+    * id  ID信息，ID字符串。
     * bizType  bizType
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizInfo  业务对象信息。
     * status  status
     * bizVersion  业务版本，只读。
@@ -113,9 +113,9 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID信息，填写String类型替代Long类型。
+    * id  ID信息，ID字符串。
     * bizType  bizType
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizInfo  业务对象信息。
     * status  status
     * bizVersion  业务版本，只读。
@@ -137,9 +137,9 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID信息，填写String类型替代Long类型。
+    * id  ID信息，ID字符串。
     * bizType  bizType
-    * bizId  业务ID，填写String类型替代Long类型。
+    * bizId  业务ID，ID字符串。
     * bizInfo  业务对象信息。
     * status  status
     * bizVersion  业务版本，只读。
@@ -251,7 +251,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID信息，填写String类型替代Long类型。
+    *  ID信息，ID字符串。
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID信息，填写String类型替代Long类型。
+    * @param string|null $id ID信息，ID字符串。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务ID，填写String类型替代Long类型。
+    *  业务ID，ID字符串。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param string|null $bizId 业务ID，填写String类型替代Long类型。
+    * @param string|null $bizId 业务ID，ID字符串。
     *
     * @return $this
     */

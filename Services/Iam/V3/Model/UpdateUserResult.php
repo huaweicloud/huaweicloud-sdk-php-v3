@@ -34,6 +34,10 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * links  links
     * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
+    * createTime  UTC时间，格式为YYYY-MM-DDTHH:mm:ss.ssssss，日期和时间戳格式如：2023-06-28T08:56:33.710000。
+    * xdomainId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xdomainType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * isDomainOwner  IAM用户是否为账号管理员。
     *
     * @var string[]
     */
@@ -51,7 +55,11 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
             'email' => 'string',
             'id' => 'string',
             'links' => '\HuaweiCloud\SDK\Iam\V3\Model\LinksSelf',
-            'passwordExpiresAt' => 'string'
+            'passwordExpiresAt' => 'string',
+            'createTime' => 'string',
+            'xdomainId' => 'string',
+            'xdomainType' => 'string',
+            'isDomainOwner' => 'bool'
     ];
 
     /**
@@ -70,6 +78,10 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * links  links
     * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
+    * createTime  UTC时间，格式为YYYY-MM-DDTHH:mm:ss.ssssss，日期和时间戳格式如：2023-06-28T08:56:33.710000。
+    * xdomainId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xdomainType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * isDomainOwner  IAM用户是否为账号管理员。
     *
     * @var string[]
     */
@@ -87,7 +99,11 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
         'email' => null,
         'id' => null,
         'links' => null,
-        'passwordExpiresAt' => null
+        'passwordExpiresAt' => null,
+        'createTime' => null,
+        'xdomainId' => null,
+        'xdomainType' => null,
+        'isDomainOwner' => null
     ];
 
     /**
@@ -127,6 +143,10 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * links  links
     * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
+    * createTime  UTC时间，格式为YYYY-MM-DDTHH:mm:ss.ssssss，日期和时间戳格式如：2023-06-28T08:56:33.710000。
+    * xdomainId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xdomainType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * isDomainOwner  IAM用户是否为账号管理员。
     *
     * @var string[]
     */
@@ -144,7 +164,11 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
             'email' => 'email',
             'id' => 'id',
             'links' => 'links',
-            'passwordExpiresAt' => 'password_expires_at'
+            'passwordExpiresAt' => 'password_expires_at',
+            'createTime' => 'create_time',
+            'xdomainId' => 'xdomain_id',
+            'xdomainType' => 'xdomain_type',
+            'isDomainOwner' => 'is_domain_owner'
     ];
 
     /**
@@ -163,6 +187,10 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * links  links
     * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
+    * createTime  UTC时间，格式为YYYY-MM-DDTHH:mm:ss.ssssss，日期和时间戳格式如：2023-06-28T08:56:33.710000。
+    * xdomainId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xdomainType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * isDomainOwner  IAM用户是否为账号管理员。
     *
     * @var string[]
     */
@@ -180,7 +208,11 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
             'email' => 'setEmail',
             'id' => 'setId',
             'links' => 'setLinks',
-            'passwordExpiresAt' => 'setPasswordExpiresAt'
+            'passwordExpiresAt' => 'setPasswordExpiresAt',
+            'createTime' => 'setCreateTime',
+            'xdomainId' => 'setXdomainId',
+            'xdomainType' => 'setXdomainType',
+            'isDomainOwner' => 'setIsDomainOwner'
     ];
 
     /**
@@ -199,6 +231,10 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     * id  IAM用户ID。
     * links  links
     * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
+    * createTime  UTC时间，格式为YYYY-MM-DDTHH:mm:ss.ssssss，日期和时间戳格式如：2023-06-28T08:56:33.710000。
+    * xdomainId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xdomainType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * isDomainOwner  IAM用户是否为账号管理员。
     *
     * @var string[]
     */
@@ -216,7 +252,11 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
             'email' => 'getEmail',
             'id' => 'getId',
             'links' => 'getLinks',
-            'passwordExpiresAt' => 'getPasswordExpiresAt'
+            'passwordExpiresAt' => 'getPasswordExpiresAt',
+            'createTime' => 'getCreateTime',
+            'xdomainId' => 'getXdomainId',
+            'xdomainType' => 'getXdomainType',
+            'isDomainOwner' => 'getIsDomainOwner'
     ];
 
     /**
@@ -291,6 +331,10 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['passwordExpiresAt'] = isset($data['passwordExpiresAt']) ? $data['passwordExpiresAt'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['xdomainId'] = isset($data['xdomainId']) ? $data['xdomainId'] : null;
+        $this->container['xdomainType'] = isset($data['xdomainType']) ? $data['xdomainType'] : null;
+        $this->container['isDomainOwner'] = isset($data['isDomainOwner']) ? $data['isDomainOwner'] : null;
     }
 
     /**
@@ -663,6 +707,102 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     public function setPasswordExpiresAt($passwordExpiresAt)
     {
         $this->container['passwordExpiresAt'] = $passwordExpiresAt;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  UTC时间，格式为YYYY-MM-DDTHH:mm:ss.ssssss，日期和时间戳格式如：2023-06-28T08:56:33.710000。
+    *
+    * @return string|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param string|null $createTime UTC时间，格式为YYYY-MM-DDTHH:mm:ss.ssssss，日期和时间戳格式如：2023-06-28T08:56:33.710000。
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets xdomainId
+    *  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    *
+    * @return string|null
+    */
+    public function getXdomainId()
+    {
+        return $this->container['xdomainId'];
+    }
+
+    /**
+    * Sets xdomainId
+    *
+    * @param string|null $xdomainId IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    *
+    * @return $this
+    */
+    public function setXdomainId($xdomainId)
+    {
+        $this->container['xdomainId'] = $xdomainId;
+        return $this;
+    }
+
+    /**
+    * Gets xdomainType
+    *  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    *
+    * @return string|null
+    */
+    public function getXdomainType()
+    {
+        return $this->container['xdomainType'];
+    }
+
+    /**
+    * Sets xdomainType
+    *
+    * @param string|null $xdomainType IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    *
+    * @return $this
+    */
+    public function setXdomainType($xdomainType)
+    {
+        $this->container['xdomainType'] = $xdomainType;
+        return $this;
+    }
+
+    /**
+    * Gets isDomainOwner
+    *  IAM用户是否为账号管理员。
+    *
+    * @return bool|null
+    */
+    public function getIsDomainOwner()
+    {
+        return $this->container['isDomainOwner'];
+    }
+
+    /**
+    * Sets isDomainOwner
+    *
+    * @param bool|null $isDomainOwner IAM用户是否为账号管理员。
+    *
+    * @return $this
+    */
+    public function setIsDomainOwner($isDomainOwner)
+    {
+        $this->container['isDomainOwner'] = $isDomainOwner;
         return $this;
     }
 

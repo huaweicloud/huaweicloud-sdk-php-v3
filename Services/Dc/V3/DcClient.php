@@ -27,6 +27,574 @@ class DcClient extends Client
 
 
     /**
+     * 绑定GEIP操作
+     *
+     * 绑定GEIP操作
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function bindGlobalEips($request)
+    {
+        return $this->bindGlobalEipsWithHttpInfo($request);
+    }
+
+    public function bindGlobalEipsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/connect-gateways/{connect_gateway_id}/binding-global-eips';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['connectGatewayId'] !== null) {
+            $pathParams['connect_gateway_id'] = $localVarParams['connectGatewayId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                ['application/json; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\BindGlobalEipsResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\BindGlobalEipsRequest');
+    }
+
+    /**
+     * 查询已经绑定的GEIP列表
+     *
+     * 查询已经绑定的GEIP列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalEips($request)
+    {
+        return $this->listGlobalEipsWithHttpInfo($request);
+    }
+
+    public function listGlobalEipsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/connect-gateways/{connect_gateway_id}/binding-global-eips';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['pageReverse'] !== null) {
+            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['extFields'] !== null) {
+            $queryParams['ext_fields'] = $localVarParams['extFields'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['globalEipId'] !== null) {
+            $queryParams['global_eip_id'] = $localVarParams['globalEipId'];
+        }
+        if ($localVarParams['globalEipSegmentId'] !== null) {
+            $queryParams['global_eip_segment_id'] = $localVarParams['globalEipSegmentId'];
+        }
+        if ($localVarParams['connectGatewayId'] !== null) {
+            $pathParams['connect_gateway_id'] = $localVarParams['connectGatewayId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ListGlobalEipsResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ListGlobalEipsRequest');
+    }
+
+    /**
+     * 解绑GEIP
+     *
+     * 解绑GEIP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function unbindGlobalEips($request)
+    {
+        return $this->unbindGlobalEipsWithHttpInfo($request);
+    }
+
+    public function unbindGlobalEipsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/connect-gateways/{connect_gateway_id}/unbinding-global-eips';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['connectGatewayId'] !== null) {
+            $pathParams['connect_gateway_id'] = $localVarParams['connectGatewayId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                ['application/json; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\UnbindGlobalEipsResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\UnbindGlobalEipsRequest');
+    }
+
+    /**
+     * 创建互联网关
+     *
+     * 创建互联网关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createConnectGateway($request)
+    {
+        return $this->createConnectGatewayWithHttpInfo($request);
+    }
+
+    public function createConnectGatewayWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/connect-gateways';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\CreateConnectGatewayResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\CreateConnectGatewayRequest');
+    }
+
+    /**
+     * 删除互联网关
+     *
+     * 删除互联网关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteConnectGateway($request)
+    {
+        return $this->deleteConnectGatewayWithHttpInfo($request);
+    }
+
+    public function deleteConnectGatewayWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/connect-gateways/{connect_gateway_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['connectGatewayId'] !== null) {
+            $pathParams['connect_gateway_id'] = $localVarParams['connectGatewayId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\DeleteConnectGatewayResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\DeleteConnectGatewayRequest');
+    }
+
+    /**
+     * 查询互联网关列表信息
+     *
+     * 查询互联网关列表信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listConnectGateways($request)
+    {
+        return $this->listConnectGatewaysWithHttpInfo($request);
+    }
+
+    public function listConnectGatewaysWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/connect-gateways';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['pageReverse'] !== null) {
+            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['extFields'] !== null) {
+            $queryParams['ext_fields'] = $localVarParams['extFields'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ListConnectGatewaysResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ListConnectGatewaysRequest');
+    }
+
+    /**
+     * 查询互联网关详细信息
+     *
+     * 查询互联网关详细信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showConnectGateway($request)
+    {
+        return $this->showConnectGatewayWithHttpInfo($request);
+    }
+
+    public function showConnectGatewayWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/connect-gateways/{connect_gateway_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['connectGatewayId'] !== null) {
+            $pathParams['connect_gateway_id'] = $localVarParams['connectGatewayId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ShowConnectGatewayResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ShowConnectGatewayRequest');
+    }
+
+    /**
+     * 更新互联网关
+     *
+     * 更新互联网关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateConnectGateway($request)
+    {
+        return $this->updateConnectGatewayWithHttpInfo($request);
+    }
+
+    public function updateConnectGatewayWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/connect-gateways/{connect_gateway_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['connectGatewayId'] !== null) {
+            $pathParams['connect_gateway_id'] = $localVarParams['connectGatewayId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateConnectGatewayResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateConnectGatewayRequest');
+    }
+
+    /**
      * 创建托管专线连接
      *
      * 用于合作伙伴用户最终租户创建托管专线
@@ -655,6 +1223,1057 @@ class DcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateHostedDirectConnectResponse',
             $requestType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateHostedDirectConnectRequest');
+    }
+
+    /**
+     * 查询全球接入网关路由表
+     *
+     * 查询全球接入网关路由表，返回查询到的全球接入网关路由表的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGdgwRouteTables($request)
+    {
+        return $this->listGdgwRouteTablesWithHttpInfo($request);
+    }
+
+    public function listGdgwRouteTablesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/gdgw/{gdgw_id}/routetables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['extFields'] !== null) {
+            $queryParams['ext_fields'] = $localVarParams['extFields'];
+        }
+        if ($localVarParams['nexthop'] !== null) {
+            $queryParams['nexthop'] = $localVarParams['nexthop'];
+        }
+        if ($localVarParams['destination'] !== null) {
+            $queryParams['destination'] = $localVarParams['destination'];
+        }
+        if ($localVarParams['addressFamily'] !== null) {
+            $queryParams['address_family'] = $localVarParams['addressFamily'];
+        }
+        if ($localVarParams['gdgwId'] !== null) {
+            $pathParams['gdgw_id'] = $localVarParams['gdgwId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ListGdgwRouteTablesResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ListGdgwRouteTablesRequest');
+    }
+
+    /**
+     * 修改全球接入网关路由表
+     *
+     * 修改全球接入网关路由表，返回修改全球接入网关路由表的结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateGdgwRouteTable($request)
+    {
+        return $this->updateGdgwRouteTableWithHttpInfo($request);
+    }
+
+    public function updateGdgwRouteTableWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/gdgw/{gdgw_id}/routetables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['gdgwId'] !== null) {
+            $pathParams['gdgw_id'] = $localVarParams['gdgwId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                ['application/json; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateGdgwRouteTableResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateGdgwRouteTableRequest');
+    }
+
+    /**
+     * 创建全球接入网关
+     *
+     * 创建全球接入网关，返回创建全球接入网关的结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createGlobalDcGateway($request)
+    {
+        return $this->createGlobalDcGatewayWithHttpInfo($request);
+    }
+
+    public function createGlobalDcGatewayWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                ['application/json; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\CreateGlobalDcGatewayResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\CreateGlobalDcGatewayRequest');
+    }
+
+    /**
+     * 创建全球接入网关对等链接
+     *
+     * 创建全球接入网关对等链接，返回创建全球接入网关对等链接的结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPeerLink($request)
+    {
+        return $this->createPeerLinkWithHttpInfo($request);
+    }
+
+    public function createPeerLinkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}/peer-links';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                ['application/json; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\CreatePeerLinkResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\CreatePeerLinkRequest');
+    }
+
+    /**
+     * 删除全球接入网关
+     *
+     * 根据ID删除全球接入网关，返回删除全球接入网关的结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteGlobalDcGateway($request)
+    {
+        return $this->deleteGlobalDcGatewayWithHttpInfo($request);
+    }
+
+    public function deleteGlobalDcGatewayWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\DeleteGlobalDcGatewayResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\DeleteGlobalDcGatewayRequest');
+    }
+
+    /**
+     * 删除全球接入网关对等链接
+     *
+     * 根据ID删除全球接入网关对等链接，返回删除全球接入网关对等链接的结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deletePeerLink($request)
+    {
+        return $this->deletePeerLinkWithHttpInfo($request);
+    }
+
+    public function deletePeerLinkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}/peer-links/{peer_link_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($localVarParams['peerLinkId'] !== null) {
+            $pathParams['peer_link_id'] = $localVarParams['peerLinkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\DeletePeerLinkResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\DeletePeerLinkRequest');
+    }
+
+    /**
+     * 查询全球接入网关列表
+     *
+     * 查询 全球接入网关列表，返回列表中包含全球接入网关的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalDcGateway($request)
+    {
+        return $this->listGlobalDcGatewayWithHttpInfo($request);
+    }
+
+    public function listGlobalDcGatewayWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['hostingId'] !== null) {
+            $queryParams['hosting_id'] = $localVarParams['hostingId'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['globalCenterNetworkId'] !== null) {
+            $queryParams['global_center_network_id'] = $localVarParams['globalCenterNetworkId'];
+        }
+        if ($localVarParams['siteNetworkId'] !== null) {
+            $queryParams['site_network_id'] = $localVarParams['siteNetworkId'];
+        }
+        if ($localVarParams['cloudConnectionId'] !== null) {
+            $queryParams['cloud_connection_id'] = $localVarParams['cloudConnectionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ListGlobalDcGatewayResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ListGlobalDcGatewayRequest');
+    }
+
+    /**
+     * 查询全球接入网关对等链接
+     *
+     * 查询全球接入网关对等链接，返回查询到的全球接入网关对等链接的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPeerLinks($request)
+    {
+        return $this->listPeerLinksWithHttpInfo($request);
+    }
+
+    public function listPeerLinksWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}/peer-links';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['pageReverse'] !== null) {
+            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['extFields'] !== null) {
+            $queryParams['ext_fields'] = $localVarParams['extFields'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ListPeerLinksResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ListPeerLinksRequest');
+    }
+
+    /**
+     * 查询RMS全球接入网关
+     *
+     * 根据类型、domain_id、region_id,资源类型查询资源，返回查询到的资源的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRmsGlobalDcGateway($request)
+    {
+        return $this->listRmsGlobalDcGatewayWithHttpInfo($request);
+    }
+
+    public function listRmsGlobalDcGatewayWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/providers/{rp_name}/domains/{domain_id}/regions/{region_id}/{resource_type}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['pageReverse'] !== null) {
+            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['extFields'] !== null) {
+            $queryParams['ext_fields'] = $localVarParams['extFields'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['globalCenterNetworkId'] !== null) {
+            $queryParams['global_center_network_id'] = $localVarParams['globalCenterNetworkId'];
+        }
+        if ($localVarParams['siteNetworkId'] !== null) {
+            $queryParams['site_network_id'] = $localVarParams['siteNetworkId'];
+        }
+        if ($localVarParams['cloudConnectionId'] !== null) {
+            $queryParams['cloud_connection_id'] = $localVarParams['cloudConnectionId'];
+        }
+        if ($localVarParams['rpName'] !== null) {
+            $pathParams['rp_name'] = $localVarParams['rpName'];
+        }
+        if ($localVarParams['domainId'] !== null) {
+            $pathParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $pathParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ListRmsGlobalDcGatewayResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ListRmsGlobalDcGatewayRequest');
+    }
+
+    /**
+     * 查询全球接入网关详情
+     *
+     * 根据ID查询全球接入网关，返回查询到的全球接入网关的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showGlobalDcGateway($request)
+    {
+        return $this->showGlobalDcGatewayWithHttpInfo($request);
+    }
+
+    public function showGlobalDcGatewayWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['extFields'] !== null) {
+            $queryParams['ext_fields'] = $localVarParams['extFields'];
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ShowGlobalDcGatewayResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ShowGlobalDcGatewayRequest');
+    }
+
+    /**
+     * 查询全球接入网关对等链接
+     *
+     * 根据ID查询全球接入网关对等链接，返回查询到的全球接入网关对等链接的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showPeerLink($request)
+    {
+        return $this->showPeerLinkWithHttpInfo($request);
+    }
+
+    public function showPeerLinkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}/peer-links/{peer_link_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['extFields'] !== null) {
+            $queryParams['ext_fields'] = $localVarParams['extFields'];
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($localVarParams['peerLinkId'] !== null) {
+            $pathParams['peer_link_id'] = $localVarParams['peerLinkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ShowPeerLinkResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ShowPeerLinkRequest');
+    }
+
+    /**
+     * 查询RMS全球接入网关
+     *
+     * 根据类型、domain_id、region_id,资源类型，全球接入网关ID查询资源,返回查询到的资源的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRmsGlobalDcGateway($request)
+    {
+        return $this->showRmsGlobalDcGatewayWithHttpInfo($request);
+    }
+
+    public function showRmsGlobalDcGatewayWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/providers/{rp_name}/domains/{domain_id}/regions/{region_id}/{resource_type}/{global_dc_gateway_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['extFields'] !== null) {
+            $queryParams['ext_fields'] = $localVarParams['extFields'];
+        }
+        if ($localVarParams['rpName'] !== null) {
+            $pathParams['rp_name'] = $localVarParams['rpName'];
+        }
+        if ($localVarParams['domainId'] !== null) {
+            $pathParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $pathParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ShowRmsGlobalDcGatewayResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ShowRmsGlobalDcGatewayRequest');
+    }
+
+    /**
+     * 修改全球接入网关
+     *
+     * 根据ID修改全球接入网关，返回修改全球接入网关的结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateGlobalDcGateway($request)
+    {
+        return $this->updateGlobalDcGatewayWithHttpInfo($request);
+    }
+
+    public function updateGlobalDcGatewayWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                ['application/json; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateGlobalDcGatewayResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateGlobalDcGatewayRequest');
+    }
+
+    /**
+     * 修改全球接入网关对等链接
+     *
+     * 根据ID修改全球接入网关对等链接，返回修改全球接入网关对等链接的结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updatePeerLink($request)
+    {
+        return $this->updatePeerLinkWithHttpInfo($request);
+    }
+
+    public function updatePeerLinkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}/peer-links/{peer_link_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($localVarParams['peerLinkId'] !== null) {
+            $pathParams['peer_link_id'] = $localVarParams['peerLinkId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                ['application/json; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\UpdatePeerLinkResponse',
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\UpdatePeerLinkRequest');
     }
 
     /**

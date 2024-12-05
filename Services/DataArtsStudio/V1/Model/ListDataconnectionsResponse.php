@@ -23,6 +23,7 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * count  当前分页返回记录数
     * maxRecords  返回记录总数，一个工作空间最多只能创建50条数据连接
+    * totalSize  返回当前空间内创建连接的总数
     * dataConnectionLists  返回数据连接列表
     *
     * @var string[]
@@ -30,6 +31,7 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'count' => 'int',
             'maxRecords' => 'int',
+            'totalSize' => 'int',
             'dataConnectionLists' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApigDataSourceView[]'
     ];
 
@@ -37,6 +39,7 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * count  当前分页返回记录数
     * maxRecords  返回记录总数，一个工作空间最多只能创建50条数据连接
+    * totalSize  返回当前空间内创建连接的总数
     * dataConnectionLists  返回数据连接列表
     *
     * @var string[]
@@ -44,6 +47,7 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'count' => null,
         'maxRecords' => null,
+        'totalSize' => null,
         'dataConnectionLists' => null
     ];
 
@@ -72,6 +76,7 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * count  当前分页返回记录数
     * maxRecords  返回记录总数，一个工作空间最多只能创建50条数据连接
+    * totalSize  返回当前空间内创建连接的总数
     * dataConnectionLists  返回数据连接列表
     *
     * @var string[]
@@ -79,6 +84,7 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'count' => 'count',
             'maxRecords' => 'max_records',
+            'totalSize' => 'total_size',
             'dataConnectionLists' => 'data_connection_lists'
     ];
 
@@ -86,6 +92,7 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * count  当前分页返回记录数
     * maxRecords  返回记录总数，一个工作空间最多只能创建50条数据连接
+    * totalSize  返回当前空间内创建连接的总数
     * dataConnectionLists  返回数据连接列表
     *
     * @var string[]
@@ -93,6 +100,7 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'count' => 'setCount',
             'maxRecords' => 'setMaxRecords',
+            'totalSize' => 'setTotalSize',
             'dataConnectionLists' => 'setDataConnectionLists'
     ];
 
@@ -100,6 +108,7 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * count  当前分页返回记录数
     * maxRecords  返回记录总数，一个工作空间最多只能创建50条数据连接
+    * totalSize  返回当前空间内创建连接的总数
     * dataConnectionLists  返回数据连接列表
     *
     * @var string[]
@@ -107,6 +116,7 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'count' => 'getCount',
             'maxRecords' => 'getMaxRecords',
+            'totalSize' => 'getTotalSize',
             'dataConnectionLists' => 'getDataConnectionLists'
     ];
 
@@ -170,6 +180,7 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['maxRecords'] = isset($data['maxRecords']) ? $data['maxRecords'] : null;
+        $this->container['totalSize'] = isset($data['totalSize']) ? $data['totalSize'] : null;
         $this->container['dataConnectionLists'] = isset($data['dataConnectionLists']) ? $data['dataConnectionLists'] : null;
     }
 
@@ -192,6 +203,12 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['maxRecords']) && ($this->container['maxRecords'] < 50)) {
                 $invalidProperties[] = "invalid value for 'maxRecords', must be bigger than or equal to 50.";
+            }
+            if (!is_null($this->container['totalSize']) && ($this->container['totalSize'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'totalSize', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['totalSize']) && ($this->container['totalSize'] < 0)) {
+                $invalidProperties[] = "invalid value for 'totalSize', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -252,6 +269,30 @@ class ListDataconnectionsResponse implements ModelInterface, ArrayAccess
     public function setMaxRecords($maxRecords)
     {
         $this->container['maxRecords'] = $maxRecords;
+        return $this;
+    }
+
+    /**
+    * Gets totalSize
+    *  返回当前空间内创建连接的总数
+    *
+    * @return int|null
+    */
+    public function getTotalSize()
+    {
+        return $this->container['totalSize'];
+    }
+
+    /**
+    * Sets totalSize
+    *
+    * @param int|null $totalSize 返回当前空间内创建连接的总数
+    *
+    * @return $this
+    */
+    public function setTotalSize($totalSize)
+    {
+        $this->container['totalSize'] = $totalSize;
         return $this;
     }
 

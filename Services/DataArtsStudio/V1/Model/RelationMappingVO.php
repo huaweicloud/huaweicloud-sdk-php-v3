@@ -20,10 +20,10 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * relationId  关系ID，填写String类型替代Long类型。
-    * sourceFieldId  源字段ID，填写String类型替代Long类型。
-    * targetFieldId  目标字段ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * relationId  关系ID，ID字符串。
+    * sourceFieldId  源字段ID，ID字符串。
+    * targetFieldId  目标字段ID，ID字符串。
     * sourceFieldName  源表名称。
     * targetFieldName  目的表名称。
     * createBy  创建人。
@@ -48,10 +48,10 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，填写String类型替代Long类型。
-    * relationId  关系ID，填写String类型替代Long类型。
-    * sourceFieldId  源字段ID，填写String类型替代Long类型。
-    * targetFieldId  目标字段ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * relationId  关系ID，ID字符串。
+    * sourceFieldId  源字段ID，ID字符串。
+    * targetFieldId  目标字段ID，ID字符串。
     * sourceFieldName  源表名称。
     * targetFieldName  目的表名称。
     * createBy  创建人。
@@ -97,10 +97,10 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，填写String类型替代Long类型。
-    * relationId  关系ID，填写String类型替代Long类型。
-    * sourceFieldId  源字段ID，填写String类型替代Long类型。
-    * targetFieldId  目标字段ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * relationId  关系ID，ID字符串。
+    * sourceFieldId  源字段ID，ID字符串。
+    * targetFieldId  目标字段ID，ID字符串。
     * sourceFieldName  源表名称。
     * targetFieldName  目的表名称。
     * createBy  创建人。
@@ -125,10 +125,10 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，填写String类型替代Long类型。
-    * relationId  关系ID，填写String类型替代Long类型。
-    * sourceFieldId  源字段ID，填写String类型替代Long类型。
-    * targetFieldId  目标字段ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * relationId  关系ID，ID字符串。
+    * sourceFieldId  源字段ID，ID字符串。
+    * targetFieldId  目标字段ID，ID字符串。
     * sourceFieldName  源表名称。
     * targetFieldName  目的表名称。
     * createBy  创建人。
@@ -153,10 +153,10 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，填写String类型替代Long类型。
-    * relationId  关系ID，填写String类型替代Long类型。
-    * sourceFieldId  源字段ID，填写String类型替代Long类型。
-    * targetFieldId  目标字段ID，填写String类型替代Long类型。
+    * id  编码，ID字符串。
+    * relationId  关系ID，ID字符串。
+    * sourceFieldId  源字段ID，ID字符串。
+    * targetFieldId  目标字段ID，ID字符串。
     * sourceFieldName  源表名称。
     * targetFieldName  目的表名称。
     * createBy  创建人。
@@ -273,7 +273,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，填写String类型替代Long类型。
+    *  编码，ID字符串。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码，填写String类型替代Long类型。
+    * @param string|null $id 编码，ID字符串。
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets relationId
-    *  关系ID，填写String类型替代Long类型。
+    *  关系ID，ID字符串。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets relationId
     *
-    * @param string|null $relationId 关系ID，填写String类型替代Long类型。
+    * @param string|null $relationId 关系ID，ID字符串。
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceFieldId
-    *  源字段ID，填写String类型替代Long类型。
+    *  源字段ID，ID字符串。
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets sourceFieldId
     *
-    * @param string|null $sourceFieldId 源字段ID，填写String类型替代Long类型。
+    * @param string|null $sourceFieldId 源字段ID，ID字符串。
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetFieldId
-    *  目标字段ID，填写String类型替代Long类型。
+    *  目标字段ID，ID字符串。
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetFieldId
     *
-    * @param string|null $targetFieldId 目标字段ID，填写String类型替代Long类型。
+    * @param string|null $targetFieldId 目标字段ID，ID字符串。
     *
     * @return $this
     */

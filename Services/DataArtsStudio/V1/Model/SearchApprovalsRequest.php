@@ -23,7 +23,7 @@ class SearchApprovalsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * bizId  业务定义ID，填写String类型替代Long类型。
+    * bizId  业务定义ID，ID字符串。
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
@@ -61,7 +61,7 @@ class SearchApprovalsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * bizId  业务定义ID，填写String类型替代Long类型。
+    * bizId  业务定义ID，ID字符串。
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
@@ -120,7 +120,7 @@ class SearchApprovalsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * bizId  业务定义ID，填写String类型替代Long类型。
+    * bizId  业务定义ID，ID字符串。
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
@@ -158,7 +158,7 @@ class SearchApprovalsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * bizId  业务定义ID，填写String类型替代Long类型。
+    * bizId  业务定义ID，ID字符串。
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
@@ -196,7 +196,7 @@ class SearchApprovalsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * bizId  业务定义ID，填写String类型替代Long类型。
+    * bizId  业务定义ID，ID字符串。
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
@@ -507,7 +507,7 @@ class SearchApprovalsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务定义ID，填写String类型替代Long类型。
+    *  业务定义ID，ID字符串。
     *
     * @return string|null
     */
@@ -519,7 +519,7 @@ class SearchApprovalsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param string|null $bizId 业务定义ID，填写String类型替代Long类型。
+    * @param string|null $bizId 业务定义ID，ID字符串。
     *
     * @return $this
     */

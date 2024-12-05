@@ -33,7 +33,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
-    * refId  关联的主题ID，填写String类型替代Long类型。
+    * refId  关联的主题ID，ID字符串。
     * children  子目录。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
             'prevId' => 'string',
             'rootId' => 'string',
             'qualifiedName' => 'string',
-            'fromPublic' => 'string',
+            'fromPublic' => 'bool',
             'createTime' => '\DateTime',
             'updateTime' => '\DateTime',
             'createBy' => 'string',
@@ -71,7 +71,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
-    * refId  关联的主题ID，填写String类型替代Long类型。
+    * refId  关联的主题ID，ID字符串。
     * children  子目录。
     *
     * @var string[]
@@ -130,7 +130,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
-    * refId  关联的主题ID，填写String类型替代Long类型。
+    * refId  关联的主题ID，ID字符串。
     * children  子目录。
     *
     * @var string[]
@@ -168,7 +168,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
-    * refId  关联的主题ID，填写String类型替代Long类型。
+    * refId  关联的主题ID，ID字符串。
     * children  子目录。
     *
     * @var string[]
@@ -206,7 +206,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人，只读。
     * updateBy  更新人，只读。
-    * refId  关联的主题ID，填写String类型替代Long类型。
+    * refId  关联的主题ID，ID字符串。
     * children  子目录。
     *
     * @var string[]
@@ -566,7 +566,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     * Gets fromPublic
     *  是否来自公共层，只读。
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getFromPublic()
     {
@@ -576,7 +576,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets fromPublic
     *
-    * @param string|null $fromPublic 是否来自公共层，只读。
+    * @param bool|null $fromPublic 是否来自公共层，只读。
     *
     * @return $this
     */
@@ -684,7 +684,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets refId
-    *  关联的主题ID，填写String类型替代Long类型。
+    *  关联的主题ID，ID字符串。
     *
     * @return string|null
     */
@@ -696,7 +696,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets refId
     *
-    * @param string|null $refId 关联的主题ID，填写String类型替代Long类型。
+    * @param string|null $refId 关联的主题ID，ID字符串。
     *
     * @return $this
     */

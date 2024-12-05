@@ -32,6 +32,7 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
     * createUser  数据连接创建者
     * createTime  数据连接创建时间，时间戳
     * dwCatagory  数据连接类别
+    * description  连接描述信息
     * updateType  0：创建 1：更新。默认为0
     *
     * @var string[]
@@ -48,6 +49,7 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
             'createUser' => 'string',
             'createTime' => 'float',
             'dwCatagory' => 'string',
+            'description' => 'string',
             'updateType' => 'int'
     ];
 
@@ -64,6 +66,7 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
     * createUser  数据连接创建者
     * createTime  数据连接创建时间，时间戳
     * dwCatagory  数据连接类别
+    * description  连接描述信息
     * updateType  0：创建 1：更新。默认为0
     *
     * @var string[]
@@ -80,6 +83,7 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
         'createUser' => null,
         'createTime' => null,
         'dwCatagory' => null,
+        'description' => null,
         'updateType' => null
     ];
 
@@ -117,6 +121,7 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
     * createUser  数据连接创建者
     * createTime  数据连接创建时间，时间戳
     * dwCatagory  数据连接类别
+    * description  连接描述信息
     * updateType  0：创建 1：更新。默认为0
     *
     * @var string[]
@@ -133,6 +138,7 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
             'createUser' => 'create_user',
             'createTime' => 'create_time',
             'dwCatagory' => 'dw_catagory',
+            'description' => 'description',
             'updateType' => 'update_type'
     ];
 
@@ -149,6 +155,7 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
     * createUser  数据连接创建者
     * createTime  数据连接创建时间，时间戳
     * dwCatagory  数据连接类别
+    * description  连接描述信息
     * updateType  0：创建 1：更新。默认为0
     *
     * @var string[]
@@ -165,6 +172,7 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
             'createUser' => 'setCreateUser',
             'createTime' => 'setCreateTime',
             'dwCatagory' => 'setDwCatagory',
+            'description' => 'setDescription',
             'updateType' => 'setUpdateType'
     ];
 
@@ -181,6 +189,7 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
     * createUser  数据连接创建者
     * createTime  数据连接创建时间，时间戳
     * dwCatagory  数据连接类别
+    * description  连接描述信息
     * updateType  0：创建 1：更新。默认为0
     *
     * @var string[]
@@ -197,6 +206,7 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
             'createUser' => 'getCreateUser',
             'createTime' => 'getCreateTime',
             'dwCatagory' => 'getDwCatagory',
+            'description' => 'getDescription',
             'updateType' => 'getUpdateType'
     ];
 
@@ -269,6 +279,7 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
         $this->container['createUser'] = isset($data['createUser']) ? $data['createUser'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['dwCatagory'] = isset($data['dwCatagory']) ? $data['dwCatagory'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['updateType'] = isset($data['updateType']) ? $data['updateType'] : null;
     }
 
@@ -339,6 +350,12 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['dwCatagory']) && (mb_strlen($this->container['dwCatagory']) < 0)) {
                 $invalidProperties[] = "invalid value for 'dwCatagory', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 4096.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['updateType']) && ($this->container['updateType'] > 1)) {
                 $invalidProperties[] = "invalid value for 'updateType', must be smaller than or equal to 1.";
@@ -621,6 +638,30 @@ class ShowDataconnectionResponse implements ModelInterface, ArrayAccess
     public function setDwCatagory($dwCatagory)
     {
         $this->container['dwCatagory'] = $dwCatagory;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  连接描述信息
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 连接描述信息
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

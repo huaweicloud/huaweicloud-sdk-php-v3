@@ -23,15 +23,15 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     * id  表ID
     * tbName  表名称。
     * tbLogicName  逻辑实体名。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * createBy  创建人。
     * description  描述。
-    * dimensionId  所属维度ID，填写String类型替代Long类型。
+    * dimensionId  所属维度ID，ID字符串。
     * owner  资产责任人。
     * dimensionType  维度类型。 枚举值：   - COMMON: 普通维度   - LOOKUP: 码表维度   - HIERARCHIES: 层级维度
-    * codeTableId  引用码表ID，填写String类型替代Long类型。
+    * codeTableId  引用码表ID，ID字符串。
     * codeTable  codeTable
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
     * dwId  数据连接ID。
@@ -69,13 +69,13 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     * summaryStatus  summaryStatus
     * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * obsLocation  外表路径
     * configs  其他配置
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -149,15 +149,15 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     * id  表ID
     * tbName  表名称。
     * tbLogicName  逻辑实体名。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * createBy  创建人。
     * description  描述。
-    * dimensionId  所属维度ID，填写String类型替代Long类型。
+    * dimensionId  所属维度ID，ID字符串。
     * owner  资产责任人。
     * dimensionType  维度类型。 枚举值：   - COMMON: 普通维度   - LOOKUP: 码表维度   - HIERARCHIES: 层级维度
-    * codeTableId  引用码表ID，填写String类型替代Long类型。
+    * codeTableId  引用码表ID，ID字符串。
     * codeTable  codeTable
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
     * dwId  数据连接ID。
@@ -195,13 +195,13 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     * summaryStatus  summaryStatus
     * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * obsLocation  外表路径
     * configs  其他配置
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -296,15 +296,15 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     * id  表ID
     * tbName  表名称。
     * tbLogicName  逻辑实体名。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * createBy  创建人。
     * description  描述。
-    * dimensionId  所属维度ID，填写String类型替代Long类型。
+    * dimensionId  所属维度ID，ID字符串。
     * owner  资产责任人。
     * dimensionType  维度类型。 枚举值：   - COMMON: 普通维度   - LOOKUP: 码表维度   - HIERARCHIES: 层级维度
-    * codeTableId  引用码表ID，填写String类型替代Long类型。
+    * codeTableId  引用码表ID，ID字符串。
     * codeTable  codeTable
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
     * dwId  数据连接ID。
@@ -342,13 +342,13 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     * summaryStatus  summaryStatus
     * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * obsLocation  外表路径
     * configs  其他配置
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -422,15 +422,15 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     * id  表ID
     * tbName  表名称。
     * tbLogicName  逻辑实体名。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * createBy  创建人。
     * description  描述。
-    * dimensionId  所属维度ID，填写String类型替代Long类型。
+    * dimensionId  所属维度ID，ID字符串。
     * owner  资产责任人。
     * dimensionType  维度类型。 枚举值：   - COMMON: 普通维度   - LOOKUP: 码表维度   - HIERARCHIES: 层级维度
-    * codeTableId  引用码表ID，填写String类型替代Long类型。
+    * codeTableId  引用码表ID，ID字符串。
     * codeTable  codeTable
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
     * dwId  数据连接ID。
@@ -468,13 +468,13 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     * summaryStatus  summaryStatus
     * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * obsLocation  外表路径
     * configs  其他配置
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -548,15 +548,15 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     * id  表ID
     * tbName  表名称。
     * tbLogicName  逻辑实体名。
-    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，ID字符串。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID，填写String类型替代Long类型。
+    * l3Id  业务对象ID，ID字符串。
     * createBy  创建人。
     * description  描述。
-    * dimensionId  所属维度ID，填写String类型替代Long类型。
+    * dimensionId  所属维度ID，ID字符串。
     * owner  资产责任人。
     * dimensionType  维度类型。 枚举值：   - COMMON: 普通维度   - LOOKUP: 码表维度   - HIERARCHIES: 层级维度
-    * codeTableId  引用码表ID，填写String类型替代Long类型。
+    * codeTableId  引用码表ID，ID字符串。
     * codeTable  codeTable
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
     * dwId  数据连接ID。
@@ -594,13 +594,13 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     * summaryStatus  summaryStatus
     * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * qualityId  质量ID，填写String类型替代Long类型。
+    * qualityId  质量ID，ID字符串。
     * alias  别名。
     * selfDefinedFields  自定义项。
     * obsLocation  外表路径
     * configs  其他配置
-    * devVersion  开发环境版本，填写String类型替代Long类型。
-    * prodVersion  生产环境版本，填写String类型替代Long类型
+    * devVersion  开发环境版本，ID字符串。
+    * prodVersion  生产环境版本，ID字符串
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
@@ -956,7 +956,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID，只读，填写String类型替代Long类型。
+    *  主题域分组ID，只读，ID字符串。
     *
     * @return string|null
     */
@@ -968,7 +968,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param string|null $l1Id 主题域分组ID，只读，填写String类型替代Long类型。
+    * @param string|null $l1Id 主题域分组ID，只读，ID字符串。
     *
     * @return $this
     */
@@ -1004,7 +1004,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象ID，填写String类型替代Long类型。
+    *  业务对象ID，ID字符串。
     *
     * @return string|null
     */
@@ -1016,7 +1016,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string|null $l3Id 业务对象ID，填写String类型替代Long类型。
+    * @param string|null $l3Id 业务对象ID，ID字符串。
     *
     * @return $this
     */
@@ -1076,7 +1076,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionId
-    *  所属维度ID，填写String类型替代Long类型。
+    *  所属维度ID，ID字符串。
     *
     * @return string|null
     */
@@ -1088,7 +1088,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionId
     *
-    * @param string|null $dimensionId 所属维度ID，填写String类型替代Long类型。
+    * @param string|null $dimensionId 所属维度ID，ID字符串。
     *
     * @return $this
     */
@@ -1148,7 +1148,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeTableId
-    *  引用码表ID，填写String类型替代Long类型。
+    *  引用码表ID，ID字符串。
     *
     * @return string|null
     */
@@ -1160,7 +1160,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets codeTableId
     *
-    * @param string|null $codeTableId 引用码表ID，填写String类型替代Long类型。
+    * @param string|null $codeTableId 引用码表ID，ID字符串。
     *
     * @return $this
     */
@@ -2060,7 +2060,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityId
-    *  质量ID，填写String类型替代Long类型。
+    *  质量ID，ID字符串。
     *
     * @return string|null
     */
@@ -2072,7 +2072,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityId
     *
-    * @param string|null $qualityId 质量ID，填写String类型替代Long类型。
+    * @param string|null $qualityId 质量ID，ID字符串。
     *
     * @return $this
     */
@@ -2180,7 +2180,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets devVersion
-    *  开发环境版本，填写String类型替代Long类型。
+    *  开发环境版本，ID字符串。
     *
     * @return string|null
     */
@@ -2192,7 +2192,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets devVersion
     *
-    * @param string|null $devVersion 开发环境版本，填写String类型替代Long类型。
+    * @param string|null $devVersion 开发环境版本，ID字符串。
     *
     * @return $this
     */
@@ -2204,7 +2204,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets prodVersion
-    *  生产环境版本，填写String类型替代Long类型
+    *  生产环境版本，ID字符串
     *
     * @return string|null
     */
@@ -2216,7 +2216,7 @@ class DimensionLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets prodVersion
     *
-    * @param string|null $prodVersion 生产环境版本，填写String类型替代Long类型
+    * @param string|null $prodVersion 生产环境版本，ID字符串
     *
     * @return $this
     */

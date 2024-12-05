@@ -4953,6 +4953,80 @@ class MeetingAsyncClient extends Client
     }
 
     /**
+     * 查询指定会议的在线与会者信息
+     *
+     * 该接口用于查询指定会议的在线与会者信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listOnlineConfAttendeeAsync($request)
+    {
+        return $this->listOnlineConfAttendeeAsyncWithHttpInfo($request);
+    }
+    
+    public function listOnlineConfAttendeeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/mmc/management/conferences/online/conf-attendee';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['confId'] !== null) {
+            $queryParams['conf_id'] = $localVarParams['confId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['searchKey'] !== null) {
+            $queryParams['search_key'] = $localVarParams['searchKey'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\ListOnlineConfAttendeeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\ListOnlineConfAttendeeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询即将召开的网络研讨会列表
      *
      * 该接口用于查询即将召开的网络研讨会。管理员可查询企业内即将召开网络研讨会，非管理员可查询自己预订的即将召开的网络研讨会。
