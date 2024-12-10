@@ -440,6 +440,77 @@ class SwrAsyncClient extends Client
     }
 
     /**
+     * 创建镜像tag
+     *
+     * 创建镜像tag
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createRepoTagAsync($request)
+    {
+        return $this->createRepoTagAsyncWithHttpInfo($request);
+    }
+    
+    public function createRepoTagAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/manage/namespaces/{namespace}/repos/{repository}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $pathParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['repository'] !== null) {
+            $pathParams['repository'] = $localVarParams['repository'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\CreateRepoTagResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\CreateRepoTagRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建镜像老化规则
      *
      * 创建镜像老化规则
@@ -2147,6 +2218,136 @@ class SwrAsyncClient extends Client
     }
 
     /**
+     * 获取租户总览信息
+     *
+     * 获取租户总览信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainOverviewAsync($request)
+    {
+        return $this->showDomainOverviewAsyncWithHttpInfo($request);
+    }
+    
+    public function showDomainOverviewAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/manage/overview';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ShowDomainOverviewResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ShowDomainOverviewRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取租户资源统计信息
+     *
+     * 获取租户资源统计信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainResourceReportsAsync($request)
+    {
+        return $this->showDomainResourceReportsAsyncWithHttpInfo($request);
+    }
+    
+    public function showDomainResourceReportsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/manage/reports/{resource_type}/{frequency}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['frequency'] !== null) {
+            $pathParams['frequency'] = $localVarParams['frequency'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ShowDomainResourceReportsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ShowDomainResourceReportsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取组织详情
      *
      * 获取组织详情
@@ -2412,6 +2613,68 @@ class SwrAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ShowRetentionResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ShowRetentionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询服务特性开关信息
+     *
+     * 查询服务特性开关信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showShareFeatureGatesAsync($request)
+    {
+        return $this->showShareFeatureGatesAsyncWithHttpInfo($request);
+    }
+    
+    public function showShareFeatureGatesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/manage/projects/{project_id}/feature-gates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ShowShareFeatureGatesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ShowShareFeatureGatesRequest',
             $asyncRequest = true);
     }
 

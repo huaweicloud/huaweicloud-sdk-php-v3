@@ -27,6 +27,7 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
     * microserviceVersion  VPC通道后端服务器组的版本，仅VPC通道类型为微服务时支持。
     * microservicePort  VPC通道后端服务器组的端口号，仅VPC通道类型为微服务时支持。端口号为0时后端服务器组下的所有地址沿用原来负载端口继承逻辑。
     * microserviceLabels  VPC通道后端服务器组的标签，仅VPC通道类型为微服务时支持。
+    * referenceVpcChannelId  引用的负载通道编号，仅VPC通道类型为引用类型（vpc_channel_type=reference）时支持。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
             'dictCode' => 'string',
             'microserviceVersion' => 'string',
             'microservicePort' => 'int',
-            'microserviceLabels' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroserviceLabel[]'
+            'microserviceLabels' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroserviceLabel[]',
+            'referenceVpcChannelId' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
     * microserviceVersion  VPC通道后端服务器组的版本，仅VPC通道类型为微服务时支持。
     * microservicePort  VPC通道后端服务器组的端口号，仅VPC通道类型为微服务时支持。端口号为0时后端服务器组下的所有地址沿用原来负载端口继承逻辑。
     * microserviceLabels  VPC通道后端服务器组的标签，仅VPC通道类型为微服务时支持。
+    * referenceVpcChannelId  引用的负载通道编号，仅VPC通道类型为引用类型（vpc_channel_type=reference）时支持。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
         'dictCode' => null,
         'microserviceVersion' => null,
         'microservicePort' => 'int32',
-        'microserviceLabels' => null
+        'microserviceLabels' => null,
+        'referenceVpcChannelId' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
     * microserviceVersion  VPC通道后端服务器组的版本，仅VPC通道类型为微服务时支持。
     * microservicePort  VPC通道后端服务器组的端口号，仅VPC通道类型为微服务时支持。端口号为0时后端服务器组下的所有地址沿用原来负载端口继承逻辑。
     * microserviceLabels  VPC通道后端服务器组的标签，仅VPC通道类型为微服务时支持。
+    * referenceVpcChannelId  引用的负载通道编号，仅VPC通道类型为引用类型（vpc_channel_type=reference）时支持。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
             'dictCode' => 'dict_code',
             'microserviceVersion' => 'microservice_version',
             'microservicePort' => 'microservice_port',
-            'microserviceLabels' => 'microservice_labels'
+            'microserviceLabels' => 'microservice_labels',
+            'referenceVpcChannelId' => 'reference_vpc_channel_id'
     ];
 
     /**
@@ -114,6 +120,7 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
     * microserviceVersion  VPC通道后端服务器组的版本，仅VPC通道类型为微服务时支持。
     * microservicePort  VPC通道后端服务器组的端口号，仅VPC通道类型为微服务时支持。端口号为0时后端服务器组下的所有地址沿用原来负载端口继承逻辑。
     * microserviceLabels  VPC通道后端服务器组的标签，仅VPC通道类型为微服务时支持。
+    * referenceVpcChannelId  引用的负载通道编号，仅VPC通道类型为引用类型（vpc_channel_type=reference）时支持。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
             'dictCode' => 'setDictCode',
             'microserviceVersion' => 'setMicroserviceVersion',
             'microservicePort' => 'setMicroservicePort',
-            'microserviceLabels' => 'setMicroserviceLabels'
+            'microserviceLabels' => 'setMicroserviceLabels',
+            'referenceVpcChannelId' => 'setReferenceVpcChannelId'
     ];
 
     /**
@@ -136,6 +144,7 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
     * microserviceVersion  VPC通道后端服务器组的版本，仅VPC通道类型为微服务时支持。
     * microservicePort  VPC通道后端服务器组的端口号，仅VPC通道类型为微服务时支持。端口号为0时后端服务器组下的所有地址沿用原来负载端口继承逻辑。
     * microserviceLabels  VPC通道后端服务器组的标签，仅VPC通道类型为微服务时支持。
+    * referenceVpcChannelId  引用的负载通道编号，仅VPC通道类型为引用类型（vpc_channel_type=reference）时支持。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
             'dictCode' => 'getDictCode',
             'microserviceVersion' => 'getMicroserviceVersion',
             'microservicePort' => 'getMicroservicePort',
-            'microserviceLabels' => 'getMicroserviceLabels'
+            'microserviceLabels' => 'getMicroserviceLabels',
+            'referenceVpcChannelId' => 'getReferenceVpcChannelId'
     ];
 
     /**
@@ -214,6 +224,7 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
         $this->container['microserviceVersion'] = isset($data['microserviceVersion']) ? $data['microserviceVersion'] : null;
         $this->container['microservicePort'] = isset($data['microservicePort']) ? $data['microservicePort'] : null;
         $this->container['microserviceLabels'] = isset($data['microserviceLabels']) ? $data['microserviceLabels'] : null;
+        $this->container['referenceVpcChannelId'] = isset($data['referenceVpcChannelId']) ? $data['referenceVpcChannelId'] : null;
     }
 
     /**
@@ -253,6 +264,12 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['microservicePort']) && ($this->container['microservicePort'] < 0)) {
                 $invalidProperties[] = "invalid value for 'microservicePort', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['referenceVpcChannelId']) && (mb_strlen($this->container['referenceVpcChannelId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'referenceVpcChannelId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['referenceVpcChannelId']) && (mb_strlen($this->container['referenceVpcChannelId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'referenceVpcChannelId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -433,6 +450,30 @@ class MemberGroupCreate implements ModelInterface, ArrayAccess
     public function setMicroserviceLabels($microserviceLabels)
     {
         $this->container['microserviceLabels'] = $microserviceLabels;
+        return $this;
+    }
+
+    /**
+    * Gets referenceVpcChannelId
+    *  引用的负载通道编号，仅VPC通道类型为引用类型（vpc_channel_type=reference）时支持。
+    *
+    * @return string|null
+    */
+    public function getReferenceVpcChannelId()
+    {
+        return $this->container['referenceVpcChannelId'];
+    }
+
+    /**
+    * Sets referenceVpcChannelId
+    *
+    * @param string|null $referenceVpcChannelId 引用的负载通道编号，仅VPC通道类型为引用类型（vpc_channel_type=reference）时支持。
+    *
+    * @return $this
+    */
+    public function setReferenceVpcChannelId($referenceVpcChannelId)
+    {
+        $this->container['referenceVpcChannelId'] = $referenceVpcChannelId;
         return $this;
     }
 

@@ -11412,9 +11412,6 @@ class ApigClient extends Client
         if ($localVarParams['apiName'] !== null) {
             $queryParams['api_name'] = $localVarParams['apiName'];
         }
-        if ($localVarParams['tags'] !== null) {
-            $queryParams['tags'] = $localVarParams['tags'];
-        }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -13482,6 +13479,9 @@ class ApigClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $queryParams['instance_id'] = $localVarParams['instanceId'];
         }
+        if ($localVarParams['algorithmType'] !== null) {
+            $queryParams['algorithm_type'] = $localVarParams['algorithmType'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=UTF-8', 'application/json']
@@ -13644,6 +13644,8 @@ class ApigClient extends Client
      * 
      * 如果指定地址的后端实例已存在，则更新对应后端实例信息。如果请求体中包含多个重复地址的后端实例定义，则使用第一个定义。
      * 
+     * 引用负载通道类型的负载通道不支持添加或更新后端实例。
+     * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
@@ -13712,6 +13714,8 @@ class ApigClient extends Client
      *
      * 批量修改后端服务器状态不可用。
      * 
+     * 引用负载通道类型的负载通道不支持修改后端服务器状态不可用。
+     * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
@@ -13779,6 +13783,8 @@ class ApigClient extends Client
      * 批量修改后端服务器状态可用
      *
      * 批量修改后端服务器状态可用。
+     * 
+     * 引用负载通道类型的负载通道不支持修改后端服务器状态可用。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13983,6 +13989,8 @@ class ApigClient extends Client
      * 删除后端实例
      *
      * 删除指定VPC通道中的后端实例
+     * 
+     * 引用负载通道类型的负载通道不支持删除后端实例。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14404,6 +14412,9 @@ class ApigClient extends Client
         if ($localVarParams['memberGroupId'] !== null) {
             $queryParams['member_group_id'] = $localVarParams['memberGroupId'];
         }
+        if ($localVarParams['vpcChannelType'] !== null) {
+            $queryParams['vpc_channel_type'] = $localVarParams['vpcChannelType'];
+        }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -14572,6 +14583,8 @@ class ApigClient extends Client
      * 更新后端实例
      *
      * 更新指定的VPC通道的后端实例。更新时，使用传入的请求参数对对应云服务组的后端实例进行全量覆盖修改。如果未指定修改的云服务器组，则进行全量覆盖。
+     * 
+     * 引用负载通道类型的负载通道不支持更新后端实例。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

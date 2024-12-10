@@ -25,7 +25,8 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
     * port  VPC通道中主机的端口号。  取值范围1 ~ 65535。
     * balanceStrategy  分发算法。 - 1：加权轮询（wrr） - 2：加权最少连接（wleastconn） - 3：源地址哈希（source） - 4：URI哈希（uri）
     * memberType  VPC通道的成员类型。 - ip - ecs
-    * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
+    * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型  当vpc_channel_type字段为空时，负载通道类型由type字段控制： 当type不为3或microservice_info为空，VCP通道类型默认为服务器类型。 当type=3，microservice_info不为空，VPC通道类型为微服务类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。  此字段待废弃，请使用vpc_channel_type字段指定负载通道类型。
+    * vpcChannelType  vpc通道类型。 - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型  当vpc_channel_type为空时，负载通道类型取决于type字段的取值。 当vpc_channel_type不为空，但type字段非空或不为0时，当vpc_channel_type的指定类型与type字段指定的类型冲突时会校验报错。 当vpc_channel_type不为空，且type字段为空或等于0时，直接使用vpc_channel_type字段的值指定负载通道类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。
     * dictCode  VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
     * createTime  VPC通道的创建时间
     * id  VPC通道的编号
@@ -43,6 +44,7 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
             'balanceStrategy' => 'int',
             'memberType' => 'string',
             'type' => 'int',
+            'vpcChannelType' => 'string',
             'dictCode' => 'string',
             'createTime' => '\DateTime',
             'id' => 'string',
@@ -59,7 +61,8 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
     * port  VPC通道中主机的端口号。  取值范围1 ~ 65535。
     * balanceStrategy  分发算法。 - 1：加权轮询（wrr） - 2：加权最少连接（wleastconn） - 3：源地址哈希（source） - 4：URI哈希（uri）
     * memberType  VPC通道的成员类型。 - ip - ecs
-    * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
+    * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型  当vpc_channel_type字段为空时，负载通道类型由type字段控制： 当type不为3或microservice_info为空，VCP通道类型默认为服务器类型。 当type=3，microservice_info不为空，VPC通道类型为微服务类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。  此字段待废弃，请使用vpc_channel_type字段指定负载通道类型。
+    * vpcChannelType  vpc通道类型。 - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型  当vpc_channel_type为空时，负载通道类型取决于type字段的取值。 当vpc_channel_type不为空，但type字段非空或不为0时，当vpc_channel_type的指定类型与type字段指定的类型冲突时会校验报错。 当vpc_channel_type不为空，且type字段为空或等于0时，直接使用vpc_channel_type字段的值指定负载通道类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。
     * dictCode  VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
     * createTime  VPC通道的创建时间
     * id  VPC通道的编号
@@ -77,6 +80,7 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
         'balanceStrategy' => 'int32',
         'memberType' => null,
         'type' => null,
+        'vpcChannelType' => null,
         'dictCode' => null,
         'createTime' => 'date-time',
         'id' => null,
@@ -114,7 +118,8 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
     * port  VPC通道中主机的端口号。  取值范围1 ~ 65535。
     * balanceStrategy  分发算法。 - 1：加权轮询（wrr） - 2：加权最少连接（wleastconn） - 3：源地址哈希（source） - 4：URI哈希（uri）
     * memberType  VPC通道的成员类型。 - ip - ecs
-    * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
+    * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型  当vpc_channel_type字段为空时，负载通道类型由type字段控制： 当type不为3或microservice_info为空，VCP通道类型默认为服务器类型。 当type=3，microservice_info不为空，VPC通道类型为微服务类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。  此字段待废弃，请使用vpc_channel_type字段指定负载通道类型。
+    * vpcChannelType  vpc通道类型。 - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型  当vpc_channel_type为空时，负载通道类型取决于type字段的取值。 当vpc_channel_type不为空，但type字段非空或不为0时，当vpc_channel_type的指定类型与type字段指定的类型冲突时会校验报错。 当vpc_channel_type不为空，且type字段为空或等于0时，直接使用vpc_channel_type字段的值指定负载通道类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。
     * dictCode  VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
     * createTime  VPC通道的创建时间
     * id  VPC通道的编号
@@ -132,6 +137,7 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
             'balanceStrategy' => 'balance_strategy',
             'memberType' => 'member_type',
             'type' => 'type',
+            'vpcChannelType' => 'vpc_channel_type',
             'dictCode' => 'dict_code',
             'createTime' => 'create_time',
             'id' => 'id',
@@ -148,7 +154,8 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
     * port  VPC通道中主机的端口号。  取值范围1 ~ 65535。
     * balanceStrategy  分发算法。 - 1：加权轮询（wrr） - 2：加权最少连接（wleastconn） - 3：源地址哈希（source） - 4：URI哈希（uri）
     * memberType  VPC通道的成员类型。 - ip - ecs
-    * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
+    * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型  当vpc_channel_type字段为空时，负载通道类型由type字段控制： 当type不为3或microservice_info为空，VCP通道类型默认为服务器类型。 当type=3，microservice_info不为空，VPC通道类型为微服务类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。  此字段待废弃，请使用vpc_channel_type字段指定负载通道类型。
+    * vpcChannelType  vpc通道类型。 - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型  当vpc_channel_type为空时，负载通道类型取决于type字段的取值。 当vpc_channel_type不为空，但type字段非空或不为0时，当vpc_channel_type的指定类型与type字段指定的类型冲突时会校验报错。 当vpc_channel_type不为空，且type字段为空或等于0时，直接使用vpc_channel_type字段的值指定负载通道类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。
     * dictCode  VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
     * createTime  VPC通道的创建时间
     * id  VPC通道的编号
@@ -166,6 +173,7 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
             'balanceStrategy' => 'setBalanceStrategy',
             'memberType' => 'setMemberType',
             'type' => 'setType',
+            'vpcChannelType' => 'setVpcChannelType',
             'dictCode' => 'setDictCode',
             'createTime' => 'setCreateTime',
             'id' => 'setId',
@@ -182,7 +190,8 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
     * port  VPC通道中主机的端口号。  取值范围1 ~ 65535。
     * balanceStrategy  分发算法。 - 1：加权轮询（wrr） - 2：加权最少连接（wleastconn） - 3：源地址哈希（source） - 4：URI哈希（uri）
     * memberType  VPC通道的成员类型。 - ip - ecs
-    * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
+    * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型  当vpc_channel_type字段为空时，负载通道类型由type字段控制： 当type不为3或microservice_info为空，VCP通道类型默认为服务器类型。 当type=3，microservice_info不为空，VPC通道类型为微服务类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。  此字段待废弃，请使用vpc_channel_type字段指定负载通道类型。
+    * vpcChannelType  vpc通道类型。 - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型  当vpc_channel_type为空时，负载通道类型取决于type字段的取值。 当vpc_channel_type不为空，但type字段非空或不为0时，当vpc_channel_type的指定类型与type字段指定的类型冲突时会校验报错。 当vpc_channel_type不为空，且type字段为空或等于0时，直接使用vpc_channel_type字段的值指定负载通道类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。
     * dictCode  VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
     * createTime  VPC通道的创建时间
     * id  VPC通道的编号
@@ -200,6 +209,7 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
             'balanceStrategy' => 'getBalanceStrategy',
             'memberType' => 'getMemberType',
             'type' => 'getType',
+            'vpcChannelType' => 'getVpcChannelType',
             'dictCode' => 'getDictCode',
             'createTime' => 'getCreateTime',
             'id' => 'getId',
@@ -256,6 +266,9 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
     const BALANCE_STRATEGY_4 = 4;
     const MEMBER_TYPE_IP = 'ip';
     const MEMBER_TYPE_ECS = 'ecs';
+    const VPC_CHANNEL_TYPE_BUILTIN = 'builtin';
+    const VPC_CHANNEL_TYPE_MICROSERVICE = 'microservice';
+    const VPC_CHANNEL_TYPE_REFERENCE = 'reference';
     const STATUS_1 = 1;
     const STATUS_2 = 2;
     
@@ -293,6 +306,20 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
+    public function getVpcChannelTypeAllowableValues()
+    {
+        return [
+            self::VPC_CHANNEL_TYPE_BUILTIN,
+            self::VPC_CHANNEL_TYPE_MICROSERVICE,
+            self::VPC_CHANNEL_TYPE_REFERENCE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
     public function getStatusAllowableValues()
     {
         return [
@@ -322,6 +349,7 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
         $this->container['balanceStrategy'] = isset($data['balanceStrategy']) ? $data['balanceStrategy'] : null;
         $this->container['memberType'] = isset($data['memberType']) ? $data['memberType'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['vpcChannelType'] = isset($data['vpcChannelType']) ? $data['vpcChannelType'] : null;
         $this->container['dictCode'] = isset($data['dictCode']) ? $data['dictCode'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -367,6 +395,14 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['memberType']) && !in_array($this->container['memberType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'memberType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getVpcChannelTypeAllowableValues();
+                if (!is_null($this->container['vpcChannelType']) && !in_array($this->container['vpcChannelType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'vpcChannelType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -500,7 +536,7 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
+    *  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型  当vpc_channel_type字段为空时，负载通道类型由type字段控制： 当type不为3或microservice_info为空，VCP通道类型默认为服务器类型。 当type=3，microservice_info不为空，VPC通道类型为微服务类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。  此字段待废弃，请使用vpc_channel_type字段指定负载通道类型。
     *
     * @return int|null
     */
@@ -512,13 +548,37 @@ class ShowDetailsOfVpcChannelV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
+    * @param int|null $type vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型  当vpc_channel_type字段为空时，负载通道类型由type字段控制： 当type不为3或microservice_info为空，VCP通道类型默认为服务器类型。 当type=3，microservice_info不为空，VPC通道类型为微服务类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。  此字段待废弃，请使用vpc_channel_type字段指定负载通道类型。
     *
     * @return $this
     */
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets vpcChannelType
+    *  vpc通道类型。 - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型  当vpc_channel_type为空时，负载通道类型取决于type字段的取值。 当vpc_channel_type不为空，但type字段非空或不为0时，当vpc_channel_type的指定类型与type字段指定的类型冲突时会校验报错。 当vpc_channel_type不为空，且type字段为空或等于0时，直接使用vpc_channel_type字段的值指定负载通道类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。
+    *
+    * @return string|null
+    */
+    public function getVpcChannelType()
+    {
+        return $this->container['vpcChannelType'];
+    }
+
+    /**
+    * Sets vpcChannelType
+    *
+    * @param string|null $vpcChannelType vpc通道类型。 - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型  当vpc_channel_type为空时，负载通道类型取决于type字段的取值。 当vpc_channel_type不为空，但type字段非空或不为0时，当vpc_channel_type的指定类型与type字段指定的类型冲突时会校验报错。 当vpc_channel_type不为空，且type字段为空或等于0时，直接使用vpc_channel_type字段的值指定负载通道类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。
+    *
+    * @return $this
+    */
+    public function setVpcChannelType($vpcChannelType)
+    {
+        $this->container['vpcChannelType'] = $vpcChannelType;
         return $this;
     }
 

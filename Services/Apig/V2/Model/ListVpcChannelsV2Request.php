@@ -31,6 +31,7 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
     * memberPort  后端服务器端口
     * memberGroupName  后端服务器组名称
     * memberGroupId  后端服务器组编号
+    * vpcChannelType  vpc通道类型： - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
             'memberHost' => 'string',
             'memberPort' => 'int',
             'memberGroupName' => 'string',
-            'memberGroupId' => 'string'
+            'memberGroupId' => 'string',
+            'vpcChannelType' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
     * memberPort  后端服务器端口
     * memberGroupName  后端服务器组名称
     * memberGroupId  后端服务器组编号
+    * vpcChannelType  vpc通道类型： - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
         'memberHost' => null,
         'memberPort' => null,
         'memberGroupName' => null,
-        'memberGroupId' => null
+        'memberGroupId' => null,
+        'vpcChannelType' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
     * memberPort  后端服务器端口
     * memberGroupName  后端服务器组名称
     * memberGroupId  后端服务器组编号
+    * vpcChannelType  vpc通道类型： - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
             'memberHost' => 'member_host',
             'memberPort' => 'member_port',
             'memberGroupName' => 'member_group_name',
-            'memberGroupId' => 'member_group_id'
+            'memberGroupId' => 'member_group_id',
+            'vpcChannelType' => 'vpc_channel_type'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
     * memberPort  后端服务器端口
     * memberGroupName  后端服务器组名称
     * memberGroupId  后端服务器组编号
+    * vpcChannelType  vpc通道类型： - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
             'memberHost' => 'setMemberHost',
             'memberPort' => 'setMemberPort',
             'memberGroupName' => 'setMemberGroupName',
-            'memberGroupId' => 'setMemberGroupId'
+            'memberGroupId' => 'setMemberGroupId',
+            'vpcChannelType' => 'setVpcChannelType'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
     * memberPort  后端服务器端口
     * memberGroupName  后端服务器组名称
     * memberGroupId  后端服务器组编号
+    * vpcChannelType  vpc通道类型： - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
             'memberHost' => 'getMemberHost',
             'memberPort' => 'getMemberPort',
             'memberGroupName' => 'getMemberGroupName',
-            'memberGroupId' => 'getMemberGroupId'
+            'memberGroupId' => 'getMemberGroupId',
+            'vpcChannelType' => 'getVpcChannelType'
     ];
 
     /**
@@ -229,7 +239,24 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const VPC_CHANNEL_TYPE_BUILTIN = 'builtin';
+    const VPC_CHANNEL_TYPE_MICROSERVICE = 'microservice';
+    const VPC_CHANNEL_TYPE_REFERENCE = 'reference';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getVpcChannelTypeAllowableValues()
+    {
+        return [
+            self::VPC_CHANNEL_TYPE_BUILTIN,
+            self::VPC_CHANNEL_TYPE_MICROSERVICE,
+            self::VPC_CHANNEL_TYPE_REFERENCE,
+        ];
+    }
 
 
     /**
@@ -258,6 +285,7 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
         $this->container['memberPort'] = isset($data['memberPort']) ? $data['memberPort'] : null;
         $this->container['memberGroupName'] = isset($data['memberGroupName']) ? $data['memberGroupName'] : null;
         $this->container['memberGroupId'] = isset($data['memberGroupId']) ? $data['memberGroupId'] : null;
+        $this->container['vpcChannelType'] = isset($data['vpcChannelType']) ? $data['vpcChannelType'] : null;
     }
 
     /**
@@ -292,6 +320,14 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
             if (!is_null($this->container['memberPort']) && ($this->container['memberPort'] < 0)) {
                 $invalidProperties[] = "invalid value for 'memberPort', must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getVpcChannelTypeAllowableValues();
+                if (!is_null($this->container['vpcChannelType']) && !in_array($this->container['vpcChannelType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'vpcChannelType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -567,6 +603,30 @@ class ListVpcChannelsV2Request implements ModelInterface, ArrayAccess
     public function setMemberGroupId($memberGroupId)
     {
         $this->container['memberGroupId'] = $memberGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets vpcChannelType
+    *  vpc通道类型： - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型
+    *
+    * @return string|null
+    */
+    public function getVpcChannelType()
+    {
+        return $this->container['vpcChannelType'];
+    }
+
+    /**
+    * Sets vpcChannelType
+    *
+    * @param string|null $vpcChannelType vpc通道类型： - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型
+    *
+    * @return $this
+    */
+    public function setVpcChannelType($vpcChannelType)
+    {
+        $this->container['vpcChannelType'] = $vpcChannelType;
         return $this;
     }
 

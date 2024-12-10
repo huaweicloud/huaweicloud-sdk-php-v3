@@ -33,6 +33,7 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  更新时间
     * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * algorithmType  证书算法类型： - RSA - ECC - SM2
     * version  版本
     * organization  公司、组织
     * organizationalUnit  部门
@@ -58,6 +59,7 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
             'createTime' => '\DateTime',
             'updateTime' => '\DateTime',
             'isHasTrustedRootCa' => 'bool',
+            'algorithmType' => 'string',
             'version' => 'int',
             'organization' => 'string[]',
             'organizationalUnit' => 'string[]',
@@ -83,6 +85,7 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  更新时间
     * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * algorithmType  证书算法类型： - RSA - ECC - SM2
     * version  版本
     * organization  公司、组织
     * organizationalUnit  部门
@@ -108,6 +111,7 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
         'createTime' => 'date-time',
         'updateTime' => 'date-time',
         'isHasTrustedRootCa' => null,
+        'algorithmType' => null,
         'version' => 'int32',
         'organization' => null,
         'organizationalUnit' => null,
@@ -154,6 +158,7 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  更新时间
     * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * algorithmType  证书算法类型： - RSA - ECC - SM2
     * version  版本
     * organization  公司、组织
     * organizationalUnit  部门
@@ -179,6 +184,7 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
             'isHasTrustedRootCa' => 'is_has_trusted_root_ca',
+            'algorithmType' => 'algorithm_type',
             'version' => 'version',
             'organization' => 'organization',
             'organizationalUnit' => 'organizational_unit',
@@ -204,6 +210,7 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  更新时间
     * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * algorithmType  证书算法类型： - RSA - ECC - SM2
     * version  版本
     * organization  公司、组织
     * organizationalUnit  部门
@@ -229,6 +236,7 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
             'isHasTrustedRootCa' => 'setIsHasTrustedRootCa',
+            'algorithmType' => 'setAlgorithmType',
             'version' => 'setVersion',
             'organization' => 'setOrganization',
             'organizationalUnit' => 'setOrganizationalUnit',
@@ -254,6 +262,7 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  更新时间
     * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * algorithmType  证书算法类型： - RSA - ECC - SM2
     * version  版本
     * organization  公司、组织
     * organizationalUnit  部门
@@ -279,6 +288,7 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
             'isHasTrustedRootCa' => 'getIsHasTrustedRootCa',
+            'algorithmType' => 'getAlgorithmType',
             'version' => 'getVersion',
             'organization' => 'getOrganization',
             'organizationalUnit' => 'getOrganizationalUnit',
@@ -332,6 +342,9 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
     }
     const TYPE__GLOBAL = 'global';
     const TYPE_INSTANCE = 'instance';
+    const ALGORITHM_TYPE_RSA = 'RSA';
+    const ALGORITHM_TYPE_ECC = 'ECC';
+    const ALGORITHM_TYPE_SM2 = 'SM2';
     
 
     /**
@@ -344,6 +357,20 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
         return [
             self::TYPE__GLOBAL,
             self::TYPE_INSTANCE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAlgorithmTypeAllowableValues()
+    {
+        return [
+            self::ALGORITHM_TYPE_RSA,
+            self::ALGORITHM_TYPE_ECC,
+            self::ALGORITHM_TYPE_SM2,
         ];
     }
 
@@ -375,6 +402,7 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['isHasTrustedRootCa'] = isset($data['isHasTrustedRootCa']) ? $data['isHasTrustedRootCa'] : null;
+        $this->container['algorithmType'] = isset($data['algorithmType']) ? $data['algorithmType'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['organization'] = isset($data['organization']) ? $data['organization'] : null;
         $this->container['organizationalUnit'] = isset($data['organizationalUnit']) ? $data['organizationalUnit'] : null;
@@ -398,6 +426,14 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getAlgorithmTypeAllowableValues();
+                if (!is_null($this->container['algorithmType']) && !in_array($this->container['algorithmType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'algorithmType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -701,6 +737,30 @@ class ShowDetailsOfCertificateV2Response implements ModelInterface, ArrayAccess
     public function setIsHasTrustedRootCa($isHasTrustedRootCa)
     {
         $this->container['isHasTrustedRootCa'] = $isHasTrustedRootCa;
+        return $this;
+    }
+
+    /**
+    * Gets algorithmType
+    *  证书算法类型： - RSA - ECC - SM2
+    *
+    * @return string|null
+    */
+    public function getAlgorithmType()
+    {
+        return $this->container['algorithmType'];
+    }
+
+    /**
+    * Sets algorithmType
+    *
+    * @param string|null $algorithmType 证书算法类型： - RSA - ECC - SM2
+    *
+    * @return $this
+    */
+    public function setAlgorithmType($algorithmType)
+    {
+        $this->container['algorithmType'] = $algorithmType;
         return $this;
     }
 

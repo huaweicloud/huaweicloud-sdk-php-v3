@@ -21,38 +21,22 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * kind  API类型，固定值“Job”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
-    * metadata  metadata
-    * spec  spec
-    * status  status
+    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'kind' => 'string',
-            'apiVersion' => 'string',
-            'metadata' => '\HuaweiCloud\SDK\Cce\V3\Model\JobMetadata',
-            'spec' => '\HuaweiCloud\SDK\Cce\V3\Model\JobSpec',
-            'status' => '\HuaweiCloud\SDK\Cce\V3\Model\JobStatus'
+            'jobid' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * kind  API类型，固定值“Job”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
-    * metadata  metadata
-    * spec  spec
-    * status  status
+    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'kind' => null,
-        'apiVersion' => null,
-        'metadata' => null,
-        'spec' => null,
-        'status' => null
+        'jobid' => 'uuid'
     ];
 
     /**
@@ -78,56 +62,32 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * kind  API类型，固定值“Job”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
-    * metadata  metadata
-    * spec  spec
-    * status  status
+    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'kind' => 'kind',
-            'apiVersion' => 'apiVersion',
-            'metadata' => 'metadata',
-            'spec' => 'spec',
-            'status' => 'status'
+            'jobid' => 'jobid'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * kind  API类型，固定值“Job”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
-    * metadata  metadata
-    * spec  spec
-    * status  status
+    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
     *
     * @var string[]
     */
     protected static $setters = [
-            'kind' => 'setKind',
-            'apiVersion' => 'setApiVersion',
-            'metadata' => 'setMetadata',
-            'spec' => 'setSpec',
-            'status' => 'setStatus'
+            'jobid' => 'setJobid'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * kind  API类型，固定值“Job”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
-    * metadata  metadata
-    * spec  spec
-    * status  status
+    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
     *
     * @var string[]
     */
     protected static $getters = [
-            'kind' => 'getKind',
-            'apiVersion' => 'getApiVersion',
-            'metadata' => 'getMetadata',
-            'spec' => 'getSpec',
-            'status' => 'getStatus'
+            'jobid' => 'getJobid'
     ];
 
     /**
@@ -188,11 +148,7 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['kind'] = isset($data['kind']) ? $data['kind'] : null;
-        $this->container['apiVersion'] = isset($data['apiVersion']) ? $data['apiVersion'] : null;
-        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
-        $this->container['spec'] = isset($data['spec']) ? $data['spec'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['jobid'] = isset($data['jobid']) ? $data['jobid'] : null;
     }
 
     /**
@@ -218,122 +174,26 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets kind
-    *  API类型，固定值“Job”，该值不可修改。
+    * Gets jobid
+    *  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
     *
     * @return string|null
     */
-    public function getKind()
+    public function getJobid()
     {
-        return $this->container['kind'];
+        return $this->container['jobid'];
     }
 
     /**
-    * Sets kind
+    * Sets jobid
     *
-    * @param string|null $kind API类型，固定值“Job”，该值不可修改。
+    * @param string|null $jobid Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
     *
     * @return $this
     */
-    public function setKind($kind)
+    public function setJobid($jobid)
     {
-        $this->container['kind'] = $kind;
-        return $this;
-    }
-
-    /**
-    * Gets apiVersion
-    *  API版本，固定值“v3”，该值不可修改。
-    *
-    * @return string|null
-    */
-    public function getApiVersion()
-    {
-        return $this->container['apiVersion'];
-    }
-
-    /**
-    * Sets apiVersion
-    *
-    * @param string|null $apiVersion API版本，固定值“v3”，该值不可修改。
-    *
-    * @return $this
-    */
-    public function setApiVersion($apiVersion)
-    {
-        $this->container['apiVersion'] = $apiVersion;
-        return $this;
-    }
-
-    /**
-    * Gets metadata
-    *  metadata
-    *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\JobMetadata|null
-    */
-    public function getMetadata()
-    {
-        return $this->container['metadata'];
-    }
-
-    /**
-    * Sets metadata
-    *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\JobMetadata|null $metadata metadata
-    *
-    * @return $this
-    */
-    public function setMetadata($metadata)
-    {
-        $this->container['metadata'] = $metadata;
-        return $this;
-    }
-
-    /**
-    * Gets spec
-    *  spec
-    *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\JobSpec|null
-    */
-    public function getSpec()
-    {
-        return $this->container['spec'];
-    }
-
-    /**
-    * Sets spec
-    *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\JobSpec|null $spec spec
-    *
-    * @return $this
-    */
-    public function setSpec($spec)
-    {
-        $this->container['spec'] = $spec;
-        return $this;
-    }
-
-    /**
-    * Gets status
-    *  status
-    *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\JobStatus|null
-    */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-    * Sets status
-    *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\JobStatus|null $status status
-    *
-    * @return $this
-    */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
+        $this->container['jobid'] = $jobid;
         return $this;
     }
 

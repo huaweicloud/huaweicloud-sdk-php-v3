@@ -27,6 +27,7 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     * signatureAlgorithm  证书签名算法
     * type  证书可见范围
     * instanceId  证书所属实例ID
+    * algorithmType  证书算法类型： - RSA。 - ECC。 - SM2。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
             'commonName' => 'string',
             'signatureAlgorithm' => 'string',
             'type' => 'string',
-            'instanceId' => 'string'
+            'instanceId' => 'string',
+            'algorithmType' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     * signatureAlgorithm  证书签名算法
     * type  证书可见范围
     * instanceId  证书所属实例ID
+    * algorithmType  证书算法类型： - RSA。 - ECC。 - SM2。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
         'commonName' => null,
         'signatureAlgorithm' => null,
         'type' => null,
-        'instanceId' => null
+        'instanceId' => null,
+        'algorithmType' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     * signatureAlgorithm  证书签名算法
     * type  证书可见范围
     * instanceId  证书所属实例ID
+    * algorithmType  证书算法类型： - RSA。 - ECC。 - SM2。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
             'commonName' => 'common_name',
             'signatureAlgorithm' => 'signature_algorithm',
             'type' => 'type',
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'algorithmType' => 'algorithm_type'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     * signatureAlgorithm  证书签名算法
     * type  证书可见范围
     * instanceId  证书所属实例ID
+    * algorithmType  证书算法类型： - RSA。 - ECC。 - SM2。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
             'commonName' => 'setCommonName',
             'signatureAlgorithm' => 'setSignatureAlgorithm',
             'type' => 'setType',
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'algorithmType' => 'setAlgorithmType'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     * signatureAlgorithm  证书签名算法
     * type  证书可见范围
     * instanceId  证书所属实例ID
+    * algorithmType  证书算法类型： - RSA。 - ECC。 - SM2。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
             'commonName' => 'getCommonName',
             'signatureAlgorithm' => 'getSignatureAlgorithm',
             'type' => 'getType',
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'algorithmType' => 'getAlgorithmType'
     ];
 
     /**
@@ -191,6 +201,9 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     }
     const TYPE_INSTANCE = 'instance';
     const TYPE__GLOBAL = 'global';
+    const ALGORITHM_TYPE_RSA = 'RSA';
+    const ALGORITHM_TYPE_ECC = 'ECC';
+    const ALGORITHM_TYPE_SM2 = 'SM2';
     
 
     /**
@@ -203,6 +216,20 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
         return [
             self::TYPE_INSTANCE,
             self::TYPE__GLOBAL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAlgorithmTypeAllowableValues()
+    {
+        return [
+            self::ALGORITHM_TYPE_RSA,
+            self::ALGORITHM_TYPE_ECC,
+            self::ALGORITHM_TYPE_SM2,
         ];
     }
 
@@ -229,6 +256,7 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
         $this->container['signatureAlgorithm'] = isset($data['signatureAlgorithm']) ? $data['signatureAlgorithm'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['algorithmType'] = isset($data['algorithmType']) ? $data['algorithmType'] : null;
     }
 
     /**
@@ -256,6 +284,14 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
+            $allowedValues = $this->getAlgorithmTypeAllowableValues();
+                if (!is_null($this->container['algorithmType']) && !in_array($this->container['algorithmType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'algorithmType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -435,6 +471,30 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets algorithmType
+    *  证书算法类型： - RSA。 - ECC。 - SM2。
+    *
+    * @return string|null
+    */
+    public function getAlgorithmType()
+    {
+        return $this->container['algorithmType'];
+    }
+
+    /**
+    * Sets algorithmType
+    *
+    * @param string|null $algorithmType 证书算法类型： - RSA。 - ECC。 - SM2。
+    *
+    * @return $this
+    */
+    public function setAlgorithmType($algorithmType)
+    {
+        $this->container['algorithmType'] = $algorithmType;
         return $this;
     }
 

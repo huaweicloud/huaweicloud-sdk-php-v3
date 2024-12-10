@@ -29,6 +29,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * cceServiceInfo  cceServiceInfo
     * nacosInfo  nacosInfo
     *
     * @var string[]
@@ -43,6 +44,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             'cors' => 'bool',
             'cseInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCSECreate',
             'cceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCECreate',
+            'cceServiceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEServiceCreate',
             'nacosInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoNacosBase'
     ];
 
@@ -57,6 +59,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * cceServiceInfo  cceServiceInfo
     * nacosInfo  nacosInfo
     *
     * @var string[]
@@ -71,6 +74,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
         'cors' => null,
         'cseInfo' => null,
         'cceInfo' => null,
+        'cceServiceInfo' => null,
         'nacosInfo' => null
     ];
 
@@ -106,6 +110,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * cceServiceInfo  cceServiceInfo
     * nacosInfo  nacosInfo
     *
     * @var string[]
@@ -120,6 +125,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             'cors' => 'cors',
             'cseInfo' => 'cse_info',
             'cceInfo' => 'cce_info',
+            'cceServiceInfo' => 'cce_service_info',
             'nacosInfo' => 'nacos_info'
     ];
 
@@ -134,6 +140,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * cceServiceInfo  cceServiceInfo
     * nacosInfo  nacosInfo
     *
     * @var string[]
@@ -148,6 +155,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             'cors' => 'setCors',
             'cseInfo' => 'setCseInfo',
             'cceInfo' => 'setCceInfo',
+            'cceServiceInfo' => 'setCceServiceInfo',
             'nacosInfo' => 'setNacosInfo'
     ];
 
@@ -162,6 +170,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * cceServiceInfo  cceServiceInfo
     * nacosInfo  nacosInfo
     *
     * @var string[]
@@ -176,6 +185,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             'cors' => 'getCors',
             'cseInfo' => 'getCseInfo',
             'cceInfo' => 'getCceInfo',
+            'cceServiceInfo' => 'getCceServiceInfo',
             'nacosInfo' => 'getNacosInfo'
     ];
 
@@ -297,6 +307,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
         $this->container['cors'] = isset($data['cors']) ? $data['cors'] : null;
         $this->container['cseInfo'] = isset($data['cseInfo']) ? $data['cseInfo'] : null;
         $this->container['cceInfo'] = isset($data['cceInfo']) ? $data['cceInfo'] : null;
+        $this->container['cceServiceInfo'] = isset($data['cceServiceInfo']) ? $data['cceServiceInfo'] : null;
         $this->container['nacosInfo'] = isset($data['nacosInfo']) ? $data['nacosInfo'] : null;
     }
 
@@ -571,6 +582,30 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     public function setCceInfo($cceInfo)
     {
         $this->container['cceInfo'] = $cceInfo;
+        return $this;
+    }
+
+    /**
+    * Gets cceServiceInfo
+    *  cceServiceInfo
+    *
+    * @return \HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEServiceCreate|null
+    */
+    public function getCceServiceInfo()
+    {
+        return $this->container['cceServiceInfo'];
+    }
+
+    /**
+    * Sets cceServiceInfo
+    *
+    * @param \HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEServiceCreate|null $cceServiceInfo cceServiceInfo
+    *
+    * @return $this
+    */
+    public function setCceServiceInfo($cceServiceInfo)
+    {
+        $this->container['cceServiceInfo'] = $cceServiceInfo;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class ListAuditInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * offset  偏移量
-    * limit  查询记录数
+    * offset  偏移量，默认0。
+    * limit  查询记录数，默认100，最大1000。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListAuditInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * offset  偏移量
-    * limit  查询记录数
+    * offset  偏移量，默认0。
+    * limit  查询记录数，默认100，最大1000。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListAuditInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * offset  偏移量
-    * limit  查询记录数
+    * offset  偏移量，默认0。
+    * limit  查询记录数，默认100，最大1000。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListAuditInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * offset  偏移量
-    * limit  查询记录数
+    * offset  偏移量，默认0。
+    * limit  查询记录数，默认100，最大1000。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListAuditInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * offset  偏移量
-    * limit  查询记录数
+    * offset  偏移量，默认0。
+    * limit  查询记录数，默认100，最大1000。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ListAuditInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量
+    *  偏移量，默认0。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ListAuditInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 偏移量
+    * @param string|null $offset 偏移量，默认0。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ListAuditInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询记录数
+    *  查询记录数，默认100，最大1000。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class ListAuditInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 查询记录数
+    * @param string|null $limit 查询记录数，默认100，最大1000。
     *
     * @return $this
     */

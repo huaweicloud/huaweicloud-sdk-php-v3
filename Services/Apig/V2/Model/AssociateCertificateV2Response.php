@@ -27,10 +27,11 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     * minSslVersion  支持的最小SSL版本
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
-    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
-    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslName  证书的名称
     * sslId  证书的编号
+    * sslInfos  SSL证书列表。
     *
     * @var string[]
     */
@@ -44,7 +45,8 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
             'ingressHttpPort' => 'int',
             'ingressHttpsPort' => 'int',
             'sslName' => 'string',
-            'sslId' => 'string'
+            'sslId' => 'string',
+            'sslInfos' => '\HuaweiCloud\SDK\Apig\V2\Model\SslInfo[]'
     ];
 
     /**
@@ -55,10 +57,11 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     * minSslVersion  支持的最小SSL版本
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
-    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
-    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslName  证书的名称
     * sslId  证书的编号
+    * sslInfos  SSL证书列表。
     *
     * @var string[]
     */
@@ -72,7 +75,8 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
         'ingressHttpPort' => null,
         'ingressHttpsPort' => null,
         'sslName' => null,
-        'sslId' => null
+        'sslId' => null,
+        'sslInfos' => null
     ];
 
     /**
@@ -104,10 +108,11 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     * minSslVersion  支持的最小SSL版本
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
-    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
-    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslName  证书的名称
     * sslId  证书的编号
+    * sslInfos  SSL证书列表。
     *
     * @var string[]
     */
@@ -121,7 +126,8 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
             'ingressHttpPort' => 'ingress_http_port',
             'ingressHttpsPort' => 'ingress_https_port',
             'sslName' => 'ssl_name',
-            'sslId' => 'ssl_id'
+            'sslId' => 'ssl_id',
+            'sslInfos' => 'ssl_infos'
     ];
 
     /**
@@ -132,10 +138,11 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     * minSslVersion  支持的最小SSL版本
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
-    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
-    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslName  证书的名称
     * sslId  证书的编号
+    * sslInfos  SSL证书列表。
     *
     * @var string[]
     */
@@ -149,7 +156,8 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
             'ingressHttpPort' => 'setIngressHttpPort',
             'ingressHttpsPort' => 'setIngressHttpsPort',
             'sslName' => 'setSslName',
-            'sslId' => 'setSslId'
+            'sslId' => 'setSslId',
+            'sslInfos' => 'setSslInfos'
     ];
 
     /**
@@ -160,10 +168,11 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     * minSslVersion  支持的最小SSL版本
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
-    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
-    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslName  证书的名称
     * sslId  证书的编号
+    * sslInfos  SSL证书列表。
     *
     * @var string[]
     */
@@ -177,7 +186,8 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
             'ingressHttpPort' => 'getIngressHttpPort',
             'ingressHttpsPort' => 'getIngressHttpsPort',
             'sslName' => 'getSslName',
-            'sslId' => 'getSslId'
+            'sslId' => 'getSslId',
+            'sslInfos' => 'getSslInfos'
     ];
 
     /**
@@ -267,6 +277,7 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
         $this->container['ingressHttpsPort'] = isset($data['ingressHttpsPort']) ? $data['ingressHttpsPort'] : null;
         $this->container['sslName'] = isset($data['sslName']) ? $data['sslName'] : null;
         $this->container['sslId'] = isset($data['sslId']) ? $data['sslId'] : null;
+        $this->container['sslInfos'] = isset($data['sslInfos']) ? $data['sslInfos'] : null;
     }
 
     /**
@@ -475,7 +486,7 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets ingressHttpPort
-    *  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    *  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     *
     * @return int|null
     */
@@ -487,7 +498,7 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets ingressHttpPort
     *
-    * @param int|null $ingressHttpPort 访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * @param int|null $ingressHttpPort 访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     *
     * @return $this
     */
@@ -499,7 +510,7 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets ingressHttpsPort
-    *  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    *  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     *
     * @return int|null
     */
@@ -511,7 +522,7 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets ingressHttpsPort
     *
-    * @param int|null $ingressHttpsPort 访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * @param int|null $ingressHttpsPort 访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     *
     * @return $this
     */
@@ -566,6 +577,30 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     public function setSslId($sslId)
     {
         $this->container['sslId'] = $sslId;
+        return $this;
+    }
+
+    /**
+    * Gets sslInfos
+    *  SSL证书列表。
+    *
+    * @return \HuaweiCloud\SDK\Apig\V2\Model\SslInfo[]|null
+    */
+    public function getSslInfos()
+    {
+        return $this->container['sslInfos'];
+    }
+
+    /**
+    * Sets sslInfos
+    *
+    * @param \HuaweiCloud\SDK\Apig\V2\Model\SslInfo[]|null $sslInfos SSL证书列表。
+    *
+    * @return $this
+    */
+    public function setSslInfos($sslInfos)
+    {
+        $this->container['sslInfos'] = $sslInfos;
         return $this;
     }
 

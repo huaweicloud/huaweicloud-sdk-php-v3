@@ -30,6 +30,7 @@ class BackendApiBase implements ModelInterface, ArrayAccess
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * enableClientSsl  是否开启双向认证
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * id  编号
     * status  后端状态   - 1： 有效
     * registerTime  注册时间
@@ -48,6 +49,7 @@ class BackendApiBase implements ModelInterface, ArrayAccess
             'timeout' => 'int',
             'enableClientSsl' => 'bool',
             'retryCount' => 'string',
+            'enableSmChannel' => 'bool',
             'id' => 'string',
             'status' => 'int',
             'registerTime' => '\DateTime',
@@ -66,6 +68,7 @@ class BackendApiBase implements ModelInterface, ArrayAccess
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * enableClientSsl  是否开启双向认证
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * id  编号
     * status  后端状态   - 1： 有效
     * registerTime  注册时间
@@ -84,6 +87,7 @@ class BackendApiBase implements ModelInterface, ArrayAccess
         'timeout' => 'int32',
         'enableClientSsl' => null,
         'retryCount' => null,
+        'enableSmChannel' => null,
         'id' => null,
         'status' => 'int32',
         'registerTime' => 'date-time',
@@ -123,6 +127,7 @@ class BackendApiBase implements ModelInterface, ArrayAccess
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * enableClientSsl  是否开启双向认证
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * id  编号
     * status  后端状态   - 1： 有效
     * registerTime  注册时间
@@ -141,6 +146,7 @@ class BackendApiBase implements ModelInterface, ArrayAccess
             'timeout' => 'timeout',
             'enableClientSsl' => 'enable_client_ssl',
             'retryCount' => 'retry_count',
+            'enableSmChannel' => 'enable_sm_channel',
             'id' => 'id',
             'status' => 'status',
             'registerTime' => 'register_time',
@@ -159,6 +165,7 @@ class BackendApiBase implements ModelInterface, ArrayAccess
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * enableClientSsl  是否开启双向认证
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * id  编号
     * status  后端状态   - 1： 有效
     * registerTime  注册时间
@@ -177,6 +184,7 @@ class BackendApiBase implements ModelInterface, ArrayAccess
             'timeout' => 'setTimeout',
             'enableClientSsl' => 'setEnableClientSsl',
             'retryCount' => 'setRetryCount',
+            'enableSmChannel' => 'setEnableSmChannel',
             'id' => 'setId',
             'status' => 'setStatus',
             'registerTime' => 'setRegisterTime',
@@ -195,6 +203,7 @@ class BackendApiBase implements ModelInterface, ArrayAccess
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * enableClientSsl  是否开启双向认证
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * id  编号
     * status  后端状态   - 1： 有效
     * registerTime  注册时间
@@ -213,6 +222,7 @@ class BackendApiBase implements ModelInterface, ArrayAccess
             'timeout' => 'getTimeout',
             'enableClientSsl' => 'getEnableClientSsl',
             'retryCount' => 'getRetryCount',
+            'enableSmChannel' => 'getEnableSmChannel',
             'id' => 'getId',
             'status' => 'getStatus',
             'registerTime' => 'getRegisterTime',
@@ -333,6 +343,7 @@ class BackendApiBase implements ModelInterface, ArrayAccess
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['enableClientSsl'] = isset($data['enableClientSsl']) ? $data['enableClientSsl'] : null;
         $this->container['retryCount'] = isset($data['retryCount']) ? $data['retryCount'] : null;
+        $this->container['enableSmChannel'] = isset($data['enableSmChannel']) ? $data['enableSmChannel'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['registerTime'] = isset($data['registerTime']) ? $data['registerTime'] : null;
@@ -629,6 +640,30 @@ class BackendApiBase implements ModelInterface, ArrayAccess
     public function setRetryCount($retryCount)
     {
         $this->container['retryCount'] = $retryCount;
+        return $this;
+    }
+
+    /**
+    * Gets enableSmChannel
+    *  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
+    *
+    * @return bool|null
+    */
+    public function getEnableSmChannel()
+    {
+        return $this->container['enableSmChannel'];
+    }
+
+    /**
+    * Sets enableSmChannel
+    *
+    * @param bool|null $enableSmChannel 是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
+    *
+    * @return $this
+    */
+    public function setEnableSmChannel($enableSmChannel)
+    {
+        $this->container['enableSmChannel'] = $enableSmChannel;
         return $this;
     }
 

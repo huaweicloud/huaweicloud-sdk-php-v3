@@ -26,6 +26,9 @@ class CertificateForm implements ModelInterface, ArrayAccess
     * type  证书可见范围
     * instanceId  所属实例ID，当type=instance时必填
     * trustedRootCa  信任的根证书CA
+    * algorithmType  证书算法类型： - RSA - ECC - SM2
+    * certContentSign  签名类型证书内容，仅algorithm_type=SM2时必填。
+    * privateKeySign  签名类型私钥内容，仅algorithm_type=SM2时必填。
     *
     * @var string[]
     */
@@ -35,7 +38,10 @@ class CertificateForm implements ModelInterface, ArrayAccess
             'privateKey' => 'string',
             'type' => 'string',
             'instanceId' => 'string',
-            'trustedRootCa' => 'string'
+            'trustedRootCa' => 'string',
+            'algorithmType' => 'string',
+            'certContentSign' => 'string',
+            'privateKeySign' => 'string'
     ];
 
     /**
@@ -46,6 +52,9 @@ class CertificateForm implements ModelInterface, ArrayAccess
     * type  证书可见范围
     * instanceId  所属实例ID，当type=instance时必填
     * trustedRootCa  信任的根证书CA
+    * algorithmType  证书算法类型： - RSA - ECC - SM2
+    * certContentSign  签名类型证书内容，仅algorithm_type=SM2时必填。
+    * privateKeySign  签名类型私钥内容，仅algorithm_type=SM2时必填。
     *
     * @var string[]
     */
@@ -55,7 +64,10 @@ class CertificateForm implements ModelInterface, ArrayAccess
         'privateKey' => null,
         'type' => null,
         'instanceId' => null,
-        'trustedRootCa' => null
+        'trustedRootCa' => null,
+        'algorithmType' => null,
+        'certContentSign' => null,
+        'privateKeySign' => null
     ];
 
     /**
@@ -87,6 +99,9 @@ class CertificateForm implements ModelInterface, ArrayAccess
     * type  证书可见范围
     * instanceId  所属实例ID，当type=instance时必填
     * trustedRootCa  信任的根证书CA
+    * algorithmType  证书算法类型： - RSA - ECC - SM2
+    * certContentSign  签名类型证书内容，仅algorithm_type=SM2时必填。
+    * privateKeySign  签名类型私钥内容，仅algorithm_type=SM2时必填。
     *
     * @var string[]
     */
@@ -96,7 +111,10 @@ class CertificateForm implements ModelInterface, ArrayAccess
             'privateKey' => 'private_key',
             'type' => 'type',
             'instanceId' => 'instance_id',
-            'trustedRootCa' => 'trusted_root_ca'
+            'trustedRootCa' => 'trusted_root_ca',
+            'algorithmType' => 'algorithm_type',
+            'certContentSign' => 'cert_content_sign',
+            'privateKeySign' => 'private_key_sign'
     ];
 
     /**
@@ -107,6 +125,9 @@ class CertificateForm implements ModelInterface, ArrayAccess
     * type  证书可见范围
     * instanceId  所属实例ID，当type=instance时必填
     * trustedRootCa  信任的根证书CA
+    * algorithmType  证书算法类型： - RSA - ECC - SM2
+    * certContentSign  签名类型证书内容，仅algorithm_type=SM2时必填。
+    * privateKeySign  签名类型私钥内容，仅algorithm_type=SM2时必填。
     *
     * @var string[]
     */
@@ -116,7 +137,10 @@ class CertificateForm implements ModelInterface, ArrayAccess
             'privateKey' => 'setPrivateKey',
             'type' => 'setType',
             'instanceId' => 'setInstanceId',
-            'trustedRootCa' => 'setTrustedRootCa'
+            'trustedRootCa' => 'setTrustedRootCa',
+            'algorithmType' => 'setAlgorithmType',
+            'certContentSign' => 'setCertContentSign',
+            'privateKeySign' => 'setPrivateKeySign'
     ];
 
     /**
@@ -127,6 +151,9 @@ class CertificateForm implements ModelInterface, ArrayAccess
     * type  证书可见范围
     * instanceId  所属实例ID，当type=instance时必填
     * trustedRootCa  信任的根证书CA
+    * algorithmType  证书算法类型： - RSA - ECC - SM2
+    * certContentSign  签名类型证书内容，仅algorithm_type=SM2时必填。
+    * privateKeySign  签名类型私钥内容，仅algorithm_type=SM2时必填。
     *
     * @var string[]
     */
@@ -136,7 +163,10 @@ class CertificateForm implements ModelInterface, ArrayAccess
             'privateKey' => 'getPrivateKey',
             'type' => 'getType',
             'instanceId' => 'getInstanceId',
-            'trustedRootCa' => 'getTrustedRootCa'
+            'trustedRootCa' => 'getTrustedRootCa',
+            'algorithmType' => 'getAlgorithmType',
+            'certContentSign' => 'getCertContentSign',
+            'privateKeySign' => 'getPrivateKeySign'
     ];
 
     /**
@@ -181,6 +211,9 @@ class CertificateForm implements ModelInterface, ArrayAccess
     }
     const TYPE_INSTANCE = 'instance';
     const TYPE__GLOBAL = 'global';
+    const ALGORITHM_TYPE_RSA = 'RSA';
+    const ALGORITHM_TYPE_ECC = 'ECC';
+    const ALGORITHM_TYPE_SM2 = 'SM2';
     
 
     /**
@@ -193,6 +226,20 @@ class CertificateForm implements ModelInterface, ArrayAccess
         return [
             self::TYPE_INSTANCE,
             self::TYPE__GLOBAL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAlgorithmTypeAllowableValues()
+    {
+        return [
+            self::ALGORITHM_TYPE_RSA,
+            self::ALGORITHM_TYPE_ECC,
+            self::ALGORITHM_TYPE_SM2,
         ];
     }
 
@@ -218,6 +265,9 @@ class CertificateForm implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['trustedRootCa'] = isset($data['trustedRootCa']) ? $data['trustedRootCa'] : null;
+        $this->container['algorithmType'] = isset($data['algorithmType']) ? $data['algorithmType'] : null;
+        $this->container['certContentSign'] = isset($data['certContentSign']) ? $data['certContentSign'] : null;
+        $this->container['privateKeySign'] = isset($data['privateKeySign']) ? $data['privateKeySign'] : null;
     }
 
     /**
@@ -248,6 +298,20 @@ class CertificateForm implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getAlgorithmTypeAllowableValues();
+                if (!is_null($this->container['algorithmType']) && !in_array($this->container['algorithmType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'algorithmType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['certContentSign']) && (mb_strlen($this->container['certContentSign']) > 8092)) {
+                $invalidProperties[] = "invalid value for 'certContentSign', the character length must be smaller than or equal to 8092.";
+            }
+            if (!is_null($this->container['privateKeySign']) && (mb_strlen($this->container['privateKeySign']) > 8092)) {
+                $invalidProperties[] = "invalid value for 'privateKeySign', the character length must be smaller than or equal to 8092.";
+            }
         return $invalidProperties;
     }
 
@@ -403,6 +467,78 @@ class CertificateForm implements ModelInterface, ArrayAccess
     public function setTrustedRootCa($trustedRootCa)
     {
         $this->container['trustedRootCa'] = $trustedRootCa;
+        return $this;
+    }
+
+    /**
+    * Gets algorithmType
+    *  证书算法类型： - RSA - ECC - SM2
+    *
+    * @return string|null
+    */
+    public function getAlgorithmType()
+    {
+        return $this->container['algorithmType'];
+    }
+
+    /**
+    * Sets algorithmType
+    *
+    * @param string|null $algorithmType 证书算法类型： - RSA - ECC - SM2
+    *
+    * @return $this
+    */
+    public function setAlgorithmType($algorithmType)
+    {
+        $this->container['algorithmType'] = $algorithmType;
+        return $this;
+    }
+
+    /**
+    * Gets certContentSign
+    *  签名类型证书内容，仅algorithm_type=SM2时必填。
+    *
+    * @return string|null
+    */
+    public function getCertContentSign()
+    {
+        return $this->container['certContentSign'];
+    }
+
+    /**
+    * Sets certContentSign
+    *
+    * @param string|null $certContentSign 签名类型证书内容，仅algorithm_type=SM2时必填。
+    *
+    * @return $this
+    */
+    public function setCertContentSign($certContentSign)
+    {
+        $this->container['certContentSign'] = $certContentSign;
+        return $this;
+    }
+
+    /**
+    * Gets privateKeySign
+    *  签名类型私钥内容，仅algorithm_type=SM2时必填。
+    *
+    * @return string|null
+    */
+    public function getPrivateKeySign()
+    {
+        return $this->container['privateKeySign'];
+    }
+
+    /**
+    * Sets privateKeySign
+    *
+    * @param string|null $privateKeySign 签名类型私钥内容，仅algorithm_type=SM2时必填。
+    *
+    * @return $this
+    */
+    public function setPrivateKeySign($privateKeySign)
+    {
+        $this->container['privateKeySign'] = $privateKeySign;
         return $this;
     }
 

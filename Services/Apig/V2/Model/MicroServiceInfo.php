@@ -25,6 +25,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
     * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * cceServiceInfo  cceServiceInfo
     * nacosInfo  nacosInfo
     * updateTime  微服务更新时间
     * createTime  微服务创建时间
@@ -37,6 +38,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
             'serviceType' => 'string',
             'cseInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCSE',
             'cceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCE',
+            'cceServiceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEService',
             'nacosInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoNacosBase',
             'updateTime' => '\DateTime',
             'createTime' => '\DateTime'
@@ -49,6 +51,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
     * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * cceServiceInfo  cceServiceInfo
     * nacosInfo  nacosInfo
     * updateTime  微服务更新时间
     * createTime  微服务创建时间
@@ -61,6 +64,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
         'serviceType' => null,
         'cseInfo' => null,
         'cceInfo' => null,
+        'cceServiceInfo' => null,
         'nacosInfo' => null,
         'updateTime' => 'date-time',
         'createTime' => 'date-time'
@@ -94,6 +98,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
     * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * cceServiceInfo  cceServiceInfo
     * nacosInfo  nacosInfo
     * updateTime  微服务更新时间
     * createTime  微服务创建时间
@@ -106,6 +111,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
             'serviceType' => 'service_type',
             'cseInfo' => 'cse_info',
             'cceInfo' => 'cce_info',
+            'cceServiceInfo' => 'cce_service_info',
             'nacosInfo' => 'nacos_info',
             'updateTime' => 'update_time',
             'createTime' => 'create_time'
@@ -118,6 +124,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
     * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * cceServiceInfo  cceServiceInfo
     * nacosInfo  nacosInfo
     * updateTime  微服务更新时间
     * createTime  微服务创建时间
@@ -130,6 +137,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
             'serviceType' => 'setServiceType',
             'cseInfo' => 'setCseInfo',
             'cceInfo' => 'setCceInfo',
+            'cceServiceInfo' => 'setCceServiceInfo',
             'nacosInfo' => 'setNacosInfo',
             'updateTime' => 'setUpdateTime',
             'createTime' => 'setCreateTime'
@@ -142,6 +150,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
     * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * cceServiceInfo  cceServiceInfo
     * nacosInfo  nacosInfo
     * updateTime  微服务更新时间
     * createTime  微服务创建时间
@@ -154,6 +163,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
             'serviceType' => 'getServiceType',
             'cseInfo' => 'getCseInfo',
             'cceInfo' => 'getCceInfo',
+            'cceServiceInfo' => 'getCceServiceInfo',
             'nacosInfo' => 'getNacosInfo',
             'updateTime' => 'getUpdateTime',
             'createTime' => 'getCreateTime'
@@ -241,6 +251,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
         $this->container['cseInfo'] = isset($data['cseInfo']) ? $data['cseInfo'] : null;
         $this->container['cceInfo'] = isset($data['cceInfo']) ? $data['cceInfo'] : null;
+        $this->container['cceServiceInfo'] = isset($data['cceServiceInfo']) ? $data['cceServiceInfo'] : null;
         $this->container['nacosInfo'] = isset($data['nacosInfo']) ? $data['nacosInfo'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
@@ -393,6 +404,30 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
     public function setCceInfo($cceInfo)
     {
         $this->container['cceInfo'] = $cceInfo;
+        return $this;
+    }
+
+    /**
+    * Gets cceServiceInfo
+    *  cceServiceInfo
+    *
+    * @return \HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEService|null
+    */
+    public function getCceServiceInfo()
+    {
+        return $this->container['cceServiceInfo'];
+    }
+
+    /**
+    * Sets cceServiceInfo
+    *
+    * @param \HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEService|null $cceServiceInfo cceServiceInfo
+    *
+    * @return $this
+    */
+    public function setCceServiceInfo($cceServiceInfo)
+    {
+        $this->container['cceServiceInfo'] = $cceServiceInfo;
         return $this;
     }
 

@@ -21,11 +21,11 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * productId  产品编号
-    * chargingMode  计费模式。
-    * paymentMode  支付模式。
+    * chargingMode  计费模式： - 0：按需 - 1：包周期
+    * paymentMode  支付模式： - ALL_UPFRONT：全预付
     * periodType  订购周期类型： - 2：月 - 3：年
-    * periodNum  订购周期数
-    * isAutoRenew  是否支持自动续费
+    * periodNum  订购周期数：1-9
+    * isAutoRenew  是否支持自动续费： - 0：不自动续费 - 1：自动续费
     * promotionId  促销产品编号
     * promotionPlanId  促销计划编号
     * promotionInfo  促销信息
@@ -51,11 +51,11 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * productId  产品编号
-    * chargingMode  计费模式。
-    * paymentMode  支付模式。
+    * chargingMode  计费模式： - 0：按需 - 1：包周期
+    * paymentMode  支付模式： - ALL_UPFRONT：全预付
     * periodType  订购周期类型： - 2：月 - 3：年
-    * periodNum  订购周期数
-    * isAutoRenew  是否支持自动续费
+    * periodNum  订购周期数：1-9
+    * isAutoRenew  是否支持自动续费： - 0：不自动续费 - 1：自动续费
     * promotionId  促销产品编号
     * promotionPlanId  促销计划编号
     * promotionInfo  促销信息
@@ -66,11 +66,11 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'productId' => null,
-        'chargingMode' => null,
+        'chargingMode' => 'int32',
         'paymentMode' => null,
         'periodType' => null,
-        'periodNum' => null,
-        'isAutoRenew' => null,
+        'periodNum' => 'int32',
+        'isAutoRenew' => 'int32',
         'promotionId' => null,
         'promotionPlanId' => null,
         'promotionInfo' => null,
@@ -102,11 +102,11 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * productId  产品编号
-    * chargingMode  计费模式。
-    * paymentMode  支付模式。
+    * chargingMode  计费模式： - 0：按需 - 1：包周期
+    * paymentMode  支付模式： - ALL_UPFRONT：全预付
     * periodType  订购周期类型： - 2：月 - 3：年
-    * periodNum  订购周期数
-    * isAutoRenew  是否支持自动续费
+    * periodNum  订购周期数：1-9
+    * isAutoRenew  是否支持自动续费： - 0：不自动续费 - 1：自动续费
     * promotionId  促销产品编号
     * promotionPlanId  促销计划编号
     * promotionInfo  促销信息
@@ -132,11 +132,11 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * productId  产品编号
-    * chargingMode  计费模式。
-    * paymentMode  支付模式。
+    * chargingMode  计费模式： - 0：按需 - 1：包周期
+    * paymentMode  支付模式： - ALL_UPFRONT：全预付
     * periodType  订购周期类型： - 2：月 - 3：年
-    * periodNum  订购周期数
-    * isAutoRenew  是否支持自动续费
+    * periodNum  订购周期数：1-9
+    * isAutoRenew  是否支持自动续费： - 0：不自动续费 - 1：自动续费
     * promotionId  促销产品编号
     * promotionPlanId  促销计划编号
     * promotionInfo  促销信息
@@ -162,11 +162,11 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * productId  产品编号
-    * chargingMode  计费模式。
-    * paymentMode  支付模式。
+    * chargingMode  计费模式： - 0：按需 - 1：包周期
+    * paymentMode  支付模式： - ALL_UPFRONT：全预付
     * periodType  订购周期类型： - 2：月 - 3：年
-    * periodNum  订购周期数
-    * isAutoRenew  是否支持自动续费
+    * periodNum  订购周期数：1-9
+    * isAutoRenew  是否支持自动续费： - 0：不自动续费 - 1：自动续费
     * promotionId  促销产品编号
     * promotionPlanId  促销计划编号
     * promotionInfo  促销信息
@@ -229,7 +229,50 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CHARGING_MODE_0 = 0;
+    const CHARGING_MODE_1 = 1;
+    const PAYMENT_MODE_ALL_UPFRONT = 'ALL_UPFRONT';
+    const IS_AUTO_RENEW_0 = 0;
+    const IS_AUTO_RENEW_1 = 1;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getChargingModeAllowableValues()
+    {
+        return [
+            self::CHARGING_MODE_0,
+            self::CHARGING_MODE_1,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPaymentModeAllowableValues()
+    {
+        return [
+            self::PAYMENT_MODE_ALL_UPFRONT,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIsAutoRenewAllowableValues()
+    {
+        return [
+            self::IS_AUTO_RENEW_0,
+            self::IS_AUTO_RENEW_1,
+        ];
+    }
 
 
     /**
@@ -268,6 +311,30 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getChargingModeAllowableValues();
+                if (!is_null($this->container['chargingMode']) && !in_array($this->container['chargingMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'chargingMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getPaymentModeAllowableValues();
+                if (!is_null($this->container['paymentMode']) && !in_array($this->container['paymentMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'paymentMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getIsAutoRenewAllowableValues();
+                if (!is_null($this->container['isAutoRenew']) && !in_array($this->container['isAutoRenew'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'isAutoRenew', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -308,7 +375,7 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  计费模式。
+    *  计费模式： - 0：按需 - 1：包周期
     *
     * @return int|null
     */
@@ -320,7 +387,7 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param int|null $chargingMode 计费模式。
+    * @param int|null $chargingMode 计费模式： - 0：按需 - 1：包周期
     *
     * @return $this
     */
@@ -332,7 +399,7 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets paymentMode
-    *  支付模式。
+    *  支付模式： - ALL_UPFRONT：全预付
     *
     * @return string|null
     */
@@ -344,7 +411,7 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
     /**
     * Sets paymentMode
     *
-    * @param string|null $paymentMode 支付模式。
+    * @param string|null $paymentMode 支付模式： - ALL_UPFRONT：全预付
     *
     * @return $this
     */
@@ -380,7 +447,7 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  订购周期数
+    *  订购周期数：1-9
     *
     * @return int|null
     */
@@ -392,7 +459,7 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int|null $periodNum 订购周期数
+    * @param int|null $periodNum 订购周期数：1-9
     *
     * @return $this
     */
@@ -404,7 +471,7 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoRenew
-    *  是否支持自动续费
+    *  是否支持自动续费： - 0：不自动续费 - 1：自动续费
     *
     * @return int|null
     */
@@ -416,7 +483,7 @@ class InstanceOrderReq implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoRenew
     *
-    * @param int|null $isAutoRenew 是否支持自动续费
+    * @param int|null $isAutoRenew 是否支持自动续费： - 0：不自动续费 - 1：自动续费
     *
     * @return $this
     */

@@ -81,6 +81,8 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     * imageDisplayname  对外展示名称。
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
+    * supportKvmHi1822Hisriov  如果镜像支持sriov直通，取值为true，否则无需增加该属性。
+    * supportKvmHi1822Hivirtionet  如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
     *
     * @var string[]
     */
@@ -144,7 +146,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'activeAt' => 'string',
             'supportAgentList' => 'string',
             'imageDisplayname' => 'string',
-            'supportAmd' => 'string'
+            'supportAmd' => 'string',
+            'supportKvmHi1822Hisriov' => 'string',
+            'supportKvmHi1822Hivirtionet' => 'string'
     ];
 
     /**
@@ -209,6 +213,8 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     * imageDisplayname  对外展示名称。
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
+    * supportKvmHi1822Hisriov  如果镜像支持sriov直通，取值为true，否则无需增加该属性。
+    * supportKvmHi1822Hivirtionet  如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
     *
     * @var string[]
     */
@@ -272,7 +278,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
         'activeAt' => null,
         'supportAgentList' => null,
         'imageDisplayname' => null,
-        'supportAmd' => null
+        'supportAmd' => null,
+        'supportKvmHi1822Hisriov' => null,
+        'supportKvmHi1822Hivirtionet' => null
     ];
 
     /**
@@ -358,6 +366,8 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     * imageDisplayname  对外展示名称。
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
+    * supportKvmHi1822Hisriov  如果镜像支持sriov直通，取值为true，否则无需增加该属性。
+    * supportKvmHi1822Hivirtionet  如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
     *
     * @var string[]
     */
@@ -421,7 +431,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'activeAt' => 'active_at',
             'supportAgentList' => '__support_agent_list',
             'imageDisplayname' => '__image_displayname',
-            'supportAmd' => '__support_amd'
+            'supportAmd' => '__support_amd',
+            'supportKvmHi1822Hisriov' => '__support_kvm_hi1822_hisriov',
+            'supportKvmHi1822Hivirtionet' => '__support_kvm_hi1822_hivirtionet'
     ];
 
     /**
@@ -486,6 +498,8 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     * imageDisplayname  对外展示名称。
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
+    * supportKvmHi1822Hisriov  如果镜像支持sriov直通，取值为true，否则无需增加该属性。
+    * supportKvmHi1822Hivirtionet  如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
     *
     * @var string[]
     */
@@ -549,7 +563,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'activeAt' => 'setActiveAt',
             'supportAgentList' => 'setSupportAgentList',
             'imageDisplayname' => 'setImageDisplayname',
-            'supportAmd' => 'setSupportAmd'
+            'supportAmd' => 'setSupportAmd',
+            'supportKvmHi1822Hisriov' => 'setSupportKvmHi1822Hisriov',
+            'supportKvmHi1822Hivirtionet' => 'setSupportKvmHi1822Hivirtionet'
     ];
 
     /**
@@ -614,6 +630,8 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     * imageDisplayname  对外展示名称。
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
+    * supportKvmHi1822Hisriov  如果镜像支持sriov直通，取值为true，否则无需增加该属性。
+    * supportKvmHi1822Hivirtionet  如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
     *
     * @var string[]
     */
@@ -677,7 +695,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'activeAt' => 'getActiveAt',
             'supportAgentList' => 'getSupportAgentList',
             'imageDisplayname' => 'getImageDisplayname',
-            'supportAmd' => 'getSupportAmd'
+            'supportAmd' => 'getSupportAmd',
+            'supportKvmHi1822Hisriov' => 'getSupportKvmHi1822Hisriov',
+            'supportKvmHi1822Hivirtionet' => 'getSupportKvmHi1822Hivirtionet'
     ];
 
     /**
@@ -1012,6 +1032,8 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
         $this->container['supportAgentList'] = isset($data['supportAgentList']) ? $data['supportAgentList'] : null;
         $this->container['imageDisplayname'] = isset($data['imageDisplayname']) ? $data['imageDisplayname'] : null;
         $this->container['supportAmd'] = isset($data['supportAmd']) ? $data['supportAmd'] : null;
+        $this->container['supportKvmHi1822Hisriov'] = isset($data['supportKvmHi1822Hisriov']) ? $data['supportKvmHi1822Hisriov'] : null;
+        $this->container['supportKvmHi1822Hivirtionet'] = isset($data['supportKvmHi1822Hivirtionet']) ? $data['supportKvmHi1822Hivirtionet'] : null;
     }
 
     /**
@@ -2587,6 +2609,54 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     public function setSupportAmd($supportAmd)
     {
         $this->container['supportAmd'] = $supportAmd;
+        return $this;
+    }
+
+    /**
+    * Gets supportKvmHi1822Hisriov
+    *  如果镜像支持sriov直通，取值为true，否则无需增加该属性。
+    *
+    * @return string|null
+    */
+    public function getSupportKvmHi1822Hisriov()
+    {
+        return $this->container['supportKvmHi1822Hisriov'];
+    }
+
+    /**
+    * Sets supportKvmHi1822Hisriov
+    *
+    * @param string|null $supportKvmHi1822Hisriov 如果镜像支持sriov直通，取值为true，否则无需增加该属性。
+    *
+    * @return $this
+    */
+    public function setSupportKvmHi1822Hisriov($supportKvmHi1822Hisriov)
+    {
+        $this->container['supportKvmHi1822Hisriov'] = $supportKvmHi1822Hisriov;
+        return $this;
+    }
+
+    /**
+    * Gets supportKvmHi1822Hivirtionet
+    *  如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
+    *
+    * @return string|null
+    */
+    public function getSupportKvmHi1822Hivirtionet()
+    {
+        return $this->container['supportKvmHi1822Hivirtionet'];
+    }
+
+    /**
+    * Sets supportKvmHi1822Hivirtionet
+    *
+    * @param string|null $supportKvmHi1822Hivirtionet 如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
+    *
+    * @return $this
+    */
+    public function setSupportKvmHi1822Hivirtionet($supportKvmHi1822Hivirtionet)
+    {
+        $this->container['supportKvmHi1822Hivirtionet'] = $supportKvmHi1822Hivirtionet;
         return $this;
     }
 

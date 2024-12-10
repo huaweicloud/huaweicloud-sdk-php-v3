@@ -23,8 +23,8 @@ class ApiPolicyFunctionResp implements ModelInterface, ArrayAccess
     * functionUrn  函数URN
     * invocationType  调用类型 - async： 异步 - sync：同步
     * networkType  对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
-    * version  函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
-    * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    * version  函数版本   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    * aliasUrn  函数别名URN   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     * id  编号
@@ -57,8 +57,8 @@ class ApiPolicyFunctionResp implements ModelInterface, ArrayAccess
     * functionUrn  函数URN
     * invocationType  调用类型 - async： 异步 - sync：同步
     * networkType  对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
-    * version  函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
-    * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    * version  函数版本   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    * aliasUrn  函数别名URN   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     * id  编号
@@ -112,8 +112,8 @@ class ApiPolicyFunctionResp implements ModelInterface, ArrayAccess
     * functionUrn  函数URN
     * invocationType  调用类型 - async： 异步 - sync：同步
     * networkType  对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
-    * version  函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
-    * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    * version  函数版本   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    * aliasUrn  函数别名URN   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     * id  编号
@@ -146,8 +146,8 @@ class ApiPolicyFunctionResp implements ModelInterface, ArrayAccess
     * functionUrn  函数URN
     * invocationType  调用类型 - async： 异步 - sync：同步
     * networkType  对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
-    * version  函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
-    * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    * version  函数版本   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    * aliasUrn  函数别名URN   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     * id  编号
@@ -180,8 +180,8 @@ class ApiPolicyFunctionResp implements ModelInterface, ArrayAccess
     * functionUrn  函数URN
     * invocationType  调用类型 - async： 异步 - sync：同步
     * networkType  对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
-    * version  函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
-    * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    * version  函数版本   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    * aliasUrn  函数别名URN   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     * id  编号
@@ -503,7 +503,7 @@ class ApiPolicyFunctionResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    *  函数版本   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     *
     * @return string|null
     */
@@ -515,7 +515,7 @@ class ApiPolicyFunctionResp implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    * @param string|null $version 函数版本   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     *
     * @return $this
     */
@@ -527,7 +527,7 @@ class ApiPolicyFunctionResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets aliasUrn
-    *  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    *  函数别名URN   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     *
     * @return string|null
     */
@@ -539,7 +539,7 @@ class ApiPolicyFunctionResp implements ModelInterface, ArrayAccess
     /**
     * Sets aliasUrn
     *
-    * @param string|null $aliasUrn 函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+    * @param string|null $aliasUrn 函数别名URN   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     *
     * @return $this
     */

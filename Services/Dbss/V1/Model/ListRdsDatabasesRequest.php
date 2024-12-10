@@ -20,7 +20,7 @@ class ListRdsDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dbType  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    * dbType  数据库类型 - MYSQL - POSTGRESQL - SQLSERVER - TAURUS - DWS - MARIADB - GAUSSDBOPENGAUSS
     * offset  偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
     * limit  查询记录数，默认为100。
     *
@@ -34,7 +34,7 @@ class ListRdsDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dbType  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    * dbType  数据库类型 - MYSQL - POSTGRESQL - SQLSERVER - TAURUS - DWS - MARIADB - GAUSSDBOPENGAUSS
     * offset  偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
     * limit  查询记录数，默认为100。
     *
@@ -69,7 +69,7 @@ class ListRdsDatabasesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dbType  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    * dbType  数据库类型 - MYSQL - POSTGRESQL - SQLSERVER - TAURUS - DWS - MARIADB - GAUSSDBOPENGAUSS
     * offset  偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
     * limit  查询记录数，默认为100。
     *
@@ -83,7 +83,7 @@ class ListRdsDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dbType  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    * dbType  数据库类型 - MYSQL - POSTGRESQL - SQLSERVER - TAURUS - DWS - MARIADB - GAUSSDBOPENGAUSS
     * offset  偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
     * limit  查询记录数，默认为100。
     *
@@ -97,7 +97,7 @@ class ListRdsDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dbType  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    * dbType  数据库类型 - MYSQL - POSTGRESQL - SQLSERVER - TAURUS - DWS - MARIADB - GAUSSDBOPENGAUSS
     * offset  偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
     * limit  查询记录数，默认为100。
     *
@@ -150,13 +150,10 @@ class ListRdsDatabasesRequest implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const DB_TYPE_MYSQL = 'MYSQL';
-    const DB_TYPE_ORACLE = 'ORACLE';
     const DB_TYPE_POSTGRESQL = 'POSTGRESQL';
     const DB_TYPE_SQLSERVER = 'SQLSERVER';
-    const DB_TYPE_DAMENG = 'DAMENG';
     const DB_TYPE_TAURUS = 'TAURUS';
     const DB_TYPE_DWS = 'DWS';
-    const DB_TYPE_KINGBASE = 'KINGBASE';
     const DB_TYPE_MARIADB = 'MARIADB';
     const DB_TYPE_GAUSSDBOPENGAUSS = 'GAUSSDBOPENGAUSS';
     
@@ -170,13 +167,10 @@ class ListRdsDatabasesRequest implements ModelInterface, ArrayAccess
     {
         return [
             self::DB_TYPE_MYSQL,
-            self::DB_TYPE_ORACLE,
             self::DB_TYPE_POSTGRESQL,
             self::DB_TYPE_SQLSERVER,
-            self::DB_TYPE_DAMENG,
             self::DB_TYPE_TAURUS,
             self::DB_TYPE_DWS,
-            self::DB_TYPE_KINGBASE,
             self::DB_TYPE_MARIADB,
             self::DB_TYPE_GAUSSDBOPENGAUSS,
         ];
@@ -238,7 +232,7 @@ class ListRdsDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbType
-    *  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    *  数据库类型 - MYSQL - POSTGRESQL - SQLSERVER - TAURUS - DWS - MARIADB - GAUSSDBOPENGAUSS
     *
     * @return string
     */
@@ -250,7 +244,7 @@ class ListRdsDatabasesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dbType
     *
-    * @param string $dbType 数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    * @param string $dbType 数据库类型 - MYSQL - POSTGRESQL - SQLSERVER - TAURUS - DWS - MARIADB - GAUSSDBOPENGAUSS
     *
     * @return $this
     */

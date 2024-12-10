@@ -21,22 +21,22 @@ class SwitchAuditDatabaseResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  响应状态
+    * status  响应状态
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'result' => 'string'
+            'status' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  响应状态
+    * status  响应状态
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'result' => null
+        'status' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class SwitchAuditDatabaseResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  响应状态
+    * status  响应状态
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'result' => 'result'
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  响应状态
+    * status  响应状态
     *
     * @var string[]
     */
     protected static $setters = [
-            'result' => 'setResult'
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  响应状态
+    * status  响应状态
     *
     * @var string[]
     */
     protected static $getters = [
-            'result' => 'getResult'
+            'status' => 'getStatus'
     ];
 
     /**
@@ -148,7 +148,7 @@ class SwitchAuditDatabaseResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class SwitchAuditDatabaseResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets result
+    * Gets status
     *  响应状态
     *
     * @return string|null
     */
-    public function getResult()
+    public function getStatus()
     {
-        return $this->container['result'];
+        return $this->container['status'];
     }
 
     /**
-    * Sets result
+    * Sets status
     *
-    * @param string|null $result 响应状态
+    * @param string|null $status 响应状态
     *
     * @return $this
     */
-    public function setResult($result)
+    public function setStatus($status)
     {
-        $this->container['result'] = $result;
+        $this->container['status'] = $status;
         return $this;
     }
 

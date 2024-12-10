@@ -32,6 +32,7 @@ class ApiPolicyHttpResp implements ModelInterface, ArrayAccess
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道： - 1： 使用VPC通道 - 2：不使用VPC通道
     *
@@ -50,6 +51,7 @@ class ApiPolicyHttpResp implements ModelInterface, ArrayAccess
             'reqUri' => 'string',
             'timeout' => 'int',
             'retryCount' => 'string',
+            'enableSmChannel' => 'bool',
             'vpcChannelInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\VpcInfo',
             'vpcChannelStatus' => 'int'
     ];
@@ -68,6 +70,7 @@ class ApiPolicyHttpResp implements ModelInterface, ArrayAccess
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道： - 1： 使用VPC通道 - 2：不使用VPC通道
     *
@@ -86,6 +89,7 @@ class ApiPolicyHttpResp implements ModelInterface, ArrayAccess
         'reqUri' => null,
         'timeout' => 'int32',
         'retryCount' => null,
+        'enableSmChannel' => null,
         'vpcChannelInfo' => null,
         'vpcChannelStatus' => 'int32'
     ];
@@ -125,6 +129,7 @@ class ApiPolicyHttpResp implements ModelInterface, ArrayAccess
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道： - 1： 使用VPC通道 - 2：不使用VPC通道
     *
@@ -143,6 +148,7 @@ class ApiPolicyHttpResp implements ModelInterface, ArrayAccess
             'reqUri' => 'req_uri',
             'timeout' => 'timeout',
             'retryCount' => 'retry_count',
+            'enableSmChannel' => 'enable_sm_channel',
             'vpcChannelInfo' => 'vpc_channel_info',
             'vpcChannelStatus' => 'vpc_channel_status'
     ];
@@ -161,6 +167,7 @@ class ApiPolicyHttpResp implements ModelInterface, ArrayAccess
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道： - 1： 使用VPC通道 - 2：不使用VPC通道
     *
@@ -179,6 +186,7 @@ class ApiPolicyHttpResp implements ModelInterface, ArrayAccess
             'reqUri' => 'setReqUri',
             'timeout' => 'setTimeout',
             'retryCount' => 'setRetryCount',
+            'enableSmChannel' => 'setEnableSmChannel',
             'vpcChannelInfo' => 'setVpcChannelInfo',
             'vpcChannelStatus' => 'setVpcChannelStatus'
     ];
@@ -197,6 +205,7 @@ class ApiPolicyHttpResp implements ModelInterface, ArrayAccess
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道： - 1： 使用VPC通道 - 2：不使用VPC通道
     *
@@ -215,6 +224,7 @@ class ApiPolicyHttpResp implements ModelInterface, ArrayAccess
             'reqUri' => 'getReqUri',
             'timeout' => 'getTimeout',
             'retryCount' => 'getRetryCount',
+            'enableSmChannel' => 'getEnableSmChannel',
             'vpcChannelInfo' => 'getVpcChannelInfo',
             'vpcChannelStatus' => 'getVpcChannelStatus'
     ];
@@ -350,6 +360,7 @@ class ApiPolicyHttpResp implements ModelInterface, ArrayAccess
         $this->container['reqUri'] = isset($data['reqUri']) ? $data['reqUri'] : null;
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['retryCount'] = isset($data['retryCount']) ? $data['retryCount'] : null;
+        $this->container['enableSmChannel'] = isset($data['enableSmChannel']) ? $data['enableSmChannel'] : null;
         $this->container['vpcChannelInfo'] = isset($data['vpcChannelInfo']) ? $data['vpcChannelInfo'] : null;
         $this->container['vpcChannelStatus'] = isset($data['vpcChannelStatus']) ? $data['vpcChannelStatus'] : null;
     }
@@ -715,6 +726,30 @@ class ApiPolicyHttpResp implements ModelInterface, ArrayAccess
     public function setRetryCount($retryCount)
     {
         $this->container['retryCount'] = $retryCount;
+        return $this;
+    }
+
+    /**
+    * Gets enableSmChannel
+    *  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
+    *
+    * @return bool|null
+    */
+    public function getEnableSmChannel()
+    {
+        return $this->container['enableSmChannel'];
+    }
+
+    /**
+    * Sets enableSmChannel
+    *
+    * @param bool|null $enableSmChannel 是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
+    *
+    * @return $this
+    */
+    public function setEnableSmChannel($enableSmChannel)
+    {
+        $this->container['enableSmChannel'] = $enableSmChannel;
         return $this;
     }
 

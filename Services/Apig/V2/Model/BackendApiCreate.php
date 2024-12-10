@@ -30,6 +30,7 @@ class BackendApiCreate implements ModelInterface, ArrayAccess
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * enableClientSsl  是否开启双向认证
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道 - 1：使用VPC通道 - 2：不使用VPC通道
     *
@@ -46,6 +47,7 @@ class BackendApiCreate implements ModelInterface, ArrayAccess
             'timeout' => 'int',
             'enableClientSsl' => 'bool',
             'retryCount' => 'string',
+            'enableSmChannel' => 'bool',
             'vpcChannelInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\ApiBackendVpcReq',
             'vpcChannelStatus' => 'int'
     ];
@@ -62,6 +64,7 @@ class BackendApiCreate implements ModelInterface, ArrayAccess
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * enableClientSsl  是否开启双向认证
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道 - 1：使用VPC通道 - 2：不使用VPC通道
     *
@@ -78,6 +81,7 @@ class BackendApiCreate implements ModelInterface, ArrayAccess
         'timeout' => 'int32',
         'enableClientSsl' => null,
         'retryCount' => null,
+        'enableSmChannel' => null,
         'vpcChannelInfo' => null,
         'vpcChannelStatus' => 'int32'
     ];
@@ -115,6 +119,7 @@ class BackendApiCreate implements ModelInterface, ArrayAccess
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * enableClientSsl  是否开启双向认证
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道 - 1：使用VPC通道 - 2：不使用VPC通道
     *
@@ -131,6 +136,7 @@ class BackendApiCreate implements ModelInterface, ArrayAccess
             'timeout' => 'timeout',
             'enableClientSsl' => 'enable_client_ssl',
             'retryCount' => 'retry_count',
+            'enableSmChannel' => 'enable_sm_channel',
             'vpcChannelInfo' => 'vpc_channel_info',
             'vpcChannelStatus' => 'vpc_channel_status'
     ];
@@ -147,6 +153,7 @@ class BackendApiCreate implements ModelInterface, ArrayAccess
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * enableClientSsl  是否开启双向认证
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道 - 1：使用VPC通道 - 2：不使用VPC通道
     *
@@ -163,6 +170,7 @@ class BackendApiCreate implements ModelInterface, ArrayAccess
             'timeout' => 'setTimeout',
             'enableClientSsl' => 'setEnableClientSsl',
             'retryCount' => 'setRetryCount',
+            'enableSmChannel' => 'setEnableSmChannel',
             'vpcChannelInfo' => 'setVpcChannelInfo',
             'vpcChannelStatus' => 'setVpcChannelStatus'
     ];
@@ -179,6 +187,7 @@ class BackendApiCreate implements ModelInterface, ArrayAccess
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * enableClientSsl  是否开启双向认证
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
+    * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道 - 1：使用VPC通道 - 2：不使用VPC通道
     *
@@ -195,6 +204,7 @@ class BackendApiCreate implements ModelInterface, ArrayAccess
             'timeout' => 'getTimeout',
             'enableClientSsl' => 'getEnableClientSsl',
             'retryCount' => 'getRetryCount',
+            'enableSmChannel' => 'getEnableSmChannel',
             'vpcChannelInfo' => 'getVpcChannelInfo',
             'vpcChannelStatus' => 'getVpcChannelStatus'
     ];
@@ -328,6 +338,7 @@ class BackendApiCreate implements ModelInterface, ArrayAccess
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['enableClientSsl'] = isset($data['enableClientSsl']) ? $data['enableClientSsl'] : null;
         $this->container['retryCount'] = isset($data['retryCount']) ? $data['retryCount'] : null;
+        $this->container['enableSmChannel'] = isset($data['enableSmChannel']) ? $data['enableSmChannel'] : null;
         $this->container['vpcChannelInfo'] = isset($data['vpcChannelInfo']) ? $data['vpcChannelInfo'] : null;
         $this->container['vpcChannelStatus'] = isset($data['vpcChannelStatus']) ? $data['vpcChannelStatus'] : null;
     }
@@ -630,6 +641,30 @@ class BackendApiCreate implements ModelInterface, ArrayAccess
     public function setRetryCount($retryCount)
     {
         $this->container['retryCount'] = $retryCount;
+        return $this;
+    }
+
+    /**
+    * Gets enableSmChannel
+    *  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
+    *
+    * @return bool|null
+    */
+    public function getEnableSmChannel()
+    {
+        return $this->container['enableSmChannel'];
+    }
+
+    /**
+    * Sets enableSmChannel
+    *
+    * @param bool|null $enableSmChannel 是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
+    *
+    * @return $this
+    */
+    public function setEnableSmChannel($enableSmChannel)
+    {
+        $this->container['enableSmChannel'] = $enableSmChannel;
         return $this;
     }
 
