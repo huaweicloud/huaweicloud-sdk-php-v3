@@ -35,7 +35,7 @@ class UpdateLivePlatformRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'string',
             'xAppUserId' => 'string',
             'platformId' => 'string',
-            'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateLivePlatformReq'
+            'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateLivePlatformReq'
     ];
 
     /**
@@ -384,7 +384,7 @@ class UpdateLivePlatformRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CreateLivePlatformReq|null
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateLivePlatformReq|null
     */
     public function getBody()
     {
@@ -394,7 +394,7 @@ class UpdateLivePlatformRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CreateLivePlatformReq|null $body body
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateLivePlatformReq|null $body body
     *
     * @return $this
     */

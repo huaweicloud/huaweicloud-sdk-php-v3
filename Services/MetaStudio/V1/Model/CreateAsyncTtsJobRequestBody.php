@@ -21,14 +21,14 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * text  待合成文本
-    * voiceAssetId  音色ID
-    * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
-    * pitch  音高。 默认值100，最小值50，最大值200。
-    * volume  音量。 默认值140，最小值90，最大值240。
+    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    * pitch  音高。
+    * volume  音量。
     * audioFormat  输出音频文件格式。默认WAV。 * WAV：wav格式。 * MP3：mp3格式。
-    * needTimestamp  是否需要时间戳 false不需要；true：需要返回时间戳信息；默认false
+    * needTimestamp  是否需要时间戳。false为不需要，true为需要返回时间戳信息。默认值为false。
     * silenceFlag  异常时是否返回静默音频流
-    * silenceTimeMs  异常时返回的静默音频流时长,单位毫秒
+    * silenceTimeMs  异常时返回的静默音频流时长，单位毫秒。
     *
     * @var string[]
     */
@@ -47,14 +47,14 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * text  待合成文本
-    * voiceAssetId  音色ID
-    * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
-    * pitch  音高。 默认值100，最小值50，最大值200。
-    * volume  音量。 默认值140，最小值90，最大值240。
+    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    * pitch  音高。
+    * volume  音量。
     * audioFormat  输出音频文件格式。默认WAV。 * WAV：wav格式。 * MP3：mp3格式。
-    * needTimestamp  是否需要时间戳 false不需要；true：需要返回时间戳信息；默认false
+    * needTimestamp  是否需要时间戳。false为不需要，true为需要返回时间戳信息。默认值为false。
     * silenceFlag  异常时是否返回静默音频流
-    * silenceTimeMs  异常时返回的静默音频流时长,单位毫秒
+    * silenceTimeMs  异常时返回的静默音频流时长，单位毫秒。
     *
     * @var string[]
     */
@@ -94,14 +94,14 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * text  待合成文本
-    * voiceAssetId  音色ID
-    * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
-    * pitch  音高。 默认值100，最小值50，最大值200。
-    * volume  音量。 默认值140，最小值90，最大值240。
+    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    * pitch  音高。
+    * volume  音量。
     * audioFormat  输出音频文件格式。默认WAV。 * WAV：wav格式。 * MP3：mp3格式。
-    * needTimestamp  是否需要时间戳 false不需要；true：需要返回时间戳信息；默认false
+    * needTimestamp  是否需要时间戳。false为不需要，true为需要返回时间戳信息。默认值为false。
     * silenceFlag  异常时是否返回静默音频流
-    * silenceTimeMs  异常时返回的静默音频流时长,单位毫秒
+    * silenceTimeMs  异常时返回的静默音频流时长，单位毫秒。
     *
     * @var string[]
     */
@@ -120,14 +120,14 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * text  待合成文本
-    * voiceAssetId  音色ID
-    * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
-    * pitch  音高。 默认值100，最小值50，最大值200。
-    * volume  音量。 默认值140，最小值90，最大值240。
+    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    * pitch  音高。
+    * volume  音量。
     * audioFormat  输出音频文件格式。默认WAV。 * WAV：wav格式。 * MP3：mp3格式。
-    * needTimestamp  是否需要时间戳 false不需要；true：需要返回时间戳信息；默认false
+    * needTimestamp  是否需要时间戳。false为不需要，true为需要返回时间戳信息。默认值为false。
     * silenceFlag  异常时是否返回静默音频流
-    * silenceTimeMs  异常时返回的静默音频流时长,单位毫秒
+    * silenceTimeMs  异常时返回的静默音频流时长，单位毫秒。
     *
     * @var string[]
     */
@@ -146,14 +146,14 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * text  待合成文本
-    * voiceAssetId  音色ID
-    * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
-    * pitch  音高。 默认值100，最小值50，最大值200。
-    * volume  音量。 默认值140，最小值90，最大值240。
+    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    * pitch  音高。
+    * volume  音量。
     * audioFormat  输出音频文件格式。默认WAV。 * WAV：wav格式。 * MP3：mp3格式。
-    * needTimestamp  是否需要时间戳 false不需要；true：需要返回时间戳信息；默认false
+    * needTimestamp  是否需要时间戳。false为不需要，true为需要返回时间戳信息。默认值为false。
     * silenceFlag  异常时是否返回静默音频流
-    * silenceTimeMs  异常时返回的静默音频流时长,单位毫秒
+    * silenceTimeMs  异常时返回的静默音频流时长，单位毫秒。
     *
     * @var string[]
     */
@@ -354,7 +354,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets voiceAssetId
-    *  音色ID
+    *  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
     *
     * @return string
     */
@@ -366,7 +366,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets voiceAssetId
     *
-    * @param string $voiceAssetId 音色ID
+    * @param string $voiceAssetId 音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets speed
-    *  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    *  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     *
     * @return int|null
     */
@@ -390,7 +390,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets speed
     *
-    * @param int|null $speed 语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    * @param int|null $speed 语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets pitch
-    *  音高。 默认值100，最小值50，最大值200。
+    *  音高。
     *
     * @return int|null
     */
@@ -414,7 +414,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets pitch
     *
-    * @param int|null $pitch 音高。 默认值100，最小值50，最大值200。
+    * @param int|null $pitch 音高。
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets volume
-    *  音量。 默认值140，最小值90，最大值240。
+    *  音量。
     *
     * @return int|null
     */
@@ -438,7 +438,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets volume
     *
-    * @param int|null $volume 音量。 默认值140，最小值90，最大值240。
+    * @param int|null $volume 音量。
     *
     * @return $this
     */
@@ -474,7 +474,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets needTimestamp
-    *  是否需要时间戳 false不需要；true：需要返回时间戳信息；默认false
+    *  是否需要时间戳。false为不需要，true为需要返回时间戳信息。默认值为false。
     *
     * @return bool|null
     */
@@ -486,7 +486,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets needTimestamp
     *
-    * @param bool|null $needTimestamp 是否需要时间戳 false不需要；true：需要返回时间戳信息；默认false
+    * @param bool|null $needTimestamp 是否需要时间戳。false为不需要，true为需要返回时间戳信息。默认值为false。
     *
     * @return $this
     */
@@ -522,7 +522,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets silenceTimeMs
-    *  异常时返回的静默音频流时长,单位毫秒
+    *  异常时返回的静默音频流时长，单位毫秒。
     *
     * @return int|null
     */
@@ -534,7 +534,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets silenceTimeMs
     *
-    * @param int|null $silenceTimeMs 异常时返回的静默音频流时长,单位毫秒
+    * @param int|null $silenceTimeMs 异常时返回的静默音频流时长，单位毫秒。
     *
     * @return $this
     */

@@ -39,7 +39,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * jobType  作业类型：flink_sql_job、flink_opensource_sql_job。 默认值：“flink_opensource_sql_job”。  “run_mode”为“exclusive_cluster”时，作业类型须为“flink_sql_job”或“flink_opensource_sql_job”。  “run_mode””为“shared_cluster”时作业类型必须为”flink_sql_job“。
     * edgeGroupIds  边缘计算组ID列表。
     * dirtyDataStrategy  作业脏数据策略。 “2”：保存； “1”：抛出异常； “0”：忽略； 默认值为“0”。
-    * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
+    * udfJarUrl  用户自定义UDF文件，在后续作业中可以调用插入Jar包中的自定义函数。 UDF Jar包的管理方式： 上传OBS管理UDF Jar包：提前将对应的Jar包上传至OBS桶中。并在此处选择对应的OBS路径。 上传DLI管理UDF Jar包：提前将对应的Jar包上传至OBS桶中，并在DLI管理控制台的“数据管理>程序包管理”中创建程序包。 Flink1.15版本不再支持DLI管理UDF Jar包。
     * managerCuNumber  用户为作业选择的管理单元（jobmanager）CU数量，默认值为“1”。
     * tmCus  每个taskmanager的CU数，默认值为“1”。
     * tmSlotNum  每个taskmanager的slot数，默认值为“(parallel_number*tm_cus)/(cu_number-manager_cu_number)”
@@ -103,7 +103,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * jobType  作业类型：flink_sql_job、flink_opensource_sql_job。 默认值：“flink_opensource_sql_job”。  “run_mode”为“exclusive_cluster”时，作业类型须为“flink_sql_job”或“flink_opensource_sql_job”。  “run_mode””为“shared_cluster”时作业类型必须为”flink_sql_job“。
     * edgeGroupIds  边缘计算组ID列表。
     * dirtyDataStrategy  作业脏数据策略。 “2”：保存； “1”：抛出异常； “0”：忽略； 默认值为“0”。
-    * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
+    * udfJarUrl  用户自定义UDF文件，在后续作业中可以调用插入Jar包中的自定义函数。 UDF Jar包的管理方式： 上传OBS管理UDF Jar包：提前将对应的Jar包上传至OBS桶中。并在此处选择对应的OBS路径。 上传DLI管理UDF Jar包：提前将对应的Jar包上传至OBS桶中，并在DLI管理控制台的“数据管理>程序包管理”中创建程序包。 Flink1.15版本不再支持DLI管理UDF Jar包。
     * managerCuNumber  用户为作业选择的管理单元（jobmanager）CU数量，默认值为“1”。
     * tmCus  每个taskmanager的CU数，默认值为“1”。
     * tmSlotNum  每个taskmanager的slot数，默认值为“(parallel_number*tm_cus)/(cu_number-manager_cu_number)”
@@ -188,7 +188,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * jobType  作业类型：flink_sql_job、flink_opensource_sql_job。 默认值：“flink_opensource_sql_job”。  “run_mode”为“exclusive_cluster”时，作业类型须为“flink_sql_job”或“flink_opensource_sql_job”。  “run_mode””为“shared_cluster”时作业类型必须为”flink_sql_job“。
     * edgeGroupIds  边缘计算组ID列表。
     * dirtyDataStrategy  作业脏数据策略。 “2”：保存； “1”：抛出异常； “0”：忽略； 默认值为“0”。
-    * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
+    * udfJarUrl  用户自定义UDF文件，在后续作业中可以调用插入Jar包中的自定义函数。 UDF Jar包的管理方式： 上传OBS管理UDF Jar包：提前将对应的Jar包上传至OBS桶中。并在此处选择对应的OBS路径。 上传DLI管理UDF Jar包：提前将对应的Jar包上传至OBS桶中，并在DLI管理控制台的“数据管理>程序包管理”中创建程序包。 Flink1.15版本不再支持DLI管理UDF Jar包。
     * managerCuNumber  用户为作业选择的管理单元（jobmanager）CU数量，默认值为“1”。
     * tmCus  每个taskmanager的CU数，默认值为“1”。
     * tmSlotNum  每个taskmanager的slot数，默认值为“(parallel_number*tm_cus)/(cu_number-manager_cu_number)”
@@ -252,7 +252,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * jobType  作业类型：flink_sql_job、flink_opensource_sql_job。 默认值：“flink_opensource_sql_job”。  “run_mode”为“exclusive_cluster”时，作业类型须为“flink_sql_job”或“flink_opensource_sql_job”。  “run_mode””为“shared_cluster”时作业类型必须为”flink_sql_job“。
     * edgeGroupIds  边缘计算组ID列表。
     * dirtyDataStrategy  作业脏数据策略。 “2”：保存； “1”：抛出异常； “0”：忽略； 默认值为“0”。
-    * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
+    * udfJarUrl  用户自定义UDF文件，在后续作业中可以调用插入Jar包中的自定义函数。 UDF Jar包的管理方式： 上传OBS管理UDF Jar包：提前将对应的Jar包上传至OBS桶中。并在此处选择对应的OBS路径。 上传DLI管理UDF Jar包：提前将对应的Jar包上传至OBS桶中，并在DLI管理控制台的“数据管理>程序包管理”中创建程序包。 Flink1.15版本不再支持DLI管理UDF Jar包。
     * managerCuNumber  用户为作业选择的管理单元（jobmanager）CU数量，默认值为“1”。
     * tmCus  每个taskmanager的CU数，默认值为“1”。
     * tmSlotNum  每个taskmanager的slot数，默认值为“(parallel_number*tm_cus)/(cu_number-manager_cu_number)”
@@ -316,7 +316,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * jobType  作业类型：flink_sql_job、flink_opensource_sql_job。 默认值：“flink_opensource_sql_job”。  “run_mode”为“exclusive_cluster”时，作业类型须为“flink_sql_job”或“flink_opensource_sql_job”。  “run_mode””为“shared_cluster”时作业类型必须为”flink_sql_job“。
     * edgeGroupIds  边缘计算组ID列表。
     * dirtyDataStrategy  作业脏数据策略。 “2”：保存； “1”：抛出异常； “0”：忽略； 默认值为“0”。
-    * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
+    * udfJarUrl  用户自定义UDF文件，在后续作业中可以调用插入Jar包中的自定义函数。 UDF Jar包的管理方式： 上传OBS管理UDF Jar包：提前将对应的Jar包上传至OBS桶中。并在此处选择对应的OBS路径。 上传DLI管理UDF Jar包：提前将对应的Jar包上传至OBS桶中，并在DLI管理控制台的“数据管理>程序包管理”中创建程序包。 Flink1.15版本不再支持DLI管理UDF Jar包。
     * managerCuNumber  用户为作业选择的管理单元（jobmanager）CU数量，默认值为“1”。
     * tmCus  每个taskmanager的CU数，默认值为“1”。
     * tmSlotNum  每个taskmanager的slot数，默认值为“(parallel_number*tm_cus)/(cu_number-manager_cu_number)”
@@ -948,7 +948,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets udfJarUrl
-    *  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
+    *  用户自定义UDF文件，在后续作业中可以调用插入Jar包中的自定义函数。 UDF Jar包的管理方式： 上传OBS管理UDF Jar包：提前将对应的Jar包上传至OBS桶中。并在此处选择对应的OBS路径。 上传DLI管理UDF Jar包：提前将对应的Jar包上传至OBS桶中，并在DLI管理控制台的“数据管理>程序包管理”中创建程序包。 Flink1.15版本不再支持DLI管理UDF Jar包。
     *
     * @return string|null
     */
@@ -960,7 +960,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets udfJarUrl
     *
-    * @param string|null $udfJarUrl 用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
+    * @param string|null $udfJarUrl 用户自定义UDF文件，在后续作业中可以调用插入Jar包中的自定义函数。 UDF Jar包的管理方式： 上传OBS管理UDF Jar包：提前将对应的Jar包上传至OBS桶中。并在此处选择对应的OBS路径。 上传DLI管理UDF Jar包：提前将对应的Jar包上传至OBS桶中，并在DLI管理控制台的“数据管理>程序包管理”中创建程序包。 Flink1.15版本不再支持DLI管理UDF Jar包。
     *
     * @return $this
     */

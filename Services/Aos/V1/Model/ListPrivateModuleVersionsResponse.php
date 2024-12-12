@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cce\V3\Model;
+namespace HuaweiCloud\SDK\Aos\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SyncNodePoolRequest implements ModelInterface, ArrayAccess
+class ListPrivateModuleVersionsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,26 @@ class SyncNodePoolRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SyncNodePoolRequest';
+    protected static $openAPIModelName = 'ListPrivateModuleVersionsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * versions  私有模块版本的列表。默认以创建时间升序排序。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'clusterId' => 'string',
-            'nodepoolId' => 'string'
+            'versions' => '\HuaweiCloud\SDK\Aos\V1\Model\PrivateModuleVersionSummary[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * versions  私有模块版本的列表。默认以创建时间升序排序。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'clusterId' => null,
-        'nodepoolId' => null
+        'versions' => null
     ];
 
     /**
@@ -65,38 +62,32 @@ class SyncNodePoolRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * versions  私有模块版本的列表。默认以创建时间升序排序。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'clusterId' => 'cluster_id',
-            'nodepoolId' => 'nodepool_id'
+            'versions' => 'versions'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * versions  私有模块版本的列表。默认以创建时间升序排序。
     *
     * @var string[]
     */
     protected static $setters = [
-            'clusterId' => 'setClusterId',
-            'nodepoolId' => 'setNodepoolId'
+            'versions' => 'setVersions'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * versions  私有模块版本的列表。默认以创建时间升序排序。
     *
     * @var string[]
     */
     protected static $getters = [
-            'clusterId' => 'getClusterId',
-            'nodepoolId' => 'getNodepoolId'
+            'versions' => 'getVersions'
     ];
 
     /**
@@ -157,8 +148,7 @@ class SyncNodePoolRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
-        $this->container['nodepoolId'] = isset($data['nodepoolId']) ? $data['nodepoolId'] : null;
+        $this->container['versions'] = isset($data['versions']) ? $data['versions'] : null;
     }
 
     /**
@@ -169,18 +159,6 @@ class SyncNodePoolRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['clusterId'] === null) {
-            $invalidProperties[] = "'clusterId' can't be null";
-        }
-            if (!preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['clusterId'])) {
-                $invalidProperties[] = "invalid value for 'clusterId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
-            }
-        if ($this->container['nodepoolId'] === null) {
-            $invalidProperties[] = "'nodepoolId' can't be null";
-        }
-            if (!preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['nodepoolId'])) {
-                $invalidProperties[] = "invalid value for 'nodepoolId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
-            }
         return $invalidProperties;
     }
 
@@ -196,50 +174,26 @@ class SyncNodePoolRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets clusterId
-    *  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * Gets versions
+    *  私有模块版本的列表。默认以创建时间升序排序。
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\PrivateModuleVersionSummary[]|null
     */
-    public function getClusterId()
+    public function getVersions()
     {
-        return $this->container['clusterId'];
+        return $this->container['versions'];
     }
 
     /**
-    * Sets clusterId
+    * Sets versions
     *
-    * @param string $clusterId 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\PrivateModuleVersionSummary[]|null $versions 私有模块版本的列表。默认以创建时间升序排序。
     *
     * @return $this
     */
-    public function setClusterId($clusterId)
+    public function setVersions($versions)
     {
-        $this->container['clusterId'] = $clusterId;
-        return $this;
-    }
-
-    /**
-    * Gets nodepoolId
-    *  节点池ID
-    *
-    * @return string
-    */
-    public function getNodepoolId()
-    {
-        return $this->container['nodepoolId'];
-    }
-
-    /**
-    * Sets nodepoolId
-    *
-    * @param string $nodepoolId 节点池ID
-    *
-    * @return $this
-    */
-    public function setNodepoolId($nodepoolId)
-    {
-        $this->container['nodepoolId'] = $nodepoolId;
+        $this->container['versions'] = $versions;
         return $this;
     }
 

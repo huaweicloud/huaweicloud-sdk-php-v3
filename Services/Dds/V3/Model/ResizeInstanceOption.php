@@ -22,6 +22,7 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * targetType  对象类型。 - 对于集群实例，该参数为必选。变更mongos节点规格时，取值为“mongos”；变更单个shard组规格、或者批量变更多个shard组规格时，取值为“shard”，变更config组规格时，取值为\"config\"。 - 对于副本集实例，不传该参数。变更readonly节点规格时,取值为“readonly”。 - 对于单节点实例，不传该参数。
     * targetId  待变更规格的节点ID或实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，取值为mongos节点ID；变更单个shard组规格时，取值为shard组ID；批量变更多个shard组规格时，不传该参数；变更config组规格时，取值为config组的ID。 - 对于副本集实例，取值为相应的实例ID。变更readonly节点规格时，取值为readonly节点ID。 - 对于单节点实例，取值为相应的实例ID。
+    * targetIds  待变更规格的节点组ID列表，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，不传该参数；变更单个shard组规格时，不传该参数；变更config组规格时，不传该参数；批量变更多个shard组规格时，取值为相应的多个shard组ID，最多支持16个shard组批量变更。 - 对于副本集实例，不传该参数。 - 对于单节点实例，不传该参数。
     * targetSpecCode  变更至新规格的资源规格编码。
     *
     * @var string[]
@@ -29,6 +30,7 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'targetType' => 'string',
             'targetId' => 'string',
+            'targetIds' => 'string[]',
             'targetSpecCode' => 'string'
     ];
 
@@ -36,6 +38,7 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * targetType  对象类型。 - 对于集群实例，该参数为必选。变更mongos节点规格时，取值为“mongos”；变更单个shard组规格、或者批量变更多个shard组规格时，取值为“shard”，变更config组规格时，取值为\"config\"。 - 对于副本集实例，不传该参数。变更readonly节点规格时,取值为“readonly”。 - 对于单节点实例，不传该参数。
     * targetId  待变更规格的节点ID或实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，取值为mongos节点ID；变更单个shard组规格时，取值为shard组ID；批量变更多个shard组规格时，不传该参数；变更config组规格时，取值为config组的ID。 - 对于副本集实例，取值为相应的实例ID。变更readonly节点规格时，取值为readonly节点ID。 - 对于单节点实例，取值为相应的实例ID。
+    * targetIds  待变更规格的节点组ID列表，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，不传该参数；变更单个shard组规格时，不传该参数；变更config组规格时，不传该参数；批量变更多个shard组规格时，取值为相应的多个shard组ID，最多支持16个shard组批量变更。 - 对于副本集实例，不传该参数。 - 对于单节点实例，不传该参数。
     * targetSpecCode  变更至新规格的资源规格编码。
     *
     * @var string[]
@@ -43,6 +46,7 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'targetType' => null,
         'targetId' => null,
+        'targetIds' => null,
         'targetSpecCode' => null
     ];
 
@@ -71,6 +75,7 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     * and the value is the original name
     * targetType  对象类型。 - 对于集群实例，该参数为必选。变更mongos节点规格时，取值为“mongos”；变更单个shard组规格、或者批量变更多个shard组规格时，取值为“shard”，变更config组规格时，取值为\"config\"。 - 对于副本集实例，不传该参数。变更readonly节点规格时,取值为“readonly”。 - 对于单节点实例，不传该参数。
     * targetId  待变更规格的节点ID或实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，取值为mongos节点ID；变更单个shard组规格时，取值为shard组ID；批量变更多个shard组规格时，不传该参数；变更config组规格时，取值为config组的ID。 - 对于副本集实例，取值为相应的实例ID。变更readonly节点规格时，取值为readonly节点ID。 - 对于单节点实例，取值为相应的实例ID。
+    * targetIds  待变更规格的节点组ID列表，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，不传该参数；变更单个shard组规格时，不传该参数；变更config组规格时，不传该参数；批量变更多个shard组规格时，取值为相应的多个shard组ID，最多支持16个shard组批量变更。 - 对于副本集实例，不传该参数。 - 对于单节点实例，不传该参数。
     * targetSpecCode  变更至新规格的资源规格编码。
     *
     * @var string[]
@@ -78,6 +83,7 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'targetType' => 'target_type',
             'targetId' => 'target_id',
+            'targetIds' => 'target_ids',
             'targetSpecCode' => 'target_spec_code'
     ];
 
@@ -85,6 +91,7 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * targetType  对象类型。 - 对于集群实例，该参数为必选。变更mongos节点规格时，取值为“mongos”；变更单个shard组规格、或者批量变更多个shard组规格时，取值为“shard”，变更config组规格时，取值为\"config\"。 - 对于副本集实例，不传该参数。变更readonly节点规格时,取值为“readonly”。 - 对于单节点实例，不传该参数。
     * targetId  待变更规格的节点ID或实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，取值为mongos节点ID；变更单个shard组规格时，取值为shard组ID；批量变更多个shard组规格时，不传该参数；变更config组规格时，取值为config组的ID。 - 对于副本集实例，取值为相应的实例ID。变更readonly节点规格时，取值为readonly节点ID。 - 对于单节点实例，取值为相应的实例ID。
+    * targetIds  待变更规格的节点组ID列表，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，不传该参数；变更单个shard组规格时，不传该参数；变更config组规格时，不传该参数；批量变更多个shard组规格时，取值为相应的多个shard组ID，最多支持16个shard组批量变更。 - 对于副本集实例，不传该参数。 - 对于单节点实例，不传该参数。
     * targetSpecCode  变更至新规格的资源规格编码。
     *
     * @var string[]
@@ -92,6 +99,7 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     protected static $setters = [
             'targetType' => 'setTargetType',
             'targetId' => 'setTargetId',
+            'targetIds' => 'setTargetIds',
             'targetSpecCode' => 'setTargetSpecCode'
     ];
 
@@ -99,6 +107,7 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * targetType  对象类型。 - 对于集群实例，该参数为必选。变更mongos节点规格时，取值为“mongos”；变更单个shard组规格、或者批量变更多个shard组规格时，取值为“shard”，变更config组规格时，取值为\"config\"。 - 对于副本集实例，不传该参数。变更readonly节点规格时,取值为“readonly”。 - 对于单节点实例，不传该参数。
     * targetId  待变更规格的节点ID或实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，取值为mongos节点ID；变更单个shard组规格时，取值为shard组ID；批量变更多个shard组规格时，不传该参数；变更config组规格时，取值为config组的ID。 - 对于副本集实例，取值为相应的实例ID。变更readonly节点规格时，取值为readonly节点ID。 - 对于单节点实例，取值为相应的实例ID。
+    * targetIds  待变更规格的节点组ID列表，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，不传该参数；变更单个shard组规格时，不传该参数；变更config组规格时，不传该参数；批量变更多个shard组规格时，取值为相应的多个shard组ID，最多支持16个shard组批量变更。 - 对于副本集实例，不传该参数。 - 对于单节点实例，不传该参数。
     * targetSpecCode  变更至新规格的资源规格编码。
     *
     * @var string[]
@@ -106,6 +115,7 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     protected static $getters = [
             'targetType' => 'getTargetType',
             'targetId' => 'getTargetId',
+            'targetIds' => 'getTargetIds',
             'targetSpecCode' => 'getTargetSpecCode'
     ];
 
@@ -188,6 +198,7 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     {
         $this->container['targetType'] = isset($data['targetType']) ? $data['targetType'] : null;
         $this->container['targetId'] = isset($data['targetId']) ? $data['targetId'] : null;
+        $this->container['targetIds'] = isset($data['targetIds']) ? $data['targetIds'] : null;
         $this->container['targetSpecCode'] = isset($data['targetSpecCode']) ? $data['targetSpecCode'] : null;
     }
 
@@ -207,9 +218,6 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['targetId'] === null) {
-            $invalidProperties[] = "'targetId' can't be null";
-        }
         if ($this->container['targetSpecCode'] === null) {
             $invalidProperties[] = "'targetSpecCode' can't be null";
         }
@@ -255,7 +263,7 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     * Gets targetId
     *  待变更规格的节点ID或实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，取值为mongos节点ID；变更单个shard组规格时，取值为shard组ID；批量变更多个shard组规格时，不传该参数；变更config组规格时，取值为config组的ID。 - 对于副本集实例，取值为相应的实例ID。变更readonly节点规格时，取值为readonly节点ID。 - 对于单节点实例，取值为相应的实例ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getTargetId()
     {
@@ -265,13 +273,37 @@ class ResizeInstanceOption implements ModelInterface, ArrayAccess
     /**
     * Sets targetId
     *
-    * @param string $targetId 待变更规格的节点ID或实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，取值为mongos节点ID；变更单个shard组规格时，取值为shard组ID；批量变更多个shard组规格时，不传该参数；变更config组规格时，取值为config组的ID。 - 对于副本集实例，取值为相应的实例ID。变更readonly节点规格时，取值为readonly节点ID。 - 对于单节点实例，取值为相应的实例ID。
+    * @param string|null $targetId 待变更规格的节点ID或实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，取值为mongos节点ID；变更单个shard组规格时，取值为shard组ID；批量变更多个shard组规格时，不传该参数；变更config组规格时，取值为config组的ID。 - 对于副本集实例，取值为相应的实例ID。变更readonly节点规格时，取值为readonly节点ID。 - 对于单节点实例，取值为相应的实例ID。
     *
     * @return $this
     */
     public function setTargetId($targetId)
     {
         $this->container['targetId'] = $targetId;
+        return $this;
+    }
+
+    /**
+    * Gets targetIds
+    *  待变更规格的节点组ID列表，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，不传该参数；变更单个shard组规格时，不传该参数；变更config组规格时，不传该参数；批量变更多个shard组规格时，取值为相应的多个shard组ID，最多支持16个shard组批量变更。 - 对于副本集实例，不传该参数。 - 对于单节点实例，不传该参数。
+    *
+    * @return string[]|null
+    */
+    public function getTargetIds()
+    {
+        return $this->container['targetIds'];
+    }
+
+    /**
+    * Sets targetIds
+    *
+    * @param string[]|null $targetIds 待变更规格的节点组ID列表，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，不传该参数；变更单个shard组规格时，不传该参数；变更config组规格时，不传该参数；批量变更多个shard组规格时，取值为相应的多个shard组ID，最多支持16个shard组批量变更。 - 对于副本集实例，不传该参数。 - 对于单节点实例，不传该参数。
+    *
+    * @return $this
+    */
+    public function setTargetIds($targetIds)
+    {
+        $this->container['targetIds'] = $targetIds;
         return $this;
     }
 

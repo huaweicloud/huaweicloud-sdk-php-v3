@@ -25,8 +25,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
+    * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
@@ -41,8 +43,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VideoConfig',
             'modelAssetId' => 'string',
             'voiceConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfig',
+            'voiceConfigList' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatVoiceConfig[]',
             'robotId' => 'string',
             'concurrency' => 'int',
+            'defaultLanguage' => 'string',
             'backgroundConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundConfigInfo',
             'layerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerConfig[]',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
@@ -57,8 +61,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
+    * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
@@ -73,8 +79,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
         'videoConfig' => null,
         'modelAssetId' => null,
         'voiceConfig' => null,
+        'voiceConfigList' => null,
         'robotId' => null,
         'concurrency' => 'int32',
+        'defaultLanguage' => null,
         'backgroundConfig' => null,
         'layerConfig' => null,
         'reviewConfig' => null,
@@ -110,8 +118,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
+    * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
@@ -126,8 +136,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'videoConfig' => 'video_config',
             'modelAssetId' => 'model_asset_id',
             'voiceConfig' => 'voice_config',
+            'voiceConfigList' => 'voice_config_list',
             'robotId' => 'robot_id',
             'concurrency' => 'concurrency',
+            'defaultLanguage' => 'default_language',
             'backgroundConfig' => 'background_config',
             'layerConfig' => 'layer_config',
             'reviewConfig' => 'review_config',
@@ -142,8 +154,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
+    * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
@@ -158,8 +172,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'videoConfig' => 'setVideoConfig',
             'modelAssetId' => 'setModelAssetId',
             'voiceConfig' => 'setVoiceConfig',
+            'voiceConfigList' => 'setVoiceConfigList',
             'robotId' => 'setRobotId',
             'concurrency' => 'setConcurrency',
+            'defaultLanguage' => 'setDefaultLanguage',
             'backgroundConfig' => 'setBackgroundConfig',
             'layerConfig' => 'setLayerConfig',
             'reviewConfig' => 'setReviewConfig',
@@ -174,8 +190,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
+    * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
@@ -190,8 +208,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'videoConfig' => 'getVideoConfig',
             'modelAssetId' => 'getModelAssetId',
             'voiceConfig' => 'getVoiceConfig',
+            'voiceConfigList' => 'getVoiceConfigList',
             'robotId' => 'getRobotId',
             'concurrency' => 'getConcurrency',
+            'defaultLanguage' => 'getDefaultLanguage',
             'backgroundConfig' => 'getBackgroundConfig',
             'layerConfig' => 'getLayerConfig',
             'reviewConfig' => 'getReviewConfig',
@@ -239,10 +259,25 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const DEFAULT_LANGUAGE_CN = 'CN';
+    const DEFAULT_LANGUAGE_EN = 'EN';
     const CHAT_VIDEO_TYPE_COMPUTER = 'COMPUTER';
     const CHAT_VIDEO_TYPE_MOBILE = 'MOBILE';
     const CHAT_VIDEO_TYPE_HUB = 'HUB';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDefaultLanguageAllowableValues()
+    {
+        return [
+            self::DEFAULT_LANGUAGE_CN,
+            self::DEFAULT_LANGUAGE_EN,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -279,8 +314,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
         $this->container['modelAssetId'] = isset($data['modelAssetId']) ? $data['modelAssetId'] : null;
         $this->container['voiceConfig'] = isset($data['voiceConfig']) ? $data['voiceConfig'] : null;
+        $this->container['voiceConfigList'] = isset($data['voiceConfigList']) ? $data['voiceConfigList'] : null;
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
         $this->container['concurrency'] = isset($data['concurrency']) ? $data['concurrency'] : null;
+        $this->container['defaultLanguage'] = isset($data['defaultLanguage']) ? $data['defaultLanguage'] : null;
         $this->container['backgroundConfig'] = isset($data['backgroundConfig']) ? $data['backgroundConfig'] : null;
         $this->container['layerConfig'] = isset($data['layerConfig']) ? $data['layerConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
@@ -329,6 +366,14 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] < 0)) {
                 $invalidProperties[] = "invalid value for 'concurrency', must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getDefaultLanguageAllowableValues();
+                if (!is_null($this->container['defaultLanguage']) && !in_array($this->container['defaultLanguage'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'defaultLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getChatVideoTypeAllowableValues();
                 if (!is_null($this->container['chatVideoType']) && !in_array($this->container['chatVideoType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -478,6 +523,30 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets voiceConfigList
+    *  语音配置参数列表。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ChatVoiceConfig[]|null
+    */
+    public function getVoiceConfigList()
+    {
+        return $this->container['voiceConfigList'];
+    }
+
+    /**
+    * Sets voiceConfigList
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ChatVoiceConfig[]|null $voiceConfigList 语音配置参数列表。
+    *
+    * @return $this
+    */
+    public function setVoiceConfigList($voiceConfigList)
+    {
+        $this->container['voiceConfigList'] = $voiceConfigList;
+        return $this;
+    }
+
+    /**
     * Gets robotId
     *  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     *
@@ -522,6 +591,30 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     public function setConcurrency($concurrency)
     {
         $this->container['concurrency'] = $concurrency;
+        return $this;
+    }
+
+    /**
+    * Gets defaultLanguage
+    *  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    *
+    * @return string|null
+    */
+    public function getDefaultLanguage()
+    {
+        return $this->container['defaultLanguage'];
+    }
+
+    /**
+    * Sets defaultLanguage
+    *
+    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    *
+    * @return $this
+    */
+    public function setDefaultLanguage($defaultLanguage)
+    {
+        $this->container['defaultLanguage'] = $defaultLanguage;
         return $this;
     }
 

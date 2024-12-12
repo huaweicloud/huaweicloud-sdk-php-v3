@@ -23,7 +23,7 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
-    * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
+    * audioInfoFileUrl  字幕文件下载链接，有效期为1个小时。
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
-    * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
+    * audioInfoFileUrl  字幕文件下载链接，有效期为1个小时。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
-    * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
+    * audioInfoFileUrl  字幕文件下载链接，有效期为1个小时。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
-    * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
+    * audioInfoFileUrl  字幕文件下载链接，有效期为1个小时。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
-    * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
+    * audioInfoFileUrl  字幕文件下载链接，有效期为1个小时。
     *
     * @var string[]
     */
@@ -263,7 +263,7 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets audioInfoFileUrl
-    *  音频信息文件下载链接，有效期为1个小时。
+    *  字幕文件下载链接，有效期为1个小时。
     *
     * @return string|null
     */
@@ -275,7 +275,7 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets audioInfoFileUrl
     *
-    * @param string|null $audioInfoFileUrl 音频信息文件下载链接，有效期为1个小时。
+    * @param string|null $audioInfoFileUrl 字幕文件下载链接，有效期为1个小时。
     *
     * @return $this
     */

@@ -2567,6 +2567,74 @@ class LtsClient extends Client
     }
 
     /**
+     * 查询上下文日志
+     *
+     * 查询上下文日志 该接口用于查询指定日志前（上文）后（下文）的若干条日志。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLogContext($request)
+    {
+        return $this->listLogContextWithHttpInfo($request);
+    }
+
+    public function listLogContextWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/groups/{log_group_id}/streams/{log_stream_id}/context';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['logGroupId'] !== null) {
+            $pathParams['log_group_id'] = $localVarParams['logGroupId'];
+        }
+        if ($localVarParams['logStreamId'] !== null) {
+            $pathParams['log_stream_id'] = $localVarParams['logStreamId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ListLogContextResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ListLogContextRequest');
+    }
+
+    /**
      * 查询账号下所有日志组
      *
      * 该接口用于查询账号下所有日志组。

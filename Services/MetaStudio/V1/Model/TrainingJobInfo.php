@@ -40,6 +40,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
     * allocatedResource  allocatedResource
+    * outputLanguage  模型输出语言类型
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'phone' => 'string',
             'dhtmsJobId' => 'string',
             'batchName' => 'string',
-            'allocatedResource' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceTrainingAllocatedResource'
+            'allocatedResource' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceTrainingAllocatedResource',
+            'outputLanguage' => 'string'
     ];
 
     /**
@@ -88,6 +90,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
     * allocatedResource  allocatedResource
+    * outputLanguage  模型输出语言类型
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
         'phone' => null,
         'dhtmsJobId' => null,
         'batchName' => null,
-        'allocatedResource' => null
+        'allocatedResource' => null,
+        'outputLanguage' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
     * allocatedResource  allocatedResource
+    * outputLanguage  模型输出语言类型
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'phone' => 'phone',
             'dhtmsJobId' => 'dhtms_job_id',
             'batchName' => 'batch_name',
-            'allocatedResource' => 'allocated_resource'
+            'allocatedResource' => 'allocated_resource',
+            'outputLanguage' => 'output_language'
     ];
 
     /**
@@ -205,6 +211,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
     * allocatedResource  allocatedResource
+    * outputLanguage  模型输出语言类型
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'phone' => 'setPhone',
             'dhtmsJobId' => 'setDhtmsJobId',
             'batchName' => 'setBatchName',
-            'allocatedResource' => 'setAllocatedResource'
+            'allocatedResource' => 'setAllocatedResource',
+            'outputLanguage' => 'setOutputLanguage'
     ];
 
     /**
@@ -253,6 +261,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * dhtmsJobId  形象制作任务id
     * batchName  批次名称
     * allocatedResource  allocatedResource
+    * outputLanguage  模型输出语言类型
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'phone' => 'getPhone',
             'dhtmsJobId' => 'getDhtmsJobId',
             'batchName' => 'getBatchName',
-            'allocatedResource' => 'getAllocatedResource'
+            'allocatedResource' => 'getAllocatedResource',
+            'outputLanguage' => 'getOutputLanguage'
     ];
 
     /**
@@ -357,6 +367,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
         $this->container['dhtmsJobId'] = isset($data['dhtmsJobId']) ? $data['dhtmsJobId'] : null;
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
         $this->container['allocatedResource'] = isset($data['allocatedResource']) ? $data['allocatedResource'] : null;
+        $this->container['outputLanguage'] = isset($data['outputLanguage']) ? $data['outputLanguage'] : null;
     }
 
     /**
@@ -456,6 +467,12 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['batchName']) && (mb_strlen($this->container['batchName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'batchName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['outputLanguage']) && (mb_strlen($this->container['outputLanguage']) > 32)) {
+                $invalidProperties[] = "invalid value for 'outputLanguage', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['outputLanguage']) && (mb_strlen($this->container['outputLanguage']) < 1)) {
+                $invalidProperties[] = "invalid value for 'outputLanguage', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -948,6 +965,30 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     public function setAllocatedResource($allocatedResource)
     {
         $this->container['allocatedResource'] = $allocatedResource;
+        return $this;
+    }
+
+    /**
+    * Gets outputLanguage
+    *  模型输出语言类型
+    *
+    * @return string|null
+    */
+    public function getOutputLanguage()
+    {
+        return $this->container['outputLanguage'];
+    }
+
+    /**
+    * Sets outputLanguage
+    *
+    * @param string|null $outputLanguage 模型输出语言类型
+    *
+    * @return $this
+    */
+    public function setOutputLanguage($outputLanguage)
+    {
+        $this->container['outputLanguage'] = $outputLanguage;
         return $this;
     }
 

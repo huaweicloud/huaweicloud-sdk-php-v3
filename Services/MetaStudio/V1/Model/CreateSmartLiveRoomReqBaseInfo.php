@@ -53,7 +53,7 @@ class CreateSmartLiveRoomReqBaseInfo implements ModelInterface, ArrayAccess
             'outputUrls' => 'string[]',
             'streamKeys' => 'string[]',
             'backupModelAssetIds' => 'string[]',
-            'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
+            'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveRoomEventCallBackConfig',
             'rtcCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCLiveEventCallBackConfig',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig',
@@ -702,7 +702,7 @@ class CreateSmartLiveRoomReqBaseInfo implements ModelInterface, ArrayAccess
     * Gets liveEventCallbackConfig
     *  liveEventCallbackConfig
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig|null
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveRoomEventCallBackConfig|null
     */
     public function getLiveEventCallbackConfig()
     {
@@ -712,7 +712,7 @@ class CreateSmartLiveRoomReqBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets liveEventCallbackConfig
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig|null $liveEventCallbackConfig liveEventCallbackConfig
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveRoomEventCallBackConfig|null $liveEventCallbackConfig liveEventCallbackConfig
     *
     * @return $this
     */

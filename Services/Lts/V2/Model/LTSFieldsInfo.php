@@ -27,6 +27,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     * tokenizer  分词符
     * quickAnalysis  是否快速分析
     * ascii  特殊分词符
+    * ltsSubFieldsInfoList  json字段信息
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
             'includeChinese' => 'bool',
             'tokenizer' => 'string',
             'quickAnalysis' => 'bool',
-            'ascii' => 'string[]'
+            'ascii' => 'string[]',
+            'ltsSubFieldsInfoList' => '\HuaweiCloud\SDK\Lts\V2\Model\LTSSubFieldsInfo[]'
     ];
 
     /**
@@ -49,6 +51,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     * tokenizer  分词符
     * quickAnalysis  是否快速分析
     * ascii  特殊分词符
+    * ltsSubFieldsInfoList  json字段信息
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
         'includeChinese' => null,
         'tokenizer' => null,
         'quickAnalysis' => null,
-        'ascii' => null
+        'ascii' => null,
+        'ltsSubFieldsInfoList' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     * tokenizer  分词符
     * quickAnalysis  是否快速分析
     * ascii  特殊分词符
+    * ltsSubFieldsInfoList  json字段信息
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
             'includeChinese' => 'includeChinese',
             'tokenizer' => 'tokenizer',
             'quickAnalysis' => 'quickAnalysis',
-            'ascii' => 'ascii'
+            'ascii' => 'ascii',
+            'ltsSubFieldsInfoList' => 'ltsSubFieldsInfoList'
     ];
 
     /**
@@ -114,6 +120,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     * tokenizer  分词符
     * quickAnalysis  是否快速分析
     * ascii  特殊分词符
+    * ltsSubFieldsInfoList  json字段信息
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
             'includeChinese' => 'setIncludeChinese',
             'tokenizer' => 'setTokenizer',
             'quickAnalysis' => 'setQuickAnalysis',
-            'ascii' => 'setAscii'
+            'ascii' => 'setAscii',
+            'ltsSubFieldsInfoList' => 'setLtsSubFieldsInfoList'
     ];
 
     /**
@@ -136,6 +144,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     * tokenizer  分词符
     * quickAnalysis  是否快速分析
     * ascii  特殊分词符
+    * ltsSubFieldsInfoList  json字段信息
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
             'includeChinese' => 'getIncludeChinese',
             'tokenizer' => 'getTokenizer',
             'quickAnalysis' => 'getQuickAnalysis',
-            'ascii' => 'getAscii'
+            'ascii' => 'getAscii',
+            'ltsSubFieldsInfoList' => 'getLtsSubFieldsInfoList'
     ];
 
     /**
@@ -192,6 +202,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     const FIELD_TYPE_STRING = 'string';
     const FIELD_TYPE_LONG = 'long';
     const FIELD_TYPE_FLOAT = 'float';
+    const FIELD_TYPE_JSON = 'json';
     
 
     /**
@@ -205,6 +216,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
             self::FIELD_TYPE_STRING,
             self::FIELD_TYPE_LONG,
             self::FIELD_TYPE_FLOAT,
+            self::FIELD_TYPE_JSON,
         ];
     }
 
@@ -231,6 +243,7 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
         $this->container['tokenizer'] = isset($data['tokenizer']) ? $data['tokenizer'] : null;
         $this->container['quickAnalysis'] = isset($data['quickAnalysis']) ? $data['quickAnalysis'] : null;
         $this->container['ascii'] = isset($data['ascii']) ? $data['ascii'] : null;
+        $this->container['ltsSubFieldsInfoList'] = isset($data['ltsSubFieldsInfoList']) ? $data['ltsSubFieldsInfoList'] : null;
     }
 
     /**
@@ -449,6 +462,30 @@ class LTSFieldsInfo implements ModelInterface, ArrayAccess
     public function setAscii($ascii)
     {
         $this->container['ascii'] = $ascii;
+        return $this;
+    }
+
+    /**
+    * Gets ltsSubFieldsInfoList
+    *  json字段信息
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\LTSSubFieldsInfo[]|null
+    */
+    public function getLtsSubFieldsInfoList()
+    {
+        return $this->container['ltsSubFieldsInfoList'];
+    }
+
+    /**
+    * Sets ltsSubFieldsInfoList
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\LTSSubFieldsInfo[]|null $ltsSubFieldsInfoList json字段信息
+    *
+    * @return $this
+    */
+    public function setLtsSubFieldsInfoList($ltsSubFieldsInfoList)
+    {
+        $this->container['ltsSubFieldsInfoList'] = $ltsSubFieldsInfoList;
         return $this;
     }
 

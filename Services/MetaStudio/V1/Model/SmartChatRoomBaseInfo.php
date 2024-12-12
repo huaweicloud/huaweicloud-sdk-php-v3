@@ -28,6 +28,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
     * concurrency  **参数解释**： 并发路数。
+    * voiceConfigList  语音配置参数列表。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
@@ -42,6 +44,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'modelInfos' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ModelInfo',
             'voiceConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfig',
             'concurrency' => 'int',
+            'voiceConfigList' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfigRsp[]',
+            'defaultLanguage' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string'
     ];
@@ -56,6 +60,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
     * concurrency  **参数解释**： 并发路数。
+    * voiceConfigList  语音配置参数列表。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
@@ -70,6 +76,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
         'modelInfos' => null,
         'voiceConfig' => null,
         'concurrency' => 'int32',
+        'voiceConfigList' => null,
+        'defaultLanguage' => null,
         'createTime' => null,
         'updateTime' => null
     ];
@@ -105,6 +113,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
     * concurrency  **参数解释**： 并发路数。
+    * voiceConfigList  语音配置参数列表。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
@@ -119,6 +129,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'modelInfos' => 'model_infos',
             'voiceConfig' => 'voice_config',
             'concurrency' => 'concurrency',
+            'voiceConfigList' => 'voice_config_list',
+            'defaultLanguage' => 'default_language',
             'createTime' => 'create_time',
             'updateTime' => 'update_time'
     ];
@@ -133,6 +145,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
     * concurrency  **参数解释**： 并发路数。
+    * voiceConfigList  语音配置参数列表。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
@@ -147,6 +161,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'modelInfos' => 'setModelInfos',
             'voiceConfig' => 'setVoiceConfig',
             'concurrency' => 'setConcurrency',
+            'voiceConfigList' => 'setVoiceConfigList',
+            'defaultLanguage' => 'setDefaultLanguage',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime'
     ];
@@ -161,6 +177,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
     * concurrency  **参数解释**： 并发路数。
+    * voiceConfigList  语音配置参数列表。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
@@ -175,6 +193,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'modelInfos' => 'getModelInfos',
             'voiceConfig' => 'getVoiceConfig',
             'concurrency' => 'getConcurrency',
+            'voiceConfigList' => 'getVoiceConfigList',
+            'defaultLanguage' => 'getDefaultLanguage',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime'
     ];
@@ -219,7 +239,22 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const DEFAULT_LANGUAGE_CN = 'CN';
+    const DEFAULT_LANGUAGE_EN = 'EN';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDefaultLanguageAllowableValues()
+    {
+        return [
+            self::DEFAULT_LANGUAGE_CN,
+            self::DEFAULT_LANGUAGE_EN,
+        ];
+    }
 
 
     /**
@@ -245,6 +280,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
         $this->container['modelInfos'] = isset($data['modelInfos']) ? $data['modelInfos'] : null;
         $this->container['voiceConfig'] = isset($data['voiceConfig']) ? $data['voiceConfig'] : null;
         $this->container['concurrency'] = isset($data['concurrency']) ? $data['concurrency'] : null;
+        $this->container['voiceConfigList'] = isset($data['voiceConfigList']) ? $data['voiceConfigList'] : null;
+        $this->container['defaultLanguage'] = isset($data['defaultLanguage']) ? $data['defaultLanguage'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
@@ -293,6 +330,14 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] < 0)) {
                 $invalidProperties[] = "invalid value for 'concurrency', must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getDefaultLanguageAllowableValues();
+                if (!is_null($this->container['defaultLanguage']) && !in_array($this->container['defaultLanguage'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'defaultLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 20)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 20.";
             }
@@ -508,6 +553,54 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     public function setConcurrency($concurrency)
     {
         $this->container['concurrency'] = $concurrency;
+        return $this;
+    }
+
+    /**
+    * Gets voiceConfigList
+    *  语音配置参数列表。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfigRsp[]|null
+    */
+    public function getVoiceConfigList()
+    {
+        return $this->container['voiceConfigList'];
+    }
+
+    /**
+    * Sets voiceConfigList
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfigRsp[]|null $voiceConfigList 语音配置参数列表。
+    *
+    * @return $this
+    */
+    public function setVoiceConfigList($voiceConfigList)
+    {
+        $this->container['voiceConfigList'] = $voiceConfigList;
+        return $this;
+    }
+
+    /**
+    * Gets defaultLanguage
+    *  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    *
+    * @return string|null
+    */
+    public function getDefaultLanguage()
+    {
+        return $this->container['defaultLanguage'];
+    }
+
+    /**
+    * Sets defaultLanguage
+    *
+    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    *
+    * @return $this
+    */
+    public function setDefaultLanguage($defaultLanguage)
+    {
+        $this->container['defaultLanguage'] = $defaultLanguage;
         return $this;
     }
 

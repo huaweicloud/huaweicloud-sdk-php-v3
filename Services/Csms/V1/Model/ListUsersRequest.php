@@ -23,7 +23,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * orgId  组织id，为空时查询所有用户。
     * offset  第几页。最小值：0
     * limit  每页多少条。最小值：10。最大值：100
-    * userName  最长64位，用户名，支持模糊查询
+    * userInfo  最长64位，用户名，支持模糊查询
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
             'orgId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'userName' => 'string'
+            'userInfo' => 'string'
     ];
 
     /**
@@ -39,7 +39,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * orgId  组织id，为空时查询所有用户。
     * offset  第几页。最小值：0
     * limit  每页多少条。最小值：10。最大值：100
-    * userName  最长64位，用户名，支持模糊查询
+    * userInfo  最长64位，用户名，支持模糊查询
     *
     * @var string[]
     */
@@ -47,7 +47,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
         'orgId' => null,
         'offset' => 'int32',
         'limit' => 'int32',
-        'userName' => null
+        'userInfo' => null
     ];
 
     /**
@@ -76,7 +76,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * orgId  组织id，为空时查询所有用户。
     * offset  第几页。最小值：0
     * limit  每页多少条。最小值：10。最大值：100
-    * userName  最长64位，用户名，支持模糊查询
+    * userInfo  最长64位，用户名，支持模糊查询
     *
     * @var string[]
     */
@@ -84,7 +84,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
             'orgId' => 'org_id',
             'offset' => 'offset',
             'limit' => 'limit',
-            'userName' => 'user_name'
+            'userInfo' => 'user_info'
     ];
 
     /**
@@ -92,7 +92,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * orgId  组织id，为空时查询所有用户。
     * offset  第几页。最小值：0
     * limit  每页多少条。最小值：10。最大值：100
-    * userName  最长64位，用户名，支持模糊查询
+    * userInfo  最长64位，用户名，支持模糊查询
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
             'orgId' => 'setOrgId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'userName' => 'setUserName'
+            'userInfo' => 'setUserInfo'
     ];
 
     /**
@@ -108,7 +108,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * orgId  组织id，为空时查询所有用户。
     * offset  第几页。最小值：0
     * limit  每页多少条。最小值：10。最大值：100
-    * userName  最长64位，用户名，支持模糊查询
+    * userInfo  最长64位，用户名，支持模糊查询
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
             'orgId' => 'getOrgId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'userName' => 'getUserName'
+            'userInfo' => 'getUserInfo'
     ];
 
     /**
@@ -180,7 +180,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
         $this->container['orgId'] = isset($data['orgId']) ? $data['orgId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
+        $this->container['userInfo'] = isset($data['userInfo']) ? $data['userInfo'] : null;
     }
 
     /**
@@ -293,26 +293,26 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets userName
+    * Gets userInfo
     *  最长64位，用户名，支持模糊查询
     *
     * @return string|null
     */
-    public function getUserName()
+    public function getUserInfo()
     {
-        return $this->container['userName'];
+        return $this->container['userInfo'];
     }
 
     /**
-    * Sets userName
+    * Sets userInfo
     *
-    * @param string|null $userName 最长64位，用户名，支持模糊查询
+    * @param string|null $userInfo 最长64位，用户名，支持模糊查询
     *
     * @return $this
     */
-    public function setUserName($userName)
+    public function setUserInfo($userInfo)
     {
-        $this->container['userName'] = $userName;
+        $this->container['userInfo'] = $userInfo;
         return $this;
     }
 

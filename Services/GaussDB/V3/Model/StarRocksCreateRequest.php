@@ -35,6 +35,8 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
     * timeZone  时区。默认时区为UTC+08:00。
     * tagsInfo  tagsInfo
     * securityGroupId  实例安全组ID。默认与Taurus安全组ID一致。
+    * payInfo  payInfo
+    * regionCode  可用区。包周期场景必填。
     *
     * @var string[]
     */
@@ -53,7 +55,9 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
             'azCode' => 'string',
             'timeZone' => 'string',
             'tagsInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\StarRocksCreateRequestTagsInfo',
-            'securityGroupId' => 'string'
+            'securityGroupId' => 'string',
+            'payInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\StarRocksCreateRequestPayInfo',
+            'regionCode' => 'string'
     ];
 
     /**
@@ -73,6 +77,8 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
     * timeZone  时区。默认时区为UTC+08:00。
     * tagsInfo  tagsInfo
     * securityGroupId  实例安全组ID。默认与Taurus安全组ID一致。
+    * payInfo  payInfo
+    * regionCode  可用区。包周期场景必填。
     *
     * @var string[]
     */
@@ -91,7 +97,9 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
         'azCode' => null,
         'timeZone' => null,
         'tagsInfo' => null,
-        'securityGroupId' => null
+        'securityGroupId' => null,
+        'payInfo' => null,
+        'regionCode' => null
     ];
 
     /**
@@ -132,6 +140,8 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
     * timeZone  时区。默认时区为UTC+08:00。
     * tagsInfo  tagsInfo
     * securityGroupId  实例安全组ID。默认与Taurus安全组ID一致。
+    * payInfo  payInfo
+    * regionCode  可用区。包周期场景必填。
     *
     * @var string[]
     */
@@ -150,7 +160,9 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
             'azCode' => 'az_code',
             'timeZone' => 'time_zone',
             'tagsInfo' => 'tags_info',
-            'securityGroupId' => 'security_group_id'
+            'securityGroupId' => 'security_group_id',
+            'payInfo' => 'pay_info',
+            'regionCode' => 'region_code'
     ];
 
     /**
@@ -170,6 +182,8 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
     * timeZone  时区。默认时区为UTC+08:00。
     * tagsInfo  tagsInfo
     * securityGroupId  实例安全组ID。默认与Taurus安全组ID一致。
+    * payInfo  payInfo
+    * regionCode  可用区。包周期场景必填。
     *
     * @var string[]
     */
@@ -188,7 +202,9 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
             'azCode' => 'setAzCode',
             'timeZone' => 'setTimeZone',
             'tagsInfo' => 'setTagsInfo',
-            'securityGroupId' => 'setSecurityGroupId'
+            'securityGroupId' => 'setSecurityGroupId',
+            'payInfo' => 'setPayInfo',
+            'regionCode' => 'setRegionCode'
     ];
 
     /**
@@ -208,6 +224,8 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
     * timeZone  时区。默认时区为UTC+08:00。
     * tagsInfo  tagsInfo
     * securityGroupId  实例安全组ID。默认与Taurus安全组ID一致。
+    * payInfo  payInfo
+    * regionCode  可用区。包周期场景必填。
     *
     * @var string[]
     */
@@ -226,7 +244,9 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
             'azCode' => 'getAzCode',
             'timeZone' => 'getTimeZone',
             'tagsInfo' => 'getTagsInfo',
-            'securityGroupId' => 'getSecurityGroupId'
+            'securityGroupId' => 'getSecurityGroupId',
+            'payInfo' => 'getPayInfo',
+            'regionCode' => 'getRegionCode'
     ];
 
     /**
@@ -315,6 +335,8 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
         $this->container['timeZone'] = isset($data['timeZone']) ? $data['timeZone'] : null;
         $this->container['tagsInfo'] = isset($data['tagsInfo']) ? $data['tagsInfo'] : null;
         $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
+        $this->container['payInfo'] = isset($data['payInfo']) ? $data['payInfo'] : null;
+        $this->container['regionCode'] = isset($data['regionCode']) ? $data['regionCode'] : null;
     }
 
     /**
@@ -746,6 +768,54 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
     public function setSecurityGroupId($securityGroupId)
     {
         $this->container['securityGroupId'] = $securityGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets payInfo
+    *  payInfo
+    *
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\StarRocksCreateRequestPayInfo|null
+    */
+    public function getPayInfo()
+    {
+        return $this->container['payInfo'];
+    }
+
+    /**
+    * Sets payInfo
+    *
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\StarRocksCreateRequestPayInfo|null $payInfo payInfo
+    *
+    * @return $this
+    */
+    public function setPayInfo($payInfo)
+    {
+        $this->container['payInfo'] = $payInfo;
+        return $this;
+    }
+
+    /**
+    * Gets regionCode
+    *  可用区。包周期场景必填。
+    *
+    * @return string|null
+    */
+    public function getRegionCode()
+    {
+        return $this->container['regionCode'];
+    }
+
+    /**
+    * Sets regionCode
+    *
+    * @param string|null $regionCode 可用区。包周期场景必填。
+    *
+    * @return $this
+    */
+    public function setRegionCode($regionCode)
+    {
+        $this->container['regionCode'] = $regionCode;
         return $this;
     }
 

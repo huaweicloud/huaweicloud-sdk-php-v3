@@ -39,6 +39,14 @@ class AccessConfigDeatilUpdate implements ModelInterface, ArrayAccess
     * includeK8sLabels  K8s Label白名单，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
     * excludeK8sLabels  K8s Label黑名单，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
     * logK8s  K8s Label日志标签，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
+    * systemFields  系统内置字段：配置日志接入规则时，可以配置系统内置字段，上报日志后，每条日志数据的标签数据中将会有系统字段 采集场景为主机文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、category、collectTime、__host_group__ 采集场景为K8S集群容器文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、clusterId、podName、appName、containerName、nameSpace、category、collectTime、__host_group__、serviceID、podIp、clusterName、workloadType 若修改时传入此字段，将覆盖原有配置
+    * customKeyValue  自定义键值对：配置日志接入规则时，可以配置自定义键值对规则，上报日志后，每条日志数据的标签数据中将会有用户自定义的键值对字段，键值对数量不超过20 键的长度限制为128，允许的字符有a-zA-Z0-9_- 值的长度限制为1024 若修改时传入此字段，将覆盖原有配置
+    * includeLabelsLogical  容器 Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeLabelsLogical  容器 Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * includeK8sLabelsLogical  K8S Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeK8sLabelsLogical  K8S Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * includeEnvsLogical  环境变量白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeEnvsLogical  环境变量黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
     *
     * @var string[]
     */
@@ -61,7 +69,15 @@ class AccessConfigDeatilUpdate implements ModelInterface, ArrayAccess
             'logEnvs' => 'map[string,string]',
             'includeK8sLabels' => 'map[string,string]',
             'excludeK8sLabels' => 'map[string,string]',
-            'logK8s' => 'map[string,string]'
+            'logK8s' => 'map[string,string]',
+            'systemFields' => 'string[]',
+            'customKeyValue' => 'map[string,string]',
+            'includeLabelsLogical' => 'string',
+            'excludeLabelsLogical' => 'string',
+            'includeK8sLabelsLogical' => 'string',
+            'excludeK8sLabelsLogical' => 'string',
+            'includeEnvsLogical' => 'string',
+            'excludeEnvsLogical' => 'string'
     ];
 
     /**
@@ -85,6 +101,14 @@ class AccessConfigDeatilUpdate implements ModelInterface, ArrayAccess
     * includeK8sLabels  K8s Label白名单，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
     * excludeK8sLabels  K8s Label黑名单，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
     * logK8s  K8s Label日志标签，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
+    * systemFields  系统内置字段：配置日志接入规则时，可以配置系统内置字段，上报日志后，每条日志数据的标签数据中将会有系统字段 采集场景为主机文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、category、collectTime、__host_group__ 采集场景为K8S集群容器文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、clusterId、podName、appName、containerName、nameSpace、category、collectTime、__host_group__、serviceID、podIp、clusterName、workloadType 若修改时传入此字段，将覆盖原有配置
+    * customKeyValue  自定义键值对：配置日志接入规则时，可以配置自定义键值对规则，上报日志后，每条日志数据的标签数据中将会有用户自定义的键值对字段，键值对数量不超过20 键的长度限制为128，允许的字符有a-zA-Z0-9_- 值的长度限制为1024 若修改时传入此字段，将覆盖原有配置
+    * includeLabelsLogical  容器 Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeLabelsLogical  容器 Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * includeK8sLabelsLogical  K8S Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeK8sLabelsLogical  K8S Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * includeEnvsLogical  环境变量白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeEnvsLogical  环境变量黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
     *
     * @var string[]
     */
@@ -107,7 +131,15 @@ class AccessConfigDeatilUpdate implements ModelInterface, ArrayAccess
         'logEnvs' => null,
         'includeK8sLabels' => null,
         'excludeK8sLabels' => null,
-        'logK8s' => null
+        'logK8s' => null,
+        'systemFields' => null,
+        'customKeyValue' => null,
+        'includeLabelsLogical' => null,
+        'excludeLabelsLogical' => null,
+        'includeK8sLabelsLogical' => null,
+        'excludeK8sLabelsLogical' => null,
+        'includeEnvsLogical' => null,
+        'excludeEnvsLogical' => null
     ];
 
     /**
@@ -152,6 +184,14 @@ class AccessConfigDeatilUpdate implements ModelInterface, ArrayAccess
     * includeK8sLabels  K8s Label白名单，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
     * excludeK8sLabels  K8s Label黑名单，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
     * logK8s  K8s Label日志标签，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
+    * systemFields  系统内置字段：配置日志接入规则时，可以配置系统内置字段，上报日志后，每条日志数据的标签数据中将会有系统字段 采集场景为主机文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、category、collectTime、__host_group__ 采集场景为K8S集群容器文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、clusterId、podName、appName、containerName、nameSpace、category、collectTime、__host_group__、serviceID、podIp、clusterName、workloadType 若修改时传入此字段，将覆盖原有配置
+    * customKeyValue  自定义键值对：配置日志接入规则时，可以配置自定义键值对规则，上报日志后，每条日志数据的标签数据中将会有用户自定义的键值对字段，键值对数量不超过20 键的长度限制为128，允许的字符有a-zA-Z0-9_- 值的长度限制为1024 若修改时传入此字段，将覆盖原有配置
+    * includeLabelsLogical  容器 Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeLabelsLogical  容器 Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * includeK8sLabelsLogical  K8S Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeK8sLabelsLogical  K8S Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * includeEnvsLogical  环境变量白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeEnvsLogical  环境变量黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
     *
     * @var string[]
     */
@@ -174,7 +214,15 @@ class AccessConfigDeatilUpdate implements ModelInterface, ArrayAccess
             'logEnvs' => 'logEnvs',
             'includeK8sLabels' => 'includeK8sLabels',
             'excludeK8sLabels' => 'excludeK8sLabels',
-            'logK8s' => 'logK8s'
+            'logK8s' => 'logK8s',
+            'systemFields' => 'system_fields',
+            'customKeyValue' => 'custom_key_value',
+            'includeLabelsLogical' => 'includeLabelsLogical',
+            'excludeLabelsLogical' => 'excludeLabelsLogical',
+            'includeK8sLabelsLogical' => 'includeK8sLabelsLogical',
+            'excludeK8sLabelsLogical' => 'excludeK8sLabelsLogical',
+            'includeEnvsLogical' => 'includeEnvsLogical',
+            'excludeEnvsLogical' => 'excludeEnvsLogical'
     ];
 
     /**
@@ -198,6 +246,14 @@ class AccessConfigDeatilUpdate implements ModelInterface, ArrayAccess
     * includeK8sLabels  K8s Label白名单，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
     * excludeK8sLabels  K8s Label黑名单，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
     * logK8s  K8s Label日志标签，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
+    * systemFields  系统内置字段：配置日志接入规则时，可以配置系统内置字段，上报日志后，每条日志数据的标签数据中将会有系统字段 采集场景为主机文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、category、collectTime、__host_group__ 采集场景为K8S集群容器文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、clusterId、podName、appName、containerName、nameSpace、category、collectTime、__host_group__、serviceID、podIp、clusterName、workloadType 若修改时传入此字段，将覆盖原有配置
+    * customKeyValue  自定义键值对：配置日志接入规则时，可以配置自定义键值对规则，上报日志后，每条日志数据的标签数据中将会有用户自定义的键值对字段，键值对数量不超过20 键的长度限制为128，允许的字符有a-zA-Z0-9_- 值的长度限制为1024 若修改时传入此字段，将覆盖原有配置
+    * includeLabelsLogical  容器 Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeLabelsLogical  容器 Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * includeK8sLabelsLogical  K8S Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeK8sLabelsLogical  K8S Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * includeEnvsLogical  环境变量白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeEnvsLogical  环境变量黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
     *
     * @var string[]
     */
@@ -220,7 +276,15 @@ class AccessConfigDeatilUpdate implements ModelInterface, ArrayAccess
             'logEnvs' => 'setLogEnvs',
             'includeK8sLabels' => 'setIncludeK8sLabels',
             'excludeK8sLabels' => 'setExcludeK8sLabels',
-            'logK8s' => 'setLogK8s'
+            'logK8s' => 'setLogK8s',
+            'systemFields' => 'setSystemFields',
+            'customKeyValue' => 'setCustomKeyValue',
+            'includeLabelsLogical' => 'setIncludeLabelsLogical',
+            'excludeLabelsLogical' => 'setExcludeLabelsLogical',
+            'includeK8sLabelsLogical' => 'setIncludeK8sLabelsLogical',
+            'excludeK8sLabelsLogical' => 'setExcludeK8sLabelsLogical',
+            'includeEnvsLogical' => 'setIncludeEnvsLogical',
+            'excludeEnvsLogical' => 'setExcludeEnvsLogical'
     ];
 
     /**
@@ -244,6 +308,14 @@ class AccessConfigDeatilUpdate implements ModelInterface, ArrayAccess
     * includeK8sLabels  K8s Label白名单，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
     * excludeK8sLabels  K8s Label黑名单，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
     * logK8s  K8s Label日志标签，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
+    * systemFields  系统内置字段：配置日志接入规则时，可以配置系统内置字段，上报日志后，每条日志数据的标签数据中将会有系统字段 采集场景为主机文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、category、collectTime、__host_group__ 采集场景为K8S集群容器文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、clusterId、podName、appName、containerName、nameSpace、category、collectTime、__host_group__、serviceID、podIp、clusterName、workloadType 若修改时传入此字段，将覆盖原有配置
+    * customKeyValue  自定义键值对：配置日志接入规则时，可以配置自定义键值对规则，上报日志后，每条日志数据的标签数据中将会有用户自定义的键值对字段，键值对数量不超过20 键的长度限制为128，允许的字符有a-zA-Z0-9_- 值的长度限制为1024 若修改时传入此字段，将覆盖原有配置
+    * includeLabelsLogical  容器 Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeLabelsLogical  容器 Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * includeK8sLabelsLogical  K8S Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeK8sLabelsLogical  K8S Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * includeEnvsLogical  环境变量白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    * excludeEnvsLogical  环境变量黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
     *
     * @var string[]
     */
@@ -266,7 +338,15 @@ class AccessConfigDeatilUpdate implements ModelInterface, ArrayAccess
             'logEnvs' => 'getLogEnvs',
             'includeK8sLabels' => 'getIncludeK8sLabels',
             'excludeK8sLabels' => 'getExcludeK8sLabels',
-            'logK8s' => 'getLogK8s'
+            'logK8s' => 'getLogK8s',
+            'systemFields' => 'getSystemFields',
+            'customKeyValue' => 'getCustomKeyValue',
+            'includeLabelsLogical' => 'getIncludeLabelsLogical',
+            'excludeLabelsLogical' => 'getExcludeLabelsLogical',
+            'includeK8sLabelsLogical' => 'getIncludeK8sLabelsLogical',
+            'excludeK8sLabelsLogical' => 'getExcludeK8sLabelsLogical',
+            'includeEnvsLogical' => 'getIncludeEnvsLogical',
+            'excludeEnvsLogical' => 'getExcludeEnvsLogical'
     ];
 
     /**
@@ -363,6 +443,14 @@ class AccessConfigDeatilUpdate implements ModelInterface, ArrayAccess
         $this->container['includeK8sLabels'] = isset($data['includeK8sLabels']) ? $data['includeK8sLabels'] : null;
         $this->container['excludeK8sLabels'] = isset($data['excludeK8sLabels']) ? $data['excludeK8sLabels'] : null;
         $this->container['logK8s'] = isset($data['logK8s']) ? $data['logK8s'] : null;
+        $this->container['systemFields'] = isset($data['systemFields']) ? $data['systemFields'] : null;
+        $this->container['customKeyValue'] = isset($data['customKeyValue']) ? $data['customKeyValue'] : null;
+        $this->container['includeLabelsLogical'] = isset($data['includeLabelsLogical']) ? $data['includeLabelsLogical'] : null;
+        $this->container['excludeLabelsLogical'] = isset($data['excludeLabelsLogical']) ? $data['excludeLabelsLogical'] : null;
+        $this->container['includeK8sLabelsLogical'] = isset($data['includeK8sLabelsLogical']) ? $data['includeK8sLabelsLogical'] : null;
+        $this->container['excludeK8sLabelsLogical'] = isset($data['excludeK8sLabelsLogical']) ? $data['excludeK8sLabelsLogical'] : null;
+        $this->container['includeEnvsLogical'] = isset($data['includeEnvsLogical']) ? $data['includeEnvsLogical'] : null;
+        $this->container['excludeEnvsLogical'] = isset($data['excludeEnvsLogical']) ? $data['excludeEnvsLogical'] : null;
     }
 
     /**
@@ -848,6 +936,198 @@ class AccessConfigDeatilUpdate implements ModelInterface, ArrayAccess
     public function setLogK8s($logK8s)
     {
         $this->container['logK8s'] = $logK8s;
+        return $this;
+    }
+
+    /**
+    * Gets systemFields
+    *  系统内置字段：配置日志接入规则时，可以配置系统内置字段，上报日志后，每条日志数据的标签数据中将会有系统字段 采集场景为主机文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、category、collectTime、__host_group__ 采集场景为K8S集群容器文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、clusterId、podName、appName、containerName、nameSpace、category、collectTime、__host_group__、serviceID、podIp、clusterName、workloadType 若修改时传入此字段，将覆盖原有配置
+    *
+    * @return string[]|null
+    */
+    public function getSystemFields()
+    {
+        return $this->container['systemFields'];
+    }
+
+    /**
+    * Sets systemFields
+    *
+    * @param string[]|null $systemFields 系统内置字段：配置日志接入规则时，可以配置系统内置字段，上报日志后，每条日志数据的标签数据中将会有系统字段 采集场景为主机文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、category、collectTime、__host_group__ 采集场景为K8S集群容器文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、clusterId、podName、appName、containerName、nameSpace、category、collectTime、__host_group__、serviceID、podIp、clusterName、workloadType 若修改时传入此字段，将覆盖原有配置
+    *
+    * @return $this
+    */
+    public function setSystemFields($systemFields)
+    {
+        $this->container['systemFields'] = $systemFields;
+        return $this;
+    }
+
+    /**
+    * Gets customKeyValue
+    *  自定义键值对：配置日志接入规则时，可以配置自定义键值对规则，上报日志后，每条日志数据的标签数据中将会有用户自定义的键值对字段，键值对数量不超过20 键的长度限制为128，允许的字符有a-zA-Z0-9_- 值的长度限制为1024 若修改时传入此字段，将覆盖原有配置
+    *
+    * @return map[string,string]|null
+    */
+    public function getCustomKeyValue()
+    {
+        return $this->container['customKeyValue'];
+    }
+
+    /**
+    * Sets customKeyValue
+    *
+    * @param map[string,string]|null $customKeyValue 自定义键值对：配置日志接入规则时，可以配置自定义键值对规则，上报日志后，每条日志数据的标签数据中将会有用户自定义的键值对字段，键值对数量不超过20 键的长度限制为128，允许的字符有a-zA-Z0-9_- 值的长度限制为1024 若修改时传入此字段，将覆盖原有配置
+    *
+    * @return $this
+    */
+    public function setCustomKeyValue($customKeyValue)
+    {
+        $this->container['customKeyValue'] = $customKeyValue;
+        return $this;
+    }
+
+    /**
+    * Gets includeLabelsLogical
+    *  容器 Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    *
+    * @return string|null
+    */
+    public function getIncludeLabelsLogical()
+    {
+        return $this->container['includeLabelsLogical'];
+    }
+
+    /**
+    * Sets includeLabelsLogical
+    *
+    * @param string|null $includeLabelsLogical 容器 Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    *
+    * @return $this
+    */
+    public function setIncludeLabelsLogical($includeLabelsLogical)
+    {
+        $this->container['includeLabelsLogical'] = $includeLabelsLogical;
+        return $this;
+    }
+
+    /**
+    * Gets excludeLabelsLogical
+    *  容器 Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    *
+    * @return string|null
+    */
+    public function getExcludeLabelsLogical()
+    {
+        return $this->container['excludeLabelsLogical'];
+    }
+
+    /**
+    * Sets excludeLabelsLogical
+    *
+    * @param string|null $excludeLabelsLogical 容器 Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    *
+    * @return $this
+    */
+    public function setExcludeLabelsLogical($excludeLabelsLogical)
+    {
+        $this->container['excludeLabelsLogical'] = $excludeLabelsLogical;
+        return $this;
+    }
+
+    /**
+    * Gets includeK8sLabelsLogical
+    *  K8S Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    *
+    * @return string|null
+    */
+    public function getIncludeK8sLabelsLogical()
+    {
+        return $this->container['includeK8sLabelsLogical'];
+    }
+
+    /**
+    * Sets includeK8sLabelsLogical
+    *
+    * @param string|null $includeK8sLabelsLogical K8S Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    *
+    * @return $this
+    */
+    public function setIncludeK8sLabelsLogical($includeK8sLabelsLogical)
+    {
+        $this->container['includeK8sLabelsLogical'] = $includeK8sLabelsLogical;
+        return $this;
+    }
+
+    /**
+    * Gets excludeK8sLabelsLogical
+    *  K8S Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    *
+    * @return string|null
+    */
+    public function getExcludeK8sLabelsLogical()
+    {
+        return $this->container['excludeK8sLabelsLogical'];
+    }
+
+    /**
+    * Sets excludeK8sLabelsLogical
+    *
+    * @param string|null $excludeK8sLabelsLogical K8S Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    *
+    * @return $this
+    */
+    public function setExcludeK8sLabelsLogical($excludeK8sLabelsLogical)
+    {
+        $this->container['excludeK8sLabelsLogical'] = $excludeK8sLabelsLogical;
+        return $this;
+    }
+
+    /**
+    * Gets includeEnvsLogical
+    *  环境变量白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    *
+    * @return string|null
+    */
+    public function getIncludeEnvsLogical()
+    {
+        return $this->container['includeEnvsLogical'];
+    }
+
+    /**
+    * Sets includeEnvsLogical
+    *
+    * @param string|null $includeEnvsLogical 环境变量白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    *
+    * @return $this
+    */
+    public function setIncludeEnvsLogical($includeEnvsLogical)
+    {
+        $this->container['includeEnvsLogical'] = $includeEnvsLogical;
+        return $this;
+    }
+
+    /**
+    * Gets excludeEnvsLogical
+    *  环境变量黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    *
+    * @return string|null
+    */
+    public function getExcludeEnvsLogical()
+    {
+        return $this->container['excludeEnvsLogical'];
+    }
+
+    /**
+    * Sets excludeEnvsLogical
+    *
+    * @param string|null $excludeEnvsLogical 环境变量黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+    *
+    * @return $this
+    */
+    public function setExcludeEnvsLogical($excludeEnvsLogical)
+    {
+        $this->container['excludeEnvsLogical'] = $excludeEnvsLogical;
         return $this;
     }
 

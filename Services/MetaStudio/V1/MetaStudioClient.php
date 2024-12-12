@@ -12071,7 +12071,7 @@ class MetaStudioClient extends Client
     }
 
     /**
-     * 创建TTS语音异步任务
+     * 创建TTS异步任务
      *
      * 该接口用于对外生成音频文件
      * 
@@ -12230,7 +12230,7 @@ class MetaStudioClient extends Client
     }
 
     /**
-     * 获取音频语音文件
+     * 获取TTS异步任务
      *
      * 该接口用于获取TTS音频文件下载链接。
      * 

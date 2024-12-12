@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cce\V3\Model;
+namespace HuaweiCloud\SDK\Aos\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SyncNodePoolResp implements ModelInterface, ArrayAccess
+class CreatePrivateModuleRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,24 +16,30 @@ class SyncNodePoolResp implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SyncNodePoolResp';
+    protected static $openAPIModelName = 'CreatePrivateModuleRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * clientRequestId  用户指定的，对于此请求的唯一Id，用于定位某个请求，推荐使用UUID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'clientRequestId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Aos\V1\Model\CreatePrivateModuleRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * clientRequestId  用户指定的，对于此请求的唯一Id，用于定位某个请求，推荐使用UUID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'clientRequestId' => null,
+        'body' => null
     ];
 
     /**
@@ -59,29 +65,38 @@ class SyncNodePoolResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * clientRequestId  用户指定的，对于此请求的唯一Id，用于定位某个请求，推荐使用UUID
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'clientRequestId' => 'Client-Request-Id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * clientRequestId  用户指定的，对于此请求的唯一Id，用于定位某个请求，推荐使用UUID
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'clientRequestId' => 'setClientRequestId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * clientRequestId  用户指定的，对于此请求的唯一Id，用于定位某个请求，推荐使用UUID
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'clientRequestId' => 'getClientRequestId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -142,6 +157,8 @@ class SyncNodePoolResp implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['clientRequestId'] = isset($data['clientRequestId']) ? $data['clientRequestId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -152,6 +169,18 @@ class SyncNodePoolResp implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['clientRequestId'] === null) {
+            $invalidProperties[] = "'clientRequestId' can't be null";
+        }
+            if ((mb_strlen($this->container['clientRequestId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'clientRequestId', the character length must be smaller than or equal to 128.";
+            }
+            if ((mb_strlen($this->container['clientRequestId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'clientRequestId', the character length must be bigger than or equal to 36.";
+            }
+            if (!preg_match("/^[A-Za-z0-9]+[A-Za-z0-9-]*$/", $this->container['clientRequestId'])) {
+                $invalidProperties[] = "invalid value for 'clientRequestId', must be conform to the pattern /^[A-Za-z0-9]+[A-Za-z0-9-]*$/.";
+            }
         return $invalidProperties;
     }
 
@@ -164,6 +193,54 @@ class SyncNodePoolResp implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets clientRequestId
+    *  用户指定的，对于此请求的唯一Id，用于定位某个请求，推荐使用UUID
+    *
+    * @return string
+    */
+    public function getClientRequestId()
+    {
+        return $this->container['clientRequestId'];
+    }
+
+    /**
+    * Sets clientRequestId
+    *
+    * @param string $clientRequestId 用户指定的，对于此请求的唯一Id，用于定位某个请求，推荐使用UUID
+    *
+    * @return $this
+    */
+    public function setClientRequestId($clientRequestId)
+    {
+        $this->container['clientRequestId'] = $clientRequestId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\CreatePrivateModuleRequestBody|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\CreatePrivateModuleRequestBody|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
+        return $this;
     }
 
     /**

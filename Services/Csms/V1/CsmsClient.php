@@ -1603,8 +1603,8 @@ class CsmsClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['userName'] !== null) {
-            $queryParams['user_name'] = $localVarParams['userName'];
+        if ($localVarParams['userInfo'] !== null) {
+            $queryParams['user_info'] = $localVarParams['userInfo'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

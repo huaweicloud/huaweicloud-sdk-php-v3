@@ -25,6 +25,8 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     * height  **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     * size  **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     * mode  **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
+    * frameRate  **参数解释**： 视频帧率。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+    * duration  **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -35,6 +37,8 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
             'height' => 'int',
             'size' => 'int',
             'mode' => 'string',
+            'frameRate' => 'string',
+            'duration' => 'int',
             'errorInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse'
     ];
 
@@ -45,6 +49,8 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     * height  **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     * size  **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     * mode  **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
+    * frameRate  **参数解释**： 视频帧率。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+    * duration  **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -55,6 +61,8 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
         'height' => null,
         'size' => 'int64',
         'mode' => null,
+        'frameRate' => null,
+        'duration' => null,
         'errorInfo' => null
     ];
 
@@ -86,6 +94,8 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     * height  **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     * size  **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     * mode  **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
+    * frameRate  **参数解释**： 视频帧率。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+    * duration  **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -96,6 +106,8 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
             'height' => 'height',
             'size' => 'size',
             'mode' => 'mode',
+            'frameRate' => 'frame_rate',
+            'duration' => 'duration',
             'errorInfo' => 'error_info'
     ];
 
@@ -106,6 +118,8 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     * height  **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     * size  **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     * mode  **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
+    * frameRate  **参数解释**： 视频帧率。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+    * duration  **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -116,6 +130,8 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
             'height' => 'setHeight',
             'size' => 'setSize',
             'mode' => 'setMode',
+            'frameRate' => 'setFrameRate',
+            'duration' => 'setDuration',
             'errorInfo' => 'setErrorInfo'
     ];
 
@@ -126,6 +142,8 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     * height  **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     * size  **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     * mode  **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
+    * frameRate  **参数解释**： 视频帧率。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+    * duration  **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -136,6 +154,8 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
             'height' => 'getHeight',
             'size' => 'getSize',
             'mode' => 'getMode',
+            'frameRate' => 'getFrameRate',
+            'duration' => 'getDuration',
             'errorInfo' => 'getErrorInfo'
     ];
 
@@ -217,6 +237,8 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['frameRate'] = isset($data['frameRate']) ? $data['frameRate'] : null;
+        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
     }
 
@@ -260,6 +282,18 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['frameRate']) && (mb_strlen($this->container['frameRate']) > 32)) {
+                $invalidProperties[] = "invalid value for 'frameRate', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['frameRate']) && (mb_strlen($this->container['frameRate']) < 0)) {
+                $invalidProperties[] = "invalid value for 'frameRate', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['duration']) && ($this->container['duration'] > 86400)) {
+                $invalidProperties[] = "invalid value for 'duration', must be smaller than or equal to 86400.";
+            }
+            if (!is_null($this->container['duration']) && ($this->container['duration'] < 0)) {
+                $invalidProperties[] = "invalid value for 'duration', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -391,6 +425,54 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     public function setMode($mode)
     {
         $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets frameRate
+    *  **参数解释**： 视频帧率。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getFrameRate()
+    {
+        return $this->container['frameRate'];
+    }
+
+    /**
+    * Sets frameRate
+    *
+    * @param string|null $frameRate **参数解释**： 视频帧率。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setFrameRate($frameRate)
+    {
+        $this->container['frameRate'] = $frameRate;
+        return $this;
+    }
+
+    /**
+    * Gets duration
+    *  **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    *
+    * @return int|null
+    */
+    public function getDuration()
+    {
+        return $this->container['duration'];
+    }
+
+    /**
+    * Sets duration
+    *
+    * @param int|null $duration **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setDuration($duration)
+    {
+        $this->container['duration'] = $duration;
         return $this;
     }
 

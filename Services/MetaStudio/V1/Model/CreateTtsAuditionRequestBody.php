@@ -21,10 +21,10 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * text  待合成文本。
-    * emotion  音色ID。
-    * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
-    * pitch  音高。 默认值100，最小值50，最大值200。
-    * volume  音量。 默认值140，最小值90，最大值240。
+    * emotion  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    * pitch  音高。
+    * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     *
     * @var string[]
@@ -41,10 +41,10 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * text  待合成文本。
-    * emotion  音色ID。
-    * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
-    * pitch  音高。 默认值100，最小值50，最大值200。
-    * volume  音量。 默认值140，最小值90，最大值240。
+    * emotion  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    * pitch  音高。
+    * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     *
     * @var string[]
@@ -82,10 +82,10 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * text  待合成文本。
-    * emotion  音色ID。
-    * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
-    * pitch  音高。 默认值100，最小值50，最大值200。
-    * volume  音量。 默认值140，最小值90，最大值240。
+    * emotion  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    * pitch  音高。
+    * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     *
     * @var string[]
@@ -102,10 +102,10 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * text  待合成文本。
-    * emotion  音色ID。
-    * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
-    * pitch  音高。 默认值100，最小值50，最大值200。
-    * volume  音量。 默认值140，最小值90，最大值240。
+    * emotion  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    * pitch  音高。
+    * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     *
     * @var string[]
@@ -122,10 +122,10 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * text  待合成文本。
-    * emotion  音色ID。
-    * speed  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
-    * pitch  音高。 默认值100，最小值50，最大值200。
-    * volume  音量。 默认值140，最小值90，最大值240。
+    * emotion  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    * pitch  音高。
+    * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     *
     * @var string[]
@@ -298,7 +298,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets emotion
-    *  音色ID。
+    *  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
     *
     * @return string
     */
@@ -310,7 +310,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets emotion
     *
-    * @param string $emotion 音色ID。
+    * @param string $emotion 音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
     *
     * @return $this
     */
@@ -322,7 +322,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets speed
-    *  语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    *  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     *
     * @return int|null
     */
@@ -334,7 +334,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets speed
     *
-    * @param int|null $speed 语速。 默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
+    * @param int|null $speed 语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     *
     * @return $this
     */
@@ -346,7 +346,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets pitch
-    *  音高。 默认值100，最小值50，最大值200。
+    *  音高。
     *
     * @return int|null
     */
@@ -358,7 +358,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets pitch
     *
-    * @param int|null $pitch 音高。 默认值100，最小值50，最大值200。
+    * @param int|null $pitch 音高。
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets volume
-    *  音量。 默认值140，最小值90，最大值240。
+    *  音量。
     *
     * @return int|null
     */
@@ -382,7 +382,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets volume
     *
-    * @param int|null $volume 音量。 默认值140，最小值90，最大值240。
+    * @param int|null $volume 音量。
     *
     * @return $this
     */

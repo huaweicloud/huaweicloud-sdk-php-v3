@@ -26,6 +26,7 @@ class CacheRules implements ModelInterface, ArrayAccess
     * ttlUnit  缓存过期时间单位，s：秒；m：分；h：小时；d：天。
     * priority  此条缓存规则的优先级, 默认值1，数值越大，优先级越高，取值范围为1-100，优先级不能相同。
     * followOrigin  缓存遵循源站开关，on：打开，off：关闭。  > 默认值为off。
+    * forceCache  强制缓存：CDN节点缓存过期时间是否忽略源站响应头Cache-Control中的no-cache、private、no-store字段，默认关闭强制缓存功能。强制缓存与缓存过期时间来源功能配合使用，具体使用限制及配置效果请参考CDN用户指南的配置节点缓存规则章节。on：打开强制缓存，off：关闭强制缓存
     * urlParameterType  URL参数： - del_params：忽略指定URL参数， - reserve_params：保留指定URL参数， - ignore_url_params：忽略全部URL参数， - full_url：使用完整URL参数。   > 不传此参数时，默认为full_url。
     * urlParameterValue  URL参数值，最多设置10条，以\",\"分隔。  > 当url_parameter_type为del_params或reserve_params时必填。
     *
@@ -38,6 +39,7 @@ class CacheRules implements ModelInterface, ArrayAccess
             'ttlUnit' => 'string',
             'priority' => 'int',
             'followOrigin' => 'string',
+            'forceCache' => 'string',
             'urlParameterType' => 'string',
             'urlParameterValue' => 'string'
     ];
@@ -50,6 +52,7 @@ class CacheRules implements ModelInterface, ArrayAccess
     * ttlUnit  缓存过期时间单位，s：秒；m：分；h：小时；d：天。
     * priority  此条缓存规则的优先级, 默认值1，数值越大，优先级越高，取值范围为1-100，优先级不能相同。
     * followOrigin  缓存遵循源站开关，on：打开，off：关闭。  > 默认值为off。
+    * forceCache  强制缓存：CDN节点缓存过期时间是否忽略源站响应头Cache-Control中的no-cache、private、no-store字段，默认关闭强制缓存功能。强制缓存与缓存过期时间来源功能配合使用，具体使用限制及配置效果请参考CDN用户指南的配置节点缓存规则章节。on：打开强制缓存，off：关闭强制缓存
     * urlParameterType  URL参数： - del_params：忽略指定URL参数， - reserve_params：保留指定URL参数， - ignore_url_params：忽略全部URL参数， - full_url：使用完整URL参数。   > 不传此参数时，默认为full_url。
     * urlParameterValue  URL参数值，最多设置10条，以\",\"分隔。  > 当url_parameter_type为del_params或reserve_params时必填。
     *
@@ -62,6 +65,7 @@ class CacheRules implements ModelInterface, ArrayAccess
         'ttlUnit' => null,
         'priority' => null,
         'followOrigin' => null,
+        'forceCache' => null,
         'urlParameterType' => null,
         'urlParameterValue' => null
     ];
@@ -95,6 +99,7 @@ class CacheRules implements ModelInterface, ArrayAccess
     * ttlUnit  缓存过期时间单位，s：秒；m：分；h：小时；d：天。
     * priority  此条缓存规则的优先级, 默认值1，数值越大，优先级越高，取值范围为1-100，优先级不能相同。
     * followOrigin  缓存遵循源站开关，on：打开，off：关闭。  > 默认值为off。
+    * forceCache  强制缓存：CDN节点缓存过期时间是否忽略源站响应头Cache-Control中的no-cache、private、no-store字段，默认关闭强制缓存功能。强制缓存与缓存过期时间来源功能配合使用，具体使用限制及配置效果请参考CDN用户指南的配置节点缓存规则章节。on：打开强制缓存，off：关闭强制缓存
     * urlParameterType  URL参数： - del_params：忽略指定URL参数， - reserve_params：保留指定URL参数， - ignore_url_params：忽略全部URL参数， - full_url：使用完整URL参数。   > 不传此参数时，默认为full_url。
     * urlParameterValue  URL参数值，最多设置10条，以\",\"分隔。  > 当url_parameter_type为del_params或reserve_params时必填。
     *
@@ -107,6 +112,7 @@ class CacheRules implements ModelInterface, ArrayAccess
             'ttlUnit' => 'ttl_unit',
             'priority' => 'priority',
             'followOrigin' => 'follow_origin',
+            'forceCache' => 'force_cache',
             'urlParameterType' => 'url_parameter_type',
             'urlParameterValue' => 'url_parameter_value'
     ];
@@ -119,6 +125,7 @@ class CacheRules implements ModelInterface, ArrayAccess
     * ttlUnit  缓存过期时间单位，s：秒；m：分；h：小时；d：天。
     * priority  此条缓存规则的优先级, 默认值1，数值越大，优先级越高，取值范围为1-100，优先级不能相同。
     * followOrigin  缓存遵循源站开关，on：打开，off：关闭。  > 默认值为off。
+    * forceCache  强制缓存：CDN节点缓存过期时间是否忽略源站响应头Cache-Control中的no-cache、private、no-store字段，默认关闭强制缓存功能。强制缓存与缓存过期时间来源功能配合使用，具体使用限制及配置效果请参考CDN用户指南的配置节点缓存规则章节。on：打开强制缓存，off：关闭强制缓存
     * urlParameterType  URL参数： - del_params：忽略指定URL参数， - reserve_params：保留指定URL参数， - ignore_url_params：忽略全部URL参数， - full_url：使用完整URL参数。   > 不传此参数时，默认为full_url。
     * urlParameterValue  URL参数值，最多设置10条，以\",\"分隔。  > 当url_parameter_type为del_params或reserve_params时必填。
     *
@@ -131,6 +138,7 @@ class CacheRules implements ModelInterface, ArrayAccess
             'ttlUnit' => 'setTtlUnit',
             'priority' => 'setPriority',
             'followOrigin' => 'setFollowOrigin',
+            'forceCache' => 'setForceCache',
             'urlParameterType' => 'setUrlParameterType',
             'urlParameterValue' => 'setUrlParameterValue'
     ];
@@ -143,6 +151,7 @@ class CacheRules implements ModelInterface, ArrayAccess
     * ttlUnit  缓存过期时间单位，s：秒；m：分；h：小时；d：天。
     * priority  此条缓存规则的优先级, 默认值1，数值越大，优先级越高，取值范围为1-100，优先级不能相同。
     * followOrigin  缓存遵循源站开关，on：打开，off：关闭。  > 默认值为off。
+    * forceCache  强制缓存：CDN节点缓存过期时间是否忽略源站响应头Cache-Control中的no-cache、private、no-store字段，默认关闭强制缓存功能。强制缓存与缓存过期时间来源功能配合使用，具体使用限制及配置效果请参考CDN用户指南的配置节点缓存规则章节。on：打开强制缓存，off：关闭强制缓存
     * urlParameterType  URL参数： - del_params：忽略指定URL参数， - reserve_params：保留指定URL参数， - ignore_url_params：忽略全部URL参数， - full_url：使用完整URL参数。   > 不传此参数时，默认为full_url。
     * urlParameterValue  URL参数值，最多设置10条，以\",\"分隔。  > 当url_parameter_type为del_params或reserve_params时必填。
     *
@@ -155,6 +164,7 @@ class CacheRules implements ModelInterface, ArrayAccess
             'ttlUnit' => 'getTtlUnit',
             'priority' => 'getPriority',
             'followOrigin' => 'getFollowOrigin',
+            'forceCache' => 'getForceCache',
             'urlParameterType' => 'getUrlParameterType',
             'urlParameterValue' => 'getUrlParameterValue'
     ];
@@ -223,6 +233,7 @@ class CacheRules implements ModelInterface, ArrayAccess
         $this->container['ttlUnit'] = isset($data['ttlUnit']) ? $data['ttlUnit'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['followOrigin'] = isset($data['followOrigin']) ? $data['followOrigin'] : null;
+        $this->container['forceCache'] = isset($data['forceCache']) ? $data['forceCache'] : null;
         $this->container['urlParameterType'] = isset($data['urlParameterType']) ? $data['urlParameterType'] : null;
         $this->container['urlParameterValue'] = isset($data['urlParameterValue']) ? $data['urlParameterValue'] : null;
     }
@@ -396,6 +407,30 @@ class CacheRules implements ModelInterface, ArrayAccess
     public function setFollowOrigin($followOrigin)
     {
         $this->container['followOrigin'] = $followOrigin;
+        return $this;
+    }
+
+    /**
+    * Gets forceCache
+    *  强制缓存：CDN节点缓存过期时间是否忽略源站响应头Cache-Control中的no-cache、private、no-store字段，默认关闭强制缓存功能。强制缓存与缓存过期时间来源功能配合使用，具体使用限制及配置效果请参考CDN用户指南的配置节点缓存规则章节。on：打开强制缓存，off：关闭强制缓存
+    *
+    * @return string|null
+    */
+    public function getForceCache()
+    {
+        return $this->container['forceCache'];
+    }
+
+    /**
+    * Sets forceCache
+    *
+    * @param string|null $forceCache 强制缓存：CDN节点缓存过期时间是否忽略源站响应头Cache-Control中的no-cache、private、no-store字段，默认关闭强制缓存功能。强制缓存与缓存过期时间来源功能配合使用，具体使用限制及配置效果请参考CDN用户指南的配置节点缓存规则章节。on：打开强制缓存，off：关闭强制缓存
+    *
+    * @return $this
+    */
+    public function setForceCache($forceCache)
+    {
+        $this->container['forceCache'] = $forceCache;
         return $this;
     }
 

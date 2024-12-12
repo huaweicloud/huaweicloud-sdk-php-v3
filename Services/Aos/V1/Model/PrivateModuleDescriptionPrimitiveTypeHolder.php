@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cce\V3\Model;
+namespace HuaweiCloud\SDK\Aos\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SyncNodePoolResponse implements ModelInterface, ArrayAccess
+class PrivateModuleDescriptionPrimitiveTypeHolder implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,26 @@ class SyncNodePoolResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SyncNodePoolResponse';
+    protected static $openAPIModelName = 'PrivateModuleDescriptionPrimitiveTypeHolder';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * moduleDescription  私有模块（private-module）的描述。可用于客户识别被管理的私有模块。如果想要更新私有模块的描述，可以通过UpdatePrivateModuleMetadata API。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'moduleDescription' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * moduleDescription  私有模块（private-module）的描述。可用于客户识别被管理的私有模块。如果想要更新私有模块的描述，可以通过UpdatePrivateModuleMetadata API。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'moduleDescription' => null
     ];
 
     /**
@@ -62,32 +61,32 @@ class SyncNodePoolResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * moduleDescription  私有模块（private-module）的描述。可用于客户识别被管理的私有模块。如果想要更新私有模块的描述，可以通过UpdatePrivateModuleMetadata API。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'moduleDescription' => 'module_description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * moduleDescription  私有模块（private-module）的描述。可用于客户识别被管理的私有模块。如果想要更新私有模块的描述，可以通过UpdatePrivateModuleMetadata API。
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'moduleDescription' => 'setModuleDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * moduleDescription  私有模块（private-module）的描述。可用于客户识别被管理的私有模块。如果想要更新私有模块的描述，可以通过UpdatePrivateModuleMetadata API。
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'moduleDescription' => 'getModuleDescription'
     ];
 
     /**
@@ -148,7 +147,7 @@ class SyncNodePoolResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['moduleDescription'] = isset($data['moduleDescription']) ? $data['moduleDescription'] : null;
     }
 
     /**
@@ -159,6 +158,12 @@ class SyncNodePoolResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['moduleDescription']) && (mb_strlen($this->container['moduleDescription']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'moduleDescription', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['moduleDescription']) && (mb_strlen($this->container['moduleDescription']) < 0)) {
+                $invalidProperties[] = "invalid value for 'moduleDescription', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -174,26 +179,26 @@ class SyncNodePoolResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets moduleDescription
+    *  私有模块（private-module）的描述。可用于客户识别被管理的私有模块。如果想要更新私有模块的描述，可以通过UpdatePrivateModuleMetadata API。
     *
     * @return string|null
     */
-    public function getBody()
+    public function getModuleDescription()
     {
-        return $this->container['body'];
+        return $this->container['moduleDescription'];
     }
 
     /**
-    * Sets body
+    * Sets moduleDescription
     *
-    * @param string|null $body body
+    * @param string|null $moduleDescription 私有模块（private-module）的描述。可用于客户识别被管理的私有模块。如果想要更新私有模块的描述，可以通过UpdatePrivateModuleMetadata API。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setModuleDescription($moduleDescription)
     {
-        $this->container['body'] = $body;
+        $this->container['moduleDescription'] = $moduleDescription;
         return $this;
     }
 
