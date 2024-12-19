@@ -37,7 +37,7 @@ class VifPeer implements ModelInterface, ArrayAccess
     * bgpStatus  接口BGP协议状态,如果是静态路由接口则状态为 null
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
-    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
     * enableNqa  是否使能nqa功能：true或false
     * enableBfd  是否使能bfd功能：true或false
     *
@@ -85,7 +85,7 @@ class VifPeer implements ModelInterface, ArrayAccess
     * bgpStatus  接口BGP协议状态,如果是静态路由接口则状态为 null
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
-    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
     * enableNqa  是否使能nqa功能：true或false
     * enableBfd  是否使能bfd功能：true或false
     *
@@ -154,7 +154,7 @@ class VifPeer implements ModelInterface, ArrayAccess
     * bgpStatus  接口BGP协议状态,如果是静态路由接口则状态为 null
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
-    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
     * enableNqa  是否使能nqa功能：true或false
     * enableBfd  是否使能bfd功能：true或false
     *
@@ -202,7 +202,7 @@ class VifPeer implements ModelInterface, ArrayAccess
     * bgpStatus  接口BGP协议状态,如果是静态路由接口则状态为 null
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
-    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
     * enableNqa  是否使能nqa功能：true或false
     * enableBfd  是否使能bfd功能：true或false
     *
@@ -250,7 +250,7 @@ class VifPeer implements ModelInterface, ArrayAccess
     * bgpStatus  接口BGP协议状态,如果是静态路由接口则状态为 null
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
-    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
     * enableNqa  是否使能nqa功能：true或false
     * enableBfd  是否使能bfd功能：true或false
     *
@@ -856,7 +856,7 @@ class VifPeer implements ModelInterface, ArrayAccess
 
     /**
     * Gets receiveRouteNum
-    *  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    *  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
     *
     * @return int|null
     */
@@ -868,7 +868,7 @@ class VifPeer implements ModelInterface, ArrayAccess
     /**
     * Sets receiveRouteNum
     *
-    * @param int|null $receiveRouteNum 路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    * @param int|null $receiveRouteNum 路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
     *
     * @return $this
     */

@@ -45,7 +45,7 @@ class JobRun implements ModelInterface, ArrayAccess
             'id' => 'string',
             'category' => 'string',
             'sequence' => 'int',
-            'async' => 'string',
+            'async' => 'bool',
             'name' => 'string',
             'identifier' => 'string',
             'dependsOn' => 'string[]',
@@ -435,7 +435,7 @@ class JobRun implements ModelInterface, ArrayAccess
     * Gets async
     *  是否异步
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getAsync()
     {
@@ -445,7 +445,7 @@ class JobRun implements ModelInterface, ArrayAccess
     /**
     * Sets async
     *
-    * @param string|null $async 是否异步
+    * @param bool|null $async 是否异步
     *
     * @return $this
     */

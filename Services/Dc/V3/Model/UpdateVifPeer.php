@@ -180,13 +180,10 @@ class UpdateVifPeer implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 64)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['name']) < 0)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 128)) {
@@ -195,9 +192,6 @@ class UpdateVifPeer implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['remoteEpGroup'] === null) {
-            $invalidProperties[] = "'remoteEpGroup' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -216,7 +210,7 @@ class UpdateVifPeer implements ModelInterface, ArrayAccess
     * Gets name
     *  VIF对等体名字
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -226,7 +220,7 @@ class UpdateVifPeer implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name VIF对等体名字
+    * @param string|null $name VIF对等体名字
     *
     * @return $this
     */
@@ -264,7 +258,7 @@ class UpdateVifPeer implements ModelInterface, ArrayAccess
     * Gets remoteEpGroup
     *  远端子网列表，记录用户侧的cidrs
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getRemoteEpGroup()
     {
@@ -274,7 +268,7 @@ class UpdateVifPeer implements ModelInterface, ArrayAccess
     /**
     * Sets remoteEpGroup
     *
-    * @param string[] $remoteEpGroup 远端子网列表，记录用户侧的cidrs
+    * @param string[]|null $remoteEpGroup 远端子网列表，记录用户侧的cidrs
     *
     * @return $this
     */

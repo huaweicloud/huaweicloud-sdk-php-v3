@@ -589,11 +589,11 @@ class DcAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -1276,9 +1276,157 @@ class DcAsyncClient extends Client
     }
 
     /**
-     * 查询全球接入网关路由表
+     * 查询专线接入点位置列表
      *
-     * 查询全球接入网关路由表，返回查询到的全球接入网关路由表的详细信息。
+     * 查询本区域下所有专线的接入点的信息，分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDirectConnectLocationsAsync($request)
+    {
+        return $this->listDirectConnectLocationsAsyncWithHttpInfo($request);
+    }
+    
+    public function listDirectConnectLocationsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/dcaas/direct-connect-locations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ListDirectConnectLocationsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ListDirectConnectLocationsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询指定专线接入点详情
+     *
+     * 查询指定的专线接入点详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDirectConnectLocationAsync($request)
+    {
+        return $this->showDirectConnectLocationAsyncWithHttpInfo($request);
+    }
+    
+    public function showDirectConnectLocationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/dcaas/direct-connect-locations/{direct_connect_location_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['directConnectLocationId'] !== null) {
+            $pathParams['direct_connect_location_id'] = $localVarParams['directConnectLocationId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ShowDirectConnectLocationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ShowDirectConnectLocationRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询全域接入网关路由表
+     *
+     * 查询全域接入网关路由表
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1306,20 +1454,14 @@ class DcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['fields'] !== null) {
-            $queryParams['fields'] = $localVarParams['fields'];
-        }
-        if ($localVarParams['extFields'] !== null) {
-            $queryParams['ext_fields'] = $localVarParams['extFields'];
+        if ($localVarParams['addressFamily'] !== null) {
+            $queryParams['address_family'] = $localVarParams['addressFamily'];
         }
         if ($localVarParams['nexthop'] !== null) {
             $queryParams['nexthop'] = $localVarParams['nexthop'];
         }
         if ($localVarParams['destination'] !== null) {
             $queryParams['destination'] = $localVarParams['destination'];
-        }
-        if ($localVarParams['addressFamily'] !== null) {
-            $queryParams['address_family'] = $localVarParams['addressFamily'];
         }
         if ($localVarParams['gdgwId'] !== null) {
             $pathParams['gdgw_id'] = $localVarParams['gdgwId'];
@@ -1356,9 +1498,13 @@ class DcAsyncClient extends Client
     }
 
     /**
-     * 修改全球接入网关路由表
+     * 修改全域接入网关路由表
      *
-     * 修改全球接入网关路由表，返回修改全球接入网关路由表的结果。
+     * # 支持的修改操作：
+     * **注意：新增、删除、修改操作互斥，一次请求只能执行其中一类操作**
+     * + 1. 新增下一跳路由
+     * + 2. 删除下一跳路由
+     * + 3. 修改路由描述
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1424,9 +1570,9 @@ class DcAsyncClient extends Client
     }
 
     /**
-     * 创建全球接入网关
+     * 创建专线全域接入网关
      *
-     * 创建全球接入网关，返回创建全球接入网关的结果。
+     * 创建专线全域接入网关实例(global-dc-gateway)，用于接入全球的ER实例
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1460,12 +1606,12 @@ class DcAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
-                ['application/json; charset=utf-8']
+                ['application/json'],
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -1489,77 +1635,9 @@ class DcAsyncClient extends Client
     }
 
     /**
-     * 创建全球接入网关对等链接
+     * 删除专线全域接入网关
      *
-     * 创建全球接入网关对等链接，返回创建全球接入网关对等链接的结果。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createPeerLinkAsync($request)
-    {
-        return $this->createPeerLinkAsyncWithHttpInfo($request);
-    }
-    
-    public function createPeerLinkAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}/peer-links';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['globalDcGatewayId'] !== null) {
-            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
-                ['application/json; charset=utf-8']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\CreatePeerLinkResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\CreatePeerLinkRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 删除全球接入网关
-     *
-     * 根据ID删除全球接入网关，返回删除全球接入网关的结果。
+     * 删除专线全域接入网关global-dc-gateway实例
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1622,9 +1700,320 @@ class DcAsyncClient extends Client
     }
 
     /**
-     * 删除全球接入网关对等链接
+     * 查询专线全域接入网关列表
      *
-     * 根据ID删除全球接入网关对等链接，返回删除全球接入网关对等链接的结果。
+     * 查询专线全域接入网关列表，建议使用分页查询 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalDcGatewaysAsync($request)
+    {
+        return $this->listGlobalDcGatewaysAsyncWithHttpInfo($request);
+    }
+    
+    public function listGlobalDcGatewaysAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['siteNetworkId'] !== null) {
+            $queryParams['site_network_id'] = $localVarParams['siteNetworkId'];
+        }
+        if ($localVarParams['cloudConnectionId'] !== null) {
+            $queryParams['cloud_connection_id'] = $localVarParams['cloudConnectionId'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['globalCenterNetworkId'] !== null) {
+            $queryParams['global_center_network_id'] = $localVarParams['globalCenterNetworkId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ListGlobalDcGatewaysResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ListGlobalDcGatewaysRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询专线全域接入网关详情
+     *
+     * 查询专线全域接入网关实例详情信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showGlobalDcGatewayAsync($request)
+    {
+        return $this->showGlobalDcGatewayAsyncWithHttpInfo($request);
+    }
+    
+    public function showGlobalDcGatewayAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['extFields'] !== null) {
+            $queryParams['ext_fields'] = $localVarParams['extFields'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ShowGlobalDcGatewayResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ShowGlobalDcGatewayRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新专线全域接入网关
+     *
+     * 更新专线全域接入网关global-dc-gateway的名字，描述等信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateGlobalDcGatewayAsync($request)
+    {
+        return $this->updateGlobalDcGatewayAsyncWithHttpInfo($request);
+    }
+    
+    public function updateGlobalDcGatewayAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateGlobalDcGatewayResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateGlobalDcGatewayRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建专线关联连接
+     *
+     * 创建专线全域接入网关的关联连接peer-link对象，用于连接企业路由器或者其他接入网关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPeerLinkAsync($request)
+    {
+        return $this->createPeerLinkAsyncWithHttpInfo($request);
+    }
+    
+    public function createPeerLinkAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}/peer-links';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\CreatePeerLinkResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\CreatePeerLinkRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除专线关联连接
+     *
+     * 删除全域接入网关与ER的关联连接peer-link
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1690,107 +2079,9 @@ class DcAsyncClient extends Client
     }
 
     /**
-     * 查询全球接入网关列表
+     * 查询专线关联连接列表
      *
-     * 查询 全球接入网关列表，返回列表中包含全球接入网关的详细信息。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listGlobalDcGatewayAsync($request)
-    {
-        return $this->listGlobalDcGatewayAsyncWithHttpInfo($request);
-    }
-    
-    public function listGlobalDcGatewayAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
-        }
-        if ($localVarParams['fields'] !== null) {
-            $queryParams['fields'] = $localVarParams['fields'];
-        }
-        if ($localVarParams['sortKey'] !== null) {
-            $queryParams['sort_key'] = $localVarParams['sortKey'];
-        }
-        if ($localVarParams['sortDir'] !== null) {
-            $queryParams['sort_dir'] = $localVarParams['sortDir'];
-        }
-        if ($localVarParams['hostingId'] !== null) {
-            $queryParams['hosting_id'] = $localVarParams['hostingId'];
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['id'] !== null) {
-            $queryParams['id'] = $localVarParams['id'];
-        }
-        if ($localVarParams['name'] !== null) {
-            $queryParams['name'] = $localVarParams['name'];
-        }
-        if ($localVarParams['globalCenterNetworkId'] !== null) {
-            $queryParams['global_center_network_id'] = $localVarParams['globalCenterNetworkId'];
-        }
-        if ($localVarParams['siteNetworkId'] !== null) {
-            $queryParams['site_network_id'] = $localVarParams['siteNetworkId'];
-        }
-        if ($localVarParams['cloudConnectionId'] !== null) {
-            $queryParams['cloud_connection_id'] = $localVarParams['cloudConnectionId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ListGlobalDcGatewayResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ListGlobalDcGatewayRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询全球接入网关对等链接
-     *
-     * 查询全球接入网关对等链接，返回查询到的全球接入网关对等链接的详细信息。
+     * 查询全域接入网关与ER等对象的关联连接列表，分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1854,11 +2145,11 @@ class DcAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
+                ['application/json'],
                 []
             );
         }
@@ -1883,199 +2174,9 @@ class DcAsyncClient extends Client
     }
 
     /**
-     * 查询RMS全球接入网关
+     * 查询专线关联连接详情
      *
-     * 根据类型、domain_id、region_id,资源类型查询资源，返回查询到的资源的详细信息。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listRmsGlobalDcGatewayAsync($request)
-    {
-        return $this->listRmsGlobalDcGatewayAsyncWithHttpInfo($request);
-    }
-    
-    public function listRmsGlobalDcGatewayAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v3/providers/{rp_name}/domains/{domain_id}/regions/{region_id}/{resource_type}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
-        }
-        if ($localVarParams['pageReverse'] !== null) {
-            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
-        }
-        if ($localVarParams['fields'] !== null) {
-            $queryParams['fields'] = $localVarParams['fields'];
-        }
-        if ($localVarParams['extFields'] !== null) {
-            $queryParams['ext_fields'] = $localVarParams['extFields'];
-        }
-        if ($localVarParams['sortKey'] !== null) {
-            $queryParams['sort_key'] = $localVarParams['sortKey'];
-        }
-        if ($localVarParams['sortDir'] !== null) {
-            $queryParams['sort_dir'] = $localVarParams['sortDir'];
-        }
-        if ($localVarParams['id'] !== null) {
-            $queryParams['id'] = $localVarParams['id'];
-        }
-        if ($localVarParams['name'] !== null) {
-            $queryParams['name'] = $localVarParams['name'];
-        }
-        if ($localVarParams['status'] !== null) {
-            $queryParams['status'] = $localVarParams['status'];
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['globalCenterNetworkId'] !== null) {
-            $queryParams['global_center_network_id'] = $localVarParams['globalCenterNetworkId'];
-        }
-        if ($localVarParams['siteNetworkId'] !== null) {
-            $queryParams['site_network_id'] = $localVarParams['siteNetworkId'];
-        }
-        if ($localVarParams['cloudConnectionId'] !== null) {
-            $queryParams['cloud_connection_id'] = $localVarParams['cloudConnectionId'];
-        }
-        if ($localVarParams['rpName'] !== null) {
-            $pathParams['rp_name'] = $localVarParams['rpName'];
-        }
-        if ($localVarParams['domainId'] !== null) {
-            $pathParams['domain_id'] = $localVarParams['domainId'];
-        }
-        if ($localVarParams['regionId'] !== null) {
-            $pathParams['region_id'] = $localVarParams['regionId'];
-        }
-        if ($localVarParams['resourceType'] !== null) {
-            $pathParams['resource_type'] = $localVarParams['resourceType'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ListRmsGlobalDcGatewayResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ListRmsGlobalDcGatewayRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询全球接入网关详情
-     *
-     * 根据ID查询全球接入网关，返回查询到的全球接入网关的详细信息。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showGlobalDcGatewayAsync($request)
-    {
-        return $this->showGlobalDcGatewayAsyncWithHttpInfo($request);
-    }
-    
-    public function showGlobalDcGatewayAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['fields'] !== null) {
-            $queryParams['fields'] = $localVarParams['fields'];
-        }
-        if ($localVarParams['extFields'] !== null) {
-            $queryParams['ext_fields'] = $localVarParams['extFields'];
-        }
-        if ($localVarParams['globalDcGatewayId'] !== null) {
-            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ShowGlobalDcGatewayResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ShowGlobalDcGatewayRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询全球接入网关对等链接
-     *
-     * 根据ID查询全球接入网关对等链接，返回查询到的全球接入网关对等链接的详细信息。
+     * 查询指定接入网关的指定的关联连接(peer link)详情
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2118,11 +2219,11 @@ class DcAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
+                ['application/json'],
                 []
             );
         }
@@ -2147,160 +2248,9 @@ class DcAsyncClient extends Client
     }
 
     /**
-     * 查询RMS全球接入网关
+     * 更新专线关联连接
      *
-     * 根据类型、domain_id、region_id,资源类型，全球接入网关ID查询资源,返回查询到的资源的详细信息。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showRmsGlobalDcGatewayAsync($request)
-    {
-        return $this->showRmsGlobalDcGatewayAsyncWithHttpInfo($request);
-    }
-    
-    public function showRmsGlobalDcGatewayAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v3/providers/{rp_name}/domains/{domain_id}/regions/{region_id}/{resource_type}/{global_dc_gateway_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['fields'] !== null) {
-            $queryParams['fields'] = $localVarParams['fields'];
-        }
-        if ($localVarParams['extFields'] !== null) {
-            $queryParams['ext_fields'] = $localVarParams['extFields'];
-        }
-        if ($localVarParams['rpName'] !== null) {
-            $pathParams['rp_name'] = $localVarParams['rpName'];
-        }
-        if ($localVarParams['domainId'] !== null) {
-            $pathParams['domain_id'] = $localVarParams['domainId'];
-        }
-        if ($localVarParams['regionId'] !== null) {
-            $pathParams['region_id'] = $localVarParams['regionId'];
-        }
-        if ($localVarParams['resourceType'] !== null) {
-            $pathParams['resource_type'] = $localVarParams['resourceType'];
-        }
-        if ($localVarParams['globalDcGatewayId'] !== null) {
-            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ShowRmsGlobalDcGatewayResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ShowRmsGlobalDcGatewayRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 修改全球接入网关
-     *
-     * 根据ID修改全球接入网关，返回修改全球接入网关的结果。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateGlobalDcGatewayAsync($request)
-    {
-        return $this->updateGlobalDcGatewayAsyncWithHttpInfo($request);
-    }
-    
-    public function updateGlobalDcGatewayAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/dcaas/global-dc-gateways/{global_dc_gateway_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['globalDcGatewayId'] !== null) {
-            $pathParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
-                ['application/json; charset=utf-8']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateGlobalDcGatewayResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateGlobalDcGatewayRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 修改全球接入网关对等链接
-     *
-     * 根据ID修改全球接入网关对等链接，返回修改全球接入网关对等链接的结果。
+     * 更新接入网关与ER对接的关联连接peer-link
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2340,12 +2290,12 @@ class DcAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
-                ['application/json; charset=utf-8']
+                ['application/json'],
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -3337,7 +3287,7 @@ class DcAsyncClient extends Client
     /**
      * 删除虚拟接口对应的对等体
      *
-     * 删除虚拟接口对等体信息,虚拟接口到少要含一个对等体,最后一个对等体不能删除 本接口只在支持Ipv6的区域开放，如需要使用请联系客服
+     * 删除虚拟接口对等体信息,虚拟接口至少要含一个对等体，最后一个对等体不能删除 本接口只在支持Ipv6的区域开放，如需要使用请联系客服
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

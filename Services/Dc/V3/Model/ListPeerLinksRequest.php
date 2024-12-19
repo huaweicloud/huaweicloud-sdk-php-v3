@@ -20,21 +20,22 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * globalDcGatewayId  全域接入网关ID
     * limit  每页返回的个数。 取值范围：1~2000。
-    * offset  offset
+    * offset  分页偏移量
     * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * pageReverse  pageReverse
+    * pageReverse  分页参数
     * fields  显示字段列表
     * extFields  show response ext-fields
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
-    * globalDcGatewayId  全球接入网关ID
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'globalDcGatewayId' => 'string',
             'limit' => 'int',
             'offset' => 'int',
             'marker' => 'string',
@@ -43,28 +44,28 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
             'extFields' => 'string[]',
             'sortKey' => 'string',
             'sortDir' => 'string[]',
-            'globalDcGatewayId' => 'string',
             'id' => 'string[]',
             'name' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * globalDcGatewayId  全域接入网关ID
     * limit  每页返回的个数。 取值范围：1~2000。
-    * offset  offset
+    * offset  分页偏移量
     * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * pageReverse  pageReverse
+    * pageReverse  分页参数
     * fields  显示字段列表
     * extFields  show response ext-fields
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
-    * globalDcGatewayId  全球接入网关ID
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'globalDcGatewayId' => null,
         'limit' => 'int32',
         'offset' => 'int32',
         'marker' => null,
@@ -73,7 +74,6 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
         'extFields' => null,
         'sortKey' => null,
         'sortDir' => null,
-        'globalDcGatewayId' => null,
         'id' => null,
         'name' => null
     ];
@@ -101,21 +101,22 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * globalDcGatewayId  全域接入网关ID
     * limit  每页返回的个数。 取值范围：1~2000。
-    * offset  offset
+    * offset  分页偏移量
     * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * pageReverse  pageReverse
+    * pageReverse  分页参数
     * fields  显示字段列表
     * extFields  show response ext-fields
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
-    * globalDcGatewayId  全球接入网关ID
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'globalDcGatewayId' => 'global_dc_gateway_id',
             'limit' => 'limit',
             'offset' => 'offset',
             'marker' => 'marker',
@@ -124,28 +125,28 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
             'extFields' => 'ext_fields',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
-            'globalDcGatewayId' => 'global_dc_gateway_id',
             'id' => 'id',
             'name' => 'name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * globalDcGatewayId  全域接入网关ID
     * limit  每页返回的个数。 取值范围：1~2000。
-    * offset  offset
+    * offset  分页偏移量
     * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * pageReverse  pageReverse
+    * pageReverse  分页参数
     * fields  显示字段列表
     * extFields  show response ext-fields
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
-    * globalDcGatewayId  全球接入网关ID
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
     *
     * @var string[]
     */
     protected static $setters = [
+            'globalDcGatewayId' => 'setGlobalDcGatewayId',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
             'marker' => 'setMarker',
@@ -154,28 +155,28 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
             'extFields' => 'setExtFields',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
-            'globalDcGatewayId' => 'setGlobalDcGatewayId',
             'id' => 'setId',
             'name' => 'setName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * globalDcGatewayId  全域接入网关ID
     * limit  每页返回的个数。 取值范围：1~2000。
-    * offset  offset
+    * offset  分页偏移量
     * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * pageReverse  pageReverse
+    * pageReverse  分页参数
     * fields  显示字段列表
     * extFields  show response ext-fields
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
-    * globalDcGatewayId  全球接入网关ID
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
     *
     * @var string[]
     */
     protected static $getters = [
+            'globalDcGatewayId' => 'getGlobalDcGatewayId',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
             'marker' => 'getMarker',
@@ -184,7 +185,6 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
             'extFields' => 'getExtFields',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
-            'globalDcGatewayId' => 'getGlobalDcGatewayId',
             'id' => 'getId',
             'name' => 'getName'
     ];
@@ -262,6 +262,7 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['globalDcGatewayId'] = isset($data['globalDcGatewayId']) ? $data['globalDcGatewayId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
@@ -270,7 +271,6 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
         $this->container['extFields'] = isset($data['extFields']) ? $data['extFields'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
-        $this->container['globalDcGatewayId'] = isset($data['globalDcGatewayId']) ? $data['globalDcGatewayId'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
@@ -283,11 +283,23 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['globalDcGatewayId'] === null) {
+            $invalidProperties[] = "'globalDcGatewayId' can't be null";
+        }
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['globalDcGatewayId'])) {
+                $invalidProperties[] = "invalid value for 'globalDcGatewayId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
+            }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 1)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 36)) {
                 $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 36.";
@@ -301,12 +313,6 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) < 0)) {
                 $invalidProperties[] = "invalid value for 'sortKey', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['globalDcGatewayId'] === null) {
-            $invalidProperties[] = "'globalDcGatewayId' can't be null";
-        }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['globalDcGatewayId'])) {
-                $invalidProperties[] = "invalid value for 'globalDcGatewayId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
-            }
         return $invalidProperties;
     }
 
@@ -319,6 +325,30 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets globalDcGatewayId
+    *  全域接入网关ID
+    *
+    * @return string
+    */
+    public function getGlobalDcGatewayId()
+    {
+        return $this->container['globalDcGatewayId'];
+    }
+
+    /**
+    * Sets globalDcGatewayId
+    *
+    * @param string $globalDcGatewayId 全域接入网关ID
+    *
+    * @return $this
+    */
+    public function setGlobalDcGatewayId($globalDcGatewayId)
+    {
+        $this->container['globalDcGatewayId'] = $globalDcGatewayId;
+        return $this;
     }
 
     /**
@@ -347,7 +377,7 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  offset
+    *  分页偏移量
     *
     * @return int|null
     */
@@ -359,7 +389,7 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset offset
+    * @param int|null $offset 分页偏移量
     *
     * @return $this
     */
@@ -395,7 +425,7 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageReverse
-    *  pageReverse
+    *  分页参数
     *
     * @return bool|null
     */
@@ -407,7 +437,7 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pageReverse
     *
-    * @param bool|null $pageReverse pageReverse
+    * @param bool|null $pageReverse 分页参数
     *
     * @return $this
     */
@@ -510,30 +540,6 @@ class ListPeerLinksRequest implements ModelInterface, ArrayAccess
     public function setSortDir($sortDir)
     {
         $this->container['sortDir'] = $sortDir;
-        return $this;
-    }
-
-    /**
-    * Gets globalDcGatewayId
-    *  全球接入网关ID
-    *
-    * @return string
-    */
-    public function getGlobalDcGatewayId()
-    {
-        return $this->container['globalDcGatewayId'];
-    }
-
-    /**
-    * Sets globalDcGatewayId
-    *
-    * @param string $globalDcGatewayId 全球接入网关ID
-    *
-    * @return $this
-    */
-    public function setGlobalDcGatewayId($globalDcGatewayId)
-    {
-        $this->container['globalDcGatewayId'] = $globalDcGatewayId;
         return $this;
     }
 

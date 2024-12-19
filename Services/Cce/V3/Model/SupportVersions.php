@@ -22,24 +22,28 @@ class SupportVersions implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterType  支持的集群类型
     * clusterVersion  支持的集群版本（正则表达式）
+    * category  作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterType' => 'string',
-            'clusterVersion' => 'string[]'
+            'clusterVersion' => 'string[]',
+            'category' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterType  支持的集群类型
     * clusterVersion  支持的集群版本（正则表达式）
+    * category  作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterType' => null,
-        'clusterVersion' => null
+        'clusterVersion' => null,
+        'category' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class SupportVersions implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterType  支持的集群类型
     * clusterVersion  支持的集群版本（正则表达式）
+    * category  作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterType' => 'clusterType',
-            'clusterVersion' => 'clusterVersion'
+            'clusterVersion' => 'clusterVersion',
+            'category' => 'category'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterType  支持的集群类型
     * clusterVersion  支持的集群版本（正则表达式）
+    * category  作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterType' => 'setClusterType',
-            'clusterVersion' => 'setClusterVersion'
+            'clusterVersion' => 'setClusterVersion',
+            'category' => 'setCategory'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterType  支持的集群类型
     * clusterVersion  支持的集群版本（正则表达式）
+    * category  作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterType' => 'getClusterType',
-            'clusterVersion' => 'getClusterVersion'
+            'clusterVersion' => 'getClusterVersion',
+            'category' => 'getCategory'
     ];
 
     /**
@@ -159,6 +169,7 @@ class SupportVersions implements ModelInterface, ArrayAccess
     {
         $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
         $this->container['clusterVersion'] = isset($data['clusterVersion']) ? $data['clusterVersion'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
     }
 
     /**
@@ -234,6 +245,30 @@ class SupportVersions implements ModelInterface, ArrayAccess
     public function setClusterVersion($clusterVersion)
     {
         $this->container['clusterVersion'] = $clusterVersion;
+        return $this;
+    }
+
+    /**
+    * Gets category
+    *  作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
+    *
+    * @return string[]|null
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param string[]|null $category 作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
         return $this;
     }
 

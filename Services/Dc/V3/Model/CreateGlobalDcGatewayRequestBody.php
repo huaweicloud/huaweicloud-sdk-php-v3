@@ -20,25 +20,21 @@ class CreateGlobalDcGatewayRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dryRun  空运行 - true 是 - false 否
     * globalDcGateway  globalDcGateway
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'dryRun' => 'bool',
-            'globalDcGateway' => '\HuaweiCloud\SDK\Dc\V3\Model\CreateGlobalDcGatewayRequestBodyGlobalDcGateway'
+            'globalDcGateway' => '\HuaweiCloud\SDK\Dc\V3\Model\CreateGlobalDcGateway'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dryRun  空运行 - true 是 - false 否
     * globalDcGateway  globalDcGateway
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'dryRun' => null,
         'globalDcGateway' => null
     ];
 
@@ -65,37 +61,31 @@ class CreateGlobalDcGatewayRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dryRun  空运行 - true 是 - false 否
     * globalDcGateway  globalDcGateway
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'dryRun' => 'dry_run',
             'globalDcGateway' => 'global_dc_gateway'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dryRun  空运行 - true 是 - false 否
     * globalDcGateway  globalDcGateway
     *
     * @var string[]
     */
     protected static $setters = [
-            'dryRun' => 'setDryRun',
             'globalDcGateway' => 'setGlobalDcGateway'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dryRun  空运行 - true 是 - false 否
     * globalDcGateway  globalDcGateway
     *
     * @var string[]
     */
     protected static $getters = [
-            'dryRun' => 'getDryRun',
             'globalDcGateway' => 'getGlobalDcGateway'
     ];
 
@@ -157,7 +147,6 @@ class CreateGlobalDcGatewayRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
         $this->container['globalDcGateway'] = isset($data['globalDcGateway']) ? $data['globalDcGateway'] : null;
     }
 
@@ -169,6 +158,9 @@ class CreateGlobalDcGatewayRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['globalDcGateway'] === null) {
+            $invalidProperties[] = "'globalDcGateway' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -184,34 +176,10 @@ class CreateGlobalDcGatewayRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets dryRun
-    *  空运行 - true 是 - false 否
-    *
-    * @return bool|null
-    */
-    public function getDryRun()
-    {
-        return $this->container['dryRun'];
-    }
-
-    /**
-    * Sets dryRun
-    *
-    * @param bool|null $dryRun 空运行 - true 是 - false 否
-    *
-    * @return $this
-    */
-    public function setDryRun($dryRun)
-    {
-        $this->container['dryRun'] = $dryRun;
-        return $this;
-    }
-
-    /**
     * Gets globalDcGateway
     *  globalDcGateway
     *
-    * @return \HuaweiCloud\SDK\Dc\V3\Model\CreateGlobalDcGatewayRequestBodyGlobalDcGateway|null
+    * @return \HuaweiCloud\SDK\Dc\V3\Model\CreateGlobalDcGateway
     */
     public function getGlobalDcGateway()
     {
@@ -221,7 +189,7 @@ class CreateGlobalDcGatewayRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets globalDcGateway
     *
-    * @param \HuaweiCloud\SDK\Dc\V3\Model\CreateGlobalDcGatewayRequestBodyGlobalDcGateway|null $globalDcGateway globalDcGateway
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\CreateGlobalDcGateway $globalDcGateway globalDcGateway
     *
     * @return $this
     */

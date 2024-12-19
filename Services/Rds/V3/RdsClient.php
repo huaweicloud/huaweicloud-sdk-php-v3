@@ -5576,6 +5576,71 @@ class RdsClient extends Client
     }
 
     /**
+     * 查询高级备份策略
+     *
+     * 查询高级备份策略，可查看自定义稀疏备份等
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listUpdateBackupEnhancePolicy($request)
+    {
+        return $this->listUpdateBackupEnhancePolicyWithHttpInfo($request);
+    }
+
+    public function listUpdateBackupEnhancePolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/backups/enhance-policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['timeZone'] !== null) {
+            $queryParams['time_zone'] = $localVarParams['timeZone'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListUpdateBackupEnhancePolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListUpdateBackupEnhancePolicyRequest');
+    }
+
+    /**
      * 
      *
      * 查询实例大版本升级历史信息。

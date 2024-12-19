@@ -27,7 +27,7 @@ class ListBindingGeip implements ModelInterface, ArrayAccess
     * errorMessage  geip绑定失败的原因
     * cidr  geip的地址ip/mask
     * addressFamily  geip的地址簇
-    * ieVtepIp  IES的集群vtepIp
+    * ieVtepIp  CloudPond的集群vtepIp
     * createdTime  geip绑定时间
     * gcbId  带宽包的id
     *
@@ -55,7 +55,7 @@ class ListBindingGeip implements ModelInterface, ArrayAccess
     * errorMessage  geip绑定失败的原因
     * cidr  geip的地址ip/mask
     * addressFamily  geip的地址簇
-    * ieVtepIp  IES的集群vtepIp
+    * ieVtepIp  CloudPond的集群vtepIp
     * createdTime  geip绑定时间
     * gcbId  带宽包的id
     *
@@ -104,7 +104,7 @@ class ListBindingGeip implements ModelInterface, ArrayAccess
     * errorMessage  geip绑定失败的原因
     * cidr  geip的地址ip/mask
     * addressFamily  geip的地址簇
-    * ieVtepIp  IES的集群vtepIp
+    * ieVtepIp  CloudPond的集群vtepIp
     * createdTime  geip绑定时间
     * gcbId  带宽包的id
     *
@@ -132,7 +132,7 @@ class ListBindingGeip implements ModelInterface, ArrayAccess
     * errorMessage  geip绑定失败的原因
     * cidr  geip的地址ip/mask
     * addressFamily  geip的地址簇
-    * ieVtepIp  IES的集群vtepIp
+    * ieVtepIp  CloudPond的集群vtepIp
     * createdTime  geip绑定时间
     * gcbId  带宽包的id
     *
@@ -160,7 +160,7 @@ class ListBindingGeip implements ModelInterface, ArrayAccess
     * errorMessage  geip绑定失败的原因
     * cidr  geip的地址ip/mask
     * addressFamily  geip的地址簇
-    * ieVtepIp  IES的集群vtepIp
+    * ieVtepIp  CloudPond的集群vtepIp
     * createdTime  geip绑定时间
     * gcbId  带宽包的id
     *
@@ -219,7 +219,37 @@ class ListBindingGeip implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_ACTIVE = 'ACTIVE';
+    const STATUS_ERROR = 'ERROR';
+    const TYPE_IP_ADDRESS = 'IP_ADDRESS';
+    const TYPE_IP_SEGMENT = 'IP_SEGMENT';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_ACTIVE,
+            self::STATUS_ERROR,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_IP_ADDRESS,
+            self::TYPE_IP_SEGMENT,
+        ];
+    }
 
 
     /**
@@ -257,6 +287,22 @@ class ListBindingGeip implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -441,7 +487,7 @@ class ListBindingGeip implements ModelInterface, ArrayAccess
 
     /**
     * Gets ieVtepIp
-    *  IES的集群vtepIp
+    *  CloudPond的集群vtepIp
     *
     * @return string|null
     */
@@ -453,7 +499,7 @@ class ListBindingGeip implements ModelInterface, ArrayAccess
     /**
     * Sets ieVtepIp
     *
-    * @param string|null $ieVtepIp IES的集群vtepIp
+    * @param string|null $ieVtepIp CloudPond的集群vtepIp
     *
     * @return $this
     */

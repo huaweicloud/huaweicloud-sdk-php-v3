@@ -15077,6 +15077,83 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 重跑作业实例
+     *
+     * 支持重跑作业实例以及上下游的作业实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function retryFactoryJobInstanceAsync($request)
+    {
+        return $this->retryFactoryJobInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function retryFactoryJobInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/factory/jobs/{job_name}/instances/retry';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['jobName'] !== null) {
+            $pathParams['job_name'] = $localVarParams['jobName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\RetryFactoryJobInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\RetryFactoryJobInstanceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 撤回审批单
      *
      * 撤回审批单。

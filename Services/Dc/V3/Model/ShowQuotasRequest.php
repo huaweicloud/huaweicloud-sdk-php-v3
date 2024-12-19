@@ -20,7 +20,7 @@ class ShowQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  支持过滤的配额类型： - [physicalConnect:  物理连接direct_connect实例的配额和使用量] - [virtualInterface: 虚拟接口virtual-interface的配额和使用量] - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全球接入网关的配额和使用量] - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量]
+    * type  支持过滤的配额类型： - physicalConnect:  物理连接direct_connect实例的配额和使用量 - virtualInterface: 虚拟接口virtual-interface的配额和使用量 - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全域接入网关的配额和使用量](tag:hws,hws_hk) - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量](tag:hws,hws_hk)
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  支持过滤的配额类型： - [physicalConnect:  物理连接direct_connect实例的配额和使用量] - [virtualInterface: 虚拟接口virtual-interface的配额和使用量] - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全球接入网关的配额和使用量] - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量]
+    * type  支持过滤的配额类型： - physicalConnect:  物理连接direct_connect实例的配额和使用量 - virtualInterface: 虚拟接口virtual-interface的配额和使用量 - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全域接入网关的配额和使用量](tag:hws,hws_hk) - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量](tag:hws,hws_hk)
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  支持过滤的配额类型： - [physicalConnect:  物理连接direct_connect实例的配额和使用量] - [virtualInterface: 虚拟接口virtual-interface的配额和使用量] - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全球接入网关的配额和使用量] - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量]
+    * type  支持过滤的配额类型： - physicalConnect:  物理连接direct_connect实例的配额和使用量 - virtualInterface: 虚拟接口virtual-interface的配额和使用量 - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全域接入网关的配额和使用量](tag:hws,hws_hk) - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量](tag:hws,hws_hk)
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  支持过滤的配额类型： - [physicalConnect:  物理连接direct_connect实例的配额和使用量] - [virtualInterface: 虚拟接口virtual-interface的配额和使用量] - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全球接入网关的配额和使用量] - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量]
+    * type  支持过滤的配额类型： - physicalConnect:  物理连接direct_connect实例的配额和使用量 - virtualInterface: 虚拟接口virtual-interface的配额和使用量 - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全域接入网关的配额和使用量](tag:hws,hws_hk) - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量](tag:hws,hws_hk)
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  支持过滤的配额类型： - [physicalConnect:  物理连接direct_connect实例的配额和使用量] - [virtualInterface: 虚拟接口virtual-interface的配额和使用量] - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全球接入网关的配额和使用量] - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量]
+    * type  支持过滤的配额类型： - physicalConnect:  物理连接direct_connect实例的配额和使用量 - virtualInterface: 虚拟接口virtual-interface的配额和使用量 - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全域接入网关的配额和使用量](tag:hws,hws_hk) - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量](tag:hws,hws_hk)
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ShowQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  支持过滤的配额类型： - [physicalConnect:  物理连接direct_connect实例的配额和使用量] - [virtualInterface: 虚拟接口virtual-interface的配额和使用量] - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全球接入网关的配额和使用量] - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量]
+    *  支持过滤的配额类型： - physicalConnect:  物理连接direct_connect实例的配额和使用量 - virtualInterface: 虚拟接口virtual-interface的配额和使用量 - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全域接入网关的配额和使用量](tag:hws,hws_hk) - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量](tag:hws,hws_hk)
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class ShowQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string[]|null $type 支持过滤的配额类型： - [physicalConnect:  物理连接direct_connect实例的配额和使用量] - [virtualInterface: 虚拟接口virtual-interface的配额和使用量] - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全球接入网关的配额和使用量] - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量]
+    * @param string[]|null $type 支持过滤的配额类型： - physicalConnect:  物理连接direct_connect实例的配额和使用量 - virtualInterface: 虚拟接口virtual-interface的配额和使用量 - [connectGateway: 连接网关（用于关联GEIP）的配额和使用量](tag:hws) - [geip: 每租户可以关联GEIP的配额和使用量](tag:hws) - [globalDcGateway 专线全域接入网关的配额和使用量](tag:hws,hws_hk) - [peerLinkPerGdgw: 接入网关的关联连接的配额和使用量](tag:hws,hws_hk)
     *
     * @return $this
     */

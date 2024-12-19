@@ -22,6 +22,7 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  虚拟网关的ID
     * vpcId  虚拟网关接入的VPC的ID
+    * enterpriseRouterId  虚拟网关接入的ER的ID
     * tenantId  实例所属项目ID。
     * name  虚拟网关的名字
     * description  虚拟网关的描述
@@ -42,6 +43,7 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'vpcId' => 'string',
+            'enterpriseRouterId' => 'string',
             'tenantId' => 'string',
             'name' => 'string',
             'description' => 'string',
@@ -62,6 +64,7 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  虚拟网关的ID
     * vpcId  虚拟网关接入的VPC的ID
+    * enterpriseRouterId  虚拟网关接入的ER的ID
     * tenantId  实例所属项目ID。
     * name  虚拟网关的名字
     * description  虚拟网关的描述
@@ -82,6 +85,7 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'vpcId' => null,
+        'enterpriseRouterId' => null,
         'tenantId' => null,
         'name' => null,
         'description' => null,
@@ -123,6 +127,7 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  虚拟网关的ID
     * vpcId  虚拟网关接入的VPC的ID
+    * enterpriseRouterId  虚拟网关接入的ER的ID
     * tenantId  实例所属项目ID。
     * name  虚拟网关的名字
     * description  虚拟网关的描述
@@ -143,6 +148,7 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'vpcId' => 'vpc_id',
+            'enterpriseRouterId' => 'enterprise_router_id',
             'tenantId' => 'tenant_id',
             'name' => 'name',
             'description' => 'description',
@@ -163,6 +169,7 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  虚拟网关的ID
     * vpcId  虚拟网关接入的VPC的ID
+    * enterpriseRouterId  虚拟网关接入的ER的ID
     * tenantId  实例所属项目ID。
     * name  虚拟网关的名字
     * description  虚拟网关的描述
@@ -183,6 +190,7 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'vpcId' => 'setVpcId',
+            'enterpriseRouterId' => 'setEnterpriseRouterId',
             'tenantId' => 'setTenantId',
             'name' => 'setName',
             'description' => 'setDescription',
@@ -203,6 +211,7 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  虚拟网关的ID
     * vpcId  虚拟网关接入的VPC的ID
+    * enterpriseRouterId  虚拟网关接入的ER的ID
     * tenantId  实例所属项目ID。
     * name  虚拟网关的名字
     * description  虚拟网关的描述
@@ -223,6 +232,7 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'vpcId' => 'getVpcId',
+            'enterpriseRouterId' => 'getEnterpriseRouterId',
             'tenantId' => 'getTenantId',
             'name' => 'getName',
             'description' => 'getDescription',
@@ -299,6 +309,7 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
+        $this->container['enterpriseRouterId'] = isset($data['enterpriseRouterId']) ? $data['enterpriseRouterId'] : null;
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -325,6 +336,9 @@ class VirtualGateway implements ModelInterface, ArrayAccess
         $invalidProperties = [];
             if (!is_null($this->container['vpcId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['vpcId'])) {
                 $invalidProperties[] = "invalid value for 'vpcId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
+            }
+            if (!is_null($this->container['enterpriseRouterId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseRouterId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
             if (!is_null($this->container['tenantId']) && (mb_strlen($this->container['tenantId']) > 32)) {
                 $invalidProperties[] = "invalid value for 'tenantId', the character length must be smaller than or equal to 32.";
@@ -421,6 +435,30 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     public function setVpcId($vpcId)
     {
         $this->container['vpcId'] = $vpcId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseRouterId
+    *  虚拟网关接入的ER的ID
+    *
+    * @return string|null
+    */
+    public function getEnterpriseRouterId()
+    {
+        return $this->container['enterpriseRouterId'];
+    }
+
+    /**
+    * Sets enterpriseRouterId
+    *
+    * @param string|null $enterpriseRouterId 虚拟网关接入的ER的ID
+    *
+    * @return $this
+    */
+    public function setEnterpriseRouterId($enterpriseRouterId)
+    {
+        $this->container['enterpriseRouterId'] = $enterpriseRouterId;
         return $this;
     }
 

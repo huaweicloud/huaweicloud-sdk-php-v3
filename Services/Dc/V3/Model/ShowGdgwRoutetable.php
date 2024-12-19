@@ -20,16 +20,16 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  唯一ID
-    * tenantId  租户ID
-    * gatewayId  网关ID
-    * destination  描述信息
-    * nexthop  下一跳ID
-    * type  类型
-    * obtainMode  获得模式
-    * status  状态：ACTIVE-正常，ERROR-异常
-    * addressFamily  地址簇：ipv4 | ipv6
-    * description  描述信息
+    * id  路由id
+    * tenantId  租户id
+    * gatewayId  网关id
+    * destination  路由子网
+    * nexthop  下一跳id
+    * obtainMode  路由类型: - customized: 默认路由 - specific: 自定义路由 - bgp: 动态路由
+    * status  路由状态: - ACTIVE: 下发正常 - ERROR: 下发失败 - PENDING_CREATE: 待下发
+    * addressFamily  addressFamily
+    * description  路由描述
+    * type  type
     *
     * @var string[]
     */
@@ -39,25 +39,25 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
             'gatewayId' => 'string',
             'destination' => 'string',
             'nexthop' => 'string',
-            'type' => 'string',
             'obtainMode' => 'string',
             'status' => 'string',
-            'addressFamily' => 'string',
-            'description' => 'string'
+            'addressFamily' => '\HuaweiCloud\SDK\Dc\V3\Model\AddressFamily',
+            'description' => 'string',
+            'type' => '\HuaweiCloud\SDK\Dc\V3\Model\RouteTypeOfGdgw'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  唯一ID
-    * tenantId  租户ID
-    * gatewayId  网关ID
-    * destination  描述信息
-    * nexthop  下一跳ID
-    * type  类型
-    * obtainMode  获得模式
-    * status  状态：ACTIVE-正常，ERROR-异常
-    * addressFamily  地址簇：ipv4 | ipv6
-    * description  描述信息
+    * id  路由id
+    * tenantId  租户id
+    * gatewayId  网关id
+    * destination  路由子网
+    * nexthop  下一跳id
+    * obtainMode  路由类型: - customized: 默认路由 - specific: 自定义路由 - bgp: 动态路由
+    * status  路由状态: - ACTIVE: 下发正常 - ERROR: 下发失败 - PENDING_CREATE: 待下发
+    * addressFamily  addressFamily
+    * description  路由描述
+    * type  type
     *
     * @var string[]
     */
@@ -67,11 +67,11 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
         'gatewayId' => null,
         'destination' => null,
         'nexthop' => null,
-        'type' => null,
         'obtainMode' => null,
         'status' => null,
         'addressFamily' => null,
-        'description' => null
+        'description' => null,
+        'type' => null
     ];
 
     /**
@@ -97,16 +97,16 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  唯一ID
-    * tenantId  租户ID
-    * gatewayId  网关ID
-    * destination  描述信息
-    * nexthop  下一跳ID
-    * type  类型
-    * obtainMode  获得模式
-    * status  状态：ACTIVE-正常，ERROR-异常
-    * addressFamily  地址簇：ipv4 | ipv6
-    * description  描述信息
+    * id  路由id
+    * tenantId  租户id
+    * gatewayId  网关id
+    * destination  路由子网
+    * nexthop  下一跳id
+    * obtainMode  路由类型: - customized: 默认路由 - specific: 自定义路由 - bgp: 动态路由
+    * status  路由状态: - ACTIVE: 下发正常 - ERROR: 下发失败 - PENDING_CREATE: 待下发
+    * addressFamily  addressFamily
+    * description  路由描述
+    * type  type
     *
     * @var string[]
     */
@@ -116,25 +116,25 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
             'gatewayId' => 'gateway_id',
             'destination' => 'destination',
             'nexthop' => 'nexthop',
-            'type' => 'type',
             'obtainMode' => 'obtain_mode',
             'status' => 'status',
             'addressFamily' => 'address_family',
-            'description' => 'description'
+            'description' => 'description',
+            'type' => 'type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  唯一ID
-    * tenantId  租户ID
-    * gatewayId  网关ID
-    * destination  描述信息
-    * nexthop  下一跳ID
-    * type  类型
-    * obtainMode  获得模式
-    * status  状态：ACTIVE-正常，ERROR-异常
-    * addressFamily  地址簇：ipv4 | ipv6
-    * description  描述信息
+    * id  路由id
+    * tenantId  租户id
+    * gatewayId  网关id
+    * destination  路由子网
+    * nexthop  下一跳id
+    * obtainMode  路由类型: - customized: 默认路由 - specific: 自定义路由 - bgp: 动态路由
+    * status  路由状态: - ACTIVE: 下发正常 - ERROR: 下发失败 - PENDING_CREATE: 待下发
+    * addressFamily  addressFamily
+    * description  路由描述
+    * type  type
     *
     * @var string[]
     */
@@ -144,25 +144,25 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
             'gatewayId' => 'setGatewayId',
             'destination' => 'setDestination',
             'nexthop' => 'setNexthop',
-            'type' => 'setType',
             'obtainMode' => 'setObtainMode',
             'status' => 'setStatus',
             'addressFamily' => 'setAddressFamily',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'type' => 'setType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  唯一ID
-    * tenantId  租户ID
-    * gatewayId  网关ID
-    * destination  描述信息
-    * nexthop  下一跳ID
-    * type  类型
-    * obtainMode  获得模式
-    * status  状态：ACTIVE-正常，ERROR-异常
-    * addressFamily  地址簇：ipv4 | ipv6
-    * description  描述信息
+    * id  路由id
+    * tenantId  租户id
+    * gatewayId  网关id
+    * destination  路由子网
+    * nexthop  下一跳id
+    * obtainMode  路由类型: - customized: 默认路由 - specific: 自定义路由 - bgp: 动态路由
+    * status  路由状态: - ACTIVE: 下发正常 - ERROR: 下发失败 - PENDING_CREATE: 待下发
+    * addressFamily  addressFamily
+    * description  路由描述
+    * type  type
     *
     * @var string[]
     */
@@ -172,11 +172,11 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
             'gatewayId' => 'getGatewayId',
             'destination' => 'getDestination',
             'nexthop' => 'getNexthop',
-            'type' => 'getType',
             'obtainMode' => 'getObtainMode',
             'status' => 'getStatus',
             'addressFamily' => 'getAddressFamily',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'type' => 'getType'
     ];
 
     /**
@@ -219,7 +219,41 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const OBTAIN_MODE_CUSTOMIZED = 'customized';
+    const OBTAIN_MODE_SPECIFIC = 'specific';
+    const OBTAIN_MODE_BGP = 'bgp';
+    const STATUS_ACTIVE = 'ACTIVE';
+    const STATUS_ERROR = 'ERROR';
+    const STATUS_PENDING_CREATE = 'PENDING_CREATE';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getObtainModeAllowableValues()
+    {
+        return [
+            self::OBTAIN_MODE_CUSTOMIZED,
+            self::OBTAIN_MODE_SPECIFIC,
+            self::OBTAIN_MODE_BGP,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_ACTIVE,
+            self::STATUS_ERROR,
+            self::STATUS_PENDING_CREATE,
+        ];
+    }
 
 
     /**
@@ -242,11 +276,11 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
         $this->container['gatewayId'] = isset($data['gatewayId']) ? $data['gatewayId'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
         $this->container['nexthop'] = isset($data['nexthop']) ? $data['nexthop'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['obtainMode'] = isset($data['obtainMode']) ? $data['obtainMode'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['addressFamily'] = isset($data['addressFamily']) ? $data['addressFamily'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -257,6 +291,82 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+            if ((mb_strlen($this->container['id']) > 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['id']) < 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 36.";
+            }
+        if ($this->container['tenantId'] === null) {
+            $invalidProperties[] = "'tenantId' can't be null";
+        }
+            if ((mb_strlen($this->container['tenantId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['tenantId']) < 64)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be bigger than or equal to 64.";
+            }
+            if (!is_null($this->container['gatewayId']) && (mb_strlen($this->container['gatewayId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'gatewayId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['gatewayId']) && (mb_strlen($this->container['gatewayId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'gatewayId', the character length must be bigger than or equal to 36.";
+            }
+        if ($this->container['destination'] === null) {
+            $invalidProperties[] = "'destination' can't be null";
+        }
+            if ((mb_strlen($this->container['destination']) > 64)) {
+                $invalidProperties[] = "invalid value for 'destination', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['destination']) < 64)) {
+                $invalidProperties[] = "invalid value for 'destination', the character length must be bigger than or equal to 64.";
+            }
+        if ($this->container['nexthop'] === null) {
+            $invalidProperties[] = "'nexthop' can't be null";
+        }
+            if ((mb_strlen($this->container['nexthop']) > 36)) {
+                $invalidProperties[] = "invalid value for 'nexthop', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['nexthop']) < 36)) {
+                $invalidProperties[] = "invalid value for 'nexthop', the character length must be bigger than or equal to 36.";
+            }
+        if ($this->container['obtainMode'] === null) {
+            $invalidProperties[] = "'obtainMode' can't be null";
+        }
+            $allowedValues = $this->getObtainModeAllowableValues();
+                if (!is_null($this->container['obtainMode']) && !in_array($this->container['obtainMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'obtainMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+        if ($this->container['addressFamily'] === null) {
+            $invalidProperties[] = "'addressFamily' can't be null";
+        }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -273,9 +383,9 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  唯一ID
+    *  路由id
     *
-    * @return string|null
+    * @return string
     */
     public function getId()
     {
@@ -285,7 +395,7 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 唯一ID
+    * @param string $id 路由id
     *
     * @return $this
     */
@@ -297,9 +407,9 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
-    *  租户ID
+    *  租户id
     *
-    * @return string|null
+    * @return string
     */
     public function getTenantId()
     {
@@ -309,7 +419,7 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId 租户ID
+    * @param string $tenantId 租户id
     *
     * @return $this
     */
@@ -321,7 +431,7 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
 
     /**
     * Gets gatewayId
-    *  网关ID
+    *  网关id
     *
     * @return string|null
     */
@@ -333,7 +443,7 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     /**
     * Sets gatewayId
     *
-    * @param string|null $gatewayId 网关ID
+    * @param string|null $gatewayId 网关id
     *
     * @return $this
     */
@@ -345,9 +455,9 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
 
     /**
     * Gets destination
-    *  描述信息
+    *  路由子网
     *
-    * @return string|null
+    * @return string
     */
     public function getDestination()
     {
@@ -357,7 +467,7 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     /**
     * Sets destination
     *
-    * @param string|null $destination 描述信息
+    * @param string $destination 路由子网
     *
     * @return $this
     */
@@ -369,9 +479,9 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
 
     /**
     * Gets nexthop
-    *  下一跳ID
+    *  下一跳id
     *
-    * @return string|null
+    * @return string
     */
     public function getNexthop()
     {
@@ -381,7 +491,7 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     /**
     * Sets nexthop
     *
-    * @param string|null $nexthop 下一跳ID
+    * @param string $nexthop 下一跳id
     *
     * @return $this
     */
@@ -392,34 +502,10 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets type
-    *  类型
-    *
-    * @return string|null
-    */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-    * Sets type
-    *
-    * @param string|null $type 类型
-    *
-    * @return $this
-    */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
     * Gets obtainMode
-    *  获得模式
+    *  路由类型: - customized: 默认路由 - specific: 自定义路由 - bgp: 动态路由
     *
-    * @return string|null
+    * @return string
     */
     public function getObtainMode()
     {
@@ -429,7 +515,7 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     /**
     * Sets obtainMode
     *
-    * @param string|null $obtainMode 获得模式
+    * @param string $obtainMode 路由类型: - customized: 默认路由 - specific: 自定义路由 - bgp: 动态路由
     *
     * @return $this
     */
@@ -441,9 +527,9 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态：ACTIVE-正常，ERROR-异常
+    *  路由状态: - ACTIVE: 下发正常 - ERROR: 下发失败 - PENDING_CREATE: 待下发
     *
-    * @return string|null
+    * @return string
     */
     public function getStatus()
     {
@@ -453,7 +539,7 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态：ACTIVE-正常，ERROR-异常
+    * @param string $status 路由状态: - ACTIVE: 下发正常 - ERROR: 下发失败 - PENDING_CREATE: 待下发
     *
     * @return $this
     */
@@ -465,9 +551,9 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressFamily
-    *  地址簇：ipv4 | ipv6
+    *  addressFamily
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Dc\V3\Model\AddressFamily
     */
     public function getAddressFamily()
     {
@@ -477,7 +563,7 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     /**
     * Sets addressFamily
     *
-    * @param string|null $addressFamily 地址簇：ipv4 | ipv6
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\AddressFamily $addressFamily addressFamily
     *
     * @return $this
     */
@@ -489,7 +575,7 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述信息
+    *  路由描述
     *
     * @return string|null
     */
@@ -501,13 +587,37 @@ class ShowGdgwRoutetable implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述信息
+    * @param string|null $description 路由描述
     *
     * @return $this
     */
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  type
+    *
+    * @return \HuaweiCloud\SDK\Dc\V3\Model\RouteTypeOfGdgw
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\RouteTypeOfGdgw $type type
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

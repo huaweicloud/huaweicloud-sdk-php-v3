@@ -27,7 +27,7 @@ class CreateSnapshotPolicyRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dws\V2\Model\BackupPolicy'
+            'body' => '\HuaweiCloud\SDK\Dws\V2\Model\CreateSnapshotPolicyRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class CreateSnapshotPolicyRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dws\V2\Model\BackupPolicy|null
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\CreateSnapshotPolicyRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class CreateSnapshotPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\BackupPolicy|null $body body
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\CreateSnapshotPolicyRequestBody|null $body body
     *
     * @return $this
     */

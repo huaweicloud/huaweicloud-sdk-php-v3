@@ -22,8 +22,8 @@ class UpdateVirtualGateway implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  更新虚拟网关的名字
     * description  虚拟网关的描述信息
-    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
-    * localEpGroupIpv6  虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
+    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当虚拟网关接入VPC时该列表才允许更新。](tag:dt)
+    * localEpGroupIpv6  虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs。[（预留字段，暂不支持）](tag:dt)
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class UpdateVirtualGateway implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  更新虚拟网关的名字
     * description  虚拟网关的描述信息
-    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
-    * localEpGroupIpv6  虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
+    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当虚拟网关接入VPC时该列表才允许更新。](tag:dt)
+    * localEpGroupIpv6  虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs。[（预留字段，暂不支持）](tag:dt)
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class UpdateVirtualGateway implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  更新虚拟网关的名字
     * description  虚拟网关的描述信息
-    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
-    * localEpGroupIpv6  虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
+    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当虚拟网关接入VPC时该列表才允许更新。](tag:dt)
+    * localEpGroupIpv6  虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs。[（预留字段，暂不支持）](tag:dt)
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class UpdateVirtualGateway implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  更新虚拟网关的名字
     * description  虚拟网关的描述信息
-    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
-    * localEpGroupIpv6  虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
+    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当虚拟网关接入VPC时该列表才允许更新。](tag:dt)
+    * localEpGroupIpv6  虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs。[（预留字段，暂不支持）](tag:dt)
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class UpdateVirtualGateway implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  更新虚拟网关的名字
     * description  虚拟网关的描述信息
-    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
-    * localEpGroupIpv6  虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
+    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当虚拟网关接入VPC时该列表才允许更新。](tag:dt)
+    * localEpGroupIpv6  虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs。[（预留字段，暂不支持）](tag:dt)
     *
     * @var string[]
     */
@@ -267,7 +267,7 @@ class UpdateVirtualGateway implements ModelInterface, ArrayAccess
 
     /**
     * Gets localEpGroup
-    *  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
+    *  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当虚拟网关接入VPC时该列表才允许更新。](tag:dt)
     *
     * @return string[]|null
     */
@@ -279,7 +279,7 @@ class UpdateVirtualGateway implements ModelInterface, ArrayAccess
     /**
     * Sets localEpGroup
     *
-    * @param string[]|null $localEpGroup 虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
+    * @param string[]|null $localEpGroup 虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当虚拟网关接入VPC时该列表才允许更新。](tag:dt)
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class UpdateVirtualGateway implements ModelInterface, ArrayAccess
 
     /**
     * Gets localEpGroupIpv6
-    *  虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
+    *  虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs。[（预留字段，暂不支持）](tag:dt)
     *
     * @return string[]|null
     */
@@ -303,7 +303,7 @@ class UpdateVirtualGateway implements ModelInterface, ArrayAccess
     /**
     * Sets localEpGroupIpv6
     *
-    * @param string[]|null $localEpGroupIpv6 虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
+    * @param string[]|null $localEpGroupIpv6 虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs。[（预留字段，暂不支持）](tag:dt)
     *
     * @return $this
     */

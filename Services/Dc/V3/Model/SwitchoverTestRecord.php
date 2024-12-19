@@ -25,8 +25,8 @@ class SwitchoverTestRecord implements ModelInterface, ArrayAccess
     * resourceId  倒换测试的资源对象ID
     * resourceType  倒换测试的资源对象类型
     * operation  shutdown, undo_shutdown表示倒换测试操作类型
-    * startTime  倒换测试操作的开始时间
-    * endTime  倒换测试操作的结束时间
+    * startTime  倒换测试操作的开始时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * endTime  倒换测试操作的结束时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * operateStatus  倒换测试状态记录 STARTING: 初始状态 INPROGRESS: 配置下发中 COMPLETE: 配置下发完成 ERROR: 配置下发失败
     *
     * @var string[]
@@ -49,8 +49,8 @@ class SwitchoverTestRecord implements ModelInterface, ArrayAccess
     * resourceId  倒换测试的资源对象ID
     * resourceType  倒换测试的资源对象类型
     * operation  shutdown, undo_shutdown表示倒换测试操作类型
-    * startTime  倒换测试操作的开始时间
-    * endTime  倒换测试操作的结束时间
+    * startTime  倒换测试操作的开始时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * endTime  倒换测试操作的结束时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * operateStatus  倒换测试状态记录 STARTING: 初始状态 INPROGRESS: 配置下发中 COMPLETE: 配置下发完成 ERROR: 配置下发失败
     *
     * @var string[]
@@ -94,8 +94,8 @@ class SwitchoverTestRecord implements ModelInterface, ArrayAccess
     * resourceId  倒换测试的资源对象ID
     * resourceType  倒换测试的资源对象类型
     * operation  shutdown, undo_shutdown表示倒换测试操作类型
-    * startTime  倒换测试操作的开始时间
-    * endTime  倒换测试操作的结束时间
+    * startTime  倒换测试操作的开始时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * endTime  倒换测试操作的结束时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * operateStatus  倒换测试状态记录 STARTING: 初始状态 INPROGRESS: 配置下发中 COMPLETE: 配置下发完成 ERROR: 配置下发失败
     *
     * @var string[]
@@ -118,8 +118,8 @@ class SwitchoverTestRecord implements ModelInterface, ArrayAccess
     * resourceId  倒换测试的资源对象ID
     * resourceType  倒换测试的资源对象类型
     * operation  shutdown, undo_shutdown表示倒换测试操作类型
-    * startTime  倒换测试操作的开始时间
-    * endTime  倒换测试操作的结束时间
+    * startTime  倒换测试操作的开始时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * endTime  倒换测试操作的结束时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * operateStatus  倒换测试状态记录 STARTING: 初始状态 INPROGRESS: 配置下发中 COMPLETE: 配置下发完成 ERROR: 配置下发失败
     *
     * @var string[]
@@ -142,8 +142,8 @@ class SwitchoverTestRecord implements ModelInterface, ArrayAccess
     * resourceId  倒换测试的资源对象ID
     * resourceType  倒换测试的资源对象类型
     * operation  shutdown, undo_shutdown表示倒换测试操作类型
-    * startTime  倒换测试操作的开始时间
-    * endTime  倒换测试操作的结束时间
+    * startTime  倒换测试操作的开始时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * endTime  倒换测试操作的结束时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * operateStatus  倒换测试状态记录 STARTING: 初始状态 INPROGRESS: 配置下发中 COMPLETE: 配置下发完成 ERROR: 配置下发失败
     *
     * @var string[]
@@ -466,7 +466,7 @@ class SwitchoverTestRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  倒换测试操作的开始时间
+    *  倒换测试操作的开始时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return \DateTime|null
     */
@@ -478,7 +478,7 @@ class SwitchoverTestRecord implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param \DateTime|null $startTime 倒换测试操作的开始时间
+    * @param \DateTime|null $startTime 倒换测试操作的开始时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return $this
     */
@@ -490,7 +490,7 @@ class SwitchoverTestRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  倒换测试操作的结束时间
+    *  倒换测试操作的结束时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return \DateTime|null
     */
@@ -502,7 +502,7 @@ class SwitchoverTestRecord implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param \DateTime|null $endTime 倒换测试操作的结束时间
+    * @param \DateTime|null $endTime 倒换测试操作的结束时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return $this
     */

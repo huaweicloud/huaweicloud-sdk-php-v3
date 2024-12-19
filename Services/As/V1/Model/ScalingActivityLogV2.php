@@ -301,7 +301,7 @@ class ScalingActivityLogV2 implements ModelInterface, ArrayAccess
     }
     const STATUS_SUCCESS = 'SUCCESS';
     const STATUS_FAIL = 'FAIL';
-    const STATUS_DING = 'DING';
+    const STATUS_DOING = 'DOING';
     
 
     /**
@@ -314,7 +314,7 @@ class ScalingActivityLogV2 implements ModelInterface, ArrayAccess
         return [
             self::STATUS_SUCCESS,
             self::STATUS_FAIL,
-            self::STATUS_DING,
+            self::STATUS_DOING,
         ];
     }
 

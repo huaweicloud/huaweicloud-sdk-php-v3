@@ -20,17 +20,17 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  id
-    * tenantId  tenantId
-    * name  name
-    * description  description
-    * globalDcGatewayId  globalDcGatewayId
+    * id  关联连接的ID
+    * tenantId  关联连接归属的租户ID
+    * name  关联连接的名字
+    * description  关联连接的描述信息
+    * globalDcGatewayId  关联连接归属的接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
-    * status  status
-    * reason  reason
-    * createdTime  createdTime
-    * updatedTime  updatedTime
+    * status  关联连接的状态
+    * reason  失败原因
+    * createdTime  创建时间
+    * updatedTime  更新时间
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  id
-    * tenantId  tenantId
-    * name  name
-    * description  description
-    * globalDcGatewayId  globalDcGatewayId
+    * id  关联连接的ID
+    * tenantId  关联连接归属的租户ID
+    * name  关联连接的名字
+    * description  关联连接的描述信息
+    * globalDcGatewayId  关联连接归属的接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
-    * status  status
-    * reason  reason
-    * createdTime  createdTime
-    * updatedTime  updatedTime
+    * status  关联连接的状态
+    * reason  失败原因
+    * createdTime  创建时间
+    * updatedTime  更新时间
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  id
-    * tenantId  tenantId
-    * name  name
-    * description  description
-    * globalDcGatewayId  globalDcGatewayId
+    * id  关联连接的ID
+    * tenantId  关联连接归属的租户ID
+    * name  关联连接的名字
+    * description  关联连接的描述信息
+    * globalDcGatewayId  关联连接归属的接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
-    * status  status
-    * reason  reason
-    * createdTime  createdTime
-    * updatedTime  updatedTime
+    * status  关联连接的状态
+    * reason  失败原因
+    * createdTime  创建时间
+    * updatedTime  更新时间
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  id
-    * tenantId  tenantId
-    * name  name
-    * description  description
-    * globalDcGatewayId  globalDcGatewayId
+    * id  关联连接的ID
+    * tenantId  关联连接归属的租户ID
+    * name  关联连接的名字
+    * description  关联连接的描述信息
+    * globalDcGatewayId  关联连接归属的接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
-    * status  status
-    * reason  reason
-    * createdTime  createdTime
-    * updatedTime  updatedTime
+    * status  关联连接的状态
+    * reason  失败原因
+    * createdTime  创建时间
+    * updatedTime  更新时间
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  id
-    * tenantId  tenantId
-    * name  name
-    * description  description
-    * globalDcGatewayId  globalDcGatewayId
+    * id  关联连接的ID
+    * tenantId  关联连接归属的租户ID
+    * name  关联连接的名字
+    * description  关联连接的描述信息
+    * globalDcGatewayId  关联连接归属的接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
-    * status  status
-    * reason  reason
-    * createdTime  createdTime
-    * updatedTime  updatedTime
+    * status  关联连接的状态
+    * reason  失败原因
+    * createdTime  创建时间
+    * updatedTime  更新时间
     *
     * @var string[]
     */
@@ -284,7 +284,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  id
+    *  关联连接的ID
     *
     * @return string|null
     */
@@ -296,7 +296,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 关联连接的ID
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
-    *  tenantId
+    *  关联连接归属的租户ID
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId tenantId
+    * @param string|null $tenantId 关联连接归属的租户ID
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  name
+    *  关联连接的名字
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 关联连接的名字
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  description
+    *  关联连接的描述信息
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description description
+    * @param string|null $description 关联连接的描述信息
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalDcGatewayId
-    *  globalDcGatewayId
+    *  关联连接归属的接入网关ID
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets globalDcGatewayId
     *
-    * @param string|null $globalDcGatewayId globalDcGatewayId
+    * @param string|null $globalDcGatewayId 关联连接归属的接入网关ID
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  status
+    *  关联连接的状态
     *
     * @return string|null
     */
@@ -464,7 +464,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 关联连接的状态
     *
     * @return $this
     */
@@ -476,7 +476,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets reason
-    *  reason
+    *  失败原因
     *
     * @return string|null
     */
@@ -488,7 +488,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets reason
     *
-    * @param string|null $reason reason
+    * @param string|null $reason 失败原因
     *
     * @return $this
     */
@@ -500,7 +500,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdTime
-    *  createdTime
+    *  创建时间
     *
     * @return \DateTime|null
     */
@@ -512,7 +512,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets createdTime
     *
-    * @param \DateTime|null $createdTime createdTime
+    * @param \DateTime|null $createdTime 创建时间
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedTime
-    *  updatedTime
+    *  更新时间
     *
     * @return \DateTime|null
     */
@@ -536,7 +536,7 @@ class ExternalUpdatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets updatedTime
     *
-    * @param \DateTime|null $updatedTime updatedTime
+    * @param \DateTime|null $updatedTime 更新时间
     *
     * @return $this
     */

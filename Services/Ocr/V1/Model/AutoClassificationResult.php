@@ -23,7 +23,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     * status  status
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
-    * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * location  票证的区域位置信息，列表形式，包含票证区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * sealMark  对应票证中是否含有印章。可选值包括： -  true：该票证中含有印章。 -  false：该票证中不含有印章。
     *
     * @var string[]
@@ -41,7 +41,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     * status  status
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
-    * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * location  票证的区域位置信息，列表形式，包含票证区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * sealMark  对应票证中是否含有印章。可选值包括： -  true：该票证中含有印章。 -  false：该票证中不含有印章。
     *
     * @var string[]
@@ -80,7 +80,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     * status  status
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
-    * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * location  票证的区域位置信息，列表形式，包含票证区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * sealMark  对应票证中是否含有印章。可选值包括： -  true：该票证中含有印章。 -  false：该票证中不含有印章。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     * status  status
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
-    * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * location  票证的区域位置信息，列表形式，包含票证区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * sealMark  对应票证中是否含有印章。可选值包括： -  true：该票证中含有印章。 -  false：该票证中不含有印章。
     *
     * @var string[]
@@ -116,7 +116,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     * status  status
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
-    * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * location  票证的区域位置信息，列表形式，包含票证区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * sealMark  对应票证中是否含有印章。可选值包括： -  true：该票证中含有印章。 -  false：该票证中不含有印章。
     *
     * @var string[]
@@ -302,7 +302,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets location
-    *  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    *  票证的区域位置信息，列表形式，包含票证区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @return int[][]
     */
@@ -314,7 +314,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     /**
     * Sets location
     *
-    * @param int[][] $location 文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * @param int[][] $location 票证的区域位置信息，列表形式，包含票证区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @return $this
     */

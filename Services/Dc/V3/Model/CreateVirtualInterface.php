@@ -22,24 +22,24 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  虚拟接口名字
     * description  虚拟接口描述信息
-    * directConnectId  虚拟接口关联的物理专线ID
+    * directConnectId  虚拟接口关联的物理专线ID。在创建虚拟接口时，需要关联direct_connect_id或lag_id，当LAG功能在当前局点不支持时，该参数为必选。
     * type  虚拟接口的类型,private
     * serviceType  接入网关类型：VGW/GDGW/LGW
-    * vlan  对接客户侧vlan
+    * vlan  对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
     * bandwidth  虚拟接口接入带宽
     * localGatewayV4Ip  云侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * addressFamily  接口的地址簇类型，ipv4，ipv6
     * localGatewayV6Ip  云侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
-    * vgwId  虚拟风关连接的虚拟网关的ID
+    * vgwId  虚拟接口连接的虚拟网关的ID
     * routeMode  路由模式：static/bgp
     * bgpAsn  客户侧BGP邻居的AS号
     * bgpMd5  BGP邻居的MD5密码
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
     * serviceEpGroup  访问公网服务的子网列表
-    * enableBfd  是否使能bfd功能：true或false
-    * enableNqa  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false。[（预留字段暂不支持）](tag:dt)
+    * enableNqa  是否使能nqa功能：true或false。[（预留字段暂不支持）](tag:dt)
     * lagId  虚拟接口关联的链路聚合组ID
     * resourceTenantId  目标的租户的ID,用于跨租户创建虚拟接口场景
     * enterpriseProjectId  实例所属企业项目ID
@@ -78,24 +78,24 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  虚拟接口名字
     * description  虚拟接口描述信息
-    * directConnectId  虚拟接口关联的物理专线ID
+    * directConnectId  虚拟接口关联的物理专线ID。在创建虚拟接口时，需要关联direct_connect_id或lag_id，当LAG功能在当前局点不支持时，该参数为必选。
     * type  虚拟接口的类型,private
     * serviceType  接入网关类型：VGW/GDGW/LGW
-    * vlan  对接客户侧vlan
+    * vlan  对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
     * bandwidth  虚拟接口接入带宽
     * localGatewayV4Ip  云侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * addressFamily  接口的地址簇类型，ipv4，ipv6
     * localGatewayV6Ip  云侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
-    * vgwId  虚拟风关连接的虚拟网关的ID
+    * vgwId  虚拟接口连接的虚拟网关的ID
     * routeMode  路由模式：static/bgp
     * bgpAsn  客户侧BGP邻居的AS号
     * bgpMd5  BGP邻居的MD5密码
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
     * serviceEpGroup  访问公网服务的子网列表
-    * enableBfd  是否使能bfd功能：true或false
-    * enableNqa  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false。[（预留字段暂不支持）](tag:dt)
+    * enableNqa  是否使能nqa功能：true或false。[（预留字段暂不支持）](tag:dt)
     * lagId  虚拟接口关联的链路聚合组ID
     * resourceTenantId  目标的租户的ID,用于跨租户创建虚拟接口场景
     * enterpriseProjectId  实例所属企业项目ID
@@ -155,24 +155,24 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  虚拟接口名字
     * description  虚拟接口描述信息
-    * directConnectId  虚拟接口关联的物理专线ID
+    * directConnectId  虚拟接口关联的物理专线ID。在创建虚拟接口时，需要关联direct_connect_id或lag_id，当LAG功能在当前局点不支持时，该参数为必选。
     * type  虚拟接口的类型,private
     * serviceType  接入网关类型：VGW/GDGW/LGW
-    * vlan  对接客户侧vlan
+    * vlan  对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
     * bandwidth  虚拟接口接入带宽
     * localGatewayV4Ip  云侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * addressFamily  接口的地址簇类型，ipv4，ipv6
     * localGatewayV6Ip  云侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
-    * vgwId  虚拟风关连接的虚拟网关的ID
+    * vgwId  虚拟接口连接的虚拟网关的ID
     * routeMode  路由模式：static/bgp
     * bgpAsn  客户侧BGP邻居的AS号
     * bgpMd5  BGP邻居的MD5密码
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
     * serviceEpGroup  访问公网服务的子网列表
-    * enableBfd  是否使能bfd功能：true或false
-    * enableNqa  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false。[（预留字段暂不支持）](tag:dt)
+    * enableNqa  是否使能nqa功能：true或false。[（预留字段暂不支持）](tag:dt)
     * lagId  虚拟接口关联的链路聚合组ID
     * resourceTenantId  目标的租户的ID,用于跨租户创建虚拟接口场景
     * enterpriseProjectId  实例所属企业项目ID
@@ -211,24 +211,24 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  虚拟接口名字
     * description  虚拟接口描述信息
-    * directConnectId  虚拟接口关联的物理专线ID
+    * directConnectId  虚拟接口关联的物理专线ID。在创建虚拟接口时，需要关联direct_connect_id或lag_id，当LAG功能在当前局点不支持时，该参数为必选。
     * type  虚拟接口的类型,private
     * serviceType  接入网关类型：VGW/GDGW/LGW
-    * vlan  对接客户侧vlan
+    * vlan  对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
     * bandwidth  虚拟接口接入带宽
     * localGatewayV4Ip  云侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * addressFamily  接口的地址簇类型，ipv4，ipv6
     * localGatewayV6Ip  云侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
-    * vgwId  虚拟风关连接的虚拟网关的ID
+    * vgwId  虚拟接口连接的虚拟网关的ID
     * routeMode  路由模式：static/bgp
     * bgpAsn  客户侧BGP邻居的AS号
     * bgpMd5  BGP邻居的MD5密码
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
     * serviceEpGroup  访问公网服务的子网列表
-    * enableBfd  是否使能bfd功能：true或false
-    * enableNqa  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false。[（预留字段暂不支持）](tag:dt)
+    * enableNqa  是否使能nqa功能：true或false。[（预留字段暂不支持）](tag:dt)
     * lagId  虚拟接口关联的链路聚合组ID
     * resourceTenantId  目标的租户的ID,用于跨租户创建虚拟接口场景
     * enterpriseProjectId  实例所属企业项目ID
@@ -267,24 +267,24 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  虚拟接口名字
     * description  虚拟接口描述信息
-    * directConnectId  虚拟接口关联的物理专线ID
+    * directConnectId  虚拟接口关联的物理专线ID。在创建虚拟接口时，需要关联direct_connect_id或lag_id，当LAG功能在当前局点不支持时，该参数为必选。
     * type  虚拟接口的类型,private
     * serviceType  接入网关类型：VGW/GDGW/LGW
-    * vlan  对接客户侧vlan
+    * vlan  对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
     * bandwidth  虚拟接口接入带宽
     * localGatewayV4Ip  云侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
     * addressFamily  接口的地址簇类型，ipv4，ipv6
     * localGatewayV6Ip  云侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
-    * vgwId  虚拟风关连接的虚拟网关的ID
+    * vgwId  虚拟接口连接的虚拟网关的ID
     * routeMode  路由模式：static/bgp
     * bgpAsn  客户侧BGP邻居的AS号
     * bgpMd5  BGP邻居的MD5密码
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
     * serviceEpGroup  访问公网服务的子网列表
-    * enableBfd  是否使能bfd功能：true或false
-    * enableNqa  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false。[（预留字段暂不支持）](tag:dt)
+    * enableNqa  是否使能nqa功能：true或false。[（预留字段暂不支持）](tag:dt)
     * lagId  虚拟接口关联的链路聚合组ID
     * resourceTenantId  目标的租户的ID,用于跨租户创建虚拟接口场景
     * enterpriseProjectId  实例所属企业项目ID
@@ -361,7 +361,6 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     }
     const TYPE__PRIVATE = 'private';
     const TYPE__PUBLIC = 'public';
-    const SERVICE_TYPE_VPC = 'vpc';
     const SERVICE_TYPE_VGW = 'VGW';
     const SERVICE_TYPE_GDGW = 'GDGW';
     const SERVICE_TYPE_LGW = 'LGW';
@@ -390,7 +389,6 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     public function getServiceTypeAllowableValues()
     {
         return [
-            self::SERVICE_TYPE_VPC,
             self::SERVICE_TYPE_VGW,
             self::SERVICE_TYPE_GDGW,
             self::SERVICE_TYPE_LGW,
@@ -620,7 +618,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets directConnectId
-    *  虚拟接口关联的物理专线ID
+    *  虚拟接口关联的物理专线ID。在创建虚拟接口时，需要关联direct_connect_id或lag_id，当LAG功能在当前局点不支持时，该参数为必选。
     *
     * @return string|null
     */
@@ -632,7 +630,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets directConnectId
     *
-    * @param string|null $directConnectId 虚拟接口关联的物理专线ID
+    * @param string|null $directConnectId 虚拟接口关联的物理专线ID。在创建虚拟接口时，需要关联direct_connect_id或lag_id，当LAG功能在当前局点不支持时，该参数为必选。
     *
     * @return $this
     */
@@ -692,7 +690,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets vlan
-    *  对接客户侧vlan
+    *  对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
     *
     * @return int
     */
@@ -704,7 +702,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets vlan
     *
-    * @param int $vlan 对接客户侧vlan
+    * @param int $vlan 对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
     *
     * @return $this
     */
@@ -860,7 +858,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets vgwId
-    *  虚拟风关连接的虚拟网关的ID
+    *  虚拟接口连接的虚拟网关的ID
     *
     * @return string
     */
@@ -872,7 +870,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets vgwId
     *
-    * @param string $vgwId 虚拟风关连接的虚拟网关的ID
+    * @param string $vgwId 虚拟接口连接的虚拟网关的ID
     *
     * @return $this
     */
@@ -1004,7 +1002,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableBfd
-    *  是否使能bfd功能：true或false
+    *  是否使能bfd功能：true或false。[（预留字段暂不支持）](tag:dt)
     *
     * @return bool|null
     */
@@ -1016,7 +1014,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets enableBfd
     *
-    * @param bool|null $enableBfd 是否使能bfd功能：true或false
+    * @param bool|null $enableBfd 是否使能bfd功能：true或false。[（预留字段暂不支持）](tag:dt)
     *
     * @return $this
     */
@@ -1028,7 +1026,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableNqa
-    *  是否使能nqa功能：true或false
+    *  是否使能nqa功能：true或false。[（预留字段暂不支持）](tag:dt)
     *
     * @return bool|null
     */
@@ -1040,7 +1038,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets enableNqa
     *
-    * @param bool|null $enableNqa 是否使能nqa功能：true或false
+    * @param bool|null $enableNqa 是否使能nqa功能：true或false。[（预留字段暂不支持）](tag:dt)
     *
     * @return $this
     */

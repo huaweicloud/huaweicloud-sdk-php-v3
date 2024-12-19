@@ -20,34 +20,34 @@ class ShowPeerLinkRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * globalDcGatewayId  全球接入网关ID
-    * peerLinkId  全球接入网关对等体
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * globalDcGatewayId  全域接入网关ID
+    * peerLinkId  全域接入网关对等体
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'globalDcGatewayId' => 'string',
-            'peerLinkId' => 'string',
             'fields' => 'string[]',
-            'extFields' => 'string[]'
+            'extFields' => 'string[]',
+            'globalDcGatewayId' => 'string',
+            'peerLinkId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * globalDcGatewayId  全球接入网关ID
-    * peerLinkId  全球接入网关对等体
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * globalDcGatewayId  全域接入网关ID
+    * peerLinkId  全域接入网关对等体
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'globalDcGatewayId' => null,
-        'peerLinkId' => null,
         'fields' => null,
-        'extFields' => null
+        'extFields' => null,
+        'globalDcGatewayId' => null,
+        'peerLinkId' => null
     ];
 
     /**
@@ -73,50 +73,50 @@ class ShowPeerLinkRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * globalDcGatewayId  全球接入网关ID
-    * peerLinkId  全球接入网关对等体
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * globalDcGatewayId  全域接入网关ID
+    * peerLinkId  全域接入网关对等体
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'globalDcGatewayId' => 'global_dc_gateway_id',
-            'peerLinkId' => 'peer_link_id',
             'fields' => 'fields',
-            'extFields' => 'ext_fields'
+            'extFields' => 'ext_fields',
+            'globalDcGatewayId' => 'global_dc_gateway_id',
+            'peerLinkId' => 'peer_link_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * globalDcGatewayId  全球接入网关ID
-    * peerLinkId  全球接入网关对等体
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * globalDcGatewayId  全域接入网关ID
+    * peerLinkId  全域接入网关对等体
     *
     * @var string[]
     */
     protected static $setters = [
-            'globalDcGatewayId' => 'setGlobalDcGatewayId',
-            'peerLinkId' => 'setPeerLinkId',
             'fields' => 'setFields',
-            'extFields' => 'setExtFields'
+            'extFields' => 'setExtFields',
+            'globalDcGatewayId' => 'setGlobalDcGatewayId',
+            'peerLinkId' => 'setPeerLinkId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * globalDcGatewayId  全球接入网关ID
-    * peerLinkId  全球接入网关对等体
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * globalDcGatewayId  全域接入网关ID
+    * peerLinkId  全域接入网关对等体
     *
     * @var string[]
     */
     protected static $getters = [
-            'globalDcGatewayId' => 'getGlobalDcGatewayId',
-            'peerLinkId' => 'getPeerLinkId',
             'fields' => 'getFields',
-            'extFields' => 'getExtFields'
+            'extFields' => 'getExtFields',
+            'globalDcGatewayId' => 'getGlobalDcGatewayId',
+            'peerLinkId' => 'getPeerLinkId'
     ];
 
     /**
@@ -177,10 +177,10 @@ class ShowPeerLinkRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['globalDcGatewayId'] = isset($data['globalDcGatewayId']) ? $data['globalDcGatewayId'] : null;
-        $this->container['peerLinkId'] = isset($data['peerLinkId']) ? $data['peerLinkId'] : null;
         $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
         $this->container['extFields'] = isset($data['extFields']) ? $data['extFields'] : null;
+        $this->container['globalDcGatewayId'] = isset($data['globalDcGatewayId']) ? $data['globalDcGatewayId'] : null;
+        $this->container['peerLinkId'] = isset($data['peerLinkId']) ? $data['peerLinkId'] : null;
     }
 
     /**
@@ -215,54 +215,6 @@ class ShowPeerLinkRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets globalDcGatewayId
-    *  全球接入网关ID
-    *
-    * @return string
-    */
-    public function getGlobalDcGatewayId()
-    {
-        return $this->container['globalDcGatewayId'];
-    }
-
-    /**
-    * Sets globalDcGatewayId
-    *
-    * @param string $globalDcGatewayId 全球接入网关ID
-    *
-    * @return $this
-    */
-    public function setGlobalDcGatewayId($globalDcGatewayId)
-    {
-        $this->container['globalDcGatewayId'] = $globalDcGatewayId;
-        return $this;
-    }
-
-    /**
-    * Gets peerLinkId
-    *  全球接入网关对等体
-    *
-    * @return string
-    */
-    public function getPeerLinkId()
-    {
-        return $this->container['peerLinkId'];
-    }
-
-    /**
-    * Sets peerLinkId
-    *
-    * @param string $peerLinkId 全球接入网关对等体
-    *
-    * @return $this
-    */
-    public function setPeerLinkId($peerLinkId)
-    {
-        $this->container['peerLinkId'] = $peerLinkId;
-        return $this;
     }
 
     /**
@@ -310,6 +262,54 @@ class ShowPeerLinkRequest implements ModelInterface, ArrayAccess
     public function setExtFields($extFields)
     {
         $this->container['extFields'] = $extFields;
+        return $this;
+    }
+
+    /**
+    * Gets globalDcGatewayId
+    *  全域接入网关ID
+    *
+    * @return string
+    */
+    public function getGlobalDcGatewayId()
+    {
+        return $this->container['globalDcGatewayId'];
+    }
+
+    /**
+    * Sets globalDcGatewayId
+    *
+    * @param string $globalDcGatewayId 全域接入网关ID
+    *
+    * @return $this
+    */
+    public function setGlobalDcGatewayId($globalDcGatewayId)
+    {
+        $this->container['globalDcGatewayId'] = $globalDcGatewayId;
+        return $this;
+    }
+
+    /**
+    * Gets peerLinkId
+    *  全域接入网关对等体
+    *
+    * @return string
+    */
+    public function getPeerLinkId()
+    {
+        return $this->container['peerLinkId'];
+    }
+
+    /**
+    * Sets peerLinkId
+    *
+    * @param string $peerLinkId 全域接入网关对等体
+    *
+    * @return $this
+    */
+    public function setPeerLinkId($peerLinkId)
+    {
+        $this->container['peerLinkId'] = $peerLinkId;
         return $this;
     }
 

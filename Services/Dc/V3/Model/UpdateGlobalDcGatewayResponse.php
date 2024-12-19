@@ -21,30 +21,26 @@ class UpdateGlobalDcGatewayResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requestId  请求ID
     * globalDcGateway  globalDcGateway
-    * xRequestId  xRequestId
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'requestId' => 'string',
-            'globalDcGateway' => '\HuaweiCloud\SDK\Dc\V3\Model\ExternalUpdateGlobalDcGateway',
-            'xRequestId' => 'string'
+            'globalDcGateway' => '\HuaweiCloud\SDK\Dc\V3\Model\GlobalDcGatewayEntry',
+            'requestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requestId  请求ID
     * globalDcGateway  globalDcGateway
-    * xRequestId  xRequestId
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'requestId' => null,
         'globalDcGateway' => null,
-        'xRequestId' => null
+        'requestId' => null
     ];
 
     /**
@@ -70,44 +66,38 @@ class UpdateGlobalDcGatewayResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requestId  请求ID
     * globalDcGateway  globalDcGateway
-    * xRequestId  xRequestId
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'requestId' => 'request_id',
             'globalDcGateway' => 'global_dc_gateway',
-            'xRequestId' => 'X-Request-Id'
+            'requestId' => 'request_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requestId  请求ID
     * globalDcGateway  globalDcGateway
-    * xRequestId  xRequestId
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'requestId' => 'setRequestId',
             'globalDcGateway' => 'setGlobalDcGateway',
-            'xRequestId' => 'setXRequestId'
+            'requestId' => 'setRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requestId  请求ID
     * globalDcGateway  globalDcGateway
-    * xRequestId  xRequestId
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'requestId' => 'getRequestId',
             'globalDcGateway' => 'getGlobalDcGateway',
-            'xRequestId' => 'getXRequestId'
+            'requestId' => 'getRequestId'
     ];
 
     /**
@@ -168,9 +158,8 @@ class UpdateGlobalDcGatewayResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['globalDcGateway'] = isset($data['globalDcGateway']) ? $data['globalDcGateway'] : null;
-        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
     }
 
     /**
@@ -181,6 +170,12 @@ class UpdateGlobalDcGatewayResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -196,8 +191,32 @@ class UpdateGlobalDcGatewayResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets globalDcGateway
+    *  globalDcGateway
+    *
+    * @return \HuaweiCloud\SDK\Dc\V3\Model\GlobalDcGatewayEntry|null
+    */
+    public function getGlobalDcGateway()
+    {
+        return $this->container['globalDcGateway'];
+    }
+
+    /**
+    * Sets globalDcGateway
+    *
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\GlobalDcGatewayEntry|null $globalDcGateway globalDcGateway
+    *
+    * @return $this
+    */
+    public function setGlobalDcGateway($globalDcGateway)
+    {
+        $this->container['globalDcGateway'] = $globalDcGateway;
+        return $this;
+    }
+
+    /**
     * Gets requestId
-    *  请求ID
+    *  请求ID。
     *
     * @return string|null
     */
@@ -209,61 +228,13 @@ class UpdateGlobalDcGatewayResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID
+    * @param string|null $requestId 请求ID。
     *
     * @return $this
     */
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
-        return $this;
-    }
-
-    /**
-    * Gets globalDcGateway
-    *  globalDcGateway
-    *
-    * @return \HuaweiCloud\SDK\Dc\V3\Model\ExternalUpdateGlobalDcGateway|null
-    */
-    public function getGlobalDcGateway()
-    {
-        return $this->container['globalDcGateway'];
-    }
-
-    /**
-    * Sets globalDcGateway
-    *
-    * @param \HuaweiCloud\SDK\Dc\V3\Model\ExternalUpdateGlobalDcGateway|null $globalDcGateway globalDcGateway
-    *
-    * @return $this
-    */
-    public function setGlobalDcGateway($globalDcGateway)
-    {
-        $this->container['globalDcGateway'] = $globalDcGateway;
-        return $this;
-    }
-
-    /**
-    * Gets xRequestId
-    *  xRequestId
-    *
-    * @return string|null
-    */
-    public function getXRequestId()
-    {
-        return $this->container['xRequestId'];
-    }
-
-    /**
-    * Sets xRequestId
-    *
-    * @param string|null $xRequestId xRequestId
-    *
-    * @return $this
-    */
-    public function setXRequestId($xRequestId)
-    {
-        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

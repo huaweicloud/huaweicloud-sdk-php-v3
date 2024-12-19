@@ -274,6 +274,9 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
@@ -373,7 +376,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
     * Gets instanceId
     *  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数且必填。 如果使用备份创建整机镜像，该参数应换成backup_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     *
-    * @return string|null
+    * @return string
     */
     public function getInstanceId()
     {
@@ -383,7 +386,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数且必填。 如果使用备份创建整机镜像，该参数应换成backup_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
+    * @param string $instanceId 弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数且必填。 如果使用备份创建整机镜像，该参数应换成backup_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     *
     * @return $this
     */

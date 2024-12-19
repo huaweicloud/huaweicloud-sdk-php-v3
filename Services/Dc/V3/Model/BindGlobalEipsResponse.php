@@ -23,28 +23,24 @@ class BindGlobalEipsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * requestId  请求ID
     * globalEips  globalEips
-    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'globalEips' => '\HuaweiCloud\SDK\Dc\V3\Model\ListBindingGeip',
-            'xRequestId' => 'string'
+            'globalEips' => '\HuaweiCloud\SDK\Dc\V3\Model\ListBindingGeip'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * requestId  请求ID
     * globalEips  globalEips
-    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
-        'globalEips' => null,
-        'xRequestId' => null
+        'globalEips' => null
     ];
 
     /**
@@ -72,42 +68,36 @@ class BindGlobalEipsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * requestId  请求ID
     * globalEips  globalEips
-    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
-            'globalEips' => 'global_eips',
-            'xRequestId' => 'X-Request-Id'
+            'globalEips' => 'global_eips'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  请求ID
     * globalEips  globalEips
-    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
-            'globalEips' => 'setGlobalEips',
-            'xRequestId' => 'setXRequestId'
+            'globalEips' => 'setGlobalEips'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  请求ID
     * globalEips  globalEips
-    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
-            'globalEips' => 'getGlobalEips',
-            'xRequestId' => 'getXRequestId'
+            'globalEips' => 'getGlobalEips'
     ];
 
     /**
@@ -170,7 +160,6 @@ class BindGlobalEipsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['globalEips'] = isset($data['globalEips']) ? $data['globalEips'] : null;
-        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -240,30 +229,6 @@ class BindGlobalEipsResponse implements ModelInterface, ArrayAccess
     public function setGlobalEips($globalEips)
     {
         $this->container['globalEips'] = $globalEips;
-        return $this;
-    }
-
-    /**
-    * Gets xRequestId
-    *  xRequestId
-    *
-    * @return string|null
-    */
-    public function getXRequestId()
-    {
-        return $this->container['xRequestId'];
-    }
-
-    /**
-    * Sets xRequestId
-    *
-    * @param string|null $xRequestId xRequestId
-    *
-    * @return $this
-    */
-    public function setXRequestId($xRequestId)
-    {
-        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

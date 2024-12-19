@@ -20,19 +20,19 @@ class UpdateGdgwRoutetableRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dryRun  空运行：true-是，false-否
+    * dryRun  是否dry run模式执行
     * gdgwRoutetable  gdgwRoutetable
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'dryRun' => 'bool',
-            'gdgwRoutetable' => '\HuaweiCloud\SDK\Dc\V3\Model\UpdateGdgwRoutetableRequestBodyGdgwRoutetable'
+            'gdgwRoutetable' => '\HuaweiCloud\SDK\Dc\V3\Model\GdgwRouteTableRequest'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dryRun  空运行：true-是，false-否
+    * dryRun  是否dry run模式执行
     * gdgwRoutetable  gdgwRoutetable
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateGdgwRoutetableRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dryRun  空运行：true-是，false-否
+    * dryRun  是否dry run模式执行
     * gdgwRoutetable  gdgwRoutetable
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateGdgwRoutetableRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dryRun  空运行：true-是，false-否
+    * dryRun  是否dry run模式执行
     * gdgwRoutetable  gdgwRoutetable
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateGdgwRoutetableRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dryRun  空运行：true-是，false-否
+    * dryRun  是否dry run模式执行
     * gdgwRoutetable  gdgwRoutetable
     *
     * @var string[]
@@ -185,7 +185,7 @@ class UpdateGdgwRoutetableRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dryRun
-    *  空运行：true-是，false-否
+    *  是否dry run模式执行
     *
     * @return bool|null
     */
@@ -197,7 +197,7 @@ class UpdateGdgwRoutetableRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dryRun
     *
-    * @param bool|null $dryRun 空运行：true-是，false-否
+    * @param bool|null $dryRun 是否dry run模式执行
     *
     * @return $this
     */
@@ -211,7 +211,7 @@ class UpdateGdgwRoutetableRequestBody implements ModelInterface, ArrayAccess
     * Gets gdgwRoutetable
     *  gdgwRoutetable
     *
-    * @return \HuaweiCloud\SDK\Dc\V3\Model\UpdateGdgwRoutetableRequestBodyGdgwRoutetable|null
+    * @return \HuaweiCloud\SDK\Dc\V3\Model\GdgwRouteTableRequest|null
     */
     public function getGdgwRoutetable()
     {
@@ -221,7 +221,7 @@ class UpdateGdgwRoutetableRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets gdgwRoutetable
     *
-    * @param \HuaweiCloud\SDK\Dc\V3\Model\UpdateGdgwRoutetableRequestBodyGdgwRoutetable|null $gdgwRoutetable gdgwRoutetable
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\GdgwRouteTableRequest|null $gdgwRoutetable gdgwRoutetable
     *
     * @return $this
     */

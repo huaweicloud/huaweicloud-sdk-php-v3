@@ -21,9 +21,9 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * limit  每页返回的个数。 取值范围：1~2000。
-    * offset  offset
+    * offset  分页偏移量
     * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * pageReverse  pageReverse
+    * pageReverse  分页参数
     * fields  显示字段列表
     * extFields  show response ext-fields
     * sortKey  排序字段。
@@ -53,9 +53,9 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * limit  每页返回的个数。 取值范围：1~2000。
-    * offset  offset
+    * offset  分页偏移量
     * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * pageReverse  pageReverse
+    * pageReverse  分页参数
     * fields  显示字段列表
     * extFields  show response ext-fields
     * sortKey  排序字段。
@@ -106,9 +106,9 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * limit  每页返回的个数。 取值范围：1~2000。
-    * offset  offset
+    * offset  分页偏移量
     * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * pageReverse  pageReverse
+    * pageReverse  分页参数
     * fields  显示字段列表
     * extFields  show response ext-fields
     * sortKey  排序字段。
@@ -138,9 +138,9 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * limit  每页返回的个数。 取值范围：1~2000。
-    * offset  offset
+    * offset  分页偏移量
     * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * pageReverse  pageReverse
+    * pageReverse  分页参数
     * fields  显示字段列表
     * extFields  show response ext-fields
     * sortKey  排序字段。
@@ -170,9 +170,9 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * limit  每页返回的个数。 取值范围：1~2000。
-    * offset  offset
+    * offset  分页偏移量
     * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * pageReverse  pageReverse
+    * pageReverse  分页参数
     * fields  显示字段列表
     * extFields  show response ext-fields
     * sortKey  排序字段。
@@ -300,6 +300,12 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 1)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 36)) {
                 $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 36.";
             }
@@ -358,7 +364,7 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  offset
+    *  分页偏移量
     *
     * @return int|null
     */
@@ -370,7 +376,7 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset offset
+    * @param int|null $offset 分页偏移量
     *
     * @return $this
     */
@@ -406,7 +412,7 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageReverse
-    *  pageReverse
+    *  分页参数
     *
     * @return bool|null
     */
@@ -418,7 +424,7 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pageReverse
     *
-    * @param bool|null $pageReverse pageReverse
+    * @param bool|null $pageReverse 分页参数
     *
     * @return $this
     */

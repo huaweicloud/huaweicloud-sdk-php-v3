@@ -21,25 +21,21 @@ class CreateVifPeerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requestId  请求ID
     * vifPeer  vifPeer
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'requestId' => 'string',
             'vifPeer' => '\HuaweiCloud\SDK\Dc\V3\Model\VifPeer'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requestId  请求ID
     * vifPeer  vifPeer
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'requestId' => null,
         'vifPeer' => null
     ];
 
@@ -66,37 +62,31 @@ class CreateVifPeerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requestId  请求ID
     * vifPeer  vifPeer
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'requestId' => 'request_id',
             'vifPeer' => 'vif_peer'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requestId  请求ID
     * vifPeer  vifPeer
     *
     * @var string[]
     */
     protected static $setters = [
-            'requestId' => 'setRequestId',
             'vifPeer' => 'setVifPeer'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requestId  请求ID
     * vifPeer  vifPeer
     *
     * @var string[]
     */
     protected static $getters = [
-            'requestId' => 'getRequestId',
             'vifPeer' => 'getVifPeer'
     ];
 
@@ -158,7 +148,6 @@ class CreateVifPeerResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['vifPeer'] = isset($data['vifPeer']) ? $data['vifPeer'] : null;
     }
 
@@ -182,30 +171,6 @@ class CreateVifPeerResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets requestId
-    *  请求ID
-    *
-    * @return string|null
-    */
-    public function getRequestId()
-    {
-        return $this->container['requestId'];
-    }
-
-    /**
-    * Sets requestId
-    *
-    * @param string|null $requestId 请求ID
-    *
-    * @return $this
-    */
-    public function setRequestId($requestId)
-    {
-        $this->container['requestId'] = $requestId;
-        return $this;
     }
 
     /**

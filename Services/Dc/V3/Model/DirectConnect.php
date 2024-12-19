@@ -35,9 +35,9 @@ class DirectConnect implements ModelInterface, ArrayAccess
     * provider  物理专线连接的线路运营商 [如：中国电信 中国联通 中国移动 中国其他 境外其他专线归属的运营商](tag:hws,hws_hk)
     * adminStateUp  管理状态：true或false
     * vlan  为托管hosted物理专线分配的vlan。
-    * status  资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘
-    * applyTime  物理专线的申请时间
-    * createTime  物理专线的创建时间
+    * status  资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘 LEASED_LINE_DELIVERY：运营商施工
+    * applyTime  物理专线的申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * createTime  物理专线的创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
     * peerPortType  连接对端的端口类型
     * peerProvider  专线连接对接的运营商
@@ -47,14 +47,14 @@ class DirectConnect implements ModelInterface, ArrayAccess
     * periodType  物理专线对应订单号对应包周期的类型
     * periodNum  物理专线对应的包周期时间
     * vgwType  专线要求的网关类型
-    * lagId  物理专线归属的链路聚合组(lag）的ID
-    * signedAgreementStatus  专线协议的签暑状态
-    * signedAgreementTime  专线协议的签暑时间
+    * lagId  物理专线归属的链路聚合组（lag）的ID
+    * signedAgreementStatus  专线协议的签署状态
+    * signedAgreementTime  专线协议的签署时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     * locales  locales
     * supportFeature  用户专线可支持的特性列表[（功能暂不支持）](tag:dt)
-    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * iesId  归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     * reason  如果专线资源的状态是Error的情况下，该参数会显示相关错误信息。[（功能暂不支持）](tag:dt)
     * email  客户邮箱信息[（功能暂不支持）](tag:dt)
     * onestopProductId  该参数用于销售线路场景，标识一站式专线产品ID[（功能暂不支持）](tag:dt)
@@ -137,9 +137,9 @@ class DirectConnect implements ModelInterface, ArrayAccess
     * provider  物理专线连接的线路运营商 [如：中国电信 中国联通 中国移动 中国其他 境外其他专线归属的运营商](tag:hws,hws_hk)
     * adminStateUp  管理状态：true或false
     * vlan  为托管hosted物理专线分配的vlan。
-    * status  资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘
-    * applyTime  物理专线的申请时间
-    * createTime  物理专线的创建时间
+    * status  资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘 LEASED_LINE_DELIVERY：运营商施工
+    * applyTime  物理专线的申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * createTime  物理专线的创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
     * peerPortType  连接对端的端口类型
     * peerProvider  专线连接对接的运营商
@@ -149,14 +149,14 @@ class DirectConnect implements ModelInterface, ArrayAccess
     * periodType  物理专线对应订单号对应包周期的类型
     * periodNum  物理专线对应的包周期时间
     * vgwType  专线要求的网关类型
-    * lagId  物理专线归属的链路聚合组(lag）的ID
-    * signedAgreementStatus  专线协议的签暑状态
-    * signedAgreementTime  专线协议的签暑时间
+    * lagId  物理专线归属的链路聚合组（lag）的ID
+    * signedAgreementStatus  专线协议的签署状态
+    * signedAgreementTime  专线协议的签署时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     * locales  locales
     * supportFeature  用户专线可支持的特性列表[（功能暂不支持）](tag:dt)
-    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * iesId  归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     * reason  如果专线资源的状态是Error的情况下，该参数会显示相关错误信息。[（功能暂不支持）](tag:dt)
     * email  客户邮箱信息[（功能暂不支持）](tag:dt)
     * onestopProductId  该参数用于销售线路场景，标识一站式专线产品ID[（功能暂不支持）](tag:dt)
@@ -260,9 +260,9 @@ class DirectConnect implements ModelInterface, ArrayAccess
     * provider  物理专线连接的线路运营商 [如：中国电信 中国联通 中国移动 中国其他 境外其他专线归属的运营商](tag:hws,hws_hk)
     * adminStateUp  管理状态：true或false
     * vlan  为托管hosted物理专线分配的vlan。
-    * status  资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘
-    * applyTime  物理专线的申请时间
-    * createTime  物理专线的创建时间
+    * status  资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘 LEASED_LINE_DELIVERY：运营商施工
+    * applyTime  物理专线的申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * createTime  物理专线的创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
     * peerPortType  连接对端的端口类型
     * peerProvider  专线连接对接的运营商
@@ -272,14 +272,14 @@ class DirectConnect implements ModelInterface, ArrayAccess
     * periodType  物理专线对应订单号对应包周期的类型
     * periodNum  物理专线对应的包周期时间
     * vgwType  专线要求的网关类型
-    * lagId  物理专线归属的链路聚合组(lag）的ID
-    * signedAgreementStatus  专线协议的签暑状态
-    * signedAgreementTime  专线协议的签暑时间
+    * lagId  物理专线归属的链路聚合组（lag）的ID
+    * signedAgreementStatus  专线协议的签署状态
+    * signedAgreementTime  专线协议的签署时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     * locales  locales
     * supportFeature  用户专线可支持的特性列表[（功能暂不支持）](tag:dt)
-    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * iesId  归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     * reason  如果专线资源的状态是Error的情况下，该参数会显示相关错误信息。[（功能暂不支持）](tag:dt)
     * email  客户邮箱信息[（功能暂不支持）](tag:dt)
     * onestopProductId  该参数用于销售线路场景，标识一站式专线产品ID[（功能暂不支持）](tag:dt)
@@ -362,9 +362,9 @@ class DirectConnect implements ModelInterface, ArrayAccess
     * provider  物理专线连接的线路运营商 [如：中国电信 中国联通 中国移动 中国其他 境外其他专线归属的运营商](tag:hws,hws_hk)
     * adminStateUp  管理状态：true或false
     * vlan  为托管hosted物理专线分配的vlan。
-    * status  资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘
-    * applyTime  物理专线的申请时间
-    * createTime  物理专线的创建时间
+    * status  资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘 LEASED_LINE_DELIVERY：运营商施工
+    * applyTime  物理专线的申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * createTime  物理专线的创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
     * peerPortType  连接对端的端口类型
     * peerProvider  专线连接对接的运营商
@@ -374,14 +374,14 @@ class DirectConnect implements ModelInterface, ArrayAccess
     * periodType  物理专线对应订单号对应包周期的类型
     * periodNum  物理专线对应的包周期时间
     * vgwType  专线要求的网关类型
-    * lagId  物理专线归属的链路聚合组(lag）的ID
-    * signedAgreementStatus  专线协议的签暑状态
-    * signedAgreementTime  专线协议的签暑时间
+    * lagId  物理专线归属的链路聚合组（lag）的ID
+    * signedAgreementStatus  专线协议的签署状态
+    * signedAgreementTime  专线协议的签署时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     * locales  locales
     * supportFeature  用户专线可支持的特性列表[（功能暂不支持）](tag:dt)
-    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * iesId  归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     * reason  如果专线资源的状态是Error的情况下，该参数会显示相关错误信息。[（功能暂不支持）](tag:dt)
     * email  客户邮箱信息[（功能暂不支持）](tag:dt)
     * onestopProductId  该参数用于销售线路场景，标识一站式专线产品ID[（功能暂不支持）](tag:dt)
@@ -464,9 +464,9 @@ class DirectConnect implements ModelInterface, ArrayAccess
     * provider  物理专线连接的线路运营商 [如：中国电信 中国联通 中国移动 中国其他 境外其他专线归属的运营商](tag:hws,hws_hk)
     * adminStateUp  管理状态：true或false
     * vlan  为托管hosted物理专线分配的vlan。
-    * status  资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘
-    * applyTime  物理专线的申请时间
-    * createTime  物理专线的创建时间
+    * status  资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘 LEASED_LINE_DELIVERY：运营商施工
+    * applyTime  物理专线的申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * createTime  物理专线的创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
     * peerPortType  连接对端的端口类型
     * peerProvider  专线连接对接的运营商
@@ -476,14 +476,14 @@ class DirectConnect implements ModelInterface, ArrayAccess
     * periodType  物理专线对应订单号对应包周期的类型
     * periodNum  物理专线对应的包周期时间
     * vgwType  专线要求的网关类型
-    * lagId  物理专线归属的链路聚合组(lag）的ID
-    * signedAgreementStatus  专线协议的签暑状态
-    * signedAgreementTime  专线协议的签暑时间
+    * lagId  物理专线归属的链路聚合组（lag）的ID
+    * signedAgreementStatus  专线协议的签署状态
+    * signedAgreementTime  专线协议的签署时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     * locales  locales
     * supportFeature  用户专线可支持的特性列表[（功能暂不支持）](tag:dt)
-    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * iesId  归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     * reason  如果专线资源的状态是Error的情况下，该参数会显示相关错误信息。[（功能暂不支持）](tag:dt)
     * email  客户邮箱信息[（功能暂不支持）](tag:dt)
     * onestopProductId  该参数用于销售线路场景，标识一站式专线产品ID[（功能暂不支持）](tag:dt)
@@ -612,6 +612,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
     const STATUS_DELETED = 'DELETED';
     const STATUS_DENY = 'DENY';
     const STATUS_PENDING_PAY = 'PENDING_PAY';
+    const STATUS_LEASED_LINE_DELIVERY = 'LEASED_LINE_DELIVERY';
     const PROVIDER_STATUS_ACTIVE = 'ACTIVE';
     const PROVIDER_STATUS_DOWN = 'DOWN';
     const VGW_TYPE__DEFAULT = 'default';
@@ -682,6 +683,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
             self::STATUS_DELETED,
             self::STATUS_DENY,
             self::STATUS_PENDING_PAY,
+            self::STATUS_LEASED_LINE_DELIVERY,
         ];
     }
 
@@ -1302,7 +1304,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘
+    *  资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘 LEASED_LINE_DELIVERY：运营商施工
     *
     * @return string|null
     */
@@ -1314,7 +1316,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘
+    * @param string|null $status 资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘 LEASED_LINE_DELIVERY：运营商施工
     *
     * @return $this
     */
@@ -1326,7 +1328,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets applyTime
-    *  物理专线的申请时间
+    *  物理专线的申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return \DateTime|null
     */
@@ -1338,7 +1340,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets applyTime
     *
-    * @param \DateTime|null $applyTime 物理专线的申请时间
+    * @param \DateTime|null $applyTime 物理专线的申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return $this
     */
@@ -1350,7 +1352,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  物理专线的创建时间
+    *  物理专线的创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return \DateTime|null
     */
@@ -1362,7 +1364,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 物理专线的创建时间
+    * @param \DateTime|null $createTime 物理专线的创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return $this
     */
@@ -1590,7 +1592,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets lagId
-    *  物理专线归属的链路聚合组(lag）的ID
+    *  物理专线归属的链路聚合组（lag）的ID
     *
     * @return string|null
     */
@@ -1602,7 +1604,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets lagId
     *
-    * @param string|null $lagId 物理专线归属的链路聚合组(lag）的ID
+    * @param string|null $lagId 物理专线归属的链路聚合组（lag）的ID
     *
     * @return $this
     */
@@ -1614,7 +1616,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets signedAgreementStatus
-    *  专线协议的签暑状态
+    *  专线协议的签署状态
     *
     * @return string|null
     */
@@ -1626,7 +1628,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets signedAgreementStatus
     *
-    * @param string|null $signedAgreementStatus 专线协议的签暑状态
+    * @param string|null $signedAgreementStatus 专线协议的签署状态
     *
     * @return $this
     */
@@ -1638,7 +1640,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets signedAgreementTime
-    *  专线协议的签暑时间
+    *  专线协议的签署时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return \DateTime|null
     */
@@ -1650,7 +1652,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets signedAgreementTime
     *
-    * @param \DateTime|null $signedAgreementTime 专线协议的签暑时间
+    * @param \DateTime|null $signedAgreementTime 专线协议的签署时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return $this
     */
@@ -1758,7 +1760,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets iesId
-    *  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    *  归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     *
     * @return string|null
     */
@@ -1770,7 +1772,7 @@ class DirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets iesId
     *
-    * @param string|null $iesId 归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * @param string|null $iesId 归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     *
     * @return $this
     */

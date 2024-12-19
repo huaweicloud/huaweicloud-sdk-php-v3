@@ -20,7 +20,7 @@ class DeleteGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * globalDcGatewayId  全球接入网关ID
+    * globalDcGatewayId  全域接入网关ID
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * globalDcGatewayId  全球接入网关ID
+    * globalDcGatewayId  全域接入网关ID
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * globalDcGatewayId  全球接入网关ID
+    * globalDcGatewayId  全域接入网关ID
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * globalDcGatewayId  全球接入网关ID
+    * globalDcGatewayId  全域接入网关ID
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * globalDcGatewayId  全球接入网关ID
+    * globalDcGatewayId  全域接入网关ID
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class DeleteGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalDcGatewayId
-    *  全球接入网关ID
+    *  全域接入网关ID
     *
     * @return string
     */
@@ -192,7 +192,7 @@ class DeleteGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
     /**
     * Sets globalDcGatewayId
     *
-    * @param string $globalDcGatewayId 全球接入网关ID
+    * @param string $globalDcGatewayId 全域接入网关ID
     *
     * @return $this
     */

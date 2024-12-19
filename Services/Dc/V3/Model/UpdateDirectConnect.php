@@ -22,9 +22,9 @@ class UpdateDirectConnect implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  物理专线的名字
     * description  物理专线的描述信息
-    * bandwidth  指定托管专线接入带宽,单位Mbps
+    * bandwidth  指定托管专线接入带宽,单位Mbps。[注：标准或运营专线的带宽不能降低！](tag:dt)
     * peerLocation  物理专线对端所在的物理位置，省/市/街道或IDC名字
-    * status  更新资源状态，合法值是：PENDING_PAY
+    * status  更新资源状态，合法值是：PENDING_PAY,APPLY
     * providerStatus  更新运营商状态，合法值是：ACTIVE,DOWN
     *
     * @var string[]
@@ -42,9 +42,9 @@ class UpdateDirectConnect implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  物理专线的名字
     * description  物理专线的描述信息
-    * bandwidth  指定托管专线接入带宽,单位Mbps
+    * bandwidth  指定托管专线接入带宽,单位Mbps。[注：标准或运营专线的带宽不能降低！](tag:dt)
     * peerLocation  物理专线对端所在的物理位置，省/市/街道或IDC名字
-    * status  更新资源状态，合法值是：PENDING_PAY
+    * status  更新资源状态，合法值是：PENDING_PAY,APPLY
     * providerStatus  更新运营商状态，合法值是：ACTIVE,DOWN
     *
     * @var string[]
@@ -83,9 +83,9 @@ class UpdateDirectConnect implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  物理专线的名字
     * description  物理专线的描述信息
-    * bandwidth  指定托管专线接入带宽,单位Mbps
+    * bandwidth  指定托管专线接入带宽,单位Mbps。[注：标准或运营专线的带宽不能降低！](tag:dt)
     * peerLocation  物理专线对端所在的物理位置，省/市/街道或IDC名字
-    * status  更新资源状态，合法值是：PENDING_PAY
+    * status  更新资源状态，合法值是：PENDING_PAY,APPLY
     * providerStatus  更新运营商状态，合法值是：ACTIVE,DOWN
     *
     * @var string[]
@@ -103,9 +103,9 @@ class UpdateDirectConnect implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  物理专线的名字
     * description  物理专线的描述信息
-    * bandwidth  指定托管专线接入带宽,单位Mbps
+    * bandwidth  指定托管专线接入带宽,单位Mbps。[注：标准或运营专线的带宽不能降低！](tag:dt)
     * peerLocation  物理专线对端所在的物理位置，省/市/街道或IDC名字
-    * status  更新资源状态，合法值是：PENDING_PAY
+    * status  更新资源状态，合法值是：PENDING_PAY,APPLY
     * providerStatus  更新运营商状态，合法值是：ACTIVE,DOWN
     *
     * @var string[]
@@ -123,9 +123,9 @@ class UpdateDirectConnect implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  物理专线的名字
     * description  物理专线的描述信息
-    * bandwidth  指定托管专线接入带宽,单位Mbps
+    * bandwidth  指定托管专线接入带宽,单位Mbps。[注：标准或运营专线的带宽不能降低！](tag:dt)
     * peerLocation  物理专线对端所在的物理位置，省/市/街道或IDC名字
-    * status  更新资源状态，合法值是：PENDING_PAY
+    * status  更新资源状态，合法值是：PENDING_PAY,APPLY
     * providerStatus  更新运营商状态，合法值是：ACTIVE,DOWN
     *
     * @var string[]
@@ -180,6 +180,7 @@ class UpdateDirectConnect implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const STATUS_PENDING_PAY = 'PENDING_PAY';
+    const STATUS_APPLY = 'APPLY';
     const PROVIDER_STATUS_ACTIVE = 'ACTIVE';
     const PROVIDER_STATUS_DOWN = 'DOWN';
     
@@ -193,6 +194,7 @@ class UpdateDirectConnect implements ModelInterface, ArrayAccess
     {
         return [
             self::STATUS_PENDING_PAY,
+            self::STATUS_APPLY,
         ];
     }
 
@@ -345,7 +347,7 @@ class UpdateDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidth
-    *  指定托管专线接入带宽,单位Mbps
+    *  指定托管专线接入带宽,单位Mbps。[注：标准或运营专线的带宽不能降低！](tag:dt)
     *
     * @return int|null
     */
@@ -357,7 +359,7 @@ class UpdateDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidth
     *
-    * @param int|null $bandwidth 指定托管专线接入带宽,单位Mbps
+    * @param int|null $bandwidth 指定托管专线接入带宽,单位Mbps。[注：标准或运营专线的带宽不能降低！](tag:dt)
     *
     * @return $this
     */
@@ -393,7 +395,7 @@ class UpdateDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  更新资源状态，合法值是：PENDING_PAY
+    *  更新资源状态，合法值是：PENDING_PAY,APPLY
     *
     * @return string|null
     */
@@ -405,7 +407,7 @@ class UpdateDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 更新资源状态，合法值是：PENDING_PAY
+    * @param string|null $status 更新资源状态，合法值是：PENDING_PAY,APPLY
     *
     * @return $this
     */

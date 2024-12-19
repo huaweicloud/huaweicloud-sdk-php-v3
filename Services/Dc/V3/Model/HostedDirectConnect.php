@@ -22,21 +22,21 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  托管专线ID
     * tenantId  实例所属项目ID。
-    * name  物理专线名字
-    * description  物理专线的描述信息
-    * bandwidth  物理专线接入带宽，单位Mbps。
+    * name  托管专线名字
+    * description  托管专线的描述信息
+    * bandwidth  托管专线接入带宽，单位Mbps。
     * location  专线的接入位置信息
-    * peerLocation  物理专线对端所在的物理位置，省/市/街道或IDC名字。
+    * peerLocation  托管专线对端所在的物理位置，省/市/街道或IDC名字。
     * hostingId  hosted物理专线对应的hosting物理专线的ID
     * provider  专线线路的提供商
     * adminStateUp  管理状态：true或false
     * vlan  hosted物理专线预分配的vlan。
-    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
-    * applyTime  物理专线申请时间
-    * createTime  物理专线创建时间
-    * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
-    * portType  物理专线接入接口的类型，支持1G 10G 40G 100G
-    * type  物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
+    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：托管专线正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：托管专线异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
+    * applyTime  托管专线申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * createTime  托管专线创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * providerStatus  托管专线的运营商操作状态，合法值是：ACTIVE， DOWN
+    * portType  托管专线接入接口的类型，支持1G 10G 40G 100G
+    * type  托管专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
     *
     * @var string[]
     */
@@ -53,8 +53,8 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
             'adminStateUp' => 'bool',
             'vlan' => 'int',
             'status' => 'string',
-            'applyTime' => 'string',
-            'createTime' => 'string',
+            'applyTime' => '\DateTime',
+            'createTime' => '\DateTime',
             'providerStatus' => 'string',
             'portType' => 'string',
             'type' => 'string'
@@ -64,21 +64,21 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  托管专线ID
     * tenantId  实例所属项目ID。
-    * name  物理专线名字
-    * description  物理专线的描述信息
-    * bandwidth  物理专线接入带宽，单位Mbps。
+    * name  托管专线名字
+    * description  托管专线的描述信息
+    * bandwidth  托管专线接入带宽，单位Mbps。
     * location  专线的接入位置信息
-    * peerLocation  物理专线对端所在的物理位置，省/市/街道或IDC名字。
+    * peerLocation  托管专线对端所在的物理位置，省/市/街道或IDC名字。
     * hostingId  hosted物理专线对应的hosting物理专线的ID
     * provider  专线线路的提供商
     * adminStateUp  管理状态：true或false
     * vlan  hosted物理专线预分配的vlan。
-    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
-    * applyTime  物理专线申请时间
-    * createTime  物理专线创建时间
-    * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
-    * portType  物理专线接入接口的类型，支持1G 10G 40G 100G
-    * type  物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
+    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：托管专线正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：托管专线异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
+    * applyTime  托管专线申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * createTime  托管专线创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * providerStatus  托管专线的运营商操作状态，合法值是：ACTIVE， DOWN
+    * portType  托管专线接入接口的类型，支持1G 10G 40G 100G
+    * type  托管专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
     *
     * @var string[]
     */
@@ -95,8 +95,8 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
         'adminStateUp' => null,
         'vlan' => 'int32',
         'status' => null,
-        'applyTime' => null,
-        'createTime' => null,
+        'applyTime' => 'date-time',
+        'createTime' => 'date-time',
         'providerStatus' => null,
         'portType' => null,
         'type' => null
@@ -127,21 +127,21 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  托管专线ID
     * tenantId  实例所属项目ID。
-    * name  物理专线名字
-    * description  物理专线的描述信息
-    * bandwidth  物理专线接入带宽，单位Mbps。
+    * name  托管专线名字
+    * description  托管专线的描述信息
+    * bandwidth  托管专线接入带宽，单位Mbps。
     * location  专线的接入位置信息
-    * peerLocation  物理专线对端所在的物理位置，省/市/街道或IDC名字。
+    * peerLocation  托管专线对端所在的物理位置，省/市/街道或IDC名字。
     * hostingId  hosted物理专线对应的hosting物理专线的ID
     * provider  专线线路的提供商
     * adminStateUp  管理状态：true或false
     * vlan  hosted物理专线预分配的vlan。
-    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
-    * applyTime  物理专线申请时间
-    * createTime  物理专线创建时间
-    * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
-    * portType  物理专线接入接口的类型，支持1G 10G 40G 100G
-    * type  物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
+    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：托管专线正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：托管专线异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
+    * applyTime  托管专线申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * createTime  托管专线创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * providerStatus  托管专线的运营商操作状态，合法值是：ACTIVE， DOWN
+    * portType  托管专线接入接口的类型，支持1G 10G 40G 100G
+    * type  托管专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
     *
     * @var string[]
     */
@@ -169,21 +169,21 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  托管专线ID
     * tenantId  实例所属项目ID。
-    * name  物理专线名字
-    * description  物理专线的描述信息
-    * bandwidth  物理专线接入带宽，单位Mbps。
+    * name  托管专线名字
+    * description  托管专线的描述信息
+    * bandwidth  托管专线接入带宽，单位Mbps。
     * location  专线的接入位置信息
-    * peerLocation  物理专线对端所在的物理位置，省/市/街道或IDC名字。
+    * peerLocation  托管专线对端所在的物理位置，省/市/街道或IDC名字。
     * hostingId  hosted物理专线对应的hosting物理专线的ID
     * provider  专线线路的提供商
     * adminStateUp  管理状态：true或false
     * vlan  hosted物理专线预分配的vlan。
-    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
-    * applyTime  物理专线申请时间
-    * createTime  物理专线创建时间
-    * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
-    * portType  物理专线接入接口的类型，支持1G 10G 40G 100G
-    * type  物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
+    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：托管专线正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：托管专线异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
+    * applyTime  托管专线申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * createTime  托管专线创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * providerStatus  托管专线的运营商操作状态，合法值是：ACTIVE， DOWN
+    * portType  托管专线接入接口的类型，支持1G 10G 40G 100G
+    * type  托管专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
     *
     * @var string[]
     */
@@ -211,21 +211,21 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  托管专线ID
     * tenantId  实例所属项目ID。
-    * name  物理专线名字
-    * description  物理专线的描述信息
-    * bandwidth  物理专线接入带宽，单位Mbps。
+    * name  托管专线名字
+    * description  托管专线的描述信息
+    * bandwidth  托管专线接入带宽，单位Mbps。
     * location  专线的接入位置信息
-    * peerLocation  物理专线对端所在的物理位置，省/市/街道或IDC名字。
+    * peerLocation  托管专线对端所在的物理位置，省/市/街道或IDC名字。
     * hostingId  hosted物理专线对应的hosting物理专线的ID
     * provider  专线线路的提供商
     * adminStateUp  管理状态：true或false
     * vlan  hosted物理专线预分配的vlan。
-    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
-    * applyTime  物理专线申请时间
-    * createTime  物理专线创建时间
-    * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
-    * portType  物理专线接入接口的类型，支持1G 10G 40G 100G
-    * type  物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
+    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：托管专线正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：托管专线异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
+    * applyTime  托管专线申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * createTime  托管专线创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * providerStatus  托管专线的运营商操作状态，合法值是：ACTIVE， DOWN
+    * portType  托管专线接入接口的类型，支持1G 10G 40G 100G
+    * type  托管专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
     *
     * @var string[]
     */
@@ -564,7 +564,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  物理专线名字
+    *  托管专线名字
     *
     * @return string|null
     */
@@ -576,7 +576,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 物理专线名字
+    * @param string|null $name 托管专线名字
     *
     * @return $this
     */
@@ -588,7 +588,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  物理专线的描述信息
+    *  托管专线的描述信息
     *
     * @return string|null
     */
@@ -600,7 +600,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 物理专线的描述信息
+    * @param string|null $description 托管专线的描述信息
     *
     * @return $this
     */
@@ -612,7 +612,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidth
-    *  物理专线接入带宽，单位Mbps。
+    *  托管专线接入带宽，单位Mbps。
     *
     * @return int|null
     */
@@ -624,7 +624,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidth
     *
-    * @param int|null $bandwidth 物理专线接入带宽，单位Mbps。
+    * @param int|null $bandwidth 托管专线接入带宽，单位Mbps。
     *
     * @return $this
     */
@@ -660,7 +660,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets peerLocation
-    *  物理专线对端所在的物理位置，省/市/街道或IDC名字。
+    *  托管专线对端所在的物理位置，省/市/街道或IDC名字。
     *
     * @return string|null
     */
@@ -672,7 +672,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets peerLocation
     *
-    * @param string|null $peerLocation 物理专线对端所在的物理位置，省/市/街道或IDC名字。
+    * @param string|null $peerLocation 托管专线对端所在的物理位置，省/市/街道或IDC名字。
     *
     * @return $this
     */
@@ -780,7 +780,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
+    *  操作状态，合法值是： BUILD：已开通 ACTIVE：托管专线正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：托管专线异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
     *
     * @return string|null
     */
@@ -792,7 +792,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
+    * @param string|null $status 操作状态，合法值是： BUILD：已开通 ACTIVE：托管专线正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：托管专线异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
     *
     * @return $this
     */
@@ -804,9 +804,9 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets applyTime
-    *  物理专线申请时间
+    *  托管专线申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
-    * @return string|null
+    * @return \DateTime|null
     */
     public function getApplyTime()
     {
@@ -816,7 +816,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets applyTime
     *
-    * @param string|null $applyTime 物理专线申请时间
+    * @param \DateTime|null $applyTime 托管专线申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return $this
     */
@@ -828,9 +828,9 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  物理专线创建时间
+    *  托管专线创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
-    * @return string|null
+    * @return \DateTime|null
     */
     public function getCreateTime()
     {
@@ -840,7 +840,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 物理专线创建时间
+    * @param \DateTime|null $createTime 托管专线创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return $this
     */
@@ -852,7 +852,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets providerStatus
-    *  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
+    *  托管专线的运营商操作状态，合法值是：ACTIVE， DOWN
     *
     * @return string|null
     */
@@ -864,7 +864,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets providerStatus
     *
-    * @param string|null $providerStatus 物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
+    * @param string|null $providerStatus 托管专线的运营商操作状态，合法值是：ACTIVE， DOWN
     *
     * @return $this
     */
@@ -876,7 +876,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets portType
-    *  物理专线接入接口的类型，支持1G 10G 40G 100G
+    *  托管专线接入接口的类型，支持1G 10G 40G 100G
     *
     * @return string|null
     */
@@ -888,7 +888,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets portType
     *
-    * @param string|null $portType 物理专线接入接口的类型，支持1G 10G 40G 100G
+    * @param string|null $portType 托管专线接入接口的类型，支持1G 10G 40G 100G
     *
     * @return $this
     */
@@ -900,7 +900,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
+    *  托管专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
     *
     * @return string|null
     */
@@ -912,7 +912,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
+    * @param string|null $type 托管专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
     *
     * @return $this
     */

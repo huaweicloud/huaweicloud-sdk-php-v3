@@ -20,30 +20,38 @@ class ShowGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * globalDcGatewayId  全球接入网关ID
+    * limit  每页返回的个数。 取值范围：1~2000。
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
+    * globalDcGatewayId  全域接入网关ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'globalDcGatewayId' => 'string',
+            'limit' => 'int',
             'fields' => 'string[]',
-            'extFields' => 'string[]'
+            'extFields' => 'string[]',
+            'enterpriseProjectId' => 'string[]',
+            'globalDcGatewayId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * globalDcGatewayId  全球接入网关ID
+    * limit  每页返回的个数。 取值范围：1~2000。
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
+    * globalDcGatewayId  全域接入网关ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'globalDcGatewayId' => null,
+        'limit' => 'int32',
         'fields' => null,
-        'extFields' => null
+        'extFields' => null,
+        'enterpriseProjectId' => null,
+        'globalDcGatewayId' => null
     ];
 
     /**
@@ -69,44 +77,56 @@ class ShowGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * globalDcGatewayId  全球接入网关ID
+    * limit  每页返回的个数。 取值范围：1~2000。
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
+    * globalDcGatewayId  全域接入网关ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'globalDcGatewayId' => 'global_dc_gateway_id',
+            'limit' => 'limit',
             'fields' => 'fields',
-            'extFields' => 'ext_fields'
+            'extFields' => 'ext_fields',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'globalDcGatewayId' => 'global_dc_gateway_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * globalDcGatewayId  全球接入网关ID
+    * limit  每页返回的个数。 取值范围：1~2000。
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
+    * globalDcGatewayId  全域接入网关ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'globalDcGatewayId' => 'setGlobalDcGatewayId',
+            'limit' => 'setLimit',
             'fields' => 'setFields',
-            'extFields' => 'setExtFields'
+            'extFields' => 'setExtFields',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'globalDcGatewayId' => 'setGlobalDcGatewayId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * globalDcGatewayId  全球接入网关ID
+    * limit  每页返回的个数。 取值范围：1~2000。
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
+    * globalDcGatewayId  全域接入网关ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'globalDcGatewayId' => 'getGlobalDcGatewayId',
+            'limit' => 'getLimit',
             'fields' => 'getFields',
-            'extFields' => 'getExtFields'
+            'extFields' => 'getExtFields',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'globalDcGatewayId' => 'getGlobalDcGatewayId'
     ];
 
     /**
@@ -167,9 +187,11 @@ class ShowGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['globalDcGatewayId'] = isset($data['globalDcGatewayId']) ? $data['globalDcGatewayId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
         $this->container['extFields'] = isset($data['extFields']) ? $data['extFields'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['globalDcGatewayId'] = isset($data['globalDcGatewayId']) ? $data['globalDcGatewayId'] : null;
     }
 
     /**
@@ -180,6 +202,12 @@ class ShowGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
         if ($this->container['globalDcGatewayId'] === null) {
             $invalidProperties[] = "'globalDcGatewayId' can't be null";
         }
@@ -201,26 +229,26 @@ class ShowGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets globalDcGatewayId
-    *  全球接入网关ID
+    * Gets limit
+    *  每页返回的个数。 取值范围：1~2000。
     *
-    * @return string
+    * @return int|null
     */
-    public function getGlobalDcGatewayId()
+    public function getLimit()
     {
-        return $this->container['globalDcGatewayId'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets globalDcGatewayId
+    * Sets limit
     *
-    * @param string $globalDcGatewayId 全球接入网关ID
+    * @param int|null $limit 每页返回的个数。 取值范围：1~2000。
     *
     * @return $this
     */
-    public function setGlobalDcGatewayId($globalDcGatewayId)
+    public function setLimit($limit)
     {
-        $this->container['globalDcGatewayId'] = $globalDcGatewayId;
+        $this->container['limit'] = $limit;
         return $this;
     }
 
@@ -269,6 +297,54 @@ class ShowGlobalDcGatewayRequest implements ModelInterface, ArrayAccess
     public function setExtFields($extFields)
     {
         $this->container['extFields'] = $extFields;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  根据企业项目ID过滤资源实例
+    *
+    * @return string[]|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string[]|null $enterpriseProjectId 根据企业项目ID过滤资源实例
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets globalDcGatewayId
+    *  全域接入网关ID
+    *
+    * @return string
+    */
+    public function getGlobalDcGatewayId()
+    {
+        return $this->container['globalDcGatewayId'];
+    }
+
+    /**
+    * Sets globalDcGatewayId
+    *
+    * @param string $globalDcGatewayId 全域接入网关ID
+    *
+    * @return $this
+    */
+    public function setGlobalDcGatewayId($globalDcGatewayId)
+    {
+        $this->container['globalDcGatewayId'] = $globalDcGatewayId;
         return $this;
     }
 

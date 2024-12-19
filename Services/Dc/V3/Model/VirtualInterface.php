@@ -24,7 +24,8 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * name  虚拟接口的名字
     * adminStateUp  管理状态：true或false
     * bandwidth  虚拟接口接入带宽
-    * createTime  虚拟接口创建时间
+    * createTime  虚拟接口创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * updateTime  虚拟接口修改时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * description  虚拟接口的描述
     * directConnectId  物理专线的ID
     * serviceType  接入网关的类型：包括VGW,GDGW,LGW等
@@ -35,26 +36,26 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * vlan  同用户网关对接的vlan, 配置范围0-3999
     * routeLimit  VIF远端子网路由配置规格
     * enableNqa  是否使能nqa功能：true或false
-    * enableBfd  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false
     * lagId  VIF关联的链路聚合组ID
     * deviceId  归属的设备ID
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     * localGatewayV4Ip  云侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
-    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * iesId  归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     * reason  如果资源的状态是Error的情况下，该参数会显示相关错误信息。
     * rateLimit  标识虚拟接口是否开启限速
     * addressFamily  接口的地址簇类型，ipv4，ipv6。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * localGatewayV6Ip  云侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
-    * lgwId  本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    * lgwId  本地网关的ID，用于CloudPond场景。[（功能暂不支持）](tag:dt)
     * gatewayId  虚拟接口关联的网关的ID
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * serviceEpGroup  该字段用于公网专线接口，表示租户可以访问云上公网服务地址列表。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * bgpRouteLimit  BGP的路由配置规格
     * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
-    * vifPeers  vif的Peer的相关信息
+    * vifPeers  vif的Peer的相关信息[（预留字段，暂不支持）](tag:dt)
     * extendAttribute  extendAttribute
     *
     * @var string[]
@@ -65,6 +66,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             'adminStateUp' => 'bool',
             'bandwidth' => 'int',
             'createTime' => '\DateTime',
+            'updateTime' => '\DateTime',
             'description' => 'string',
             'directConnectId' => 'string',
             'serviceType' => 'string',
@@ -104,7 +106,8 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * name  虚拟接口的名字
     * adminStateUp  管理状态：true或false
     * bandwidth  虚拟接口接入带宽
-    * createTime  虚拟接口创建时间
+    * createTime  虚拟接口创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * updateTime  虚拟接口修改时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * description  虚拟接口的描述
     * directConnectId  物理专线的ID
     * serviceType  接入网关的类型：包括VGW,GDGW,LGW等
@@ -115,26 +118,26 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * vlan  同用户网关对接的vlan, 配置范围0-3999
     * routeLimit  VIF远端子网路由配置规格
     * enableNqa  是否使能nqa功能：true或false
-    * enableBfd  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false
     * lagId  VIF关联的链路聚合组ID
     * deviceId  归属的设备ID
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     * localGatewayV4Ip  云侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
-    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * iesId  归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     * reason  如果资源的状态是Error的情况下，该参数会显示相关错误信息。
     * rateLimit  标识虚拟接口是否开启限速
     * addressFamily  接口的地址簇类型，ipv4，ipv6。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * localGatewayV6Ip  云侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
-    * lgwId  本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    * lgwId  本地网关的ID，用于CloudPond场景。[（功能暂不支持）](tag:dt)
     * gatewayId  虚拟接口关联的网关的ID
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * serviceEpGroup  该字段用于公网专线接口，表示租户可以访问云上公网服务地址列表。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * bgpRouteLimit  BGP的路由配置规格
     * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
-    * vifPeers  vif的Peer的相关信息
+    * vifPeers  vif的Peer的相关信息[（预留字段，暂不支持）](tag:dt)
     * extendAttribute  extendAttribute
     *
     * @var string[]
@@ -145,6 +148,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
         'adminStateUp' => null,
         'bandwidth' => 'int32',
         'createTime' => 'date-time',
+        'updateTime' => 'date-time',
         'description' => null,
         'directConnectId' => null,
         'serviceType' => null,
@@ -205,7 +209,8 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * name  虚拟接口的名字
     * adminStateUp  管理状态：true或false
     * bandwidth  虚拟接口接入带宽
-    * createTime  虚拟接口创建时间
+    * createTime  虚拟接口创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * updateTime  虚拟接口修改时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * description  虚拟接口的描述
     * directConnectId  物理专线的ID
     * serviceType  接入网关的类型：包括VGW,GDGW,LGW等
@@ -216,26 +221,26 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * vlan  同用户网关对接的vlan, 配置范围0-3999
     * routeLimit  VIF远端子网路由配置规格
     * enableNqa  是否使能nqa功能：true或false
-    * enableBfd  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false
     * lagId  VIF关联的链路聚合组ID
     * deviceId  归属的设备ID
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     * localGatewayV4Ip  云侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
-    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * iesId  归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     * reason  如果资源的状态是Error的情况下，该参数会显示相关错误信息。
     * rateLimit  标识虚拟接口是否开启限速
     * addressFamily  接口的地址簇类型，ipv4，ipv6。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * localGatewayV6Ip  云侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
-    * lgwId  本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    * lgwId  本地网关的ID，用于CloudPond场景。[（功能暂不支持）](tag:dt)
     * gatewayId  虚拟接口关联的网关的ID
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * serviceEpGroup  该字段用于公网专线接口，表示租户可以访问云上公网服务地址列表。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * bgpRouteLimit  BGP的路由配置规格
     * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
-    * vifPeers  vif的Peer的相关信息
+    * vifPeers  vif的Peer的相关信息[（预留字段，暂不支持）](tag:dt)
     * extendAttribute  extendAttribute
     *
     * @var string[]
@@ -246,6 +251,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             'adminStateUp' => 'admin_state_up',
             'bandwidth' => 'bandwidth',
             'createTime' => 'create_time',
+            'updateTime' => 'update_time',
             'description' => 'description',
             'directConnectId' => 'direct_connect_id',
             'serviceType' => 'service_type',
@@ -285,7 +291,8 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * name  虚拟接口的名字
     * adminStateUp  管理状态：true或false
     * bandwidth  虚拟接口接入带宽
-    * createTime  虚拟接口创建时间
+    * createTime  虚拟接口创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * updateTime  虚拟接口修改时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * description  虚拟接口的描述
     * directConnectId  物理专线的ID
     * serviceType  接入网关的类型：包括VGW,GDGW,LGW等
@@ -296,26 +303,26 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * vlan  同用户网关对接的vlan, 配置范围0-3999
     * routeLimit  VIF远端子网路由配置规格
     * enableNqa  是否使能nqa功能：true或false
-    * enableBfd  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false
     * lagId  VIF关联的链路聚合组ID
     * deviceId  归属的设备ID
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     * localGatewayV4Ip  云侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
-    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * iesId  归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     * reason  如果资源的状态是Error的情况下，该参数会显示相关错误信息。
     * rateLimit  标识虚拟接口是否开启限速
     * addressFamily  接口的地址簇类型，ipv4，ipv6。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * localGatewayV6Ip  云侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
-    * lgwId  本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    * lgwId  本地网关的ID，用于CloudPond场景。[（功能暂不支持）](tag:dt)
     * gatewayId  虚拟接口关联的网关的ID
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * serviceEpGroup  该字段用于公网专线接口，表示租户可以访问云上公网服务地址列表。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * bgpRouteLimit  BGP的路由配置规格
     * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
-    * vifPeers  vif的Peer的相关信息
+    * vifPeers  vif的Peer的相关信息[（预留字段，暂不支持）](tag:dt)
     * extendAttribute  extendAttribute
     *
     * @var string[]
@@ -326,6 +333,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             'adminStateUp' => 'setAdminStateUp',
             'bandwidth' => 'setBandwidth',
             'createTime' => 'setCreateTime',
+            'updateTime' => 'setUpdateTime',
             'description' => 'setDescription',
             'directConnectId' => 'setDirectConnectId',
             'serviceType' => 'setServiceType',
@@ -365,7 +373,8 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * name  虚拟接口的名字
     * adminStateUp  管理状态：true或false
     * bandwidth  虚拟接口接入带宽
-    * createTime  虚拟接口创建时间
+    * createTime  虚拟接口创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    * updateTime  虚拟接口修改时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     * description  虚拟接口的描述
     * directConnectId  物理专线的ID
     * serviceType  接入网关的类型：包括VGW,GDGW,LGW等
@@ -376,26 +385,26 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * vlan  同用户网关对接的vlan, 配置范围0-3999
     * routeLimit  VIF远端子网路由配置规格
     * enableNqa  是否使能nqa功能：true或false
-    * enableBfd  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false
     * lagId  VIF关联的链路聚合组ID
     * deviceId  归属的设备ID
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     * localGatewayV4Ip  云侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
     * remoteGatewayV4Ip  客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
-    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * iesId  归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     * reason  如果资源的状态是Error的情况下，该参数会显示相关错误信息。
     * rateLimit  标识虚拟接口是否开启限速
     * addressFamily  接口的地址簇类型，ipv4，ipv6。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * localGatewayV6Ip  云侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
-    * lgwId  本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    * lgwId  本地网关的ID，用于CloudPond场景。[（功能暂不支持）](tag:dt)
     * gatewayId  虚拟接口关联的网关的ID
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * serviceEpGroup  该字段用于公网专线接口，表示租户可以访问云上公网服务地址列表。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
     * bgpRouteLimit  BGP的路由配置规格
     * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
-    * vifPeers  vif的Peer的相关信息
+    * vifPeers  vif的Peer的相关信息[（预留字段，暂不支持）](tag:dt)
     * extendAttribute  extendAttribute
     *
     * @var string[]
@@ -406,6 +415,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             'adminStateUp' => 'getAdminStateUp',
             'bandwidth' => 'getBandwidth',
             'createTime' => 'getCreateTime',
+            'updateTime' => 'getUpdateTime',
             'description' => 'getDescription',
             'directConnectId' => 'getDirectConnectId',
             'serviceType' => 'getServiceType',
@@ -549,6 +559,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['directConnectId'] = isset($data['directConnectId']) ? $data['directConnectId'] : null;
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
@@ -786,7 +797,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  虚拟接口创建时间
+    *  虚拟接口创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return \DateTime|null
     */
@@ -798,13 +809,37 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 虚拟接口创建时间
+    * @param \DateTime|null $createTime 虚拟接口创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
     *
     * @return $this
     */
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  虚拟接口修改时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    *
+    * @return \DateTime|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param \DateTime|null $updateTime 虚拟接口修改时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
         return $this;
     }
 
@@ -1050,7 +1085,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableBfd
-    *  是否使能nqa功能：true或false
+    *  是否使能bfd功能：true或false
     *
     * @return bool|null
     */
@@ -1062,7 +1097,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets enableBfd
     *
-    * @param bool|null $enableBfd 是否使能nqa功能：true或false
+    * @param bool|null $enableBfd 是否使能bfd功能：true或false
     *
     * @return $this
     */
@@ -1218,7 +1253,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets iesId
-    *  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    *  归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     *
     * @return string|null
     */
@@ -1230,7 +1265,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets iesId
     *
-    * @param string|null $iesId 归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * @param string|null $iesId 归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
     *
     * @return $this
     */
@@ -1362,7 +1397,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets lgwId
-    *  本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    *  本地网关的ID，用于CloudPond场景。[（功能暂不支持）](tag:dt)
     *
     * @return string|null
     */
@@ -1374,7 +1409,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets lgwId
     *
-    * @param string|null $lgwId 本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    * @param string|null $lgwId 本地网关的ID，用于CloudPond场景。[（功能暂不支持）](tag:dt)
     *
     * @return $this
     */
@@ -1506,7 +1541,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets vifPeers
-    *  vif的Peer的相关信息
+    *  vif的Peer的相关信息[（预留字段，暂不支持）](tag:dt)
     *
     * @return \HuaweiCloud\SDK\Dc\V3\Model\VifPeer[]|null
     */
@@ -1518,7 +1553,7 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets vifPeers
     *
-    * @param \HuaweiCloud\SDK\Dc\V3\Model\VifPeer[]|null $vifPeers vif的Peer的相关信息
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\VifPeer[]|null $vifPeers vif的Peer的相关信息[（预留字段，暂不支持）](tag:dt)
     *
     * @return $this
     */

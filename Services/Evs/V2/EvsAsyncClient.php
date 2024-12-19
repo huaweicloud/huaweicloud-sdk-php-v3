@@ -1838,6 +1838,73 @@ class EvsAsyncClient extends Client
     }
 
     /**
+     * 退订包周期计费模式的云硬盘
+     *
+     * 退订包周期计费模式的云硬盘，有如下约束：
+     * -  系统盘、启动盘不可使用当前接口退订，必须和弹性云服务器一起退订
+     * -  接口的请求body体最多可以传60个云硬盘id
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function unsubscribePostpaidVolumeAsync($request)
+    {
+        return $this->unsubscribePostpaidVolumeAsyncWithHttpInfo($request);
+    }
+    
+    public function unsubscribePostpaidVolumeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/cloudvolumes/unsubscribe';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\UnsubscribePostpaidVolumeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\UnsubscribePostpaidVolumeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 更新云硬盘快照
      *
      * 更新云硬盘快照。支持企业项目授权功能。

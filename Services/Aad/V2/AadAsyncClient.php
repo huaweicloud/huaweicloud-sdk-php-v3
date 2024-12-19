@@ -26,6 +26,71 @@ class AadAsyncClient extends Client
     }
 
     /**
+     * 防护策略web-cc黑白名单-创建黑白名单规则
+     *
+     * 防护策略web-cc黑白名单-创建黑白名单规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addWafWhiteIpRuleAsync($request)
+    {
+        return $this->addWafWhiteIpRuleAsyncWithHttpInfo($request);
+    }
+    
+    public function addWafWhiteIpRuleAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/aad/policies/waf/blackwhite-list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\AddWafWhiteIpRuleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\AddWafWhiteIpRuleRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建防护域名
      *
      * 创建防护域名
@@ -152,6 +217,71 @@ class AadAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Aad\V2\Model\DeleteDomainResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Aad\V2\Model\DeleteDomainRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 防护策略web-cc黑白名单-删除黑白名单规则
+     *
+     * 防护策略web-cc黑白名单-删除黑白名单规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteWafWhiteIpRuleAsync($request)
+    {
+        return $this->deleteWafWhiteIpRuleAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteWafWhiteIpRuleAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/aad/policies/waf/blackwhite-list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\DeleteWafWhiteIpRuleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\DeleteWafWhiteIpRuleRequest',
             $asyncRequest = true);
     }
 

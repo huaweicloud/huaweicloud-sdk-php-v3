@@ -387,6 +387,9 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
@@ -520,7 +523,7 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
     * Gets instanceId
     *  需要转换的云服务器ID。使用instance_id字段，从云服务器制作私有镜像时，该字段填写云服务器ID。
     *
-    * @return string|null
+    * @return string
     */
     public function getInstanceId()
     {
@@ -530,7 +533,7 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 需要转换的云服务器ID。使用instance_id字段，从云服务器制作私有镜像时，该字段填写云服务器ID。
+    * @param string $instanceId 需要转换的云服务器ID。使用instance_id字段，从云服务器制作私有镜像时，该字段填写云服务器ID。
     *
     * @return $this
     */

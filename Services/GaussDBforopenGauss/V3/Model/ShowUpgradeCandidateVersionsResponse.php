@@ -29,8 +29,8 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组。
     * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组。
     * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组。
-    * hotfixUpgradeInfos  hotfixUpgradeInfos
-    * hotfixRollbackInfos  hotfixRollbackInfos
+    * hotfixUpgradeInfos  可以升级的热补丁信息。
+    * hotfixRollbackInfos  可以回滚的热补丁信息。
     *
     * @var string[]
     */
@@ -43,8 +43,8 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
             'upgradeCandidateVersions' => 'string[]',
             'hotfixUpgradeCandidateVersions' => 'string[]',
             'hotfixRollbackCandidateVersions' => 'string[]',
-            'hotfixUpgradeInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixUpgradeInfos',
-            'hotfixRollbackInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixRollbackInfos'
+            'hotfixUpgradeInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixUpgradeInfos[]',
+            'hotfixRollbackInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixRollbackInfos[]'
     ];
 
     /**
@@ -57,8 +57,8 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组。
     * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组。
     * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组。
-    * hotfixUpgradeInfos  hotfixUpgradeInfos
-    * hotfixRollbackInfos  hotfixRollbackInfos
+    * hotfixUpgradeInfos  可以升级的热补丁信息。
+    * hotfixRollbackInfos  可以回滚的热补丁信息。
     *
     * @var string[]
     */
@@ -106,8 +106,8 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组。
     * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组。
     * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组。
-    * hotfixUpgradeInfos  hotfixUpgradeInfos
-    * hotfixRollbackInfos  hotfixRollbackInfos
+    * hotfixUpgradeInfos  可以升级的热补丁信息。
+    * hotfixRollbackInfos  可以回滚的热补丁信息。
     *
     * @var string[]
     */
@@ -134,8 +134,8 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组。
     * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组。
     * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组。
-    * hotfixUpgradeInfos  hotfixUpgradeInfos
-    * hotfixRollbackInfos  hotfixRollbackInfos
+    * hotfixUpgradeInfos  可以升级的热补丁信息。
+    * hotfixRollbackInfos  可以回滚的热补丁信息。
     *
     * @var string[]
     */
@@ -162,8 +162,8 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组。
     * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组。
     * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组。
-    * hotfixUpgradeInfos  hotfixUpgradeInfos
-    * hotfixRollbackInfos  hotfixRollbackInfos
+    * hotfixUpgradeInfos  可以升级的热补丁信息。
+    * hotfixRollbackInfos  可以回滚的热补丁信息。
     *
     * @var string[]
     */
@@ -478,9 +478,9 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets hotfixUpgradeInfos
-    *  hotfixUpgradeInfos
+    *  可以升级的热补丁信息。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixUpgradeInfos|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixUpgradeInfos[]|null
     */
     public function getHotfixUpgradeInfos()
     {
@@ -490,7 +490,7 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     /**
     * Sets hotfixUpgradeInfos
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixUpgradeInfos|null $hotfixUpgradeInfos hotfixUpgradeInfos
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixUpgradeInfos[]|null $hotfixUpgradeInfos 可以升级的热补丁信息。
     *
     * @return $this
     */
@@ -502,9 +502,9 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets hotfixRollbackInfos
-    *  hotfixRollbackInfos
+    *  可以回滚的热补丁信息。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixRollbackInfos|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixRollbackInfos[]|null
     */
     public function getHotfixRollbackInfos()
     {
@@ -514,7 +514,7 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     /**
     * Sets hotfixRollbackInfos
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixRollbackInfos|null $hotfixRollbackInfos hotfixRollbackInfos
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixRollbackInfos[]|null $hotfixRollbackInfos 可以回滚的热补丁信息。
     *
     * @return $this
     */

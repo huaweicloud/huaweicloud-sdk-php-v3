@@ -20,12 +20,13 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vpcId  虚拟网关接入的VPC的ID
+    * vpcId  虚拟网关接入的VPC的ID[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
+    * enterpriseRouterId  虚拟网关接入的ER的ID，当选择创建接入ER的虚拟网关时必选。
     * name  虚拟网关名字
     * description  虚拟网关的描述信息
-    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
+    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
     * localEpGroupIpv6  预留字段用于虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
-    * bgpAsn  虚拟网关本地的BGP自冶域号(asn)
+    * bgpAsn  虚拟网关本地的BGP自治域号(asn)
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     *
@@ -33,6 +34,7 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'vpcId' => 'string',
+            'enterpriseRouterId' => 'string',
             'name' => 'string',
             'description' => 'string',
             'localEpGroup' => 'string[]',
@@ -44,12 +46,13 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vpcId  虚拟网关接入的VPC的ID
+    * vpcId  虚拟网关接入的VPC的ID[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
+    * enterpriseRouterId  虚拟网关接入的ER的ID，当选择创建接入ER的虚拟网关时必选。
     * name  虚拟网关名字
     * description  虚拟网关的描述信息
-    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
+    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
     * localEpGroupIpv6  预留字段用于虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
-    * bgpAsn  虚拟网关本地的BGP自冶域号(asn)
+    * bgpAsn  虚拟网关本地的BGP自治域号(asn)
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     *
@@ -57,6 +60,7 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'vpcId' => null,
+        'enterpriseRouterId' => null,
         'name' => null,
         'description' => null,
         'localEpGroup' => null,
@@ -89,12 +93,13 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vpcId  虚拟网关接入的VPC的ID
+    * vpcId  虚拟网关接入的VPC的ID[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
+    * enterpriseRouterId  虚拟网关接入的ER的ID，当选择创建接入ER的虚拟网关时必选。
     * name  虚拟网关名字
     * description  虚拟网关的描述信息
-    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
+    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
     * localEpGroupIpv6  预留字段用于虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
-    * bgpAsn  虚拟网关本地的BGP自冶域号(asn)
+    * bgpAsn  虚拟网关本地的BGP自治域号(asn)
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     *
@@ -102,6 +107,7 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'vpcId' => 'vpc_id',
+            'enterpriseRouterId' => 'enterprise_router_id',
             'name' => 'name',
             'description' => 'description',
             'localEpGroup' => 'local_ep_group',
@@ -113,12 +119,13 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vpcId  虚拟网关接入的VPC的ID
+    * vpcId  虚拟网关接入的VPC的ID[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
+    * enterpriseRouterId  虚拟网关接入的ER的ID，当选择创建接入ER的虚拟网关时必选。
     * name  虚拟网关名字
     * description  虚拟网关的描述信息
-    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
+    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
     * localEpGroupIpv6  预留字段用于虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
-    * bgpAsn  虚拟网关本地的BGP自冶域号(asn)
+    * bgpAsn  虚拟网关本地的BGP自治域号(asn)
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     *
@@ -126,6 +133,7 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'vpcId' => 'setVpcId',
+            'enterpriseRouterId' => 'setEnterpriseRouterId',
             'name' => 'setName',
             'description' => 'setDescription',
             'localEpGroup' => 'setLocalEpGroup',
@@ -137,12 +145,13 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vpcId  虚拟网关接入的VPC的ID
+    * vpcId  虚拟网关接入的VPC的ID[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
+    * enterpriseRouterId  虚拟网关接入的ER的ID，当选择创建接入ER的虚拟网关时必选。
     * name  虚拟网关名字
     * description  虚拟网关的描述信息
-    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
+    * localEpGroup  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
     * localEpGroupIpv6  预留字段用于虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
-    * bgpAsn  虚拟网关本地的BGP自冶域号(asn)
+    * bgpAsn  虚拟网关本地的BGP自治域号(asn)
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
     *
@@ -150,6 +159,7 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'vpcId' => 'getVpcId',
+            'enterpriseRouterId' => 'getEnterpriseRouterId',
             'name' => 'getName',
             'description' => 'getDescription',
             'localEpGroup' => 'getLocalEpGroup',
@@ -218,6 +228,7 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
+        $this->container['enterpriseRouterId'] = isset($data['enterpriseRouterId']) ? $data['enterpriseRouterId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['localEpGroup'] = isset($data['localEpGroup']) ? $data['localEpGroup'] : null;
@@ -240,6 +251,9 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
         }
             if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['vpcId'])) {
                 $invalidProperties[] = "invalid value for 'vpcId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
+            }
+            if (!is_null($this->container['enterpriseRouterId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseRouterId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
@@ -287,7 +301,7 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  虚拟网关接入的VPC的ID
+    *  虚拟网关接入的VPC的ID[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
     *
     * @return string
     */
@@ -299,13 +313,37 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId 虚拟网关接入的VPC的ID
+    * @param string $vpcId 虚拟网关接入的VPC的ID[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
     *
     * @return $this
     */
     public function setVpcId($vpcId)
     {
         $this->container['vpcId'] = $vpcId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseRouterId
+    *  虚拟网关接入的ER的ID，当选择创建接入ER的虚拟网关时必选。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseRouterId()
+    {
+        return $this->container['enterpriseRouterId'];
+    }
+
+    /**
+    * Sets enterpriseRouterId
+    *
+    * @param string|null $enterpriseRouterId 虚拟网关接入的ER的ID，当选择创建接入ER的虚拟网关时必选。
+    *
+    * @return $this
+    */
+    public function setEnterpriseRouterId($enterpriseRouterId)
+    {
+        $this->container['enterpriseRouterId'] = $enterpriseRouterId;
         return $this;
     }
 
@@ -359,7 +397,7 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
 
     /**
     * Gets localEpGroup
-    *  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
+    *  虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
     *
     * @return string[]
     */
@@ -371,7 +409,7 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
     /**
     * Sets localEpGroup
     *
-    * @param string[] $localEpGroup 虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
+    * @param string[] $localEpGroup 虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当选择创建接入VPC的虚拟网关时必选。](tag:dt)
     *
     * @return $this
     */
@@ -407,7 +445,7 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
 
     /**
     * Gets bgpAsn
-    *  虚拟网关本地的BGP自冶域号(asn)
+    *  虚拟网关本地的BGP自治域号(asn)
     *
     * @return int|null
     */
@@ -419,7 +457,7 @@ class CreateVirtualGateway implements ModelInterface, ArrayAccess
     /**
     * Sets bgpAsn
     *
-    * @param int|null $bgpAsn 虚拟网关本地的BGP自冶域号(asn)
+    * @param int|null $bgpAsn 虚拟网关本地的BGP自治域号(asn)
     *
     * @return $this
     */

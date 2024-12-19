@@ -21,34 +21,30 @@ class ListPeerLinksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requestId  requestId
-    * peerLinks  peerLinks
+    * peerLinks  专线关联连接列表。
     * pageInfo  pageInfo
-    * xRequestId  xRequestId
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'requestId' => 'string',
-            'peerLinks' => '\HuaweiCloud\SDK\Dc\V3\Model\ExternalListPeerLinks[]',
+            'peerLinks' => '\HuaweiCloud\SDK\Dc\V3\Model\PeerLinkEntry[]',
             'pageInfo' => '\HuaweiCloud\SDK\Dc\V3\Model\PageInfo',
-            'xRequestId' => 'string'
+            'requestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requestId  requestId
-    * peerLinks  peerLinks
+    * peerLinks  专线关联连接列表。
     * pageInfo  pageInfo
-    * xRequestId  xRequestId
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'requestId' => null,
         'peerLinks' => null,
         'pageInfo' => null,
-        'xRequestId' => null
+        'requestId' => null
     ];
 
     /**
@@ -74,50 +70,44 @@ class ListPeerLinksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requestId  requestId
-    * peerLinks  peerLinks
+    * peerLinks  专线关联连接列表。
     * pageInfo  pageInfo
-    * xRequestId  xRequestId
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'requestId' => 'request_id',
             'peerLinks' => 'peer_links',
             'pageInfo' => 'page_info',
-            'xRequestId' => 'X-Request-Id'
+            'requestId' => 'request_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requestId  requestId
-    * peerLinks  peerLinks
+    * peerLinks  专线关联连接列表。
     * pageInfo  pageInfo
-    * xRequestId  xRequestId
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'requestId' => 'setRequestId',
             'peerLinks' => 'setPeerLinks',
             'pageInfo' => 'setPageInfo',
-            'xRequestId' => 'setXRequestId'
+            'requestId' => 'setRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requestId  requestId
-    * peerLinks  peerLinks
+    * peerLinks  专线关联连接列表。
     * pageInfo  pageInfo
-    * xRequestId  xRequestId
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'requestId' => 'getRequestId',
             'peerLinks' => 'getPeerLinks',
             'pageInfo' => 'getPageInfo',
-            'xRequestId' => 'getXRequestId'
+            'requestId' => 'getRequestId'
     ];
 
     /**
@@ -178,10 +168,9 @@ class ListPeerLinksResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['peerLinks'] = isset($data['peerLinks']) ? $data['peerLinks'] : null;
         $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
-        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
     }
 
     /**
@@ -192,6 +181,12 @@ class ListPeerLinksResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -207,34 +202,10 @@ class ListPeerLinksResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets requestId
-    *  requestId
-    *
-    * @return string|null
-    */
-    public function getRequestId()
-    {
-        return $this->container['requestId'];
-    }
-
-    /**
-    * Sets requestId
-    *
-    * @param string|null $requestId requestId
-    *
-    * @return $this
-    */
-    public function setRequestId($requestId)
-    {
-        $this->container['requestId'] = $requestId;
-        return $this;
-    }
-
-    /**
     * Gets peerLinks
-    *  peerLinks
+    *  专线关联连接列表。
     *
-    * @return \HuaweiCloud\SDK\Dc\V3\Model\ExternalListPeerLinks[]|null
+    * @return \HuaweiCloud\SDK\Dc\V3\Model\PeerLinkEntry[]|null
     */
     public function getPeerLinks()
     {
@@ -244,7 +215,7 @@ class ListPeerLinksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets peerLinks
     *
-    * @param \HuaweiCloud\SDK\Dc\V3\Model\ExternalListPeerLinks[]|null $peerLinks peerLinks
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\PeerLinkEntry[]|null $peerLinks 专线关联连接列表。
     *
     * @return $this
     */
@@ -279,26 +250,26 @@ class ListPeerLinksResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets xRequestId
-    *  xRequestId
+    * Gets requestId
+    *  请求ID。
     *
     * @return string|null
     */
-    public function getXRequestId()
+    public function getRequestId()
     {
-        return $this->container['xRequestId'];
+        return $this->container['requestId'];
     }
 
     /**
-    * Sets xRequestId
+    * Sets requestId
     *
-    * @param string|null $xRequestId xRequestId
+    * @param string|null $requestId 请求ID。
     *
     * @return $this
     */
-    public function setXRequestId($xRequestId)
+    public function setRequestId($requestId)
     {
-        $this->container['xRequestId'] = $xRequestId;
+        $this->container['requestId'] = $requestId;
         return $this;
     }
 

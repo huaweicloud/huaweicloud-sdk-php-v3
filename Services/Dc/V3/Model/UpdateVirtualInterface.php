@@ -24,9 +24,9 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     * description  虚拟接口描述信息
     * bandwidth  虚拟接口带宽配置
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
-    * serviceEpGroup  用于公网专线,用户访问公网服务地址列表
-    * enableBfd  是否使能bfd功能：true或false
-    * enableNqa  是否使能nqa功能：true或false
+    * serviceEpGroup  用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
+    * enableBfd  是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
+    * enableNqa  是否使能nqa功能：true或false。[（预留字段，暂不支持）](tag:dt)
     * status  对其他租户创建的虚拟接口进行确认,可以是ACCEPTED和REJECTED
     *
     * @var string[]
@@ -48,9 +48,9 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     * description  虚拟接口描述信息
     * bandwidth  虚拟接口带宽配置
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
-    * serviceEpGroup  用于公网专线,用户访问公网服务地址列表
-    * enableBfd  是否使能bfd功能：true或false
-    * enableNqa  是否使能nqa功能：true或false
+    * serviceEpGroup  用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
+    * enableBfd  是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
+    * enableNqa  是否使能nqa功能：true或false。[（预留字段，暂不支持）](tag:dt)
     * status  对其他租户创建的虚拟接口进行确认,可以是ACCEPTED和REJECTED
     *
     * @var string[]
@@ -93,9 +93,9 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     * description  虚拟接口描述信息
     * bandwidth  虚拟接口带宽配置
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
-    * serviceEpGroup  用于公网专线,用户访问公网服务地址列表
-    * enableBfd  是否使能bfd功能：true或false
-    * enableNqa  是否使能nqa功能：true或false
+    * serviceEpGroup  用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
+    * enableBfd  是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
+    * enableNqa  是否使能nqa功能：true或false。[（预留字段，暂不支持）](tag:dt)
     * status  对其他租户创建的虚拟接口进行确认,可以是ACCEPTED和REJECTED
     *
     * @var string[]
@@ -117,9 +117,9 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     * description  虚拟接口描述信息
     * bandwidth  虚拟接口带宽配置
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
-    * serviceEpGroup  用于公网专线,用户访问公网服务地址列表
-    * enableBfd  是否使能bfd功能：true或false
-    * enableNqa  是否使能nqa功能：true或false
+    * serviceEpGroup  用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
+    * enableBfd  是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
+    * enableNqa  是否使能nqa功能：true或false。[（预留字段，暂不支持）](tag:dt)
     * status  对其他租户创建的虚拟接口进行确认,可以是ACCEPTED和REJECTED
     *
     * @var string[]
@@ -141,9 +141,9 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     * description  虚拟接口描述信息
     * bandwidth  虚拟接口带宽配置
     * remoteEpGroup  远端子网列表，记录租户侧的cidrs
-    * serviceEpGroup  用于公网专线,用户访问公网服务地址列表
-    * enableBfd  是否使能bfd功能：true或false
-    * enableNqa  是否使能nqa功能：true或false
+    * serviceEpGroup  用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
+    * enableBfd  是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
+    * enableNqa  是否使能nqa功能：true或false。[（预留字段，暂不支持）](tag:dt)
     * status  对其他租户创建的虚拟接口进行确认,可以是ACCEPTED和REJECTED
     *
     * @var string[]
@@ -388,7 +388,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceEpGroup
-    *  用于公网专线,用户访问公网服务地址列表
+    *  用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
     *
     * @return string[]|null
     */
@@ -400,7 +400,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets serviceEpGroup
     *
-    * @param string[]|null $serviceEpGroup 用于公网专线,用户访问公网服务地址列表
+    * @param string[]|null $serviceEpGroup 用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableBfd
-    *  是否使能bfd功能：true或false
+    *  是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
     *
     * @return bool|null
     */
@@ -424,7 +424,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets enableBfd
     *
-    * @param bool|null $enableBfd 是否使能bfd功能：true或false
+    * @param bool|null $enableBfd 是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
     *
     * @return $this
     */
@@ -436,7 +436,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableNqa
-    *  是否使能nqa功能：true或false
+    *  是否使能nqa功能：true或false。[（预留字段，暂不支持）](tag:dt)
     *
     * @return bool|null
     */
@@ -448,7 +448,7 @@ class UpdateVirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets enableNqa
     *
-    * @param bool|null $enableNqa 是否使能nqa功能：true或false
+    * @param bool|null $enableNqa 是否使能nqa功能：true或false。[（预留字段，暂不支持）](tag:dt)
     *
     * @return $this
     */

@@ -20,18 +20,17 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  唯一ID
+    * id  专线对等连接
     * tenantId  租户ID
     * name  名称
-    * description  描述
-    * globalDcGatewayId  全球接入网关ID
-    * instanceId  实例ID
+    * description  描述信息
+    * globalDcGatewayId  全域接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
-    * status  状态： ACTIVE-正常
-    * reason  原因
+    * status  '状态信息' - ACTIVE 正常 - ERROR 异常
+    * reason  失败原因
     * createdTime  创建时间
-    * updatedTime  修改时间
+    * updatedTime  更新时间
     *
     * @var string[]
     */
@@ -41,7 +40,6 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'globalDcGatewayId' => 'string',
-            'instanceId' => 'string',
             'bandwidthInfo' => '\HuaweiCloud\SDK\Dc\V3\Model\BandwidthInfoExternal',
             'peerSite' => '\HuaweiCloud\SDK\Dc\V3\Model\PeerSiteExternal',
             'status' => 'string',
@@ -52,18 +50,17 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  唯一ID
+    * id  专线对等连接
     * tenantId  租户ID
     * name  名称
-    * description  描述
-    * globalDcGatewayId  全球接入网关ID
-    * instanceId  实例ID
+    * description  描述信息
+    * globalDcGatewayId  全域接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
-    * status  状态： ACTIVE-正常
-    * reason  原因
+    * status  '状态信息' - ACTIVE 正常 - ERROR 异常
+    * reason  失败原因
     * createdTime  创建时间
-    * updatedTime  修改时间
+    * updatedTime  更新时间
     *
     * @var string[]
     */
@@ -73,7 +70,6 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'globalDcGatewayId' => null,
-        'instanceId' => null,
         'bandwidthInfo' => null,
         'peerSite' => null,
         'status' => null,
@@ -105,18 +101,17 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  唯一ID
+    * id  专线对等连接
     * tenantId  租户ID
     * name  名称
-    * description  描述
-    * globalDcGatewayId  全球接入网关ID
-    * instanceId  实例ID
+    * description  描述信息
+    * globalDcGatewayId  全域接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
-    * status  状态： ACTIVE-正常
-    * reason  原因
+    * status  '状态信息' - ACTIVE 正常 - ERROR 异常
+    * reason  失败原因
     * createdTime  创建时间
-    * updatedTime  修改时间
+    * updatedTime  更新时间
     *
     * @var string[]
     */
@@ -126,7 +121,6 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'globalDcGatewayId' => 'global_dc_gateway_id',
-            'instanceId' => 'instance_id',
             'bandwidthInfo' => 'bandwidth_info',
             'peerSite' => 'peer_site',
             'status' => 'status',
@@ -137,18 +131,17 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  唯一ID
+    * id  专线对等连接
     * tenantId  租户ID
     * name  名称
-    * description  描述
-    * globalDcGatewayId  全球接入网关ID
-    * instanceId  实例ID
+    * description  描述信息
+    * globalDcGatewayId  全域接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
-    * status  状态： ACTIVE-正常
-    * reason  原因
+    * status  '状态信息' - ACTIVE 正常 - ERROR 异常
+    * reason  失败原因
     * createdTime  创建时间
-    * updatedTime  修改时间
+    * updatedTime  更新时间
     *
     * @var string[]
     */
@@ -158,7 +151,6 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'globalDcGatewayId' => 'setGlobalDcGatewayId',
-            'instanceId' => 'setInstanceId',
             'bandwidthInfo' => 'setBandwidthInfo',
             'peerSite' => 'setPeerSite',
             'status' => 'setStatus',
@@ -169,18 +161,17 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  唯一ID
+    * id  专线对等连接
     * tenantId  租户ID
     * name  名称
-    * description  描述
-    * globalDcGatewayId  全球接入网关ID
-    * instanceId  实例ID
+    * description  描述信息
+    * globalDcGatewayId  全域接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
-    * status  状态： ACTIVE-正常
-    * reason  原因
+    * status  '状态信息' - ACTIVE 正常 - ERROR 异常
+    * reason  失败原因
     * createdTime  创建时间
-    * updatedTime  修改时间
+    * updatedTime  更新时间
     *
     * @var string[]
     */
@@ -190,7 +181,6 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'globalDcGatewayId' => 'getGlobalDcGatewayId',
-            'instanceId' => 'getInstanceId',
             'bandwidthInfo' => 'getBandwidthInfo',
             'peerSite' => 'getPeerSite',
             'status' => 'getStatus',
@@ -262,7 +252,6 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['globalDcGatewayId'] = isset($data['globalDcGatewayId']) ? $data['globalDcGatewayId'] : null;
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['bandwidthInfo'] = isset($data['bandwidthInfo']) ? $data['bandwidthInfo'] : null;
         $this->container['peerSite'] = isset($data['peerSite']) ? $data['peerSite'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -301,7 +290,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  唯一ID
+    *  专线对等连接
     *
     * @return string|null
     */
@@ -313,7 +302,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 唯一ID
+    * @param string|null $id 专线对等连接
     *
     * @return $this
     */
@@ -373,7 +362,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  描述信息
     *
     * @return string|null
     */
@@ -385,7 +374,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description 描述信息
     *
     * @return $this
     */
@@ -397,7 +386,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalDcGatewayId
-    *  全球接入网关ID
+    *  全域接入网关ID
     *
     * @return string|null
     */
@@ -409,37 +398,13 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets globalDcGatewayId
     *
-    * @param string|null $globalDcGatewayId 全球接入网关ID
+    * @param string|null $globalDcGatewayId 全域接入网关ID
     *
     * @return $this
     */
     public function setGlobalDcGatewayId($globalDcGatewayId)
     {
         $this->container['globalDcGatewayId'] = $globalDcGatewayId;
-        return $this;
-    }
-
-    /**
-    * Gets instanceId
-    *  实例ID
-    *
-    * @return string|null
-    */
-    public function getInstanceId()
-    {
-        return $this->container['instanceId'];
-    }
-
-    /**
-    * Sets instanceId
-    *
-    * @param string|null $instanceId 实例ID
-    *
-    * @return $this
-    */
-    public function setInstanceId($instanceId)
-    {
-        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 
@@ -493,7 +458,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态： ACTIVE-正常
+    *  '状态信息' - ACTIVE 正常 - ERROR 异常
     *
     * @return string|null
     */
@@ -505,7 +470,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态： ACTIVE-正常
+    * @param string|null $status '状态信息' - ACTIVE 正常 - ERROR 异常
     *
     * @return $this
     */
@@ -517,7 +482,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets reason
-    *  原因
+    *  失败原因
     *
     * @return string|null
     */
@@ -529,7 +494,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets reason
     *
-    * @param string|null $reason 原因
+    * @param string|null $reason 失败原因
     *
     * @return $this
     */
@@ -565,7 +530,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedTime
-    *  修改时间
+    *  更新时间
     *
     * @return \DateTime|null
     */
@@ -577,7 +542,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Sets updatedTime
     *
-    * @param \DateTime|null $updatedTime 修改时间
+    * @param \DateTime|null $updatedTime 更新时间
     *
     * @return $this
     */

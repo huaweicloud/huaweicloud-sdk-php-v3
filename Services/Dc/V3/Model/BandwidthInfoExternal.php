@@ -22,28 +22,24 @@ class BandwidthInfoExternal implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * bandwidthSize  带宽值
     * gcbId  带宽包ID
-    * freezeStatus  冻结状态
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'bandwidthSize' => 'int',
-            'gcbId' => 'string',
-            'freezeStatus' => 'string'
+            'gcbId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bandwidthSize  带宽值
     * gcbId  带宽包ID
-    * freezeStatus  冻结状态
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'bandwidthSize' => 'int64',
-        'gcbId' => null,
-        'freezeStatus' => null
+        'gcbId' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class BandwidthInfoExternal implements ModelInterface, ArrayAccess
     * and the value is the original name
     * bandwidthSize  带宽值
     * gcbId  带宽包ID
-    * freezeStatus  冻结状态
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'bandwidthSize' => 'bandwidth_size',
-            'gcbId' => 'gcb_id',
-            'freezeStatus' => 'freeze_status'
+            'gcbId' => 'gcb_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bandwidthSize  带宽值
     * gcbId  带宽包ID
-    * freezeStatus  冻结状态
     *
     * @var string[]
     */
     protected static $setters = [
             'bandwidthSize' => 'setBandwidthSize',
-            'gcbId' => 'setGcbId',
-            'freezeStatus' => 'setFreezeStatus'
+            'gcbId' => 'setGcbId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bandwidthSize  带宽值
     * gcbId  带宽包ID
-    * freezeStatus  冻结状态
     *
     * @var string[]
     */
     protected static $getters = [
             'bandwidthSize' => 'getBandwidthSize',
-            'gcbId' => 'getGcbId',
-            'freezeStatus' => 'getFreezeStatus'
+            'gcbId' => 'getGcbId'
     ];
 
     /**
@@ -169,7 +159,6 @@ class BandwidthInfoExternal implements ModelInterface, ArrayAccess
     {
         $this->container['bandwidthSize'] = isset($data['bandwidthSize']) ? $data['bandwidthSize'] : null;
         $this->container['gcbId'] = isset($data['gcbId']) ? $data['gcbId'] : null;
-        $this->container['freezeStatus'] = isset($data['freezeStatus']) ? $data['freezeStatus'] : null;
     }
 
     /**
@@ -239,30 +228,6 @@ class BandwidthInfoExternal implements ModelInterface, ArrayAccess
     public function setGcbId($gcbId)
     {
         $this->container['gcbId'] = $gcbId;
-        return $this;
-    }
-
-    /**
-    * Gets freezeStatus
-    *  冻结状态
-    *
-    * @return string|null
-    */
-    public function getFreezeStatus()
-    {
-        return $this->container['freezeStatus'];
-    }
-
-    /**
-    * Sets freezeStatus
-    *
-    * @param string|null $freezeStatus 冻结状态
-    *
-    * @return $this
-    */
-    public function setFreezeStatus($freezeStatus)
-    {
-        $this->container['freezeStatus'] = $freezeStatus;
         return $this;
     }
 

@@ -21,30 +21,26 @@ class UpdateGdgwRouteTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requestId  请求ID
-    * gdgwRoutetable  路由表详细对象
-    * xRequestId  xRequestId
+    * requestId  请求id
+    * gdgwRoutetable  全域接入网关路由表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'gdgwRoutetable' => '\HuaweiCloud\SDK\Dc\V3\Model\ShowGdgwRoutetable[]',
-            'xRequestId' => 'string'
+            'gdgwRoutetable' => '\HuaweiCloud\SDK\Dc\V3\Model\ShowGdgwRoutetable[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requestId  请求ID
-    * gdgwRoutetable  路由表详细对象
-    * xRequestId  xRequestId
+    * requestId  请求id
+    * gdgwRoutetable  全域接入网关路由表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
-        'gdgwRoutetable' => null,
-        'xRequestId' => null
+        'gdgwRoutetable' => null
     ];
 
     /**
@@ -70,44 +66,38 @@ class UpdateGdgwRouteTableResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requestId  请求ID
-    * gdgwRoutetable  路由表详细对象
-    * xRequestId  xRequestId
+    * requestId  请求id
+    * gdgwRoutetable  全域接入网关路由表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
-            'gdgwRoutetable' => 'gdgw_routetable',
-            'xRequestId' => 'X-Request-Id'
+            'gdgwRoutetable' => 'gdgw_routetable'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requestId  请求ID
-    * gdgwRoutetable  路由表详细对象
-    * xRequestId  xRequestId
+    * requestId  请求id
+    * gdgwRoutetable  全域接入网关路由表
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
-            'gdgwRoutetable' => 'setGdgwRoutetable',
-            'xRequestId' => 'setXRequestId'
+            'gdgwRoutetable' => 'setGdgwRoutetable'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requestId  请求ID
-    * gdgwRoutetable  路由表详细对象
-    * xRequestId  xRequestId
+    * requestId  请求id
+    * gdgwRoutetable  全域接入网关路由表
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
-            'gdgwRoutetable' => 'getGdgwRoutetable',
-            'xRequestId' => 'getXRequestId'
+            'gdgwRoutetable' => 'getGdgwRoutetable'
     ];
 
     /**
@@ -170,7 +160,6 @@ class UpdateGdgwRouteTableResponse implements ModelInterface, ArrayAccess
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['gdgwRoutetable'] = isset($data['gdgwRoutetable']) ? $data['gdgwRoutetable'] : null;
-        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -181,6 +170,12 @@ class UpdateGdgwRouteTableResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -197,7 +192,7 @@ class UpdateGdgwRouteTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  请求ID
+    *  请求id
     *
     * @return string|null
     */
@@ -209,7 +204,7 @@ class UpdateGdgwRouteTableResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID
+    * @param string|null $requestId 请求id
     *
     * @return $this
     */
@@ -221,7 +216,7 @@ class UpdateGdgwRouteTableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets gdgwRoutetable
-    *  路由表详细对象
+    *  全域接入网关路由表
     *
     * @return \HuaweiCloud\SDK\Dc\V3\Model\ShowGdgwRoutetable[]|null
     */
@@ -233,37 +228,13 @@ class UpdateGdgwRouteTableResponse implements ModelInterface, ArrayAccess
     /**
     * Sets gdgwRoutetable
     *
-    * @param \HuaweiCloud\SDK\Dc\V3\Model\ShowGdgwRoutetable[]|null $gdgwRoutetable 路由表详细对象
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\ShowGdgwRoutetable[]|null $gdgwRoutetable 全域接入网关路由表
     *
     * @return $this
     */
     public function setGdgwRoutetable($gdgwRoutetable)
     {
         $this->container['gdgwRoutetable'] = $gdgwRoutetable;
-        return $this;
-    }
-
-    /**
-    * Gets xRequestId
-    *  xRequestId
-    *
-    * @return string|null
-    */
-    public function getXRequestId()
-    {
-        return $this->container['xRequestId'];
-    }
-
-    /**
-    * Sets xRequestId
-    *
-    * @param string|null $xRequestId xRequestId
-    *
-    * @return $this
-    */
-    public function setXRequestId($xRequestId)
-    {
-        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

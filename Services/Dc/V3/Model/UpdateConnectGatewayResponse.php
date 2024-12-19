@@ -21,20 +21,26 @@ class UpdateConnectGatewayResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * requestId  请求ID
+    * connectGateway  connectGateway
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'requestId' => 'string',
+            'connectGateway' => '\HuaweiCloud\SDK\Dc\V3\Model\ConnectGatewayResponse'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * requestId  请求ID
+    * connectGateway  connectGateway
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'requestId' => null,
+        'connectGateway' => null
     ];
 
     /**
@@ -60,29 +66,38 @@ class UpdateConnectGatewayResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * requestId  请求ID
+    * connectGateway  connectGateway
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'requestId' => 'request_id',
+            'connectGateway' => 'connect_gateway'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * requestId  请求ID
+    * connectGateway  connectGateway
     *
     * @var string[]
     */
     protected static $setters = [
+            'requestId' => 'setRequestId',
+            'connectGateway' => 'setConnectGateway'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * requestId  请求ID
+    * connectGateway  connectGateway
     *
     * @var string[]
     */
     protected static $getters = [
+            'requestId' => 'getRequestId',
+            'connectGateway' => 'getConnectGateway'
     ];
 
     /**
@@ -143,6 +158,8 @@ class UpdateConnectGatewayResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['connectGateway'] = isset($data['connectGateway']) ? $data['connectGateway'] : null;
     }
 
     /**
@@ -165,6 +182,54 @@ class UpdateConnectGatewayResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets requestId
+    *  请求ID
+    *
+    * @return string|null
+    */
+    public function getRequestId()
+    {
+        return $this->container['requestId'];
+    }
+
+    /**
+    * Sets requestId
+    *
+    * @param string|null $requestId 请求ID
+    *
+    * @return $this
+    */
+    public function setRequestId($requestId)
+    {
+        $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets connectGateway
+    *  connectGateway
+    *
+    * @return \HuaweiCloud\SDK\Dc\V3\Model\ConnectGatewayResponse|null
+    */
+    public function getConnectGateway()
+    {
+        return $this->container['connectGateway'];
+    }
+
+    /**
+    * Sets connectGateway
+    *
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\ConnectGatewayResponse|null $connectGateway connectGateway
+    *
+    * @return $this
+    */
+    public function setConnectGateway($connectGateway)
+    {
+        $this->container['connectGateway'] = $connectGateway;
+        return $this;
     }
 
     /**

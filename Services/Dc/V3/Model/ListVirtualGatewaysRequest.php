@@ -27,7 +27,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * id  根据资源ID过滤实例
     * enterpriseProjectId  根据企业项目ID过滤资源实例
-    * vpcId  通过VPC-ID过虑虚拟网关实例
+    * vpcId  通过VPC-ID过滤虚拟网关实例
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * id  根据资源ID过滤实例
     * enterpriseProjectId  根据企业项目ID过滤资源实例
-    * vpcId  通过VPC-ID过虑虚拟网关实例
+    * vpcId  通过VPC-ID过滤虚拟网关实例
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * id  根据资源ID过滤实例
     * enterpriseProjectId  根据企业项目ID过滤资源实例
-    * vpcId  通过VPC-ID过虑虚拟网关实例
+    * vpcId  通过VPC-ID过滤虚拟网关实例
     *
     * @var string[]
     */
@@ -120,7 +120,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * id  根据资源ID过滤实例
     * enterpriseProjectId  根据企业项目ID过滤资源实例
-    * vpcId  通过VPC-ID过虑虚拟网关实例
+    * vpcId  通过VPC-ID过滤虚拟网关实例
     *
     * @var string[]
     */
@@ -144,7 +144,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * id  根据资源ID过滤实例
     * enterpriseProjectId  根据企业项目ID过滤资源实例
-    * vpcId  通过VPC-ID过虑虚拟网关实例
+    * vpcId  通过VPC-ID过滤虚拟网关实例
     *
     * @var string[]
     */
@@ -452,7 +452,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  通过VPC-ID过虑虚拟网关实例
+    *  通过VPC-ID过滤虚拟网关实例
     *
     * @return string[]|null
     */
@@ -464,7 +464,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string[]|null $vpcId 通过VPC-ID过虑虚拟网关实例
+    * @param string[]|null $vpcId 通过VPC-ID过滤虚拟网关实例
     *
     * @return $this
     */

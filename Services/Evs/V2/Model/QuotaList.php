@@ -35,6 +35,9 @@ class QuotaList implements ModelInterface, ArrayAccess
     * gigabytesSsd  gigabytesSsd
     * snapshotsSsd  snapshotsSsd
     * volumesSsd  volumesSsd
+    * gigabytesEssd  gigabytesEssd
+    * snapshotsEssd  snapshotsEssd
+    * volumesEssd  volumesEssd
     * gigabytesGpssd  gigabytesGpssd
     * snapshotsGpssd  snapshotsGpssd
     * volumesGpssd  volumesGpssd
@@ -58,6 +61,9 @@ class QuotaList implements ModelInterface, ArrayAccess
             'gigabytesSsd' => '\HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailGigabytesSSD',
             'snapshotsSsd' => '\HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailSnapshotsSSD',
             'volumesSsd' => '\HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailVolumesSSD',
+            'gigabytesEssd' => '\HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailGigabytesESSD',
+            'snapshotsEssd' => '\HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailSnapshotsESSD',
+            'volumesEssd' => '\HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailVolumesESSD',
             'gigabytesGpssd' => '\HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailGigabytesGPSSD',
             'snapshotsGpssd' => '\HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailSnapshotsGPSSD',
             'volumesGpssd' => '\HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailVolumesGPSSD',
@@ -81,6 +87,9 @@ class QuotaList implements ModelInterface, ArrayAccess
     * gigabytesSsd  gigabytesSsd
     * snapshotsSsd  snapshotsSsd
     * volumesSsd  volumesSsd
+    * gigabytesEssd  gigabytesEssd
+    * snapshotsEssd  snapshotsEssd
+    * volumesEssd  volumesEssd
     * gigabytesGpssd  gigabytesGpssd
     * snapshotsGpssd  snapshotsGpssd
     * volumesGpssd  volumesGpssd
@@ -104,6 +113,9 @@ class QuotaList implements ModelInterface, ArrayAccess
         'gigabytesSsd' => null,
         'snapshotsSsd' => null,
         'volumesSsd' => null,
+        'gigabytesEssd' => null,
+        'snapshotsEssd' => null,
+        'volumesEssd' => null,
         'gigabytesGpssd' => null,
         'snapshotsGpssd' => null,
         'volumesGpssd' => null,
@@ -148,6 +160,9 @@ class QuotaList implements ModelInterface, ArrayAccess
     * gigabytesSsd  gigabytesSsd
     * snapshotsSsd  snapshotsSsd
     * volumesSsd  volumesSsd
+    * gigabytesEssd  gigabytesEssd
+    * snapshotsEssd  snapshotsEssd
+    * volumesEssd  volumesEssd
     * gigabytesGpssd  gigabytesGpssd
     * snapshotsGpssd  snapshotsGpssd
     * volumesGpssd  volumesGpssd
@@ -171,6 +186,9 @@ class QuotaList implements ModelInterface, ArrayAccess
             'gigabytesSsd' => 'gigabytes_SSD',
             'snapshotsSsd' => 'snapshots_SSD',
             'volumesSsd' => 'volumes_SSD',
+            'gigabytesEssd' => 'gigabytes_ESSD',
+            'snapshotsEssd' => 'snapshots_ESSD',
+            'volumesEssd' => 'volumes_ESSD',
             'gigabytesGpssd' => 'gigabytes_GPSSD',
             'snapshotsGpssd' => 'snapshots_GPSSD',
             'volumesGpssd' => 'volumes_GPSSD',
@@ -194,6 +212,9 @@ class QuotaList implements ModelInterface, ArrayAccess
     * gigabytesSsd  gigabytesSsd
     * snapshotsSsd  snapshotsSsd
     * volumesSsd  volumesSsd
+    * gigabytesEssd  gigabytesEssd
+    * snapshotsEssd  snapshotsEssd
+    * volumesEssd  volumesEssd
     * gigabytesGpssd  gigabytesGpssd
     * snapshotsGpssd  snapshotsGpssd
     * volumesGpssd  volumesGpssd
@@ -217,6 +238,9 @@ class QuotaList implements ModelInterface, ArrayAccess
             'gigabytesSsd' => 'setGigabytesSsd',
             'snapshotsSsd' => 'setSnapshotsSsd',
             'volumesSsd' => 'setVolumesSsd',
+            'gigabytesEssd' => 'setGigabytesEssd',
+            'snapshotsEssd' => 'setSnapshotsEssd',
+            'volumesEssd' => 'setVolumesEssd',
             'gigabytesGpssd' => 'setGigabytesGpssd',
             'snapshotsGpssd' => 'setSnapshotsGpssd',
             'volumesGpssd' => 'setVolumesGpssd',
@@ -240,6 +264,9 @@ class QuotaList implements ModelInterface, ArrayAccess
     * gigabytesSsd  gigabytesSsd
     * snapshotsSsd  snapshotsSsd
     * volumesSsd  volumesSsd
+    * gigabytesEssd  gigabytesEssd
+    * snapshotsEssd  snapshotsEssd
+    * volumesEssd  volumesEssd
     * gigabytesGpssd  gigabytesGpssd
     * snapshotsGpssd  snapshotsGpssd
     * volumesGpssd  volumesGpssd
@@ -263,6 +290,9 @@ class QuotaList implements ModelInterface, ArrayAccess
             'gigabytesSsd' => 'getGigabytesSsd',
             'snapshotsSsd' => 'getSnapshotsSsd',
             'volumesSsd' => 'getVolumesSsd',
+            'gigabytesEssd' => 'getGigabytesEssd',
+            'snapshotsEssd' => 'getSnapshotsEssd',
+            'volumesEssd' => 'getVolumesEssd',
             'gigabytesGpssd' => 'getGigabytesGpssd',
             'snapshotsGpssd' => 'getSnapshotsGpssd',
             'volumesGpssd' => 'getVolumesGpssd',
@@ -342,6 +372,9 @@ class QuotaList implements ModelInterface, ArrayAccess
         $this->container['gigabytesSsd'] = isset($data['gigabytesSsd']) ? $data['gigabytesSsd'] : null;
         $this->container['snapshotsSsd'] = isset($data['snapshotsSsd']) ? $data['snapshotsSsd'] : null;
         $this->container['volumesSsd'] = isset($data['volumesSsd']) ? $data['volumesSsd'] : null;
+        $this->container['gigabytesEssd'] = isset($data['gigabytesEssd']) ? $data['gigabytesEssd'] : null;
+        $this->container['snapshotsEssd'] = isset($data['snapshotsEssd']) ? $data['snapshotsEssd'] : null;
+        $this->container['volumesEssd'] = isset($data['volumesEssd']) ? $data['volumesEssd'] : null;
         $this->container['gigabytesGpssd'] = isset($data['gigabytesGpssd']) ? $data['gigabytesGpssd'] : null;
         $this->container['snapshotsGpssd'] = isset($data['snapshotsGpssd']) ? $data['snapshotsGpssd'] : null;
         $this->container['volumesGpssd'] = isset($data['volumesGpssd']) ? $data['volumesGpssd'] : null;
@@ -745,6 +778,78 @@ class QuotaList implements ModelInterface, ArrayAccess
     public function setVolumesSsd($volumesSsd)
     {
         $this->container['volumesSsd'] = $volumesSsd;
+        return $this;
+    }
+
+    /**
+    * Gets gigabytesEssd
+    *  gigabytesEssd
+    *
+    * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailGigabytesESSD|null
+    */
+    public function getGigabytesEssd()
+    {
+        return $this->container['gigabytesEssd'];
+    }
+
+    /**
+    * Sets gigabytesEssd
+    *
+    * @param \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailGigabytesESSD|null $gigabytesEssd gigabytesEssd
+    *
+    * @return $this
+    */
+    public function setGigabytesEssd($gigabytesEssd)
+    {
+        $this->container['gigabytesEssd'] = $gigabytesEssd;
+        return $this;
+    }
+
+    /**
+    * Gets snapshotsEssd
+    *  snapshotsEssd
+    *
+    * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailSnapshotsESSD|null
+    */
+    public function getSnapshotsEssd()
+    {
+        return $this->container['snapshotsEssd'];
+    }
+
+    /**
+    * Sets snapshotsEssd
+    *
+    * @param \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailSnapshotsESSD|null $snapshotsEssd snapshotsEssd
+    *
+    * @return $this
+    */
+    public function setSnapshotsEssd($snapshotsEssd)
+    {
+        $this->container['snapshotsEssd'] = $snapshotsEssd;
+        return $this;
+    }
+
+    /**
+    * Gets volumesEssd
+    *  volumesEssd
+    *
+    * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailVolumesESSD|null
+    */
+    public function getVolumesEssd()
+    {
+        return $this->container['volumesEssd'];
+    }
+
+    /**
+    * Sets volumesEssd
+    *
+    * @param \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailVolumesESSD|null $volumesEssd volumesEssd
+    *
+    * @return $this
+    */
+    public function setVolumesEssd($volumesEssd)
+    {
+        $this->container['volumesEssd'] = $volumesEssd;
         return $this;
     }
 

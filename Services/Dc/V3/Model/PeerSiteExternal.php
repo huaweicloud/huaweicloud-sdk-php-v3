@@ -20,17 +20,15 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  类型
-    * gatewayId  网关ID
+    * gatewayId  全域接入网关ID
     * linkId  连接ID
     * regionId  局点ID
     * projectId  项目ID
-    * siteCode  站点编码
+    * siteCode  网点编码
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'type' => 'string',
             'gatewayId' => 'string',
             'linkId' => 'string',
             'regionId' => 'string',
@@ -40,17 +38,15 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  类型
-    * gatewayId  网关ID
+    * gatewayId  全域接入网关ID
     * linkId  连接ID
     * regionId  局点ID
     * projectId  项目ID
-    * siteCode  站点编码
+    * siteCode  网点编码
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'type' => null,
         'gatewayId' => null,
         'linkId' => null,
         'regionId' => null,
@@ -81,17 +77,15 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  类型
-    * gatewayId  网关ID
+    * gatewayId  全域接入网关ID
     * linkId  连接ID
     * regionId  局点ID
     * projectId  项目ID
-    * siteCode  站点编码
+    * siteCode  网点编码
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'type' => 'type',
             'gatewayId' => 'gateway_id',
             'linkId' => 'link_id',
             'regionId' => 'region_id',
@@ -101,17 +95,15 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  类型
-    * gatewayId  网关ID
+    * gatewayId  全域接入网关ID
     * linkId  连接ID
     * regionId  局点ID
     * projectId  项目ID
-    * siteCode  站点编码
+    * siteCode  网点编码
     *
     * @var string[]
     */
     protected static $setters = [
-            'type' => 'setType',
             'gatewayId' => 'setGatewayId',
             'linkId' => 'setLinkId',
             'regionId' => 'setRegionId',
@@ -121,17 +113,15 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  类型
-    * gatewayId  网关ID
+    * gatewayId  全域接入网关ID
     * linkId  连接ID
     * regionId  局点ID
     * projectId  项目ID
-    * siteCode  站点编码
+    * siteCode  网点编码
     *
     * @var string[]
     */
     protected static $getters = [
-            'type' => 'getType',
             'gatewayId' => 'getGatewayId',
             'linkId' => 'getLinkId',
             'regionId' => 'getRegionId',
@@ -197,7 +187,6 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['gatewayId'] = isset($data['gatewayId']) ? $data['gatewayId'] : null;
         $this->container['linkId'] = isset($data['linkId']) ? $data['linkId'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
@@ -228,32 +217,8 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets type
-    *  类型
-    *
-    * @return string|null
-    */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-    * Sets type
-    *
-    * @param string|null $type 类型
-    *
-    * @return $this
-    */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
     * Gets gatewayId
-    *  网关ID
+    *  全域接入网关ID
     *
     * @return string|null
     */
@@ -265,7 +230,7 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
     /**
     * Sets gatewayId
     *
-    * @param string|null $gatewayId 网关ID
+    * @param string|null $gatewayId 全域接入网关ID
     *
     * @return $this
     */
@@ -349,7 +314,7 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
 
     /**
     * Gets siteCode
-    *  站点编码
+    *  网点编码
     *
     * @return string|null
     */
@@ -361,7 +326,7 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
     /**
     * Sets siteCode
     *
-    * @param string|null $siteCode 站点编码
+    * @param string|null $siteCode 网点编码
     *
     * @return $this
     */

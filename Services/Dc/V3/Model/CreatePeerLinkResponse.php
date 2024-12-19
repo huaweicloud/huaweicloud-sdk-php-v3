@@ -21,30 +21,26 @@ class CreatePeerLinkResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requestId  requestId
+    * requestId  请求ID
     * peerLink  peerLink
-    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'peerLink' => '\HuaweiCloud\SDK\Dc\V3\Model\ExternalCreatePeerLink',
-            'xRequestId' => 'string'
+            'peerLink' => '\HuaweiCloud\SDK\Dc\V3\Model\ExternalCreatePeerLink'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requestId  requestId
+    * requestId  请求ID
     * peerLink  peerLink
-    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
-        'peerLink' => null,
-        'xRequestId' => null
+        'peerLink' => null
     ];
 
     /**
@@ -70,44 +66,38 @@ class CreatePeerLinkResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requestId  requestId
+    * requestId  请求ID
     * peerLink  peerLink
-    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
-            'peerLink' => 'peer_link',
-            'xRequestId' => 'X-Request-Id'
+            'peerLink' => 'peer_link'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requestId  requestId
+    * requestId  请求ID
     * peerLink  peerLink
-    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
-            'peerLink' => 'setPeerLink',
-            'xRequestId' => 'setXRequestId'
+            'peerLink' => 'setPeerLink'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requestId  requestId
+    * requestId  请求ID
     * peerLink  peerLink
-    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
-            'peerLink' => 'getPeerLink',
-            'xRequestId' => 'getXRequestId'
+            'peerLink' => 'getPeerLink'
     ];
 
     /**
@@ -170,7 +160,6 @@ class CreatePeerLinkResponse implements ModelInterface, ArrayAccess
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['peerLink'] = isset($data['peerLink']) ? $data['peerLink'] : null;
-        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -197,7 +186,7 @@ class CreatePeerLinkResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  requestId
+    *  请求ID
     *
     * @return string|null
     */
@@ -209,7 +198,7 @@ class CreatePeerLinkResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId requestId
+    * @param string|null $requestId 请求ID
     *
     * @return $this
     */
@@ -240,30 +229,6 @@ class CreatePeerLinkResponse implements ModelInterface, ArrayAccess
     public function setPeerLink($peerLink)
     {
         $this->container['peerLink'] = $peerLink;
-        return $this;
-    }
-
-    /**
-    * Gets xRequestId
-    *  xRequestId
-    *
-    * @return string|null
-    */
-    public function getXRequestId()
-    {
-        return $this->container['xRequestId'];
-    }
-
-    /**
-    * Sets xRequestId
-    *
-    * @param string|null $xRequestId xRequestId
-    *
-    * @return $this
-    */
-    public function setXRequestId($xRequestId)
-    {
-        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

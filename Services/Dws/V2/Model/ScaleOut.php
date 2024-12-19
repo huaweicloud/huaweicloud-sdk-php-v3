@@ -21,21 +21,25 @@ class ScaleOut implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * count  扩容节点数。
+    * subnetId  指定子网ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'count' => 'int'
+            'count' => 'int',
+            'subnetId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * count  扩容节点数。
+    * subnetId  指定子网ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'count' => 'int32'
+        'count' => 'int32',
+        'subnetId' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ScaleOut implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * count  扩容节点数。
+    * subnetId  指定子网ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'count' => 'count'
+            'count' => 'count',
+            'subnetId' => 'subnet_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * count  扩容节点数。
+    * subnetId  指定子网ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'count' => 'setCount'
+            'count' => 'setCount',
+            'subnetId' => 'setSubnetId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * count  扩容节点数。
+    * subnetId  指定子网ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'count' => 'getCount'
+            'count' => 'getCount',
+            'subnetId' => 'getSubnetId'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ScaleOut implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class ScaleOut implements ModelInterface, ArrayAccess
     public function setCount($count)
     {
         $this->container['count'] = $count;
+        return $this;
+    }
+
+    /**
+    * Gets subnetId
+    *  指定子网ID。
+    *
+    * @return string|null
+    */
+    public function getSubnetId()
+    {
+        return $this->container['subnetId'];
+    }
+
+    /**
+    * Sets subnetId
+    *
+    * @param string|null $subnetId 指定子网ID。
+    *
+    * @return $this
+    */
+    public function setSubnetId($subnetId)
+    {
+        $this->container['subnetId'] = $subnetId;
         return $this;
     }
 
