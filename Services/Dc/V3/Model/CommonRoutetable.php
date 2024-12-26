@@ -29,6 +29,7 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
     * status  路由状态: - ACTIVE: 下发正常 - ERROR: 下发失败 - PENDING_CREATE: 待下发
     * addressFamily  addressFamily
     * description  路由描述
+    * type  下一跳类型: - vif_peer: 虚拟接口对等体 - gdgw: 全域接入网关
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
             'obtainMode' => 'string',
             'status' => 'string',
             'addressFamily' => '\HuaweiCloud\SDK\Dc\V3\Model\AddressFamily',
-            'description' => 'string'
+            'description' => 'string',
+            'type' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
     * status  路由状态: - ACTIVE: 下发正常 - ERROR: 下发失败 - PENDING_CREATE: 待下发
     * addressFamily  addressFamily
     * description  路由描述
+    * type  下一跳类型: - vif_peer: 虚拟接口对等体 - gdgw: 全域接入网关
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
         'obtainMode' => null,
         'status' => null,
         'addressFamily' => null,
-        'description' => null
+        'description' => null,
+        'type' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
     * status  路由状态: - ACTIVE: 下发正常 - ERROR: 下发失败 - PENDING_CREATE: 待下发
     * addressFamily  addressFamily
     * description  路由描述
+    * type  下一跳类型: - vif_peer: 虚拟接口对等体 - gdgw: 全域接入网关
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
             'obtainMode' => 'obtain_mode',
             'status' => 'status',
             'addressFamily' => 'address_family',
-            'description' => 'description'
+            'description' => 'description',
+            'type' => 'type'
     ];
 
     /**
@@ -128,6 +134,7 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
     * status  路由状态: - ACTIVE: 下发正常 - ERROR: 下发失败 - PENDING_CREATE: 待下发
     * addressFamily  addressFamily
     * description  路由描述
+    * type  下一跳类型: - vif_peer: 虚拟接口对等体 - gdgw: 全域接入网关
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
             'obtainMode' => 'setObtainMode',
             'status' => 'setStatus',
             'addressFamily' => 'setAddressFamily',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'type' => 'setType'
     ];
 
     /**
@@ -154,6 +162,7 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
     * status  路由状态: - ACTIVE: 下发正常 - ERROR: 下发失败 - PENDING_CREATE: 待下发
     * addressFamily  addressFamily
     * description  路由描述
+    * type  下一跳类型: - vif_peer: 虚拟接口对等体 - gdgw: 全域接入网关
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
             'obtainMode' => 'getObtainMode',
             'status' => 'getStatus',
             'addressFamily' => 'getAddressFamily',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'type' => 'getType'
     ];
 
     /**
@@ -215,6 +225,8 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
     const STATUS_ACTIVE = 'ACTIVE';
     const STATUS_ERROR = 'ERROR';
     const STATUS_PENDING_CREATE = 'PENDING_CREATE';
+    const TYPE_VIF_PEER = 'vif_peer';
+    const TYPE_GDGW = 'gdgw';
     
 
     /**
@@ -245,6 +257,19 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_VIF_PEER,
+            self::TYPE_GDGW,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -270,6 +295,7 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['addressFamily'] = isset($data['addressFamily']) ? $data['addressFamily'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -352,6 +378,23 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if ((mb_strlen($this->container['type']) > 255)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 255.";
+            }
+            if ((mb_strlen($this->container['type']) < 0)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -580,6 +623,30 @@ class CommonRoutetable implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  下一跳类型: - vif_peer: 虚拟接口对等体 - gdgw: 全域接入网关
+    *
+    * @return string
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string $type 下一跳类型: - vif_peer: 虚拟接口对等体 - gdgw: 全域接入网关
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

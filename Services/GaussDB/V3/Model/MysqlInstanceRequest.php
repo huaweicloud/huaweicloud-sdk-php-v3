@@ -400,6 +400,9 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['chargeInfo'] === null) {
+            $invalidProperties[] = "'chargeInfo' can't be null";
+        }
         if ($this->container['region'] === null) {
             $invalidProperties[] = "'region' can't be null";
         }
@@ -423,6 +426,9 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
         }
         if ($this->container['password'] === null) {
             $invalidProperties[] = "'password' can't be null";
+        }
+        if ($this->container['backupStrategy'] === null) {
+            $invalidProperties[] = "'backupStrategy' can't be null";
         }
         if ($this->container['availabilityZoneMode'] === null) {
             $invalidProperties[] = "'availabilityZoneMode' can't be null";
@@ -448,7 +454,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * Gets chargeInfo
     *  chargeInfo
     *
-    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlChargeInfo|null
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlChargeInfo
     */
     public function getChargeInfo()
     {
@@ -458,7 +464,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets chargeInfo
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlChargeInfo|null $chargeInfo chargeInfo
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlChargeInfo $chargeInfo chargeInfo
     *
     * @return $this
     */
@@ -712,7 +718,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * Gets backupStrategy
     *  backupStrategy
     *
-    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlBackupStrategy|null
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlBackupStrategy
     */
     public function getBackupStrategy()
     {
@@ -722,7 +728,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets backupStrategy
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlBackupStrategy|null $backupStrategy backupStrategy
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlBackupStrategy $backupStrategy backupStrategy
     *
     * @return $this
     */

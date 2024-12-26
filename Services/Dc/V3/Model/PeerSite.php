@@ -21,7 +21,7 @@ class PeerSite implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * gatewayId  对端网关的ID
-    * linkId  对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id)
+    * linkId  对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id
     * regionId  对端网关所在的Region
     * siteCode  专线全域接入网关对应的站点位置
     * projectId  对等体站点的项目ID
@@ -41,7 +41,7 @@ class PeerSite implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * gatewayId  对端网关的ID
-    * linkId  对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id)
+    * linkId  对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id
     * regionId  对端网关所在的Region
     * siteCode  专线全域接入网关对应的站点位置
     * projectId  对等体站点的项目ID
@@ -82,7 +82,7 @@ class PeerSite implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * gatewayId  对端网关的ID
-    * linkId  对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id)
+    * linkId  对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id
     * regionId  对端网关所在的Region
     * siteCode  专线全域接入网关对应的站点位置
     * projectId  对等体站点的项目ID
@@ -102,7 +102,7 @@ class PeerSite implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * gatewayId  对端网关的ID
-    * linkId  对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id)
+    * linkId  对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id
     * regionId  对端网关所在的Region
     * siteCode  专线全域接入网关对应的站点位置
     * projectId  对等体站点的项目ID
@@ -122,7 +122,7 @@ class PeerSite implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * gatewayId  对端网关的ID
-    * linkId  对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id)
+    * linkId  对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id
     * regionId  对端网关所在的Region
     * siteCode  专线全域接入网关对应的站点位置
     * projectId  对等体站点的项目ID
@@ -312,7 +312,7 @@ class PeerSite implements ModelInterface, ArrayAccess
 
     /**
     * Gets linkId
-    *  对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id)
+    *  对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class PeerSite implements ModelInterface, ArrayAccess
     /**
     * Sets linkId
     *
-    * @param string|null $linkId 对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id)
+    * @param string|null $linkId 对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id
     *
     * @return $this
     */

@@ -31,7 +31,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * mode  版本号，0代表v1旧版本，1代表v2新版本；mode为0时，不存在conditions字段，存在url和url_logic字段；mode为1时，不存在url和url_logic字段，存在conditions字段
     * urlLogic  url匹配逻辑
     * conditions  条件
-    * advanced  高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
+    * advanced  advanced
     * domains  防护域名或防护网站
     *
     * @var string[]
@@ -47,7 +47,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
             'mode' => 'int',
             'urlLogic' => 'string',
             'conditions' => '\HuaweiCloud\SDK\Waf\V1\Model\Condition[]',
-            'advanced' => '\HuaweiCloud\SDK\Waf\V1\Model\Advanced[]',
+            'advanced' => '\HuaweiCloud\SDK\Waf\V1\Model\IgnoreAdvanced',
             'domains' => 'string[]'
     ];
 
@@ -63,7 +63,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * mode  版本号，0代表v1旧版本，1代表v2新版本；mode为0时，不存在conditions字段，存在url和url_logic字段；mode为1时，不存在url和url_logic字段，存在conditions字段
     * urlLogic  url匹配逻辑
     * conditions  条件
-    * advanced  高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
+    * advanced  advanced
     * domains  防护域名或防护网站
     *
     * @var string[]
@@ -116,7 +116,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * mode  版本号，0代表v1旧版本，1代表v2新版本；mode为0时，不存在conditions字段，存在url和url_logic字段；mode为1时，不存在url和url_logic字段，存在conditions字段
     * urlLogic  url匹配逻辑
     * conditions  条件
-    * advanced  高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
+    * advanced  advanced
     * domains  防护域名或防护网站
     *
     * @var string[]
@@ -148,7 +148,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * mode  版本号，0代表v1旧版本，1代表v2新版本；mode为0时，不存在conditions字段，存在url和url_logic字段；mode为1时，不存在url和url_logic字段，存在conditions字段
     * urlLogic  url匹配逻辑
     * conditions  条件
-    * advanced  高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
+    * advanced  advanced
     * domains  防护域名或防护网站
     *
     * @var string[]
@@ -180,7 +180,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * mode  版本号，0代表v1旧版本，1代表v2新版本；mode为0时，不存在conditions字段，存在url和url_logic字段；mode为1时，不存在url和url_logic字段，存在conditions字段
     * urlLogic  url匹配逻辑
     * conditions  条件
-    * advanced  高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
+    * advanced  advanced
     * domains  防护域名或防护网站
     *
     * @var string[]
@@ -536,9 +536,9 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets advanced
-    *  高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
+    *  advanced
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\Advanced[]|null
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\IgnoreAdvanced|null
     */
     public function getAdvanced()
     {
@@ -548,7 +548,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets advanced
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\Advanced[]|null $advanced 高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\IgnoreAdvanced|null $advanced advanced
     *
     * @return $this
     */

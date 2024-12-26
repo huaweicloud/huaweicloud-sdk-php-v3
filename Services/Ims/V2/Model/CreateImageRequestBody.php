@@ -38,6 +38,7 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
     * isQuickImport  是否使用镜像文件快速导入方式，导入系统盘镜像。 是，配置为true。 否，配置为false。 关于镜像文件快速导入的约束与限制请参见镜像文件快速导入。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。 当架构类型为arm时，镜像引导方式将自动转为UEFI的引导方式。
     * volumeId  数据盘的卷ID。当数据盘创建系统盘镜像时，该参数必选
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
             'type' => 'string',
             'isQuickImport' => 'bool',
             'architecture' => 'string',
-            'volumeId' => 'string'
+            'volumeId' => 'string',
+            'hwFirmwareType' => 'string'
     ];
 
     /**
@@ -82,6 +84,7 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
     * isQuickImport  是否使用镜像文件快速导入方式，导入系统盘镜像。 是，配置为true。 否，配置为false。 关于镜像文件快速导入的约束与限制请参见镜像文件快速导入。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。 当架构类型为arm时，镜像引导方式将自动转为UEFI的引导方式。
     * volumeId  数据盘的卷ID。当数据盘创建系统盘镜像时，该参数必选
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
         'type' => null,
         'isQuickImport' => null,
         'architecture' => null,
-        'volumeId' => null
+        'volumeId' => null,
+        'hwFirmwareType' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
     * isQuickImport  是否使用镜像文件快速导入方式，导入系统盘镜像。 是，配置为true。 否，配置为false。 关于镜像文件快速导入的约束与限制请参见镜像文件快速导入。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。 当架构类型为arm时，镜像引导方式将自动转为UEFI的引导方式。
     * volumeId  数据盘的卷ID。当数据盘创建系统盘镜像时，该参数必选
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
             'type' => 'type',
             'isQuickImport' => 'is_quick_import',
             'architecture' => 'architecture',
-            'volumeId' => 'volume_id'
+            'volumeId' => 'volume_id',
+            'hwFirmwareType' => 'hw_firmware_type'
     ];
 
     /**
@@ -191,6 +197,7 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
     * isQuickImport  是否使用镜像文件快速导入方式，导入系统盘镜像。 是，配置为true。 否，配置为false。 关于镜像文件快速导入的约束与限制请参见镜像文件快速导入。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。 当架构类型为arm时，镜像引导方式将自动转为UEFI的引导方式。
     * volumeId  数据盘的卷ID。当数据盘创建系统盘镜像时，该参数必选
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'isQuickImport' => 'setIsQuickImport',
             'architecture' => 'setArchitecture',
-            'volumeId' => 'setVolumeId'
+            'volumeId' => 'setVolumeId',
+            'hwFirmwareType' => 'setHwFirmwareType'
     ];
 
     /**
@@ -235,6 +243,7 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
     * isQuickImport  是否使用镜像文件快速导入方式，导入系统盘镜像。 是，配置为true。 否，配置为false。 关于镜像文件快速导入的约束与限制请参见镜像文件快速导入。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。 当架构类型为arm时，镜像引导方式将自动转为UEFI的引导方式。
     * volumeId  数据盘的卷ID。当数据盘创建系统盘镜像时，该参数必选
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'isQuickImport' => 'getIsQuickImport',
             'architecture' => 'getArchitecture',
-            'volumeId' => 'getVolumeId'
+            'volumeId' => 'getVolumeId',
+            'hwFirmwareType' => 'getHwFirmwareType'
     ];
 
     /**
@@ -306,6 +316,8 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
     const TYPE_ISO_IMAGE = 'IsoImage';
     const ARCHITECTURE_X86 = 'x86';
     const ARCHITECTURE_ARM = 'arm';
+    const HW_FIRMWARE_TYPE_BIOS = 'bios';
+    const HW_FIRMWARE_TYPE_UEFI = 'uefi';
     
 
     /**
@@ -334,6 +346,19 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
         return [
             self::ARCHITECTURE_X86,
             self::ARCHITECTURE_ARM,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getHwFirmwareTypeAllowableValues()
+    {
+        return [
+            self::HW_FIRMWARE_TYPE_BIOS,
+            self::HW_FIRMWARE_TYPE_UEFI,
         ];
     }
 
@@ -371,6 +396,7 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
         $this->container['isQuickImport'] = isset($data['isQuickImport']) ? $data['isQuickImport'] : null;
         $this->container['architecture'] = isset($data['architecture']) ? $data['architecture'] : null;
         $this->container['volumeId'] = isset($data['volumeId']) ? $data['volumeId'] : null;
+        $this->container['hwFirmwareType'] = isset($data['hwFirmwareType']) ? $data['hwFirmwareType'] : null;
     }
 
     /**
@@ -405,6 +431,14 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['architecture']) && !in_array($this->container['architecture'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'architecture', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getHwFirmwareTypeAllowableValues();
+                if (!is_null($this->container['hwFirmwareType']) && !in_array($this->container['hwFirmwareType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'hwFirmwareType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -852,6 +886,30 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
     public function setVolumeId($volumeId)
     {
         $this->container['volumeId'] = $volumeId;
+        return $this;
+    }
+
+    /**
+    * Gets hwFirmwareType
+    *  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
+    *
+    * @return string|null
+    */
+    public function getHwFirmwareType()
+    {
+        return $this->container['hwFirmwareType'];
+    }
+
+    /**
+    * Sets hwFirmwareType
+    *
+    * @param string|null $hwFirmwareType 云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
+    *
+    * @return $this
+    */
+    public function setHwFirmwareType($hwFirmwareType)
+    {
+        $this->container['hwFirmwareType'] = $hwFirmwareType;
         return $this;
     }
 

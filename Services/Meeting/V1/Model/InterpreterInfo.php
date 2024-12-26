@@ -24,6 +24,7 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
     * userId  用户的userUUID。
     * callNumber  呼叫号码。
     * name  用户名。
+    * interpreterId  传译员序号，AI传译组下传译员唯一标识。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
             'loginAccount' => 'string',
             'userId' => 'string',
             'callNumber' => 'string',
-            'name' => 'string'
+            'name' => 'string',
+            'interpreterId' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
     * userId  用户的userUUID。
     * callNumber  呼叫号码。
     * name  用户名。
+    * interpreterId  传译员序号，AI传译组下传译员唯一标识。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
         'loginAccount' => null,
         'userId' => null,
         'callNumber' => null,
-        'name' => null
+        'name' => null,
+        'interpreterId' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
     * userId  用户的userUUID。
     * callNumber  呼叫号码。
     * name  用户名。
+    * interpreterId  传译员序号，AI传译组下传译员唯一标识。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
             'loginAccount' => 'loginAccount',
             'userId' => 'userID',
             'callNumber' => 'callNumber',
-            'name' => 'name'
+            'name' => 'name',
+            'interpreterId' => 'interpreterId'
     ];
 
     /**
@@ -93,6 +99,7 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
     * userId  用户的userUUID。
     * callNumber  呼叫号码。
     * name  用户名。
+    * interpreterId  传译员序号，AI传译组下传译员唯一标识。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
             'loginAccount' => 'setLoginAccount',
             'userId' => 'setUserId',
             'callNumber' => 'setCallNumber',
-            'name' => 'setName'
+            'name' => 'setName',
+            'interpreterId' => 'setInterpreterId'
     ];
 
     /**
@@ -109,6 +117,7 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
     * userId  用户的userUUID。
     * callNumber  呼叫号码。
     * name  用户名。
+    * interpreterId  传译员序号，AI传译组下传译员唯一标识。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
             'loginAccount' => 'getLoginAccount',
             'userId' => 'getUserId',
             'callNumber' => 'getCallNumber',
-            'name' => 'getName'
+            'name' => 'getName',
+            'interpreterId' => 'getInterpreterId'
     ];
 
     /**
@@ -181,6 +191,7 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
         $this->container['callNumber'] = isset($data['callNumber']) ? $data['callNumber'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['interpreterId'] = isset($data['interpreterId']) ? $data['interpreterId'] : null;
     }
 
     /**
@@ -301,6 +312,30 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets interpreterId
+    *  传译员序号，AI传译组下传译员唯一标识。
+    *
+    * @return string|null
+    */
+    public function getInterpreterId()
+    {
+        return $this->container['interpreterId'];
+    }
+
+    /**
+    * Sets interpreterId
+    *
+    * @param string|null $interpreterId 传译员序号，AI传译组下传译员唯一标识。
+    *
+    * @return $this
+    */
+    public function setInterpreterId($interpreterId)
+    {
+        $this->container['interpreterId'] = $interpreterId;
         return $this;
     }
 

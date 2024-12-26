@@ -35,6 +35,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务状态更新时间。
     * voiceAuthorizationUrl  用户授权书连接。
+    * trainingInputSourceUrl  用户原始输入数据url。
     * createType  createType
     * tag  tag
     * phone  手机号
@@ -42,6 +43,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * batchName  批次名称
     * allocatedResource  allocatedResource
     * outputLanguage  模型输出语言类型
+    * isRemake  任务是否重做
     *
     * @var string[]
     */
@@ -60,13 +62,15 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
             'createTime' => 'int',
             'lastupdateTime' => 'int',
             'voiceAuthorizationUrl' => 'string',
+            'trainingInputSourceUrl' => 'string',
             'createType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateType',
             'tag' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\JobTag',
             'phone' => 'string',
             'dhtmsJobId' => 'string',
             'batchName' => 'string',
             'allocatedResource' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceTrainingAllocatedResource',
-            'outputLanguage' => 'string'
+            'outputLanguage' => 'string',
+            'isRemake' => 'bool'
     ];
 
     /**
@@ -85,6 +89,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务状态更新时间。
     * voiceAuthorizationUrl  用户授权书连接。
+    * trainingInputSourceUrl  用户原始输入数据url。
     * createType  createType
     * tag  tag
     * phone  手机号
@@ -92,6 +97,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * batchName  批次名称
     * allocatedResource  allocatedResource
     * outputLanguage  模型输出语言类型
+    * isRemake  任务是否重做
     *
     * @var string[]
     */
@@ -110,13 +116,15 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
         'createTime' => 'int64',
         'lastupdateTime' => 'int64',
         'voiceAuthorizationUrl' => null,
+        'trainingInputSourceUrl' => null,
         'createType' => null,
         'tag' => null,
         'phone' => null,
         'dhtmsJobId' => null,
         'batchName' => null,
         'allocatedResource' => null,
-        'outputLanguage' => null
+        'outputLanguage' => null,
+        'isRemake' => null
     ];
 
     /**
@@ -156,6 +164,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务状态更新时间。
     * voiceAuthorizationUrl  用户授权书连接。
+    * trainingInputSourceUrl  用户原始输入数据url。
     * createType  createType
     * tag  tag
     * phone  手机号
@@ -163,6 +172,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * batchName  批次名称
     * allocatedResource  allocatedResource
     * outputLanguage  模型输出语言类型
+    * isRemake  任务是否重做
     *
     * @var string[]
     */
@@ -181,13 +191,15 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
             'createTime' => 'create_time',
             'lastupdateTime' => 'lastupdate_time',
             'voiceAuthorizationUrl' => 'voice_authorization_url',
+            'trainingInputSourceUrl' => 'training_input_source_url',
             'createType' => 'create_type',
             'tag' => 'tag',
             'phone' => 'phone',
             'dhtmsJobId' => 'dhtms_job_id',
             'batchName' => 'batch_name',
             'allocatedResource' => 'allocated_resource',
-            'outputLanguage' => 'output_language'
+            'outputLanguage' => 'output_language',
+            'isRemake' => 'is_remake'
     ];
 
     /**
@@ -206,6 +218,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务状态更新时间。
     * voiceAuthorizationUrl  用户授权书连接。
+    * trainingInputSourceUrl  用户原始输入数据url。
     * createType  createType
     * tag  tag
     * phone  手机号
@@ -213,6 +226,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * batchName  批次名称
     * allocatedResource  allocatedResource
     * outputLanguage  模型输出语言类型
+    * isRemake  任务是否重做
     *
     * @var string[]
     */
@@ -231,13 +245,15 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
             'createTime' => 'setCreateTime',
             'lastupdateTime' => 'setLastupdateTime',
             'voiceAuthorizationUrl' => 'setVoiceAuthorizationUrl',
+            'trainingInputSourceUrl' => 'setTrainingInputSourceUrl',
             'createType' => 'setCreateType',
             'tag' => 'setTag',
             'phone' => 'setPhone',
             'dhtmsJobId' => 'setDhtmsJobId',
             'batchName' => 'setBatchName',
             'allocatedResource' => 'setAllocatedResource',
-            'outputLanguage' => 'setOutputLanguage'
+            'outputLanguage' => 'setOutputLanguage',
+            'isRemake' => 'setIsRemake'
     ];
 
     /**
@@ -256,6 +272,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务状态更新时间。
     * voiceAuthorizationUrl  用户授权书连接。
+    * trainingInputSourceUrl  用户原始输入数据url。
     * createType  createType
     * tag  tag
     * phone  手机号
@@ -263,6 +280,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     * batchName  批次名称
     * allocatedResource  allocatedResource
     * outputLanguage  模型输出语言类型
+    * isRemake  任务是否重做
     *
     * @var string[]
     */
@@ -281,13 +299,15 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
             'createTime' => 'getCreateTime',
             'lastupdateTime' => 'getLastupdateTime',
             'voiceAuthorizationUrl' => 'getVoiceAuthorizationUrl',
+            'trainingInputSourceUrl' => 'getTrainingInputSourceUrl',
             'createType' => 'getCreateType',
             'tag' => 'getTag',
             'phone' => 'getPhone',
             'dhtmsJobId' => 'getDhtmsJobId',
             'batchName' => 'getBatchName',
             'allocatedResource' => 'getAllocatedResource',
-            'outputLanguage' => 'getOutputLanguage'
+            'outputLanguage' => 'getOutputLanguage',
+            'isRemake' => 'getIsRemake'
     ];
 
     /**
@@ -362,6 +382,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['lastupdateTime'] = isset($data['lastupdateTime']) ? $data['lastupdateTime'] : null;
         $this->container['voiceAuthorizationUrl'] = isset($data['voiceAuthorizationUrl']) ? $data['voiceAuthorizationUrl'] : null;
+        $this->container['trainingInputSourceUrl'] = isset($data['trainingInputSourceUrl']) ? $data['trainingInputSourceUrl'] : null;
         $this->container['createType'] = isset($data['createType']) ? $data['createType'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
@@ -369,6 +390,7 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
         $this->container['allocatedResource'] = isset($data['allocatedResource']) ? $data['allocatedResource'] : null;
         $this->container['outputLanguage'] = isset($data['outputLanguage']) ? $data['outputLanguage'] : null;
+        $this->container['isRemake'] = isset($data['isRemake']) ? $data['isRemake'] : null;
     }
 
     /**
@@ -450,6 +472,12 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['voiceAuthorizationUrl']) && (mb_strlen($this->container['voiceAuthorizationUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'voiceAuthorizationUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['trainingInputSourceUrl']) && (mb_strlen($this->container['trainingInputSourceUrl']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'trainingInputSourceUrl', the character length must be smaller than or equal to 4096.";
+            }
+            if (!is_null($this->container['trainingInputSourceUrl']) && (mb_strlen($this->container['trainingInputSourceUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'trainingInputSourceUrl', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['phone']) && (mb_strlen($this->container['phone']) > 16)) {
                 $invalidProperties[] = "invalid value for 'phone', the character length must be smaller than or equal to 16.";
@@ -826,6 +854,30 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets trainingInputSourceUrl
+    *  用户原始输入数据url。
+    *
+    * @return string|null
+    */
+    public function getTrainingInputSourceUrl()
+    {
+        return $this->container['trainingInputSourceUrl'];
+    }
+
+    /**
+    * Sets trainingInputSourceUrl
+    *
+    * @param string|null $trainingInputSourceUrl 用户原始输入数据url。
+    *
+    * @return $this
+    */
+    public function setTrainingInputSourceUrl($trainingInputSourceUrl)
+    {
+        $this->container['trainingInputSourceUrl'] = $trainingInputSourceUrl;
+        return $this;
+    }
+
+    /**
     * Gets createType
     *  createType
     *
@@ -990,6 +1042,30 @@ class ShowVoiceTrainingJobResponse implements ModelInterface, ArrayAccess
     public function setOutputLanguage($outputLanguage)
     {
         $this->container['outputLanguage'] = $outputLanguage;
+        return $this;
+    }
+
+    /**
+    * Gets isRemake
+    *  任务是否重做
+    *
+    * @return bool|null
+    */
+    public function getIsRemake()
+    {
+        return $this->container['isRemake'];
+    }
+
+    /**
+    * Sets isRemake
+    *
+    * @param bool|null $isRemake 任务是否重做
+    *
+    * @return $this
+    */
+    public function setIsRemake($isRemake)
+    {
+        $this->container['isRemake'] = $isRemake;
         return $this;
     }
 

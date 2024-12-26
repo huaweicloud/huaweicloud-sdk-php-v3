@@ -21,6 +21,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  专线对等连接
+    * instanceId  专线对等连接实例ID
     * tenantId  租户ID
     * name  名称
     * description  描述信息
@@ -36,6 +37,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'id' => 'string',
+            'instanceId' => 'string',
             'tenantId' => 'string',
             'name' => 'string',
             'description' => 'string',
@@ -51,6 +53,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  专线对等连接
+    * instanceId  专线对等连接实例ID
     * tenantId  租户ID
     * name  名称
     * description  描述信息
@@ -66,6 +69,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'id' => null,
+        'instanceId' => null,
         'tenantId' => null,
         'name' => null,
         'description' => null,
@@ -102,6 +106,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  专线对等连接
+    * instanceId  专线对等连接实例ID
     * tenantId  租户ID
     * name  名称
     * description  描述信息
@@ -117,6 +122,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'id' => 'id',
+            'instanceId' => 'instance_id',
             'tenantId' => 'tenant_id',
             'name' => 'name',
             'description' => 'description',
@@ -132,6 +138,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  专线对等连接
+    * instanceId  专线对等连接实例ID
     * tenantId  租户ID
     * name  名称
     * description  描述信息
@@ -147,6 +154,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'id' => 'setId',
+            'instanceId' => 'setInstanceId',
             'tenantId' => 'setTenantId',
             'name' => 'setName',
             'description' => 'setDescription',
@@ -162,6 +170,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  专线对等连接
+    * instanceId  专线对等连接实例ID
     * tenantId  租户ID
     * name  名称
     * description  描述信息
@@ -177,6 +186,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'id' => 'getId',
+            'instanceId' => 'getInstanceId',
             'tenantId' => 'getTenantId',
             'name' => 'getName',
             'description' => 'getDescription',
@@ -248,6 +258,7 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -309,6 +320,30 @@ class ExternalCreatePeerLink implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  专线对等连接实例ID
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 专线对等连接实例ID
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 

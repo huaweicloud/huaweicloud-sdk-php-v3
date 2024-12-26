@@ -33,7 +33,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     *
     * @var string[]
     */
@@ -69,7 +69,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     *
     * @var string[]
     */
@@ -198,7 +198,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     *
     * @var string[]
     */
@@ -737,7 +737,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportedService
-    *  该任务所生成的模型支持的业务类型，可多选
+    *  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     *
     * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null
     */
@@ -749,7 +749,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets supportedService
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null $supportedService 该任务所生成的模型支持的业务类型，可多选
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null $supportedService 该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     *
     * @return $this
     */

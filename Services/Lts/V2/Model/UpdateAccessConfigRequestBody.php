@@ -21,6 +21,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * accessConfigId  日志接入ID
+    * accessConfigName  日志接入名称。 满足正则表达式：^(?!.)(?!)(?!.*?.$)[\\u4e00-\\u9fa5a-zA-Z0-9-.]{1,64}$
     * accessConfigDetail  accessConfigDetail
     * hostGroupInfo  hostGroupInfo
     * accessConfigTag  标签信息。KEY不能重复,最多20个标签
@@ -41,6 +42,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'accessConfigId' => 'string',
+            'accessConfigName' => 'string',
             'accessConfigDetail' => '\HuaweiCloud\SDK\Lts\V2\Model\AccessConfigDeatilUpdate',
             'hostGroupInfo' => '\HuaweiCloud\SDK\Lts\V2\Model\AccessConfigHostGroupIdList',
             'accessConfigTag' => '\HuaweiCloud\SDK\Lts\V2\Model\AccessConfigTag[]',
@@ -61,6 +63,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * accessConfigId  日志接入ID
+    * accessConfigName  日志接入名称。 满足正则表达式：^(?!.)(?!)(?!.*?.$)[\\u4e00-\\u9fa5a-zA-Z0-9-.]{1,64}$
     * accessConfigDetail  accessConfigDetail
     * hostGroupInfo  hostGroupInfo
     * accessConfigTag  标签信息。KEY不能重复,最多20个标签
@@ -81,6 +84,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'accessConfigId' => null,
+        'accessConfigName' => null,
         'accessConfigDetail' => null,
         'hostGroupInfo' => null,
         'accessConfigTag' => null,
@@ -122,6 +126,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * accessConfigId  日志接入ID
+    * accessConfigName  日志接入名称。 满足正则表达式：^(?!.)(?!)(?!.*?.$)[\\u4e00-\\u9fa5a-zA-Z0-9-.]{1,64}$
     * accessConfigDetail  accessConfigDetail
     * hostGroupInfo  hostGroupInfo
     * accessConfigTag  标签信息。KEY不能重复,最多20个标签
@@ -142,6 +147,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'accessConfigId' => 'access_config_id',
+            'accessConfigName' => 'access_config_name',
             'accessConfigDetail' => 'access_config_detail',
             'hostGroupInfo' => 'host_group_info',
             'accessConfigTag' => 'access_config_tag',
@@ -162,6 +168,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * accessConfigId  日志接入ID
+    * accessConfigName  日志接入名称。 满足正则表达式：^(?!.)(?!)(?!.*?.$)[\\u4e00-\\u9fa5a-zA-Z0-9-.]{1,64}$
     * accessConfigDetail  accessConfigDetail
     * hostGroupInfo  hostGroupInfo
     * accessConfigTag  标签信息。KEY不能重复,最多20个标签
@@ -182,6 +189,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'accessConfigId' => 'setAccessConfigId',
+            'accessConfigName' => 'setAccessConfigName',
             'accessConfigDetail' => 'setAccessConfigDetail',
             'hostGroupInfo' => 'setHostGroupInfo',
             'accessConfigTag' => 'setAccessConfigTag',
@@ -202,6 +210,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * accessConfigId  日志接入ID
+    * accessConfigName  日志接入名称。 满足正则表达式：^(?!.)(?!)(?!.*?.$)[\\u4e00-\\u9fa5a-zA-Z0-9-.]{1,64}$
     * accessConfigDetail  accessConfigDetail
     * hostGroupInfo  hostGroupInfo
     * accessConfigTag  标签信息。KEY不能重复,最多20个标签
@@ -222,6 +231,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'accessConfigId' => 'getAccessConfigId',
+            'accessConfigName' => 'getAccessConfigName',
             'accessConfigDetail' => 'getAccessConfigDetail',
             'hostGroupInfo' => 'getHostGroupInfo',
             'accessConfigTag' => 'getAccessConfigTag',
@@ -298,6 +308,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['accessConfigId'] = isset($data['accessConfigId']) ? $data['accessConfigId'] : null;
+        $this->container['accessConfigName'] = isset($data['accessConfigName']) ? $data['accessConfigName'] : null;
         $this->container['accessConfigDetail'] = isset($data['accessConfigDetail']) ? $data['accessConfigDetail'] : null;
         $this->container['hostGroupInfo'] = isset($data['hostGroupInfo']) ? $data['hostGroupInfo'] : null;
         $this->container['accessConfigTag'] = isset($data['accessConfigTag']) ? $data['accessConfigTag'] : null;
@@ -367,6 +378,30 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     public function setAccessConfigId($accessConfigId)
     {
         $this->container['accessConfigId'] = $accessConfigId;
+        return $this;
+    }
+
+    /**
+    * Gets accessConfigName
+    *  日志接入名称。 满足正则表达式：^(?!.)(?!)(?!.*?.$)[\\u4e00-\\u9fa5a-zA-Z0-9-.]{1,64}$
+    *
+    * @return string|null
+    */
+    public function getAccessConfigName()
+    {
+        return $this->container['accessConfigName'];
+    }
+
+    /**
+    * Sets accessConfigName
+    *
+    * @param string|null $accessConfigName 日志接入名称。 满足正则表达式：^(?!.)(?!)(?!.*?.$)[\\u4e00-\\u9fa5a-zA-Z0-9-.]{1,64}$
+    *
+    * @return $this
+    */
+    public function setAccessConfigName($accessConfigName)
+    {
+        $this->container['accessConfigName'] = $accessConfigName;
         return $this;
     }
 

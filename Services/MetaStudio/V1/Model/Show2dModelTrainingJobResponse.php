@@ -64,7 +64,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * voiceTrainJobId  声音训练任务id。
     * flexusRetryCount  flexus版本任务剩余可以重训的次数，每重训一次减1，减到0时不可再重训。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * allocatedResource  allocatedResource
     * xRequestId  xRequestId
     *
@@ -164,7 +164,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * voiceTrainJobId  声音训练任务id。
     * flexusRetryCount  flexus版本任务剩余可以重训的次数，每重训一次减1，减到0时不可再重训。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * allocatedResource  allocatedResource
     * xRequestId  xRequestId
     *
@@ -285,7 +285,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * voiceTrainJobId  声音训练任务id。
     * flexusRetryCount  flexus版本任务剩余可以重训的次数，每重训一次减1，减到0时不可再重训。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * allocatedResource  allocatedResource
     * xRequestId  xRequestId
     *
@@ -385,7 +385,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * voiceTrainJobId  声音训练任务id。
     * flexusRetryCount  flexus版本任务剩余可以重训的次数，每重训一次减1，减到0时不可再重训。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * allocatedResource  allocatedResource
     * xRequestId  xRequestId
     *
@@ -485,7 +485,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * voiceTrainJobId  声音训练任务id。
     * flexusRetryCount  flexus版本任务剩余可以重训的次数，每重训一次减1，减到0时不可再重训。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * allocatedResource  allocatedResource
     * xRequestId  xRequestId
     *
@@ -2047,7 +2047,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportedService
-    *  该任务所生成的模型支持的业务类型，可多选
+    *  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     *
     * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null
     */
@@ -2059,7 +2059,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets supportedService
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null $supportedService 该任务所生成的模型支持的业务类型，可多选
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null $supportedService 该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     *
     * @return $this
     */

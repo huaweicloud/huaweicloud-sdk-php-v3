@@ -66,6 +66,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     *
     * @var string[]
     */
@@ -115,7 +116,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'azCodeInfos' => '\HuaweiCloud\SDK\Bssintl\V2\Model\AzCodeInfo[]',
             'payerAccountId' => 'string',
             'effectiveTime' => 'string',
-            'expireTime' => 'string'
+            'expireTime' => 'string',
+            'consumeTime' => 'string'
     ];
 
     /**
@@ -166,6 +168,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     *
     * @var string[]
     */
@@ -215,7 +218,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'azCodeInfos' => null,
         'payerAccountId' => null,
         'effectiveTime' => null,
-        'expireTime' => null
+        'expireTime' => null,
+        'consumeTime' => null
     ];
 
     /**
@@ -287,6 +291,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     *
     * @var string[]
     */
@@ -336,7 +341,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'azCodeInfos' => 'az_code_infos',
             'payerAccountId' => 'payer_account_id',
             'effectiveTime' => 'effective_time',
-            'expireTime' => 'expire_time'
+            'expireTime' => 'expire_time',
+            'consumeTime' => 'consume_time'
     ];
 
     /**
@@ -387,6 +393,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     *
     * @var string[]
     */
@@ -436,7 +443,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'azCodeInfos' => 'setAzCodeInfos',
             'payerAccountId' => 'setPayerAccountId',
             'effectiveTime' => 'setEffectiveTime',
-            'expireTime' => 'setExpireTime'
+            'expireTime' => 'setExpireTime',
+            'consumeTime' => 'setConsumeTime'
     ];
 
     /**
@@ -487,6 +495,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     *
     * @var string[]
     */
@@ -536,7 +545,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'azCodeInfos' => 'getAzCodeInfos',
             'payerAccountId' => 'getPayerAccountId',
             'effectiveTime' => 'getEffectiveTime',
-            'expireTime' => 'getExpireTime'
+            'expireTime' => 'getExpireTime',
+            'consumeTime' => 'getConsumeTime'
     ];
 
     /**
@@ -643,6 +653,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['payerAccountId'] = isset($data['payerAccountId']) ? $data['payerAccountId'] : null;
         $this->container['effectiveTime'] = isset($data['effectiveTime']) ? $data['effectiveTime'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
+        $this->container['consumeTime'] = isset($data['consumeTime']) ? $data['consumeTime'] : null;
     }
 
     /**
@@ -1810,6 +1821,30 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setExpireTime($expireTime)
     {
         $this->container['expireTime'] = $expireTime;
+        return $this;
+    }
+
+    /**
+    * Gets consumeTime
+    *  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    *
+    * @return string|null
+    */
+    public function getConsumeTime()
+    {
+        return $this->container['consumeTime'];
+    }
+
+    /**
+    * Sets consumeTime
+    *
+    * @param string|null $consumeTime |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    *
+    * @return $this
+    */
+    public function setConsumeTime($consumeTime)
+    {
+        $this->container['consumeTime'] = $consumeTime;
         return $this;
     }
 

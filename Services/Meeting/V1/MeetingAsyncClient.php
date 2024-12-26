@@ -6566,6 +6566,80 @@ class MeetingAsyncClient extends Client
     }
 
     /**
+     * 查询公共或本地数字资产列表
+     *
+     * 主持人通过该接口查询系统公共音色或者企业本地音色。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function searchCorpDigitalInfoListAsync($request)
+    {
+        return $this->searchCorpDigitalInfoListAsyncWithHttpInfo($request);
+    }
+    
+    public function searchCorpDigitalInfoListAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/mmc/control/conferences/queryCorpDigitalInfoList';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['conferenceId'] !== null) {
+            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['language'] !== null) {
+            $queryParams['language'] = $localVarParams['language'];
+        }
+        if ($localVarParams['xConferenceAuthorization'] !== null) {
+            $headerParams['x_conference_authorization'] = $localVarParams['xConferenceAuthorization'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\SearchCorpDigitalInfoListResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\SearchCorpDigitalInfoListRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询企业通讯录
      *
      * 企业用户（含管理员）通过该接口查询该企业的通讯录。
@@ -7653,6 +7727,80 @@ class MeetingAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\SearchOnlineMeetingsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\SearchOnlineMeetingsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询主讲人绑定的数字资产信息
+     *
+     * 主持人通过该接口查询查询主讲人绑定的数字资产信息列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function searchPrivateCorpDigitalInfoAsync($request)
+    {
+        return $this->searchPrivateCorpDigitalInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function searchPrivateCorpDigitalInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/mmc/control/conferences/queryPrivateCorpDigitalInfo';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['conferenceId'] !== null) {
+            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+        }
+        if ($localVarParams['account'] !== null) {
+            $queryParams['account'] = $localVarParams['account'];
+        }
+        if ($localVarParams['language'] !== null) {
+            $queryParams['language'] = $localVarParams['language'];
+        }
+        if ($localVarParams['xConferenceAuthorization'] !== null) {
+            $headerParams['x_conference_authorization'] = $localVarParams['xConferenceAuthorization'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\SearchPrivateCorpDigitalInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\SearchPrivateCorpDigitalInfoRequest',
             $asyncRequest = true);
     }
 

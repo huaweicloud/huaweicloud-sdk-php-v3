@@ -23,7 +23,7 @@ class GaussDBListDatabaseRoles implements ModelInterface, ArrayAccess
     * name  数据库用户/角色名。
     * memberof  用户/角色的默认权限。
     * lockStatus  用户/角色是否被锁。
-    * attribute  用户/角色的权限属性。
+    * attribute  attribute
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class GaussDBListDatabaseRoles implements ModelInterface, ArrayAccess
             'name' => 'string',
             'memberof' => 'string',
             'lockStatus' => 'bool',
-            'attribute' => 'object'
+            'attribute' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\GaussDBListDatabaseRolesPriv'
     ];
 
     /**
@@ -39,7 +39,7 @@ class GaussDBListDatabaseRoles implements ModelInterface, ArrayAccess
     * name  数据库用户/角色名。
     * memberof  用户/角色的默认权限。
     * lockStatus  用户/角色是否被锁。
-    * attribute  用户/角色的权限属性。
+    * attribute  attribute
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class GaussDBListDatabaseRoles implements ModelInterface, ArrayAccess
     * name  数据库用户/角色名。
     * memberof  用户/角色的默认权限。
     * lockStatus  用户/角色是否被锁。
-    * attribute  用户/角色的权限属性。
+    * attribute  attribute
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class GaussDBListDatabaseRoles implements ModelInterface, ArrayAccess
     * name  数据库用户/角色名。
     * memberof  用户/角色的默认权限。
     * lockStatus  用户/角色是否被锁。
-    * attribute  用户/角色的权限属性。
+    * attribute  attribute
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class GaussDBListDatabaseRoles implements ModelInterface, ArrayAccess
     * name  数据库用户/角色名。
     * memberof  用户/角色的默认权限。
     * lockStatus  用户/角色是否被锁。
-    * attribute  用户/角色的权限属性。
+    * attribute  attribute
     *
     * @var string[]
     */
@@ -282,9 +282,9 @@ class GaussDBListDatabaseRoles implements ModelInterface, ArrayAccess
 
     /**
     * Gets attribute
-    *  用户/角色的权限属性。
+    *  attribute
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\GaussDBListDatabaseRolesPriv|null
     */
     public function getAttribute()
     {
@@ -294,7 +294,7 @@ class GaussDBListDatabaseRoles implements ModelInterface, ArrayAccess
     /**
     * Sets attribute
     *
-    * @param object|null $attribute 用户/角色的权限属性。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\GaussDBListDatabaseRolesPriv|null $attribute attribute
     *
     * @return $this
     */

@@ -237,13 +237,10 @@ class CreateNotificationTemplateRequestBody implements ModelInterface, ArrayAcce
             if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['desc'] === null) {
-            $invalidProperties[] = "'desc' can't be null";
-        }
-            if ((mb_strlen($this->container['desc']) > 1024)) {
+            if (!is_null($this->container['desc']) && (mb_strlen($this->container['desc']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'desc', the character length must be smaller than or equal to 1024.";
             }
-            if ((mb_strlen($this->container['desc']) < 0)) {
+            if (!is_null($this->container['desc']) && (mb_strlen($this->container['desc']) < 0)) {
                 $invalidProperties[] = "invalid value for 'desc', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['source'] === null) {
@@ -335,7 +332,7 @@ class CreateNotificationTemplateRequestBody implements ModelInterface, ArrayAcce
     * Gets desc
     *  模板描述，必填，只含有汉字、数字、字母、下划线不能以下划线开头和结尾，长度为0--1024
     *
-    * @return string
+    * @return string|null
     */
     public function getDesc()
     {
@@ -345,7 +342,7 @@ class CreateNotificationTemplateRequestBody implements ModelInterface, ArrayAcce
     /**
     * Sets desc
     *
-    * @param string $desc 模板描述，必填，只含有汉字、数字、字母、下划线不能以下划线开头和结尾，长度为0--1024
+    * @param string|null $desc 模板描述，必填，只含有汉字、数字、字母、下划线不能以下划线开头和结尾，长度为0--1024
     *
     * @return $this
     */

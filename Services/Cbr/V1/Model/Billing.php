@@ -277,6 +277,7 @@ class Billing implements ModelInterface, ArrayAccess
     const CONSISTENT_LEVEL_CRASH_CONSISTENT = 'crash_consistent';
     const OBJECT_TYPE_SERVER = 'server';
     const OBJECT_TYPE_DISK = 'disk';
+    const OBJECT_TYPE_TURBO = 'turbo';
     const OBJECT_TYPE_WORKSPACE = 'workspace';
     const OBJECT_TYPE_VMWARE = 'vmware';
     const OBJECT_TYPE_RDS = 'rds';
@@ -286,6 +287,10 @@ class Billing implements ModelInterface, ArrayAccess
     const PROTECT_TYPE_HYBRID = 'hybrid';
     const SPEC_CODE_VAULT_BACKUP_SERVER_NORMAL = 'vault.backup.server.normal';
     const SPEC_CODE_VAULT_BACKUP_VOLUME_NORMAL = 'vault.backup.volume.normal';
+    const SPEC_CODE_VAULT_BACKUP_TURBO_NORMAL = 'vault.backup.turbo.normal';
+    const SPEC_CODE_VAULT_BACKUP_DATABASE_NORMAL = 'vault.backup.database.normal';
+    const SPEC_CODE_VAULT_HYBRID_SERVER_NORMAL = 'vault.hybrid.server.normal';
+    const SPEC_CODE_VAULT_REPLICATION_SERVER_NORMAL = 'vault.replication.server.normal';
     const STATUS_AVAILABLE = 'available';
     const STATUS_LOCK = 'lock';
     const STATUS_FROZEN = 'frozen';
@@ -342,6 +347,7 @@ class Billing implements ModelInterface, ArrayAccess
         return [
             self::OBJECT_TYPE_SERVER,
             self::OBJECT_TYPE_DISK,
+            self::OBJECT_TYPE_TURBO,
             self::OBJECT_TYPE_WORKSPACE,
             self::OBJECT_TYPE_VMWARE,
             self::OBJECT_TYPE_RDS,
@@ -373,6 +379,10 @@ class Billing implements ModelInterface, ArrayAccess
         return [
             self::SPEC_CODE_VAULT_BACKUP_SERVER_NORMAL,
             self::SPEC_CODE_VAULT_BACKUP_VOLUME_NORMAL,
+            self::SPEC_CODE_VAULT_BACKUP_TURBO_NORMAL,
+            self::SPEC_CODE_VAULT_BACKUP_DATABASE_NORMAL,
+            self::SPEC_CODE_VAULT_HYBRID_SERVER_NORMAL,
+            self::SPEC_CODE_VAULT_REPLICATION_SERVER_NORMAL,
         ];
     }
 

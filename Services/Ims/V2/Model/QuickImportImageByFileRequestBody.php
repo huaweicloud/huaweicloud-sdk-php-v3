@@ -30,6 +30,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     * type  制作的镜像类型。系统盘镜像为ECS/BMS，数据盘镜像为DataImage. 制作数据盘镜像时该参数必选.
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * osType  操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
     * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
@@ -46,6 +47,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
             'type' => 'string',
             'enterpriseProjectId' => 'string',
             'architecture' => 'string',
+            'hwFirmwareType' => 'string',
             'osType' => 'string',
             'imageTags' => '\HuaweiCloud\SDK\Ims\V2\Model\ResourceTag[]'
     ];
@@ -62,6 +64,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     * type  制作的镜像类型。系统盘镜像为ECS/BMS，数据盘镜像为DataImage. 制作数据盘镜像时该参数必选.
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * osType  操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
     * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
@@ -78,6 +81,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
         'type' => null,
         'enterpriseProjectId' => null,
         'architecture' => null,
+        'hwFirmwareType' => null,
         'osType' => null,
         'imageTags' => null
     ];
@@ -115,6 +119,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     * type  制作的镜像类型。系统盘镜像为ECS/BMS，数据盘镜像为DataImage. 制作数据盘镜像时该参数必选.
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * osType  操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
     * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
@@ -131,6 +136,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
             'type' => 'type',
             'enterpriseProjectId' => 'enterprise_project_id',
             'architecture' => 'architecture',
+            'hwFirmwareType' => 'hw_firmware_type',
             'osType' => 'os_type',
             'imageTags' => 'image_tags'
     ];
@@ -147,6 +153,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     * type  制作的镜像类型。系统盘镜像为ECS/BMS，数据盘镜像为DataImage. 制作数据盘镜像时该参数必选.
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * osType  操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
     * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
@@ -163,6 +170,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'architecture' => 'setArchitecture',
+            'hwFirmwareType' => 'setHwFirmwareType',
             'osType' => 'setOsType',
             'imageTags' => 'setImageTags'
     ];
@@ -179,6 +187,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     * type  制作的镜像类型。系统盘镜像为ECS/BMS，数据盘镜像为DataImage. 制作数据盘镜像时该参数必选.
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * osType  操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
     * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
@@ -195,6 +204,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'architecture' => 'getArchitecture',
+            'hwFirmwareType' => 'getHwFirmwareType',
             'osType' => 'getOsType',
             'imageTags' => 'getImageTags'
     ];
@@ -244,6 +254,8 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     const TYPE_DATA_IMAGE = 'DataImage';
     const ARCHITECTURE_X86 = 'x86';
     const ARCHITECTURE_ARM = 'arm';
+    const HW_FIRMWARE_TYPE_BIOS = 'bios';
+    const HW_FIRMWARE_TYPE_UEFI = 'uefi';
     const OS_TYPE_LINUX = 'Linux';
     const OS_TYPE_WINDOWS = 'Windows';
     
@@ -272,6 +284,19 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
         return [
             self::ARCHITECTURE_X86,
             self::ARCHITECTURE_ARM,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getHwFirmwareTypeAllowableValues()
+    {
+        return [
+            self::HW_FIRMWARE_TYPE_BIOS,
+            self::HW_FIRMWARE_TYPE_UEFI,
         ];
     }
 
@@ -314,6 +339,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['architecture'] = isset($data['architecture']) ? $data['architecture'] : null;
+        $this->container['hwFirmwareType'] = isset($data['hwFirmwareType']) ? $data['hwFirmwareType'] : null;
         $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
         $this->container['imageTags'] = isset($data['imageTags']) ? $data['imageTags'] : null;
     }
@@ -368,6 +394,14 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['architecture']) && !in_array($this->container['architecture'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'architecture', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getHwFirmwareTypeAllowableValues();
+                if (!is_null($this->container['hwFirmwareType']) && !in_array($this->container['hwFirmwareType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'hwFirmwareType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -631,6 +665,30 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     public function setArchitecture($architecture)
     {
         $this->container['architecture'] = $architecture;
+        return $this;
+    }
+
+    /**
+    * Gets hwFirmwareType
+    *  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
+    *
+    * @return string|null
+    */
+    public function getHwFirmwareType()
+    {
+        return $this->container['hwFirmwareType'];
+    }
+
+    /**
+    * Sets hwFirmwareType
+    *
+    * @param string|null $hwFirmwareType 云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
+    *
+    * @return $this
+    */
+    public function setHwFirmwareType($hwFirmwareType)
+    {
+        $this->container['hwFirmwareType'] = $hwFirmwareType;
         return $this;
     }
 

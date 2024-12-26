@@ -30,7 +30,7 @@ class ListConnectGatewaysRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     *
     * @var string[]
     */
@@ -60,7 +60,7 @@ class ListConnectGatewaysRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     *
     * @var string[]
     */
@@ -111,7 +111,7 @@ class ListConnectGatewaysRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class ListConnectGatewaysRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     *
     * @var string[]
     */
@@ -171,7 +171,7 @@ class ListConnectGatewaysRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     *
     * @var string[]
     */
@@ -563,7 +563,7 @@ class ListConnectGatewaysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  根椐资源状态过淲实例
+    *  根椐资源状态过滤实例
     *
     * @return string[]|null
     */
@@ -575,7 +575,7 @@ class ListConnectGatewaysRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 根椐资源状态过淲实例
+    * @param string[]|null $status 根椐资源状态过滤实例
     *
     * @return $this
     */

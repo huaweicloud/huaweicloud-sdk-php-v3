@@ -40,6 +40,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * productSpecDesc  产品规格描述
     * specSize  线性大小
     * specSizeMeasureId  线性大小单位
+    * updateTime  |参数名称：资源更新时间。| |参数约束及描述：资源更新时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-12-25T07:32:04Z”。|
+    * enterpriseProject  enterpriseProject
     *
     * @var string[]
     */
@@ -63,7 +65,9 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'expirePolicy' => 'int',
             'productSpecDesc' => 'string',
             'specSize' => 'float',
-            'specSizeMeasureId' => 'int'
+            'specSizeMeasureId' => 'int',
+            'updateTime' => 'string',
+            'enterpriseProject' => '\HuaweiCloud\SDK\Bss\V2\Model\EnterpriseProject'
     ];
 
     /**
@@ -88,6 +92,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * productSpecDesc  产品规格描述
     * specSize  线性大小
     * specSizeMeasureId  线性大小单位
+    * updateTime  |参数名称：资源更新时间。| |参数约束及描述：资源更新时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-12-25T07:32:04Z”。|
+    * enterpriseProject  enterpriseProject
     *
     * @var string[]
     */
@@ -111,7 +117,9 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
         'expirePolicy' => 'int32',
         'productSpecDesc' => null,
         'specSize' => 'bigdecimal',
-        'specSizeMeasureId' => 'int32'
+        'specSizeMeasureId' => 'int32',
+        'updateTime' => null,
+        'enterpriseProject' => null
     ];
 
     /**
@@ -157,6 +165,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * productSpecDesc  产品规格描述
     * specSize  线性大小
     * specSizeMeasureId  线性大小单位
+    * updateTime  |参数名称：资源更新时间。| |参数约束及描述：资源更新时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-12-25T07:32:04Z”。|
+    * enterpriseProject  enterpriseProject
     *
     * @var string[]
     */
@@ -180,7 +190,9 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'expirePolicy' => 'expire_policy',
             'productSpecDesc' => 'product_spec_desc',
             'specSize' => 'spec_size',
-            'specSizeMeasureId' => 'spec_size_measure_id'
+            'specSizeMeasureId' => 'spec_size_measure_id',
+            'updateTime' => 'update_time',
+            'enterpriseProject' => 'enterprise_project'
     ];
 
     /**
@@ -205,6 +217,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * productSpecDesc  产品规格描述
     * specSize  线性大小
     * specSizeMeasureId  线性大小单位
+    * updateTime  |参数名称：资源更新时间。| |参数约束及描述：资源更新时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-12-25T07:32:04Z”。|
+    * enterpriseProject  enterpriseProject
     *
     * @var string[]
     */
@@ -228,7 +242,9 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'expirePolicy' => 'setExpirePolicy',
             'productSpecDesc' => 'setProductSpecDesc',
             'specSize' => 'setSpecSize',
-            'specSizeMeasureId' => 'setSpecSizeMeasureId'
+            'specSizeMeasureId' => 'setSpecSizeMeasureId',
+            'updateTime' => 'setUpdateTime',
+            'enterpriseProject' => 'setEnterpriseProject'
     ];
 
     /**
@@ -253,6 +269,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * productSpecDesc  产品规格描述
     * specSize  线性大小
     * specSizeMeasureId  线性大小单位
+    * updateTime  |参数名称：资源更新时间。| |参数约束及描述：资源更新时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-12-25T07:32:04Z”。|
+    * enterpriseProject  enterpriseProject
     *
     * @var string[]
     */
@@ -276,7 +294,9 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'expirePolicy' => 'getExpirePolicy',
             'productSpecDesc' => 'getProductSpecDesc',
             'specSize' => 'getSpecSize',
-            'specSizeMeasureId' => 'getSpecSizeMeasureId'
+            'specSizeMeasureId' => 'getSpecSizeMeasureId',
+            'updateTime' => 'getUpdateTime',
+            'enterpriseProject' => 'getEnterpriseProject'
     ];
 
     /**
@@ -357,6 +377,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
         $this->container['productSpecDesc'] = isset($data['productSpecDesc']) ? $data['productSpecDesc'] : null;
         $this->container['specSize'] = isset($data['specSize']) ? $data['specSize'] : null;
         $this->container['specSizeMeasureId'] = isset($data['specSizeMeasureId']) ? $data['specSizeMeasureId'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['enterpriseProject'] = isset($data['enterpriseProject']) ? $data['enterpriseProject'] : null;
     }
 
     /**
@@ -864,6 +886,54 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     public function setSpecSizeMeasureId($specSizeMeasureId)
     {
         $this->container['specSizeMeasureId'] = $specSizeMeasureId;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  |参数名称：资源更新时间。| |参数约束及描述：资源更新时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-12-25T07:32:04Z”。|
+    *
+    * @return string|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param string|null $updateTime |参数名称：资源更新时间。| |参数约束及描述：资源更新时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-12-25T07:32:04Z”。|
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProject
+    *  enterpriseProject
+    *
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\EnterpriseProject|null
+    */
+    public function getEnterpriseProject()
+    {
+        return $this->container['enterpriseProject'];
+    }
+
+    /**
+    * Sets enterpriseProject
+    *
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\EnterpriseProject|null $enterpriseProject enterpriseProject
+    *
+    * @return $this
+    */
+    public function setEnterpriseProject($enterpriseProject)
+    {
+        $this->container['enterpriseProject'] = $enterpriseProject;
         return $this;
     }
 

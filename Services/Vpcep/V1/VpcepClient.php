@@ -1924,6 +1924,72 @@ class VpcepClient extends Client
     }
 
     /**
+     * 升级终端节点服务
+     *
+     * 升级终端节点服务，使终端节点服务支持创建专业型终端节点实例
+     * 该接口仅支持在华东二、中东-利雅得、华东-青岛、非洲-开罗局点调用。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function upgradeEndpointService($request)
+    {
+        return $this->upgradeEndpointServiceWithHttpInfo($request);
+    }
+
+    public function upgradeEndpointServiceWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/upgrade';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['vpcEndpointServiceId'] !== null) {
+            $pathParams['vpc_endpoint_service_id'] = $localVarParams['vpcEndpointServiceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpgradeEndpointServiceResponse',
+            $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpgradeEndpointServiceRequest');
+    }
+
+    /**
      * 批量添加或删除资源标签接口
      *
      * 为指定Endpoint Service或Endpoint批量添加或删除标签。

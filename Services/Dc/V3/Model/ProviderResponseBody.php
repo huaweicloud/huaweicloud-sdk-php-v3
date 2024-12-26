@@ -24,7 +24,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
     * shortName  运营商简写
     * type  运营商类型
     * providerValue  providerValue
-    * description  运营商描述信息
+    * description  运营商说明
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
     * shortName  运营商简写
     * type  运营商类型
     * providerValue  providerValue
-    * description  运营商描述信息
+    * description  运营商说明
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
     * shortName  运营商简写
     * type  运营商类型
     * providerValue  providerValue
-    * description  运营商描述信息
+    * description  运营商说明
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
     * shortName  运营商简写
     * type  运营商类型
     * providerValue  providerValue
-    * description  运营商描述信息
+    * description  运营商说明
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
     * shortName  运营商简写
     * type  运营商类型
     * providerValue  providerValue
-    * description  运营商描述信息
+    * description  运营商说明
     *
     * @var string[]
     */
@@ -350,7 +350,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  运营商描述信息
+    *  运营商说明
     *
     * @return string|null
     */
@@ -362,7 +362,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 运营商描述信息
+    * @param string|null $description 运营商说明
     *
     * @return $this
     */

@@ -24,6 +24,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * updateUntil  过滤更新时间<=输入时间的记录。
+    * updateSince  过滤更新时间>=输入时间的记录。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
     * jobId  任务id。
@@ -31,6 +33,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * tag  任务标签。
     * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
     * batchName  批次名称。
+    * sortKey  排序字段，当前支持：ceate_time/update_time
+    * sortDir  排序规则：desc(降序)/asc(升序)
     *
     * @var string[]
     */
@@ -39,13 +43,17 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'createUntil' => 'string',
             'createSince' => 'string',
+            'updateUntil' => 'string',
+            'updateSince' => 'string',
             'xAppUserId' => 'string',
             'state' => 'string',
             'jobId' => 'string',
             'voiceName' => 'string',
             'tag' => 'string',
             'jobType' => 'string',
-            'batchName' => 'string'
+            'batchName' => 'string',
+            'sortKey' => 'string',
+            'sortDir' => 'string'
     ];
 
     /**
@@ -54,6 +62,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * updateUntil  过滤更新时间<=输入时间的记录。
+    * updateSince  过滤更新时间>=输入时间的记录。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
     * jobId  任务id。
@@ -61,6 +71,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * tag  任务标签。
     * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
     * batchName  批次名称。
+    * sortKey  排序字段，当前支持：ceate_time/update_time
+    * sortDir  排序规则：desc(降序)/asc(升序)
     *
     * @var string[]
     */
@@ -69,13 +81,17 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
         'limit' => 'uint32',
         'createUntil' => null,
         'createSince' => null,
+        'updateUntil' => null,
+        'updateSince' => null,
         'xAppUserId' => null,
         'state' => null,
         'jobId' => null,
         'voiceName' => null,
         'tag' => null,
         'jobType' => null,
-        'batchName' => null
+        'batchName' => null,
+        'sortKey' => null,
+        'sortDir' => null
     ];
 
     /**
@@ -105,6 +121,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * updateUntil  过滤更新时间<=输入时间的记录。
+    * updateSince  过滤更新时间>=输入时间的记录。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
     * jobId  任务id。
@@ -112,6 +130,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * tag  任务标签。
     * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
     * batchName  批次名称。
+    * sortKey  排序字段，当前支持：ceate_time/update_time
+    * sortDir  排序规则：desc(降序)/asc(升序)
     *
     * @var string[]
     */
@@ -120,13 +140,17 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'createUntil' => 'create_until',
             'createSince' => 'create_since',
+            'updateUntil' => 'update_until',
+            'updateSince' => 'update_since',
             'xAppUserId' => 'X-App-UserId',
             'state' => 'state',
             'jobId' => 'job_id',
             'voiceName' => 'voice_name',
             'tag' => 'tag',
             'jobType' => 'job_type',
-            'batchName' => 'batch_name'
+            'batchName' => 'batch_name',
+            'sortKey' => 'sort_key',
+            'sortDir' => 'sort_dir'
     ];
 
     /**
@@ -135,6 +159,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * updateUntil  过滤更新时间<=输入时间的记录。
+    * updateSince  过滤更新时间>=输入时间的记录。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
     * jobId  任务id。
@@ -142,6 +168,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * tag  任务标签。
     * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
     * batchName  批次名称。
+    * sortKey  排序字段，当前支持：ceate_time/update_time
+    * sortDir  排序规则：desc(降序)/asc(升序)
     *
     * @var string[]
     */
@@ -150,13 +178,17 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'createUntil' => 'setCreateUntil',
             'createSince' => 'setCreateSince',
+            'updateUntil' => 'setUpdateUntil',
+            'updateSince' => 'setUpdateSince',
             'xAppUserId' => 'setXAppUserId',
             'state' => 'setState',
             'jobId' => 'setJobId',
             'voiceName' => 'setVoiceName',
             'tag' => 'setTag',
             'jobType' => 'setJobType',
-            'batchName' => 'setBatchName'
+            'batchName' => 'setBatchName',
+            'sortKey' => 'setSortKey',
+            'sortDir' => 'setSortDir'
     ];
 
     /**
@@ -165,6 +197,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * updateUntil  过滤更新时间<=输入时间的记录。
+    * updateSince  过滤更新时间>=输入时间的记录。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
     * jobId  任务id。
@@ -172,6 +206,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * tag  任务标签。
     * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
     * batchName  批次名称。
+    * sortKey  排序字段，当前支持：ceate_time/update_time
+    * sortDir  排序规则：desc(降序)/asc(升序)
     *
     * @var string[]
     */
@@ -180,13 +216,17 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'createUntil' => 'getCreateUntil',
             'createSince' => 'getCreateSince',
+            'updateUntil' => 'getUpdateUntil',
+            'updateSince' => 'getUpdateSince',
             'xAppUserId' => 'getXAppUserId',
             'state' => 'getState',
             'jobId' => 'getJobId',
             'voiceName' => 'getVoiceName',
             'tag' => 'getTag',
             'jobType' => 'getJobType',
-            'batchName' => 'getBatchName'
+            'batchName' => 'getBatchName',
+            'sortKey' => 'getSortKey',
+            'sortDir' => 'getSortDir'
     ];
 
     /**
@@ -251,6 +291,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['createUntil'] = isset($data['createUntil']) ? $data['createUntil'] : null;
         $this->container['createSince'] = isset($data['createSince']) ? $data['createSince'] : null;
+        $this->container['updateUntil'] = isset($data['updateUntil']) ? $data['updateUntil'] : null;
+        $this->container['updateSince'] = isset($data['updateSince']) ? $data['updateSince'] : null;
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
@@ -258,6 +300,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
+        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
     }
 
     /**
@@ -291,6 +335,18 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['createSince']) && (mb_strlen($this->container['createSince']) < 0)) {
                 $invalidProperties[] = "invalid value for 'createSince', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['updateUntil']) && (mb_strlen($this->container['updateUntil']) > 20)) {
+                $invalidProperties[] = "invalid value for 'updateUntil', the character length must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['updateUntil']) && (mb_strlen($this->container['updateUntil']) < 0)) {
+                $invalidProperties[] = "invalid value for 'updateUntil', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['updateSince']) && (mb_strlen($this->container['updateSince']) > 20)) {
+                $invalidProperties[] = "invalid value for 'updateSince', the character length must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['updateSince']) && (mb_strlen($this->container['updateSince']) < 0)) {
+                $invalidProperties[] = "invalid value for 'updateSince', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be smaller than or equal to 256.";
@@ -333,6 +389,18 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['batchName']) && (mb_strlen($this->container['batchName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'batchName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 128)) {
+                $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sortKey', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) > 128)) {
+                $invalidProperties[] = "invalid value for 'sortDir', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sortDir', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -441,6 +509,54 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     public function setCreateSince($createSince)
     {
         $this->container['createSince'] = $createSince;
+        return $this;
+    }
+
+    /**
+    * Gets updateUntil
+    *  过滤更新时间<=输入时间的记录。
+    *
+    * @return string|null
+    */
+    public function getUpdateUntil()
+    {
+        return $this->container['updateUntil'];
+    }
+
+    /**
+    * Sets updateUntil
+    *
+    * @param string|null $updateUntil 过滤更新时间<=输入时间的记录。
+    *
+    * @return $this
+    */
+    public function setUpdateUntil($updateUntil)
+    {
+        $this->container['updateUntil'] = $updateUntil;
+        return $this;
+    }
+
+    /**
+    * Gets updateSince
+    *  过滤更新时间>=输入时间的记录。
+    *
+    * @return string|null
+    */
+    public function getUpdateSince()
+    {
+        return $this->container['updateSince'];
+    }
+
+    /**
+    * Sets updateSince
+    *
+    * @param string|null $updateSince 过滤更新时间>=输入时间的记录。
+    *
+    * @return $this
+    */
+    public function setUpdateSince($updateSince)
+    {
+        $this->container['updateSince'] = $updateSince;
         return $this;
     }
 
@@ -609,6 +725,54 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     public function setBatchName($batchName)
     {
         $this->container['batchName'] = $batchName;
+        return $this;
+    }
+
+    /**
+    * Gets sortKey
+    *  排序字段，当前支持：ceate_time/update_time
+    *
+    * @return string|null
+    */
+    public function getSortKey()
+    {
+        return $this->container['sortKey'];
+    }
+
+    /**
+    * Sets sortKey
+    *
+    * @param string|null $sortKey 排序字段，当前支持：ceate_time/update_time
+    *
+    * @return $this
+    */
+    public function setSortKey($sortKey)
+    {
+        $this->container['sortKey'] = $sortKey;
+        return $this;
+    }
+
+    /**
+    * Gets sortDir
+    *  排序规则：desc(降序)/asc(升序)
+    *
+    * @return string|null
+    */
+    public function getSortDir()
+    {
+        return $this->container['sortDir'];
+    }
+
+    /**
+    * Sets sortDir
+    *
+    * @param string|null $sortDir 排序规则：desc(降序)/asc(升序)
+    *
+    * @return $this
+    */
+    public function setSortDir($sortDir)
+    {
+        $this->container['sortDir'] = $sortDir;
         return $this;
     }
 

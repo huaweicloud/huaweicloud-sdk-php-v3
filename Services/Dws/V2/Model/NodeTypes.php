@@ -24,6 +24,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     * detail  节点类型详细。
     * id  节点类型ID。
     * datastoreType  产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    * architecture  架构类型 - x86。 - arm。
     * availableZones  支持的可用区及状态信息。
     * ram  内存大小。
     * vcpus  CPU数量。
@@ -38,6 +39,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
             'detail' => '\HuaweiCloud\SDK\Dws\V2\Model\Detail[]',
             'id' => 'string',
             'datastoreType' => 'string',
+            'architecture' => 'string',
             'availableZones' => '\HuaweiCloud\SDK\Dws\V2\Model\NodeTypeAvailableZones[]',
             'ram' => 'int',
             'vcpus' => 'int',
@@ -52,6 +54,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     * detail  节点类型详细。
     * id  节点类型ID。
     * datastoreType  产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    * architecture  架构类型 - x86。 - arm。
     * availableZones  支持的可用区及状态信息。
     * ram  内存大小。
     * vcpus  CPU数量。
@@ -66,6 +69,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
         'detail' => null,
         'id' => null,
         'datastoreType' => null,
+        'architecture' => null,
         'availableZones' => null,
         'ram' => null,
         'vcpus' => null,
@@ -101,6 +105,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     * detail  节点类型详细。
     * id  节点类型ID。
     * datastoreType  产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    * architecture  架构类型 - x86。 - arm。
     * availableZones  支持的可用区及状态信息。
     * ram  内存大小。
     * vcpus  CPU数量。
@@ -115,6 +120,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
             'detail' => 'detail',
             'id' => 'id',
             'datastoreType' => 'datastore_type',
+            'architecture' => 'architecture',
             'availableZones' => 'available_zones',
             'ram' => 'ram',
             'vcpus' => 'vcpus',
@@ -129,6 +135,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     * detail  节点类型详细。
     * id  节点类型ID。
     * datastoreType  产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    * architecture  架构类型 - x86。 - arm。
     * availableZones  支持的可用区及状态信息。
     * ram  内存大小。
     * vcpus  CPU数量。
@@ -143,6 +150,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
             'detail' => 'setDetail',
             'id' => 'setId',
             'datastoreType' => 'setDatastoreType',
+            'architecture' => 'setArchitecture',
             'availableZones' => 'setAvailableZones',
             'ram' => 'setRam',
             'vcpus' => 'setVcpus',
@@ -157,6 +165,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     * detail  节点类型详细。
     * id  节点类型ID。
     * datastoreType  产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    * architecture  架构类型 - x86。 - arm。
     * availableZones  支持的可用区及状态信息。
     * ram  内存大小。
     * vcpus  CPU数量。
@@ -171,6 +180,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
             'detail' => 'getDetail',
             'id' => 'getId',
             'datastoreType' => 'getDatastoreType',
+            'architecture' => 'getArchitecture',
             'availableZones' => 'getAvailableZones',
             'ram' => 'getRam',
             'vcpus' => 'getVcpus',
@@ -241,6 +251,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
         $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['datastoreType'] = isset($data['datastoreType']) ? $data['datastoreType'] : null;
+        $this->container['architecture'] = isset($data['architecture']) ? $data['architecture'] : null;
         $this->container['availableZones'] = isset($data['availableZones']) ? $data['availableZones'] : null;
         $this->container['ram'] = isset($data['ram']) ? $data['ram'] : null;
         $this->container['vcpus'] = isset($data['vcpus']) ? $data['vcpus'] : null;
@@ -268,6 +279,9 @@ class NodeTypes implements ModelInterface, ArrayAccess
         }
         if ($this->container['datastoreType'] === null) {
             $invalidProperties[] = "'datastoreType' can't be null";
+        }
+        if ($this->container['architecture'] === null) {
+            $invalidProperties[] = "'architecture' can't be null";
         }
         if ($this->container['availableZones'] === null) {
             $invalidProperties[] = "'availableZones' can't be null";
@@ -394,6 +408,30 @@ class NodeTypes implements ModelInterface, ArrayAccess
     public function setDatastoreType($datastoreType)
     {
         $this->container['datastoreType'] = $datastoreType;
+        return $this;
+    }
+
+    /**
+    * Gets architecture
+    *  架构类型 - x86。 - arm。
+    *
+    * @return string
+    */
+    public function getArchitecture()
+    {
+        return $this->container['architecture'];
+    }
+
+    /**
+    * Sets architecture
+    *
+    * @param string $architecture 架构类型 - x86。 - arm。
+    *
+    * @return $this
+    */
+    public function setArchitecture($architecture)
+    {
+        $this->container['architecture'] = $architecture;
         return $this;
     }
 

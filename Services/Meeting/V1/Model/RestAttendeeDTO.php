@@ -36,6 +36,7 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
     * deptUuid  部门ID。
     * deptName  部门名称。最大不超过128个字符。
     * appId  App ID。如果是APP ID鉴权场景，此项必填。参考[[App ID的申请](https://support.huaweicloud.com/devg-meeting/meeting_20_0011.html#section1)](tag:hws)[[App ID的申请](https://support.huaweicloud.com/intl/zh-cn/devg-meeting/meeting_20_0011.html#section1)](tag:hk)。
+    * uniqueType  企业内唯一会场标识, 0标识为普通与会者，1标识为企业内唯一会场; uniqueType 为1， 同时type要指定为customnumber
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
             'address' => 'string',
             'deptUuid' => 'string',
             'deptName' => 'string',
-            'appId' => 'string'
+            'appId' => 'string',
+            'uniqueType' => 'int'
     ];
 
     /**
@@ -76,6 +78,7 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
     * deptUuid  部门ID。
     * deptName  部门名称。最大不超过128个字符。
     * appId  App ID。如果是APP ID鉴权场景，此项必填。参考[[App ID的申请](https://support.huaweicloud.com/devg-meeting/meeting_20_0011.html#section1)](tag:hws)[[App ID的申请](https://support.huaweicloud.com/intl/zh-cn/devg-meeting/meeting_20_0011.html#section1)](tag:hk)。
+    * uniqueType  企业内唯一会场标识, 0标识为普通与会者，1标识为企业内唯一会场; uniqueType 为1， 同时type要指定为customnumber
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
         'address' => null,
         'deptUuid' => null,
         'deptName' => null,
-        'appId' => null
+        'appId' => null,
+        'uniqueType' => 'int32'
     ];
 
     /**
@@ -137,6 +141,7 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
     * deptUuid  部门ID。
     * deptName  部门名称。最大不超过128个字符。
     * appId  App ID。如果是APP ID鉴权场景，此项必填。参考[[App ID的申请](https://support.huaweicloud.com/devg-meeting/meeting_20_0011.html#section1)](tag:hws)[[App ID的申请](https://support.huaweicloud.com/intl/zh-cn/devg-meeting/meeting_20_0011.html#section1)](tag:hk)。
+    * uniqueType  企业内唯一会场标识, 0标识为普通与会者，1标识为企业内唯一会场; uniqueType 为1， 同时type要指定为customnumber
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
             'address' => 'address',
             'deptUuid' => 'deptUUID',
             'deptName' => 'deptName',
-            'appId' => 'appId'
+            'appId' => 'appId',
+            'uniqueType' => 'uniqueType'
     ];
 
     /**
@@ -177,6 +183,7 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
     * deptUuid  部门ID。
     * deptName  部门名称。最大不超过128个字符。
     * appId  App ID。如果是APP ID鉴权场景，此项必填。参考[[App ID的申请](https://support.huaweicloud.com/devg-meeting/meeting_20_0011.html#section1)](tag:hws)[[App ID的申请](https://support.huaweicloud.com/intl/zh-cn/devg-meeting/meeting_20_0011.html#section1)](tag:hk)。
+    * uniqueType  企业内唯一会场标识, 0标识为普通与会者，1标识为企业内唯一会场; uniqueType 为1， 同时type要指定为customnumber
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
             'address' => 'setAddress',
             'deptUuid' => 'setDeptUuid',
             'deptName' => 'setDeptName',
-            'appId' => 'setAppId'
+            'appId' => 'setAppId',
+            'uniqueType' => 'setUniqueType'
     ];
 
     /**
@@ -217,6 +225,7 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
     * deptUuid  部门ID。
     * deptName  部门名称。最大不超过128个字符。
     * appId  App ID。如果是APP ID鉴权场景，此项必填。参考[[App ID的申请](https://support.huaweicloud.com/devg-meeting/meeting_20_0011.html#section1)](tag:hws)[[App ID的申请](https://support.huaweicloud.com/intl/zh-cn/devg-meeting/meeting_20_0011.html#section1)](tag:hk)。
+    * uniqueType  企业内唯一会场标识, 0标识为普通与会者，1标识为企业内唯一会场; uniqueType 为1， 同时type要指定为customnumber
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
             'address' => 'getAddress',
             'deptUuid' => 'getDeptUuid',
             'deptName' => 'getDeptName',
-            'appId' => 'getAppId'
+            'appId' => 'getAppId',
+            'uniqueType' => 'getUniqueType'
     ];
 
     /**
@@ -313,6 +323,7 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
         $this->container['deptUuid'] = isset($data['deptUuid']) ? $data['deptUuid'] : null;
         $this->container['deptName'] = isset($data['deptName']) ? $data['deptName'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
+        $this->container['uniqueType'] = isset($data['uniqueType']) ? $data['uniqueType'] : null;
     }
 
     /**
@@ -388,6 +399,12 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['deptName']) && (mb_strlen($this->container['deptName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'deptName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['uniqueType']) && ($this->container['uniqueType'] > 1)) {
+                $invalidProperties[] = "invalid value for 'uniqueType', must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['uniqueType']) && ($this->container['uniqueType'] < 0)) {
+                $invalidProperties[] = "invalid value for 'uniqueType', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -784,6 +801,30 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
     public function setAppId($appId)
     {
         $this->container['appId'] = $appId;
+        return $this;
+    }
+
+    /**
+    * Gets uniqueType
+    *  企业内唯一会场标识, 0标识为普通与会者，1标识为企业内唯一会场; uniqueType 为1， 同时type要指定为customnumber
+    *
+    * @return int|null
+    */
+    public function getUniqueType()
+    {
+        return $this->container['uniqueType'];
+    }
+
+    /**
+    * Sets uniqueType
+    *
+    * @param int|null $uniqueType 企业内唯一会场标识, 0标识为普通与会者，1标识为企业内唯一会场; uniqueType 为1， 同时type要指定为customnumber
+    *
+    * @return $this
+    */
+    public function setUniqueType($uniqueType)
+    {
+        $this->container['uniqueType'] = $uniqueType;
         return $this;
     }
 

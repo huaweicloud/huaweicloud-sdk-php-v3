@@ -21,41 +21,49 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * text  待合成文本。
+    * ttsText  发送给tts的待合成文本。
     * emotion  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
     * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。
     * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
+    * style  风格情感
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'text' => 'string',
+            'ttsText' => 'string',
             'emotion' => 'string',
             'speed' => 'int',
             'pitch' => 'int',
             'volume' => 'int',
-            'businessType' => 'string'
+            'businessType' => 'string',
+            'style' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * text  待合成文本。
+    * ttsText  发送给tts的待合成文本。
     * emotion  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
     * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。
     * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
+    * style  风格情感
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'text' => null,
+        'ttsText' => null,
         'emotion' => null,
         'speed' => 'int32',
         'pitch' => 'int32',
         'volume' => 'int32',
-        'businessType' => null
+        'businessType' => null,
+        'style' => null
     ];
 
     /**
@@ -82,61 +90,73 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * text  待合成文本。
+    * ttsText  发送给tts的待合成文本。
     * emotion  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
     * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。
     * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
+    * style  风格情感
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'text' => 'text',
+            'ttsText' => 'tts_text',
             'emotion' => 'emotion',
             'speed' => 'speed',
             'pitch' => 'pitch',
             'volume' => 'volume',
-            'businessType' => 'business_type'
+            'businessType' => 'business_type',
+            'style' => 'style'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * text  待合成文本。
+    * ttsText  发送给tts的待合成文本。
     * emotion  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
     * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。
     * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
+    * style  风格情感
     *
     * @var string[]
     */
     protected static $setters = [
             'text' => 'setText',
+            'ttsText' => 'setTtsText',
             'emotion' => 'setEmotion',
             'speed' => 'setSpeed',
             'pitch' => 'setPitch',
             'volume' => 'setVolume',
-            'businessType' => 'setBusinessType'
+            'businessType' => 'setBusinessType',
+            'style' => 'setStyle'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * text  待合成文本。
+    * ttsText  发送给tts的待合成文本。
     * emotion  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
     * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。
     * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
+    * style  风格情感
     *
     * @var string[]
     */
     protected static $getters = [
             'text' => 'getText',
+            'ttsText' => 'getTtsText',
             'emotion' => 'getEmotion',
             'speed' => 'getSpeed',
             'pitch' => 'getPitch',
             'volume' => 'getVolume',
-            'businessType' => 'getBusinessType'
+            'businessType' => 'getBusinessType',
+            'style' => 'getStyle'
     ];
 
     /**
@@ -198,11 +218,13 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['text'] = isset($data['text']) ? $data['text'] : null;
+        $this->container['ttsText'] = isset($data['ttsText']) ? $data['ttsText'] : null;
         $this->container['emotion'] = isset($data['emotion']) ? $data['emotion'] : null;
         $this->container['speed'] = isset($data['speed']) ? $data['speed'] : null;
         $this->container['pitch'] = isset($data['pitch']) ? $data['pitch'] : null;
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
         $this->container['businessType'] = isset($data['businessType']) ? $data['businessType'] : null;
+        $this->container['style'] = isset($data['style']) ? $data['style'] : null;
     }
 
     /**
@@ -221,6 +243,12 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['text']) < 0)) {
                 $invalidProperties[] = "invalid value for 'text', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['ttsText']) && (mb_strlen($this->container['ttsText']) > 100000)) {
+                $invalidProperties[] = "invalid value for 'ttsText', the character length must be smaller than or equal to 100000.";
+            }
+            if (!is_null($this->container['ttsText']) && (mb_strlen($this->container['ttsText']) < 0)) {
+                $invalidProperties[] = "invalid value for 'ttsText', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['emotion'] === null) {
             $invalidProperties[] = "'emotion' can't be null";
@@ -258,6 +286,12 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['businessType']) && (mb_strlen($this->container['businessType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'businessType', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['style']) && (mb_strlen($this->container['style']) > 100)) {
+                $invalidProperties[] = "invalid value for 'style', the character length must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['style']) && (mb_strlen($this->container['style']) < 0)) {
+                $invalidProperties[] = "invalid value for 'style', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -293,6 +327,30 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     public function setText($text)
     {
         $this->container['text'] = $text;
+        return $this;
+    }
+
+    /**
+    * Gets ttsText
+    *  发送给tts的待合成文本。
+    *
+    * @return string|null
+    */
+    public function getTtsText()
+    {
+        return $this->container['ttsText'];
+    }
+
+    /**
+    * Sets ttsText
+    *
+    * @param string|null $ttsText 发送给tts的待合成文本。
+    *
+    * @return $this
+    */
+    public function setTtsText($ttsText)
+    {
+        $this->container['ttsText'] = $ttsText;
         return $this;
     }
 
@@ -413,6 +471,30 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     public function setBusinessType($businessType)
     {
         $this->container['businessType'] = $businessType;
+        return $this;
+    }
+
+    /**
+    * Gets style
+    *  风格情感
+    *
+    * @return string|null
+    */
+    public function getStyle()
+    {
+        return $this->container['style'];
+    }
+
+    /**
+    * Sets style
+    *
+    * @param string|null $style 风格情感
+    *
+    * @return $this
+    */
+    public function setStyle($style)
+    {
+        $this->container['style'] = $style;
         return $this;
     }
 

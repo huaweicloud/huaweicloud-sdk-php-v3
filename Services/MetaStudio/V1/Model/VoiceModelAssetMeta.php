@@ -32,6 +32,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     * isSupportVcProcess  是否支持vc。
+    * isSupportThaiAutoSplit  是否支持泰语文本自动分句。
     * isFlexus  是否是Flexus版本声音。
     *
     * @var string[]
@@ -49,6 +50,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'voiceCapability' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceCapability',
             'externalVoiceMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ExternalVoiceAssetMeta',
             'isSupportVcProcess' => 'bool',
+            'isSupportThaiAutoSplit' => 'bool',
             'isFlexus' => 'bool'
     ];
 
@@ -66,6 +68,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     * isSupportVcProcess  是否支持vc。
+    * isSupportThaiAutoSplit  是否支持泰语文本自动分句。
     * isFlexus  是否是Flexus版本声音。
     *
     * @var string[]
@@ -83,6 +86,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
         'voiceCapability' => null,
         'externalVoiceMeta' => null,
         'isSupportVcProcess' => null,
+        'isSupportThaiAutoSplit' => null,
         'isFlexus' => null
     ];
 
@@ -121,6 +125,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     * isSupportVcProcess  是否支持vc。
+    * isSupportThaiAutoSplit  是否支持泰语文本自动分句。
     * isFlexus  是否是Flexus版本声音。
     *
     * @var string[]
@@ -138,6 +143,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'voiceCapability' => 'voice_capability',
             'externalVoiceMeta' => 'external_voice_meta',
             'isSupportVcProcess' => 'is_support_vc_process',
+            'isSupportThaiAutoSplit' => 'is_support_thai_auto_split',
             'isFlexus' => 'is_flexus'
     ];
 
@@ -155,6 +161,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     * isSupportVcProcess  是否支持vc。
+    * isSupportThaiAutoSplit  是否支持泰语文本自动分句。
     * isFlexus  是否是Flexus版本声音。
     *
     * @var string[]
@@ -172,6 +179,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'voiceCapability' => 'setVoiceCapability',
             'externalVoiceMeta' => 'setExternalVoiceMeta',
             'isSupportVcProcess' => 'setIsSupportVcProcess',
+            'isSupportThaiAutoSplit' => 'setIsSupportThaiAutoSplit',
             'isFlexus' => 'setIsFlexus'
     ];
 
@@ -189,6 +197,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     * isSupportVcProcess  是否支持vc。
+    * isSupportThaiAutoSplit  是否支持泰语文本自动分句。
     * isFlexus  是否是Flexus版本声音。
     *
     * @var string[]
@@ -206,6 +215,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'voiceCapability' => 'getVoiceCapability',
             'externalVoiceMeta' => 'getExternalVoiceMeta',
             'isSupportVcProcess' => 'getIsSupportVcProcess',
+            'isSupportThaiAutoSplit' => 'getIsSupportThaiAutoSplit',
             'isFlexus' => 'getIsFlexus'
     ];
 
@@ -376,6 +386,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
         $this->container['voiceCapability'] = isset($data['voiceCapability']) ? $data['voiceCapability'] : null;
         $this->container['externalVoiceMeta'] = isset($data['externalVoiceMeta']) ? $data['externalVoiceMeta'] : null;
         $this->container['isSupportVcProcess'] = isset($data['isSupportVcProcess']) ? $data['isSupportVcProcess'] : null;
+        $this->container['isSupportThaiAutoSplit'] = isset($data['isSupportThaiAutoSplit']) ? $data['isSupportThaiAutoSplit'] : null;
         $this->container['isFlexus'] = isset($data['isFlexus']) ? $data['isFlexus'] : null;
     }
 
@@ -752,6 +763,30 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     public function setIsSupportVcProcess($isSupportVcProcess)
     {
         $this->container['isSupportVcProcess'] = $isSupportVcProcess;
+        return $this;
+    }
+
+    /**
+    * Gets isSupportThaiAutoSplit
+    *  是否支持泰语文本自动分句。
+    *
+    * @return bool|null
+    */
+    public function getIsSupportThaiAutoSplit()
+    {
+        return $this->container['isSupportThaiAutoSplit'];
+    }
+
+    /**
+    * Sets isSupportThaiAutoSplit
+    *
+    * @param bool|null $isSupportThaiAutoSplit 是否支持泰语文本自动分句。
+    *
+    * @return $this
+    */
+    public function setIsSupportThaiAutoSplit($isSupportThaiAutoSplit)
+    {
+        $this->container['isSupportThaiAutoSplit'] = $isSupportThaiAutoSplit;
         return $this;
     }
 

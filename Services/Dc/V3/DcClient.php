@@ -65,12 +65,12 @@ class DcClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
-                ['application/json; charset=utf-8']
+                ['application/json'],
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -160,11 +160,11 @@ class DcClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
+                ['application/json'],
                 []
             );
         }
@@ -225,12 +225,12 @@ class DcClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
-                ['application/json; charset=utf-8']
+                ['application/json'],
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -1228,7 +1228,7 @@ class DcClient extends Client
     /**
      * 查询专线接入点位置列表
      *
-     * 查询本区域下所有专线的接入点的信息，分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+     * 查询本区域下所有专线的接入点的信息，分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1398,8 +1398,11 @@ class DcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['addressFamily'] !== null) {
-            $queryParams['address_family'] = $localVarParams['addressFamily'];
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['extFields'] !== null) {
+            $queryParams['ext_fields'] = $localVarParams['extFields'];
         }
         if ($localVarParams['nexthop'] !== null) {
             $queryParams['nexthop'] = $localVarParams['nexthop'];
@@ -1407,16 +1410,19 @@ class DcClient extends Client
         if ($localVarParams['destination'] !== null) {
             $queryParams['destination'] = $localVarParams['destination'];
         }
+        if ($localVarParams['addressFamily'] !== null) {
+            $queryParams['address_family'] = $localVarParams['addressFamily'];
+        }
         if ($localVarParams['gdgwId'] !== null) {
             $pathParams['gdgw_id'] = $localVarParams['gdgwId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
+                ['application/json'],
                 []
             );
         }
@@ -1441,11 +1447,7 @@ class DcClient extends Client
     /**
      * 修改全域接入网关路由表
      *
-     * # 支持的修改操作：
-     * **注意：新增、删除、修改操作互斥，一次请求只能执行其中一类操作**
-     * + 1. 新增下一跳路由
-     * + 2. 删除下一跳路由
-     * + 3. 修改路由描述
+     * 支持的修改操作：新增、删除、修改
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1481,12 +1483,12 @@ class DcClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=utf-8'],
-                ['application/json; charset=utf-8']
+                ['application/json'],
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -2332,11 +2334,11 @@ class DcClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                [],
                 ['application/json']
             );
         }
@@ -2402,11 +2404,11 @@ class DcClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                [],
                 ['application/json']
             );
         }

@@ -20,7 +20,7 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ttlInDays  日志存储时间（天）。   该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
+    * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ttlInDays  日志存储时间（天）。   该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
+    * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ttlInDays  日志存储时间（天）。   该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
+    * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ttlInDays  日志存储时间（天）。   该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
+    * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ttlInDays  日志存储时间（天）。   该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
+    * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
     *
     * @var string[]
@@ -139,20 +139,7 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const TTL_IN_DAYS_7 = 7;
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getTtlInDaysAllowableValues()
-    {
-        return [
-            self::TTL_IN_DAYS_7,
-        ];
-    }
 
 
     /**
@@ -185,14 +172,6 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
         if ($this->container['ttlInDays'] === null) {
             $invalidProperties[] = "'ttlInDays' can't be null";
         }
-            $allowedValues = $this->getTtlInDaysAllowableValues();
-                if (!is_null($this->container['ttlInDays']) && !in_array($this->container['ttlInDays'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'ttlInDays', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             if (($this->container['ttlInDays'] > 365)) {
                 $invalidProperties[] = "invalid value for 'ttlInDays', must be smaller than or equal to 365.";
             }
@@ -215,7 +194,7 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttlInDays
-    *  日志存储时间（天）。   该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
+    *  日志存储时间（天）。
     *
     * @return int
     */
@@ -227,7 +206,7 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     /**
     * Sets ttlInDays
     *
-    * @param int $ttlInDays 日志存储时间（天）。   该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
+    * @param int $ttlInDays 日志存储时间（天）。
     *
     * @return $this
     */

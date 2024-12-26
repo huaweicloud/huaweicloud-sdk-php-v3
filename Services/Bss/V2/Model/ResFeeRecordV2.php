@@ -76,6 +76,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceTypeName  整机的子云服务的自身的资源类型名称。
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     *
     * @var string[]
     */
@@ -135,7 +136,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'string',
             'subResourceTypeName' => 'string',
             'subResourceId' => 'string',
-            'subResourceName' => 'string'
+            'subResourceName' => 'string',
+            'consumeTime' => 'string'
     ];
 
     /**
@@ -196,6 +198,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceTypeName  整机的子云服务的自身的资源类型名称。
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     *
     * @var string[]
     */
@@ -255,7 +258,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         'subResourceTypeCode' => null,
         'subResourceTypeName' => null,
         'subResourceId' => null,
-        'subResourceName' => null
+        'subResourceName' => null,
+        'consumeTime' => null
     ];
 
     /**
@@ -337,6 +341,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceTypeName  整机的子云服务的自身的资源类型名称。
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     *
     * @var string[]
     */
@@ -396,7 +401,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'sub_resource_type_code',
             'subResourceTypeName' => 'sub_resource_type_name',
             'subResourceId' => 'sub_resource_id',
-            'subResourceName' => 'sub_resource_name'
+            'subResourceName' => 'sub_resource_name',
+            'consumeTime' => 'consume_time'
     ];
 
     /**
@@ -457,6 +463,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceTypeName  整机的子云服务的自身的资源类型名称。
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     *
     * @var string[]
     */
@@ -516,7 +523,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'setSubResourceTypeCode',
             'subResourceTypeName' => 'setSubResourceTypeName',
             'subResourceId' => 'setSubResourceId',
-            'subResourceName' => 'setSubResourceName'
+            'subResourceName' => 'setSubResourceName',
+            'consumeTime' => 'setConsumeTime'
     ];
 
     /**
@@ -577,6 +585,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceTypeName  整机的子云服务的自身的资源类型名称。
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
+    * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     *
     * @var string[]
     */
@@ -636,7 +645,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'getSubResourceTypeCode',
             'subResourceTypeName' => 'getSubResourceTypeName',
             'subResourceId' => 'getSubResourceId',
-            'subResourceName' => 'getSubResourceName'
+            'subResourceName' => 'getSubResourceName',
+            'consumeTime' => 'getConsumeTime'
     ];
 
     /**
@@ -753,6 +763,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         $this->container['subResourceTypeName'] = isset($data['subResourceTypeName']) ? $data['subResourceTypeName'] : null;
         $this->container['subResourceId'] = isset($data['subResourceId']) ? $data['subResourceId'] : null;
         $this->container['subResourceName'] = isset($data['subResourceName']) ? $data['subResourceName'] : null;
+        $this->container['consumeTime'] = isset($data['consumeTime']) ? $data['consumeTime'] : null;
     }
 
     /**
@@ -2118,6 +2129,30 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     public function setSubResourceName($subResourceName)
     {
         $this->container['subResourceName'] = $subResourceName;
+        return $this;
+    }
+
+    /**
+    * Gets consumeTime
+    *  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    *
+    * @return string|null
+    */
+    public function getConsumeTime()
+    {
+        return $this->container['consumeTime'];
+    }
+
+    /**
+    * Sets consumeTime
+    *
+    * @param string|null $consumeTime |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    *
+    * @return $this
+    */
+    public function setConsumeTime($consumeTime)
+    {
+        $this->container['consumeTime'] = $consumeTime;
         return $this;
     }
 

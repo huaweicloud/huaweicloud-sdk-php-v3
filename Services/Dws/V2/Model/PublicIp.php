@@ -169,9 +169,6 @@ class PublicIp implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['publicBindType'] === null) {
-            $invalidProperties[] = "'publicBindType' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -190,7 +187,7 @@ class PublicIp implements ModelInterface, ArrayAccess
     * Gets publicBindType
     *  弹性IP绑定类型，取值如下：  - auto_assign：自动绑定 - not_use：暂未使用 - bind_existing ：使用已有
     *
-    * @return string
+    * @return string|null
     */
     public function getPublicBindType()
     {
@@ -200,7 +197,7 @@ class PublicIp implements ModelInterface, ArrayAccess
     /**
     * Sets publicBindType
     *
-    * @param string $publicBindType 弹性IP绑定类型，取值如下：  - auto_assign：自动绑定 - not_use：暂未使用 - bind_existing ：使用已有
+    * @param string|null $publicBindType 弹性IP绑定类型，取值如下：  - auto_assign：自动绑定 - not_use：暂未使用 - bind_existing ：使用已有
     *
     * @return $this
     */

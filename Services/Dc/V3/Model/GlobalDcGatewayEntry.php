@@ -24,6 +24,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
     * tenantId  项目ID。
     * name  global-dc-gateway名字。
     * description  描述信息
+    * reason  失败原因
     * enterpriseProjectId  global-dc-gateway所属的企业项目ID。
     * globalCenterNetworkId  DGW加载的全球中心网络实例的ID
     * bgpAsn  DGW对应BGP的ASN编号
@@ -46,6 +47,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
             'tenantId' => 'string',
             'name' => 'string',
             'description' => 'string',
+            'reason' => 'string',
             'enterpriseProjectId' => 'string',
             'globalCenterNetworkId' => 'string',
             'bgpAsn' => 'int',
@@ -68,6 +70,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
     * tenantId  项目ID。
     * name  global-dc-gateway名字。
     * description  描述信息
+    * reason  失败原因
     * enterpriseProjectId  global-dc-gateway所属的企业项目ID。
     * globalCenterNetworkId  DGW加载的全球中心网络实例的ID
     * bgpAsn  DGW对应BGP的ASN编号
@@ -90,6 +93,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
         'tenantId' => null,
         'name' => null,
         'description' => null,
+        'reason' => null,
         'enterpriseProjectId' => null,
         'globalCenterNetworkId' => null,
         'bgpAsn' => 'int64',
@@ -133,6 +137,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
     * tenantId  项目ID。
     * name  global-dc-gateway名字。
     * description  描述信息
+    * reason  失败原因
     * enterpriseProjectId  global-dc-gateway所属的企业项目ID。
     * globalCenterNetworkId  DGW加载的全球中心网络实例的ID
     * bgpAsn  DGW对应BGP的ASN编号
@@ -155,6 +160,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
             'tenantId' => 'tenant_id',
             'name' => 'name',
             'description' => 'description',
+            'reason' => 'reason',
             'enterpriseProjectId' => 'enterprise_project_id',
             'globalCenterNetworkId' => 'global_center_network_id',
             'bgpAsn' => 'bgp_asn',
@@ -177,6 +183,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
     * tenantId  项目ID。
     * name  global-dc-gateway名字。
     * description  描述信息
+    * reason  失败原因
     * enterpriseProjectId  global-dc-gateway所属的企业项目ID。
     * globalCenterNetworkId  DGW加载的全球中心网络实例的ID
     * bgpAsn  DGW对应BGP的ASN编号
@@ -199,6 +206,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
             'tenantId' => 'setTenantId',
             'name' => 'setName',
             'description' => 'setDescription',
+            'reason' => 'setReason',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'globalCenterNetworkId' => 'setGlobalCenterNetworkId',
             'bgpAsn' => 'setBgpAsn',
@@ -221,6 +229,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
     * tenantId  项目ID。
     * name  global-dc-gateway名字。
     * description  描述信息
+    * reason  失败原因
     * enterpriseProjectId  global-dc-gateway所属的企业项目ID。
     * globalCenterNetworkId  DGW加载的全球中心网络实例的ID
     * bgpAsn  DGW对应BGP的ASN编号
@@ -243,6 +252,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
             'tenantId' => 'getTenantId',
             'name' => 'getName',
             'description' => 'getDescription',
+            'reason' => 'getReason',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'globalCenterNetworkId' => 'getGlobalCenterNetworkId',
             'bgpAsn' => 'getBgpAsn',
@@ -336,6 +346,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['globalCenterNetworkId'] = isset($data['globalCenterNetworkId']) ? $data['globalCenterNetworkId'] : null;
         $this->container['bgpAsn'] = isset($data['bgpAsn']) ? $data['bgpAsn'] : null;
@@ -386,6 +397,12 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 255)) {
+                $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'reason', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
@@ -532,6 +549,30 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets reason
+    *  失败原因
+    *
+    * @return string|null
+    */
+    public function getReason()
+    {
+        return $this->container['reason'];
+    }
+
+    /**
+    * Sets reason
+    *
+    * @param string|null $reason 失败原因
+    *
+    * @return $this
+    */
+    public function setReason($reason)
+    {
+        $this->container['reason'] = $reason;
         return $this;
     }
 

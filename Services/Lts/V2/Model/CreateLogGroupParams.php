@@ -23,13 +23,15 @@ class CreateLogGroupParams implements ModelInterface, ArrayAccess
     * logGroupName  需要创建的日志组名称。
     * ttlInDays  日志存储时间（天），取值范围：1-30。
     * tags  标签字段信息
+    * logGroupNameAlias  日志组别名
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'logGroupName' => 'string',
             'ttlInDays' => 'int',
-            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]'
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]',
+            'logGroupNameAlias' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class CreateLogGroupParams implements ModelInterface, ArrayAccess
     * logGroupName  需要创建的日志组名称。
     * ttlInDays  日志存储时间（天），取值范围：1-30。
     * tags  标签字段信息
+    * logGroupNameAlias  日志组别名
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'logGroupName' => null,
         'ttlInDays' => 'int32',
-        'tags' => null
+        'tags' => null,
+        'logGroupNameAlias' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class CreateLogGroupParams implements ModelInterface, ArrayAccess
     * logGroupName  需要创建的日志组名称。
     * ttlInDays  日志存储时间（天），取值范围：1-30。
     * tags  标签字段信息
+    * logGroupNameAlias  日志组别名
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'logGroupName' => 'log_group_name',
             'ttlInDays' => 'ttl_in_days',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'logGroupNameAlias' => 'log_group_name_alias'
     ];
 
     /**
@@ -86,13 +92,15 @@ class CreateLogGroupParams implements ModelInterface, ArrayAccess
     * logGroupName  需要创建的日志组名称。
     * ttlInDays  日志存储时间（天），取值范围：1-30。
     * tags  标签字段信息
+    * logGroupNameAlias  日志组别名
     *
     * @var string[]
     */
     protected static $setters = [
             'logGroupName' => 'setLogGroupName',
             'ttlInDays' => 'setTtlInDays',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'logGroupNameAlias' => 'setLogGroupNameAlias'
     ];
 
     /**
@@ -100,13 +108,15 @@ class CreateLogGroupParams implements ModelInterface, ArrayAccess
     * logGroupName  需要创建的日志组名称。
     * ttlInDays  日志存储时间（天），取值范围：1-30。
     * tags  标签字段信息
+    * logGroupNameAlias  日志组别名
     *
     * @var string[]
     */
     protected static $getters = [
             'logGroupName' => 'getLogGroupName',
             'ttlInDays' => 'getTtlInDays',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'logGroupNameAlias' => 'getLogGroupNameAlias'
     ];
 
     /**
@@ -170,6 +180,7 @@ class CreateLogGroupParams implements ModelInterface, ArrayAccess
         $this->container['logGroupName'] = isset($data['logGroupName']) ? $data['logGroupName'] : null;
         $this->container['ttlInDays'] = isset($data['ttlInDays']) ? $data['ttlInDays'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['logGroupNameAlias'] = isset($data['logGroupNameAlias']) ? $data['logGroupNameAlias'] : null;
     }
 
     /**
@@ -281,6 +292,30 @@ class CreateLogGroupParams implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets logGroupNameAlias
+    *  日志组别名
+    *
+    * @return string|null
+    */
+    public function getLogGroupNameAlias()
+    {
+        return $this->container['logGroupNameAlias'];
+    }
+
+    /**
+    * Sets logGroupNameAlias
+    *
+    * @param string|null $logGroupNameAlias 日志组别名
+    *
+    * @return $this
+    */
+    public function setLogGroupNameAlias($logGroupNameAlias)
+    {
+        $this->container['logGroupNameAlias'] = $logGroupNameAlias;
         return $this;
     }
 

@@ -30,7 +30,7 @@ class ListGlobalDcGatewaysRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  根据企业项目ID过滤资源实例
     * siteNetworkId  站点网络ID
     * cloudConnectionId  云连接ID
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * globalCenterNetworkId  全球中心网络ID
     *
     * @var string[]
@@ -62,7 +62,7 @@ class ListGlobalDcGatewaysRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  根据企业项目ID过滤资源实例
     * siteNetworkId  站点网络ID
     * cloudConnectionId  云连接ID
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * globalCenterNetworkId  全球中心网络ID
     *
     * @var string[]
@@ -115,7 +115,7 @@ class ListGlobalDcGatewaysRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  根据企业项目ID过滤资源实例
     * siteNetworkId  站点网络ID
     * cloudConnectionId  云连接ID
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * globalCenterNetworkId  全球中心网络ID
     *
     * @var string[]
@@ -147,7 +147,7 @@ class ListGlobalDcGatewaysRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  根据企业项目ID过滤资源实例
     * siteNetworkId  站点网络ID
     * cloudConnectionId  云连接ID
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * globalCenterNetworkId  全球中心网络ID
     *
     * @var string[]
@@ -179,7 +179,7 @@ class ListGlobalDcGatewaysRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  根据企业项目ID过滤资源实例
     * siteNetworkId  站点网络ID
     * cloudConnectionId  云连接ID
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * globalCenterNetworkId  全球中心网络ID
     *
     * @var string[]
@@ -568,7 +568,7 @@ class ListGlobalDcGatewaysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  根椐资源状态过淲实例
+    *  根椐资源状态过滤实例
     *
     * @return string[]|null
     */
@@ -580,7 +580,7 @@ class ListGlobalDcGatewaysRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 根椐资源状态过淲实例
+    * @param string[]|null $status 根椐资源状态过滤实例
     *
     * @return $this
     */

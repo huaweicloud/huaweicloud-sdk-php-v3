@@ -20,34 +20,42 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * fields  显示字段列表
+    * extFields  show response ext-fields
     * gdgwId  全域接入网关ID
-    * addressFamily  地址簇
-    * nexthop  下一跳ID
+    * nexthop  下一条ID
     * destination  目的地址
+    * addressFamily  地址簇
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'fields' => 'string[]',
+            'extFields' => 'string[]',
             'gdgwId' => 'string',
-            'addressFamily' => 'string[]',
             'nexthop' => 'string[]',
-            'destination' => 'string[]'
+            'destination' => 'string[]',
+            'addressFamily' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * fields  显示字段列表
+    * extFields  show response ext-fields
     * gdgwId  全域接入网关ID
-    * addressFamily  地址簇
-    * nexthop  下一跳ID
+    * nexthop  下一条ID
     * destination  目的地址
+    * addressFamily  地址簇
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'fields' => null,
+        'extFields' => null,
         'gdgwId' => null,
-        'addressFamily' => null,
         'nexthop' => null,
-        'destination' => null
+        'destination' => null,
+        'addressFamily' => null
     ];
 
     /**
@@ -73,50 +81,62 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * fields  显示字段列表
+    * extFields  show response ext-fields
     * gdgwId  全域接入网关ID
-    * addressFamily  地址簇
-    * nexthop  下一跳ID
+    * nexthop  下一条ID
     * destination  目的地址
+    * addressFamily  地址簇
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'fields' => 'fields',
+            'extFields' => 'ext_fields',
             'gdgwId' => 'gdgw_id',
-            'addressFamily' => 'address_family',
             'nexthop' => 'nexthop',
-            'destination' => 'destination'
+            'destination' => 'destination',
+            'addressFamily' => 'address_family'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * fields  显示字段列表
+    * extFields  show response ext-fields
     * gdgwId  全域接入网关ID
-    * addressFamily  地址簇
-    * nexthop  下一跳ID
+    * nexthop  下一条ID
     * destination  目的地址
+    * addressFamily  地址簇
     *
     * @var string[]
     */
     protected static $setters = [
+            'fields' => 'setFields',
+            'extFields' => 'setExtFields',
             'gdgwId' => 'setGdgwId',
-            'addressFamily' => 'setAddressFamily',
             'nexthop' => 'setNexthop',
-            'destination' => 'setDestination'
+            'destination' => 'setDestination',
+            'addressFamily' => 'setAddressFamily'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * fields  显示字段列表
+    * extFields  show response ext-fields
     * gdgwId  全域接入网关ID
-    * addressFamily  地址簇
-    * nexthop  下一跳ID
+    * nexthop  下一条ID
     * destination  目的地址
+    * addressFamily  地址簇
     *
     * @var string[]
     */
     protected static $getters = [
+            'fields' => 'getFields',
+            'extFields' => 'getExtFields',
             'gdgwId' => 'getGdgwId',
-            'addressFamily' => 'getAddressFamily',
             'nexthop' => 'getNexthop',
-            'destination' => 'getDestination'
+            'destination' => 'getDestination',
+            'addressFamily' => 'getAddressFamily'
     ];
 
     /**
@@ -192,10 +212,12 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
+        $this->container['extFields'] = isset($data['extFields']) ? $data['extFields'] : null;
         $this->container['gdgwId'] = isset($data['gdgwId']) ? $data['gdgwId'] : null;
-        $this->container['addressFamily'] = isset($data['addressFamily']) ? $data['addressFamily'] : null;
         $this->container['nexthop'] = isset($data['nexthop']) ? $data['nexthop'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
+        $this->container['addressFamily'] = isset($data['addressFamily']) ? $data['addressFamily'] : null;
     }
 
     /**
@@ -227,6 +249,54 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets fields
+    *  显示字段列表
+    *
+    * @return string[]|null
+    */
+    public function getFields()
+    {
+        return $this->container['fields'];
+    }
+
+    /**
+    * Sets fields
+    *
+    * @param string[]|null $fields 显示字段列表
+    *
+    * @return $this
+    */
+    public function setFields($fields)
+    {
+        $this->container['fields'] = $fields;
+        return $this;
+    }
+
+    /**
+    * Gets extFields
+    *  show response ext-fields
+    *
+    * @return string[]|null
+    */
+    public function getExtFields()
+    {
+        return $this->container['extFields'];
+    }
+
+    /**
+    * Sets extFields
+    *
+    * @param string[]|null $extFields show response ext-fields
+    *
+    * @return $this
+    */
+    public function setExtFields($extFields)
+    {
+        $this->container['extFields'] = $extFields;
+        return $this;
+    }
+
+    /**
     * Gets gdgwId
     *  全域接入网关ID
     *
@@ -251,32 +321,8 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets addressFamily
-    *  地址簇
-    *
-    * @return string[]|null
-    */
-    public function getAddressFamily()
-    {
-        return $this->container['addressFamily'];
-    }
-
-    /**
-    * Sets addressFamily
-    *
-    * @param string[]|null $addressFamily 地址簇
-    *
-    * @return $this
-    */
-    public function setAddressFamily($addressFamily)
-    {
-        $this->container['addressFamily'] = $addressFamily;
-        return $this;
-    }
-
-    /**
     * Gets nexthop
-    *  下一跳ID
+    *  下一条ID
     *
     * @return string[]|null
     */
@@ -288,7 +334,7 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nexthop
     *
-    * @param string[]|null $nexthop 下一跳ID
+    * @param string[]|null $nexthop 下一条ID
     *
     * @return $this
     */
@@ -319,6 +365,30 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     public function setDestination($destination)
     {
         $this->container['destination'] = $destination;
+        return $this;
+    }
+
+    /**
+    * Gets addressFamily
+    *  地址簇
+    *
+    * @return string[]|null
+    */
+    public function getAddressFamily()
+    {
+        return $this->container['addressFamily'];
+    }
+
+    /**
+    * Sets addressFamily
+    *
+    * @param string[]|null $addressFamily 地址簇
+    *
+    * @return $this
+    */
+    public function setAddressFamily($addressFamily)
+    {
+        $this->container['addressFamily'] = $addressFamily;
         return $this;
     }
 

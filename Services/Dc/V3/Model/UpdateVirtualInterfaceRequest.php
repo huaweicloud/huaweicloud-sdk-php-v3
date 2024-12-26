@@ -175,8 +175,8 @@ class UpdateVirtualInterfaceRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['virtualInterfaceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'virtualInterfaceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['virtualInterfaceId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'virtualInterfaceId', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['virtualInterfaceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'virtualInterfaceId', the character length must be bigger than or equal to 0.";
             }
             if (!preg_match("/0|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['virtualInterfaceId'])) {
                 $invalidProperties[] = "invalid value for 'virtualInterfaceId', must be conform to the pattern /0|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";

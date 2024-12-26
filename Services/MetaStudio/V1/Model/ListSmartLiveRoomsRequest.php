@@ -34,6 +34,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     * roomType  按直播间类型查询。直播间类型。 * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * templateOwnType  按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - unconfirm: 未确认 - confirmed：已确认 - reject： 拒绝
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'startTime' => 'string',
             'endTime' => 'string',
             'roomType' => 'string',
-            'templateOwnType' => 'string'
+            'templateOwnType' => 'string',
+            'confirmState' => 'string'
     ];
 
     /**
@@ -70,6 +72,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     * roomType  按直播间类型查询。直播间类型。 * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * templateOwnType  按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - unconfirm: 未确认 - confirmed：已确认 - reject： 拒绝
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
         'startTime' => null,
         'endTime' => null,
         'roomType' => null,
-        'templateOwnType' => null
+        'templateOwnType' => null,
+        'confirmState' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     * roomType  按直播间类型查询。直播间类型。 * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * templateOwnType  按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - unconfirm: 未确认 - confirmed：已确认 - reject： 拒绝
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'roomType' => 'room_type',
-            'templateOwnType' => 'template_own_type'
+            'templateOwnType' => 'template_own_type',
+            'confirmState' => 'confirm_state'
     ];
 
     /**
@@ -163,6 +169,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     * roomType  按直播间类型查询。直播间类型。 * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * templateOwnType  按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - unconfirm: 未确认 - confirmed：已确认 - reject： 拒绝
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'roomType' => 'setRoomType',
-            'templateOwnType' => 'setTemplateOwnType'
+            'templateOwnType' => 'setTemplateOwnType',
+            'confirmState' => 'setConfirmState'
     ];
 
     /**
@@ -199,6 +207,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     * roomType  按直播间类型查询。直播间类型。 * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * templateOwnType  按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - unconfirm: 未确认 - confirmed：已确认 - reject： 拒绝
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'roomType' => 'getRoomType',
-            'templateOwnType' => 'getTemplateOwnType'
+            'templateOwnType' => 'getTemplateOwnType',
+            'confirmState' => 'getConfirmState'
     ];
 
     /**
@@ -291,6 +301,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['roomType'] = isset($data['roomType']) ? $data['roomType'] : null;
         $this->container['templateOwnType'] = isset($data['templateOwnType']) ? $data['templateOwnType'] : null;
+        $this->container['confirmState'] = isset($data['confirmState']) ? $data['confirmState'] : null;
     }
 
     /**
@@ -732,6 +743,30 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     public function setTemplateOwnType($templateOwnType)
     {
         $this->container['templateOwnType'] = $templateOwnType;
+        return $this;
+    }
+
+    /**
+    * Gets confirmState
+    *  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - unconfirm: 未确认 - confirmed：已确认 - reject： 拒绝
+    *
+    * @return string|null
+    */
+    public function getConfirmState()
+    {
+        return $this->container['confirmState'];
+    }
+
+    /**
+    * Sets confirmState
+    *
+    * @param string|null $confirmState 直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - unconfirm: 未确认 - confirmed：已确认 - reject： 拒绝
+    *
+    * @return $this
+    */
+    public function setConfirmState($confirmState)
+    {
+        $this->container['confirmState'] = $confirmState;
         return $this;
     }
 

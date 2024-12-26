@@ -25,6 +25,7 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
     * regionId  局点ID
     * projectId  项目ID
     * siteCode  网点编码
+    * type  连接类型
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
             'linkId' => 'string',
             'regionId' => 'string',
             'projectId' => 'string',
-            'siteCode' => 'string'
+            'siteCode' => 'string',
+            'type' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
     * regionId  局点ID
     * projectId  项目ID
     * siteCode  网点编码
+    * type  连接类型
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
         'linkId' => null,
         'regionId' => null,
         'projectId' => null,
-        'siteCode' => null
+        'siteCode' => null,
+        'type' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
     * regionId  局点ID
     * projectId  项目ID
     * siteCode  网点编码
+    * type  连接类型
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
             'linkId' => 'link_id',
             'regionId' => 'region_id',
             'projectId' => 'project_id',
-            'siteCode' => 'site_code'
+            'siteCode' => 'site_code',
+            'type' => 'type'
     ];
 
     /**
@@ -100,6 +106,7 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
     * regionId  局点ID
     * projectId  项目ID
     * siteCode  网点编码
+    * type  连接类型
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
             'linkId' => 'setLinkId',
             'regionId' => 'setRegionId',
             'projectId' => 'setProjectId',
-            'siteCode' => 'setSiteCode'
+            'siteCode' => 'setSiteCode',
+            'type' => 'setType'
     ];
 
     /**
@@ -118,6 +126,7 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
     * regionId  局点ID
     * projectId  项目ID
     * siteCode  网点编码
+    * type  连接类型
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
             'linkId' => 'getLinkId',
             'regionId' => 'getRegionId',
             'projectId' => 'getProjectId',
-            'siteCode' => 'getSiteCode'
+            'siteCode' => 'getSiteCode',
+            'type' => 'getType'
     ];
 
     /**
@@ -192,6 +202,7 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['siteCode'] = isset($data['siteCode']) ? $data['siteCode'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -333,6 +344,30 @@ class PeerSiteExternal implements ModelInterface, ArrayAccess
     public function setSiteCode($siteCode)
     {
         $this->container['siteCode'] = $siteCode;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  连接类型
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 连接类型
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

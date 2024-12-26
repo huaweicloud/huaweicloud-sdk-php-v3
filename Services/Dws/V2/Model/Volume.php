@@ -21,7 +21,7 @@ class Volume implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * volume  磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
-    * capacity  磁盘容量
+    * capacity  磁盘容量,单位：GB
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class Volume implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * volume  磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
-    * capacity  磁盘容量
+    * capacity  磁盘容量,单位：GB
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class Volume implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * volume  磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
-    * capacity  磁盘容量
+    * capacity  磁盘容量,单位：GB
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class Volume implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * volume  磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
-    * capacity  磁盘容量
+    * capacity  磁盘容量,单位：GB
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class Volume implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * volume  磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
-    * capacity  磁盘容量
+    * capacity  磁盘容量,单位：GB
     *
     * @var string[]
     */
@@ -169,6 +169,9 @@ class Volume implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['volume'] === null) {
+            $invalidProperties[] = "'volume' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +190,7 @@ class Volume implements ModelInterface, ArrayAccess
     * Gets volume
     *  磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
     *
-    * @return string|null
+    * @return string
     */
     public function getVolume()
     {
@@ -197,7 +200,7 @@ class Volume implements ModelInterface, ArrayAccess
     /**
     * Sets volume
     *
-    * @param string|null $volume 磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
+    * @param string $volume 磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
     *
     * @return $this
     */
@@ -209,7 +212,7 @@ class Volume implements ModelInterface, ArrayAccess
 
     /**
     * Gets capacity
-    *  磁盘容量
+    *  磁盘容量,单位：GB
     *
     * @return int|null
     */
@@ -221,7 +224,7 @@ class Volume implements ModelInterface, ArrayAccess
     /**
     * Sets capacity
     *
-    * @param int|null $capacity 磁盘容量
+    * @param int|null $capacity 磁盘容量,单位：GB
     *
     * @return $this
     */

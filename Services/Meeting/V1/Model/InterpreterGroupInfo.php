@@ -22,6 +22,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groupId  传译组序号。
     * groupName  传译组名称。
+    * groupType  传译组类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
     * firstLanguage  传译组支持的第一种语言。
     * secondLanguage  传译组支持的第二种语言。
     * interpreters  传译员列表。
@@ -31,6 +32,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'groupId' => 'string',
             'groupName' => 'string',
+            'groupType' => 'string',
             'firstLanguage' => 'string',
             'secondLanguage' => 'string',
             'interpreters' => '\HuaweiCloud\SDK\Meeting\V1\Model\InterpreterInfo[]'
@@ -40,6 +42,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * groupId  传译组序号。
     * groupName  传译组名称。
+    * groupType  传译组类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
     * firstLanguage  传译组支持的第一种语言。
     * secondLanguage  传译组支持的第二种语言。
     * interpreters  传译员列表。
@@ -49,6 +52,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'groupId' => null,
         'groupName' => null,
+        'groupType' => null,
         'firstLanguage' => null,
         'secondLanguage' => null,
         'interpreters' => null
@@ -79,6 +83,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groupId  传译组序号。
     * groupName  传译组名称。
+    * groupType  传译组类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
     * firstLanguage  传译组支持的第一种语言。
     * secondLanguage  传译组支持的第二种语言。
     * interpreters  传译员列表。
@@ -88,6 +93,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'groupId' => 'groupID',
             'groupName' => 'groupName',
+            'groupType' => 'groupType',
             'firstLanguage' => 'firstLanguage',
             'secondLanguage' => 'secondLanguage',
             'interpreters' => 'interpreters'
@@ -97,6 +103,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * groupId  传译组序号。
     * groupName  传译组名称。
+    * groupType  传译组类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
     * firstLanguage  传译组支持的第一种语言。
     * secondLanguage  传译组支持的第二种语言。
     * interpreters  传译员列表。
@@ -106,6 +113,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'groupId' => 'setGroupId',
             'groupName' => 'setGroupName',
+            'groupType' => 'setGroupType',
             'firstLanguage' => 'setFirstLanguage',
             'secondLanguage' => 'setSecondLanguage',
             'interpreters' => 'setInterpreters'
@@ -115,6 +123,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * groupId  传译组序号。
     * groupName  传译组名称。
+    * groupType  传译组类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
     * firstLanguage  传译组支持的第一种语言。
     * secondLanguage  传译组支持的第二种语言。
     * interpreters  传译员列表。
@@ -124,6 +133,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'groupId' => 'getGroupId',
             'groupName' => 'getGroupName',
+            'groupType' => 'getGroupType',
             'firstLanguage' => 'getFirstLanguage',
             'secondLanguage' => 'getSecondLanguage',
             'interpreters' => 'getInterpreters'
@@ -189,6 +199,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     {
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
+        $this->container['groupType'] = isset($data['groupType']) ? $data['groupType'] : null;
         $this->container['firstLanguage'] = isset($data['firstLanguage']) ? $data['firstLanguage'] : null;
         $this->container['secondLanguage'] = isset($data['secondLanguage']) ? $data['secondLanguage'] : null;
         $this->container['interpreters'] = isset($data['interpreters']) ? $data['interpreters'] : null;
@@ -270,6 +281,30 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     public function setGroupName($groupName)
     {
         $this->container['groupName'] = $groupName;
+        return $this;
+    }
+
+    /**
+    * Gets groupType
+    *  传译组类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
+    *
+    * @return string|null
+    */
+    public function getGroupType()
+    {
+        return $this->container['groupType'];
+    }
+
+    /**
+    * Sets groupType
+    *
+    * @param string|null $groupType 传译组类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
+    *
+    * @return $this
+    */
+    public function setGroupType($groupType)
+    {
+        $this->container['groupType'] = $groupType;
         return $this;
     }
 

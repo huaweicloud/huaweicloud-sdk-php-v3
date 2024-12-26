@@ -27,7 +27,7 @@ class Policy implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'period' => 'string',
-            'retentionDays' => 'string'
+            'retentionDays' => 'int'
     ];
 
     /**
@@ -217,7 +217,7 @@ class Policy implements ModelInterface, ArrayAccess
     * Gets retentionDays
     *  保留时长（天）
     *
-    * @return string
+    * @return int
     */
     public function getRetentionDays()
     {
@@ -227,7 +227,7 @@ class Policy implements ModelInterface, ArrayAccess
     /**
     * Sets retentionDays
     *
-    * @param string $retentionDays 保留时长（天）
+    * @param int $retentionDays 保留时长（天）
     *
     * @return $this
     */

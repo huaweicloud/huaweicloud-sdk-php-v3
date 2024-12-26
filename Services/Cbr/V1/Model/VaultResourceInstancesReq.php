@@ -243,6 +243,11 @@ class VaultResourceInstancesReq implements ModelInterface, ArrayAccess
     const CLOUD_TYPE_HYBRID = 'hybrid';
     const OBJECT_TYPE_SERVER = 'server';
     const OBJECT_TYPE_DISK = 'disk';
+    const OBJECT_TYPE_TURBO = 'turbo';
+    const OBJECT_TYPE_WORKSPACE = 'workspace';
+    const OBJECT_TYPE_VMWARE = 'vmware';
+    const OBJECT_TYPE_RDS = 'rds';
+    const OBJECT_TYPE_FILE = 'file';
     
 
     /**
@@ -268,6 +273,11 @@ class VaultResourceInstancesReq implements ModelInterface, ArrayAccess
         return [
             self::OBJECT_TYPE_SERVER,
             self::OBJECT_TYPE_DISK,
+            self::OBJECT_TYPE_TURBO,
+            self::OBJECT_TYPE_WORKSPACE,
+            self::OBJECT_TYPE_VMWARE,
+            self::OBJECT_TYPE_RDS,
+            self::OBJECT_TYPE_FILE,
         ];
     }
 

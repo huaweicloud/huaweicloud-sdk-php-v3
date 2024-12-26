@@ -202,18 +202,6 @@ class GetAccessConfigListRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['accessConfigNameList'] === null) {
-            $invalidProperties[] = "'accessConfigNameList' can't be null";
-        }
-        if ($this->container['hostGroupNameList'] === null) {
-            $invalidProperties[] = "'hostGroupNameList' can't be null";
-        }
-        if ($this->container['logGroupNameList'] === null) {
-            $invalidProperties[] = "'logGroupNameList' can't be null";
-        }
-        if ($this->container['logStreamNameList'] === null) {
-            $invalidProperties[] = "'logStreamNameList' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -232,7 +220,7 @@ class GetAccessConfigListRequestBody implements ModelInterface, ArrayAccess
     * Gets accessConfigNameList
     *  接入配置名称列表
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getAccessConfigNameList()
     {
@@ -242,7 +230,7 @@ class GetAccessConfigListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets accessConfigNameList
     *
-    * @param string[] $accessConfigNameList 接入配置名称列表
+    * @param string[]|null $accessConfigNameList 接入配置名称列表
     *
     * @return $this
     */
@@ -256,7 +244,7 @@ class GetAccessConfigListRequestBody implements ModelInterface, ArrayAccess
     * Gets hostGroupNameList
     *  主机组名称列表
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getHostGroupNameList()
     {
@@ -266,7 +254,7 @@ class GetAccessConfigListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets hostGroupNameList
     *
-    * @param string[] $hostGroupNameList 主机组名称列表
+    * @param string[]|null $hostGroupNameList 主机组名称列表
     *
     * @return $this
     */
@@ -280,7 +268,7 @@ class GetAccessConfigListRequestBody implements ModelInterface, ArrayAccess
     * Gets logGroupNameList
     *  日志组名称列表
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getLogGroupNameList()
     {
@@ -290,7 +278,7 @@ class GetAccessConfigListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets logGroupNameList
     *
-    * @param string[] $logGroupNameList 日志组名称列表
+    * @param string[]|null $logGroupNameList 日志组名称列表
     *
     * @return $this
     */
@@ -304,7 +292,7 @@ class GetAccessConfigListRequestBody implements ModelInterface, ArrayAccess
     * Gets logStreamNameList
     *  日志流名称列表
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getLogStreamNameList()
     {
@@ -314,7 +302,7 @@ class GetAccessConfigListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets logStreamNameList
     *
-    * @param string[] $logStreamNameList 日志流名称列表
+    * @param string[]|null $logStreamNameList 日志流名称列表
     *
     * @return $this
     */

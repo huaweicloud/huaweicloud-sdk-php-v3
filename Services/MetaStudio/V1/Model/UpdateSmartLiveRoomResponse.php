@@ -46,6 +46,8 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * coverUrl  直播间封面图URL
     * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
+    * scriptVersion  直播间剧本版本。调用update接口即更新版本。使用时间戳。
     * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
@@ -77,6 +79,8 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'coverUrl' => 'string',
             'thumbnail' => 'string',
             'roomState' => 'string',
+            'confirmState' => 'string',
+            'scriptVersion' => 'string',
             'errorInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse',
             'xRequestId' => 'string'
     ];
@@ -108,6 +112,8 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * coverUrl  直播间封面图URL
     * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
+    * scriptVersion  直播间剧本版本。调用update接口即更新版本。使用时间戳。
     * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
@@ -139,6 +145,8 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         'coverUrl' => null,
         'thumbnail' => null,
         'roomState' => null,
+        'confirmState' => null,
+        'scriptVersion' => null,
         'errorInfo' => null,
         'xRequestId' => null
     ];
@@ -191,6 +199,8 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * coverUrl  直播间封面图URL
     * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
+    * scriptVersion  直播间剧本版本。调用update接口即更新版本。使用时间戳。
     * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
@@ -222,6 +232,8 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'coverUrl' => 'cover_url',
             'thumbnail' => 'thumbnail',
             'roomState' => 'room_state',
+            'confirmState' => 'confirm_state',
+            'scriptVersion' => 'script_version',
             'errorInfo' => 'error_info',
             'xRequestId' => 'X-Request-Id'
     ];
@@ -253,6 +265,8 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * coverUrl  直播间封面图URL
     * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
+    * scriptVersion  直播间剧本版本。调用update接口即更新版本。使用时间戳。
     * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
@@ -284,6 +298,8 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'coverUrl' => 'setCoverUrl',
             'thumbnail' => 'setThumbnail',
             'roomState' => 'setRoomState',
+            'confirmState' => 'setConfirmState',
+            'scriptVersion' => 'setScriptVersion',
             'errorInfo' => 'setErrorInfo',
             'xRequestId' => 'setXRequestId'
     ];
@@ -315,6 +331,8 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * coverUrl  直播间封面图URL
     * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
+    * scriptVersion  直播间剧本版本。调用update接口即更新版本。使用时间戳。
     * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
@@ -346,6 +364,8 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'coverUrl' => 'getCoverUrl',
             'thumbnail' => 'getThumbnail',
             'roomState' => 'getRoomState',
+            'confirmState' => 'getConfirmState',
+            'scriptVersion' => 'getScriptVersion',
             'errorInfo' => 'getErrorInfo',
             'xRequestId' => 'getXRequestId'
     ];
@@ -398,6 +418,9 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     const ROOM_STATE_ENABLE = 'ENABLE';
     const ROOM_STATE_DISABLE = 'DISABLE';
     const ROOM_STATE_BLOCKED = 'BLOCKED';
+    const CONFIRM_STATE_UNCONFIRM = 'UNCONFIRM';
+    const CONFIRM_STATE_CONFIRMED = 'CONFIRMED';
+    const CONFIRM_STATE_REJECT = 'REJECT';
     
 
     /**
@@ -438,6 +461,20 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             self::ROOM_STATE_ENABLE,
             self::ROOM_STATE_DISABLE,
             self::ROOM_STATE_BLOCKED,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getConfirmStateAllowableValues()
+    {
+        return [
+            self::CONFIRM_STATE_UNCONFIRM,
+            self::CONFIRM_STATE_CONFIRMED,
+            self::CONFIRM_STATE_REJECT,
         ];
     }
 
@@ -482,6 +519,8 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
         $this->container['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : null;
         $this->container['roomState'] = isset($data['roomState']) ? $data['roomState'] : null;
+        $this->container['confirmState'] = isset($data['confirmState']) ? $data['confirmState'] : null;
+        $this->container['scriptVersion'] = isset($data['scriptVersion']) ? $data['scriptVersion'] : null;
         $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
@@ -580,6 +619,26 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['roomState']) && (mb_strlen($this->container['roomState']) < 0)) {
                 $invalidProperties[] = "invalid value for 'roomState', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getConfirmStateAllowableValues();
+                if (!is_null($this->container['confirmState']) && !in_array($this->container['confirmState'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'confirmState', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['confirmState']) && (mb_strlen($this->container['confirmState']) > 32)) {
+                $invalidProperties[] = "invalid value for 'confirmState', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['confirmState']) && (mb_strlen($this->container['confirmState']) < 0)) {
+                $invalidProperties[] = "invalid value for 'confirmState', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['scriptVersion']) && (mb_strlen($this->container['scriptVersion']) > 32)) {
+                $invalidProperties[] = "invalid value for 'scriptVersion', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['scriptVersion']) && (mb_strlen($this->container['scriptVersion']) < 0)) {
+                $invalidProperties[] = "invalid value for 'scriptVersion', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1192,6 +1251,54 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     public function setRoomState($roomState)
     {
         $this->container['roomState'] = $roomState;
+        return $this;
+    }
+
+    /**
+    * Gets confirmState
+    *  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
+    *
+    * @return string|null
+    */
+    public function getConfirmState()
+    {
+        return $this->container['confirmState'];
+    }
+
+    /**
+    * Sets confirmState
+    *
+    * @param string|null $confirmState 直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
+    *
+    * @return $this
+    */
+    public function setConfirmState($confirmState)
+    {
+        $this->container['confirmState'] = $confirmState;
+        return $this;
+    }
+
+    /**
+    * Gets scriptVersion
+    *  直播间剧本版本。调用update接口即更新版本。使用时间戳。
+    *
+    * @return string|null
+    */
+    public function getScriptVersion()
+    {
+        return $this->container['scriptVersion'];
+    }
+
+    /**
+    * Sets scriptVersion
+    *
+    * @param string|null $scriptVersion 直播间剧本版本。调用update接口即更新版本。使用时间戳。
+    *
+    * @return $this
+    */
+    public function setScriptVersion($scriptVersion)
+    {
+        $this->container['scriptVersion'] = $scriptVersion;
         return $this;
     }
 

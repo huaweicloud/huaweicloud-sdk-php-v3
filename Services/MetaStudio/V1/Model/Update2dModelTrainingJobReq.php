@@ -29,7 +29,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * samplesBasicInfo  动作视频样例可修改信息。
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     *
     * @var string[]
@@ -59,7 +59,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * samplesBasicInfo  动作视频样例可修改信息。
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     *
     * @var string[]
@@ -110,7 +110,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * samplesBasicInfo  动作视频样例可修改信息。
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     *
     * @var string[]
@@ -140,7 +140,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * samplesBasicInfo  动作视频样例可修改信息。
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     *
     * @var string[]
@@ -170,7 +170,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
     * samplesBasicInfo  动作视频样例可修改信息。
-    * supportedService  该任务所生成的模型支持的业务类型，可多选
+    * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     *
     * @var string[]
@@ -580,7 +580,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportedService
-    *  该任务所生成的模型支持的业务类型，可多选
+    *  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     *
     * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null
     */
@@ -592,7 +592,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets supportedService
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null $supportedService 该任务所生成的模型支持的业务类型，可多选
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null $supportedService 该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     *
     * @return $this
     */

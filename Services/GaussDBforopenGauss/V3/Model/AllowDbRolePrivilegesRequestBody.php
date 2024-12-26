@@ -21,19 +21,19 @@ class AllowDbRolePrivilegesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * dbName  数据库名称。 不能使用模板库，且是已存在的数据库名称。 模板库包括postgres， template0 ，template1，templatea，template_pdb，templatem。
-    * user  角色权限信息。
+    * user  user
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'dbName' => 'string',
-            'user' => 'object'
+            'user' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\GaussDBforOpenGaussRoleAttributes'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * dbName  数据库名称。 不能使用模板库，且是已存在的数据库名称。 模板库包括postgres， template0 ，template1，templatea，template_pdb，templatem。
-    * user  角色权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class AllowDbRolePrivilegesRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * dbName  数据库名称。 不能使用模板库，且是已存在的数据库名称。 模板库包括postgres， template0 ，template1，templatea，template_pdb，templatem。
-    * user  角色权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class AllowDbRolePrivilegesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * dbName  数据库名称。 不能使用模板库，且是已存在的数据库名称。 模板库包括postgres， template0 ，template1，templatea，template_pdb，templatem。
-    * user  角色权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class AllowDbRolePrivilegesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * dbName  数据库名称。 不能使用模板库，且是已存在的数据库名称。 模板库包括postgres， template0 ，template1，templatea，template_pdb，templatem。
-    * user  角色权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -215,9 +215,9 @@ class AllowDbRolePrivilegesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets user
-    *  角色权限信息。
+    *  user
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\GaussDBforOpenGaussRoleAttributes
     */
     public function getUser()
     {
@@ -227,7 +227,7 @@ class AllowDbRolePrivilegesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets user
     *
-    * @param object $user 角色权限信息。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\GaussDBforOpenGaussRoleAttributes $user user
     *
     * @return $this
     */

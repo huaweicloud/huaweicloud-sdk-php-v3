@@ -1592,6 +1592,92 @@ class HssAsyncClient extends Client
     }
 
     /**
+     * 查询agent安装脚本
+     *
+     * 查询agent安装脚本
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAgentInstallScriptAsync($request)
+    {
+        return $this->listAgentInstallScriptAsyncWithHttpInfo($request);
+    }
+    
+    public function listAgentInstallScriptAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/setting/agent-install-script';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['osType'] !== null) {
+            $queryParams['os_type'] = $localVarParams['osType'];
+        }
+        if ($localVarParams['osArch'] !== null) {
+            $queryParams['os_arch'] = $localVarParams['osArch'];
+        }
+        if ($localVarParams['outsideHost'] !== null) {
+            $queryParams['outside_host'] = $localVarParams['outsideHost'];
+        }
+        if ($localVarParams['outsideGroupId'] !== null) {
+            $queryParams['outside_group_id'] = $localVarParams['outsideGroupId'];
+        }
+        if ($localVarParams['batchInstall'] !== null) {
+            $queryParams['batch_install'] = $localVarParams['batchInstall'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAgentInstallScriptResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAgentInstallScriptRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询告警白名单列表
      *
      * 查询告警白名单列表
@@ -2577,11 +2663,11 @@ class HssAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/zip']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/zip'],
                 []
             );
         }

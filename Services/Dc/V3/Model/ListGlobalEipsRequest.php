@@ -29,7 +29,7 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * connectGatewayId  互联网关ID
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * globalEipId  全局弹性IP的ID
     * globalEipSegmentId  全局弹性IP(有掩码)的ID
     *
@@ -61,7 +61,7 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * connectGatewayId  互联网关ID
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * globalEipId  全局弹性IP的ID
     * globalEipSegmentId  全局弹性IP(有掩码)的ID
     *
@@ -114,7 +114,7 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * connectGatewayId  互联网关ID
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * globalEipId  全局弹性IP的ID
     * globalEipSegmentId  全局弹性IP(有掩码)的ID
     *
@@ -146,7 +146,7 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * connectGatewayId  互联网关ID
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * globalEipId  全局弹性IP的ID
     * globalEipSegmentId  全局弹性IP(有掩码)的ID
     *
@@ -178,7 +178,7 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * connectGatewayId  互联网关ID
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * globalEipId  全局弹性IP的ID
     * globalEipSegmentId  全局弹性IP(有掩码)的ID
     *
@@ -556,7 +556,7 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  根椐资源状态过淲实例
+    *  根椐资源状态过滤实例
     *
     * @return string[]|null
     */
@@ -568,7 +568,7 @@ class ListGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 根椐资源状态过淲实例
+    * @param string[]|null $status 根椐资源状态过滤实例
     *
     * @return $this
     */

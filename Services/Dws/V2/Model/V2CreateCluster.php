@@ -40,6 +40,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * cryptAlgorithm  加密算法
     * volume  volume
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
             'masterKeyName' => 'string',
             'cryptAlgorithm' => 'string',
             'volume' => '\HuaweiCloud\SDK\Dws\V2\Model\Volume',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'ipv6Enable' => 'bool'
     ];
 
     /**
@@ -88,6 +90,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * cryptAlgorithm  加密算法
     * volume  volume
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
         'masterKeyName' => null,
         'cryptAlgorithm' => null,
         'volume' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'ipv6Enable' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * cryptAlgorithm  加密算法
     * volume  volume
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
             'masterKeyName' => 'master_key_name',
             'cryptAlgorithm' => 'crypt_algorithm',
             'volume' => 'volume',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'ipv6Enable' => 'ipv6_enable'
     ];
 
     /**
@@ -205,6 +211,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * cryptAlgorithm  加密算法
     * volume  volume
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
             'masterKeyName' => 'setMasterKeyName',
             'cryptAlgorithm' => 'setCryptAlgorithm',
             'volume' => 'setVolume',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'ipv6Enable' => 'setIpv6Enable'
     ];
 
     /**
@@ -253,6 +261,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * cryptAlgorithm  加密算法
     * volume  volume
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
             'masterKeyName' => 'getMasterKeyName',
             'cryptAlgorithm' => 'getCryptAlgorithm',
             'volume' => 'getVolume',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'ipv6Enable' => 'getIpv6Enable'
     ];
 
     /**
@@ -357,6 +367,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
         $this->container['cryptAlgorithm'] = isset($data['cryptAlgorithm']) ? $data['cryptAlgorithm'] : null;
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
     }
 
     /**
@@ -399,6 +410,9 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
         }
         if ($this->container['datastoreVersion'] === null) {
             $invalidProperties[] = "'datastoreVersion' can't be null";
+        }
+        if ($this->container['volume'] === null) {
+            $invalidProperties[] = "'volume' can't be null";
         }
         return $invalidProperties;
     }
@@ -850,7 +864,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * Gets volume
     *  volume
     *
-    * @return \HuaweiCloud\SDK\Dws\V2\Model\Volume|null
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\Volume
     */
     public function getVolume()
     {
@@ -860,7 +874,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets volume
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\Volume|null $volume volume
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\Volume $volume volume
     *
     * @return $this
     */
@@ -891,6 +905,30 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6Enable
+    *  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    *
+    * @return bool|null
+    */
+    public function getIpv6Enable()
+    {
+        return $this->container['ipv6Enable'];
+    }
+
+    /**
+    * Sets ipv6Enable
+    *
+    * @param bool|null $ipv6Enable 指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    *
+    * @return $this
+    */
+    public function setIpv6Enable($ipv6Enable)
+    {
+        $this->container['ipv6Enable'] = $ipv6Enable;
         return $this;
     }
 

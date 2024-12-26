@@ -24,6 +24,7 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
     * tenantId  租户项目ID
     * name  专线内部连接(peer link)名字
     * description  描述信息
+    * reason  失败原因
     * globalDcGatewayId  对应的专线全域接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
@@ -40,6 +41,7 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
             'tenantId' => 'string',
             'name' => 'string',
             'description' => 'string',
+            'reason' => 'string',
             'globalDcGatewayId' => 'string',
             'bandwidthInfo' => '\HuaweiCloud\SDK\Dc\V3\Model\BandWidthInfo',
             'peerSite' => '\HuaweiCloud\SDK\Dc\V3\Model\PeerSite',
@@ -56,6 +58,7 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
     * tenantId  租户项目ID
     * name  专线内部连接(peer link)名字
     * description  描述信息
+    * reason  失败原因
     * globalDcGatewayId  对应的专线全域接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
@@ -72,6 +75,7 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
         'tenantId' => null,
         'name' => null,
         'description' => null,
+        'reason' => null,
         'globalDcGatewayId' => null,
         'bandwidthInfo' => null,
         'peerSite' => null,
@@ -109,6 +113,7 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
     * tenantId  租户项目ID
     * name  专线内部连接(peer link)名字
     * description  描述信息
+    * reason  失败原因
     * globalDcGatewayId  对应的专线全域接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
@@ -125,6 +130,7 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
             'tenantId' => 'tenant_id',
             'name' => 'name',
             'description' => 'description',
+            'reason' => 'reason',
             'globalDcGatewayId' => 'global_dc_gateway_id',
             'bandwidthInfo' => 'bandwidth_info',
             'peerSite' => 'peer_site',
@@ -141,6 +147,7 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
     * tenantId  租户项目ID
     * name  专线内部连接(peer link)名字
     * description  描述信息
+    * reason  失败原因
     * globalDcGatewayId  对应的专线全域接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
@@ -157,6 +164,7 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
             'tenantId' => 'setTenantId',
             'name' => 'setName',
             'description' => 'setDescription',
+            'reason' => 'setReason',
             'globalDcGatewayId' => 'setGlobalDcGatewayId',
             'bandwidthInfo' => 'setBandwidthInfo',
             'peerSite' => 'setPeerSite',
@@ -173,6 +181,7 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
     * tenantId  租户项目ID
     * name  专线内部连接(peer link)名字
     * description  描述信息
+    * reason  失败原因
     * globalDcGatewayId  对应的专线全域接入网关ID
     * bandwidthInfo  bandwidthInfo
     * peerSite  peerSite
@@ -189,6 +198,7 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
             'tenantId' => 'getTenantId',
             'name' => 'getName',
             'description' => 'getDescription',
+            'reason' => 'getReason',
             'globalDcGatewayId' => 'getGlobalDcGatewayId',
             'bandwidthInfo' => 'getBandwidthInfo',
             'peerSite' => 'getPeerSite',
@@ -261,6 +271,7 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
         $this->container['globalDcGatewayId'] = isset($data['globalDcGatewayId']) ? $data['globalDcGatewayId'] : null;
         $this->container['bandwidthInfo'] = isset($data['bandwidthInfo']) ? $data['bandwidthInfo'] : null;
         $this->container['peerSite'] = isset($data['peerSite']) ? $data['peerSite'] : null;
@@ -305,6 +316,12 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 255)) {
+                $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'reason', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['globalDcGatewayId']) && (mb_strlen($this->container['globalDcGatewayId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'globalDcGatewayId', the character length must be smaller than or equal to 64.";
@@ -419,6 +436,30 @@ class PeerLinkEntry implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets reason
+    *  失败原因
+    *
+    * @return string|null
+    */
+    public function getReason()
+    {
+        return $this->container['reason'];
+    }
+
+    /**
+    * Sets reason
+    *
+    * @param string|null $reason 失败原因
+    *
+    * @return $this
+    */
+    public function setReason($reason)
+    {
+        $this->container['reason'] = $reason;
         return $this;
     }
 

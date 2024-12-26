@@ -27,7 +27,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * directConnectId  根椐物理专线ID过滤查询实例信息
     * vgwId  根椐虚拟网关ID过滤查询实例信息
     *
@@ -55,7 +55,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * directConnectId  根椐物理专线ID过滤查询实例信息
     * vgwId  根椐虚拟网关ID过滤查询实例信息
     *
@@ -104,7 +104,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * directConnectId  根椐物理专线ID过滤查询实例信息
     * vgwId  根椐虚拟网关ID过滤查询实例信息
     *
@@ -132,7 +132,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * directConnectId  根椐物理专线ID过滤查询实例信息
     * vgwId  根椐虚拟网关ID过滤查询实例信息
     *
@@ -160,7 +160,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
-    * status  根椐资源状态过淲实例
+    * status  根椐资源状态过滤实例
     * directConnectId  根椐物理专线ID过滤查询实例信息
     * vgwId  根椐虚拟网关ID过滤查询实例信息
     *
@@ -474,7 +474,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  根椐资源状态过淲实例
+    *  根椐资源状态过滤实例
     *
     * @return string[]|null
     */
@@ -486,7 +486,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 根椐资源状态过淲实例
+    * @param string[]|null $status 根椐资源状态过滤实例
     *
     * @return $this
     */

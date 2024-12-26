@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Waf\V1\Model;
+namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class Advanced implements ModelInterface, ArrayAccess
+class LivePlayingScriptInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class Advanced implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'Advanced';
+    protected static $openAPIModelName = 'LivePlayingScriptInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * index  字段类型，支持的字段类型有：Params、Cookie、Header、Body、Multipart。   - 当选择“Params”、“Cookie”或者“Header”字段时，可以配置“全部”或根据需求配置子字段   - 当选择“Body”或“Multipart”字段时，可以配置“全部”
-    * contensts  指定字段类型的子字段，默认值为“全部”
+    * scriptName  剧本名称
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
+    * shootScripts  拍摄脚本列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'index' => 'string',
-            'contensts' => 'string[]'
+            'scriptName' => 'string',
+            'modelAssetId' => 'string',
+            'shootScripts' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LivePlayingShootScriptItem[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * index  字段类型，支持的字段类型有：Params、Cookie、Header、Body、Multipart。   - 当选择“Params”、“Cookie”或者“Header”字段时，可以配置“全部”或根据需求配置子字段   - 当选择“Body”或“Multipart”字段时，可以配置“全部”
-    * contensts  指定字段类型的子字段，默认值为“全部”
+    * scriptName  剧本名称
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
+    * shootScripts  拍摄脚本列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'index' => null,
-        'contensts' => null
+        'scriptName' => null,
+        'modelAssetId' => null,
+        'shootScripts' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class Advanced implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * index  字段类型，支持的字段类型有：Params、Cookie、Header、Body、Multipart。   - 当选择“Params”、“Cookie”或者“Header”字段时，可以配置“全部”或根据需求配置子字段   - 当选择“Body”或“Multipart”字段时，可以配置“全部”
-    * contensts  指定字段类型的子字段，默认值为“全部”
+    * scriptName  剧本名称
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
+    * shootScripts  拍摄脚本列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'index' => 'index',
-            'contensts' => 'contensts'
+            'scriptName' => 'script_name',
+            'modelAssetId' => 'model_asset_id',
+            'shootScripts' => 'shoot_scripts'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * index  字段类型，支持的字段类型有：Params、Cookie、Header、Body、Multipart。   - 当选择“Params”、“Cookie”或者“Header”字段时，可以配置“全部”或根据需求配置子字段   - 当选择“Body”或“Multipart”字段时，可以配置“全部”
-    * contensts  指定字段类型的子字段，默认值为“全部”
+    * scriptName  剧本名称
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
+    * shootScripts  拍摄脚本列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'index' => 'setIndex',
-            'contensts' => 'setContensts'
+            'scriptName' => 'setScriptName',
+            'modelAssetId' => 'setModelAssetId',
+            'shootScripts' => 'setShootScripts'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * index  字段类型，支持的字段类型有：Params、Cookie、Header、Body、Multipart。   - 当选择“Params”、“Cookie”或者“Header”字段时，可以配置“全部”或根据需求配置子字段   - 当选择“Body”或“Multipart”字段时，可以配置“全部”
-    * contensts  指定字段类型的子字段，默认值为“全部”
+    * scriptName  剧本名称
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
+    * shootScripts  拍摄脚本列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'index' => 'getIndex',
-            'contensts' => 'getContensts'
+            'scriptName' => 'getScriptName',
+            'modelAssetId' => 'getModelAssetId',
+            'shootScripts' => 'getShootScripts'
     ];
 
     /**
@@ -157,8 +167,9 @@ class Advanced implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['index'] = isset($data['index']) ? $data['index'] : null;
-        $this->container['contensts'] = isset($data['contensts']) ? $data['contensts'] : null;
+        $this->container['scriptName'] = isset($data['scriptName']) ? $data['scriptName'] : null;
+        $this->container['modelAssetId'] = isset($data['modelAssetId']) ? $data['modelAssetId'] : null;
+        $this->container['shootScripts'] = isset($data['shootScripts']) ? $data['shootScripts'] : null;
     }
 
     /**
@@ -169,6 +180,18 @@ class Advanced implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['scriptName']) && (mb_strlen($this->container['scriptName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'scriptName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['scriptName']) && (mb_strlen($this->container['scriptName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'scriptName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['modelAssetId']) && (mb_strlen($this->container['modelAssetId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'modelAssetId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['modelAssetId']) && (mb_strlen($this->container['modelAssetId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'modelAssetId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -184,50 +207,74 @@ class Advanced implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets index
-    *  字段类型，支持的字段类型有：Params、Cookie、Header、Body、Multipart。   - 当选择“Params”、“Cookie”或者“Header”字段时，可以配置“全部”或根据需求配置子字段   - 当选择“Body”或“Multipart”字段时，可以配置“全部”
+    * Gets scriptName
+    *  剧本名称
     *
     * @return string|null
     */
-    public function getIndex()
+    public function getScriptName()
     {
-        return $this->container['index'];
+        return $this->container['scriptName'];
     }
 
     /**
-    * Sets index
+    * Sets scriptName
     *
-    * @param string|null $index 字段类型，支持的字段类型有：Params、Cookie、Header、Body、Multipart。   - 当选择“Params”、“Cookie”或者“Header”字段时，可以配置“全部”或根据需求配置子字段   - 当选择“Body”或“Multipart”字段时，可以配置“全部”
+    * @param string|null $scriptName 剧本名称
     *
     * @return $this
     */
-    public function setIndex($index)
+    public function setScriptName($scriptName)
     {
-        $this->container['index'] = $index;
+        $this->container['scriptName'] = $scriptName;
         return $this;
     }
 
     /**
-    * Gets contensts
-    *  指定字段类型的子字段，默认值为“全部”
+    * Gets modelAssetId
+    *  数字人模型资产ID，可以从资产库中查询。
     *
-    * @return string[]|null
+    * @return string|null
     */
-    public function getContensts()
+    public function getModelAssetId()
     {
-        return $this->container['contensts'];
+        return $this->container['modelAssetId'];
     }
 
     /**
-    * Sets contensts
+    * Sets modelAssetId
     *
-    * @param string[]|null $contensts 指定字段类型的子字段，默认值为“全部”
+    * @param string|null $modelAssetId 数字人模型资产ID，可以从资产库中查询。
     *
     * @return $this
     */
-    public function setContensts($contensts)
+    public function setModelAssetId($modelAssetId)
     {
-        $this->container['contensts'] = $contensts;
+        $this->container['modelAssetId'] = $modelAssetId;
+        return $this;
+    }
+
+    /**
+    * Gets shootScripts
+    *  拍摄脚本列表。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LivePlayingShootScriptItem[]|null
+    */
+    public function getShootScripts()
+    {
+        return $this->container['shootScripts'];
+    }
+
+    /**
+    * Sets shootScripts
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LivePlayingShootScriptItem[]|null $shootScripts 拍摄脚本列表。
+    *
+    * @return $this
+    */
+    public function setShootScripts($shootScripts)
+    {
+        $this->container['shootScripts'] = $shootScripts;
         return $this;
     }
 

@@ -28,7 +28,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'gdgwRoutetable' => '\HuaweiCloud\SDK\Dc\V3\Model\ShowGdgwRoutetable[]'
+            'gdgwRoutetable' => '\HuaweiCloud\SDK\Dc\V3\Model\CommonRoutetable[]'
     ];
 
     /**
@@ -218,7 +218,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     * Gets gdgwRoutetable
     *  全域接入网关路由表
     *
-    * @return \HuaweiCloud\SDK\Dc\V3\Model\ShowGdgwRoutetable[]|null
+    * @return \HuaweiCloud\SDK\Dc\V3\Model\CommonRoutetable[]|null
     */
     public function getGdgwRoutetable()
     {
@@ -228,7 +228,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets gdgwRoutetable
     *
-    * @param \HuaweiCloud\SDK\Dc\V3\Model\ShowGdgwRoutetable[]|null $gdgwRoutetable 全域接入网关路由表
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\CommonRoutetable[]|null $gdgwRoutetable 全域接入网关路由表
     *
     * @return $this
     */

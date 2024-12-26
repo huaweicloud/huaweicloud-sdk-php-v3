@@ -40,7 +40,7 @@ class ListDatabaseRolesResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'roles' => null,
-        'totalCount' => 'int64'
+        'totalCount' => 'int32'
     ];
 
     /**

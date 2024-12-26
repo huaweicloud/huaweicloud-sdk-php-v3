@@ -22,32 +22,24 @@ class ListLogStreamsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * logGroupName  日志组名称
     * logStreamName  日志流名称
-    * offset  查询游标，初始传入0，后续从上一次的返回值中获取
-    * limit  每页数据量，最大值为100
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'logGroupName' => 'string',
-            'logStreamName' => 'string',
-            'offset' => 'int',
-            'limit' => 'int'
+            'logStreamName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * logGroupName  日志组名称
     * logStreamName  日志流名称
-    * offset  查询游标，初始传入0，后续从上一次的返回值中获取
-    * limit  每页数据量，最大值为100
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'logGroupName' => null,
-        'logStreamName' => null,
-        'offset' => 'int32',
-        'limit' => 'int32'
+        'logStreamName' => null
     ];
 
     /**
@@ -75,48 +67,36 @@ class ListLogStreamsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * logGroupName  日志组名称
     * logStreamName  日志流名称
-    * offset  查询游标，初始传入0，后续从上一次的返回值中获取
-    * limit  每页数据量，最大值为100
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'logGroupName' => 'log_group_name',
-            'logStreamName' => 'log_stream_name',
-            'offset' => 'offset',
-            'limit' => 'limit'
+            'logStreamName' => 'log_stream_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * logGroupName  日志组名称
     * logStreamName  日志流名称
-    * offset  查询游标，初始传入0，后续从上一次的返回值中获取
-    * limit  每页数据量，最大值为100
     *
     * @var string[]
     */
     protected static $setters = [
             'logGroupName' => 'setLogGroupName',
-            'logStreamName' => 'setLogStreamName',
-            'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'logStreamName' => 'setLogStreamName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * logGroupName  日志组名称
     * logStreamName  日志流名称
-    * offset  查询游标，初始传入0，后续从上一次的返回值中获取
-    * limit  每页数据量，最大值为100
     *
     * @var string[]
     */
     protected static $getters = [
             'logGroupName' => 'getLogGroupName',
-            'logStreamName' => 'getLogStreamName',
-            'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'logStreamName' => 'getLogStreamName'
     ];
 
     /**
@@ -179,8 +159,6 @@ class ListLogStreamsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['logGroupName'] = isset($data['logGroupName']) ? $data['logGroupName'] : null;
         $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -202,18 +180,6 @@ class ListLogStreamsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['logStreamName']) && (mb_strlen($this->container['logStreamName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'logStreamName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 1024)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -274,54 +240,6 @@ class ListLogStreamsRequest implements ModelInterface, ArrayAccess
     public function setLogStreamName($logStreamName)
     {
         $this->container['logStreamName'] = $logStreamName;
-        return $this;
-    }
-
-    /**
-    * Gets offset
-    *  查询游标，初始传入0，后续从上一次的返回值中获取
-    *
-    * @return int|null
-    */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-    * Sets offset
-    *
-    * @param int|null $offset 查询游标，初始传入0，后续从上一次的返回值中获取
-    *
-    * @return $this
-    */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
-        return $this;
-    }
-
-    /**
-    * Gets limit
-    *  每页数据量，最大值为100
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit 每页数据量，最大值为100
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
         return $this;
     }
 

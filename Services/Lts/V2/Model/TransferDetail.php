@@ -36,6 +36,10 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsTimeZone  OBS转储时区。如果选择该参数，则必须选择obs_time_zone_id。
     * obsTimeZoneId  OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
     * tags  若开启tag投递，该字段必须包含主机信息：hostIP、hostId、hostName、pathFile、collectTime；  公共字段有：logStreamName、regionName、logGroupName、projectId，为可选填；  开启转储标签：streamTag，可选填
+    * ltsTags  dms转储JSON格式选填，可以转储tag字段
+    * streamTags  dms转储JSON格式选填，可以转储日志流标签字段
+    * structFields  dms转储JSON格式选填，可以转储结构化字段
+    * invalidFieldValue  dms转储JSON格式选填，无效字段填充
     *
     * @var string[]
     */
@@ -55,7 +59,11 @@ class TransferDetail implements ModelInterface, ArrayAccess
             'kafkaTopic' => 'string',
             'obsTimeZone' => 'string',
             'obsTimeZoneId' => 'string',
-            'tags' => 'string[]'
+            'tags' => 'string[]',
+            'ltsTags' => 'string[]',
+            'streamTags' => 'string[]',
+            'structFields' => 'string[]',
+            'invalidFieldValue' => 'string'
     ];
 
     /**
@@ -76,6 +84,10 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsTimeZone  OBS转储时区。如果选择该参数，则必须选择obs_time_zone_id。
     * obsTimeZoneId  OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
     * tags  若开启tag投递，该字段必须包含主机信息：hostIP、hostId、hostName、pathFile、collectTime；  公共字段有：logStreamName、regionName、logGroupName、projectId，为可选填；  开启转储标签：streamTag，可选填
+    * ltsTags  dms转储JSON格式选填，可以转储tag字段
+    * streamTags  dms转储JSON格式选填，可以转储日志流标签字段
+    * structFields  dms转储JSON格式选填，可以转储结构化字段
+    * invalidFieldValue  dms转储JSON格式选填，无效字段填充
     *
     * @var string[]
     */
@@ -95,7 +107,11 @@ class TransferDetail implements ModelInterface, ArrayAccess
         'kafkaTopic' => null,
         'obsTimeZone' => null,
         'obsTimeZoneId' => null,
-        'tags' => null
+        'tags' => null,
+        'ltsTags' => null,
+        'streamTags' => null,
+        'structFields' => null,
+        'invalidFieldValue' => null
     ];
 
     /**
@@ -137,6 +153,10 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsTimeZone  OBS转储时区。如果选择该参数，则必须选择obs_time_zone_id。
     * obsTimeZoneId  OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
     * tags  若开启tag投递，该字段必须包含主机信息：hostIP、hostId、hostName、pathFile、collectTime；  公共字段有：logStreamName、regionName、logGroupName、projectId，为可选填；  开启转储标签：streamTag，可选填
+    * ltsTags  dms转储JSON格式选填，可以转储tag字段
+    * streamTags  dms转储JSON格式选填，可以转储日志流标签字段
+    * structFields  dms转储JSON格式选填，可以转储结构化字段
+    * invalidFieldValue  dms转储JSON格式选填，无效字段填充
     *
     * @var string[]
     */
@@ -156,7 +176,11 @@ class TransferDetail implements ModelInterface, ArrayAccess
             'kafkaTopic' => 'kafka_topic',
             'obsTimeZone' => 'obs_time_zone',
             'obsTimeZoneId' => 'obs_time_zone_id',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'ltsTags' => 'lts_tags',
+            'streamTags' => 'stream_tags',
+            'structFields' => 'struct_fields',
+            'invalidFieldValue' => 'invalid_field_value'
     ];
 
     /**
@@ -177,6 +201,10 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsTimeZone  OBS转储时区。如果选择该参数，则必须选择obs_time_zone_id。
     * obsTimeZoneId  OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
     * tags  若开启tag投递，该字段必须包含主机信息：hostIP、hostId、hostName、pathFile、collectTime；  公共字段有：logStreamName、regionName、logGroupName、projectId，为可选填；  开启转储标签：streamTag，可选填
+    * ltsTags  dms转储JSON格式选填，可以转储tag字段
+    * streamTags  dms转储JSON格式选填，可以转储日志流标签字段
+    * structFields  dms转储JSON格式选填，可以转储结构化字段
+    * invalidFieldValue  dms转储JSON格式选填，无效字段填充
     *
     * @var string[]
     */
@@ -196,7 +224,11 @@ class TransferDetail implements ModelInterface, ArrayAccess
             'kafkaTopic' => 'setKafkaTopic',
             'obsTimeZone' => 'setObsTimeZone',
             'obsTimeZoneId' => 'setObsTimeZoneId',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'ltsTags' => 'setLtsTags',
+            'streamTags' => 'setStreamTags',
+            'structFields' => 'setStructFields',
+            'invalidFieldValue' => 'setInvalidFieldValue'
     ];
 
     /**
@@ -217,6 +249,10 @@ class TransferDetail implements ModelInterface, ArrayAccess
     * obsTimeZone  OBS转储时区。如果选择该参数，则必须选择obs_time_zone_id。
     * obsTimeZoneId  OBS转储时区ID。参数选择参考OBS转储时区表。如果选择该参数，则必须选择obs_time_zone。
     * tags  若开启tag投递，该字段必须包含主机信息：hostIP、hostId、hostName、pathFile、collectTime；  公共字段有：logStreamName、regionName、logGroupName、projectId，为可选填；  开启转储标签：streamTag，可选填
+    * ltsTags  dms转储JSON格式选填，可以转储tag字段
+    * streamTags  dms转储JSON格式选填，可以转储日志流标签字段
+    * structFields  dms转储JSON格式选填，可以转储结构化字段
+    * invalidFieldValue  dms转储JSON格式选填，无效字段填充
     *
     * @var string[]
     */
@@ -236,7 +272,11 @@ class TransferDetail implements ModelInterface, ArrayAccess
             'kafkaTopic' => 'getKafkaTopic',
             'obsTimeZone' => 'getObsTimeZone',
             'obsTimeZoneId' => 'getObsTimeZoneId',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'ltsTags' => 'getLtsTags',
+            'streamTags' => 'getStreamTags',
+            'structFields' => 'getStructFields',
+            'invalidFieldValue' => 'getInvalidFieldValue'
     ];
 
     /**
@@ -338,6 +378,10 @@ class TransferDetail implements ModelInterface, ArrayAccess
         $this->container['obsTimeZone'] = isset($data['obsTimeZone']) ? $data['obsTimeZone'] : null;
         $this->container['obsTimeZoneId'] = isset($data['obsTimeZoneId']) ? $data['obsTimeZoneId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['ltsTags'] = isset($data['ltsTags']) ? $data['ltsTags'] : null;
+        $this->container['streamTags'] = isset($data['streamTags']) ? $data['streamTags'] : null;
+        $this->container['structFields'] = isset($data['structFields']) ? $data['structFields'] : null;
+        $this->container['invalidFieldValue'] = isset($data['invalidFieldValue']) ? $data['invalidFieldValue'] : null;
     }
 
     /**
@@ -826,6 +870,102 @@ class TransferDetail implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets ltsTags
+    *  dms转储JSON格式选填，可以转储tag字段
+    *
+    * @return string[]|null
+    */
+    public function getLtsTags()
+    {
+        return $this->container['ltsTags'];
+    }
+
+    /**
+    * Sets ltsTags
+    *
+    * @param string[]|null $ltsTags dms转储JSON格式选填，可以转储tag字段
+    *
+    * @return $this
+    */
+    public function setLtsTags($ltsTags)
+    {
+        $this->container['ltsTags'] = $ltsTags;
+        return $this;
+    }
+
+    /**
+    * Gets streamTags
+    *  dms转储JSON格式选填，可以转储日志流标签字段
+    *
+    * @return string[]|null
+    */
+    public function getStreamTags()
+    {
+        return $this->container['streamTags'];
+    }
+
+    /**
+    * Sets streamTags
+    *
+    * @param string[]|null $streamTags dms转储JSON格式选填，可以转储日志流标签字段
+    *
+    * @return $this
+    */
+    public function setStreamTags($streamTags)
+    {
+        $this->container['streamTags'] = $streamTags;
+        return $this;
+    }
+
+    /**
+    * Gets structFields
+    *  dms转储JSON格式选填，可以转储结构化字段
+    *
+    * @return string[]|null
+    */
+    public function getStructFields()
+    {
+        return $this->container['structFields'];
+    }
+
+    /**
+    * Sets structFields
+    *
+    * @param string[]|null $structFields dms转储JSON格式选填，可以转储结构化字段
+    *
+    * @return $this
+    */
+    public function setStructFields($structFields)
+    {
+        $this->container['structFields'] = $structFields;
+        return $this;
+    }
+
+    /**
+    * Gets invalidFieldValue
+    *  dms转储JSON格式选填，无效字段填充
+    *
+    * @return string|null
+    */
+    public function getInvalidFieldValue()
+    {
+        return $this->container['invalidFieldValue'];
+    }
+
+    /**
+    * Sets invalidFieldValue
+    *
+    * @param string|null $invalidFieldValue dms转储JSON格式选填，无效字段填充
+    *
+    * @return $this
+    */
+    public function setInvalidFieldValue($invalidFieldValue)
+    {
+        $this->container['invalidFieldValue'] = $invalidFieldValue;
         return $this;
     }
 
