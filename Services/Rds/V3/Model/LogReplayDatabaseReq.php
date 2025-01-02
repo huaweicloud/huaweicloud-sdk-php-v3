@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cfw\V1\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class PageInfoCustomerIpsListVO implements ModelInterface, ArrayAccess
+class LogReplayDatabaseReq implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,38 +16,26 @@ class PageInfoCustomerIpsListVO implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'PageInfo«CustomerIpsListVO»';
+    protected static $openAPIModelName = 'LogReplayDatabaseReq';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  limit
-    * offset  offset
-    * records  records
-    * total  total
+    * databases  需要恢复的库名列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'limit' => 'int',
-            'offset' => 'int',
-            'records' => '\HuaweiCloud\SDK\Cfw\V1\Model\CustomerIpsListVO[]',
-            'total' => 'int'
+            'databases' => '\HuaweiCloud\SDK\Rds\V3\Model\RestoreInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  limit
-    * offset  offset
-    * records  records
-    * total  total
+    * databases  需要恢复的库名列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'limit' => 'int32',
-        'offset' => 'int32',
-        'records' => null,
-        'total' => 'int32'
+        'databases' => null
     ];
 
     /**
@@ -73,50 +61,32 @@ class PageInfoCustomerIpsListVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  limit
-    * offset  offset
-    * records  records
-    * total  total
+    * databases  需要恢复的库名列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'limit' => 'limit',
-            'offset' => 'offset',
-            'records' => 'records',
-            'total' => 'total'
+            'databases' => 'databases'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  limit
-    * offset  offset
-    * records  records
-    * total  total
+    * databases  需要恢复的库名列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'limit' => 'setLimit',
-            'offset' => 'setOffset',
-            'records' => 'setRecords',
-            'total' => 'setTotal'
+            'databases' => 'setDatabases'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  limit
-    * offset  offset
-    * records  records
-    * total  total
+    * databases  需要恢复的库名列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'limit' => 'getLimit',
-            'offset' => 'getOffset',
-            'records' => 'getRecords',
-            'total' => 'getTotal'
+            'databases' => 'getDatabases'
     ];
 
     /**
@@ -177,10 +147,7 @@ class PageInfoCustomerIpsListVO implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['records'] = isset($data['records']) ? $data['records'] : null;
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['databases'] = isset($data['databases']) ? $data['databases'] : null;
     }
 
     /**
@@ -191,6 +158,9 @@ class PageInfoCustomerIpsListVO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['databases'] === null) {
+            $invalidProperties[] = "'databases' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -206,98 +176,26 @@ class PageInfoCustomerIpsListVO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets limit
-    *  limit
+    * Gets databases
+    *  需要恢复的库名列表
     *
-    * @return int|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\RestoreInfo[]
     */
-    public function getLimit()
+    public function getDatabases()
     {
-        return $this->container['limit'];
+        return $this->container['databases'];
     }
 
     /**
-    * Sets limit
+    * Sets databases
     *
-    * @param int|null $limit limit
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\RestoreInfo[] $databases 需要恢复的库名列表
     *
     * @return $this
     */
-    public function setLimit($limit)
+    public function setDatabases($databases)
     {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets offset
-    *  offset
-    *
-    * @return int|null
-    */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-    * Sets offset
-    *
-    * @param int|null $offset offset
-    *
-    * @return $this
-    */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
-        return $this;
-    }
-
-    /**
-    * Gets records
-    *  records
-    *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\CustomerIpsListVO[]|null
-    */
-    public function getRecords()
-    {
-        return $this->container['records'];
-    }
-
-    /**
-    * Sets records
-    *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CustomerIpsListVO[]|null $records records
-    *
-    * @return $this
-    */
-    public function setRecords($records)
-    {
-        $this->container['records'] = $records;
-        return $this;
-    }
-
-    /**
-    * Gets total
-    *  total
-    *
-    * @return int|null
-    */
-    public function getTotal()
-    {
-        return $this->container['total'];
-    }
-
-    /**
-    * Sets total
-    *
-    * @param int|null $total total
-    *
-    * @return $this
-    */
-    public function setTotal($total)
-    {
-        $this->container['total'] = $total;
+        $this->container['databases'] = $databases;
         return $this;
     }
 

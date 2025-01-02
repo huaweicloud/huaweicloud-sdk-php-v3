@@ -57,10 +57,10 @@ class SegmentFileDO implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'recordType' => null,
-        'beginTime' => null,
-        'endTime' => null,
-        'duration' => null,
-        'fileSize' => null,
+        'beginTime' => 'int64',
+        'endTime' => 'int64',
+        'duration' => 'int64',
+        'fileSize' => 'int64',
         'sha256' => null,
         'playUrl' => null,
         'downloadUrl' => null

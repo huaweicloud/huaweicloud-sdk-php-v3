@@ -20,7 +20,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0003.xml)
+    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
     * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
     * name  子网名称
     * id  子网id
@@ -42,7 +42,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0003.xml)
+    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
     * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
     * name  子网名称
     * id  子网id
@@ -85,7 +85,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0003.xml)
+    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
     * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
     * name  子网名称
     * id  子网id
@@ -107,7 +107,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0003.xml)
+    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
     * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
     * name  子网名称
     * id  子网id
@@ -129,7 +129,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0003.xml)
+    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
     * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
     * name  子网名称
     * id  子网id
@@ -243,7 +243,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0003.xml)
+    *  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string|null $availabilityZone 子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0003.xml)
+    * @param string|null $availabilityZone 子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
     *
     * @return $this
     */

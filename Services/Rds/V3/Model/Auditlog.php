@@ -31,7 +31,7 @@ class Auditlog implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
-            'size' => 'int',
+            'size' => 'double',
             'beginTime' => 'string',
             'endTime' => 'string'
     ];
@@ -49,7 +49,7 @@ class Auditlog implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'size' => 'int64',
+        'size' => 'double',
         'beginTime' => null,
         'endTime' => null
     ];
@@ -268,7 +268,7 @@ class Auditlog implements ModelInterface, ArrayAccess
     * Gets size
     *  审计日志大小，单位：KB。
     *
-    * @return int|null
+    * @return double|null
     */
     public function getSize()
     {
@@ -278,7 +278,7 @@ class Auditlog implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 审计日志大小，单位：KB。
+    * @param double|null $size 审计日志大小，单位：KB。
     *
     * @return $this
     */

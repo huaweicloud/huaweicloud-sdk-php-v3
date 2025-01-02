@@ -24,8 +24,6 @@ class TrackerConfigBody implements ModelInterface, ArrayAccess
     * selector  selector
     * retentionPeriodInDays  存储历史信息的天数
     * agencyName  IAM委托名称
-    * domainId  账号ID
-    * frozenStatus  frozenStatus
     *
     * @var string[]
     */
@@ -33,9 +31,7 @@ class TrackerConfigBody implements ModelInterface, ArrayAccess
             'channel' => '\HuaweiCloud\SDK\Config\V1\Model\ChannelConfigBody',
             'selector' => '\HuaweiCloud\SDK\Config\V1\Model\SelectorConfigBody',
             'retentionPeriodInDays' => 'int',
-            'agencyName' => 'string',
-            'domainId' => 'string',
-            'frozenStatus' => '\HuaweiCloud\SDK\Config\V1\Model\FrozenStatus'
+            'agencyName' => 'string'
     ];
 
     /**
@@ -44,8 +40,6 @@ class TrackerConfigBody implements ModelInterface, ArrayAccess
     * selector  selector
     * retentionPeriodInDays  存储历史信息的天数
     * agencyName  IAM委托名称
-    * domainId  账号ID
-    * frozenStatus  frozenStatus
     *
     * @var string[]
     */
@@ -53,9 +47,7 @@ class TrackerConfigBody implements ModelInterface, ArrayAccess
         'channel' => null,
         'selector' => null,
         'retentionPeriodInDays' => null,
-        'agencyName' => null,
-        'domainId' => null,
-        'frozenStatus' => null
+        'agencyName' => null
     ];
 
     /**
@@ -85,8 +77,6 @@ class TrackerConfigBody implements ModelInterface, ArrayAccess
     * selector  selector
     * retentionPeriodInDays  存储历史信息的天数
     * agencyName  IAM委托名称
-    * domainId  账号ID
-    * frozenStatus  frozenStatus
     *
     * @var string[]
     */
@@ -94,9 +84,7 @@ class TrackerConfigBody implements ModelInterface, ArrayAccess
             'channel' => 'channel',
             'selector' => 'selector',
             'retentionPeriodInDays' => 'retention_period_in_days',
-            'agencyName' => 'agency_name',
-            'domainId' => 'domain_id',
-            'frozenStatus' => 'frozen_status'
+            'agencyName' => 'agency_name'
     ];
 
     /**
@@ -105,8 +93,6 @@ class TrackerConfigBody implements ModelInterface, ArrayAccess
     * selector  selector
     * retentionPeriodInDays  存储历史信息的天数
     * agencyName  IAM委托名称
-    * domainId  账号ID
-    * frozenStatus  frozenStatus
     *
     * @var string[]
     */
@@ -114,9 +100,7 @@ class TrackerConfigBody implements ModelInterface, ArrayAccess
             'channel' => 'setChannel',
             'selector' => 'setSelector',
             'retentionPeriodInDays' => 'setRetentionPeriodInDays',
-            'agencyName' => 'setAgencyName',
-            'domainId' => 'setDomainId',
-            'frozenStatus' => 'setFrozenStatus'
+            'agencyName' => 'setAgencyName'
     ];
 
     /**
@@ -125,8 +109,6 @@ class TrackerConfigBody implements ModelInterface, ArrayAccess
     * selector  selector
     * retentionPeriodInDays  存储历史信息的天数
     * agencyName  IAM委托名称
-    * domainId  账号ID
-    * frozenStatus  frozenStatus
     *
     * @var string[]
     */
@@ -134,9 +116,7 @@ class TrackerConfigBody implements ModelInterface, ArrayAccess
             'channel' => 'getChannel',
             'selector' => 'getSelector',
             'retentionPeriodInDays' => 'getRetentionPeriodInDays',
-            'agencyName' => 'getAgencyName',
-            'domainId' => 'getDomainId',
-            'frozenStatus' => 'getFrozenStatus'
+            'agencyName' => 'getAgencyName'
     ];
 
     /**
@@ -201,8 +181,6 @@ class TrackerConfigBody implements ModelInterface, ArrayAccess
         $this->container['selector'] = isset($data['selector']) ? $data['selector'] : null;
         $this->container['retentionPeriodInDays'] = isset($data['retentionPeriodInDays']) ? $data['retentionPeriodInDays'] : null;
         $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
-        $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
-        $this->container['frozenStatus'] = isset($data['frozenStatus']) ? $data['frozenStatus'] : null;
     }
 
     /**
@@ -329,54 +307,6 @@ class TrackerConfigBody implements ModelInterface, ArrayAccess
     public function setAgencyName($agencyName)
     {
         $this->container['agencyName'] = $agencyName;
-        return $this;
-    }
-
-    /**
-    * Gets domainId
-    *  账号ID
-    *
-    * @return string|null
-    */
-    public function getDomainId()
-    {
-        return $this->container['domainId'];
-    }
-
-    /**
-    * Sets domainId
-    *
-    * @param string|null $domainId 账号ID
-    *
-    * @return $this
-    */
-    public function setDomainId($domainId)
-    {
-        $this->container['domainId'] = $domainId;
-        return $this;
-    }
-
-    /**
-    * Gets frozenStatus
-    *  frozenStatus
-    *
-    * @return \HuaweiCloud\SDK\Config\V1\Model\FrozenStatus|null
-    */
-    public function getFrozenStatus()
-    {
-        return $this->container['frozenStatus'];
-    }
-
-    /**
-    * Sets frozenStatus
-    *
-    * @param \HuaweiCloud\SDK\Config\V1\Model\FrozenStatus|null $frozenStatus frozenStatus
-    *
-    * @return $this
-    */
-    public function setFrozenStatus($frozenStatus)
-    {
-        $this->container['frozenStatus'] = $frozenStatus;
         return $this;
     }
 

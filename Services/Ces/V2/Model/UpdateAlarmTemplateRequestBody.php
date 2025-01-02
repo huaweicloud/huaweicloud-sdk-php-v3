@@ -21,6 +21,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    * templateType  自定义告警模板类型 0：指标 2： 事件
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     * policies  告警模板策略列表
     *
@@ -28,6 +29,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'templateName' => 'string',
+            'templateType' => 'int',
             'templateDescription' => 'string',
             'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\Policies[]'
     ];
@@ -35,6 +37,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    * templateType  自定义告警模板类型 0：指标 2： 事件
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     * policies  告警模板策略列表
     *
@@ -42,6 +45,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'templateName' => null,
+        'templateType' => 'int32',
         'templateDescription' => null,
         'policies' => null
     ];
@@ -70,6 +74,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    * templateType  自定义告警模板类型 0：指标 2： 事件
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     * policies  告警模板策略列表
     *
@@ -77,6 +82,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'templateName' => 'template_name',
+            'templateType' => 'template_type',
             'templateDescription' => 'template_description',
             'policies' => 'policies'
     ];
@@ -84,6 +90,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    * templateType  自定义告警模板类型 0：指标 2： 事件
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     * policies  告警模板策略列表
     *
@@ -91,6 +98,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'templateName' => 'setTemplateName',
+            'templateType' => 'setTemplateType',
             'templateDescription' => 'setTemplateDescription',
             'policies' => 'setPolicies'
     ];
@@ -98,6 +106,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+    * templateType  自定义告警模板类型 0：指标 2： 事件
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     * policies  告警模板策略列表
     *
@@ -105,6 +114,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'templateName' => 'getTemplateName',
+            'templateType' => 'getTemplateType',
             'templateDescription' => 'getTemplateDescription',
             'policies' => 'getPolicies'
     ];
@@ -149,7 +159,22 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TEMPLATE_TYPE_0 = 0;
+    const TEMPLATE_TYPE_2 = 2;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTemplateTypeAllowableValues()
+    {
+        return [
+            self::TEMPLATE_TYPE_0,
+            self::TEMPLATE_TYPE_2,
+        ];
+    }
 
 
     /**
@@ -168,6 +193,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
+        $this->container['templateType'] = isset($data['templateType']) ? $data['templateType'] : null;
         $this->container['templateDescription'] = isset($data['templateDescription']) ? $data['templateDescription'] : null;
         $this->container['policies'] = isset($data['policies']) ? $data['policies'] : null;
     }
@@ -192,6 +218,14 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
             if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s)+$/", $this->container['templateName'])) {
                 $invalidProperties[] = "invalid value for 'templateName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s)+$/.";
             }
+            $allowedValues = $this->getTemplateTypeAllowableValues();
+                if (!is_null($this->container['templateType']) && !in_array($this->container['templateType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'templateType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['templateDescription']) && (mb_strlen($this->container['templateDescription']) > 256)) {
                 $invalidProperties[] = "invalid value for 'templateDescription', the character length must be smaller than or equal to 256.";
             }
@@ -239,6 +273,30 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     public function setTemplateName($templateName)
     {
         $this->container['templateName'] = $templateName;
+        return $this;
+    }
+
+    /**
+    * Gets templateType
+    *  自定义告警模板类型 0：指标 2： 事件
+    *
+    * @return int|null
+    */
+    public function getTemplateType()
+    {
+        return $this->container['templateType'];
+    }
+
+    /**
+    * Sets templateType
+    *
+    * @param int|null $templateType 自定义告警模板类型 0：指标 2： 事件
+    *
+    * @return $this
+    */
+    public function setTemplateType($templateType)
+    {
+        $this->container['templateType'] = $templateType;
         return $this;
     }
 

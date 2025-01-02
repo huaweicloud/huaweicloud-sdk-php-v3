@@ -21,20 +21,30 @@ class SearchCorpDigitalInfoListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * returnCode  结果码
+    * returnDesc  结果描述
+    * corpDigitalInfoList  数字资产列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'returnCode' => 'int',
+            'returnDesc' => 'string',
+            'corpDigitalInfoList' => '\HuaweiCloud\SDK\Meeting\V1\Model\CorpDigitalInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * returnCode  结果码
+    * returnDesc  结果描述
+    * corpDigitalInfoList  数字资产列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'returnCode' => null,
+        'returnDesc' => null,
+        'corpDigitalInfoList' => null
     ];
 
     /**
@@ -60,29 +70,44 @@ class SearchCorpDigitalInfoListResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * returnCode  结果码
+    * returnDesc  结果描述
+    * corpDigitalInfoList  数字资产列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'returnCode' => 'returnCode',
+            'returnDesc' => 'returnDesc',
+            'corpDigitalInfoList' => 'corpDigitalInfoList'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * returnCode  结果码
+    * returnDesc  结果描述
+    * corpDigitalInfoList  数字资产列表
     *
     * @var string[]
     */
     protected static $setters = [
+            'returnCode' => 'setReturnCode',
+            'returnDesc' => 'setReturnDesc',
+            'corpDigitalInfoList' => 'setCorpDigitalInfoList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * returnCode  结果码
+    * returnDesc  结果描述
+    * corpDigitalInfoList  数字资产列表
     *
     * @var string[]
     */
     protected static $getters = [
+            'returnCode' => 'getReturnCode',
+            'returnDesc' => 'getReturnDesc',
+            'corpDigitalInfoList' => 'getCorpDigitalInfoList'
     ];
 
     /**
@@ -143,6 +168,9 @@ class SearchCorpDigitalInfoListResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['returnCode'] = isset($data['returnCode']) ? $data['returnCode'] : null;
+        $this->container['returnDesc'] = isset($data['returnDesc']) ? $data['returnDesc'] : null;
+        $this->container['corpDigitalInfoList'] = isset($data['corpDigitalInfoList']) ? $data['corpDigitalInfoList'] : null;
     }
 
     /**
@@ -165,6 +193,78 @@ class SearchCorpDigitalInfoListResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets returnCode
+    *  结果码
+    *
+    * @return int|null
+    */
+    public function getReturnCode()
+    {
+        return $this->container['returnCode'];
+    }
+
+    /**
+    * Sets returnCode
+    *
+    * @param int|null $returnCode 结果码
+    *
+    * @return $this
+    */
+    public function setReturnCode($returnCode)
+    {
+        $this->container['returnCode'] = $returnCode;
+        return $this;
+    }
+
+    /**
+    * Gets returnDesc
+    *  结果描述
+    *
+    * @return string|null
+    */
+    public function getReturnDesc()
+    {
+        return $this->container['returnDesc'];
+    }
+
+    /**
+    * Sets returnDesc
+    *
+    * @param string|null $returnDesc 结果描述
+    *
+    * @return $this
+    */
+    public function setReturnDesc($returnDesc)
+    {
+        $this->container['returnDesc'] = $returnDesc;
+        return $this;
+    }
+
+    /**
+    * Gets corpDigitalInfoList
+    *  数字资产列表
+    *
+    * @return \HuaweiCloud\SDK\Meeting\V1\Model\CorpDigitalInfo[]|null
+    */
+    public function getCorpDigitalInfoList()
+    {
+        return $this->container['corpDigitalInfoList'];
+    }
+
+    /**
+    * Sets corpDigitalInfoList
+    *
+    * @param \HuaweiCloud\SDK\Meeting\V1\Model\CorpDigitalInfo[]|null $corpDigitalInfoList 数字资产列表
+    *
+    * @return $this
+    */
+    public function setCorpDigitalInfoList($corpDigitalInfoList)
+    {
+        $this->container['corpDigitalInfoList'] = $corpDigitalInfoList;
+        return $this;
     }
 
     /**

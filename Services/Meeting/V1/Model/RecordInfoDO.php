@@ -54,7 +54,7 @@ class RecordInfoDO implements ModelInterface, ArrayAccess
         'beginTime' => null,
         'segmentOffset' => null,
         'segmentLimit' => null,
-        'segmentCount' => null,
+        'segmentCount' => 'int64',
         'segmentList' => null
     ];
 

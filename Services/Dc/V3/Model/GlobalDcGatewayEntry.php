@@ -54,8 +54,8 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
             'regionId' => 'string',
             'locationName' => 'string',
             'locales' => '\HuaweiCloud\SDK\Dc\V3\Model\LocalesBody',
-            'currentPeerLinkCount' => 'string',
-            'availablePeerLinkCount' => 'string',
+            'currentPeerLinkCount' => 'int',
+            'availablePeerLinkCount' => 'int',
             'tags' => '\HuaweiCloud\SDK\Dc\V3\Model\Tag[]',
             'adminStateUp' => 'bool',
             'status' => '\HuaweiCloud\SDK\Dc\V3\Model\GlobalDcGatewayStatus',
@@ -724,7 +724,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
     * Gets currentPeerLinkCount
     *  全域接入网关(GDGW)上关联连接的数量，表示DGW挂载ER的数量
     *
-    * @return string|null
+    * @return int|null
     */
     public function getCurrentPeerLinkCount()
     {
@@ -734,7 +734,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
     /**
     * Sets currentPeerLinkCount
     *
-    * @param string|null $currentPeerLinkCount 全域接入网关(GDGW)上关联连接的数量，表示DGW挂载ER的数量
+    * @param int|null $currentPeerLinkCount 全域接入网关(GDGW)上关联连接的数量，表示DGW挂载ER的数量
     *
     * @return $this
     */
@@ -748,7 +748,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
     * Gets availablePeerLinkCount
     *  该全域接入网关上GDGW允许创建关联连接（PeerLink）的数量
     *
-    * @return string|null
+    * @return int|null
     */
     public function getAvailablePeerLinkCount()
     {
@@ -758,7 +758,7 @@ class GlobalDcGatewayEntry implements ModelInterface, ArrayAccess
     /**
     * Sets availablePeerLinkCount
     *
-    * @param string|null $availablePeerLinkCount 该全域接入网关上GDGW允许创建关联连接（PeerLink）的数量
+    * @param int|null $availablePeerLinkCount 该全域接入网关上GDGW允许创建关联连接（PeerLink）的数量
     *
     * @return $this
     */

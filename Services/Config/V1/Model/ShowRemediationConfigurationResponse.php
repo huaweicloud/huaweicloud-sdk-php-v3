@@ -24,6 +24,8 @@ class ShowRemediationConfigurationResponse implements ModelInterface, ArrayAcces
     * automatic  是否为自动修正。
     * targetType  合规规则修正执行的方式。
     * targetId  修正执行的目标ID。如果修正方式为fgs，则该值为函数工作流的函数urn；如果修正方式为rfs，则该值为资源编排服务的模板name与版本号，两者以/分割，如果没有指定默认V1。
+    * targetRegionId  修正执行的目标的regionId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的regionId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_project_id字段则该字段必选。
+    * targetProjectId  修正执行的目标的projectId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的主projectId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_region_id字段则该字段必选。
     * staticParameter  修正执行的参数。
     * resourceParameter  resourceParameter
     * maximumAttempts  指定时间内修正的最大尝试次数。
@@ -40,6 +42,8 @@ class ShowRemediationConfigurationResponse implements ModelInterface, ArrayAcces
             'automatic' => 'bool',
             'targetType' => 'string',
             'targetId' => 'string',
+            'targetRegionId' => 'string',
+            'targetProjectId' => 'string',
             'staticParameter' => '\HuaweiCloud\SDK\Config\V1\Model\RemediationStaticParameter[]',
             'resourceParameter' => '\HuaweiCloud\SDK\Config\V1\Model\RemediationResourceParameter',
             'maximumAttempts' => 'int',
@@ -56,6 +60,8 @@ class ShowRemediationConfigurationResponse implements ModelInterface, ArrayAcces
     * automatic  是否为自动修正。
     * targetType  合规规则修正执行的方式。
     * targetId  修正执行的目标ID。如果修正方式为fgs，则该值为函数工作流的函数urn；如果修正方式为rfs，则该值为资源编排服务的模板name与版本号，两者以/分割，如果没有指定默认V1。
+    * targetRegionId  修正执行的目标的regionId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的regionId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_project_id字段则该字段必选。
+    * targetProjectId  修正执行的目标的projectId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的主projectId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_region_id字段则该字段必选。
     * staticParameter  修正执行的参数。
     * resourceParameter  resourceParameter
     * maximumAttempts  指定时间内修正的最大尝试次数。
@@ -72,6 +78,8 @@ class ShowRemediationConfigurationResponse implements ModelInterface, ArrayAcces
         'automatic' => null,
         'targetType' => null,
         'targetId' => null,
+        'targetRegionId' => null,
+        'targetProjectId' => null,
         'staticParameter' => null,
         'resourceParameter' => null,
         'maximumAttempts' => null,
@@ -109,6 +117,8 @@ class ShowRemediationConfigurationResponse implements ModelInterface, ArrayAcces
     * automatic  是否为自动修正。
     * targetType  合规规则修正执行的方式。
     * targetId  修正执行的目标ID。如果修正方式为fgs，则该值为函数工作流的函数urn；如果修正方式为rfs，则该值为资源编排服务的模板name与版本号，两者以/分割，如果没有指定默认V1。
+    * targetRegionId  修正执行的目标的regionId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的regionId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_project_id字段则该字段必选。
+    * targetProjectId  修正执行的目标的projectId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的主projectId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_region_id字段则该字段必选。
     * staticParameter  修正执行的参数。
     * resourceParameter  resourceParameter
     * maximumAttempts  指定时间内修正的最大尝试次数。
@@ -125,6 +135,8 @@ class ShowRemediationConfigurationResponse implements ModelInterface, ArrayAcces
             'automatic' => 'automatic',
             'targetType' => 'target_type',
             'targetId' => 'target_id',
+            'targetRegionId' => 'target_region_id',
+            'targetProjectId' => 'target_project_id',
             'staticParameter' => 'static_parameter',
             'resourceParameter' => 'resource_parameter',
             'maximumAttempts' => 'maximum_attempts',
@@ -141,6 +153,8 @@ class ShowRemediationConfigurationResponse implements ModelInterface, ArrayAcces
     * automatic  是否为自动修正。
     * targetType  合规规则修正执行的方式。
     * targetId  修正执行的目标ID。如果修正方式为fgs，则该值为函数工作流的函数urn；如果修正方式为rfs，则该值为资源编排服务的模板name与版本号，两者以/分割，如果没有指定默认V1。
+    * targetRegionId  修正执行的目标的regionId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的regionId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_project_id字段则该字段必选。
+    * targetProjectId  修正执行的目标的projectId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的主projectId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_region_id字段则该字段必选。
     * staticParameter  修正执行的参数。
     * resourceParameter  resourceParameter
     * maximumAttempts  指定时间内修正的最大尝试次数。
@@ -157,6 +171,8 @@ class ShowRemediationConfigurationResponse implements ModelInterface, ArrayAcces
             'automatic' => 'setAutomatic',
             'targetType' => 'setTargetType',
             'targetId' => 'setTargetId',
+            'targetRegionId' => 'setTargetRegionId',
+            'targetProjectId' => 'setTargetProjectId',
             'staticParameter' => 'setStaticParameter',
             'resourceParameter' => 'setResourceParameter',
             'maximumAttempts' => 'setMaximumAttempts',
@@ -173,6 +189,8 @@ class ShowRemediationConfigurationResponse implements ModelInterface, ArrayAcces
     * automatic  是否为自动修正。
     * targetType  合规规则修正执行的方式。
     * targetId  修正执行的目标ID。如果修正方式为fgs，则该值为函数工作流的函数urn；如果修正方式为rfs，则该值为资源编排服务的模板name与版本号，两者以/分割，如果没有指定默认V1。
+    * targetRegionId  修正执行的目标的regionId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的regionId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_project_id字段则该字段必选。
+    * targetProjectId  修正执行的目标的projectId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的主projectId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_region_id字段则该字段必选。
     * staticParameter  修正执行的参数。
     * resourceParameter  resourceParameter
     * maximumAttempts  指定时间内修正的最大尝试次数。
@@ -189,6 +207,8 @@ class ShowRemediationConfigurationResponse implements ModelInterface, ArrayAcces
             'automatic' => 'getAutomatic',
             'targetType' => 'getTargetType',
             'targetId' => 'getTargetId',
+            'targetRegionId' => 'getTargetRegionId',
+            'targetProjectId' => 'getTargetProjectId',
             'staticParameter' => 'getStaticParameter',
             'resourceParameter' => 'getResourceParameter',
             'maximumAttempts' => 'getMaximumAttempts',
@@ -261,6 +281,8 @@ class ShowRemediationConfigurationResponse implements ModelInterface, ArrayAcces
         $this->container['automatic'] = isset($data['automatic']) ? $data['automatic'] : null;
         $this->container['targetType'] = isset($data['targetType']) ? $data['targetType'] : null;
         $this->container['targetId'] = isset($data['targetId']) ? $data['targetId'] : null;
+        $this->container['targetRegionId'] = isset($data['targetRegionId']) ? $data['targetRegionId'] : null;
+        $this->container['targetProjectId'] = isset($data['targetProjectId']) ? $data['targetProjectId'] : null;
         $this->container['staticParameter'] = isset($data['staticParameter']) ? $data['staticParameter'] : null;
         $this->container['resourceParameter'] = isset($data['resourceParameter']) ? $data['resourceParameter'] : null;
         $this->container['maximumAttempts'] = isset($data['maximumAttempts']) ? $data['maximumAttempts'] : null;
@@ -381,6 +403,54 @@ class ShowRemediationConfigurationResponse implements ModelInterface, ArrayAcces
     public function setTargetId($targetId)
     {
         $this->container['targetId'] = $targetId;
+        return $this;
+    }
+
+    /**
+    * Gets targetRegionId
+    *  修正执行的目标的regionId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的regionId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_project_id字段则该字段必选。
+    *
+    * @return string|null
+    */
+    public function getTargetRegionId()
+    {
+        return $this->container['targetRegionId'];
+    }
+
+    /**
+    * Sets targetRegionId
+    *
+    * @param string|null $targetRegionId 修正执行的目标的regionId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的regionId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_project_id字段则该字段必选。
+    *
+    * @return $this
+    */
+    public function setTargetRegionId($targetRegionId)
+    {
+        $this->container['targetRegionId'] = $targetRegionId;
+        return $this;
+    }
+
+    /**
+    * Gets targetProjectId
+    *  修正执行的目标的projectId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的主projectId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_region_id字段则该字段必选。
+    *
+    * @return string|null
+    */
+    public function getTargetProjectId()
+    {
+        return $this->container['targetProjectId'];
+    }
+
+    /**
+    * Sets targetProjectId
+    *
+    * @param string|null $targetProjectId 修正执行的目标的projectId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的主projectId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_region_id字段则该字段必选。
+    *
+    * @return $this
+    */
+    public function setTargetProjectId($targetProjectId)
+    {
+        $this->container['targetProjectId'] = $targetProjectId;
         return $this;
     }
 

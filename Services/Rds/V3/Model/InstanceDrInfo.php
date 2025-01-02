@@ -31,6 +31,7 @@ class InstanceDrInfo implements ModelInterface, ArrayAccess
     * masterRegion  主实例所在region
     * slaveInstanceId  灾备实例ID
     * slaveRegion  灾备实例所在region
+    * buildProcess  搭建流程。master表示配置主实例容灾能力流程。slave表示配置灾备实例容灾能力流程。
     * time  灾备搭建时间
     *
     * @var string[]
@@ -47,6 +48,7 @@ class InstanceDrInfo implements ModelInterface, ArrayAccess
             'masterRegion' => 'string',
             'slaveInstanceId' => 'string',
             'slaveRegion' => 'string',
+            'buildProcess' => 'string',
             'time' => 'int'
     ];
 
@@ -63,6 +65,7 @@ class InstanceDrInfo implements ModelInterface, ArrayAccess
     * masterRegion  主实例所在region
     * slaveInstanceId  灾备实例ID
     * slaveRegion  灾备实例所在region
+    * buildProcess  搭建流程。master表示配置主实例容灾能力流程。slave表示配置灾备实例容灾能力流程。
     * time  灾备搭建时间
     *
     * @var string[]
@@ -79,6 +82,7 @@ class InstanceDrInfo implements ModelInterface, ArrayAccess
         'masterRegion' => null,
         'slaveInstanceId' => null,
         'slaveRegion' => null,
+        'buildProcess' => null,
         'time' => 'int64'
     ];
 
@@ -116,6 +120,7 @@ class InstanceDrInfo implements ModelInterface, ArrayAccess
     * masterRegion  主实例所在region
     * slaveInstanceId  灾备实例ID
     * slaveRegion  灾备实例所在region
+    * buildProcess  搭建流程。master表示配置主实例容灾能力流程。slave表示配置灾备实例容灾能力流程。
     * time  灾备搭建时间
     *
     * @var string[]
@@ -132,6 +137,7 @@ class InstanceDrInfo implements ModelInterface, ArrayAccess
             'masterRegion' => 'master_region',
             'slaveInstanceId' => 'slave_instance_id',
             'slaveRegion' => 'slave_region',
+            'buildProcess' => 'build_process',
             'time' => 'time'
     ];
 
@@ -148,6 +154,7 @@ class InstanceDrInfo implements ModelInterface, ArrayAccess
     * masterRegion  主实例所在region
     * slaveInstanceId  灾备实例ID
     * slaveRegion  灾备实例所在region
+    * buildProcess  搭建流程。master表示配置主实例容灾能力流程。slave表示配置灾备实例容灾能力流程。
     * time  灾备搭建时间
     *
     * @var string[]
@@ -164,6 +171,7 @@ class InstanceDrInfo implements ModelInterface, ArrayAccess
             'masterRegion' => 'setMasterRegion',
             'slaveInstanceId' => 'setSlaveInstanceId',
             'slaveRegion' => 'setSlaveRegion',
+            'buildProcess' => 'setBuildProcess',
             'time' => 'setTime'
     ];
 
@@ -180,6 +188,7 @@ class InstanceDrInfo implements ModelInterface, ArrayAccess
     * masterRegion  主实例所在region
     * slaveInstanceId  灾备实例ID
     * slaveRegion  灾备实例所在region
+    * buildProcess  搭建流程。master表示配置主实例容灾能力流程。slave表示配置灾备实例容灾能力流程。
     * time  灾备搭建时间
     *
     * @var string[]
@@ -196,6 +205,7 @@ class InstanceDrInfo implements ModelInterface, ArrayAccess
             'masterRegion' => 'getMasterRegion',
             'slaveInstanceId' => 'getSlaveInstanceId',
             'slaveRegion' => 'getSlaveRegion',
+            'buildProcess' => 'getBuildProcess',
             'time' => 'getTime'
     ];
 
@@ -268,6 +278,7 @@ class InstanceDrInfo implements ModelInterface, ArrayAccess
         $this->container['masterRegion'] = isset($data['masterRegion']) ? $data['masterRegion'] : null;
         $this->container['slaveInstanceId'] = isset($data['slaveInstanceId']) ? $data['slaveInstanceId'] : null;
         $this->container['slaveRegion'] = isset($data['slaveRegion']) ? $data['slaveRegion'] : null;
+        $this->container['buildProcess'] = isset($data['buildProcess']) ? $data['buildProcess'] : null;
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
     }
 
@@ -575,6 +586,30 @@ class InstanceDrInfo implements ModelInterface, ArrayAccess
     public function setSlaveRegion($slaveRegion)
     {
         $this->container['slaveRegion'] = $slaveRegion;
+        return $this;
+    }
+
+    /**
+    * Gets buildProcess
+    *  搭建流程。master表示配置主实例容灾能力流程。slave表示配置灾备实例容灾能力流程。
+    *
+    * @return string|null
+    */
+    public function getBuildProcess()
+    {
+        return $this->container['buildProcess'];
+    }
+
+    /**
+    * Sets buildProcess
+    *
+    * @param string|null $buildProcess 搭建流程。master表示配置主实例容灾能力流程。slave表示配置灾备实例容灾能力流程。
+    *
+    * @return $this
+    */
+    public function setBuildProcess($buildProcess)
+    {
+        $this->container['buildProcess'] = $buildProcess;
         return $this;
     }
 

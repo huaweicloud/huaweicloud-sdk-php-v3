@@ -37,7 +37,7 @@ class HistoryItem implements ModelInterface, ArrayAccess
             'captureTime' => 'string',
             'status' => 'string',
             'relations' => '\HuaweiCloud\SDK\Config\V1\Model\ResourceRelation[]',
-            'resource' => '\HuaweiCloud\SDK\Config\V1\Model\ResourceEntity'
+            'resource' => '\HuaweiCloud\SDK\Config\V1\Model\BaseResourceEntity'
     ];
 
     /**
@@ -386,7 +386,7 @@ class HistoryItem implements ModelInterface, ArrayAccess
     * Gets resource
     *  resource
     *
-    * @return \HuaweiCloud\SDK\Config\V1\Model\ResourceEntity|null
+    * @return \HuaweiCloud\SDK\Config\V1\Model\BaseResourceEntity|null
     */
     public function getResource()
     {
@@ -396,7 +396,7 @@ class HistoryItem implements ModelInterface, ArrayAccess
     /**
     * Sets resource
     *
-    * @param \HuaweiCloud\SDK\Config\V1\Model\ResourceEntity|null $resource resource
+    * @param \HuaweiCloud\SDK\Config\V1\Model\BaseResourceEntity|null $resource resource
     *
     * @return $this
     */

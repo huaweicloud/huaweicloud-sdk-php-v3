@@ -28,6 +28,7 @@ class Restore implements ModelInterface, ArrayAccess
     * port  指定集群服务端口
     * publicIp  publicIp
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class Restore implements ModelInterface, ArrayAccess
             'availabilityZone' => 'string',
             'port' => 'int',
             'publicIp' => '\HuaweiCloud\SDK\Dws\V2\Model\PublicIp',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'ipv6Enable' => 'bool'
     ];
 
     /**
@@ -52,6 +54,7 @@ class Restore implements ModelInterface, ArrayAccess
     * port  指定集群服务端口
     * publicIp  publicIp
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class Restore implements ModelInterface, ArrayAccess
         'availabilityZone' => null,
         'port' => 'int32',
         'publicIp' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'ipv6Enable' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class Restore implements ModelInterface, ArrayAccess
     * port  指定集群服务端口
     * publicIp  publicIp
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class Restore implements ModelInterface, ArrayAccess
             'availabilityZone' => 'availability_zone',
             'port' => 'port',
             'publicIp' => 'public_ip',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'ipv6Enable' => 'ipv6_enable'
     ];
 
     /**
@@ -121,6 +127,7 @@ class Restore implements ModelInterface, ArrayAccess
     * port  指定集群服务端口
     * publicIp  publicIp
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class Restore implements ModelInterface, ArrayAccess
             'availabilityZone' => 'setAvailabilityZone',
             'port' => 'setPort',
             'publicIp' => 'setPublicIp',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'ipv6Enable' => 'setIpv6Enable'
     ];
 
     /**
@@ -145,6 +153,7 @@ class Restore implements ModelInterface, ArrayAccess
     * port  指定集群服务端口
     * publicIp  publicIp
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class Restore implements ModelInterface, ArrayAccess
             'availabilityZone' => 'getAvailabilityZone',
             'port' => 'getPort',
             'publicIp' => 'getPublicIp',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'ipv6Enable' => 'getIpv6Enable'
     ];
 
     /**
@@ -225,6 +235,7 @@ class Restore implements ModelInterface, ArrayAccess
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
     }
 
     /**
@@ -447,6 +458,30 @@ class Restore implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6Enable
+    *  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    *
+    * @return bool|null
+    */
+    public function getIpv6Enable()
+    {
+        return $this->container['ipv6Enable'];
+    }
+
+    /**
+    * Sets ipv6Enable
+    *
+    * @param bool|null $ipv6Enable 指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    *
+    * @return $this
+    */
+    public function setIpv6Enable($ipv6Enable)
+    {
+        $this->container['ipv6Enable'] = $ipv6Enable;
         return $this;
     }
 

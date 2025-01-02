@@ -22,7 +22,7 @@ class GdgwRouteTableRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * addRoutes  需要添加的路由
     * delRoutes  需要删除的路由
-    * updateRoutes  需要更新的路 **仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息**
+    * updateRoutes  需要更新的路由 仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class GdgwRouteTableRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * addRoutes  需要添加的路由
     * delRoutes  需要删除的路由
-    * updateRoutes  需要更新的路 **仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息**
+    * updateRoutes  需要更新的路由 仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class GdgwRouteTableRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * addRoutes  需要添加的路由
     * delRoutes  需要删除的路由
-    * updateRoutes  需要更新的路 **仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息**
+    * updateRoutes  需要更新的路由 仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class GdgwRouteTableRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * addRoutes  需要添加的路由
     * delRoutes  需要删除的路由
-    * updateRoutes  需要更新的路 **仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息**
+    * updateRoutes  需要更新的路由 仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class GdgwRouteTableRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * addRoutes  需要添加的路由
     * delRoutes  需要删除的路由
-    * updateRoutes  需要更新的路 **仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息**
+    * updateRoutes  需要更新的路由 仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class GdgwRouteTableRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateRoutes
-    *  需要更新的路 **仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息**
+    *  需要更新的路由 仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息
     *
     * @return \HuaweiCloud\SDK\Dc\V3\Model\UpdateRouteAction[]|null
     */
@@ -256,7 +256,7 @@ class GdgwRouteTableRequest implements ModelInterface, ArrayAccess
     /**
     * Sets updateRoutes
     *
-    * @param \HuaweiCloud\SDK\Dc\V3\Model\UpdateRouteAction[]|null $updateRoutes 需要更新的路 **仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息**
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\UpdateRouteAction[]|null $updateRoutes 需要更新的路由 仅更新该条路由的附加信息，不执行交换机的路由更新操作。当前支持更新：路由描述-description信息
     *
     * @return $this
     */

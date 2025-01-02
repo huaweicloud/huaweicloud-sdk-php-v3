@@ -24,6 +24,7 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
     * limit  功能说明：每页返回的个数 取值范围：0-2000
     * marker  分页查询起始的资源ID，为空时查询第一页
     * id  VPC资源ID。可以使用该字段过滤VPC
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的VPC。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的VPC，请传参all_granted_eps。
     * name  VPC的name信息，可以使用该字段过滤VPC
     * description  VPC的描述信息。可以使用该字段过滤VPC
     * cidr  VPC的CIDR。可以使用该字段过滤VPC
@@ -35,6 +36,7 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'marker' => 'string',
             'id' => 'string[]',
+            'enterpriseProjectId' => 'string',
             'name' => 'string[]',
             'description' => 'string[]',
             'cidr' => 'string[]'
@@ -46,6 +48,7 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
     * limit  功能说明：每页返回的个数 取值范围：0-2000
     * marker  分页查询起始的资源ID，为空时查询第一页
     * id  VPC资源ID。可以使用该字段过滤VPC
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的VPC。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的VPC，请传参all_granted_eps。
     * name  VPC的name信息，可以使用该字段过滤VPC
     * description  VPC的描述信息。可以使用该字段过滤VPC
     * cidr  VPC的CIDR。可以使用该字段过滤VPC
@@ -57,6 +60,7 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
         'limit' => 'int32',
         'marker' => null,
         'id' => null,
+        'enterpriseProjectId' => null,
         'name' => null,
         'description' => null,
         'cidr' => null
@@ -89,6 +93,7 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
     * limit  功能说明：每页返回的个数 取值范围：0-2000
     * marker  分页查询起始的资源ID，为空时查询第一页
     * id  VPC资源ID。可以使用该字段过滤VPC
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的VPC。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的VPC，请传参all_granted_eps。
     * name  VPC的name信息，可以使用该字段过滤VPC
     * description  VPC的描述信息。可以使用该字段过滤VPC
     * cidr  VPC的CIDR。可以使用该字段过滤VPC
@@ -100,6 +105,7 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'marker' => 'marker',
             'id' => 'id',
+            'enterpriseProjectId' => 'enterprise_project_id',
             'name' => 'name',
             'description' => 'description',
             'cidr' => 'cidr'
@@ -111,6 +117,7 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
     * limit  功能说明：每页返回的个数 取值范围：0-2000
     * marker  分页查询起始的资源ID，为空时查询第一页
     * id  VPC资源ID。可以使用该字段过滤VPC
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的VPC。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的VPC，请传参all_granted_eps。
     * name  VPC的name信息，可以使用该字段过滤VPC
     * description  VPC的描述信息。可以使用该字段过滤VPC
     * cidr  VPC的CIDR。可以使用该字段过滤VPC
@@ -122,6 +129,7 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'marker' => 'setMarker',
             'id' => 'setId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'name' => 'setName',
             'description' => 'setDescription',
             'cidr' => 'setCidr'
@@ -133,6 +141,7 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
     * limit  功能说明：每页返回的个数 取值范围：0-2000
     * marker  分页查询起始的资源ID，为空时查询第一页
     * id  VPC资源ID。可以使用该字段过滤VPC
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的VPC。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的VPC，请传参all_granted_eps。
     * name  VPC的name信息，可以使用该字段过滤VPC
     * description  VPC的描述信息。可以使用该字段过滤VPC
     * cidr  VPC的CIDR。可以使用该字段过滤VPC
@@ -144,6 +153,7 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'marker' => 'getMarker',
             'id' => 'getId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'name' => 'getName',
             'description' => 'getDescription',
             'cidr' => 'getCidr'
@@ -211,6 +221,7 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['cidr'] = isset($data['cidr']) ? $data['cidr'] : null;
@@ -229,6 +240,9 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
         }
             if (!preg_match("/[0-9a-fA-F]{32}/", $this->container['projectId'])) {
                 $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[0-9a-fA-F]{32}/.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
             }
         return $invalidProperties;
     }
@@ -337,6 +351,30 @@ class ListVpcsRequest implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的VPC。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的VPC，请传参all_granted_eps。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的VPC。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的VPC，请传参all_granted_eps。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

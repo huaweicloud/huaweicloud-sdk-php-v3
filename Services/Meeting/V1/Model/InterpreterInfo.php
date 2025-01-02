@@ -25,6 +25,8 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
     * callNumber  呼叫号码。
     * name  用户名。
     * interpreterId  传译员序号，AI传译组下传译员唯一标识。
+    * interpreterType  传译员类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
+    * aiDigitalInfo  aiDigitalInfo
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
             'userId' => 'string',
             'callNumber' => 'string',
             'name' => 'string',
-            'interpreterId' => 'string'
+            'interpreterId' => 'string',
+            'interpreterType' => 'string',
+            'aiDigitalInfo' => '\HuaweiCloud\SDK\Meeting\V1\Model\InterpreterAiDigitalInfo'
     ];
 
     /**
@@ -43,6 +47,8 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
     * callNumber  呼叫号码。
     * name  用户名。
     * interpreterId  传译员序号，AI传译组下传译员唯一标识。
+    * interpreterType  传译员类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
+    * aiDigitalInfo  aiDigitalInfo
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
         'userId' => null,
         'callNumber' => null,
         'name' => null,
-        'interpreterId' => null
+        'interpreterId' => null,
+        'interpreterType' => null,
+        'aiDigitalInfo' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
     * callNumber  呼叫号码。
     * name  用户名。
     * interpreterId  传译员序号，AI传译组下传译员唯一标识。
+    * interpreterType  传译员类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
+    * aiDigitalInfo  aiDigitalInfo
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
             'userId' => 'userID',
             'callNumber' => 'callNumber',
             'name' => 'name',
-            'interpreterId' => 'interpreterId'
+            'interpreterId' => 'interpreterId',
+            'interpreterType' => 'interpreterType',
+            'aiDigitalInfo' => 'aiDigitalInfo'
     ];
 
     /**
@@ -100,6 +112,8 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
     * callNumber  呼叫号码。
     * name  用户名。
     * interpreterId  传译员序号，AI传译组下传译员唯一标识。
+    * interpreterType  传译员类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
+    * aiDigitalInfo  aiDigitalInfo
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
             'userId' => 'setUserId',
             'callNumber' => 'setCallNumber',
             'name' => 'setName',
-            'interpreterId' => 'setInterpreterId'
+            'interpreterId' => 'setInterpreterId',
+            'interpreterType' => 'setInterpreterType',
+            'aiDigitalInfo' => 'setAiDigitalInfo'
     ];
 
     /**
@@ -118,6 +134,8 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
     * callNumber  呼叫号码。
     * name  用户名。
     * interpreterId  传译员序号，AI传译组下传译员唯一标识。
+    * interpreterType  传译员类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
+    * aiDigitalInfo  aiDigitalInfo
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
             'userId' => 'getUserId',
             'callNumber' => 'getCallNumber',
             'name' => 'getName',
-            'interpreterId' => 'getInterpreterId'
+            'interpreterId' => 'getInterpreterId',
+            'interpreterType' => 'getInterpreterType',
+            'aiDigitalInfo' => 'getAiDigitalInfo'
     ];
 
     /**
@@ -192,6 +212,8 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
         $this->container['callNumber'] = isset($data['callNumber']) ? $data['callNumber'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['interpreterId'] = isset($data['interpreterId']) ? $data['interpreterId'] : null;
+        $this->container['interpreterType'] = isset($data['interpreterType']) ? $data['interpreterType'] : null;
+        $this->container['aiDigitalInfo'] = isset($data['aiDigitalInfo']) ? $data['aiDigitalInfo'] : null;
     }
 
     /**
@@ -336,6 +358,54 @@ class InterpreterInfo implements ModelInterface, ArrayAccess
     public function setInterpreterId($interpreterId)
     {
         $this->container['interpreterId'] = $interpreterId;
+        return $this;
+    }
+
+    /**
+    * Gets interpreterType
+    *  传译员类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
+    *
+    * @return string|null
+    */
+    public function getInterpreterType()
+    {
+        return $this->container['interpreterType'];
+    }
+
+    /**
+    * Sets interpreterType
+    *
+    * @param string|null $interpreterType 传译员类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
+    *
+    * @return $this
+    */
+    public function setInterpreterType($interpreterType)
+    {
+        $this->container['interpreterType'] = $interpreterType;
+        return $this;
+    }
+
+    /**
+    * Gets aiDigitalInfo
+    *  aiDigitalInfo
+    *
+    * @return \HuaweiCloud\SDK\Meeting\V1\Model\InterpreterAiDigitalInfo|null
+    */
+    public function getAiDigitalInfo()
+    {
+        return $this->container['aiDigitalInfo'];
+    }
+
+    /**
+    * Sets aiDigitalInfo
+    *
+    * @param \HuaweiCloud\SDK\Meeting\V1\Model\InterpreterAiDigitalInfo|null $aiDigitalInfo aiDigitalInfo
+    *
+    * @return $this
+    */
+    public function setAiDigitalInfo($aiDigitalInfo)
+    {
+        $this->container['aiDigitalInfo'] = $aiDigitalInfo;
         return $this;
     }
 

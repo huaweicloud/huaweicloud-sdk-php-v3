@@ -42,8 +42,8 @@ class RecordInfoReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'confUuid' => null,
-        'segmentOffset' => 'int64',
-        'segmentLimit' => 'int64'
+        'segmentOffset' => null,
+        'segmentLimit' => null
     ];
 
     /**

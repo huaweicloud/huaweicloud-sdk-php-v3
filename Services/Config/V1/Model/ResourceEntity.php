@@ -33,9 +33,9 @@ class ResourceEntity implements ModelInterface, ArrayAccess
     * created  资源创建时间
     * updated  资源更新时间
     * provisioningState  资源操作状态
-    * state  资源状态，保有中（Normal）/已删除(Deleted)
     * tags  资源Tag
     * properties  资源详细属性
+    * state  资源状态，保有中（Normal）/已删除(Deleted)
     *
     * @var string[]
     */
@@ -53,9 +53,9 @@ class ResourceEntity implements ModelInterface, ArrayAccess
             'created' => 'string',
             'updated' => 'string',
             'provisioningState' => 'string',
-            'state' => 'string',
             'tags' => 'map[string,string]',
-            'properties' => 'map[string,object]'
+            'properties' => 'map[string,object]',
+            'state' => 'string'
     ];
 
     /**
@@ -73,9 +73,9 @@ class ResourceEntity implements ModelInterface, ArrayAccess
     * created  资源创建时间
     * updated  资源更新时间
     * provisioningState  资源操作状态
-    * state  资源状态，保有中（Normal）/已删除(Deleted)
     * tags  资源Tag
     * properties  资源详细属性
+    * state  资源状态，保有中（Normal）/已删除(Deleted)
     *
     * @var string[]
     */
@@ -93,9 +93,9 @@ class ResourceEntity implements ModelInterface, ArrayAccess
         'created' => null,
         'updated' => null,
         'provisioningState' => null,
-        'state' => null,
         'tags' => null,
-        'properties' => null
+        'properties' => null,
+        'state' => null
     ];
 
     /**
@@ -134,9 +134,9 @@ class ResourceEntity implements ModelInterface, ArrayAccess
     * created  资源创建时间
     * updated  资源更新时间
     * provisioningState  资源操作状态
-    * state  资源状态，保有中（Normal）/已删除(Deleted)
     * tags  资源Tag
     * properties  资源详细属性
+    * state  资源状态，保有中（Normal）/已删除(Deleted)
     *
     * @var string[]
     */
@@ -154,9 +154,9 @@ class ResourceEntity implements ModelInterface, ArrayAccess
             'created' => 'created',
             'updated' => 'updated',
             'provisioningState' => 'provisioning_state',
-            'state' => 'state',
             'tags' => 'tags',
-            'properties' => 'properties'
+            'properties' => 'properties',
+            'state' => 'state'
     ];
 
     /**
@@ -174,9 +174,9 @@ class ResourceEntity implements ModelInterface, ArrayAccess
     * created  资源创建时间
     * updated  资源更新时间
     * provisioningState  资源操作状态
-    * state  资源状态，保有中（Normal）/已删除(Deleted)
     * tags  资源Tag
     * properties  资源详细属性
+    * state  资源状态，保有中（Normal）/已删除(Deleted)
     *
     * @var string[]
     */
@@ -194,9 +194,9 @@ class ResourceEntity implements ModelInterface, ArrayAccess
             'created' => 'setCreated',
             'updated' => 'setUpdated',
             'provisioningState' => 'setProvisioningState',
-            'state' => 'setState',
             'tags' => 'setTags',
-            'properties' => 'setProperties'
+            'properties' => 'setProperties',
+            'state' => 'setState'
     ];
 
     /**
@@ -214,9 +214,9 @@ class ResourceEntity implements ModelInterface, ArrayAccess
     * created  资源创建时间
     * updated  资源更新时间
     * provisioningState  资源操作状态
-    * state  资源状态，保有中（Normal）/已删除(Deleted)
     * tags  资源Tag
     * properties  资源详细属性
+    * state  资源状态，保有中（Normal）/已删除(Deleted)
     *
     * @var string[]
     */
@@ -234,9 +234,9 @@ class ResourceEntity implements ModelInterface, ArrayAccess
             'created' => 'getCreated',
             'updated' => 'getUpdated',
             'provisioningState' => 'getProvisioningState',
-            'state' => 'getState',
             'tags' => 'getTags',
-            'properties' => 'getProperties'
+            'properties' => 'getProperties',
+            'state' => 'getState'
     ];
 
     /**
@@ -310,9 +310,9 @@ class ResourceEntity implements ModelInterface, ArrayAccess
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['provisioningState'] = isset($data['provisioningState']) ? $data['provisioningState'] : null;
-        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
+        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
     }
 
     /**
@@ -650,30 +650,6 @@ class ResourceEntity implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets state
-    *  资源状态，保有中（Normal）/已删除(Deleted)
-    *
-    * @return string|null
-    */
-    public function getState()
-    {
-        return $this->container['state'];
-    }
-
-    /**
-    * Sets state
-    *
-    * @param string|null $state 资源状态，保有中（Normal）/已删除(Deleted)
-    *
-    * @return $this
-    */
-    public function setState($state)
-    {
-        $this->container['state'] = $state;
-        return $this;
-    }
-
-    /**
     * Gets tags
     *  资源Tag
     *
@@ -718,6 +694,30 @@ class ResourceEntity implements ModelInterface, ArrayAccess
     public function setProperties($properties)
     {
         $this->container['properties'] = $properties;
+        return $this;
+    }
+
+    /**
+    * Gets state
+    *  资源状态，保有中（Normal）/已删除(Deleted)
+    *
+    * @return string|null
+    */
+    public function getState()
+    {
+        return $this->container['state'];
+    }
+
+    /**
+    * Sets state
+    *
+    * @param string|null $state 资源状态，保有中（Normal）/已删除(Deleted)
+    *
+    * @return $this
+    */
+    public function setState($state)
+    {
+        $this->container['state'] = $state;
         return $this;
     }
 

@@ -23,24 +23,32 @@ class ListConnectGatewaysResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * requestId  请求ID
     * connectGateways  connectGateways
+    * totalCount  总记录数。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'connectGateways' => '\HuaweiCloud\SDK\Dc\V3\Model\ConnectGatewayResponse[]'
+            'connectGateways' => '\HuaweiCloud\SDK\Dc\V3\Model\ConnectGatewayResponse[]',
+            'totalCount' => 'int',
+            'pageInfo' => '\HuaweiCloud\SDK\Dc\V3\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * requestId  请求ID
     * connectGateways  connectGateways
+    * totalCount  总记录数。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
-        'connectGateways' => null
+        'connectGateways' => null,
+        'totalCount' => 'int32',
+        'pageInfo' => null
     ];
 
     /**
@@ -68,36 +76,48 @@ class ListConnectGatewaysResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * requestId  请求ID
     * connectGateways  connectGateways
+    * totalCount  总记录数。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
-            'connectGateways' => 'connect_gateways'
+            'connectGateways' => 'connect_gateways',
+            'totalCount' => 'total_count',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  请求ID
     * connectGateways  connectGateways
+    * totalCount  总记录数。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
-            'connectGateways' => 'setConnectGateways'
+            'connectGateways' => 'setConnectGateways',
+            'totalCount' => 'setTotalCount',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  请求ID
     * connectGateways  connectGateways
+    * totalCount  总记录数。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
-            'connectGateways' => 'getConnectGateways'
+            'connectGateways' => 'getConnectGateways',
+            'totalCount' => 'getTotalCount',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -160,6 +180,8 @@ class ListConnectGatewaysResponse implements ModelInterface, ArrayAccess
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['connectGateways'] = isset($data['connectGateways']) ? $data['connectGateways'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -229,6 +251,54 @@ class ListConnectGatewaysResponse implements ModelInterface, ArrayAccess
     public function setConnectGateways($connectGateways)
     {
         $this->container['connectGateways'] = $connectGateways;
+        return $this;
+    }
+
+    /**
+    * Gets totalCount
+    *  总记录数。
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 总记录数。
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Dc\V3\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 
