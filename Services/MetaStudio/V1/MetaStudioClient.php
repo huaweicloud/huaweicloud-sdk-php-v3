@@ -6046,6 +6046,80 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 批量删除安抚话术
+     *
+     * 该接口用于批量删除安抚话术。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeletePacifyWords($request)
+    {
+        return $this->batchDeletePacifyWordsWithHttpInfo($request);
+    }
+
+    public function batchDeletePacifyWordsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/digital-human-chat/pacify-words/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\BatchDeletePacifyWordsResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\BatchDeletePacifyWordsRequest');
+    }
+
+    /**
      * 创建安抚话术
      *
      * 该接口用于创建安抚话术。
@@ -12562,9 +12636,9 @@ class MetaStudioClient extends Client
     }
 
     /**
-     * 设置TTS租户级扩展词表配置
+     * 设置TTS租户级自定义读法配置
      *
-     * 该接口用于设置TTS租户级扩展词表配置。
+     * 该接口用于设置TTS租户级自定义读法配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12639,9 +12713,9 @@ class MetaStudioClient extends Client
     }
 
     /**
-     * 删除TTS租户级词表扩展配置
+     * 删除TTS租户级自定义读法配置
      *
-     * 该接口用于删除TTS租户级词表扩展配置。
+     * 该接口用于删除TTS租户级自定义读法配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12722,9 +12796,9 @@ class MetaStudioClient extends Client
     }
 
     /**
-     * 获取TTS租户级词表扩展配置
+     * 获取TTS租户级自定义读法配置
      *
-     * 该接口用于获取TTS租户级词表扩展配置。
+     * 该接口用于获取TTS租户级自定义读法配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12814,9 +12888,9 @@ class MetaStudioClient extends Client
     }
 
     /**
-     * 修改TTS租户级扩展词表配置
+     * 修改TTS租户级自定义读法配置
      *
-     * 该接口用于修改TTS租户级扩展词表配置。
+     * 该接口用于修改TTS租户级自定义读法配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

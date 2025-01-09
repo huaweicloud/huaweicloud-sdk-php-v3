@@ -21,8 +21,8 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  id
-    * key  映射键
-    * value  映射值
+    * key  原始词
+    * value  设置的自定义读法
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -39,8 +39,8 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  id
-    * key  映射键
-    * value  映射值
+    * key  原始词
+    * value  设置的自定义读法
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -78,8 +78,8 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  id
-    * key  映射键
-    * value  映射值
+    * key  原始词
+    * value  设置的自定义读法
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -96,8 +96,8 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  id
-    * key  映射键
-    * value  映射值
+    * key  原始词
+    * value  设置的自定义读法
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -114,8 +114,8 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  id
-    * key  映射键
-    * value  映射值
+    * key  原始词
+    * value  设置的自定义读法
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -272,7 +272,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  映射键
+    *  原始词
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 映射键
+    * @param string|null $key 原始词
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  映射值
+    *  设置的自定义读法
     *
     * @return string|null
     */
@@ -308,7 +308,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 映射值
+    * @param string|null $value 设置的自定义读法
     *
     * @return $this
     */

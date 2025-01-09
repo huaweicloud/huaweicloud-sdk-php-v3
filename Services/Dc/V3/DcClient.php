@@ -1404,6 +1404,12 @@ class DcClient extends Client
         if ($localVarParams['extFields'] !== null) {
             $queryParams['ext_fields'] = $localVarParams['extFields'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
         if ($localVarParams['nexthop'] !== null) {
             $queryParams['nexthop'] = $localVarParams['nexthop'];
         }

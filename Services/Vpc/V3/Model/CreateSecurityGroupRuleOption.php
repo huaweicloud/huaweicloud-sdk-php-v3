@@ -31,6 +31,7 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
     * remoteAddressGroupId  功能说明：远端地址组ID 取值范围：租户下存在的地址组ID 约束：与remote_ip_prefix，remote_group_id功能互斥
     * action  功能说明：安全组规则生效策略 取值范围：allow 允许，deny 拒绝 约束：默认值为allow
     * priority  功能说明：规则在安全组中的优先级 取值范围：1~100，1代表最高优先级 约束：默认值为100
+    * enabled  功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
             'remoteGroupId' => 'string',
             'remoteAddressGroupId' => 'string',
             'action' => 'string',
-            'priority' => 'string'
+            'priority' => 'string',
+            'enabled' => 'bool'
     ];
 
     /**
@@ -61,6 +63,7 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
     * remoteAddressGroupId  功能说明：远端地址组ID 取值范围：租户下存在的地址组ID 约束：与remote_ip_prefix，remote_group_id功能互斥
     * action  功能说明：安全组规则生效策略 取值范围：allow 允许，deny 拒绝 约束：默认值为allow
     * priority  功能说明：规则在安全组中的优先级 取值范围：1~100，1代表最高优先级 约束：默认值为100
+    * enabled  功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
         'remoteGroupId' => null,
         'remoteAddressGroupId' => null,
         'action' => null,
-        'priority' => null
+        'priority' => null,
+        'enabled' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
     * remoteAddressGroupId  功能说明：远端地址组ID 取值范围：租户下存在的地址组ID 约束：与remote_ip_prefix，remote_group_id功能互斥
     * action  功能说明：安全组规则生效策略 取值范围：allow 允许，deny 拒绝 约束：默认值为allow
     * priority  功能说明：规则在安全组中的优先级 取值范围：1~100，1代表最高优先级 约束：默认值为100
+    * enabled  功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
             'remoteGroupId' => 'remote_group_id',
             'remoteAddressGroupId' => 'remote_address_group_id',
             'action' => 'action',
-            'priority' => 'priority'
+            'priority' => 'priority',
+            'enabled' => 'enabled'
     ];
 
     /**
@@ -142,6 +148,7 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
     * remoteAddressGroupId  功能说明：远端地址组ID 取值范围：租户下存在的地址组ID 约束：与remote_ip_prefix，remote_group_id功能互斥
     * action  功能说明：安全组规则生效策略 取值范围：allow 允许，deny 拒绝 约束：默认值为allow
     * priority  功能说明：规则在安全组中的优先级 取值范围：1~100，1代表最高优先级 约束：默认值为100
+    * enabled  功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
             'remoteGroupId' => 'setRemoteGroupId',
             'remoteAddressGroupId' => 'setRemoteAddressGroupId',
             'action' => 'setAction',
-            'priority' => 'setPriority'
+            'priority' => 'setPriority',
+            'enabled' => 'setEnabled'
     ];
 
     /**
@@ -172,6 +180,7 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
     * remoteAddressGroupId  功能说明：远端地址组ID 取值范围：租户下存在的地址组ID 约束：与remote_ip_prefix，remote_group_id功能互斥
     * action  功能说明：安全组规则生效策略 取值范围：allow 允许，deny 拒绝 约束：默认值为allow
     * priority  功能说明：规则在安全组中的优先级 取值范围：1~100，1代表最高优先级 约束：默认值为100
+    * enabled  功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
             'remoteGroupId' => 'getRemoteGroupId',
             'remoteAddressGroupId' => 'getRemoteAddressGroupId',
             'action' => 'getAction',
-            'priority' => 'getPriority'
+            'priority' => 'getPriority',
+            'enabled' => 'getEnabled'
     ];
 
     /**
@@ -258,6 +268,7 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
         $this->container['remoteAddressGroupId'] = isset($data['remoteAddressGroupId']) ? $data['remoteAddressGroupId'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
     }
 
     /**
@@ -549,6 +560,30 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
     public function setPriority($priority)
     {
         $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets enabled
+    *  功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
+    *
+    * @return bool|null
+    */
+    public function getEnabled()
+    {
+        return $this->container['enabled'];
+    }
+
+    /**
+    * Sets enabled
+    *
+    * @param bool|null $enabled 功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
+    *
+    * @return $this
+    */
+    public function setEnabled($enabled)
+    {
+        $this->container['enabled'] = $enabled;
         return $this;
     }
 

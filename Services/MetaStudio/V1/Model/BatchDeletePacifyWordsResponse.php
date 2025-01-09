@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Meeting\V1\Model;
+namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SearchPrivateCorpDigitalInfoResponse implements ModelInterface, ArrayAccess
+class BatchDeletePacifyWordsResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,34 +17,26 @@ class SearchPrivateCorpDigitalInfoResponse implements ModelInterface, ArrayAcces
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SearchPrivateCorpDigitalInfoResponse';
+    protected static $openAPIModelName = 'BatchDeletePacifyWordsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * returnCode  结果码
-    * returnDesc  结果描述
-    * corpDigitalInfoList  数字资产列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'returnCode' => 'int',
-            'returnDesc' => 'string',
-            'corpDigitalInfoList' => '\HuaweiCloud\SDK\Meeting\V1\Model\CorpDigitalInfo[]'
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * returnCode  结果码
-    * returnDesc  结果描述
-    * corpDigitalInfoList  数字资产列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'returnCode' => null,
-        'returnDesc' => null,
-        'corpDigitalInfoList' => null
+        'xRequestId' => null
     ];
 
     /**
@@ -70,44 +62,32 @@ class SearchPrivateCorpDigitalInfoResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * returnCode  结果码
-    * returnDesc  结果描述
-    * corpDigitalInfoList  数字资产列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'returnCode' => 'returnCode',
-            'returnDesc' => 'returnDesc',
-            'corpDigitalInfoList' => 'corpDigitalInfoList'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * returnCode  结果码
-    * returnDesc  结果描述
-    * corpDigitalInfoList  数字资产列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'returnCode' => 'setReturnCode',
-            'returnDesc' => 'setReturnDesc',
-            'corpDigitalInfoList' => 'setCorpDigitalInfoList'
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * returnCode  结果码
-    * returnDesc  结果描述
-    * corpDigitalInfoList  数字资产列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'returnCode' => 'getReturnCode',
-            'returnDesc' => 'getReturnDesc',
-            'corpDigitalInfoList' => 'getCorpDigitalInfoList'
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -168,9 +148,7 @@ class SearchPrivateCorpDigitalInfoResponse implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['returnCode'] = isset($data['returnCode']) ? $data['returnCode'] : null;
-        $this->container['returnDesc'] = isset($data['returnDesc']) ? $data['returnDesc'] : null;
-        $this->container['corpDigitalInfoList'] = isset($data['corpDigitalInfoList']) ? $data['corpDigitalInfoList'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -196,74 +174,26 @@ class SearchPrivateCorpDigitalInfoResponse implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets returnCode
-    *  结果码
-    *
-    * @return int|null
-    */
-    public function getReturnCode()
-    {
-        return $this->container['returnCode'];
-    }
-
-    /**
-    * Sets returnCode
-    *
-    * @param int|null $returnCode 结果码
-    *
-    * @return $this
-    */
-    public function setReturnCode($returnCode)
-    {
-        $this->container['returnCode'] = $returnCode;
-        return $this;
-    }
-
-    /**
-    * Gets returnDesc
-    *  结果描述
+    * Gets xRequestId
+    *  xRequestId
     *
     * @return string|null
     */
-    public function getReturnDesc()
+    public function getXRequestId()
     {
-        return $this->container['returnDesc'];
+        return $this->container['xRequestId'];
     }
 
     /**
-    * Sets returnDesc
+    * Sets xRequestId
     *
-    * @param string|null $returnDesc 结果描述
+    * @param string|null $xRequestId xRequestId
     *
     * @return $this
     */
-    public function setReturnDesc($returnDesc)
+    public function setXRequestId($xRequestId)
     {
-        $this->container['returnDesc'] = $returnDesc;
-        return $this;
-    }
-
-    /**
-    * Gets corpDigitalInfoList
-    *  数字资产列表
-    *
-    * @return \HuaweiCloud\SDK\Meeting\V1\Model\CorpDigitalInfo[]|null
-    */
-    public function getCorpDigitalInfoList()
-    {
-        return $this->container['corpDigitalInfoList'];
-    }
-
-    /**
-    * Sets corpDigitalInfoList
-    *
-    * @param \HuaweiCloud\SDK\Meeting\V1\Model\CorpDigitalInfo[]|null $corpDigitalInfoList 数字资产列表
-    *
-    * @return $this
-    */
-    public function setCorpDigitalInfoList($corpDigitalInfoList)
-    {
-        $this->container['corpDigitalInfoList'] = $corpDigitalInfoList;
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

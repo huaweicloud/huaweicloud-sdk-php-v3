@@ -29,8 +29,12 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     * description  功能说明：安全组规则的描述，支持多个描述同时过滤
     * remoteGroupId  功能说明：远端安全组ID，支持多ID过滤
     * direction  功能说明：安全组规则方向
-    * action  功能说明：安全组规则生效策略
+    * action  功能说明：安全组规则生效策略。 取值范围：allow表示允许，deny表示拒绝。
     * remoteIpPrefix  功能说明：远端IP地址 取值范围：cidr格式
+    * priority  功能说明：优先级，支持多条过滤。
+    * ethertype  功能说明：IP协议类型，支持多条过滤。 取值范围：IPv4,IPv6,ipv4,ipv6
+    * remoteAddressGroupId  功能说明：远端IP地址组ID，支持多ID过滤。
+    * enabled  功能说明：是否启用安全组规则，不支持多值过滤。 取值范围：true, false。
     *
     * @var string[]
     */
@@ -45,7 +49,11 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
             'remoteGroupId' => 'string[]',
             'direction' => 'string',
             'action' => 'string',
-            'remoteIpPrefix' => 'string'
+            'remoteIpPrefix' => 'string',
+            'priority' => 'int[]',
+            'ethertype' => 'string[]',
+            'remoteAddressGroupId' => 'string[]',
+            'enabled' => 'bool'
     ];
 
     /**
@@ -59,8 +67,12 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     * description  功能说明：安全组规则的描述，支持多个描述同时过滤
     * remoteGroupId  功能说明：远端安全组ID，支持多ID过滤
     * direction  功能说明：安全组规则方向
-    * action  功能说明：安全组规则生效策略
+    * action  功能说明：安全组规则生效策略。 取值范围：allow表示允许，deny表示拒绝。
     * remoteIpPrefix  功能说明：远端IP地址 取值范围：cidr格式
+    * priority  功能说明：优先级，支持多条过滤。
+    * ethertype  功能说明：IP协议类型，支持多条过滤。 取值范围：IPv4,IPv6,ipv4,ipv6
+    * remoteAddressGroupId  功能说明：远端IP地址组ID，支持多ID过滤。
+    * enabled  功能说明：是否启用安全组规则，不支持多值过滤。 取值范围：true, false。
     *
     * @var string[]
     */
@@ -75,7 +87,11 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
         'remoteGroupId' => null,
         'direction' => null,
         'action' => null,
-        'remoteIpPrefix' => null
+        'remoteIpPrefix' => null,
+        'priority' => 'int32',
+        'ethertype' => null,
+        'remoteAddressGroupId' => null,
+        'enabled' => null
     ];
 
     /**
@@ -110,8 +126,12 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     * description  功能说明：安全组规则的描述，支持多个描述同时过滤
     * remoteGroupId  功能说明：远端安全组ID，支持多ID过滤
     * direction  功能说明：安全组规则方向
-    * action  功能说明：安全组规则生效策略
+    * action  功能说明：安全组规则生效策略。 取值范围：allow表示允许，deny表示拒绝。
     * remoteIpPrefix  功能说明：远端IP地址 取值范围：cidr格式
+    * priority  功能说明：优先级，支持多条过滤。
+    * ethertype  功能说明：IP协议类型，支持多条过滤。 取值范围：IPv4,IPv6,ipv4,ipv6
+    * remoteAddressGroupId  功能说明：远端IP地址组ID，支持多ID过滤。
+    * enabled  功能说明：是否启用安全组规则，不支持多值过滤。 取值范围：true, false。
     *
     * @var string[]
     */
@@ -126,7 +146,11 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
             'remoteGroupId' => 'remote_group_id',
             'direction' => 'direction',
             'action' => 'action',
-            'remoteIpPrefix' => 'remote_ip_prefix'
+            'remoteIpPrefix' => 'remote_ip_prefix',
+            'priority' => 'priority',
+            'ethertype' => 'ethertype',
+            'remoteAddressGroupId' => 'remote_address_group_id',
+            'enabled' => 'enabled'
     ];
 
     /**
@@ -140,8 +164,12 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     * description  功能说明：安全组规则的描述，支持多个描述同时过滤
     * remoteGroupId  功能说明：远端安全组ID，支持多ID过滤
     * direction  功能说明：安全组规则方向
-    * action  功能说明：安全组规则生效策略
+    * action  功能说明：安全组规则生效策略。 取值范围：allow表示允许，deny表示拒绝。
     * remoteIpPrefix  功能说明：远端IP地址 取值范围：cidr格式
+    * priority  功能说明：优先级，支持多条过滤。
+    * ethertype  功能说明：IP协议类型，支持多条过滤。 取值范围：IPv4,IPv6,ipv4,ipv6
+    * remoteAddressGroupId  功能说明：远端IP地址组ID，支持多ID过滤。
+    * enabled  功能说明：是否启用安全组规则，不支持多值过滤。 取值范围：true, false。
     *
     * @var string[]
     */
@@ -156,7 +184,11 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
             'remoteGroupId' => 'setRemoteGroupId',
             'direction' => 'setDirection',
             'action' => 'setAction',
-            'remoteIpPrefix' => 'setRemoteIpPrefix'
+            'remoteIpPrefix' => 'setRemoteIpPrefix',
+            'priority' => 'setPriority',
+            'ethertype' => 'setEthertype',
+            'remoteAddressGroupId' => 'setRemoteAddressGroupId',
+            'enabled' => 'setEnabled'
     ];
 
     /**
@@ -170,8 +202,12 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     * description  功能说明：安全组规则的描述，支持多个描述同时过滤
     * remoteGroupId  功能说明：远端安全组ID，支持多ID过滤
     * direction  功能说明：安全组规则方向
-    * action  功能说明：安全组规则生效策略
+    * action  功能说明：安全组规则生效策略。 取值范围：allow表示允许，deny表示拒绝。
     * remoteIpPrefix  功能说明：远端IP地址 取值范围：cidr格式
+    * priority  功能说明：优先级，支持多条过滤。
+    * ethertype  功能说明：IP协议类型，支持多条过滤。 取值范围：IPv4,IPv6,ipv4,ipv6
+    * remoteAddressGroupId  功能说明：远端IP地址组ID，支持多ID过滤。
+    * enabled  功能说明：是否启用安全组规则，不支持多值过滤。 取值范围：true, false。
     *
     * @var string[]
     */
@@ -186,7 +222,11 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
             'remoteGroupId' => 'getRemoteGroupId',
             'direction' => 'getDirection',
             'action' => 'getAction',
-            'remoteIpPrefix' => 'getRemoteIpPrefix'
+            'remoteIpPrefix' => 'getRemoteIpPrefix',
+            'priority' => 'getPriority',
+            'ethertype' => 'getEthertype',
+            'remoteAddressGroupId' => 'getRemoteAddressGroupId',
+            'enabled' => 'getEnabled'
     ];
 
     /**
@@ -258,6 +298,10 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['remoteIpPrefix'] = isset($data['remoteIpPrefix']) ? $data['remoteIpPrefix'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['ethertype'] = isset($data['ethertype']) ? $data['ethertype'] : null;
+        $this->container['remoteAddressGroupId'] = isset($data['remoteAddressGroupId']) ? $data['remoteAddressGroupId'] : null;
+        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
     }
 
     /**
@@ -506,7 +550,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  功能说明：安全组规则生效策略
+    *  功能说明：安全组规则生效策略。 取值范围：allow表示允许，deny表示拒绝。
     *
     * @return string|null
     */
@@ -518,7 +562,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 功能说明：安全组规则生效策略
+    * @param string|null $action 功能说明：安全组规则生效策略。 取值范围：allow表示允许，deny表示拒绝。
     *
     * @return $this
     */
@@ -549,6 +593,102 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     public function setRemoteIpPrefix($remoteIpPrefix)
     {
         $this->container['remoteIpPrefix'] = $remoteIpPrefix;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  功能说明：优先级，支持多条过滤。
+    *
+    * @return int[]|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param int[]|null $priority 功能说明：优先级，支持多条过滤。
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets ethertype
+    *  功能说明：IP协议类型，支持多条过滤。 取值范围：IPv4,IPv6,ipv4,ipv6
+    *
+    * @return string[]|null
+    */
+    public function getEthertype()
+    {
+        return $this->container['ethertype'];
+    }
+
+    /**
+    * Sets ethertype
+    *
+    * @param string[]|null $ethertype 功能说明：IP协议类型，支持多条过滤。 取值范围：IPv4,IPv6,ipv4,ipv6
+    *
+    * @return $this
+    */
+    public function setEthertype($ethertype)
+    {
+        $this->container['ethertype'] = $ethertype;
+        return $this;
+    }
+
+    /**
+    * Gets remoteAddressGroupId
+    *  功能说明：远端IP地址组ID，支持多ID过滤。
+    *
+    * @return string[]|null
+    */
+    public function getRemoteAddressGroupId()
+    {
+        return $this->container['remoteAddressGroupId'];
+    }
+
+    /**
+    * Sets remoteAddressGroupId
+    *
+    * @param string[]|null $remoteAddressGroupId 功能说明：远端IP地址组ID，支持多ID过滤。
+    *
+    * @return $this
+    */
+    public function setRemoteAddressGroupId($remoteAddressGroupId)
+    {
+        $this->container['remoteAddressGroupId'] = $remoteAddressGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets enabled
+    *  功能说明：是否启用安全组规则，不支持多值过滤。 取值范围：true, false。
+    *
+    * @return bool|null
+    */
+    public function getEnabled()
+    {
+        return $this->container['enabled'];
+    }
+
+    /**
+    * Sets enabled
+    *
+    * @param bool|null $enabled 功能说明：是否启用安全组规则，不支持多值过滤。 取值范围：true, false。
+    *
+    * @return $this
+    */
+    public function setEnabled($enabled)
+    {
+        $this->container['enabled'] = $enabled;
         return $this;
     }
 

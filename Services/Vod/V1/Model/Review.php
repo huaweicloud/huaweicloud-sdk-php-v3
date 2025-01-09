@@ -202,9 +202,6 @@ class Review implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['templateId'] === null) {
-            $invalidProperties[] = "'templateId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -223,7 +220,7 @@ class Review implements ModelInterface, ArrayAccess
     * Gets templateId
     *  审核模板ID。您可以在视频点播控制台配置审核模板后获取，具体请参见[审核设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0057.html)。
     *
-    * @return string
+    * @return string|null
     */
     public function getTemplateId()
     {
@@ -233,7 +230,7 @@ class Review implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string $templateId 审核模板ID。您可以在视频点播控制台配置审核模板后获取，具体请参见[审核设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0057.html)。
+    * @param string|null $templateId 审核模板ID。您可以在视频点播控制台配置审核模板后获取，具体请参见[审核设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0057.html)。
     *
     * @return $this
     */

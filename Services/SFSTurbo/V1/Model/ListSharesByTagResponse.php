@@ -21,21 +21,29 @@ class ListSharesByTagResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resources  通过标签查询文件系统的资源列表
+    * totalCount  设置返回的文件系统的偏移量
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'resources' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ListSharesByTagResource[]',
+            'totalCount' => 'int',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resources  通过标签查询文件系统的资源列表
+    * totalCount  设置返回的文件系统的偏移量
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'resources' => null,
+        'totalCount' => null,
         'xRequestId' => null
     ];
 
@@ -62,31 +70,43 @@ class ListSharesByTagResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resources  通过标签查询文件系统的资源列表
+    * totalCount  设置返回的文件系统的偏移量
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'resources' => 'resources',
+            'totalCount' => 'total_count',
             'xRequestId' => 'X-request-id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resources  通过标签查询文件系统的资源列表
+    * totalCount  设置返回的文件系统的偏移量
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
+            'resources' => 'setResources',
+            'totalCount' => 'setTotalCount',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resources  通过标签查询文件系统的资源列表
+    * totalCount  设置返回的文件系统的偏移量
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
+            'resources' => 'getResources',
+            'totalCount' => 'getTotalCount',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -148,6 +168,8 @@ class ListSharesByTagResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -171,6 +193,54 @@ class ListSharesByTagResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets resources
+    *  通过标签查询文件系统的资源列表
+    *
+    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ListSharesByTagResource[]|null
+    */
+    public function getResources()
+    {
+        return $this->container['resources'];
+    }
+
+    /**
+    * Sets resources
+    *
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ListSharesByTagResource[]|null $resources 通过标签查询文件系统的资源列表
+    *
+    * @return $this
+    */
+    public function setResources($resources)
+    {
+        $this->container['resources'] = $resources;
+        return $this;
+    }
+
+    /**
+    * Gets totalCount
+    *  设置返回的文件系统的偏移量
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 设置返回的文件系统的偏移量
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
+        return $this;
     }
 
     /**

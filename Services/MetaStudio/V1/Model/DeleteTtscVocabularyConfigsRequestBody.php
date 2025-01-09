@@ -20,7 +20,7 @@ class DeleteTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  词表id
+    * id  自定义读法id
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  词表id
+    * id  自定义读法id
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  词表id
+    * id  自定义读法id
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  词表id
+    * id  自定义读法id
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  词表id
+    * id  自定义读法id
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class DeleteTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Gets id
-    *  词表id
+    *  自定义读法id
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class DeleteTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets id
     *
-    * @param string[]|null $id 词表id
+    * @param string[]|null $id 自定义读法id
     *
     * @return $this
     */

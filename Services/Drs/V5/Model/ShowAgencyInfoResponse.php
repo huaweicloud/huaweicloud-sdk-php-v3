@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Meeting\V1\Model;
+namespace HuaweiCloud\SDK\Drs\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SearchCorpDigitalInfoListResponse implements ModelInterface, ArrayAccess
+class ShowAgencyInfoResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,34 +17,34 @@ class SearchCorpDigitalInfoListResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SearchCorpDigitalInfoListResponse';
+    protected static $openAPIModelName = 'ShowAgencyInfoResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * returnCode  结果码
-    * returnDesc  结果描述
-    * corpDigitalInfoList  数字资产列表
+    * isExisted  委托是否存在。
+    * name  委托名称。
+    * roles  委托绑定的权限策略信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'returnCode' => 'int',
-            'returnDesc' => 'string',
-            'corpDigitalInfoList' => '\HuaweiCloud\SDK\Meeting\V1\Model\CorpDigitalInfo[]'
+            'isExisted' => 'bool',
+            'name' => 'string',
+            'roles' => '\HuaweiCloud\SDK\Drs\V5\Model\AgencyRole[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * returnCode  结果码
-    * returnDesc  结果描述
-    * corpDigitalInfoList  数字资产列表
+    * isExisted  委托是否存在。
+    * name  委托名称。
+    * roles  委托绑定的权限策略信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'returnCode' => null,
-        'returnDesc' => null,
-        'corpDigitalInfoList' => null
+        'isExisted' => null,
+        'name' => null,
+        'roles' => null
     ];
 
     /**
@@ -70,44 +70,44 @@ class SearchCorpDigitalInfoListResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * returnCode  结果码
-    * returnDesc  结果描述
-    * corpDigitalInfoList  数字资产列表
+    * isExisted  委托是否存在。
+    * name  委托名称。
+    * roles  委托绑定的权限策略信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'returnCode' => 'returnCode',
-            'returnDesc' => 'returnDesc',
-            'corpDigitalInfoList' => 'corpDigitalInfoList'
+            'isExisted' => 'is_existed',
+            'name' => 'name',
+            'roles' => 'roles'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * returnCode  结果码
-    * returnDesc  结果描述
-    * corpDigitalInfoList  数字资产列表
+    * isExisted  委托是否存在。
+    * name  委托名称。
+    * roles  委托绑定的权限策略信息。
     *
     * @var string[]
     */
     protected static $setters = [
-            'returnCode' => 'setReturnCode',
-            'returnDesc' => 'setReturnDesc',
-            'corpDigitalInfoList' => 'setCorpDigitalInfoList'
+            'isExisted' => 'setIsExisted',
+            'name' => 'setName',
+            'roles' => 'setRoles'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * returnCode  结果码
-    * returnDesc  结果描述
-    * corpDigitalInfoList  数字资产列表
+    * isExisted  委托是否存在。
+    * name  委托名称。
+    * roles  委托绑定的权限策略信息。
     *
     * @var string[]
     */
     protected static $getters = [
-            'returnCode' => 'getReturnCode',
-            'returnDesc' => 'getReturnDesc',
-            'corpDigitalInfoList' => 'getCorpDigitalInfoList'
+            'isExisted' => 'getIsExisted',
+            'name' => 'getName',
+            'roles' => 'getRoles'
     ];
 
     /**
@@ -168,9 +168,9 @@ class SearchCorpDigitalInfoListResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['returnCode'] = isset($data['returnCode']) ? $data['returnCode'] : null;
-        $this->container['returnDesc'] = isset($data['returnDesc']) ? $data['returnDesc'] : null;
-        $this->container['corpDigitalInfoList'] = isset($data['corpDigitalInfoList']) ? $data['corpDigitalInfoList'] : null;
+        $this->container['isExisted'] = isset($data['isExisted']) ? $data['isExisted'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
     }
 
     /**
@@ -196,74 +196,74 @@ class SearchCorpDigitalInfoListResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets returnCode
-    *  结果码
+    * Gets isExisted
+    *  委托是否存在。
     *
-    * @return int|null
+    * @return bool|null
     */
-    public function getReturnCode()
+    public function getIsExisted()
     {
-        return $this->container['returnCode'];
+        return $this->container['isExisted'];
     }
 
     /**
-    * Sets returnCode
+    * Sets isExisted
     *
-    * @param int|null $returnCode 结果码
+    * @param bool|null $isExisted 委托是否存在。
     *
     * @return $this
     */
-    public function setReturnCode($returnCode)
+    public function setIsExisted($isExisted)
     {
-        $this->container['returnCode'] = $returnCode;
+        $this->container['isExisted'] = $isExisted;
         return $this;
     }
 
     /**
-    * Gets returnDesc
-    *  结果描述
+    * Gets name
+    *  委托名称。
     *
     * @return string|null
     */
-    public function getReturnDesc()
+    public function getName()
     {
-        return $this->container['returnDesc'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets returnDesc
+    * Sets name
     *
-    * @param string|null $returnDesc 结果描述
+    * @param string|null $name 委托名称。
     *
     * @return $this
     */
-    public function setReturnDesc($returnDesc)
+    public function setName($name)
     {
-        $this->container['returnDesc'] = $returnDesc;
+        $this->container['name'] = $name;
         return $this;
     }
 
     /**
-    * Gets corpDigitalInfoList
-    *  数字资产列表
+    * Gets roles
+    *  委托绑定的权限策略信息。
     *
-    * @return \HuaweiCloud\SDK\Meeting\V1\Model\CorpDigitalInfo[]|null
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\AgencyRole[]|null
     */
-    public function getCorpDigitalInfoList()
+    public function getRoles()
     {
-        return $this->container['corpDigitalInfoList'];
+        return $this->container['roles'];
     }
 
     /**
-    * Sets corpDigitalInfoList
+    * Sets roles
     *
-    * @param \HuaweiCloud\SDK\Meeting\V1\Model\CorpDigitalInfo[]|null $corpDigitalInfoList 数字资产列表
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\AgencyRole[]|null $roles 委托绑定的权限策略信息。
     *
     * @return $this
     */
-    public function setCorpDigitalInfoList($corpDigitalInfoList)
+    public function setRoles($roles)
     {
-        $this->container['corpDigitalInfoList'] = $corpDigitalInfoList;
+        $this->container['roles'] = $roles;
         return $this;
     }
 

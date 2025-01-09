@@ -25,7 +25,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * type  词表类型 CHINESE_G2P：（g2p）中文拼音
+    * type  自定义读法类型 CHINESE_G2P：拼音
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -55,7 +55,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * type  词表类型 CHINESE_G2P：（g2p）中文拼音
+    * type  自定义读法类型 CHINESE_G2P：拼音
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -106,7 +106,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * type  词表类型 CHINESE_G2P：（g2p）中文拼音
+    * type  自定义读法类型 CHINESE_G2P：拼音
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -136,7 +136,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * type  词表类型 CHINESE_G2P：（g2p）中文拼音
+    * type  自定义读法类型 CHINESE_G2P：拼音
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -166,7 +166,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * type  词表类型 CHINESE_G2P：（g2p）中文拼音
+    * type  自定义读法类型 CHINESE_G2P：拼音
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -473,7 +473,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  词表类型 CHINESE_G2P：（g2p）中文拼音
+    *  自定义读法类型 CHINESE_G2P：拼音
     *
     * @return string
     */
@@ -485,7 +485,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 词表类型 CHINESE_G2P：（g2p）中文拼音
+    * @param string $type 自定义读法类型 CHINESE_G2P：拼音
     *
     * @return $this
     */

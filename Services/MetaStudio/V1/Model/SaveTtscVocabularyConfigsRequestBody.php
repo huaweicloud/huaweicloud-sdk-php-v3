@@ -20,9 +20,9 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
-    * key  映射键
-    * value  映射值
+    * type  支持配置的自定义读法类型。当前读法类型会映射为SSML标签，详见[文本驱动SSML定义](metastudio_02_0038.xml)。  包含如下选项： * CHINESE_G2P：拼音 * PHONETIC_SYMBOL：音标 * CONTINUUM：连读 * ALIAS：别名 * SAY_AS：数字/英文的读法。不同value值有不同的读法，详情如下所示。   数字的读法包括：   - date：读日期   - number：读数字   - figure：读数值   - telephone：读电话    英文的读法包括：   - spell：读字母   - english：读单词
+    * key  原始词。
+    * value  自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
-    * key  映射键
-    * value  映射值
+    * type  支持配置的自定义读法类型。当前读法类型会映射为SSML标签，详见[文本驱动SSML定义](metastudio_02_0038.xml)。  包含如下选项： * CHINESE_G2P：拼音 * PHONETIC_SYMBOL：音标 * CONTINUUM：连读 * ALIAS：别名 * SAY_AS：数字/英文的读法。不同value值有不同的读法，详情如下所示。   数字的读法包括：   - date：读日期   - number：读数字   - figure：读数值   - telephone：读电话    英文的读法包括：   - spell：读字母   - english：读单词
+    * key  原始词。
+    * value  自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
-    * key  映射键
-    * value  映射值
+    * type  支持配置的自定义读法类型。当前读法类型会映射为SSML标签，详见[文本驱动SSML定义](metastudio_02_0038.xml)。  包含如下选项： * CHINESE_G2P：拼音 * PHONETIC_SYMBOL：音标 * CONTINUUM：连读 * ALIAS：别名 * SAY_AS：数字/英文的读法。不同value值有不同的读法，详情如下所示。   数字的读法包括：   - date：读日期   - number：读数字   - figure：读数值   - telephone：读电话    英文的读法包括：   - spell：读字母   - english：读单词
+    * key  原始词。
+    * value  自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
-    * key  映射键
-    * value  映射值
+    * type  支持配置的自定义读法类型。当前读法类型会映射为SSML标签，详见[文本驱动SSML定义](metastudio_02_0038.xml)。  包含如下选项： * CHINESE_G2P：拼音 * PHONETIC_SYMBOL：音标 * CONTINUUM：连读 * ALIAS：别名 * SAY_AS：数字/英文的读法。不同value值有不同的读法，详情如下所示。   数字的读法包括：   - date：读日期   - number：读数字   - figure：读数值   - telephone：读电话    英文的读法包括：   - spell：读字母   - english：读单词
+    * key  原始词。
+    * value  自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
-    * key  映射键
-    * value  映射值
+    * type  支持配置的自定义读法类型。当前读法类型会映射为SSML标签，详见[文本驱动SSML定义](metastudio_02_0038.xml)。  包含如下选项： * CHINESE_G2P：拼音 * PHONETIC_SYMBOL：音标 * CONTINUUM：连读 * ALIAS：别名 * SAY_AS：数字/英文的读法。不同value值有不同的读法，详情如下所示。   数字的读法包括：   - date：读日期   - number：读数字   - figure：读数值   - telephone：读电话    英文的读法包括：   - spell：读字母   - english：读单词
+    * key  原始词。
+    * value  自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets type
-    *  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
+    *  支持配置的自定义读法类型。当前读法类型会映射为SSML标签，详见[文本驱动SSML定义](metastudio_02_0038.xml)。  包含如下选项： * CHINESE_G2P：拼音 * PHONETIC_SYMBOL：音标 * CONTINUUM：连读 * ALIAS：别名 * SAY_AS：数字/英文的读法。不同value值有不同的读法，详情如下所示。   数字的读法包括：   - date：读日期   - number：读数字   - figure：读数值   - telephone：读电话    英文的读法包括：   - spell：读字母   - english：读单词
     *
     * @return string
     */
@@ -252,7 +252,7 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets type
     *
-    * @param string $type TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
+    * @param string $type 支持配置的自定义读法类型。当前读法类型会映射为SSML标签，详见[文本驱动SSML定义](metastudio_02_0038.xml)。  包含如下选项： * CHINESE_G2P：拼音 * PHONETIC_SYMBOL：音标 * CONTINUUM：连读 * ALIAS：别名 * SAY_AS：数字/英文的读法。不同value值有不同的读法，详情如下所示。   数字的读法包括：   - date：读日期   - number：读数字   - figure：读数值   - telephone：读电话    英文的读法包括：   - spell：读字母   - english：读单词
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets key
-    *  映射键
+    *  原始词。
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets key
     *
-    * @param string|null $key 映射键
+    * @param string|null $key 原始词。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets value
-    *  映射值
+    *  自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class SaveTtscVocabularyConfigsRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets value
     *
-    * @param string|null $value 映射值
+    * @param string|null $value 自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
     *
     * @return $this
     */

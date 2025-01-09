@@ -1623,6 +1623,18 @@ class VpcClient extends Client
         if ($localVarParams['remoteIpPrefix'] !== null) {
             $queryParams['remote_ip_prefix'] = $localVarParams['remoteIpPrefix'];
         }
+        if ($localVarParams['priority'] !== null) {
+            $queryParams['priority'] = $localVarParams['priority'];
+        }
+        if ($localVarParams['ethertype'] !== null) {
+            $queryParams['ethertype'] = $localVarParams['ethertype'];
+        }
+        if ($localVarParams['remoteAddressGroupId'] !== null) {
+            $queryParams['remote_address_group_id'] = $localVarParams['remoteAddressGroupId'];
+        }
+        if ($localVarParams['enabled'] !== null) {
+            $queryParams['enabled'] = $localVarParams['enabled'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }

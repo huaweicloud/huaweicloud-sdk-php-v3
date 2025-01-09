@@ -22,24 +22,28 @@ class LivePlayingShootScriptItem implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * sequenceNo  剧本序号。
     * title  段落标题。
+    * text  段落话术内容。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'sequenceNo' => 'int',
-            'title' => 'string'
+            'title' => 'string',
+            'text' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sequenceNo  剧本序号。
     * title  段落标题。
+    * text  段落话术内容。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'sequenceNo' => 'int32',
-        'title' => null
+        'title' => null,
+        'text' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class LivePlayingShootScriptItem implements ModelInterface, ArrayAccess
     * and the value is the original name
     * sequenceNo  剧本序号。
     * title  段落标题。
+    * text  段落话术内容。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'sequenceNo' => 'sequence_no',
-            'title' => 'title'
+            'title' => 'title',
+            'text' => 'text'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sequenceNo  剧本序号。
     * title  段落标题。
+    * text  段落话术内容。
     *
     * @var string[]
     */
     protected static $setters = [
             'sequenceNo' => 'setSequenceNo',
-            'title' => 'setTitle'
+            'title' => 'setTitle',
+            'text' => 'setText'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sequenceNo  剧本序号。
     * title  段落标题。
+    * text  段落话术内容。
     *
     * @var string[]
     */
     protected static $getters = [
             'sequenceNo' => 'getSequenceNo',
-            'title' => 'getTitle'
+            'title' => 'getTitle',
+            'text' => 'getText'
     ];
 
     /**
@@ -159,6 +169,7 @@ class LivePlayingShootScriptItem implements ModelInterface, ArrayAccess
     {
         $this->container['sequenceNo'] = isset($data['sequenceNo']) ? $data['sequenceNo'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
+        $this->container['text'] = isset($data['text']) ? $data['text'] : null;
     }
 
     /**
@@ -180,6 +191,12 @@ class LivePlayingShootScriptItem implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['title']) && (mb_strlen($this->container['title']) < 0)) {
                 $invalidProperties[] = "invalid value for 'title', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['text']) && (mb_strlen($this->container['text']) > 16384)) {
+                $invalidProperties[] = "invalid value for 'text', the character length must be smaller than or equal to 16384.";
+            }
+            if (!is_null($this->container['text']) && (mb_strlen($this->container['text']) < 0)) {
+                $invalidProperties[] = "invalid value for 'text', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -240,6 +257,30 @@ class LivePlayingShootScriptItem implements ModelInterface, ArrayAccess
     public function setTitle($title)
     {
         $this->container['title'] = $title;
+        return $this;
+    }
+
+    /**
+    * Gets text
+    *  段落话术内容。
+    *
+    * @return string|null
+    */
+    public function getText()
+    {
+        return $this->container['text'];
+    }
+
+    /**
+    * Sets text
+    *
+    * @param string|null $text 段落话术内容。
+    *
+    * @return $this
+    */
+    public function setText($text)
+    {
+        $this->container['text'] = $text;
         return $this;
     }
 

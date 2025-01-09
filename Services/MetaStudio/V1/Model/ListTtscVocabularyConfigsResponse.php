@@ -22,7 +22,7 @@ class ListTtscVocabularyConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * count  总记录数。
-    * data  词表。
+    * data  自定义读法。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListTtscVocabularyConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * count  总记录数。
-    * data  词表。
+    * data  自定义读法。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListTtscVocabularyConfigsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * count  总记录数。
-    * data  词表。
+    * data  自定义读法。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListTtscVocabularyConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * count  总记录数。
-    * data  词表。
+    * data  自定义读法。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListTtscVocabularyConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * count  总记录数。
-    * data  词表。
+    * data  自定义读法。
     *
     * @var string[]
     */
@@ -216,7 +216,7 @@ class ListTtscVocabularyConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  词表。
+    *  自定义读法。
     *
     * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\VocabularyConfig[]|null
     */
@@ -228,7 +228,7 @@ class ListTtscVocabularyConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\VocabularyConfig[]|null $data 词表。
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\VocabularyConfig[]|null $data 自定义读法。
     *
     * @return $this
     */

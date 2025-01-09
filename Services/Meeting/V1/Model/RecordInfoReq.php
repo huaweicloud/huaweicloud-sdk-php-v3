@@ -180,6 +180,9 @@ class RecordInfoReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['confUuid'] === null) {
+            $invalidProperties[] = "'confUuid' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -198,7 +201,7 @@ class RecordInfoReq implements ModelInterface, ArrayAccess
     * Gets confUuid
     *  会议uuid
     *
-    * @return string|null
+    * @return string
     */
     public function getConfUuid()
     {
@@ -208,7 +211,7 @@ class RecordInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets confUuid
     *
-    * @param string|null $confUuid 会议uuid
+    * @param string $confUuid 会议uuid
     *
     * @return $this
     */

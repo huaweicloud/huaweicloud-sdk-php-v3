@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Meeting\V1\Model;
+namespace HuaweiCloud\SDK\Drs\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CorpDigitalInfo implements ModelInterface, ArrayAccess
+class UpdateAgencyPolicyRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,38 +16,34 @@ class CorpDigitalInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CorpDigitalInfo';
+    protected static $openAPIModelName = 'UpdateAgencyPolicyRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * account  音色资产标识ID。
-    * corpId  当前会议企业ID。
-    * type  类型，PUBLIC：公共、LOCAL：本地会议、PRIVATE：克隆专用。
-    * name  音色名称。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * agencyName  委托名称。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'account' => 'string',
-            'corpId' => 'string',
-            'type' => 'string',
-            'name' => 'string'
+            'xLanguage' => 'string',
+            'agencyName' => 'string',
+            'body' => '\HuaweiCloud\SDK\Drs\V5\Model\UpdateAgencyPolicyRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * account  音色资产标识ID。
-    * corpId  当前会议企业ID。
-    * type  类型，PUBLIC：公共、LOCAL：本地会议、PRIVATE：克隆专用。
-    * name  音色名称。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * agencyName  委托名称。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'account' => null,
-        'corpId' => null,
-        'type' => null,
-        'name' => null
+        'xLanguage' => null,
+        'agencyName' => null,
+        'body' => null
     ];
 
     /**
@@ -73,50 +69,44 @@ class CorpDigitalInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * account  音色资产标识ID。
-    * corpId  当前会议企业ID。
-    * type  类型，PUBLIC：公共、LOCAL：本地会议、PRIVATE：克隆专用。
-    * name  音色名称。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * agencyName  委托名称。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'account' => 'account',
-            'corpId' => 'corpId',
-            'type' => 'type',
-            'name' => 'name'
+            'xLanguage' => 'X-Language',
+            'agencyName' => 'agency_name',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * account  音色资产标识ID。
-    * corpId  当前会议企业ID。
-    * type  类型，PUBLIC：公共、LOCAL：本地会议、PRIVATE：克隆专用。
-    * name  音色名称。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * agencyName  委托名称。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'account' => 'setAccount',
-            'corpId' => 'setCorpId',
-            'type' => 'setType',
-            'name' => 'setName'
+            'xLanguage' => 'setXLanguage',
+            'agencyName' => 'setAgencyName',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * account  音色资产标识ID。
-    * corpId  当前会议企业ID。
-    * type  类型，PUBLIC：公共、LOCAL：本地会议、PRIVATE：克隆专用。
-    * name  音色名称。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * agencyName  委托名称。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'account' => 'getAccount',
-            'corpId' => 'getCorpId',
-            'type' => 'getType',
-            'name' => 'getName'
+            'xLanguage' => 'getXLanguage',
+            'agencyName' => 'getAgencyName',
+            'body' => 'getBody'
     ];
 
     /**
@@ -177,10 +167,9 @@ class CorpDigitalInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['account'] = isset($data['account']) ? $data['account'] : null;
-        $this->container['corpId'] = isset($data['corpId']) ? $data['corpId'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -191,6 +180,9 @@ class CorpDigitalInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['agencyName'] === null) {
+            $invalidProperties[] = "'agencyName' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -206,98 +198,74 @@ class CorpDigitalInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets account
-    *  音色资产标识ID。
+    * Gets xLanguage
+    *  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
     * @return string|null
     */
-    public function getAccount()
+    public function getXLanguage()
     {
-        return $this->container['account'];
+        return $this->container['xLanguage'];
     }
 
     /**
-    * Sets account
+    * Sets xLanguage
     *
-    * @param string|null $account 音色资产标识ID。
+    * @param string|null $xLanguage 请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
     * @return $this
     */
-    public function setAccount($account)
+    public function setXLanguage($xLanguage)
     {
-        $this->container['account'] = $account;
+        $this->container['xLanguage'] = $xLanguage;
         return $this;
     }
 
     /**
-    * Gets corpId
-    *  当前会议企业ID。
+    * Gets agencyName
+    *  委托名称。
     *
-    * @return string|null
+    * @return string
     */
-    public function getCorpId()
+    public function getAgencyName()
     {
-        return $this->container['corpId'];
+        return $this->container['agencyName'];
     }
 
     /**
-    * Sets corpId
+    * Sets agencyName
     *
-    * @param string|null $corpId 当前会议企业ID。
+    * @param string $agencyName 委托名称。
     *
     * @return $this
     */
-    public function setCorpId($corpId)
+    public function setAgencyName($agencyName)
     {
-        $this->container['corpId'] = $corpId;
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 
     /**
-    * Gets type
-    *  类型，PUBLIC：公共、LOCAL：本地会议、PRIVATE：克隆专用。
+    * Gets body
+    *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\UpdateAgencyPolicyRequestBody|null
     */
-    public function getType()
+    public function getBody()
     {
-        return $this->container['type'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets type
+    * Sets body
     *
-    * @param string|null $type 类型，PUBLIC：公共、LOCAL：本地会议、PRIVATE：克隆专用。
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\UpdateAgencyPolicyRequestBody|null $body body
     *
     * @return $this
     */
-    public function setType($type)
+    public function setBody($body)
     {
-        $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
-    * Gets name
-    *  音色名称。
-    *
-    * @return string|null
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string|null $name 音色名称。
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
+        $this->container['body'] = $body;
         return $this;
     }
 

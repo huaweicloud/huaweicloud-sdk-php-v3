@@ -83,6 +83,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     * supportKvmHi1822Hisriov  如果镜像支持sriov直通，取值为true，否则无需增加该属性。
     * supportKvmHi1822Hivirtionet  如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
+    * osShutdownTimeout  设置虚拟机的优雅关机超时时间，设置范围为60-300，默认为60（取值为整数，单位为秒）。 云服务器在优雅关机超时后会触发强制关机，避免实例长时间处于关机状态中。 当您的云服务器关机过程中由于特定软件的状态、保存等原因导致优雅关机时间过长，会触发超时强制关机。 您可以通过设置镜像该字段，使得发放的云服务器优雅关机超时时间变长。 该字段当前只影响弹性云服务器，不影响裸金属服务器。
     *
     * @var string[]
     */
@@ -148,7 +149,8 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'imageDisplayname' => 'string',
             'supportAmd' => 'string',
             'supportKvmHi1822Hisriov' => 'string',
-            'supportKvmHi1822Hivirtionet' => 'string'
+            'supportKvmHi1822Hivirtionet' => 'string',
+            'osShutdownTimeout' => 'string'
     ];
 
     /**
@@ -215,6 +217,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     * supportKvmHi1822Hisriov  如果镜像支持sriov直通，取值为true，否则无需增加该属性。
     * supportKvmHi1822Hivirtionet  如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
+    * osShutdownTimeout  设置虚拟机的优雅关机超时时间，设置范围为60-300，默认为60（取值为整数，单位为秒）。 云服务器在优雅关机超时后会触发强制关机，避免实例长时间处于关机状态中。 当您的云服务器关机过程中由于特定软件的状态、保存等原因导致优雅关机时间过长，会触发超时强制关机。 您可以通过设置镜像该字段，使得发放的云服务器优雅关机超时时间变长。 该字段当前只影响弹性云服务器，不影响裸金属服务器。
     *
     * @var string[]
     */
@@ -280,7 +283,8 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
         'imageDisplayname' => null,
         'supportAmd' => null,
         'supportKvmHi1822Hisriov' => null,
-        'supportKvmHi1822Hivirtionet' => null
+        'supportKvmHi1822Hivirtionet' => null,
+        'osShutdownTimeout' => null
     ];
 
     /**
@@ -368,6 +372,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     * supportKvmHi1822Hisriov  如果镜像支持sriov直通，取值为true，否则无需增加该属性。
     * supportKvmHi1822Hivirtionet  如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
+    * osShutdownTimeout  设置虚拟机的优雅关机超时时间，设置范围为60-300，默认为60（取值为整数，单位为秒）。 云服务器在优雅关机超时后会触发强制关机，避免实例长时间处于关机状态中。 当您的云服务器关机过程中由于特定软件的状态、保存等原因导致优雅关机时间过长，会触发超时强制关机。 您可以通过设置镜像该字段，使得发放的云服务器优雅关机超时时间变长。 该字段当前只影响弹性云服务器，不影响裸金属服务器。
     *
     * @var string[]
     */
@@ -433,7 +438,8 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'imageDisplayname' => '__image_displayname',
             'supportAmd' => '__support_amd',
             'supportKvmHi1822Hisriov' => '__support_kvm_hi1822_hisriov',
-            'supportKvmHi1822Hivirtionet' => '__support_kvm_hi1822_hivirtionet'
+            'supportKvmHi1822Hivirtionet' => '__support_kvm_hi1822_hivirtionet',
+            'osShutdownTimeout' => 'os_shutdown_timeout'
     ];
 
     /**
@@ -500,6 +506,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     * supportKvmHi1822Hisriov  如果镜像支持sriov直通，取值为true，否则无需增加该属性。
     * supportKvmHi1822Hivirtionet  如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
+    * osShutdownTimeout  设置虚拟机的优雅关机超时时间，设置范围为60-300，默认为60（取值为整数，单位为秒）。 云服务器在优雅关机超时后会触发强制关机，避免实例长时间处于关机状态中。 当您的云服务器关机过程中由于特定软件的状态、保存等原因导致优雅关机时间过长，会触发超时强制关机。 您可以通过设置镜像该字段，使得发放的云服务器优雅关机超时时间变长。 该字段当前只影响弹性云服务器，不影响裸金属服务器。
     *
     * @var string[]
     */
@@ -565,7 +572,8 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'imageDisplayname' => 'setImageDisplayname',
             'supportAmd' => 'setSupportAmd',
             'supportKvmHi1822Hisriov' => 'setSupportKvmHi1822Hisriov',
-            'supportKvmHi1822Hivirtionet' => 'setSupportKvmHi1822Hivirtionet'
+            'supportKvmHi1822Hivirtionet' => 'setSupportKvmHi1822Hivirtionet',
+            'osShutdownTimeout' => 'setOsShutdownTimeout'
     ];
 
     /**
@@ -632,6 +640,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     * supportKvmHi1822Hisriov  如果镜像支持sriov直通，取值为true，否则无需增加该属性。
     * supportKvmHi1822Hivirtionet  如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
+    * osShutdownTimeout  设置虚拟机的优雅关机超时时间，设置范围为60-300，默认为60（取值为整数，单位为秒）。 云服务器在优雅关机超时后会触发强制关机，避免实例长时间处于关机状态中。 当您的云服务器关机过程中由于特定软件的状态、保存等原因导致优雅关机时间过长，会触发超时强制关机。 您可以通过设置镜像该字段，使得发放的云服务器优雅关机超时时间变长。 该字段当前只影响弹性云服务器，不影响裸金属服务器。
     *
     * @var string[]
     */
@@ -697,7 +706,8 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'imageDisplayname' => 'getImageDisplayname',
             'supportAmd' => 'getSupportAmd',
             'supportKvmHi1822Hisriov' => 'getSupportKvmHi1822Hisriov',
-            'supportKvmHi1822Hivirtionet' => 'getSupportKvmHi1822Hivirtionet'
+            'supportKvmHi1822Hivirtionet' => 'getSupportKvmHi1822Hivirtionet',
+            'osShutdownTimeout' => 'getOsShutdownTimeout'
     ];
 
     /**
@@ -1034,6 +1044,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
         $this->container['supportAmd'] = isset($data['supportAmd']) ? $data['supportAmd'] : null;
         $this->container['supportKvmHi1822Hisriov'] = isset($data['supportKvmHi1822Hisriov']) ? $data['supportKvmHi1822Hisriov'] : null;
         $this->container['supportKvmHi1822Hivirtionet'] = isset($data['supportKvmHi1822Hivirtionet']) ? $data['supportKvmHi1822Hivirtionet'] : null;
+        $this->container['osShutdownTimeout'] = isset($data['osShutdownTimeout']) ? $data['osShutdownTimeout'] : null;
     }
 
     /**
@@ -2657,6 +2668,30 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     public function setSupportKvmHi1822Hivirtionet($supportKvmHi1822Hivirtionet)
     {
         $this->container['supportKvmHi1822Hivirtionet'] = $supportKvmHi1822Hivirtionet;
+        return $this;
+    }
+
+    /**
+    * Gets osShutdownTimeout
+    *  设置虚拟机的优雅关机超时时间，设置范围为60-300，默认为60（取值为整数，单位为秒）。 云服务器在优雅关机超时后会触发强制关机，避免实例长时间处于关机状态中。 当您的云服务器关机过程中由于特定软件的状态、保存等原因导致优雅关机时间过长，会触发超时强制关机。 您可以通过设置镜像该字段，使得发放的云服务器优雅关机超时时间变长。 该字段当前只影响弹性云服务器，不影响裸金属服务器。
+    *
+    * @return string|null
+    */
+    public function getOsShutdownTimeout()
+    {
+        return $this->container['osShutdownTimeout'];
+    }
+
+    /**
+    * Sets osShutdownTimeout
+    *
+    * @param string|null $osShutdownTimeout 设置虚拟机的优雅关机超时时间，设置范围为60-300，默认为60（取值为整数，单位为秒）。 云服务器在优雅关机超时后会触发强制关机，避免实例长时间处于关机状态中。 当您的云服务器关机过程中由于特定软件的状态、保存等原因导致优雅关机时间过长，会触发超时强制关机。 您可以通过设置镜像该字段，使得发放的云服务器优雅关机超时时间变长。 该字段当前只影响弹性云服务器，不影响裸金属服务器。
+    *
+    * @return $this
+    */
+    public function setOsShutdownTimeout($osShutdownTimeout)
+    {
+        $this->container['osShutdownTimeout'] = $osShutdownTimeout;
         return $this;
     }
 

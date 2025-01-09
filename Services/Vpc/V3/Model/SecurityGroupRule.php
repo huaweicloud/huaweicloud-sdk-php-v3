@@ -35,6 +35,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     * createdAt  功能说明：安全组规则创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：安全组规则更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * projectId  功能说明：安全组规则所属项目ID
+    * enabled  功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
             'remoteAddressGroupId' => 'string',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
-            'projectId' => 'string'
+            'projectId' => 'string',
+            'enabled' => 'bool'
     ];
 
     /**
@@ -73,6 +75,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     * createdAt  功能说明：安全组规则创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：安全组规则更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * projectId  功能说明：安全组规则所属项目ID
+    * enabled  功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
         'remoteAddressGroupId' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
-        'projectId' => null
+        'projectId' => null,
+        'enabled' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     * createdAt  功能说明：安全组规则创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：安全组规则更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * projectId  功能说明：安全组规则所属项目ID
+    * enabled  功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
             'remoteAddressGroupId' => 'remote_address_group_id',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
-            'projectId' => 'project_id'
+            'projectId' => 'project_id',
+            'enabled' => 'enabled'
     ];
 
     /**
@@ -170,6 +176,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     * createdAt  功能说明：安全组规则创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：安全组规则更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * projectId  功能说明：安全组规则所属项目ID
+    * enabled  功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
             'remoteAddressGroupId' => 'setRemoteAddressGroupId',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
-            'projectId' => 'setProjectId'
+            'projectId' => 'setProjectId',
+            'enabled' => 'setEnabled'
     ];
 
     /**
@@ -208,6 +216,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     * createdAt  功能说明：安全组规则创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：安全组规则更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * projectId  功能说明：安全组规则所属项目ID
+    * enabled  功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
             'remoteAddressGroupId' => 'getRemoteAddressGroupId',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
-            'projectId' => 'getProjectId'
+            'projectId' => 'getProjectId',
+            'enabled' => 'getEnabled'
     ];
 
     /**
@@ -302,6 +312,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
     }
 
     /**
@@ -356,6 +367,9 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
         }
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
+        }
+        if ($this->container['enabled'] === null) {
+            $invalidProperties[] = "'enabled' can't be null";
         }
         return $invalidProperties;
     }
@@ -728,6 +742,30 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets enabled
+    *  功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
+    *
+    * @return bool
+    */
+    public function getEnabled()
+    {
+        return $this->container['enabled'];
+    }
+
+    /**
+    * Sets enabled
+    *
+    * @param bool $enabled 功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
+    *
+    * @return $this
+    */
+    public function setEnabled($enabled)
+    {
+        $this->container['enabled'] = $enabled;
         return $this;
     }
 

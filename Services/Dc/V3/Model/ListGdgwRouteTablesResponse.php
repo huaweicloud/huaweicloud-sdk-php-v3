@@ -22,25 +22,29 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * requestId  请求id
-    * gdgwRoutetable  全域接入网关路由表
+    * gdgwRoutetables  全域接入网关路由表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'gdgwRoutetable' => '\HuaweiCloud\SDK\Dc\V3\Model\CommonRoutetable[]'
+            'gdgwRoutetables' => '\HuaweiCloud\SDK\Dc\V3\Model\CommonRoutetable[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Dc\V3\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * requestId  请求id
-    * gdgwRoutetable  全域接入网关路由表
+    * gdgwRoutetables  全域接入网关路由表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
-        'gdgwRoutetable' => null
+        'gdgwRoutetables' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -67,37 +71,43 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * requestId  请求id
-    * gdgwRoutetable  全域接入网关路由表
+    * gdgwRoutetables  全域接入网关路由表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
-            'gdgwRoutetable' => 'gdgw_routetable'
+            'gdgwRoutetables' => 'gdgw_routetables',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  请求id
-    * gdgwRoutetable  全域接入网关路由表
+    * gdgwRoutetables  全域接入网关路由表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
-            'gdgwRoutetable' => 'setGdgwRoutetable'
+            'gdgwRoutetables' => 'setGdgwRoutetables',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  请求id
-    * gdgwRoutetable  全域接入网关路由表
+    * gdgwRoutetables  全域接入网关路由表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
-            'gdgwRoutetable' => 'getGdgwRoutetable'
+            'gdgwRoutetables' => 'getGdgwRoutetables',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -159,7 +169,8 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
-        $this->container['gdgwRoutetable'] = isset($data['gdgwRoutetable']) ? $data['gdgwRoutetable'] : null;
+        $this->container['gdgwRoutetables'] = isset($data['gdgwRoutetables']) ? $data['gdgwRoutetables'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -215,26 +226,50 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets gdgwRoutetable
+    * Gets gdgwRoutetables
     *  全域接入网关路由表
     *
     * @return \HuaweiCloud\SDK\Dc\V3\Model\CommonRoutetable[]|null
     */
-    public function getGdgwRoutetable()
+    public function getGdgwRoutetables()
     {
-        return $this->container['gdgwRoutetable'];
+        return $this->container['gdgwRoutetables'];
     }
 
     /**
-    * Sets gdgwRoutetable
+    * Sets gdgwRoutetables
     *
-    * @param \HuaweiCloud\SDK\Dc\V3\Model\CommonRoutetable[]|null $gdgwRoutetable 全域接入网关路由表
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\CommonRoutetable[]|null $gdgwRoutetables 全域接入网关路由表
     *
     * @return $this
     */
-    public function setGdgwRoutetable($gdgwRoutetable)
+    public function setGdgwRoutetables($gdgwRoutetables)
     {
-        $this->container['gdgwRoutetable'] = $gdgwRoutetable;
+        $this->container['gdgwRoutetables'] = $gdgwRoutetables;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Dc\V3\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Dc\V3\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

@@ -39,7 +39,7 @@ class CountItem implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'key' => null,
-        'num' => null
+        'num' => 'int64'
     ];
 
     /**

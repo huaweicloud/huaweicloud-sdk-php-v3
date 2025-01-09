@@ -23,6 +23,7 @@ class RuleCommand implements ModelInterface, ArrayAccess
     * roomId  直播间ID
     * jobId  直播任务ID。
     * commandId  命令ID。
+    * commandTime  命令时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * interactionRules  互动规则列表
     *
     * @var string[]
@@ -31,6 +32,7 @@ class RuleCommand implements ModelInterface, ArrayAccess
             'roomId' => 'string',
             'jobId' => 'string',
             'commandId' => 'string',
+            'commandTime' => 'string',
             'interactionRules' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveRoomInteractionRuleInfo[]'
     ];
 
@@ -39,6 +41,7 @@ class RuleCommand implements ModelInterface, ArrayAccess
     * roomId  直播间ID
     * jobId  直播任务ID。
     * commandId  命令ID。
+    * commandTime  命令时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * interactionRules  互动规则列表
     *
     * @var string[]
@@ -47,6 +50,7 @@ class RuleCommand implements ModelInterface, ArrayAccess
         'roomId' => null,
         'jobId' => null,
         'commandId' => null,
+        'commandTime' => null,
         'interactionRules' => null
     ];
 
@@ -76,6 +80,7 @@ class RuleCommand implements ModelInterface, ArrayAccess
     * roomId  直播间ID
     * jobId  直播任务ID。
     * commandId  命令ID。
+    * commandTime  命令时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * interactionRules  互动规则列表
     *
     * @var string[]
@@ -84,6 +89,7 @@ class RuleCommand implements ModelInterface, ArrayAccess
             'roomId' => 'room_id',
             'jobId' => 'job_id',
             'commandId' => 'command_id',
+            'commandTime' => 'command_time',
             'interactionRules' => 'interaction_rules'
     ];
 
@@ -92,6 +98,7 @@ class RuleCommand implements ModelInterface, ArrayAccess
     * roomId  直播间ID
     * jobId  直播任务ID。
     * commandId  命令ID。
+    * commandTime  命令时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * interactionRules  互动规则列表
     *
     * @var string[]
@@ -100,6 +107,7 @@ class RuleCommand implements ModelInterface, ArrayAccess
             'roomId' => 'setRoomId',
             'jobId' => 'setJobId',
             'commandId' => 'setCommandId',
+            'commandTime' => 'setCommandTime',
             'interactionRules' => 'setInteractionRules'
     ];
 
@@ -108,6 +116,7 @@ class RuleCommand implements ModelInterface, ArrayAccess
     * roomId  直播间ID
     * jobId  直播任务ID。
     * commandId  命令ID。
+    * commandTime  命令时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * interactionRules  互动规则列表
     *
     * @var string[]
@@ -116,6 +125,7 @@ class RuleCommand implements ModelInterface, ArrayAccess
             'roomId' => 'getRoomId',
             'jobId' => 'getJobId',
             'commandId' => 'getCommandId',
+            'commandTime' => 'getCommandTime',
             'interactionRules' => 'getInteractionRules'
     ];
 
@@ -180,6 +190,7 @@ class RuleCommand implements ModelInterface, ArrayAccess
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['commandId'] = isset($data['commandId']) ? $data['commandId'] : null;
+        $this->container['commandTime'] = isset($data['commandTime']) ? $data['commandTime'] : null;
         $this->container['interactionRules'] = isset($data['interactionRules']) ? $data['interactionRules'] : null;
     }
 
@@ -208,6 +219,12 @@ class RuleCommand implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['commandId']) && (mb_strlen($this->container['commandId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'commandId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['commandTime']) && (mb_strlen($this->container['commandTime']) > 20)) {
+                $invalidProperties[] = "invalid value for 'commandTime', the character length must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['commandTime']) && (mb_strlen($this->container['commandTime']) < 20)) {
+                $invalidProperties[] = "invalid value for 'commandTime', the character length must be bigger than or equal to 20.";
             }
         return $invalidProperties;
     }
@@ -292,6 +309,30 @@ class RuleCommand implements ModelInterface, ArrayAccess
     public function setCommandId($commandId)
     {
         $this->container['commandId'] = $commandId;
+        return $this;
+    }
+
+    /**
+    * Gets commandTime
+    *  命令时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *
+    * @return string|null
+    */
+    public function getCommandTime()
+    {
+        return $this->container['commandTime'];
+    }
+
+    /**
+    * Sets commandTime
+    *
+    * @param string|null $commandTime 命令时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *
+    * @return $this
+    */
+    public function setCommandTime($commandTime)
+    {
+        $this->container['commandTime'] = $commandTime;
         return $this;
     }
 

@@ -305,6 +305,15 @@ class Client
                     $formParamValueItems = is_array($formParamValue) ?
                         $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
+                        /* The current code does not carry the ContentType value application/x-www-form-urlencoded.
+                         * As a result, the format of formData cannot be distinguished.
+                         * If Content-Type needs to be transferred, the change is great.
+                         * If the getPathname method does not exist in formParamValueItem, it indicates that the file
+                         * is not uploaded but in formData format.*/
+                        if (!method_exists($formParamValueItem, 'getPathname')) {
+                            return http_build_query($formParams);
+                        }
+
                         $multipartContents[] = [
                             'name' => $formParamName,
                             'contents' => fopen($formParamValueItem->getPathname(),'r'),

@@ -27,6 +27,9 @@ class Connections implements ModelInterface, ArrayAccess
     * createdAt  创建时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
     * updateAt  更新时间。默认为null。
     * domainId  拥有者。
+    * vpcepIp  终端节点IPv4。
+    * vpcepIpv6Address  终端节点IPv6。
+    * vpcepDnsName  终端节点内网域名。
     *
     * @var string[]
     */
@@ -37,7 +40,10 @@ class Connections implements ModelInterface, ArrayAccess
             'specificationName' => 'string',
             'createdAt' => 'string',
             'updateAt' => 'string',
-            'domainId' => 'string'
+            'domainId' => 'string',
+            'vpcepIp' => 'string',
+            'vpcepIpv6Address' => 'string',
+            'vpcepDnsName' => 'string'
     ];
 
     /**
@@ -49,6 +55,9 @@ class Connections implements ModelInterface, ArrayAccess
     * createdAt  创建时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
     * updateAt  更新时间。默认为null。
     * domainId  拥有者。
+    * vpcepIp  终端节点IPv4。
+    * vpcepIpv6Address  终端节点IPv6。
+    * vpcepDnsName  终端节点内网域名。
     *
     * @var string[]
     */
@@ -59,7 +68,10 @@ class Connections implements ModelInterface, ArrayAccess
         'specificationName' => null,
         'createdAt' => null,
         'updateAt' => null,
-        'domainId' => null
+        'domainId' => null,
+        'vpcepIp' => null,
+        'vpcepIpv6Address' => null,
+        'vpcepDnsName' => null
     ];
 
     /**
@@ -92,6 +104,9 @@ class Connections implements ModelInterface, ArrayAccess
     * createdAt  创建时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
     * updateAt  更新时间。默认为null。
     * domainId  拥有者。
+    * vpcepIp  终端节点IPv4。
+    * vpcepIpv6Address  终端节点IPv6。
+    * vpcepDnsName  终端节点内网域名。
     *
     * @var string[]
     */
@@ -102,7 +117,10 @@ class Connections implements ModelInterface, ArrayAccess
             'specificationName' => 'specificationName',
             'createdAt' => 'created_at',
             'updateAt' => 'update_at',
-            'domainId' => 'domain_id'
+            'domainId' => 'domain_id',
+            'vpcepIp' => 'vpcepIp',
+            'vpcepIpv6Address' => 'vpcepIpv6Address',
+            'vpcepDnsName' => 'vpcepDnsName'
     ];
 
     /**
@@ -114,6 +132,9 @@ class Connections implements ModelInterface, ArrayAccess
     * createdAt  创建时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
     * updateAt  更新时间。默认为null。
     * domainId  拥有者。
+    * vpcepIp  终端节点IPv4。
+    * vpcepIpv6Address  终端节点IPv6。
+    * vpcepDnsName  终端节点内网域名。
     *
     * @var string[]
     */
@@ -124,7 +145,10 @@ class Connections implements ModelInterface, ArrayAccess
             'specificationName' => 'setSpecificationName',
             'createdAt' => 'setCreatedAt',
             'updateAt' => 'setUpdateAt',
-            'domainId' => 'setDomainId'
+            'domainId' => 'setDomainId',
+            'vpcepIp' => 'setVpcepIp',
+            'vpcepIpv6Address' => 'setVpcepIpv6Address',
+            'vpcepDnsName' => 'setVpcepDnsName'
     ];
 
     /**
@@ -136,6 +160,9 @@ class Connections implements ModelInterface, ArrayAccess
     * createdAt  创建时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
     * updateAt  更新时间。默认为null。
     * domainId  拥有者。
+    * vpcepIp  终端节点IPv4。
+    * vpcepIpv6Address  终端节点IPv6。
+    * vpcepDnsName  终端节点内网域名。
     *
     * @var string[]
     */
@@ -146,7 +173,10 @@ class Connections implements ModelInterface, ArrayAccess
             'specificationName' => 'getSpecificationName',
             'createdAt' => 'getCreatedAt',
             'updateAt' => 'getUpdateAt',
-            'domainId' => 'getDomainId'
+            'domainId' => 'getDomainId',
+            'vpcepIp' => 'getVpcepIp',
+            'vpcepIpv6Address' => 'getVpcepIpv6Address',
+            'vpcepDnsName' => 'getVpcepDnsName'
     ];
 
     /**
@@ -214,6 +244,9 @@ class Connections implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updateAt'] = isset($data['updateAt']) ? $data['updateAt'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
+        $this->container['vpcepIp'] = isset($data['vpcepIp']) ? $data['vpcepIp'] : null;
+        $this->container['vpcepIpv6Address'] = isset($data['vpcepIpv6Address']) ? $data['vpcepIpv6Address'] : null;
+        $this->container['vpcepDnsName'] = isset($data['vpcepDnsName']) ? $data['vpcepDnsName'] : null;
     }
 
     /**
@@ -403,6 +436,78 @@ class Connections implements ModelInterface, ArrayAccess
     public function setDomainId($domainId)
     {
         $this->container['domainId'] = $domainId;
+        return $this;
+    }
+
+    /**
+    * Gets vpcepIp
+    *  终端节点IPv4。
+    *
+    * @return string|null
+    */
+    public function getVpcepIp()
+    {
+        return $this->container['vpcepIp'];
+    }
+
+    /**
+    * Sets vpcepIp
+    *
+    * @param string|null $vpcepIp 终端节点IPv4。
+    *
+    * @return $this
+    */
+    public function setVpcepIp($vpcepIp)
+    {
+        $this->container['vpcepIp'] = $vpcepIp;
+        return $this;
+    }
+
+    /**
+    * Gets vpcepIpv6Address
+    *  终端节点IPv6。
+    *
+    * @return string|null
+    */
+    public function getVpcepIpv6Address()
+    {
+        return $this->container['vpcepIpv6Address'];
+    }
+
+    /**
+    * Sets vpcepIpv6Address
+    *
+    * @param string|null $vpcepIpv6Address 终端节点IPv6。
+    *
+    * @return $this
+    */
+    public function setVpcepIpv6Address($vpcepIpv6Address)
+    {
+        $this->container['vpcepIpv6Address'] = $vpcepIpv6Address;
+        return $this;
+    }
+
+    /**
+    * Gets vpcepDnsName
+    *  终端节点内网域名。
+    *
+    * @return string|null
+    */
+    public function getVpcepDnsName()
+    {
+        return $this->container['vpcepDnsName'];
+    }
+
+    /**
+    * Sets vpcepDnsName
+    *
+    * @param string|null $vpcepDnsName 终端节点内网域名。
+    *
+    * @return $this
+    */
+    public function setVpcepDnsName($vpcepDnsName)
+    {
+        $this->container['vpcepDnsName'] = $vpcepDnsName;
         return $this;
     }
 

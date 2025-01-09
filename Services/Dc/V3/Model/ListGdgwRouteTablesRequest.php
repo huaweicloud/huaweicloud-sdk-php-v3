@@ -22,6 +22,8 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * limit  每页返回的个数。 取值范围：1~2000。
+    * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * gdgwId  全域接入网关ID
     * nexthop  下一条ID
     * destination  目的地址
@@ -32,6 +34,8 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'fields' => 'string[]',
             'extFields' => 'string[]',
+            'limit' => 'int',
+            'marker' => 'string',
             'gdgwId' => 'string',
             'nexthop' => 'string[]',
             'destination' => 'string[]',
@@ -42,6 +46,8 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * limit  每页返回的个数。 取值范围：1~2000。
+    * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * gdgwId  全域接入网关ID
     * nexthop  下一条ID
     * destination  目的地址
@@ -52,6 +58,8 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'fields' => null,
         'extFields' => null,
+        'limit' => 'int32',
+        'marker' => null,
         'gdgwId' => null,
         'nexthop' => null,
         'destination' => null,
@@ -83,6 +91,8 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * limit  每页返回的个数。 取值范围：1~2000。
+    * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * gdgwId  全域接入网关ID
     * nexthop  下一条ID
     * destination  目的地址
@@ -93,6 +103,8 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'fields' => 'fields',
             'extFields' => 'ext_fields',
+            'limit' => 'limit',
+            'marker' => 'marker',
             'gdgwId' => 'gdgw_id',
             'nexthop' => 'nexthop',
             'destination' => 'destination',
@@ -103,6 +115,8 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * limit  每页返回的个数。 取值范围：1~2000。
+    * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * gdgwId  全域接入网关ID
     * nexthop  下一条ID
     * destination  目的地址
@@ -113,6 +127,8 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'fields' => 'setFields',
             'extFields' => 'setExtFields',
+            'limit' => 'setLimit',
+            'marker' => 'setMarker',
             'gdgwId' => 'setGdgwId',
             'nexthop' => 'setNexthop',
             'destination' => 'setDestination',
@@ -123,6 +139,8 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * fields  显示字段列表
     * extFields  show response ext-fields
+    * limit  每页返回的个数。 取值范围：1~2000。
+    * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * gdgwId  全域接入网关ID
     * nexthop  下一条ID
     * destination  目的地址
@@ -133,6 +151,8 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'fields' => 'getFields',
             'extFields' => 'getExtFields',
+            'limit' => 'getLimit',
+            'marker' => 'getMarker',
             'gdgwId' => 'getGdgwId',
             'nexthop' => 'getNexthop',
             'destination' => 'getDestination',
@@ -214,6 +234,8 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     {
         $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
         $this->container['extFields'] = isset($data['extFields']) ? $data['extFields'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['gdgwId'] = isset($data['gdgwId']) ? $data['gdgwId'] : null;
         $this->container['nexthop'] = isset($data['nexthop']) ? $data['nexthop'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
@@ -228,6 +250,18 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 36)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 0)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 0.";
+            }
         if ($this->container['gdgwId'] === null) {
             $invalidProperties[] = "'gdgwId' can't be null";
         }
@@ -293,6 +327,54 @@ class ListGdgwRouteTablesRequest implements ModelInterface, ArrayAccess
     public function setExtFields($extFields)
     {
         $this->container['extFields'] = $extFields;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页返回的个数。 取值范围：1~2000。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页返回的个数。 取值范围：1~2000。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

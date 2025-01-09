@@ -38,6 +38,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
     * privData  私有数据，用户填写，原样带回。
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             'lastJobStartTime' => 'string',
             'lastJobEndTime' => 'string',
             'lastJobStatus' => 'string',
-            'privData' => 'string'
+            'privData' => 'string',
+            'confirmState' => 'string'
     ];
 
     /**
@@ -82,6 +84,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
     * privData  私有数据，用户填写，原样带回。
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
         'lastJobStartTime' => null,
         'lastJobEndTime' => null,
         'lastJobStatus' => null,
-        'privData' => null
+        'privData' => null,
+        'confirmState' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
     * privData  私有数据，用户填写，原样带回。
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             'lastJobStartTime' => 'last_job_start_time',
             'lastJobEndTime' => 'last_job_end_time',
             'lastJobStatus' => 'last_job_status',
-            'privData' => 'priv_data'
+            'privData' => 'priv_data',
+            'confirmState' => 'confirm_state'
     ];
 
     /**
@@ -191,6 +197,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
     * privData  私有数据，用户填写，原样带回。
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             'lastJobStartTime' => 'setLastJobStartTime',
             'lastJobEndTime' => 'setLastJobEndTime',
             'lastJobStatus' => 'setLastJobStatus',
-            'privData' => 'setPrivData'
+            'privData' => 'setPrivData',
+            'confirmState' => 'setConfirmState'
     ];
 
     /**
@@ -235,6 +243,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
     * privData  私有数据，用户填写，原样带回。
+    * confirmState  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             'lastJobStartTime' => 'getLastJobStartTime',
             'lastJobEndTime' => 'getLastJobEndTime',
             'lastJobStatus' => 'getLastJobStatus',
-            'privData' => 'getPrivData'
+            'privData' => 'getPrivData',
+            'confirmState' => 'getConfirmState'
     ];
 
     /**
@@ -313,6 +323,9 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     const LAST_JOB_STATUS_FAILED = 'FAILED';
     const LAST_JOB_STATUS_CANCELED = 'CANCELED';
     const LAST_JOB_STATUS_BLOCKED = 'BLOCKED';
+    const CONFIRM_STATE_UNCONFIRM = 'UNCONFIRM';
+    const CONFIRM_STATE_CONFIRMED = 'CONFIRMED';
+    const CONFIRM_STATE_REJECT = 'REJECT';
     
 
     /**
@@ -373,6 +386,20 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getConfirmStateAllowableValues()
+    {
+        return [
+            self::CONFIRM_STATE_UNCONFIRM,
+            self::CONFIRM_STATE_CONFIRMED,
+            self::CONFIRM_STATE_REJECT,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -407,6 +434,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
         $this->container['lastJobEndTime'] = isset($data['lastJobEndTime']) ? $data['lastJobEndTime'] : null;
         $this->container['lastJobStatus'] = isset($data['lastJobStatus']) ? $data['lastJobStatus'] : null;
         $this->container['privData'] = isset($data['privData']) ? $data['privData'] : null;
+        $this->container['confirmState'] = isset($data['confirmState']) ? $data['confirmState'] : null;
     }
 
     /**
@@ -526,6 +554,20 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['privData']) && (mb_strlen($this->container['privData']) < 0)) {
                 $invalidProperties[] = "invalid value for 'privData', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getConfirmStateAllowableValues();
+                if (!is_null($this->container['confirmState']) && !in_array($this->container['confirmState'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'confirmState', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['confirmState']) && (mb_strlen($this->container['confirmState']) > 32)) {
+                $invalidProperties[] = "invalid value for 'confirmState', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['confirmState']) && (mb_strlen($this->container['confirmState']) < 0)) {
+                $invalidProperties[] = "invalid value for 'confirmState', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -970,6 +1012,30 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     public function setPrivData($privData)
     {
         $this->container['privData'] = $privData;
+        return $this;
+    }
+
+    /**
+    * Gets confirmState
+    *  直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
+    *
+    * @return string|null
+    */
+    public function getConfirmState()
+    {
+        return $this->container['confirmState'];
+    }
+
+    /**
+    * Sets confirmState
+    *
+    * @param string|null $confirmState 直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
+    *
+    * @return $this
+    */
+    public function setConfirmState($confirmState)
+    {
+        $this->container['confirmState'] = $confirmState;
         return $this;
     }
 

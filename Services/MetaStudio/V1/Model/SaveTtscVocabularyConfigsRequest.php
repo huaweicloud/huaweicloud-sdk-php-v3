@@ -25,7 +25,7 @@ class SaveTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * vocabularyId  词表id
+    * vocabularyId  自定义读法id
     * body  body
     *
     * @var string[]
@@ -47,7 +47,7 @@ class SaveTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * vocabularyId  词表id
+    * vocabularyId  自定义读法id
     * body  body
     *
     * @var string[]
@@ -90,7 +90,7 @@ class SaveTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * vocabularyId  词表id
+    * vocabularyId  自定义读法id
     * body  body
     *
     * @var string[]
@@ -112,7 +112,7 @@ class SaveTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * vocabularyId  词表id
+    * vocabularyId  自定义读法id
     * body  body
     *
     * @var string[]
@@ -134,7 +134,7 @@ class SaveTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
-    * vocabularyId  词表id
+    * vocabularyId  自定义读法id
     * body  body
     *
     * @var string[]
@@ -399,7 +399,7 @@ class SaveTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vocabularyId
-    *  词表id
+    *  自定义读法id
     *
     * @return string
     */
@@ -411,7 +411,7 @@ class SaveTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vocabularyId
     *
-    * @param string $vocabularyId 词表id
+    * @param string $vocabularyId 自定义读法id
     *
     * @return $this
     */
