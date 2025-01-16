@@ -24,9 +24,9 @@ class SecretTask implements ModelInterface, ArrayAccess
     * secretName  凭据名称。
     * rotationFuncUrn  FunctionGraph函数的urn。
     * taskStatus  任务状态。
-    * attemptNums  任务尝试次数。
     * operateType  轮转类型。
     * taskTime  任务创建时间。
+    * attemptNums  轮转尝试次数。
     * taskErrorCode  任务错误码。
     * taskErrorMsg  任务错误信息。
     *
@@ -37,9 +37,9 @@ class SecretTask implements ModelInterface, ArrayAccess
             'secretName' => 'string',
             'rotationFuncUrn' => 'string',
             'taskStatus' => 'string',
-            'attemptNums' => 'int',
             'operateType' => 'string',
             'taskTime' => 'int',
+            'attemptNums' => 'int',
             'taskErrorCode' => 'string',
             'taskErrorMsg' => 'string'
     ];
@@ -50,9 +50,9 @@ class SecretTask implements ModelInterface, ArrayAccess
     * secretName  凭据名称。
     * rotationFuncUrn  FunctionGraph函数的urn。
     * taskStatus  任务状态。
-    * attemptNums  任务尝试次数。
     * operateType  轮转类型。
     * taskTime  任务创建时间。
+    * attemptNums  轮转尝试次数。
     * taskErrorCode  任务错误码。
     * taskErrorMsg  任务错误信息。
     *
@@ -63,9 +63,9 @@ class SecretTask implements ModelInterface, ArrayAccess
         'secretName' => null,
         'rotationFuncUrn' => null,
         'taskStatus' => null,
-        'attemptNums' => 'int32',
         'operateType' => null,
         'taskTime' => 'int64',
+        'attemptNums' => 'int32',
         'taskErrorCode' => null,
         'taskErrorMsg' => null
     ];
@@ -97,9 +97,9 @@ class SecretTask implements ModelInterface, ArrayAccess
     * secretName  凭据名称。
     * rotationFuncUrn  FunctionGraph函数的urn。
     * taskStatus  任务状态。
-    * attemptNums  任务尝试次数。
     * operateType  轮转类型。
     * taskTime  任务创建时间。
+    * attemptNums  轮转尝试次数。
     * taskErrorCode  任务错误码。
     * taskErrorMsg  任务错误信息。
     *
@@ -110,9 +110,9 @@ class SecretTask implements ModelInterface, ArrayAccess
             'secretName' => 'secret_name',
             'rotationFuncUrn' => 'rotation_func_urn',
             'taskStatus' => 'task_status',
-            'attemptNums' => 'attempt_nums',
             'operateType' => 'operate_type',
             'taskTime' => 'task_time',
+            'attemptNums' => 'attempt_nums',
             'taskErrorCode' => 'task_error_code',
             'taskErrorMsg' => 'task_error_msg'
     ];
@@ -123,9 +123,9 @@ class SecretTask implements ModelInterface, ArrayAccess
     * secretName  凭据名称。
     * rotationFuncUrn  FunctionGraph函数的urn。
     * taskStatus  任务状态。
-    * attemptNums  任务尝试次数。
     * operateType  轮转类型。
     * taskTime  任务创建时间。
+    * attemptNums  轮转尝试次数。
     * taskErrorCode  任务错误码。
     * taskErrorMsg  任务错误信息。
     *
@@ -136,9 +136,9 @@ class SecretTask implements ModelInterface, ArrayAccess
             'secretName' => 'setSecretName',
             'rotationFuncUrn' => 'setRotationFuncUrn',
             'taskStatus' => 'setTaskStatus',
-            'attemptNums' => 'setAttemptNums',
             'operateType' => 'setOperateType',
             'taskTime' => 'setTaskTime',
+            'attemptNums' => 'setAttemptNums',
             'taskErrorCode' => 'setTaskErrorCode',
             'taskErrorMsg' => 'setTaskErrorMsg'
     ];
@@ -149,9 +149,9 @@ class SecretTask implements ModelInterface, ArrayAccess
     * secretName  凭据名称。
     * rotationFuncUrn  FunctionGraph函数的urn。
     * taskStatus  任务状态。
-    * attemptNums  任务尝试次数。
     * operateType  轮转类型。
     * taskTime  任务创建时间。
+    * attemptNums  轮转尝试次数。
     * taskErrorCode  任务错误码。
     * taskErrorMsg  任务错误信息。
     *
@@ -162,9 +162,9 @@ class SecretTask implements ModelInterface, ArrayAccess
             'secretName' => 'getSecretName',
             'rotationFuncUrn' => 'getRotationFuncUrn',
             'taskStatus' => 'getTaskStatus',
-            'attemptNums' => 'getAttemptNums',
             'operateType' => 'getOperateType',
             'taskTime' => 'getTaskTime',
+            'attemptNums' => 'getAttemptNums',
             'taskErrorCode' => 'getTaskErrorCode',
             'taskErrorMsg' => 'getTaskErrorMsg'
     ];
@@ -231,9 +231,9 @@ class SecretTask implements ModelInterface, ArrayAccess
         $this->container['secretName'] = isset($data['secretName']) ? $data['secretName'] : null;
         $this->container['rotationFuncUrn'] = isset($data['rotationFuncUrn']) ? $data['rotationFuncUrn'] : null;
         $this->container['taskStatus'] = isset($data['taskStatus']) ? $data['taskStatus'] : null;
-        $this->container['attemptNums'] = isset($data['attemptNums']) ? $data['attemptNums'] : null;
         $this->container['operateType'] = isset($data['operateType']) ? $data['operateType'] : null;
         $this->container['taskTime'] = isset($data['taskTime']) ? $data['taskTime'] : null;
+        $this->container['attemptNums'] = isset($data['attemptNums']) ? $data['attemptNums'] : null;
         $this->container['taskErrorCode'] = isset($data['taskErrorCode']) ? $data['taskErrorCode'] : null;
         $this->container['taskErrorMsg'] = isset($data['taskErrorMsg']) ? $data['taskErrorMsg'] : null;
     }
@@ -357,30 +357,6 @@ class SecretTask implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets attemptNums
-    *  任务尝试次数。
-    *
-    * @return int|null
-    */
-    public function getAttemptNums()
-    {
-        return $this->container['attemptNums'];
-    }
-
-    /**
-    * Sets attemptNums
-    *
-    * @param int|null $attemptNums 任务尝试次数。
-    *
-    * @return $this
-    */
-    public function setAttemptNums($attemptNums)
-    {
-        $this->container['attemptNums'] = $attemptNums;
-        return $this;
-    }
-
-    /**
     * Gets operateType
     *  轮转类型。
     *
@@ -425,6 +401,30 @@ class SecretTask implements ModelInterface, ArrayAccess
     public function setTaskTime($taskTime)
     {
         $this->container['taskTime'] = $taskTime;
+        return $this;
+    }
+
+    /**
+    * Gets attemptNums
+    *  轮转尝试次数。
+    *
+    * @return int|null
+    */
+    public function getAttemptNums()
+    {
+        return $this->container['attemptNums'];
+    }
+
+    /**
+    * Sets attemptNums
+    *
+    * @param int|null $attemptNums 轮转尝试次数。
+    *
+    * @return $this
+    */
+    public function setAttemptNums($attemptNums)
+    {
+        $this->container['attemptNums'] = $attemptNums;
         return $this;
     }
 

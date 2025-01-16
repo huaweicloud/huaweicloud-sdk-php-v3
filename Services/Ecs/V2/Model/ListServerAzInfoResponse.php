@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Ecs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdateCustomsLineReq implements ModelInterface, ArrayAccess
+class ListServerAzInfoResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,34 +17,26 @@ class UpdateCustomsLineReq implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdateCustomsLineReq';
+    protected static $openAPIModelName = 'ListServerAzInfoResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  解析线路名称。
-    * ipSegments  P地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。
-    * description  自定义线路的描述信息。长度不超过255个字符。
+    * availabilityZones  az详情信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string',
-            'ipSegments' => 'string[]',
-            'description' => 'string'
+            'availabilityZones' => '\HuaweiCloud\SDK\Ecs\V2\Model\ListServerAzInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  解析线路名称。
-    * ipSegments  P地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。
-    * description  自定义线路的描述信息。长度不超过255个字符。
+    * availabilityZones  az详情信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'name' => null,
-        'ipSegments' => null,
-        'description' => null
+        'availabilityZones' => null
     ];
 
     /**
@@ -69,44 +62,32 @@ class UpdateCustomsLineReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  解析线路名称。
-    * ipSegments  P地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。
-    * description  自定义线路的描述信息。长度不超过255个字符。
+    * availabilityZones  az详情信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'name' => 'name',
-            'ipSegments' => 'ip_segments',
-            'description' => 'description'
+            'availabilityZones' => 'availability_zones'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  解析线路名称。
-    * ipSegments  P地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。
-    * description  自定义线路的描述信息。长度不超过255个字符。
+    * availabilityZones  az详情信息
     *
     * @var string[]
     */
     protected static $setters = [
-            'name' => 'setName',
-            'ipSegments' => 'setIpSegments',
-            'description' => 'setDescription'
+            'availabilityZones' => 'setAvailabilityZones'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  解析线路名称。
-    * ipSegments  P地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。
-    * description  自定义线路的描述信息。长度不超过255个字符。
+    * availabilityZones  az详情信息
     *
     * @var string[]
     */
     protected static $getters = [
-            'name' => 'getName',
-            'ipSegments' => 'getIpSegments',
-            'description' => 'getDescription'
+            'availabilityZones' => 'getAvailabilityZones'
     ];
 
     /**
@@ -167,9 +148,7 @@ class UpdateCustomsLineReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['ipSegments'] = isset($data['ipSegments']) ? $data['ipSegments'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['availabilityZones'] = isset($data['availabilityZones']) ? $data['availabilityZones'] : null;
     }
 
     /**
@@ -195,74 +174,26 @@ class UpdateCustomsLineReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
-    *  解析线路名称。
+    * Gets availabilityZones
+    *  az详情信息
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ListServerAzInfo[]|null
     */
-    public function getName()
+    public function getAvailabilityZones()
     {
-        return $this->container['name'];
+        return $this->container['availabilityZones'];
     }
 
     /**
-    * Sets name
+    * Sets availabilityZones
     *
-    * @param string|null $name 解析线路名称。
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ListServerAzInfo[]|null $availabilityZones az详情信息
     *
     * @return $this
     */
-    public function setName($name)
+    public function setAvailabilityZones($availabilityZones)
     {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
-    * Gets ipSegments
-    *  P地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。
-    *
-    * @return string[]|null
-    */
-    public function getIpSegments()
-    {
-        return $this->container['ipSegments'];
-    }
-
-    /**
-    * Sets ipSegments
-    *
-    * @param string[]|null $ipSegments P地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。
-    *
-    * @return $this
-    */
-    public function setIpSegments($ipSegments)
-    {
-        $this->container['ipSegments'] = $ipSegments;
-        return $this;
-    }
-
-    /**
-    * Gets description
-    *  自定义线路的描述信息。长度不超过255个字符。
-    *
-    * @return string|null
-    */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-    * Sets description
-    *
-    * @param string|null $description 自定义线路的描述信息。长度不超过255个字符。
-    *
-    * @return $this
-    */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
+        $this->container['availabilityZones'] = $availabilityZones;
         return $this;
     }
 

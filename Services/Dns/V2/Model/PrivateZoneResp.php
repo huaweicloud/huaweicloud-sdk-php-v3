@@ -23,7 +23,7 @@ class PrivateZoneResp implements ModelInterface, ArrayAccess
     * id  zone的ID，uuid形式的一个资源标识。
     * name  zone名称。
     * description  对zone的描述信息。
-    * email  管理该zone的管理员邮箱。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
@@ -69,7 +69,7 @@ class PrivateZoneResp implements ModelInterface, ArrayAccess
     * id  zone的ID，uuid形式的一个资源标识。
     * name  zone名称。
     * description  对zone的描述信息。
-    * email  管理该zone的管理员邮箱。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
@@ -136,7 +136,7 @@ class PrivateZoneResp implements ModelInterface, ArrayAccess
     * id  zone的ID，uuid形式的一个资源标识。
     * name  zone名称。
     * description  对zone的描述信息。
-    * email  管理该zone的管理员邮箱。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
@@ -182,7 +182,7 @@ class PrivateZoneResp implements ModelInterface, ArrayAccess
     * id  zone的ID，uuid形式的一个资源标识。
     * name  zone名称。
     * description  对zone的描述信息。
-    * email  管理该zone的管理员邮箱。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
@@ -228,7 +228,7 @@ class PrivateZoneResp implements ModelInterface, ArrayAccess
     * id  zone的ID，uuid形式的一个资源标识。
     * name  zone名称。
     * description  对zone的描述信息。
-    * email  管理该zone的管理员邮箱。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
@@ -444,7 +444,7 @@ class PrivateZoneResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  管理该zone的管理员邮箱。
+    *  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     *
     * @return string|null
     */
@@ -456,7 +456,7 @@ class PrivateZoneResp implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 管理该zone的管理员邮箱。
+    * @param string|null $email 管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     *
     * @return $this
     */

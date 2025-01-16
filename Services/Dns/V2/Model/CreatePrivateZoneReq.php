@@ -23,7 +23,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * name  待创建的域名。
     * description  域名的描述信息。
     * zoneType  域名类型。取值：private。
-    * email  管理该zone的管理员邮箱。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
     * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
@@ -49,7 +49,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * name  待创建的域名。
     * description  域名的描述信息。
     * zoneType  域名类型。取值：private。
-    * email  管理该zone的管理员邮箱。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
     * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
@@ -96,7 +96,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * name  待创建的域名。
     * description  域名的描述信息。
     * zoneType  域名类型。取值：private。
-    * email  管理该zone的管理员邮箱。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
     * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
@@ -122,7 +122,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * name  待创建的域名。
     * description  域名的描述信息。
     * zoneType  域名类型。取值：private。
-    * email  管理该zone的管理员邮箱。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
     * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
@@ -148,7 +148,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * name  待创建的域名。
     * description  域名的描述信息。
     * zoneType  域名类型。取值：private。
-    * email  管理该zone的管理员邮箱。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
     * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
@@ -343,7 +343,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  管理该zone的管理员邮箱。
+    *  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     *
     * @return string|null
     */
@@ -355,7 +355,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 管理该zone的管理员邮箱。
+    * @param string|null $email 管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     *
     * @return $this
     */

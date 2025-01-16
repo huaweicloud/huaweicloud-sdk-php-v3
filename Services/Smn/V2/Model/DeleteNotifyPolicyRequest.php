@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Smn\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchUpdateRecordSetWithLineReq implements ModelInterface, ArrayAccess
+class DeleteNotifyPolicyRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class BatchUpdateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchUpdateRecordSetWithLineReq';
+    protected static $openAPIModelName = 'DeleteNotifyPolicyRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordsets  RecordSet 列表。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
+    * notifyPolicyId  通知策略ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'recordsets' => '\HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSet[]'
+            'topicUrn' => 'string',
+            'notifyPolicyId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordsets  RecordSet 列表。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
+    * notifyPolicyId  通知策略ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'recordsets' => null
+        'topicUrn' => null,
+        'notifyPolicyId' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class BatchUpdateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordsets  RecordSet 列表。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
+    * notifyPolicyId  通知策略ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'recordsets' => 'recordsets'
+            'topicUrn' => 'topic_urn',
+            'notifyPolicyId' => 'notify_policy_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordsets  RecordSet 列表。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
+    * notifyPolicyId  通知策略ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'recordsets' => 'setRecordsets'
+            'topicUrn' => 'setTopicUrn',
+            'notifyPolicyId' => 'setNotifyPolicyId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordsets  RecordSet 列表。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
+    * notifyPolicyId  通知策略ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'recordsets' => 'getRecordsets'
+            'topicUrn' => 'getTopicUrn',
+            'notifyPolicyId' => 'getNotifyPolicyId'
     ];
 
     /**
@@ -147,7 +157,8 @@ class BatchUpdateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['recordsets'] = isset($data['recordsets']) ? $data['recordsets'] : null;
+        $this->container['topicUrn'] = isset($data['topicUrn']) ? $data['topicUrn'] : null;
+        $this->container['notifyPolicyId'] = isset($data['notifyPolicyId']) ? $data['notifyPolicyId'] : null;
     }
 
     /**
@@ -158,8 +169,11 @@ class BatchUpdateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['recordsets'] === null) {
-            $invalidProperties[] = "'recordsets' can't be null";
+        if ($this->container['topicUrn'] === null) {
+            $invalidProperties[] = "'topicUrn' can't be null";
+        }
+        if ($this->container['notifyPolicyId'] === null) {
+            $invalidProperties[] = "'notifyPolicyId' can't be null";
         }
         return $invalidProperties;
     }
@@ -176,26 +190,50 @@ class BatchUpdateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets recordsets
-    *  RecordSet 列表。
+    * Gets topicUrn
+    *  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSet[]
+    * @return string
     */
-    public function getRecordsets()
+    public function getTopicUrn()
     {
-        return $this->container['recordsets'];
+        return $this->container['topicUrn'];
     }
 
     /**
-    * Sets recordsets
+    * Sets topicUrn
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSet[] $recordsets RecordSet 列表。
+    * @param string $topicUrn Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
     *
     * @return $this
     */
-    public function setRecordsets($recordsets)
+    public function setTopicUrn($topicUrn)
     {
-        $this->container['recordsets'] = $recordsets;
+        $this->container['topicUrn'] = $topicUrn;
+        return $this;
+    }
+
+    /**
+    * Gets notifyPolicyId
+    *  通知策略ID。
+    *
+    * @return string
+    */
+    public function getNotifyPolicyId()
+    {
+        return $this->container['notifyPolicyId'];
+    }
+
+    /**
+    * Sets notifyPolicyId
+    *
+    * @param string $notifyPolicyId 通知策略ID。
+    *
+    * @return $this
+    */
+    public function setNotifyPolicyId($notifyPolicyId)
+    {
+        $this->container['notifyPolicyId'] = $notifyPolicyId;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
-    * protocol  协议名称， 枚举值：http、https、sms、email、functionstage、dms、application。
+    * protocol  协议名称， 枚举值：http、https、sms、email、functionstage。
     * status  状态。 0：未确认 1：已确认 2：不需要确认 3：已取消确认 4：已经删除。
     * endpoint  订阅终端。
     * fuzzyRemark  检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
@@ -42,7 +42,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
-    * protocol  协议名称， 枚举值：http、https、sms、email、functionstage、dms、application。
+    * protocol  协议名称， 枚举值：http、https、sms、email、functionstage。
     * status  状态。 0：未确认 1：已确认 2：不需要确认 3：已取消确认 4：已经删除。
     * endpoint  订阅终端。
     * fuzzyRemark  检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
@@ -83,7 +83,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
-    * protocol  协议名称， 枚举值：http、https、sms、email、functionstage、dms、application。
+    * protocol  协议名称， 枚举值：http、https、sms、email、functionstage。
     * status  状态。 0：未确认 1：已确认 2：不需要确认 3：已取消确认 4：已经删除。
     * endpoint  订阅终端。
     * fuzzyRemark  检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
@@ -103,7 +103,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
-    * protocol  协议名称， 枚举值：http、https、sms、email、functionstage、dms、application。
+    * protocol  协议名称， 枚举值：http、https、sms、email、functionstage。
     * status  状态。 0：未确认 1：已确认 2：不需要确认 3：已取消确认 4：已经删除。
     * endpoint  订阅终端。
     * fuzzyRemark  检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
@@ -123,7 +123,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
-    * protocol  协议名称， 枚举值：http、https、sms、email、functionstage、dms、application。
+    * protocol  协议名称， 枚举值：http、https、sms、email、functionstage。
     * status  状态。 0：未确认 1：已确认 2：不需要确认 3：已取消确认 4：已经删除。
     * endpoint  订阅终端。
     * fuzzyRemark  检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
@@ -280,7 +280,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  协议名称， 枚举值：http、https、sms、email、functionstage、dms、application。
+    *  协议名称， 枚举值：http、https、sms、email、functionstage。
     *
     * @return string|null
     */
@@ -292,7 +292,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 协议名称， 枚举值：http、https、sms、email、functionstage、dms、application。
+    * @param string|null $protocol 协议名称， 枚举值：http、https、sms、email、functionstage。
     *
     * @return $this
     */

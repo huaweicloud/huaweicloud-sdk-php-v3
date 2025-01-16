@@ -16,7 +16,7 @@ class BatchUpdateRecordSet implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'batchUpdateRecordSet';
+    protected static $openAPIModelName = 'BatchUpdateRecordSet';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

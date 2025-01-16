@@ -22,7 +22,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
-    * limit  每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
-    * limit  每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
-    * limit  每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
-    * limit  每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
-    * limit  每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
@@ -191,6 +191,21 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['lineId']) && !preg_match("/[0-9a-zA-Z_]{0,50}/", $this->container['lineId'])) {
+                $invalidProperties[] = "invalid value for 'lineId', must be conform to the pattern /[0-9a-zA-Z_]{0,50}/.";
+            }
+            if (!is_null($this->container['name']) && !preg_match("/[\\w\\u4e00-\\u9fa5\\._-]{0,64}/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /[\\w\\u4e00-\\u9fa5\\._-]{0,64}/.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 500)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 500.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -255,7 +270,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
+    *  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     *
     * @return int|null
     */
@@ -267,7 +282,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
+    * @param int|null $limit 每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     *
     * @return $this
     */

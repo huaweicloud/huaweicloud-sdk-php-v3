@@ -172,9 +172,6 @@ class ListTopicAttributesRequest implements ModelInterface, ArrayAccess
         if ($this->container['topicUrn'] === null) {
             $invalidProperties[] = "'topicUrn' can't be null";
         }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,7 +214,7 @@ class ListTopicAttributesRequest implements ModelInterface, ArrayAccess
     * Gets name
     *  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](smn_api_a1000.xml)。
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -227,7 +224,7 @@ class ListTopicAttributesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](smn_api_a1000.xml)。
+    * @param string|null $name 主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](smn_api_a1000.xml)。
     *
     * @return $this
     */

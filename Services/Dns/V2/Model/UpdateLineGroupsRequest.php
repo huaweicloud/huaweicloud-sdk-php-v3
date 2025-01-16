@@ -20,19 +20,19 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * linegroupId  待更新的线路分组ID。
+    * linegroupId  线路分组ID
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'linegroupId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\UpdateLineGroupsBody'
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\UpdateLineGroupsRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * linegroupId  待更新的线路分组ID。
+    * linegroupId  线路分组ID
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * linegroupId  待更新的线路分组ID。
+    * linegroupId  线路分组ID
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * linegroupId  待更新的线路分组ID。
+    * linegroupId  线路分组ID
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * linegroupId  待更新的线路分组ID。
+    * linegroupId  线路分组ID
     * body  body
     *
     * @var string[]
@@ -172,6 +172,9 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
         if ($this->container['linegroupId'] === null) {
             $invalidProperties[] = "'linegroupId' can't be null";
         }
+            if (!preg_match("/[0-9a-zA-Z_]{1,50}/", $this->container['linegroupId'])) {
+                $invalidProperties[] = "invalid value for 'linegroupId', must be conform to the pattern /[0-9a-zA-Z_]{1,50}/.";
+            }
         return $invalidProperties;
     }
 
@@ -188,7 +191,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets linegroupId
-    *  待更新的线路分组ID。
+    *  线路分组ID
     *
     * @return string
     */
@@ -200,7 +203,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets linegroupId
     *
-    * @param string $linegroupId 待更新的线路分组ID。
+    * @param string $linegroupId 线路分组ID
     *
     * @return $this
     */
@@ -214,7 +217,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\UpdateLineGroupsBody|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\UpdateLineGroupsRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +227,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\UpdateLineGroupsBody|null $body body
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\UpdateLineGroupsRequestBody|null $body body
     *
     * @return $this
     */

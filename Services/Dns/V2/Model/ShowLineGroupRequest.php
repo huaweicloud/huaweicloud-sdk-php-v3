@@ -20,7 +20,7 @@ class ShowLineGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * linegroupId  待查询的线路分组ID。
+    * linegroupId  线路分组ID
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowLineGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * linegroupId  待查询的线路分组ID。
+    * linegroupId  线路分组ID
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowLineGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * linegroupId  待查询的线路分组ID。
+    * linegroupId  线路分组ID
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowLineGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * linegroupId  待查询的线路分组ID。
+    * linegroupId  线路分组ID
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowLineGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * linegroupId  待查询的线路分组ID。
+    * linegroupId  线路分组ID
     *
     * @var string[]
     */
@@ -161,6 +161,9 @@ class ShowLineGroupRequest implements ModelInterface, ArrayAccess
         if ($this->container['linegroupId'] === null) {
             $invalidProperties[] = "'linegroupId' can't be null";
         }
+            if (!preg_match("/[0-9a-zA-Z_]{1,50}/", $this->container['linegroupId'])) {
+                $invalidProperties[] = "invalid value for 'linegroupId', must be conform to the pattern /[0-9a-zA-Z_]{1,50}/.";
+            }
         return $invalidProperties;
     }
 
@@ -177,7 +180,7 @@ class ShowLineGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets linegroupId
-    *  待查询的线路分组ID。
+    *  线路分组ID
     *
     * @return string
     */
@@ -189,7 +192,7 @@ class ShowLineGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets linegroupId
     *
-    * @param string $linegroupId 待查询的线路分组ID。
+    * @param string $linegroupId 线路分组ID
     *
     * @return $this
     */

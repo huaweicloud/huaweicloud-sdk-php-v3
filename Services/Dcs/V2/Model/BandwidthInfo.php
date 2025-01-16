@@ -30,6 +30,8 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
     * expandIntervalTime  下一次可以扩容间隔时间
     * maxExpandCount  最大扩容数量
     * taskRunning  任务是否运行
+    * assuredBandwidth  **参数解释**： 实例基准带宽。 **取值范围**： 不涉及。
+    * maxBandwidthForNode  **参数解释**： 节点最大带宽。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
             'expandEffectTime' => 'int',
             'expandIntervalTime' => 'int',
             'maxExpandCount' => 'int',
-            'taskRunning' => 'bool'
+            'taskRunning' => 'bool',
+            'assuredBandwidth' => 'int',
+            'maxBandwidthForNode' => 'int'
     ];
 
     /**
@@ -58,6 +62,8 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
     * expandIntervalTime  下一次可以扩容间隔时间
     * maxExpandCount  最大扩容数量
     * taskRunning  任务是否运行
+    * assuredBandwidth  **参数解释**： 实例基准带宽。 **取值范围**： 不涉及。
+    * maxBandwidthForNode  **参数解释**： 节点最大带宽。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
         'expandEffectTime' => 'int64',
         'expandIntervalTime' => 'int64',
         'maxExpandCount' => 'int32',
-        'taskRunning' => null
+        'taskRunning' => null,
+        'assuredBandwidth' => null,
+        'maxBandwidthForNode' => 'int32'
     ];
 
     /**
@@ -107,6 +115,8 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
     * expandIntervalTime  下一次可以扩容间隔时间
     * maxExpandCount  最大扩容数量
     * taskRunning  任务是否运行
+    * assuredBandwidth  **参数解释**： 实例基准带宽。 **取值范围**： 不涉及。
+    * maxBandwidthForNode  **参数解释**： 节点最大带宽。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
             'expandEffectTime' => 'expand_effect_time',
             'expandIntervalTime' => 'expand_interval_time',
             'maxExpandCount' => 'max_expand_count',
-            'taskRunning' => 'task_running'
+            'taskRunning' => 'task_running',
+            'assuredBandwidth' => 'assured_bandwidth',
+            'maxBandwidthForNode' => 'max_bandwidth_for_node'
     ];
 
     /**
@@ -135,6 +147,8 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
     * expandIntervalTime  下一次可以扩容间隔时间
     * maxExpandCount  最大扩容数量
     * taskRunning  任务是否运行
+    * assuredBandwidth  **参数解释**： 实例基准带宽。 **取值范围**： 不涉及。
+    * maxBandwidthForNode  **参数解释**： 节点最大带宽。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
             'expandEffectTime' => 'setExpandEffectTime',
             'expandIntervalTime' => 'setExpandIntervalTime',
             'maxExpandCount' => 'setMaxExpandCount',
-            'taskRunning' => 'setTaskRunning'
+            'taskRunning' => 'setTaskRunning',
+            'assuredBandwidth' => 'setAssuredBandwidth',
+            'maxBandwidthForNode' => 'setMaxBandwidthForNode'
     ];
 
     /**
@@ -163,6 +179,8 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
     * expandIntervalTime  下一次可以扩容间隔时间
     * maxExpandCount  最大扩容数量
     * taskRunning  任务是否运行
+    * assuredBandwidth  **参数解释**： 实例基准带宽。 **取值范围**： 不涉及。
+    * maxBandwidthForNode  **参数解释**： 节点最大带宽。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
             'expandEffectTime' => 'getExpandEffectTime',
             'expandIntervalTime' => 'getExpandIntervalTime',
             'maxExpandCount' => 'getMaxExpandCount',
-            'taskRunning' => 'getTaskRunning'
+            'taskRunning' => 'getTaskRunning',
+            'assuredBandwidth' => 'getAssuredBandwidth',
+            'maxBandwidthForNode' => 'getMaxBandwidthForNode'
     ];
 
     /**
@@ -247,6 +267,8 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
         $this->container['expandIntervalTime'] = isset($data['expandIntervalTime']) ? $data['expandIntervalTime'] : null;
         $this->container['maxExpandCount'] = isset($data['maxExpandCount']) ? $data['maxExpandCount'] : null;
         $this->container['taskRunning'] = isset($data['taskRunning']) ? $data['taskRunning'] : null;
+        $this->container['assuredBandwidth'] = isset($data['assuredBandwidth']) ? $data['assuredBandwidth'] : null;
+        $this->container['maxBandwidthForNode'] = isset($data['maxBandwidthForNode']) ? $data['maxBandwidthForNode'] : null;
     }
 
     /**
@@ -508,6 +530,54 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
     public function setTaskRunning($taskRunning)
     {
         $this->container['taskRunning'] = $taskRunning;
+        return $this;
+    }
+
+    /**
+    * Gets assuredBandwidth
+    *  **参数解释**： 实例基准带宽。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getAssuredBandwidth()
+    {
+        return $this->container['assuredBandwidth'];
+    }
+
+    /**
+    * Sets assuredBandwidth
+    *
+    * @param int|null $assuredBandwidth **参数解释**： 实例基准带宽。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setAssuredBandwidth($assuredBandwidth)
+    {
+        $this->container['assuredBandwidth'] = $assuredBandwidth;
+        return $this;
+    }
+
+    /**
+    * Gets maxBandwidthForNode
+    *  **参数解释**： 节点最大带宽。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getMaxBandwidthForNode()
+    {
+        return $this->container['maxBandwidthForNode'];
+    }
+
+    /**
+    * Sets maxBandwidthForNode
+    *
+    * @param int|null $maxBandwidthForNode **参数解释**： 节点最大带宽。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setMaxBandwidthForNode($maxBandwidthForNode)
+    {
+        $this->container['maxBandwidthForNode'] = $maxBandwidthForNode;
         return $this;
     }
 

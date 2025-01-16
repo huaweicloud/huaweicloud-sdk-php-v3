@@ -23,7 +23,7 @@ class ListMessageTemplateDetailsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * messageTemplateId  模板ID。
     * messageTemplateName  模板名称。
-    * protocol  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “dms”：DMS传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
+    * protocol  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
     * tagNames  模板tag列表。  是消息模板“{}”内的字段，在具体使用消息模板时，可根据实际情况替为该字段赋值。
     * createTime  模板创建时间。 时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * updateTime  模板最后更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
@@ -47,7 +47,7 @@ class ListMessageTemplateDetailsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * messageTemplateId  模板ID。
     * messageTemplateName  模板名称。
-    * protocol  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “dms”：DMS传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
+    * protocol  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
     * tagNames  模板tag列表。  是消息模板“{}”内的字段，在具体使用消息模板时，可根据实际情况替为该字段赋值。
     * createTime  模板创建时间。 时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * updateTime  模板最后更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
@@ -92,7 +92,7 @@ class ListMessageTemplateDetailsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * messageTemplateId  模板ID。
     * messageTemplateName  模板名称。
-    * protocol  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “dms”：DMS传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
+    * protocol  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
     * tagNames  模板tag列表。  是消息模板“{}”内的字段，在具体使用消息模板时，可根据实际情况替为该字段赋值。
     * createTime  模板创建时间。 时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * updateTime  模板最后更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
@@ -116,7 +116,7 @@ class ListMessageTemplateDetailsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * messageTemplateId  模板ID。
     * messageTemplateName  模板名称。
-    * protocol  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “dms”：DMS传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
+    * protocol  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
     * tagNames  模板tag列表。  是消息模板“{}”内的字段，在具体使用消息模板时，可根据实际情况替为该字段赋值。
     * createTime  模板创建时间。 时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * updateTime  模板最后更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
@@ -140,7 +140,7 @@ class ListMessageTemplateDetailsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * messageTemplateId  模板ID。
     * messageTemplateName  模板名称。
-    * protocol  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “dms”：DMS传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
+    * protocol  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
     * tagNames  模板tag列表。  是消息模板“{}”内的字段，在具体使用消息模板时，可根据实际情况替为该字段赋值。
     * createTime  模板创建时间。 时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * updateTime  模板最后更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
@@ -300,7 +300,7 @@ class ListMessageTemplateDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “dms”：DMS传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
+    *  模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
     *
     * @return string|null
     */
@@ -312,7 +312,7 @@ class ListMessageTemplateDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “dms”：DMS传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
+    * @param string|null $protocol 模板支持的协议类型。  目前支持的协议包括：  “default”：默认协议。  “email”：邮件传输协议。  “sms”：短信传输协议。  “functionstage”：FunctionGraph（函数）传输协议。  “http”、“https”：HTTP/HTTPS传输协议。
     *
     * @return $this
     */

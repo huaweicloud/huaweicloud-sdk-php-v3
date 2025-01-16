@@ -25,7 +25,7 @@ class CreateCustomLineRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\CreateCustomLines'
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\CreateCustomLineRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateCustomLineRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\CreateCustomLines|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\CreateCustomLineRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateCustomLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\CreateCustomLines|null $body body
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\CreateCustomLineRequestBody|null $body body
     *
     * @return $this
     */

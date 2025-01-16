@@ -37,6 +37,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
             'exclusiveIp' => 'bool',
             'paidType' => 'string',
             'webTag' => 'string',
-            'flag' => '\HuaweiCloud\SDK\Waf\V1\Model\Flag'
+            'flag' => '\HuaweiCloud\SDK\Waf\V1\Model\Flag',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -79,6 +81,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
         'exclusiveIp' => null,
         'paidType' => null,
         'webTag' => null,
-        'flag' => null
+        'flag' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
             'exclusiveIp' => 'exclusive_ip',
             'paidType' => 'paid_type',
             'webTag' => 'web_tag',
-            'flag' => 'flag'
+            'flag' => 'flag',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -184,6 +190,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
             'exclusiveIp' => 'setExclusiveIp',
             'paidType' => 'setPaidType',
             'webTag' => 'setWebTag',
-            'flag' => 'setFlag'
+            'flag' => 'setFlag',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -226,6 +234,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
             'exclusiveIp' => 'getExclusiveIp',
             'paidType' => 'getPaidType',
             'webTag' => 'getWebTag',
-            'flag' => 'getFlag'
+            'flag' => 'getFlag',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -324,6 +334,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
         $this->container['paidType'] = isset($data['paidType']) ? $data['paidType'] : null;
         $this->container['webTag'] = isset($data['webTag']) ? $data['webTag'] : null;
         $this->container['flag'] = isset($data['flag']) ? $data['flag'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -753,6 +764,30 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     public function setFlag($flag)
     {
         $this->container['flag'] = $flag;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

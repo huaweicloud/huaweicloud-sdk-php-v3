@@ -25,6 +25,7 @@ class PermissionClusterDetail implements ModelInterface, ArrayAccess
     * canDelete  是否有删除权限
     * canAddHost  是否有添加主机权限
     * canManage  是否有编辑主机集群权限矩阵的权限
+    * canCopy  是否有复制主机权限
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class PermissionClusterDetail implements ModelInterface, ArrayAccess
             'canEdit' => 'bool',
             'canDelete' => 'bool',
             'canAddHost' => 'bool',
-            'canManage' => 'bool'
+            'canManage' => 'bool',
+            'canCopy' => 'bool'
     ];
 
     /**
@@ -43,6 +45,7 @@ class PermissionClusterDetail implements ModelInterface, ArrayAccess
     * canDelete  是否有删除权限
     * canAddHost  是否有添加主机权限
     * canManage  是否有编辑主机集群权限矩阵的权限
+    * canCopy  是否有复制主机权限
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class PermissionClusterDetail implements ModelInterface, ArrayAccess
         'canEdit' => null,
         'canDelete' => null,
         'canAddHost' => null,
-        'canManage' => null
+        'canManage' => null,
+        'canCopy' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class PermissionClusterDetail implements ModelInterface, ArrayAccess
     * canDelete  是否有删除权限
     * canAddHost  是否有添加主机权限
     * canManage  是否有编辑主机集群权限矩阵的权限
+    * canCopy  是否有复制主机权限
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class PermissionClusterDetail implements ModelInterface, ArrayAccess
             'canEdit' => 'can_edit',
             'canDelete' => 'can_delete',
             'canAddHost' => 'can_add_host',
-            'canManage' => 'can_manage'
+            'canManage' => 'can_manage',
+            'canCopy' => 'can_copy'
     ];
 
     /**
@@ -100,6 +106,7 @@ class PermissionClusterDetail implements ModelInterface, ArrayAccess
     * canDelete  是否有删除权限
     * canAddHost  是否有添加主机权限
     * canManage  是否有编辑主机集群权限矩阵的权限
+    * canCopy  是否有复制主机权限
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class PermissionClusterDetail implements ModelInterface, ArrayAccess
             'canEdit' => 'setCanEdit',
             'canDelete' => 'setCanDelete',
             'canAddHost' => 'setCanAddHost',
-            'canManage' => 'setCanManage'
+            'canManage' => 'setCanManage',
+            'canCopy' => 'setCanCopy'
     ];
 
     /**
@@ -118,6 +126,7 @@ class PermissionClusterDetail implements ModelInterface, ArrayAccess
     * canDelete  是否有删除权限
     * canAddHost  是否有添加主机权限
     * canManage  是否有编辑主机集群权限矩阵的权限
+    * canCopy  是否有复制主机权限
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class PermissionClusterDetail implements ModelInterface, ArrayAccess
             'canEdit' => 'getCanEdit',
             'canDelete' => 'getCanDelete',
             'canAddHost' => 'getCanAddHost',
-            'canManage' => 'getCanManage'
+            'canManage' => 'getCanManage',
+            'canCopy' => 'getCanCopy'
     ];
 
     /**
@@ -192,6 +202,7 @@ class PermissionClusterDetail implements ModelInterface, ArrayAccess
         $this->container['canDelete'] = isset($data['canDelete']) ? $data['canDelete'] : null;
         $this->container['canAddHost'] = isset($data['canAddHost']) ? $data['canAddHost'] : null;
         $this->container['canManage'] = isset($data['canManage']) ? $data['canManage'] : null;
+        $this->container['canCopy'] = isset($data['canCopy']) ? $data['canCopy'] : null;
     }
 
     /**
@@ -333,6 +344,30 @@ class PermissionClusterDetail implements ModelInterface, ArrayAccess
     public function setCanManage($canManage)
     {
         $this->container['canManage'] = $canManage;
+        return $this;
+    }
+
+    /**
+    * Gets canCopy
+    *  是否有复制主机权限
+    *
+    * @return bool|null
+    */
+    public function getCanCopy()
+    {
+        return $this->container['canCopy'];
+    }
+
+    /**
+    * Sets canCopy
+    *
+    * @param bool|null $canCopy 是否有复制主机权限
+    *
+    * @return $this
+    */
+    public function setCanCopy($canCopy)
+    {
+        $this->container['canCopy'] = $canCopy;
         return $this;
     }
 

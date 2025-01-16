@@ -161,6 +161,9 @@ class ShowDomainQuotaRequest implements ModelInterface, ArrayAccess
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
         }
+            if (!preg_match("/[0-9a-zA-Z]{1,32}/", $this->container['domainId'])) {
+                $invalidProperties[] = "invalid value for 'domainId', must be conform to the pattern /[0-9a-zA-Z]{1,32}/.";
+            }
         return $invalidProperties;
     }
 

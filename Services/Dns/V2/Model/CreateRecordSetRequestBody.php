@@ -23,7 +23,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     * type  Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
-    * status  资源状态。
+    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * tags  资源标签。
@@ -45,7 +45,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     * type  Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
-    * status  资源状态。
+    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * tags  资源标签。
@@ -88,7 +88,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     * type  Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
-    * status  资源状态。
+    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * tags  资源标签。
@@ -110,7 +110,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     * type  Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
-    * status  资源状态。
+    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * tags  资源标签。
@@ -132,7 +132,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     * type  Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
-    * status  资源状态。
+    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * tags  资源标签。
@@ -321,7 +321,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态。
+    *  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。
+    * @param string|null $status 解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     *
     * @return $this
     */

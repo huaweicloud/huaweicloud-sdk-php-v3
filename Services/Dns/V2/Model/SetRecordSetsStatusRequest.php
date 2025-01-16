@@ -27,7 +27,7 @@ class SetRecordSetsStatusRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'recordsetId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\SetRecordSetsStatusReq'
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\SetRecordSetsStatusRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class SetRecordSetsStatusRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\SetRecordSetsStatusReq|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\SetRecordSetsStatusRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class SetRecordSetsStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\SetRecordSetsStatusReq|null $body body
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\SetRecordSetsStatusRequestBody|null $body body
     *
     * @return $this
     */

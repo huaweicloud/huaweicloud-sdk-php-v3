@@ -27,7 +27,7 @@ class BatchUpdateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'zoneId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineReq'
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class BatchUpdateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineReq|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class BatchUpdateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineReq|null $body body
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineRequestBody|null $body body
     *
     * @return $this
     */

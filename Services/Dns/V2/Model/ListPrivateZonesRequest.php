@@ -25,10 +25,14 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。
-    * name  zone名称。
+    * name  Zone名称。  搜索模式默认为模糊搜索。
+    * id  Zone ID。
     * status  资源状态。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * sortKey  查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    * sortDir  查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
+    * routerId  关联VPC的ID。
     *
     * @var string[]
     */
@@ -39,9 +43,13 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'tags' => 'string',
             'name' => 'string',
+            'id' => 'string',
             'status' => 'string',
             'searchMode' => 'string',
-            'enterpriseProjectId' => 'string'
+            'sortKey' => 'string',
+            'sortDir' => 'string',
+            'enterpriseProjectId' => 'string',
+            'routerId' => 'string'
     ];
 
     /**
@@ -51,10 +59,14 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。
-    * name  zone名称。
+    * name  Zone名称。  搜索模式默认为模糊搜索。
+    * id  Zone ID。
     * status  资源状态。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * sortKey  查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    * sortDir  查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
+    * routerId  关联VPC的ID。
     *
     * @var string[]
     */
@@ -65,9 +77,13 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'tags' => null,
         'name' => null,
+        'id' => null,
         'status' => null,
         'searchMode' => null,
-        'enterpriseProjectId' => null
+        'sortKey' => null,
+        'sortDir' => null,
+        'enterpriseProjectId' => null,
+        'routerId' => null
     ];
 
     /**
@@ -98,10 +114,14 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。
-    * name  zone名称。
+    * name  Zone名称。  搜索模式默认为模糊搜索。
+    * id  Zone ID。
     * status  资源状态。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * sortKey  查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    * sortDir  查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
+    * routerId  关联VPC的ID。
     *
     * @var string[]
     */
@@ -112,9 +132,13 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'tags' => 'tags',
             'name' => 'name',
+            'id' => 'id',
             'status' => 'status',
             'searchMode' => 'search_mode',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'sortKey' => 'sort_key',
+            'sortDir' => 'sort_dir',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'routerId' => 'router_id'
     ];
 
     /**
@@ -124,10 +148,14 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。
-    * name  zone名称。
+    * name  Zone名称。  搜索模式默认为模糊搜索。
+    * id  Zone ID。
     * status  资源状态。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * sortKey  查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    * sortDir  查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
+    * routerId  关联VPC的ID。
     *
     * @var string[]
     */
@@ -138,9 +166,13 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'tags' => 'setTags',
             'name' => 'setName',
+            'id' => 'setId',
             'status' => 'setStatus',
             'searchMode' => 'setSearchMode',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'sortKey' => 'setSortKey',
+            'sortDir' => 'setSortDir',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'routerId' => 'setRouterId'
     ];
 
     /**
@@ -150,10 +182,14 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。
-    * name  zone名称。
+    * name  Zone名称。  搜索模式默认为模糊搜索。
+    * id  Zone ID。
     * status  资源状态。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * sortKey  查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    * sortDir  查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
+    * routerId  关联VPC的ID。
     *
     * @var string[]
     */
@@ -164,9 +200,13 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'tags' => 'getTags',
             'name' => 'getName',
+            'id' => 'getId',
             'status' => 'getStatus',
             'searchMode' => 'getSearchMode',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'sortKey' => 'getSortKey',
+            'sortDir' => 'getSortDir',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'routerId' => 'getRouterId'
     ];
 
     /**
@@ -233,9 +273,13 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['searchMode'] = isset($data['searchMode']) ? $data['searchMode'] : null;
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
+        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['routerId'] = isset($data['routerId']) ? $data['routerId'] : null;
     }
 
     /**
@@ -385,7 +429,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  zone名称。
+    *  Zone名称。  搜索模式默认为模糊搜索。
     *
     * @return string|null
     */
@@ -397,13 +441,37 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name zone名称。
+    * @param string|null $name Zone名称。  搜索模式默认为模糊搜索。
     *
     * @return $this
     */
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  Zone ID。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id Zone ID。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 
@@ -456,8 +524,56 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets sortKey
+    *  查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    *
+    * @return string|null
+    */
+    public function getSortKey()
+    {
+        return $this->container['sortKey'];
+    }
+
+    /**
+    * Sets sortKey
+    *
+    * @param string|null $sortKey 查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    *
+    * @return $this
+    */
+    public function setSortKey($sortKey)
+    {
+        $this->container['sortKey'] = $sortKey;
+        return $this;
+    }
+
+    /**
+    * Gets sortDir
+    *  查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    *
+    * @return string|null
+    */
+    public function getSortDir()
+    {
+        return $this->container['sortDir'];
+    }
+
+    /**
+    * Sets sortDir
+    *
+    * @param string|null $sortDir 查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    *
+    * @return $this
+    */
+    public function setSortDir($sortDir)
+    {
+        $this->container['sortDir'] = $sortDir;
+        return $this;
+    }
+
+    /**
     * Gets enterpriseProjectId
-    *  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    *  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @return string|null
     */
@@ -469,13 +585,37 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * @param string|null $enterpriseProjectId 域名关联的企业项目ID，长度不超过36个字符。
     *
     * @return $this
     */
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets routerId
+    *  关联VPC的ID。
+    *
+    * @return string|null
+    */
+    public function getRouterId()
+    {
+        return $this->container['routerId'];
+    }
+
+    /**
+    * Sets routerId
+    *
+    * @param string|null $routerId 关联VPC的ID。
+    *
+    * @return $this
+    */
+    public function setRouterId($routerId)
+    {
+        $this->container['routerId'] = $routerId;
         return $this;
     }
 

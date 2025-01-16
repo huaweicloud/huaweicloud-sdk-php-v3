@@ -183,6 +183,12 @@ class CreateLineGroupsReq implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
+            if (!preg_match("/[\\w\\u4e00-\\u9fa5\\._-]{1,64}/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /[\\w\\u4e00-\\u9fa5\\._-]{1,64}/.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
         if ($this->container['lines'] === null) {
             $invalidProperties[] = "'lines' can't be null";
         }

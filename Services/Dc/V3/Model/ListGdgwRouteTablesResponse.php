@@ -23,6 +23,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * requestId  请求id
     * gdgwRoutetables  全域接入网关路由表
+    * totalCount  总记录数。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -30,6 +31,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'requestId' => 'string',
             'gdgwRoutetables' => '\HuaweiCloud\SDK\Dc\V3\Model\CommonRoutetable[]',
+            'totalCount' => 'int',
             'pageInfo' => '\HuaweiCloud\SDK\Dc\V3\Model\PageInfo'
     ];
 
@@ -37,6 +39,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * requestId  请求id
     * gdgwRoutetables  全域接入网关路由表
+    * totalCount  总记录数。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -44,6 +47,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'requestId' => null,
         'gdgwRoutetables' => null,
+        'totalCount' => 'int32',
         'pageInfo' => null
     ];
 
@@ -72,6 +76,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * requestId  请求id
     * gdgwRoutetables  全域接入网关路由表
+    * totalCount  总记录数。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -79,6 +84,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'requestId' => 'request_id',
             'gdgwRoutetables' => 'gdgw_routetables',
+            'totalCount' => 'total_count',
             'pageInfo' => 'page_info'
     ];
 
@@ -86,6 +92,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  请求id
     * gdgwRoutetables  全域接入网关路由表
+    * totalCount  总记录数。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -93,6 +100,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'requestId' => 'setRequestId',
             'gdgwRoutetables' => 'setGdgwRoutetables',
+            'totalCount' => 'setTotalCount',
             'pageInfo' => 'setPageInfo'
     ];
 
@@ -100,6 +108,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  请求id
     * gdgwRoutetables  全域接入网关路由表
+    * totalCount  总记录数。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -107,6 +116,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'requestId' => 'getRequestId',
             'gdgwRoutetables' => 'getGdgwRoutetables',
+            'totalCount' => 'getTotalCount',
             'pageInfo' => 'getPageInfo'
     ];
 
@@ -170,6 +180,7 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['gdgwRoutetables'] = isset($data['gdgwRoutetables']) ? $data['gdgwRoutetables'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
         $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
@@ -246,6 +257,30 @@ class ListGdgwRouteTablesResponse implements ModelInterface, ArrayAccess
     public function setGdgwRoutetables($gdgwRoutetables)
     {
         $this->container['gdgwRoutetables'] = $gdgwRoutetables;
+        return $this;
+    }
+
+    /**
+    * Gets totalCount
+    *  总记录数。
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 总记录数。
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 

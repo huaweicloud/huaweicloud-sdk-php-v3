@@ -27,6 +27,262 @@ class DnsClient extends Client
 
 
     /**
+     * 批量删除Record Set
+     *
+     * 批量删除Record Set。
+     * 响应结果中只包含本次实际删除的Record Set。
+     * 支持批量删除公网域名和内网域名的记录集。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteRecordSets($request)
+    {
+        return $this->batchDeleteRecordSetsWithHttpInfo($request);
+    }
+
+    public function batchDeleteRecordSetsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/recordsets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetsResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetsRequest');
+    }
+
+    /**
+     * 批量删除Zone
+     *
+     * 批量删除Zone。
+     * 本接口为原子操作，所有记录应全部删除成功或全部失败。
+     * 仅支持公网Zone、内网Zone。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteZones($request)
+    {
+        return $this->batchDeleteZonesWithHttpInfo($request);
+    }
+
+    public function batchDeleteZonesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/zones';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteZonesResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteZonesRequest');
+    }
+
+    /**
+     * 批量设置Record Set状态
+     *
+     * 批量设置Record Set状态。
+     * 响应结果中只包含本次实际更新的Record Set。
+     * 支持公网域名和内网域名的记录集。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchSetRecordSetsStatus($request)
+    {
+        return $this->batchSetRecordSetsStatusWithHttpInfo($request);
+    }
+
+    public function batchSetRecordSetsStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/recordsets/statuses';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchSetRecordSetsStatusResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchSetRecordSetsStatusRequest');
+    }
+
+    /**
+     * 批量设置Zone状态
+     *
+     * 批量设置Zone状态。
+     * 响应结果中只包含本次实际更新的Zone。
+     * 仅支持公网Zone、内网Zone。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchSetZonesStatus($request)
+    {
+        return $this->batchSetZonesStatusWithHttpInfo($request);
+    }
+
+    public function batchSetZonesStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/zones/statuses';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchSetZonesStatusResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchSetZonesStatusRequest');
+    }
+
+    /**
      * 创建单个自定义线路
      *
      * 创建单个自定义线路
@@ -378,6 +634,12 @@ class DnsClient extends Client
         }
         if ($localVarParams['showDetail'] !== null) {
             $queryParams['show_detail'] = $localVarParams['showDetail'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['ip'] !== null) {
+            $queryParams['ip'] = $localVarParams['ip'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -860,9 +1122,9 @@ class DnsClient extends Client
     }
 
     /**
-     * 设置弹性IP的PTR记录
+     * 设置弹性公网IP的PTR记录
      *
-     * 设置弹性IP的PTR记录
+     * 设置弹性公网IP的PTR记录
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -928,9 +1190,9 @@ class DnsClient extends Client
     }
 
     /**
-     * 查询租户弹性IP的PTR记录列表
+     * 查询租户弹性公网IP的PTR记录列表
      *
-     * 查询租户弹性IP的PTR记录列表
+     * 查询租户弹性公网IP的PTR记录列表
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1005,9 +1267,9 @@ class DnsClient extends Client
     }
 
     /**
-     * 将弹性IP的PTR记录恢复为默认值
+     * 将弹性公网IP的PTR记录恢复为默认值
      *
-     * 将弹性IP的PTR记录恢复为默认值
+     * 将弹性公网IP的PTR记录恢复为默认值
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1073,9 +1335,9 @@ class DnsClient extends Client
     }
 
     /**
-     * 查询单个弹性IP的PTR记录
+     * 查询单个弹性公网IP的PTR记录
      *
-     * 查询单个弹性IP的PTR记录
+     * 查询单个弹性公网IP的PTR记录
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1138,9 +1400,9 @@ class DnsClient extends Client
     }
 
     /**
-     * 修改弹性IP的PTR记录
+     * 修改弹性公网IP的PTR记录
      *
-     * 修改弹性IP的PTR记录
+     * 修改弹性公网IP的PTR记录
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1897,6 +2159,9 @@ class DnsClient extends Client
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['zoneId'] !== null) {
+            $queryParams['zone_id'] = $localVarParams['zoneId'];
         }
         if ($localVarParams['lineId'] !== null) {
             $queryParams['line_id'] = $localVarParams['lineId'];
@@ -3211,14 +3476,26 @@ class DnsClient extends Client
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }
         if ($localVarParams['searchMode'] !== null) {
             $queryParams['search_mode'] = $localVarParams['searchMode'];
         }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['routerId'] !== null) {
+            $queryParams['router_id'] = $localVarParams['routerId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3297,11 +3574,20 @@ class DnsClient extends Client
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }
         if ($localVarParams['searchMode'] !== null) {
             $queryParams['search_mode'] = $localVarParams['searchMode'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
         }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];

@@ -25,6 +25,7 @@ class DbParameter implements ModelInterface, ArrayAccess
     * defaultValue  参数默认值。
     * valueRange  参数取值范围。
     * description  参数描述。
+    * isModifiable  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class DbParameter implements ModelInterface, ArrayAccess
             'dataType' => 'string',
             'defaultValue' => 'string',
             'valueRange' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'isModifiable' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class DbParameter implements ModelInterface, ArrayAccess
     * defaultValue  参数默认值。
     * valueRange  参数取值范围。
     * description  参数描述。
+    * isModifiable  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class DbParameter implements ModelInterface, ArrayAccess
         'dataType' => null,
         'defaultValue' => null,
         'valueRange' => null,
-        'description' => null
+        'description' => null,
+        'isModifiable' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class DbParameter implements ModelInterface, ArrayAccess
     * defaultValue  参数默认值。
     * valueRange  参数取值范围。
     * description  参数描述。
+    * isModifiable  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class DbParameter implements ModelInterface, ArrayAccess
             'dataType' => 'data_type',
             'defaultValue' => 'default_value',
             'valueRange' => 'value_range',
-            'description' => 'description'
+            'description' => 'description',
+            'isModifiable' => 'is_modifiable'
     ];
 
     /**
@@ -100,6 +106,7 @@ class DbParameter implements ModelInterface, ArrayAccess
     * defaultValue  参数默认值。
     * valueRange  参数取值范围。
     * description  参数描述。
+    * isModifiable  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class DbParameter implements ModelInterface, ArrayAccess
             'dataType' => 'setDataType',
             'defaultValue' => 'setDefaultValue',
             'valueRange' => 'setValueRange',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'isModifiable' => 'setIsModifiable'
     ];
 
     /**
@@ -118,6 +126,7 @@ class DbParameter implements ModelInterface, ArrayAccess
     * defaultValue  参数默认值。
     * valueRange  参数取值范围。
     * description  参数描述。
+    * isModifiable  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class DbParameter implements ModelInterface, ArrayAccess
             'dataType' => 'getDataType',
             'defaultValue' => 'getDefaultValue',
             'valueRange' => 'getValueRange',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'isModifiable' => 'getIsModifiable'
     ];
 
     /**
@@ -192,6 +202,7 @@ class DbParameter implements ModelInterface, ArrayAccess
         $this->container['defaultValue'] = isset($data['defaultValue']) ? $data['defaultValue'] : null;
         $this->container['valueRange'] = isset($data['valueRange']) ? $data['valueRange'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['isModifiable'] = isset($data['isModifiable']) ? $data['isModifiable'] : null;
     }
 
     /**
@@ -363,6 +374,30 @@ class DbParameter implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets isModifiable
+    *  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **取值范围**：  不涉及。
+    *
+    * @return string|null
+    */
+    public function getIsModifiable()
+    {
+        return $this->container['isModifiable'];
+    }
+
+    /**
+    * Sets isModifiable
+    *
+    * @param string|null $isModifiable **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **取值范围**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setIsModifiable($isModifiable)
+    {
+        $this->container['isModifiable'] = $isModifiable;
         return $this;
     }
 

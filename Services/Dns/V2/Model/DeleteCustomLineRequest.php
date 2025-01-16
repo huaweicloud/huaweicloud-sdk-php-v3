@@ -20,7 +20,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * lineId  解析线路ID。
+    * lineId  自定义线路id
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * lineId  解析线路ID。
+    * lineId  自定义线路id
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * lineId  解析线路ID。
+    * lineId  自定义线路id
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * lineId  解析线路ID。
+    * lineId  自定义线路id
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * lineId  解析线路ID。
+    * lineId  自定义线路id
     *
     * @var string[]
     */
@@ -161,6 +161,9 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
         if ($this->container['lineId'] === null) {
             $invalidProperties[] = "'lineId' can't be null";
         }
+            if (!preg_match("/[0-9a-zA-Z_]{1,50}/", $this->container['lineId'])) {
+                $invalidProperties[] = "invalid value for 'lineId', must be conform to the pattern /[0-9a-zA-Z_]{1,50}/.";
+            }
         return $invalidProperties;
     }
 
@@ -177,7 +180,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets lineId
-    *  解析线路ID。
+    *  自定义线路id
     *
     * @return string
     */
@@ -189,7 +192,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets lineId
     *
-    * @param string $lineId 解析线路ID。
+    * @param string $lineId 自定义线路id
     *
     * @return $this
     */

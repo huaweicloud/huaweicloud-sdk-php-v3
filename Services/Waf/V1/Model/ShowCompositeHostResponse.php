@@ -40,6 +40,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -62,7 +63,8 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
             'description' => 'string',
             'exclusiveIp' => 'bool',
             'region' => 'string',
-            'server' => '\HuaweiCloud\SDK\Waf\V1\Model\WafServer[]'
+            'server' => '\HuaweiCloud\SDK\Waf\V1\Model\WafServer[]',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -86,6 +88,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -108,7 +111,8 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
         'description' => null,
         'exclusiveIp' => null,
         'region' => null,
-        'server' => null
+        'server' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -153,6 +157,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -175,7 +180,8 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
             'description' => 'description',
             'exclusiveIp' => 'exclusive_ip',
             'region' => 'region',
-            'server' => 'server'
+            'server' => 'server',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -199,6 +205,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -221,7 +228,8 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'exclusiveIp' => 'setExclusiveIp',
             'region' => 'setRegion',
-            'server' => 'setServer'
+            'server' => 'setServer',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -245,6 +253,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -267,7 +276,8 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'exclusiveIp' => 'getExclusiveIp',
             'region' => 'getRegion',
-            'server' => 'getServer'
+            'server' => 'getServer',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -347,6 +357,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
         $this->container['exclusiveIp'] = isset($data['exclusiveIp']) ? $data['exclusiveIp'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['server'] = isset($data['server']) ? $data['server'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -824,6 +835,30 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     public function setServer($server)
     {
         $this->container['server'] = $server;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

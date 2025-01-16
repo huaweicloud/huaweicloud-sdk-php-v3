@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Coc\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateCustomLines implements ModelInterface, ArrayAccess
+class ListPrrTemplateRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,38 @@ class CreateCustomLines implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateCustomLines';
+    protected static $openAPIModelName = 'ListPrrTemplateRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  解析线路名称。  长度限制为1-80个字符，只允许包含中文、字母、数字、'-'、'_'、'.'字符。  租户内，解析线路名称是唯一的。
-    * ipSegments  IP地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。  最多支持50个。
-    * description  自定义线路的描述信息。长度不超过255个字符。  默认值为空。
+    * name  名称
+    * applicationType  应用类型 core: 核心应用 non-core: 非核心应用
+    * offset  分页参数
+    * limit  每页显示的条目数量
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'ipSegments' => 'string[]',
-            'description' => 'string'
+            'applicationType' => 'string',
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  解析线路名称。  长度限制为1-80个字符，只允许包含中文、字母、数字、'-'、'_'、'.'字符。  租户内，解析线路名称是唯一的。
-    * ipSegments  IP地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。  最多支持50个。
-    * description  自定义线路的描述信息。长度不超过255个字符。  默认值为空。
+    * name  名称
+    * applicationType  应用类型 core: 核心应用 non-core: 非核心应用
+    * offset  分页参数
+    * limit  每页显示的条目数量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'ipSegments' => null,
-        'description' => null
+        'applicationType' => null,
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -69,44 +73,50 @@ class CreateCustomLines implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  解析线路名称。  长度限制为1-80个字符，只允许包含中文、字母、数字、'-'、'_'、'.'字符。  租户内，解析线路名称是唯一的。
-    * ipSegments  IP地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。  最多支持50个。
-    * description  自定义线路的描述信息。长度不超过255个字符。  默认值为空。
+    * name  名称
+    * applicationType  应用类型 core: 核心应用 non-core: 非核心应用
+    * offset  分页参数
+    * limit  每页显示的条目数量
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'ipSegments' => 'ip_segments',
-            'description' => 'description'
+            'applicationType' => 'application_type',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  解析线路名称。  长度限制为1-80个字符，只允许包含中文、字母、数字、'-'、'_'、'.'字符。  租户内，解析线路名称是唯一的。
-    * ipSegments  IP地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。  最多支持50个。
-    * description  自定义线路的描述信息。长度不超过255个字符。  默认值为空。
+    * name  名称
+    * applicationType  应用类型 core: 核心应用 non-core: 非核心应用
+    * offset  分页参数
+    * limit  每页显示的条目数量
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'ipSegments' => 'setIpSegments',
-            'description' => 'setDescription'
+            'applicationType' => 'setApplicationType',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  解析线路名称。  长度限制为1-80个字符，只允许包含中文、字母、数字、'-'、'_'、'.'字符。  租户内，解析线路名称是唯一的。
-    * ipSegments  IP地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。  最多支持50个。
-    * description  自定义线路的描述信息。长度不超过255个字符。  默认值为空。
+    * name  名称
+    * applicationType  应用类型 core: 核心应用 non-core: 非核心应用
+    * offset  分页参数
+    * limit  每页显示的条目数量
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'ipSegments' => 'getIpSegments',
-            'description' => 'getDescription'
+            'applicationType' => 'getApplicationType',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -149,7 +159,22 @@ class CreateCustomLines implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const APPLICATION_TYPE_CORE = 'core';
+    const APPLICATION_TYPE_NON_CORE = 'non-core';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getApplicationTypeAllowableValues()
+    {
+        return [
+            self::APPLICATION_TYPE_CORE,
+            self::APPLICATION_TYPE_NON_CORE,
+        ];
+    }
 
 
     /**
@@ -168,8 +193,9 @@ class CreateCustomLines implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['ipSegments'] = isset($data['ipSegments']) ? $data['ipSegments'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['applicationType'] = isset($data['applicationType']) ? $data['applicationType'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -180,12 +206,32 @@ class CreateCustomLines implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['ipSegments'] === null) {
-            $invalidProperties[] = "'ipSegments' can't be null";
-        }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getApplicationTypeAllowableValues();
+                if (!is_null($this->container['applicationType']) && !in_array($this->container['applicationType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'applicationType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 1000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1000000.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 1)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -202,9 +248,9 @@ class CreateCustomLines implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  解析线路名称。  长度限制为1-80个字符，只允许包含中文、字母、数字、'-'、'_'、'.'字符。  租户内，解析线路名称是唯一的。
+    *  名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -214,7 +260,7 @@ class CreateCustomLines implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 解析线路名称。  长度限制为1-80个字符，只允许包含中文、字母、数字、'-'、'_'、'.'字符。  租户内，解析线路名称是唯一的。
+    * @param string|null $name 名称
     *
     * @return $this
     */
@@ -225,50 +271,74 @@ class CreateCustomLines implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ipSegments
-    *  IP地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。  最多支持50个。
+    * Gets applicationType
+    *  应用类型 core: 核心应用 non-core: 非核心应用
     *
-    * @return string[]
+    * @return string|null
     */
-    public function getIpSegments()
+    public function getApplicationType()
     {
-        return $this->container['ipSegments'];
+        return $this->container['applicationType'];
     }
 
     /**
-    * Sets ipSegments
+    * Sets applicationType
     *
-    * @param string[] $ipSegments IP地址段。  以“-”分隔，小IP地址在前，大IP地址在后。IP段之间不能有交叉。当只有一个IP时，填写IP1-IP1。 目前只支持IPV4。  最多支持50个。
+    * @param string|null $applicationType 应用类型 core: 核心应用 non-core: 非核心应用
     *
     * @return $this
     */
-    public function setIpSegments($ipSegments)
+    public function setApplicationType($applicationType)
     {
-        $this->container['ipSegments'] = $ipSegments;
+        $this->container['applicationType'] = $applicationType;
         return $this;
     }
 
     /**
-    * Gets description
-    *  自定义线路的描述信息。长度不超过255个字符。  默认值为空。
+    * Gets offset
+    *  分页参数
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getDescription()
+    public function getOffset()
     {
-        return $this->container['description'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets description
+    * Sets offset
     *
-    * @param string|null $description 自定义线路的描述信息。长度不超过255个字符。  默认值为空。
+    * @param int|null $offset 分页参数
     *
     * @return $this
     */
-    public function setDescription($description)
+    public function setOffset($offset)
     {
-        $this->container['description'] = $description;
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页显示的条目数量
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页显示的条目数量
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

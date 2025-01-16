@@ -20,15 +20,18 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  待查询的zone的类型。  取值范围：public  搜索模式默认为模糊搜索。  默认值为空。
+    * type  待查询的zone的类型。  取值范围：public 默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。  多个标签之间为“与”的关系。  关于资源标签，请参见添加资源标签。  搜索模式为精确搜索。如果资源标签值value是以&ast;开头时，则按照&ast;后面的值全模糊匹配。  默认值为空。
-    * name  zone名称。  搜索模式默认为模糊搜索。
+    * name  Zone名称。  搜索模式默认为模糊搜索。
+    * id  Zone ID。
     * status  资源状态。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * sortKey  查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    * sortDir  查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -39,22 +42,28 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'tags' => 'string',
             'name' => 'string',
+            'id' => 'string',
             'status' => 'string',
             'searchMode' => 'string',
+            'sortKey' => 'string',
+            'sortDir' => 'string',
             'enterpriseProjectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  待查询的zone的类型。  取值范围：public  搜索模式默认为模糊搜索。  默认值为空。
+    * type  待查询的zone的类型。  取值范围：public 默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。  多个标签之间为“与”的关系。  关于资源标签，请参见添加资源标签。  搜索模式为精确搜索。如果资源标签值value是以&ast;开头时，则按照&ast;后面的值全模糊匹配。  默认值为空。
-    * name  zone名称。  搜索模式默认为模糊搜索。
+    * name  Zone名称。  搜索模式默认为模糊搜索。
+    * id  Zone ID。
     * status  资源状态。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * sortKey  查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    * sortDir  查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -65,8 +74,11 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'tags' => null,
         'name' => null,
+        'id' => null,
         'status' => null,
         'searchMode' => null,
+        'sortKey' => null,
+        'sortDir' => null,
         'enterpriseProjectId' => null
     ];
 
@@ -93,15 +105,18 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  待查询的zone的类型。  取值范围：public  搜索模式默认为模糊搜索。  默认值为空。
+    * type  待查询的zone的类型。  取值范围：public 默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。  多个标签之间为“与”的关系。  关于资源标签，请参见添加资源标签。  搜索模式为精确搜索。如果资源标签值value是以&ast;开头时，则按照&ast;后面的值全模糊匹配。  默认值为空。
-    * name  zone名称。  搜索模式默认为模糊搜索。
+    * name  Zone名称。  搜索模式默认为模糊搜索。
+    * id  Zone ID。
     * status  资源状态。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * sortKey  查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    * sortDir  查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -112,22 +127,28 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'tags' => 'tags',
             'name' => 'name',
+            'id' => 'id',
             'status' => 'status',
             'searchMode' => 'search_mode',
+            'sortKey' => 'sort_key',
+            'sortDir' => 'sort_dir',
             'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  待查询的zone的类型。  取值范围：public  搜索模式默认为模糊搜索。  默认值为空。
+    * type  待查询的zone的类型。  取值范围：public 默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。  多个标签之间为“与”的关系。  关于资源标签，请参见添加资源标签。  搜索模式为精确搜索。如果资源标签值value是以&ast;开头时，则按照&ast;后面的值全模糊匹配。  默认值为空。
-    * name  zone名称。  搜索模式默认为模糊搜索。
+    * name  Zone名称。  搜索模式默认为模糊搜索。
+    * id  Zone ID。
     * status  资源状态。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * sortKey  查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    * sortDir  查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -138,22 +159,28 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'tags' => 'setTags',
             'name' => 'setName',
+            'id' => 'setId',
             'status' => 'setStatus',
             'searchMode' => 'setSearchMode',
+            'sortKey' => 'setSortKey',
+            'sortDir' => 'setSortDir',
             'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  待查询的zone的类型。  取值范围：public  搜索模式默认为模糊搜索。  默认值为空。
+    * type  待查询的zone的类型。  取值范围：public 默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。  多个标签之间为“与”的关系。  关于资源标签，请参见添加资源标签。  搜索模式为精确搜索。如果资源标签值value是以&ast;开头时，则按照&ast;后面的值全模糊匹配。  默认值为空。
-    * name  zone名称。  搜索模式默认为模糊搜索。
+    * name  Zone名称。  搜索模式默认为模糊搜索。
+    * id  Zone ID。
     * status  资源状态。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * sortKey  查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    * sortDir  查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -164,8 +191,11 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'tags' => 'getTags',
             'name' => 'getName',
+            'id' => 'getId',
             'status' => 'getStatus',
             'searchMode' => 'getSearchMode',
+            'sortKey' => 'getSortKey',
+            'sortDir' => 'getSortDir',
             'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
@@ -233,8 +263,11 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['searchMode'] = isset($data['searchMode']) ? $data['searchMode'] : null;
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
+        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
@@ -262,7 +295,7 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  待查询的zone的类型。  取值范围：public  搜索模式默认为模糊搜索。  默认值为空。
+    *  待查询的zone的类型。  取值范围：public 默认值为空。
     *
     * @return string|null
     */
@@ -274,7 +307,7 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 待查询的zone的类型。  取值范围：public  搜索模式默认为模糊搜索。  默认值为空。
+    * @param string|null $type 待查询的zone的类型。  取值范围：public 默认值为空。
     *
     * @return $this
     */
@@ -382,7 +415,7 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  zone名称。  搜索模式默认为模糊搜索。
+    *  Zone名称。  搜索模式默认为模糊搜索。
     *
     * @return string|null
     */
@@ -394,13 +427,37 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name zone名称。  搜索模式默认为模糊搜索。
+    * @param string|null $name Zone名称。  搜索模式默认为模糊搜索。
     *
     * @return $this
     */
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  Zone ID。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id Zone ID。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 
@@ -453,8 +510,56 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets sortKey
+    *  查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    *
+    * @return string|null
+    */
+    public function getSortKey()
+    {
+        return $this->container['sortKey'];
+    }
+
+    /**
+    * Sets sortKey
+    *
+    * @param string|null $sortKey 查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+    *
+    * @return $this
+    */
+    public function setSortKey($sortKey)
+    {
+        $this->container['sortKey'] = $sortKey;
+        return $this;
+    }
+
+    /**
+    * Gets sortDir
+    *  查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    *
+    * @return string|null
+    */
+    public function getSortDir()
+    {
+        return $this->container['sortDir'];
+    }
+
+    /**
+    * Sets sortDir
+    *
+    * @param string|null $sortDir 查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    *
+    * @return $this
+    */
+    public function setSortDir($sortDir)
+    {
+        $this->container['sortDir'] = $sortDir;
+        return $this;
+    }
+
+    /**
     * Gets enterpriseProjectId
-    *  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    *  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @return string|null
     */
@@ -466,7 +571,7 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * @param string|null $enterpriseProjectId 域名关联的企业项目ID，长度不超过36个字符。
     *
     * @return $this
     */

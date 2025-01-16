@@ -25,7 +25,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     * kmsKeyId  加密版本凭据值的KMS主密钥ID。
     * secretName  凭据名称。
-    * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果你创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
+    * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     * kmsKeyId  加密版本凭据值的KMS主密钥ID。
     * secretName  凭据名称。
-    * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果你创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
+    * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     * kmsKeyId  加密版本凭据值的KMS主密钥ID。
     * secretName  凭据名称。
-    * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果你创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
+    * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     * kmsKeyId  加密版本凭据值的KMS主密钥ID。
     * secretName  凭据名称。
-    * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果你创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
+    * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     * kmsKeyId  加密版本凭据值的KMS主密钥ID。
     * secretName  凭据名称。
-    * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果你创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
+    * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
     *
     * @var string[]
     */
@@ -370,7 +370,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionStages
-    *  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果你创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
+    *  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
     *
     * @return string[]|null
     */
@@ -382,7 +382,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets versionStages
     *
-    * @param string[]|null $versionStages 凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果你创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
+    * @param string[]|null $versionStages 凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
     *
     * @return $this
     */

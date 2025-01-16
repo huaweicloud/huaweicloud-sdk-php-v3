@@ -23,7 +23,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
     * type  Record Set的类型。
-    * status  解析记录的状态。默认值为ENABLE。
+    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * line  解析线路ID
@@ -51,7 +51,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
     * type  Record Set的类型。
-    * status  解析记录的状态。默认值为ENABLE。
+    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * line  解析线路ID
@@ -100,7 +100,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
     * type  Record Set的类型。
-    * status  解析记录的状态。默认值为ENABLE。
+    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * line  解析线路ID
@@ -128,7 +128,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
     * type  Record Set的类型。
-    * status  解析记录的状态。默认值为ENABLE。
+    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * line  解析线路ID
@@ -156,7 +156,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
     * type  Record Set的类型。
-    * status  解析记录的状态。默认值为ENABLE。
+    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * line  解析线路ID
@@ -351,7 +351,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  解析记录的状态。默认值为ENABLE。
+    *  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     *
     * @return string|null
     */
@@ -363,7 +363,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 解析记录的状态。默认值为ENABLE。
+    * @param string|null $status 解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
     *
     * @return $this
     */

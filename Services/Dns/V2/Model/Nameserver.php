@@ -16,7 +16,7 @@ class Nameserver implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'nameserver';
+    protected static $openAPIModelName = 'Nameserver';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

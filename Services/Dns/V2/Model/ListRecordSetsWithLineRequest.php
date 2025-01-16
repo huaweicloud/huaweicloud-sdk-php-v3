@@ -24,14 +24,15 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
+    * zoneId  zone的ID。
     * lineId  解析线路ID。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。  取值范围：A、CNAME、MX、AAAA、TXT、SRV、NS、CAA
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的Record Set的id包含此id。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     * healthCheckId  健康检查ID。  搜索模式默认为模糊搜索。  默认值为空。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
@@ -43,6 +44,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
             'marker' => 'string',
             'limit' => 'int',
             'offset' => 'int',
+            'zoneId' => 'string',
             'lineId' => 'string',
             'tags' => 'string',
             'status' => 'string',
@@ -62,14 +64,15 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
+    * zoneId  zone的ID。
     * lineId  解析线路ID。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。  取值范围：A、CNAME、MX、AAAA、TXT、SRV、NS、CAA
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的Record Set的id包含此id。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     * healthCheckId  健康检查ID。  搜索模式默认为模糊搜索。  默认值为空。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
@@ -81,6 +84,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
         'marker' => null,
         'limit' => 'int32',
         'offset' => 'int32',
+        'zoneId' => null,
         'lineId' => null,
         'tags' => null,
         'status' => null,
@@ -121,14 +125,15 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
+    * zoneId  zone的ID。
     * lineId  解析线路ID。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。  取值范围：A、CNAME、MX、AAAA、TXT、SRV、NS、CAA
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的Record Set的id包含此id。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     * healthCheckId  健康检查ID。  搜索模式默认为模糊搜索。  默认值为空。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
@@ -140,6 +145,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
             'marker' => 'marker',
             'limit' => 'limit',
             'offset' => 'offset',
+            'zoneId' => 'zone_id',
             'lineId' => 'line_id',
             'tags' => 'tags',
             'status' => 'status',
@@ -159,14 +165,15 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
+    * zoneId  zone的ID。
     * lineId  解析线路ID。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。  取值范围：A、CNAME、MX、AAAA、TXT、SRV、NS、CAA
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的Record Set的id包含此id。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     * healthCheckId  健康检查ID。  搜索模式默认为模糊搜索。  默认值为空。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
@@ -178,6 +185,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
             'marker' => 'setMarker',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
+            'zoneId' => 'setZoneId',
             'lineId' => 'setLineId',
             'tags' => 'setTags',
             'status' => 'setStatus',
@@ -197,14 +205,15 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
+    * zoneId  zone的ID。
     * lineId  解析线路ID。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。  取值范围：A、CNAME、MX、AAAA、TXT、SRV、NS、CAA
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的Record Set的id包含此id。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     * healthCheckId  健康检查ID。  搜索模式默认为模糊搜索。  默认值为空。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
@@ -216,6 +225,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
             'marker' => 'getMarker',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
+            'zoneId' => 'getZoneId',
             'lineId' => 'getLineId',
             'tags' => 'getTags',
             'status' => 'getStatus',
@@ -291,6 +301,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['zoneId'] = isset($data['zoneId']) ? $data['zoneId'] : null;
         $this->container['lineId'] = isset($data['lineId']) ? $data['lineId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -312,6 +323,36 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['marker']) && !preg_match("/[0-9a-zA-Z-]{0,32}/", $this->container['marker'])) {
+                $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /[0-9a-zA-Z-]{0,32}/.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 500)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 500.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['zoneId']) && !preg_match("/[0-9a-zA-Z-]{0,32}/", $this->container['zoneId'])) {
+                $invalidProperties[] = "invalid value for 'zoneId', must be conform to the pattern /[0-9a-zA-Z-]{0,32}/.";
+            }
+            if (!is_null($this->container['type']) && !preg_match("/|A|AAAA|MX|CNAME|TXT|NS|SRV|CAA/", $this->container['type'])) {
+                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /|A|AAAA|MX|CNAME|TXT|NS|SRV|CAA/.";
+            }
+            if (!is_null($this->container['records']) && (mb_strlen($this->container['records']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'records', the character length must be smaller than or equal to 4096.";
+            }
+            if (!is_null($this->container['sortKey']) && !preg_match("/|name|type|view_name|created_at|updated_at/", $this->container['sortKey'])) {
+                $invalidProperties[] = "invalid value for 'sortKey', must be conform to the pattern /|name|type|view_name|created_at|updated_at/.";
+            }
+            if (!is_null($this->container['sortDir']) && !preg_match("/|asc|desc/", $this->container['sortDir'])) {
+                $invalidProperties[] = "invalid value for 'sortDir', must be conform to the pattern /|asc|desc/.";
+            }
+            if (!is_null($this->container['searchMode']) && !preg_match("/|like|equal/", $this->container['searchMode'])) {
+                $invalidProperties[] = "invalid value for 'searchMode', must be conform to the pattern /|like|equal/.";
+            }
         return $invalidProperties;
     }
 
@@ -419,6 +460,30 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets zoneId
+    *  zone的ID。
+    *
+    * @return string|null
+    */
+    public function getZoneId()
+    {
+        return $this->container['zoneId'];
+    }
+
+    /**
+    * Sets zoneId
+    *
+    * @param string|null $zoneId zone的ID。
+    *
+    * @return $this
+    */
+    public function setZoneId($zoneId)
+    {
+        $this->container['zoneId'] = $zoneId;
         return $this;
     }
 
@@ -544,7 +609,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    *  待查询的Record Set的id包含此id。
     *
     * @return string|null
     */
@@ -556,7 +621,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    * @param string|null $id 待查询的Record Set的id包含此id。
     *
     * @return $this
     */
@@ -592,7 +657,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    *  查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     *
     * @return string|null
     */
@@ -604,7 +669,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    * @param string|null $sortKey 查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     *
     * @return $this
     */

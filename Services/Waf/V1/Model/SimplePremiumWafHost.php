@@ -31,6 +31,7 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostid  域名id，和id的值是一样的，属于冗余字段
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
             'protectStatus' => 'int',
             'accessStatus' => 'int',
             'webTag' => 'string',
-            'hostid' => 'string'
+            'hostid' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostid  域名id，和id的值是一样的，属于冗余字段
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
         'protectStatus' => null,
         'accessStatus' => null,
         'webTag' => null,
-        'hostid' => null
+        'hostid' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostid  域名id，和id的值是一样的，属于冗余字段
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
             'protectStatus' => 'protect_status',
             'accessStatus' => 'access_status',
             'webTag' => 'web_tag',
-            'hostid' => 'hostid'
+            'hostid' => 'hostid',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -142,6 +148,7 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostid  域名id，和id的值是一样的，属于冗余字段
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
             'protectStatus' => 'setProtectStatus',
             'accessStatus' => 'setAccessStatus',
             'webTag' => 'setWebTag',
-            'hostid' => 'setHostid'
+            'hostid' => 'setHostid',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -172,6 +180,7 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostid  域名id，和id的值是一样的，属于冗余字段
+    * enterpriseProjectId  企业项目id
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
             'protectStatus' => 'getProtectStatus',
             'accessStatus' => 'getAccessStatus',
             'webTag' => 'getWebTag',
-            'hostid' => 'getHostid'
+            'hostid' => 'getHostid',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -258,6 +268,7 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
         $this->container['accessStatus'] = isset($data['accessStatus']) ? $data['accessStatus'] : null;
         $this->container['webTag'] = isset($data['webTag']) ? $data['webTag'] : null;
         $this->container['hostid'] = isset($data['hostid']) ? $data['hostid'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -543,6 +554,30 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     public function setHostid($hostid)
     {
         $this->container['hostid'] = $hostid;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

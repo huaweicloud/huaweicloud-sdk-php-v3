@@ -24,7 +24,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。 - url中不能存在中文字符，若存在，中文需要进行utf8编码。
     * side  - front：行驶证主页  - back：行驶证副页  - double_side：行驶证双页信息  > 说明： 如果参数值为空或无该参数，系统默认识别主页，建议填写，准确率更高。
     * returnIssuingAuthority  是否返回发证机关的开关，可选值包括： - true：返回发证机关 - false：不返回发证机关  > 说明： - 如果无该参数，系统默认不返回发证机关。如果输入参数不是Boolean类型，则会报非法参数错误。
-    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * returnTextLocation  识别到的文字块的区域位置信息。取值范围：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * recognizeElectronicLicense  是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
             'url' => 'string',
             'side' => 'string',
             'returnIssuingAuthority' => 'bool',
-            'returnTextLocation' => 'bool'
+            'returnTextLocation' => 'bool',
+            'recognizeElectronicLicense' => 'bool'
     ];
 
     /**
@@ -42,7 +44,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。 - url中不能存在中文字符，若存在，中文需要进行utf8编码。
     * side  - front：行驶证主页  - back：行驶证副页  - double_side：行驶证双页信息  > 说明： 如果参数值为空或无该参数，系统默认识别主页，建议填写，准确率更高。
     * returnIssuingAuthority  是否返回发证机关的开关，可选值包括： - true：返回发证机关 - false：不返回发证机关  > 说明： - 如果无该参数，系统默认不返回发证机关。如果输入参数不是Boolean类型，则会报非法参数错误。
-    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * returnTextLocation  识别到的文字块的区域位置信息。取值范围：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * recognizeElectronicLicense  是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
         'url' => null,
         'side' => null,
         'returnIssuingAuthority' => null,
-        'returnTextLocation' => null
+        'returnTextLocation' => null,
+        'recognizeElectronicLicense' => null
     ];
 
     /**
@@ -81,7 +85,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。 - url中不能存在中文字符，若存在，中文需要进行utf8编码。
     * side  - front：行驶证主页  - back：行驶证副页  - double_side：行驶证双页信息  > 说明： 如果参数值为空或无该参数，系统默认识别主页，建议填写，准确率更高。
     * returnIssuingAuthority  是否返回发证机关的开关，可选值包括： - true：返回发证机关 - false：不返回发证机关  > 说明： - 如果无该参数，系统默认不返回发证机关。如果输入参数不是Boolean类型，则会报非法参数错误。
-    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * returnTextLocation  识别到的文字块的区域位置信息。取值范围：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * recognizeElectronicLicense  是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
             'url' => 'url',
             'side' => 'side',
             'returnIssuingAuthority' => 'return_issuing_authority',
-            'returnTextLocation' => 'return_text_location'
+            'returnTextLocation' => 'return_text_location',
+            'recognizeElectronicLicense' => 'recognize_electronic_license'
     ];
 
     /**
@@ -99,7 +105,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。 - url中不能存在中文字符，若存在，中文需要进行utf8编码。
     * side  - front：行驶证主页  - back：行驶证副页  - double_side：行驶证双页信息  > 说明： 如果参数值为空或无该参数，系统默认识别主页，建议填写，准确率更高。
     * returnIssuingAuthority  是否返回发证机关的开关，可选值包括： - true：返回发证机关 - false：不返回发证机关  > 说明： - 如果无该参数，系统默认不返回发证机关。如果输入参数不是Boolean类型，则会报非法参数错误。
-    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * returnTextLocation  识别到的文字块的区域位置信息。取值范围：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * recognizeElectronicLicense  是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
             'url' => 'setUrl',
             'side' => 'setSide',
             'returnIssuingAuthority' => 'setReturnIssuingAuthority',
-            'returnTextLocation' => 'setReturnTextLocation'
+            'returnTextLocation' => 'setReturnTextLocation',
+            'recognizeElectronicLicense' => 'setRecognizeElectronicLicense'
     ];
 
     /**
@@ -117,7 +125,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。 - url中不能存在中文字符，若存在，中文需要进行utf8编码。
     * side  - front：行驶证主页  - back：行驶证副页  - double_side：行驶证双页信息  > 说明： 如果参数值为空或无该参数，系统默认识别主页，建议填写，准确率更高。
     * returnIssuingAuthority  是否返回发证机关的开关，可选值包括： - true：返回发证机关 - false：不返回发证机关  > 说明： - 如果无该参数，系统默认不返回发证机关。如果输入参数不是Boolean类型，则会报非法参数错误。
-    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * returnTextLocation  识别到的文字块的区域位置信息。取值范围：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * recognizeElectronicLicense  是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
             'url' => 'getUrl',
             'side' => 'getSide',
             'returnIssuingAuthority' => 'getReturnIssuingAuthority',
-            'returnTextLocation' => 'getReturnTextLocation'
+            'returnTextLocation' => 'getReturnTextLocation',
+            'recognizeElectronicLicense' => 'getRecognizeElectronicLicense'
     ];
 
     /**
@@ -192,6 +202,7 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
         $this->container['side'] = isset($data['side']) ? $data['side'] : null;
         $this->container['returnIssuingAuthority'] = isset($data['returnIssuingAuthority']) ? $data['returnIssuingAuthority'] : null;
         $this->container['returnTextLocation'] = isset($data['returnTextLocation']) ? $data['returnTextLocation'] : null;
+        $this->container['recognizeElectronicLicense'] = isset($data['recognizeElectronicLicense']) ? $data['recognizeElectronicLicense'] : null;
     }
 
     /**
@@ -314,7 +325,7 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets returnTextLocation
-    *  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    *  识别到的文字块的区域位置信息。取值范围：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @return bool|null
     */
@@ -326,13 +337,37 @@ class VehicleLicenseRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets returnTextLocation
     *
-    * @param bool|null $returnTextLocation 识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * @param bool|null $returnTextLocation 识别到的文字块的区域位置信息。取值范围：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @return $this
     */
     public function setReturnTextLocation($returnTextLocation)
     {
         $this->container['returnTextLocation'] = $returnTextLocation;
+        return $this;
+    }
+
+    /**
+    * Gets recognizeElectronicLicense
+    *  是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
+    *
+    * @return bool|null
+    */
+    public function getRecognizeElectronicLicense()
+    {
+        return $this->container['recognizeElectronicLicense'];
+    }
+
+    /**
+    * Sets recognizeElectronicLicense
+    *
+    * @param bool|null $recognizeElectronicLicense 是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
+    *
+    * @return $this
+    */
+    public function setRecognizeElectronicLicense($recognizeElectronicLicense)
+    {
+        $this->container['recognizeElectronicLicense'] = $recognizeElectronicLicense;
         return $this;
     }
 

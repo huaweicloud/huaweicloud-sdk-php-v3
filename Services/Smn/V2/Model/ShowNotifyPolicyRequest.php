@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Smn\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
+class ShowNotifyPolicyRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,26 @@ class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdateLineGroupsBody';
+    protected static $openAPIModelName = 'ShowNotifyPolicyRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
-    * description  线路分组的描述信息。长度不超过255个字符。默认值为空。
-    * lines  线路列表。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string',
-            'description' => 'string',
-            'lines' => 'string[]'
+            'topicUrn' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
-    * description  线路分组的描述信息。长度不超过255个字符。默认值为空。
-    * lines  线路列表。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'name' => null,
-        'description' => null,
-        'lines' => null
+        'topicUrn' => null
     ];
 
     /**
@@ -69,44 +61,32 @@ class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
-    * description  线路分组的描述信息。长度不超过255个字符。默认值为空。
-    * lines  线路列表。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'name' => 'name',
-            'description' => 'description',
-            'lines' => 'lines'
+            'topicUrn' => 'topic_urn'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
-    * description  线路分组的描述信息。长度不超过255个字符。默认值为空。
-    * lines  线路列表。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
     *
     * @var string[]
     */
     protected static $setters = [
-            'name' => 'setName',
-            'description' => 'setDescription',
-            'lines' => 'setLines'
+            'topicUrn' => 'setTopicUrn'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
-    * description  线路分组的描述信息。长度不超过255个字符。默认值为空。
-    * lines  线路列表。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
     *
     * @var string[]
     */
     protected static $getters = [
-            'name' => 'getName',
-            'description' => 'getDescription',
-            'lines' => 'getLines'
+            'topicUrn' => 'getTopicUrn'
     ];
 
     /**
@@ -167,9 +147,7 @@ class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['lines'] = isset($data['lines']) ? $data['lines'] : null;
+        $this->container['topicUrn'] = isset($data['topicUrn']) ? $data['topicUrn'] : null;
     }
 
     /**
@@ -180,11 +158,8 @@ class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['lines'] === null) {
-            $invalidProperties[] = "'lines' can't be null";
+        if ($this->container['topicUrn'] === null) {
+            $invalidProperties[] = "'topicUrn' can't be null";
         }
         return $invalidProperties;
     }
@@ -201,74 +176,26 @@ class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
-    *  线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
+    * Gets topicUrn
+    *  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
     *
     * @return string
     */
-    public function getName()
+    public function getTopicUrn()
     {
-        return $this->container['name'];
+        return $this->container['topicUrn'];
     }
 
     /**
-    * Sets name
+    * Sets topicUrn
     *
-    * @param string $name 线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
+    * @param string $topicUrn Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
     *
     * @return $this
     */
-    public function setName($name)
+    public function setTopicUrn($topicUrn)
     {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
-    * Gets description
-    *  线路分组的描述信息。长度不超过255个字符。默认值为空。
-    *
-    * @return string|null
-    */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-    * Sets description
-    *
-    * @param string|null $description 线路分组的描述信息。长度不超过255个字符。默认值为空。
-    *
-    * @return $this
-    */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-        return $this;
-    }
-
-    /**
-    * Gets lines
-    *  线路列表。
-    *
-    * @return string[]
-    */
-    public function getLines()
-    {
-        return $this->container['lines'];
-    }
-
-    /**
-    * Sets lines
-    *
-    * @param string[] $lines 线路列表。
-    *
-    * @return $this
-    */
-    public function setLines($lines)
-    {
-        $this->container['lines'] = $lines;
+        $this->container['topicUrn'] = $topicUrn;
         return $this;
     }
 

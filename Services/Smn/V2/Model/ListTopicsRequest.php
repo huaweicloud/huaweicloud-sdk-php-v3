@@ -22,7 +22,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
-    * enterpriseProjectId  企业项目id，默认企业项目id为0。
+    * enterpriseProjectId  企业项目id。
     * name  检索的主题名称，完全匹配。
     * fuzzyName  检索的主题名称，模糊匹配。
     * topicId  检索的主题ID，完全匹配。
@@ -44,7 +44,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
-    * enterpriseProjectId  企业项目id，默认企业项目id为0。
+    * enterpriseProjectId  企业项目id。
     * name  检索的主题名称，完全匹配。
     * fuzzyName  检索的主题名称，模糊匹配。
     * topicId  检索的主题ID，完全匹配。
@@ -87,7 +87,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
-    * enterpriseProjectId  企业项目id，默认企业项目id为0。
+    * enterpriseProjectId  企业项目id。
     * name  检索的主题名称，完全匹配。
     * fuzzyName  检索的主题名称，模糊匹配。
     * topicId  检索的主题ID，完全匹配。
@@ -109,7 +109,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
-    * enterpriseProjectId  企业项目id，默认企业项目id为0。
+    * enterpriseProjectId  企业项目id。
     * name  检索的主题名称，完全匹配。
     * fuzzyName  检索的主题名称，模糊匹配。
     * topicId  检索的主题ID，完全匹配。
@@ -131,7 +131,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
-    * enterpriseProjectId  企业项目id，默认企业项目id为0。
+    * enterpriseProjectId  企业项目id。
     * name  检索的主题名称，完全匹配。
     * fuzzyName  检索的主题名称，模糊匹配。
     * topicId  检索的主题ID，完全匹配。
@@ -291,7 +291,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目id，默认企业项目id为0。
+    *  企业项目id。
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目id，默认企业项目id为0。
+    * @param string|null $enterpriseProjectId 企业项目id。
     *
     * @return $this
     */

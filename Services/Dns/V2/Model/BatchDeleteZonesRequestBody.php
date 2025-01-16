@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
+class BatchDeleteZonesRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SetRecordSetsStatusReq';
+    protected static $openAPIModelName = 'BatchDeleteZonesRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
+    * zoneType  待删除zone类型，当前仅支持 public 或 private。
+    * zoneIds  待删除Zone ID列表。 最多支持50个。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'status' => 'string'
+            'zoneType' => 'string',
+            'zoneIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
+    * zoneType  待删除zone类型，当前仅支持 public 或 private。
+    * zoneIds  待删除Zone ID列表。 最多支持50个。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'status' => null
+        'zoneType' => null,
+        'zoneIds' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
+    * zoneType  待删除zone类型，当前仅支持 public 或 private。
+    * zoneIds  待删除Zone ID列表。 最多支持50个。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'status' => 'status'
+            'zoneType' => 'zone_type',
+            'zoneIds' => 'zone_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
+    * zoneType  待删除zone类型，当前仅支持 public 或 private。
+    * zoneIds  待删除Zone ID列表。 最多支持50个。
     *
     * @var string[]
     */
     protected static $setters = [
-            'status' => 'setStatus'
+            'zoneType' => 'setZoneType',
+            'zoneIds' => 'setZoneIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
+    * zoneType  待删除zone类型，当前仅支持 public 或 private。
+    * zoneIds  待删除Zone ID列表。 最多支持50个。
     *
     * @var string[]
     */
     protected static $getters = [
-            'status' => 'getStatus'
+            'zoneType' => 'getZoneType',
+            'zoneIds' => 'getZoneIds'
     ];
 
     /**
@@ -147,7 +157,8 @@ class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['zoneType'] = isset($data['zoneType']) ? $data['zoneType'] : null;
+        $this->container['zoneIds'] = isset($data['zoneIds']) ? $data['zoneIds'] : null;
     }
 
     /**
@@ -158,8 +169,14 @@ class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
+        if ($this->container['zoneType'] === null) {
+            $invalidProperties[] = "'zoneType' can't be null";
+        }
+            if (!preg_match("/public|private/", $this->container['zoneType'])) {
+                $invalidProperties[] = "invalid value for 'zoneType', must be conform to the pattern /public|private/.";
+            }
+        if ($this->container['zoneIds'] === null) {
+            $invalidProperties[] = "'zoneIds' can't be null";
         }
         return $invalidProperties;
     }
@@ -176,26 +193,50 @@ class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets status
-    *  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
+    * Gets zoneType
+    *  待删除zone类型，当前仅支持 public 或 private。
     *
     * @return string
     */
-    public function getStatus()
+    public function getZoneType()
     {
-        return $this->container['status'];
+        return $this->container['zoneType'];
     }
 
     /**
-    * Sets status
+    * Sets zoneType
     *
-    * @param string $status 解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
+    * @param string $zoneType 待删除zone类型，当前仅支持 public 或 private。
     *
     * @return $this
     */
-    public function setStatus($status)
+    public function setZoneType($zoneType)
     {
-        $this->container['status'] = $status;
+        $this->container['zoneType'] = $zoneType;
+        return $this;
+    }
+
+    /**
+    * Gets zoneIds
+    *  待删除Zone ID列表。 最多支持50个。
+    *
+    * @return string[]
+    */
+    public function getZoneIds()
+    {
+        return $this->container['zoneIds'];
+    }
+
+    /**
+    * Sets zoneIds
+    *
+    * @param string[] $zoneIds 待删除Zone ID列表。 最多支持50个。
+    *
+    * @return $this
+    */
+    public function setZoneIds($zoneIds)
+    {
+        $this->container['zoneIds'] = $zoneIds;
         return $this;
     }
 

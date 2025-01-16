@@ -17837,6 +17837,92 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 表数据预览
+     *
+     * 表数据预览
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDataPreview($request)
+    {
+        return $this->showDataPreviewWithHttpInfo($request);
+    }
+
+    public function showDataPreviewWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/asset/entities/guid/{guid}/preview';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['dataConnectionId'] !== null) {
+            $queryParams['data_connection_id'] = $localVarParams['dataConnectionId'];
+        }
+        if ($localVarParams['dataType'] !== null) {
+            $queryParams['data_type'] = $localVarParams['dataType'];
+        }
+        if ($localVarParams['database'] !== null) {
+            $queryParams['database'] = $localVarParams['database'];
+        }
+        if ($localVarParams['schema'] !== null) {
+            $queryParams['schema'] = $localVarParams['schema'];
+        }
+        if ($localVarParams['table'] !== null) {
+            $queryParams['table'] = $localVarParams['table'];
+        }
+        if ($localVarParams['datasourceWorkspaceId'] !== null) {
+            $queryParams['datasource_workspace_id'] = $localVarParams['datasourceWorkspaceId'];
+        }
+        if ($localVarParams['partitionsCondition'] !== null) {
+            $queryParams['partitions_condition'] = $localVarParams['partitionsCondition'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['guid'] !== null) {
+            $pathParams['guid'] = $localVarParams['guid'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDataPreviewResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDataPreviewRequest');
+    }
+
+    /**
      * 资产信息
      *
      * 查询概要

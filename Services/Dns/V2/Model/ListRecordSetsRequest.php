@@ -29,9 +29,9 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的Record Set的id包含此id。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     *
     * @var string[]
@@ -63,9 +63,9 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的Record Set的id包含此id。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     *
     * @var string[]
@@ -118,9 +118,9 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的Record Set的id包含此id。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     *
     * @var string[]
@@ -152,9 +152,9 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的Record Set的id包含此id。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     *
     * @var string[]
@@ -186,9 +186,9 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的Record Set的id包含此id。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     *
     * @var string[]
@@ -522,7 +522,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    *  待查询的Record Set的id包含此id。
     *
     * @return string|null
     */
@@ -534,7 +534,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+    * @param string|null $id 待查询的Record Set的id包含此id。
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    *  查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     *
     * @return string|null
     */
@@ -582,7 +582,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+    * @param string|null $sortKey 查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     *
     * @return $this
     */

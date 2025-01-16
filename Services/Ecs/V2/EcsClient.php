@@ -2234,6 +2234,65 @@ class EcsClient extends Client
     }
 
     /**
+     * 查询可用区列表
+     *
+     * 查询可用区列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listServerAzInfo($request)
+    {
+        return $this->listServerAzInfoWithHttpInfo($request);
+    }
+
+    public function listServerAzInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/availability-zones';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServerAzInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServerAzInfoRequest');
+    }
+
+    /**
      * 查询弹性云服务器挂载磁盘列表详情信息
      *
      * 查询弹性云服务器挂载的磁盘信息。

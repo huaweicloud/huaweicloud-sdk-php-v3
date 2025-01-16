@@ -20,6 +20,7 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * type  行驶证类型：  - normal: 纸质行驶证  - electronic: 电子行驶证
     * number  号牌号码。
     * vehicleType  车辆类型。
     * name  所有人。
@@ -43,12 +44,16 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * codeNumber  条码号。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
     * energyType  能源类型。
+    * color  车身颜色。
+    * mandatoryScrappingDate  强制报废日期。
+    * status  状态。
     * front  front
     * back  back
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'type' => 'string',
             'number' => 'string',
             'vehicleType' => 'string',
             'name' => 'string',
@@ -72,12 +77,16 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'codeNumber' => 'string',
             'textLocation' => 'object',
             'energyType' => 'string',
+            'color' => 'string',
+            'mandatoryScrappingDate' => 'string',
+            'status' => 'string[]',
             'front' => '\HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseFront',
             'back' => '\HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseback'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * type  行驶证类型：  - normal: 纸质行驶证  - electronic: 电子行驶证
     * number  号牌号码。
     * vehicleType  车辆类型。
     * name  所有人。
@@ -101,12 +110,16 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * codeNumber  条码号。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
     * energyType  能源类型。
+    * color  车身颜色。
+    * mandatoryScrappingDate  强制报废日期。
+    * status  状态。
     * front  front
     * back  back
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'type' => null,
         'number' => null,
         'vehicleType' => null,
         'name' => null,
@@ -130,6 +143,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
         'codeNumber' => null,
         'textLocation' => null,
         'energyType' => null,
+        'color' => null,
+        'mandatoryScrappingDate' => null,
+        'status' => null,
         'front' => null,
         'back' => null
     ];
@@ -157,6 +173,7 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * type  行驶证类型：  - normal: 纸质行驶证  - electronic: 电子行驶证
     * number  号牌号码。
     * vehicleType  车辆类型。
     * name  所有人。
@@ -180,12 +197,16 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * codeNumber  条码号。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
     * energyType  能源类型。
+    * color  车身颜色。
+    * mandatoryScrappingDate  强制报废日期。
+    * status  状态。
     * front  front
     * back  back
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'type' => 'type',
             'number' => 'number',
             'vehicleType' => 'vehicle_type',
             'name' => 'name',
@@ -209,12 +230,16 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'codeNumber' => 'code_number',
             'textLocation' => 'text_location',
             'energyType' => 'energy_type',
+            'color' => 'color',
+            'mandatoryScrappingDate' => 'mandatory_scrapping_date',
+            'status' => 'status',
             'front' => 'front',
             'back' => 'back'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * type  行驶证类型：  - normal: 纸质行驶证  - electronic: 电子行驶证
     * number  号牌号码。
     * vehicleType  车辆类型。
     * name  所有人。
@@ -238,12 +263,16 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * codeNumber  条码号。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
     * energyType  能源类型。
+    * color  车身颜色。
+    * mandatoryScrappingDate  强制报废日期。
+    * status  状态。
     * front  front
     * back  back
     *
     * @var string[]
     */
     protected static $setters = [
+            'type' => 'setType',
             'number' => 'setNumber',
             'vehicleType' => 'setVehicleType',
             'name' => 'setName',
@@ -267,12 +296,16 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'codeNumber' => 'setCodeNumber',
             'textLocation' => 'setTextLocation',
             'energyType' => 'setEnergyType',
+            'color' => 'setColor',
+            'mandatoryScrappingDate' => 'setMandatoryScrappingDate',
+            'status' => 'setStatus',
             'front' => 'setFront',
             'back' => 'setBack'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * type  行驶证类型：  - normal: 纸质行驶证  - electronic: 电子行驶证
     * number  号牌号码。
     * vehicleType  车辆类型。
     * name  所有人。
@@ -296,12 +329,16 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * codeNumber  条码号。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
     * energyType  能源类型。
+    * color  车身颜色。
+    * mandatoryScrappingDate  强制报废日期。
+    * status  状态。
     * front  front
     * back  back
     *
     * @var string[]
     */
     protected static $getters = [
+            'type' => 'getType',
             'number' => 'getNumber',
             'vehicleType' => 'getVehicleType',
             'name' => 'getName',
@@ -325,6 +362,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'codeNumber' => 'getCodeNumber',
             'textLocation' => 'getTextLocation',
             'energyType' => 'getEnergyType',
+            'color' => 'getColor',
+            'mandatoryScrappingDate' => 'getMandatoryScrappingDate',
+            'status' => 'getStatus',
             'front' => 'getFront',
             'back' => 'getBack'
     ];
@@ -387,6 +427,7 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['number'] = isset($data['number']) ? $data['number'] : null;
         $this->container['vehicleType'] = isset($data['vehicleType']) ? $data['vehicleType'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -410,6 +451,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
         $this->container['codeNumber'] = isset($data['codeNumber']) ? $data['codeNumber'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
         $this->container['energyType'] = isset($data['energyType']) ? $data['energyType'] : null;
+        $this->container['color'] = isset($data['color']) ? $data['color'] : null;
+        $this->container['mandatoryScrappingDate'] = isset($data['mandatoryScrappingDate']) ? $data['mandatoryScrappingDate'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['front'] = isset($data['front']) ? $data['front'] : null;
         $this->container['back'] = isset($data['back']) ? $data['back'] : null;
     }
@@ -434,6 +478,30 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets type
+    *  行驶证类型：  - normal: 纸质行驶证  - electronic: 电子行驶证
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 行驶证类型：  - normal: 纸质行驶证  - electronic: 电子行驶证
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+        return $this;
     }
 
     /**
@@ -985,6 +1053,78 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     public function setEnergyType($energyType)
     {
         $this->container['energyType'] = $energyType;
+        return $this;
+    }
+
+    /**
+    * Gets color
+    *  车身颜色。
+    *
+    * @return string|null
+    */
+    public function getColor()
+    {
+        return $this->container['color'];
+    }
+
+    /**
+    * Sets color
+    *
+    * @param string|null $color 车身颜色。
+    *
+    * @return $this
+    */
+    public function setColor($color)
+    {
+        $this->container['color'] = $color;
+        return $this;
+    }
+
+    /**
+    * Gets mandatoryScrappingDate
+    *  强制报废日期。
+    *
+    * @return string|null
+    */
+    public function getMandatoryScrappingDate()
+    {
+        return $this->container['mandatoryScrappingDate'];
+    }
+
+    /**
+    * Sets mandatoryScrappingDate
+    *
+    * @param string|null $mandatoryScrappingDate 强制报废日期。
+    *
+    * @return $this
+    */
+    public function setMandatoryScrappingDate($mandatoryScrappingDate)
+    {
+        $this->container['mandatoryScrappingDate'] = $mandatoryScrappingDate;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  状态。
+    *
+    * @return string[]|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string[]|null $status 状态。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

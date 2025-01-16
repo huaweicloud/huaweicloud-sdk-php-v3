@@ -604,6 +604,71 @@ class SmnClient extends Client
     }
 
     /**
+     * 创建通知策略
+     *
+     * 创建通知策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createNotifyPolicy($request)
+    {
+        return $this->createNotifyPolicyWithHttpInfo($request);
+    }
+
+    public function createNotifyPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/notify-policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\CreateNotifyPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\CreateNotifyPolicyRequest');
+    }
+
+    /**
      * 添加资源标签
      *
      * 一个资源上最多有10个标签。此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
@@ -859,6 +924,71 @@ class SmnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Smn\V2\Model\DeleteMessageTemplateResponse',
             $requestType='\HuaweiCloud\SDK\Smn\V2\Model\DeleteMessageTemplateRequest');
+    }
+
+    /**
+     * 删除通知策略
+     *
+     * 删除通知策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteNotifyPolicy($request)
+    {
+        return $this->deleteNotifyPolicyWithHttpInfo($request);
+    }
+
+    public function deleteNotifyPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/notify-policy/{notify_policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['notifyPolicyId'] !== null) {
+            $pathParams['notify_policy_id'] = $localVarParams['notifyPolicyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\DeleteNotifyPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\DeleteNotifyPolicyRequest');
     }
 
     /**
@@ -2046,7 +2176,8 @@ class SmnClient extends Client
     /**
      * 消息发布
      *
-     * 将消息发送给Topic的所有订阅端点。当返回消息ID时，该消息已被保存并开始尝试将其推送给Topic的订阅者。三种消息发送方式
+     * 将消息发送给Topic的所有订阅端点。当返回消息ID时，该消息已被保存并开始尝试将其推送给Topic的订阅者。为确保您的消息能够成功推送到各个订阅者，请确保您的消息内容符合当地法律法规要求。
+     * 三种消息发送方式
      * 
      * message
      * 
@@ -2183,6 +2314,68 @@ class SmnClient extends Client
     }
 
     /**
+     * 查询通知策略
+     *
+     * 查询通知策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showNotifyPolicy($request)
+    {
+        return $this->showNotifyPolicyWithHttpInfo($request);
+    }
+
+    public function showNotifyPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/notify-policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\ShowNotifyPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\ShowNotifyPolicyRequest');
+    }
+
+    /**
      * 更新云日志
      *
      * 更新指定Topic绑定的云日志。
@@ -2313,6 +2506,74 @@ class SmnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Smn\V2\Model\UpdateMessageTemplateResponse',
             $requestType='\HuaweiCloud\SDK\Smn\V2\Model\UpdateMessageTemplateRequest');
+    }
+
+    /**
+     * 修改通知策略
+     *
+     * 修改通知策略，该接口仅支持全量修改，不支持部分修改。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateNotifyPolicy($request)
+    {
+        return $this->updateNotifyPolicyWithHttpInfo($request);
+    }
+
+    public function updateNotifyPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/notify-policy/{notify_policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['notifyPolicyId'] !== null) {
+            $pathParams['notify_policy_id'] = $localVarParams['notifyPolicyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\UpdateNotifyPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\UpdateNotifyPolicyRequest');
     }
 
     /**

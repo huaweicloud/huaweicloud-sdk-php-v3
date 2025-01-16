@@ -22,24 +22,28 @@ class ListStarRocksDbParametersRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  StarRocks实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * addTaskScenario  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
-            'xLanguage' => 'string'
+            'xLanguage' => 'string',
+            'addTaskScenario' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  StarRocks实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * addTaskScenario  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
-        'xLanguage' => null
+        'xLanguage' => null,
+        'addTaskScenario' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ListStarRocksDbParametersRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * instanceId  StarRocks实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * addTaskScenario  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
-            'xLanguage' => 'X-Language'
+            'xLanguage' => 'X-Language',
+            'addTaskScenario' => 'add_task_scenario'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  StarRocks实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * addTaskScenario  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
-            'xLanguage' => 'setXLanguage'
+            'xLanguage' => 'setXLanguage',
+            'addTaskScenario' => 'setAddTaskScenario'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  StarRocks实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * addTaskScenario  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
-            'xLanguage' => 'getXLanguage'
+            'xLanguage' => 'getXLanguage',
+            'addTaskScenario' => 'getAddTaskScenario'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ListStarRocksDbParametersRequest implements ModelInterface, ArrayAccess
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['addTaskScenario'] = isset($data['addTaskScenario']) ? $data['addTaskScenario'] : null;
     }
 
     /**
@@ -240,6 +251,30 @@ class ListStarRocksDbParametersRequest implements ModelInterface, ArrayAccess
     public function setXLanguage($xLanguage)
     {
         $this->container['xLanguage'] = $xLanguage;
+        return $this;
+    }
+
+    /**
+    * Gets addTaskScenario
+    *  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
+    *
+    * @return string|null
+    */
+    public function getAddTaskScenario()
+    {
+        return $this->container['addTaskScenario'];
+    }
+
+    /**
+    * Sets addTaskScenario
+    *
+    * @param string|null $addTaskScenario **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setAddTaskScenario($addTaskScenario)
+    {
+        $this->container['addTaskScenario'] = $addTaskScenario;
         return $this;
     }
 

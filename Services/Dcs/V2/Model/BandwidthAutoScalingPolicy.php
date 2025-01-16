@@ -285,10 +285,13 @@ class BandwidthAutoScalingPolicy implements ModelInterface, ArrayAccess
             if (($this->container['bandwidthUsageUpperThreshold'] < 50)) {
                 $invalidProperties[] = "invalid value for 'bandwidthUsageUpperThreshold', must be bigger than or equal to 50.";
             }
-            if (!is_null($this->container['scaleOutCooldown']) && ($this->container['scaleOutCooldown'] > 86400)) {
+        if ($this->container['scaleOutCooldown'] === null) {
+            $invalidProperties[] = "'scaleOutCooldown' can't be null";
+        }
+            if (($this->container['scaleOutCooldown'] > 86400)) {
                 $invalidProperties[] = "invalid value for 'scaleOutCooldown', must be smaller than or equal to 86400.";
             }
-            if (!is_null($this->container['scaleOutCooldown']) && ($this->container['scaleOutCooldown'] < 0)) {
+            if (($this->container['scaleOutCooldown'] < 0)) {
                 $invalidProperties[] = "invalid value for 'scaleOutCooldown', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['bandwidthUsageLowerThreshold']) && ($this->container['bandwidthUsageLowerThreshold'] > 30)) {
@@ -369,7 +372,7 @@ class BandwidthAutoScalingPolicy implements ModelInterface, ArrayAccess
     * Gets scaleOutCooldown
     *  带宽扩展操作的静默时间（两次带宽扩展操作之间的最小间隔时间），单位：秒。 默认值：0。取值范围：0~86400。
     *
-    * @return int|null
+    * @return int
     */
     public function getScaleOutCooldown()
     {
@@ -379,7 +382,7 @@ class BandwidthAutoScalingPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets scaleOutCooldown
     *
-    * @param int|null $scaleOutCooldown 带宽扩展操作的静默时间（两次带宽扩展操作之间的最小间隔时间），单位：秒。 默认值：0。取值范围：0~86400。
+    * @param int $scaleOutCooldown 带宽扩展操作的静默时间（两次带宽扩展操作之间的最小间隔时间），单位：秒。 默认值：0。取值范围：0~86400。
     *
     * @return $this
     */

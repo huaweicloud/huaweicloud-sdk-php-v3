@@ -22,9 +22,11 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * lineId  解析线路ID。
     * name  解析线路名称。
-    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * limit  每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * showDetail  是否查询详细信息。  取值范围：  true：是，查询详细信息。 false：否，不查询详细信息。 默认为true。
+    * status  资源状态。
+    * ip  IP地址范围。
     *
     * @var string[]
     */
@@ -33,16 +35,20 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
             'name' => 'string',
             'limit' => 'int',
             'offset' => 'int',
-            'showDetail' => 'bool'
+            'showDetail' => 'bool',
+            'status' => 'string',
+            'ip' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * lineId  解析线路ID。
     * name  解析线路名称。
-    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * limit  每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * showDetail  是否查询详细信息。  取值范围：  true：是，查询详细信息。 false：否，不查询详细信息。 默认为true。
+    * status  资源状态。
+    * ip  IP地址范围。
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
         'name' => null,
         'limit' => 'int32',
         'offset' => 'int32',
-        'showDetail' => null
+        'showDetail' => null,
+        'status' => null,
+        'ip' => null
     ];
 
     /**
@@ -79,9 +87,11 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * lineId  解析线路ID。
     * name  解析线路名称。
-    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * limit  每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * showDetail  是否查询详细信息。  取值范围：  true：是，查询详细信息。 false：否，不查询详细信息。 默认为true。
+    * status  资源状态。
+    * ip  IP地址范围。
     *
     * @var string[]
     */
@@ -90,16 +100,20 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
             'name' => 'name',
             'limit' => 'limit',
             'offset' => 'offset',
-            'showDetail' => 'show_detail'
+            'showDetail' => 'show_detail',
+            'status' => 'status',
+            'ip' => 'ip'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * lineId  解析线路ID。
     * name  解析线路名称。
-    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * limit  每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * showDetail  是否查询详细信息。  取值范围：  true：是，查询详细信息。 false：否，不查询详细信息。 默认为true。
+    * status  资源状态。
+    * ip  IP地址范围。
     *
     * @var string[]
     */
@@ -108,16 +122,20 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
-            'showDetail' => 'setShowDetail'
+            'showDetail' => 'setShowDetail',
+            'status' => 'setStatus',
+            'ip' => 'setIp'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * lineId  解析线路ID。
     * name  解析线路名称。
-    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * limit  每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * showDetail  是否查询详细信息。  取值范围：  true：是，查询详细信息。 false：否，不查询详细信息。 默认为true。
+    * status  资源状态。
+    * ip  IP地址范围。
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
-            'showDetail' => 'getShowDetail'
+            'showDetail' => 'getShowDetail',
+            'status' => 'getStatus',
+            'ip' => 'getIp'
     ];
 
     /**
@@ -192,6 +212,8 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['showDetail'] = isset($data['showDetail']) ? $data['showDetail'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
     }
 
     /**
@@ -202,6 +224,27 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['lineId']) && !preg_match("/[0-9a-zA-Z_]{0,50}/", $this->container['lineId'])) {
+                $invalidProperties[] = "invalid value for 'lineId', must be conform to the pattern /[0-9a-zA-Z_]{0,50}/.";
+            }
+            if (!is_null($this->container['name']) && !preg_match("/[\\w\\u4e00-\\u9fa5\\._-]{0,80}/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /[\\w\\u4e00-\\u9fa5\\._-]{0,80}/.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 3000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 3000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['status']) && !preg_match("/|DOWN|ACTIVE|ERROR|PENDING_CREATE|PENDING_UPDATE|PENDING_DELETE|FREEZE|DELETED|DISABLE|ENABLE|PENDING_DISABLE|POLICE|POLICE_ACTIVE|ILLEGAL|ILLEGAL_ACTIVE|PENDING_TRANSFER|PENDING_FREEZE|PENDING_POLICE|PENDING_ILLEGAL|PENDING_ACTIVE/", $this->container['status'])) {
+                $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /|DOWN|ACTIVE|ERROR|PENDING_CREATE|PENDING_UPDATE|PENDING_DELETE|FREEZE|DELETED|DISABLE|ENABLE|PENDING_DISABLE|POLICE|POLICE_ACTIVE|ILLEGAL|ILLEGAL_ACTIVE|PENDING_TRANSFER|PENDING_FREEZE|PENDING_POLICE|PENDING_ILLEGAL|PENDING_ACTIVE/.";
+            }
+            if (!is_null($this->container['ip']) && !preg_match("/[0-9.]{0,15}/", $this->container['ip'])) {
+                $invalidProperties[] = "invalid value for 'ip', must be conform to the pattern /[0-9.]{0,15}/.";
+            }
         return $invalidProperties;
     }
 
@@ -266,7 +309,7 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    *  每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
     *
     * @return int|null
     */
@@ -278,7 +321,7 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * @param int|null $limit 每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
     *
     * @return $this
     */
@@ -333,6 +376,54 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
     public function setShowDetail($showDetail)
     {
         $this->container['showDetail'] = $showDetail;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  资源状态。
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 资源状态。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets ip
+    *  IP地址范围。
+    *
+    * @return string|null
+    */
+    public function getIp()
+    {
+        return $this->container['ip'];
+    }
+
+    /**
+    * Sets ip
+    *
+    * @param string|null $ip IP地址范围。
+    *
+    * @return $this
+    */
+    public function setIp($ip)
+    {
+        $this->container['ip'] = $ip;
         return $this;
     }
 

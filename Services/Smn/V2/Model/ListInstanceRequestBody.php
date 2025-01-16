@@ -28,6 +28,7 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
     * limit  查询记录数。  action为count时无此参数。  action为filter时，默认为1000。limit最多为1000，不能为负数，最小值为1。
     * action  操作标识（仅限于filter，count）：filter（过滤），count(查询总条数)。 为filter时表示分页查询，为count只需按照条件将总条数返回即可。
     * matches  搜索字段。  key为要匹配的字段，当前只支持resource_name。  value为匹配的值，当前为精确匹配。
+    * withoutAnyTag  不包含任意一个标签。该字段为true时查询所有不带标签的资源，此时忽略“tags”、“tags_any”、“not_tags”、“not_tags_any”字段。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
             'offset' => 'string',
             'limit' => 'string',
             'action' => 'string',
-            'matches' => '\HuaweiCloud\SDK\Smn\V2\Model\TagMatch[]'
+            'matches' => '\HuaweiCloud\SDK\Smn\V2\Model\TagMatch[]',
+            'withoutAnyTag' => 'bool'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
     * limit  查询记录数。  action为count时无此参数。  action为filter时，默认为1000。limit最多为1000，不能为负数，最小值为1。
     * action  操作标识（仅限于filter，count）：filter（过滤），count(查询总条数)。 为filter时表示分页查询，为count只需按照条件将总条数返回即可。
     * matches  搜索字段。  key为要匹配的字段，当前只支持resource_name。  value为匹配的值，当前为精确匹配。
+    * withoutAnyTag  不包含任意一个标签。该字段为true时查询所有不带标签的资源，此时忽略“tags”、“tags_any”、“not_tags”、“not_tags_any”字段。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
         'offset' => null,
         'limit' => null,
         'action' => null,
-        'matches' => null
+        'matches' => null,
+        'withoutAnyTag' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
     * limit  查询记录数。  action为count时无此参数。  action为filter时，默认为1000。limit最多为1000，不能为负数，最小值为1。
     * action  操作标识（仅限于filter，count）：filter（过滤），count(查询总条数)。 为filter时表示分页查询，为count只需按照条件将总条数返回即可。
     * matches  搜索字段。  key为要匹配的字段，当前只支持resource_name。  value为匹配的值，当前为精确匹配。
+    * withoutAnyTag  不包含任意一个标签。该字段为true时查询所有不带标签的资源，此时忽略“tags”、“tags_any”、“not_tags”、“not_tags_any”字段。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'limit' => 'limit',
             'action' => 'action',
-            'matches' => 'matches'
+            'matches' => 'matches',
+            'withoutAnyTag' => 'without_any_tag'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
     * limit  查询记录数。  action为count时无此参数。  action为filter时，默认为1000。limit最多为1000，不能为负数，最小值为1。
     * action  操作标识（仅限于filter，count）：filter（过滤），count(查询总条数)。 为filter时表示分页查询，为count只需按照条件将总条数返回即可。
     * matches  搜索字段。  key为要匹配的字段，当前只支持resource_name。  value为匹配的值，当前为精确匹配。
+    * withoutAnyTag  不包含任意一个标签。该字段为true时查询所有不带标签的资源，此时忽略“tags”、“tags_any”、“not_tags”、“not_tags_any”字段。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'action' => 'setAction',
-            'matches' => 'setMatches'
+            'matches' => 'setMatches',
+            'withoutAnyTag' => 'setWithoutAnyTag'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
     * limit  查询记录数。  action为count时无此参数。  action为filter时，默认为1000。limit最多为1000，不能为负数，最小值为1。
     * action  操作标识（仅限于filter，count）：filter（过滤），count(查询总条数)。 为filter时表示分页查询，为count只需按照条件将总条数返回即可。
     * matches  搜索字段。  key为要匹配的字段，当前只支持resource_name。  value为匹配的值，当前为精确匹配。
+    * withoutAnyTag  不包含任意一个标签。该字段为true时查询所有不带标签的资源，此时忽略“tags”、“tags_any”、“not_tags”、“not_tags_any”字段。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'action' => 'getAction',
-            'matches' => 'getMatches'
+            'matches' => 'getMatches',
+            'withoutAnyTag' => 'getWithoutAnyTag'
     ];
 
     /**
@@ -225,6 +235,7 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['matches'] = isset($data['matches']) ? $data['matches'] : null;
+        $this->container['withoutAnyTag'] = isset($data['withoutAnyTag']) ? $data['withoutAnyTag'] : null;
     }
 
     /**
@@ -441,6 +452,30 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setMatches($matches)
     {
         $this->container['matches'] = $matches;
+        return $this;
+    }
+
+    /**
+    * Gets withoutAnyTag
+    *  不包含任意一个标签。该字段为true时查询所有不带标签的资源，此时忽略“tags”、“tags_any”、“not_tags”、“not_tags_any”字段。
+    *
+    * @return bool|null
+    */
+    public function getWithoutAnyTag()
+    {
+        return $this->container['withoutAnyTag'];
+    }
+
+    /**
+    * Sets withoutAnyTag
+    *
+    * @param bool|null $withoutAnyTag 不包含任意一个标签。该字段为true时查询所有不带标签的资源，此时忽略“tags”、“tags_any”、“not_tags”、“not_tags_any”字段。
+    *
+    * @return $this
+    */
+    public function setWithoutAnyTag($withoutAnyTag)
+    {
+        $this->container['withoutAnyTag'] = $withoutAnyTag;
         return $this;
     }
 

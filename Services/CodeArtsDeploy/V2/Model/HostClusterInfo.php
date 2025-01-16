@@ -26,11 +26,11 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
-    * createdBy  createdBy
     * description  描述
     * permission  permission
     * nickName  创建人名称
     * envCount  环境数量
+    * isProxyMode  主机集群是否为代理机接入模式， 1：是 0：否
     *
     * @var string[]
     */
@@ -41,11 +41,11 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'os' => 'string',
             'slaveClusterId' => 'string',
-            'createdBy' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\UserInfo',
             'description' => 'string',
             'permission' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionClusterDetail',
             'nickName' => 'string',
-            'envCount' => 'int'
+            'envCount' => 'int',
+            'isProxyMode' => 'int'
     ];
 
     /**
@@ -56,11 +56,11 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
-    * createdBy  createdBy
     * description  描述
     * permission  permission
     * nickName  创建人名称
     * envCount  环境数量
+    * isProxyMode  主机集群是否为代理机接入模式， 1：是 0：否
     *
     * @var string[]
     */
@@ -71,11 +71,11 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
         'projectId' => null,
         'os' => null,
         'slaveClusterId' => null,
-        'createdBy' => null,
         'description' => null,
         'permission' => null,
         'nickName' => null,
-        'envCount' => null
+        'envCount' => null,
+        'isProxyMode' => null
     ];
 
     /**
@@ -107,11 +107,11 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
-    * createdBy  createdBy
     * description  描述
     * permission  permission
     * nickName  创建人名称
     * envCount  环境数量
+    * isProxyMode  主机集群是否为代理机接入模式， 1：是 0：否
     *
     * @var string[]
     */
@@ -122,11 +122,11 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'os' => 'os',
             'slaveClusterId' => 'slave_cluster_id',
-            'createdBy' => 'created_by',
             'description' => 'description',
             'permission' => 'permission',
             'nickName' => 'nick_name',
-            'envCount' => 'env_count'
+            'envCount' => 'env_count',
+            'isProxyMode' => 'is_proxy_mode'
     ];
 
     /**
@@ -137,11 +137,11 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
-    * createdBy  createdBy
     * description  描述
     * permission  permission
     * nickName  创建人名称
     * envCount  环境数量
+    * isProxyMode  主机集群是否为代理机接入模式， 1：是 0：否
     *
     * @var string[]
     */
@@ -152,11 +152,11 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'os' => 'setOs',
             'slaveClusterId' => 'setSlaveClusterId',
-            'createdBy' => 'setCreatedBy',
             'description' => 'setDescription',
             'permission' => 'setPermission',
             'nickName' => 'setNickName',
-            'envCount' => 'setEnvCount'
+            'envCount' => 'setEnvCount',
+            'isProxyMode' => 'setIsProxyMode'
     ];
 
     /**
@@ -167,11 +167,11 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
-    * createdBy  createdBy
     * description  描述
     * permission  permission
     * nickName  创建人名称
     * envCount  环境数量
+    * isProxyMode  主机集群是否为代理机接入模式， 1：是 0：否
     *
     * @var string[]
     */
@@ -182,11 +182,11 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'os' => 'getOs',
             'slaveClusterId' => 'getSlaveClusterId',
-            'createdBy' => 'getCreatedBy',
             'description' => 'getDescription',
             'permission' => 'getPermission',
             'nickName' => 'getNickName',
-            'envCount' => 'getEnvCount'
+            'envCount' => 'getEnvCount',
+            'isProxyMode' => 'getIsProxyMode'
     ];
 
     /**
@@ -253,11 +253,11 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['os'] = isset($data['os']) ? $data['os'] : null;
         $this->container['slaveClusterId'] = isset($data['slaveClusterId']) ? $data['slaveClusterId'] : null;
-        $this->container['createdBy'] = isset($data['createdBy']) ? $data['createdBy'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
         $this->container['nickName'] = isset($data['nickName']) ? $data['nickName'] : null;
         $this->container['envCount'] = isset($data['envCount']) ? $data['envCount'] : null;
+        $this->container['isProxyMode'] = isset($data['isProxyMode']) ? $data['isProxyMode'] : null;
     }
 
     /**
@@ -448,30 +448,6 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets createdBy
-    *  createdBy
-    *
-    * @return \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\UserInfo|null
-    */
-    public function getCreatedBy()
-    {
-        return $this->container['createdBy'];
-    }
-
-    /**
-    * Sets createdBy
-    *
-    * @param \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\UserInfo|null $createdBy createdBy
-    *
-    * @return $this
-    */
-    public function setCreatedBy($createdBy)
-    {
-        $this->container['createdBy'] = $createdBy;
-        return $this;
-    }
-
-    /**
     * Gets description
     *  描述
     *
@@ -564,6 +540,30 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     public function setEnvCount($envCount)
     {
         $this->container['envCount'] = $envCount;
+        return $this;
+    }
+
+    /**
+    * Gets isProxyMode
+    *  主机集群是否为代理机接入模式， 1：是 0：否
+    *
+    * @return int|null
+    */
+    public function getIsProxyMode()
+    {
+        return $this->container['isProxyMode'];
+    }
+
+    /**
+    * Sets isProxyMode
+    *
+    * @param int|null $isProxyMode 主机集群是否为代理机接入模式， 1：是 0：否
+    *
+    * @return $this
+    */
+    public function setIsProxyMode($isProxyMode)
+    {
+        $this->container['isProxyMode'] = $isProxyMode;
         return $this;
     }
 

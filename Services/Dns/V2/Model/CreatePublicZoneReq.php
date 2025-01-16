@@ -22,8 +22,8 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  Zone名称
     * description  描述
-    * zoneType  Zone类型,取值public。
-    * email  管理该zone的管理员邮箱
+    * zoneType  域名类型。取值：public。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位.
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符.
     * tags  资源标签。
@@ -44,8 +44,8 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  Zone名称
     * description  描述
-    * zoneType  Zone类型,取值public。
-    * email  管理该zone的管理员邮箱
+    * zoneType  域名类型。取值：public。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位.
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符.
     * tags  资源标签。
@@ -87,8 +87,8 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  Zone名称
     * description  描述
-    * zoneType  Zone类型,取值public。
-    * email  管理该zone的管理员邮箱
+    * zoneType  域名类型。取值：public。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位.
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符.
     * tags  资源标签。
@@ -109,8 +109,8 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  Zone名称
     * description  描述
-    * zoneType  Zone类型,取值public。
-    * email  管理该zone的管理员邮箱
+    * zoneType  域名类型。取值：public。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位.
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符.
     * tags  资源标签。
@@ -131,8 +131,8 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  Zone名称
     * description  描述
-    * zoneType  Zone类型,取值public。
-    * email  管理该zone的管理员邮箱
+    * zoneType  域名类型。取值：public。
+    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位.
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符.
     * tags  资源标签。
@@ -291,7 +291,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneType
-    *  Zone类型,取值public。
+    *  域名类型。取值：public。
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets zoneType
     *
-    * @param string|null $zoneType Zone类型,取值public。
+    * @param string|null $zoneType 域名类型。取值：public。
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  管理该zone的管理员邮箱
+    *  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     *
     * @return string|null
     */
@@ -327,7 +327,7 @@ class CreatePublicZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 管理该zone的管理员邮箱
+    * @param string|null $email 管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
     *
     * @return $this
     */

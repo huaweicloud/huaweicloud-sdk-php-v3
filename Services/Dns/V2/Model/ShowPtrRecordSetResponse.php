@@ -25,7 +25,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     * ptrdname  PTR记录对应的域名。
     * description  对PTR记录的描述。
     * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
-    * address  弹性IP的IP地址。
+    * address  弹性公网IP的IP地址。
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
@@ -51,7 +51,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     * ptrdname  PTR记录对应的域名。
     * description  对PTR记录的描述。
     * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
-    * address  弹性IP的IP地址。
+    * address  弹性公网IP的IP地址。
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
@@ -98,7 +98,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     * ptrdname  PTR记录对应的域名。
     * description  对PTR记录的描述。
     * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
-    * address  弹性IP的IP地址。
+    * address  弹性公网IP的IP地址。
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
@@ -124,7 +124,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     * ptrdname  PTR记录对应的域名。
     * description  对PTR记录的描述。
     * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
-    * address  弹性IP的IP地址。
+    * address  弹性公网IP的IP地址。
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
@@ -150,7 +150,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     * ptrdname  PTR记录对应的域名。
     * description  对PTR记录的描述。
     * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
-    * address  弹性IP的IP地址。
+    * address  弹性公网IP的IP地址。
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
@@ -359,7 +359,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  弹性IP的IP地址。
+    *  弹性公网IP的IP地址。
     *
     * @return string|null
     */
@@ -371,7 +371,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address 弹性IP的IP地址。
+    * @param string|null $address 弹性公网IP的IP地址。
     *
     * @return $this
     */

@@ -28,8 +28,8 @@ class ShowRecordSetByZoneResp implements ModelInterface, ArrayAccess
     * type  记录类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
-    * createAt  创建时间。
-    * updateAt  更新时间。
+    * createdAt  创建时间。
+    * updatedAt  更新时间。
     * status  资源状态。
     * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
     * projectId  该Record Set所属的项目ID。
@@ -50,8 +50,8 @@ class ShowRecordSetByZoneResp implements ModelInterface, ArrayAccess
             'type' => 'string',
             'ttl' => 'int',
             'records' => 'string[]',
-            'createAt' => 'string',
-            'updateAt' => 'string',
+            'createdAt' => 'string',
+            'updatedAt' => 'string',
             'status' => 'string',
             'default' => 'bool',
             'projectId' => 'string',
@@ -72,8 +72,8 @@ class ShowRecordSetByZoneResp implements ModelInterface, ArrayAccess
     * type  记录类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
-    * createAt  创建时间。
-    * updateAt  更新时间。
+    * createdAt  创建时间。
+    * updatedAt  更新时间。
     * status  资源状态。
     * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
     * projectId  该Record Set所属的项目ID。
@@ -94,8 +94,8 @@ class ShowRecordSetByZoneResp implements ModelInterface, ArrayAccess
         'type' => null,
         'ttl' => 'int32',
         'records' => null,
-        'createAt' => null,
-        'updateAt' => null,
+        'createdAt' => null,
+        'updatedAt' => null,
         'status' => null,
         'default' => null,
         'projectId' => null,
@@ -137,8 +137,8 @@ class ShowRecordSetByZoneResp implements ModelInterface, ArrayAccess
     * type  记录类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
-    * createAt  创建时间。
-    * updateAt  更新时间。
+    * createdAt  创建时间。
+    * updatedAt  更新时间。
     * status  资源状态。
     * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
     * projectId  该Record Set所属的项目ID。
@@ -159,8 +159,8 @@ class ShowRecordSetByZoneResp implements ModelInterface, ArrayAccess
             'type' => 'type',
             'ttl' => 'ttl',
             'records' => 'records',
-            'createAt' => 'create_at',
-            'updateAt' => 'update_at',
+            'createdAt' => 'created_at',
+            'updatedAt' => 'updated_at',
             'status' => 'status',
             'default' => 'default',
             'projectId' => 'project_id',
@@ -181,8 +181,8 @@ class ShowRecordSetByZoneResp implements ModelInterface, ArrayAccess
     * type  记录类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
-    * createAt  创建时间。
-    * updateAt  更新时间。
+    * createdAt  创建时间。
+    * updatedAt  更新时间。
     * status  资源状态。
     * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
     * projectId  该Record Set所属的项目ID。
@@ -203,8 +203,8 @@ class ShowRecordSetByZoneResp implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'ttl' => 'setTtl',
             'records' => 'setRecords',
-            'createAt' => 'setCreateAt',
-            'updateAt' => 'setUpdateAt',
+            'createdAt' => 'setCreatedAt',
+            'updatedAt' => 'setUpdatedAt',
             'status' => 'setStatus',
             'default' => 'setDefault',
             'projectId' => 'setProjectId',
@@ -225,8 +225,8 @@ class ShowRecordSetByZoneResp implements ModelInterface, ArrayAccess
     * type  记录类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
-    * createAt  创建时间。
-    * updateAt  更新时间。
+    * createdAt  创建时间。
+    * updatedAt  更新时间。
     * status  资源状态。
     * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
     * projectId  该Record Set所属的项目ID。
@@ -247,8 +247,8 @@ class ShowRecordSetByZoneResp implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'ttl' => 'getTtl',
             'records' => 'getRecords',
-            'createAt' => 'getCreateAt',
-            'updateAt' => 'getUpdateAt',
+            'createdAt' => 'getCreatedAt',
+            'updatedAt' => 'getUpdatedAt',
             'status' => 'getStatus',
             'default' => 'getDefault',
             'projectId' => 'getProjectId',
@@ -325,8 +325,8 @@ class ShowRecordSetByZoneResp implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['ttl'] = isset($data['ttl']) ? $data['ttl'] : null;
         $this->container['records'] = isset($data['records']) ? $data['records'] : null;
-        $this->container['createAt'] = isset($data['createAt']) ? $data['createAt'] : null;
-        $this->container['updateAt'] = isset($data['updateAt']) ? $data['updateAt'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['default'] = isset($data['default']) ? $data['default'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
@@ -552,50 +552,50 @@ class ShowRecordSetByZoneResp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets createAt
+    * Gets createdAt
     *  创建时间。
     *
     * @return string|null
     */
-    public function getCreateAt()
+    public function getCreatedAt()
     {
-        return $this->container['createAt'];
+        return $this->container['createdAt'];
     }
 
     /**
-    * Sets createAt
+    * Sets createdAt
     *
-    * @param string|null $createAt 创建时间。
+    * @param string|null $createdAt 创建时间。
     *
     * @return $this
     */
-    public function setCreateAt($createAt)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['createAt'] = $createAt;
+        $this->container['createdAt'] = $createdAt;
         return $this;
     }
 
     /**
-    * Gets updateAt
+    * Gets updatedAt
     *  更新时间。
     *
     * @return string|null
     */
-    public function getUpdateAt()
+    public function getUpdatedAt()
     {
-        return $this->container['updateAt'];
+        return $this->container['updatedAt'];
     }
 
     /**
-    * Sets updateAt
+    * Sets updatedAt
     *
-    * @param string|null $updateAt 更新时间。
+    * @param string|null $updatedAt 更新时间。
     *
     * @return $this
     */
-    public function setUpdateAt($updateAt)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->container['updateAt'] = $updateAt;
+        $this->container['updatedAt'] = $updatedAt;
         return $this;
     }
 
