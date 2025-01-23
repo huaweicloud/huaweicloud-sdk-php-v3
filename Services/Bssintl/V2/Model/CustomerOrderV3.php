@@ -37,6 +37,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * amountInfo  amountInfo
     * userName  订单创建者名称。 如果是客户自己下单，则此处返回下单操作员的登录名称；如果是运营人员从后台下单，则此处返回“运营人员”；如果是运营系统自动触发下单，则此处返回“运营系统”。
     * pendingPaymentEndTime  订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * subOrderInfos  客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV3 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
             'contractId' => 'string',
             'amountInfo' => '\HuaweiCloud\SDK\Bssintl\V2\Model\AmountInfomationV2',
             'userName' => 'string',
-            'pendingPaymentEndTime' => 'string'
+            'pendingPaymentEndTime' => 'string',
+            'subOrderInfos' => '\HuaweiCloud\SDK\Bssintl\V2\Model\SubCustomerOrderV3[]'
     ];
 
     /**
@@ -79,6 +81,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * amountInfo  amountInfo
     * userName  订单创建者名称。 如果是客户自己下单，则此处返回下单操作员的登录名称；如果是运营人员从后台下单，则此处返回“运营人员”；如果是运营系统自动触发下单，则此处返回“运营系统”。
     * pendingPaymentEndTime  订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * subOrderInfos  客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV3 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
         'contractId' => null,
         'amountInfo' => null,
         'userName' => null,
-        'pendingPaymentEndTime' => null
+        'pendingPaymentEndTime' => null,
+        'subOrderInfos' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * amountInfo  amountInfo
     * userName  订单创建者名称。 如果是客户自己下单，则此处返回下单操作员的登录名称；如果是运营人员从后台下单，则此处返回“运营人员”；如果是运营系统自动触发下单，则此处返回“运营系统”。
     * pendingPaymentEndTime  订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * subOrderInfos  客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV3 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
             'contractId' => 'contract_id',
             'amountInfo' => 'amount_info',
             'userName' => 'user_name',
-            'pendingPaymentEndTime' => 'pending_payment_end_time'
+            'pendingPaymentEndTime' => 'pending_payment_end_time',
+            'subOrderInfos' => 'sub_order_infos'
     ];
 
     /**
@@ -184,6 +190,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * amountInfo  amountInfo
     * userName  订单创建者名称。 如果是客户自己下单，则此处返回下单操作员的登录名称；如果是运营人员从后台下单，则此处返回“运营人员”；如果是运营系统自动触发下单，则此处返回“运营系统”。
     * pendingPaymentEndTime  订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * subOrderInfos  客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV3 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
             'contractId' => 'setContractId',
             'amountInfo' => 'setAmountInfo',
             'userName' => 'setUserName',
-            'pendingPaymentEndTime' => 'setPendingPaymentEndTime'
+            'pendingPaymentEndTime' => 'setPendingPaymentEndTime',
+            'subOrderInfos' => 'setSubOrderInfos'
     ];
 
     /**
@@ -226,6 +234,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * amountInfo  amountInfo
     * userName  订单创建者名称。 如果是客户自己下单，则此处返回下单操作员的登录名称；如果是运营人员从后台下单，则此处返回“运营人员”；如果是运营系统自动触发下单，则此处返回“运营系统”。
     * pendingPaymentEndTime  订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * subOrderInfos  客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV3 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
             'contractId' => 'getContractId',
             'amountInfo' => 'getAmountInfo',
             'userName' => 'getUserName',
-            'pendingPaymentEndTime' => 'getPendingPaymentEndTime'
+            'pendingPaymentEndTime' => 'getPendingPaymentEndTime',
+            'subOrderInfos' => 'getSubOrderInfos'
     ];
 
     /**
@@ -324,6 +334,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
         $this->container['amountInfo'] = isset($data['amountInfo']) ? $data['amountInfo'] : null;
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
         $this->container['pendingPaymentEndTime'] = isset($data['pendingPaymentEndTime']) ? $data['pendingPaymentEndTime'] : null;
+        $this->container['subOrderInfos'] = isset($data['subOrderInfos']) ? $data['subOrderInfos'] : null;
     }
 
     /**
@@ -759,6 +770,30 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     public function setPendingPaymentEndTime($pendingPaymentEndTime)
     {
         $this->container['pendingPaymentEndTime'] = $pendingPaymentEndTime;
+        return $this;
+    }
+
+    /**
+    * Gets subOrderInfos
+    *  客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV3 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
+    *
+    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\SubCustomerOrderV3[]|null
+    */
+    public function getSubOrderInfos()
+    {
+        return $this->container['subOrderInfos'];
+    }
+
+    /**
+    * Sets subOrderInfos
+    *
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\SubCustomerOrderV3[]|null $subOrderInfos 客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV3 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
+    *
+    * @return $this
+    */
+    public function setSubOrderInfos($subOrderInfos)
+    {
+        $this->container['subOrderInfos'] = $subOrderInfos;
         return $this;
     }
 

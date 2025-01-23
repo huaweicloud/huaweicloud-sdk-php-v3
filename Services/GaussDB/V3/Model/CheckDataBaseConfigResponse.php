@@ -21,8 +21,8 @@ class CheckDataBaseConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名称。
-    * sourceDbConfigCheckResults  GaussDB(for MySQL)数据库配置检查结果。
+    * sourceDatabaseName  TaurusDB数据库名称。
+    * sourceDbConfigCheckResults  TaurusDB数据库配置检查结果。
     * targetDatabaseName  目标数据库名称。
     * targetDbConfigCheckResults  目标数据库配置检查结果。
     * taskName  同步任务名称。
@@ -39,8 +39,8 @@ class CheckDataBaseConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名称。
-    * sourceDbConfigCheckResults  GaussDB(for MySQL)数据库配置检查结果。
+    * sourceDatabaseName  TaurusDB数据库名称。
+    * sourceDbConfigCheckResults  TaurusDB数据库配置检查结果。
     * targetDatabaseName  目标数据库名称。
     * targetDbConfigCheckResults  目标数据库配置检查结果。
     * taskName  同步任务名称。
@@ -78,8 +78,8 @@ class CheckDataBaseConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名称。
-    * sourceDbConfigCheckResults  GaussDB(for MySQL)数据库配置检查结果。
+    * sourceDatabaseName  TaurusDB数据库名称。
+    * sourceDbConfigCheckResults  TaurusDB数据库配置检查结果。
     * targetDatabaseName  目标数据库名称。
     * targetDbConfigCheckResults  目标数据库配置检查结果。
     * taskName  同步任务名称。
@@ -96,8 +96,8 @@ class CheckDataBaseConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名称。
-    * sourceDbConfigCheckResults  GaussDB(for MySQL)数据库配置检查结果。
+    * sourceDatabaseName  TaurusDB数据库名称。
+    * sourceDbConfigCheckResults  TaurusDB数据库配置检查结果。
     * targetDatabaseName  目标数据库名称。
     * targetDbConfigCheckResults  目标数据库配置检查结果。
     * taskName  同步任务名称。
@@ -114,8 +114,8 @@ class CheckDataBaseConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名称。
-    * sourceDbConfigCheckResults  GaussDB(for MySQL)数据库配置检查结果。
+    * sourceDatabaseName  TaurusDB数据库名称。
+    * sourceDbConfigCheckResults  TaurusDB数据库配置检查结果。
     * targetDatabaseName  目标数据库名称。
     * targetDbConfigCheckResults  目标数据库配置检查结果。
     * taskName  同步任务名称。
@@ -237,7 +237,7 @@ class CheckDataBaseConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceDatabaseName
-    *  GaussDB(for MySQL)数据库名称。
+    *  TaurusDB数据库名称。
     *
     * @return string|null
     */
@@ -249,7 +249,7 @@ class CheckDataBaseConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceDatabaseName
     *
-    * @param string|null $sourceDatabaseName GaussDB(for MySQL)数据库名称。
+    * @param string|null $sourceDatabaseName TaurusDB数据库名称。
     *
     * @return $this
     */
@@ -261,7 +261,7 @@ class CheckDataBaseConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceDbConfigCheckResults
-    *  GaussDB(for MySQL)数据库配置检查结果。
+    *  TaurusDB数据库配置检查结果。
     *
     * @return \HuaweiCloud\SDK\GaussDB\V3\Model\DbConfigCheckResult[]|null
     */
@@ -273,7 +273,7 @@ class CheckDataBaseConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceDbConfigCheckResults
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\DbConfigCheckResult[]|null $sourceDbConfigCheckResults GaussDB(for MySQL)数据库配置检查结果。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\DbConfigCheckResult[]|null $sourceDbConfigCheckResults TaurusDB数据库配置检查结果。
     *
     * @return $this
     */

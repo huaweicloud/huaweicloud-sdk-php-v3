@@ -20,9 +20,9 @@ class DbConfigCheckRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sourceInstanceId  GaussDB(for MySQL)实例ID。
-    * sourceNodeId  GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名。
+    * sourceInstanceId  TaurusDB实例ID。
+    * sourceNodeId  TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID
+    * sourceDatabaseName  TaurusDB数据库名。
     * targetDatabaseName  目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线_。
     * taskName  同步任务名称。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线_。
     * dbConfigs  库配置列表。
@@ -42,9 +42,9 @@ class DbConfigCheckRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sourceInstanceId  GaussDB(for MySQL)实例ID。
-    * sourceNodeId  GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名。
+    * sourceInstanceId  TaurusDB实例ID。
+    * sourceNodeId  TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID
+    * sourceDatabaseName  TaurusDB数据库名。
     * targetDatabaseName  目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线_。
     * taskName  同步任务名称。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线_。
     * dbConfigs  库配置列表。
@@ -85,9 +85,9 @@ class DbConfigCheckRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sourceInstanceId  GaussDB(for MySQL)实例ID。
-    * sourceNodeId  GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名。
+    * sourceInstanceId  TaurusDB实例ID。
+    * sourceNodeId  TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID
+    * sourceDatabaseName  TaurusDB数据库名。
     * targetDatabaseName  目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线_。
     * taskName  同步任务名称。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线_。
     * dbConfigs  库配置列表。
@@ -107,9 +107,9 @@ class DbConfigCheckRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sourceInstanceId  GaussDB(for MySQL)实例ID。
-    * sourceNodeId  GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名。
+    * sourceInstanceId  TaurusDB实例ID。
+    * sourceNodeId  TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID
+    * sourceDatabaseName  TaurusDB数据库名。
     * targetDatabaseName  目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线_。
     * taskName  同步任务名称。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线_。
     * dbConfigs  库配置列表。
@@ -129,9 +129,9 @@ class DbConfigCheckRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sourceInstanceId  GaussDB(for MySQL)实例ID。
-    * sourceNodeId  GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名。
+    * sourceInstanceId  TaurusDB实例ID。
+    * sourceNodeId  TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID
+    * sourceDatabaseName  TaurusDB数据库名。
     * targetDatabaseName  目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线_。
     * taskName  同步任务名称。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线_。
     * dbConfigs  库配置列表。
@@ -270,7 +270,7 @@ class DbConfigCheckRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceInstanceId
-    *  GaussDB(for MySQL)实例ID。
+    *  TaurusDB实例ID。
     *
     * @return string|null
     */
@@ -282,7 +282,7 @@ class DbConfigCheckRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets sourceInstanceId
     *
-    * @param string|null $sourceInstanceId GaussDB(for MySQL)实例ID。
+    * @param string|null $sourceInstanceId TaurusDB实例ID。
     *
     * @return $this
     */
@@ -294,7 +294,7 @@ class DbConfigCheckRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceNodeId
-    *  GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID
+    *  TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID
     *
     * @return string|null
     */
@@ -306,7 +306,7 @@ class DbConfigCheckRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets sourceNodeId
     *
-    * @param string|null $sourceNodeId GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID
+    * @param string|null $sourceNodeId TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID
     *
     * @return $this
     */
@@ -318,7 +318,7 @@ class DbConfigCheckRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceDatabaseName
-    *  GaussDB(for MySQL)数据库名。
+    *  TaurusDB数据库名。
     *
     * @return string|null
     */
@@ -330,7 +330,7 @@ class DbConfigCheckRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets sourceDatabaseName
     *
-    * @param string|null $sourceDatabaseName GaussDB(for MySQL)数据库名。
+    * @param string|null $sourceDatabaseName TaurusDB数据库名。
     *
     * @return $this
     */

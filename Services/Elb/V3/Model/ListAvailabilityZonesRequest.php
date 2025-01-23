@@ -20,22 +20,26 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publicBorderGroup  参数解释：可用区组。
+    * publicBorderGroup  参数解释：网络公共边界组。
+    * loadbalancerId  参数解释：负载均衡器ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'publicBorderGroup' => 'string'
+            'publicBorderGroup' => 'string',
+            'loadbalancerId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publicBorderGroup  参数解释：可用区组。
+    * publicBorderGroup  参数解释：网络公共边界组。
+    * loadbalancerId  参数解释：负载均衡器ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'publicBorderGroup' => null
+        'publicBorderGroup' => null,
+        'loadbalancerId' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publicBorderGroup  参数解释：可用区组。
+    * publicBorderGroup  参数解释：网络公共边界组。
+    * loadbalancerId  参数解释：负载均衡器ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'publicBorderGroup' => 'public_border_group'
+            'publicBorderGroup' => 'public_border_group',
+            'loadbalancerId' => 'loadbalancer_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publicBorderGroup  参数解释：可用区组。
+    * publicBorderGroup  参数解释：网络公共边界组。
+    * loadbalancerId  参数解释：负载均衡器ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'publicBorderGroup' => 'setPublicBorderGroup'
+            'publicBorderGroup' => 'setPublicBorderGroup',
+            'loadbalancerId' => 'setLoadbalancerId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publicBorderGroup  参数解释：可用区组。
+    * publicBorderGroup  参数解释：网络公共边界组。
+    * loadbalancerId  参数解释：负载均衡器ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'publicBorderGroup' => 'getPublicBorderGroup'
+            'publicBorderGroup' => 'getPublicBorderGroup',
+            'loadbalancerId' => 'getLoadbalancerId'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
+        $this->container['loadbalancerId'] = isset($data['loadbalancerId']) ? $data['loadbalancerId'] : null;
     }
 
     /**
@@ -174,7 +185,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  参数解释：可用区组。
+    *  参数解释：网络公共边界组。
     *
     * @return string|null
     */
@@ -186,13 +197,37 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string|null $publicBorderGroup 参数解释：可用区组。
+    * @param string|null $publicBorderGroup 参数解释：网络公共边界组。
     *
     * @return $this
     */
     public function setPublicBorderGroup($publicBorderGroup)
     {
         $this->container['publicBorderGroup'] = $publicBorderGroup;
+        return $this;
+    }
+
+    /**
+    * Gets loadbalancerId
+    *  参数解释：负载均衡器ID。
+    *
+    * @return string|null
+    */
+    public function getLoadbalancerId()
+    {
+        return $this->container['loadbalancerId'];
+    }
+
+    /**
+    * Sets loadbalancerId
+    *
+    * @param string|null $loadbalancerId 参数解释：负载均衡器ID。
+    *
+    * @return $this
+    */
+    public function setLoadbalancerId($loadbalancerId)
+    {
+        $this->container['loadbalancerId'] = $loadbalancerId;
         return $this;
     }
 

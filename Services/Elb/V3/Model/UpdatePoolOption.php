@@ -30,10 +30,11 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     * vpcId  后端服务器组关联的虚拟私有云的ID。 [- pool的protocol为IP时，必须指定vpc_id，且与LB的vpc_id相同。](tag:hws_eu)  只有vpc_id为空时允许更新。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。[pool的protocol为IP时，type不允许设置为ip。](tag:hws_eu)] - 空字符串（\"\"）：允许任意类型的后端  使用说明： - 只有type为空时允许更新，不允许从非空更新为空。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
-    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
     * poolHealth  poolHealth
+    * quicCidHashStrategy  quicCidHashStrategy
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
             'protectionReason' => 'string',
             'anyPortEnable' => 'bool',
             'connectionDrain' => '\HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain',
-            'poolHealth' => '\HuaweiCloud\SDK\Elb\V3\Model\PoolHealth'
+            'poolHealth' => '\HuaweiCloud\SDK\Elb\V3\Model\PoolHealth',
+            'quicCidHashStrategy' => '\HuaweiCloud\SDK\Elb\V3\Model\QuicCidHashStrategy'
     ];
 
     /**
@@ -66,10 +68,11 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     * vpcId  后端服务器组关联的虚拟私有云的ID。 [- pool的protocol为IP时，必须指定vpc_id，且与LB的vpc_id相同。](tag:hws_eu)  只有vpc_id为空时允许更新。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。[pool的protocol为IP时，type不允许设置为ip。](tag:hws_eu)] - 空字符串（\"\"）：允许任意类型的后端  使用说明： - 只有type为空时允许更新，不允许从非空更新为空。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
-    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
     * poolHealth  poolHealth
+    * quicCidHashStrategy  quicCidHashStrategy
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
         'protectionReason' => null,
         'anyPortEnable' => null,
         'connectionDrain' => null,
-        'poolHealth' => null
+        'poolHealth' => null,
+        'quicCidHashStrategy' => null
     ];
 
     /**
@@ -123,10 +127,11 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     * vpcId  后端服务器组关联的虚拟私有云的ID。 [- pool的protocol为IP时，必须指定vpc_id，且与LB的vpc_id相同。](tag:hws_eu)  只有vpc_id为空时允许更新。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。[pool的protocol为IP时，type不允许设置为ip。](tag:hws_eu)] - 空字符串（\"\"）：允许任意类型的后端  使用说明： - 只有type为空时允许更新，不允许从非空更新为空。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
-    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
     * poolHealth  poolHealth
+    * quicCidHashStrategy  quicCidHashStrategy
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
             'protectionReason' => 'protection_reason',
             'anyPortEnable' => 'any_port_enable',
             'connectionDrain' => 'connection_drain',
-            'poolHealth' => 'pool_health'
+            'poolHealth' => 'pool_health',
+            'quicCidHashStrategy' => 'quic_cid_hash_strategy'
     ];
 
     /**
@@ -159,10 +165,11 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     * vpcId  后端服务器组关联的虚拟私有云的ID。 [- pool的protocol为IP时，必须指定vpc_id，且与LB的vpc_id相同。](tag:hws_eu)  只有vpc_id为空时允许更新。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。[pool的protocol为IP时，type不允许设置为ip。](tag:hws_eu)] - 空字符串（\"\"）：允许任意类型的后端  使用说明： - 只有type为空时允许更新，不允许从非空更新为空。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
-    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
     * poolHealth  poolHealth
+    * quicCidHashStrategy  quicCidHashStrategy
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
             'protectionReason' => 'setProtectionReason',
             'anyPortEnable' => 'setAnyPortEnable',
             'connectionDrain' => 'setConnectionDrain',
-            'poolHealth' => 'setPoolHealth'
+            'poolHealth' => 'setPoolHealth',
+            'quicCidHashStrategy' => 'setQuicCidHashStrategy'
     ];
 
     /**
@@ -195,10 +203,11 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     * vpcId  后端服务器组关联的虚拟私有云的ID。 [- pool的protocol为IP时，必须指定vpc_id，且与LB的vpc_id相同。](tag:hws_eu)  只有vpc_id为空时允许更新。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。[pool的protocol为IP时，type不允许设置为ip。](tag:hws_eu)] - 空字符串（\"\"）：允许任意类型的后端  使用说明： - 只有type为空时允许更新，不允许从非空更新为空。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
-    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
     * poolHealth  poolHealth
+    * quicCidHashStrategy  quicCidHashStrategy
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
             'protectionReason' => 'getProtectionReason',
             'anyPortEnable' => 'getAnyPortEnable',
             'connectionDrain' => 'getConnectionDrain',
-            'poolHealth' => 'getPoolHealth'
+            'poolHealth' => 'getPoolHealth',
+            'quicCidHashStrategy' => 'getQuicCidHashStrategy'
     ];
 
     /**
@@ -306,6 +316,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
         $this->container['anyPortEnable'] = isset($data['anyPortEnable']) ? $data['anyPortEnable'] : null;
         $this->container['connectionDrain'] = isset($data['connectionDrain']) ? $data['connectionDrain'] : null;
         $this->container['poolHealth'] = isset($data['poolHealth']) ? $data['poolHealth'] : null;
+        $this->container['quicCidHashStrategy'] = isset($data['quicCidHashStrategy']) ? $data['quicCidHashStrategy'] : null;
     }
 
     /**
@@ -604,7 +615,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionReason
-    *  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    *  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     *
     * @return string|null
     */
@@ -616,7 +627,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     /**
     * Sets protectionReason
     *
-    * @param string|null $protectionReason 设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * @param string|null $protectionReason 参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     *
     * @return $this
     */
@@ -695,6 +706,30 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     public function setPoolHealth($poolHealth)
     {
         $this->container['poolHealth'] = $poolHealth;
+        return $this;
+    }
+
+    /**
+    * Gets quicCidHashStrategy
+    *  quicCidHashStrategy
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\QuicCidHashStrategy|null
+    */
+    public function getQuicCidHashStrategy()
+    {
+        return $this->container['quicCidHashStrategy'];
+    }
+
+    /**
+    * Sets quicCidHashStrategy
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\QuicCidHashStrategy|null $quicCidHashStrategy quicCidHashStrategy
+    *
+    * @return $this
+    */
+    public function setQuicCidHashStrategy($quicCidHashStrategy)
+    {
+        $this->container['quicCidHashStrategy'] = $quicCidHashStrategy;
         return $this;
     }
 

@@ -21,8 +21,8 @@ class ListStarRocksDataReplicationConfigByDataBaseResponse implements ModelInter
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sourceInstanceId  GaussDB(for MySQL)实例ID。
-    * sourceNodeId  GaussDB(for MySQL)节点ID。
+    * sourceInstanceId  TaurusDB实例ID。
+    * sourceNodeId  TaurusDB节点ID。
     * databaseInfo  databaseInfo
     * tableInfos  表配置信息。
     * tableReplConfig  tableReplConfig
@@ -47,8 +47,8 @@ class ListStarRocksDataReplicationConfigByDataBaseResponse implements ModelInter
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sourceInstanceId  GaussDB(for MySQL)实例ID。
-    * sourceNodeId  GaussDB(for MySQL)节点ID。
+    * sourceInstanceId  TaurusDB实例ID。
+    * sourceNodeId  TaurusDB节点ID。
     * databaseInfo  databaseInfo
     * tableInfos  表配置信息。
     * tableReplConfig  tableReplConfig
@@ -94,8 +94,8 @@ class ListStarRocksDataReplicationConfigByDataBaseResponse implements ModelInter
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sourceInstanceId  GaussDB(for MySQL)实例ID。
-    * sourceNodeId  GaussDB(for MySQL)节点ID。
+    * sourceInstanceId  TaurusDB实例ID。
+    * sourceNodeId  TaurusDB节点ID。
     * databaseInfo  databaseInfo
     * tableInfos  表配置信息。
     * tableReplConfig  tableReplConfig
@@ -120,8 +120,8 @@ class ListStarRocksDataReplicationConfigByDataBaseResponse implements ModelInter
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sourceInstanceId  GaussDB(for MySQL)实例ID。
-    * sourceNodeId  GaussDB(for MySQL)节点ID。
+    * sourceInstanceId  TaurusDB实例ID。
+    * sourceNodeId  TaurusDB节点ID。
     * databaseInfo  databaseInfo
     * tableInfos  表配置信息。
     * tableReplConfig  tableReplConfig
@@ -146,8 +146,8 @@ class ListStarRocksDataReplicationConfigByDataBaseResponse implements ModelInter
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sourceInstanceId  GaussDB(for MySQL)实例ID。
-    * sourceNodeId  GaussDB(for MySQL)节点ID。
+    * sourceInstanceId  TaurusDB实例ID。
+    * sourceNodeId  TaurusDB节点ID。
     * databaseInfo  databaseInfo
     * tableInfos  表配置信息。
     * tableReplConfig  tableReplConfig
@@ -287,7 +287,7 @@ class ListStarRocksDataReplicationConfigByDataBaseResponse implements ModelInter
 
     /**
     * Gets sourceInstanceId
-    *  GaussDB(for MySQL)实例ID。
+    *  TaurusDB实例ID。
     *
     * @return string|null
     */
@@ -299,7 +299,7 @@ class ListStarRocksDataReplicationConfigByDataBaseResponse implements ModelInter
     /**
     * Sets sourceInstanceId
     *
-    * @param string|null $sourceInstanceId GaussDB(for MySQL)实例ID。
+    * @param string|null $sourceInstanceId TaurusDB实例ID。
     *
     * @return $this
     */
@@ -311,7 +311,7 @@ class ListStarRocksDataReplicationConfigByDataBaseResponse implements ModelInter
 
     /**
     * Gets sourceNodeId
-    *  GaussDB(for MySQL)节点ID。
+    *  TaurusDB节点ID。
     *
     * @return string|null
     */
@@ -323,7 +323,7 @@ class ListStarRocksDataReplicationConfigByDataBaseResponse implements ModelInter
     /**
     * Sets sourceNodeId
     *
-    * @param string|null $sourceNodeId GaussDB(for MySQL)节点ID。
+    * @param string|null $sourceNodeId TaurusDB节点ID。
     *
     * @return $this
     */

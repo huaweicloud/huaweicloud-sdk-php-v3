@@ -31,7 +31,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
     * periodNum  订购包年/包月产品的周期数。
     * subscriptionNum  订购包年/包月产品的数量。
-    * feeInstallmentMode  费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持IES产品。
+    * feeInstallmentMode  费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -63,7 +63,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
     * periodNum  订购包年/包月产品的周期数。
     * subscriptionNum  订购包年/包月产品的数量。
-    * feeInstallmentMode  费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持IES产品。
+    * feeInstallmentMode  费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
     * periodNum  订购包年/包月产品的周期数。
     * subscriptionNum  订购包年/包月产品的数量。
-    * feeInstallmentMode  费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持IES产品。
+    * feeInstallmentMode  费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -148,7 +148,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
     * periodNum  订购包年/包月产品的周期数。
     * subscriptionNum  订购包年/包月产品的数量。
-    * feeInstallmentMode  费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持IES产品。
+    * feeInstallmentMode  费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
     * periodNum  订购包年/包月产品的周期数。
     * subscriptionNum  订购包年/包月产品的数量。
-    * feeInstallmentMode  费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持IES产品。
+    * feeInstallmentMode  费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -335,6 +335,12 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['resourceSize']) && ($this->container['resourceSize'] < 1)) {
                 $invalidProperties[] = "invalid value for 'resourceSize', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['sizeMeasureId']) && ($this->container['sizeMeasureId'] > 214783647)) {
+                $invalidProperties[] = "invalid value for 'sizeMeasureId', must be smaller than or equal to 214783647.";
+            }
+            if (!is_null($this->container['sizeMeasureId']) && ($this->container['sizeMeasureId'] < 0)) {
+                $invalidProperties[] = "invalid value for 'sizeMeasureId', must be bigger than or equal to 0.";
             }
         if ($this->container['periodType'] === null) {
             $invalidProperties[] = "'periodType' can't be null";
@@ -649,7 +655,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets feeInstallmentMode
-    *  费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持IES产品。
+    *  费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持CloudPond产品。
     *
     * @return string|null
     */
@@ -661,7 +667,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets feeInstallmentMode
     *
-    * @param string|null $feeInstallmentMode 费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持IES产品。
+    * @param string|null $feeInstallmentMode 费用分期模式。 HALF_PAY：半付ZERO_PAY：零付NA：不支持费用分期模式  说明： 此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持CloudPond产品。
     *
     * @return $this
     */

@@ -26,10 +26,10 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentOfficialDiscountAmount  分期金额的折扣价。  说明： 暂只支持IES产品。
-    * installmentAmount  分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。  说明： 暂只支持CloudPond产品。
+    * installmentAmount  分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -54,10 +54,10 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentOfficialDiscountAmount  分期金额的折扣价。  说明： 暂只支持IES产品。
-    * installmentAmount  分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。  说明： 暂只支持CloudPond产品。
+    * installmentAmount  分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -103,10 +103,10 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentOfficialDiscountAmount  分期金额的折扣价。  说明： 暂只支持IES产品。
-    * installmentAmount  分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。  说明： 暂只支持CloudPond产品。
+    * installmentAmount  分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -131,10 +131,10 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentOfficialDiscountAmount  分期金额的折扣价。  说明： 暂只支持IES产品。
-    * installmentAmount  分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。  说明： 暂只支持CloudPond产品。
+    * installmentAmount  分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -159,10 +159,10 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentOfficialDiscountAmount  分期金额的折扣价。  说明： 暂只支持IES产品。
-    * installmentAmount  分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。  说明： 暂只支持CloudPond产品。
+    * installmentAmount  分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -429,7 +429,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets installmentOfficialWebsiteAmount
-    *  分期金额的官网价。  说明： 暂只支持IES产品。
+    *  分期金额的官网价。  说明： 暂只支持CloudPond产品。
     *
     * @return string|null
     */
@@ -441,7 +441,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets installmentOfficialWebsiteAmount
     *
-    * @param string|null $installmentOfficialWebsiteAmount 分期金额的官网价。  说明： 暂只支持IES产品。
+    * @param string|null $installmentOfficialWebsiteAmount 分期金额的官网价。  说明： 暂只支持CloudPond产品。
     *
     * @return $this
     */
@@ -453,7 +453,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets installmentOfficialDiscountAmount
-    *  分期金额的折扣价。  说明： 暂只支持IES产品。
+    *  分期金额的折扣价。  说明： 暂只支持CloudPond产品。
     *
     * @return string|null
     */
@@ -465,7 +465,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets installmentOfficialDiscountAmount
     *
-    * @param string|null $installmentOfficialDiscountAmount 分期金额的折扣价。  说明： 暂只支持IES产品。
+    * @param string|null $installmentOfficialDiscountAmount 分期金额的折扣价。  说明： 暂只支持CloudPond产品。
     *
     * @return $this
     */
@@ -477,7 +477,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets installmentAmount
-    *  分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持IES产品。
+    *  分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持CloudPond产品。
     *
     * @return string|null
     */
@@ -489,7 +489,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets installmentAmount
     *
-    * @param string|null $installmentAmount 分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持IES产品。
+    * @param string|null $installmentAmount 分期金额的成交价。  说明： 分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持CloudPond产品。
     *
     * @return $this
     */
@@ -501,7 +501,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets installmentPeriodType
-    *  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    *  分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @return int|null
     */
@@ -513,7 +513,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets installmentPeriodType
     *
-    * @param int|null $installmentPeriodType 分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * @param int|null $installmentPeriodType 分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @return $this
     */

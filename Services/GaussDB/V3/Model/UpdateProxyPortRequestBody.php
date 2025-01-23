@@ -20,7 +20,7 @@ class UpdateProxyPortRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * port  修改后的读写分离端口。  GaussDB(for MySQL) Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
+    * port  修改后的读写分离端口。  TaurusDB Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateProxyPortRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * port  修改后的读写分离端口。  GaussDB(for MySQL) Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
+    * port  修改后的读写分离端口。  TaurusDB Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateProxyPortRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * port  修改后的读写分离端口。  GaussDB(for MySQL) Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
+    * port  修改后的读写分离端口。  TaurusDB Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateProxyPortRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * port  修改后的读写分离端口。  GaussDB(for MySQL) Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
+    * port  修改后的读写分离端口。  TaurusDB Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateProxyPortRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * port  修改后的读写分离端口。  GaussDB(for MySQL) Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
+    * port  修改后的读写分离端口。  TaurusDB Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UpdateProxyPortRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  修改后的读写分离端口。  GaussDB(for MySQL) Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
+    *  修改后的读写分离端口。  TaurusDB Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
     *
     * @return int
     */
@@ -189,7 +189,7 @@ class UpdateProxyPortRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int $port 修改后的读写分离端口。  GaussDB(for MySQL) Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
+    * @param int $port 修改后的读写分离端口。  TaurusDB Proxy端口号范围：大于等于1025，小于等于65534，不包含端口1033、5342-5345、12017、20000、20201、20202、33062、33071。
     *
     * @return $this
     */

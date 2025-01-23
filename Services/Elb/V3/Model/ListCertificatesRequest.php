@@ -29,6 +29,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * domain  服务器证书所签域名。该字段仅type为server时有效。  支持多值查询，查询条件格式：domain=xxx&domain=xxx。
     * type  证书的类型。分为服务器证书(server)和CA证书(client)。  支持多值查询，查询条件格式：type=xxx&type=xxx。
+    * scmCertificateId  SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
     * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
     * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
     *
@@ -44,6 +45,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'adminStateUp' => 'bool',
             'domain' => 'string[]',
             'type' => 'string[]',
+            'scmCertificateId' => 'string[]',
             'commonName' => 'string[]',
             'fingerprint' => 'string[]'
     ];
@@ -59,6 +61,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * domain  服务器证书所签域名。该字段仅type为server时有效。  支持多值查询，查询条件格式：domain=xxx&domain=xxx。
     * type  证书的类型。分为服务器证书(server)和CA证书(client)。  支持多值查询，查询条件格式：type=xxx&type=xxx。
+    * scmCertificateId  SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
     * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
     * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
     *
@@ -74,6 +77,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         'adminStateUp' => null,
         'domain' => null,
         'type' => null,
+        'scmCertificateId' => null,
         'commonName' => null,
         'fingerprint' => null
     ];
@@ -110,6 +114,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * domain  服务器证书所签域名。该字段仅type为server时有效。  支持多值查询，查询条件格式：domain=xxx&domain=xxx。
     * type  证书的类型。分为服务器证书(server)和CA证书(client)。  支持多值查询，查询条件格式：type=xxx&type=xxx。
+    * scmCertificateId  SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
     * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
     * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
     *
@@ -125,6 +130,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'adminStateUp' => 'admin_state_up',
             'domain' => 'domain',
             'type' => 'type',
+            'scmCertificateId' => 'scm_certificate_id',
             'commonName' => 'common_name',
             'fingerprint' => 'fingerprint'
     ];
@@ -140,6 +146,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * domain  服务器证书所签域名。该字段仅type为server时有效。  支持多值查询，查询条件格式：domain=xxx&domain=xxx。
     * type  证书的类型。分为服务器证书(server)和CA证书(client)。  支持多值查询，查询条件格式：type=xxx&type=xxx。
+    * scmCertificateId  SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
     * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
     * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
     *
@@ -155,6 +162,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'adminStateUp' => 'setAdminStateUp',
             'domain' => 'setDomain',
             'type' => 'setType',
+            'scmCertificateId' => 'setScmCertificateId',
             'commonName' => 'setCommonName',
             'fingerprint' => 'setFingerprint'
     ];
@@ -170,6 +178,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * domain  服务器证书所签域名。该字段仅type为server时有效。  支持多值查询，查询条件格式：domain=xxx&domain=xxx。
     * type  证书的类型。分为服务器证书(server)和CA证书(client)。  支持多值查询，查询条件格式：type=xxx&type=xxx。
+    * scmCertificateId  SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
     * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
     * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
     *
@@ -185,6 +194,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'adminStateUp' => 'getAdminStateUp',
             'domain' => 'getDomain',
             'type' => 'getType',
+            'scmCertificateId' => 'getScmCertificateId',
             'commonName' => 'getCommonName',
             'fingerprint' => 'getFingerprint'
     ];
@@ -256,6 +266,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['scmCertificateId'] = isset($data['scmCertificateId']) ? $data['scmCertificateId'] : null;
         $this->container['commonName'] = isset($data['commonName']) ? $data['commonName'] : null;
         $this->container['fingerprint'] = isset($data['fingerprint']) ? $data['fingerprint'] : null;
     }
@@ -501,6 +512,30 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets scmCertificateId
+    *  SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
+    *
+    * @return string[]|null
+    */
+    public function getScmCertificateId()
+    {
+        return $this->container['scmCertificateId'];
+    }
+
+    /**
+    * Sets scmCertificateId
+    *
+    * @param string[]|null $scmCertificateId SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
+    *
+    * @return $this
+    */
+    public function setScmCertificateId($scmCertificateId)
+    {
+        $this->container['scmCertificateId'] = $scmCertificateId;
         return $this;
     }
 

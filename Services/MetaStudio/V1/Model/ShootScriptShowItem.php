@@ -23,6 +23,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
+    * audioConfig  audioConfig
     * previewInfo  previewInfo
     *
     * @var string[]
@@ -31,6 +32,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
             'sequenceNo' => 'int',
             'shootScript' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptDetail',
             'subtitleFileInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SubtitleFiles',
+            'audioConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AudioInfo',
             'previewInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PreviewInfo'
     ];
 
@@ -39,6 +41,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
+    * audioConfig  audioConfig
     * previewInfo  previewInfo
     *
     * @var string[]
@@ -47,6 +50,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
         'sequenceNo' => 'int32',
         'shootScript' => null,
         'subtitleFileInfo' => null,
+        'audioConfig' => null,
         'previewInfo' => null
     ];
 
@@ -76,6 +80,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
+    * audioConfig  audioConfig
     * previewInfo  previewInfo
     *
     * @var string[]
@@ -84,6 +89,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
             'sequenceNo' => 'sequence_no',
             'shootScript' => 'shoot_script',
             'subtitleFileInfo' => 'subtitle_file_info',
+            'audioConfig' => 'audio_config',
             'previewInfo' => 'preview_info'
     ];
 
@@ -92,6 +98,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
+    * audioConfig  audioConfig
     * previewInfo  previewInfo
     *
     * @var string[]
@@ -100,6 +107,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
             'sequenceNo' => 'setSequenceNo',
             'shootScript' => 'setShootScript',
             'subtitleFileInfo' => 'setSubtitleFileInfo',
+            'audioConfig' => 'setAudioConfig',
             'previewInfo' => 'setPreviewInfo'
     ];
 
@@ -108,6 +116,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
+    * audioConfig  audioConfig
     * previewInfo  previewInfo
     *
     * @var string[]
@@ -116,6 +125,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
             'sequenceNo' => 'getSequenceNo',
             'shootScript' => 'getShootScript',
             'subtitleFileInfo' => 'getSubtitleFileInfo',
+            'audioConfig' => 'getAudioConfig',
             'previewInfo' => 'getPreviewInfo'
     ];
 
@@ -180,6 +190,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
         $this->container['sequenceNo'] = isset($data['sequenceNo']) ? $data['sequenceNo'] : null;
         $this->container['shootScript'] = isset($data['shootScript']) ? $data['shootScript'] : null;
         $this->container['subtitleFileInfo'] = isset($data['subtitleFileInfo']) ? $data['subtitleFileInfo'] : null;
+        $this->container['audioConfig'] = isset($data['audioConfig']) ? $data['audioConfig'] : null;
         $this->container['previewInfo'] = isset($data['previewInfo']) ? $data['previewInfo'] : null;
     }
 
@@ -280,6 +291,30 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     public function setSubtitleFileInfo($subtitleFileInfo)
     {
         $this->container['subtitleFileInfo'] = $subtitleFileInfo;
+        return $this;
+    }
+
+    /**
+    * Gets audioConfig
+    *  audioConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\AudioInfo|null
+    */
+    public function getAudioConfig()
+    {
+        return $this->container['audioConfig'];
+    }
+
+    /**
+    * Sets audioConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\AudioInfo|null $audioConfig audioConfig
+    *
+    * @return $this
+    */
+    public function setAudioConfig($audioConfig)
+    {
+        $this->container['audioConfig'] = $audioConfig;
         return $this;
     }
 

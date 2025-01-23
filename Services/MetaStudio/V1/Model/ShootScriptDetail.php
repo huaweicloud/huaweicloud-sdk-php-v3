@@ -23,8 +23,10 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
     * audioDriveActionConfig  语音驱动时的动作配置。
+    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
+    * audioConfig  audioConfig
     * thumbnailUrl  **参数解释**： 剧本场景缩略图url。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -33,8 +35,10 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
             'scriptType' => 'string',
             'textConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\TextConfig',
             'audioDriveActionConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AudioDriveActionConfig[]',
+            'audioDriveFileExternalUrl' => 'string',
             'backgroundConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundConfigInfo[]',
             'layerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerConfig[]',
+            'audioConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AudioInfo',
             'thumbnailUrl' => 'string'
     ];
 
@@ -43,8 +47,10 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
     * audioDriveActionConfig  语音驱动时的动作配置。
+    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
+    * audioConfig  audioConfig
     * thumbnailUrl  **参数解释**： 剧本场景缩略图url。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -53,8 +59,10 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
         'scriptType' => null,
         'textConfig' => null,
         'audioDriveActionConfig' => null,
+        'audioDriveFileExternalUrl' => null,
         'backgroundConfig' => null,
         'layerConfig' => null,
+        'audioConfig' => null,
         'thumbnailUrl' => null
     ];
 
@@ -84,8 +92,10 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
     * audioDriveActionConfig  语音驱动时的动作配置。
+    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
+    * audioConfig  audioConfig
     * thumbnailUrl  **参数解释**： 剧本场景缩略图url。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -94,8 +104,10 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
             'scriptType' => 'script_type',
             'textConfig' => 'text_config',
             'audioDriveActionConfig' => 'audio_drive_action_config',
+            'audioDriveFileExternalUrl' => 'audio_drive_file_external_url',
             'backgroundConfig' => 'background_config',
             'layerConfig' => 'layer_config',
+            'audioConfig' => 'audio_config',
             'thumbnailUrl' => 'thumbnail_url'
     ];
 
@@ -104,8 +116,10 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
     * audioDriveActionConfig  语音驱动时的动作配置。
+    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
+    * audioConfig  audioConfig
     * thumbnailUrl  **参数解释**： 剧本场景缩略图url。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -114,8 +128,10 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
             'scriptType' => 'setScriptType',
             'textConfig' => 'setTextConfig',
             'audioDriveActionConfig' => 'setAudioDriveActionConfig',
+            'audioDriveFileExternalUrl' => 'setAudioDriveFileExternalUrl',
             'backgroundConfig' => 'setBackgroundConfig',
             'layerConfig' => 'setLayerConfig',
+            'audioConfig' => 'setAudioConfig',
             'thumbnailUrl' => 'setThumbnailUrl'
     ];
 
@@ -124,8 +140,10 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
     * audioDriveActionConfig  语音驱动时的动作配置。
+    * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
+    * audioConfig  audioConfig
     * thumbnailUrl  **参数解释**： 剧本场景缩略图url。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -134,8 +152,10 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
             'scriptType' => 'getScriptType',
             'textConfig' => 'getTextConfig',
             'audioDriveActionConfig' => 'getAudioDriveActionConfig',
+            'audioDriveFileExternalUrl' => 'getAudioDriveFileExternalUrl',
             'backgroundConfig' => 'getBackgroundConfig',
             'layerConfig' => 'getLayerConfig',
+            'audioConfig' => 'getAudioConfig',
             'thumbnailUrl' => 'getThumbnailUrl'
     ];
 
@@ -215,8 +235,10 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
         $this->container['scriptType'] = isset($data['scriptType']) ? $data['scriptType'] : null;
         $this->container['textConfig'] = isset($data['textConfig']) ? $data['textConfig'] : null;
         $this->container['audioDriveActionConfig'] = isset($data['audioDriveActionConfig']) ? $data['audioDriveActionConfig'] : null;
+        $this->container['audioDriveFileExternalUrl'] = isset($data['audioDriveFileExternalUrl']) ? $data['audioDriveFileExternalUrl'] : null;
         $this->container['backgroundConfig'] = isset($data['backgroundConfig']) ? $data['backgroundConfig'] : null;
         $this->container['layerConfig'] = isset($data['layerConfig']) ? $data['layerConfig'] : null;
+        $this->container['audioConfig'] = isset($data['audioConfig']) ? $data['audioConfig'] : null;
         $this->container['thumbnailUrl'] = isset($data['thumbnailUrl']) ? $data['thumbnailUrl'] : null;
     }
 
@@ -236,6 +258,12 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['audioDriveFileExternalUrl']) && (mb_strlen($this->container['audioDriveFileExternalUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'audioDriveFileExternalUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['audioDriveFileExternalUrl']) && (mb_strlen($this->container['audioDriveFileExternalUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'audioDriveFileExternalUrl', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['thumbnailUrl']) && (mb_strlen($this->container['thumbnailUrl']) > 2048)) {
                 $invalidProperties[] = "invalid value for 'thumbnailUrl', the character length must be smaller than or equal to 2048.";
             }
@@ -329,6 +357,30 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets audioDriveFileExternalUrl
+    *  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
+    *
+    * @return string|null
+    */
+    public function getAudioDriveFileExternalUrl()
+    {
+        return $this->container['audioDriveFileExternalUrl'];
+    }
+
+    /**
+    * Sets audioDriveFileExternalUrl
+    *
+    * @param string|null $audioDriveFileExternalUrl 语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
+    *
+    * @return $this
+    */
+    public function setAudioDriveFileExternalUrl($audioDriveFileExternalUrl)
+    {
+        $this->container['audioDriveFileExternalUrl'] = $audioDriveFileExternalUrl;
+        return $this;
+    }
+
+    /**
     * Gets backgroundConfig
     *  背景配置。
     *
@@ -373,6 +425,30 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     public function setLayerConfig($layerConfig)
     {
         $this->container['layerConfig'] = $layerConfig;
+        return $this;
+    }
+
+    /**
+    * Gets audioConfig
+    *  audioConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\AudioInfo|null
+    */
+    public function getAudioConfig()
+    {
+        return $this->container['audioConfig'];
+    }
+
+    /**
+    * Sets audioConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\AudioInfo|null $audioConfig audioConfig
+    *
+    * @return $this
+    */
+    public function setAudioConfig($audioConfig)
+    {
+        $this->container['audioConfig'] = $audioConfig;
         return $this;
     }
 

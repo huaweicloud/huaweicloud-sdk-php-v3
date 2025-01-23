@@ -26,9 +26,9 @@ class Flavor implements ModelInterface, ArrayAccess
     * shared  参数解释：是否公共规格。  取值范围： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
     * projectId  参数解释：项目ID。
     * type  参数解释：规格类别。  取值范围：   - L4和L7 表示四层网络型和七层应用型flavor。   [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu)   - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。已废弃，请勿使用。   - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。
-    * flavorSoldOut  参数解释：[是否售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
-    * publicBorderGroup  参数解释：可用区组，如：center
-    * category  参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
+    * publicBorderGroup  参数解释：网络公共边界组，如：center
+    * category  参数解释：网络公共边界组编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
     */
@@ -52,9 +52,9 @@ class Flavor implements ModelInterface, ArrayAccess
     * shared  参数解释：是否公共规格。  取值范围： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
     * projectId  参数解释：项目ID。
     * type  参数解释：规格类别。  取值范围：   - L4和L7 表示四层网络型和七层应用型flavor。   [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu)   - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。已废弃，请勿使用。   - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。
-    * flavorSoldOut  参数解释：[是否售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
-    * publicBorderGroup  参数解释：可用区组，如：center
-    * category  参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
+    * publicBorderGroup  参数解释：网络公共边界组，如：center
+    * category  参数解释：网络公共边界组编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
     */
@@ -99,9 +99,9 @@ class Flavor implements ModelInterface, ArrayAccess
     * shared  参数解释：是否公共规格。  取值范围： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
     * projectId  参数解释：项目ID。
     * type  参数解释：规格类别。  取值范围：   - L4和L7 表示四层网络型和七层应用型flavor。   [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu)   - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。已废弃，请勿使用。   - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。
-    * flavorSoldOut  参数解释：[是否售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
-    * publicBorderGroup  参数解释：可用区组，如：center
-    * category  参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
+    * publicBorderGroup  参数解释：网络公共边界组，如：center
+    * category  参数解释：网络公共边界组编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
     */
@@ -125,9 +125,9 @@ class Flavor implements ModelInterface, ArrayAccess
     * shared  参数解释：是否公共规格。  取值范围： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
     * projectId  参数解释：项目ID。
     * type  参数解释：规格类别。  取值范围：   - L4和L7 表示四层网络型和七层应用型flavor。   [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu)   - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。已废弃，请勿使用。   - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。
-    * flavorSoldOut  参数解释：[是否售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
-    * publicBorderGroup  参数解释：可用区组，如：center
-    * category  参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
+    * publicBorderGroup  参数解释：网络公共边界组，如：center
+    * category  参数解释：网络公共边界组编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
     */
@@ -151,9 +151,9 @@ class Flavor implements ModelInterface, ArrayAccess
     * shared  参数解释：是否公共规格。  取值范围： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
     * projectId  参数解释：项目ID。
     * type  参数解释：规格类别。  取值范围：   - L4和L7 表示四层网络型和七层应用型flavor。   [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu)   - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。已废弃，请勿使用。   - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。
-    * flavorSoldOut  参数解释：[是否售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
-    * publicBorderGroup  参数解释：可用区组，如：center
-    * category  参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
+    * publicBorderGroup  参数解释：网络公共边界组，如：center
+    * category  参数解释：网络公共边界组编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
     */
@@ -433,7 +433,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavorSoldOut
-    *  参数解释：[是否售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
+    *  参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
     *
     * @return bool
     */
@@ -445,7 +445,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets flavorSoldOut
     *
-    * @param bool $flavorSoldOut 参数解释：[是否售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
+    * @param bool $flavorSoldOut 参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  参数解释：可用区组，如：center
+    *  参数解释：网络公共边界组，如：center
     *
     * @return string|null
     */
@@ -469,7 +469,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string|null $publicBorderGroup 参数解释：可用区组，如：center
+    * @param string|null $publicBorderGroup 参数解释：网络公共边界组，如：center
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
+    *  参数解释：网络公共边界组编码。  取值范围：0表示center，21表示homezone。
     *
     * @return int|null
     */
@@ -493,7 +493,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param int|null $category 参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
+    * @param int|null $category 参数解释：网络公共边界组编码。  取值范围：0表示center，21表示homezone。
     *
     * @return $this
     */

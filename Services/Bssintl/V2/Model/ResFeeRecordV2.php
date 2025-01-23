@@ -77,6 +77,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
     *
     * @var string[]
     */
@@ -137,7 +138,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceTypeName' => 'string',
             'subResourceId' => 'string',
             'subResourceName' => 'string',
-            'consumeTime' => 'string'
+            'consumeTime' => 'string',
+            'relativeOrderId' => 'string'
     ];
 
     /**
@@ -199,6 +201,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
     *
     * @var string[]
     */
@@ -259,7 +262,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         'subResourceTypeName' => null,
         'subResourceId' => null,
         'subResourceName' => null,
-        'consumeTime' => null
+        'consumeTime' => null,
+        'relativeOrderId' => null
     ];
 
     /**
@@ -342,6 +346,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
     *
     * @var string[]
     */
@@ -402,7 +407,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceTypeName' => 'sub_resource_type_name',
             'subResourceId' => 'sub_resource_id',
             'subResourceName' => 'sub_resource_name',
-            'consumeTime' => 'consume_time'
+            'consumeTime' => 'consume_time',
+            'relativeOrderId' => 'relative_order_id'
     ];
 
     /**
@@ -464,6 +470,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
     *
     * @var string[]
     */
@@ -524,7 +531,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceTypeName' => 'setSubResourceTypeName',
             'subResourceId' => 'setSubResourceId',
             'subResourceName' => 'setSubResourceName',
-            'consumeTime' => 'setConsumeTime'
+            'consumeTime' => 'setConsumeTime',
+            'relativeOrderId' => 'setRelativeOrderId'
     ];
 
     /**
@@ -586,6 +594,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
     *
     * @var string[]
     */
@@ -646,7 +655,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceTypeName' => 'getSubResourceTypeName',
             'subResourceId' => 'getSubResourceId',
             'subResourceName' => 'getSubResourceName',
-            'consumeTime' => 'getConsumeTime'
+            'consumeTime' => 'getConsumeTime',
+            'relativeOrderId' => 'getRelativeOrderId'
     ];
 
     /**
@@ -764,6 +774,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         $this->container['subResourceId'] = isset($data['subResourceId']) ? $data['subResourceId'] : null;
         $this->container['subResourceName'] = isset($data['subResourceName']) ? $data['subResourceName'] : null;
         $this->container['consumeTime'] = isset($data['consumeTime']) ? $data['consumeTime'] : null;
+        $this->container['relativeOrderId'] = isset($data['relativeOrderId']) ? $data['relativeOrderId'] : null;
     }
 
     /**
@@ -2153,6 +2164,30 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     public function setConsumeTime($consumeTime)
     {
         $this->container['consumeTime'] = $consumeTime;
+        return $this;
+    }
+
+    /**
+    * Gets relativeOrderId
+    *  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
+    *
+    * @return string|null
+    */
+    public function getRelativeOrderId()
+    {
+        return $this->container['relativeOrderId'];
+    }
+
+    /**
+    * Sets relativeOrderId
+    *
+    * @param string|null $relativeOrderId |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
+    *
+    * @return $this
+    */
+    public function setRelativeOrderId($relativeOrderId)
+    {
+        $this->container['relativeOrderId'] = $relativeOrderId;
         return $this;
     }
 

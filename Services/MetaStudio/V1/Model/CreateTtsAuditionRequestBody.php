@@ -28,6 +28,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     * style  风格情感
+    * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             'pitch' => 'int',
             'volume' => 'int',
             'businessType' => 'string',
-            'style' => 'string'
+            'style' => 'string',
+            'channels' => 'int'
     ];
 
     /**
@@ -52,6 +54,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     * style  风格情感
+    * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
         'pitch' => 'int32',
         'volume' => 'int32',
         'businessType' => null,
-        'style' => null
+        'style' => null,
+        'channels' => 'int32'
     ];
 
     /**
@@ -97,6 +101,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     * style  风格情感
+    * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             'pitch' => 'pitch',
             'volume' => 'volume',
             'businessType' => 'business_type',
-            'style' => 'style'
+            'style' => 'style',
+            'channels' => 'channels'
     ];
 
     /**
@@ -121,6 +127,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     * style  风格情感
+    * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             'pitch' => 'setPitch',
             'volume' => 'setVolume',
             'businessType' => 'setBusinessType',
-            'style' => 'setStyle'
+            'style' => 'setStyle',
+            'channels' => 'setChannels'
     ];
 
     /**
@@ -145,6 +153,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * volume  音量。
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     * style  风格情感
+    * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             'pitch' => 'getPitch',
             'volume' => 'getVolume',
             'businessType' => 'getBusinessType',
-            'style' => 'getStyle'
+            'style' => 'getStyle',
+            'channels' => 'getChannels'
     ];
 
     /**
@@ -225,6 +235,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
         $this->container['businessType'] = isset($data['businessType']) ? $data['businessType'] : null;
         $this->container['style'] = isset($data['style']) ? $data['style'] : null;
+        $this->container['channels'] = isset($data['channels']) ? $data['channels'] : null;
     }
 
     /**
@@ -291,6 +302,12 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['style']) && (mb_strlen($this->container['style']) < 0)) {
                 $invalidProperties[] = "invalid value for 'style', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['channels']) && ($this->container['channels'] > 2)) {
+                $invalidProperties[] = "invalid value for 'channels', must be smaller than or equal to 2.";
+            }
+            if (!is_null($this->container['channels']) && ($this->container['channels'] < 1)) {
+                $invalidProperties[] = "invalid value for 'channels', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -495,6 +512,30 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     public function setStyle($style)
     {
         $this->container['style'] = $style;
+        return $this;
+    }
+
+    /**
+    * Gets channels
+    *  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    *
+    * @return int|null
+    */
+    public function getChannels()
+    {
+        return $this->container['channels'];
+    }
+
+    /**
+    * Sets channels
+    *
+    * @param int|null $channels 声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    *
+    * @return $this
+    */
+    public function setChannels($channels)
+    {
+        $this->container['channels'] = $channels;
         return $this;
     }
 

@@ -27,6 +27,10 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * name  参数解释：规格名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * type  参数解释：规格类别。  取值范围： - L4和L7 表示四层网络型和七层应用型flavor。 [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu) - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
     * shared  参数解释：是否查询公共规格。  取值范围：true表示公共规格，所有租户可见。false表示私有规格，为当前租户所有。
+    * publicBorderGroup  站点pbg。  支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。
+    * category  站点category。  支持多值查询，查询条件格式：*category=xxx&category=xxx*。
+    * listAll  设置list_all=true时，返回当前租户所有的弹性上限规格（l4_elastic_max、l7__elastic_max）。否则只返回该租户弹性上限规格中最大的规格（l4类型优先比较cps指标，然后是带宽；l7类型优先比较https cps指标然后是qps指标）。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
     *
     * @var string[]
     */
@@ -37,7 +41,11 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
             'id' => 'string[]',
             'name' => 'string[]',
             'type' => 'string[]',
-            'shared' => 'bool'
+            'shared' => 'bool',
+            'publicBorderGroup' => 'string[]',
+            'category' => 'int[]',
+            'listAll' => 'bool',
+            'flavorSoldOut' => 'bool'
     ];
 
     /**
@@ -49,6 +57,10 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * name  参数解释：规格名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * type  参数解释：规格类别。  取值范围： - L4和L7 表示四层网络型和七层应用型flavor。 [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu) - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
     * shared  参数解释：是否查询公共规格。  取值范围：true表示公共规格，所有租户可见。false表示私有规格，为当前租户所有。
+    * publicBorderGroup  站点pbg。  支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。
+    * category  站点category。  支持多值查询，查询条件格式：*category=xxx&category=xxx*。
+    * listAll  设置list_all=true时，返回当前租户所有的弹性上限规格（l4_elastic_max、l7__elastic_max）。否则只返回该租户弹性上限规格中最大的规格（l4类型优先比较cps指标，然后是带宽；l7类型优先比较https cps指标然后是qps指标）。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
     *
     * @var string[]
     */
@@ -59,7 +71,11 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'type' => null,
-        'shared' => null
+        'shared' => null,
+        'publicBorderGroup' => null,
+        'category' => null,
+        'listAll' => null,
+        'flavorSoldOut' => null
     ];
 
     /**
@@ -92,6 +108,10 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * name  参数解释：规格名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * type  参数解释：规格类别。  取值范围： - L4和L7 表示四层网络型和七层应用型flavor。 [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu) - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
     * shared  参数解释：是否查询公共规格。  取值范围：true表示公共规格，所有租户可见。false表示私有规格，为当前租户所有。
+    * publicBorderGroup  站点pbg。  支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。
+    * category  站点category。  支持多值查询，查询条件格式：*category=xxx&category=xxx*。
+    * listAll  设置list_all=true时，返回当前租户所有的弹性上限规格（l4_elastic_max、l7__elastic_max）。否则只返回该租户弹性上限规格中最大的规格（l4类型优先比较cps指标，然后是带宽；l7类型优先比较https cps指标然后是qps指标）。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
     *
     * @var string[]
     */
@@ -102,7 +122,11 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'type' => 'type',
-            'shared' => 'shared'
+            'shared' => 'shared',
+            'publicBorderGroup' => 'public_border_group',
+            'category' => 'category',
+            'listAll' => 'list_all',
+            'flavorSoldOut' => 'flavor_sold_out'
     ];
 
     /**
@@ -114,6 +138,10 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * name  参数解释：规格名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * type  参数解释：规格类别。  取值范围： - L4和L7 表示四层网络型和七层应用型flavor。 [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu) - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
     * shared  参数解释：是否查询公共规格。  取值范围：true表示公共规格，所有租户可见。false表示私有规格，为当前租户所有。
+    * publicBorderGroup  站点pbg。  支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。
+    * category  站点category。  支持多值查询，查询条件格式：*category=xxx&category=xxx*。
+    * listAll  设置list_all=true时，返回当前租户所有的弹性上限规格（l4_elastic_max、l7__elastic_max）。否则只返回该租户弹性上限规格中最大的规格（l4类型优先比较cps指标，然后是带宽；l7类型优先比较https cps指标然后是qps指标）。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
     *
     * @var string[]
     */
@@ -124,7 +152,11 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'type' => 'setType',
-            'shared' => 'setShared'
+            'shared' => 'setShared',
+            'publicBorderGroup' => 'setPublicBorderGroup',
+            'category' => 'setCategory',
+            'listAll' => 'setListAll',
+            'flavorSoldOut' => 'setFlavorSoldOut'
     ];
 
     /**
@@ -136,6 +168,10 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * name  参数解释：规格名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * type  参数解释：规格类别。  取值范围： - L4和L7 表示四层网络型和七层应用型flavor。 [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu) - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
     * shared  参数解释：是否查询公共规格。  取值范围：true表示公共规格，所有租户可见。false表示私有规格，为当前租户所有。
+    * publicBorderGroup  站点pbg。  支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。
+    * category  站点category。  支持多值查询，查询条件格式：*category=xxx&category=xxx*。
+    * listAll  设置list_all=true时，返回当前租户所有的弹性上限规格（l4_elastic_max、l7__elastic_max）。否则只返回该租户弹性上限规格中最大的规格（l4类型优先比较cps指标，然后是带宽；l7类型优先比较https cps指标然后是qps指标）。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
     *
     * @var string[]
     */
@@ -146,7 +182,11 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'type' => 'getType',
-            'shared' => 'getShared'
+            'shared' => 'getShared',
+            'publicBorderGroup' => 'getPublicBorderGroup',
+            'category' => 'getCategory',
+            'listAll' => 'getListAll',
+            'flavorSoldOut' => 'getFlavorSoldOut'
     ];
 
     /**
@@ -214,6 +254,10 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
+        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['listAll'] = isset($data['listAll']) ? $data['listAll'] : null;
+        $this->container['flavorSoldOut'] = isset($data['flavorSoldOut']) ? $data['flavorSoldOut'] : null;
     }
 
     /**
@@ -409,6 +453,102 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     public function setShared($shared)
     {
         $this->container['shared'] = $shared;
+        return $this;
+    }
+
+    /**
+    * Gets publicBorderGroup
+    *  站点pbg。  支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。
+    *
+    * @return string[]|null
+    */
+    public function getPublicBorderGroup()
+    {
+        return $this->container['publicBorderGroup'];
+    }
+
+    /**
+    * Sets publicBorderGroup
+    *
+    * @param string[]|null $publicBorderGroup 站点pbg。  支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。
+    *
+    * @return $this
+    */
+    public function setPublicBorderGroup($publicBorderGroup)
+    {
+        $this->container['publicBorderGroup'] = $publicBorderGroup;
+        return $this;
+    }
+
+    /**
+    * Gets category
+    *  站点category。  支持多值查询，查询条件格式：*category=xxx&category=xxx*。
+    *
+    * @return int[]|null
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param int[]|null $category 站点category。  支持多值查询，查询条件格式：*category=xxx&category=xxx*。
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
+    * Gets listAll
+    *  设置list_all=true时，返回当前租户所有的弹性上限规格（l4_elastic_max、l7__elastic_max）。否则只返回该租户弹性上限规格中最大的规格（l4类型优先比较cps指标，然后是带宽；l7类型优先比较https cps指标然后是qps指标）。
+    *
+    * @return bool|null
+    */
+    public function getListAll()
+    {
+        return $this->container['listAll'];
+    }
+
+    /**
+    * Sets listAll
+    *
+    * @param bool|null $listAll 设置list_all=true时，返回当前租户所有的弹性上限规格（l4_elastic_max、l7__elastic_max）。否则只返回该租户弹性上限规格中最大的规格（l4类型优先比较cps指标，然后是带宽；l7类型优先比较https cps指标然后是qps指标）。
+    *
+    * @return $this
+    */
+    public function setListAll($listAll)
+    {
+        $this->container['listAll'] = $listAll;
+        return $this;
+    }
+
+    /**
+    * Gets flavorSoldOut
+    *  参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
+    *
+    * @return bool|null
+    */
+    public function getFlavorSoldOut()
+    {
+        return $this->container['flavorSoldOut'];
+    }
+
+    /**
+    * Sets flavorSoldOut
+    *
+    * @param bool|null $flavorSoldOut 参数解释： [是否售罄。](tag:hws) [是否无法购买该规格的LB。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,dt_test,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,ct)  取值范围： - true：[已售罄，将](tag:hws)无法购买该规格的LB。 - false：[未售罄，](tag:hws)可购买该规格的LB。
+    *
+    * @return $this
+    */
+    public function setFlavorSoldOut($flavorSoldOut)
+    {
+        $this->container['flavorSoldOut'] = $flavorSoldOut;
         return $this;
     }
 

@@ -27,6 +27,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
     * databaseId  数据库id，当前只对指定客户开放
     * username  操作慢日志的账号名称，当前只对指定客户开放
+    * nodeRole  **参数解释**： 节点类型。 **取值范围**： 不涉及。
+    * clientIp  **参数解释**： 客户端IP地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class SlowlogItem implements ModelInterface, ArrayAccess
             'duration' => 'string',
             'shardName' => 'string',
             'databaseId' => 'int',
-            'username' => 'string'
+            'username' => 'string',
+            'nodeRole' => 'string',
+            'clientIp' => 'string'
     ];
 
     /**
@@ -49,6 +53,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
     * databaseId  数据库id，当前只对指定客户开放
     * username  操作慢日志的账号名称，当前只对指定客户开放
+    * nodeRole  **参数解释**： 节点类型。 **取值范围**： 不涉及。
+    * clientIp  **参数解释**： 客户端IP地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class SlowlogItem implements ModelInterface, ArrayAccess
         'duration' => null,
         'shardName' => null,
         'databaseId' => null,
-        'username' => null
+        'username' => null,
+        'nodeRole' => null,
+        'clientIp' => null
     ];
 
     /**
@@ -92,6 +100,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
     * databaseId  数据库id，当前只对指定客户开放
     * username  操作慢日志的账号名称，当前只对指定客户开放
+    * nodeRole  **参数解释**： 节点类型。 **取值范围**： 不涉及。
+    * clientIp  **参数解释**： 客户端IP地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class SlowlogItem implements ModelInterface, ArrayAccess
             'duration' => 'duration',
             'shardName' => 'shard_name',
             'databaseId' => 'database_id',
-            'username' => 'username'
+            'username' => 'username',
+            'nodeRole' => 'node_role',
+            'clientIp' => 'client_ip'
     ];
 
     /**
@@ -114,6 +126,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
     * databaseId  数据库id，当前只对指定客户开放
     * username  操作慢日志的账号名称，当前只对指定客户开放
+    * nodeRole  **参数解释**： 节点类型。 **取值范围**： 不涉及。
+    * clientIp  **参数解释**： 客户端IP地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class SlowlogItem implements ModelInterface, ArrayAccess
             'duration' => 'setDuration',
             'shardName' => 'setShardName',
             'databaseId' => 'setDatabaseId',
-            'username' => 'setUsername'
+            'username' => 'setUsername',
+            'nodeRole' => 'setNodeRole',
+            'clientIp' => 'setClientIp'
     ];
 
     /**
@@ -136,6 +152,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
     * databaseId  数据库id，当前只对指定客户开放
     * username  操作慢日志的账号名称，当前只对指定客户开放
+    * nodeRole  **参数解释**： 节点类型。 **取值范围**： 不涉及。
+    * clientIp  **参数解释**： 客户端IP地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class SlowlogItem implements ModelInterface, ArrayAccess
             'duration' => 'getDuration',
             'shardName' => 'getShardName',
             'databaseId' => 'getDatabaseId',
-            'username' => 'getUsername'
+            'username' => 'getUsername',
+            'nodeRole' => 'getNodeRole',
+            'clientIp' => 'getClientIp'
     ];
 
     /**
@@ -214,6 +234,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
         $this->container['shardName'] = isset($data['shardName']) ? $data['shardName'] : null;
         $this->container['databaseId'] = isset($data['databaseId']) ? $data['databaseId'] : null;
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
+        $this->container['nodeRole'] = isset($data['nodeRole']) ? $data['nodeRole'] : null;
+        $this->container['clientIp'] = isset($data['clientIp']) ? $data['clientIp'] : null;
     }
 
     /**
@@ -403,6 +425,54 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     public function setUsername($username)
     {
         $this->container['username'] = $username;
+        return $this;
+    }
+
+    /**
+    * Gets nodeRole
+    *  **参数解释**： 节点类型。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getNodeRole()
+    {
+        return $this->container['nodeRole'];
+    }
+
+    /**
+    * Sets nodeRole
+    *
+    * @param string|null $nodeRole **参数解释**： 节点类型。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setNodeRole($nodeRole)
+    {
+        $this->container['nodeRole'] = $nodeRole;
+        return $this;
+    }
+
+    /**
+    * Gets clientIp
+    *  **参数解释**： 客户端IP地址。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getClientIp()
+    {
+        return $this->container['clientIp'];
+    }
+
+    /**
+    * Sets clientIp
+    *
+    * @param string|null $clientIp **参数解释**： 客户端IP地址。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setClientIp($clientIp)
+    {
+        $this->container['clientIp'] = $clientIp;
         return $this;
     }
 

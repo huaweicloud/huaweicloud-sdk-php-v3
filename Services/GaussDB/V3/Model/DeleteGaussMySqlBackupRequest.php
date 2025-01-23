@@ -21,7 +21,7 @@ class DeleteGaussMySqlBackupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言。
-    * backupId  备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlBackupList.html)。
+    * backupId  备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlBackupList.html)。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class DeleteGaussMySqlBackupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言。
-    * backupId  备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlBackupList.html)。
+    * backupId  备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlBackupList.html)。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class DeleteGaussMySqlBackupRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * xLanguage  语言。
-    * backupId  备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlBackupList.html)。
+    * backupId  备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlBackupList.html)。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class DeleteGaussMySqlBackupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言。
-    * backupId  备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlBackupList.html)。
+    * backupId  备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlBackupList.html)。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class DeleteGaussMySqlBackupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言。
-    * backupId  备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlBackupList.html)。
+    * backupId  备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlBackupList.html)。
     *
     * @var string[]
     */
@@ -212,7 +212,7 @@ class DeleteGaussMySqlBackupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupId
-    *  备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlBackupList.html)。
+    *  备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlBackupList.html)。
     *
     * @return string
     */
@@ -224,7 +224,7 @@ class DeleteGaussMySqlBackupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets backupId
     *
-    * @param string $backupId 备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlBackupList.html)。
+    * @param string $backupId 备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlBackupList.html)。
     *
     * @return $this
     */

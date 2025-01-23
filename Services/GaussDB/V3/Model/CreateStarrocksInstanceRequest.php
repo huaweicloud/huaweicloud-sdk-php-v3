@@ -20,7 +20,7 @@ class CreateStarrocksInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  GaussDBForMySQL数据库实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB数据库实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * body  body
     *
@@ -34,7 +34,7 @@ class CreateStarrocksInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  GaussDBForMySQL数据库实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB数据库实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * body  body
     *
@@ -69,7 +69,7 @@ class CreateStarrocksInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  GaussDBForMySQL数据库实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB数据库实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * body  body
     *
@@ -83,7 +83,7 @@ class CreateStarrocksInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  GaussDBForMySQL数据库实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB数据库实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * body  body
     *
@@ -97,7 +97,7 @@ class CreateStarrocksInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  GaussDBForMySQL数据库实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB数据库实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * body  body
     *
@@ -199,7 +199,7 @@ class CreateStarrocksInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  GaussDBForMySQL数据库实例ID，严格匹配UUID规则。
+    *  TaurusDB数据库实例ID，严格匹配UUID规则。
     *
     * @return string
     */
@@ -211,7 +211,7 @@ class CreateStarrocksInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId GaussDBForMySQL数据库实例ID，严格匹配UUID规则。
+    * @param string $instanceId TaurusDB数据库实例ID，严格匹配UUID规则。
     *
     * @return $this
     */

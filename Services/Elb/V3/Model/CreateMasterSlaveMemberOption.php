@@ -243,13 +243,10 @@ class CreateMasterSlaveMemberOption implements ModelInterface, ArrayAccess
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['protocolPort'] === null) {
-            $invalidProperties[] = "'protocolPort' can't be null";
-        }
-            if (($this->container['protocolPort'] > 65535)) {
+            if (!is_null($this->container['protocolPort']) && ($this->container['protocolPort'] > 65535)) {
                 $invalidProperties[] = "invalid value for 'protocolPort', must be smaller than or equal to 65535.";
             }
-            if (($this->container['protocolPort'] < 1)) {
+            if (!is_null($this->container['protocolPort']) && ($this->container['protocolPort'] < 1)) {
                 $invalidProperties[] = "invalid value for 'protocolPort', must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['subnetCidrId']) && (mb_strlen($this->container['subnetCidrId']) > 36)) {
@@ -365,7 +362,7 @@ class CreateMasterSlaveMemberOption implements ModelInterface, ArrayAccess
     * Gets protocolPort
     *  后端服务器业务端口。 >在开启端口透传的pool下创建member传该字段不生效，可不传该字段。
     *
-    * @return int
+    * @return int|null
     */
     public function getProtocolPort()
     {
@@ -375,7 +372,7 @@ class CreateMasterSlaveMemberOption implements ModelInterface, ArrayAccess
     /**
     * Sets protocolPort
     *
-    * @param int $protocolPort 后端服务器业务端口。 >在开启端口透传的pool下创建member传该字段不生效，可不传该字段。
+    * @param int|null $protocolPort 后端服务器业务端口。 >在开启端口透传的pool下创建member传该字段不生效，可不传该字段。
     *
     * @return $this
     */

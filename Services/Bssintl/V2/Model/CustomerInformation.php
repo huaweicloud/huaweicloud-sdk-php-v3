@@ -35,6 +35,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
     * customerLevel  客户等级。 V0 V1 V2 V3 V4 V5
+    * email  |参数名称：客户邮箱| |参数的约束及描述：该参数为字符串 范围限制:0-256。|
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class CustomerInformation implements ModelInterface, ArrayAccess
             'accountManagers' => '\HuaweiCloud\SDK\Bssintl\V2\Model\AccountManager[]',
             'xaccountId' => 'string',
             'xaccountType' => 'string',
-            'customerLevel' => 'string'
+            'customerLevel' => 'string',
+            'email' => 'string'
     ];
 
     /**
@@ -73,6 +75,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
     * customerLevel  客户等级。 V0 V1 V2 V3 V4 V5
+    * email  |参数名称：客户邮箱| |参数的约束及描述：该参数为字符串 范围限制:0-256。|
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class CustomerInformation implements ModelInterface, ArrayAccess
         'accountManagers' => null,
         'xaccountId' => null,
         'xaccountType' => null,
-        'customerLevel' => null
+        'customerLevel' => null,
+        'email' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
     * customerLevel  客户等级。 V0 V1 V2 V3 V4 V5
+    * email  |参数名称：客户邮箱| |参数的约束及描述：该参数为字符串 范围限制:0-256。|
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class CustomerInformation implements ModelInterface, ArrayAccess
             'accountManagers' => 'account_managers',
             'xaccountId' => 'xaccount_id',
             'xaccountType' => 'xaccount_type',
-            'customerLevel' => 'customer_level'
+            'customerLevel' => 'customer_level',
+            'email' => 'email'
     ];
 
     /**
@@ -170,6 +176,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
     * customerLevel  客户等级。 V0 V1 V2 V3 V4 V5
+    * email  |参数名称：客户邮箱| |参数的约束及描述：该参数为字符串 范围限制:0-256。|
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class CustomerInformation implements ModelInterface, ArrayAccess
             'accountManagers' => 'setAccountManagers',
             'xaccountId' => 'setXaccountId',
             'xaccountType' => 'setXaccountType',
-            'customerLevel' => 'setCustomerLevel'
+            'customerLevel' => 'setCustomerLevel',
+            'email' => 'setEmail'
     ];
 
     /**
@@ -208,6 +216,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
     * customerLevel  客户等级。 V0 V1 V2 V3 V4 V5
+    * email  |参数名称：客户邮箱| |参数的约束及描述：该参数为字符串 范围限制:0-256。|
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class CustomerInformation implements ModelInterface, ArrayAccess
             'accountManagers' => 'getAccountManagers',
             'xaccountId' => 'getXaccountId',
             'xaccountType' => 'getXaccountType',
-            'customerLevel' => 'getCustomerLevel'
+            'customerLevel' => 'getCustomerLevel',
+            'email' => 'getEmail'
     ];
 
     /**
@@ -302,6 +312,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
         $this->container['xaccountId'] = isset($data['xaccountId']) ? $data['xaccountId'] : null;
         $this->container['xaccountType'] = isset($data['xaccountType']) ? $data['xaccountType'] : null;
         $this->container['customerLevel'] = isset($data['customerLevel']) ? $data['customerLevel'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
     }
 
     /**
@@ -318,6 +329,12 @@ class CustomerInformation implements ModelInterface, ArrayAccess
         if ($this->container['customerId'] === null) {
             $invalidProperties[] = "'customerId' can't be null";
         }
+            if (!is_null($this->container['email']) && (mb_strlen($this->container['email']) > 256)) {
+                $invalidProperties[] = "invalid value for 'email', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['email']) && (mb_strlen($this->container['email']) < 0)) {
+                $invalidProperties[] = "invalid value for 'email', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -689,6 +706,30 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     public function setCustomerLevel($customerLevel)
     {
         $this->container['customerLevel'] = $customerLevel;
+        return $this;
+    }
+
+    /**
+    * Gets email
+    *  |参数名称：客户邮箱| |参数的约束及描述：该参数为字符串 范围限制:0-256。|
+    *
+    * @return string|null
+    */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+    * Sets email
+    *
+    * @param string|null $email |参数名称：客户邮箱| |参数的约束及描述：该参数为字符串 范围限制:0-256。|
+    *
+    * @return $this
+    */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
         return $this;
     }
 

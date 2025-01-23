@@ -20,7 +20,7 @@ class StarRocksReplicationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sourceDatabase  GaussDB(for MySQL)数据库。
+    * sourceDatabase  TaurusDB数据库。
     * targetDatabase  目标数据库。
     * taskName  同步任务名。
     * status  当前状态。Yes:正常;No:异常。
@@ -44,7 +44,7 @@ class StarRocksReplicationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sourceDatabase  GaussDB(for MySQL)数据库。
+    * sourceDatabase  TaurusDB数据库。
     * targetDatabase  目标数据库。
     * taskName  同步任务名。
     * status  当前状态。Yes:正常;No:异常。
@@ -89,7 +89,7 @@ class StarRocksReplicationInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sourceDatabase  GaussDB(for MySQL)数据库。
+    * sourceDatabase  TaurusDB数据库。
     * targetDatabase  目标数据库。
     * taskName  同步任务名。
     * status  当前状态。Yes:正常;No:异常。
@@ -113,7 +113,7 @@ class StarRocksReplicationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sourceDatabase  GaussDB(for MySQL)数据库。
+    * sourceDatabase  TaurusDB数据库。
     * targetDatabase  目标数据库。
     * taskName  同步任务名。
     * status  当前状态。Yes:正常;No:异常。
@@ -137,7 +137,7 @@ class StarRocksReplicationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sourceDatabase  GaussDB(for MySQL)数据库。
+    * sourceDatabase  TaurusDB数据库。
     * targetDatabase  目标数据库。
     * taskName  同步任务名。
     * status  当前状态。Yes:正常;No:异常。
@@ -380,7 +380,7 @@ class StarRocksReplicationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceDatabase
-    *  GaussDB(for MySQL)数据库。
+    *  TaurusDB数据库。
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class StarRocksReplicationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sourceDatabase
     *
-    * @param string|null $sourceDatabase GaussDB(for MySQL)数据库。
+    * @param string|null $sourceDatabase TaurusDB数据库。
     *
     * @return $this
     */

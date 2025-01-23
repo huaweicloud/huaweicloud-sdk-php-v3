@@ -24,13 +24,19 @@ class ResetPasswordResponse implements ModelInterface, ArrayAccess
     * retryTimesLeft  密码验证剩余次数
     * lockTime  锁定时间
     * lockTimeLeft  锁定剩余时间
+    * code  **参数解释**： 重置密码结果编号。 **取值范围**： - 1：重置密码成功。 - 3：实例被锁定。
+    * message  **参数解释**： 重置密码结果信息。 **取值范围**： - success - instance is locked
+    * extMessage  **参数解释**： 重置密码错误信息，若重置密码成功，则为null。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'retryTimesLeft' => 'string',
             'lockTime' => 'string',
-            'lockTimeLeft' => 'string'
+            'lockTimeLeft' => 'string',
+            'code' => 'string',
+            'message' => 'string',
+            'extMessage' => 'string'
     ];
 
     /**
@@ -38,13 +44,19 @@ class ResetPasswordResponse implements ModelInterface, ArrayAccess
     * retryTimesLeft  密码验证剩余次数
     * lockTime  锁定时间
     * lockTimeLeft  锁定剩余时间
+    * code  **参数解释**： 重置密码结果编号。 **取值范围**： - 1：重置密码成功。 - 3：实例被锁定。
+    * message  **参数解释**： 重置密码结果信息。 **取值范围**： - success - instance is locked
+    * extMessage  **参数解释**： 重置密码错误信息，若重置密码成功，则为null。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'retryTimesLeft' => null,
         'lockTime' => null,
-        'lockTimeLeft' => null
+        'lockTimeLeft' => null,
+        'code' => null,
+        'message' => null,
+        'extMessage' => null
     ];
 
     /**
@@ -73,13 +85,19 @@ class ResetPasswordResponse implements ModelInterface, ArrayAccess
     * retryTimesLeft  密码验证剩余次数
     * lockTime  锁定时间
     * lockTimeLeft  锁定剩余时间
+    * code  **参数解释**： 重置密码结果编号。 **取值范围**： - 1：重置密码成功。 - 3：实例被锁定。
+    * message  **参数解释**： 重置密码结果信息。 **取值范围**： - success - instance is locked
+    * extMessage  **参数解释**： 重置密码错误信息，若重置密码成功，则为null。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'retryTimesLeft' => 'retry_times_left',
             'lockTime' => 'lock_time',
-            'lockTimeLeft' => 'lock_time_left'
+            'lockTimeLeft' => 'lock_time_left',
+            'code' => 'code',
+            'message' => 'message',
+            'extMessage' => 'ext_message'
     ];
 
     /**
@@ -87,13 +105,19 @@ class ResetPasswordResponse implements ModelInterface, ArrayAccess
     * retryTimesLeft  密码验证剩余次数
     * lockTime  锁定时间
     * lockTimeLeft  锁定剩余时间
+    * code  **参数解释**： 重置密码结果编号。 **取值范围**： - 1：重置密码成功。 - 3：实例被锁定。
+    * message  **参数解释**： 重置密码结果信息。 **取值范围**： - success - instance is locked
+    * extMessage  **参数解释**： 重置密码错误信息，若重置密码成功，则为null。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'retryTimesLeft' => 'setRetryTimesLeft',
             'lockTime' => 'setLockTime',
-            'lockTimeLeft' => 'setLockTimeLeft'
+            'lockTimeLeft' => 'setLockTimeLeft',
+            'code' => 'setCode',
+            'message' => 'setMessage',
+            'extMessage' => 'setExtMessage'
     ];
 
     /**
@@ -101,13 +125,19 @@ class ResetPasswordResponse implements ModelInterface, ArrayAccess
     * retryTimesLeft  密码验证剩余次数
     * lockTime  锁定时间
     * lockTimeLeft  锁定剩余时间
+    * code  **参数解释**： 重置密码结果编号。 **取值范围**： - 1：重置密码成功。 - 3：实例被锁定。
+    * message  **参数解释**： 重置密码结果信息。 **取值范围**： - success - instance is locked
+    * extMessage  **参数解释**： 重置密码错误信息，若重置密码成功，则为null。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'retryTimesLeft' => 'getRetryTimesLeft',
             'lockTime' => 'getLockTime',
-            'lockTimeLeft' => 'getLockTimeLeft'
+            'lockTimeLeft' => 'getLockTimeLeft',
+            'code' => 'getCode',
+            'message' => 'getMessage',
+            'extMessage' => 'getExtMessage'
     ];
 
     /**
@@ -171,6 +201,9 @@ class ResetPasswordResponse implements ModelInterface, ArrayAccess
         $this->container['retryTimesLeft'] = isset($data['retryTimesLeft']) ? $data['retryTimesLeft'] : null;
         $this->container['lockTime'] = isset($data['lockTime']) ? $data['lockTime'] : null;
         $this->container['lockTimeLeft'] = isset($data['lockTimeLeft']) ? $data['lockTimeLeft'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['extMessage'] = isset($data['extMessage']) ? $data['extMessage'] : null;
     }
 
     /**
@@ -264,6 +297,78 @@ class ResetPasswordResponse implements ModelInterface, ArrayAccess
     public function setLockTimeLeft($lockTimeLeft)
     {
         $this->container['lockTimeLeft'] = $lockTimeLeft;
+        return $this;
+    }
+
+    /**
+    * Gets code
+    *  **参数解释**： 重置密码结果编号。 **取值范围**： - 1：重置密码成功。 - 3：实例被锁定。
+    *
+    * @return string|null
+    */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+    * Sets code
+    *
+    * @param string|null $code **参数解释**： 重置密码结果编号。 **取值范围**： - 1：重置密码成功。 - 3：实例被锁定。
+    *
+    * @return $this
+    */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
+        return $this;
+    }
+
+    /**
+    * Gets message
+    *  **参数解释**： 重置密码结果信息。 **取值范围**： - success - instance is locked
+    *
+    * @return string|null
+    */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+    * Sets message
+    *
+    * @param string|null $message **参数解释**： 重置密码结果信息。 **取值范围**： - success - instance is locked
+    *
+    * @return $this
+    */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
+        return $this;
+    }
+
+    /**
+    * Gets extMessage
+    *  **参数解释**： 重置密码错误信息，若重置密码成功，则为null。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getExtMessage()
+    {
+        return $this->container['extMessage'];
+    }
+
+    /**
+    * Sets extMessage
+    *
+    * @param string|null $extMessage **参数解释**： 重置密码错误信息，若重置密码成功，则为null。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setExtMessage($extMessage)
+    {
+        $this->container['extMessage'] = $extMessage;
         return $this;
     }
 

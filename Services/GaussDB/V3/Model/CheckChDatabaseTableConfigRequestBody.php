@@ -21,7 +21,7 @@ class CheckChDatabaseTableConfigRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of property to type mappings. Used for (de)serialization
     * sourceInstanceId  源实例ID。
-    * sourceNodeId  源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    * sourceNodeId  源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     * sourceDatabaseName  源数据库名。
     * dbConfigs  库配置列表。
     * tablesConfigs  表配置信息。
@@ -41,7 +41,7 @@ class CheckChDatabaseTableConfigRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sourceInstanceId  源实例ID。
-    * sourceNodeId  源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    * sourceNodeId  源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     * sourceDatabaseName  源数据库名。
     * dbConfigs  库配置列表。
     * tablesConfigs  表配置信息。
@@ -82,7 +82,7 @@ class CheckChDatabaseTableConfigRequestBody implements ModelInterface, ArrayAcce
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * sourceInstanceId  源实例ID。
-    * sourceNodeId  源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    * sourceNodeId  源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     * sourceDatabaseName  源数据库名。
     * dbConfigs  库配置列表。
     * tablesConfigs  表配置信息。
@@ -102,7 +102,7 @@ class CheckChDatabaseTableConfigRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sourceInstanceId  源实例ID。
-    * sourceNodeId  源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    * sourceNodeId  源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     * sourceDatabaseName  源数据库名。
     * dbConfigs  库配置列表。
     * tablesConfigs  表配置信息。
@@ -122,7 +122,7 @@ class CheckChDatabaseTableConfigRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sourceInstanceId  源实例ID。
-    * sourceNodeId  源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    * sourceNodeId  源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     * sourceDatabaseName  源数据库名。
     * dbConfigs  库配置列表。
     * tablesConfigs  表配置信息。
@@ -268,7 +268,7 @@ class CheckChDatabaseTableConfigRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Gets sourceNodeId
-    *  源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    *  源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     *
     * @return string|null
     */
@@ -280,7 +280,7 @@ class CheckChDatabaseTableConfigRequestBody implements ModelInterface, ArrayAcce
     /**
     * Sets sourceNodeId
     *
-    * @param string|null $sourceNodeId 源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    * @param string|null $sourceNodeId 源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     *
     * @return $this
     */

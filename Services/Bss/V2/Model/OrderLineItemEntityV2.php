@@ -38,6 +38,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * productOwnerService  产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * commercialResource  商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * baseProductInfo  baseProductInfo
+    * orderId  订单ID。
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
             'categoryCode' => 'string',
             'productOwnerService' => 'string',
             'commercialResource' => 'string',
-            'baseProductInfo' => '\HuaweiCloud\SDK\Bss\V2\Model\ProductObject'
+            'baseProductInfo' => '\HuaweiCloud\SDK\Bss\V2\Model\ProductObject',
+            'orderId' => 'string'
     ];
 
     /**
@@ -82,6 +84,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * productOwnerService  产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * commercialResource  商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * baseProductInfo  baseProductInfo
+    * orderId  订单ID。
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
         'categoryCode' => null,
         'productOwnerService' => null,
         'commercialResource' => null,
-        'baseProductInfo' => null
+        'baseProductInfo' => null,
+        'orderId' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * productOwnerService  产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * commercialResource  商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * baseProductInfo  baseProductInfo
+    * orderId  订单ID。
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
             'categoryCode' => 'category_code',
             'productOwnerService' => 'product_owner_service',
             'commercialResource' => 'commercial_resource',
-            'baseProductInfo' => 'base_product_info'
+            'baseProductInfo' => 'base_product_info',
+            'orderId' => 'order_id'
     ];
 
     /**
@@ -191,6 +197,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * productOwnerService  产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * commercialResource  商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * baseProductInfo  baseProductInfo
+    * orderId  订单ID。
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
             'categoryCode' => 'setCategoryCode',
             'productOwnerService' => 'setProductOwnerService',
             'commercialResource' => 'setCommercialResource',
-            'baseProductInfo' => 'setBaseProductInfo'
+            'baseProductInfo' => 'setBaseProductInfo',
+            'orderId' => 'setOrderId'
     ];
 
     /**
@@ -235,6 +243,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * productOwnerService  产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * commercialResource  商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * baseProductInfo  baseProductInfo
+    * orderId  订单ID。
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
             'categoryCode' => 'getCategoryCode',
             'productOwnerService' => 'getProductOwnerService',
             'commercialResource' => 'getCommercialResource',
-            'baseProductInfo' => 'getBaseProductInfo'
+            'baseProductInfo' => 'getBaseProductInfo',
+            'orderId' => 'getOrderId'
     ];
 
     /**
@@ -335,6 +345,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
         $this->container['productOwnerService'] = isset($data['productOwnerService']) ? $data['productOwnerService'] : null;
         $this->container['commercialResource'] = isset($data['commercialResource']) ? $data['commercialResource'] : null;
         $this->container['baseProductInfo'] = isset($data['baseProductInfo']) ? $data['baseProductInfo'] : null;
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
     }
 
     /**
@@ -345,6 +356,12 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'orderId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'orderId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -788,6 +805,30 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     public function setBaseProductInfo($baseProductInfo)
     {
         $this->container['baseProductInfo'] = $baseProductInfo;
+        return $this;
+    }
+
+    /**
+    * Gets orderId
+    *  订单ID。
+    *
+    * @return string|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param string|null $orderId 订单ID。
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
         return $this;
     }
 

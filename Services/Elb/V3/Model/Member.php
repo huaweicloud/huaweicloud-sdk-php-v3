@@ -31,8 +31,9 @@ class Member implements ModelInterface, ArrayAccess
     * ipVersion  参数解释：当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。  取值范围：v4、v6。
     * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
     * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
-    * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * reason  reason
+    * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * memberType  参数解释：后端服务器的类型。  取值范围： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  参数解释：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     *
@@ -50,6 +51,7 @@ class Member implements ModelInterface, ArrayAccess
             'ipVersion' => 'string',
             'operatingStatus' => 'string',
             'status' => '\HuaweiCloud\SDK\Elb\V3\Model\MemberStatus[]',
+            'reason' => '\HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason',
             'createdAt' => 'string',
             'updatedAt' => 'string',
             'memberType' => 'string',
@@ -69,8 +71,9 @@ class Member implements ModelInterface, ArrayAccess
     * ipVersion  参数解释：当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。  取值范围：v4、v6。
     * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
     * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
-    * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * reason  reason
+    * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * memberType  参数解释：后端服务器的类型。  取值范围： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  参数解释：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     *
@@ -88,6 +91,7 @@ class Member implements ModelInterface, ArrayAccess
         'ipVersion' => null,
         'operatingStatus' => null,
         'status' => null,
+        'reason' => null,
         'createdAt' => null,
         'updatedAt' => null,
         'memberType' => null,
@@ -128,8 +132,9 @@ class Member implements ModelInterface, ArrayAccess
     * ipVersion  参数解释：当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。  取值范围：v4、v6。
     * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
     * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
-    * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * reason  reason
+    * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * memberType  参数解释：后端服务器的类型。  取值范围： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  参数解释：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     *
@@ -147,6 +152,7 @@ class Member implements ModelInterface, ArrayAccess
             'ipVersion' => 'ip_version',
             'operatingStatus' => 'operating_status',
             'status' => 'status',
+            'reason' => 'reason',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'memberType' => 'member_type',
@@ -166,8 +172,9 @@ class Member implements ModelInterface, ArrayAccess
     * ipVersion  参数解释：当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。  取值范围：v4、v6。
     * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
     * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
-    * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * reason  reason
+    * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * memberType  参数解释：后端服务器的类型。  取值范围： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  参数解释：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     *
@@ -185,6 +192,7 @@ class Member implements ModelInterface, ArrayAccess
             'ipVersion' => 'setIpVersion',
             'operatingStatus' => 'setOperatingStatus',
             'status' => 'setStatus',
+            'reason' => 'setReason',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'memberType' => 'setMemberType',
@@ -204,8 +212,9 @@ class Member implements ModelInterface, ArrayAccess
     * ipVersion  参数解释：当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。  取值范围：v4、v6。
     * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
     * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
-    * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * reason  reason
+    * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * memberType  参数解释：后端服务器的类型。  取值范围： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  参数解释：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     *
@@ -223,6 +232,7 @@ class Member implements ModelInterface, ArrayAccess
             'ipVersion' => 'getIpVersion',
             'operatingStatus' => 'getOperatingStatus',
             'status' => 'getStatus',
+            'reason' => 'getReason',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'memberType' => 'getMemberType',
@@ -298,6 +308,7 @@ class Member implements ModelInterface, ArrayAccess
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['operatingStatus'] = isset($data['operatingStatus']) ? $data['operatingStatus'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['memberType'] = isset($data['memberType']) ? $data['memberType'] : null;
@@ -633,8 +644,32 @@ class Member implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets reason
+    *  reason
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason|null
+    */
+    public function getReason()
+    {
+        return $this->container['reason'];
+    }
+
+    /**
+    * Sets reason
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason|null $reason reason
+    *
+    * @return $this
+    */
+    public function setReason($reason)
+    {
+        $this->container['reason'] = $reason;
+        return $this;
+    }
+
+    /**
     * Gets createdAt
-    *  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    *  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     *
     * @return string|null
     */
@@ -646,7 +681,7 @@ class Member implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * @param string|null $createdAt 参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     *
     * @return $this
     */
@@ -658,7 +693,7 @@ class Member implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    *  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     *
     * @return string|null
     */
@@ -670,7 +705,7 @@ class Member implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * @param string|null $updatedAt 参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     *
     * @return $this
     */

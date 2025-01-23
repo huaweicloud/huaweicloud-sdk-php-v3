@@ -158,6 +158,9 @@ class BatchDeleteFirewallTagsRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class BatchDeleteFirewallTagsRequestBody implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签列表
     *
-    * @return \HuaweiCloud\SDK\Vpc\V3\Model\DeleteResourceTagRequestBody[]|null
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\DeleteResourceTagRequestBody[]
     */
     public function getTags()
     {
@@ -186,7 +189,7 @@ class BatchDeleteFirewallTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\DeleteResourceTagRequestBody[]|null $tags 标签列表
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\DeleteResourceTagRequestBody[] $tags 标签列表
     *
     * @return $this
     */

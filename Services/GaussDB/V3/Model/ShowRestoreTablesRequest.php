@@ -22,7 +22,7 @@ class ShowRestoreTablesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * instanceId  实例ID，严格匹配UUID规则。
-    * restoreTime  备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-gaussdbformysql/ShowBackupRestoreTime.html)获取。
+    * restoreTime  备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-taurusdb/ShowBackupRestoreTime.html)获取。
     * lastTableInfo  是否是最新库表。 - true：是最新库表。 - false：是恢复时间点库表。
     * databaseName  数据库名称，模糊匹配。
     * tableName  表名称，模糊匹配。
@@ -42,7 +42,7 @@ class ShowRestoreTablesRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * instanceId  实例ID，严格匹配UUID规则。
-    * restoreTime  备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-gaussdbformysql/ShowBackupRestoreTime.html)获取。
+    * restoreTime  备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-taurusdb/ShowBackupRestoreTime.html)获取。
     * lastTableInfo  是否是最新库表。 - true：是最新库表。 - false：是恢复时间点库表。
     * databaseName  数据库名称，模糊匹配。
     * tableName  表名称，模糊匹配。
@@ -83,7 +83,7 @@ class ShowRestoreTablesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * instanceId  实例ID，严格匹配UUID规则。
-    * restoreTime  备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-gaussdbformysql/ShowBackupRestoreTime.html)获取。
+    * restoreTime  备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-taurusdb/ShowBackupRestoreTime.html)获取。
     * lastTableInfo  是否是最新库表。 - true：是最新库表。 - false：是恢复时间点库表。
     * databaseName  数据库名称，模糊匹配。
     * tableName  表名称，模糊匹配。
@@ -103,7 +103,7 @@ class ShowRestoreTablesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * instanceId  实例ID，严格匹配UUID规则。
-    * restoreTime  备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-gaussdbformysql/ShowBackupRestoreTime.html)获取。
+    * restoreTime  备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-taurusdb/ShowBackupRestoreTime.html)获取。
     * lastTableInfo  是否是最新库表。 - true：是最新库表。 - false：是恢复时间点库表。
     * databaseName  数据库名称，模糊匹配。
     * tableName  表名称，模糊匹配。
@@ -123,7 +123,7 @@ class ShowRestoreTablesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * instanceId  实例ID，严格匹配UUID规则。
-    * restoreTime  备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-gaussdbformysql/ShowBackupRestoreTime.html)获取。
+    * restoreTime  备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-taurusdb/ShowBackupRestoreTime.html)获取。
     * lastTableInfo  是否是最新库表。 - true：是最新库表。 - false：是恢复时间点库表。
     * databaseName  数据库名称，模糊匹配。
     * tableName  表名称，模糊匹配。
@@ -286,7 +286,7 @@ class ShowRestoreTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets restoreTime
-    *  备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-gaussdbformysql/ShowBackupRestoreTime.html)获取。
+    *  备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-taurusdb/ShowBackupRestoreTime.html)获取。
     *
     * @return string
     */
@@ -298,7 +298,7 @@ class ShowRestoreTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets restoreTime
     *
-    * @param string $restoreTime 备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-gaussdbformysql/ShowBackupRestoreTime.html)获取。
+    * @param string $restoreTime 备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-taurusdb/ShowBackupRestoreTime.html)获取。
     *
     * @return $this
     */

@@ -24,7 +24,7 @@ class MysqlInstanceListInfo implements ModelInterface, ArrayAccess
     * name  创建的实例名称。
     * status  实例状态。
     * privateIps  实例写内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空字列表。
-    * proxyIps  实例读写分离IP地址列表。GaussDB(for MySQL)实例开启代理成功后该值存在，其他情况下为空列表。
+    * proxyIps  实例读写分离IP地址列表。TaurusDB实例开启代理成功后该值存在，其他情况下为空列表。
     * readonlyPrivateIps  实例读内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空列表。
     * publicIps  实例外网IP地址列表。
     * port  数据库端口号。
@@ -84,7 +84,7 @@ class MysqlInstanceListInfo implements ModelInterface, ArrayAccess
     * name  创建的实例名称。
     * status  实例状态。
     * privateIps  实例写内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空字列表。
-    * proxyIps  实例读写分离IP地址列表。GaussDB(for MySQL)实例开启代理成功后该值存在，其他情况下为空列表。
+    * proxyIps  实例读写分离IP地址列表。TaurusDB实例开启代理成功后该值存在，其他情况下为空列表。
     * readonlyPrivateIps  实例读内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空列表。
     * publicIps  实例外网IP地址列表。
     * port  数据库端口号。
@@ -165,7 +165,7 @@ class MysqlInstanceListInfo implements ModelInterface, ArrayAccess
     * name  创建的实例名称。
     * status  实例状态。
     * privateIps  实例写内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空字列表。
-    * proxyIps  实例读写分离IP地址列表。GaussDB(for MySQL)实例开启代理成功后该值存在，其他情况下为空列表。
+    * proxyIps  实例读写分离IP地址列表。TaurusDB实例开启代理成功后该值存在，其他情况下为空列表。
     * readonlyPrivateIps  实例读内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空列表。
     * publicIps  实例外网IP地址列表。
     * port  数据库端口号。
@@ -225,7 +225,7 @@ class MysqlInstanceListInfo implements ModelInterface, ArrayAccess
     * name  创建的实例名称。
     * status  实例状态。
     * privateIps  实例写内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空字列表。
-    * proxyIps  实例读写分离IP地址列表。GaussDB(for MySQL)实例开启代理成功后该值存在，其他情况下为空列表。
+    * proxyIps  实例读写分离IP地址列表。TaurusDB实例开启代理成功后该值存在，其他情况下为空列表。
     * readonlyPrivateIps  实例读内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空列表。
     * publicIps  实例外网IP地址列表。
     * port  数据库端口号。
@@ -285,7 +285,7 @@ class MysqlInstanceListInfo implements ModelInterface, ArrayAccess
     * name  创建的实例名称。
     * status  实例状态。
     * privateIps  实例写内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空字列表。
-    * proxyIps  实例读写分离IP地址列表。GaussDB(for MySQL)实例开启代理成功后该值存在，其他情况下为空列表。
+    * proxyIps  实例读写分离IP地址列表。TaurusDB实例开启代理成功后该值存在，其他情况下为空列表。
     * readonlyPrivateIps  实例读内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空列表。
     * publicIps  实例外网IP地址列表。
     * port  数据库端口号。
@@ -551,7 +551,7 @@ class MysqlInstanceListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyIps
-    *  实例读写分离IP地址列表。GaussDB(for MySQL)实例开启代理成功后该值存在，其他情况下为空列表。
+    *  实例读写分离IP地址列表。TaurusDB实例开启代理成功后该值存在，其他情况下为空列表。
     *
     * @return string[]|null
     */
@@ -563,7 +563,7 @@ class MysqlInstanceListInfo implements ModelInterface, ArrayAccess
     /**
     * Sets proxyIps
     *
-    * @param string[]|null $proxyIps 实例读写分离IP地址列表。GaussDB(for MySQL)实例开启代理成功后该值存在，其他情况下为空列表。
+    * @param string[]|null $proxyIps 实例读写分离IP地址列表。TaurusDB实例开启代理成功后该值存在，其他情况下为空列表。
     *
     * @return $this
     */

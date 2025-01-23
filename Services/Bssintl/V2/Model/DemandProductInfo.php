@@ -336,6 +336,12 @@ class DemandProductInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['resourceSize']) && ($this->container['resourceSize'] < 1)) {
                 $invalidProperties[] = "invalid value for 'resourceSize', must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['sizeMeasureId']) && ($this->container['sizeMeasureId'] > 214783647)) {
+                $invalidProperties[] = "invalid value for 'sizeMeasureId', must be smaller than or equal to 214783647.";
+            }
+            if (!is_null($this->container['sizeMeasureId']) && ($this->container['sizeMeasureId'] < 0)) {
+                $invalidProperties[] = "invalid value for 'sizeMeasureId', must be bigger than or equal to 0.";
+            }
         if ($this->container['usageFactor'] === null) {
             $invalidProperties[] = "'usageFactor' can't be null";
         }

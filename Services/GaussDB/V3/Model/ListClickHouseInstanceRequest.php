@@ -20,7 +20,7 @@ class ListClickHouseInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  GaussDB(for MySQL)实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB实例ID，严格匹配UUID规则。
     * clickhouseInstanceId  ClickHouse实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
@@ -34,7 +34,7 @@ class ListClickHouseInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  GaussDB(for MySQL)实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB实例ID，严格匹配UUID规则。
     * clickhouseInstanceId  ClickHouse实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
@@ -69,7 +69,7 @@ class ListClickHouseInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  GaussDB(for MySQL)实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB实例ID，严格匹配UUID规则。
     * clickhouseInstanceId  ClickHouse实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
@@ -83,7 +83,7 @@ class ListClickHouseInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  GaussDB(for MySQL)实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB实例ID，严格匹配UUID规则。
     * clickhouseInstanceId  ClickHouse实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
@@ -97,7 +97,7 @@ class ListClickHouseInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  GaussDB(for MySQL)实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB实例ID，严格匹配UUID规则。
     * clickhouseInstanceId  ClickHouse实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
@@ -202,7 +202,7 @@ class ListClickHouseInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  GaussDB(for MySQL)实例ID，严格匹配UUID规则。
+    *  TaurusDB实例ID，严格匹配UUID规则。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class ListClickHouseInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId GaussDB(for MySQL)实例ID，严格匹配UUID规则。
+    * @param string $instanceId TaurusDB实例ID，严格匹配UUID规则。
     *
     * @return $this
     */

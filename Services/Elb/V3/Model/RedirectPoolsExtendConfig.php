@@ -25,6 +25,7 @@ class RedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
+    * corsConfig  corsConfig
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class RedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
             'rewriteUrlConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\RewriteUrlConfig',
             'insertHeadersConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\InsertHeadersConfig',
             'removeHeadersConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\RemoveHeadersConfig',
-            'trafficLimitConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\TrafficLimitConfig'
+            'trafficLimitConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\TrafficLimitConfig',
+            'corsConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\CorsConfig'
     ];
 
     /**
@@ -43,6 +45,7 @@ class RedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
+    * corsConfig  corsConfig
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class RedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
         'rewriteUrlConfig' => null,
         'insertHeadersConfig' => null,
         'removeHeadersConfig' => null,
-        'trafficLimitConfig' => null
+        'trafficLimitConfig' => null,
+        'corsConfig' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class RedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
+    * corsConfig  corsConfig
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class RedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
             'rewriteUrlConfig' => 'rewrite_url_config',
             'insertHeadersConfig' => 'insert_headers_config',
             'removeHeadersConfig' => 'remove_headers_config',
-            'trafficLimitConfig' => 'traffic_limit_config'
+            'trafficLimitConfig' => 'traffic_limit_config',
+            'corsConfig' => 'cors_config'
     ];
 
     /**
@@ -100,6 +106,7 @@ class RedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
+    * corsConfig  corsConfig
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class RedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
             'rewriteUrlConfig' => 'setRewriteUrlConfig',
             'insertHeadersConfig' => 'setInsertHeadersConfig',
             'removeHeadersConfig' => 'setRemoveHeadersConfig',
-            'trafficLimitConfig' => 'setTrafficLimitConfig'
+            'trafficLimitConfig' => 'setTrafficLimitConfig',
+            'corsConfig' => 'setCorsConfig'
     ];
 
     /**
@@ -118,6 +126,7 @@ class RedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
+    * corsConfig  corsConfig
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class RedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
             'rewriteUrlConfig' => 'getRewriteUrlConfig',
             'insertHeadersConfig' => 'getInsertHeadersConfig',
             'removeHeadersConfig' => 'getRemoveHeadersConfig',
-            'trafficLimitConfig' => 'getTrafficLimitConfig'
+            'trafficLimitConfig' => 'getTrafficLimitConfig',
+            'corsConfig' => 'getCorsConfig'
     ];
 
     /**
@@ -192,6 +202,7 @@ class RedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
         $this->container['insertHeadersConfig'] = isset($data['insertHeadersConfig']) ? $data['insertHeadersConfig'] : null;
         $this->container['removeHeadersConfig'] = isset($data['removeHeadersConfig']) ? $data['removeHeadersConfig'] : null;
         $this->container['trafficLimitConfig'] = isset($data['trafficLimitConfig']) ? $data['trafficLimitConfig'] : null;
+        $this->container['corsConfig'] = isset($data['corsConfig']) ? $data['corsConfig'] : null;
     }
 
     /**
@@ -333,6 +344,30 @@ class RedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
     public function setTrafficLimitConfig($trafficLimitConfig)
     {
         $this->container['trafficLimitConfig'] = $trafficLimitConfig;
+        return $this;
+    }
+
+    /**
+    * Gets corsConfig
+    *  corsConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\CorsConfig|null
+    */
+    public function getCorsConfig()
+    {
+        return $this->container['corsConfig'];
+    }
+
+    /**
+    * Sets corsConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CorsConfig|null $corsConfig corsConfig
+    *
+    * @return $this
+    */
+    public function setCorsConfig($corsConfig)
+    {
+        $this->container['corsConfig'] = $corsConfig;
         return $this;
     }
 

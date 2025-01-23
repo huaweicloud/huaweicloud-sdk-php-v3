@@ -36,10 +36,11 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * status  后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * loadbalancerId  所属负载均衡器ID。  不支持该字段，请勿使用。
     * loadbalancers  后端服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
-    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
-    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
+    * reason  reason
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class MemberInfo implements ModelInterface, ArrayAccess
             'createdAt' => 'string',
             'updatedAt' => 'string',
             'memberType' => 'string',
-            'instanceId' => 'string'
+            'instanceId' => 'string',
+            'reason' => '\HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason'
     ];
 
     /**
@@ -84,10 +86,11 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * status  后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * loadbalancerId  所属负载均衡器ID。  不支持该字段，请勿使用。
     * loadbalancers  后端服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
-    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
-    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
+    * reason  reason
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class MemberInfo implements ModelInterface, ArrayAccess
         'createdAt' => null,
         'updatedAt' => null,
         'memberType' => null,
-        'instanceId' => null
+        'instanceId' => null,
+        'reason' => null
     ];
 
     /**
@@ -153,10 +157,11 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * status  后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * loadbalancerId  所属负载均衡器ID。  不支持该字段，请勿使用。
     * loadbalancers  后端服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
-    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
-    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
+    * reason  reason
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class MemberInfo implements ModelInterface, ArrayAccess
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'memberType' => 'member_type',
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'reason' => 'reason'
     ];
 
     /**
@@ -201,10 +207,11 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * status  后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * loadbalancerId  所属负载均衡器ID。  不支持该字段，请勿使用。
     * loadbalancers  后端服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
-    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
-    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
+    * reason  reason
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class MemberInfo implements ModelInterface, ArrayAccess
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'memberType' => 'setMemberType',
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'reason' => 'setReason'
     ];
 
     /**
@@ -249,10 +257,11 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * status  后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * loadbalancerId  所属负载均衡器ID。  不支持该字段，请勿使用。
     * loadbalancers  后端服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
-    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
-    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
+    * reason  reason
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class MemberInfo implements ModelInterface, ArrayAccess
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'memberType' => 'getMemberType',
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'reason' => 'getReason'
     ];
 
     /**
@@ -357,6 +367,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['memberType'] = isset($data['memberType']) ? $data['memberType'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
     }
 
     /**
@@ -809,7 +820,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    *  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     *
     * @return string|null
     */
@@ -821,7 +832,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * @param string|null $createdAt 创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     *
     * @return $this
     */
@@ -833,7 +844,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    *  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     *
     * @return string|null
     */
@@ -845,7 +856,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * @param string|null $updatedAt 更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     *
     * @return $this
     */
@@ -900,6 +911,30 @@ class MemberInfo implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets reason
+    *  reason
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason|null
+    */
+    public function getReason()
+    {
+        return $this->container['reason'];
+    }
+
+    /**
+    * Sets reason
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason|null $reason reason
+    *
+    * @return $this
+    */
+    public function setReason($reason)
+    {
+        $this->container['reason'] = $reason;
         return $this;
     }
 

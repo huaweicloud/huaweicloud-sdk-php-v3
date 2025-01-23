@@ -28,7 +28,7 @@ class CreateChInstanceRequestBody implements ModelInterface, ArrayAccess
     * azMode  可用区类型。 取值范围： - single：单可用区 - double：多可用区
     * volume  volume
     * azCode  可用区码。  当ha中mode为Ha时，需要填写多个可用区，用\",\" 分隔。例如：cn-southwest-244b,cn-southwest-244a
-    * timeZone  时区。默认为所属GaussDB(for MySQL)实例时区。
+    * timeZone  时区。默认为所属TaurusDB实例时区。
     * tagsInfo  tagsInfo
     * payInfo  payInfo
     *
@@ -58,7 +58,7 @@ class CreateChInstanceRequestBody implements ModelInterface, ArrayAccess
     * azMode  可用区类型。 取值范围： - single：单可用区 - double：多可用区
     * volume  volume
     * azCode  可用区码。  当ha中mode为Ha时，需要填写多个可用区，用\",\" 分隔。例如：cn-southwest-244b,cn-southwest-244a
-    * timeZone  时区。默认为所属GaussDB(for MySQL)实例时区。
+    * timeZone  时区。默认为所属TaurusDB实例时区。
     * tagsInfo  tagsInfo
     * payInfo  payInfo
     *
@@ -109,7 +109,7 @@ class CreateChInstanceRequestBody implements ModelInterface, ArrayAccess
     * azMode  可用区类型。 取值范围： - single：单可用区 - double：多可用区
     * volume  volume
     * azCode  可用区码。  当ha中mode为Ha时，需要填写多个可用区，用\",\" 分隔。例如：cn-southwest-244b,cn-southwest-244a
-    * timeZone  时区。默认为所属GaussDB(for MySQL)实例时区。
+    * timeZone  时区。默认为所属TaurusDB实例时区。
     * tagsInfo  tagsInfo
     * payInfo  payInfo
     *
@@ -139,7 +139,7 @@ class CreateChInstanceRequestBody implements ModelInterface, ArrayAccess
     * azMode  可用区类型。 取值范围： - single：单可用区 - double：多可用区
     * volume  volume
     * azCode  可用区码。  当ha中mode为Ha时，需要填写多个可用区，用\",\" 分隔。例如：cn-southwest-244b,cn-southwest-244a
-    * timeZone  时区。默认为所属GaussDB(for MySQL)实例时区。
+    * timeZone  时区。默认为所属TaurusDB实例时区。
     * tagsInfo  tagsInfo
     * payInfo  payInfo
     *
@@ -169,7 +169,7 @@ class CreateChInstanceRequestBody implements ModelInterface, ArrayAccess
     * azMode  可用区类型。 取值范围： - single：单可用区 - double：多可用区
     * volume  volume
     * azCode  可用区码。  当ha中mode为Ha时，需要填写多个可用区，用\",\" 分隔。例如：cn-southwest-244b,cn-southwest-244a
-    * timeZone  时区。默认为所属GaussDB(for MySQL)实例时区。
+    * timeZone  时区。默认为所属TaurusDB实例时区。
     * tagsInfo  tagsInfo
     * payInfo  payInfo
     *
@@ -503,7 +503,7 @@ class CreateChInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeZone
-    *  时区。默认为所属GaussDB(for MySQL)实例时区。
+    *  时区。默认为所属TaurusDB实例时区。
     *
     * @return string|null
     */
@@ -515,7 +515,7 @@ class CreateChInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets timeZone
     *
-    * @param string|null $timeZone 时区。默认为所属GaussDB(for MySQL)实例时区。
+    * @param string|null $timeZone 时区。默认为所属TaurusDB实例时区。
     *
     * @return $this
     */

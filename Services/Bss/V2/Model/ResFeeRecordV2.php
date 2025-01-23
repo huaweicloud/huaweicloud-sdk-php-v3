@@ -21,7 +21,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区时间截取。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
+    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -77,6 +77,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
     *
     * @var string[]
     */
@@ -137,13 +138,14 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceTypeName' => 'string',
             'subResourceId' => 'string',
             'subResourceName' => 'string',
-            'consumeTime' => 'string'
+            'consumeTime' => 'string',
+            'relativeOrderId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区时间截取。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
+    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -199,6 +201,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
     *
     * @var string[]
     */
@@ -259,7 +262,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         'subResourceTypeName' => null,
         'subResourceId' => null,
         'subResourceName' => null,
-        'consumeTime' => null
+        'consumeTime' => null,
+        'relativeOrderId' => null
     ];
 
     /**
@@ -286,7 +290,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区时间截取。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
+    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -342,6 +346,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
     *
     * @var string[]
     */
@@ -402,13 +407,14 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceTypeName' => 'sub_resource_type_name',
             'subResourceId' => 'sub_resource_id',
             'subResourceName' => 'sub_resource_name',
-            'consumeTime' => 'consume_time'
+            'consumeTime' => 'consume_time',
+            'relativeOrderId' => 'relative_order_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区时间截取。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
+    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -464,6 +470,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
     *
     * @var string[]
     */
@@ -524,13 +531,14 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceTypeName' => 'setSubResourceTypeName',
             'subResourceId' => 'setSubResourceId',
             'subResourceName' => 'setSubResourceName',
-            'consumeTime' => 'setConsumeTime'
+            'consumeTime' => 'setConsumeTime',
+            'relativeOrderId' => 'setRelativeOrderId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区时间截取。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
+    * billType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -586,6 +594,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * relativeOrderId  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
     *
     * @var string[]
     */
@@ -646,7 +655,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'subResourceTypeName' => 'getSubResourceTypeName',
             'subResourceId' => 'getSubResourceId',
             'subResourceName' => 'getSubResourceName',
-            'consumeTime' => 'getConsumeTime'
+            'consumeTime' => 'getConsumeTime',
+            'relativeOrderId' => 'getRelativeOrderId'
     ];
 
     /**
@@ -764,6 +774,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         $this->container['subResourceId'] = isset($data['subResourceId']) ? $data['subResourceId'] : null;
         $this->container['subResourceName'] = isset($data['subResourceName']) ? $data['subResourceName'] : null;
         $this->container['consumeTime'] = isset($data['consumeTime']) ? $data['consumeTime'] : null;
+        $this->container['relativeOrderId'] = isset($data['relativeOrderId']) ? $data['relativeOrderId'] : null;
     }
 
     /**
@@ -814,7 +825,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets billType
-    *  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
+    *  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
     *
     * @return int|null
     */
@@ -826,7 +837,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets billType
     *
-    * @param int|null $billType 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
+    * @param int|null $billType 账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 103：消费-按年付费
     *
     * @return $this
     */
@@ -2153,6 +2164,30 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     public function setConsumeTime($consumeTime)
     {
         $this->container['consumeTime'] = $consumeTime;
+        return $this;
+    }
+
+    /**
+    * Gets relativeOrderId
+    *  |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
+    *
+    * @return string|null
+    */
+    public function getRelativeOrderId()
+    {
+        return $this->container['relativeOrderId'];
+    }
+
+    /**
+    * Sets relativeOrderId
+    *
+    * @param string|null $relativeOrderId |参数名称：客户订单关联的订单ID| |参数约束及描述：客户订单关联的订单ID，包年/包月资源的使用记录该字段才有值，按需资源则为空。当order_id为组合交易订单时，该字段才有值，当查询为普通订单时，此字段返回为空。|
+    *
+    * @return $this
+    */
+    public function setRelativeOrderId($relativeOrderId)
+    {
+        $this->container['relativeOrderId'] = $relativeOrderId;
         return $this;
     }
 

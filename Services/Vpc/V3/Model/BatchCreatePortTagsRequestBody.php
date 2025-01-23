@@ -158,6 +158,9 @@ class BatchCreatePortTagsRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class BatchCreatePortTagsRequestBody implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签列表
     *
-    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]
     */
     public function getTags()
     {
@@ -186,7 +189,7 @@ class BatchCreatePortTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null $tags 标签列表
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[] $tags 标签列表
     *
     * @return $this
     */

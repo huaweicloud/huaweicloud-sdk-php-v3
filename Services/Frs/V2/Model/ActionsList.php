@@ -21,7 +21,7 @@ class ActionsList implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * confidence  置信度，取值范围0～1。
-    * action  动作编号，取值范围：[1,2,3,4]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作
+    * action  动作编号，取值范围：[1,2,3,4,5]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作 • 5：眨眼
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ActionsList implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * confidence  置信度，取值范围0～1。
-    * action  动作编号，取值范围：[1,2,3,4]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作
+    * action  动作编号，取值范围：[1,2,3,4,5]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作 • 5：眨眼
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ActionsList implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * confidence  置信度，取值范围0～1。
-    * action  动作编号，取值范围：[1,2,3,4]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作
+    * action  动作编号，取值范围：[1,2,3,4,5]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作 • 5：眨眼
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ActionsList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * confidence  置信度，取值范围0～1。
-    * action  动作编号，取值范围：[1,2,3,4]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作
+    * action  动作编号，取值范围：[1,2,3,4,5]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作 • 5：眨眼
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ActionsList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * confidence  置信度，取值范围0～1。
-    * action  动作编号，取值范围：[1,2,3,4]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作
+    * action  动作编号，取值范围：[1,2,3,4,5]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作 • 5：眨眼
     *
     * @var string[]
     */
@@ -212,7 +212,7 @@ class ActionsList implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  动作编号，取值范围：[1,2,3,4]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作
+    *  动作编号，取值范围：[1,2,3,4,5]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作 • 5：眨眼
     *
     * @return int|null
     */
@@ -224,7 +224,7 @@ class ActionsList implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param int|null $action 动作编号，取值范围：[1,2,3,4]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作
+    * @param int|null $action 动作编号，取值范围：[1,2,3,4,5]，其中： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作 • 5：眨眼
     *
     * @return $this
     */

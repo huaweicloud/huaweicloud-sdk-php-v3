@@ -30,11 +30,12 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * sessionPersistence  sessionPersistence
     * vpcId  后端服务器组关联的虚拟私有云的ID。  指定了vpc_id的约束： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。  没有指定vpc_id的约束： - 后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。
-    * ipVersion  后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
+    * ipVersion  后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
     * members  主备主机组的后端服务器。 只能添加2个后端服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
     * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
+    * quicCidHashStrategy  quicCidHashStrategy
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
             'members' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateMasterSlaveMemberOption[]',
             'healthmonitor' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateMasterSlaveHealthMonitorOption',
             'anyPortEnable' => 'bool',
-            'connectionDrain' => '\HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain'
+            'connectionDrain' => '\HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain',
+            'quicCidHashStrategy' => '\HuaweiCloud\SDK\Elb\V3\Model\QuicCidHashStrategy'
     ];
 
     /**
@@ -68,11 +70,12 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * sessionPersistence  sessionPersistence
     * vpcId  后端服务器组关联的虚拟私有云的ID。  指定了vpc_id的约束： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。  没有指定vpc_id的约束： - 后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。
-    * ipVersion  后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
+    * ipVersion  后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
     * members  主备主机组的后端服务器。 只能添加2个后端服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
     * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
+    * quicCidHashStrategy  quicCidHashStrategy
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
         'members' => null,
         'healthmonitor' => null,
         'anyPortEnable' => null,
-        'connectionDrain' => null
+        'connectionDrain' => null,
+        'quicCidHashStrategy' => null
     ];
 
     /**
@@ -127,11 +131,12 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * sessionPersistence  sessionPersistence
     * vpcId  后端服务器组关联的虚拟私有云的ID。  指定了vpc_id的约束： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。  没有指定vpc_id的约束： - 后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。
-    * ipVersion  后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
+    * ipVersion  后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
     * members  主备主机组的后端服务器。 只能添加2个后端服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
     * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
+    * quicCidHashStrategy  quicCidHashStrategy
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
             'members' => 'members',
             'healthmonitor' => 'healthmonitor',
             'anyPortEnable' => 'any_port_enable',
-            'connectionDrain' => 'connection_drain'
+            'connectionDrain' => 'connection_drain',
+            'quicCidHashStrategy' => 'quic_cid_hash_strategy'
     ];
 
     /**
@@ -165,11 +171,12 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * sessionPersistence  sessionPersistence
     * vpcId  后端服务器组关联的虚拟私有云的ID。  指定了vpc_id的约束： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。  没有指定vpc_id的约束： - 后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。
-    * ipVersion  后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
+    * ipVersion  后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
     * members  主备主机组的后端服务器。 只能添加2个后端服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
     * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
+    * quicCidHashStrategy  quicCidHashStrategy
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
             'members' => 'setMembers',
             'healthmonitor' => 'setHealthmonitor',
             'anyPortEnable' => 'setAnyPortEnable',
-            'connectionDrain' => 'setConnectionDrain'
+            'connectionDrain' => 'setConnectionDrain',
+            'quicCidHashStrategy' => 'setQuicCidHashStrategy'
     ];
 
     /**
@@ -203,11 +211,12 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * sessionPersistence  sessionPersistence
     * vpcId  后端服务器组关联的虚拟私有云的ID。  指定了vpc_id的约束： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。  没有指定vpc_id的约束： - 后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。
-    * ipVersion  后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
+    * ipVersion  后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
     * members  主备主机组的后端服务器。 只能添加2个后端服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
     * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
+    * quicCidHashStrategy  quicCidHashStrategy
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
             'members' => 'getMembers',
             'healthmonitor' => 'getHealthmonitor',
             'anyPortEnable' => 'getAnyPortEnable',
-            'connectionDrain' => 'getConnectionDrain'
+            'connectionDrain' => 'getConnectionDrain',
+            'quicCidHashStrategy' => 'getQuicCidHashStrategy'
     ];
 
     /**
@@ -302,6 +312,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
         $this->container['healthmonitor'] = isset($data['healthmonitor']) ? $data['healthmonitor'] : null;
         $this->container['anyPortEnable'] = isset($data['anyPortEnable']) ? $data['anyPortEnable'] : null;
         $this->container['connectionDrain'] = isset($data['connectionDrain']) ? $data['connectionDrain'] : null;
+        $this->container['quicCidHashStrategy'] = isset($data['quicCidHashStrategy']) ? $data['quicCidHashStrategy'] : null;
     }
 
     /**
@@ -640,7 +651,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
-    *  后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
+    *  后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
     *
     * @return string|null
     */
@@ -652,7 +663,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param string|null $ipVersion 后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
+    * @param string|null $ipVersion 后端服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
     *
     * @return $this
     */
@@ -755,6 +766,30 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     public function setConnectionDrain($connectionDrain)
     {
         $this->container['connectionDrain'] = $connectionDrain;
+        return $this;
+    }
+
+    /**
+    * Gets quicCidHashStrategy
+    *  quicCidHashStrategy
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\QuicCidHashStrategy|null
+    */
+    public function getQuicCidHashStrategy()
+    {
+        return $this->container['quicCidHashStrategy'];
+    }
+
+    /**
+    * Sets quicCidHashStrategy
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\QuicCidHashStrategy|null $quicCidHashStrategy quicCidHashStrategy
+    *
+    * @return $this
+    */
+    public function setQuicCidHashStrategy($quicCidHashStrategy)
+    {
+        $this->container['quicCidHashStrategy'] = $quicCidHashStrategy;
         return $this;
     }
 

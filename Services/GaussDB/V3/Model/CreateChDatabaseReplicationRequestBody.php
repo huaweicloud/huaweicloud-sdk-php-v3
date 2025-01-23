@@ -21,7 +21,7 @@ class CreateChDatabaseReplicationRequestBody implements ModelInterface, ArrayAcc
     /**
     * Array of property to type mappings. Used for (de)serialization
     * sourceInstanceId  源实例ID。
-    * sourceNodeId  源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    * sourceNodeId  源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     * sourceDatabase  源数据库。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class CreateChDatabaseReplicationRequestBody implements ModelInterface, ArrayAcc
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sourceInstanceId  源实例ID。
-    * sourceNodeId  源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    * sourceNodeId  源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     * sourceDatabase  源数据库。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class CreateChDatabaseReplicationRequestBody implements ModelInterface, ArrayAcc
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * sourceInstanceId  源实例ID。
-    * sourceNodeId  源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    * sourceNodeId  源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     * sourceDatabase  源数据库。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class CreateChDatabaseReplicationRequestBody implements ModelInterface, ArrayAcc
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sourceInstanceId  源实例ID。
-    * sourceNodeId  源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    * sourceNodeId  源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     * sourceDatabase  源数据库。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreateChDatabaseReplicationRequestBody implements ModelInterface, ArrayAcc
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sourceInstanceId  源实例ID。
-    * sourceNodeId  源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    * sourceNodeId  源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     * sourceDatabase  源数据库。
     *
     * @var string[]
@@ -226,7 +226,7 @@ class CreateChDatabaseReplicationRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Gets sourceNodeId
-    *  源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    *  源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     *
     * @return string|null
     */
@@ -238,7 +238,7 @@ class CreateChDatabaseReplicationRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets sourceNodeId
     *
-    * @param string|null $sourceNodeId 源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+    * @param string|null $sourceNodeId 源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
     *
     * @return $this
     */

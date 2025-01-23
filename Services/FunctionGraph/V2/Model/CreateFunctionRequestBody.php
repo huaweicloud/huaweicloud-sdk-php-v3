@@ -51,6 +51,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * networkController  networkController
     * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
     * enableDynamicMemory  是否启动动态内存配置
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -85,7 +86,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'logConfig' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FuncLogConfig',
             'networkController' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\NetworkControlConfig',
             'isStatefulFunction' => 'bool',
-            'enableDynamicMemory' => 'bool'
+            'enableDynamicMemory' => 'bool',
+            'ltsCustomTag' => 'map[string,string]'
     ];
 
     /**
@@ -121,6 +123,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * networkController  networkController
     * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
     * enableDynamicMemory  是否启动动态内存配置
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -155,7 +158,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
         'logConfig' => null,
         'networkController' => null,
         'isStatefulFunction' => null,
-        'enableDynamicMemory' => null
+        'enableDynamicMemory' => null,
+        'ltsCustomTag' => null
     ];
 
     /**
@@ -212,6 +216,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * networkController  networkController
     * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
     * enableDynamicMemory  是否启动动态内存配置
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -246,7 +251,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'logConfig' => 'log_config',
             'networkController' => 'network_controller',
             'isStatefulFunction' => 'is_stateful_function',
-            'enableDynamicMemory' => 'enable_dynamic_memory'
+            'enableDynamicMemory' => 'enable_dynamic_memory',
+            'ltsCustomTag' => 'lts_custom_tag'
     ];
 
     /**
@@ -282,6 +288,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * networkController  networkController
     * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
     * enableDynamicMemory  是否启动动态内存配置
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -316,7 +323,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'logConfig' => 'setLogConfig',
             'networkController' => 'setNetworkController',
             'isStatefulFunction' => 'setIsStatefulFunction',
-            'enableDynamicMemory' => 'setEnableDynamicMemory'
+            'enableDynamicMemory' => 'setEnableDynamicMemory',
+            'ltsCustomTag' => 'setLtsCustomTag'
     ];
 
     /**
@@ -352,6 +360,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * networkController  networkController
     * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
     * enableDynamicMemory  是否启动动态内存配置
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -386,7 +395,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'logConfig' => 'getLogConfig',
             'networkController' => 'getNetworkController',
             'isStatefulFunction' => 'getIsStatefulFunction',
-            'enableDynamicMemory' => 'getEnableDynamicMemory'
+            'enableDynamicMemory' => 'getEnableDynamicMemory',
+            'ltsCustomTag' => 'getLtsCustomTag'
     ];
 
     /**
@@ -575,6 +585,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
         $this->container['networkController'] = isset($data['networkController']) ? $data['networkController'] : null;
         $this->container['isStatefulFunction'] = isset($data['isStatefulFunction']) ? $data['isStatefulFunction'] : null;
         $this->container['enableDynamicMemory'] = isset($data['enableDynamicMemory']) ? $data['enableDynamicMemory'] : null;
+        $this->container['ltsCustomTag'] = isset($data['ltsCustomTag']) ? $data['ltsCustomTag'] : null;
     }
 
     /**
@@ -1382,6 +1393,30 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     public function setEnableDynamicMemory($enableDynamicMemory)
     {
         $this->container['enableDynamicMemory'] = $enableDynamicMemory;
+        return $this;
+    }
+
+    /**
+    * Gets ltsCustomTag
+    *  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    *
+    * @return map[string,string]|null
+    */
+    public function getLtsCustomTag()
+    {
+        return $this->container['ltsCustomTag'];
+    }
+
+    /**
+    * Sets ltsCustomTag
+    *
+    * @param map[string,string]|null $ltsCustomTag 自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    *
+    * @return $this
+    */
+    public function setLtsCustomTag($ltsCustomTag)
+    {
+        $this->container['ltsCustomTag'] = $ltsCustomTag;
         return $this;
     }
 

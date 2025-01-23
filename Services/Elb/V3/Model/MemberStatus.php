@@ -22,24 +22,28 @@ class MemberStatus implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * listenerId  参数解释：监听器ID
     * operatingStatus  参数解释：后端服务器的健康状态。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * reason  reason
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'listenerId' => 'string',
-            'operatingStatus' => 'string'
+            'operatingStatus' => 'string',
+            'reason' => '\HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * listenerId  参数解释：监听器ID
     * operatingStatus  参数解释：后端服务器的健康状态。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * reason  reason
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'listenerId' => null,
-        'operatingStatus' => null
+        'operatingStatus' => null,
+        'reason' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class MemberStatus implements ModelInterface, ArrayAccess
     * and the value is the original name
     * listenerId  参数解释：监听器ID
     * operatingStatus  参数解释：后端服务器的健康状态。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * reason  reason
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'listenerId' => 'listener_id',
-            'operatingStatus' => 'operating_status'
+            'operatingStatus' => 'operating_status',
+            'reason' => 'reason'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * listenerId  参数解释：监听器ID
     * operatingStatus  参数解释：后端服务器的健康状态。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * reason  reason
     *
     * @var string[]
     */
     protected static $setters = [
             'listenerId' => 'setListenerId',
-            'operatingStatus' => 'setOperatingStatus'
+            'operatingStatus' => 'setOperatingStatus',
+            'reason' => 'setReason'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * listenerId  参数解释：监听器ID
     * operatingStatus  参数解释：后端服务器的健康状态。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * reason  reason
     *
     * @var string[]
     */
     protected static $getters = [
             'listenerId' => 'getListenerId',
-            'operatingStatus' => 'getOperatingStatus'
+            'operatingStatus' => 'getOperatingStatus',
+            'reason' => 'getReason'
     ];
 
     /**
@@ -159,6 +169,7 @@ class MemberStatus implements ModelInterface, ArrayAccess
     {
         $this->container['listenerId'] = isset($data['listenerId']) ? $data['listenerId'] : null;
         $this->container['operatingStatus'] = isset($data['operatingStatus']) ? $data['operatingStatus'] : null;
+        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
     }
 
     /**
@@ -234,6 +245,30 @@ class MemberStatus implements ModelInterface, ArrayAccess
     public function setOperatingStatus($operatingStatus)
     {
         $this->container['operatingStatus'] = $operatingStatus;
+        return $this;
+    }
+
+    /**
+    * Gets reason
+    *  reason
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason|null
+    */
+    public function getReason()
+    {
+        return $this->container['reason'];
+    }
+
+    /**
+    * Sets reason
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason|null $reason reason
+    *
+    * @return $this
+    */
+    public function setReason($reason)
+    {
+        $this->container['reason'] = $reason;
         return $this;
     }
 

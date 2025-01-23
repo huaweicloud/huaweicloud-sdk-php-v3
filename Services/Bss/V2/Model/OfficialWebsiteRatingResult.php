@@ -21,8 +21,8 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年  说明： 暂只支持CloudPond产品。
     * measureId  价格度量单位标识。 1：元
     * productRatingResults  产品询价结果，具体参见表5。
     *
@@ -39,8 +39,8 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年  说明： 暂只支持CloudPond产品。
     * measureId  价格度量单位标识。 1：元
     * productRatingResults  产品询价结果，具体参见表5。
     *
@@ -78,8 +78,8 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年  说明： 暂只支持CloudPond产品。
     * measureId  价格度量单位标识。 1：元
     * productRatingResults  产品询价结果，具体参见表5。
     *
@@ -96,8 +96,8 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年  说明： 暂只支持CloudPond产品。
     * measureId  价格度量单位标识。 1：元
     * productRatingResults  产品询价结果，具体参见表5。
     *
@@ -114,8 +114,8 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年  说明： 暂只支持CloudPond产品。
     * measureId  价格度量单位标识。 1：元
     * productRatingResults  产品询价结果，具体参见表5。
     *
@@ -242,7 +242,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets installmentOfficialWebsiteAmount
-    *  分期金额的官网价。  说明： 暂只支持IES产品。
+    *  分期金额的官网价。  说明： 暂只支持CloudPond产品。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets installmentOfficialWebsiteAmount
     *
-    * @param string|null $installmentOfficialWebsiteAmount 分期金额的官网价。  说明： 暂只支持IES产品。
+    * @param string|null $installmentOfficialWebsiteAmount 分期金额的官网价。  说明： 暂只支持CloudPond产品。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets installmentPeriodType
-    *  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    *  分期付款的周期类型。 2：月 3：年  说明： 暂只支持CloudPond产品。
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets installmentPeriodType
     *
-    * @param int|null $installmentPeriodType 分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * @param int|null $installmentPeriodType 分期付款的周期类型。 2：月 3：年  说明： 暂只支持CloudPond产品。
     *
     * @return $this
     */

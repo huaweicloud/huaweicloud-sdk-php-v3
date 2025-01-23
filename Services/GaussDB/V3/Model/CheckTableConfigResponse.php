@@ -21,7 +21,7 @@ class CheckTableConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名。
+    * sourceDatabaseName  TaurusDB数据库名。
     * targetDatabaseName  目标数据库名。
     * tblConfigCheckResults  表配置检查结果。
     * taskName  同步任务名称。
@@ -37,7 +37,7 @@ class CheckTableConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名。
+    * sourceDatabaseName  TaurusDB数据库名。
     * targetDatabaseName  目标数据库名。
     * tblConfigCheckResults  表配置检查结果。
     * taskName  同步任务名称。
@@ -74,7 +74,7 @@ class CheckTableConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名。
+    * sourceDatabaseName  TaurusDB数据库名。
     * targetDatabaseName  目标数据库名。
     * tblConfigCheckResults  表配置检查结果。
     * taskName  同步任务名称。
@@ -90,7 +90,7 @@ class CheckTableConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名。
+    * sourceDatabaseName  TaurusDB数据库名。
     * targetDatabaseName  目标数据库名。
     * tblConfigCheckResults  表配置检查结果。
     * taskName  同步任务名称。
@@ -106,7 +106,7 @@ class CheckTableConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sourceDatabaseName  GaussDB(for MySQL)数据库名。
+    * sourceDatabaseName  TaurusDB数据库名。
     * targetDatabaseName  目标数据库名。
     * tblConfigCheckResults  表配置检查结果。
     * taskName  同步任务名称。
@@ -226,7 +226,7 @@ class CheckTableConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceDatabaseName
-    *  GaussDB(for MySQL)数据库名。
+    *  TaurusDB数据库名。
     *
     * @return string|null
     */
@@ -238,7 +238,7 @@ class CheckTableConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceDatabaseName
     *
-    * @param string|null $sourceDatabaseName GaussDB(for MySQL)数据库名。
+    * @param string|null $sourceDatabaseName TaurusDB数据库名。
     *
     * @return $this
     */

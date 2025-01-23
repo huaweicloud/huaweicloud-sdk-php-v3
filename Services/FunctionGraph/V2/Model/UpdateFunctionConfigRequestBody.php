@@ -33,6 +33,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcVpc  funcVpc
+    * peeringCidr  VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
     * mountConfig  mountConfig
     * strategyConfig  strategyConfig
     * customImage  customImage
@@ -53,6 +54,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -70,6 +72,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'appXrole' => 'string',
             'description' => 'string',
             'funcVpc' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FuncVpc',
+            'peeringCidr' => 'string',
             'mountConfig' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\MountConfig',
             'strategyConfig' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\StrategyConfig',
             'customImage' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\CustomImage',
@@ -89,7 +92,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'restoreHookHandler' => 'string',
             'restoreHookTimeout' => 'int',
             'heartbeatHandler' => 'string',
-            'enableClassIsolation' => 'bool'
+            'enableClassIsolation' => 'bool',
+            'ltsCustomTag' => 'map[string,string]'
     ];
 
     /**
@@ -107,6 +111,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcVpc  funcVpc
+    * peeringCidr  VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
     * mountConfig  mountConfig
     * strategyConfig  strategyConfig
     * customImage  customImage
@@ -127,6 +132,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -144,6 +150,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         'appXrole' => null,
         'description' => null,
         'funcVpc' => null,
+        'peeringCidr' => null,
         'mountConfig' => null,
         'strategyConfig' => null,
         'customImage' => null,
@@ -163,7 +170,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         'restoreHookHandler' => null,
         'restoreHookTimeout' => 'int32',
         'heartbeatHandler' => null,
-        'enableClassIsolation' => null
+        'enableClassIsolation' => null,
+        'ltsCustomTag' => null
     ];
 
     /**
@@ -202,6 +210,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcVpc  funcVpc
+    * peeringCidr  VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
     * mountConfig  mountConfig
     * strategyConfig  strategyConfig
     * customImage  customImage
@@ -222,6 +231,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -239,6 +249,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'appXrole' => 'app_xrole',
             'description' => 'description',
             'funcVpc' => 'func_vpc',
+            'peeringCidr' => 'peering_cidr',
             'mountConfig' => 'mount_config',
             'strategyConfig' => 'strategy_config',
             'customImage' => 'custom_image',
@@ -258,7 +269,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'restoreHookHandler' => 'restore_hook_handler',
             'restoreHookTimeout' => 'restore_hook_timeout',
             'heartbeatHandler' => 'heartbeat_handler',
-            'enableClassIsolation' => 'enable_class_isolation'
+            'enableClassIsolation' => 'enable_class_isolation',
+            'ltsCustomTag' => 'lts_custom_tag'
     ];
 
     /**
@@ -276,6 +288,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcVpc  funcVpc
+    * peeringCidr  VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
     * mountConfig  mountConfig
     * strategyConfig  strategyConfig
     * customImage  customImage
@@ -296,6 +309,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -313,6 +327,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'appXrole' => 'setAppXrole',
             'description' => 'setDescription',
             'funcVpc' => 'setFuncVpc',
+            'peeringCidr' => 'setPeeringCidr',
             'mountConfig' => 'setMountConfig',
             'strategyConfig' => 'setStrategyConfig',
             'customImage' => 'setCustomImage',
@@ -332,7 +347,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'restoreHookHandler' => 'setRestoreHookHandler',
             'restoreHookTimeout' => 'setRestoreHookTimeout',
             'heartbeatHandler' => 'setHeartbeatHandler',
-            'enableClassIsolation' => 'setEnableClassIsolation'
+            'enableClassIsolation' => 'setEnableClassIsolation',
+            'ltsCustomTag' => 'setLtsCustomTag'
     ];
 
     /**
@@ -350,6 +366,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcVpc  funcVpc
+    * peeringCidr  VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
     * mountConfig  mountConfig
     * strategyConfig  strategyConfig
     * customImage  customImage
@@ -370,6 +387,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -387,6 +405,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'appXrole' => 'getAppXrole',
             'description' => 'getDescription',
             'funcVpc' => 'getFuncVpc',
+            'peeringCidr' => 'getPeeringCidr',
             'mountConfig' => 'getMountConfig',
             'strategyConfig' => 'getStrategyConfig',
             'customImage' => 'getCustomImage',
@@ -406,7 +425,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'restoreHookHandler' => 'getRestoreHookHandler',
             'restoreHookTimeout' => 'getRestoreHookTimeout',
             'heartbeatHandler' => 'getHeartbeatHandler',
-            'enableClassIsolation' => 'getEnableClassIsolation'
+            'enableClassIsolation' => 'getEnableClassIsolation',
+            'ltsCustomTag' => 'getLtsCustomTag'
     ];
 
     /**
@@ -541,6 +561,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['appXrole'] = isset($data['appXrole']) ? $data['appXrole'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['funcVpc'] = isset($data['funcVpc']) ? $data['funcVpc'] : null;
+        $this->container['peeringCidr'] = isset($data['peeringCidr']) ? $data['peeringCidr'] : null;
         $this->container['mountConfig'] = isset($data['mountConfig']) ? $data['mountConfig'] : null;
         $this->container['strategyConfig'] = isset($data['strategyConfig']) ? $data['strategyConfig'] : null;
         $this->container['customImage'] = isset($data['customImage']) ? $data['customImage'] : null;
@@ -561,6 +582,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['restoreHookTimeout'] = isset($data['restoreHookTimeout']) ? $data['restoreHookTimeout'] : null;
         $this->container['heartbeatHandler'] = isset($data['heartbeatHandler']) ? $data['heartbeatHandler'] : null;
         $this->container['enableClassIsolation'] = isset($data['enableClassIsolation']) ? $data['enableClassIsolation'] : null;
+        $this->container['ltsCustomTag'] = isset($data['ltsCustomTag']) ? $data['ltsCustomTag'] : null;
     }
 
     /**
@@ -917,6 +939,30 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     public function setFuncVpc($funcVpc)
     {
         $this->container['funcVpc'] = $funcVpc;
+        return $this;
+    }
+
+    /**
+    * Gets peeringCidr
+    *  VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
+    *
+    * @return string|null
+    */
+    public function getPeeringCidr()
+    {
+        return $this->container['peeringCidr'];
+    }
+
+    /**
+    * Sets peeringCidr
+    *
+    * @param string|null $peeringCidr VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
+    *
+    * @return $this
+    */
+    public function setPeeringCidr($peeringCidr)
+    {
+        $this->container['peeringCidr'] = $peeringCidr;
         return $this;
     }
 
@@ -1397,6 +1443,30 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     public function setEnableClassIsolation($enableClassIsolation)
     {
         $this->container['enableClassIsolation'] = $enableClassIsolation;
+        return $this;
+    }
+
+    /**
+    * Gets ltsCustomTag
+    *  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    *
+    * @return map[string,string]|null
+    */
+    public function getLtsCustomTag()
+    {
+        return $this->container['ltsCustomTag'];
+    }
+
+    /**
+    * Sets ltsCustomTag
+    *
+    * @param map[string,string]|null $ltsCustomTag 自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    *
+    * @return $this
+    */
+    public function setLtsCustomTag($ltsCustomTag)
+    {
+        $this->container['ltsCustomTag'] = $ltsCustomTag;
         return $this;
     }
 

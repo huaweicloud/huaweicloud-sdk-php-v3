@@ -36,6 +36,9 @@ class Quota implements ModelInterface, ArrayAccess
     * ipgroupMaxLength  单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     * securityPolicy  自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     * listenersPerLoadbalancer  单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
+    * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -55,7 +58,10 @@ class Quota implements ModelInterface, ArrayAccess
             'ipgroupBindings' => 'int',
             'ipgroupMaxLength' => 'int',
             'securityPolicy' => 'int',
-            'listenersPerLoadbalancer' => 'int'
+            'listenersPerLoadbalancer' => 'int',
+            'ipgroupsPerListener' => 'int',
+            'poolsPerL7policy' => 'int',
+            'l7policiesPerListener' => 'int'
     ];
 
     /**
@@ -76,6 +82,9 @@ class Quota implements ModelInterface, ArrayAccess
     * ipgroupMaxLength  单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     * securityPolicy  自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     * listenersPerLoadbalancer  单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
+    * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -95,7 +104,10 @@ class Quota implements ModelInterface, ArrayAccess
         'ipgroupBindings' => 'int32',
         'ipgroupMaxLength' => 'int32',
         'securityPolicy' => 'int32',
-        'listenersPerLoadbalancer' => 'int32'
+        'listenersPerLoadbalancer' => 'int32',
+        'ipgroupsPerListener' => 'int32',
+        'poolsPerL7policy' => 'int32',
+        'l7policiesPerListener' => 'int32'
     ];
 
     /**
@@ -137,6 +149,9 @@ class Quota implements ModelInterface, ArrayAccess
     * ipgroupMaxLength  单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     * securityPolicy  自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     * listenersPerLoadbalancer  单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
+    * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -156,7 +171,10 @@ class Quota implements ModelInterface, ArrayAccess
             'ipgroupBindings' => 'ipgroup_bindings',
             'ipgroupMaxLength' => 'ipgroup_max_length',
             'securityPolicy' => 'security_policy',
-            'listenersPerLoadbalancer' => 'listeners_per_loadbalancer'
+            'listenersPerLoadbalancer' => 'listeners_per_loadbalancer',
+            'ipgroupsPerListener' => 'ipgroups_per_listener',
+            'poolsPerL7policy' => 'pools_per_l7policy',
+            'l7policiesPerListener' => 'l7policies_per_listener'
     ];
 
     /**
@@ -177,6 +195,9 @@ class Quota implements ModelInterface, ArrayAccess
     * ipgroupMaxLength  单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     * securityPolicy  自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     * listenersPerLoadbalancer  单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
+    * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -196,7 +217,10 @@ class Quota implements ModelInterface, ArrayAccess
             'ipgroupBindings' => 'setIpgroupBindings',
             'ipgroupMaxLength' => 'setIpgroupMaxLength',
             'securityPolicy' => 'setSecurityPolicy',
-            'listenersPerLoadbalancer' => 'setListenersPerLoadbalancer'
+            'listenersPerLoadbalancer' => 'setListenersPerLoadbalancer',
+            'ipgroupsPerListener' => 'setIpgroupsPerListener',
+            'poolsPerL7policy' => 'setPoolsPerL7policy',
+            'l7policiesPerListener' => 'setL7policiesPerListener'
     ];
 
     /**
@@ -217,6 +241,9 @@ class Quota implements ModelInterface, ArrayAccess
     * ipgroupMaxLength  单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     * securityPolicy  自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
     * listenersPerLoadbalancer  单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
+    * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -236,7 +263,10 @@ class Quota implements ModelInterface, ArrayAccess
             'ipgroupBindings' => 'getIpgroupBindings',
             'ipgroupMaxLength' => 'getIpgroupMaxLength',
             'securityPolicy' => 'getSecurityPolicy',
-            'listenersPerLoadbalancer' => 'getListenersPerLoadbalancer'
+            'listenersPerLoadbalancer' => 'getListenersPerLoadbalancer',
+            'ipgroupsPerListener' => 'getIpgroupsPerListener',
+            'poolsPerL7policy' => 'getPoolsPerL7policy',
+            'l7policiesPerListener' => 'getL7policiesPerListener'
     ];
 
     /**
@@ -313,6 +343,9 @@ class Quota implements ModelInterface, ArrayAccess
         $this->container['ipgroupMaxLength'] = isset($data['ipgroupMaxLength']) ? $data['ipgroupMaxLength'] : null;
         $this->container['securityPolicy'] = isset($data['securityPolicy']) ? $data['securityPolicy'] : null;
         $this->container['listenersPerLoadbalancer'] = isset($data['listenersPerLoadbalancer']) ? $data['listenersPerLoadbalancer'] : null;
+        $this->container['ipgroupsPerListener'] = isset($data['ipgroupsPerListener']) ? $data['ipgroupsPerListener'] : null;
+        $this->container['poolsPerL7policy'] = isset($data['poolsPerL7policy']) ? $data['poolsPerL7policy'] : null;
+        $this->container['l7policiesPerListener'] = isset($data['l7policiesPerListener']) ? $data['l7policiesPerListener'] : null;
     }
 
     /**
@@ -370,6 +403,15 @@ class Quota implements ModelInterface, ArrayAccess
         }
         if ($this->container['listenersPerLoadbalancer'] === null) {
             $invalidProperties[] = "'listenersPerLoadbalancer' can't be null";
+        }
+        if ($this->container['ipgroupsPerListener'] === null) {
+            $invalidProperties[] = "'ipgroupsPerListener' can't be null";
+        }
+        if ($this->container['poolsPerL7policy'] === null) {
+            $invalidProperties[] = "'poolsPerL7policy' can't be null";
+        }
+        if ($this->container['l7policiesPerListener'] === null) {
+            $invalidProperties[] = "'l7policiesPerListener' can't be null";
         }
         return $invalidProperties;
     }
@@ -766,6 +808,78 @@ class Quota implements ModelInterface, ArrayAccess
     public function setListenersPerLoadbalancer($listenersPerLoadbalancer)
     {
         $this->container['listenersPerLoadbalancer'] = $listenersPerLoadbalancer;
+        return $this;
+    }
+
+    /**
+    * Gets ipgroupsPerListener
+    *  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *
+    * @return int
+    */
+    public function getIpgroupsPerListener()
+    {
+        return $this->container['ipgroupsPerListener'];
+    }
+
+    /**
+    * Sets ipgroupsPerListener
+    *
+    * @param int $ipgroupsPerListener 单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *
+    * @return $this
+    */
+    public function setIpgroupsPerListener($ipgroupsPerListener)
+    {
+        $this->container['ipgroupsPerListener'] = $ipgroupsPerListener;
+        return $this;
+    }
+
+    /**
+    * Gets poolsPerL7policy
+    *  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *
+    * @return int
+    */
+    public function getPoolsPerL7policy()
+    {
+        return $this->container['poolsPerL7policy'];
+    }
+
+    /**
+    * Sets poolsPerL7policy
+    *
+    * @param int $poolsPerL7policy 单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *
+    * @return $this
+    */
+    public function setPoolsPerL7policy($poolsPerL7policy)
+    {
+        $this->container['poolsPerL7policy'] = $poolsPerL7policy;
+        return $this;
+    }
+
+    /**
+    * Gets l7policiesPerListener
+    *  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *
+    * @return int
+    */
+    public function getL7policiesPerListener()
+    {
+        return $this->container['l7policiesPerListener'];
+    }
+
+    /**
+    * Sets l7policiesPerListener
+    *
+    * @param int $l7policiesPerListener 单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *
+    * @return $this
+    */
+    public function setL7policiesPerListener($l7policiesPerListener)
+    {
+        $this->container['l7policiesPerListener'] = $l7policiesPerListener;
         return $this;
     }
 

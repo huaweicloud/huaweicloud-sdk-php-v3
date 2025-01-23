@@ -27,7 +27,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串和携带值为null。
     * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串和携带值为null。
-    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
+    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为非枚举值时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null时，取默认值0；不支持携带值为空串。说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每页记录数。默认值为10。此参数不携带或携带值为空或携带值为null时，取默认值10；不支持携带值为空串。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
@@ -57,7 +57,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串和携带值为null。
     * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串和携带值为null。
-    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
+    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为非枚举值时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null时，取默认值0；不支持携带值为空串。说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每页记录数。默认值为10。此参数不携带或携带值为空或携带值为null时，取默认值10；不支持携带值为空串。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
@@ -108,7 +108,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串和携带值为null。
     * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串和携带值为null。
-    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
+    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为非枚举值时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null时，取默认值0；不支持携带值为空串。说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每页记录数。默认值为10。此参数不携带或携带值为空或携带值为null时，取默认值10；不支持携带值为空串。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
@@ -138,7 +138,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串和携带值为null。
     * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串和携带值为null。
-    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
+    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为非枚举值时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null时，取默认值0；不支持携带值为空串。说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每页记录数。默认值为10。此参数不携带或携带值为空或携带值为null时，取默认值10；不支持携带值为空串。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
@@ -168,7 +168,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串和携带值为null。
     * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串和携带值为null。
-    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
+    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为非枚举值时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null时，取默认值0；不支持携带值为空串。说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每页记录数。默认值为10。此参数不携带或携带值为空或携带值为null时，取默认值10；不支持携带值为空串。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
@@ -470,7 +470,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
+    *  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为非枚举值时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -482,7 +482,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
+    * @param string|null $result 操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为非枚举值时，不作为筛选条件。
     *
     * @return $this
     */

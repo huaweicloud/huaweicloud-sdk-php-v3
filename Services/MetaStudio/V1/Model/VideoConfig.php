@@ -32,6 +32,7 @@ class VideoConfig implements ModelInterface, ArrayAccess
     * dy  **参数解释**： 裁剪视频左上角像素点纵坐标。 > 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dy最小值是0，最大值是1080  **约束限制**： clip_mode= CROP时生效。 **默认取值**： 不涉及
     * isEnableSuperResolution  **参数解释**： 视频是否开启超分。 **约束限制**： 仅分身数字人视频制作支持。 **取值范围** * true: 开启 * false: 不开启
     * isEndAtFirstFrame  **参数解释**： 视频结束帧是否跟起始帧相同。需要多个数字人视频无缝拼接时设置成true。 **约束限制**： 仅分身数字人视频制作支持，当视频制作时插入动作标签后此设置将失效。 **取值范围** * true: 开启 * false: 不开启
+    * outputExternalUrl  视频文件上传的外部URL。  > * 需要先申请开通白名单后，才允许将视频上传到外部URL。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class VideoConfig implements ModelInterface, ArrayAccess
             'dx' => 'int',
             'dy' => 'int',
             'isEnableSuperResolution' => 'bool',
-            'isEndAtFirstFrame' => 'bool'
+            'isEndAtFirstFrame' => 'bool',
+            'outputExternalUrl' => 'string'
     ];
 
     /**
@@ -64,6 +66,7 @@ class VideoConfig implements ModelInterface, ArrayAccess
     * dy  **参数解释**： 裁剪视频左上角像素点纵坐标。 > 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dy最小值是0，最大值是1080  **约束限制**： clip_mode= CROP时生效。 **默认取值**： 不涉及
     * isEnableSuperResolution  **参数解释**： 视频是否开启超分。 **约束限制**： 仅分身数字人视频制作支持。 **取值范围** * true: 开启 * false: 不开启
     * isEndAtFirstFrame  **参数解释**： 视频结束帧是否跟起始帧相同。需要多个数字人视频无缝拼接时设置成true。 **约束限制**： 仅分身数字人视频制作支持，当视频制作时插入动作标签后此设置将失效。 **取值范围** * true: 开启 * false: 不开启
+    * outputExternalUrl  视频文件上传的外部URL。  > * 需要先申请开通白名单后，才允许将视频上传到外部URL。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class VideoConfig implements ModelInterface, ArrayAccess
         'dx' => 'int32',
         'dy' => 'int32',
         'isEnableSuperResolution' => null,
-        'isEndAtFirstFrame' => null
+        'isEndAtFirstFrame' => null,
+        'outputExternalUrl' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class VideoConfig implements ModelInterface, ArrayAccess
     * dy  **参数解释**： 裁剪视频左上角像素点纵坐标。 > 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dy最小值是0，最大值是1080  **约束限制**： clip_mode= CROP时生效。 **默认取值**： 不涉及
     * isEnableSuperResolution  **参数解释**： 视频是否开启超分。 **约束限制**： 仅分身数字人视频制作支持。 **取值范围** * true: 开启 * false: 不开启
     * isEndAtFirstFrame  **参数解释**： 视频结束帧是否跟起始帧相同。需要多个数字人视频无缝拼接时设置成true。 **约束限制**： 仅分身数字人视频制作支持，当视频制作时插入动作标签后此设置将失效。 **取值范围** * true: 开启 * false: 不开启
+    * outputExternalUrl  视频文件上传的外部URL。  > * 需要先申请开通白名单后，才允许将视频上传到外部URL。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class VideoConfig implements ModelInterface, ArrayAccess
             'dx' => 'dx',
             'dy' => 'dy',
             'isEnableSuperResolution' => 'is_enable_super_resolution',
-            'isEndAtFirstFrame' => 'is_end_at_first_frame'
+            'isEndAtFirstFrame' => 'is_end_at_first_frame',
+            'outputExternalUrl' => 'output_external_url'
     ];
 
     /**
@@ -149,6 +155,7 @@ class VideoConfig implements ModelInterface, ArrayAccess
     * dy  **参数解释**： 裁剪视频左上角像素点纵坐标。 > 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dy最小值是0，最大值是1080  **约束限制**： clip_mode= CROP时生效。 **默认取值**： 不涉及
     * isEnableSuperResolution  **参数解释**： 视频是否开启超分。 **约束限制**： 仅分身数字人视频制作支持。 **取值范围** * true: 开启 * false: 不开启
     * isEndAtFirstFrame  **参数解释**： 视频结束帧是否跟起始帧相同。需要多个数字人视频无缝拼接时设置成true。 **约束限制**： 仅分身数字人视频制作支持，当视频制作时插入动作标签后此设置将失效。 **取值范围** * true: 开启 * false: 不开启
+    * outputExternalUrl  视频文件上传的外部URL。  > * 需要先申请开通白名单后，才允许将视频上传到外部URL。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class VideoConfig implements ModelInterface, ArrayAccess
             'dx' => 'setDx',
             'dy' => 'setDy',
             'isEnableSuperResolution' => 'setIsEnableSuperResolution',
-            'isEndAtFirstFrame' => 'setIsEndAtFirstFrame'
+            'isEndAtFirstFrame' => 'setIsEndAtFirstFrame',
+            'outputExternalUrl' => 'setOutputExternalUrl'
     ];
 
     /**
@@ -181,6 +189,7 @@ class VideoConfig implements ModelInterface, ArrayAccess
     * dy  **参数解释**： 裁剪视频左上角像素点纵坐标。 > 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dy最小值是0，最大值是1080  **约束限制**： clip_mode= CROP时生效。 **默认取值**： 不涉及
     * isEnableSuperResolution  **参数解释**： 视频是否开启超分。 **约束限制**： 仅分身数字人视频制作支持。 **取值范围** * true: 开启 * false: 不开启
     * isEndAtFirstFrame  **参数解释**： 视频结束帧是否跟起始帧相同。需要多个数字人视频无缝拼接时设置成true。 **约束限制**： 仅分身数字人视频制作支持，当视频制作时插入动作标签后此设置将失效。 **取值范围** * true: 开启 * false: 不开启
+    * outputExternalUrl  视频文件上传的外部URL。  > * 需要先申请开通白名单后，才允许将视频上传到外部URL。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class VideoConfig implements ModelInterface, ArrayAccess
             'dx' => 'getDx',
             'dy' => 'getDy',
             'isEnableSuperResolution' => 'getIsEnableSuperResolution',
-            'isEndAtFirstFrame' => 'getIsEndAtFirstFrame'
+            'isEndAtFirstFrame' => 'getIsEndAtFirstFrame',
+            'outputExternalUrl' => 'getOutputExternalUrl'
     ];
 
     /**
@@ -318,6 +328,7 @@ class VideoConfig implements ModelInterface, ArrayAccess
         $this->container['dy'] = isset($data['dy']) ? $data['dy'] : null;
         $this->container['isEnableSuperResolution'] = isset($data['isEnableSuperResolution']) ? $data['isEnableSuperResolution'] : null;
         $this->container['isEndAtFirstFrame'] = isset($data['isEndAtFirstFrame']) ? $data['isEndAtFirstFrame'] : null;
+        $this->container['outputExternalUrl'] = isset($data['outputExternalUrl']) ? $data['outputExternalUrl'] : null;
     }
 
     /**
@@ -399,6 +410,12 @@ class VideoConfig implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['dy']) && ($this->container['dy'] < -1920)) {
                 $invalidProperties[] = "invalid value for 'dy', must be bigger than or equal to -1920.";
+            }
+            if (!is_null($this->container['outputExternalUrl']) && (mb_strlen($this->container['outputExternalUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'outputExternalUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['outputExternalUrl']) && (mb_strlen($this->container['outputExternalUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'outputExternalUrl', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -699,6 +716,30 @@ class VideoConfig implements ModelInterface, ArrayAccess
     public function setIsEndAtFirstFrame($isEndAtFirstFrame)
     {
         $this->container['isEndAtFirstFrame'] = $isEndAtFirstFrame;
+        return $this;
+    }
+
+    /**
+    * Gets outputExternalUrl
+    *  视频文件上传的外部URL。  > * 需要先申请开通白名单后，才允许将视频上传到外部URL。
+    *
+    * @return string|null
+    */
+    public function getOutputExternalUrl()
+    {
+        return $this->container['outputExternalUrl'];
+    }
+
+    /**
+    * Sets outputExternalUrl
+    *
+    * @param string|null $outputExternalUrl 视频文件上传的外部URL。  > * 需要先申请开通白名单后，才允许将视频上传到外部URL。
+    *
+    * @return $this
+    */
+    public function setOutputExternalUrl($outputExternalUrl)
+    {
+        $this->container['outputExternalUrl'] = $outputExternalUrl;
         return $this;
     }
 

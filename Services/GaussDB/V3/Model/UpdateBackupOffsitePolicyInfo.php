@@ -22,7 +22,7 @@ class UpdateBackupOffsitePolicyInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * openAutoBackup  是否开启跨区域全量备份。 - true：开启跨区域全量备份。 - false：关闭跨区域全量备份。
     * openIncrementalBackup  是否开启跨区域增量备份。 - true：开启跨区域增量备份，当open_auto_backup开启时才可以开启。 - false：关闭跨区域增量备份。
-    * destinationProjectId  设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-gaussdbformysql/gaussdbformysql_10_0004.html)。
+    * destinationProjectId  设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-taurusdb/taurusdb_10_0004.html)。
     * destinationRegion  设置跨区域备份策略的目标区域。
     * keepDays  指定已生成的备份文件可以保存的天数。  取值范围：1～1825。
     *
@@ -40,7 +40,7 @@ class UpdateBackupOffsitePolicyInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * openAutoBackup  是否开启跨区域全量备份。 - true：开启跨区域全量备份。 - false：关闭跨区域全量备份。
     * openIncrementalBackup  是否开启跨区域增量备份。 - true：开启跨区域增量备份，当open_auto_backup开启时才可以开启。 - false：关闭跨区域增量备份。
-    * destinationProjectId  设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-gaussdbformysql/gaussdbformysql_10_0004.html)。
+    * destinationProjectId  设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-taurusdb/taurusdb_10_0004.html)。
     * destinationRegion  设置跨区域备份策略的目标区域。
     * keepDays  指定已生成的备份文件可以保存的天数。  取值范围：1～1825。
     *
@@ -79,7 +79,7 @@ class UpdateBackupOffsitePolicyInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * openAutoBackup  是否开启跨区域全量备份。 - true：开启跨区域全量备份。 - false：关闭跨区域全量备份。
     * openIncrementalBackup  是否开启跨区域增量备份。 - true：开启跨区域增量备份，当open_auto_backup开启时才可以开启。 - false：关闭跨区域增量备份。
-    * destinationProjectId  设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-gaussdbformysql/gaussdbformysql_10_0004.html)。
+    * destinationProjectId  设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-taurusdb/taurusdb_10_0004.html)。
     * destinationRegion  设置跨区域备份策略的目标区域。
     * keepDays  指定已生成的备份文件可以保存的天数。  取值范围：1～1825。
     *
@@ -97,7 +97,7 @@ class UpdateBackupOffsitePolicyInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * openAutoBackup  是否开启跨区域全量备份。 - true：开启跨区域全量备份。 - false：关闭跨区域全量备份。
     * openIncrementalBackup  是否开启跨区域增量备份。 - true：开启跨区域增量备份，当open_auto_backup开启时才可以开启。 - false：关闭跨区域增量备份。
-    * destinationProjectId  设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-gaussdbformysql/gaussdbformysql_10_0004.html)。
+    * destinationProjectId  设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-taurusdb/taurusdb_10_0004.html)。
     * destinationRegion  设置跨区域备份策略的目标区域。
     * keepDays  指定已生成的备份文件可以保存的天数。  取值范围：1～1825。
     *
@@ -115,7 +115,7 @@ class UpdateBackupOffsitePolicyInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * openAutoBackup  是否开启跨区域全量备份。 - true：开启跨区域全量备份。 - false：关闭跨区域全量备份。
     * openIncrementalBackup  是否开启跨区域增量备份。 - true：开启跨区域增量备份，当open_auto_backup开启时才可以开启。 - false：关闭跨区域增量备份。
-    * destinationProjectId  设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-gaussdbformysql/gaussdbformysql_10_0004.html)。
+    * destinationProjectId  设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-taurusdb/taurusdb_10_0004.html)。
     * destinationRegion  设置跨区域备份策略的目标区域。
     * keepDays  指定已生成的备份文件可以保存的天数。  取值范围：1～1825。
     *
@@ -281,7 +281,7 @@ class UpdateBackupOffsitePolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationProjectId
-    *  设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-gaussdbformysql/gaussdbformysql_10_0004.html)。
+    *  设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-taurusdb/taurusdb_10_0004.html)。
     *
     * @return string
     */
@@ -293,7 +293,7 @@ class UpdateBackupOffsitePolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets destinationProjectId
     *
-    * @param string $destinationProjectId 设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-gaussdbformysql/gaussdbformysql_10_0004.html)。
+    * @param string $destinationProjectId 设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-taurusdb/taurusdb_10_0004.html)。
     *
     * @return $this
     */

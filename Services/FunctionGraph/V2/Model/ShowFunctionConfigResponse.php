@@ -51,6 +51,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * lastModified  函数最后一次更新时间。
     * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * funcVpc  funcVpc
+    * peeringCidr  VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
     * mountConfig  mountConfig
     * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
@@ -78,6 +79,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -112,6 +114,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'lastModified' => '\DateTime',
             'ephemeralStorage' => 'int',
             'funcVpc' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FuncVpc',
+            'peeringCidr' => 'string',
             'mountConfig' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\MountConfig',
             'dependList' => 'string[]',
             'dependVersionList' => 'string[]',
@@ -138,7 +141,8 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'enableClassIsolation' => 'bool',
             'allowEphemeralStorage' => 'bool',
             'networkController' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\NetworkControlConfig',
-            'isReturnStream' => 'bool'
+            'isReturnStream' => 'bool',
+            'ltsCustomTag' => 'map[string,string]'
     ];
 
     /**
@@ -173,6 +177,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * lastModified  函数最后一次更新时间。
     * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * funcVpc  funcVpc
+    * peeringCidr  VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
     * mountConfig  mountConfig
     * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
@@ -200,6 +205,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -234,6 +240,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         'lastModified' => 'date-time',
         'ephemeralStorage' => null,
         'funcVpc' => null,
+        'peeringCidr' => null,
         'mountConfig' => null,
         'dependList' => null,
         'dependVersionList' => null,
@@ -260,7 +267,8 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         'enableClassIsolation' => null,
         'allowEphemeralStorage' => null,
         'networkController' => null,
-        'isReturnStream' => null
+        'isReturnStream' => null,
+        'ltsCustomTag' => null
     ];
 
     /**
@@ -316,6 +324,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * lastModified  函数最后一次更新时间。
     * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * funcVpc  funcVpc
+    * peeringCidr  VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
     * mountConfig  mountConfig
     * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
@@ -343,6 +352,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -377,6 +387,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'lastModified' => 'last_modified',
             'ephemeralStorage' => 'ephemeral_storage',
             'funcVpc' => 'func_vpc',
+            'peeringCidr' => 'peering_cidr',
             'mountConfig' => 'mount_config',
             'dependList' => 'depend_list',
             'dependVersionList' => 'depend_version_list',
@@ -403,7 +414,8 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'enableClassIsolation' => 'enable_class_isolation',
             'allowEphemeralStorage' => 'allow_ephemeral_storage',
             'networkController' => 'network_controller',
-            'isReturnStream' => 'is_return_stream'
+            'isReturnStream' => 'is_return_stream',
+            'ltsCustomTag' => 'lts_custom_tag'
     ];
 
     /**
@@ -438,6 +450,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * lastModified  函数最后一次更新时间。
     * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * funcVpc  funcVpc
+    * peeringCidr  VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
     * mountConfig  mountConfig
     * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
@@ -465,6 +478,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -499,6 +513,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'lastModified' => 'setLastModified',
             'ephemeralStorage' => 'setEphemeralStorage',
             'funcVpc' => 'setFuncVpc',
+            'peeringCidr' => 'setPeeringCidr',
             'mountConfig' => 'setMountConfig',
             'dependList' => 'setDependList',
             'dependVersionList' => 'setDependVersionList',
@@ -525,7 +540,8 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'enableClassIsolation' => 'setEnableClassIsolation',
             'allowEphemeralStorage' => 'setAllowEphemeralStorage',
             'networkController' => 'setNetworkController',
-            'isReturnStream' => 'setIsReturnStream'
+            'isReturnStream' => 'setIsReturnStream',
+            'ltsCustomTag' => 'setLtsCustomTag'
     ];
 
     /**
@@ -560,6 +576,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * lastModified  函数最后一次更新时间。
     * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * funcVpc  funcVpc
+    * peeringCidr  VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
     * mountConfig  mountConfig
     * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
@@ -587,6 +604,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -621,6 +639,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'lastModified' => 'getLastModified',
             'ephemeralStorage' => 'getEphemeralStorage',
             'funcVpc' => 'getFuncVpc',
+            'peeringCidr' => 'getPeeringCidr',
             'mountConfig' => 'getMountConfig',
             'dependList' => 'getDependList',
             'dependVersionList' => 'getDependVersionList',
@@ -647,7 +666,8 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'enableClassIsolation' => 'getEnableClassIsolation',
             'allowEphemeralStorage' => 'getAllowEphemeralStorage',
             'networkController' => 'getNetworkController',
-            'isReturnStream' => 'getIsReturnStream'
+            'isReturnStream' => 'getIsReturnStream',
+            'ltsCustomTag' => 'getLtsCustomTag'
     ];
 
     /**
@@ -835,6 +855,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         $this->container['lastModified'] = isset($data['lastModified']) ? $data['lastModified'] : null;
         $this->container['ephemeralStorage'] = isset($data['ephemeralStorage']) ? $data['ephemeralStorage'] : null;
         $this->container['funcVpc'] = isset($data['funcVpc']) ? $data['funcVpc'] : null;
+        $this->container['peeringCidr'] = isset($data['peeringCidr']) ? $data['peeringCidr'] : null;
         $this->container['mountConfig'] = isset($data['mountConfig']) ? $data['mountConfig'] : null;
         $this->container['dependList'] = isset($data['dependList']) ? $data['dependList'] : null;
         $this->container['dependVersionList'] = isset($data['dependVersionList']) ? $data['dependVersionList'] : null;
@@ -862,6 +883,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         $this->container['allowEphemeralStorage'] = isset($data['allowEphemeralStorage']) ? $data['allowEphemeralStorage'] : null;
         $this->container['networkController'] = isset($data['networkController']) ? $data['networkController'] : null;
         $this->container['isReturnStream'] = isset($data['isReturnStream']) ? $data['isReturnStream'] : null;
+        $this->container['ltsCustomTag'] = isset($data['ltsCustomTag']) ? $data['ltsCustomTag'] : null;
     }
 
     /**
@@ -1631,6 +1653,30 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets peeringCidr
+    *  VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
+    *
+    * @return string|null
+    */
+    public function getPeeringCidr()
+    {
+        return $this->container['peeringCidr'];
+    }
+
+    /**
+    * Sets peeringCidr
+    *
+    * @param string|null $peeringCidr VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
+    *
+    * @return $this
+    */
+    public function setPeeringCidr($peeringCidr)
+    {
+        $this->container['peeringCidr'] = $peeringCidr;
+        return $this;
+    }
+
+    /**
     * Gets mountConfig
     *  mountConfig
     *
@@ -2275,6 +2321,30 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     public function setIsReturnStream($isReturnStream)
     {
         $this->container['isReturnStream'] = $isReturnStream;
+        return $this;
+    }
+
+    /**
+    * Gets ltsCustomTag
+    *  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    *
+    * @return map[string,string]|null
+    */
+    public function getLtsCustomTag()
+    {
+        return $this->container['ltsCustomTag'];
+    }
+
+    /**
+    * Sets ltsCustomTag
+    *
+    * @param map[string,string]|null $ltsCustomTag 自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    *
+    * @return $this
+    */
+    public function setLtsCustomTag($ltsCustomTag)
+    {
+        $this->container['ltsCustomTag'] = $ltsCustomTag;
         return $this;
     }
 

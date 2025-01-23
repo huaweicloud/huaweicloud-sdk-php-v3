@@ -27,7 +27,7 @@ class CreateHealthMonitorOption implements ModelInterface, ArrayAccess
     * httpMethod  HTTP请求方法。  取值：GET、HEAD、POST，默认GET。  使用说明：当type为HTTP/HTTPS时生效。
     * maxRetries  健康检查连续成功多少次后，将后端服务器的健康检查状态由OFFLINE判定为ONLINE。取值范围：1-10。
     * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10，默认3。
-    * monitorPort  健康检查端口号。取值：1-65535，默认为空，表示使用后端服务器端口号。  [当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu)  >当绑定的pool开启了端口透传功能时，该字段为必填。
+    * monitorPort  参数解释：健康检查端口号。 约束限制： - 当绑定的pool开启了端口透传功能时，该字段为必填。 [- 当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu) 取值范围：1-65535和null，传null表示使用后端服务器端口号。 默认取值：null
     * name  健康检查名称。
     * poolId  健康检查所在的后端服务器组ID
     * projectId  健康检查所在的项目ID。
@@ -63,7 +63,7 @@ class CreateHealthMonitorOption implements ModelInterface, ArrayAccess
     * httpMethod  HTTP请求方法。  取值：GET、HEAD、POST，默认GET。  使用说明：当type为HTTP/HTTPS时生效。
     * maxRetries  健康检查连续成功多少次后，将后端服务器的健康检查状态由OFFLINE判定为ONLINE。取值范围：1-10。
     * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10，默认3。
-    * monitorPort  健康检查端口号。取值：1-65535，默认为空，表示使用后端服务器端口号。  [当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu)  >当绑定的pool开启了端口透传功能时，该字段为必填。
+    * monitorPort  参数解释：健康检查端口号。 约束限制： - 当绑定的pool开启了端口透传功能时，该字段为必填。 [- 当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu) 取值范围：1-65535和null，传null表示使用后端服务器端口号。 默认取值：null
     * name  健康检查名称。
     * poolId  健康检查所在的后端服务器组ID
     * projectId  健康检查所在的项目ID。
@@ -120,7 +120,7 @@ class CreateHealthMonitorOption implements ModelInterface, ArrayAccess
     * httpMethod  HTTP请求方法。  取值：GET、HEAD、POST，默认GET。  使用说明：当type为HTTP/HTTPS时生效。
     * maxRetries  健康检查连续成功多少次后，将后端服务器的健康检查状态由OFFLINE判定为ONLINE。取值范围：1-10。
     * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10，默认3。
-    * monitorPort  健康检查端口号。取值：1-65535，默认为空，表示使用后端服务器端口号。  [当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu)  >当绑定的pool开启了端口透传功能时，该字段为必填。
+    * monitorPort  参数解释：健康检查端口号。 约束限制： - 当绑定的pool开启了端口透传功能时，该字段为必填。 [- 当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu) 取值范围：1-65535和null，传null表示使用后端服务器端口号。 默认取值：null
     * name  健康检查名称。
     * poolId  健康检查所在的后端服务器组ID
     * projectId  健康检查所在的项目ID。
@@ -156,7 +156,7 @@ class CreateHealthMonitorOption implements ModelInterface, ArrayAccess
     * httpMethod  HTTP请求方法。  取值：GET、HEAD、POST，默认GET。  使用说明：当type为HTTP/HTTPS时生效。
     * maxRetries  健康检查连续成功多少次后，将后端服务器的健康检查状态由OFFLINE判定为ONLINE。取值范围：1-10。
     * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10，默认3。
-    * monitorPort  健康检查端口号。取值：1-65535，默认为空，表示使用后端服务器端口号。  [当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu)  >当绑定的pool开启了端口透传功能时，该字段为必填。
+    * monitorPort  参数解释：健康检查端口号。 约束限制： - 当绑定的pool开启了端口透传功能时，该字段为必填。 [- 当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu) 取值范围：1-65535和null，传null表示使用后端服务器端口号。 默认取值：null
     * name  健康检查名称。
     * poolId  健康检查所在的后端服务器组ID
     * projectId  健康检查所在的项目ID。
@@ -192,7 +192,7 @@ class CreateHealthMonitorOption implements ModelInterface, ArrayAccess
     * httpMethod  HTTP请求方法。  取值：GET、HEAD、POST，默认GET。  使用说明：当type为HTTP/HTTPS时生效。
     * maxRetries  健康检查连续成功多少次后，将后端服务器的健康检查状态由OFFLINE判定为ONLINE。取值范围：1-10。
     * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10，默认3。
-    * monitorPort  健康检查端口号。取值：1-65535，默认为空，表示使用后端服务器端口号。  [当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu)  >当绑定的pool开启了端口透传功能时，该字段为必填。
+    * monitorPort  参数解释：健康检查端口号。 约束限制： - 当绑定的pool开启了端口透传功能时，该字段为必填。 [- 当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu) 取值范围：1-65535和null，传null表示使用后端服务器端口号。 默认取值：null
     * name  健康检查名称。
     * poolId  健康检查所在的后端服务器组ID
     * projectId  健康检查所在的项目ID。
@@ -572,7 +572,7 @@ class CreateHealthMonitorOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets monitorPort
-    *  健康检查端口号。取值：1-65535，默认为空，表示使用后端服务器端口号。  [当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu)  >当绑定的pool开启了端口透传功能时，该字段为必填。
+    *  参数解释：健康检查端口号。 约束限制： - 当绑定的pool开启了端口透传功能时，该字段为必填。 [- 当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu) 取值范围：1-65535和null，传null表示使用后端服务器端口号。 默认取值：null
     *
     * @return int|null
     */
@@ -584,7 +584,7 @@ class CreateHealthMonitorOption implements ModelInterface, ArrayAccess
     /**
     * Sets monitorPort
     *
-    * @param int|null $monitorPort 健康检查端口号。取值：1-65535，默认为空，表示使用后端服务器端口号。  [当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu)  >当绑定的pool开启了端口透传功能时，该字段为必填。
+    * @param int|null $monitorPort 参数解释：健康检查端口号。 约束限制： - 当绑定的pool开启了端口透传功能时，该字段为必填。 [- 当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu) 取值范围：1-65535和null，传null表示使用后端服务器端口号。 默认取值：null
     *
     * @return $this
     */

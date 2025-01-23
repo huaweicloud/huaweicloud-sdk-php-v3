@@ -80,6 +80,7 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
     * resourceId  资源id。
     * isReturnStream  是否返回流式数据（已废弃）
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数（创建函数时不支持修改）
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -142,7 +143,8 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
             'networkController' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\NetworkControlConfig',
             'resourceId' => 'string',
             'isReturnStream' => 'bool',
-            'enableAuthInHeader' => 'bool'
+            'enableAuthInHeader' => 'bool',
+            'ltsCustomTag' => 'map[string,string]'
     ];
 
     /**
@@ -206,6 +208,7 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
     * resourceId  资源id。
     * isReturnStream  是否返回流式数据（已废弃）
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数（创建函数时不支持修改）
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -268,7 +271,8 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
         'networkController' => null,
         'resourceId' => null,
         'isReturnStream' => null,
-        'enableAuthInHeader' => null
+        'enableAuthInHeader' => null,
+        'ltsCustomTag' => null
     ];
 
     /**
@@ -353,6 +357,7 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
     * resourceId  资源id。
     * isReturnStream  是否返回流式数据（已废弃）
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数（创建函数时不支持修改）
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -415,7 +420,8 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
             'networkController' => 'network_controller',
             'resourceId' => 'resource_id',
             'isReturnStream' => 'is_return_stream',
-            'enableAuthInHeader' => 'enable_auth_in_header'
+            'enableAuthInHeader' => 'enable_auth_in_header',
+            'ltsCustomTag' => 'lts_custom_tag'
     ];
 
     /**
@@ -479,6 +485,7 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
     * resourceId  资源id。
     * isReturnStream  是否返回流式数据（已废弃）
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数（创建函数时不支持修改）
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -541,7 +548,8 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
             'networkController' => 'setNetworkController',
             'resourceId' => 'setResourceId',
             'isReturnStream' => 'setIsReturnStream',
-            'enableAuthInHeader' => 'setEnableAuthInHeader'
+            'enableAuthInHeader' => 'setEnableAuthInHeader',
+            'ltsCustomTag' => 'setLtsCustomTag'
     ];
 
     /**
@@ -605,6 +613,7 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
     * resourceId  资源id。
     * isReturnStream  是否返回流式数据（已废弃）
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数（创建函数时不支持修改）
+    * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
     */
@@ -667,7 +676,8 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
             'networkController' => 'getNetworkController',
             'resourceId' => 'getResourceId',
             'isReturnStream' => 'getIsReturnStream',
-            'enableAuthInHeader' => 'getEnableAuthInHeader'
+            'enableAuthInHeader' => 'getEnableAuthInHeader',
+            'ltsCustomTag' => 'getLtsCustomTag'
     ];
 
     /**
@@ -884,6 +894,7 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['isReturnStream'] = isset($data['isReturnStream']) ? $data['isReturnStream'] : null;
         $this->container['enableAuthInHeader'] = isset($data['enableAuthInHeader']) ? $data['enableAuthInHeader'] : null;
+        $this->container['ltsCustomTag'] = isset($data['ltsCustomTag']) ? $data['ltsCustomTag'] : null;
     }
 
     /**
@@ -2345,6 +2356,30 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
     public function setEnableAuthInHeader($enableAuthInHeader)
     {
         $this->container['enableAuthInHeader'] = $enableAuthInHeader;
+        return $this;
+    }
+
+    /**
+    * Gets ltsCustomTag
+    *  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    *
+    * @return map[string,string]|null
+    */
+    public function getLtsCustomTag()
+    {
+        return $this->container['ltsCustomTag'];
+    }
+
+    /**
+    * Sets ltsCustomTag
+    *
+    * @param map[string,string]|null $ltsCustomTag 自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    *
+    * @return $this
+    */
+    public function setLtsCustomTag($ltsCustomTag)
+    {
+        $this->container['ltsCustomTag'] = $ltsCustomTag;
         return $this;
     }
 

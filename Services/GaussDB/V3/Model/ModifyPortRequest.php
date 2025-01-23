@@ -20,7 +20,7 @@ class ModifyPortRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * port  端口号。  GaussDB(for MySQL)端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
+    * port  端口号。  TaurusDB端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ModifyPortRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * port  端口号。  GaussDB(for MySQL)端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
+    * port  端口号。  TaurusDB端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ModifyPortRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * port  端口号。  GaussDB(for MySQL)端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
+    * port  端口号。  TaurusDB端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ModifyPortRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * port  端口号。  GaussDB(for MySQL)端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
+    * port  端口号。  TaurusDB端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ModifyPortRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * port  端口号。  GaussDB(for MySQL)端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
+    * port  端口号。  TaurusDB端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ModifyPortRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  端口号。  GaussDB(for MySQL)端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
+    *  端口号。  TaurusDB端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
     *
     * @return int
     */
@@ -189,7 +189,7 @@ class ModifyPortRequest implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int $port 端口号。  GaussDB(for MySQL)端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
+    * @param int $port 端口号。  TaurusDB端口号范围：大于等于1024，小于等于65535，不包含端口5342-5345、12017、20000、20201、20202、33062。
     *
     * @return $this
     */

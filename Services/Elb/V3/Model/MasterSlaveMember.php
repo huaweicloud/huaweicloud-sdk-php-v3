@@ -30,6 +30,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
     * deviceOwner  设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
     * deviceId  关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
     * operatingStatus  后端服务器的健康状态。  取值： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * reason  reason
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     * role  后端服务器的主备状态。
@@ -48,6 +49,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
             'deviceOwner' => 'string',
             'deviceId' => 'string',
             'operatingStatus' => 'string',
+            'reason' => '\HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason',
             'memberType' => 'string',
             'instanceId' => 'string',
             'role' => 'string',
@@ -66,6 +68,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
     * deviceOwner  设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
     * deviceId  关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
     * operatingStatus  后端服务器的健康状态。  取值： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * reason  reason
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     * role  后端服务器的主备状态。
@@ -84,6 +87,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
         'deviceOwner' => null,
         'deviceId' => null,
         'operatingStatus' => null,
+        'reason' => null,
         'memberType' => null,
         'instanceId' => null,
         'role' => null,
@@ -123,6 +127,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
     * deviceOwner  设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
     * deviceId  关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
     * operatingStatus  后端服务器的健康状态。  取值： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * reason  reason
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     * role  后端服务器的主备状态。
@@ -141,6 +146,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
             'deviceOwner' => 'device_owner',
             'deviceId' => 'device_id',
             'operatingStatus' => 'operating_status',
+            'reason' => 'reason',
             'memberType' => 'member_type',
             'instanceId' => 'instance_id',
             'role' => 'role',
@@ -159,6 +165,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
     * deviceOwner  设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
     * deviceId  关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
     * operatingStatus  后端服务器的健康状态。  取值： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * reason  reason
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     * role  后端服务器的主备状态。
@@ -177,6 +184,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
             'deviceOwner' => 'setDeviceOwner',
             'deviceId' => 'setDeviceId',
             'operatingStatus' => 'setOperatingStatus',
+            'reason' => 'setReason',
             'memberType' => 'setMemberType',
             'instanceId' => 'setInstanceId',
             'role' => 'setRole',
@@ -195,6 +203,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
     * deviceOwner  设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
     * deviceId  关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
     * operatingStatus  后端服务器的健康状态。  取值： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * reason  reason
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     * role  后端服务器的主备状态。
@@ -213,6 +222,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
             'deviceOwner' => 'getDeviceOwner',
             'deviceId' => 'getDeviceId',
             'operatingStatus' => 'getOperatingStatus',
+            'reason' => 'getReason',
             'memberType' => 'getMemberType',
             'instanceId' => 'getInstanceId',
             'role' => 'getRole',
@@ -287,6 +297,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
         $this->container['deviceOwner'] = isset($data['deviceOwner']) ? $data['deviceOwner'] : null;
         $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
         $this->container['operatingStatus'] = isset($data['operatingStatus']) ? $data['operatingStatus'] : null;
+        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
         $this->container['memberType'] = isset($data['memberType']) ? $data['memberType'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['role'] = isset($data['role']) ? $data['role'] : null;
@@ -600,6 +611,30 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
     public function setOperatingStatus($operatingStatus)
     {
         $this->container['operatingStatus'] = $operatingStatus;
+        return $this;
+    }
+
+    /**
+    * Gets reason
+    *  reason
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason|null
+    */
+    public function getReason()
+    {
+        return $this->container['reason'];
+    }
+
+    /**
+    * Sets reason
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason|null $reason reason
+    *
+    * @return $this
+    */
+    public function setReason($reason)
+    {
+        $this->container['reason'] = $reason;
         return $this;
     }
 

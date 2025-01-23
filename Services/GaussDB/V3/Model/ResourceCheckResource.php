@@ -29,7 +29,7 @@ class ResourceCheckResource implements ModelInterface, ArrayAccess
     * feFlavorRef  FE规格码。
     * beFlavorRef  BE规格码。
     * availabilityZone  可用区码。选填，校验可用区码是否正确。
-    * subnetId  HTAP实例子网即GaussDBForMySQL实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    * subnetId  HTAP实例子网即TaurusDB实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class ResourceCheckResource implements ModelInterface, ArrayAccess
     * feFlavorRef  FE规格码。
     * beFlavorRef  BE规格码。
     * availabilityZone  可用区码。选填，校验可用区码是否正确。
-    * subnetId  HTAP实例子网即GaussDBForMySQL实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    * subnetId  HTAP实例子网即TaurusDB实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ResourceCheckResource implements ModelInterface, ArrayAccess
     * feFlavorRef  FE规格码。
     * beFlavorRef  BE规格码。
     * availabilityZone  可用区码。选填，校验可用区码是否正确。
-    * subnetId  HTAP实例子网即GaussDBForMySQL实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    * subnetId  HTAP实例子网即TaurusDB实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class ResourceCheckResource implements ModelInterface, ArrayAccess
     * feFlavorRef  FE规格码。
     * beFlavorRef  BE规格码。
     * availabilityZone  可用区码。选填，校验可用区码是否正确。
-    * subnetId  HTAP实例子网即GaussDBForMySQL实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    * subnetId  HTAP实例子网即TaurusDB实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class ResourceCheckResource implements ModelInterface, ArrayAccess
     * feFlavorRef  FE规格码。
     * beFlavorRef  BE规格码。
     * availabilityZone  可用区码。选填，校验可用区码是否正确。
-    * subnetId  HTAP实例子网即GaussDBForMySQL实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    * subnetId  HTAP实例子网即TaurusDB实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
     *
     * @var string[]
     */
@@ -539,7 +539,7 @@ class ResourceCheckResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  HTAP实例子网即GaussDBForMySQL实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    *  HTAP实例子网即TaurusDB实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
     *
     * @return string
     */
@@ -551,7 +551,7 @@ class ResourceCheckResource implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId HTAP实例子网即GaussDBForMySQL实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    * @param string $subnetId HTAP实例子网即TaurusDB实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
     *
     * @return $this
     */

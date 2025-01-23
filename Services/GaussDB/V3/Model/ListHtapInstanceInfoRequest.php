@@ -20,7 +20,7 @@ class ListHtapInstanceInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  GaussDBForMySQL实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ListHtapInstanceInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  GaussDBForMySQL实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ListHtapInstanceInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  GaussDBForMySQL实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ListHtapInstanceInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  GaussDBForMySQL实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ListHtapInstanceInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  GaussDBForMySQL实例ID，严格匹配UUID规则。
+    * instanceId  TaurusDB实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
     * @var string[]
@@ -188,7 +188,7 @@ class ListHtapInstanceInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  GaussDBForMySQL实例ID，严格匹配UUID规则。
+    *  TaurusDB实例ID，严格匹配UUID规则。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class ListHtapInstanceInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId GaussDBForMySQL实例ID，严格匹配UUID规则。
+    * @param string $instanceId TaurusDB实例ID，严格匹配UUID规则。
     *
     * @return $this
     */

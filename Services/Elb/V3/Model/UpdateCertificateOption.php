@@ -24,9 +24,10 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     * description  证书的描述。
     * name  证书的名称。
     * privateKey  服务器证书的私钥。PEM编码格式。 当type为client时，该参数被忽略，不影响证书的创建和使用。若传入不符合格式值，则会报错。 当type为server时，该字段必须符合格式要求，且私钥必须是有效的。 最大长度8192字符。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
+    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
     * encCertificate  HTTPS协议使用的SM加密证书内容。支持证书链，最大11层(含证书和证书链)。  取值：PEM编码格式。最大长度65536字符。  使用说明：仅type为server_sm时有效。
     * encPrivateKey  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。最大长度8192字符。  使用说明：仅type为server_sm时有效。
+    * scmCertificateId  scm证书id
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
             'privateKey' => 'string',
             'domain' => 'string',
             'encCertificate' => 'string',
-            'encPrivateKey' => 'string'
+            'encPrivateKey' => 'string',
+            'scmCertificateId' => 'string'
     ];
 
     /**
@@ -46,9 +48,10 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     * description  证书的描述。
     * name  证书的名称。
     * privateKey  服务器证书的私钥。PEM编码格式。 当type为client时，该参数被忽略，不影响证书的创建和使用。若传入不符合格式值，则会报错。 当type为server时，该字段必须符合格式要求，且私钥必须是有效的。 最大长度8192字符。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
+    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
     * encCertificate  HTTPS协议使用的SM加密证书内容。支持证书链，最大11层(含证书和证书链)。  取值：PEM编码格式。最大长度65536字符。  使用说明：仅type为server_sm时有效。
     * encPrivateKey  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。最大长度8192字符。  使用说明：仅type为server_sm时有效。
+    * scmCertificateId  scm证书id
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
         'privateKey' => null,
         'domain' => null,
         'encCertificate' => null,
-        'encPrivateKey' => null
+        'encPrivateKey' => null,
+        'scmCertificateId' => null
     ];
 
     /**
@@ -89,9 +93,10 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     * description  证书的描述。
     * name  证书的名称。
     * privateKey  服务器证书的私钥。PEM编码格式。 当type为client时，该参数被忽略，不影响证书的创建和使用。若传入不符合格式值，则会报错。 当type为server时，该字段必须符合格式要求，且私钥必须是有效的。 最大长度8192字符。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
+    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
     * encCertificate  HTTPS协议使用的SM加密证书内容。支持证书链，最大11层(含证书和证书链)。  取值：PEM编码格式。最大长度65536字符。  使用说明：仅type为server_sm时有效。
     * encPrivateKey  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。最大长度8192字符。  使用说明：仅type为server_sm时有效。
+    * scmCertificateId  scm证书id
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
             'privateKey' => 'private_key',
             'domain' => 'domain',
             'encCertificate' => 'enc_certificate',
-            'encPrivateKey' => 'enc_private_key'
+            'encPrivateKey' => 'enc_private_key',
+            'scmCertificateId' => 'scm_certificate_id'
     ];
 
     /**
@@ -111,9 +117,10 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     * description  证书的描述。
     * name  证书的名称。
     * privateKey  服务器证书的私钥。PEM编码格式。 当type为client时，该参数被忽略，不影响证书的创建和使用。若传入不符合格式值，则会报错。 当type为server时，该字段必须符合格式要求，且私钥必须是有效的。 最大长度8192字符。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
+    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
     * encCertificate  HTTPS协议使用的SM加密证书内容。支持证书链，最大11层(含证书和证书链)。  取值：PEM编码格式。最大长度65536字符。  使用说明：仅type为server_sm时有效。
     * encPrivateKey  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。最大长度8192字符。  使用说明：仅type为server_sm时有效。
+    * scmCertificateId  scm证书id
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
             'privateKey' => 'setPrivateKey',
             'domain' => 'setDomain',
             'encCertificate' => 'setEncCertificate',
-            'encPrivateKey' => 'setEncPrivateKey'
+            'encPrivateKey' => 'setEncPrivateKey',
+            'scmCertificateId' => 'setScmCertificateId'
     ];
 
     /**
@@ -133,9 +141,10 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     * description  证书的描述。
     * name  证书的名称。
     * privateKey  服务器证书的私钥。PEM编码格式。 当type为client时，该参数被忽略，不影响证书的创建和使用。若传入不符合格式值，则会报错。 当type为server时，该字段必须符合格式要求，且私钥必须是有效的。 最大长度8192字符。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
+    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
     * encCertificate  HTTPS协议使用的SM加密证书内容。支持证书链，最大11层(含证书和证书链)。  取值：PEM编码格式。最大长度65536字符。  使用说明：仅type为server_sm时有效。
     * encPrivateKey  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。最大长度8192字符。  使用说明：仅type为server_sm时有效。
+    * scmCertificateId  scm证书id
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
             'privateKey' => 'getPrivateKey',
             'domain' => 'getDomain',
             'encCertificate' => 'getEncCertificate',
-            'encPrivateKey' => 'getEncPrivateKey'
+            'encPrivateKey' => 'getEncPrivateKey',
+            'scmCertificateId' => 'getScmCertificateId'
     ];
 
     /**
@@ -214,6 +224,7 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['encCertificate'] = isset($data['encCertificate']) ? $data['encCertificate'] : null;
         $this->container['encPrivateKey'] = isset($data['encPrivateKey']) ? $data['encPrivateKey'] : null;
+        $this->container['scmCertificateId'] = isset($data['scmCertificateId']) ? $data['scmCertificateId'] : null;
     }
 
     /**
@@ -354,7 +365,7 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
-    *  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
+    *  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
     *
     * @return string|null
     */
@@ -366,7 +377,7 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     /**
     * Sets domain
     *
-    * @param string|null $domain 服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
+    * @param string|null $domain 服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分隔，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分隔，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\\*\"。例：\\*.test.com
     *
     * @return $this
     */
@@ -421,6 +432,30 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     public function setEncPrivateKey($encPrivateKey)
     {
         $this->container['encPrivateKey'] = $encPrivateKey;
+        return $this;
+    }
+
+    /**
+    * Gets scmCertificateId
+    *  scm证书id
+    *
+    * @return string|null
+    */
+    public function getScmCertificateId()
+    {
+        return $this->container['scmCertificateId'];
+    }
+
+    /**
+    * Sets scmCertificateId
+    *
+    * @param string|null $scmCertificateId scm证书id
+    *
+    * @return $this
+    */
+    public function setScmCertificateId($scmCertificateId)
+    {
+        $this->container['scmCertificateId'] = $scmCertificateId;
         return $this;
     }
 

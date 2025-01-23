@@ -24,8 +24,8 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
     * measureId  价格度量单位标识。 1：元
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -44,8 +44,8 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
     * measureId  价格度量单位标识。 1：元
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -85,8 +85,8 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
     * measureId  价格度量单位标识。 1：元
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -105,8 +105,8 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
     * measureId  价格度量单位标识。 1：元
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -125,8 +125,8 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
     * measureId  价格度量单位标识。 1：元
-    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持IES产品。
-    * installmentPeriodType  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。  说明： 暂只支持CloudPond产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @var string[]
     */
@@ -337,7 +337,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets installmentOfficialWebsiteAmount
-    *  分期金额的官网价。  说明： 暂只支持IES产品。
+    *  分期金额的官网价。  说明： 暂只支持CloudPond产品。
     *
     * @return string|null
     */
@@ -349,7 +349,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets installmentOfficialWebsiteAmount
     *
-    * @param string|null $installmentOfficialWebsiteAmount 分期金额的官网价。  说明： 暂只支持IES产品。
+    * @param string|null $installmentOfficialWebsiteAmount 分期金额的官网价。  说明： 暂只支持CloudPond产品。
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets installmentPeriodType
-    *  分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    *  分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @return int|null
     */
@@ -373,7 +373,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets installmentPeriodType
     *
-    * @param int|null $installmentPeriodType 分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+    * @param int|null $installmentPeriodType 分期付款的周期类型。 2：月 3：年 说明： 暂只支持CloudPond产品。
     *
     * @return $this
     */

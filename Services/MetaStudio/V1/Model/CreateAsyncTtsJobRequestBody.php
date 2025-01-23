@@ -34,6 +34,10 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * genSrt  是否开启字幕
     * srtLen  字幕最大长度限制
     * srtLineLimit  字幕行数限制，默认为1
+    * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    * outputExternalUrl  音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
+    * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
+    * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     *
     * @var string[]
     */
@@ -51,7 +55,11 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'callbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\TtsCallBackConfig',
             'genSrt' => 'bool',
             'srtLen' => 'int',
-            'srtLineLimit' => 'int'
+            'srtLineLimit' => 'int',
+            'channels' => 'int',
+            'outputExternalUrl' => 'string',
+            'srtOutputExternalUrl' => 'string',
+            'actionOutputExternalUrl' => 'string'
     ];
 
     /**
@@ -70,6 +78,10 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * genSrt  是否开启字幕
     * srtLen  字幕最大长度限制
     * srtLineLimit  字幕行数限制，默认为1
+    * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    * outputExternalUrl  音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
+    * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
+    * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     *
     * @var string[]
     */
@@ -87,7 +99,11 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
         'callbackConfig' => null,
         'genSrt' => null,
         'srtLen' => 'int64',
-        'srtLineLimit' => 'int32'
+        'srtLineLimit' => 'int32',
+        'channels' => 'int32',
+        'outputExternalUrl' => null,
+        'srtOutputExternalUrl' => null,
+        'actionOutputExternalUrl' => null
     ];
 
     /**
@@ -127,6 +143,10 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * genSrt  是否开启字幕
     * srtLen  字幕最大长度限制
     * srtLineLimit  字幕行数限制，默认为1
+    * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    * outputExternalUrl  音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
+    * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
+    * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     *
     * @var string[]
     */
@@ -144,7 +164,11 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'callbackConfig' => 'callback_config',
             'genSrt' => 'gen_srt',
             'srtLen' => 'srt_len',
-            'srtLineLimit' => 'srt_line_limit'
+            'srtLineLimit' => 'srt_line_limit',
+            'channels' => 'channels',
+            'outputExternalUrl' => 'output_external_url',
+            'srtOutputExternalUrl' => 'srt_output_external_url',
+            'actionOutputExternalUrl' => 'action_output_external_url'
     ];
 
     /**
@@ -163,6 +187,10 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * genSrt  是否开启字幕
     * srtLen  字幕最大长度限制
     * srtLineLimit  字幕行数限制，默认为1
+    * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    * outputExternalUrl  音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
+    * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
+    * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     *
     * @var string[]
     */
@@ -180,7 +208,11 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'callbackConfig' => 'setCallbackConfig',
             'genSrt' => 'setGenSrt',
             'srtLen' => 'setSrtLen',
-            'srtLineLimit' => 'setSrtLineLimit'
+            'srtLineLimit' => 'setSrtLineLimit',
+            'channels' => 'setChannels',
+            'outputExternalUrl' => 'setOutputExternalUrl',
+            'srtOutputExternalUrl' => 'setSrtOutputExternalUrl',
+            'actionOutputExternalUrl' => 'setActionOutputExternalUrl'
     ];
 
     /**
@@ -199,6 +231,10 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * genSrt  是否开启字幕
     * srtLen  字幕最大长度限制
     * srtLineLimit  字幕行数限制，默认为1
+    * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    * outputExternalUrl  音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
+    * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
+    * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     *
     * @var string[]
     */
@@ -216,7 +252,11 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'callbackConfig' => 'getCallbackConfig',
             'genSrt' => 'getGenSrt',
             'srtLen' => 'getSrtLen',
-            'srtLineLimit' => 'getSrtLineLimit'
+            'srtLineLimit' => 'getSrtLineLimit',
+            'channels' => 'getChannels',
+            'outputExternalUrl' => 'getOutputExternalUrl',
+            'srtOutputExternalUrl' => 'getSrtOutputExternalUrl',
+            'actionOutputExternalUrl' => 'getActionOutputExternalUrl'
     ];
 
     /**
@@ -306,6 +346,10 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['genSrt'] = isset($data['genSrt']) ? $data['genSrt'] : null;
         $this->container['srtLen'] = isset($data['srtLen']) ? $data['srtLen'] : null;
         $this->container['srtLineLimit'] = isset($data['srtLineLimit']) ? $data['srtLineLimit'] : null;
+        $this->container['channels'] = isset($data['channels']) ? $data['channels'] : null;
+        $this->container['outputExternalUrl'] = isset($data['outputExternalUrl']) ? $data['outputExternalUrl'] : null;
+        $this->container['srtOutputExternalUrl'] = isset($data['srtOutputExternalUrl']) ? $data['srtOutputExternalUrl'] : null;
+        $this->container['actionOutputExternalUrl'] = isset($data['actionOutputExternalUrl']) ? $data['actionOutputExternalUrl'] : null;
     }
 
     /**
@@ -386,6 +430,30 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['srtLineLimit']) && ($this->container['srtLineLimit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'srtLineLimit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['channels']) && ($this->container['channels'] > 2)) {
+                $invalidProperties[] = "invalid value for 'channels', must be smaller than or equal to 2.";
+            }
+            if (!is_null($this->container['channels']) && ($this->container['channels'] < 1)) {
+                $invalidProperties[] = "invalid value for 'channels', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['outputExternalUrl']) && (mb_strlen($this->container['outputExternalUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'outputExternalUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['outputExternalUrl']) && (mb_strlen($this->container['outputExternalUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'outputExternalUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['srtOutputExternalUrl']) && (mb_strlen($this->container['srtOutputExternalUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'srtOutputExternalUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['srtOutputExternalUrl']) && (mb_strlen($this->container['srtOutputExternalUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'srtOutputExternalUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['actionOutputExternalUrl']) && (mb_strlen($this->container['actionOutputExternalUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'actionOutputExternalUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['actionOutputExternalUrl']) && (mb_strlen($this->container['actionOutputExternalUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'actionOutputExternalUrl', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -734,6 +802,102 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     public function setSrtLineLimit($srtLineLimit)
     {
         $this->container['srtLineLimit'] = $srtLineLimit;
+        return $this;
+    }
+
+    /**
+    * Gets channels
+    *  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    *
+    * @return int|null
+    */
+    public function getChannels()
+    {
+        return $this->container['channels'];
+    }
+
+    /**
+    * Sets channels
+    *
+    * @param int|null $channels 声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    *
+    * @return $this
+    */
+    public function setChannels($channels)
+    {
+        $this->container['channels'] = $channels;
+        return $this;
+    }
+
+    /**
+    * Gets outputExternalUrl
+    *  音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
+    *
+    * @return string|null
+    */
+    public function getOutputExternalUrl()
+    {
+        return $this->container['outputExternalUrl'];
+    }
+
+    /**
+    * Sets outputExternalUrl
+    *
+    * @param string|null $outputExternalUrl 音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
+    *
+    * @return $this
+    */
+    public function setOutputExternalUrl($outputExternalUrl)
+    {
+        $this->container['outputExternalUrl'] = $outputExternalUrl;
+        return $this;
+    }
+
+    /**
+    * Gets srtOutputExternalUrl
+    *  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
+    *
+    * @return string|null
+    */
+    public function getSrtOutputExternalUrl()
+    {
+        return $this->container['srtOutputExternalUrl'];
+    }
+
+    /**
+    * Sets srtOutputExternalUrl
+    *
+    * @param string|null $srtOutputExternalUrl 字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
+    *
+    * @return $this
+    */
+    public function setSrtOutputExternalUrl($srtOutputExternalUrl)
+    {
+        $this->container['srtOutputExternalUrl'] = $srtOutputExternalUrl;
+        return $this;
+    }
+
+    /**
+    * Gets actionOutputExternalUrl
+    *  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
+    *
+    * @return string|null
+    */
+    public function getActionOutputExternalUrl()
+    {
+        return $this->container['actionOutputExternalUrl'];
+    }
+
+    /**
+    * Sets actionOutputExternalUrl
+    *
+    * @param string|null $actionOutputExternalUrl 动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
+    *
+    * @return $this
+    */
+    public function setActionOutputExternalUrl($actionOutputExternalUrl)
+    {
+        $this->container['actionOutputExternalUrl'] = $actionOutputExternalUrl;
         return $this;
     }
 

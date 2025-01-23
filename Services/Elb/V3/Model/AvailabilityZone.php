@@ -22,8 +22,8 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * code  参数解释：可用区唯一编码。
     * state  参数解释：可用区状态。  取值范围：ACTIVE。
-    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
-    * publicBorderGroup  参数解释：可用区组，如：center
+    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    * publicBorderGroup  参数解释：网络公共边界组，如：center
     * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
@@ -40,8 +40,8 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * code  参数解释：可用区唯一编码。
     * state  参数解释：可用区状态。  取值范围：ACTIVE。
-    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
-    * publicBorderGroup  参数解释：可用区组，如：center
+    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    * publicBorderGroup  参数解释：网络公共边界组，如：center
     * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
@@ -79,8 +79,8 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * and the value is the original name
     * code  参数解释：可用区唯一编码。
     * state  参数解释：可用区状态。  取值范围：ACTIVE。
-    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
-    * publicBorderGroup  参数解释：可用区组，如：center
+    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    * publicBorderGroup  参数解释：网络公共边界组，如：center
     * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * code  参数解释：可用区唯一编码。
     * state  参数解释：可用区状态。  取值范围：ACTIVE。
-    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
-    * publicBorderGroup  参数解释：可用区组，如：center
+    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    * publicBorderGroup  参数解释：网络公共边界组，如：center
     * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
@@ -115,8 +115,8 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * code  参数解释：可用区唯一编码。
     * state  参数解释：可用区状态。  取值范围：ACTIVE。
-    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
-    * publicBorderGroup  参数解释：可用区组，如：center
+    * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    * publicBorderGroup  参数解释：网络公共边界组，如：center
     * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
@@ -281,7 +281,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    *  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
     *
     * @return string[]
     */
@@ -293,7 +293,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string[] $protocol [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
+    * @param string[] $protocol [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  参数解释：可用区组，如：center
+    *  参数解释：网络公共边界组，如：center
     *
     * @return string
     */
@@ -317,7 +317,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string $publicBorderGroup 参数解释：可用区组，如：center
+    * @param string $publicBorderGroup 参数解释：网络公共边界组，如：center
     *
     * @return $this
     */

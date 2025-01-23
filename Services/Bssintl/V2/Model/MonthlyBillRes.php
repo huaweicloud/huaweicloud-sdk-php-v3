@@ -67,6 +67,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * beId  |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
     *
     * @var string[]
     */
@@ -117,7 +118,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'payerAccountId' => 'string',
             'effectiveTime' => 'string',
             'expireTime' => 'string',
-            'consumeTime' => 'string'
+            'consumeTime' => 'string',
+            'beId' => 'string'
     ];
 
     /**
@@ -169,6 +171,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * beId  |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
     *
     * @var string[]
     */
@@ -219,7 +222,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'payerAccountId' => null,
         'effectiveTime' => null,
         'expireTime' => null,
-        'consumeTime' => null
+        'consumeTime' => null,
+        'beId' => null
     ];
 
     /**
@@ -292,6 +296,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * beId  |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
     *
     * @var string[]
     */
@@ -342,7 +347,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'payerAccountId' => 'payer_account_id',
             'effectiveTime' => 'effective_time',
             'expireTime' => 'expire_time',
-            'consumeTime' => 'consume_time'
+            'consumeTime' => 'consume_time',
+            'beId' => 'be_id'
     ];
 
     /**
@@ -394,6 +400,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * beId  |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
     *
     * @var string[]
     */
@@ -444,7 +451,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'payerAccountId' => 'setPayerAccountId',
             'effectiveTime' => 'setEffectiveTime',
             'expireTime' => 'setExpireTime',
-            'consumeTime' => 'setConsumeTime'
+            'consumeTime' => 'setConsumeTime',
+            'beId' => 'setBeId'
     ];
 
     /**
@@ -496,6 +504,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+    * beId  |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
     *
     * @var string[]
     */
@@ -546,7 +555,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'payerAccountId' => 'getPayerAccountId',
             'effectiveTime' => 'getEffectiveTime',
             'expireTime' => 'getExpireTime',
-            'consumeTime' => 'getConsumeTime'
+            'consumeTime' => 'getConsumeTime',
+            'beId' => 'getBeId'
     ];
 
     /**
@@ -654,6 +664,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['effectiveTime'] = isset($data['effectiveTime']) ? $data['effectiveTime'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['consumeTime'] = isset($data['consumeTime']) ? $data['consumeTime'] : null;
+        $this->container['beId'] = isset($data['beId']) ? $data['beId'] : null;
     }
 
     /**
@@ -705,6 +716,12 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['expireTime']) && (mb_strlen($this->container['expireTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'expireTime', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['beId']) && (mb_strlen($this->container['beId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'beId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['beId']) && (mb_strlen($this->container['beId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'beId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1845,6 +1862,30 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setConsumeTime($consumeTime)
     {
         $this->container['consumeTime'] = $consumeTime;
+        return $this;
+    }
+
+    /**
+    * Gets beId
+    *  |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
+    *
+    * @return string|null
+    */
+    public function getBeId()
+    {
+        return $this->container['beId'];
+    }
+
+    /**
+    * Sets beId
+    *
+    * @param string|null $beId |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
+    *
+    * @return $this
+    */
+    public function setBeId($beId)
+    {
+        $this->container['beId'] = $beId;
         return $this;
     }
 
