@@ -4031,16 +4031,16 @@ class CceAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['clusterId'] !== null) {
-            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
         }
         if ($localVarParams['clusterType'] !== null) {
-            $pathParams['cluster_type'] = $localVarParams['clusterType'];
+            $queryParams['cluster_type'] = $localVarParams['clusterType'];
         }
         if ($localVarParams['clusterVersion'] !== null) {
-            $pathParams['cluster_version'] = $localVarParams['clusterVersion'];
+            $queryParams['cluster_version'] = $localVarParams['clusterVersion'];
         }
         if ($localVarParams['networkMode'] !== null) {
-            $pathParams['network_mode'] = $localVarParams['networkMode'];
+            $queryParams['network_mode'] = $localVarParams['networkMode'];
         }
 
         if ($multipart) {

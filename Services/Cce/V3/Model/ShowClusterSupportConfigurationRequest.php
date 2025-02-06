@@ -191,10 +191,7 @@ class ShowClusterSupportConfigurationRequest implements ModelInterface, ArrayAcc
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['clusterId'] === null) {
-            $invalidProperties[] = "'clusterId' can't be null";
-        }
-            if (!preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['clusterId'])) {
+            if (!is_null($this->container['clusterId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['clusterId'])) {
                 $invalidProperties[] = "invalid value for 'clusterId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
         if ($this->container['clusterType'] === null) {
@@ -224,7 +221,7 @@ class ShowClusterSupportConfigurationRequest implements ModelInterface, ArrayAcc
     * Gets clusterId
     *  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
-    * @return string
+    * @return string|null
     */
     public function getClusterId()
     {
@@ -234,7 +231,7 @@ class ShowClusterSupportConfigurationRequest implements ModelInterface, ArrayAcc
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * @param string|null $clusterId 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
     * @return $this
     */

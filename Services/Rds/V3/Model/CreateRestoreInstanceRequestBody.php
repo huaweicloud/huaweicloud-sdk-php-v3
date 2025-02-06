@@ -45,6 +45,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * tags  标签列表。单个实例总标签数上限20个。
     * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
+    * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
     *
     * @var string[]
     */
@@ -73,7 +74,8 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
             'collation' => 'string',
             'tags' => '\HuaweiCloud\SDK\Rds\V3\Model\TagWithKeyValue[]',
             'serverlessInfo' => '\HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfo',
-            'dryRun' => 'bool'
+            'dryRun' => 'bool',
+            'isAutoUpgrade' => 'bool'
     ];
 
     /**
@@ -103,6 +105,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * tags  标签列表。单个实例总标签数上限20个。
     * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
+    * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
     *
     * @var string[]
     */
@@ -131,7 +134,8 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
         'collation' => null,
         'tags' => null,
         'serverlessInfo' => null,
-        'dryRun' => null
+        'dryRun' => null,
+        'isAutoUpgrade' => null
     ];
 
     /**
@@ -182,6 +186,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * tags  标签列表。单个实例总标签数上限20个。
     * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
+    * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
     *
     * @var string[]
     */
@@ -210,7 +215,8 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
             'collation' => 'collation',
             'tags' => 'tags',
             'serverlessInfo' => 'serverless_info',
-            'dryRun' => 'dry_run'
+            'dryRun' => 'dry_run',
+            'isAutoUpgrade' => 'is_auto_upgrade'
     ];
 
     /**
@@ -240,6 +246,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * tags  标签列表。单个实例总标签数上限20个。
     * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
+    * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
     *
     * @var string[]
     */
@@ -268,7 +275,8 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
             'collation' => 'setCollation',
             'tags' => 'setTags',
             'serverlessInfo' => 'setServerlessInfo',
-            'dryRun' => 'setDryRun'
+            'dryRun' => 'setDryRun',
+            'isAutoUpgrade' => 'setIsAutoUpgrade'
     ];
 
     /**
@@ -298,6 +306,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * tags  标签列表。单个实例总标签数上限20个。
     * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
+    * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
     *
     * @var string[]
     */
@@ -326,7 +335,8 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
             'collation' => 'getCollation',
             'tags' => 'getTags',
             'serverlessInfo' => 'getServerlessInfo',
-            'dryRun' => 'getDryRun'
+            'dryRun' => 'getDryRun',
+            'isAutoUpgrade' => 'getIsAutoUpgrade'
     ];
 
     /**
@@ -412,6 +422,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['serverlessInfo'] = isset($data['serverlessInfo']) ? $data['serverlessInfo'] : null;
         $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
+        $this->container['isAutoUpgrade'] = isset($data['isAutoUpgrade']) ? $data['isAutoUpgrade'] : null;
     }
 
     /**
@@ -1045,6 +1056,30 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setDryRun($dryRun)
     {
         $this->container['dryRun'] = $dryRun;
+        return $this;
+    }
+
+    /**
+    * Gets isAutoUpgrade
+    *  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
+    *
+    * @return bool|null
+    */
+    public function getIsAutoUpgrade()
+    {
+        return $this->container['isAutoUpgrade'];
+    }
+
+    /**
+    * Sets isAutoUpgrade
+    *
+    * @param bool|null $isAutoUpgrade 是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
+    *
+    * @return $this
+    */
+    public function setIsAutoUpgrade($isAutoUpgrade)
+    {
+        $this->container['isAutoUpgrade'] = $isAutoUpgrade;
         return $this;
     }
 

@@ -45,6 +45,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
+    * clusterOps  clusterOps
     * encryptionConfig  encryptionConfig
     *
     * @var string[]
@@ -75,6 +76,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'enableDistMgt' => 'bool',
             'deletionProtection' => 'bool',
             'configurationsOverride' => '\HuaweiCloud\SDK\Cce\V3\Model\PackageConfiguration[]',
+            'clusterOps' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterOps',
             'encryptionConfig' => '\HuaweiCloud\SDK\Cce\V3\Model\EncryptionConfig'
     ];
 
@@ -105,6 +107,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
+    * clusterOps  clusterOps
     * encryptionConfig  encryptionConfig
     *
     * @var string[]
@@ -135,6 +138,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         'enableDistMgt' => null,
         'deletionProtection' => null,
         'configurationsOverride' => null,
+        'clusterOps' => null,
         'encryptionConfig' => null
     ];
 
@@ -186,6 +190,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
+    * clusterOps  clusterOps
     * encryptionConfig  encryptionConfig
     *
     * @var string[]
@@ -216,6 +221,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'enableDistMgt' => 'enableDistMgt',
             'deletionProtection' => 'deletionProtection',
             'configurationsOverride' => 'configurationsOverride',
+            'clusterOps' => 'clusterOps',
             'encryptionConfig' => 'encryptionConfig'
     ];
 
@@ -246,6 +252,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
+    * clusterOps  clusterOps
     * encryptionConfig  encryptionConfig
     *
     * @var string[]
@@ -276,6 +283,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'enableDistMgt' => 'setEnableDistMgt',
             'deletionProtection' => 'setDeletionProtection',
             'configurationsOverride' => 'setConfigurationsOverride',
+            'clusterOps' => 'setClusterOps',
             'encryptionConfig' => 'setEncryptionConfig'
     ];
 
@@ -306,6 +314,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
+    * clusterOps  clusterOps
     * encryptionConfig  encryptionConfig
     *
     * @var string[]
@@ -336,6 +345,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'enableDistMgt' => 'getEnableDistMgt',
             'deletionProtection' => 'getDeletionProtection',
             'configurationsOverride' => 'getConfigurationsOverride',
+            'clusterOps' => 'getClusterOps',
             'encryptionConfig' => 'getEncryptionConfig'
     ];
 
@@ -467,6 +477,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         $this->container['enableDistMgt'] = isset($data['enableDistMgt']) ? $data['enableDistMgt'] : null;
         $this->container['deletionProtection'] = isset($data['deletionProtection']) ? $data['deletionProtection'] : null;
         $this->container['configurationsOverride'] = isset($data['configurationsOverride']) ? $data['configurationsOverride'] : null;
+        $this->container['clusterOps'] = isset($data['clusterOps']) ? $data['clusterOps'] : null;
         $this->container['encryptionConfig'] = isset($data['encryptionConfig']) ? $data['encryptionConfig'] : null;
     }
 
@@ -1131,6 +1142,30 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     public function setConfigurationsOverride($configurationsOverride)
     {
         $this->container['configurationsOverride'] = $configurationsOverride;
+        return $this;
+    }
+
+    /**
+    * Gets clusterOps
+    *  clusterOps
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\ClusterOps|null
+    */
+    public function getClusterOps()
+    {
+        return $this->container['clusterOps'];
+    }
+
+    /**
+    * Sets clusterOps
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ClusterOps|null $clusterOps clusterOps
+    *
+    * @return $this
+    */
+    public function setClusterOps($clusterOps)
+    {
+        $this->container['clusterOps'] = $clusterOps;
         return $this;
     }
 

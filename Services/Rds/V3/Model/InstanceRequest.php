@@ -48,6 +48,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     * count  批量创建实例的数量，取值范围为1~50。
     * serverlessInfo  serverlessInfo
+    * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
     *
     * @var string[]
     */
@@ -79,7 +80,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
             'unchangeableParam' => '\HuaweiCloud\SDK\Rds\V3\Model\UnchangeableParam',
             'dryRun' => 'bool',
             'count' => 'int',
-            'serverlessInfo' => '\HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfo'
+            'serverlessInfo' => '\HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfo',
+            'isAutoUpgrade' => 'bool'
     ];
 
     /**
@@ -112,6 +114,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     * count  批量创建实例的数量，取值范围为1~50。
     * serverlessInfo  serverlessInfo
+    * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
     *
     * @var string[]
     */
@@ -143,7 +146,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
         'unchangeableParam' => null,
         'dryRun' => null,
         'count' => 'int32',
-        'serverlessInfo' => null
+        'serverlessInfo' => null,
+        'isAutoUpgrade' => null
     ];
 
     /**
@@ -197,6 +201,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     * count  批量创建实例的数量，取值范围为1~50。
     * serverlessInfo  serverlessInfo
+    * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
     *
     * @var string[]
     */
@@ -228,7 +233,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
             'unchangeableParam' => 'unchangeable_param',
             'dryRun' => 'dry_run',
             'count' => 'count',
-            'serverlessInfo' => 'serverless_info'
+            'serverlessInfo' => 'serverless_info',
+            'isAutoUpgrade' => 'is_auto_upgrade'
     ];
 
     /**
@@ -261,6 +267,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     * count  批量创建实例的数量，取值范围为1~50。
     * serverlessInfo  serverlessInfo
+    * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
     *
     * @var string[]
     */
@@ -292,7 +299,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
             'unchangeableParam' => 'setUnchangeableParam',
             'dryRun' => 'setDryRun',
             'count' => 'setCount',
-            'serverlessInfo' => 'setServerlessInfo'
+            'serverlessInfo' => 'setServerlessInfo',
+            'isAutoUpgrade' => 'setIsAutoUpgrade'
     ];
 
     /**
@@ -325,6 +333,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     * count  批量创建实例的数量，取值范围为1~50。
     * serverlessInfo  serverlessInfo
+    * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
     *
     * @var string[]
     */
@@ -356,7 +365,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
             'unchangeableParam' => 'getUnchangeableParam',
             'dryRun' => 'getDryRun',
             'count' => 'getCount',
-            'serverlessInfo' => 'getServerlessInfo'
+            'serverlessInfo' => 'getServerlessInfo',
+            'isAutoUpgrade' => 'getIsAutoUpgrade'
     ];
 
     /**
@@ -445,6 +455,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
         $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['serverlessInfo'] = isset($data['serverlessInfo']) ? $data['serverlessInfo'] : null;
+        $this->container['isAutoUpgrade'] = isset($data['isAutoUpgrade']) ? $data['isAutoUpgrade'] : null;
     }
 
     /**
@@ -1165,6 +1176,30 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     public function setServerlessInfo($serverlessInfo)
     {
         $this->container['serverlessInfo'] = $serverlessInfo;
+        return $this;
+    }
+
+    /**
+    * Gets isAutoUpgrade
+    *  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
+    *
+    * @return bool|null
+    */
+    public function getIsAutoUpgrade()
+    {
+        return $this->container['isAutoUpgrade'];
+    }
+
+    /**
+    * Sets isAutoUpgrade
+    *
+    * @param bool|null $isAutoUpgrade 是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
+    *
+    * @return $this
+    */
+    public function setIsAutoUpgrade($isAutoUpgrade)
+    {
+        $this->container['isAutoUpgrade'] = $isAutoUpgrade;
         return $this;
     }
 
