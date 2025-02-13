@@ -38,6 +38,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * thumbnailOutputname  截图压缩包名。
     * picInfo  截图文件信息。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
+    * additionalManifests  主索引定制参数。
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
             'thumbnailOutput' => '\HuaweiCloud\SDK\Mpc\V1\Model\ObsObjInfo',
             'thumbnailOutputname' => 'string',
             'picInfo' => '\HuaweiCloud\SDK\Mpc\V1\Model\PicInfo[]',
-            'avParameters' => '\HuaweiCloud\SDK\Mpc\V1\Model\AvParameters[]'
+            'avParameters' => '\HuaweiCloud\SDK\Mpc\V1\Model\AvParameters[]',
+            'additionalManifests' => '\HuaweiCloud\SDK\Mpc\V1\Model\AdditionalManifests[]'
     ];
 
     /**
@@ -82,6 +84,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * thumbnailOutputname  截图压缩包名。
     * picInfo  截图文件信息。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
+    * additionalManifests  主索引定制参数。
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
         'thumbnailOutput' => null,
         'thumbnailOutputname' => null,
         'picInfo' => null,
-        'avParameters' => null
+        'avParameters' => null,
+        'additionalManifests' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * thumbnailOutputname  截图压缩包名。
     * picInfo  截图文件信息。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
+    * additionalManifests  主索引定制参数。
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
             'thumbnailOutput' => 'thumbnail_output',
             'thumbnailOutputname' => 'thumbnail_outputname',
             'picInfo' => 'pic_info',
-            'avParameters' => 'av_parameters'
+            'avParameters' => 'av_parameters',
+            'additionalManifests' => 'additional_manifests'
     ];
 
     /**
@@ -191,6 +197,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * thumbnailOutputname  截图压缩包名。
     * picInfo  截图文件信息。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
+    * additionalManifests  主索引定制参数。
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
             'thumbnailOutput' => 'setThumbnailOutput',
             'thumbnailOutputname' => 'setThumbnailOutputname',
             'picInfo' => 'setPicInfo',
-            'avParameters' => 'setAvParameters'
+            'avParameters' => 'setAvParameters',
+            'additionalManifests' => 'setAdditionalManifests'
     ];
 
     /**
@@ -235,6 +243,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * thumbnailOutputname  截图压缩包名。
     * picInfo  截图文件信息。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
+    * additionalManifests  主索引定制参数。
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
             'thumbnailOutput' => 'getThumbnailOutput',
             'thumbnailOutputname' => 'getThumbnailOutputname',
             'picInfo' => 'getPicInfo',
-            'avParameters' => 'getAvParameters'
+            'avParameters' => 'getAvParameters',
+            'additionalManifests' => 'getAdditionalManifests'
     ];
 
     /**
@@ -360,6 +370,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
         $this->container['thumbnailOutputname'] = isset($data['thumbnailOutputname']) ? $data['thumbnailOutputname'] : null;
         $this->container['picInfo'] = isset($data['picInfo']) ? $data['picInfo'] : null;
         $this->container['avParameters'] = isset($data['avParameters']) ? $data['avParameters'] : null;
+        $this->container['additionalManifests'] = isset($data['additionalManifests']) ? $data['additionalManifests'] : null;
     }
 
     /**
@@ -881,6 +892,30 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     public function setAvParameters($avParameters)
     {
         $this->container['avParameters'] = $avParameters;
+        return $this;
+    }
+
+    /**
+    * Gets additionalManifests
+    *  主索引定制参数。
+    *
+    * @return \HuaweiCloud\SDK\Mpc\V1\Model\AdditionalManifests[]|null
+    */
+    public function getAdditionalManifests()
+    {
+        return $this->container['additionalManifests'];
+    }
+
+    /**
+    * Sets additionalManifests
+    *
+    * @param \HuaweiCloud\SDK\Mpc\V1\Model\AdditionalManifests[]|null $additionalManifests 主索引定制参数。
+    *
+    * @return $this
+    */
+    public function setAdditionalManifests($additionalManifests)
+    {
+        $this->container['additionalManifests'] = $additionalManifests;
         return $this;
     }
 

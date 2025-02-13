@@ -22,24 +22,28 @@ class AudioSelectorSettings implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * audioLanguageSelection  audioLanguageSelection
     * audioPidSelection  audioPidSelection
+    * audioHlsSelection  audioHlsSelection
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'audioLanguageSelection' => '\HuaweiCloud\SDK\Live\V1\Model\AudioSelectorLangSelection',
-            'audioPidSelection' => '\HuaweiCloud\SDK\Live\V1\Model\AudioSelectorPidSelection'
+            'audioPidSelection' => '\HuaweiCloud\SDK\Live\V1\Model\AudioSelectorPidSelection',
+            'audioHlsSelection' => '\HuaweiCloud\SDK\Live\V1\Model\AudioSelectorHlsSelection'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * audioLanguageSelection  audioLanguageSelection
     * audioPidSelection  audioPidSelection
+    * audioHlsSelection  audioHlsSelection
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'audioLanguageSelection' => null,
-        'audioPidSelection' => null
+        'audioPidSelection' => null,
+        'audioHlsSelection' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class AudioSelectorSettings implements ModelInterface, ArrayAccess
     * and the value is the original name
     * audioLanguageSelection  audioLanguageSelection
     * audioPidSelection  audioPidSelection
+    * audioHlsSelection  audioHlsSelection
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'audioLanguageSelection' => 'audio_language_selection',
-            'audioPidSelection' => 'audio_pid_selection'
+            'audioPidSelection' => 'audio_pid_selection',
+            'audioHlsSelection' => 'audio_hls_selection'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * audioLanguageSelection  audioLanguageSelection
     * audioPidSelection  audioPidSelection
+    * audioHlsSelection  audioHlsSelection
     *
     * @var string[]
     */
     protected static $setters = [
             'audioLanguageSelection' => 'setAudioLanguageSelection',
-            'audioPidSelection' => 'setAudioPidSelection'
+            'audioPidSelection' => 'setAudioPidSelection',
+            'audioHlsSelection' => 'setAudioHlsSelection'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * audioLanguageSelection  audioLanguageSelection
     * audioPidSelection  audioPidSelection
+    * audioHlsSelection  audioHlsSelection
     *
     * @var string[]
     */
     protected static $getters = [
             'audioLanguageSelection' => 'getAudioLanguageSelection',
-            'audioPidSelection' => 'getAudioPidSelection'
+            'audioPidSelection' => 'getAudioPidSelection',
+            'audioHlsSelection' => 'getAudioHlsSelection'
     ];
 
     /**
@@ -159,6 +169,7 @@ class AudioSelectorSettings implements ModelInterface, ArrayAccess
     {
         $this->container['audioLanguageSelection'] = isset($data['audioLanguageSelection']) ? $data['audioLanguageSelection'] : null;
         $this->container['audioPidSelection'] = isset($data['audioPidSelection']) ? $data['audioPidSelection'] : null;
+        $this->container['audioHlsSelection'] = isset($data['audioHlsSelection']) ? $data['audioHlsSelection'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class AudioSelectorSettings implements ModelInterface, ArrayAccess
     public function setAudioPidSelection($audioPidSelection)
     {
         $this->container['audioPidSelection'] = $audioPidSelection;
+        return $this;
+    }
+
+    /**
+    * Gets audioHlsSelection
+    *  audioHlsSelection
+    *
+    * @return \HuaweiCloud\SDK\Live\V1\Model\AudioSelectorHlsSelection|null
+    */
+    public function getAudioHlsSelection()
+    {
+        return $this->container['audioHlsSelection'];
+    }
+
+    /**
+    * Sets audioHlsSelection
+    *
+    * @param \HuaweiCloud\SDK\Live\V1\Model\AudioSelectorHlsSelection|null $audioHlsSelection audioHlsSelection
+    *
+    * @return $this
+    */
+    public function setAudioHlsSelection($audioHlsSelection)
+    {
+        $this->container['audioHlsSelection'] = $audioHlsSelection;
         return $this;
     }
 

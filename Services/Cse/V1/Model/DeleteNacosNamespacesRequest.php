@@ -78,7 +78,7 @@ class DeleteNacosNamespacesRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'xEngineId' => 'x-engine-id',
             'xEnterpriseProjectId' => 'X-Enterprise-Project-ID',
-            'namespaceId' => 'namespace_id'
+            'namespaceId' => 'namespaceId'
     ];
 
     /**

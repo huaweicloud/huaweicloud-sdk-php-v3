@@ -88,9 +88,9 @@ class CreateNacosNamespacesRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'xEngineId' => 'x-engine-id',
             'xEnterpriseProjectId' => 'X-Enterprise-Project-ID',
-            'customNamespaceId' => 'custom_namespace_id',
-            'namespaceName' => 'namespace_name',
-            'namespaceDesc' => 'namespace_desc'
+            'customNamespaceId' => 'customNamespaceId',
+            'namespaceName' => 'namespaceName',
+            'namespaceDesc' => 'namespaceDesc'
     ];
 
     /**

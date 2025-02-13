@@ -32,6 +32,7 @@ class Video implements ModelInterface, ArrayAccess
     * width  视频宽度。  取值范围： - H.264：0或[32,4096]间2的倍数。 - H.265：0或[160,4096]间4的倍数。  单位：像素。  说明：若视频宽度设置为0，则视频宽度值自适应。
     * height  视频高度。 - H.264：0或[32,2880]且必须为2的倍数。 - H.265：0或[96,2880]且必须为4的倍数。  单位：像素。  说明：若视频高度设置为0，则视频高度值自适应。
     * blackCut  黑边剪裁类型。  取值如下： - 0：不开启黑边剪裁。 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟）。 - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）。
+    * streamName  流名称
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class Video implements ModelInterface, ArrayAccess
             'frameRate' => 'int',
             'width' => 'int',
             'height' => 'int',
-            'blackCut' => 'int'
+            'blackCut' => 'int',
+            'streamName' => 'string'
     ];
 
     /**
@@ -64,6 +66,7 @@ class Video implements ModelInterface, ArrayAccess
     * width  视频宽度。  取值范围： - H.264：0或[32,4096]间2的倍数。 - H.265：0或[160,4096]间4的倍数。  单位：像素。  说明：若视频宽度设置为0，则视频宽度值自适应。
     * height  视频高度。 - H.264：0或[32,2880]且必须为2的倍数。 - H.265：0或[96,2880]且必须为4的倍数。  单位：像素。  说明：若视频高度设置为0，则视频高度值自适应。
     * blackCut  黑边剪裁类型。  取值如下： - 0：不开启黑边剪裁。 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟）。 - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）。
+    * streamName  流名称
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class Video implements ModelInterface, ArrayAccess
         'frameRate' => 'int32',
         'width' => 'int32',
         'height' => 'int32',
-        'blackCut' => 'int32'
+        'blackCut' => 'int32',
+        'streamName' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class Video implements ModelInterface, ArrayAccess
     * width  视频宽度。  取值范围： - H.264：0或[32,4096]间2的倍数。 - H.265：0或[160,4096]间4的倍数。  单位：像素。  说明：若视频宽度设置为0，则视频宽度值自适应。
     * height  视频高度。 - H.264：0或[32,2880]且必须为2的倍数。 - H.265：0或[96,2880]且必须为4的倍数。  单位：像素。  说明：若视频高度设置为0，则视频高度值自适应。
     * blackCut  黑边剪裁类型。  取值如下： - 0：不开启黑边剪裁。 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟）。 - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）。
+    * streamName  流名称
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class Video implements ModelInterface, ArrayAccess
             'frameRate' => 'frame_rate',
             'width' => 'width',
             'height' => 'height',
-            'blackCut' => 'black_cut'
+            'blackCut' => 'black_cut',
+            'streamName' => 'stream_name'
     ];
 
     /**
@@ -149,6 +155,7 @@ class Video implements ModelInterface, ArrayAccess
     * width  视频宽度。  取值范围： - H.264：0或[32,4096]间2的倍数。 - H.265：0或[160,4096]间4的倍数。  单位：像素。  说明：若视频宽度设置为0，则视频宽度值自适应。
     * height  视频高度。 - H.264：0或[32,2880]且必须为2的倍数。 - H.265：0或[96,2880]且必须为4的倍数。  单位：像素。  说明：若视频高度设置为0，则视频高度值自适应。
     * blackCut  黑边剪裁类型。  取值如下： - 0：不开启黑边剪裁。 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟）。 - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）。
+    * streamName  流名称
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class Video implements ModelInterface, ArrayAccess
             'frameRate' => 'setFrameRate',
             'width' => 'setWidth',
             'height' => 'setHeight',
-            'blackCut' => 'setBlackCut'
+            'blackCut' => 'setBlackCut',
+            'streamName' => 'setStreamName'
     ];
 
     /**
@@ -181,6 +189,7 @@ class Video implements ModelInterface, ArrayAccess
     * width  视频宽度。  取值范围： - H.264：0或[32,4096]间2的倍数。 - H.265：0或[160,4096]间4的倍数。  单位：像素。  说明：若视频宽度设置为0，则视频宽度值自适应。
     * height  视频高度。 - H.264：0或[32,2880]且必须为2的倍数。 - H.265：0或[96,2880]且必须为4的倍数。  单位：像素。  说明：若视频高度设置为0，则视频高度值自适应。
     * blackCut  黑边剪裁类型。  取值如下： - 0：不开启黑边剪裁。 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟）。 - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）。
+    * streamName  流名称
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class Video implements ModelInterface, ArrayAccess
             'frameRate' => 'getFrameRate',
             'width' => 'getWidth',
             'height' => 'getHeight',
-            'blackCut' => 'getBlackCut'
+            'blackCut' => 'getBlackCut',
+            'streamName' => 'getStreamName'
     ];
 
     /**
@@ -286,6 +296,7 @@ class Video implements ModelInterface, ArrayAccess
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['blackCut'] = isset($data['blackCut']) ? $data['blackCut'] : null;
+        $this->container['streamName'] = isset($data['streamName']) ? $data['streamName'] : null;
     }
 
     /**
@@ -375,6 +386,15 @@ class Video implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['blackCut']) && ($this->container['blackCut'] < 0)) {
                 $invalidProperties[] = "invalid value for 'blackCut', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['streamName']) && (mb_strlen($this->container['streamName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'streamName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['streamName']) && (mb_strlen($this->container['streamName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'streamName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['streamName']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['streamName'])) {
+                $invalidProperties[] = "invalid value for 'streamName', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
         return $invalidProperties;
     }
@@ -675,6 +695,30 @@ class Video implements ModelInterface, ArrayAccess
     public function setBlackCut($blackCut)
     {
         $this->container['blackCut'] = $blackCut;
+        return $this;
+    }
+
+    /**
+    * Gets streamName
+    *  流名称
+    *
+    * @return string|null
+    */
+    public function getStreamName()
+    {
+        return $this->container['streamName'];
+    }
+
+    /**
+    * Sets streamName
+    *
+    * @param string|null $streamName 流名称
+    *
+    * @return $this
+    */
+    public function setStreamName($streamName)
+    {
+        $this->container['streamName'] = $streamName;
         return $this;
     }
 

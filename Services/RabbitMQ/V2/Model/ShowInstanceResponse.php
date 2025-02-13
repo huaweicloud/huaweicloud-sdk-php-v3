@@ -29,12 +29,16 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
     * storageSpace  消息存储空间，单位：GB。
     * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * connectAddress  实例连接IP地址。
+    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
+    * connectAddress  实例内网连接IP地址。
+    * connectDomainName  实例内网连接域名。
+    * publicConnectAddress  实例公网连接IP地址。
+    * publicConnectDomainName  实例公网连接域名。
     * port  实例连接端口。
     * status  实例的状态。
     * description  实例描述。
     * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)
+    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
     * chargingMode  付费模式，1表示按需计费，0表示包年/包月计费。
     * vpcId  VPC ID。
     * vpcName  VPC的名称。
@@ -48,6 +52,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * publicipAddress  RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
     * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
     * managementConnectAddress  RabbitMQ实例的管理地址。
+    * managementConnectDomainName  RabbitMQ实例的管理域名。
+    * publicManagementConnectAddress  RabbitMQ实例的公网管理地址。
+    * publicManagementConnectDomainName  RabbitMQ实例的公网管理域名。
     * sslEnable  是否开启安全认证。   - true：开启   - false：未开启
     * enterpriseProjectId  企业项目ID。
     * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
@@ -58,6 +65,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * availableZones  实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  实例节点所在的可用区，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * storageResourceId  存储资源ID。
     * storageSpecCode  IO规格。
@@ -76,7 +84,11 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'specification' => 'string',
             'storageSpace' => 'int',
             'usedStorageSpace' => 'int',
+            'dnsEnable' => 'bool',
             'connectAddress' => 'string',
+            'connectDomainName' => 'string',
+            'publicConnectAddress' => 'string',
+            'publicConnectDomainName' => 'string',
             'port' => 'int',
             'status' => 'string',
             'description' => 'string',
@@ -95,6 +107,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'publicipAddress' => 'string',
             'publicipId' => 'string',
             'managementConnectAddress' => 'string',
+            'managementConnectDomainName' => 'string',
+            'publicManagementConnectAddress' => 'string',
+            'publicManagementConnectDomainName' => 'string',
             'sslEnable' => 'bool',
             'enterpriseProjectId' => 'string',
             'isLogicalVolume' => 'bool',
@@ -105,6 +120,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'securityGroupName' => 'string',
             'subnetId' => 'string',
             'availableZones' => 'string[]',
+            'availableZoneNames' => 'string[]',
             'totalStorageSpace' => 'int',
             'storageResourceId' => 'string',
             'storageSpecCode' => 'string',
@@ -123,12 +139,16 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
     * storageSpace  消息存储空间，单位：GB。
     * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * connectAddress  实例连接IP地址。
+    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
+    * connectAddress  实例内网连接IP地址。
+    * connectDomainName  实例内网连接域名。
+    * publicConnectAddress  实例公网连接IP地址。
+    * publicConnectDomainName  实例公网连接域名。
     * port  实例连接端口。
     * status  实例的状态。
     * description  实例描述。
     * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)
+    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
     * chargingMode  付费模式，1表示按需计费，0表示包年/包月计费。
     * vpcId  VPC ID。
     * vpcName  VPC的名称。
@@ -142,6 +162,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * publicipAddress  RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
     * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
     * managementConnectAddress  RabbitMQ实例的管理地址。
+    * managementConnectDomainName  RabbitMQ实例的管理域名。
+    * publicManagementConnectAddress  RabbitMQ实例的公网管理地址。
+    * publicManagementConnectDomainName  RabbitMQ实例的公网管理域名。
     * sslEnable  是否开启安全认证。   - true：开启   - false：未开启
     * enterpriseProjectId  企业项目ID。
     * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
@@ -152,6 +175,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * availableZones  实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  实例节点所在的可用区，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * storageResourceId  存储资源ID。
     * storageSpecCode  IO规格。
@@ -170,7 +194,11 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'specification' => null,
         'storageSpace' => null,
         'usedStorageSpace' => null,
+        'dnsEnable' => null,
         'connectAddress' => null,
+        'connectDomainName' => null,
+        'publicConnectAddress' => null,
+        'publicConnectDomainName' => null,
         'port' => null,
         'status' => null,
         'description' => null,
@@ -189,6 +217,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'publicipAddress' => null,
         'publicipId' => null,
         'managementConnectAddress' => null,
+        'managementConnectDomainName' => null,
+        'publicManagementConnectAddress' => null,
+        'publicManagementConnectDomainName' => null,
         'sslEnable' => null,
         'enterpriseProjectId' => null,
         'isLogicalVolume' => null,
@@ -199,6 +230,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'securityGroupName' => null,
         'subnetId' => null,
         'availableZones' => null,
+        'availableZoneNames' => null,
         'totalStorageSpace' => null,
         'storageResourceId' => null,
         'storageSpecCode' => null,
@@ -238,12 +270,16 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
     * storageSpace  消息存储空间，单位：GB。
     * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * connectAddress  实例连接IP地址。
+    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
+    * connectAddress  实例内网连接IP地址。
+    * connectDomainName  实例内网连接域名。
+    * publicConnectAddress  实例公网连接IP地址。
+    * publicConnectDomainName  实例公网连接域名。
     * port  实例连接端口。
     * status  实例的状态。
     * description  实例描述。
     * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)
+    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
     * chargingMode  付费模式，1表示按需计费，0表示包年/包月计费。
     * vpcId  VPC ID。
     * vpcName  VPC的名称。
@@ -257,6 +293,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * publicipAddress  RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
     * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
     * managementConnectAddress  RabbitMQ实例的管理地址。
+    * managementConnectDomainName  RabbitMQ实例的管理域名。
+    * publicManagementConnectAddress  RabbitMQ实例的公网管理地址。
+    * publicManagementConnectDomainName  RabbitMQ实例的公网管理域名。
     * sslEnable  是否开启安全认证。   - true：开启   - false：未开启
     * enterpriseProjectId  企业项目ID。
     * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
@@ -267,6 +306,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * availableZones  实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  实例节点所在的可用区，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * storageResourceId  存储资源ID。
     * storageSpecCode  IO规格。
@@ -285,7 +325,11 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'specification' => 'specification',
             'storageSpace' => 'storage_space',
             'usedStorageSpace' => 'used_storage_space',
+            'dnsEnable' => 'dns_enable',
             'connectAddress' => 'connect_address',
+            'connectDomainName' => 'connect_domain_name',
+            'publicConnectAddress' => 'public_connect_address',
+            'publicConnectDomainName' => 'public_connect_domain_name',
             'port' => 'port',
             'status' => 'status',
             'description' => 'description',
@@ -304,6 +348,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'publicipAddress' => 'publicip_address',
             'publicipId' => 'publicip_id',
             'managementConnectAddress' => 'management_connect_address',
+            'managementConnectDomainName' => 'management_connect_domain_name',
+            'publicManagementConnectAddress' => 'public_management_connect_address',
+            'publicManagementConnectDomainName' => 'public_management_connect_domain_name',
             'sslEnable' => 'ssl_enable',
             'enterpriseProjectId' => 'enterprise_project_id',
             'isLogicalVolume' => 'is_logical_volume',
@@ -314,6 +361,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'securityGroupName' => 'security_group_name',
             'subnetId' => 'subnet_id',
             'availableZones' => 'available_zones',
+            'availableZoneNames' => 'available_zone_names',
             'totalStorageSpace' => 'total_storage_space',
             'storageResourceId' => 'storage_resource_id',
             'storageSpecCode' => 'storage_spec_code',
@@ -332,12 +380,16 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
     * storageSpace  消息存储空间，单位：GB。
     * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * connectAddress  实例连接IP地址。
+    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
+    * connectAddress  实例内网连接IP地址。
+    * connectDomainName  实例内网连接域名。
+    * publicConnectAddress  实例公网连接IP地址。
+    * publicConnectDomainName  实例公网连接域名。
     * port  实例连接端口。
     * status  实例的状态。
     * description  实例描述。
     * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)
+    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
     * chargingMode  付费模式，1表示按需计费，0表示包年/包月计费。
     * vpcId  VPC ID。
     * vpcName  VPC的名称。
@@ -351,6 +403,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * publicipAddress  RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
     * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
     * managementConnectAddress  RabbitMQ实例的管理地址。
+    * managementConnectDomainName  RabbitMQ实例的管理域名。
+    * publicManagementConnectAddress  RabbitMQ实例的公网管理地址。
+    * publicManagementConnectDomainName  RabbitMQ实例的公网管理域名。
     * sslEnable  是否开启安全认证。   - true：开启   - false：未开启
     * enterpriseProjectId  企业项目ID。
     * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
@@ -361,6 +416,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * availableZones  实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  实例节点所在的可用区，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * storageResourceId  存储资源ID。
     * storageSpecCode  IO规格。
@@ -379,7 +435,11 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'specification' => 'setSpecification',
             'storageSpace' => 'setStorageSpace',
             'usedStorageSpace' => 'setUsedStorageSpace',
+            'dnsEnable' => 'setDnsEnable',
             'connectAddress' => 'setConnectAddress',
+            'connectDomainName' => 'setConnectDomainName',
+            'publicConnectAddress' => 'setPublicConnectAddress',
+            'publicConnectDomainName' => 'setPublicConnectDomainName',
             'port' => 'setPort',
             'status' => 'setStatus',
             'description' => 'setDescription',
@@ -398,6 +458,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'publicipAddress' => 'setPublicipAddress',
             'publicipId' => 'setPublicipId',
             'managementConnectAddress' => 'setManagementConnectAddress',
+            'managementConnectDomainName' => 'setManagementConnectDomainName',
+            'publicManagementConnectAddress' => 'setPublicManagementConnectAddress',
+            'publicManagementConnectDomainName' => 'setPublicManagementConnectDomainName',
             'sslEnable' => 'setSslEnable',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'isLogicalVolume' => 'setIsLogicalVolume',
@@ -408,6 +471,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'securityGroupName' => 'setSecurityGroupName',
             'subnetId' => 'setSubnetId',
             'availableZones' => 'setAvailableZones',
+            'availableZoneNames' => 'setAvailableZoneNames',
             'totalStorageSpace' => 'setTotalStorageSpace',
             'storageResourceId' => 'setStorageResourceId',
             'storageSpecCode' => 'setStorageSpecCode',
@@ -426,12 +490,16 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
     * storageSpace  消息存储空间，单位：GB。
     * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * connectAddress  实例连接IP地址。
+    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
+    * connectAddress  实例内网连接IP地址。
+    * connectDomainName  实例内网连接域名。
+    * publicConnectAddress  实例公网连接IP地址。
+    * publicConnectDomainName  实例公网连接域名。
     * port  实例连接端口。
     * status  实例的状态。
     * description  实例描述。
     * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)
+    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
     * chargingMode  付费模式，1表示按需计费，0表示包年/包月计费。
     * vpcId  VPC ID。
     * vpcName  VPC的名称。
@@ -445,6 +513,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * publicipAddress  RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
     * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
     * managementConnectAddress  RabbitMQ实例的管理地址。
+    * managementConnectDomainName  RabbitMQ实例的管理域名。
+    * publicManagementConnectAddress  RabbitMQ实例的公网管理地址。
+    * publicManagementConnectDomainName  RabbitMQ实例的公网管理域名。
     * sslEnable  是否开启安全认证。   - true：开启   - false：未开启
     * enterpriseProjectId  企业项目ID。
     * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
@@ -455,6 +526,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * availableZones  实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  实例节点所在的可用区，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * storageResourceId  存储资源ID。
     * storageSpecCode  IO规格。
@@ -473,7 +545,11 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'specification' => 'getSpecification',
             'storageSpace' => 'getStorageSpace',
             'usedStorageSpace' => 'getUsedStorageSpace',
+            'dnsEnable' => 'getDnsEnable',
             'connectAddress' => 'getConnectAddress',
+            'connectDomainName' => 'getConnectDomainName',
+            'publicConnectAddress' => 'getPublicConnectAddress',
+            'publicConnectDomainName' => 'getPublicConnectDomainName',
             'port' => 'getPort',
             'status' => 'getStatus',
             'description' => 'getDescription',
@@ -492,6 +568,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'publicipAddress' => 'getPublicipAddress',
             'publicipId' => 'getPublicipId',
             'managementConnectAddress' => 'getManagementConnectAddress',
+            'managementConnectDomainName' => 'getManagementConnectDomainName',
+            'publicManagementConnectAddress' => 'getPublicManagementConnectAddress',
+            'publicManagementConnectDomainName' => 'getPublicManagementConnectDomainName',
             'sslEnable' => 'getSslEnable',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'isLogicalVolume' => 'getIsLogicalVolume',
@@ -502,6 +581,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'securityGroupName' => 'getSecurityGroupName',
             'subnetId' => 'getSubnetId',
             'availableZones' => 'getAvailableZones',
+            'availableZoneNames' => 'getAvailableZoneNames',
             'totalStorageSpace' => 'getTotalStorageSpace',
             'storageResourceId' => 'getStorageResourceId',
             'storageSpecCode' => 'getStorageSpecCode',
@@ -610,7 +690,11 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['specification'] = isset($data['specification']) ? $data['specification'] : null;
         $this->container['storageSpace'] = isset($data['storageSpace']) ? $data['storageSpace'] : null;
         $this->container['usedStorageSpace'] = isset($data['usedStorageSpace']) ? $data['usedStorageSpace'] : null;
+        $this->container['dnsEnable'] = isset($data['dnsEnable']) ? $data['dnsEnable'] : null;
         $this->container['connectAddress'] = isset($data['connectAddress']) ? $data['connectAddress'] : null;
+        $this->container['connectDomainName'] = isset($data['connectDomainName']) ? $data['connectDomainName'] : null;
+        $this->container['publicConnectAddress'] = isset($data['publicConnectAddress']) ? $data['publicConnectAddress'] : null;
+        $this->container['publicConnectDomainName'] = isset($data['publicConnectDomainName']) ? $data['publicConnectDomainName'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -629,6 +713,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['publicipAddress'] = isset($data['publicipAddress']) ? $data['publicipAddress'] : null;
         $this->container['publicipId'] = isset($data['publicipId']) ? $data['publicipId'] : null;
         $this->container['managementConnectAddress'] = isset($data['managementConnectAddress']) ? $data['managementConnectAddress'] : null;
+        $this->container['managementConnectDomainName'] = isset($data['managementConnectDomainName']) ? $data['managementConnectDomainName'] : null;
+        $this->container['publicManagementConnectAddress'] = isset($data['publicManagementConnectAddress']) ? $data['publicManagementConnectAddress'] : null;
+        $this->container['publicManagementConnectDomainName'] = isset($data['publicManagementConnectDomainName']) ? $data['publicManagementConnectDomainName'] : null;
         $this->container['sslEnable'] = isset($data['sslEnable']) ? $data['sslEnable'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['isLogicalVolume'] = isset($data['isLogicalVolume']) ? $data['isLogicalVolume'] : null;
@@ -639,6 +726,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['securityGroupName'] = isset($data['securityGroupName']) ? $data['securityGroupName'] : null;
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['availableZones'] = isset($data['availableZones']) ? $data['availableZones'] : null;
+        $this->container['availableZoneNames'] = isset($data['availableZoneNames']) ? $data['availableZoneNames'] : null;
         $this->container['totalStorageSpace'] = isset($data['totalStorageSpace']) ? $data['totalStorageSpace'] : null;
         $this->container['storageResourceId'] = isset($data['storageResourceId']) ? $data['storageResourceId'] : null;
         $this->container['storageSpecCode'] = isset($data['storageSpecCode']) ? $data['storageSpecCode'] : null;
@@ -878,8 +966,32 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets dnsEnable
+    *  实例是否开启域名访问功能。 - true：开启 - false：未开启
+    *
+    * @return bool|null
+    */
+    public function getDnsEnable()
+    {
+        return $this->container['dnsEnable'];
+    }
+
+    /**
+    * Sets dnsEnable
+    *
+    * @param bool|null $dnsEnable 实例是否开启域名访问功能。 - true：开启 - false：未开启
+    *
+    * @return $this
+    */
+    public function setDnsEnable($dnsEnable)
+    {
+        $this->container['dnsEnable'] = $dnsEnable;
+        return $this;
+    }
+
+    /**
     * Gets connectAddress
-    *  实例连接IP地址。
+    *  实例内网连接IP地址。
     *
     * @return string|null
     */
@@ -891,13 +1003,85 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets connectAddress
     *
-    * @param string|null $connectAddress 实例连接IP地址。
+    * @param string|null $connectAddress 实例内网连接IP地址。
     *
     * @return $this
     */
     public function setConnectAddress($connectAddress)
     {
         $this->container['connectAddress'] = $connectAddress;
+        return $this;
+    }
+
+    /**
+    * Gets connectDomainName
+    *  实例内网连接域名。
+    *
+    * @return string|null
+    */
+    public function getConnectDomainName()
+    {
+        return $this->container['connectDomainName'];
+    }
+
+    /**
+    * Sets connectDomainName
+    *
+    * @param string|null $connectDomainName 实例内网连接域名。
+    *
+    * @return $this
+    */
+    public function setConnectDomainName($connectDomainName)
+    {
+        $this->container['connectDomainName'] = $connectDomainName;
+        return $this;
+    }
+
+    /**
+    * Gets publicConnectAddress
+    *  实例公网连接IP地址。
+    *
+    * @return string|null
+    */
+    public function getPublicConnectAddress()
+    {
+        return $this->container['publicConnectAddress'];
+    }
+
+    /**
+    * Sets publicConnectAddress
+    *
+    * @param string|null $publicConnectAddress 实例公网连接IP地址。
+    *
+    * @return $this
+    */
+    public function setPublicConnectAddress($publicConnectAddress)
+    {
+        $this->container['publicConnectAddress'] = $publicConnectAddress;
+        return $this;
+    }
+
+    /**
+    * Gets publicConnectDomainName
+    *  实例公网连接域名。
+    *
+    * @return string|null
+    */
+    public function getPublicConnectDomainName()
+    {
+        return $this->container['publicConnectDomainName'];
+    }
+
+    /**
+    * Sets publicConnectDomainName
+    *
+    * @param string|null $publicConnectDomainName 实例公网连接域名。
+    *
+    * @return $this
+    */
+    public function setPublicConnectDomainName($publicConnectDomainName)
+    {
+        $this->container['publicConnectDomainName'] = $publicConnectDomainName;
         return $this;
     }
 
@@ -999,7 +1183,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)
+    *  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
     *
     * @return string|null
     */
@@ -1011,7 +1195,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode 资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)
+    * @param string|null $resourceSpecCode 资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
     *
     * @return $this
     */
@@ -1334,6 +1518,78 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets managementConnectDomainName
+    *  RabbitMQ实例的管理域名。
+    *
+    * @return string|null
+    */
+    public function getManagementConnectDomainName()
+    {
+        return $this->container['managementConnectDomainName'];
+    }
+
+    /**
+    * Sets managementConnectDomainName
+    *
+    * @param string|null $managementConnectDomainName RabbitMQ实例的管理域名。
+    *
+    * @return $this
+    */
+    public function setManagementConnectDomainName($managementConnectDomainName)
+    {
+        $this->container['managementConnectDomainName'] = $managementConnectDomainName;
+        return $this;
+    }
+
+    /**
+    * Gets publicManagementConnectAddress
+    *  RabbitMQ实例的公网管理地址。
+    *
+    * @return string|null
+    */
+    public function getPublicManagementConnectAddress()
+    {
+        return $this->container['publicManagementConnectAddress'];
+    }
+
+    /**
+    * Sets publicManagementConnectAddress
+    *
+    * @param string|null $publicManagementConnectAddress RabbitMQ实例的公网管理地址。
+    *
+    * @return $this
+    */
+    public function setPublicManagementConnectAddress($publicManagementConnectAddress)
+    {
+        $this->container['publicManagementConnectAddress'] = $publicManagementConnectAddress;
+        return $this;
+    }
+
+    /**
+    * Gets publicManagementConnectDomainName
+    *  RabbitMQ实例的公网管理域名。
+    *
+    * @return string|null
+    */
+    public function getPublicManagementConnectDomainName()
+    {
+        return $this->container['publicManagementConnectDomainName'];
+    }
+
+    /**
+    * Sets publicManagementConnectDomainName
+    *
+    * @param string|null $publicManagementConnectDomainName RabbitMQ实例的公网管理域名。
+    *
+    * @return $this
+    */
+    public function setPublicManagementConnectDomainName($publicManagementConnectDomainName)
+    {
+        $this->container['publicManagementConnectDomainName'] = $publicManagementConnectDomainName;
+        return $this;
+    }
+
+    /**
     * Gets sslEnable
     *  是否开启安全认证。   - true：开启   - false：未开启
     *
@@ -1570,6 +1826,30 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function setAvailableZones($availableZones)
     {
         $this->container['availableZones'] = $availableZones;
+        return $this;
+    }
+
+    /**
+    * Gets availableZoneNames
+    *  实例节点所在的可用区，返回“可用区名称”。
+    *
+    * @return string[]|null
+    */
+    public function getAvailableZoneNames()
+    {
+        return $this->container['availableZoneNames'];
+    }
+
+    /**
+    * Sets availableZoneNames
+    *
+    * @param string[]|null $availableZoneNames 实例节点所在的可用区，返回“可用区名称”。
+    *
+    * @return $this
+    */
+    public function setAvailableZoneNames($availableZoneNames)
+    {
+        $this->container['availableZoneNames'] = $availableZoneNames;
         return $this;
     }
 

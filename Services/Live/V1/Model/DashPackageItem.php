@@ -28,7 +28,10 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     * ads  广告配置
     * extArgs  其他额外参数
     * requestArgs  requestArgs
-    * adMarker  广告标识。  DASH取值：\"xml+bin\"。
+    * adMarker  广告标识。DASH取值：\"xml+bin\"
+    * suggestedPresentationDelay  建议播放延迟。单位：秒。取值范围：[1 - 120]
+    * minimumUpdatePeriod  索引最短更新周期。单位：秒。取值范围：[1 - 120]
+    * minBufferTime  最小缓冲时间。单位：秒。取值范围：[1 - 120]
     *
     * @var string[]
     */
@@ -41,7 +44,10 @@ class DashPackageItem implements ModelInterface, ArrayAccess
             'ads' => 'object',
             'extArgs' => 'object',
             'requestArgs' => '\HuaweiCloud\SDK\Live\V1\Model\PackageRequestArgs',
-            'adMarker' => 'string'
+            'adMarker' => 'string',
+            'suggestedPresentationDelay' => 'int',
+            'minimumUpdatePeriod' => 'int',
+            'minBufferTime' => 'int'
     ];
 
     /**
@@ -54,7 +60,10 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     * ads  广告配置
     * extArgs  其他额外参数
     * requestArgs  requestArgs
-    * adMarker  广告标识。  DASH取值：\"xml+bin\"。
+    * adMarker  广告标识。DASH取值：\"xml+bin\"
+    * suggestedPresentationDelay  建议播放延迟。单位：秒。取值范围：[1 - 120]
+    * minimumUpdatePeriod  索引最短更新周期。单位：秒。取值范围：[1 - 120]
+    * minBufferTime  最小缓冲时间。单位：秒。取值范围：[1 - 120]
     *
     * @var string[]
     */
@@ -67,7 +76,10 @@ class DashPackageItem implements ModelInterface, ArrayAccess
         'ads' => null,
         'extArgs' => null,
         'requestArgs' => null,
-        'adMarker' => null
+        'adMarker' => null,
+        'suggestedPresentationDelay' => 'int32',
+        'minimumUpdatePeriod' => 'int32',
+        'minBufferTime' => 'int32'
     ];
 
     /**
@@ -101,7 +113,10 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     * ads  广告配置
     * extArgs  其他额外参数
     * requestArgs  requestArgs
-    * adMarker  广告标识。  DASH取值：\"xml+bin\"。
+    * adMarker  广告标识。DASH取值：\"xml+bin\"
+    * suggestedPresentationDelay  建议播放延迟。单位：秒。取值范围：[1 - 120]
+    * minimumUpdatePeriod  索引最短更新周期。单位：秒。取值范围：[1 - 120]
+    * minBufferTime  最小缓冲时间。单位：秒。取值范围：[1 - 120]
     *
     * @var string[]
     */
@@ -114,7 +129,10 @@ class DashPackageItem implements ModelInterface, ArrayAccess
             'ads' => 'ads',
             'extArgs' => 'ext_args',
             'requestArgs' => 'request_args',
-            'adMarker' => 'ad_marker'
+            'adMarker' => 'ad_marker',
+            'suggestedPresentationDelay' => 'suggested_presentation_delay',
+            'minimumUpdatePeriod' => 'minimum_update_period',
+            'minBufferTime' => 'min_buffer_time'
     ];
 
     /**
@@ -127,7 +145,10 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     * ads  广告配置
     * extArgs  其他额外参数
     * requestArgs  requestArgs
-    * adMarker  广告标识。  DASH取值：\"xml+bin\"。
+    * adMarker  广告标识。DASH取值：\"xml+bin\"
+    * suggestedPresentationDelay  建议播放延迟。单位：秒。取值范围：[1 - 120]
+    * minimumUpdatePeriod  索引最短更新周期。单位：秒。取值范围：[1 - 120]
+    * minBufferTime  最小缓冲时间。单位：秒。取值范围：[1 - 120]
     *
     * @var string[]
     */
@@ -140,7 +161,10 @@ class DashPackageItem implements ModelInterface, ArrayAccess
             'ads' => 'setAds',
             'extArgs' => 'setExtArgs',
             'requestArgs' => 'setRequestArgs',
-            'adMarker' => 'setAdMarker'
+            'adMarker' => 'setAdMarker',
+            'suggestedPresentationDelay' => 'setSuggestedPresentationDelay',
+            'minimumUpdatePeriod' => 'setMinimumUpdatePeriod',
+            'minBufferTime' => 'setMinBufferTime'
     ];
 
     /**
@@ -153,7 +177,10 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     * ads  广告配置
     * extArgs  其他额外参数
     * requestArgs  requestArgs
-    * adMarker  广告标识。  DASH取值：\"xml+bin\"。
+    * adMarker  广告标识。DASH取值：\"xml+bin\"
+    * suggestedPresentationDelay  建议播放延迟。单位：秒。取值范围：[1 - 120]
+    * minimumUpdatePeriod  索引最短更新周期。单位：秒。取值范围：[1 - 120]
+    * minBufferTime  最小缓冲时间。单位：秒。取值范围：[1 - 120]
     *
     * @var string[]
     */
@@ -166,7 +193,10 @@ class DashPackageItem implements ModelInterface, ArrayAccess
             'ads' => 'getAds',
             'extArgs' => 'getExtArgs',
             'requestArgs' => 'getRequestArgs',
-            'adMarker' => 'getAdMarker'
+            'adMarker' => 'getAdMarker',
+            'suggestedPresentationDelay' => 'getSuggestedPresentationDelay',
+            'minimumUpdatePeriod' => 'getMinimumUpdatePeriod',
+            'minBufferTime' => 'getMinBufferTime'
     ];
 
     /**
@@ -251,6 +281,9 @@ class DashPackageItem implements ModelInterface, ArrayAccess
         $this->container['extArgs'] = isset($data['extArgs']) ? $data['extArgs'] : null;
         $this->container['requestArgs'] = isset($data['requestArgs']) ? $data['requestArgs'] : null;
         $this->container['adMarker'] = isset($data['adMarker']) ? $data['adMarker'] : null;
+        $this->container['suggestedPresentationDelay'] = isset($data['suggestedPresentationDelay']) ? $data['suggestedPresentationDelay'] : null;
+        $this->container['minimumUpdatePeriod'] = isset($data['minimumUpdatePeriod']) ? $data['minimumUpdatePeriod'] : null;
+        $this->container['minBufferTime'] = isset($data['minBufferTime']) ? $data['minBufferTime'] : null;
     }
 
     /**
@@ -293,6 +326,24 @@ class DashPackageItem implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['suggestedPresentationDelay']) && ($this->container['suggestedPresentationDelay'] > 120)) {
+                $invalidProperties[] = "invalid value for 'suggestedPresentationDelay', must be smaller than or equal to 120.";
+            }
+            if (!is_null($this->container['suggestedPresentationDelay']) && ($this->container['suggestedPresentationDelay'] < 1)) {
+                $invalidProperties[] = "invalid value for 'suggestedPresentationDelay', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['minimumUpdatePeriod']) && ($this->container['minimumUpdatePeriod'] > 120)) {
+                $invalidProperties[] = "invalid value for 'minimumUpdatePeriod', must be smaller than or equal to 120.";
+            }
+            if (!is_null($this->container['minimumUpdatePeriod']) && ($this->container['minimumUpdatePeriod'] < 1)) {
+                $invalidProperties[] = "invalid value for 'minimumUpdatePeriod', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['minBufferTime']) && ($this->container['minBufferTime'] > 120)) {
+                $invalidProperties[] = "invalid value for 'minBufferTime', must be smaller than or equal to 120.";
+            }
+            if (!is_null($this->container['minBufferTime']) && ($this->container['minBufferTime'] < 1)) {
+                $invalidProperties[] = "invalid value for 'minBufferTime', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -501,7 +552,7 @@ class DashPackageItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets adMarker
-    *  广告标识。  DASH取值：\"xml+bin\"。
+    *  广告标识。DASH取值：\"xml+bin\"
     *
     * @return string|null
     */
@@ -513,13 +564,85 @@ class DashPackageItem implements ModelInterface, ArrayAccess
     /**
     * Sets adMarker
     *
-    * @param string|null $adMarker 广告标识。  DASH取值：\"xml+bin\"。
+    * @param string|null $adMarker 广告标识。DASH取值：\"xml+bin\"
     *
     * @return $this
     */
     public function setAdMarker($adMarker)
     {
         $this->container['adMarker'] = $adMarker;
+        return $this;
+    }
+
+    /**
+    * Gets suggestedPresentationDelay
+    *  建议播放延迟。单位：秒。取值范围：[1 - 120]
+    *
+    * @return int|null
+    */
+    public function getSuggestedPresentationDelay()
+    {
+        return $this->container['suggestedPresentationDelay'];
+    }
+
+    /**
+    * Sets suggestedPresentationDelay
+    *
+    * @param int|null $suggestedPresentationDelay 建议播放延迟。单位：秒。取值范围：[1 - 120]
+    *
+    * @return $this
+    */
+    public function setSuggestedPresentationDelay($suggestedPresentationDelay)
+    {
+        $this->container['suggestedPresentationDelay'] = $suggestedPresentationDelay;
+        return $this;
+    }
+
+    /**
+    * Gets minimumUpdatePeriod
+    *  索引最短更新周期。单位：秒。取值范围：[1 - 120]
+    *
+    * @return int|null
+    */
+    public function getMinimumUpdatePeriod()
+    {
+        return $this->container['minimumUpdatePeriod'];
+    }
+
+    /**
+    * Sets minimumUpdatePeriod
+    *
+    * @param int|null $minimumUpdatePeriod 索引最短更新周期。单位：秒。取值范围：[1 - 120]
+    *
+    * @return $this
+    */
+    public function setMinimumUpdatePeriod($minimumUpdatePeriod)
+    {
+        $this->container['minimumUpdatePeriod'] = $minimumUpdatePeriod;
+        return $this;
+    }
+
+    /**
+    * Gets minBufferTime
+    *  最小缓冲时间。单位：秒。取值范围：[1 - 120]
+    *
+    * @return int|null
+    */
+    public function getMinBufferTime()
+    {
+        return $this->container['minBufferTime'];
+    }
+
+    /**
+    * Sets minBufferTime
+    *
+    * @param int|null $minBufferTime 最小缓冲时间。单位：秒。取值范围：[1 - 120]
+    *
+    * @return $this
+    */
+    public function setMinBufferTime($minBufferTime)
+    {
+        $this->container['minBufferTime'] = $minBufferTime;
         return $this;
     }
 

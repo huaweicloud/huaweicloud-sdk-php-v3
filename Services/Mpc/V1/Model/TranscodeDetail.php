@@ -22,24 +22,28 @@ class TranscodeDetail implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * multitaskInfo  一进多出情况下部分转码失败的情况。
     * inputFile  inputFile
+    * replaceSubIndex  被替换的子索引文件
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'multitaskInfo' => '\HuaweiCloud\SDK\Mpc\V1\Model\MultiTaskInfo[]',
-            'inputFile' => '\HuaweiCloud\SDK\Mpc\V1\Model\SourceInfo'
+            'inputFile' => '\HuaweiCloud\SDK\Mpc\V1\Model\SourceInfo',
+            'replaceSubIndex' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * multitaskInfo  一进多出情况下部分转码失败的情况。
     * inputFile  inputFile
+    * replaceSubIndex  被替换的子索引文件
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'multitaskInfo' => null,
-        'inputFile' => null
+        'inputFile' => null,
+        'replaceSubIndex' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class TranscodeDetail implements ModelInterface, ArrayAccess
     * and the value is the original name
     * multitaskInfo  一进多出情况下部分转码失败的情况。
     * inputFile  inputFile
+    * replaceSubIndex  被替换的子索引文件
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'multitaskInfo' => 'multitask_info',
-            'inputFile' => 'input_file'
+            'inputFile' => 'input_file',
+            'replaceSubIndex' => 'replace_sub_index'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * multitaskInfo  一进多出情况下部分转码失败的情况。
     * inputFile  inputFile
+    * replaceSubIndex  被替换的子索引文件
     *
     * @var string[]
     */
     protected static $setters = [
             'multitaskInfo' => 'setMultitaskInfo',
-            'inputFile' => 'setInputFile'
+            'inputFile' => 'setInputFile',
+            'replaceSubIndex' => 'setReplaceSubIndex'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * multitaskInfo  一进多出情况下部分转码失败的情况。
     * inputFile  inputFile
+    * replaceSubIndex  被替换的子索引文件
     *
     * @var string[]
     */
     protected static $getters = [
             'multitaskInfo' => 'getMultitaskInfo',
-            'inputFile' => 'getInputFile'
+            'inputFile' => 'getInputFile',
+            'replaceSubIndex' => 'getReplaceSubIndex'
     ];
 
     /**
@@ -159,6 +169,7 @@ class TranscodeDetail implements ModelInterface, ArrayAccess
     {
         $this->container['multitaskInfo'] = isset($data['multitaskInfo']) ? $data['multitaskInfo'] : null;
         $this->container['inputFile'] = isset($data['inputFile']) ? $data['inputFile'] : null;
+        $this->container['replaceSubIndex'] = isset($data['replaceSubIndex']) ? $data['replaceSubIndex'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class TranscodeDetail implements ModelInterface, ArrayAccess
     public function setInputFile($inputFile)
     {
         $this->container['inputFile'] = $inputFile;
+        return $this;
+    }
+
+    /**
+    * Gets replaceSubIndex
+    *  被替换的子索引文件
+    *
+    * @return string[]|null
+    */
+    public function getReplaceSubIndex()
+    {
+        return $this->container['replaceSubIndex'];
+    }
+
+    /**
+    * Sets replaceSubIndex
+    *
+    * @param string[]|null $replaceSubIndex 被替换的子索引文件
+    *
+    * @return $this
+    */
+    public function setReplaceSubIndex($replaceSubIndex)
+    {
+        $this->container['replaceSubIndex'] = $replaceSubIndex;
         return $this;
     }
 

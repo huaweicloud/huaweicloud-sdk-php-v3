@@ -56,6 +56,7 @@ class Configs implements ModelInterface, ArrayAccess
     * requestUrlRewrite  访问URL重写。
     * browserCacheRules  浏览器缓存过期时间。
     * accessAreaFilter  accessAreaFilter
+    * clientCert  clientCert
     *
     * @var string[]
     */
@@ -95,7 +96,8 @@ class Configs implements ModelInterface, ArrayAccess
             'sni' => '\HuaweiCloud\SDK\Cdn\V2\Model\Sni',
             'requestUrlRewrite' => '\HuaweiCloud\SDK\Cdn\V2\Model\RequestUrlRewrite[]',
             'browserCacheRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\BrowserCacheRules[]',
-            'accessAreaFilter' => '\HuaweiCloud\SDK\Cdn\V2\Model\AccessAreaFilter[]'
+            'accessAreaFilter' => '\HuaweiCloud\SDK\Cdn\V2\Model\AccessAreaFilter[]',
+            'clientCert' => '\HuaweiCloud\SDK\Cdn\V2\Model\ClientCert'
     ];
 
     /**
@@ -136,6 +138,7 @@ class Configs implements ModelInterface, ArrayAccess
     * requestUrlRewrite  访问URL重写。
     * browserCacheRules  浏览器缓存过期时间。
     * accessAreaFilter  accessAreaFilter
+    * clientCert  clientCert
     *
     * @var string[]
     */
@@ -175,7 +178,8 @@ class Configs implements ModelInterface, ArrayAccess
         'sni' => null,
         'requestUrlRewrite' => null,
         'browserCacheRules' => null,
-        'accessAreaFilter' => null
+        'accessAreaFilter' => null,
+        'clientCert' => null
     ];
 
     /**
@@ -237,6 +241,7 @@ class Configs implements ModelInterface, ArrayAccess
     * requestUrlRewrite  访问URL重写。
     * browserCacheRules  浏览器缓存过期时间。
     * accessAreaFilter  accessAreaFilter
+    * clientCert  clientCert
     *
     * @var string[]
     */
@@ -276,7 +281,8 @@ class Configs implements ModelInterface, ArrayAccess
             'sni' => 'sni',
             'requestUrlRewrite' => 'request_url_rewrite',
             'browserCacheRules' => 'browser_cache_rules',
-            'accessAreaFilter' => 'access_area_filter'
+            'accessAreaFilter' => 'access_area_filter',
+            'clientCert' => 'client_cert'
     ];
 
     /**
@@ -317,6 +323,7 @@ class Configs implements ModelInterface, ArrayAccess
     * requestUrlRewrite  访问URL重写。
     * browserCacheRules  浏览器缓存过期时间。
     * accessAreaFilter  accessAreaFilter
+    * clientCert  clientCert
     *
     * @var string[]
     */
@@ -356,7 +363,8 @@ class Configs implements ModelInterface, ArrayAccess
             'sni' => 'setSni',
             'requestUrlRewrite' => 'setRequestUrlRewrite',
             'browserCacheRules' => 'setBrowserCacheRules',
-            'accessAreaFilter' => 'setAccessAreaFilter'
+            'accessAreaFilter' => 'setAccessAreaFilter',
+            'clientCert' => 'setClientCert'
     ];
 
     /**
@@ -397,6 +405,7 @@ class Configs implements ModelInterface, ArrayAccess
     * requestUrlRewrite  访问URL重写。
     * browserCacheRules  浏览器缓存过期时间。
     * accessAreaFilter  accessAreaFilter
+    * clientCert  clientCert
     *
     * @var string[]
     */
@@ -436,7 +445,8 @@ class Configs implements ModelInterface, ArrayAccess
             'sni' => 'getSni',
             'requestUrlRewrite' => 'getRequestUrlRewrite',
             'browserCacheRules' => 'getBrowserCacheRules',
-            'accessAreaFilter' => 'getAccessAreaFilter'
+            'accessAreaFilter' => 'getAccessAreaFilter',
+            'clientCert' => 'getClientCert'
     ];
 
     /**
@@ -533,6 +543,7 @@ class Configs implements ModelInterface, ArrayAccess
         $this->container['requestUrlRewrite'] = isset($data['requestUrlRewrite']) ? $data['requestUrlRewrite'] : null;
         $this->container['browserCacheRules'] = isset($data['browserCacheRules']) ? $data['browserCacheRules'] : null;
         $this->container['accessAreaFilter'] = isset($data['accessAreaFilter']) ? $data['accessAreaFilter'] : null;
+        $this->container['clientCert'] = isset($data['clientCert']) ? $data['clientCert'] : null;
     }
 
     /**
@@ -1418,6 +1429,30 @@ class Configs implements ModelInterface, ArrayAccess
     public function setAccessAreaFilter($accessAreaFilter)
     {
         $this->container['accessAreaFilter'] = $accessAreaFilter;
+        return $this;
+    }
+
+    /**
+    * Gets clientCert
+    *  clientCert
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\ClientCert|null
+    */
+    public function getClientCert()
+    {
+        return $this->container['clientCert'];
+    }
+
+    /**
+    * Sets clientCert
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\ClientCert|null $clientCert clientCert
+    *
+    * @return $this
+    */
+    public function setClientCert($clientCert)
+    {
+        $this->container['clientCert'] = $clientCert;
         return $this;
     }
 

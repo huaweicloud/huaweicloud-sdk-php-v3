@@ -24,6 +24,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
     * durationMs  片源时长，单位：毫秒
     * format  片源格式
     * size  片源大小
+    * manifestName  独立mpd索引文件名
     * videoInfo  videoInfo
     * audioInfo  音频信息
     *
@@ -34,6 +35,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
             'durationMs' => 'int',
             'format' => 'string',
             'size' => 'int',
+            'manifestName' => 'string',
             'videoInfo' => '\HuaweiCloud\SDK\Mpc\V1\Model\VideoInfo',
             'audioInfo' => '\HuaweiCloud\SDK\Mpc\V1\Model\AudioInfo[]'
     ];
@@ -44,6 +46,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
     * durationMs  片源时长，单位：毫秒
     * format  片源格式
     * size  片源大小
+    * manifestName  独立mpd索引文件名
     * videoInfo  videoInfo
     * audioInfo  音频信息
     *
@@ -54,6 +57,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
         'durationMs' => 'int64',
         'format' => null,
         'size' => 'int64',
+        'manifestName' => null,
         'videoInfo' => null,
         'audioInfo' => null
     ];
@@ -85,6 +89,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
     * durationMs  片源时长，单位：毫秒
     * format  片源格式
     * size  片源大小
+    * manifestName  独立mpd索引文件名
     * videoInfo  videoInfo
     * audioInfo  音频信息
     *
@@ -95,6 +100,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
             'durationMs' => 'duration_ms',
             'format' => 'format',
             'size' => 'size',
+            'manifestName' => 'manifest_name',
             'videoInfo' => 'video_info',
             'audioInfo' => 'audio_info'
     ];
@@ -105,6 +111,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
     * durationMs  片源时长，单位：毫秒
     * format  片源格式
     * size  片源大小
+    * manifestName  独立mpd索引文件名
     * videoInfo  videoInfo
     * audioInfo  音频信息
     *
@@ -115,6 +122,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
             'durationMs' => 'setDurationMs',
             'format' => 'setFormat',
             'size' => 'setSize',
+            'manifestName' => 'setManifestName',
             'videoInfo' => 'setVideoInfo',
             'audioInfo' => 'setAudioInfo'
     ];
@@ -125,6 +133,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
     * durationMs  片源时长，单位：毫秒
     * format  片源格式
     * size  片源大小
+    * manifestName  独立mpd索引文件名
     * videoInfo  videoInfo
     * audioInfo  音频信息
     *
@@ -135,6 +144,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
             'durationMs' => 'getDurationMs',
             'format' => 'getFormat',
             'size' => 'getSize',
+            'manifestName' => 'getManifestName',
             'videoInfo' => 'getVideoInfo',
             'audioInfo' => 'getAudioInfo'
     ];
@@ -201,6 +211,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
         $this->container['durationMs'] = isset($data['durationMs']) ? $data['durationMs'] : null;
         $this->container['format'] = isset($data['format']) ? $data['format'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['manifestName'] = isset($data['manifestName']) ? $data['manifestName'] : null;
         $this->container['videoInfo'] = isset($data['videoInfo']) ? $data['videoInfo'] : null;
         $this->container['audioInfo'] = isset($data['audioInfo']) ? $data['audioInfo'] : null;
     }
@@ -236,6 +247,12 @@ class SourceInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['size']) && ($this->container['size'] < 0)) {
                 $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['manifestName']) && (mb_strlen($this->container['manifestName']) > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'manifestName', the character length must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['manifestName']) && (mb_strlen($this->container['manifestName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'manifestName', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -344,6 +361,30 @@ class SourceInfo implements ModelInterface, ArrayAccess
     public function setSize($size)
     {
         $this->container['size'] = $size;
+        return $this;
+    }
+
+    /**
+    * Gets manifestName
+    *  独立mpd索引文件名
+    *
+    * @return string|null
+    */
+    public function getManifestName()
+    {
+        return $this->container['manifestName'];
+    }
+
+    /**
+    * Sets manifestName
+    *
+    * @param string|null $manifestName 独立mpd索引文件名
+    *
+    * @return $this
+    */
+    public function setManifestName($manifestName)
+    {
+        $this->container['manifestName'] = $manifestName;
         return $this;
     }
 

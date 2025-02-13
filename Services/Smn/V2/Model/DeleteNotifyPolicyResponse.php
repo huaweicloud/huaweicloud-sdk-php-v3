@@ -21,22 +21,22 @@ class DeleteNotifyPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * requestId  请求的唯一标识ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'requestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * requestId  请求的唯一标识ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'requestId' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class DeleteNotifyPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * requestId  请求的唯一标识ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'requestId' => 'request_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * requestId  请求的唯一标识ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'requestId' => 'setRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * requestId  请求的唯一标识ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'requestId' => 'getRequestId'
     ];
 
     /**
@@ -148,7 +148,7 @@ class DeleteNotifyPolicyResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class DeleteNotifyPolicyResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets requestId
+    *  请求的唯一标识ID
     *
     * @return string|null
     */
-    public function getBody()
+    public function getRequestId()
     {
-        return $this->container['body'];
+        return $this->container['requestId'];
     }
 
     /**
-    * Sets body
+    * Sets requestId
     *
-    * @param string|null $body body
+    * @param string|null $requestId 请求的唯一标识ID
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setRequestId($requestId)
     {
-        $this->container['body'] = $body;
+        $this->container['requestId'] = $requestId;
         return $this;
     }
 

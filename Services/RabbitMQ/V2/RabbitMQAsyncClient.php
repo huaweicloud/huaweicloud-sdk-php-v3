@@ -228,7 +228,7 @@ class RabbitMQAsyncClient extends Client
     /**
      * 创建实例
      *
-     * 创建实例[，该接口支持创建按需[和包周期](tag:hws,hws_eu,hws_hk,ctc,cmcc)计费方式的实例](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,cmcc)。
+     * 创建实例[，该接口支持创建按需[和包周期](tag:hws,hws_eu,hws_hk,ctc,cmcc)计费方式的实例](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,cmcc,sbc)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -559,6 +559,71 @@ class RabbitMQAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteUserResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteUserRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 开启RabbitMQ实例域名访问能力
+     *
+     * 开启RabbitMQ实例域名访问功能后，客户端可以通过域名连接RabbitMQ实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function enableDnsAsync($request)
+    {
+        return $this->enableDnsAsyncWithHttpInfo($request);
+    }
+    
+    public function enableDnsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/rabbitmq/instances/{instance_id}/dns';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\EnableDnsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\EnableDnsRequest',
             $asyncRequest = true);
     }
 
@@ -1671,6 +1736,68 @@ class RabbitMQAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowMaintainWindowsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowMaintainWindowsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查看租户配额
+     *
+     * 查询租户最大可以创建的实例个数和已创建的实例个数，以及每个实例最大可以创建标签的个数。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showQuotasAsync($request)
+    {
+        return $this->showQuotasAsyncWithHttpInfo($request);
+    }
+    
+    public function showQuotasAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/quotas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowQuotasResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowQuotasRequest',
             $asyncRequest = true);
     }
 

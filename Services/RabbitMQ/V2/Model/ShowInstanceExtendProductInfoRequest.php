@@ -21,7 +21,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * type  产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    * type  产品的类型。   - advanced：专享版
     * engine  消息引擎的类型。支持的类型为rabbitmq。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * type  产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    * type  产品的类型。   - advanced：专享版
     * engine  消息引擎的类型。支持的类型为rabbitmq。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
-    * type  产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    * type  产品的类型。   - advanced：专享版
     * engine  消息引擎的类型。支持的类型为rabbitmq。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
-    * type  产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    * type  产品的类型。   - advanced：专享版
     * engine  消息引擎的类型。支持的类型为rabbitmq。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
-    * type  产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    * type  产品的类型。   - advanced：专享版
     * engine  消息引擎的类型。支持的类型为rabbitmq。
     *
     * @var string[]
@@ -277,7 +277,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets type
-    *  产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    *  产品的类型。   - advanced：专享版
     *
     * @return string
     */
@@ -289,7 +289,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     /**
     * Sets type
     *
-    * @param string $type 产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    * @param string $type 产品的类型。   - advanced：专享版
     *
     * @return $this
     */

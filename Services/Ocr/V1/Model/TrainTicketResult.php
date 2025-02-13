@@ -29,15 +29,15 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * destinationStationEn  终点站拼音。
     * departureTime  开车时间。
     * seatNumber  座位号。
-    * ticketPrice  票价。
+    * ticketPrice  票价，当为退票凭证时，表示退票费。
     * saleMethod  售票方式。
     * seatCategory  座位类别。
-    * ticketChanging  是否改签票, \"Yes\"表示改签票，\"No\"表示非改签票。
+    * ticketChanging  标识信息，包含始发改签、退票、差额退票等。
     * idNumber  车票持有人的身份证号。
     * name  车票持有人姓名。
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
-    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：铁路电子客票 - refund_old：退票费报销凭证 - refund_new：纸质火车票退票凭证  - refund_electronic：铁路电子客票退票凭证
     * issueDate  开票时间
     * discountMark  打折标识
     * serialNumber  电子客票号
@@ -56,7 +56,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * amountInFigures  小写票据金额
     * amountInWords  大写票据金额
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
-    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。  > 说明：输入数据格式是OFD时，返回的字段坐标为空列表。
     *
     * @var string[]
     */
@@ -111,15 +111,15 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * destinationStationEn  终点站拼音。
     * departureTime  开车时间。
     * seatNumber  座位号。
-    * ticketPrice  票价。
+    * ticketPrice  票价，当为退票凭证时，表示退票费。
     * saleMethod  售票方式。
     * seatCategory  座位类别。
-    * ticketChanging  是否改签票, \"Yes\"表示改签票，\"No\"表示非改签票。
+    * ticketChanging  标识信息，包含始发改签、退票、差额退票等。
     * idNumber  车票持有人的身份证号。
     * name  车票持有人姓名。
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
-    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：铁路电子客票 - refund_old：退票费报销凭证 - refund_new：纸质火车票退票凭证  - refund_electronic：铁路电子客票退票凭证
     * issueDate  开票时间
     * discountMark  打折标识
     * serialNumber  电子客票号
@@ -138,7 +138,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * amountInFigures  小写票据金额
     * amountInWords  大写票据金额
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
-    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。  > 说明：输入数据格式是OFD时，返回的字段坐标为空列表。
     *
     * @var string[]
     */
@@ -214,15 +214,15 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * destinationStationEn  终点站拼音。
     * departureTime  开车时间。
     * seatNumber  座位号。
-    * ticketPrice  票价。
+    * ticketPrice  票价，当为退票凭证时，表示退票费。
     * saleMethod  售票方式。
     * seatCategory  座位类别。
-    * ticketChanging  是否改签票, \"Yes\"表示改签票，\"No\"表示非改签票。
+    * ticketChanging  标识信息，包含始发改签、退票、差额退票等。
     * idNumber  车票持有人的身份证号。
     * name  车票持有人姓名。
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
-    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：铁路电子客票 - refund_old：退票费报销凭证 - refund_new：纸质火车票退票凭证  - refund_electronic：铁路电子客票退票凭证
     * issueDate  开票时间
     * discountMark  打折标识
     * serialNumber  电子客票号
@@ -241,7 +241,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * amountInFigures  小写票据金额
     * amountInWords  大写票据金额
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
-    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。  > 说明：输入数据格式是OFD时，返回的字段坐标为空列表。
     *
     * @var string[]
     */
@@ -296,15 +296,15 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * destinationStationEn  终点站拼音。
     * departureTime  开车时间。
     * seatNumber  座位号。
-    * ticketPrice  票价。
+    * ticketPrice  票价，当为退票凭证时，表示退票费。
     * saleMethod  售票方式。
     * seatCategory  座位类别。
-    * ticketChanging  是否改签票, \"Yes\"表示改签票，\"No\"表示非改签票。
+    * ticketChanging  标识信息，包含始发改签、退票、差额退票等。
     * idNumber  车票持有人的身份证号。
     * name  车票持有人姓名。
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
-    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：铁路电子客票 - refund_old：退票费报销凭证 - refund_new：纸质火车票退票凭证  - refund_electronic：铁路电子客票退票凭证
     * issueDate  开票时间
     * discountMark  打折标识
     * serialNumber  电子客票号
@@ -323,7 +323,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * amountInFigures  小写票据金额
     * amountInWords  大写票据金额
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
-    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。  > 说明：输入数据格式是OFD时，返回的字段坐标为空列表。
     *
     * @var string[]
     */
@@ -378,15 +378,15 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * destinationStationEn  终点站拼音。
     * departureTime  开车时间。
     * seatNumber  座位号。
-    * ticketPrice  票价。
+    * ticketPrice  票价，当为退票凭证时，表示退票费。
     * saleMethod  售票方式。
     * seatCategory  座位类别。
-    * ticketChanging  是否改签票, \"Yes\"表示改签票，\"No\"表示非改签票。
+    * ticketChanging  标识信息，包含始发改签、退票、差额退票等。
     * idNumber  车票持有人的身份证号。
     * name  车票持有人姓名。
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
-    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：铁路电子客票 - refund_old：退票费报销凭证 - refund_new：纸质火车票退票凭证  - refund_electronic：铁路电子客票退票凭证
     * issueDate  开票时间
     * discountMark  打折标识
     * serialNumber  电子客票号
@@ -405,7 +405,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * amountInFigures  小写票据金额
     * amountInWords  大写票据金额
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
-    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。  > 说明：输入数据格式是OFD时，返回的字段坐标为空列表。
     *
     * @var string[]
     */
@@ -786,7 +786,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets ticketPrice
-    *  票价。
+    *  票价，当为退票凭证时，表示退票费。
     *
     * @return string|null
     */
@@ -798,7 +798,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     /**
     * Sets ticketPrice
     *
-    * @param string|null $ticketPrice 票价。
+    * @param string|null $ticketPrice 票价，当为退票凭证时，表示退票费。
     *
     * @return $this
     */
@@ -858,7 +858,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets ticketChanging
-    *  是否改签票, \"Yes\"表示改签票，\"No\"表示非改签票。
+    *  标识信息，包含始发改签、退票、差额退票等。
     *
     * @return string|null
     */
@@ -870,7 +870,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     /**
     * Sets ticketChanging
     *
-    * @param string|null $ticketChanging 是否改签票, \"Yes\"表示改签票，\"No\"表示非改签票。
+    * @param string|null $ticketChanging 标识信息，包含始发改签、退票、差额退票等。
     *
     * @return $this
     */
@@ -978,7 +978,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets invoiceStyle
-    *  类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    *  类型。包含以下几种类型： - paper：纸质火车票 - electronic：铁路电子客票 - refund_old：退票费报销凭证 - refund_new：纸质火车票退票凭证  - refund_electronic：铁路电子客票退票凭证
     *
     * @return string|null
     */
@@ -990,7 +990,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     /**
     * Sets invoiceStyle
     *
-    * @param string|null $invoiceStyle 类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    * @param string|null $invoiceStyle 类型。包含以下几种类型： - paper：纸质火车票 - electronic：铁路电子客票 - refund_old：退票费报销凭证 - refund_new：纸质火车票退票凭证  - refund_electronic：铁路电子客票退票凭证
     *
     * @return $this
     */
@@ -1434,7 +1434,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets textLocation
-    *  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    *  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。  > 说明：输入数据格式是OFD时，返回的字段坐标为空列表。
     *
     * @return object|null
     */
@@ -1446,7 +1446,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     /**
     * Sets textLocation
     *
-    * @param object|null $textLocation 对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * @param object|null $textLocation 对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。  > 说明：输入数据格式是OFD时，返回的字段坐标为空列表。
     *
     * @return $this
     */

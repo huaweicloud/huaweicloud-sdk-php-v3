@@ -21,7 +21,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * stepLength  节点增长步长。
-    * maxQueuePerBroker  每个Broker的最大对列。
+    * maxQueuePerBroker  每个Broker的最大队列。
     * maxConnectionPerBroker  每个Broker的最大连接数。
     * maxPartitionPerBroker  每个Broker的最大分区数。
     * maxBroker  Broker的最大个数。
@@ -53,7 +53,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * stepLength  节点增长步长。
-    * maxQueuePerBroker  每个Broker的最大对列。
+    * maxQueuePerBroker  每个Broker的最大队列。
     * maxConnectionPerBroker  每个Broker的最大连接数。
     * maxPartitionPerBroker  每个Broker的最大分区数。
     * maxBroker  Broker的最大个数。
@@ -106,7 +106,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * stepLength  节点增长步长。
-    * maxQueuePerBroker  每个Broker的最大对列。
+    * maxQueuePerBroker  每个Broker的最大队列。
     * maxConnectionPerBroker  每个Broker的最大连接数。
     * maxPartitionPerBroker  每个Broker的最大分区数。
     * maxBroker  Broker的最大个数。
@@ -138,7 +138,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * stepLength  节点增长步长。
-    * maxQueuePerBroker  每个Broker的最大对列。
+    * maxQueuePerBroker  每个Broker的最大队列。
     * maxConnectionPerBroker  每个Broker的最大连接数。
     * maxPartitionPerBroker  每个Broker的最大分区数。
     * maxBroker  Broker的最大个数。
@@ -170,7 +170,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * stepLength  节点增长步长。
-    * maxQueuePerBroker  每个Broker的最大对列。
+    * maxQueuePerBroker  每个Broker的最大队列。
     * maxConnectionPerBroker  每个Broker的最大连接数。
     * maxPartitionPerBroker  每个Broker的最大分区数。
     * maxBroker  Broker的最大个数。
@@ -319,7 +319,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxQueuePerBroker
-    *  每个Broker的最大对列。
+    *  每个Broker的最大队列。
     *
     * @return string|null
     */
@@ -331,7 +331,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets maxQueuePerBroker
     *
-    * @param string|null $maxQueuePerBroker 每个Broker的最大对列。
+    * @param string|null $maxQueuePerBroker 每个Broker的最大队列。
     *
     * @return $this
     */

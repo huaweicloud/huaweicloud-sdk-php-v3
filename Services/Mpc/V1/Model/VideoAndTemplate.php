@@ -24,6 +24,7 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
     * width  视频宽度（单位：像素） - H264：范围[32,4096]，必须为2的倍数 - H265：范围[320,4096]，必须是4的倍数
     * height  视频高度（单位：像素） - H264：范围[32,2880]，必须为2的倍数 - H265：范围[240,2880]，必须是4的倍数
     * bitrate  输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。
+    * streamName  流名称
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
             'templateId' => 'int',
             'width' => 'int',
             'height' => 'int',
-            'bitrate' => 'int'
+            'bitrate' => 'int',
+            'streamName' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
     * width  视频宽度（单位：像素） - H264：范围[32,4096]，必须为2的倍数 - H265：范围[320,4096]，必须是4的倍数
     * height  视频高度（单位：像素） - H264：范围[32,2880]，必须为2的倍数 - H265：范围[240,2880]，必须是4的倍数
     * bitrate  输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。
+    * streamName  流名称
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
         'templateId' => 'int32',
         'width' => 'int32',
         'height' => 'int32',
-        'bitrate' => 'int32'
+        'bitrate' => 'int32',
+        'streamName' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
     * width  视频宽度（单位：像素） - H264：范围[32,4096]，必须为2的倍数 - H265：范围[320,4096]，必须是4的倍数
     * height  视频高度（单位：像素） - H264：范围[32,2880]，必须为2的倍数 - H265：范围[240,2880]，必须是4的倍数
     * bitrate  输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。
+    * streamName  流名称
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
             'templateId' => 'template_id',
             'width' => 'width',
             'height' => 'height',
-            'bitrate' => 'bitrate'
+            'bitrate' => 'bitrate',
+            'streamName' => 'stream_name'
     ];
 
     /**
@@ -93,6 +99,7 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
     * width  视频宽度（单位：像素） - H264：范围[32,4096]，必须为2的倍数 - H265：范围[320,4096]，必须是4的倍数
     * height  视频高度（单位：像素） - H264：范围[32,2880]，必须为2的倍数 - H265：范围[240,2880]，必须是4的倍数
     * bitrate  输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。
+    * streamName  流名称
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
             'templateId' => 'setTemplateId',
             'width' => 'setWidth',
             'height' => 'setHeight',
-            'bitrate' => 'setBitrate'
+            'bitrate' => 'setBitrate',
+            'streamName' => 'setStreamName'
     ];
 
     /**
@@ -109,6 +117,7 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
     * width  视频宽度（单位：像素） - H264：范围[32,4096]，必须为2的倍数 - H265：范围[320,4096]，必须是4的倍数
     * height  视频高度（单位：像素） - H264：范围[32,2880]，必须为2的倍数 - H265：范围[240,2880]，必须是4的倍数
     * bitrate  输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。
+    * streamName  流名称
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
             'templateId' => 'getTemplateId',
             'width' => 'getWidth',
             'height' => 'getHeight',
-            'bitrate' => 'getBitrate'
+            'bitrate' => 'getBitrate',
+            'streamName' => 'getStreamName'
     ];
 
     /**
@@ -181,6 +191,7 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['bitrate'] = isset($data['bitrate']) ? $data['bitrate'] : null;
+        $this->container['streamName'] = isset($data['streamName']) ? $data['streamName'] : null;
     }
 
     /**
@@ -214,6 +225,15 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['bitrate']) && ($this->container['bitrate'] < 0)) {
                 $invalidProperties[] = "invalid value for 'bitrate', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['streamName']) && (mb_strlen($this->container['streamName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'streamName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['streamName']) && (mb_strlen($this->container['streamName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'streamName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['streamName']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['streamName'])) {
+                $invalidProperties[] = "invalid value for 'streamName', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
         return $invalidProperties;
     }
@@ -322,6 +342,30 @@ class VideoAndTemplate implements ModelInterface, ArrayAccess
     public function setBitrate($bitrate)
     {
         $this->container['bitrate'] = $bitrate;
+        return $this;
+    }
+
+    /**
+    * Gets streamName
+    *  流名称
+    *
+    * @return string|null
+    */
+    public function getStreamName()
+    {
+        return $this->container['streamName'];
+    }
+
+    /**
+    * Sets streamName
+    *
+    * @param string|null $streamName 流名称
+    *
+    * @return $this
+    */
+    public function setStreamName($streamName)
+    {
+        $this->container['streamName'] = $streamName;
         return $this;
     }
 

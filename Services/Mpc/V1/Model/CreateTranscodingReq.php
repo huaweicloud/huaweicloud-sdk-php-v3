@@ -24,6 +24,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * output  output
     * transTemplateId  转码模板ID，没带av_parameter参数时，必须带该参数，数组，每一路转码输出对应一个转码配置模板ID，最多支持9个模板ID。  多个转码模板中如下参数可变，其他都必须一致：  视频bitrate，height，width。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码，不带trans_template_id时，该参数必选。
+    * additionalManifests  主索引定制参数。
     * outputFilenames  输出文件名称，每一路转码输出对应一个名称，需要与转码模板ID数组的顺序对应。  - 若设置该参数，表示输出文件按该参数命名。 - 若不设置该参数，表示输出文件按默认方式命名。
     * userData  用户自定义数据，该字段可在查询接口或消息通知中按原内容透传给用户。
     * watermarks  图片水印参数，数组，最多支持20个成员。
@@ -44,6 +45,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             'output' => '\HuaweiCloud\SDK\Mpc\V1\Model\ObsObjInfo',
             'transTemplateId' => 'int[]',
             'avParameters' => '\HuaweiCloud\SDK\Mpc\V1\Model\AvParameters[]',
+            'additionalManifests' => '\HuaweiCloud\SDK\Mpc\V1\Model\AdditionalManifests[]',
             'outputFilenames' => 'string[]',
             'userData' => 'string',
             'watermarks' => '\HuaweiCloud\SDK\Mpc\V1\Model\WatermarkRequest[]',
@@ -64,6 +66,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * output  output
     * transTemplateId  转码模板ID，没带av_parameter参数时，必须带该参数，数组，每一路转码输出对应一个转码配置模板ID，最多支持9个模板ID。  多个转码模板中如下参数可变，其他都必须一致：  视频bitrate，height，width。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码，不带trans_template_id时，该参数必选。
+    * additionalManifests  主索引定制参数。
     * outputFilenames  输出文件名称，每一路转码输出对应一个名称，需要与转码模板ID数组的顺序对应。  - 若设置该参数，表示输出文件按该参数命名。 - 若不设置该参数，表示输出文件按默认方式命名。
     * userData  用户自定义数据，该字段可在查询接口或消息通知中按原内容透传给用户。
     * watermarks  图片水印参数，数组，最多支持20个成员。
@@ -84,6 +87,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
         'output' => null,
         'transTemplateId' => null,
         'avParameters' => null,
+        'additionalManifests' => null,
         'outputFilenames' => null,
         'userData' => null,
         'watermarks' => null,
@@ -125,6 +129,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * output  output
     * transTemplateId  转码模板ID，没带av_parameter参数时，必须带该参数，数组，每一路转码输出对应一个转码配置模板ID，最多支持9个模板ID。  多个转码模板中如下参数可变，其他都必须一致：  视频bitrate，height，width。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码，不带trans_template_id时，该参数必选。
+    * additionalManifests  主索引定制参数。
     * outputFilenames  输出文件名称，每一路转码输出对应一个名称，需要与转码模板ID数组的顺序对应。  - 若设置该参数，表示输出文件按该参数命名。 - 若不设置该参数，表示输出文件按默认方式命名。
     * userData  用户自定义数据，该字段可在查询接口或消息通知中按原内容透传给用户。
     * watermarks  图片水印参数，数组，最多支持20个成员。
@@ -145,6 +150,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             'output' => 'output',
             'transTemplateId' => 'trans_template_id',
             'avParameters' => 'av_parameters',
+            'additionalManifests' => 'additional_manifests',
             'outputFilenames' => 'output_filenames',
             'userData' => 'user_data',
             'watermarks' => 'watermarks',
@@ -165,6 +171,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * output  output
     * transTemplateId  转码模板ID，没带av_parameter参数时，必须带该参数，数组，每一路转码输出对应一个转码配置模板ID，最多支持9个模板ID。  多个转码模板中如下参数可变，其他都必须一致：  视频bitrate，height，width。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码，不带trans_template_id时，该参数必选。
+    * additionalManifests  主索引定制参数。
     * outputFilenames  输出文件名称，每一路转码输出对应一个名称，需要与转码模板ID数组的顺序对应。  - 若设置该参数，表示输出文件按该参数命名。 - 若不设置该参数，表示输出文件按默认方式命名。
     * userData  用户自定义数据，该字段可在查询接口或消息通知中按原内容透传给用户。
     * watermarks  图片水印参数，数组，最多支持20个成员。
@@ -185,6 +192,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             'output' => 'setOutput',
             'transTemplateId' => 'setTransTemplateId',
             'avParameters' => 'setAvParameters',
+            'additionalManifests' => 'setAdditionalManifests',
             'outputFilenames' => 'setOutputFilenames',
             'userData' => 'setUserData',
             'watermarks' => 'setWatermarks',
@@ -205,6 +213,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * output  output
     * transTemplateId  转码模板ID，没带av_parameter参数时，必须带该参数，数组，每一路转码输出对应一个转码配置模板ID，最多支持9个模板ID。  多个转码模板中如下参数可变，其他都必须一致：  视频bitrate，height，width。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码，不带trans_template_id时，该参数必选。
+    * additionalManifests  主索引定制参数。
     * outputFilenames  输出文件名称，每一路转码输出对应一个名称，需要与转码模板ID数组的顺序对应。  - 若设置该参数，表示输出文件按该参数命名。 - 若不设置该参数，表示输出文件按默认方式命名。
     * userData  用户自定义数据，该字段可在查询接口或消息通知中按原内容透传给用户。
     * watermarks  图片水印参数，数组，最多支持20个成员。
@@ -225,6 +234,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             'output' => 'getOutput',
             'transTemplateId' => 'getTransTemplateId',
             'avParameters' => 'getAvParameters',
+            'additionalManifests' => 'getAdditionalManifests',
             'outputFilenames' => 'getOutputFilenames',
             'userData' => 'getUserData',
             'watermarks' => 'getWatermarks',
@@ -301,6 +311,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
         $this->container['output'] = isset($data['output']) ? $data['output'] : null;
         $this->container['transTemplateId'] = isset($data['transTemplateId']) ? $data['transTemplateId'] : null;
         $this->container['avParameters'] = isset($data['avParameters']) ? $data['avParameters'] : null;
+        $this->container['additionalManifests'] = isset($data['additionalManifests']) ? $data['additionalManifests'] : null;
         $this->container['outputFilenames'] = isset($data['outputFilenames']) ? $data['outputFilenames'] : null;
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;
         $this->container['watermarks'] = isset($data['watermarks']) ? $data['watermarks'] : null;
@@ -445,6 +456,30 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     public function setAvParameters($avParameters)
     {
         $this->container['avParameters'] = $avParameters;
+        return $this;
+    }
+
+    /**
+    * Gets additionalManifests
+    *  主索引定制参数。
+    *
+    * @return \HuaweiCloud\SDK\Mpc\V1\Model\AdditionalManifests[]|null
+    */
+    public function getAdditionalManifests()
+    {
+        return $this->container['additionalManifests'];
+    }
+
+    /**
+    * Sets additionalManifests
+    *
+    * @param \HuaweiCloud\SDK\Mpc\V1\Model\AdditionalManifests[]|null $additionalManifests 主索引定制参数。
+    *
+    * @return $this
+    */
+    public function setAdditionalManifests($additionalManifests)
+    {
+        $this->container['additionalManifests'] = $additionalManifests;
         return $this;
     }
 

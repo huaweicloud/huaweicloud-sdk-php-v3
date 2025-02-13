@@ -2243,13 +2243,13 @@ class CseClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['customNamespaceId'] !== null) {
-            $queryParams['custom_namespace_id'] = $localVarParams['customNamespaceId'];
+            $queryParams['customNamespaceId'] = $localVarParams['customNamespaceId'];
         }
         if ($localVarParams['namespaceName'] !== null) {
-            $queryParams['namespace_name'] = $localVarParams['namespaceName'];
+            $queryParams['namespaceName'] = $localVarParams['namespaceName'];
         }
         if ($localVarParams['namespaceDesc'] !== null) {
-            $queryParams['namespace_desc'] = $localVarParams['namespaceDesc'];
+            $queryParams['namespaceDesc'] = $localVarParams['namespaceDesc'];
         }
         if ($localVarParams['xEngineId'] !== null) {
             $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
@@ -2259,11 +2259,11 @@ class CseClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 []
             );
         }
@@ -2317,7 +2317,7 @@ class CseClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['namespaceId'] !== null) {
-            $queryParams['namespace_id'] = $localVarParams['namespaceId'];
+            $queryParams['namespaceId'] = $localVarParams['namespaceId'];
         }
         if ($localVarParams['xEngineId'] !== null) {
             $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
@@ -2327,11 +2327,11 @@ class CseClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 []
             );
         }
@@ -2398,11 +2398,11 @@ class CseClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 []
             );
         }
@@ -2459,10 +2459,10 @@ class CseClient extends Client
             $queryParams['namespace'] = $localVarParams['namespace'];
         }
         if ($localVarParams['namespaceShowName'] !== null) {
-            $queryParams['namespace_show_name'] = $localVarParams['namespaceShowName'];
+            $queryParams['namespaceShowName'] = $localVarParams['namespaceShowName'];
         }
         if ($localVarParams['namespaceDesc'] !== null) {
-            $queryParams['namespace_desc'] = $localVarParams['namespaceDesc'];
+            $queryParams['namespaceDesc'] = $localVarParams['namespaceDesc'];
         }
         if ($localVarParams['xEngineId'] !== null) {
             $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
@@ -2472,11 +2472,11 @@ class CseClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 []
             );
         }

@@ -26,6 +26,7 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
     * video  video
     * audio  audio
     * fileName  输出片源文件名
+    * manifestName  独立mpd索引文件名
     * converDuration  折算后视频时长
     * error  error
     *
@@ -38,6 +39,7 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
             'video' => '\HuaweiCloud\SDK\Mpc\V1\Model\VideoInfo',
             'audio' => '\HuaweiCloud\SDK\Mpc\V1\Model\AudioInfo',
             'fileName' => 'string',
+            'manifestName' => 'string',
             'converDuration' => 'double',
             'error' => '\HuaweiCloud\SDK\Mpc\V1\Model\XCodeError'
     ];
@@ -50,6 +52,7 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
     * video  video
     * audio  audio
     * fileName  输出片源文件名
+    * manifestName  独立mpd索引文件名
     * converDuration  折算后视频时长
     * error  error
     *
@@ -62,6 +65,7 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
         'video' => null,
         'audio' => null,
         'fileName' => null,
+        'manifestName' => null,
         'converDuration' => 'double',
         'error' => null
     ];
@@ -95,6 +99,7 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
     * video  video
     * audio  audio
     * fileName  输出片源文件名
+    * manifestName  独立mpd索引文件名
     * converDuration  折算后视频时长
     * error  error
     *
@@ -107,6 +112,7 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
             'video' => 'video',
             'audio' => 'audio',
             'fileName' => 'file_name',
+            'manifestName' => 'manifest_name',
             'converDuration' => 'conver_duration',
             'error' => 'error'
     ];
@@ -119,6 +125,7 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
     * video  video
     * audio  audio
     * fileName  输出片源文件名
+    * manifestName  独立mpd索引文件名
     * converDuration  折算后视频时长
     * error  error
     *
@@ -131,6 +138,7 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
             'video' => 'setVideo',
             'audio' => 'setAudio',
             'fileName' => 'setFileName',
+            'manifestName' => 'setManifestName',
             'converDuration' => 'setConverDuration',
             'error' => 'setError'
     ];
@@ -143,6 +151,7 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
     * video  video
     * audio  audio
     * fileName  输出片源文件名
+    * manifestName  独立mpd索引文件名
     * converDuration  折算后视频时长
     * error  error
     *
@@ -155,6 +164,7 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
             'video' => 'getVideo',
             'audio' => 'getAudio',
             'fileName' => 'getFileName',
+            'manifestName' => 'getManifestName',
             'converDuration' => 'getConverDuration',
             'error' => 'getError'
     ];
@@ -223,6 +233,7 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
         $this->container['video'] = isset($data['video']) ? $data['video'] : null;
         $this->container['audio'] = isset($data['audio']) ? $data['audio'] : null;
         $this->container['fileName'] = isset($data['fileName']) ? $data['fileName'] : null;
+        $this->container['manifestName'] = isset($data['manifestName']) ? $data['manifestName'] : null;
         $this->container['converDuration'] = isset($data['converDuration']) ? $data['converDuration'] : null;
         $this->container['error'] = isset($data['error']) ? $data['error'] : null;
     }
@@ -258,6 +269,12 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['fileName']) && (mb_strlen($this->container['fileName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'fileName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['manifestName']) && (mb_strlen($this->container['manifestName']) > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'manifestName', the character length must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['manifestName']) && (mb_strlen($this->container['manifestName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'manifestName', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['converDuration']) && ($this->container['converDuration'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'converDuration', must be smaller than or equal to 2147483647.";
@@ -420,6 +437,30 @@ class OutputVideoPara implements ModelInterface, ArrayAccess
     public function setFileName($fileName)
     {
         $this->container['fileName'] = $fileName;
+        return $this;
+    }
+
+    /**
+    * Gets manifestName
+    *  独立mpd索引文件名
+    *
+    * @return string|null
+    */
+    public function getManifestName()
+    {
+        return $this->container['manifestName'];
+    }
+
+    /**
+    * Sets manifestName
+    *
+    * @param string|null $manifestName 独立mpd索引文件名
+    *
+    * @return $this
+    */
+    public function setManifestName($manifestName)
+    {
+        $this->container['manifestName'] = $manifestName;
         return $this;
     }
 

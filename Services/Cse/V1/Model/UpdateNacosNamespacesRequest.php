@@ -89,8 +89,8 @@ class UpdateNacosNamespacesRequest implements ModelInterface, ArrayAccess
             'xEngineId' => 'x-engine-id',
             'xEnterpriseProjectId' => 'X-Enterprise-Project-ID',
             'namespace' => 'namespace',
-            'namespaceShowName' => 'namespace_show_name',
-            'namespaceDesc' => 'namespace_desc'
+            'namespaceShowName' => 'namespaceShowName',
+            'namespaceDesc' => 'namespaceDesc'
     ];
 
     /**

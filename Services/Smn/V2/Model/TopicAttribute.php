@@ -20,19 +20,19 @@ class TopicAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessPolicy  accessPolicy
+    * accessPolicy  topic的访问策略
     * introduction  topic的简介
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'accessPolicy' => '\HuaweiCloud\SDK\Smn\V2\Model\AccessPolicy',
+            'accessPolicy' => 'string',
             'introduction' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessPolicy  accessPolicy
+    * accessPolicy  topic的访问策略
     * introduction  topic的简介
     *
     * @var string[]
@@ -65,7 +65,7 @@ class TopicAttribute implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessPolicy  accessPolicy
+    * accessPolicy  topic的访问策略
     * introduction  topic的简介
     *
     * @var string[]
@@ -77,7 +77,7 @@ class TopicAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessPolicy  accessPolicy
+    * accessPolicy  topic的访问策略
     * introduction  topic的简介
     *
     * @var string[]
@@ -89,7 +89,7 @@ class TopicAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessPolicy  accessPolicy
+    * accessPolicy  topic的访问策略
     * introduction  topic的简介
     *
     * @var string[]
@@ -185,9 +185,9 @@ class TopicAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessPolicy
-    *  accessPolicy
+    *  topic的访问策略
     *
-    * @return \HuaweiCloud\SDK\Smn\V2\Model\AccessPolicy|null
+    * @return string|null
     */
     public function getAccessPolicy()
     {
@@ -197,7 +197,7 @@ class TopicAttribute implements ModelInterface, ArrayAccess
     /**
     * Sets accessPolicy
     *
-    * @param \HuaweiCloud\SDK\Smn\V2\Model\AccessPolicy|null $accessPolicy accessPolicy
+    * @param string|null $accessPolicy topic的访问策略
     *
     * @return $this
     */
