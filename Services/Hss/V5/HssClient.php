@@ -2333,11 +2333,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -2564,11 +2564,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/zip']
+                ['application/zip']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/zip'],
+                ['application/zip'],
                 []
             );
         }

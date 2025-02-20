@@ -94,6 +94,71 @@ class CsmsAsyncClient extends Client
     }
 
     /**
+     * 批量导入凭据
+     *
+     * 批量导入凭据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchImportSecretsAsync($request)
+    {
+        return $this->batchImportSecretsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchImportSecretsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/secrets/batch-import';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\V1\Model\BatchImportSecretsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Csms\V1\Model\BatchImportSecretsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建服务委托
      *
      * 创建服务委托。用于创建凭据管理服务相关委托和函数工作流相关委托。
@@ -2238,6 +2303,71 @@ class CsmsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Csms\V1\Model\ShowSecretVersionResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Csms\V1\Model\ShowSecretVersionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取用户详情
+     *
+     * 根据用户id查询用户详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showUserDetailAsync($request)
+    {
+        return $this->showUserDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function showUserDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/csms/users/{user_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['userId'] !== null) {
+            $pathParams['user_id'] = $localVarParams['userId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\V1\Model\ShowUserDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Csms\V1\Model\ShowUserDetailRequest',
             $asyncRequest = true);
     }
 

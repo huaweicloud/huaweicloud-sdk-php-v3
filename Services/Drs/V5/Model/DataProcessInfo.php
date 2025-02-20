@@ -20,7 +20,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filterConditions  指定任务数据加工规则请求体
+    * filterConditions  指定任务数据加工规则请求体,  当进行数据过滤规则校验，必填 当数据过滤规则校验通过，需要更新数据过滤规则时，必填
     * isBatchProcess  库级、批量表级处理为true，单表操作为false
     * addColumns  附加列 当选择附加列时必须填写 约束：使用多对一操作时，需要使用数据加工的附加列操作来避免数据冲突。
     * ddlOperation  支持DDL的语法 选择增量迁移或同步的DDL操作。取值及意思如下： \"table\": \"CREATE TABLE, ALTER TABLE,DROP TABLE,RENAME TABLE\" 如该值为空，不迁移或同步DDL操作
@@ -30,6 +30,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     * dbObject  dbObject
     * isSynchronized  表示该规则是否已同步至目标库
     * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    * processRuleLevel  数据加工规则作用级别 - table 表示数据同步时的过滤 - combinations 表示组合集，对多个表的操作  当进行数据过滤规则校验，必填 当需要更新数据加工规则（数据过滤、列加工等）时，必填
     *
     * @var string[]
     */
@@ -43,12 +44,13 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
             'dbOrTableRenameRule' => '\HuaweiCloud\SDK\Drs\V5\Model\DbOrTableRenameRule',
             'dbObject' => '\HuaweiCloud\SDK\Drs\V5\Model\DbObject',
             'isSynchronized' => 'bool',
-            'source' => 'string'
+            'source' => 'string',
+            'processRuleLevel' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filterConditions  指定任务数据加工规则请求体
+    * filterConditions  指定任务数据加工规则请求体,  当进行数据过滤规则校验，必填 当数据过滤规则校验通过，需要更新数据过滤规则时，必填
     * isBatchProcess  库级、批量表级处理为true，单表操作为false
     * addColumns  附加列 当选择附加列时必须填写 约束：使用多对一操作时，需要使用数据加工的附加列操作来避免数据冲突。
     * ddlOperation  支持DDL的语法 选择增量迁移或同步的DDL操作。取值及意思如下： \"table\": \"CREATE TABLE, ALTER TABLE,DROP TABLE,RENAME TABLE\" 如该值为空，不迁移或同步DDL操作
@@ -58,6 +60,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     * dbObject  dbObject
     * isSynchronized  表示该规则是否已同步至目标库
     * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    * processRuleLevel  数据加工规则作用级别 - table 表示数据同步时的过滤 - combinations 表示组合集，对多个表的操作  当进行数据过滤规则校验，必填 当需要更新数据加工规则（数据过滤、列加工等）时，必填
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
         'dbOrTableRenameRule' => null,
         'dbObject' => null,
         'isSynchronized' => null,
-        'source' => null
+        'source' => null,
+        'processRuleLevel' => null
     ];
 
     /**
@@ -97,7 +101,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filterConditions  指定任务数据加工规则请求体
+    * filterConditions  指定任务数据加工规则请求体,  当进行数据过滤规则校验，必填 当数据过滤规则校验通过，需要更新数据过滤规则时，必填
     * isBatchProcess  库级、批量表级处理为true，单表操作为false
     * addColumns  附加列 当选择附加列时必须填写 约束：使用多对一操作时，需要使用数据加工的附加列操作来避免数据冲突。
     * ddlOperation  支持DDL的语法 选择增量迁移或同步的DDL操作。取值及意思如下： \"table\": \"CREATE TABLE, ALTER TABLE,DROP TABLE,RENAME TABLE\" 如该值为空，不迁移或同步DDL操作
@@ -107,6 +111,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     * dbObject  dbObject
     * isSynchronized  表示该规则是否已同步至目标库
     * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    * processRuleLevel  数据加工规则作用级别 - table 表示数据同步时的过滤 - combinations 表示组合集，对多个表的操作  当进行数据过滤规则校验，必填 当需要更新数据加工规则（数据过滤、列加工等）时，必填
     *
     * @var string[]
     */
@@ -120,12 +125,13 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
             'dbOrTableRenameRule' => 'db_or_table_rename_rule',
             'dbObject' => 'db_object',
             'isSynchronized' => 'is_synchronized',
-            'source' => 'source'
+            'source' => 'source',
+            'processRuleLevel' => 'process_rule_level'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filterConditions  指定任务数据加工规则请求体
+    * filterConditions  指定任务数据加工规则请求体,  当进行数据过滤规则校验，必填 当数据过滤规则校验通过，需要更新数据过滤规则时，必填
     * isBatchProcess  库级、批量表级处理为true，单表操作为false
     * addColumns  附加列 当选择附加列时必须填写 约束：使用多对一操作时，需要使用数据加工的附加列操作来避免数据冲突。
     * ddlOperation  支持DDL的语法 选择增量迁移或同步的DDL操作。取值及意思如下： \"table\": \"CREATE TABLE, ALTER TABLE,DROP TABLE,RENAME TABLE\" 如该值为空，不迁移或同步DDL操作
@@ -135,6 +141,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     * dbObject  dbObject
     * isSynchronized  表示该规则是否已同步至目标库
     * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    * processRuleLevel  数据加工规则作用级别 - table 表示数据同步时的过滤 - combinations 表示组合集，对多个表的操作  当进行数据过滤规则校验，必填 当需要更新数据加工规则（数据过滤、列加工等）时，必填
     *
     * @var string[]
     */
@@ -148,12 +155,13 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
             'dbOrTableRenameRule' => 'setDbOrTableRenameRule',
             'dbObject' => 'setDbObject',
             'isSynchronized' => 'setIsSynchronized',
-            'source' => 'setSource'
+            'source' => 'setSource',
+            'processRuleLevel' => 'setProcessRuleLevel'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filterConditions  指定任务数据加工规则请求体
+    * filterConditions  指定任务数据加工规则请求体,  当进行数据过滤规则校验，必填 当数据过滤规则校验通过，需要更新数据过滤规则时，必填
     * isBatchProcess  库级、批量表级处理为true，单表操作为false
     * addColumns  附加列 当选择附加列时必须填写 约束：使用多对一操作时，需要使用数据加工的附加列操作来避免数据冲突。
     * ddlOperation  支持DDL的语法 选择增量迁移或同步的DDL操作。取值及意思如下： \"table\": \"CREATE TABLE, ALTER TABLE,DROP TABLE,RENAME TABLE\" 如该值为空，不迁移或同步DDL操作
@@ -163,6 +171,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     * dbObject  dbObject
     * isSynchronized  表示该规则是否已同步至目标库
     * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    * processRuleLevel  数据加工规则作用级别 - table 表示数据同步时的过滤 - combinations 表示组合集，对多个表的操作  当进行数据过滤规则校验，必填 当需要更新数据加工规则（数据过滤、列加工等）时，必填
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
             'dbOrTableRenameRule' => 'getDbOrTableRenameRule',
             'dbObject' => 'getDbObject',
             'isSynchronized' => 'getIsSynchronized',
-            'source' => 'getSource'
+            'source' => 'getSource',
+            'processRuleLevel' => 'getProcessRuleLevel'
     ];
 
     /**
@@ -221,6 +231,8 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     }
     const SOURCE_JOB = 'job';
     const SOURCE_COMPARE = 'compare';
+    const PROCESS_RULE_LEVEL_TABLE = 'table';
+    const PROCESS_RULE_LEVEL_COMBINATIONS = 'combinations';
     
 
     /**
@@ -233,6 +245,19 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
         return [
             self::SOURCE_JOB,
             self::SOURCE_COMPARE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProcessRuleLevelAllowableValues()
+    {
+        return [
+            self::PROCESS_RULE_LEVEL_TABLE,
+            self::PROCESS_RULE_LEVEL_COMBINATIONS,
         ];
     }
 
@@ -262,6 +287,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
         $this->container['dbObject'] = isset($data['dbObject']) ? $data['dbObject'] : null;
         $this->container['isSynchronized'] = isset($data['isSynchronized']) ? $data['isSynchronized'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
+        $this->container['processRuleLevel'] = isset($data['processRuleLevel']) ? $data['processRuleLevel'] : null;
     }
 
     /**
@@ -276,6 +302,14 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['source']) && !in_array($this->container['source'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'source', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getProcessRuleLevelAllowableValues();
+                if (!is_null($this->container['processRuleLevel']) && !in_array($this->container['processRuleLevel'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'processRuleLevel', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -296,7 +330,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets filterConditions
-    *  指定任务数据加工规则请求体
+    *  指定任务数据加工规则请求体,  当进行数据过滤规则校验，必填 当数据过滤规则校验通过，需要更新数据过滤规则时，必填
     *
     * @return \HuaweiCloud\SDK\Drs\V5\Model\DataFilteringCondition[]|null
     */
@@ -308,7 +342,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     /**
     * Sets filterConditions
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\DataFilteringCondition[]|null $filterConditions 指定任务数据加工规则请求体
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\DataFilteringCondition[]|null $filterConditions 指定任务数据加工规则请求体,  当进行数据过滤规则校验，必填 当数据过滤规则校验通过，需要更新数据过滤规则时，必填
     *
     * @return $this
     */
@@ -531,6 +565,30 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     public function setSource($source)
     {
         $this->container['source'] = $source;
+        return $this;
+    }
+
+    /**
+    * Gets processRuleLevel
+    *  数据加工规则作用级别 - table 表示数据同步时的过滤 - combinations 表示组合集，对多个表的操作  当进行数据过滤规则校验，必填 当需要更新数据加工规则（数据过滤、列加工等）时，必填
+    *
+    * @return string|null
+    */
+    public function getProcessRuleLevel()
+    {
+        return $this->container['processRuleLevel'];
+    }
+
+    /**
+    * Sets processRuleLevel
+    *
+    * @param string|null $processRuleLevel 数据加工规则作用级别 - table 表示数据同步时的过滤 - combinations 表示组合集，对多个表的操作  当进行数据过滤规则校验，必填 当需要更新数据加工规则（数据过滤、列加工等）时，必填
+    *
+    * @return $this
+    */
+    public function setProcessRuleLevel($processRuleLevel)
+    {
+        $this->container['processRuleLevel'] = $processRuleLevel;
         return $this;
     }
 

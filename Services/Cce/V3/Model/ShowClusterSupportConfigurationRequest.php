@@ -194,15 +194,6 @@ class ShowClusterSupportConfigurationRequest implements ModelInterface, ArrayAcc
             if (!is_null($this->container['clusterId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['clusterId'])) {
                 $invalidProperties[] = "invalid value for 'clusterId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
-        if ($this->container['clusterType'] === null) {
-            $invalidProperties[] = "'clusterType' can't be null";
-        }
-        if ($this->container['clusterVersion'] === null) {
-            $invalidProperties[] = "'clusterVersion' can't be null";
-        }
-        if ($this->container['networkMode'] === null) {
-            $invalidProperties[] = "'networkMode' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -245,7 +236,7 @@ class ShowClusterSupportConfigurationRequest implements ModelInterface, ArrayAcc
     * Gets clusterType
     *  集群类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
-    * @return string
+    * @return string|null
     */
     public function getClusterType()
     {
@@ -255,7 +246,7 @@ class ShowClusterSupportConfigurationRequest implements ModelInterface, ArrayAcc
     /**
     * Sets clusterType
     *
-    * @param string $clusterType 集群类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * @param string|null $clusterType 集群类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
     * @return $this
     */
@@ -269,7 +260,7 @@ class ShowClusterSupportConfigurationRequest implements ModelInterface, ArrayAcc
     * Gets clusterVersion
     *  集群版本，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
-    * @return string
+    * @return string|null
     */
     public function getClusterVersion()
     {
@@ -279,7 +270,7 @@ class ShowClusterSupportConfigurationRequest implements ModelInterface, ArrayAcc
     /**
     * Sets clusterVersion
     *
-    * @param string $clusterVersion 集群版本，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * @param string|null $clusterVersion 集群版本，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
     * @return $this
     */
@@ -293,7 +284,7 @@ class ShowClusterSupportConfigurationRequest implements ModelInterface, ArrayAcc
     * Gets networkMode
     *  集群网络类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
-    * @return string
+    * @return string|null
     */
     public function getNetworkMode()
     {
@@ -303,7 +294,7 @@ class ShowClusterSupportConfigurationRequest implements ModelInterface, ArrayAcc
     /**
     * Sets networkMode
     *
-    * @param string $networkMode 集群网络类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * @param string|null $networkMode 集群网络类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
     * @return $this
     */

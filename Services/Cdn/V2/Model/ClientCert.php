@@ -20,28 +20,28 @@ class ClientCert implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * validation  客户端证书配置开关，1：打开；0：关闭。
+    * status  客户端证书配置开关，on：打开；off：关闭。
     * trustedCert  客户端CA证书的内容，仅支持PEM格式。
     * hosts  客户端CA证书指定的域名。   > 1. 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求。   > 2. 最多可配置100个域名，多个域名用“,”或“|”分隔。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'validation' => 'int',
+            'status' => 'string',
             'trustedCert' => 'string',
             'hosts' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * validation  客户端证书配置开关，1：打开；0：关闭。
+    * status  客户端证书配置开关，on：打开；off：关闭。
     * trustedCert  客户端CA证书的内容，仅支持PEM格式。
     * hosts  客户端CA证书指定的域名。   > 1. 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求。   > 2. 最多可配置100个域名，多个域名用“,”或“|”分隔。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'validation' => 'int32',
+        'status' => null,
         'trustedCert' => null,
         'hosts' => null
     ];
@@ -69,42 +69,42 @@ class ClientCert implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * validation  客户端证书配置开关，1：打开；0：关闭。
+    * status  客户端证书配置开关，on：打开；off：关闭。
     * trustedCert  客户端CA证书的内容，仅支持PEM格式。
     * hosts  客户端CA证书指定的域名。   > 1. 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求。   > 2. 最多可配置100个域名，多个域名用“,”或“|”分隔。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'validation' => 'validation',
+            'status' => 'status',
             'trustedCert' => 'trusted_cert',
             'hosts' => 'hosts'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * validation  客户端证书配置开关，1：打开；0：关闭。
+    * status  客户端证书配置开关，on：打开；off：关闭。
     * trustedCert  客户端CA证书的内容，仅支持PEM格式。
     * hosts  客户端CA证书指定的域名。   > 1. 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求。   > 2. 最多可配置100个域名，多个域名用“,”或“|”分隔。
     *
     * @var string[]
     */
     protected static $setters = [
-            'validation' => 'setValidation',
+            'status' => 'setStatus',
             'trustedCert' => 'setTrustedCert',
             'hosts' => 'setHosts'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * validation  客户端证书配置开关，1：打开；0：关闭。
+    * status  客户端证书配置开关，on：打开；off：关闭。
     * trustedCert  客户端CA证书的内容，仅支持PEM格式。
     * hosts  客户端CA证书指定的域名。   > 1. 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求。   > 2. 最多可配置100个域名，多个域名用“,”或“|”分隔。
     *
     * @var string[]
     */
     protected static $getters = [
-            'validation' => 'getValidation',
+            'status' => 'getStatus',
             'trustedCert' => 'getTrustedCert',
             'hosts' => 'getHosts'
     ];
@@ -167,7 +167,7 @@ class ClientCert implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['validation'] = isset($data['validation']) ? $data['validation'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['trustedCert'] = isset($data['trustedCert']) ? $data['trustedCert'] : null;
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
     }
@@ -180,8 +180,8 @@ class ClientCert implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['validation'] === null) {
-            $invalidProperties[] = "'validation' can't be null";
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
         }
         if ($this->container['trustedCert'] === null) {
             $invalidProperties[] = "'trustedCert' can't be null";
@@ -201,26 +201,26 @@ class ClientCert implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets validation
-    *  客户端证书配置开关，1：打开；0：关闭。
+    * Gets status
+    *  客户端证书配置开关，on：打开；off：关闭。
     *
-    * @return int
+    * @return string
     */
-    public function getValidation()
+    public function getStatus()
     {
-        return $this->container['validation'];
+        return $this->container['status'];
     }
 
     /**
-    * Sets validation
+    * Sets status
     *
-    * @param int $validation 客户端证书配置开关，1：打开；0：关闭。
+    * @param string $status 客户端证书配置开关，on：打开；off：关闭。
     *
     * @return $this
     */
-    public function setValidation($validation)
+    public function setStatus($status)
     {
-        $this->container['validation'] = $validation;
+        $this->container['status'] = $status;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class ExportCompareResultReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     * compareJobId  对比任务的ID，内容对比、抽样对比、行数对比场景必填。
     * timeZone  时区，如GMT+08:00，用于生成当前时间标识，拼接到文件名称中。
     *
@@ -34,7 +34,7 @@ class ExportCompareResultReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     * compareJobId  对比任务的ID，内容对比、抽样对比、行数对比场景必填。
     * timeZone  时区，如GMT+08:00，用于生成当前时间标识，拼接到文件名称中。
     *
@@ -69,7 +69,7 @@ class ExportCompareResultReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     * compareJobId  对比任务的ID，内容对比、抽样对比、行数对比场景必填。
     * timeZone  时区，如GMT+08:00，用于生成当前时间标识，拼接到文件名称中。
     *
@@ -83,7 +83,7 @@ class ExportCompareResultReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     * compareJobId  对比任务的ID，内容对比、抽样对比、行数对比场景必填。
     * timeZone  时区，如GMT+08:00，用于生成当前时间标识，拼接到文件名称中。
     *
@@ -97,7 +97,7 @@ class ExportCompareResultReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     * compareJobId  对比任务的ID，内容对比、抽样对比、行数对比场景必填。
     * timeZone  时区，如GMT+08:00，用于生成当前时间标识，拼接到文件名称中。
     *
@@ -199,7 +199,7 @@ class ExportCompareResultReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets compareType
-    *  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    *  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     *
     * @return string
     */
@@ -211,7 +211,7 @@ class ExportCompareResultReq implements ModelInterface, ArrayAccess
     /**
     * Sets compareType
     *
-    * @param string $compareType 对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    * @param string $compareType 对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     *
     * @return $this
     */

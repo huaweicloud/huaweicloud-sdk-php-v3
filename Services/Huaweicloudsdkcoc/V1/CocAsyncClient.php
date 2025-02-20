@@ -106,6 +106,148 @@ class CocAsyncClient extends Client
     }
 
     /**
+     * 查询下一级的子应用、组件、分组
+     *
+     * 查询下一级的子应用、组件、分组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listApplicationModelAsync($request)
+    {
+        return $this->listApplicationModelAsyncWithHttpInfo($request);
+    }
+    
+    public function listApplicationModelAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/application-model/next';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $queryParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['componentId'] !== null) {
+            $queryParams['component_id'] = $localVarParams['componentId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['pageNo'] !== null) {
+            $queryParams['page_no'] = $localVarParams['pageNo'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListApplicationModelResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListApplicationModelRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量创建应用视图
+     *
+     * 批量创建应用视图
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateApplicationViewAsync($request)
+    {
+        return $this->batchCreateApplicationViewAsyncWithHttpInfo($request);
+    }
+    
+    public function batchCreateApplicationViewAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/application-view/batch-create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取节点合规性报告
      *
      * 分页获取节点合规性报告
@@ -898,6 +1040,163 @@ class CocAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListAuthorizableTicketsExternalResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListAuthorizableTicketsExternalRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询用户在云厂商中的资源
+     *
+     * 查询用户在云厂商中的资源
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listMultiCloudResourcesAsync($request)
+    {
+        return $this->listMultiCloudResourcesAsyncWithHttpInfo($request);
+    }
+    
+    public function listMultiCloudResourcesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/multicloud-resources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vendor'] !== null) {
+            $queryParams['vendor'] = $localVarParams['vendor'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['resourceIdList'] !== null) {
+            $queryParams['resource_id_list'] = $localVarParams['resourceIdList'];
+        }
+        if ($localVarParams['nameList'] !== null) {
+            $queryParams['name_list'] = $localVarParams['nameList'];
+        }
+        if ($localVarParams['regionIdList'] !== null) {
+            $queryParams['region_id_list'] = $localVarParams['regionIdList'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListMultiCloudResourcesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListMultiCloudResourcesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询用户各种资源总数
+     *
+     * 查询用户各种资源总数
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countMultiResourcesAsync($request)
+    {
+        return $this->countMultiResourcesAsyncWithHttpInfo($request);
+    }
+    
+    public function countMultiResourcesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resources/multi-count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vendor'] !== null) {
+            $queryParams['vendor'] = $localVarParams['vendor'];
+        }
+        if ($localVarParams['viewId'] !== null) {
+            $queryParams['view_id'] = $localVarParams['viewId'];
+        }
+        if ($localVarParams['isResource'] !== null) {
+            $queryParams['is_resource'] = $localVarParams['isResource'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\CountMultiResourcesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\CountMultiResourcesRequest',
             $asyncRequest = true);
     }
 

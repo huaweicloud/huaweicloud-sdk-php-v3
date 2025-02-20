@@ -31,6 +31,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
     * replayConfig  replayConfig
+    * repairInfo  repairInfo
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ActionParams implements ModelInterface, ArrayAccess
             'isOnlyInitTask' => 'bool',
             'forceDelete' => 'bool',
             'publicIpConfig' => '\HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig',
-            'replayConfig' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayConfigInfo'
+            'replayConfig' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayConfigInfo',
+            'repairInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\ActionParamsRepairInfo'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
     * replayConfig  replayConfig
+    * repairInfo  repairInfo
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ActionParams implements ModelInterface, ArrayAccess
         'isOnlyInitTask' => null,
         'forceDelete' => null,
         'publicIpConfig' => null,
-        'replayConfig' => null
+        'replayConfig' => null,
+        'repairInfo' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
     * replayConfig  replayConfig
+    * repairInfo  repairInfo
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ActionParams implements ModelInterface, ArrayAccess
             'isOnlyInitTask' => 'is_only_init_task',
             'forceDelete' => 'force_delete',
             'publicIpConfig' => 'public_ip_config',
-            'replayConfig' => 'replay_config'
+            'replayConfig' => 'replay_config',
+            'repairInfo' => 'repair_info'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
     * replayConfig  replayConfig
+    * repairInfo  repairInfo
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ActionParams implements ModelInterface, ArrayAccess
             'isOnlyInitTask' => 'setIsOnlyInitTask',
             'forceDelete' => 'setForceDelete',
             'publicIpConfig' => 'setPublicIpConfig',
-            'replayConfig' => 'setReplayConfig'
+            'replayConfig' => 'setReplayConfig',
+            'repairInfo' => 'setRepairInfo'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
     * replayConfig  replayConfig
+    * repairInfo  repairInfo
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ActionParams implements ModelInterface, ArrayAccess
             'isOnlyInitTask' => 'getIsOnlyInitTask',
             'forceDelete' => 'getForceDelete',
             'publicIpConfig' => 'getPublicIpConfig',
-            'replayConfig' => 'getReplayConfig'
+            'replayConfig' => 'getReplayConfig',
+            'repairInfo' => 'getRepairInfo'
     ];
 
     /**
@@ -258,6 +268,7 @@ class ActionParams implements ModelInterface, ArrayAccess
         $this->container['forceDelete'] = isset($data['forceDelete']) ? $data['forceDelete'] : null;
         $this->container['publicIpConfig'] = isset($data['publicIpConfig']) ? $data['publicIpConfig'] : null;
         $this->container['replayConfig'] = isset($data['replayConfig']) ? $data['replayConfig'] : null;
+        $this->container['repairInfo'] = isset($data['repairInfo']) ? $data['repairInfo'] : null;
     }
 
     /**
@@ -543,6 +554,30 @@ class ActionParams implements ModelInterface, ArrayAccess
     public function setReplayConfig($replayConfig)
     {
         $this->container['replayConfig'] = $replayConfig;
+        return $this;
+    }
+
+    /**
+    * Gets repairInfo
+    *  repairInfo
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\ActionParamsRepairInfo|null
+    */
+    public function getRepairInfo()
+    {
+        return $this->container['repairInfo'];
+    }
+
+    /**
+    * Sets repairInfo
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\ActionParamsRepairInfo|null $repairInfo repairInfo
+    *
+    * @return $this
+    */
+    public function setRepairInfo($repairInfo)
+    {
+        $this->container['repairInfo'] = $repairInfo;
         return $this;
     }
 

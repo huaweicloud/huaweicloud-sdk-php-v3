@@ -51,6 +51,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * bindPublicIpState  是否成功绑定公网IP
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
+    * diagnoses  一键诊断结果。
+    * repairProgressInfo  repairProgressInfo
+    * repairDetailInfo  repairDetailInfo
+    * repairExportStatus  修复SQL导出状态。
     *
     * @var string[]
     */
@@ -85,7 +89,11 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'publicIpList' => '\HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig[]',
             'bindPublicIpState' => 'string',
             'children' => '\HuaweiCloud\SDK\Drs\V5\Model\FailedToBindEipChildInfo[]',
-            'isWritable' => 'string'
+            'isWritable' => 'string',
+            'diagnoses' => '\HuaweiCloud\SDK\Drs\V5\Model\QueryDiagnosisResult[]',
+            'repairProgressInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\JobDetailRespRepairProgressInfo',
+            'repairDetailInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\QueryRepairDetailResp',
+            'repairExportStatus' => 'string'
     ];
 
     /**
@@ -121,6 +129,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * bindPublicIpState  是否成功绑定公网IP
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
+    * diagnoses  一键诊断结果。
+    * repairProgressInfo  repairProgressInfo
+    * repairDetailInfo  repairDetailInfo
+    * repairExportStatus  修复SQL导出状态。
     *
     * @var string[]
     */
@@ -155,7 +167,11 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         'publicIpList' => null,
         'bindPublicIpState' => null,
         'children' => null,
-        'isWritable' => null
+        'isWritable' => null,
+        'diagnoses' => null,
+        'repairProgressInfo' => null,
+        'repairDetailInfo' => null,
+        'repairExportStatus' => null
     ];
 
     /**
@@ -212,6 +228,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * bindPublicIpState  是否成功绑定公网IP
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
+    * diagnoses  一键诊断结果。
+    * repairProgressInfo  repairProgressInfo
+    * repairDetailInfo  repairDetailInfo
+    * repairExportStatus  修复SQL导出状态。
     *
     * @var string[]
     */
@@ -246,7 +266,11 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'publicIpList' => 'public_ip_list',
             'bindPublicIpState' => 'bind_public_ip_state',
             'children' => 'children',
-            'isWritable' => 'is_writable'
+            'isWritable' => 'is_writable',
+            'diagnoses' => 'diagnoses',
+            'repairProgressInfo' => 'repair_progress_info',
+            'repairDetailInfo' => 'repair_detail_info',
+            'repairExportStatus' => 'repair_export_status'
     ];
 
     /**
@@ -282,6 +306,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * bindPublicIpState  是否成功绑定公网IP
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
+    * diagnoses  一键诊断结果。
+    * repairProgressInfo  repairProgressInfo
+    * repairDetailInfo  repairDetailInfo
+    * repairExportStatus  修复SQL导出状态。
     *
     * @var string[]
     */
@@ -316,7 +344,11 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'publicIpList' => 'setPublicIpList',
             'bindPublicIpState' => 'setBindPublicIpState',
             'children' => 'setChildren',
-            'isWritable' => 'setIsWritable'
+            'isWritable' => 'setIsWritable',
+            'diagnoses' => 'setDiagnoses',
+            'repairProgressInfo' => 'setRepairProgressInfo',
+            'repairDetailInfo' => 'setRepairDetailInfo',
+            'repairExportStatus' => 'setRepairExportStatus'
     ];
 
     /**
@@ -352,6 +384,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * bindPublicIpState  是否成功绑定公网IP
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
+    * diagnoses  一键诊断结果。
+    * repairProgressInfo  repairProgressInfo
+    * repairDetailInfo  repairDetailInfo
+    * repairExportStatus  修复SQL导出状态。
     *
     * @var string[]
     */
@@ -386,7 +422,11 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'publicIpList' => 'getPublicIpList',
             'bindPublicIpState' => 'getBindPublicIpState',
             'children' => 'getChildren',
-            'isWritable' => 'getIsWritable'
+            'isWritable' => 'getIsWritable',
+            'diagnoses' => 'getDiagnoses',
+            'repairProgressInfo' => 'getRepairProgressInfo',
+            'repairDetailInfo' => 'getRepairDetailInfo',
+            'repairExportStatus' => 'getRepairExportStatus'
     ];
 
     /**
@@ -562,6 +602,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         $this->container['bindPublicIpState'] = isset($data['bindPublicIpState']) ? $data['bindPublicIpState'] : null;
         $this->container['children'] = isset($data['children']) ? $data['children'] : null;
         $this->container['isWritable'] = isset($data['isWritable']) ? $data['isWritable'] : null;
+        $this->container['diagnoses'] = isset($data['diagnoses']) ? $data['diagnoses'] : null;
+        $this->container['repairProgressInfo'] = isset($data['repairProgressInfo']) ? $data['repairProgressInfo'] : null;
+        $this->container['repairDetailInfo'] = isset($data['repairDetailInfo']) ? $data['repairDetailInfo'] : null;
+        $this->container['repairExportStatus'] = isset($data['repairExportStatus']) ? $data['repairExportStatus'] : null;
     }
 
     /**
@@ -1343,6 +1387,102 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     public function setIsWritable($isWritable)
     {
         $this->container['isWritable'] = $isWritable;
+        return $this;
+    }
+
+    /**
+    * Gets diagnoses
+    *  一键诊断结果。
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\QueryDiagnosisResult[]|null
+    */
+    public function getDiagnoses()
+    {
+        return $this->container['diagnoses'];
+    }
+
+    /**
+    * Sets diagnoses
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\QueryDiagnosisResult[]|null $diagnoses 一键诊断结果。
+    *
+    * @return $this
+    */
+    public function setDiagnoses($diagnoses)
+    {
+        $this->container['diagnoses'] = $diagnoses;
+        return $this;
+    }
+
+    /**
+    * Gets repairProgressInfo
+    *  repairProgressInfo
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\JobDetailRespRepairProgressInfo|null
+    */
+    public function getRepairProgressInfo()
+    {
+        return $this->container['repairProgressInfo'];
+    }
+
+    /**
+    * Sets repairProgressInfo
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\JobDetailRespRepairProgressInfo|null $repairProgressInfo repairProgressInfo
+    *
+    * @return $this
+    */
+    public function setRepairProgressInfo($repairProgressInfo)
+    {
+        $this->container['repairProgressInfo'] = $repairProgressInfo;
+        return $this;
+    }
+
+    /**
+    * Gets repairDetailInfo
+    *  repairDetailInfo
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\QueryRepairDetailResp|null
+    */
+    public function getRepairDetailInfo()
+    {
+        return $this->container['repairDetailInfo'];
+    }
+
+    /**
+    * Sets repairDetailInfo
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\QueryRepairDetailResp|null $repairDetailInfo repairDetailInfo
+    *
+    * @return $this
+    */
+    public function setRepairDetailInfo($repairDetailInfo)
+    {
+        $this->container['repairDetailInfo'] = $repairDetailInfo;
+        return $this;
+    }
+
+    /**
+    * Gets repairExportStatus
+    *  修复SQL导出状态。
+    *
+    * @return string|null
+    */
+    public function getRepairExportStatus()
+    {
+        return $this->container['repairExportStatus'];
+    }
+
+    /**
+    * Sets repairExportStatus
+    *
+    * @param string|null $repairExportStatus 修复SQL导出状态。
+    *
+    * @return $this
+    */
+    public function setRepairExportStatus($repairExportStatus)
+    {
+        $this->container['repairExportStatus'] = $repairExportStatus;
         return $this;
     }
 

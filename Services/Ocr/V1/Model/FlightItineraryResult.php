@@ -44,6 +44,7 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
     * number  发票号码
     * internationalFlag  国内国际标签
     * issueStatus  开具状态
+    * gpNumber  gp单号。
     * itineraryList  机票行程列表。
     * confidence  相关字段的置信度信息，取值范围0~1。  置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。  > 说明：  - （1）置信度中的相关字段均与返回值中的相关字段一一对应；  - （2）置信度中的itinerary_list的顺序与返回值中的itinerary_list的顺序是一致的。
     *
@@ -74,6 +75,7 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
             'number' => 'string',
             'internationalFlag' => 'string',
             'issueStatus' => 'string',
+            'gpNumber' => 'string',
             'itineraryList' => '\HuaweiCloud\SDK\Ocr\V1\Model\ItineraryList[]',
             'confidence' => 'object'
     ];
@@ -104,6 +106,7 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
     * number  发票号码
     * internationalFlag  国内国际标签
     * issueStatus  开具状态
+    * gpNumber  gp单号。
     * itineraryList  机票行程列表。
     * confidence  相关字段的置信度信息，取值范围0~1。  置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。  > 说明：  - （1）置信度中的相关字段均与返回值中的相关字段一一对应；  - （2）置信度中的itinerary_list的顺序与返回值中的itinerary_list的顺序是一致的。
     *
@@ -134,6 +137,7 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
         'number' => null,
         'internationalFlag' => null,
         'issueStatus' => null,
+        'gpNumber' => null,
         'itineraryList' => null,
         'confidence' => null
     ];
@@ -185,6 +189,7 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
     * number  发票号码
     * internationalFlag  国内国际标签
     * issueStatus  开具状态
+    * gpNumber  gp单号。
     * itineraryList  机票行程列表。
     * confidence  相关字段的置信度信息，取值范围0~1。  置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。  > 说明：  - （1）置信度中的相关字段均与返回值中的相关字段一一对应；  - （2）置信度中的itinerary_list的顺序与返回值中的itinerary_list的顺序是一致的。
     *
@@ -215,6 +220,7 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
             'number' => 'number',
             'internationalFlag' => 'international_flag',
             'issueStatus' => 'issue_status',
+            'gpNumber' => 'gp_number',
             'itineraryList' => 'itinerary_list',
             'confidence' => 'confidence'
     ];
@@ -245,6 +251,7 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
     * number  发票号码
     * internationalFlag  国内国际标签
     * issueStatus  开具状态
+    * gpNumber  gp单号。
     * itineraryList  机票行程列表。
     * confidence  相关字段的置信度信息，取值范围0~1。  置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。  > 说明：  - （1）置信度中的相关字段均与返回值中的相关字段一一对应；  - （2）置信度中的itinerary_list的顺序与返回值中的itinerary_list的顺序是一致的。
     *
@@ -275,6 +282,7 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
             'number' => 'setNumber',
             'internationalFlag' => 'setInternationalFlag',
             'issueStatus' => 'setIssueStatus',
+            'gpNumber' => 'setGpNumber',
             'itineraryList' => 'setItineraryList',
             'confidence' => 'setConfidence'
     ];
@@ -305,6 +313,7 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
     * number  发票号码
     * internationalFlag  国内国际标签
     * issueStatus  开具状态
+    * gpNumber  gp单号。
     * itineraryList  机票行程列表。
     * confidence  相关字段的置信度信息，取值范围0~1。  置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。  > 说明：  - （1）置信度中的相关字段均与返回值中的相关字段一一对应；  - （2）置信度中的itinerary_list的顺序与返回值中的itinerary_list的顺序是一致的。
     *
@@ -335,6 +344,7 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
             'number' => 'getNumber',
             'internationalFlag' => 'getInternationalFlag',
             'issueStatus' => 'getIssueStatus',
+            'gpNumber' => 'getGpNumber',
             'itineraryList' => 'getItineraryList',
             'confidence' => 'getConfidence'
     ];
@@ -421,6 +431,7 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
         $this->container['number'] = isset($data['number']) ? $data['number'] : null;
         $this->container['internationalFlag'] = isset($data['internationalFlag']) ? $data['internationalFlag'] : null;
         $this->container['issueStatus'] = isset($data['issueStatus']) ? $data['issueStatus'] : null;
+        $this->container['gpNumber'] = isset($data['gpNumber']) ? $data['gpNumber'] : null;
         $this->container['itineraryList'] = isset($data['itineraryList']) ? $data['itineraryList'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
     }
@@ -1020,6 +1031,30 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
     public function setIssueStatus($issueStatus)
     {
         $this->container['issueStatus'] = $issueStatus;
+        return $this;
+    }
+
+    /**
+    * Gets gpNumber
+    *  gp单号。
+    *
+    * @return string|null
+    */
+    public function getGpNumber()
+    {
+        return $this->container['gpNumber'];
+    }
+
+    /**
+    * Sets gpNumber
+    *
+    * @param string|null $gpNumber gp单号。
+    *
+    * @return $this
+    */
+    public function setGpNumber($gpNumber)
+    {
+        $this->container['gpNumber'] = $gpNumber;
         return $this;
     }
 

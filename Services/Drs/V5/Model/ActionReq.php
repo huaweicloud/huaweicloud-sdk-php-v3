@@ -21,7 +21,7 @@ class ActionReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID (对比任务相关操作，多任务场景传父任务详情返回的master_job_id)，批量操作时必填
-    * actionName  操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。
+    * actionName  操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。 - diagnosis：一键诊断。 - start_repair：开始数据修复。 - stop_repair：停止数据修复。
     * actionParams  actionParams
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ActionReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID (对比任务相关操作，多任务场景传父任务详情返回的master_job_id)，批量操作时必填
-    * actionName  操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。
+    * actionName  操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。 - diagnosis：一键诊断。 - start_repair：开始数据修复。 - stop_repair：停止数据修复。
     * actionParams  actionParams
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ActionReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  任务ID (对比任务相关操作，多任务场景传父任务详情返回的master_job_id)，批量操作时必填
-    * actionName  操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。
+    * actionName  操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。 - diagnosis：一键诊断。 - start_repair：开始数据修复。 - stop_repair：停止数据修复。
     * actionParams  actionParams
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ActionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID (对比任务相关操作，多任务场景传父任务详情返回的master_job_id)，批量操作时必填
-    * actionName  操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。
+    * actionName  操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。 - diagnosis：一键诊断。 - start_repair：开始数据修复。 - stop_repair：停止数据修复。
     * actionParams  actionParams
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ActionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID (对比任务相关操作，多任务场景传父任务详情返回的master_job_id)，批量操作时必填
-    * actionName  操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。
+    * actionName  操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。 - diagnosis：一键诊断。 - start_repair：开始数据修复。 - stop_repair：停止数据修复。
     * actionParams  actionParams
     *
     * @var string[]
@@ -166,6 +166,9 @@ class ActionReq implements ModelInterface, ArrayAccess
     const ACTION_NAME_SET_WRITABLE = 'set_writable';
     const ACTION_NAME_CLOUD_CONNECTION = 'cloud_connection';
     const ACTION_NAME_SET_READONLY = 'set_readonly';
+    const ACTION_NAME_DIAGNOSIS = 'diagnosis：一键诊断。';
+    const ACTION_NAME_START_REPAIR = 'start_repair：开始数据修复。';
+    const ACTION_NAME_STOP_REPAIR = 'stop_repair：停止数据修复。';
     
 
     /**
@@ -193,6 +196,9 @@ class ActionReq implements ModelInterface, ArrayAccess
             self::ACTION_NAME_SET_WRITABLE,
             self::ACTION_NAME_CLOUD_CONNECTION,
             self::ACTION_NAME_SET_READONLY,
+            self::ACTION_NAME_DIAGNOSIS,
+            self::ACTION_NAME_START_REPAIR,
+            self::ACTION_NAME_STOP_REPAIR,
         ];
     }
 
@@ -276,7 +282,7 @@ class ActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionName
-    *  操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。
+    *  操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。 - diagnosis：一键诊断。 - start_repair：开始数据修复。 - stop_repair：停止数据修复。
     *
     * @return string
     */
@@ -288,7 +294,7 @@ class ActionReq implements ModelInterface, ArrayAccess
     /**
     * Sets actionName
     *
-    * @param string $actionName 操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。
+    * @param string $actionName 操作任务动作名称。取值： - network：测试连接源库/目标库。 - precheck：执行预检查。 - start：启动任务。 - stop：暂停任务。 - restart：重试任务。 - reset：重置任务，需要先调用预检查接口并且预检查通过率为100%。 - terminate：结束任务。 - skip_precheck：跳过预检查。 - create_compare：创建对比任务。 - cancel_compare：取消对比任务。 - column_limit：字段过滤。 - reload_parameters：重新加载任务参数。 - bind_eip：绑定公网IP。 - unbind_eip：解绑公网IP。 - set_writable：目标库解除只读。 - cloud_connection：录制回放他云连通性测试。 - set_readonly: 灾备任务目标库设置只读。 - diagnosis：一键诊断。 - start_repair：开始数据修复。 - stop_repair：停止数据修复。
     *
     * @return $this
     */

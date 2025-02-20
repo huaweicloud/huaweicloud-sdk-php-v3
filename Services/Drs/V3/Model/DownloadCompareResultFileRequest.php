@@ -22,7 +22,7 @@ class DownloadCompareResultFileRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  请求语言类型。
     * jobId  任务ID。
-    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     * compareJobId  对比任务的ID，内容对比、抽样对比、行数对比场景必填。
     * region  区域ID，例如：cn-north-4。
     * body  body
@@ -42,7 +42,7 @@ class DownloadCompareResultFileRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  请求语言类型。
     * jobId  任务ID。
-    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     * compareJobId  对比任务的ID，内容对比、抽样对比、行数对比场景必填。
     * region  区域ID，例如：cn-north-4。
     * body  body
@@ -83,7 +83,7 @@ class DownloadCompareResultFileRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  请求语言类型。
     * jobId  任务ID。
-    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     * compareJobId  对比任务的ID，内容对比、抽样对比、行数对比场景必填。
     * region  区域ID，例如：cn-north-4。
     * body  body
@@ -103,7 +103,7 @@ class DownloadCompareResultFileRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  请求语言类型。
     * jobId  任务ID。
-    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     * compareJobId  对比任务的ID，内容对比、抽样对比、行数对比场景必填。
     * region  区域ID，例如：cn-north-4。
     * body  body
@@ -123,7 +123,7 @@ class DownloadCompareResultFileRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  请求语言类型。
     * jobId  任务ID。
-    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    * compareType  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     * compareJobId  对比任务的ID，内容对比、抽样对比、行数对比场景必填。
     * region  区域ID，例如：cn-north-4。
     * body  body
@@ -303,7 +303,7 @@ class DownloadCompareResultFileRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets compareType
-    *  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    *  对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     *
     * @return string|null
     */
@@ -315,7 +315,7 @@ class DownloadCompareResultFileRequest implements ModelInterface, ArrayAccess
     /**
     * Sets compareType
     *
-    * @param string|null $compareType 对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+    * @param string|null $compareType 对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
     *
     * @return $this
     */
