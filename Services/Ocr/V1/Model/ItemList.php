@@ -25,13 +25,13 @@ class ItemList implements ModelInterface, ArrayAccess
     * unit  单位。
     * quantity  数量。
     * unitPrice  单价。
-    * licensePlateNumber  车牌号码。 当“type”被识别为“toll”且 “advanced_mode”设置为“true” 时才返回。
+    * licensePlateNumber  车牌号码。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     * amount  金额。
     * taxRate  税率。
     * tax  税额。
-    * endDate  通行日期止。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
-    * startDate  通行日期起。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
-    * vehicleType  车辆类型。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
+    * endDate  通行日期止。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
+    * startDate  通行日期起。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
+    * vehicleType  车辆类型。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -57,13 +57,13 @@ class ItemList implements ModelInterface, ArrayAccess
     * unit  单位。
     * quantity  数量。
     * unitPrice  单价。
-    * licensePlateNumber  车牌号码。 当“type”被识别为“toll”且 “advanced_mode”设置为“true” 时才返回。
+    * licensePlateNumber  车牌号码。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     * amount  金额。
     * taxRate  税率。
     * tax  税额。
-    * endDate  通行日期止。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
-    * startDate  通行日期起。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
-    * vehicleType  车辆类型。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
+    * endDate  通行日期止。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
+    * startDate  通行日期起。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
+    * vehicleType  车辆类型。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -110,13 +110,13 @@ class ItemList implements ModelInterface, ArrayAccess
     * unit  单位。
     * quantity  数量。
     * unitPrice  单价。
-    * licensePlateNumber  车牌号码。 当“type”被识别为“toll”且 “advanced_mode”设置为“true” 时才返回。
+    * licensePlateNumber  车牌号码。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     * amount  金额。
     * taxRate  税率。
     * tax  税额。
-    * endDate  通行日期止。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
-    * startDate  通行日期起。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
-    * vehicleType  车辆类型。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
+    * endDate  通行日期止。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
+    * startDate  通行日期起。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
+    * vehicleType  车辆类型。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -142,13 +142,13 @@ class ItemList implements ModelInterface, ArrayAccess
     * unit  单位。
     * quantity  数量。
     * unitPrice  单价。
-    * licensePlateNumber  车牌号码。 当“type”被识别为“toll”且 “advanced_mode”设置为“true” 时才返回。
+    * licensePlateNumber  车牌号码。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     * amount  金额。
     * taxRate  税率。
     * tax  税额。
-    * endDate  通行日期止。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
-    * startDate  通行日期起。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
-    * vehicleType  车辆类型。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
+    * endDate  通行日期止。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
+    * startDate  通行日期起。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
+    * vehicleType  车辆类型。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -174,13 +174,13 @@ class ItemList implements ModelInterface, ArrayAccess
     * unit  单位。
     * quantity  数量。
     * unitPrice  单价。
-    * licensePlateNumber  车牌号码。 当“type”被识别为“toll”且 “advanced_mode”设置为“true” 时才返回。
+    * licensePlateNumber  车牌号码。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     * amount  金额。
     * taxRate  税率。
     * tax  税额。
-    * endDate  通行日期止。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
-    * startDate  通行日期起。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
-    * vehicleType  车辆类型。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
+    * endDate  通行日期止。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
+    * startDate  通行日期起。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
+    * vehicleType  车辆类型。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -415,7 +415,7 @@ class ItemList implements ModelInterface, ArrayAccess
 
     /**
     * Gets licensePlateNumber
-    *  车牌号码。 当“type”被识别为“toll”且 “advanced_mode”设置为“true” 时才返回。
+    *  车牌号码。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @return string|null
     */
@@ -427,7 +427,7 @@ class ItemList implements ModelInterface, ArrayAccess
     /**
     * Sets licensePlateNumber
     *
-    * @param string|null $licensePlateNumber 车牌号码。 当“type”被识别为“toll”且 “advanced_mode”设置为“true” 时才返回。
+    * @param string|null $licensePlateNumber 车牌号码。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class ItemList implements ModelInterface, ArrayAccess
 
     /**
     * Gets endDate
-    *  通行日期止。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
+    *  通行日期止。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @return string|null
     */
@@ -523,7 +523,7 @@ class ItemList implements ModelInterface, ArrayAccess
     /**
     * Sets endDate
     *
-    * @param string|null $endDate 通行日期止。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
+    * @param string|null $endDate 通行日期止。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class ItemList implements ModelInterface, ArrayAccess
 
     /**
     * Gets startDate
-    *  通行日期起。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
+    *  通行日期起。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @return string|null
     */
@@ -547,7 +547,7 @@ class ItemList implements ModelInterface, ArrayAccess
     /**
     * Sets startDate
     *
-    * @param string|null $startDate 通行日期起。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
+    * @param string|null $startDate 通行日期起。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @return $this
     */
@@ -559,7 +559,7 @@ class ItemList implements ModelInterface, ArrayAccess
 
     /**
     * Gets vehicleType
-    *  车辆类型。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
+    *  车辆类型。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @return string|null
     */
@@ -571,7 +571,7 @@ class ItemList implements ModelInterface, ArrayAccess
     /**
     * Sets vehicleType
     *
-    * @param string|null $vehicleType 车辆类型。 当“type”被识别为“toll”且“advanced_mode”设置为“true”时才返回。
+    * @param string|null $vehicleType 车辆类型。 当\"type\"被识别为\"toll\"且\"advanced_mode\"设置为“true”时才返回。
     *
     * @return $this
     */

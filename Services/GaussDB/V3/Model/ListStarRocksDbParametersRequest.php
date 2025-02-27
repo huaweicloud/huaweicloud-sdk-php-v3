@@ -23,13 +23,15 @@ class ListStarRocksDbParametersRequest implements ModelInterface, ArrayAccess
     * instanceId  StarRocks实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * addTaskScenario  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
+    * mainTaskName  **参数解释**：  新增子任务相应的主任务名。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
             'xLanguage' => 'string',
-            'addTaskScenario' => 'string'
+            'addTaskScenario' => 'string',
+            'mainTaskName' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ListStarRocksDbParametersRequest implements ModelInterface, ArrayAccess
     * instanceId  StarRocks实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * addTaskScenario  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
+    * mainTaskName  **参数解释**：  新增子任务相应的主任务名。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
         'xLanguage' => null,
-        'addTaskScenario' => null
+        'addTaskScenario' => null,
+        'mainTaskName' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ListStarRocksDbParametersRequest implements ModelInterface, ArrayAccess
     * instanceId  StarRocks实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * addTaskScenario  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
+    * mainTaskName  **参数解释**：  新增子任务相应的主任务名。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
             'xLanguage' => 'X-Language',
-            'addTaskScenario' => 'add_task_scenario'
+            'addTaskScenario' => 'add_task_scenario',
+            'mainTaskName' => 'main_task_name'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ListStarRocksDbParametersRequest implements ModelInterface, ArrayAccess
     * instanceId  StarRocks实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * addTaskScenario  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
+    * mainTaskName  **参数解释**：  新增子任务相应的主任务名。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
             'xLanguage' => 'setXLanguage',
-            'addTaskScenario' => 'setAddTaskScenario'
+            'addTaskScenario' => 'setAddTaskScenario',
+            'mainTaskName' => 'setMainTaskName'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ListStarRocksDbParametersRequest implements ModelInterface, ArrayAccess
     * instanceId  StarRocks实例ID，严格匹配UUID规则。
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * addTaskScenario  **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
+    * mainTaskName  **参数解释**：  新增子任务相应的主任务名。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
             'xLanguage' => 'getXLanguage',
-            'addTaskScenario' => 'getAddTaskScenario'
+            'addTaskScenario' => 'getAddTaskScenario',
+            'mainTaskName' => 'getMainTaskName'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ListStarRocksDbParametersRequest implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['addTaskScenario'] = isset($data['addTaskScenario']) ? $data['addTaskScenario'] : null;
+        $this->container['mainTaskName'] = isset($data['mainTaskName']) ? $data['mainTaskName'] : null;
     }
 
     /**
@@ -275,6 +286,30 @@ class ListStarRocksDbParametersRequest implements ModelInterface, ArrayAccess
     public function setAddTaskScenario($addTaskScenario)
     {
         $this->container['addTaskScenario'] = $addTaskScenario;
+        return $this;
+    }
+
+    /**
+    * Gets mainTaskName
+    *  **参数解释**：  新增子任务相应的主任务名。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
+    *
+    * @return string|null
+    */
+    public function getMainTaskName()
+    {
+        return $this->container['mainTaskName'];
+    }
+
+    /**
+    * Sets mainTaskName
+    *
+    * @param string|null $mainTaskName **参数解释**：  新增子任务相应的主任务名。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setMainTaskName($mainTaskName)
+    {
+        $this->container['mainTaskName'] = $mainTaskName;
         return $this;
     }
 

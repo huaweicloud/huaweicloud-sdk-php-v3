@@ -28,7 +28,7 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     * privateKey  HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
     * projectId  证书所在的项目ID。
     * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
-    * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * encCertificate  HTTPS协议使用的SM加密证书内容。支持证书链，最大11层(含证书和证书链)。  取值：PEM编码格式。最大长度65536字符。  使用说明：仅type为server_sm时有效且必选。
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。最大长度8192字符。  使用说明：仅type为server_sm时有效且必选。
     * scmCertificateId  SM证书ID。
@@ -60,7 +60,7 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     * privateKey  HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
     * projectId  证书所在的项目ID。
     * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
-    * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * encCertificate  HTTPS协议使用的SM加密证书内容。支持证书链，最大11层(含证书和证书链)。  取值：PEM编码格式。最大长度65536字符。  使用说明：仅type为server_sm时有效且必选。
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。最大长度8192字符。  使用说明：仅type为server_sm时有效且必选。
     * scmCertificateId  SM证书ID。
@@ -113,7 +113,7 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     * privateKey  HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
     * projectId  证书所在的项目ID。
     * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
-    * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * encCertificate  HTTPS协议使用的SM加密证书内容。支持证书链，最大11层(含证书和证书链)。  取值：PEM编码格式。最大长度65536字符。  使用说明：仅type为server_sm时有效且必选。
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。最大长度8192字符。  使用说明：仅type为server_sm时有效且必选。
     * scmCertificateId  SM证书ID。
@@ -145,7 +145,7 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     * privateKey  HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
     * projectId  证书所在的项目ID。
     * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
-    * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * encCertificate  HTTPS协议使用的SM加密证书内容。支持证书链，最大11层(含证书和证书链)。  取值：PEM编码格式。最大长度65536字符。  使用说明：仅type为server_sm时有效且必选。
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。最大长度8192字符。  使用说明：仅type为server_sm时有效且必选。
     * scmCertificateId  SM证书ID。
@@ -177,7 +177,7 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     * privateKey  HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
     * projectId  证书所在的项目ID。
     * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
-    * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * encCertificate  HTTPS协议使用的SM加密证书内容。支持证书链，最大11层(含证书和证书链)。  取值：PEM编码格式。最大长度65536字符。  使用说明：仅type为server_sm时有效且必选。
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。最大长度8192字符。  使用说明：仅type为server_sm时有效且必选。
     * scmCertificateId  SM证书ID。
@@ -537,7 +537,7 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    *  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return string|null
     */
@@ -549,7 +549,7 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * @param string|null $enterpriseProjectId 证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return $this
     */

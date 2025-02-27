@@ -24,7 +24,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
     * description  参数解释：IP地址组的描述。
     * name  参数解释：IP地址组的名称。
     * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
     * description  参数解释：IP地址组的描述。
     * name  参数解释：IP地址组的名称。
     * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
     * description  参数解释：IP地址组的描述。
     * name  参数解释：IP地址组的名称。
     * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
     * description  参数解释：IP地址组的描述。
     * name  参数解释：IP地址组的名称。
     * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
     * description  参数解释：IP地址组的描述。
     * name  参数解释：IP地址组的名称。
     * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -338,7 +338,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    *  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return string|null
     */
@@ -350,7 +350,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * @param string|null $enterpriseProjectId 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return $this
     */

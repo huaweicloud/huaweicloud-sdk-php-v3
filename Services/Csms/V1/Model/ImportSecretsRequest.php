@@ -21,25 +21,21 @@ class ImportSecretsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * secrets  批量创建凭据参数
-    * total  导入数据条数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'secrets' => '\HuaweiCloud\SDK\Csms\V1\Model\CreateSecretRequestBody[]',
-            'total' => 'int'
+            'secrets' => '\HuaweiCloud\SDK\Csms\V1\Model\CreateSecretRequestBody[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * secrets  批量创建凭据参数
-    * total  导入数据条数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'secrets' => null,
-        'total' => 'int32'
+        'secrets' => null
     ];
 
     /**
@@ -66,37 +62,31 @@ class ImportSecretsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * secrets  批量创建凭据参数
-    * total  导入数据条数
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'secrets' => 'secrets',
-            'total' => 'total'
+            'secrets' => 'secrets'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * secrets  批量创建凭据参数
-    * total  导入数据条数
     *
     * @var string[]
     */
     protected static $setters = [
-            'secrets' => 'setSecrets',
-            'total' => 'setTotal'
+            'secrets' => 'setSecrets'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * secrets  批量创建凭据参数
-    * total  导入数据条数
     *
     * @var string[]
     */
     protected static $getters = [
-            'secrets' => 'getSecrets',
-            'total' => 'getTotal'
+            'secrets' => 'getSecrets'
     ];
 
     /**
@@ -158,7 +148,6 @@ class ImportSecretsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['secrets'] = isset($data['secrets']) ? $data['secrets'] : null;
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -171,9 +160,6 @@ class ImportSecretsRequest implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['secrets'] === null) {
             $invalidProperties[] = "'secrets' can't be null";
-        }
-        if ($this->container['total'] === null) {
-            $invalidProperties[] = "'total' can't be null";
         }
         return $invalidProperties;
     }
@@ -210,30 +196,6 @@ class ImportSecretsRequest implements ModelInterface, ArrayAccess
     public function setSecrets($secrets)
     {
         $this->container['secrets'] = $secrets;
-        return $this;
-    }
-
-    /**
-    * Gets total
-    *  导入数据条数
-    *
-    * @return int
-    */
-    public function getTotal()
-    {
-        return $this->container['total'];
-    }
-
-    /**
-    * Sets total
-    *
-    * @param int $total 导入数据条数
-    *
-    * @return $this
-    */
-    public function setTotal($total)
-    {
-        $this->container['total'] = $total;
         return $this;
     }
 

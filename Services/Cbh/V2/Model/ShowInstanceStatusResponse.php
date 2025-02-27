@@ -23,21 +23,21 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  云堡垒机实例名称。
     * status  堡垒机实例状态。 - POWERING_ON：正在开启 - POWERING_OFF：正在关闭 - DELETE_WAITE：等待删除 - REBOOTING：重启中 - RESIZE：变更中 - UPGRADING：升级中 - FROZEN：冻结 - ACTIVE：运行
-    * serverId  serverId
+    * serverId  云堡垒机实例ID，使用UUID格式表示。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'status' => 'string',
-            'serverId' => 'object'
+            'serverId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  云堡垒机实例名称。
     * status  堡垒机实例状态。 - POWERING_ON：正在开启 - POWERING_OFF：正在关闭 - DELETE_WAITE：等待删除 - REBOOTING：重启中 - RESIZE：变更中 - UPGRADING：升级中 - FROZEN：冻结 - ACTIVE：运行
-    * serverId  serverId
+    * serverId  云堡垒机实例ID，使用UUID格式表示。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  云堡垒机实例名称。
     * status  堡垒机实例状态。 - POWERING_ON：正在开启 - POWERING_OFF：正在关闭 - DELETE_WAITE：等待删除 - REBOOTING：重启中 - RESIZE：变更中 - UPGRADING：升级中 - FROZEN：冻结 - ACTIVE：运行
-    * serverId  serverId
+    * serverId  云堡垒机实例ID，使用UUID格式表示。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  云堡垒机实例名称。
     * status  堡垒机实例状态。 - POWERING_ON：正在开启 - POWERING_OFF：正在关闭 - DELETE_WAITE：等待删除 - REBOOTING：重启中 - RESIZE：变更中 - UPGRADING：升级中 - FROZEN：冻结 - ACTIVE：运行
-    * serverId  serverId
+    * serverId  云堡垒机实例ID，使用UUID格式表示。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  云堡垒机实例名称。
     * status  堡垒机实例状态。 - POWERING_ON：正在开启 - POWERING_OFF：正在关闭 - DELETE_WAITE：等待删除 - REBOOTING：重启中 - RESIZE：变更中 - UPGRADING：升级中 - FROZEN：冻结 - ACTIVE：运行
-    * serverId  serverId
+    * serverId  云堡垒机实例ID，使用UUID格式表示。
     *
     * @var string[]
     */
@@ -193,6 +193,12 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['serverId']) && (mb_strlen($this->container['serverId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'serverId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['serverId']) && (mb_strlen($this->container['serverId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'serverId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -257,9 +263,9 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
-    *  serverId
+    *  云堡垒机实例ID，使用UUID格式表示。
     *
-    * @return object|null
+    * @return string|null
     */
     public function getServerId()
     {
@@ -269,7 +275,7 @@ class ShowInstanceStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serverId
     *
-    * @param object|null $serverId serverId
+    * @param string|null $serverId 云堡垒机实例ID，使用UUID格式表示。
     *
     * @return $this
     */

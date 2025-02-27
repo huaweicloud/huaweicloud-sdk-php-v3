@@ -20,20 +20,22 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * enterpriseProjectId  企业项目ID，查询所有绑定eps集群，值为all_granted_eps
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * enterpriseProjectId  企业项目ID，查询所有绑定eps集群，值为all_granted_eps
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -59,29 +61,32 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * enterpriseProjectId  企业项目ID，查询所有绑定eps集群，值为all_granted_eps
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * enterpriseProjectId  企业项目ID，查询所有绑定eps集群，值为all_granted_eps
     *
     * @var string[]
     */
     protected static $setters = [
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * enterpriseProjectId  企业项目ID，查询所有绑定eps集群，值为all_granted_eps
     *
     * @var string[]
     */
     protected static $getters = [
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -142,6 +147,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -164,6 +170,30 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目ID，查询所有绑定eps集群，值为all_granted_eps
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目ID，查询所有绑定eps集群，值为all_granted_eps
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
     }
 
     /**

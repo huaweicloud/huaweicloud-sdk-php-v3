@@ -269,8 +269,8 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['customer']) && (mb_strlen($this->container['customer']) < 0)) {
                 $invalidProperties[] = "invalid value for 'customer', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 40000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 40000000.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";

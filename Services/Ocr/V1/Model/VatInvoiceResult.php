@@ -21,17 +21,17 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * title  增值税发票标题
-    * type  增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
-    * invoiceTag  增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    * type  增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+    * invoiceTag  增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
     * sumAmount  小计金额，当传入多页PDF时返回此字段。
     * sumTax  小计税额，当传入多页PDF时返回此字段。
-    * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
-    * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
-    * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
+    * serialNumber  发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * attribution  发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * supervisionSeal  发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
     * code  发票代码。
-    * printCode  机打代码。当“advanced_mode”设置为“true”时才返回。
-    * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
-    * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
+    * printCode  机打代码。 当\"advanced_mode\"设置为\"true\"时才返回。
+    * machineNumber  机器编号。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * printNumber  机打号码。  当\"advanced_mode\"设置为\"true\"时才返回。
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
     * number  发票号码。
     * issueDate  开票日期。
@@ -47,17 +47,17 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * subtotalAmount  合计金额。
     * subtotalTax  合计税额。
     * total  价税合计。
-    * totalInWords  价税合计（大写）。 当“advanced_mode”设置为“true”时才返回。
-    * remarks  备注。 当“advanced_mode”设置为“true”时才返回。
-    * receiver  收款人。 当“advanced_mode”设置为“true”时才返回。
-    * reviewer  复核。 当“advanced_mode”设置为“true”时才返回。
-    * issuer  开票人。 当“advanced_mode”设置为“true”时才返回。
-    * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
+    * totalInWords  价税合计（大写）。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * remarks  备注。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * receiver  收款人。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * reviewer  复核。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * issuer  开票人。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * sellerSeal  销售方发票专用章。  当\"advanced_mode\"设置为\"true\"时才返回。
     * itemList  货物或应税劳务列表。
     * province  省。
     * city  市。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
-    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
     * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
     * belongSellerName  销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
     * belongVatCode  所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
@@ -74,6 +74,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * belongDiscountAmount  销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
     * belongDiscountTax  销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
     * belongItemList  销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
+    * passengerTravelItemList  旅客运输服务的出行信息列表。 当传入图片为旅客运输服务发票时返回此字段。
     *
     * @var string[]
     */
@@ -131,23 +132,24 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'belongSubtotalTax' => 'string',
             'belongDiscountAmount' => 'string',
             'belongDiscountTax' => 'string',
-            'belongItemList' => '\HuaweiCloud\SDK\Ocr\V1\Model\BelongItemList[]'
+            'belongItemList' => '\HuaweiCloud\SDK\Ocr\V1\Model\BelongItemList[]',
+            'passengerTravelItemList' => '\HuaweiCloud\SDK\Ocr\V1\Model\PassengerTravelItemList[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * title  增值税发票标题
-    * type  增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
-    * invoiceTag  增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    * type  增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+    * invoiceTag  增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
     * sumAmount  小计金额，当传入多页PDF时返回此字段。
     * sumTax  小计税额，当传入多页PDF时返回此字段。
-    * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
-    * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
-    * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
+    * serialNumber  发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * attribution  发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * supervisionSeal  发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
     * code  发票代码。
-    * printCode  机打代码。当“advanced_mode”设置为“true”时才返回。
-    * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
-    * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
+    * printCode  机打代码。 当\"advanced_mode\"设置为\"true\"时才返回。
+    * machineNumber  机器编号。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * printNumber  机打号码。  当\"advanced_mode\"设置为\"true\"时才返回。
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
     * number  发票号码。
     * issueDate  开票日期。
@@ -163,17 +165,17 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * subtotalAmount  合计金额。
     * subtotalTax  合计税额。
     * total  价税合计。
-    * totalInWords  价税合计（大写）。 当“advanced_mode”设置为“true”时才返回。
-    * remarks  备注。 当“advanced_mode”设置为“true”时才返回。
-    * receiver  收款人。 当“advanced_mode”设置为“true”时才返回。
-    * reviewer  复核。 当“advanced_mode”设置为“true”时才返回。
-    * issuer  开票人。 当“advanced_mode”设置为“true”时才返回。
-    * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
+    * totalInWords  价税合计（大写）。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * remarks  备注。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * receiver  收款人。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * reviewer  复核。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * issuer  开票人。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * sellerSeal  销售方发票专用章。  当\"advanced_mode\"设置为\"true\"时才返回。
     * itemList  货物或应税劳务列表。
     * province  省。
     * city  市。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
-    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
     * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
     * belongSellerName  销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
     * belongVatCode  所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
@@ -190,6 +192,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * belongDiscountAmount  销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
     * belongDiscountTax  销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
     * belongItemList  销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
+    * passengerTravelItemList  旅客运输服务的出行信息列表。 当传入图片为旅客运输服务发票时返回此字段。
     *
     * @var string[]
     */
@@ -247,7 +250,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
         'belongSubtotalTax' => null,
         'belongDiscountAmount' => null,
         'belongDiscountTax' => null,
-        'belongItemList' => null
+        'belongItemList' => null,
+        'passengerTravelItemList' => null
     ];
 
     /**
@@ -274,17 +278,17 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * title  增值税发票标题
-    * type  增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
-    * invoiceTag  增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    * type  增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+    * invoiceTag  增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
     * sumAmount  小计金额，当传入多页PDF时返回此字段。
     * sumTax  小计税额，当传入多页PDF时返回此字段。
-    * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
-    * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
-    * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
+    * serialNumber  发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * attribution  发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * supervisionSeal  发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
     * code  发票代码。
-    * printCode  机打代码。当“advanced_mode”设置为“true”时才返回。
-    * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
-    * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
+    * printCode  机打代码。 当\"advanced_mode\"设置为\"true\"时才返回。
+    * machineNumber  机器编号。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * printNumber  机打号码。  当\"advanced_mode\"设置为\"true\"时才返回。
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
     * number  发票号码。
     * issueDate  开票日期。
@@ -300,17 +304,17 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * subtotalAmount  合计金额。
     * subtotalTax  合计税额。
     * total  价税合计。
-    * totalInWords  价税合计（大写）。 当“advanced_mode”设置为“true”时才返回。
-    * remarks  备注。 当“advanced_mode”设置为“true”时才返回。
-    * receiver  收款人。 当“advanced_mode”设置为“true”时才返回。
-    * reviewer  复核。 当“advanced_mode”设置为“true”时才返回。
-    * issuer  开票人。 当“advanced_mode”设置为“true”时才返回。
-    * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
+    * totalInWords  价税合计（大写）。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * remarks  备注。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * receiver  收款人。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * reviewer  复核。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * issuer  开票人。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * sellerSeal  销售方发票专用章。  当\"advanced_mode\"设置为\"true\"时才返回。
     * itemList  货物或应税劳务列表。
     * province  省。
     * city  市。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
-    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
     * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
     * belongSellerName  销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
     * belongVatCode  所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
@@ -327,6 +331,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * belongDiscountAmount  销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
     * belongDiscountTax  销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
     * belongItemList  销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
+    * passengerTravelItemList  旅客运输服务的出行信息列表。 当传入图片为旅客运输服务发票时返回此字段。
     *
     * @var string[]
     */
@@ -384,23 +389,24 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'belongSubtotalTax' => 'belong_subtotal_tax',
             'belongDiscountAmount' => 'belong_discount_amount',
             'belongDiscountTax' => 'belong_discount_tax',
-            'belongItemList' => 'belong_item_list'
+            'belongItemList' => 'belong_item_list',
+            'passengerTravelItemList' => 'passenger_travel_item_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * title  增值税发票标题
-    * type  增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
-    * invoiceTag  增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    * type  增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+    * invoiceTag  增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
     * sumAmount  小计金额，当传入多页PDF时返回此字段。
     * sumTax  小计税额，当传入多页PDF时返回此字段。
-    * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
-    * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
-    * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
+    * serialNumber  发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * attribution  发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * supervisionSeal  发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
     * code  发票代码。
-    * printCode  机打代码。当“advanced_mode”设置为“true”时才返回。
-    * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
-    * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
+    * printCode  机打代码。 当\"advanced_mode\"设置为\"true\"时才返回。
+    * machineNumber  机器编号。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * printNumber  机打号码。  当\"advanced_mode\"设置为\"true\"时才返回。
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
     * number  发票号码。
     * issueDate  开票日期。
@@ -416,17 +422,17 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * subtotalAmount  合计金额。
     * subtotalTax  合计税额。
     * total  价税合计。
-    * totalInWords  价税合计（大写）。 当“advanced_mode”设置为“true”时才返回。
-    * remarks  备注。 当“advanced_mode”设置为“true”时才返回。
-    * receiver  收款人。 当“advanced_mode”设置为“true”时才返回。
-    * reviewer  复核。 当“advanced_mode”设置为“true”时才返回。
-    * issuer  开票人。 当“advanced_mode”设置为“true”时才返回。
-    * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
+    * totalInWords  价税合计（大写）。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * remarks  备注。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * receiver  收款人。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * reviewer  复核。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * issuer  开票人。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * sellerSeal  销售方发票专用章。  当\"advanced_mode\"设置为\"true\"时才返回。
     * itemList  货物或应税劳务列表。
     * province  省。
     * city  市。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
-    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
     * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
     * belongSellerName  销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
     * belongVatCode  所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
@@ -443,6 +449,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * belongDiscountAmount  销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
     * belongDiscountTax  销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
     * belongItemList  销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
+    * passengerTravelItemList  旅客运输服务的出行信息列表。 当传入图片为旅客运输服务发票时返回此字段。
     *
     * @var string[]
     */
@@ -500,23 +507,24 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'belongSubtotalTax' => 'setBelongSubtotalTax',
             'belongDiscountAmount' => 'setBelongDiscountAmount',
             'belongDiscountTax' => 'setBelongDiscountTax',
-            'belongItemList' => 'setBelongItemList'
+            'belongItemList' => 'setBelongItemList',
+            'passengerTravelItemList' => 'setPassengerTravelItemList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * title  增值税发票标题
-    * type  增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
-    * invoiceTag  增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    * type  增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+    * invoiceTag  增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
     * sumAmount  小计金额，当传入多页PDF时返回此字段。
     * sumTax  小计税额，当传入多页PDF时返回此字段。
-    * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
-    * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
-    * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
+    * serialNumber  发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * attribution  发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * supervisionSeal  发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
     * code  发票代码。
-    * printCode  机打代码。当“advanced_mode”设置为“true”时才返回。
-    * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
-    * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
+    * printCode  机打代码。 当\"advanced_mode\"设置为\"true\"时才返回。
+    * machineNumber  机器编号。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * printNumber  机打号码。  当\"advanced_mode\"设置为\"true\"时才返回。
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
     * number  发票号码。
     * issueDate  开票日期。
@@ -532,17 +540,17 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * subtotalAmount  合计金额。
     * subtotalTax  合计税额。
     * total  价税合计。
-    * totalInWords  价税合计（大写）。 当“advanced_mode”设置为“true”时才返回。
-    * remarks  备注。 当“advanced_mode”设置为“true”时才返回。
-    * receiver  收款人。 当“advanced_mode”设置为“true”时才返回。
-    * reviewer  复核。 当“advanced_mode”设置为“true”时才返回。
-    * issuer  开票人。 当“advanced_mode”设置为“true”时才返回。
-    * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
+    * totalInWords  价税合计（大写）。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * remarks  备注。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * receiver  收款人。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * reviewer  复核。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * issuer  开票人。  当\"advanced_mode\"设置为\"true\"时才返回。
+    * sellerSeal  销售方发票专用章。  当\"advanced_mode\"设置为\"true\"时才返回。
     * itemList  货物或应税劳务列表。
     * province  省。
     * city  市。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
-    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
     * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
     * belongSellerName  销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
     * belongVatCode  所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
@@ -559,6 +567,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * belongDiscountAmount  销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
     * belongDiscountTax  销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
     * belongItemList  销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
+    * passengerTravelItemList  旅客运输服务的出行信息列表。 当传入图片为旅客运输服务发票时返回此字段。
     *
     * @var string[]
     */
@@ -616,7 +625,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'belongSubtotalTax' => 'getBelongSubtotalTax',
             'belongDiscountAmount' => 'getBelongDiscountAmount',
             'belongDiscountTax' => 'getBelongDiscountTax',
-            'belongItemList' => 'getBelongItemList'
+            'belongItemList' => 'getBelongItemList',
+            'passengerTravelItemList' => 'getPassengerTravelItemList'
     ];
 
     /**
@@ -731,6 +741,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
         $this->container['belongDiscountAmount'] = isset($data['belongDiscountAmount']) ? $data['belongDiscountAmount'] : null;
         $this->container['belongDiscountTax'] = isset($data['belongDiscountTax']) ? $data['belongDiscountTax'] : null;
         $this->container['belongItemList'] = isset($data['belongItemList']) ? $data['belongItemList'] : null;
+        $this->container['passengerTravelItemList'] = isset($data['passengerTravelItemList']) ? $data['passengerTravelItemList'] : null;
     }
 
     /**
@@ -781,7 +792,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+    *  增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
     *
     * @return string|null
     */
@@ -793,7 +804,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+    * @param string|null $type 增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
     *
     * @return $this
     */
@@ -805,7 +816,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets invoiceTag
-    *  增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    *  增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string|null
     */
@@ -817,7 +828,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets invoiceTag
     *
-    * @param string|null $invoiceTag 增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    * @param string|null $invoiceTag 增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -877,7 +888,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets serialNumber
-    *  发票联次。 当“advanced_mode”设置为“true”时才返回。
+    *  发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string|null
     */
@@ -889,7 +900,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets serialNumber
     *
-    * @param string|null $serialNumber 发票联次。 当“advanced_mode”设置为“true”时才返回。
+    * @param string|null $serialNumber 发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -901,7 +912,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets attribution
-    *  发票归属地。 当“advanced_mode”设置为“true”时才返回。
+    *  发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string|null
     */
@@ -913,7 +924,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets attribution
     *
-    * @param string|null $attribution 发票归属地。 当“advanced_mode”设置为“true”时才返回。
+    * @param string|null $attribution 发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -925,7 +936,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets supervisionSeal
-    *  发票监制章。 当“advanced_mode”设置为“true”时才返回。
+    *  发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string[]|null
     */
@@ -937,7 +948,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets supervisionSeal
     *
-    * @param string[]|null $supervisionSeal 发票监制章。 当“advanced_mode”设置为“true”时才返回。
+    * @param string[]|null $supervisionSeal 发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -973,7 +984,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets printCode
-    *  机打代码。当“advanced_mode”设置为“true”时才返回。
+    *  机打代码。 当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string|null
     */
@@ -985,7 +996,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets printCode
     *
-    * @param string|null $printCode 机打代码。当“advanced_mode”设置为“true”时才返回。
+    * @param string|null $printCode 机打代码。 当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -997,7 +1008,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets machineNumber
-    *  机器编号。 当“advanced_mode”设置为“true”时才返回。
+    *  机器编号。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string|null
     */
@@ -1009,7 +1020,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets machineNumber
     *
-    * @param string|null $machineNumber 机器编号。 当“advanced_mode”设置为“true”时才返回。
+    * @param string|null $machineNumber 机器编号。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -1021,7 +1032,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets printNumber
-    *  机打号码。 当“advanced_mode”设置为“true”时才返回
+    *  机打号码。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string|null
     */
@@ -1033,7 +1044,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets printNumber
     *
-    * @param string|null $printNumber 机打号码。 当“advanced_mode”设置为“true”时才返回
+    * @param string|null $printNumber 机打号码。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -1405,7 +1416,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalInWords
-    *  价税合计（大写）。 当“advanced_mode”设置为“true”时才返回。
+    *  价税合计（大写）。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string|null
     */
@@ -1417,7 +1428,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets totalInWords
     *
-    * @param string|null $totalInWords 价税合计（大写）。 当“advanced_mode”设置为“true”时才返回。
+    * @param string|null $totalInWords 价税合计（大写）。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -1429,7 +1440,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets remarks
-    *  备注。 当“advanced_mode”设置为“true”时才返回。
+    *  备注。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string|null
     */
@@ -1441,7 +1452,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets remarks
     *
-    * @param string|null $remarks 备注。 当“advanced_mode”设置为“true”时才返回。
+    * @param string|null $remarks 备注。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -1453,7 +1464,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets receiver
-    *  收款人。 当“advanced_mode”设置为“true”时才返回。
+    *  收款人。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string|null
     */
@@ -1465,7 +1476,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets receiver
     *
-    * @param string|null $receiver 收款人。 当“advanced_mode”设置为“true”时才返回。
+    * @param string|null $receiver 收款人。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -1477,7 +1488,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets reviewer
-    *  复核。 当“advanced_mode”设置为“true”时才返回。
+    *  复核。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string|null
     */
@@ -1489,7 +1500,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets reviewer
     *
-    * @param string|null $reviewer 复核。 当“advanced_mode”设置为“true”时才返回。
+    * @param string|null $reviewer 复核。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -1501,7 +1512,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets issuer
-    *  开票人。 当“advanced_mode”设置为“true”时才返回。
+    *  开票人。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string|null
     */
@@ -1513,7 +1524,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets issuer
     *
-    * @param string|null $issuer 开票人。 当“advanced_mode”设置为“true”时才返回。
+    * @param string|null $issuer 开票人。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -1525,7 +1536,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets sellerSeal
-    *  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
+    *  销售方发票专用章。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return string[]|null
     */
@@ -1537,7 +1548,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets sellerSeal
     *
-    * @param string[]|null $sellerSeal 销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
+    * @param string[]|null $sellerSeal 销售方发票专用章。  当\"advanced_mode\"设置为\"true\"时才返回。
     *
     * @return $this
     */
@@ -1645,7 +1656,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets textLocation
-    *  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    *  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
     *
     * @return object|null
     */
@@ -1657,7 +1668,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets textLocation
     *
-    * @param object|null $textLocation 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * @param object|null $textLocation 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
     *
     * @return $this
     */
@@ -2048,6 +2059,30 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     public function setBelongItemList($belongItemList)
     {
         $this->container['belongItemList'] = $belongItemList;
+        return $this;
+    }
+
+    /**
+    * Gets passengerTravelItemList
+    *  旅客运输服务的出行信息列表。 当传入图片为旅客运输服务发票时返回此字段。
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\PassengerTravelItemList[]|null
+    */
+    public function getPassengerTravelItemList()
+    {
+        return $this->container['passengerTravelItemList'];
+    }
+
+    /**
+    * Sets passengerTravelItemList
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\PassengerTravelItemList[]|null $passengerTravelItemList 旅客运输服务的出行信息列表。 当传入图片为旅客运输服务发票时返回此字段。
+    *
+    * @return $this
+    */
+    public function setPassengerTravelItemList($passengerTravelItemList)
+    {
+        $this->container['passengerTravelItemList'] = $passengerTravelItemList;
         return $this;
     }
 

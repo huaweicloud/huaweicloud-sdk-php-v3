@@ -68,6 +68,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     * beId  |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
+    * extendParams  extendParams
     *
     * @var string[]
     */
@@ -119,7 +120,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'effectiveTime' => 'string',
             'expireTime' => 'string',
             'consumeTime' => 'string',
-            'beId' => 'string'
+            'beId' => 'string',
+            'extendParams' => '\HuaweiCloud\SDK\Bssintl\V2\Model\ResRelation'
     ];
 
     /**
@@ -172,6 +174,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     * beId  |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
+    * extendParams  extendParams
     *
     * @var string[]
     */
@@ -223,7 +226,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'effectiveTime' => null,
         'expireTime' => null,
         'consumeTime' => null,
-        'beId' => null
+        'beId' => null,
+        'extendParams' => null
     ];
 
     /**
@@ -297,6 +301,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     * beId  |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
+    * extendParams  extendParams
     *
     * @var string[]
     */
@@ -348,7 +353,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'effectiveTime' => 'effective_time',
             'expireTime' => 'expire_time',
             'consumeTime' => 'consume_time',
-            'beId' => 'be_id'
+            'beId' => 'be_id',
+            'extendParams' => 'extend_params'
     ];
 
     /**
@@ -401,6 +407,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     * beId  |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
+    * extendParams  extendParams
     *
     * @var string[]
     */
@@ -452,7 +459,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'effectiveTime' => 'setEffectiveTime',
             'expireTime' => 'setExpireTime',
             'consumeTime' => 'setConsumeTime',
-            'beId' => 'setBeId'
+            'beId' => 'setBeId',
+            'extendParams' => 'setExtendParams'
     ];
 
     /**
@@ -505,6 +513,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     * consumeTime  |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
     * beId  |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
+    * extendParams  extendParams
     *
     * @var string[]
     */
@@ -556,7 +565,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'effectiveTime' => 'getEffectiveTime',
             'expireTime' => 'getExpireTime',
             'consumeTime' => 'getConsumeTime',
-            'beId' => 'getBeId'
+            'beId' => 'getBeId',
+            'extendParams' => 'getExtendParams'
     ];
 
     /**
@@ -665,6 +675,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['consumeTime'] = isset($data['consumeTime']) ? $data['consumeTime'] : null;
         $this->container['beId'] = isset($data['beId']) ? $data['beId'] : null;
+        $this->container['extendParams'] = isset($data['extendParams']) ? $data['extendParams'] : null;
     }
 
     /**
@@ -1886,6 +1897,30 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setBeId($beId)
     {
         $this->container['beId'] = $beId;
+        return $this;
+    }
+
+    /**
+    * Gets extendParams
+    *  extendParams
+    *
+    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\ResRelation|null
+    */
+    public function getExtendParams()
+    {
+        return $this->container['extendParams'];
+    }
+
+    /**
+    * Sets extendParams
+    *
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ResRelation|null $extendParams extendParams
+    *
+    * @return $this
+    */
+    public function setExtendParams($extendParams)
+    {
+        $this->container['extendParams'] = $extendParams;
         return $this;
     }
 

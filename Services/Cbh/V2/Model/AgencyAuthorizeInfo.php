@@ -169,12 +169,6 @@ class AgencyAuthorizeInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['csms'] === null) {
-            $invalidProperties[] = "'csms' can't be null";
-        }
-        if ($this->container['kms'] === null) {
-            $invalidProperties[] = "'kms' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -193,7 +187,7 @@ class AgencyAuthorizeInfo implements ModelInterface, ArrayAccess
     * Gets csms
     *  凭据管理权限信息。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getCsms()
     {
@@ -203,7 +197,7 @@ class AgencyAuthorizeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets csms
     *
-    * @param bool $csms 凭据管理权限信息。
+    * @param bool|null $csms 凭据管理权限信息。
     *
     * @return $this
     */
@@ -217,7 +211,7 @@ class AgencyAuthorizeInfo implements ModelInterface, ArrayAccess
     * Gets kms
     *  密钥管理权限信息。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getKms()
     {
@@ -227,7 +221,7 @@ class AgencyAuthorizeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets kms
     *
-    * @param bool $kms 密钥管理权限信息。
+    * @param bool|null $kms 密钥管理权限信息。
     *
     * @return $this
     */

@@ -26,7 +26,7 @@ class ShowAuthorizationResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'authorization' => '\HuaweiCloud\SDK\Cbh\V2\Model\AgencyAuthorizeInfo'
+            'authorization' => '\HuaweiCloud\SDK\Cbh\V2\Model\AgencyAuthorizeInfoRsp'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ShowAuthorizationResponse implements ModelInterface, ArrayAccess
     * Gets authorization
     *  authorization
     *
-    * @return \HuaweiCloud\SDK\Cbh\V2\Model\AgencyAuthorizeInfo|null
+    * @return \HuaweiCloud\SDK\Cbh\V2\Model\AgencyAuthorizeInfoRsp|null
     */
     public function getAuthorization()
     {
@@ -187,7 +187,7 @@ class ShowAuthorizationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets authorization
     *
-    * @param \HuaweiCloud\SDK\Cbh\V2\Model\AgencyAuthorizeInfo|null $authorization authorization
+    * @param \HuaweiCloud\SDK\Cbh\V2\Model\AgencyAuthorizeInfoRsp|null $authorization authorization
     *
     * @return $this
     */

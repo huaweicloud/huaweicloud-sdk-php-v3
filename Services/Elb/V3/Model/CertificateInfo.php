@@ -36,7 +36,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
     * scmCertificateId  SCM证书ID
     * commonName  证书绑定的主域名。
-    * fingerprint  证书指纹
+    * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
     *
     * @var string[]
@@ -80,7 +80,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
     * scmCertificateId  SCM证书ID
     * commonName  证书绑定的主域名。
-    * fingerprint  证书指纹
+    * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
     *
     * @var string[]
@@ -145,7 +145,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
     * scmCertificateId  SCM证书ID
     * commonName  证书绑定的主域名。
-    * fingerprint  证书指纹
+    * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
     *
     * @var string[]
@@ -189,7 +189,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
     * scmCertificateId  SCM证书ID
     * commonName  证书绑定的主域名。
-    * fingerprint  证书指纹
+    * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
     *
     * @var string[]
@@ -233,7 +233,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
     * scmCertificateId  SCM证书ID
     * commonName  证书绑定的主域名。
-    * fingerprint  证书指纹
+    * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
     *
     * @var string[]
@@ -799,7 +799,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fingerprint
-    *  证书指纹
+    *  证书指纹。
     *
     * @return string|null
     */
@@ -811,7 +811,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fingerprint
     *
-    * @param string|null $fingerprint 证书指纹
+    * @param string|null $fingerprint 证书指纹。
     *
     * @return $this
     */

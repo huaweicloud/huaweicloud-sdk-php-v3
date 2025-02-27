@@ -41,7 +41,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'projectId' => 'string',
             'name' => 'string',
-            'id' => 'string',
+            'id' => 'string[]',
             'limit' => 'int',
             'adminStateUp' => 'bool',
             'networkId' => 'string',
@@ -360,9 +360,6 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['id']) && !preg_match("/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/", $this->container['id'])) {
-                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/.";
-            }
             if (!is_null($this->container['networkId']) && !preg_match("/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/", $this->container['networkId'])) {
                 $invalidProperties[] = "invalid value for 'networkId', must be conform to the pattern /[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/.";
             }
@@ -454,7 +451,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * Gets id
     *  按照port_id过滤查询
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getId()
     {
@@ -464,7 +461,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 按照port_id过滤查询
+    * @param string[]|null $id 按照port_id过滤查询
     *
     * @return $this
     */

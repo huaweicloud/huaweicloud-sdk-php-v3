@@ -20,7 +20,7 @@ class IpInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ip  参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * ip  参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * description  参数解释：IP地址组中ip的备注信息。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class IpInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ip  参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * ip  参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * description  参数解释：IP地址组中ip的备注信息。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class IpInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ip  参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * ip  参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * description  参数解释：IP地址组中ip的备注信息。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class IpInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ip  参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * ip  参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * description  参数解释：IP地址组中ip的备注信息。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class IpInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ip  参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * ip  参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * description  参数解释：IP地址组中ip的备注信息。
     *
     * @var string[]
@@ -197,7 +197,7 @@ class IpInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ip
-    *  参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    *  参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class IpInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string $ip 参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * @param string $ip 参数解释：IP地址组中的IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     *
     * @return $this
     */

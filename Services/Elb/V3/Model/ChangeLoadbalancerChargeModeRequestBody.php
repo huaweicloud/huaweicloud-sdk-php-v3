@@ -21,7 +21,7 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of property to type mappings. Used for (de)serialization
     * loadbalancerIds  需要修改计费类型的负载均衡器ID列表。
-    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:test)
+    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
     * prepaidOptions  prepaidOptions
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of property to format mappings. Used for (de)serialization
     * loadbalancerIds  需要修改计费类型的负载均衡器ID列表。
-    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:test)
+    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
     * prepaidOptions  prepaidOptions
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * loadbalancerIds  需要修改计费类型的负载均衡器ID列表。
-    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:test)
+    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
     * prepaidOptions  prepaidOptions
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * loadbalancerIds  需要修改计费类型的负载均衡器ID列表。
-    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:test)
+    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
     * prepaidOptions  prepaidOptions
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * loadbalancerIds  需要修改计费类型的负载均衡器ID列表。
-    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:test)
+    * chargeMode  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
     * prepaidOptions  prepaidOptions
     *
     * @var string[]
@@ -253,7 +253,7 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets chargeMode
-    *  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:test)
+    *  计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class ChangeLoadbalancerChargeModeRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets chargeMode
     *
-    * @param string $chargeMode 计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:test)
+    * @param string $chargeMode 计费模式。取值： - prepaid：包周期计费[（仅当不传pay_type时，允许设为该值）](tag:hws)
     *
     * @return $this
     */

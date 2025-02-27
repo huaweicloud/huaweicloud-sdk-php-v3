@@ -30,6 +30,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * domain  服务端证书所签的域名。 取值：总长度为0-1024。  普通域名由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。  泛域名仅允许首段为\"*\"，其他取值限制与普通域名一致。如：*.domain.com，但不能是：*my.domain.com   该字段仅type为server时有效。
     * privateKey  PEM格式的服务端私有密钥。
     * certificate  PEM格式的服务端公有密钥或者用于认证客户端证书的CA证书，由type字段区分。
+    * source  参数解释： 证书来源  约束限制： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”。  取值范围： 无  默认取值： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    * protectionStatus  参数解释： 修改保护状态  约束限制： 无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值： nonProtection
+    * protectionReason  参数解释： 设置修改保护的原因  约束限制： 仅当protection_status为consoleProtection时有效  取值范围： 无  默认取值： 空
     *
     * @var string[]
     */
@@ -43,7 +46,10 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'type' => 'string',
             'domain' => 'string',
             'privateKey' => 'string',
-            'certificate' => 'string'
+            'certificate' => 'string',
+            'source' => 'string',
+            'protectionStatus' => 'string',
+            'protectionReason' => 'string'
     ];
 
     /**
@@ -58,6 +64,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * domain  服务端证书所签的域名。 取值：总长度为0-1024。  普通域名由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。  泛域名仅允许首段为\"*\"，其他取值限制与普通域名一致。如：*.domain.com，但不能是：*my.domain.com   该字段仅type为server时有效。
     * privateKey  PEM格式的服务端私有密钥。
     * certificate  PEM格式的服务端公有密钥或者用于认证客户端证书的CA证书，由type字段区分。
+    * source  参数解释： 证书来源  约束限制： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”。  取值范围： 无  默认取值： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    * protectionStatus  参数解释： 修改保护状态  约束限制： 无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值： nonProtection
+    * protectionReason  参数解释： 设置修改保护的原因  约束限制： 仅当protection_status为consoleProtection时有效  取值范围： 无  默认取值： 空
     *
     * @var string[]
     */
@@ -71,7 +80,10 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         'type' => null,
         'domain' => null,
         'privateKey' => null,
-        'certificate' => null
+        'certificate' => null,
+        'source' => null,
+        'protectionStatus' => null,
+        'protectionReason' => null
     ];
 
     /**
@@ -107,6 +119,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * domain  服务端证书所签的域名。 取值：总长度为0-1024。  普通域名由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。  泛域名仅允许首段为\"*\"，其他取值限制与普通域名一致。如：*.domain.com，但不能是：*my.domain.com   该字段仅type为server时有效。
     * privateKey  PEM格式的服务端私有密钥。
     * certificate  PEM格式的服务端公有密钥或者用于认证客户端证书的CA证书，由type字段区分。
+    * source  参数解释： 证书来源  约束限制： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”。  取值范围： 无  默认取值： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    * protectionStatus  参数解释： 修改保护状态  约束限制： 无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值： nonProtection
+    * protectionReason  参数解释： 设置修改保护的原因  约束限制： 仅当protection_status为consoleProtection时有效  取值范围： 无  默认取值： 空
     *
     * @var string[]
     */
@@ -120,7 +135,10 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'type' => 'type',
             'domain' => 'domain',
             'privateKey' => 'private_key',
-            'certificate' => 'certificate'
+            'certificate' => 'certificate',
+            'source' => 'source',
+            'protectionStatus' => 'protection_status',
+            'protectionReason' => 'protection_reason'
     ];
 
     /**
@@ -135,6 +153,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * domain  服务端证书所签的域名。 取值：总长度为0-1024。  普通域名由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。  泛域名仅允许首段为\"*\"，其他取值限制与普通域名一致。如：*.domain.com，但不能是：*my.domain.com   该字段仅type为server时有效。
     * privateKey  PEM格式的服务端私有密钥。
     * certificate  PEM格式的服务端公有密钥或者用于认证客户端证书的CA证书，由type字段区分。
+    * source  参数解释： 证书来源  约束限制： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”。  取值范围： 无  默认取值： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    * protectionStatus  参数解释： 修改保护状态  约束限制： 无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值： nonProtection
+    * protectionReason  参数解释： 设置修改保护的原因  约束限制： 仅当protection_status为consoleProtection时有效  取值范围： 无  默认取值： 空
     *
     * @var string[]
     */
@@ -148,7 +169,10 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'domain' => 'setDomain',
             'privateKey' => 'setPrivateKey',
-            'certificate' => 'setCertificate'
+            'certificate' => 'setCertificate',
+            'source' => 'setSource',
+            'protectionStatus' => 'setProtectionStatus',
+            'protectionReason' => 'setProtectionReason'
     ];
 
     /**
@@ -163,6 +187,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * domain  服务端证书所签的域名。 取值：总长度为0-1024。  普通域名由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。  泛域名仅允许首段为\"*\"，其他取值限制与普通域名一致。如：*.domain.com，但不能是：*my.domain.com   该字段仅type为server时有效。
     * privateKey  PEM格式的服务端私有密钥。
     * certificate  PEM格式的服务端公有密钥或者用于认证客户端证书的CA证书，由type字段区分。
+    * source  参数解释： 证书来源  约束限制： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”。  取值范围： 无  默认取值： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    * protectionStatus  参数解释： 修改保护状态  约束限制： 无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值： nonProtection
+    * protectionReason  参数解释： 设置修改保护的原因  约束限制： 仅当protection_status为consoleProtection时有效  取值范围： 无  默认取值： 空
     *
     * @var string[]
     */
@@ -176,7 +203,10 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'domain' => 'getDomain',
             'privateKey' => 'getPrivateKey',
-            'certificate' => 'getCertificate'
+            'certificate' => 'getCertificate',
+            'source' => 'getSource',
+            'protectionStatus' => 'getProtectionStatus',
+            'protectionReason' => 'getProtectionReason'
     ];
 
     /**
@@ -219,7 +249,22 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PROTECTION_STATUS_NON_PROTECTION = 'nonProtection';
+    const PROTECTION_STATUS_CONSOLE_PROTECTION = 'consoleProtection';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtectionStatusAllowableValues()
+    {
+        return [
+            self::PROTECTION_STATUS_NON_PROTECTION,
+            self::PROTECTION_STATUS_CONSOLE_PROTECTION,
+        ];
+    }
 
 
     /**
@@ -247,6 +292,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['privateKey'] = isset($data['privateKey']) ? $data['privateKey'] : null;
         $this->container['certificate'] = isset($data['certificate']) ? $data['certificate'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
+        $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
+        $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
     }
 
     /**
@@ -277,6 +325,26 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['domain']) && (mb_strlen($this->container['domain']) < 0)) {
                 $invalidProperties[] = "invalid value for 'domain', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['source']) && (mb_strlen($this->container['source']) > 255)) {
+                $invalidProperties[] = "invalid value for 'source', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['source']) && (mb_strlen($this->container['source']) < 0)) {
+                $invalidProperties[] = "invalid value for 'source', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getProtectionStatusAllowableValues();
+                if (!is_null($this->container['protectionStatus']) && !in_array($this->container['protectionStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protectionStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['protectionReason']) && (mb_strlen($this->container['protectionReason']) > 255)) {
+                $invalidProperties[] = "invalid value for 'protectionReason', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['protectionReason']) && (mb_strlen($this->container['protectionReason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'protectionReason', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -529,6 +597,78 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     public function setCertificate($certificate)
     {
         $this->container['certificate'] = $certificate;
+        return $this;
+    }
+
+    /**
+    * Gets source
+    *  参数解释： 证书来源  约束限制： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”。  取值范围： 无  默认取值： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    *
+    * @return string|null
+    */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+    * Sets source
+    *
+    * @param string|null $source 参数解释： 证书来源  约束限制： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”。  取值范围： 无  默认取值： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    *
+    * @return $this
+    */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
+        return $this;
+    }
+
+    /**
+    * Gets protectionStatus
+    *  参数解释： 修改保护状态  约束限制： 无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值： nonProtection
+    *
+    * @return string|null
+    */
+    public function getProtectionStatus()
+    {
+        return $this->container['protectionStatus'];
+    }
+
+    /**
+    * Sets protectionStatus
+    *
+    * @param string|null $protectionStatus 参数解释： 修改保护状态  约束限制： 无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值： nonProtection
+    *
+    * @return $this
+    */
+    public function setProtectionStatus($protectionStatus)
+    {
+        $this->container['protectionStatus'] = $protectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets protectionReason
+    *  参数解释： 设置修改保护的原因  约束限制： 仅当protection_status为consoleProtection时有效  取值范围： 无  默认取值： 空
+    *
+    * @return string|null
+    */
+    public function getProtectionReason()
+    {
+        return $this->container['protectionReason'];
+    }
+
+    /**
+    * Sets protectionReason
+    *
+    * @param string|null $protectionReason 参数解释： 设置修改保护的原因  约束限制： 仅当protection_status为consoleProtection时有效  取值范围： 无  默认取值： 空
+    *
+    * @return $this
+    */
+    public function setProtectionReason($protectionReason)
+    {
+        $this->container['protectionReason'] = $protectionReason;
         return $this;
     }
 

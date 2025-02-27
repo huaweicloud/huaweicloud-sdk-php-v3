@@ -12479,6 +12479,9 @@ class GaussDBAsyncClient extends Client
         if ($localVarParams['addTaskScenario'] !== null) {
             $queryParams['add_task_scenario'] = $localVarParams['addTaskScenario'];
         }
+        if ($localVarParams['mainTaskName'] !== null) {
+            $queryParams['main_task_name'] = $localVarParams['mainTaskName'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
         }

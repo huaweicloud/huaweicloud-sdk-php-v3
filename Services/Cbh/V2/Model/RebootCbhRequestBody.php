@@ -20,19 +20,19 @@ class RebootCbhRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serverId  serverId
+    * serverId  云堡垒机实例ID，使用UUID格式表示。
     * rebootType  重启方式，不区分大小写。 - SOFT：普通重启，关闭虚拟机服务 - HARD：强制重启，重启虚拟机
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'serverId' => 'object',
+            'serverId' => 'string',
             'rebootType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serverId  serverId
+    * serverId  云堡垒机实例ID，使用UUID格式表示。
     * rebootType  重启方式，不区分大小写。 - SOFT：普通重启，关闭虚拟机服务 - HARD：强制重启，重启虚拟机
     *
     * @var string[]
@@ -65,7 +65,7 @@ class RebootCbhRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serverId  serverId
+    * serverId  云堡垒机实例ID，使用UUID格式表示。
     * rebootType  重启方式，不区分大小写。 - SOFT：普通重启，关闭虚拟机服务 - HARD：强制重启，重启虚拟机
     *
     * @var string[]
@@ -77,7 +77,7 @@ class RebootCbhRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serverId  serverId
+    * serverId  云堡垒机实例ID，使用UUID格式表示。
     * rebootType  重启方式，不区分大小写。 - SOFT：普通重启，关闭虚拟机服务 - HARD：强制重启，重启虚拟机
     *
     * @var string[]
@@ -89,7 +89,7 @@ class RebootCbhRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serverId  serverId
+    * serverId  云堡垒机实例ID，使用UUID格式表示。
     * rebootType  重启方式，不区分大小写。 - SOFT：普通重启，关闭虚拟机服务 - HARD：强制重启，重启虚拟机
     *
     * @var string[]
@@ -172,6 +172,12 @@ class RebootCbhRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['serverId'] === null) {
             $invalidProperties[] = "'serverId' can't be null";
         }
+            if ((mb_strlen($this->container['serverId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'serverId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['serverId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'serverId', the character length must be bigger than or equal to 0.";
+            }
         if ($this->container['rebootType'] === null) {
             $invalidProperties[] = "'rebootType' can't be null";
         }
@@ -197,9 +203,9 @@ class RebootCbhRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
-    *  serverId
+    *  云堡垒机实例ID，使用UUID格式表示。
     *
-    * @return object
+    * @return string
     */
     public function getServerId()
     {
@@ -209,7 +215,7 @@ class RebootCbhRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets serverId
     *
-    * @param object $serverId serverId
+    * @param string $serverId 云堡垒机实例ID，使用UUID格式表示。
     *
     * @return $this
     */

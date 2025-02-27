@@ -4160,6 +4160,15 @@ class ElbAsyncClient extends Client
         if ($localVarParams['certificate'] !== null) {
             $queryParams['certificate'] = $localVarParams['certificate'];
         }
+        if ($localVarParams['source'] !== null) {
+            $queryParams['source'] = $localVarParams['source'];
+        }
+        if ($localVarParams['protectionStatus'] !== null) {
+            $queryParams['protection_status'] = $localVarParams['protectionStatus'];
+        }
+        if ($localVarParams['protectionReason'] !== null) {
+            $queryParams['protection_reason'] = $localVarParams['protectionReason'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

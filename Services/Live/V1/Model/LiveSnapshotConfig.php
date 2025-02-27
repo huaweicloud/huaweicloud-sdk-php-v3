@@ -28,6 +28,8 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
+    * imageAccessProtocol  截图存储文件访问协议， 仅支持http、https格式
+    * imageAccessDomain  截图存储文件访问域名
     *
     * @var string[]
     */
@@ -39,7 +41,9 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'objectWriteMode' => 'int',
             'obsLocation' => '\HuaweiCloud\SDK\Live\V1\Model\ObsFileAddr',
             'callBackEnable' => 'string',
-            'callBackUrl' => 'string'
+            'callBackUrl' => 'string',
+            'imageAccessProtocol' => 'string',
+            'imageAccessDomain' => 'string'
     ];
 
     /**
@@ -52,6 +56,8 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
+    * imageAccessProtocol  截图存储文件访问协议， 仅支持http、https格式
+    * imageAccessDomain  截图存储文件访问域名
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
         'objectWriteMode' => null,
         'obsLocation' => null,
         'callBackEnable' => null,
-        'callBackUrl' => null
+        'callBackUrl' => null,
+        'imageAccessProtocol' => null,
+        'imageAccessDomain' => null
     ];
 
     /**
@@ -97,6 +105,8 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
+    * imageAccessProtocol  截图存储文件访问协议， 仅支持http、https格式
+    * imageAccessDomain  截图存储文件访问域名
     *
     * @var string[]
     */
@@ -108,7 +118,9 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'objectWriteMode' => 'object_write_mode',
             'obsLocation' => 'obs_location',
             'callBackEnable' => 'call_back_enable',
-            'callBackUrl' => 'call_back_url'
+            'callBackUrl' => 'call_back_url',
+            'imageAccessProtocol' => 'image_access_protocol',
+            'imageAccessDomain' => 'image_access_domain'
     ];
 
     /**
@@ -121,6 +133,8 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
+    * imageAccessProtocol  截图存储文件访问协议， 仅支持http、https格式
+    * imageAccessDomain  截图存储文件访问域名
     *
     * @var string[]
     */
@@ -132,7 +146,9 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'objectWriteMode' => 'setObjectWriteMode',
             'obsLocation' => 'setObsLocation',
             'callBackEnable' => 'setCallBackEnable',
-            'callBackUrl' => 'setCallBackUrl'
+            'callBackUrl' => 'setCallBackUrl',
+            'imageAccessProtocol' => 'setImageAccessProtocol',
+            'imageAccessDomain' => 'setImageAccessDomain'
     ];
 
     /**
@@ -145,6 +161,8 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
+    * imageAccessProtocol  截图存储文件访问协议， 仅支持http、https格式
+    * imageAccessDomain  截图存储文件访问域名
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'objectWriteMode' => 'getObjectWriteMode',
             'obsLocation' => 'getObsLocation',
             'callBackEnable' => 'getCallBackEnable',
-            'callBackUrl' => 'getCallBackUrl'
+            'callBackUrl' => 'getCallBackUrl',
+            'imageAccessProtocol' => 'getImageAccessProtocol',
+            'imageAccessDomain' => 'getImageAccessDomain'
     ];
 
     /**
@@ -201,6 +221,8 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     }
     const CALL_BACK_ENABLE_ON = 'on';
     const CALL_BACK_ENABLE_OFF = 'off';
+    const IMAGE_ACCESS_PROTOCOL_HTTP = 'http';
+    const IMAGE_ACCESS_PROTOCOL_HTTPS = 'https';
     
 
     /**
@@ -213,6 +235,19 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
         return [
             self::CALL_BACK_ENABLE_ON,
             self::CALL_BACK_ENABLE_OFF,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getImageAccessProtocolAllowableValues()
+    {
+        return [
+            self::IMAGE_ACCESS_PROTOCOL_HTTP,
+            self::IMAGE_ACCESS_PROTOCOL_HTTPS,
         ];
     }
 
@@ -240,6 +275,8 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
         $this->container['obsLocation'] = isset($data['obsLocation']) ? $data['obsLocation'] : null;
         $this->container['callBackEnable'] = isset($data['callBackEnable']) ? $data['callBackEnable'] : null;
         $this->container['callBackUrl'] = isset($data['callBackUrl']) ? $data['callBackUrl'] : null;
+        $this->container['imageAccessProtocol'] = isset($data['imageAccessProtocol']) ? $data['imageAccessProtocol'] : null;
+        $this->container['imageAccessDomain'] = isset($data['imageAccessDomain']) ? $data['imageAccessDomain'] : null;
     }
 
     /**
@@ -291,6 +328,20 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getImageAccessProtocolAllowableValues();
+                if (!is_null($this->container['imageAccessProtocol']) && !in_array($this->container['imageAccessProtocol'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'imageAccessProtocol', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['imageAccessDomain']) && (mb_strlen($this->container['imageAccessDomain']) > 255)) {
+                $invalidProperties[] = "invalid value for 'imageAccessDomain', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['imageAccessDomain']) && (mb_strlen($this->container['imageAccessDomain']) < 0)) {
+                $invalidProperties[] = "invalid value for 'imageAccessDomain', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -494,6 +545,54 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     public function setCallBackUrl($callBackUrl)
     {
         $this->container['callBackUrl'] = $callBackUrl;
+        return $this;
+    }
+
+    /**
+    * Gets imageAccessProtocol
+    *  截图存储文件访问协议， 仅支持http、https格式
+    *
+    * @return string|null
+    */
+    public function getImageAccessProtocol()
+    {
+        return $this->container['imageAccessProtocol'];
+    }
+
+    /**
+    * Sets imageAccessProtocol
+    *
+    * @param string|null $imageAccessProtocol 截图存储文件访问协议， 仅支持http、https格式
+    *
+    * @return $this
+    */
+    public function setImageAccessProtocol($imageAccessProtocol)
+    {
+        $this->container['imageAccessProtocol'] = $imageAccessProtocol;
+        return $this;
+    }
+
+    /**
+    * Gets imageAccessDomain
+    *  截图存储文件访问域名
+    *
+    * @return string|null
+    */
+    public function getImageAccessDomain()
+    {
+        return $this->container['imageAccessDomain'];
+    }
+
+    /**
+    * Sets imageAccessDomain
+    *
+    * @param string|null $imageAccessDomain 截图存储文件访问域名
+    *
+    * @return $this
+    */
+    public function setImageAccessDomain($imageAccessDomain)
+    {
+        $this->container['imageAccessDomain'] = $imageAccessDomain;
         return $this;
     }
 

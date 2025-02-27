@@ -26,7 +26,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
     * listeners  参数解释：与IP地址组关联的监听器的ID列表。
     * projectId  参数解释：IP地址组的项目ID。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * createdAt  参数解释：IP地址组的创建时间。
     * updatedAt  参数解释：IP地址组的更新时间。
     *
@@ -52,7 +52,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
     * listeners  参数解释：与IP地址组关联的监听器的ID列表。
     * projectId  参数解释：IP地址组的项目ID。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * createdAt  参数解释：IP地址组的创建时间。
     * updatedAt  参数解释：IP地址组的更新时间。
     *
@@ -99,7 +99,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
     * listeners  参数解释：与IP地址组关联的监听器的ID列表。
     * projectId  参数解释：IP地址组的项目ID。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * createdAt  参数解释：IP地址组的创建时间。
     * updatedAt  参数解释：IP地址组的更新时间。
     *
@@ -125,7 +125,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
     * listeners  参数解释：与IP地址组关联的监听器的ID列表。
     * projectId  参数解释：IP地址组的项目ID。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * createdAt  参数解释：IP地址组的创建时间。
     * updatedAt  参数解释：IP地址组的更新时间。
     *
@@ -151,7 +151,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
     * listeners  参数解释：与IP地址组关联的监听器的ID列表。
     * projectId  参数解释：IP地址组的项目ID。
-    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * createdAt  参数解释：IP地址组的创建时间。
     * updatedAt  参数解释：IP地址组的更新时间。
     *
@@ -430,7 +430,7 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    *  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * @param string|null $enterpriseProjectId 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @return $this
     */

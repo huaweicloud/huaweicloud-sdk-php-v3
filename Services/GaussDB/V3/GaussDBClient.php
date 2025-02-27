@@ -11961,6 +11961,9 @@ class GaussDBClient extends Client
         if ($localVarParams['addTaskScenario'] !== null) {
             $queryParams['add_task_scenario'] = $localVarParams['addTaskScenario'];
         }
+        if ($localVarParams['mainTaskName'] !== null) {
+            $queryParams['main_task_name'] = $localVarParams['mainTaskName'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }

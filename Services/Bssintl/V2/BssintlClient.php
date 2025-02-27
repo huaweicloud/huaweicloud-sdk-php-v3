@@ -1177,6 +1177,83 @@ class BssintlClient extends Client
     }
 
     /**
+     * 查询企业子账号列表
+     *
+     * 企业主账号在自建平台查询企业子账号信息列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listEnterpriseSubCustomers($request)
+    {
+        return $this->listEnterpriseSubCustomersWithHttpInfo($request);
+    }
+
+    public function listEnterpriseSubCustomersWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/enterprises/multi-accounts/sub-customers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['subCustomerAccountName'] !== null) {
+            $queryParams['sub_customer_account_name'] = $localVarParams['subCustomerAccountName'];
+        }
+        if ($localVarParams['subCustomerDisplayName'] !== null) {
+            $queryParams['sub_customer_display_name'] = $localVarParams['subCustomerDisplayName'];
+        }
+        if ($localVarParams['fuzzyQuery'] !== null) {
+            $queryParams['fuzzy_query'] = $localVarParams['fuzzyQuery'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['orgId'] !== null) {
+            $queryParams['org_id'] = $localVarParams['orgId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListEnterpriseSubCustomersResponse',
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListEnterpriseSubCustomersRequest');
+    }
+
+    /**
      * 查询资源包列表
      *
      * 功能描述：客户在自建平台查询资源包列表。

@@ -21,7 +21,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ipgroupId  参数解释：监听器关联的访问控制组的id。  约束限制： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。
-    * enableIpgroup  参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - flase：关闭访问控制。
+    * enableIpgroup  参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - false：关闭访问控制。
     * type  参数解释：访问控制组的类型。  取值范围： - white：白名单，只允许指定ip访问。 - black：黑名单，不允许指定ip访问。  默认取值：white
     *
     * @var string[]
@@ -35,7 +35,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ipgroupId  参数解释：监听器关联的访问控制组的id。  约束限制： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。
-    * enableIpgroup  参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - flase：关闭访问控制。
+    * enableIpgroup  参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - false：关闭访问控制。
     * type  参数解释：访问控制组的类型。  取值范围： - white：白名单，只允许指定ip访问。 - black：黑名单，不允许指定ip访问。  默认取值：white
     *
     * @var string[]
@@ -70,7 +70,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ipgroupId  参数解释：监听器关联的访问控制组的id。  约束限制： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。
-    * enableIpgroup  参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - flase：关闭访问控制。
+    * enableIpgroup  参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - false：关闭访问控制。
     * type  参数解释：访问控制组的类型。  取值范围： - white：白名单，只允许指定ip访问。 - black：黑名单，不允许指定ip访问。  默认取值：white
     *
     * @var string[]
@@ -84,7 +84,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ipgroupId  参数解释：监听器关联的访问控制组的id。  约束限制： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。
-    * enableIpgroup  参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - flase：关闭访问控制。
+    * enableIpgroup  参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - false：关闭访问控制。
     * type  参数解释：访问控制组的类型。  取值范围： - white：白名单，只允许指定ip访问。 - black：黑名单，不允许指定ip访问。  默认取值：white
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ipgroupId  参数解释：监听器关联的访问控制组的id。  约束限制： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。
-    * enableIpgroup  参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - flase：关闭访问控制。
+    * enableIpgroup  参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - false：关闭访问控制。
     * type  参数解释：访问控制组的类型。  取值范围： - white：白名单，只允许指定ip访问。 - black：黑名单，不允许指定ip访问。  默认取值：white
     *
     * @var string[]
@@ -252,7 +252,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableIpgroup
-    *  参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - flase：关闭访问控制。
+    *  参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - false：关闭访问控制。
     *
     * @return bool|null
     */
@@ -264,7 +264,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets enableIpgroup
     *
-    * @param bool|null $enableIpgroup 参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - flase：关闭访问控制。
+    * @param bool|null $enableIpgroup 参数解释：访问控制组的状态。  取值范围： - true：开启访问控制，默认值。 - false：关闭访问控制。
     *
     * @return $this
     */

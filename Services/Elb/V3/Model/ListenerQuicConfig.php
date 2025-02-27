@@ -20,8 +20,8 @@ class ListenerQuicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quicListenerId  参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
-    * enableQuicUpgrade  参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - flase：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * quicListenerId  参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
+    * enableQuicUpgrade  参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - false：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListenerQuicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quicListenerId  参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
-    * enableQuicUpgrade  参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - flase：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * quicListenerId  参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
+    * enableQuicUpgrade  参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - false：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListenerQuicConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quicListenerId  参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
-    * enableQuicUpgrade  参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - flase：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * quicListenerId  参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
+    * enableQuicUpgrade  参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - false：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListenerQuicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quicListenerId  参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
-    * enableQuicUpgrade  参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - flase：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * quicListenerId  参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
+    * enableQuicUpgrade  参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - false：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListenerQuicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quicListenerId  参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
-    * enableQuicUpgrade  参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - flase：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * quicListenerId  参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
+    * enableQuicUpgrade  参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - false：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ListenerQuicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets quicListenerId
-    *  参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    *  参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ListenerQuicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets quicListenerId
     *
-    * @param string|null $quicListenerId 参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * @param string|null $quicListenerId 参数解释：监听器关联的QUIC监听器ID。  约束限制：指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ListenerQuicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableQuicUpgrade
-    *  参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - flase：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    *  参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - false：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
     *
     * @return bool|null
     */
@@ -221,7 +221,7 @@ class ListenerQuicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets enableQuicUpgrade
     *
-    * @param bool|null $enableQuicUpgrade 参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - flase：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * @param bool|null $enableQuicUpgrade 参数解释：QUIC升级的开启状态。开启HTTPS监听器升级QUIC监听器能力。  取值范围： - true:开启QUIC升级。 - false：关闭QUIC升级。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
     *
     * @return $this
     */
