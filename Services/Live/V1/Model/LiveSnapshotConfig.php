@@ -28,6 +28,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
+    * imageObjectFormat  截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
     * imageAccessProtocol  截图存储文件访问协议， 仅支持http、https格式
     * imageAccessDomain  截图存储文件访问域名
     *
@@ -42,6 +43,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'obsLocation' => '\HuaweiCloud\SDK\Live\V1\Model\ObsFileAddr',
             'callBackEnable' => 'string',
             'callBackUrl' => 'string',
+            'imageObjectFormat' => 'string',
             'imageAccessProtocol' => 'string',
             'imageAccessDomain' => 'string'
     ];
@@ -56,6 +58,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
+    * imageObjectFormat  截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
     * imageAccessProtocol  截图存储文件访问协议， 仅支持http、https格式
     * imageAccessDomain  截图存储文件访问域名
     *
@@ -70,6 +73,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
         'obsLocation' => null,
         'callBackEnable' => null,
         'callBackUrl' => null,
+        'imageObjectFormat' => null,
         'imageAccessProtocol' => null,
         'imageAccessDomain' => null
     ];
@@ -105,6 +109,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
+    * imageObjectFormat  截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
     * imageAccessProtocol  截图存储文件访问协议， 仅支持http、https格式
     * imageAccessDomain  截图存储文件访问域名
     *
@@ -119,6 +124,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'obsLocation' => 'obs_location',
             'callBackEnable' => 'call_back_enable',
             'callBackUrl' => 'call_back_url',
+            'imageObjectFormat' => 'image_object_format',
             'imageAccessProtocol' => 'image_access_protocol',
             'imageAccessDomain' => 'image_access_domain'
     ];
@@ -133,6 +139,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
+    * imageObjectFormat  截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
     * imageAccessProtocol  截图存储文件访问协议， 仅支持http、https格式
     * imageAccessDomain  截图存储文件访问域名
     *
@@ -147,6 +154,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'obsLocation' => 'setObsLocation',
             'callBackEnable' => 'setCallBackEnable',
             'callBackUrl' => 'setCallBackUrl',
+            'imageObjectFormat' => 'setImageObjectFormat',
             'imageAccessProtocol' => 'setImageAccessProtocol',
             'imageAccessDomain' => 'setImageAccessDomain'
     ];
@@ -161,6 +169,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
+    * imageObjectFormat  截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
     * imageAccessProtocol  截图存储文件访问协议， 仅支持http、https格式
     * imageAccessDomain  截图存储文件访问域名
     *
@@ -175,6 +184,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'obsLocation' => 'getObsLocation',
             'callBackEnable' => 'getCallBackEnable',
             'callBackUrl' => 'getCallBackUrl',
+            'imageObjectFormat' => 'getImageObjectFormat',
             'imageAccessProtocol' => 'getImageAccessProtocol',
             'imageAccessDomain' => 'getImageAccessDomain'
     ];
@@ -275,6 +285,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
         $this->container['obsLocation'] = isset($data['obsLocation']) ? $data['obsLocation'] : null;
         $this->container['callBackEnable'] = isset($data['callBackEnable']) ? $data['callBackEnable'] : null;
         $this->container['callBackUrl'] = isset($data['callBackUrl']) ? $data['callBackUrl'] : null;
+        $this->container['imageObjectFormat'] = isset($data['imageObjectFormat']) ? $data['imageObjectFormat'] : null;
         $this->container['imageAccessProtocol'] = isset($data['imageAccessProtocol']) ? $data['imageAccessProtocol'] : null;
         $this->container['imageAccessDomain'] = isset($data['imageAccessDomain']) ? $data['imageAccessDomain'] : null;
     }
@@ -545,6 +556,30 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     public function setCallBackUrl($callBackUrl)
     {
         $this->container['callBackUrl'] = $callBackUrl;
+        return $this;
+    }
+
+    /**
+    * Gets imageObjectFormat
+    *  截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
+    *
+    * @return string|null
+    */
+    public function getImageObjectFormat()
+    {
+        return $this->container['imageObjectFormat'];
+    }
+
+    /**
+    * Sets imageObjectFormat
+    *
+    * @param string|null $imageObjectFormat 截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
+    *
+    * @return $this
+    */
+    public function setImageObjectFormat($imageObjectFormat)
+    {
+        $this->container['imageObjectFormat'] = $imageObjectFormat;
         return $this;
     }
 

@@ -22,7 +22,8 @@ class RecycleInstance implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
     * name  实例名称。
-    * mode  实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis集群实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx单节点实例类型。   - 取值为“Replication”，表示GeminiDB Redis主备版实例类型。
+    * mode  实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis 经典部署模式Proxy 集群实例类型。   - 取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。   - 取值为“RedisCluster”，表示GeminiDB Redis经典部署模式Cluster集群实例类型。   - 取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx 经典部署模式单节点实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。
+    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * datastore  datastore
     * chargeMode  计费方式。 计费方式。   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
     * enterpriseProjectId  企业项目ID，取值为“0”，表示为default企业项目
@@ -37,6 +38,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'mode' => 'string',
+            'productType' => 'string',
             'datastore' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\RecycleDatastore',
             'chargeMode' => 'string',
             'enterpriseProjectId' => 'string',
@@ -50,7 +52,8 @@ class RecycleInstance implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
     * name  实例名称。
-    * mode  实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis集群实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx单节点实例类型。   - 取值为“Replication”，表示GeminiDB Redis主备版实例类型。
+    * mode  实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis 经典部署模式Proxy 集群实例类型。   - 取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。   - 取值为“RedisCluster”，表示GeminiDB Redis经典部署模式Cluster集群实例类型。   - 取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx 经典部署模式单节点实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。
+    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * datastore  datastore
     * chargeMode  计费方式。 计费方式。   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
     * enterpriseProjectId  企业项目ID，取值为“0”，表示为default企业项目
@@ -65,6 +68,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'mode' => null,
+        'productType' => null,
         'datastore' => null,
         'chargeMode' => null,
         'enterpriseProjectId' => null,
@@ -99,7 +103,8 @@ class RecycleInstance implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  实例ID。
     * name  实例名称。
-    * mode  实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis集群实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx单节点实例类型。   - 取值为“Replication”，表示GeminiDB Redis主备版实例类型。
+    * mode  实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis 经典部署模式Proxy 集群实例类型。   - 取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。   - 取值为“RedisCluster”，表示GeminiDB Redis经典部署模式Cluster集群实例类型。   - 取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx 经典部署模式单节点实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。
+    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * datastore  datastore
     * chargeMode  计费方式。 计费方式。   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
     * enterpriseProjectId  企业项目ID，取值为“0”，表示为default企业项目
@@ -114,6 +119,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'mode' => 'mode',
+            'productType' => 'product_type',
             'datastore' => 'datastore',
             'chargeMode' => 'charge_mode',
             'enterpriseProjectId' => 'enterprise_project_id',
@@ -127,7 +133,8 @@ class RecycleInstance implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
     * name  实例名称。
-    * mode  实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis集群实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx单节点实例类型。   - 取值为“Replication”，表示GeminiDB Redis主备版实例类型。
+    * mode  实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis 经典部署模式Proxy 集群实例类型。   - 取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。   - 取值为“RedisCluster”，表示GeminiDB Redis经典部署模式Cluster集群实例类型。   - 取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx 经典部署模式单节点实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。
+    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * datastore  datastore
     * chargeMode  计费方式。 计费方式。   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
     * enterpriseProjectId  企业项目ID，取值为“0”，表示为default企业项目
@@ -142,6 +149,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'mode' => 'setMode',
+            'productType' => 'setProductType',
             'datastore' => 'setDatastore',
             'chargeMode' => 'setChargeMode',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
@@ -155,7 +163,8 @@ class RecycleInstance implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
     * name  实例名称。
-    * mode  实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis集群实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx单节点实例类型。   - 取值为“Replication”，表示GeminiDB Redis主备版实例类型。
+    * mode  实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis 经典部署模式Proxy 集群实例类型。   - 取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。   - 取值为“RedisCluster”，表示GeminiDB Redis经典部署模式Cluster集群实例类型。   - 取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx 经典部署模式单节点实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。
+    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * datastore  datastore
     * chargeMode  计费方式。 计费方式。   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
     * enterpriseProjectId  企业项目ID，取值为“0”，表示为default企业项目
@@ -170,6 +179,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'mode' => 'getMode',
+            'productType' => 'getProductType',
             'datastore' => 'getDatastore',
             'chargeMode' => 'getChargeMode',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
@@ -240,6 +250,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['productType'] = isset($data['productType']) ? $data['productType'] : null;
         $this->container['datastore'] = isset($data['datastore']) ? $data['datastore'] : null;
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
@@ -321,7 +332,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis集群实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx单节点实例类型。   - 取值为“Replication”，表示GeminiDB Redis主备版实例类型。
+    *  实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis 经典部署模式Proxy 集群实例类型。   - 取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。   - 取值为“RedisCluster”，表示GeminiDB Redis经典部署模式Cluster集群实例类型。   - 取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx 经典部署模式单节点实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。
     *
     * @return string|null
     */
@@ -333,13 +344,37 @@ class RecycleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode 实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis集群实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx单节点实例类型。   - 取值为“Replication”，表示GeminiDB Redis主备版实例类型。
+    * @param string|null $mode 实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis 经典部署模式Proxy 集群实例类型。   - 取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。   - 取值为“RedisCluster”，表示GeminiDB Redis经典部署模式Cluster集群实例类型。   - 取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx 经典部署模式单节点实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。
     *
     * @return $this
     */
     public function setMode($mode)
     {
         $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets productType
+    *  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
+    *
+    * @return string|null
+    */
+    public function getProductType()
+    {
+        return $this->container['productType'];
+    }
+
+    /**
+    * Sets productType
+    *
+    * @param string|null $productType 产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
+    *
+    * @return $this
+    */
+    public function setProductType($productType)
+    {
+        $this->container['productType'] = $productType;
         return $this;
     }
 

@@ -28,7 +28,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * subnetId  子网的网络ID，获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考查询子网列表。
     * securityGroupId  安全组ID，获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考查询安全组列表。
     * password  数据库密码。 取值范围：长度为8~32位，必须是大写字母（A~Z）、小写字母（a~z）、数字（0~9）、特殊字符~!@#%^*-_=+?的组合。 建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
-    * mode  实例类型。   - GeminiDB Cassandra支持集群类型，取值为“Cluster”。   - GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   - GeminiDB Influx支持集群类型，取值为“Cluster”。   - GeminiDB Influx支持单节点类型，取值为“InfluxdbSingle”。   - GeminiDB redis支持集群类型，取值为“Cluster”。   - GeminiDB redis支持主备类型，取值为“Replication”。
+    * mode  实例类型。   -  GeminiDB Cassandra支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Cassandra支持云原生部署模式集群类型，取值“CloudNativeCluster”。   -  GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   -  GeminiDB Influx支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Influx支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Influx支持经典部署模式单节点类型，取值为“InfluxdbSingle”。   -  GeminiDB Redis支持经典部署模式Proxy集群类型，取值为“Cluster”。   -  GeminiDB redis支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Redis支持经典部署模式Cluster集群类型，取值为“RedisCluster”   -  GeminiDB Redis支持经典部署模式主备类型，取值为“Replication”。
+    * productType  产品类型。   -  Capacity 容量型   -  Standard 标准型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
     * flavor  实例规格详情。获取方法请参见查询所有实例规格信息中响应“flavors”字段下参数的值。
     * configurationId  参数模板ID。
     * backupStrategy  backupStrategy
@@ -52,6 +53,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'securityGroupId' => 'string',
             'password' => 'string',
             'mode' => 'string',
+            'productType' => 'string',
             'flavor' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\CreateInstanceFlavorOption[]',
             'configurationId' => 'string',
             'backupStrategy' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\BackupStrategyOption',
@@ -74,7 +76,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * subnetId  子网的网络ID，获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考查询子网列表。
     * securityGroupId  安全组ID，获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考查询安全组列表。
     * password  数据库密码。 取值范围：长度为8~32位，必须是大写字母（A~Z）、小写字母（a~z）、数字（0~9）、特殊字符~!@#%^*-_=+?的组合。 建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
-    * mode  实例类型。   - GeminiDB Cassandra支持集群类型，取值为“Cluster”。   - GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   - GeminiDB Influx支持集群类型，取值为“Cluster”。   - GeminiDB Influx支持单节点类型，取值为“InfluxdbSingle”。   - GeminiDB redis支持集群类型，取值为“Cluster”。   - GeminiDB redis支持主备类型，取值为“Replication”。
+    * mode  实例类型。   -  GeminiDB Cassandra支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Cassandra支持云原生部署模式集群类型，取值“CloudNativeCluster”。   -  GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   -  GeminiDB Influx支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Influx支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Influx支持经典部署模式单节点类型，取值为“InfluxdbSingle”。   -  GeminiDB Redis支持经典部署模式Proxy集群类型，取值为“Cluster”。   -  GeminiDB redis支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Redis支持经典部署模式Cluster集群类型，取值为“RedisCluster”   -  GeminiDB Redis支持经典部署模式主备类型，取值为“Replication”。
+    * productType  产品类型。   -  Capacity 容量型   -  Standard 标准型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
     * flavor  实例规格详情。获取方法请参见查询所有实例规格信息中响应“flavors”字段下参数的值。
     * configurationId  参数模板ID。
     * backupStrategy  backupStrategy
@@ -98,6 +101,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         'securityGroupId' => null,
         'password' => null,
         'mode' => null,
+        'productType' => null,
         'flavor' => null,
         'configurationId' => null,
         'backupStrategy' => null,
@@ -141,7 +145,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * subnetId  子网的网络ID，获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考查询子网列表。
     * securityGroupId  安全组ID，获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考查询安全组列表。
     * password  数据库密码。 取值范围：长度为8~32位，必须是大写字母（A~Z）、小写字母（a~z）、数字（0~9）、特殊字符~!@#%^*-_=+?的组合。 建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
-    * mode  实例类型。   - GeminiDB Cassandra支持集群类型，取值为“Cluster”。   - GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   - GeminiDB Influx支持集群类型，取值为“Cluster”。   - GeminiDB Influx支持单节点类型，取值为“InfluxdbSingle”。   - GeminiDB redis支持集群类型，取值为“Cluster”。   - GeminiDB redis支持主备类型，取值为“Replication”。
+    * mode  实例类型。   -  GeminiDB Cassandra支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Cassandra支持云原生部署模式集群类型，取值“CloudNativeCluster”。   -  GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   -  GeminiDB Influx支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Influx支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Influx支持经典部署模式单节点类型，取值为“InfluxdbSingle”。   -  GeminiDB Redis支持经典部署模式Proxy集群类型，取值为“Cluster”。   -  GeminiDB redis支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Redis支持经典部署模式Cluster集群类型，取值为“RedisCluster”   -  GeminiDB Redis支持经典部署模式主备类型，取值为“Replication”。
+    * productType  产品类型。   -  Capacity 容量型   -  Standard 标准型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
     * flavor  实例规格详情。获取方法请参见查询所有实例规格信息中响应“flavors”字段下参数的值。
     * configurationId  参数模板ID。
     * backupStrategy  backupStrategy
@@ -165,6 +170,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'securityGroupId' => 'security_group_id',
             'password' => 'password',
             'mode' => 'mode',
+            'productType' => 'product_type',
             'flavor' => 'flavor',
             'configurationId' => 'configuration_id',
             'backupStrategy' => 'backup_strategy',
@@ -187,7 +193,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * subnetId  子网的网络ID，获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考查询子网列表。
     * securityGroupId  安全组ID，获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考查询安全组列表。
     * password  数据库密码。 取值范围：长度为8~32位，必须是大写字母（A~Z）、小写字母（a~z）、数字（0~9）、特殊字符~!@#%^*-_=+?的组合。 建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
-    * mode  实例类型。   - GeminiDB Cassandra支持集群类型，取值为“Cluster”。   - GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   - GeminiDB Influx支持集群类型，取值为“Cluster”。   - GeminiDB Influx支持单节点类型，取值为“InfluxdbSingle”。   - GeminiDB redis支持集群类型，取值为“Cluster”。   - GeminiDB redis支持主备类型，取值为“Replication”。
+    * mode  实例类型。   -  GeminiDB Cassandra支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Cassandra支持云原生部署模式集群类型，取值“CloudNativeCluster”。   -  GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   -  GeminiDB Influx支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Influx支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Influx支持经典部署模式单节点类型，取值为“InfluxdbSingle”。   -  GeminiDB Redis支持经典部署模式Proxy集群类型，取值为“Cluster”。   -  GeminiDB redis支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Redis支持经典部署模式Cluster集群类型，取值为“RedisCluster”   -  GeminiDB Redis支持经典部署模式主备类型，取值为“Replication”。
+    * productType  产品类型。   -  Capacity 容量型   -  Standard 标准型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
     * flavor  实例规格详情。获取方法请参见查询所有实例规格信息中响应“flavors”字段下参数的值。
     * configurationId  参数模板ID。
     * backupStrategy  backupStrategy
@@ -211,6 +218,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'securityGroupId' => 'setSecurityGroupId',
             'password' => 'setPassword',
             'mode' => 'setMode',
+            'productType' => 'setProductType',
             'flavor' => 'setFlavor',
             'configurationId' => 'setConfigurationId',
             'backupStrategy' => 'setBackupStrategy',
@@ -233,7 +241,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * subnetId  子网的网络ID，获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考查询子网列表。
     * securityGroupId  安全组ID，获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考查询安全组列表。
     * password  数据库密码。 取值范围：长度为8~32位，必须是大写字母（A~Z）、小写字母（a~z）、数字（0~9）、特殊字符~!@#%^*-_=+?的组合。 建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
-    * mode  实例类型。   - GeminiDB Cassandra支持集群类型，取值为“Cluster”。   - GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   - GeminiDB Influx支持集群类型，取值为“Cluster”。   - GeminiDB Influx支持单节点类型，取值为“InfluxdbSingle”。   - GeminiDB redis支持集群类型，取值为“Cluster”。   - GeminiDB redis支持主备类型，取值为“Replication”。
+    * mode  实例类型。   -  GeminiDB Cassandra支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Cassandra支持云原生部署模式集群类型，取值“CloudNativeCluster”。   -  GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   -  GeminiDB Influx支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Influx支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Influx支持经典部署模式单节点类型，取值为“InfluxdbSingle”。   -  GeminiDB Redis支持经典部署模式Proxy集群类型，取值为“Cluster”。   -  GeminiDB redis支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Redis支持经典部署模式Cluster集群类型，取值为“RedisCluster”   -  GeminiDB Redis支持经典部署模式主备类型，取值为“Replication”。
+    * productType  产品类型。   -  Capacity 容量型   -  Standard 标准型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
     * flavor  实例规格详情。获取方法请参见查询所有实例规格信息中响应“flavors”字段下参数的值。
     * configurationId  参数模板ID。
     * backupStrategy  backupStrategy
@@ -257,6 +266,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'securityGroupId' => 'getSecurityGroupId',
             'password' => 'getPassword',
             'mode' => 'getMode',
+            'productType' => 'getProductType',
             'flavor' => 'getFlavor',
             'configurationId' => 'getConfigurationId',
             'backupStrategy' => 'getBackupStrategy',
@@ -336,6 +346,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['productType'] = isset($data['productType']) ? $data['productType'] : null;
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
         $this->container['configurationId'] = isset($data['configurationId']) ? $data['configurationId'] : null;
         $this->container['backupStrategy'] = isset($data['backupStrategy']) ? $data['backupStrategy'] : null;
@@ -594,7 +605,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  实例类型。   - GeminiDB Cassandra支持集群类型，取值为“Cluster”。   - GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   - GeminiDB Influx支持集群类型，取值为“Cluster”。   - GeminiDB Influx支持单节点类型，取值为“InfluxdbSingle”。   - GeminiDB redis支持集群类型，取值为“Cluster”。   - GeminiDB redis支持主备类型，取值为“Replication”。
+    *  实例类型。   -  GeminiDB Cassandra支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Cassandra支持云原生部署模式集群类型，取值“CloudNativeCluster”。   -  GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   -  GeminiDB Influx支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Influx支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Influx支持经典部署模式单节点类型，取值为“InfluxdbSingle”。   -  GeminiDB Redis支持经典部署模式Proxy集群类型，取值为“Cluster”。   -  GeminiDB redis支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Redis支持经典部署模式Cluster集群类型，取值为“RedisCluster”   -  GeminiDB Redis支持经典部署模式主备类型，取值为“Replication”。
     *
     * @return string
     */
@@ -606,13 +617,37 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string $mode 实例类型。   - GeminiDB Cassandra支持集群类型，取值为“Cluster”。   - GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   - GeminiDB Influx支持集群类型，取值为“Cluster”。   - GeminiDB Influx支持单节点类型，取值为“InfluxdbSingle”。   - GeminiDB redis支持集群类型，取值为“Cluster”。   - GeminiDB redis支持主备类型，取值为“Replication”。
+    * @param string $mode 实例类型。   -  GeminiDB Cassandra支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Cassandra支持云原生部署模式集群类型，取值“CloudNativeCluster”。   -  GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   -  GeminiDB Influx支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Influx支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Influx支持经典部署模式单节点类型，取值为“InfluxdbSingle”。   -  GeminiDB Redis支持经典部署模式Proxy集群类型，取值为“Cluster”。   -  GeminiDB redis支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Redis支持经典部署模式Cluster集群类型，取值为“RedisCluster”   -  GeminiDB Redis支持经典部署模式主备类型，取值为“Replication”。
     *
     * @return $this
     */
     public function setMode($mode)
     {
         $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets productType
+    *  产品类型。   -  Capacity 容量型   -  Standard 标准型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
+    *
+    * @return string|null
+    */
+    public function getProductType()
+    {
+        return $this->container['productType'];
+    }
+
+    /**
+    * Sets productType
+    *
+    * @param string|null $productType 产品类型。   -  Capacity 容量型   -  Standard 标准型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
+    *
+    * @return $this
+    */
+    public function setProductType($productType)
+    {
+        $this->container['productType'] = $productType;
         return $this;
     }
 

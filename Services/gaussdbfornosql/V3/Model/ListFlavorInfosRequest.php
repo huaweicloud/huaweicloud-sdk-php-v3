@@ -21,6 +21,8 @@ class ListFlavorInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * engineName  数据库类型。   - 取值为“cassandra”，表示查询GeminiDB Cassandra数据库实例支持的规格。   - 取值为“mongodb”，表示查询GeminiDB Mongo数据库实例支持的规格。   - 取值为“influxdb”，表示查询GeminiDB Influx数据库实例支持的规格。   - 取值为“redis”，表示查询GeminiDB Redis数据库实例支持的规格。   - 如果不传该参数，默认为“cassandra”。
+    * mode  - 取值为“CloudNativeCluster”, 表示查询云原生部署模式支持的规格。 - 不传该参数表示查询数据库类型下的所有经典部署模式支持的规格。
+    * productType  产品类型。   - Standard 标准型   - Capacity 容量型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
     * offset  索引位置，偏移量。   - 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。   - 取值必须为数字，不能为负数。
     * limit  查询规格信息上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条规格信息。
     *
@@ -28,6 +30,8 @@ class ListFlavorInfosRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'engineName' => 'string',
+            'mode' => 'string',
+            'productType' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
@@ -35,6 +39,8 @@ class ListFlavorInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * engineName  数据库类型。   - 取值为“cassandra”，表示查询GeminiDB Cassandra数据库实例支持的规格。   - 取值为“mongodb”，表示查询GeminiDB Mongo数据库实例支持的规格。   - 取值为“influxdb”，表示查询GeminiDB Influx数据库实例支持的规格。   - 取值为“redis”，表示查询GeminiDB Redis数据库实例支持的规格。   - 如果不传该参数，默认为“cassandra”。
+    * mode  - 取值为“CloudNativeCluster”, 表示查询云原生部署模式支持的规格。 - 不传该参数表示查询数据库类型下的所有经典部署模式支持的规格。
+    * productType  产品类型。   - Standard 标准型   - Capacity 容量型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
     * offset  索引位置，偏移量。   - 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。   - 取值必须为数字，不能为负数。
     * limit  查询规格信息上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条规格信息。
     *
@@ -42,6 +48,8 @@ class ListFlavorInfosRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'engineName' => null,
+        'mode' => null,
+        'productType' => null,
         'offset' => null,
         'limit' => null
     ];
@@ -70,6 +78,8 @@ class ListFlavorInfosRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * engineName  数据库类型。   - 取值为“cassandra”，表示查询GeminiDB Cassandra数据库实例支持的规格。   - 取值为“mongodb”，表示查询GeminiDB Mongo数据库实例支持的规格。   - 取值为“influxdb”，表示查询GeminiDB Influx数据库实例支持的规格。   - 取值为“redis”，表示查询GeminiDB Redis数据库实例支持的规格。   - 如果不传该参数，默认为“cassandra”。
+    * mode  - 取值为“CloudNativeCluster”, 表示查询云原生部署模式支持的规格。 - 不传该参数表示查询数据库类型下的所有经典部署模式支持的规格。
+    * productType  产品类型。   - Standard 标准型   - Capacity 容量型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
     * offset  索引位置，偏移量。   - 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。   - 取值必须为数字，不能为负数。
     * limit  查询规格信息上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条规格信息。
     *
@@ -77,6 +87,8 @@ class ListFlavorInfosRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'engineName' => 'engine_name',
+            'mode' => 'mode',
+            'productType' => 'product_type',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
@@ -84,6 +96,8 @@ class ListFlavorInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * engineName  数据库类型。   - 取值为“cassandra”，表示查询GeminiDB Cassandra数据库实例支持的规格。   - 取值为“mongodb”，表示查询GeminiDB Mongo数据库实例支持的规格。   - 取值为“influxdb”，表示查询GeminiDB Influx数据库实例支持的规格。   - 取值为“redis”，表示查询GeminiDB Redis数据库实例支持的规格。   - 如果不传该参数，默认为“cassandra”。
+    * mode  - 取值为“CloudNativeCluster”, 表示查询云原生部署模式支持的规格。 - 不传该参数表示查询数据库类型下的所有经典部署模式支持的规格。
+    * productType  产品类型。   - Standard 标准型   - Capacity 容量型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
     * offset  索引位置，偏移量。   - 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。   - 取值必须为数字，不能为负数。
     * limit  查询规格信息上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条规格信息。
     *
@@ -91,6 +105,8 @@ class ListFlavorInfosRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'engineName' => 'setEngineName',
+            'mode' => 'setMode',
+            'productType' => 'setProductType',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
@@ -98,6 +114,8 @@ class ListFlavorInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * engineName  数据库类型。   - 取值为“cassandra”，表示查询GeminiDB Cassandra数据库实例支持的规格。   - 取值为“mongodb”，表示查询GeminiDB Mongo数据库实例支持的规格。   - 取值为“influxdb”，表示查询GeminiDB Influx数据库实例支持的规格。   - 取值为“redis”，表示查询GeminiDB Redis数据库实例支持的规格。   - 如果不传该参数，默认为“cassandra”。
+    * mode  - 取值为“CloudNativeCluster”, 表示查询云原生部署模式支持的规格。 - 不传该参数表示查询数据库类型下的所有经典部署模式支持的规格。
+    * productType  产品类型。   - Standard 标准型   - Capacity 容量型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
     * offset  索引位置，偏移量。   - 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。   - 取值必须为数字，不能为负数。
     * limit  查询规格信息上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条规格信息。
     *
@@ -105,6 +123,8 @@ class ListFlavorInfosRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'engineName' => 'getEngineName',
+            'mode' => 'getMode',
+            'productType' => 'getProductType',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -168,6 +188,8 @@ class ListFlavorInfosRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['engineName'] = isset($data['engineName']) ? $data['engineName'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['productType'] = isset($data['productType']) ? $data['productType'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -215,6 +237,54 @@ class ListFlavorInfosRequest implements ModelInterface, ArrayAccess
     public function setEngineName($engineName)
     {
         $this->container['engineName'] = $engineName;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  - 取值为“CloudNativeCluster”, 表示查询云原生部署模式支持的规格。 - 不传该参数表示查询数据库类型下的所有经典部署模式支持的规格。
+    *
+    * @return string|null
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param string|null $mode - 取值为“CloudNativeCluster”, 表示查询云原生部署模式支持的规格。 - 不传该参数表示查询数据库类型下的所有经典部署模式支持的规格。
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets productType
+    *  产品类型。   - Standard 标准型   - Capacity 容量型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
+    *
+    * @return string|null
+    */
+    public function getProductType()
+    {
+        return $this->container['productType'];
+    }
+
+    /**
+    * Sets productType
+    *
+    * @param string|null $productType 产品类型。   - Standard 标准型   - Capacity 容量型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
+    *
+    * @return $this
+    */
+    public function setProductType($productType)
+    {
+        $this->container['productType'] = $productType;
         return $this;
     }
 

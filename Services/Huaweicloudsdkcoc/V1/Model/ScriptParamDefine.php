@@ -20,8 +20,8 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * paramName  参数名称：只支持英文、数字、下划线
-    * paramValue  参数默认值，默认必填，如果有参数引用，可为空
+    * paramName  参数名仅支持字母、数字以及下划线
+    * paramValue  1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     * paramDescription  参数描述
     * paramOrder  该参数已废弃，传入该参数不会生效。
     * sensitive  是否是敏感参数
@@ -38,8 +38,8 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * paramName  参数名称：只支持英文、数字、下划线
-    * paramValue  参数默认值，默认必填，如果有参数引用，可为空
+    * paramName  参数名仅支持字母、数字以及下划线
+    * paramValue  1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     * paramDescription  参数描述
     * paramOrder  该参数已废弃，传入该参数不会生效。
     * sensitive  是否是敏感参数
@@ -77,8 +77,8 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * paramName  参数名称：只支持英文、数字、下划线
-    * paramValue  参数默认值，默认必填，如果有参数引用，可为空
+    * paramName  参数名仅支持字母、数字以及下划线
+    * paramValue  1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     * paramDescription  参数描述
     * paramOrder  该参数已废弃，传入该参数不会生效。
     * sensitive  是否是敏感参数
@@ -95,8 +95,8 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * paramName  参数名称：只支持英文、数字、下划线
-    * paramValue  参数默认值，默认必填，如果有参数引用，可为空
+    * paramName  参数名仅支持字母、数字以及下划线
+    * paramValue  1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     * paramDescription  参数描述
     * paramOrder  该参数已废弃，传入该参数不会生效。
     * sensitive  是否是敏感参数
@@ -113,8 +113,8 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * paramName  参数名称：只支持英文、数字、下划线
-    * paramValue  参数默认值，默认必填，如果有参数引用，可为空
+    * paramName  参数名仅支持字母、数字以及下划线
+    * paramValue  1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     * paramDescription  参数描述
     * paramOrder  该参数已废弃，传入该参数不会生效。
     * sensitive  是否是敏感参数
@@ -211,10 +211,13 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['paramName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'paramName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['paramValue']) && (mb_strlen($this->container['paramValue']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'paramValue', the character length must be smaller than or equal to 1024.";
+        if ($this->container['paramValue'] === null) {
+            $invalidProperties[] = "'paramValue' can't be null";
+        }
+            if ((mb_strlen($this->container['paramValue']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'paramValue', the character length must be smaller than or equal to 4096.";
             }
-            if (!is_null($this->container['paramValue']) && (mb_strlen($this->container['paramValue']) < 0)) {
+            if ((mb_strlen($this->container['paramValue']) < 0)) {
                 $invalidProperties[] = "invalid value for 'paramValue', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['paramDescription'] === null) {
@@ -226,6 +229,9 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['paramDescription']) < 0)) {
                 $invalidProperties[] = "invalid value for 'paramDescription', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['paramOrder'] === null) {
+            $invalidProperties[] = "'paramOrder' can't be null";
+        }
         if ($this->container['sensitive'] === null) {
             $invalidProperties[] = "'sensitive' can't be null";
         }
@@ -245,7 +251,7 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
 
     /**
     * Gets paramName
-    *  参数名称：只支持英文、数字、下划线
+    *  参数名仅支持字母、数字以及下划线
     *
     * @return string
     */
@@ -257,7 +263,7 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
     /**
     * Sets paramName
     *
-    * @param string $paramName 参数名称：只支持英文、数字、下划线
+    * @param string $paramName 参数名仅支持字母、数字以及下划线
     *
     * @return $this
     */
@@ -269,9 +275,9 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
 
     /**
     * Gets paramValue
-    *  参数默认值，默认必填，如果有参数引用，可为空
+    *  1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     *
-    * @return string|null
+    * @return string
     */
     public function getParamValue()
     {
@@ -281,7 +287,7 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
     /**
     * Sets paramValue
     *
-    * @param string|null $paramValue 参数默认值，默认必填，如果有参数引用，可为空
+    * @param string $paramValue 1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     *
     * @return $this
     */
@@ -319,7 +325,7 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
     * Gets paramOrder
     *  该参数已废弃，传入该参数不会生效。
     *
-    * @return int|null
+    * @return int
     */
     public function getParamOrder()
     {
@@ -329,7 +335,7 @@ class ScriptParamDefine implements ModelInterface, ArrayAccess
     /**
     * Sets paramOrder
     *
-    * @param int|null $paramOrder 该参数已废弃，传入该参数不会生效。
+    * @param int $paramOrder 该参数已废弃，传入该参数不会生效。
     *
     * @return $this
     */

@@ -615,10 +615,13 @@ class DimensionVO implements ModelInterface, ArrayAccess
             if (!preg_match("/^[a-zA-Z\\u4e00-\\u9fa5]+[a-zA-Z0-9_\\u4e00-\\u9fa5\\-\\(\\)]*$/", $this->container['nameCh'])) {
                 $invalidProperties[] = "invalid value for 'nameCh', must be conform to the pattern /^[a-zA-Z\\u4e00-\\u9fa5]+[a-zA-Z0-9_\\u4e00-\\u9fa5\\-\\(\\)]*$/.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 600)) {
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
+        }
+            if ((mb_strlen($this->container['description']) > 600)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 600.";
             }
-            if (!is_null($this->container['description']) && !preg_match("/^[^\\\\\\\\]*$/", $this->container['description'])) {
+            if (!preg_match("/^[^\\\\\\\\]*$/", $this->container['description'])) {
                 $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^\\\\\\\\]*$/.";
             }
         if ($this->container['l3Id'] === null) {
@@ -626,6 +629,12 @@ class DimensionVO implements ModelInterface, ArrayAccess
         }
         if ($this->container['attributes'] === null) {
             $invalidProperties[] = "'attributes' can't be null";
+        }
+        if ($this->container['datasource'] === null) {
+            $invalidProperties[] = "'datasource' can't be null";
+        }
+        if ($this->container['owner'] === null) {
+            $invalidProperties[] = "'owner' can't be null";
         }
             if (!is_null($this->container['obsLocation']) && (mb_strlen($this->container['obsLocation']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'obsLocation', the character length must be smaller than or equal to 1024.";
@@ -758,7 +767,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * Gets description
     *  描述。
     *
-    * @return string|null
+    * @return string
     */
     public function getDescription()
     {
@@ -768,7 +777,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述。
+    * @param string $description 描述。
     *
     * @return $this
     */
@@ -1214,7 +1223,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * Gets datasource
     *  datasource
     *
-    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizDatasourceRelationVO|null
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizDatasourceRelationVO
     */
     public function getDatasource()
     {
@@ -1224,7 +1233,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets datasource
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizDatasourceRelationVO|null $datasource datasource
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizDatasourceRelationVO $datasource datasource
     *
     * @return $this
     */
@@ -1238,7 +1247,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * Gets owner
     *  资产责任人。
     *
-    * @return string|null
+    * @return string
     */
     public function getOwner()
     {
@@ -1248,7 +1257,7 @@ class DimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner 资产责任人。
+    * @param string $owner 资产责任人。
     *
     * @return $this
     */

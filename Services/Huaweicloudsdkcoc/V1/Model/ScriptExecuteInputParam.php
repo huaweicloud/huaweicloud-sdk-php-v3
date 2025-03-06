@@ -21,7 +21,7 @@ class ScriptExecuteInputParam implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * paramName  脚本入参的名称,同一个脚本，参数名不能重复
-    * paramValue  脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空
+    * paramValue  脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空 1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     * paramOrder  该参数已废弃，传入该参数不会生效。
     * paramRefer  paramRefer
     *
@@ -37,7 +37,7 @@ class ScriptExecuteInputParam implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * paramName  脚本入参的名称,同一个脚本，参数名不能重复
-    * paramValue  脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空
+    * paramValue  脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空 1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     * paramOrder  该参数已废弃，传入该参数不会生效。
     * paramRefer  paramRefer
     *
@@ -74,7 +74,7 @@ class ScriptExecuteInputParam implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * paramName  脚本入参的名称,同一个脚本，参数名不能重复
-    * paramValue  脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空
+    * paramValue  脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空 1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     * paramOrder  该参数已废弃，传入该参数不会生效。
     * paramRefer  paramRefer
     *
@@ -90,7 +90,7 @@ class ScriptExecuteInputParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * paramName  脚本入参的名称,同一个脚本，参数名不能重复
-    * paramValue  脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空
+    * paramValue  脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空 1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     * paramOrder  该参数已废弃，传入该参数不会生效。
     * paramRefer  paramRefer
     *
@@ -106,7 +106,7 @@ class ScriptExecuteInputParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * paramName  脚本入参的名称,同一个脚本，参数名不能重复
-    * paramValue  脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空
+    * paramValue  脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空 1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     * paramOrder  该参数已废弃，传入该参数不会生效。
     * paramRefer  paramRefer
     *
@@ -159,24 +159,7 @@ class ScriptExecuteInputParam implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const PARAM_VALUE____2 = '^((?!\\.{2';
-    const PARAM_VALUE_A_Z_A_Z0_9________X20 = '})[a-zA-Z0-9_\\-/\\.\\x20\\?:\"';
-    const PARAM_VALUE________ = '=+@\\\\\\[\\{\\]\\}])*$';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getParamValueAllowableValues()
-    {
-        return [
-            self::PARAM_VALUE____2,
-            self::PARAM_VALUE_A_Z_A_Z0_9________X20,
-            self::PARAM_VALUE________,
-        ];
-    }
 
 
     /**
@@ -223,16 +206,8 @@ class ScriptExecuteInputParam implements ModelInterface, ArrayAccess
         if ($this->container['paramValue'] === null) {
             $invalidProperties[] = "'paramValue' can't be null";
         }
-            $allowedValues = $this->getParamValueAllowableValues();
-                if (!is_null($this->container['paramValue']) && !in_array($this->container['paramValue'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'paramValue', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if ((mb_strlen($this->container['paramValue']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'paramValue', the character length must be smaller than or equal to 1024.";
+            if ((mb_strlen($this->container['paramValue']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'paramValue', the character length must be smaller than or equal to 4096.";
             }
             if ((mb_strlen($this->container['paramValue']) < 0)) {
                 $invalidProperties[] = "invalid value for 'paramValue', the character length must be bigger than or equal to 0.";
@@ -277,7 +252,7 @@ class ScriptExecuteInputParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets paramValue
-    *  脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空
+    *  脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空 1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     *
     * @return string
     */
@@ -289,7 +264,7 @@ class ScriptExecuteInputParam implements ModelInterface, ArrayAccess
     /**
     * Sets paramValue
     *
-    * @param string $paramValue 脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空
+    * @param string $paramValue 脚本入参的值，默认必填。有引用参数（param_refer不为空）时，允许为空 1.参数长度为1-4096位 2.可以包含大写字母、小写字母、数字及特殊字符(_-/.* ?:\",=+@#\\[{]}) 3.禁止出现连续'.'
     *
     * @return $this
     */

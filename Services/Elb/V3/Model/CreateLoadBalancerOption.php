@@ -35,7 +35,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * enterpriseProjectId  参数解释：负载均衡器所属的企业项目ID。  约束限制：不能传入\"\"、\"0\"或不存在的企业项目ID，创建时不传则资源属于default企业项目，默认返回\"0\"。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * tags  参数解释：负载均衡的标签列表。示例：\"tags\":[{\"key\":\"my_tag\",\"value\":\"my_tag_value\"}]
     * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  默认取值：true。  [不支持该字段，请勿使用。](tag:dt)
-    * billingInfo  参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * billingInfo  参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     * ipv6Bandwidth  ipv6Bandwidth
     * publicipIds  参数解释：负载均衡器绑定的公网IP的ID的数组。  约束限制： - 只支持绑定数组中的第一个EIP，其他将被忽略。 [- 网关型LB不支持该字段。](tag:hws_eu)
     * publicip  publicip
@@ -101,7 +101,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * enterpriseProjectId  参数解释：负载均衡器所属的企业项目ID。  约束限制：不能传入\"\"、\"0\"或不存在的企业项目ID，创建时不传则资源属于default企业项目，默认返回\"0\"。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * tags  参数解释：负载均衡的标签列表。示例：\"tags\":[{\"key\":\"my_tag\",\"value\":\"my_tag_value\"}]
     * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  默认取值：true。  [不支持该字段，请勿使用。](tag:dt)
-    * billingInfo  参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * billingInfo  参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     * ipv6Bandwidth  ipv6Bandwidth
     * publicipIds  参数解释：负载均衡器绑定的公网IP的ID的数组。  约束限制： - 只支持绑定数组中的第一个EIP，其他将被忽略。 [- 网关型LB不支持该字段。](tag:hws_eu)
     * publicip  publicip
@@ -188,7 +188,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * enterpriseProjectId  参数解释：负载均衡器所属的企业项目ID。  约束限制：不能传入\"\"、\"0\"或不存在的企业项目ID，创建时不传则资源属于default企业项目，默认返回\"0\"。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * tags  参数解释：负载均衡的标签列表。示例：\"tags\":[{\"key\":\"my_tag\",\"value\":\"my_tag_value\"}]
     * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  默认取值：true。  [不支持该字段，请勿使用。](tag:dt)
-    * billingInfo  参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * billingInfo  参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     * ipv6Bandwidth  ipv6Bandwidth
     * publicipIds  参数解释：负载均衡器绑定的公网IP的ID的数组。  约束限制： - 只支持绑定数组中的第一个EIP，其他将被忽略。 [- 网关型LB不支持该字段。](tag:hws_eu)
     * publicip  publicip
@@ -254,7 +254,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * enterpriseProjectId  参数解释：负载均衡器所属的企业项目ID。  约束限制：不能传入\"\"、\"0\"或不存在的企业项目ID，创建时不传则资源属于default企业项目，默认返回\"0\"。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * tags  参数解释：负载均衡的标签列表。示例：\"tags\":[{\"key\":\"my_tag\",\"value\":\"my_tag_value\"}]
     * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  默认取值：true。  [不支持该字段，请勿使用。](tag:dt)
-    * billingInfo  参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * billingInfo  参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     * ipv6Bandwidth  ipv6Bandwidth
     * publicipIds  参数解释：负载均衡器绑定的公网IP的ID的数组。  约束限制： - 只支持绑定数组中的第一个EIP，其他将被忽略。 [- 网关型LB不支持该字段。](tag:hws_eu)
     * publicip  publicip
@@ -320,7 +320,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * enterpriseProjectId  参数解释：负载均衡器所属的企业项目ID。  约束限制：不能传入\"\"、\"0\"或不存在的企业项目ID，创建时不传则资源属于default企业项目，默认返回\"0\"。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * tags  参数解释：负载均衡的标签列表。示例：\"tags\":[{\"key\":\"my_tag\",\"value\":\"my_tag_value\"}]
     * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  默认取值：true。  [不支持该字段，请勿使用。](tag:dt)
-    * billingInfo  参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * billingInfo  参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     * ipv6Bandwidth  ipv6Bandwidth
     * publicipIds  参数解释：负载均衡器绑定的公网IP的ID的数组。  约束限制： - 只支持绑定数组中的第一个EIP，其他将被忽略。 [- 网关型LB不支持该字段。](tag:hws_eu)
     * publicip  publicip
@@ -983,7 +983,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets billingInfo
-    *  参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    *  参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     *
     * @return string|null
     */
@@ -995,7 +995,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
     /**
     * Sets billingInfo
     *
-    * @param string|null $billingInfo 参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * @param string|null $billingInfo 参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     *
     * @return $this
     */

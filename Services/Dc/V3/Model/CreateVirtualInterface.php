@@ -33,6 +33,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * localGatewayV6Ip  云侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * vgwId  虚拟接口连接的虚拟网关的ID
+    * gatewayId  虚拟接口关联的网关的ID。 当虚拟接口接入网关类型为全域接入网关时该参数必填，gateway_id值为全域接入网关的id
     * routeMode  路由模式：static/bgp
     * bgpAsn  客户侧BGP邻居的AS号
     * bgpMd5  BGP邻居的MD5密码
@@ -61,6 +62,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
             'localGatewayV6Ip' => 'string',
             'remoteGatewayV6Ip' => 'string',
             'vgwId' => 'string',
+            'gatewayId' => 'string',
             'routeMode' => 'string',
             'bgpAsn' => 'int',
             'bgpMd5' => 'string',
@@ -89,6 +91,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * localGatewayV6Ip  云侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * vgwId  虚拟接口连接的虚拟网关的ID
+    * gatewayId  虚拟接口关联的网关的ID。 当虚拟接口接入网关类型为全域接入网关时该参数必填，gateway_id值为全域接入网关的id
     * routeMode  路由模式：static/bgp
     * bgpAsn  客户侧BGP邻居的AS号
     * bgpMd5  BGP邻居的MD5密码
@@ -117,6 +120,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
         'localGatewayV6Ip' => null,
         'remoteGatewayV6Ip' => null,
         'vgwId' => null,
+        'gatewayId' => null,
         'routeMode' => null,
         'bgpAsn' => 'int32',
         'bgpMd5' => null,
@@ -166,6 +170,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * localGatewayV6Ip  云侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * vgwId  虚拟接口连接的虚拟网关的ID
+    * gatewayId  虚拟接口关联的网关的ID。 当虚拟接口接入网关类型为全域接入网关时该参数必填，gateway_id值为全域接入网关的id
     * routeMode  路由模式：static/bgp
     * bgpAsn  客户侧BGP邻居的AS号
     * bgpMd5  BGP邻居的MD5密码
@@ -194,6 +199,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
             'localGatewayV6Ip' => 'local_gateway_v6_ip',
             'remoteGatewayV6Ip' => 'remote_gateway_v6_ip',
             'vgwId' => 'vgw_id',
+            'gatewayId' => 'gateway_id',
             'routeMode' => 'route_mode',
             'bgpAsn' => 'bgp_asn',
             'bgpMd5' => 'bgp_md5',
@@ -222,6 +228,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * localGatewayV6Ip  云侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * vgwId  虚拟接口连接的虚拟网关的ID
+    * gatewayId  虚拟接口关联的网关的ID。 当虚拟接口接入网关类型为全域接入网关时该参数必填，gateway_id值为全域接入网关的id
     * routeMode  路由模式：static/bgp
     * bgpAsn  客户侧BGP邻居的AS号
     * bgpMd5  BGP邻居的MD5密码
@@ -250,6 +257,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
             'localGatewayV6Ip' => 'setLocalGatewayV6Ip',
             'remoteGatewayV6Ip' => 'setRemoteGatewayV6Ip',
             'vgwId' => 'setVgwId',
+            'gatewayId' => 'setGatewayId',
             'routeMode' => 'setRouteMode',
             'bgpAsn' => 'setBgpAsn',
             'bgpMd5' => 'setBgpMd5',
@@ -278,6 +286,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * localGatewayV6Ip  云侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * remoteGatewayV6Ip  客户侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
     * vgwId  虚拟接口连接的虚拟网关的ID
+    * gatewayId  虚拟接口关联的网关的ID。 当虚拟接口接入网关类型为全域接入网关时该参数必填，gateway_id值为全域接入网关的id
     * routeMode  路由模式：static/bgp
     * bgpAsn  客户侧BGP邻居的AS号
     * bgpMd5  BGP邻居的MD5密码
@@ -306,6 +315,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
             'localGatewayV6Ip' => 'getLocalGatewayV6Ip',
             'remoteGatewayV6Ip' => 'getRemoteGatewayV6Ip',
             'vgwId' => 'getVgwId',
+            'gatewayId' => 'getGatewayId',
             'routeMode' => 'getRouteMode',
             'bgpAsn' => 'getBgpAsn',
             'bgpMd5' => 'getBgpMd5',
@@ -437,6 +447,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
         $this->container['localGatewayV6Ip'] = isset($data['localGatewayV6Ip']) ? $data['localGatewayV6Ip'] : null;
         $this->container['remoteGatewayV6Ip'] = isset($data['remoteGatewayV6Ip']) ? $data['remoteGatewayV6Ip'] : null;
         $this->container['vgwId'] = isset($data['vgwId']) ? $data['vgwId'] : null;
+        $this->container['gatewayId'] = isset($data['gatewayId']) ? $data['gatewayId'] : null;
         $this->container['routeMode'] = isset($data['routeMode']) ? $data['routeMode'] : null;
         $this->container['bgpAsn'] = isset($data['bgpAsn']) ? $data['bgpAsn'] : null;
         $this->container['bgpMd5'] = isset($data['bgpMd5']) ? $data['bgpMd5'] : null;
@@ -515,6 +526,9 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
         }
             if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['vgwId'])) {
                 $invalidProperties[] = "invalid value for 'vgwId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
+            }
+            if (!is_null($this->container['gatewayId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['gatewayId'])) {
+                $invalidProperties[] = "invalid value for 'gatewayId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['routeMode'] === null) {
             $invalidProperties[] = "'routeMode' can't be null";
@@ -877,6 +891,30 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     public function setVgwId($vgwId)
     {
         $this->container['vgwId'] = $vgwId;
+        return $this;
+    }
+
+    /**
+    * Gets gatewayId
+    *  虚拟接口关联的网关的ID。 当虚拟接口接入网关类型为全域接入网关时该参数必填，gateway_id值为全域接入网关的id
+    *
+    * @return string|null
+    */
+    public function getGatewayId()
+    {
+        return $this->container['gatewayId'];
+    }
+
+    /**
+    * Sets gatewayId
+    *
+    * @param string|null $gatewayId 虚拟接口关联的网关的ID。 当虚拟接口接入网关类型为全域接入网关时该参数必填，gateway_id值为全域接入网关的id
+    *
+    * @return $this
+    */
+    public function setGatewayId($gatewayId)
+    {
+        $this->container['gatewayId'] = $gatewayId;
         return $this;
     }
 

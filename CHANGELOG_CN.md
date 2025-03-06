@@ -1,3 +1,155 @@
+# 3.1.134 2025-03-06
+
+### HuaweiCloud SDK CFW
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListAclRules**
+    - 响应参数变更
+      - `+ data.records.applications`
+
+### HuaweiCloud SDK DataArtsStudio
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ShowDesignOperationResult**
+    - 请求参数变更
+      - `* operation_type: optional -> required`
+      - `+ operation_type: enum value [PUBLISH,ADD_TAGS,APPROVAL,CODETABLE_REVERSE_DB,DIMENSION_REVERSE_DB,FACT_LOGIC_TABLE_REVERSE_DB,SYNC_TABLES,IMPORT_STANDARD,IMPORT_CODETABLE,IMPORT_ER_TABLE,IMPORT_BUSINESS,PUBLISH_CODETABLE,PUBLISH_STANDARD,TABLE_MODEL_RELOCATE,DIMENSION_RELOCATE,FACT_LOGIC_TABLE_RELOCATE,AGGREGATION_LOGIC_TABLE_RELOCATE,ATOMIC_INDEX_RELOCATE,DERIVATIVE_INDEX_RELOCATE,COMPOUND_METRIC_RELOCATE,BIZ_METRIC_RELOCATE,CODE_TABLE_RELOCATE,STANDARD_ELEMENT_RELOCATE,INFO_ARCH_RELOCATE]`
+
+### HuaweiCloud SDK DC
+
+- _接口版本_
+  - V3
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **CreateVirtualInterface**
+    - 请求参数变更
+      - `+ virtual_interface.gateway_id`
+
+### HuaweiCloud SDK DRS
+
+- _接口版本_
+  - V5
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 废弃以下接口：
+    - `CollectDbObjectsAsync`
+    - `BatchTagAction`
+    - `ListProjectTags`
+    - `ShowInstanceTags`
+    - `ListDbObjects`
+
+### HuaweiCloud SDK DWS
+
+- _接口版本_
+  - V2
+- _新增特性_
+  - 支持接口`DeleteDwsCluster`、`ShowClusters`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK ECS
+
+- _接口版本_
+  - V2
+- _新增特性_
+  - 支持接口`UpdateServerInterface`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 废弃接口`NovaListAvailabilityZones`
+
+### HuaweiCloud SDK GaussDBforNoSQL
+
+- _接口版本_
+  - V3
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListFlavorInfos**
+    - 请求参数变更
+      - `+ mode`
+      - `+ product_type`
+  - **ShowQuotas**
+    - 请求参数变更
+      - `+ product_type`
+  - **ListRecycleInstances**
+    - 响应参数变更
+      - `+ instances.product_type`
+  - **CreateInstance**
+    - 请求参数变更
+      - `+ product_type`
+  - **ListInstances**
+    - 响应参数变更
+      - `+ instances.product_type`
+
+### HuaweiCloud SDK GaussDBforopenGauss
+
+- _接口版本_
+  - V3
+- _新增特性_
+  - 支持以下接口：
+    - `ListScheduleTask`
+    - `CancelScheduleTask`
+    - `DeleteScheduleTask`
+    - `ListInstanceEngineDetail`
+    - `CreateScheduleTask`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK IAM
+
+- _接口版本_
+  - V3
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **CreateAgency**
+    - 请求参数变更
+      - `* agency.duration: string -> object`
+  - **UpdateAgency**
+    - 请求参数变更
+      - `* agency.duration: string -> object`
+
+### HuaweiCloud SDK OCR
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **RecognizeBankReceipt**
+    - 请求参数变更
+      - `+ single_orientation_mode`
+      - `+ erase_seal`
+
 # 3.1.133 2025-02-27
 
 ### HuaweiCloud SDK BSS

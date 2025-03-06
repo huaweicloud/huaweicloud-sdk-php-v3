@@ -35,7 +35,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
             'trustDomainId' => 'string',
             'trustDomainName' => 'string',
             'description' => 'string',
-            'duration' => 'string'
+            'duration' => 'object'
     ];
 
     /**
@@ -357,7 +357,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
     * Gets duration
     *  description: 委托的期限，单位为“天”。默认为FOREVER。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天,取值为自定义天数表示委托的期限为有限天数，如20。四个参数至少填写一个。
     *
-    * @return string|null
+    * @return object|null
     */
     public function getDuration()
     {
@@ -367,7 +367,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param string|null $duration description: 委托的期限，单位为“天”。默认为FOREVER。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天,取值为自定义天数表示委托的期限为有限天数，如20。四个参数至少填写一个。
+    * @param object|null $duration description: 委托的期限，单位为“天”。默认为FOREVER。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天,取值为自定义天数表示委托的期限为有限天数，如20。四个参数至少填写一个。
     *
     * @return $this
     */

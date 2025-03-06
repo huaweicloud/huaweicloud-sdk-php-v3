@@ -257,10 +257,13 @@ class WorkspaceTransformVO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['targetModelName']) && (mb_strlen($this->container['targetModelName']) > 250)) {
+        if ($this->container['targetModelName'] === null) {
+            $invalidProperties[] = "'targetModelName' can't be null";
+        }
+            if ((mb_strlen($this->container['targetModelName']) > 250)) {
                 $invalidProperties[] = "invalid value for 'targetModelName', the character length must be smaller than or equal to 250.";
             }
-            if (!is_null($this->container['targetModelName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z\\d_]*$/", $this->container['targetModelName'])) {
+            if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z\\d_]*$/", $this->container['targetModelName'])) {
                 $invalidProperties[] = "invalid value for 'targetModelName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z\\d_]*$/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 600)) {
@@ -311,7 +314,7 @@ class WorkspaceTransformVO implements ModelInterface, ArrayAccess
     * Gets targetModelName
     *  工作区名字。
     *
-    * @return string|null
+    * @return string
     */
     public function getTargetModelName()
     {
@@ -321,7 +324,7 @@ class WorkspaceTransformVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetModelName
     *
-    * @param string|null $targetModelName 工作区名字。
+    * @param string $targetModelName 工作区名字。
     *
     * @return $this
     */

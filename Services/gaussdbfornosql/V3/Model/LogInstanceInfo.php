@@ -23,7 +23,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     * id  实例ID。
     * name  实例名称。
     * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点失败。
-    * mode  实例类型。 - 取值为“Cluster”，表示GeminiDB Redis集群实例类型。
+    * mode  实例类型。 -  取值为“Cluster”，表示GeminiDB Redis经典部署模式集群实例类型。 -  取值为“CloudNativeCluster”，表示GeminiDB Redis云原生部署模式集群实例类型。
     * datastore  datastore
     * actions  实例正在执行的动作。
     * enterpriseProjectId  企业项目ID。
@@ -47,7 +47,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     * id  实例ID。
     * name  实例名称。
     * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点失败。
-    * mode  实例类型。 - 取值为“Cluster”，表示GeminiDB Redis集群实例类型。
+    * mode  实例类型。 -  取值为“Cluster”，表示GeminiDB Redis经典部署模式集群实例类型。 -  取值为“CloudNativeCluster”，表示GeminiDB Redis云原生部署模式集群实例类型。
     * datastore  datastore
     * actions  实例正在执行的动作。
     * enterpriseProjectId  企业项目ID。
@@ -92,7 +92,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     * id  实例ID。
     * name  实例名称。
     * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点失败。
-    * mode  实例类型。 - 取值为“Cluster”，表示GeminiDB Redis集群实例类型。
+    * mode  实例类型。 -  取值为“Cluster”，表示GeminiDB Redis经典部署模式集群实例类型。 -  取值为“CloudNativeCluster”，表示GeminiDB Redis云原生部署模式集群实例类型。
     * datastore  datastore
     * actions  实例正在执行的动作。
     * enterpriseProjectId  企业项目ID。
@@ -116,7 +116,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     * id  实例ID。
     * name  实例名称。
     * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点失败。
-    * mode  实例类型。 - 取值为“Cluster”，表示GeminiDB Redis集群实例类型。
+    * mode  实例类型。 -  取值为“Cluster”，表示GeminiDB Redis经典部署模式集群实例类型。 -  取值为“CloudNativeCluster”，表示GeminiDB Redis云原生部署模式集群实例类型。
     * datastore  datastore
     * actions  实例正在执行的动作。
     * enterpriseProjectId  企业项目ID。
@@ -140,7 +140,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     * id  实例ID。
     * name  实例名称。
     * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点失败。
-    * mode  实例类型。 - 取值为“Cluster”，表示GeminiDB Redis集群实例类型。
+    * mode  实例类型。 -  取值为“Cluster”，表示GeminiDB Redis经典部署模式集群实例类型。 -  取值为“CloudNativeCluster”，表示GeminiDB Redis云原生部署模式集群实例类型。
     * datastore  datastore
     * actions  实例正在执行的动作。
     * enterpriseProjectId  企业项目ID。
@@ -323,7 +323,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  实例类型。 - 取值为“Cluster”，表示GeminiDB Redis集群实例类型。
+    *  实例类型。 -  取值为“Cluster”，表示GeminiDB Redis经典部署模式集群实例类型。 -  取值为“CloudNativeCluster”，表示GeminiDB Redis云原生部署模式集群实例类型。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode 实例类型。 - 取值为“Cluster”，表示GeminiDB Redis集群实例类型。
+    * @param string|null $mode 实例类型。 -  取值为“Cluster”，表示GeminiDB Redis经典部署模式集群实例类型。 -  取值为“CloudNativeCluster”，表示GeminiDB Redis云原生部署模式集群实例类型。
     *
     * @return $this
     */

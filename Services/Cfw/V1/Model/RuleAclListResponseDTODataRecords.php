@@ -21,6 +21,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ruleId  规则id
+    * applications  应用列表
     * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
     * direction  规则方向0：外到内1：内到外
@@ -44,6 +45,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'ruleId' => 'string',
+            'applications' => 'string[]',
             'addressType' => 'int',
             'name' => 'string',
             'direction' => 'int',
@@ -67,6 +69,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ruleId  规则id
+    * applications  应用列表
     * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
     * direction  规则方向0：外到内1：内到外
@@ -90,6 +93,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'ruleId' => null,
+        'applications' => null,
         'addressType' => 'int32',
         'name' => null,
         'direction' => 'int32',
@@ -134,6 +138,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ruleId  规则id
+    * applications  应用列表
     * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
     * direction  规则方向0：外到内1：内到外
@@ -157,6 +162,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'ruleId' => 'rule_id',
+            'applications' => 'applications',
             'addressType' => 'address_type',
             'name' => 'name',
             'direction' => 'direction',
@@ -180,6 +186,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ruleId  规则id
+    * applications  应用列表
     * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
     * direction  规则方向0：外到内1：内到外
@@ -203,6 +210,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'ruleId' => 'setRuleId',
+            'applications' => 'setApplications',
             'addressType' => 'setAddressType',
             'name' => 'setName',
             'direction' => 'setDirection',
@@ -226,6 +234,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ruleId  规则id
+    * applications  应用列表
     * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
     * direction  规则方向0：外到内1：内到外
@@ -249,6 +258,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'ruleId' => 'getRuleId',
+            'applications' => 'getApplications',
             'addressType' => 'getAddressType',
             'name' => 'getName',
             'direction' => 'getDirection',
@@ -360,6 +370,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['ruleId'] = isset($data['ruleId']) ? $data['ruleId'] : null;
+        $this->container['applications'] = isset($data['applications']) ? $data['applications'] : null;
         $this->container['addressType'] = isset($data['addressType']) ? $data['addressType'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
@@ -442,6 +453,30 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     public function setRuleId($ruleId)
     {
         $this->container['ruleId'] = $ruleId;
+        return $this;
+    }
+
+    /**
+    * Gets applications
+    *  应用列表
+    *
+    * @return string[]|null
+    */
+    public function getApplications()
+    {
+        return $this->container['applications'];
+    }
+
+    /**
+    * Sets applications
+    *
+    * @param string[]|null $applications 应用列表
+    *
+    * @return $this
+    */
+    public function setApplications($applications)
+    {
+        $this->container['applications'] = $applications;
         return $this;
     }
 

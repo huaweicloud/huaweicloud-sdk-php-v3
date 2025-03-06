@@ -2904,6 +2904,12 @@ class GaussDBforNoSQLAsyncClient extends Client
         if ($localVarParams['engineName'] !== null) {
             $queryParams['engine_name'] = $localVarParams['engineName'];
         }
+        if ($localVarParams['mode'] !== null) {
+            $queryParams['mode'] = $localVarParams['mode'];
+        }
+        if ($localVarParams['productType'] !== null) {
+            $queryParams['product_type'] = $localVarParams['productType'];
+        }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }
@@ -5624,9 +5630,9 @@ class GaussDBforNoSQLAsyncClient extends Client
     }
 
     /**
-     * 重启实例的数据库服务
+     * 重启实例或节点的数据库服务
      *
-     * 重启实例的数据库服务。
+     * 重启实例或节点的数据库服务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5657,6 +5663,9 @@ class GaussDBforNoSQLAsyncClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5665,7 +5674,7 @@ class GaussDBforNoSQLAsyncClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                []
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -7734,6 +7743,9 @@ class GaussDBforNoSQLAsyncClient extends Client
         }
         if ($localVarParams['mode'] !== null) {
             $queryParams['mode'] = $localVarParams['mode'];
+        }
+        if ($localVarParams['productType'] !== null) {
+            $queryParams['product_type'] = $localVarParams['productType'];
         }
 
         if ($multipart) {

@@ -23,7 +23,7 @@ class ShowDesignOperationResultRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * operationType  批量操作类型。 枚举值：   - PUBLISH: 发布   - ADD_TAGS: 打标签   - APPROVAL: 审批   - ER_REVERSE_DB: 关系建模逆向数据库   - CODETABLE_REVERSE_DB: 码表逆向数据库   - DIMENSION_REVERSE_DB: 维度逆向数据库   - FACT_LOGIC_TABLE_REVERSE_DB: 事实表逆向数据库   - SYNC_TABLES: 同步元模型   - IMPORT_STANDARD: 导入数据标准   - IMPORT_CODETABLE: 导入码表   - IMPORT_ER_TABLE: 导入关系建模（逻辑实体/物理表）   - IMPORT_BUSINESS: 导入业务分层（主题）   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型   - PUBLISH_CODETABLE: 发布码表   - PUBLISH_STANDARD: 发布数据标准   - TABLE_MODEL_RELOCATE: 关系建模业务表批量修改主题   - DIMENSION_RELOCATE: 维度批量修改主题   - FACT_LOGIC_TABLE_RELOCATE: 事实表批量修改主题   - AGGREGATION_LOGIC_TABLE_RELOCATE: 汇总表批量修改主题   - ATOMIC_INDEX_RELOCATE: 原子指标批量修改主题   - DERIVATIVE_INDEX_RELOCATE: 衍生指标批量修改主题   - COMPOUND_METRIC_RELOCATE: 复合指标批量修改主题   - BIZ_METRIC_RELOCATE: 业务指标批量修改流程   - CODE_TABLE_RELOCATE: 码表批量修改目录   - STANDARD_ELEMENT_RELOCATE: 数据标准批量修改目录   - INFO_ARCH_RELOCATE: 信息架构批量修改主题
+    * operationType  批量操作类型。 枚举值：   - ER_REVERSE_DB: 关系建模逆向数据库   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     * operationId  批量操作id，在逻辑模型转物理表时，填写的是逻辑模型的model_id，在逆向数据库时，填写的是目标模型的model_id。model_id可从接口[获取模型](ListWorkspaces.xml)中获取。
@@ -45,7 +45,7 @@ class ShowDesignOperationResultRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * operationType  批量操作类型。 枚举值：   - PUBLISH: 发布   - ADD_TAGS: 打标签   - APPROVAL: 审批   - ER_REVERSE_DB: 关系建模逆向数据库   - CODETABLE_REVERSE_DB: 码表逆向数据库   - DIMENSION_REVERSE_DB: 维度逆向数据库   - FACT_LOGIC_TABLE_REVERSE_DB: 事实表逆向数据库   - SYNC_TABLES: 同步元模型   - IMPORT_STANDARD: 导入数据标准   - IMPORT_CODETABLE: 导入码表   - IMPORT_ER_TABLE: 导入关系建模（逻辑实体/物理表）   - IMPORT_BUSINESS: 导入业务分层（主题）   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型   - PUBLISH_CODETABLE: 发布码表   - PUBLISH_STANDARD: 发布数据标准   - TABLE_MODEL_RELOCATE: 关系建模业务表批量修改主题   - DIMENSION_RELOCATE: 维度批量修改主题   - FACT_LOGIC_TABLE_RELOCATE: 事实表批量修改主题   - AGGREGATION_LOGIC_TABLE_RELOCATE: 汇总表批量修改主题   - ATOMIC_INDEX_RELOCATE: 原子指标批量修改主题   - DERIVATIVE_INDEX_RELOCATE: 衍生指标批量修改主题   - COMPOUND_METRIC_RELOCATE: 复合指标批量修改主题   - BIZ_METRIC_RELOCATE: 业务指标批量修改流程   - CODE_TABLE_RELOCATE: 码表批量修改目录   - STANDARD_ELEMENT_RELOCATE: 数据标准批量修改目录   - INFO_ARCH_RELOCATE: 信息架构批量修改主题
+    * operationType  批量操作类型。 枚举值：   - ER_REVERSE_DB: 关系建模逆向数据库   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     * operationId  批量操作id，在逻辑模型转物理表时，填写的是逻辑模型的model_id，在逆向数据库时，填写的是目标模型的model_id。model_id可从接口[获取模型](ListWorkspaces.xml)中获取。
@@ -88,7 +88,7 @@ class ShowDesignOperationResultRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * operationType  批量操作类型。 枚举值：   - PUBLISH: 发布   - ADD_TAGS: 打标签   - APPROVAL: 审批   - ER_REVERSE_DB: 关系建模逆向数据库   - CODETABLE_REVERSE_DB: 码表逆向数据库   - DIMENSION_REVERSE_DB: 维度逆向数据库   - FACT_LOGIC_TABLE_REVERSE_DB: 事实表逆向数据库   - SYNC_TABLES: 同步元模型   - IMPORT_STANDARD: 导入数据标准   - IMPORT_CODETABLE: 导入码表   - IMPORT_ER_TABLE: 导入关系建模（逻辑实体/物理表）   - IMPORT_BUSINESS: 导入业务分层（主题）   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型   - PUBLISH_CODETABLE: 发布码表   - PUBLISH_STANDARD: 发布数据标准   - TABLE_MODEL_RELOCATE: 关系建模业务表批量修改主题   - DIMENSION_RELOCATE: 维度批量修改主题   - FACT_LOGIC_TABLE_RELOCATE: 事实表批量修改主题   - AGGREGATION_LOGIC_TABLE_RELOCATE: 汇总表批量修改主题   - ATOMIC_INDEX_RELOCATE: 原子指标批量修改主题   - DERIVATIVE_INDEX_RELOCATE: 衍生指标批量修改主题   - COMPOUND_METRIC_RELOCATE: 复合指标批量修改主题   - BIZ_METRIC_RELOCATE: 业务指标批量修改流程   - CODE_TABLE_RELOCATE: 码表批量修改目录   - STANDARD_ELEMENT_RELOCATE: 数据标准批量修改目录   - INFO_ARCH_RELOCATE: 信息架构批量修改主题
+    * operationType  批量操作类型。 枚举值：   - ER_REVERSE_DB: 关系建模逆向数据库   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     * operationId  批量操作id，在逻辑模型转物理表时，填写的是逻辑模型的model_id，在逆向数据库时，填写的是目标模型的model_id。model_id可从接口[获取模型](ListWorkspaces.xml)中获取。
@@ -110,7 +110,7 @@ class ShowDesignOperationResultRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * operationType  批量操作类型。 枚举值：   - PUBLISH: 发布   - ADD_TAGS: 打标签   - APPROVAL: 审批   - ER_REVERSE_DB: 关系建模逆向数据库   - CODETABLE_REVERSE_DB: 码表逆向数据库   - DIMENSION_REVERSE_DB: 维度逆向数据库   - FACT_LOGIC_TABLE_REVERSE_DB: 事实表逆向数据库   - SYNC_TABLES: 同步元模型   - IMPORT_STANDARD: 导入数据标准   - IMPORT_CODETABLE: 导入码表   - IMPORT_ER_TABLE: 导入关系建模（逻辑实体/物理表）   - IMPORT_BUSINESS: 导入业务分层（主题）   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型   - PUBLISH_CODETABLE: 发布码表   - PUBLISH_STANDARD: 发布数据标准   - TABLE_MODEL_RELOCATE: 关系建模业务表批量修改主题   - DIMENSION_RELOCATE: 维度批量修改主题   - FACT_LOGIC_TABLE_RELOCATE: 事实表批量修改主题   - AGGREGATION_LOGIC_TABLE_RELOCATE: 汇总表批量修改主题   - ATOMIC_INDEX_RELOCATE: 原子指标批量修改主题   - DERIVATIVE_INDEX_RELOCATE: 衍生指标批量修改主题   - COMPOUND_METRIC_RELOCATE: 复合指标批量修改主题   - BIZ_METRIC_RELOCATE: 业务指标批量修改流程   - CODE_TABLE_RELOCATE: 码表批量修改目录   - STANDARD_ELEMENT_RELOCATE: 数据标准批量修改目录   - INFO_ARCH_RELOCATE: 信息架构批量修改主题
+    * operationType  批量操作类型。 枚举值：   - ER_REVERSE_DB: 关系建模逆向数据库   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     * operationId  批量操作id，在逻辑模型转物理表时，填写的是逻辑模型的model_id，在逆向数据库时，填写的是目标模型的model_id。model_id可从接口[获取模型](ListWorkspaces.xml)中获取。
@@ -132,7 +132,7 @@ class ShowDesignOperationResultRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * operationType  批量操作类型。 枚举值：   - PUBLISH: 发布   - ADD_TAGS: 打标签   - APPROVAL: 审批   - ER_REVERSE_DB: 关系建模逆向数据库   - CODETABLE_REVERSE_DB: 码表逆向数据库   - DIMENSION_REVERSE_DB: 维度逆向数据库   - FACT_LOGIC_TABLE_REVERSE_DB: 事实表逆向数据库   - SYNC_TABLES: 同步元模型   - IMPORT_STANDARD: 导入数据标准   - IMPORT_CODETABLE: 导入码表   - IMPORT_ER_TABLE: 导入关系建模（逻辑实体/物理表）   - IMPORT_BUSINESS: 导入业务分层（主题）   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型   - PUBLISH_CODETABLE: 发布码表   - PUBLISH_STANDARD: 发布数据标准   - TABLE_MODEL_RELOCATE: 关系建模业务表批量修改主题   - DIMENSION_RELOCATE: 维度批量修改主题   - FACT_LOGIC_TABLE_RELOCATE: 事实表批量修改主题   - AGGREGATION_LOGIC_TABLE_RELOCATE: 汇总表批量修改主题   - ATOMIC_INDEX_RELOCATE: 原子指标批量修改主题   - DERIVATIVE_INDEX_RELOCATE: 衍生指标批量修改主题   - COMPOUND_METRIC_RELOCATE: 复合指标批量修改主题   - BIZ_METRIC_RELOCATE: 业务指标批量修改流程   - CODE_TABLE_RELOCATE: 码表批量修改目录   - STANDARD_ELEMENT_RELOCATE: 数据标准批量修改目录   - INFO_ARCH_RELOCATE: 信息架构批量修改主题
+    * operationType  批量操作类型。 枚举值：   - ER_REVERSE_DB: 关系建模逆向数据库   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     * operationId  批量操作id，在逻辑模型转物理表时，填写的是逻辑模型的model_id，在逆向数据库时，填写的是目标模型的model_id。model_id可从接口[获取模型](ListWorkspaces.xml)中获取。
@@ -189,32 +189,8 @@ class ShowDesignOperationResultRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const OPERATION_TYPE_PUBLISH = 'PUBLISH';
-    const OPERATION_TYPE_ADD_TAGS = 'ADD_TAGS';
-    const OPERATION_TYPE_APPROVAL = 'APPROVAL';
     const OPERATION_TYPE_ER_REVERSE_DB = 'ER_REVERSE_DB';
-    const OPERATION_TYPE_CODETABLE_REVERSE_DB = 'CODETABLE_REVERSE_DB';
-    const OPERATION_TYPE_DIMENSION_REVERSE_DB = 'DIMENSION_REVERSE_DB';
-    const OPERATION_TYPE_FACT_LOGIC_TABLE_REVERSE_DB = 'FACT_LOGIC_TABLE_REVERSE_DB';
-    const OPERATION_TYPE_SYNC_TABLES = 'SYNC_TABLES';
-    const OPERATION_TYPE_IMPORT_STANDARD = 'IMPORT_STANDARD';
-    const OPERATION_TYPE_IMPORT_CODETABLE = 'IMPORT_CODETABLE';
-    const OPERATION_TYPE_IMPORT_ER_TABLE = 'IMPORT_ER_TABLE';
-    const OPERATION_TYPE_IMPORT_BUSINESS = 'IMPORT_BUSINESS';
     const OPERATION_TYPE_TRANSFORM_LOGIC_MODEL = 'TRANSFORM_LOGIC_MODEL';
-    const OPERATION_TYPE_PUBLISH_CODETABLE = 'PUBLISH_CODETABLE';
-    const OPERATION_TYPE_PUBLISH_STANDARD = 'PUBLISH_STANDARD';
-    const OPERATION_TYPE_TABLE_MODEL_RELOCATE = 'TABLE_MODEL_RELOCATE';
-    const OPERATION_TYPE_DIMENSION_RELOCATE = 'DIMENSION_RELOCATE';
-    const OPERATION_TYPE_FACT_LOGIC_TABLE_RELOCATE = 'FACT_LOGIC_TABLE_RELOCATE';
-    const OPERATION_TYPE_AGGREGATION_LOGIC_TABLE_RELOCATE = 'AGGREGATION_LOGIC_TABLE_RELOCATE';
-    const OPERATION_TYPE_ATOMIC_INDEX_RELOCATE = 'ATOMIC_INDEX_RELOCATE';
-    const OPERATION_TYPE_DERIVATIVE_INDEX_RELOCATE = 'DERIVATIVE_INDEX_RELOCATE';
-    const OPERATION_TYPE_COMPOUND_METRIC_RELOCATE = 'COMPOUND_METRIC_RELOCATE';
-    const OPERATION_TYPE_BIZ_METRIC_RELOCATE = 'BIZ_METRIC_RELOCATE';
-    const OPERATION_TYPE_CODE_TABLE_RELOCATE = 'CODE_TABLE_RELOCATE';
-    const OPERATION_TYPE_STANDARD_ELEMENT_RELOCATE = 'STANDARD_ELEMENT_RELOCATE';
-    const OPERATION_TYPE_INFO_ARCH_RELOCATE = 'INFO_ARCH_RELOCATE';
     
 
     /**
@@ -225,32 +201,8 @@ class ShowDesignOperationResultRequest implements ModelInterface, ArrayAccess
     public function getOperationTypeAllowableValues()
     {
         return [
-            self::OPERATION_TYPE_PUBLISH,
-            self::OPERATION_TYPE_ADD_TAGS,
-            self::OPERATION_TYPE_APPROVAL,
             self::OPERATION_TYPE_ER_REVERSE_DB,
-            self::OPERATION_TYPE_CODETABLE_REVERSE_DB,
-            self::OPERATION_TYPE_DIMENSION_REVERSE_DB,
-            self::OPERATION_TYPE_FACT_LOGIC_TABLE_REVERSE_DB,
-            self::OPERATION_TYPE_SYNC_TABLES,
-            self::OPERATION_TYPE_IMPORT_STANDARD,
-            self::OPERATION_TYPE_IMPORT_CODETABLE,
-            self::OPERATION_TYPE_IMPORT_ER_TABLE,
-            self::OPERATION_TYPE_IMPORT_BUSINESS,
             self::OPERATION_TYPE_TRANSFORM_LOGIC_MODEL,
-            self::OPERATION_TYPE_PUBLISH_CODETABLE,
-            self::OPERATION_TYPE_PUBLISH_STANDARD,
-            self::OPERATION_TYPE_TABLE_MODEL_RELOCATE,
-            self::OPERATION_TYPE_DIMENSION_RELOCATE,
-            self::OPERATION_TYPE_FACT_LOGIC_TABLE_RELOCATE,
-            self::OPERATION_TYPE_AGGREGATION_LOGIC_TABLE_RELOCATE,
-            self::OPERATION_TYPE_ATOMIC_INDEX_RELOCATE,
-            self::OPERATION_TYPE_DERIVATIVE_INDEX_RELOCATE,
-            self::OPERATION_TYPE_COMPOUND_METRIC_RELOCATE,
-            self::OPERATION_TYPE_BIZ_METRIC_RELOCATE,
-            self::OPERATION_TYPE_CODE_TABLE_RELOCATE,
-            self::OPERATION_TYPE_STANDARD_ELEMENT_RELOCATE,
-            self::OPERATION_TYPE_INFO_ARCH_RELOCATE,
         ];
     }
 
@@ -308,6 +260,9 @@ class ShowDesignOperationResultRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 3)) {
                 $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 3.";
             }
+        if ($this->container['operationType'] === null) {
+            $invalidProperties[] = "'operationType' can't be null";
+        }
             $allowedValues = $this->getOperationTypeAllowableValues();
                 if (!is_null($this->container['operationType']) && !in_array($this->container['operationType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -407,9 +362,9 @@ class ShowDesignOperationResultRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationType
-    *  批量操作类型。 枚举值：   - PUBLISH: 发布   - ADD_TAGS: 打标签   - APPROVAL: 审批   - ER_REVERSE_DB: 关系建模逆向数据库   - CODETABLE_REVERSE_DB: 码表逆向数据库   - DIMENSION_REVERSE_DB: 维度逆向数据库   - FACT_LOGIC_TABLE_REVERSE_DB: 事实表逆向数据库   - SYNC_TABLES: 同步元模型   - IMPORT_STANDARD: 导入数据标准   - IMPORT_CODETABLE: 导入码表   - IMPORT_ER_TABLE: 导入关系建模（逻辑实体/物理表）   - IMPORT_BUSINESS: 导入业务分层（主题）   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型   - PUBLISH_CODETABLE: 发布码表   - PUBLISH_STANDARD: 发布数据标准   - TABLE_MODEL_RELOCATE: 关系建模业务表批量修改主题   - DIMENSION_RELOCATE: 维度批量修改主题   - FACT_LOGIC_TABLE_RELOCATE: 事实表批量修改主题   - AGGREGATION_LOGIC_TABLE_RELOCATE: 汇总表批量修改主题   - ATOMIC_INDEX_RELOCATE: 原子指标批量修改主题   - DERIVATIVE_INDEX_RELOCATE: 衍生指标批量修改主题   - COMPOUND_METRIC_RELOCATE: 复合指标批量修改主题   - BIZ_METRIC_RELOCATE: 业务指标批量修改流程   - CODE_TABLE_RELOCATE: 码表批量修改目录   - STANDARD_ELEMENT_RELOCATE: 数据标准批量修改目录   - INFO_ARCH_RELOCATE: 信息架构批量修改主题
+    *  批量操作类型。 枚举值：   - ER_REVERSE_DB: 关系建模逆向数据库   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型
     *
-    * @return string|null
+    * @return string
     */
     public function getOperationType()
     {
@@ -419,7 +374,7 @@ class ShowDesignOperationResultRequest implements ModelInterface, ArrayAccess
     /**
     * Sets operationType
     *
-    * @param string|null $operationType 批量操作类型。 枚举值：   - PUBLISH: 发布   - ADD_TAGS: 打标签   - APPROVAL: 审批   - ER_REVERSE_DB: 关系建模逆向数据库   - CODETABLE_REVERSE_DB: 码表逆向数据库   - DIMENSION_REVERSE_DB: 维度逆向数据库   - FACT_LOGIC_TABLE_REVERSE_DB: 事实表逆向数据库   - SYNC_TABLES: 同步元模型   - IMPORT_STANDARD: 导入数据标准   - IMPORT_CODETABLE: 导入码表   - IMPORT_ER_TABLE: 导入关系建模（逻辑实体/物理表）   - IMPORT_BUSINESS: 导入业务分层（主题）   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型   - PUBLISH_CODETABLE: 发布码表   - PUBLISH_STANDARD: 发布数据标准   - TABLE_MODEL_RELOCATE: 关系建模业务表批量修改主题   - DIMENSION_RELOCATE: 维度批量修改主题   - FACT_LOGIC_TABLE_RELOCATE: 事实表批量修改主题   - AGGREGATION_LOGIC_TABLE_RELOCATE: 汇总表批量修改主题   - ATOMIC_INDEX_RELOCATE: 原子指标批量修改主题   - DERIVATIVE_INDEX_RELOCATE: 衍生指标批量修改主题   - COMPOUND_METRIC_RELOCATE: 复合指标批量修改主题   - BIZ_METRIC_RELOCATE: 业务指标批量修改流程   - CODE_TABLE_RELOCATE: 码表批量修改目录   - STANDARD_ELEMENT_RELOCATE: 数据标准批量修改目录   - INFO_ARCH_RELOCATE: 信息架构批量修改主题
+    * @param string $operationType 批量操作类型。 枚举值：   - ER_REVERSE_DB: 关系建模逆向数据库   - TRANSFORM_LOGIC_MODEL: 逻辑模型转物理模型
     *
     * @return $this
     */
