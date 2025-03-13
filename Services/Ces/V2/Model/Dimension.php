@@ -175,8 +175,8 @@ class Dimension implements ModelInterface, ArrayAccess
             if (!preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){1,32}$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){1,32}$/.";
             }
-            if (!is_null($this->container['value']) && !preg_match("/^((([a-z]|[A-Z]|[0-9]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.)*)|\\*){1,256}$/", $this->container['value'])) {
-                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^((([a-z]|[A-Z]|[0-9]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.)*)|\\*){1,256}$/.";
+            if (!is_null($this->container['value']) && !preg_match("/^((([a-z]|[A-Z]|[0-9]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\\.|\/|#|\\(|\\))*)|\\*){1,256}$/", $this->container['value'])) {
+                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^((([a-z]|[A-Z]|[0-9]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\\.|\/|#|\\(|\\))*)|\\*){1,256}$/.";
             }
         return $invalidProperties;
     }

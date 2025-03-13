@@ -25,6 +25,8 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
     * providerVersion  provider的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
     * versionDescription  私有provider版本（provider version）的描述。可用于客户识别并管理私有provider的版本。注意：provider版本为不可更新（immutable），所以该字段不可更新，如果需要更新，请删除后重建
     * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给予了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
+    * providerAgencyUrn  自定义provider所绑定的IAM委托URN，provider_agency_name和provider_agency_urn最多只能提供一个。
+    * providerAgencyName  自定义provider所绑定的IAM委托名称，provider_agency_name和provider_agency_urn最多只能提供一个。
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
             'providerDescription' => 'string',
             'providerVersion' => 'string',
             'versionDescription' => 'string',
-            'functionGraphUrn' => 'string'
+            'functionGraphUrn' => 'string',
+            'providerAgencyUrn' => 'string',
+            'providerAgencyName' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
     * providerVersion  provider的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
     * versionDescription  私有provider版本（provider version）的描述。可用于客户识别并管理私有provider的版本。注意：provider版本为不可更新（immutable），所以该字段不可更新，如果需要更新，请删除后重建
     * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给予了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
+    * providerAgencyUrn  自定义provider所绑定的IAM委托URN，provider_agency_name和provider_agency_urn最多只能提供一个。
+    * providerAgencyName  自定义provider所绑定的IAM委托名称，provider_agency_name和provider_agency_urn最多只能提供一个。
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
         'providerDescription' => null,
         'providerVersion' => null,
         'versionDescription' => null,
-        'functionGraphUrn' => null
+        'functionGraphUrn' => null,
+        'providerAgencyUrn' => null,
+        'providerAgencyName' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
     * providerVersion  provider的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
     * versionDescription  私有provider版本（provider version）的描述。可用于客户识别并管理私有provider的版本。注意：provider版本为不可更新（immutable），所以该字段不可更新，如果需要更新，请删除后重建
     * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给予了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
+    * providerAgencyUrn  自定义provider所绑定的IAM委托URN，provider_agency_name和provider_agency_urn最多只能提供一个。
+    * providerAgencyName  自定义provider所绑定的IAM委托名称，provider_agency_name和provider_agency_urn最多只能提供一个。
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
             'providerDescription' => 'provider_description',
             'providerVersion' => 'provider_version',
             'versionDescription' => 'version_description',
-            'functionGraphUrn' => 'function_graph_urn'
+            'functionGraphUrn' => 'function_graph_urn',
+            'providerAgencyUrn' => 'provider_agency_urn',
+            'providerAgencyName' => 'provider_agency_name'
     ];
 
     /**
@@ -100,6 +112,8 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
     * providerVersion  provider的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
     * versionDescription  私有provider版本（provider version）的描述。可用于客户识别并管理私有provider的版本。注意：provider版本为不可更新（immutable），所以该字段不可更新，如果需要更新，请删除后重建
     * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给予了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
+    * providerAgencyUrn  自定义provider所绑定的IAM委托URN，provider_agency_name和provider_agency_urn最多只能提供一个。
+    * providerAgencyName  自定义provider所绑定的IAM委托名称，provider_agency_name和provider_agency_urn最多只能提供一个。
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
             'providerDescription' => 'setProviderDescription',
             'providerVersion' => 'setProviderVersion',
             'versionDescription' => 'setVersionDescription',
-            'functionGraphUrn' => 'setFunctionGraphUrn'
+            'functionGraphUrn' => 'setFunctionGraphUrn',
+            'providerAgencyUrn' => 'setProviderAgencyUrn',
+            'providerAgencyName' => 'setProviderAgencyName'
     ];
 
     /**
@@ -118,6 +134,8 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
     * providerVersion  provider的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
     * versionDescription  私有provider版本（provider version）的描述。可用于客户识别并管理私有provider的版本。注意：provider版本为不可更新（immutable），所以该字段不可更新，如果需要更新，请删除后重建
     * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给予了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
+    * providerAgencyUrn  自定义provider所绑定的IAM委托URN，provider_agency_name和provider_agency_urn最多只能提供一个。
+    * providerAgencyName  自定义provider所绑定的IAM委托名称，provider_agency_name和provider_agency_urn最多只能提供一个。
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
             'providerDescription' => 'getProviderDescription',
             'providerVersion' => 'getProviderVersion',
             'versionDescription' => 'getVersionDescription',
-            'functionGraphUrn' => 'getFunctionGraphUrn'
+            'functionGraphUrn' => 'getFunctionGraphUrn',
+            'providerAgencyUrn' => 'getProviderAgencyUrn',
+            'providerAgencyName' => 'getProviderAgencyName'
     ];
 
     /**
@@ -192,6 +212,8 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
         $this->container['providerVersion'] = isset($data['providerVersion']) ? $data['providerVersion'] : null;
         $this->container['versionDescription'] = isset($data['versionDescription']) ? $data['versionDescription'] : null;
         $this->container['functionGraphUrn'] = isset($data['functionGraphUrn']) ? $data['functionGraphUrn'] : null;
+        $this->container['providerAgencyUrn'] = isset($data['providerAgencyUrn']) ? $data['providerAgencyUrn'] : null;
+        $this->container['providerAgencyName'] = isset($data['providerAgencyName']) ? $data['providerAgencyName'] : null;
     }
 
     /**
@@ -240,6 +262,15 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['functionGraphUrn']) && !preg_match("/^urn:fss:.+:[A-Za-z0-9]{3,64}:function:default:[A-Za-z][A-Za-z0-9_-]{0,58}[A-Za-z0-9]:([A-Za-z0-9][A-Za-z0-9_.-]{0,40}|![A-Za-z][A-Za-z0-9_-]{0,61})[A-Za-z0-9]$/", $this->container['functionGraphUrn'])) {
                 $invalidProperties[] = "invalid value for 'functionGraphUrn', must be conform to the pattern /^urn:fss:.+:[A-Za-z0-9]{3,64}:function:default:[A-Za-z][A-Za-z0-9_-]{0,58}[A-Za-z0-9]:([A-Za-z0-9][A-Za-z0-9_.-]{0,40}|![A-Za-z][A-Za-z0-9_-]{0,61})[A-Za-z0-9]$/.";
+            }
+            if (!is_null($this->container['providerAgencyUrn']) && !preg_match("/^(iam:\\*?:[A-Za-z0-9-]{1,64}:agency:.{1,64})?$/", $this->container['providerAgencyUrn'])) {
+                $invalidProperties[] = "invalid value for 'providerAgencyUrn', must be conform to the pattern /^(iam:\\*?:[A-Za-z0-9-]{1,64}:agency:.{1,64})?$/.";
+            }
+            if (!is_null($this->container['providerAgencyName']) && (mb_strlen($this->container['providerAgencyName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'providerAgencyName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['providerAgencyName']) && (mb_strlen($this->container['providerAgencyName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'providerAgencyName', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -372,6 +403,54 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
     public function setFunctionGraphUrn($functionGraphUrn)
     {
         $this->container['functionGraphUrn'] = $functionGraphUrn;
+        return $this;
+    }
+
+    /**
+    * Gets providerAgencyUrn
+    *  自定义provider所绑定的IAM委托URN，provider_agency_name和provider_agency_urn最多只能提供一个。
+    *
+    * @return string|null
+    */
+    public function getProviderAgencyUrn()
+    {
+        return $this->container['providerAgencyUrn'];
+    }
+
+    /**
+    * Sets providerAgencyUrn
+    *
+    * @param string|null $providerAgencyUrn 自定义provider所绑定的IAM委托URN，provider_agency_name和provider_agency_urn最多只能提供一个。
+    *
+    * @return $this
+    */
+    public function setProviderAgencyUrn($providerAgencyUrn)
+    {
+        $this->container['providerAgencyUrn'] = $providerAgencyUrn;
+        return $this;
+    }
+
+    /**
+    * Gets providerAgencyName
+    *  自定义provider所绑定的IAM委托名称，provider_agency_name和provider_agency_urn最多只能提供一个。
+    *
+    * @return string|null
+    */
+    public function getProviderAgencyName()
+    {
+        return $this->container['providerAgencyName'];
+    }
+
+    /**
+    * Sets providerAgencyName
+    *
+    * @param string|null $providerAgencyName 自定义provider所绑定的IAM委托名称，provider_agency_name和provider_agency_urn最多只能提供一个。
+    *
+    * @return $this
+    */
+    public function setProviderAgencyName($providerAgencyName)
+    {
+        $this->container['providerAgencyName'] = $providerAgencyName;
         return $this;
     }
 

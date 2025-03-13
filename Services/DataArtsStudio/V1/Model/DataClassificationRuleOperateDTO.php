@@ -289,6 +289,9 @@ class DataClassificationRuleOperateDTO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['ruleType'] === null) {
+            $invalidProperties[] = "'ruleType' can't be null";
+        }
             $allowedValues = $this->getRuleTypeAllowableValues();
                 if (!is_null($this->container['ruleType']) && !in_array($this->container['ruleType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -297,16 +300,22 @@ class DataClassificationRuleOperateDTO implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['secrecyLevelId']) && (mb_strlen($this->container['secrecyLevelId']) > 128)) {
+        if ($this->container['secrecyLevelId'] === null) {
+            $invalidProperties[] = "'secrecyLevelId' can't be null";
+        }
+            if ((mb_strlen($this->container['secrecyLevelId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'secrecyLevelId', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['secrecyLevelId']) && (mb_strlen($this->container['secrecyLevelId']) < 1)) {
+            if ((mb_strlen($this->container['secrecyLevelId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'secrecyLevelId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 128)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 128)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+            if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getMethodAllowableValues();
@@ -371,7 +380,7 @@ class DataClassificationRuleOperateDTO implements ModelInterface, ArrayAccess
     * Gets ruleType
     *  规则类型, CUSTOM, BUILTIN
     *
-    * @return string|null
+    * @return string
     */
     public function getRuleType()
     {
@@ -381,7 +390,7 @@ class DataClassificationRuleOperateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets ruleType
     *
-    * @param string|null $ruleType 规则类型, CUSTOM, BUILTIN
+    * @param string $ruleType 规则类型, CUSTOM, BUILTIN
     *
     * @return $this
     */
@@ -395,7 +404,7 @@ class DataClassificationRuleOperateDTO implements ModelInterface, ArrayAccess
     * Gets secrecyLevelId
     *  密级ID
     *
-    * @return string|null
+    * @return string
     */
     public function getSecrecyLevelId()
     {
@@ -405,7 +414,7 @@ class DataClassificationRuleOperateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets secrecyLevelId
     *
-    * @param string|null $secrecyLevelId 密级ID
+    * @param string $secrecyLevelId 密级ID
     *
     * @return $this
     */
@@ -419,7 +428,7 @@ class DataClassificationRuleOperateDTO implements ModelInterface, ArrayAccess
     * Gets name
     *  规则名称
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -429,7 +438,7 @@ class DataClassificationRuleOperateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 规则名称
+    * @param string $name 规则名称
     *
     * @return $this
     */

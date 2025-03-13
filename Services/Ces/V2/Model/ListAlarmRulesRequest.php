@@ -245,8 +245,8 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 700)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 700.";
             }
-            if (!is_null($this->container['resourceId']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|:|,|\\.|)+$/", $this->container['resourceId'])) {
-                $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-|:|,|\\.|)+$/.";
+            if (!is_null($this->container['resourceId']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|:|,|\\.|\\*|\/|#|\\(|\\))+$/", $this->container['resourceId'])) {
+                $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-|:|,|\\.|\\*|\/|#|\\(|\\))+$/.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/.";

@@ -24,6 +24,7 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
     * indices  指定要恢复的索引名称，多个索引用逗号隔开，默认恢复所有索引。支持使用“\\*”匹配多个索引，例如：2018-06\\*，表示恢复名称前缀是2018-06的所有索引的数据。  0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?特殊字符。
     * renamePattern  匹配要恢复的索引规则，最大支持1024个字符。根据此处定义的过滤条件去恢复符合条件的索引，过滤条件请使用正则表达式。  0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?,特殊字符。   renamePattern参数与renameReplacement参数必须同时设置才能生效。
     * renameReplacement  索引重命名的规则。0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?,特殊字符。例如，“restored_index_$1”表示在所有恢复的索引名称前面加上“restored_”。    renamePattern参数与renameReplacement参数必须同时设置才能生效。
+    * replaceExistIndices  替换已存在的索引。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
             'targetCluster' => 'string',
             'indices' => 'string',
             'renamePattern' => 'string',
-            'renameReplacement' => 'string'
+            'renameReplacement' => 'string',
+            'replaceExistIndices' => 'bool'
     ];
 
     /**
@@ -40,6 +42,7 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
     * indices  指定要恢复的索引名称，多个索引用逗号隔开，默认恢复所有索引。支持使用“\\*”匹配多个索引，例如：2018-06\\*，表示恢复名称前缀是2018-06的所有索引的数据。  0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?特殊字符。
     * renamePattern  匹配要恢复的索引规则，最大支持1024个字符。根据此处定义的过滤条件去恢复符合条件的索引，过滤条件请使用正则表达式。  0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?,特殊字符。   renamePattern参数与renameReplacement参数必须同时设置才能生效。
     * renameReplacement  索引重命名的规则。0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?,特殊字符。例如，“restored_index_$1”表示在所有恢复的索引名称前面加上“restored_”。    renamePattern参数与renameReplacement参数必须同时设置才能生效。
+    * replaceExistIndices  替换已存在的索引。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
         'targetCluster' => null,
         'indices' => null,
         'renamePattern' => null,
-        'renameReplacement' => null
+        'renameReplacement' => null,
+        'replaceExistIndices' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
     * indices  指定要恢复的索引名称，多个索引用逗号隔开，默认恢复所有索引。支持使用“\\*”匹配多个索引，例如：2018-06\\*，表示恢复名称前缀是2018-06的所有索引的数据。  0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?特殊字符。
     * renamePattern  匹配要恢复的索引规则，最大支持1024个字符。根据此处定义的过滤条件去恢复符合条件的索引，过滤条件请使用正则表达式。  0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?,特殊字符。   renamePattern参数与renameReplacement参数必须同时设置才能生效。
     * renameReplacement  索引重命名的规则。0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?,特殊字符。例如，“restored_index_$1”表示在所有恢复的索引名称前面加上“restored_”。    renamePattern参数与renameReplacement参数必须同时设置才能生效。
+    * replaceExistIndices  替换已存在的索引。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
             'targetCluster' => 'targetCluster',
             'indices' => 'indices',
             'renamePattern' => 'renamePattern',
-            'renameReplacement' => 'renameReplacement'
+            'renameReplacement' => 'renameReplacement',
+            'replaceExistIndices' => 'replace_exist_indices'
     ];
 
     /**
@@ -93,6 +99,7 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
     * indices  指定要恢复的索引名称，多个索引用逗号隔开，默认恢复所有索引。支持使用“\\*”匹配多个索引，例如：2018-06\\*，表示恢复名称前缀是2018-06的所有索引的数据。  0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?特殊字符。
     * renamePattern  匹配要恢复的索引规则，最大支持1024个字符。根据此处定义的过滤条件去恢复符合条件的索引，过滤条件请使用正则表达式。  0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?,特殊字符。   renamePattern参数与renameReplacement参数必须同时设置才能生效。
     * renameReplacement  索引重命名的规则。0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?,特殊字符。例如，“restored_index_$1”表示在所有恢复的索引名称前面加上“restored_”。    renamePattern参数与renameReplacement参数必须同时设置才能生效。
+    * replaceExistIndices  替换已存在的索引。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
             'targetCluster' => 'setTargetCluster',
             'indices' => 'setIndices',
             'renamePattern' => 'setRenamePattern',
-            'renameReplacement' => 'setRenameReplacement'
+            'renameReplacement' => 'setRenameReplacement',
+            'replaceExistIndices' => 'setReplaceExistIndices'
     ];
 
     /**
@@ -109,6 +117,7 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
     * indices  指定要恢复的索引名称，多个索引用逗号隔开，默认恢复所有索引。支持使用“\\*”匹配多个索引，例如：2018-06\\*，表示恢复名称前缀是2018-06的所有索引的数据。  0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?特殊字符。
     * renamePattern  匹配要恢复的索引规则，最大支持1024个字符。根据此处定义的过滤条件去恢复符合条件的索引，过滤条件请使用正则表达式。  0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?,特殊字符。   renamePattern参数与renameReplacement参数必须同时设置才能生效。
     * renameReplacement  索引重命名的规则。0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?,特殊字符。例如，“restored_index_$1”表示在所有恢复的索引名称前面加上“restored_”。    renamePattern参数与renameReplacement参数必须同时设置才能生效。
+    * replaceExistIndices  替换已存在的索引。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
             'targetCluster' => 'getTargetCluster',
             'indices' => 'getIndices',
             'renamePattern' => 'getRenamePattern',
-            'renameReplacement' => 'getRenameReplacement'
+            'renameReplacement' => 'getRenameReplacement',
+            'replaceExistIndices' => 'getReplaceExistIndices'
     ];
 
     /**
@@ -181,6 +191,7 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
         $this->container['indices'] = isset($data['indices']) ? $data['indices'] : null;
         $this->container['renamePattern'] = isset($data['renamePattern']) ? $data['renamePattern'] : null;
         $this->container['renameReplacement'] = isset($data['renameReplacement']) ? $data['renameReplacement'] : null;
+        $this->container['replaceExistIndices'] = isset($data['replaceExistIndices']) ? $data['replaceExistIndices'] : null;
     }
 
     /**
@@ -301,6 +312,30 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
     public function setRenameReplacement($renameReplacement)
     {
         $this->container['renameReplacement'] = $renameReplacement;
+        return $this;
+    }
+
+    /**
+    * Gets replaceExistIndices
+    *  替换已存在的索引。
+    *
+    * @return bool|null
+    */
+    public function getReplaceExistIndices()
+    {
+        return $this->container['replaceExistIndices'];
+    }
+
+    /**
+    * Sets replaceExistIndices
+    *
+    * @param bool|null $replaceExistIndices 替换已存在的索引。
+    *
+    * @return $this
+    */
+    public function setReplaceExistIndices($replaceExistIndices)
+    {
+        $this->container['replaceExistIndices'] = $replaceExistIndices;
         return $this;
     }
 

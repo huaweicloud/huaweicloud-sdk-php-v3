@@ -23,7 +23,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * loadbalancerIds  批创负载均衡器ID（UUID）的列表。
     * jobId  批量创建负载均衡器的job ID。
-    * orderId  订单号[（只有批量创建包周期示例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * orderId  订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     * requestId  请求ID。 注：自动生成 。
     *
     * @var string[]
@@ -39,7 +39,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * loadbalancerIds  批创负载均衡器ID（UUID）的列表。
     * jobId  批量创建负载均衡器的job ID。
-    * orderId  订单号[（只有批量创建包周期示例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * orderId  订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     * requestId  请求ID。 注：自动生成 。
     *
     * @var string[]
@@ -76,7 +76,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * loadbalancerIds  批创负载均衡器ID（UUID）的列表。
     * jobId  批量创建负载均衡器的job ID。
-    * orderId  订单号[（只有批量创建包周期示例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * orderId  订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     * requestId  请求ID。 注：自动生成 。
     *
     * @var string[]
@@ -92,7 +92,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * loadbalancerIds  批创负载均衡器ID（UUID）的列表。
     * jobId  批量创建负载均衡器的job ID。
-    * orderId  订单号[（只有批量创建包周期示例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * orderId  订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     * requestId  请求ID。 注：自动生成 。
     *
     * @var string[]
@@ -108,7 +108,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * loadbalancerIds  批创负载均衡器ID（UUID）的列表。
     * jobId  批量创建负载均衡器的job ID。
-    * orderId  订单号[（只有批量创建包周期示例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * orderId  订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     * requestId  请求ID。 注：自动生成 。
     *
     * @var string[]
@@ -268,7 +268,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单号[（只有批量创建包周期示例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    *  订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     *
     * @return string|null
     */
@@ -280,7 +280,7 @@ class BatchCreateLoadBalancersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单号[（只有批量创建包周期示例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
+    * @param string|null $orderId 订单号[（只有批量创建包周期实例的场景返回该字段）](tag:hws)  [不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
     *
     * @return $this
     */

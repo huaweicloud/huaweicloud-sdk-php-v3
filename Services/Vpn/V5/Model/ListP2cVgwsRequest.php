@@ -20,20 +20,26 @@ class ListP2cVgwsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * limit  分页查询时每页返回的记录数量
+    * marker  上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'limit' => 'int',
+            'marker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * limit  分页查询时每页返回的记录数量
+    * marker  上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'limit' => 'int32',
+        'marker' => null
     ];
 
     /**
@@ -59,29 +65,38 @@ class ListP2cVgwsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * limit  分页查询时每页返回的记录数量
+    * marker  上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * limit  分页查询时每页返回的记录数量
+    * marker  上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
     protected static $setters = [
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * limit  分页查询时每页返回的记录数量
+    * marker  上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
     protected static $getters = [
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -142,6 +157,8 @@ class ListP2cVgwsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -152,6 +169,9 @@ class ListP2cVgwsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
+            }
         return $invalidProperties;
     }
 
@@ -164,6 +184,54 @@ class ListP2cVgwsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets limit
+    *  分页查询时每页返回的记录数量
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 分页查询时每页返回的记录数量
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
+        return $this;
     }
 
     /**

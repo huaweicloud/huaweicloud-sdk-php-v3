@@ -46,6 +46,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     * parameterGroup  parameterGroup
     * nodeTypeId  节点类型ID
     * securityGroupId  安全组ID
+    * orderId  订单ID，仅包周期场景返回。
     * privateIp  内网IP地址列表
     * maintainWindow  maintainWindow
     * resizeInfo  resizeInfo
@@ -81,6 +82,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
             'parameterGroup' => '\HuaweiCloud\SDK\Dws\V2\Model\ParameterGroup',
             'nodeTypeId' => 'string',
             'securityGroupId' => 'string',
+            'orderId' => 'string',
             'privateIp' => 'string[]',
             'maintainWindow' => '\HuaweiCloud\SDK\Dws\V2\Model\MaintainWindow',
             'resizeInfo' => '\HuaweiCloud\SDK\Dws\V2\Model\ResizeInfo',
@@ -116,6 +118,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     * parameterGroup  parameterGroup
     * nodeTypeId  节点类型ID
     * securityGroupId  安全组ID
+    * orderId  订单ID，仅包周期场景返回。
     * privateIp  内网IP地址列表
     * maintainWindow  maintainWindow
     * resizeInfo  resizeInfo
@@ -151,6 +154,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
         'parameterGroup' => null,
         'nodeTypeId' => null,
         'securityGroupId' => null,
+        'orderId' => null,
         'privateIp' => null,
         'maintainWindow' => null,
         'resizeInfo' => null,
@@ -207,6 +211,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     * parameterGroup  parameterGroup
     * nodeTypeId  节点类型ID
     * securityGroupId  安全组ID
+    * orderId  订单ID，仅包周期场景返回。
     * privateIp  内网IP地址列表
     * maintainWindow  maintainWindow
     * resizeInfo  resizeInfo
@@ -242,6 +247,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
             'parameterGroup' => 'parameter_group',
             'nodeTypeId' => 'node_type_id',
             'securityGroupId' => 'security_group_id',
+            'orderId' => 'order_id',
             'privateIp' => 'private_ip',
             'maintainWindow' => 'maintain_window',
             'resizeInfo' => 'resize_info',
@@ -277,6 +283,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     * parameterGroup  parameterGroup
     * nodeTypeId  节点类型ID
     * securityGroupId  安全组ID
+    * orderId  订单ID，仅包周期场景返回。
     * privateIp  内网IP地址列表
     * maintainWindow  maintainWindow
     * resizeInfo  resizeInfo
@@ -312,6 +319,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
             'parameterGroup' => 'setParameterGroup',
             'nodeTypeId' => 'setNodeTypeId',
             'securityGroupId' => 'setSecurityGroupId',
+            'orderId' => 'setOrderId',
             'privateIp' => 'setPrivateIp',
             'maintainWindow' => 'setMaintainWindow',
             'resizeInfo' => 'setResizeInfo',
@@ -347,6 +355,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     * parameterGroup  parameterGroup
     * nodeTypeId  节点类型ID
     * securityGroupId  安全组ID
+    * orderId  订单ID，仅包周期场景返回。
     * privateIp  内网IP地址列表
     * maintainWindow  maintainWindow
     * resizeInfo  resizeInfo
@@ -382,6 +391,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
             'parameterGroup' => 'getParameterGroup',
             'nodeTypeId' => 'getNodeTypeId',
             'securityGroupId' => 'getSecurityGroupId',
+            'orderId' => 'getOrderId',
             'privateIp' => 'getPrivateIp',
             'maintainWindow' => 'getMaintainWindow',
             'resizeInfo' => 'getResizeInfo',
@@ -473,6 +483,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
         $this->container['parameterGroup'] = isset($data['parameterGroup']) ? $data['parameterGroup'] : null;
         $this->container['nodeTypeId'] = isset($data['nodeTypeId']) ? $data['nodeTypeId'] : null;
         $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
         $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
         $this->container['maintainWindow'] = isset($data['maintainWindow']) ? $data['maintainWindow'] : null;
         $this->container['resizeInfo'] = isset($data['resizeInfo']) ? $data['resizeInfo'] : null;
@@ -1204,6 +1215,30 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     public function setSecurityGroupId($securityGroupId)
     {
         $this->container['securityGroupId'] = $securityGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets orderId
+    *  订单ID，仅包周期场景返回。
+    *
+    * @return string|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param string|null $orderId 订单ID，仅包周期场景返回。
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
         return $this;
     }
 
