@@ -22,24 +22,28 @@ class UpdateRoute implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * attachmentId  路由下一跳
     * isBlackhole  是否为黑洞路由
+    * description  路由描述信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'attachmentId' => 'string',
-            'isBlackhole' => 'bool'
+            'isBlackhole' => 'bool',
+            'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * attachmentId  路由下一跳
     * isBlackhole  是否为黑洞路由
+    * description  路由描述信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'attachmentId' => null,
-        'isBlackhole' => null
+        'isBlackhole' => null,
+        'description' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class UpdateRoute implements ModelInterface, ArrayAccess
     * and the value is the original name
     * attachmentId  路由下一跳
     * isBlackhole  是否为黑洞路由
+    * description  路由描述信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'attachmentId' => 'attachment_id',
-            'isBlackhole' => 'is_blackhole'
+            'isBlackhole' => 'is_blackhole',
+            'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * attachmentId  路由下一跳
     * isBlackhole  是否为黑洞路由
+    * description  路由描述信息
     *
     * @var string[]
     */
     protected static $setters = [
             'attachmentId' => 'setAttachmentId',
-            'isBlackhole' => 'setIsBlackhole'
+            'isBlackhole' => 'setIsBlackhole',
+            'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * attachmentId  路由下一跳
     * isBlackhole  是否为黑洞路由
+    * description  路由描述信息
     *
     * @var string[]
     */
     protected static $getters = [
             'attachmentId' => 'getAttachmentId',
-            'isBlackhole' => 'getIsBlackhole'
+            'isBlackhole' => 'getIsBlackhole',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -159,6 +169,7 @@ class UpdateRoute implements ModelInterface, ArrayAccess
     {
         $this->container['attachmentId'] = isset($data['attachmentId']) ? $data['attachmentId'] : null;
         $this->container['isBlackhole'] = isset($data['isBlackhole']) ? $data['isBlackhole'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -171,6 +182,15 @@ class UpdateRoute implements ModelInterface, ArrayAccess
         $invalidProperties = [];
             if (!is_null($this->container['attachmentId']) && !preg_match("/[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}/", $this->container['attachmentId'])) {
                 $invalidProperties[] = "invalid value for 'attachmentId', must be conform to the pattern /[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}/.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['description']) && !preg_match("/[^<>]*/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /[^<>]*/.";
             }
         return $invalidProperties;
     }
@@ -231,6 +251,30 @@ class UpdateRoute implements ModelInterface, ArrayAccess
     public function setIsBlackhole($isBlackhole)
     {
         $this->container['isBlackhole'] = $isBlackhole;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  路由描述信息
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 路由描述信息
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

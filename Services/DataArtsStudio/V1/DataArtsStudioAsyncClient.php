@@ -9230,6 +9230,9 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['endTime'] !== null) {
             $queryParams['end_time'] = $localVarParams['endTime'];
         }
+        if ($localVarParams['needPath'] !== null) {
+            $queryParams['need_path'] = $localVarParams['needPath'];
+        }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -11713,6 +11716,83 @@ class DataArtsStudioAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDerivativeIndexesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDerivativeIndexesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取数仓分层信息
+     *
+     * 获取数仓分层信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDesignDataLayersAsync($request)
+    {
+        return $this->listDesignDataLayersAsyncWithHttpInfo($request);
+    }
+    
+    public function listDesignDataLayersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/design/data-layers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDesignDataLayersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDesignDataLayersRequest',
             $asyncRequest = true);
     }
 
@@ -24463,6 +24543,80 @@ class DataArtsStudioAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDesignCompoundMetricResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDesignCompoundMetricRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改或删除数仓分层
+     *
+     * 修改或删除数仓分层
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDesignDataLayersAsync($request)
+    {
+        return $this->updateDesignDataLayersAsyncWithHttpInfo($request);
+    }
+    
+    public function updateDesignDataLayersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/design/data-layers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDesignDataLayersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDesignDataLayersRequest',
             $asyncRequest = true);
     }
 

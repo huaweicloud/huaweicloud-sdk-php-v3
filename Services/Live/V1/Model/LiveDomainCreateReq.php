@@ -23,8 +23,9 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球加速区域
     * enterpriseProjectId  企业项目ID
+    * pullProtocol  域名支持的拉流协议；仅domain_type为pull时生效。若不填写此字段，视为默认支持FLV、RTMP拉流协议 - flv_rtmp表示支持FLV、RTMP协议 - hls表示支持HLS协议
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domainType' => 'string',
             'region' => 'string',
             'serviceArea' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'pullProtocol' => 'string'
     ];
 
     /**
@@ -41,8 +43,9 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球加速区域
     * enterpriseProjectId  企业项目ID
+    * pullProtocol  域名支持的拉流协议；仅domain_type为pull时生效。若不填写此字段，视为默认支持FLV、RTMP拉流协议 - flv_rtmp表示支持FLV、RTMP协议 - hls表示支持HLS协议
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
         'domainType' => null,
         'region' => null,
         'serviceArea' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'pullProtocol' => null
     ];
 
     /**
@@ -80,8 +84,9 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球加速区域
     * enterpriseProjectId  企业项目ID
+    * pullProtocol  域名支持的拉流协议；仅domain_type为pull时生效。若不填写此字段，视为默认支持FLV、RTMP拉流协议 - flv_rtmp表示支持FLV、RTMP协议 - hls表示支持HLS协议
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domainType' => 'domain_type',
             'region' => 'region',
             'serviceArea' => 'service_area',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'pullProtocol' => 'pull_protocol'
     ];
 
     /**
@@ -98,8 +104,9 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球加速区域
     * enterpriseProjectId  企业项目ID
+    * pullProtocol  域名支持的拉流协议；仅domain_type为pull时生效。若不填写此字段，视为默认支持FLV、RTMP拉流协议 - flv_rtmp表示支持FLV、RTMP协议 - hls表示支持HLS协议
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domainType' => 'setDomainType',
             'region' => 'setRegion',
             'serviceArea' => 'setServiceArea',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'pullProtocol' => 'setPullProtocol'
     ];
 
     /**
@@ -116,8 +124,9 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球加速区域
     * enterpriseProjectId  企业项目ID
+    * pullProtocol  域名支持的拉流协议；仅domain_type为pull时生效。若不填写此字段，视为默认支持FLV、RTMP拉流协议 - flv_rtmp表示支持FLV、RTMP协议 - hls表示支持HLS协议
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domainType' => 'getDomainType',
             'region' => 'getRegion',
             'serviceArea' => 'getServiceArea',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'pullProtocol' => 'getPullProtocol'
     ];
 
     /**
@@ -173,6 +183,9 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     const DOMAIN_TYPE_PUSH = 'push';
     const SERVICE_AREA_MAINLAND_CHINA = 'mainland_china';
     const SERVICE_AREA_OUTSIDE_MAINLAND_CHINA = 'outside_mainland_china';
+    const SERVICE_AREA__GLOBAL = 'global';
+    const PULL_PROTOCOL_FLV_RTMP = 'flv_rtmp';
+    const PULL_PROTOCOL_HLS = 'hls';
     
 
     /**
@@ -198,6 +211,20 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
         return [
             self::SERVICE_AREA_MAINLAND_CHINA,
             self::SERVICE_AREA_OUTSIDE_MAINLAND_CHINA,
+            self::SERVICE_AREA__GLOBAL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPullProtocolAllowableValues()
+    {
+        return [
+            self::PULL_PROTOCOL_FLV_RTMP,
+            self::PULL_PROTOCOL_HLS,
         ];
     }
 
@@ -222,6 +249,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['pullProtocol'] = isset($data['pullProtocol']) ? $data['pullProtocol'] : null;
     }
 
     /**
@@ -265,6 +293,14 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['serviceArea']) && !in_array($this->container['serviceArea'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'serviceArea', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getPullProtocolAllowableValues();
+                if (!is_null($this->container['pullProtocol']) && !in_array($this->container['pullProtocol'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'pullProtocol', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -357,7 +393,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceArea
-    *  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    *  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球加速区域
     *
     * @return string|null
     */
@@ -369,7 +405,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string|null $serviceArea 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * @param string|null $serviceArea 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球加速区域
     *
     * @return $this
     */
@@ -400,6 +436,30 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets pullProtocol
+    *  域名支持的拉流协议；仅domain_type为pull时生效。若不填写此字段，视为默认支持FLV、RTMP拉流协议 - flv_rtmp表示支持FLV、RTMP协议 - hls表示支持HLS协议
+    *
+    * @return string|null
+    */
+    public function getPullProtocol()
+    {
+        return $this->container['pullProtocol'];
+    }
+
+    /**
+    * Sets pullProtocol
+    *
+    * @param string|null $pullProtocol 域名支持的拉流协议；仅domain_type为pull时生效。若不填写此字段，视为默认支持FLV、RTMP拉流协议 - flv_rtmp表示支持FLV、RTMP协议 - hls表示支持HLS协议
+    *
+    * @return $this
+    */
+    public function setPullProtocol($pullProtocol)
+    {
+        $this->container['pullProtocol'] = $pullProtocol;
         return $this;
     }
 

@@ -23,13 +23,15 @@ class CreateRoute implements ModelInterface, ArrayAccess
     * destination  路由目的地址
     * attachmentId  路由下一跳指向的连接ID
     * isBlackhole  是否为黑洞路由，默认为false
+    * description  路由描述信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'destination' => 'string',
             'attachmentId' => 'string',
-            'isBlackhole' => 'bool'
+            'isBlackhole' => 'bool',
+            'description' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class CreateRoute implements ModelInterface, ArrayAccess
     * destination  路由目的地址
     * attachmentId  路由下一跳指向的连接ID
     * isBlackhole  是否为黑洞路由，默认为false
+    * description  路由描述信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'destination' => null,
         'attachmentId' => null,
-        'isBlackhole' => null
+        'isBlackhole' => null,
+        'description' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class CreateRoute implements ModelInterface, ArrayAccess
     * destination  路由目的地址
     * attachmentId  路由下一跳指向的连接ID
     * isBlackhole  是否为黑洞路由，默认为false
+    * description  路由描述信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'destination' => 'destination',
             'attachmentId' => 'attachment_id',
-            'isBlackhole' => 'is_blackhole'
+            'isBlackhole' => 'is_blackhole',
+            'description' => 'description'
     ];
 
     /**
@@ -86,13 +92,15 @@ class CreateRoute implements ModelInterface, ArrayAccess
     * destination  路由目的地址
     * attachmentId  路由下一跳指向的连接ID
     * isBlackhole  是否为黑洞路由，默认为false
+    * description  路由描述信息
     *
     * @var string[]
     */
     protected static $setters = [
             'destination' => 'setDestination',
             'attachmentId' => 'setAttachmentId',
-            'isBlackhole' => 'setIsBlackhole'
+            'isBlackhole' => 'setIsBlackhole',
+            'description' => 'setDescription'
     ];
 
     /**
@@ -100,13 +108,15 @@ class CreateRoute implements ModelInterface, ArrayAccess
     * destination  路由目的地址
     * attachmentId  路由下一跳指向的连接ID
     * isBlackhole  是否为黑洞路由，默认为false
+    * description  路由描述信息
     *
     * @var string[]
     */
     protected static $getters = [
             'destination' => 'getDestination',
             'attachmentId' => 'getAttachmentId',
-            'isBlackhole' => 'getIsBlackhole'
+            'isBlackhole' => 'getIsBlackhole',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -170,6 +180,7 @@ class CreateRoute implements ModelInterface, ArrayAccess
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
         $this->container['attachmentId'] = isset($data['attachmentId']) ? $data['attachmentId'] : null;
         $this->container['isBlackhole'] = isset($data['isBlackhole']) ? $data['isBlackhole'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -191,6 +202,15 @@ class CreateRoute implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['attachmentId']) && !preg_match("/[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}/", $this->container['attachmentId'])) {
                 $invalidProperties[] = "invalid value for 'attachmentId', must be conform to the pattern /[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}/.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['description']) && !preg_match("/[^<>]*/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /[^<>]*/.";
             }
         return $invalidProperties;
     }
@@ -275,6 +295,30 @@ class CreateRoute implements ModelInterface, ArrayAccess
     public function setIsBlackhole($isBlackhole)
     {
         $this->container['isBlackhole'] = $isBlackhole;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  路由描述信息
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 路由描述信息
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

@@ -23,6 +23,7 @@ class ListFlowLogsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * flowLogs  flowLogs
     * requestId  请求ID
+    * totalCount  总计数量
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -30,6 +31,7 @@ class ListFlowLogsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'flowLogs' => '\HuaweiCloud\SDK\Er\V3\Model\FlowLog[]',
             'requestId' => 'string',
+            'totalCount' => 'int',
             'pageInfo' => '\HuaweiCloud\SDK\Er\V3\Model\PageInfo'
     ];
 
@@ -37,6 +39,7 @@ class ListFlowLogsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * flowLogs  flowLogs
     * requestId  请求ID
+    * totalCount  总计数量
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -44,6 +47,7 @@ class ListFlowLogsResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'flowLogs' => null,
         'requestId' => null,
+        'totalCount' => 'int64',
         'pageInfo' => null
     ];
 
@@ -72,6 +76,7 @@ class ListFlowLogsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * flowLogs  flowLogs
     * requestId  请求ID
+    * totalCount  总计数量
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -79,6 +84,7 @@ class ListFlowLogsResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'flowLogs' => 'flow_logs',
             'requestId' => 'request_id',
+            'totalCount' => 'total_count',
             'pageInfo' => 'page_info'
     ];
 
@@ -86,6 +92,7 @@ class ListFlowLogsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * flowLogs  flowLogs
     * requestId  请求ID
+    * totalCount  总计数量
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -93,6 +100,7 @@ class ListFlowLogsResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'flowLogs' => 'setFlowLogs',
             'requestId' => 'setRequestId',
+            'totalCount' => 'setTotalCount',
             'pageInfo' => 'setPageInfo'
     ];
 
@@ -100,6 +108,7 @@ class ListFlowLogsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * flowLogs  flowLogs
     * requestId  请求ID
+    * totalCount  总计数量
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -107,6 +116,7 @@ class ListFlowLogsResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'flowLogs' => 'getFlowLogs',
             'requestId' => 'getRequestId',
+            'totalCount' => 'getTotalCount',
             'pageInfo' => 'getPageInfo'
     ];
 
@@ -170,6 +180,7 @@ class ListFlowLogsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['flowLogs'] = isset($data['flowLogs']) ? $data['flowLogs'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
         $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
@@ -240,6 +251,30 @@ class ListFlowLogsResponse implements ModelInterface, ArrayAccess
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets totalCount
+    *  总计数量
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 总计数量
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 

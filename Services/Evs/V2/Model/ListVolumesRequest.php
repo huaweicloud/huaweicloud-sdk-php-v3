@@ -38,6 +38,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serverId  云服务器id。
+    * notMetadata  查询不包含所选元数据的云硬盘
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             'id' => 'string',
             'ids' => 'string',
             'enterpriseProjectId' => 'string',
-            'serverId' => 'string'
+            'serverId' => 'string',
+            'notMetadata' => 'string'
     ];
 
     /**
@@ -82,6 +84,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serverId  云服务器id。
+    * notMetadata  查询不包含所选元数据的云硬盘
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
         'id' => null,
         'ids' => null,
         'enterpriseProjectId' => null,
-        'serverId' => null
+        'serverId' => null,
+        'notMetadata' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serverId  云服务器id。
+    * notMetadata  查询不包含所选元数据的云硬盘
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             'id' => 'id',
             'ids' => 'ids',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'serverId' => 'server_id'
+            'serverId' => 'server_id',
+            'notMetadata' => 'not_metadata'
     ];
 
     /**
@@ -191,6 +197,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serverId  云服务器id。
+    * notMetadata  查询不包含所选元数据的云硬盘
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'ids' => 'setIds',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'serverId' => 'setServerId'
+            'serverId' => 'setServerId',
+            'notMetadata' => 'setNotMetadata'
     ];
 
     /**
@@ -235,6 +243,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serverId  云服务器id。
+    * notMetadata  查询不包含所选元数据的云硬盘
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'ids' => 'getIds',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'serverId' => 'getServerId'
+            'serverId' => 'getServerId',
+            'notMetadata' => 'getNotMetadata'
     ];
 
     /**
@@ -299,7 +309,26 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const NOT_METADATA_HWPASSTHROUGHTRUE = '{\"hw:passthrough\":true}';
+    const NOT_METADATA_HWPASSTHROUGHFALSE = '{\"hw:passthrough\":false}';
+    const NOT_METADATA__SYSTEM__ENCRYPTED1 = '{\"__system__encrypted\":1}';
+    const NOT_METADATA__SYSTEM__ENCRYPTED0 = '{\"__system__encrypted\":0}';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getNotMetadataAllowableValues()
+    {
+        return [
+            self::NOT_METADATA_HWPASSTHROUGHTRUE,
+            self::NOT_METADATA_HWPASSTHROUGHFALSE,
+            self::NOT_METADATA__SYSTEM__ENCRYPTED1,
+            self::NOT_METADATA__SYSTEM__ENCRYPTED0,
+        ];
+    }
 
 
     /**
@@ -335,6 +364,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
         $this->container['ids'] = isset($data['ids']) ? $data['ids'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
+        $this->container['notMetadata'] = isset($data['notMetadata']) ? $data['notMetadata'] : null;
     }
 
     /**
@@ -351,6 +381,14 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getNotMetadataAllowableValues();
+                if (!is_null($this->container['notMetadata']) && !in_array($this->container['notMetadata'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'notMetadata', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -794,6 +832,30 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     public function setServerId($serverId)
     {
         $this->container['serverId'] = $serverId;
+        return $this;
+    }
+
+    /**
+    * Gets notMetadata
+    *  查询不包含所选元数据的云硬盘
+    *
+    * @return string|null
+    */
+    public function getNotMetadata()
+    {
+        return $this->container['notMetadata'];
+    }
+
+    /**
+    * Sets notMetadata
+    *
+    * @param string|null $notMetadata 查询不包含所选元数据的云硬盘
+    *
+    * @return $this
+    */
+    public function setNotMetadata($notMetadata)
+    {
+        $this->container['notMetadata'] = $notMetadata;
         return $this;
     }
 

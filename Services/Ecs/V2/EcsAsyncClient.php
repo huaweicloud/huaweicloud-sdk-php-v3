@@ -2655,6 +2655,71 @@ class EcsAsyncClient extends Client
     }
 
     /**
+     * 查询弹性云服务器挂载磁盘列表信息
+     *
+     * 查询弹性云服务器挂载的磁盘信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listServerVolumeAttachmentsAsync($request)
+    {
+        return $this->listServerVolumeAttachmentsAsyncWithHttpInfo($request);
+    }
+    
+    public function listServerVolumeAttachmentsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/os-volume_attachments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServerVolumeAttachmentsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServerVolumeAttachmentsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 按标签查询云服务器列表
      *
      * 使用标签过滤弹性云服务器，并返回云服务器使用的所有标签和资源列表。

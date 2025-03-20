@@ -18,7 +18,7 @@ This document introduces how to obtain and use Huawei Cloud Php SDK.
 - To use Huawei Cloud Php SDK to access the APIs of specific service, please make sure you do have activated the
   service in [Huawei Cloud console](https://console.huaweicloud.com/?locale=en-us) if needed.
 
-- Huawei Cloud Php SDK requires **PHP 5.6, PHP6, PHP7 **, but not support PHP8. Please run command `php --version` to check the version of Php before run php sdk code.
+- Huawei Cloud Php SDK requires **PHP 5.6** or later, run command `php --version` to check the version of Php.
 
 ## Install Php SDK
 

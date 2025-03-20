@@ -20,7 +20,7 @@
 - 要使用华为云 Php SDK 访问指定服务的 API
   ，您需要确认已在 [华为云控制台](https://console.huaweicloud.com/console/?locale=zh-cn&region=cn-north-4#/home) 开通当前服务。
 
-- 华为云 Php SDK 支持 **PHP 5.6、PHP6、PHP7**版本，不支持PHP8 版本，在运行前可执行 `php --version` 检查当前 Php 的版本信息，如果安装了PHP其他语言的版本，运行PHP SDK可能会报错。
+- 华为云 Php SDK 支持 **PHP 5.6** 及以上版本，可执行 `php --version` 检查当前 Php 的版本信息。
 
 ## SDK 获取和安装
 

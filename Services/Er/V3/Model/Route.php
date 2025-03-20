@@ -29,6 +29,7 @@ class Route implements ModelInterface, ArrayAccess
     * routeTableId  路由表id
     * createdAt  创建时间
     * updatedAt  更新时间
+    * description  路由描述信息
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class Route implements ModelInterface, ArrayAccess
             'attachments' => '\HuaweiCloud\SDK\Er\V3\Model\RouteAttachment[]',
             'routeTableId' => 'string',
             'createdAt' => '\DateTime',
-            'updatedAt' => '\DateTime'
+            'updatedAt' => '\DateTime',
+            'description' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class Route implements ModelInterface, ArrayAccess
     * routeTableId  路由表id
     * createdAt  创建时间
     * updatedAt  更新时间
+    * description  路由描述信息
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class Route implements ModelInterface, ArrayAccess
         'attachments' => null,
         'routeTableId' => null,
         'createdAt' => 'date-time',
-        'updatedAt' => 'date-time'
+        'updatedAt' => 'date-time',
+        'description' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class Route implements ModelInterface, ArrayAccess
     * routeTableId  路由表id
     * createdAt  创建时间
     * updatedAt  更新时间
+    * description  路由描述信息
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class Route implements ModelInterface, ArrayAccess
             'attachments' => 'attachments',
             'routeTableId' => 'route_table_id',
             'createdAt' => 'created_at',
-            'updatedAt' => 'updated_at'
+            'updatedAt' => 'updated_at',
+            'description' => 'description'
     ];
 
     /**
@@ -128,6 +134,7 @@ class Route implements ModelInterface, ArrayAccess
     * routeTableId  路由表id
     * createdAt  创建时间
     * updatedAt  更新时间
+    * description  路由描述信息
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class Route implements ModelInterface, ArrayAccess
             'attachments' => 'setAttachments',
             'routeTableId' => 'setRouteTableId',
             'createdAt' => 'setCreatedAt',
-            'updatedAt' => 'setUpdatedAt'
+            'updatedAt' => 'setUpdatedAt',
+            'description' => 'setDescription'
     ];
 
     /**
@@ -154,6 +162,7 @@ class Route implements ModelInterface, ArrayAccess
     * routeTableId  路由表id
     * createdAt  创建时间
     * updatedAt  更新时间
+    * description  路由描述信息
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class Route implements ModelInterface, ArrayAccess
             'attachments' => 'getAttachments',
             'routeTableId' => 'getRouteTableId',
             'createdAt' => 'getCreatedAt',
-            'updatedAt' => 'getUpdatedAt'
+            'updatedAt' => 'getUpdatedAt',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -236,6 +246,7 @@ class Route implements ModelInterface, ArrayAccess
         $this->container['routeTableId'] = isset($data['routeTableId']) ? $data['routeTableId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -491,6 +502,30 @@ class Route implements ModelInterface, ArrayAccess
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  路由描述信息
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 路由描述信息
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

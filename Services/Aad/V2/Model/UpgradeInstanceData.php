@@ -27,6 +27,7 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
     * bindDomainNum  域名数
     * elasticServiceBandwidthType  弹性业务带宽,0-关闭，3-月95
     * elasticServiceBandwidth  弹性业务带宽增加值
+    * basicQps  业务QPS(如果实例没购买过QPS，需要在页面上升级一次规格开通QPS，之后才可以通过接口修改规格)
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
             'portNum' => 'int',
             'bindDomainNum' => 'int',
             'elasticServiceBandwidthType' => 'int',
-            'elasticServiceBandwidth' => 'int'
+            'elasticServiceBandwidth' => 'int',
+            'basicQps' => 'int'
     ];
 
     /**
@@ -49,6 +51,7 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
     * bindDomainNum  域名数
     * elasticServiceBandwidthType  弹性业务带宽,0-关闭，3-月95
     * elasticServiceBandwidth  弹性业务带宽增加值
+    * basicQps  业务QPS(如果实例没购买过QPS，需要在页面上升级一次规格开通QPS，之后才可以通过接口修改规格)
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
         'portNum' => 'int32',
         'bindDomainNum' => 'int32',
         'elasticServiceBandwidthType' => 'int32',
-        'elasticServiceBandwidth' => 'int32'
+        'elasticServiceBandwidth' => 'int32',
+        'basicQps' => 'int32'
     ];
 
     /**
@@ -92,6 +96,7 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
     * bindDomainNum  域名数
     * elasticServiceBandwidthType  弹性业务带宽,0-关闭，3-月95
     * elasticServiceBandwidth  弹性业务带宽增加值
+    * basicQps  业务QPS(如果实例没购买过QPS，需要在页面上升级一次规格开通QPS，之后才可以通过接口修改规格)
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
             'portNum' => 'port_num',
             'bindDomainNum' => 'bind_domain_num',
             'elasticServiceBandwidthType' => 'elastic_service_bandwidth_type',
-            'elasticServiceBandwidth' => 'elastic_service_bandwidth'
+            'elasticServiceBandwidth' => 'elastic_service_bandwidth',
+            'basicQps' => 'basic_qps'
     ];
 
     /**
@@ -114,6 +120,7 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
     * bindDomainNum  域名数
     * elasticServiceBandwidthType  弹性业务带宽,0-关闭，3-月95
     * elasticServiceBandwidth  弹性业务带宽增加值
+    * basicQps  业务QPS(如果实例没购买过QPS，需要在页面上升级一次规格开通QPS，之后才可以通过接口修改规格)
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
             'portNum' => 'setPortNum',
             'bindDomainNum' => 'setBindDomainNum',
             'elasticServiceBandwidthType' => 'setElasticServiceBandwidthType',
-            'elasticServiceBandwidth' => 'setElasticServiceBandwidth'
+            'elasticServiceBandwidth' => 'setElasticServiceBandwidth',
+            'basicQps' => 'setBasicQps'
     ];
 
     /**
@@ -136,6 +144,7 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
     * bindDomainNum  域名数
     * elasticServiceBandwidthType  弹性业务带宽,0-关闭，3-月95
     * elasticServiceBandwidth  弹性业务带宽增加值
+    * basicQps  业务QPS(如果实例没购买过QPS，需要在页面上升级一次规格开通QPS，之后才可以通过接口修改规格)
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
             'portNum' => 'getPortNum',
             'bindDomainNum' => 'getBindDomainNum',
             'elasticServiceBandwidthType' => 'getElasticServiceBandwidthType',
-            'elasticServiceBandwidth' => 'getElasticServiceBandwidth'
+            'elasticServiceBandwidth' => 'getElasticServiceBandwidth',
+            'basicQps' => 'getBasicQps'
     ];
 
     /**
@@ -214,6 +224,7 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
         $this->container['bindDomainNum'] = isset($data['bindDomainNum']) ? $data['bindDomainNum'] : null;
         $this->container['elasticServiceBandwidthType'] = isset($data['elasticServiceBandwidthType']) ? $data['elasticServiceBandwidthType'] : null;
         $this->container['elasticServiceBandwidth'] = isset($data['elasticServiceBandwidth']) ? $data['elasticServiceBandwidth'] : null;
+        $this->container['basicQps'] = isset($data['basicQps']) ? $data['basicQps'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
     public function setElasticServiceBandwidth($elasticServiceBandwidth)
     {
         $this->container['elasticServiceBandwidth'] = $elasticServiceBandwidth;
+        return $this;
+    }
+
+    /**
+    * Gets basicQps
+    *  业务QPS(如果实例没购买过QPS，需要在页面上升级一次规格开通QPS，之后才可以通过接口修改规格)
+    *
+    * @return int|null
+    */
+    public function getBasicQps()
+    {
+        return $this->container['basicQps'];
+    }
+
+    /**
+    * Sets basicQps
+    *
+    * @param int|null $basicQps 业务QPS(如果实例没购买过QPS，需要在页面上升级一次规格开通QPS，之后才可以通过接口修改规格)
+    *
+    * @return $this
+    */
+    public function setBasicQps($basicQps)
+    {
+        $this->container['basicQps'] = $basicQps;
         return $this;
     }
 

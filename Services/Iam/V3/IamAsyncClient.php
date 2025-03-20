@@ -1289,6 +1289,84 @@ class IamAsyncClient extends Client
     }
 
     /**
+     * 获取联邦认证unscoped token(IdP initiated)
+     *
+     * 该接口可以用于通过IdP initiated的联邦认证方式获取unscoped token。
+     * 
+     * Unscoped token不能用来鉴权，若联邦用户需要使用token进行鉴权，请参考[获取联邦认证scoped token](https://support.huaweicloud.com/api-iam/iam_13_0604.html)获取scoped token。
+     * 
+     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     * &gt; - 该接口支持在命令行侧调用，需要客户端使用IdP initiated的联邦认证方式获取SAMLResponse，并采用浏览器提交表单数据的方式，获取unscoped token。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createUnscopeTokenByIdpInitiatedAsync($request)
+    {
+        return $this->createUnscopeTokenByIdpInitiatedAsyncWithHttpInfo($request);
+    }
+    
+    public function createUnscopeTokenByIdpInitiatedAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-FEDERATION/tokens';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xIdpId'] !== null) {
+            $headerParams['x_idp_id'] = $localVarParams['xIdpId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/x-www-form-urlencoded']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUnscopeTokenByIdpInitiatedResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUnscopeTokenByIdpInitiatedRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取联邦认证unscoped token(OpenId Connect Id token方式)
      *
      * 获取联邦认证token(OpenId Connect Id token方式)。

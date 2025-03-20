@@ -26,6 +26,7 @@ class ListAllStandardsRequest implements ModelInterface, ArrayAccess
     * directoryId  目录ID。获取该目录下的数据标准，如果有子目录，同时获取所有子目录的数据标准。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * needPath  查询数据标准目录时，是否查询数据标准目录信息。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
@@ -38,6 +39,7 @@ class ListAllStandardsRequest implements ModelInterface, ArrayAccess
             'directoryId' => 'string',
             'beginTime' => 'string',
             'endTime' => 'string',
+            'needPath' => 'bool',
             'limit' => 'int',
             'offset' => 'int'
     ];
@@ -50,6 +52,7 @@ class ListAllStandardsRequest implements ModelInterface, ArrayAccess
     * directoryId  目录ID。获取该目录下的数据标准，如果有子目录，同时获取所有子目录的数据标准。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * needPath  查询数据标准目录时，是否查询数据标准目录信息。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
@@ -62,6 +65,7 @@ class ListAllStandardsRequest implements ModelInterface, ArrayAccess
         'directoryId' => null,
         'beginTime' => null,
         'endTime' => null,
+        'needPath' => null,
         'limit' => 'int32',
         'offset' => 'int32'
     ];
@@ -95,6 +99,7 @@ class ListAllStandardsRequest implements ModelInterface, ArrayAccess
     * directoryId  目录ID。获取该目录下的数据标准，如果有子目录，同时获取所有子目录的数据标准。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * needPath  查询数据标准目录时，是否查询数据标准目录信息。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
@@ -107,6 +112,7 @@ class ListAllStandardsRequest implements ModelInterface, ArrayAccess
             'directoryId' => 'directory_id',
             'beginTime' => 'begin_time',
             'endTime' => 'end_time',
+            'needPath' => 'need_path',
             'limit' => 'limit',
             'offset' => 'offset'
     ];
@@ -119,6 +125,7 @@ class ListAllStandardsRequest implements ModelInterface, ArrayAccess
     * directoryId  目录ID。获取该目录下的数据标准，如果有子目录，同时获取所有子目录的数据标准。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * needPath  查询数据标准目录时，是否查询数据标准目录信息。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
@@ -131,6 +138,7 @@ class ListAllStandardsRequest implements ModelInterface, ArrayAccess
             'directoryId' => 'setDirectoryId',
             'beginTime' => 'setBeginTime',
             'endTime' => 'setEndTime',
+            'needPath' => 'setNeedPath',
             'limit' => 'setLimit',
             'offset' => 'setOffset'
     ];
@@ -143,6 +151,7 @@ class ListAllStandardsRequest implements ModelInterface, ArrayAccess
     * directoryId  目录ID。获取该目录下的数据标准，如果有子目录，同时获取所有子目录的数据标准。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * needPath  查询数据标准目录时，是否查询数据标准目录信息。
     * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
@@ -155,6 +164,7 @@ class ListAllStandardsRequest implements ModelInterface, ArrayAccess
             'directoryId' => 'getDirectoryId',
             'beginTime' => 'getBeginTime',
             'endTime' => 'getEndTime',
+            'needPath' => 'getNeedPath',
             'limit' => 'getLimit',
             'offset' => 'getOffset'
     ];
@@ -223,6 +233,7 @@ class ListAllStandardsRequest implements ModelInterface, ArrayAccess
         $this->container['directoryId'] = isset($data['directoryId']) ? $data['directoryId'] : null;
         $this->container['beginTime'] = isset($data['beginTime']) ? $data['beginTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['needPath'] = isset($data['needPath']) ? $data['needPath'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
@@ -432,6 +443,30 @@ class ListAllStandardsRequest implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets needPath
+    *  查询数据标准目录时，是否查询数据标准目录信息。
+    *
+    * @return bool|null
+    */
+    public function getNeedPath()
+    {
+        return $this->container['needPath'];
+    }
+
+    /**
+    * Sets needPath
+    *
+    * @param bool|null $needPath 查询数据标准目录时，是否查询数据标准目录信息。
+    *
+    * @return $this
+    */
+    public function setNeedPath($needPath)
+    {
+        $this->container['needPath'] = $needPath;
         return $this;
     }
 

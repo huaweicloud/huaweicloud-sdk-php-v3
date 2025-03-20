@@ -26,6 +26,219 @@ class CocAsyncClient extends Client
     }
 
     /**
+     * 查询客户账号
+     *
+     * show account ，使用场景：托管功能 sre 账号使用，查询自己管理的客户账号
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAccountAsync($request)
+    {
+        return $this->showAccountAsyncWithHttpInfo($request);
+    }
+    
+    public function showAccountAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/host/accounts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['delegator'] !== null) {
+            $queryParams['delegator'] = $localVarParams['delegator'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ShowAccountResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ShowAccountRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询告警工单历史
+     *
+     * 查询告警工单历史
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAlarmHandleHistoriesAsync($request)
+    {
+        return $this->listAlarmHandleHistoriesAsyncWithHttpInfo($request);
+    }
+    
+    public function listAlarmHandleHistoriesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/alarm-mgmt/alarm/{alarm_id}/handle-histories';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['alarmId'] !== null) {
+            $pathParams['alarm_id'] = $localVarParams['alarmId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListAlarmHandleHistoriesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListAlarmHandleHistoriesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询Alarm
+     *
+     * Get alarm info by id
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAlarmAsync($request)
+    {
+        return $this->showAlarmAsyncWithHttpInfo($request);
+    }
+    
+    public function showAlarmAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/alarm-mgmt/alarm/{alarm_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['alarmId'] !== null) {
+            $pathParams['alarm_id'] = $localVarParams['alarmId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ShowAlarmResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ShowAlarmRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询应用
      *
      * 查询应用
@@ -244,6 +457,139 @@ class CocAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询Baseline
+     *
+     * Get baseline info by id
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showPatchBaselineAsync($request)
+    {
+        return $this->showPatchBaselineAsyncWithHttpInfo($request);
+    }
+    
+    public function showPatchBaselineAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/patch/baseline/{baseline_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['baselineId'] !== null) {
+            $pathParams['baseline_id'] = $localVarParams['baselineId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ShowPatchBaselineResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ShowPatchBaselineRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取合规性报告cce信息
+     *
+     * 分页获取合规性报告cce信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCceCompliantAsync($request)
+    {
+        return $this->listCceCompliantAsyncWithHttpInfo($request);
+    }
+    
+    public function listCceCompliantAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/patch/cce/compliant';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListCceCompliantResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListCceCompliantRequest',
             $asyncRequest = true);
     }
 
@@ -1127,6 +1473,145 @@ class CocAsyncClient extends Client
     }
 
     /**
+     * 查询人员列表
+     *
+     * 获取人员列表（公网调用）
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPersonnelAsync($request)
+    {
+        return $this->listPersonnelAsyncWithHttpInfo($request);
+    }
+    
+    public function listPersonnelAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/personnel';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['hasMobile'] !== null) {
+            $queryParams['has_mobile'] = $localVarParams['hasMobile'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListPersonnelResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListPersonnelRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 同步人员
+     *
+     * 同步人员
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function syncAddPersonnelAsync($request)
+    {
+        return $this->syncAddPersonnelAsyncWithHttpInfo($request);
+    }
+    
+    public function syncAddPersonnelAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/sync/{domain_id}/personnels';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainId'] !== null) {
+            $pathParams['domain_id'] = $localVarParams['domainId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\SyncAddPersonnelResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\SyncAddPersonnelRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询用户各种资源总数
      *
      * 查询用户各种资源总数
@@ -1393,6 +1878,622 @@ class CocAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Coc\V1\Model\SyncResourceResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Coc\V1\Model\SyncResourceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 新建定时运维
+     *
+     * Create Scheduled Task
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createScheduledTaskAsync($request)
+    {
+        return $this->createScheduledTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function createScheduledTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/schedule/task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\CreateScheduledTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\CreateScheduledTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除ScheduledTask
+     *
+     * Delete scheduled task by id
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteScheduledTaskAsync($request)
+    {
+        return $this->deleteScheduledTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteScheduledTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/schedule/task/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\DeleteScheduledTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\DeleteScheduledTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 禁用ScheduledTask
+     *
+     * Disable scheduled task by id
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disableScheduledTaskAsync($request)
+    {
+        return $this->disableScheduledTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function disableScheduledTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/schedule/task/{task_id}/disable';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\DisableScheduledTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\DisableScheduledTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 启用ScheduledTask
+     *
+     * Enable scheduled task by id
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function enableScheduledTaskAsync($request)
+    {
+        return $this->enableScheduledTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function enableScheduledTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/schedule/task/{task_id}/enable';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\EnableScheduledTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\EnableScheduledTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询ScheduledTask列表
+     *
+     * Get ScheduledTask infos
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listScheduledTaskAsync($request)
+    {
+        return $this->listScheduledTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function listScheduledTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/schedule/task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $queryParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['taskName'] !== null) {
+            $queryParams['task_name'] = $localVarParams['taskName'];
+        }
+        if ($localVarParams['scheduledType'] !== null) {
+            $queryParams['scheduled_type'] = $localVarParams['scheduledType'];
+        }
+        if ($localVarParams['taskType'] !== null) {
+            $queryParams['task_type'] = $localVarParams['taskType'];
+        }
+        if ($localVarParams['associatedTaskType'] !== null) {
+            $queryParams['associated_task_type'] = $localVarParams['associatedTaskType'];
+        }
+        if ($localVarParams['riskLevel'] !== null) {
+            $queryParams['risk_level'] = $localVarParams['riskLevel'];
+        }
+        if ($localVarParams['createdBy'] !== null) {
+            $queryParams['created_by'] = $localVarParams['createdBy'];
+        }
+        if ($localVarParams['reviewer'] !== null) {
+            $queryParams['reviewer'] = $localVarParams['reviewer'];
+        }
+        if ($localVarParams['reviewerUserName'] !== null) {
+            $queryParams['reviewer_user_name'] = $localVarParams['reviewerUserName'];
+        }
+        if ($localVarParams['approveStatus'] !== null) {
+            $queryParams['approve_status'] = $localVarParams['approveStatus'];
+        }
+        if ($localVarParams['lastExecutionStatus'] !== null) {
+            $queryParams['last_execution_status'] = $localVarParams['lastExecutionStatus'];
+        }
+        if ($localVarParams['lastExecutionStartTime'] !== null) {
+            $queryParams['last_execution_start_time'] = $localVarParams['lastExecutionStartTime'];
+        }
+        if ($localVarParams['lastExecutionEndTime'] !== null) {
+            $queryParams['last_execution_end_time'] = $localVarParams['lastExecutionEndTime'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $queryParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListScheduledTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListScheduledTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询定时运维历史记录
+     *
+     * get scheduled task history list
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listScheduledTaskHistoryAsync($request)
+    {
+        return $this->listScheduledTaskHistoryAsyncWithHttpInfo($request);
+    }
+    
+    public function listScheduledTaskHistoryAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/schedule/task/history';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $queryParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $queryParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['startedStartTime'] !== null) {
+            $queryParams['started_start_time'] = $localVarParams['startedStartTime'];
+        }
+        if ($localVarParams['startedEndTime'] !== null) {
+            $queryParams['started_end_time'] = $localVarParams['startedEndTime'];
+        }
+        if ($localVarParams['finishedStartTime'] !== null) {
+            $queryParams['finished_start_time'] = $localVarParams['finishedStartTime'];
+        }
+        if ($localVarParams['finishedEndTime'] !== null) {
+            $queryParams['finished_end_time'] = $localVarParams['finishedEndTime'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListScheduledTaskHistoryResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListScheduledTaskHistoryRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询ScheduledTask
+     *
+     * Get ScheduledTask info by id
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showScheduledTaskAsync($request)
+    {
+        return $this->showScheduledTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function showScheduledTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/schedule/task/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ShowScheduledTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ShowScheduledTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改ScheduledTask
+     *
+     * Update ScheduledTask
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateScheduledTaskAsync($request)
+    {
+        return $this->updateScheduledTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function updateScheduledTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/schedule/task/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\UpdateScheduledTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\UpdateScheduledTaskRequest',
             $asyncRequest = true);
     }
 
@@ -2617,6 +3718,284 @@ class CocAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListPublicScriptsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListPublicScriptsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询Sla模板详情
+     *
+     * Get Sla Template info by id
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSlaCustomizedTemplateAsync($request)
+    {
+        return $this->showSlaCustomizedTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function showSlaCustomizedTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/sla-mgmt/customized-template/{template_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['templateId'] !== null) {
+            $pathParams['template_id'] = $localVarParams['templateId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ShowSlaCustomizedTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ShowSlaCustomizedTemplateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询SLA工单信息
+     *
+     * SLA 工单信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSlaOrderAsync($request)
+    {
+        return $this->showSlaOrderAsyncWithHttpInfo($request);
+    }
+    
+    public function showSlaOrderAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/sla-mgmt/orders/{order_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['orderId'] !== null) {
+            $pathParams['order_id'] = $localVarParams['orderId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ShowSlaOrderResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ShowSlaOrderRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询中断记录
+     *
+     * 查询中断记录
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInterruptRecordsAsync($request)
+    {
+        return $this->listInterruptRecordsAsyncWithHttpInfo($request);
+    }
+    
+    public function listInterruptRecordsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/slo-mgmt/slos/{slo_id}/interrupt-records';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['sourceId'] !== null) {
+            $queryParams['source_id'] = $localVarParams['sourceId'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['sloId'] !== null) {
+            $pathParams['slo_id'] = $localVarParams['sloId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListInterruptRecordsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListInterruptRecordsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询SLO详情
+     *
+     * 查询SLO详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSloDetailAsync($request)
+    {
+        return $this->showSloDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function showSloDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/slo-mgmt/slos/{slo_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['sloId'] !== null) {
+            $pathParams['slo_id'] = $localVarParams['sloId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ShowSloDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ShowSloDetailRequest',
             $asyncRequest = true);
     }
 

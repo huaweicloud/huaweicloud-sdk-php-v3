@@ -1198,6 +1198,9 @@ class EvsAsyncClient extends Client
         if ($localVarParams['serverId'] !== null) {
             $queryParams['server_id'] = $localVarParams['serverId'];
         }
+        if ($localVarParams['notMetadata'] !== null) {
+            $queryParams['not_metadata'] = $localVarParams['notMetadata'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

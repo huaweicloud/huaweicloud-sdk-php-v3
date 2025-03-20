@@ -25,7 +25,7 @@ class UpdateDomainConsoleAclPolicyRequestBody implements ModelInterface, ArrayAc
     * @var string[]
     */
     protected static $openAPITypes = [
-            'consoleAclPolicy' => '\HuaweiCloud\SDK\Iam\V3\Model\ConsoleAclPolicyOption'
+            'consoleAclPolicy' => '\HuaweiCloud\SDK\Iam\V3\Model\AclPolicyOption'
     ];
 
     /**
@@ -179,7 +179,7 @@ class UpdateDomainConsoleAclPolicyRequestBody implements ModelInterface, ArrayAc
     * Gets consoleAclPolicy
     *  consoleAclPolicy
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\ConsoleAclPolicyOption
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\AclPolicyOption
     */
     public function getConsoleAclPolicy()
     {
@@ -189,7 +189,7 @@ class UpdateDomainConsoleAclPolicyRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets consoleAclPolicy
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\ConsoleAclPolicyOption $consoleAclPolicy consoleAclPolicy
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\AclPolicyOption $consoleAclPolicy consoleAclPolicy
     *
     * @return $this
     */
