@@ -26,7 +26,7 @@ class SourceServerAssociatedWithTask implements ModelInterface, ArrayAccess
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class SourceServerAssociatedWithTask implements ModelInterface, ArrayAccess
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class SourceServerAssociatedWithTask implements ModelInterface, ArrayAccess
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class SourceServerAssociatedWithTask implements ModelInterface, ArrayAccess
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class SourceServerAssociatedWithTask implements ModelInterface, ArrayAccess
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @var string[]
     */
@@ -203,6 +203,9 @@ class SourceServerAssociatedWithTask implements ModelInterface, ArrayAccess
     const STATE_CLONING = 'cloning';
     const STATE_TESTING = 'testing';
     const STATE_FINISHED = 'finished';
+    const STATE_CLEARING = 'clearing';
+    const STATE_CLEARED = 'cleared';
+    const STATE_CLEARFAILED = 'clearfailed';
     
 
     /**
@@ -238,6 +241,9 @@ class SourceServerAssociatedWithTask implements ModelInterface, ArrayAccess
             self::STATE_CLONING,
             self::STATE_TESTING,
             self::STATE_FINISHED,
+            self::STATE_CLEARING,
+            self::STATE_CLEARED,
+            self::STATE_CLEARFAILED,
         ];
     }
 
@@ -489,7 +495,7 @@ class SourceServerAssociatedWithTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    *  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @return string|null
     */
@@ -501,7 +507,7 @@ class SourceServerAssociatedWithTask implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    * @param string|null $state 当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @return $this
     */

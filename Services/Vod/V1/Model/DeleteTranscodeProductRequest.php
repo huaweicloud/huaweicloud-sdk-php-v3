@@ -20,21 +20,25 @@ class DeleteTranscodeProductRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'xSdkDate' => 'string',
             'body' => '\HuaweiCloud\SDK\Vod\V1\Model\DeleteTranscodeProductReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'xSdkDate' => null,
         'body' => null
     ];
 
@@ -61,31 +65,37 @@ class DeleteTranscodeProductRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'xSdkDate' => 'X-Sdk-Date',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'xSdkDate' => 'setXSdkDate',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'xSdkDate' => 'getXSdkDate',
             'body' => 'getBody'
     ];
 
@@ -147,6 +157,7 @@ class DeleteTranscodeProductRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -158,6 +169,12 @@ class DeleteTranscodeProductRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['xSdkDate']) && (mb_strlen($this->container['xSdkDate']) > 256)) {
+                $invalidProperties[] = "invalid value for 'xSdkDate', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['xSdkDate']) && (mb_strlen($this->container['xSdkDate']) < 1)) {
+                $invalidProperties[] = "invalid value for 'xSdkDate', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -170,6 +187,30 @@ class DeleteTranscodeProductRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets xSdkDate
+    *  使用AK/SK方式认证时必选，请求的发生时间。
+    *
+    * @return string|null
+    */
+    public function getXSdkDate()
+    {
+        return $this->container['xSdkDate'];
+    }
+
+    /**
+    * Sets xSdkDate
+    *
+    * @param string|null $xSdkDate 使用AK/SK方式认证时必选，请求的发生时间。
+    *
+    * @return $this
+    */
+    public function setXSdkDate($xSdkDate)
+    {
+        $this->container['xSdkDate'] = $xSdkDate;
+        return $this;
     }
 
     /**

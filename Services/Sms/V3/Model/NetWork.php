@@ -22,6 +22,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  网卡的名称
     * ip  该网卡绑定的IP
+    * ipv6  IPv6地址
     * netmask  掩码
     * gateway  网关
     * mtu  Linux必选，网卡的MTU
@@ -33,6 +34,7 @@ class NetWork implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'ip' => 'string',
+            'ipv6' => 'string',
             'netmask' => 'string',
             'gateway' => 'string',
             'mtu' => 'int',
@@ -44,6 +46,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  网卡的名称
     * ip  该网卡绑定的IP
+    * ipv6  IPv6地址
     * netmask  掩码
     * gateway  网关
     * mtu  Linux必选，网卡的MTU
@@ -55,6 +58,7 @@ class NetWork implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'ip' => null,
+        'ipv6' => null,
         'netmask' => null,
         'gateway' => null,
         'mtu' => 'int32',
@@ -87,6 +91,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  网卡的名称
     * ip  该网卡绑定的IP
+    * ipv6  IPv6地址
     * netmask  掩码
     * gateway  网关
     * mtu  Linux必选，网卡的MTU
@@ -98,6 +103,7 @@ class NetWork implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'name' => 'name',
             'ip' => 'ip',
+            'ipv6' => 'ipv6',
             'netmask' => 'netmask',
             'gateway' => 'gateway',
             'mtu' => 'mtu',
@@ -109,6 +115,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  网卡的名称
     * ip  该网卡绑定的IP
+    * ipv6  IPv6地址
     * netmask  掩码
     * gateway  网关
     * mtu  Linux必选，网卡的MTU
@@ -120,6 +127,7 @@ class NetWork implements ModelInterface, ArrayAccess
     protected static $setters = [
             'name' => 'setName',
             'ip' => 'setIp',
+            'ipv6' => 'setIpv6',
             'netmask' => 'setNetmask',
             'gateway' => 'setGateway',
             'mtu' => 'setMtu',
@@ -131,6 +139,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  网卡的名称
     * ip  该网卡绑定的IP
+    * ipv6  IPv6地址
     * netmask  掩码
     * gateway  网关
     * mtu  Linux必选，网卡的MTU
@@ -142,6 +151,7 @@ class NetWork implements ModelInterface, ArrayAccess
     protected static $getters = [
             'name' => 'getName',
             'ip' => 'getIp',
+            'ipv6' => 'getIpv6',
             'netmask' => 'getNetmask',
             'gateway' => 'getGateway',
             'mtu' => 'getMtu',
@@ -209,6 +219,7 @@ class NetWork implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
+        $this->container['ipv6'] = isset($data['ipv6']) ? $data['ipv6'] : null;
         $this->container['netmask'] = isset($data['netmask']) ? $data['netmask'] : null;
         $this->container['gateway'] = isset($data['gateway']) ? $data['gateway'] : null;
         $this->container['mtu'] = isset($data['mtu']) ? $data['mtu'] : null;
@@ -241,6 +252,12 @@ class NetWork implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['ip']) < 0)) {
                 $invalidProperties[] = "invalid value for 'ip', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['ipv6']) && (mb_strlen($this->container['ipv6']) > 255)) {
+                $invalidProperties[] = "invalid value for 'ipv6', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['ipv6']) && (mb_strlen($this->container['ipv6']) < 0)) {
+                $invalidProperties[] = "invalid value for 'ipv6', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['netmask'] === null) {
             $invalidProperties[] = "'netmask' can't be null";
@@ -340,6 +357,30 @@ class NetWork implements ModelInterface, ArrayAccess
     public function setIp($ip)
     {
         $this->container['ip'] = $ip;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6
+    *  IPv6地址
+    *
+    * @return string|null
+    */
+    public function getIpv6()
+    {
+        return $this->container['ipv6'];
+    }
+
+    /**
+    * Sets ipv6
+    *
+    * @param string|null $ipv6 IPv6地址
+    *
+    * @return $this
+    */
+    public function setIpv6($ipv6)
+    {
+        $this->container['ipv6'] = $ipv6;
         return $this;
     }
 

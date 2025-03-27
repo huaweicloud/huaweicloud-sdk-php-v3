@@ -29,7 +29,7 @@ class ChangeOrderResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'orderId' => 'string',
-            'retCode' => 'string',
+            'retCode' => 'float',
             'retMsg' => 'string'
     ];
 
@@ -223,7 +223,7 @@ class ChangeOrderResponse implements ModelInterface, ArrayAccess
     * Gets retCode
     *  变更状态码
     *
-    * @return string|null
+    * @return float|null
     */
     public function getRetCode()
     {
@@ -233,7 +233,7 @@ class ChangeOrderResponse implements ModelInterface, ArrayAccess
     /**
     * Sets retCode
     *
-    * @param string|null $retCode 变更状态码
+    * @param float|null $retCode 变更状态码
     *
     * @return $this
     */

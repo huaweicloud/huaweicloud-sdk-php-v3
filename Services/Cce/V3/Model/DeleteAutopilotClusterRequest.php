@@ -26,7 +26,7 @@ class DeleteAutopilotClusterRequest implements ModelInterface, ArrayAccess
     * deleteNet  是否删除elb（弹性负载均衡）等集群Service/Ingress相关资源。 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程，默认选项) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程)
     * deleteObs  是否删除obs（对象存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
-    * ltsReclaimPolicy  是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    * ltsReclaimPolicy  是否删除LTS资源（日志组/日志流）。 枚举取值： - Delete_Log_Group：删除日志组，失败则忽略，并继续执行后续流程。 - Delete_Master_Log_Stream：删除Master接入日志流，失败则忽略，并继续执行后续流程，默认选项。 - Retain：跳过删除流程。
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class DeleteAutopilotClusterRequest implements ModelInterface, ArrayAccess
     * deleteNet  是否删除elb（弹性负载均衡）等集群Service/Ingress相关资源。 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程，默认选项) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程)
     * deleteObs  是否删除obs（对象存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
-    * ltsReclaimPolicy  是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    * ltsReclaimPolicy  是否删除LTS资源（日志组/日志流）。 枚举取值： - Delete_Log_Group：删除日志组，失败则忽略，并继续执行后续流程。 - Delete_Master_Log_Stream：删除Master接入日志流，失败则忽略，并继续执行后续流程，默认选项。 - Retain：跳过删除流程。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class DeleteAutopilotClusterRequest implements ModelInterface, ArrayAccess
     * deleteNet  是否删除elb（弹性负载均衡）等集群Service/Ingress相关资源。 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程，默认选项) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程)
     * deleteObs  是否删除obs（对象存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
-    * ltsReclaimPolicy  是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    * ltsReclaimPolicy  是否删除LTS资源（日志组/日志流）。 枚举取值： - Delete_Log_Group：删除日志组，失败则忽略，并继续执行后续流程。 - Delete_Master_Log_Stream：删除Master接入日志流，失败则忽略，并继续执行后续流程，默认选项。 - Retain：跳过删除流程。
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class DeleteAutopilotClusterRequest implements ModelInterface, ArrayAccess
     * deleteNet  是否删除elb（弹性负载均衡）等集群Service/Ingress相关资源。 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程，默认选项) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程)
     * deleteObs  是否删除obs（对象存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
-    * ltsReclaimPolicy  是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    * ltsReclaimPolicy  是否删除LTS资源（日志组/日志流）。 枚举取值： - Delete_Log_Group：删除日志组，失败则忽略，并继续执行后续流程。 - Delete_Master_Log_Stream：删除Master接入日志流，失败则忽略，并继续执行后续流程，默认选项。 - Retain：跳过删除流程。
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class DeleteAutopilotClusterRequest implements ModelInterface, ArrayAccess
     * deleteNet  是否删除elb（弹性负载均衡）等集群Service/Ingress相关资源。 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程，默认选项) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程)
     * deleteObs  是否删除obs（对象存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
-    * ltsReclaimPolicy  是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    * ltsReclaimPolicy  是否删除LTS资源（日志组/日志流）。 枚举取值： - Delete_Log_Group：删除日志组，失败则忽略，并继续执行后续流程。 - Delete_Master_Log_Stream：删除Master接入日志流，失败则忽略，并继续执行后续流程，默认选项。 - Retain：跳过删除流程。
     *
     * @var string[]
     */
@@ -214,11 +214,9 @@ class DeleteAutopilotClusterRequest implements ModelInterface, ArrayAccess
     const DELETE_SFS30__TRY = 'try';
     const DELETE_SFS30_FALSE = 'false';
     const DELETE_SFS30_SKIP = 'skip';
-    const LTS_RECLAIM_POLICY_TRUE = 'true';
-    const LTS_RECLAIM_POLICY_BLOCK = 'block';
-    const LTS_RECLAIM_POLICY__TRY = 'try';
-    const LTS_RECLAIM_POLICY_FALSE = 'false';
-    const LTS_RECLAIM_POLICY_SKIP = 'skip';
+    const LTS_RECLAIM_POLICY_DELETE_LOG_GROUP = 'Delete_Log_Group';
+    const LTS_RECLAIM_POLICY_DELETE_MASTER_LOG_STREAM = 'Delete_Master_Log_Stream';
+    const LTS_RECLAIM_POLICY_RETAIN = 'Retain';
     
 
     /**
@@ -309,11 +307,9 @@ class DeleteAutopilotClusterRequest implements ModelInterface, ArrayAccess
     public function getLtsReclaimPolicyAllowableValues()
     {
         return [
-            self::LTS_RECLAIM_POLICY_TRUE,
-            self::LTS_RECLAIM_POLICY_BLOCK,
-            self::LTS_RECLAIM_POLICY__TRY,
-            self::LTS_RECLAIM_POLICY_FALSE,
-            self::LTS_RECLAIM_POLICY_SKIP,
+            self::LTS_RECLAIM_POLICY_DELETE_LOG_GROUP,
+            self::LTS_RECLAIM_POLICY_DELETE_MASTER_LOG_STREAM,
+            self::LTS_RECLAIM_POLICY_RETAIN,
         ];
     }
 
@@ -564,7 +560,7 @@ class DeleteAutopilotClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsReclaimPolicy
-    *  是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    *  是否删除LTS资源（日志组/日志流）。 枚举取值： - Delete_Log_Group：删除日志组，失败则忽略，并继续执行后续流程。 - Delete_Master_Log_Stream：删除Master接入日志流，失败则忽略，并继续执行后续流程，默认选项。 - Retain：跳过删除流程。
     *
     * @return string|null
     */
@@ -576,7 +572,7 @@ class DeleteAutopilotClusterRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ltsReclaimPolicy
     *
-    * @param string|null $ltsReclaimPolicy 是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    * @param string|null $ltsReclaimPolicy 是否删除LTS资源（日志组/日志流）。 枚举取值： - Delete_Log_Group：删除日志组，失败则忽略，并继续执行后续流程。 - Delete_Master_Log_Stream：删除Master接入日志流，失败则忽略，并继续执行后续流程，默认选项。 - Retain：跳过删除流程。
     *
     * @return $this
     */

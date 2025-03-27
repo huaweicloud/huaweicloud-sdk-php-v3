@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Sms\V3\Model;
+namespace HuaweiCloud\SDK\Cbr\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ComandParam implements ModelInterface, ArrayAccess
+class ChangeVaultChargeModeRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class ComandParam implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ComandParam';
+    protected static $openAPIModelName = 'ChangeVaultChargeModeRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  任务ID
-    * bucket  桶名
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'taskId' => 'string',
-            'bucket' => 'string'
+            'body' => '\HuaweiCloud\SDK\Cbr\V1\Model\ChangeToPeriod'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  任务ID
-    * bucket  桶名
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'taskId' => null,
-        'bucket' => null
+        'body' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class ComandParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  任务ID
-    * bucket  桶名
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'taskId' => 'task_id',
-            'bucket' => 'bucket'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  任务ID
-    * bucket  桶名
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'taskId' => 'setTaskId',
-            'bucket' => 'setBucket'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  任务ID
-    * bucket  桶名
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'taskId' => 'getTaskId',
-            'bucket' => 'getBucket'
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +147,7 @@ class ComandParam implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
-        $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,18 +158,6 @@ class ComandParam implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['taskId']) && (mb_strlen($this->container['taskId']) > 255)) {
-                $invalidProperties[] = "invalid value for 'taskId', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['taskId']) && (mb_strlen($this->container['taskId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'taskId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['bucket']) && (mb_strlen($this->container['bucket']) > 255)) {
-                $invalidProperties[] = "invalid value for 'bucket', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['bucket']) && (mb_strlen($this->container['bucket']) < 0)) {
-                $invalidProperties[] = "invalid value for 'bucket', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -196,50 +173,26 @@ class ComandParam implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets taskId
-    *  任务ID
+    * Gets body
+    *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\ChangeToPeriod|null
     */
-    public function getTaskId()
+    public function getBody()
     {
-        return $this->container['taskId'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets taskId
+    * Sets body
     *
-    * @param string|null $taskId 任务ID
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\ChangeToPeriod|null $body body
     *
     * @return $this
     */
-    public function setTaskId($taskId)
+    public function setBody($body)
     {
-        $this->container['taskId'] = $taskId;
-        return $this;
-    }
-
-    /**
-    * Gets bucket
-    *  桶名
-    *
-    * @return string|null
-    */
-    public function getBucket()
-    {
-        return $this->container['bucket'];
-    }
-
-    /**
-    * Sets bucket
-    *
-    * @param string|null $bucket 桶名
-    *
-    * @return $this
-    */
-    public function setBucket($bucket)
-    {
-        $this->container['bucket'] = $bucket;
+        $this->container['body'] = $body;
         return $this;
     }
 

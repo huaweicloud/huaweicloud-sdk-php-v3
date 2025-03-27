@@ -21,19 +21,19 @@ class ShowCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * commandName  命令名称，分为：START、STOP、DELETE、SYNC
+    * commandName  命令名称，分为：START、STOP、DELETE、SYNC、SKIP
     * commandParam  commandParam
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'commandName' => 'string',
-            'commandParam' => '\HuaweiCloud\SDK\Sms\V3\Model\ComandParam'
+            'commandParam' => '\HuaweiCloud\SDK\Sms\V3\Model\CommandParam'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * commandName  命令名称，分为：START、STOP、DELETE、SYNC
+    * commandName  命令名称，分为：START、STOP、DELETE、SYNC、SKIP
     * commandParam  commandParam
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ShowCommandResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * commandName  命令名称，分为：START、STOP、DELETE、SYNC
+    * commandName  命令名称，分为：START、STOP、DELETE、SYNC、SKIP
     * commandParam  commandParam
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ShowCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * commandName  命令名称，分为：START、STOP、DELETE、SYNC
+    * commandName  命令名称，分为：START、STOP、DELETE、SYNC、SKIP
     * commandParam  commandParam
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ShowCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * commandName  命令名称，分为：START、STOP、DELETE、SYNC
+    * commandName  命令名称，分为：START、STOP、DELETE、SYNC、SKIP
     * commandParam  commandParam
     *
     * @var string[]
@@ -192,7 +192,7 @@ class ShowCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets commandName
-    *  命令名称，分为：START、STOP、DELETE、SYNC
+    *  命令名称，分为：START、STOP、DELETE、SYNC、SKIP
     *
     * @return string|null
     */
@@ -204,7 +204,7 @@ class ShowCommandResponse implements ModelInterface, ArrayAccess
     /**
     * Sets commandName
     *
-    * @param string|null $commandName 命令名称，分为：START、STOP、DELETE、SYNC
+    * @param string|null $commandName 命令名称，分为：START、STOP、DELETE、SYNC、SKIP
     *
     * @return $this
     */
@@ -218,7 +218,7 @@ class ShowCommandResponse implements ModelInterface, ArrayAccess
     * Gets commandParam
     *  commandParam
     *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\ComandParam|null
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\CommandParam|null
     */
     public function getCommandParam()
     {
@@ -228,7 +228,7 @@ class ShowCommandResponse implements ModelInterface, ArrayAccess
     /**
     * Sets commandParam
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\ComandParam|null $commandParam commandParam
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\CommandParam|null $commandParam commandParam
     *
     * @return $this
     */

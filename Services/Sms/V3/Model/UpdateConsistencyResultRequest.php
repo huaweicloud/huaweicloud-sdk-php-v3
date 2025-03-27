@@ -27,7 +27,7 @@ class UpdateConsistencyResultRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'taskId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResultRequestBody'
+            'body' => '\HuaweiCloud\SDK\Sms\V3\Model\SetConsistencyResultRequestBody'
     ];
 
     /**
@@ -220,7 +220,7 @@ class UpdateConsistencyResultRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResultRequestBody|null
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\SetConsistencyResultRequestBody|null
     */
     public function getBody()
     {
@@ -230,7 +230,7 @@ class UpdateConsistencyResultRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResultRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\SetConsistencyResultRequestBody|null $body body
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configKey  配置类型，分为：\"EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
+    * configKey  配置类型，分为：”EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
     * configValue  具体配置参数字段，保存于数据库，最终在agent端进行解析
     * configStatus  描述配置状态的保留字段
     *
@@ -34,7 +34,7 @@ class ConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configKey  配置类型，分为：\"EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
+    * configKey  配置类型，分为：”EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
     * configValue  具体配置参数字段，保存于数据库，最终在agent端进行解析
     * configStatus  描述配置状态的保留字段
     *
@@ -69,7 +69,7 @@ class ConfigBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configKey  配置类型，分为：\"EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
+    * configKey  配置类型，分为：”EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
     * configValue  具体配置参数字段，保存于数据库，最终在agent端进行解析
     * configStatus  描述配置状态的保留字段
     *
@@ -83,7 +83,7 @@ class ConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configKey  配置类型，分为：\"EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
+    * configKey  配置类型，分为：”EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
     * configValue  具体配置参数字段，保存于数据库，最终在agent端进行解析
     * configStatus  描述配置状态的保留字段
     *
@@ -97,7 +97,7 @@ class ConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configKey  配置类型，分为：\"EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
+    * configKey  配置类型，分为：”EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
     * configValue  具体配置参数字段，保存于数据库，最终在agent端进行解析
     * configStatus  描述配置状态的保留字段
     *
@@ -220,7 +220,7 @@ class ConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets configKey
-    *  配置类型，分为：\"EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
+    *  配置类型，分为：”EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
     *
     * @return string
     */
@@ -232,7 +232,7 @@ class ConfigBody implements ModelInterface, ArrayAccess
     /**
     * Sets configKey
     *
-    * @param string $configKey 配置类型，分为：\"EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
+    * @param string $configKey 配置类型，分为：”EXCLUDE_MIGRATE_PATH\"，\"SYNC_EXCLUDE_PATH\"，\"ONLY_SYNC_PATH\"等
     *
     * @return $this
     */

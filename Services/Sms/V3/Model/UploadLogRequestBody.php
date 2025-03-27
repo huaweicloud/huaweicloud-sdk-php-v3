@@ -21,25 +21,21 @@ class UploadLogRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * logBucket  指定桶名称
-    * logExpire  指定有效期
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'logBucket' => 'string',
-            'logExpire' => 'int'
+            'logBucket' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * logBucket  指定桶名称
-    * logExpire  指定有效期
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'logBucket' => null,
-        'logExpire' => 'int32'
+        'logBucket' => null
     ];
 
     /**
@@ -66,37 +62,31 @@ class UploadLogRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * logBucket  指定桶名称
-    * logExpire  指定有效期
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'logBucket' => 'log_bucket',
-            'logExpire' => 'log_expire'
+            'logBucket' => 'log_bucket'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * logBucket  指定桶名称
-    * logExpire  指定有效期
     *
     * @var string[]
     */
     protected static $setters = [
-            'logBucket' => 'setLogBucket',
-            'logExpire' => 'setLogExpire'
+            'logBucket' => 'setLogBucket'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * logBucket  指定桶名称
-    * logExpire  指定有效期
     *
     * @var string[]
     */
     protected static $getters = [
-            'logBucket' => 'getLogBucket',
-            'logExpire' => 'getLogExpire'
+            'logBucket' => 'getLogBucket'
     ];
 
     /**
@@ -158,7 +148,6 @@ class UploadLogRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['logBucket'] = isset($data['logBucket']) ? $data['logBucket'] : null;
-        $this->container['logExpire'] = isset($data['logExpire']) ? $data['logExpire'] : null;
     }
 
     /**
@@ -177,15 +166,6 @@ class UploadLogRequestBody implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['logBucket']) < 0)) {
                 $invalidProperties[] = "invalid value for 'logBucket', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['logExpire'] === null) {
-            $invalidProperties[] = "'logExpire' can't be null";
-        }
-            if (($this->container['logExpire'] > 64800)) {
-                $invalidProperties[] = "invalid value for 'logExpire', must be smaller than or equal to 64800.";
-            }
-            if (($this->container['logExpire'] < 300)) {
-                $invalidProperties[] = "invalid value for 'logExpire', must be bigger than or equal to 300.";
             }
         return $invalidProperties;
     }
@@ -222,30 +202,6 @@ class UploadLogRequestBody implements ModelInterface, ArrayAccess
     public function setLogBucket($logBucket)
     {
         $this->container['logBucket'] = $logBucket;
-        return $this;
-    }
-
-    /**
-    * Gets logExpire
-    *  指定有效期
-    *
-    * @return int
-    */
-    public function getLogExpire()
-    {
-        return $this->container['logExpire'];
-    }
-
-    /**
-    * Sets logExpire
-    *
-    * @param int $logExpire 指定有效期
-    *
-    * @return $this
-    */
-    public function setLogExpire($logExpire)
-    {
-        $this->container['logExpire'] = $logExpire;
         return $this;
     }
 

@@ -39,6 +39,9 @@ class PostTask implements ModelInterface, ArrayAccess
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
     * startNetworkCheck  是否开启网络检测
+    * speedLimit  迁移速率限制值
+    * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
+    * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
     */
@@ -61,7 +64,10 @@ class PostTask implements ModelInterface, ArrayAccess
             'useIpv6' => 'bool',
             'syncing' => 'bool',
             'existServer' => 'bool',
-            'startNetworkCheck' => 'bool'
+            'startNetworkCheck' => 'bool',
+            'speedLimit' => 'int',
+            'overSpeedThreshold' => 'double',
+            'isNeedConsistencyCheck' => 'bool'
     ];
 
     /**
@@ -85,6 +91,9 @@ class PostTask implements ModelInterface, ArrayAccess
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
     * startNetworkCheck  是否开启网络检测
+    * speedLimit  迁移速率限制值
+    * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
+    * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
     */
@@ -107,7 +116,10 @@ class PostTask implements ModelInterface, ArrayAccess
         'useIpv6' => null,
         'syncing' => null,
         'existServer' => null,
-        'startNetworkCheck' => null
+        'startNetworkCheck' => null,
+        'speedLimit' => 'int32',
+        'overSpeedThreshold' => 'double',
+        'isNeedConsistencyCheck' => null
     ];
 
     /**
@@ -152,6 +164,9 @@ class PostTask implements ModelInterface, ArrayAccess
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
     * startNetworkCheck  是否开启网络检测
+    * speedLimit  迁移速率限制值
+    * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
+    * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
     */
@@ -174,7 +189,10 @@ class PostTask implements ModelInterface, ArrayAccess
             'useIpv6' => 'use_ipv6',
             'syncing' => 'syncing',
             'existServer' => 'exist_server',
-            'startNetworkCheck' => 'start_network_check'
+            'startNetworkCheck' => 'start_network_check',
+            'speedLimit' => 'speed_limit',
+            'overSpeedThreshold' => 'over_speed_threshold',
+            'isNeedConsistencyCheck' => 'is_need_consistency_check'
     ];
 
     /**
@@ -198,6 +216,9 @@ class PostTask implements ModelInterface, ArrayAccess
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
     * startNetworkCheck  是否开启网络检测
+    * speedLimit  迁移速率限制值
+    * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
+    * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
     */
@@ -220,7 +241,10 @@ class PostTask implements ModelInterface, ArrayAccess
             'useIpv6' => 'setUseIpv6',
             'syncing' => 'setSyncing',
             'existServer' => 'setExistServer',
-            'startNetworkCheck' => 'setStartNetworkCheck'
+            'startNetworkCheck' => 'setStartNetworkCheck',
+            'speedLimit' => 'setSpeedLimit',
+            'overSpeedThreshold' => 'setOverSpeedThreshold',
+            'isNeedConsistencyCheck' => 'setIsNeedConsistencyCheck'
     ];
 
     /**
@@ -244,6 +268,9 @@ class PostTask implements ModelInterface, ArrayAccess
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
     * startNetworkCheck  是否开启网络检测
+    * speedLimit  迁移速率限制值
+    * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
+    * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
     */
@@ -266,7 +293,10 @@ class PostTask implements ModelInterface, ArrayAccess
             'useIpv6' => 'getUseIpv6',
             'syncing' => 'getSyncing',
             'existServer' => 'getExistServer',
-            'startNetworkCheck' => 'getStartNetworkCheck'
+            'startNetworkCheck' => 'getStartNetworkCheck',
+            'speedLimit' => 'getSpeedLimit',
+            'overSpeedThreshold' => 'getOverSpeedThreshold',
+            'isNeedConsistencyCheck' => 'getIsNeedConsistencyCheck'
     ];
 
     /**
@@ -361,6 +391,9 @@ class PostTask implements ModelInterface, ArrayAccess
         $this->container['syncing'] = isset($data['syncing']) ? $data['syncing'] : null;
         $this->container['existServer'] = isset($data['existServer']) ? $data['existServer'] : null;
         $this->container['startNetworkCheck'] = isset($data['startNetworkCheck']) ? $data['startNetworkCheck'] : null;
+        $this->container['speedLimit'] = isset($data['speedLimit']) ? $data['speedLimit'] : null;
+        $this->container['overSpeedThreshold'] = isset($data['overSpeedThreshold']) ? $data['overSpeedThreshold'] : null;
+        $this->container['isNeedConsistencyCheck'] = isset($data['isNeedConsistencyCheck']) ? $data['isNeedConsistencyCheck'] : null;
     }
 
     /**
@@ -448,11 +481,29 @@ class PostTask implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['projectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['priority']) && ($this->container['priority'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'priority', must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['priority']) && ($this->container['priority'] < 0)) {
+                $invalidProperties[] = "invalid value for 'priority', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['vmTemplateId']) && (mb_strlen($this->container['vmTemplateId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'vmTemplateId', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['vmTemplateId']) && (mb_strlen($this->container['vmTemplateId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'vmTemplateId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] > 10000)) {
+                $invalidProperties[] = "invalid value for 'speedLimit', must be smaller than or equal to 10000.";
+            }
+            if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'speedLimit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['overSpeedThreshold']) && ($this->container['overSpeedThreshold'] > 1E+2)) {
+                $invalidProperties[] = "invalid value for 'overSpeedThreshold', must be smaller than or equal to 1E+2.";
+            }
+            if (!is_null($this->container['overSpeedThreshold']) && ($this->container['overSpeedThreshold'] < 1E+1)) {
+                $invalidProperties[] = "invalid value for 'overSpeedThreshold', must be bigger than or equal to 1E+1.";
             }
         return $invalidProperties;
     }
@@ -921,6 +972,78 @@ class PostTask implements ModelInterface, ArrayAccess
     public function setStartNetworkCheck($startNetworkCheck)
     {
         $this->container['startNetworkCheck'] = $startNetworkCheck;
+        return $this;
+    }
+
+    /**
+    * Gets speedLimit
+    *  迁移速率限制值
+    *
+    * @return int|null
+    */
+    public function getSpeedLimit()
+    {
+        return $this->container['speedLimit'];
+    }
+
+    /**
+    * Sets speedLimit
+    *
+    * @param int|null $speedLimit 迁移速率限制值
+    *
+    * @return $this
+    */
+    public function setSpeedLimit($speedLimit)
+    {
+        $this->container['speedLimit'] = $speedLimit;
+        return $this;
+    }
+
+    /**
+    * Gets overSpeedThreshold
+    *  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
+    *
+    * @return double|null
+    */
+    public function getOverSpeedThreshold()
+    {
+        return $this->container['overSpeedThreshold'];
+    }
+
+    /**
+    * Sets overSpeedThreshold
+    *
+    * @param double|null $overSpeedThreshold 停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
+    *
+    * @return $this
+    */
+    public function setOverSpeedThreshold($overSpeedThreshold)
+    {
+        $this->container['overSpeedThreshold'] = $overSpeedThreshold;
+        return $this;
+    }
+
+    /**
+    * Gets isNeedConsistencyCheck
+    *  是否进行一致性校验
+    *
+    * @return bool|null
+    */
+    public function getIsNeedConsistencyCheck()
+    {
+        return $this->container['isNeedConsistencyCheck'];
+    }
+
+    /**
+    * Sets isNeedConsistencyCheck
+    *
+    * @param bool|null $isNeedConsistencyCheck 是否进行一致性校验
+    *
+    * @return $this
+    */
+    public function setIsNeedConsistencyCheck($isNeedConsistencyCheck)
+    {
+        $this->container['isNeedConsistencyCheck'] = $isNeedConsistencyCheck;
         return $this;
     }
 

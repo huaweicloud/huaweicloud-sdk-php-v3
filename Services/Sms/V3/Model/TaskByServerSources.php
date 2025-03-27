@@ -41,7 +41,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * cloneServer  cloneServer
     * remainSeconds  已迁移时长
     * logBucket  上传日志指定桶名称
-    * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
     * logShareUrl  分享链接url
     *
@@ -69,7 +68,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
             'cloneServer' => '\HuaweiCloud\SDK\Sms\V3\Model\CloneServer',
             'remainSeconds' => 'int',
             'logBucket' => 'string',
-            'logExpire' => 'int',
             'logUploadTime' => 'int',
             'logShareUrl' => 'string'
     ];
@@ -97,7 +95,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * cloneServer  cloneServer
     * remainSeconds  已迁移时长
     * logBucket  上传日志指定桶名称
-    * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
     * logShareUrl  分享链接url
     *
@@ -125,7 +122,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
         'cloneServer' => null,
         'remainSeconds' => 'int64',
         'logBucket' => null,
-        'logExpire' => 'int64',
         'logUploadTime' => 'int64',
         'logShareUrl' => null
     ];
@@ -174,7 +170,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * cloneServer  cloneServer
     * remainSeconds  已迁移时长
     * logBucket  上传日志指定桶名称
-    * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
     * logShareUrl  分享链接url
     *
@@ -202,7 +197,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
             'cloneServer' => 'clone_server',
             'remainSeconds' => 'remain_seconds',
             'logBucket' => 'log_bucket',
-            'logExpire' => 'log_expire',
             'logUploadTime' => 'log_upload_time',
             'logShareUrl' => 'log_share_url'
     ];
@@ -230,7 +224,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * cloneServer  cloneServer
     * remainSeconds  已迁移时长
     * logBucket  上传日志指定桶名称
-    * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
     * logShareUrl  分享链接url
     *
@@ -258,7 +251,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
             'cloneServer' => 'setCloneServer',
             'remainSeconds' => 'setRemainSeconds',
             'logBucket' => 'setLogBucket',
-            'logExpire' => 'setLogExpire',
             'logUploadTime' => 'setLogUploadTime',
             'logShareUrl' => 'setLogShareUrl'
     ];
@@ -286,7 +278,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * cloneServer  cloneServer
     * remainSeconds  已迁移时长
     * logBucket  上传日志指定桶名称
-    * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
     * logShareUrl  分享链接url
     *
@@ -314,7 +305,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
             'cloneServer' => 'getCloneServer',
             'remainSeconds' => 'getRemainSeconds',
             'logBucket' => 'getLogBucket',
-            'logExpire' => 'getLogExpire',
             'logUploadTime' => 'getLogUploadTime',
             'logShareUrl' => 'getLogShareUrl'
     ];
@@ -398,7 +388,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
         $this->container['cloneServer'] = isset($data['cloneServer']) ? $data['cloneServer'] : null;
         $this->container['remainSeconds'] = isset($data['remainSeconds']) ? $data['remainSeconds'] : null;
         $this->container['logBucket'] = isset($data['logBucket']) ? $data['logBucket'] : null;
-        $this->container['logExpire'] = isset($data['logExpire']) ? $data['logExpire'] : null;
         $this->container['logUploadTime'] = isset($data['logUploadTime']) ? $data['logUploadTime'] : null;
         $this->container['logShareUrl'] = isset($data['logShareUrl']) ? $data['logShareUrl'] : null;
     }
@@ -506,12 +495,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['logBucket']) && (mb_strlen($this->container['logBucket']) < 0)) {
                 $invalidProperties[] = "invalid value for 'logBucket', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['logExpire']) && ($this->container['logExpire'] > 64800)) {
-                $invalidProperties[] = "invalid value for 'logExpire', must be smaller than or equal to 64800.";
-            }
-            if (!is_null($this->container['logExpire']) && ($this->container['logExpire'] < 300)) {
-                $invalidProperties[] = "invalid value for 'logExpire', must be bigger than or equal to 300.";
             }
             if (!is_null($this->container['logUploadTime']) && ($this->container['logUploadTime'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'logUploadTime', must be smaller than or equal to 9223372036854775807.";
@@ -1040,30 +1023,6 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     public function setLogBucket($logBucket)
     {
         $this->container['logBucket'] = $logBucket;
-        return $this;
-    }
-
-    /**
-    * Gets logExpire
-    *  分享链接有效期
-    *
-    * @return int|null
-    */
-    public function getLogExpire()
-    {
-        return $this->container['logExpire'];
-    }
-
-    /**
-    * Sets logExpire
-    *
-    * @param int|null $logExpire 分享链接有效期
-    *
-    * @return $this
-    */
-    public function setLogExpire($logExpire)
-    {
-        $this->container['logExpire'] = $logExpire;
         return $this;
     }
 

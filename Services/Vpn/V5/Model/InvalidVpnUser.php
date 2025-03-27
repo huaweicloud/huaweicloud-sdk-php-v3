@@ -23,6 +23,7 @@ class InvalidVpnUser implements ModelInterface, ArrayAccess
     * name  用户名
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
     * userGroupName  所属用户组名称
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     * cause  失败原因
     *
     * @var string[]
@@ -31,6 +32,7 @@ class InvalidVpnUser implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'userGroupName' => 'string',
+            'staticIp' => 'string',
             'cause' => 'string'
     ];
 
@@ -39,6 +41,7 @@ class InvalidVpnUser implements ModelInterface, ArrayAccess
     * name  用户名
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
     * userGroupName  所属用户组名称
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     * cause  失败原因
     *
     * @var string[]
@@ -47,6 +50,7 @@ class InvalidVpnUser implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'userGroupName' => null,
+        'staticIp' => null,
         'cause' => null
     ];
 
@@ -76,6 +80,7 @@ class InvalidVpnUser implements ModelInterface, ArrayAccess
     * name  用户名
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
     * userGroupName  所属用户组名称
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     * cause  失败原因
     *
     * @var string[]
@@ -84,6 +89,7 @@ class InvalidVpnUser implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'userGroupName' => 'user_group_name',
+            'staticIp' => 'static_ip',
             'cause' => 'cause'
     ];
 
@@ -92,6 +98,7 @@ class InvalidVpnUser implements ModelInterface, ArrayAccess
     * name  用户名
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
     * userGroupName  所属用户组名称
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     * cause  失败原因
     *
     * @var string[]
@@ -100,6 +107,7 @@ class InvalidVpnUser implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'userGroupName' => 'setUserGroupName',
+            'staticIp' => 'setStaticIp',
             'cause' => 'setCause'
     ];
 
@@ -108,6 +116,7 @@ class InvalidVpnUser implements ModelInterface, ArrayAccess
     * name  用户名
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
     * userGroupName  所属用户组名称
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     * cause  失败原因
     *
     * @var string[]
@@ -116,6 +125,7 @@ class InvalidVpnUser implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'userGroupName' => 'getUserGroupName',
+            'staticIp' => 'getStaticIp',
             'cause' => 'getCause'
     ];
 
@@ -180,6 +190,7 @@ class InvalidVpnUser implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['userGroupName'] = isset($data['userGroupName']) ? $data['userGroupName'] : null;
+        $this->container['staticIp'] = isset($data['staticIp']) ? $data['staticIp'] : null;
         $this->container['cause'] = isset($data['cause']) ? $data['cause'] : null;
     }
 
@@ -274,6 +285,30 @@ class InvalidVpnUser implements ModelInterface, ArrayAccess
     public function setUserGroupName($userGroupName)
     {
         $this->container['userGroupName'] = $userGroupName;
+        return $this;
+    }
+
+    /**
+    * Gets staticIp
+    *  静态客户端IP地址，默认值disable，表示随机分配客户端IP
+    *
+    * @return string|null
+    */
+    public function getStaticIp()
+    {
+        return $this->container['staticIp'];
+    }
+
+    /**
+    * Sets staticIp
+    *
+    * @param string|null $staticIp 静态客户端IP地址，默认值disable，表示随机分配客户端IP
+    *
+    * @return $this
+    */
+    public function setStaticIp($staticIp)
+    {
+        $this->container['staticIp'] = $staticIp;
         return $this;
     }
 

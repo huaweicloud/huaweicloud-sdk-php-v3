@@ -158,10 +158,13 @@ class UpdateServerRequestServerCertificate implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+            if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 16)) {
+            if ((mb_strlen($this->container['id']) < 16)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 16.";
             }
         return $invalidProperties;
@@ -182,7 +185,7 @@ class UpdateServerRequestServerCertificate implements ModelInterface, ArrayAcces
     * Gets id
     *  服务端证书ID,为CCM服务中的证书ID
     *
-    * @return string|null
+    * @return string
     */
     public function getId()
     {
@@ -192,7 +195,7 @@ class UpdateServerRequestServerCertificate implements ModelInterface, ArrayAcces
     /**
     * Sets id
     *
-    * @param string|null $id 服务端证书ID,为CCM服务中的证书ID
+    * @param string $id 服务端证书ID,为CCM服务中的证书ID
     *
     * @return $this
     */

@@ -29,6 +29,7 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
     * operationTime  调账操作的时间。 UTC时间，格式为：2016-03-28T14:45:38Z
     * measureId  调账单位。 1：元
     * transId  事务ID。
+    * memo  备注。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
             'applyScene' => 'string',
             'operationTime' => 'string',
             'measureId' => 'int',
-            'transId' => 'string'
+            'transId' => 'string',
+            'memo' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
     * operationTime  调账操作的时间。 UTC时间，格式为：2016-03-28T14:45:38Z
     * measureId  调账单位。 1：元
     * transId  事务ID。
+    * memo  备注。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
         'applyScene' => null,
         'operationTime' => null,
         'measureId' => 'int32',
-        'transId' => null
+        'transId' => null,
+        'memo' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
     * operationTime  调账操作的时间。 UTC时间，格式为：2016-03-28T14:45:38Z
     * measureId  调账单位。 1：元
     * transId  事务ID。
+    * memo  备注。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
             'applyScene' => 'apply_scene',
             'operationTime' => 'operation_time',
             'measureId' => 'measure_id',
-            'transId' => 'trans_id'
+            'transId' => 'trans_id',
+            'memo' => 'memo'
     ];
 
     /**
@@ -128,6 +134,7 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
     * operationTime  调账操作的时间。 UTC时间，格式为：2016-03-28T14:45:38Z
     * measureId  调账单位。 1：元
     * transId  事务ID。
+    * memo  备注。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
             'applyScene' => 'setApplyScene',
             'operationTime' => 'setOperationTime',
             'measureId' => 'setMeasureId',
-            'transId' => 'setTransId'
+            'transId' => 'setTransId',
+            'memo' => 'setMemo'
     ];
 
     /**
@@ -154,6 +162,7 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
     * operationTime  调账操作的时间。 UTC时间，格式为：2016-03-28T14:45:38Z
     * measureId  调账单位。 1：元
     * transId  事务ID。
+    * memo  备注。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
             'applyScene' => 'getApplyScene',
             'operationTime' => 'getOperationTime',
             'measureId' => 'getMeasureId',
-            'transId' => 'getTransId'
+            'transId' => 'getTransId',
+            'memo' => 'getMemo'
     ];
 
     /**
@@ -236,6 +246,7 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
         $this->container['operationTime'] = isset($data['operationTime']) ? $data['operationTime'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
         $this->container['transId'] = isset($data['transId']) ? $data['transId'] : null;
+        $this->container['memo'] = isset($data['memo']) ? $data['memo'] : null;
     }
 
     /**
@@ -246,6 +257,12 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['memo']) && (mb_strlen($this->container['memo']) > 512)) {
+                $invalidProperties[] = "invalid value for 'memo', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['memo']) && (mb_strlen($this->container['memo']) < 0)) {
+                $invalidProperties[] = "invalid value for 'memo', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -473,6 +490,30 @@ class AdjustRecordV3 implements ModelInterface, ArrayAccess
     public function setTransId($transId)
     {
         $this->container['transId'] = $transId;
+        return $this;
+    }
+
+    /**
+    * Gets memo
+    *  备注。
+    *
+    * @return string|null
+    */
+    public function getMemo()
+    {
+        return $this->container['memo'];
+    }
+
+    /**
+    * Sets memo
+    *
+    * @param string|null $memo 备注。
+    *
+    * @return $this
+    */
+    public function setMemo($memo)
+    {
+        $this->container['memo'] = $memo;
         return $this;
     }
 

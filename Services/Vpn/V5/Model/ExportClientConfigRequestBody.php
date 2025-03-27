@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Sms\V3\Model;
+namespace HuaweiCloud\SDK\Vpn\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ConsistencyResultRequestBody implements ModelInterface, ArrayAccess
+class ExportClientConfigRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class ConsistencyResultRequestBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ConsistencyResultRequestBody';
+    protected static $openAPIModelName = 'ExportClientConfigRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * consistencyResult  校验结果
-    * finishedTime  检验完成时间
+    * osType  操作系统类型
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'consistencyResult' => '\HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResult[]',
-            'finishedTime' => 'int'
+            'osType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * consistencyResult  校验结果
-    * finishedTime  检验完成时间
+    * osType  操作系统类型
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'consistencyResult' => null,
-        'finishedTime' => 'int64'
+        'osType' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class ConsistencyResultRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * consistencyResult  校验结果
-    * finishedTime  检验完成时间
+    * osType  操作系统类型
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'consistencyResult' => 'consistency_result',
-            'finishedTime' => 'finished_time'
+            'osType' => 'os_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * consistencyResult  校验结果
-    * finishedTime  检验完成时间
+    * osType  操作系统类型
     *
     * @var string[]
     */
     protected static $setters = [
-            'consistencyResult' => 'setConsistencyResult',
-            'finishedTime' => 'setFinishedTime'
+            'osType' => 'setOsType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * consistencyResult  校验结果
-    * finishedTime  检验完成时间
+    * osType  操作系统类型
     *
     * @var string[]
     */
     protected static $getters = [
-            'consistencyResult' => 'getConsistencyResult',
-            'finishedTime' => 'getFinishedTime'
+            'osType' => 'getOsType'
     ];
 
     /**
@@ -139,7 +129,28 @@ class ConsistencyResultRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const OS_TYPE_WINDOWS = 'Windows';
+    const OS_TYPE_LINUX = 'Linux';
+    const OS_TYPE_MAC_OS = 'MacOS';
+    const OS_TYPE_ANDROID = 'Android';
+    const OS_TYPE_I_OS = 'iOS';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getOsTypeAllowableValues()
+    {
+        return [
+            self::OS_TYPE_WINDOWS,
+            self::OS_TYPE_LINUX,
+            self::OS_TYPE_MAC_OS,
+            self::OS_TYPE_ANDROID,
+            self::OS_TYPE_I_OS,
+        ];
+    }
 
 
     /**
@@ -157,8 +168,7 @@ class ConsistencyResultRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['consistencyResult'] = isset($data['consistencyResult']) ? $data['consistencyResult'] : null;
-        $this->container['finishedTime'] = isset($data['finishedTime']) ? $data['finishedTime'] : null;
+        $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
     }
 
     /**
@@ -169,15 +179,14 @@ class ConsistencyResultRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['consistencyResult'] === null) {
-            $invalidProperties[] = "'consistencyResult' can't be null";
-        }
-            if (!is_null($this->container['finishedTime']) && ($this->container['finishedTime'] > 100000000000)) {
-                $invalidProperties[] = "invalid value for 'finishedTime', must be smaller than or equal to 100000000000.";
+            $allowedValues = $this->getOsTypeAllowableValues();
+                if (!is_null($this->container['osType']) && !in_array($this->container['osType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'osType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['finishedTime']) && ($this->container['finishedTime'] < 0)) {
-                $invalidProperties[] = "invalid value for 'finishedTime', must be bigger than or equal to 0.";
-            }
+
         return $invalidProperties;
     }
 
@@ -193,50 +202,26 @@ class ConsistencyResultRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets consistencyResult
-    *  校验结果
+    * Gets osType
+    *  操作系统类型
     *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResult[]
+    * @return string|null
     */
-    public function getConsistencyResult()
+    public function getOsType()
     {
-        return $this->container['consistencyResult'];
+        return $this->container['osType'];
     }
 
     /**
-    * Sets consistencyResult
+    * Sets osType
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResult[] $consistencyResult 校验结果
+    * @param string|null $osType 操作系统类型
     *
     * @return $this
     */
-    public function setConsistencyResult($consistencyResult)
+    public function setOsType($osType)
     {
-        $this->container['consistencyResult'] = $consistencyResult;
-        return $this;
-    }
-
-    /**
-    * Gets finishedTime
-    *  检验完成时间
-    *
-    * @return int|null
-    */
-    public function getFinishedTime()
-    {
-        return $this->container['finishedTime'];
-    }
-
-    /**
-    * Sets finishedTime
-    *
-    * @param int|null $finishedTime 检验完成时间
-    *
-    * @return $this
-    */
-    public function setFinishedTime($finishedTime)
-    {
-        $this->container['finishedTime'] = $finishedTime;
+        $this->container['osType'] = $osType;
         return $this;
     }
 

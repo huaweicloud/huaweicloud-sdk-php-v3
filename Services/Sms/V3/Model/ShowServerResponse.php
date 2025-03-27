@@ -30,7 +30,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * connected  与Agent连接状态
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * initTargetServer  initTargetServer
@@ -49,6 +49,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * lastVisitTime  agent上一次连接状态发生变化的时间戳
     * stageActionTime  迁移周期（migration_cycle）上一次变化的时间戳
     * agentVersion  Agent版本信息
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
     *
     * @var string[]
     */
@@ -80,7 +81,8 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             'totalsize' => 'int',
             'lastVisitTime' => 'int',
             'stageActionTime' => 'int',
-            'agentVersion' => 'string'
+            'agentVersion' => 'string',
+            'hasTc' => 'bool'
     ];
 
     /**
@@ -94,7 +96,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * connected  与Agent连接状态
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * initTargetServer  initTargetServer
@@ -113,6 +115,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * lastVisitTime  agent上一次连接状态发生变化的时间戳
     * stageActionTime  迁移周期（migration_cycle）上一次变化的时间戳
     * agentVersion  Agent版本信息
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
     *
     * @var string[]
     */
@@ -144,7 +147,8 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
         'totalsize' => 'int64',
         'lastVisitTime' => 'int64',
         'stageActionTime' => 'int64',
-        'agentVersion' => null
+        'agentVersion' => null,
+        'hasTc' => null
     ];
 
     /**
@@ -179,7 +183,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * connected  与Agent连接状态
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * initTargetServer  initTargetServer
@@ -198,6 +202,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * lastVisitTime  agent上一次连接状态发生变化的时间戳
     * stageActionTime  迁移周期（migration_cycle）上一次变化的时间戳
     * agentVersion  Agent版本信息
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
     *
     * @var string[]
     */
@@ -229,7 +234,8 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             'totalsize' => 'totalsize',
             'lastVisitTime' => 'last_visit_time',
             'stageActionTime' => 'stage_action_time',
-            'agentVersion' => 'agent_version'
+            'agentVersion' => 'agent_version',
+            'hasTc' => 'has_tc'
     ];
 
     /**
@@ -243,7 +249,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * connected  与Agent连接状态
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * initTargetServer  initTargetServer
@@ -262,6 +268,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * lastVisitTime  agent上一次连接状态发生变化的时间戳
     * stageActionTime  迁移周期（migration_cycle）上一次变化的时间戳
     * agentVersion  Agent版本信息
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
     *
     * @var string[]
     */
@@ -293,7 +300,8 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             'totalsize' => 'setTotalsize',
             'lastVisitTime' => 'setLastVisitTime',
             'stageActionTime' => 'setStageActionTime',
-            'agentVersion' => 'setAgentVersion'
+            'agentVersion' => 'setAgentVersion',
+            'hasTc' => 'setHasTc'
     ];
 
     /**
@@ -307,7 +315,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    * state  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * connected  与Agent连接状态
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * initTargetServer  initTargetServer
@@ -326,6 +334,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * lastVisitTime  agent上一次连接状态发生变化的时间戳
     * stageActionTime  迁移周期（migration_cycle）上一次变化的时间戳
     * agentVersion  Agent版本信息
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
     *
     * @var string[]
     */
@@ -357,7 +366,8 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             'totalsize' => 'getTotalsize',
             'lastVisitTime' => 'getLastVisitTime',
             'stageActionTime' => 'getStageActionTime',
-            'agentVersion' => 'getAgentVersion'
+            'agentVersion' => 'getAgentVersion',
+            'hasTc' => 'getHasTc'
     ];
 
     /**
@@ -412,6 +422,9 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     const STATE_CLONING = 'cloning';
     const STATE_TESTING = 'testing';
     const STATE_FINISHED = 'finished';
+    const STATE_CLEARING = 'clearing';
+    const STATE_CLEARED = 'cleared';
+    const STATE_CLEARFAILED = 'clearfailed';
     const FIRMWARE_BIOS = 'BIOS';
     const FIRMWARE_UEFI = 'UEFI';
     const MIGRATION_CYCLE_CUTOVERING = 'cutovering';
@@ -442,6 +455,9 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             self::STATE_CLONING,
             self::STATE_TESTING,
             self::STATE_FINISHED,
+            self::STATE_CLEARING,
+            self::STATE_CLEARED,
+            self::STATE_CLEARFAILED,
         ];
     }
 
@@ -519,6 +535,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
         $this->container['lastVisitTime'] = isset($data['lastVisitTime']) ? $data['lastVisitTime'] : null;
         $this->container['stageActionTime'] = isset($data['stageActionTime']) ? $data['stageActionTime'] : null;
         $this->container['agentVersion'] = isset($data['agentVersion']) ? $data['agentVersion'] : null;
+        $this->container['hasTc'] = isset($data['hasTc']) ? $data['hasTc'] : null;
     }
 
     /**
@@ -887,7 +904,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    *  当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @return string|null
     */
@@ -899,7 +916,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+    * @param string|null $state 当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @return $this
     */
@@ -1338,6 +1355,30 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     public function setAgentVersion($agentVersion)
     {
         $this->container['agentVersion'] = $agentVersion;
+        return $this;
+    }
+
+    /**
+    * Gets hasTc
+    *  是否安装tc组件，Linux系统此参数为必选
+    *
+    * @return bool|null
+    */
+    public function getHasTc()
+    {
+        return $this->container['hasTc'];
+    }
+
+    /**
+    * Sets hasTc
+    *
+    * @param bool|null $hasTc 是否安装tc组件，Linux系统此参数为必选
+    *
+    * @return $this
+    */
+    public function setHasTc($hasTc)
+    {
+        $this->container['hasTc'] = $hasTc;
         return $this;
     }
 

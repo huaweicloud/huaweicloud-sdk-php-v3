@@ -28,7 +28,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * osType  操作系统类型，OS_TYPE (WINDOWS/LINUX)
     * osVersion  系统详细版本号，如CENTOS7.6等
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * connected  源端服务器与主机迁移服务端是否连接
     * cpuQuantity  源端CPU核心数
     * memory  源端物理内存大小（单位：字节）
@@ -42,6 +42,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * stateActionTime  源端状态（state）上次发生变化的时间
     * isConsistencyResultExist  是否有一致性校验结果
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
     *
     * @var string[]
     */
@@ -67,7 +68,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             'lastVisitTime' => 'int',
             'migrationCycle' => 'string',
             'stateActionTime' => 'int',
-            'isConsistencyResultExist' => 'bool'
+            'isConsistencyResultExist' => 'bool',
+            'hasTc' => 'bool'
     ];
 
     /**
@@ -80,7 +82,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * osType  操作系统类型，OS_TYPE (WINDOWS/LINUX)
     * osVersion  系统详细版本号，如CENTOS7.6等
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * connected  源端服务器与主机迁移服务端是否连接
     * cpuQuantity  源端CPU核心数
     * memory  源端物理内存大小（单位：字节）
@@ -94,6 +96,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * stateActionTime  源端状态（state）上次发生变化的时间
     * isConsistencyResultExist  是否有一致性校验结果
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
     *
     * @var string[]
     */
@@ -119,7 +122,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
         'lastVisitTime' => 'int64',
         'migrationCycle' => null,
         'stateActionTime' => 'int64',
-        'isConsistencyResultExist' => null
+        'isConsistencyResultExist' => null,
+        'hasTc' => null
     ];
 
     /**
@@ -153,7 +157,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * osType  操作系统类型，OS_TYPE (WINDOWS/LINUX)
     * osVersion  系统详细版本号，如CENTOS7.6等
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * connected  源端服务器与主机迁移服务端是否连接
     * cpuQuantity  源端CPU核心数
     * memory  源端物理内存大小（单位：字节）
@@ -167,6 +171,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * stateActionTime  源端状态（state）上次发生变化的时间
     * isConsistencyResultExist  是否有一致性校验结果
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
     *
     * @var string[]
     */
@@ -192,7 +197,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             'lastVisitTime' => 'last_visit_time',
             'migrationCycle' => 'migration_cycle',
             'stateActionTime' => 'state_action_time',
-            'isConsistencyResultExist' => 'is_consistency_result_exist'
+            'isConsistencyResultExist' => 'is_consistency_result_exist',
+            'hasTc' => 'has_tc'
     ];
 
     /**
@@ -205,7 +211,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * osType  操作系统类型，OS_TYPE (WINDOWS/LINUX)
     * osVersion  系统详细版本号，如CENTOS7.6等
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * connected  源端服务器与主机迁移服务端是否连接
     * cpuQuantity  源端CPU核心数
     * memory  源端物理内存大小（单位：字节）
@@ -219,6 +225,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * stateActionTime  源端状态（state）上次发生变化的时间
     * isConsistencyResultExist  是否有一致性校验结果
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
     *
     * @var string[]
     */
@@ -244,7 +251,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             'lastVisitTime' => 'setLastVisitTime',
             'migrationCycle' => 'setMigrationCycle',
             'stateActionTime' => 'setStateActionTime',
-            'isConsistencyResultExist' => 'setIsConsistencyResultExist'
+            'isConsistencyResultExist' => 'setIsConsistencyResultExist',
+            'hasTc' => 'setHasTc'
     ];
 
     /**
@@ -257,7 +265,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * osType  操作系统类型，OS_TYPE (WINDOWS/LINUX)
     * osVersion  系统详细版本号，如CENTOS7.6等
     * oemSystem  是否是OEM操作系统(Windows)
-    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * connected  源端服务器与主机迁移服务端是否连接
     * cpuQuantity  源端CPU核心数
     * memory  源端物理内存大小（单位：字节）
@@ -271,6 +279,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * stateActionTime  源端状态（state）上次发生变化的时间
     * isConsistencyResultExist  是否有一致性校验结果
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
     *
     * @var string[]
     */
@@ -296,7 +305,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             'lastVisitTime' => 'getLastVisitTime',
             'migrationCycle' => 'getMigrationCycle',
             'stateActionTime' => 'getStateActionTime',
-            'isConsistencyResultExist' => 'getIsConsistencyResultExist'
+            'isConsistencyResultExist' => 'getIsConsistencyResultExist',
+            'hasTc' => 'getHasTc'
     ];
 
     /**
@@ -353,6 +363,9 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     const STATE_CLONING = 'cloning';
     const STATE_CUTOVERING = 'cutovering';
     const STATE_FINISHED = 'finished';
+    const STATE_CLEARING = 'clearing';
+    const STATE_CLEARED = 'cleared';
+    const STATE_CLEARFAILED = 'clearfailed';
     const MIGRATION_CYCLE_CUTOVERING = 'cutovering';
     const MIGRATION_CYCLE_CUTOVERED = 'cutovered';
     const MIGRATION_CYCLE_CHECKING = 'checking';
@@ -394,6 +407,9 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             self::STATE_CLONING,
             self::STATE_CUTOVERING,
             self::STATE_FINISHED,
+            self::STATE_CLEARING,
+            self::STATE_CLEARED,
+            self::STATE_CLEARFAILED,
         ];
     }
 
@@ -452,6 +468,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
         $this->container['migrationCycle'] = isset($data['migrationCycle']) ? $data['migrationCycle'] : null;
         $this->container['stateActionTime'] = isset($data['stateActionTime']) ? $data['stateActionTime'] : null;
         $this->container['isConsistencyResultExist'] = isset($data['isConsistencyResultExist']) ? $data['isConsistencyResultExist'] : null;
+        $this->container['hasTc'] = isset($data['hasTc']) ? $data['hasTc'] : null;
     }
 
     /**
@@ -790,7 +807,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    *  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @return string|null
     */
@@ -802,7 +819,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    * @param string|null $state 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @return $this
     */
@@ -1121,6 +1138,30 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     public function setIsConsistencyResultExist($isConsistencyResultExist)
     {
         $this->container['isConsistencyResultExist'] = $isConsistencyResultExist;
+        return $this;
+    }
+
+    /**
+    * Gets hasTc
+    *  是否安装tc组件，Linux系统此参数为必选
+    *
+    * @return bool|null
+    */
+    public function getHasTc()
+    {
+        return $this->container['hasTc'];
+    }
+
+    /**
+    * Sets hasTc
+    *
+    * @param bool|null $hasTc 是否安装tc组件，Linux系统此参数为必选
+    *
+    * @return $this
+    */
+    public function setHasTc($hasTc)
+    {
+        $this->container['hasTc'] = $hasTc;
         return $this;
     }
 

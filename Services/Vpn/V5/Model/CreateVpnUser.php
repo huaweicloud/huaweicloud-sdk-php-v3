@@ -23,7 +23,8 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
     * name  用户名
     * password  用户密码
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
-    * userGroupName  所属用户组ID
+    * userGroupName  所属用户组名称
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
             'name' => 'string',
             'password' => 'string',
             'description' => 'string',
-            'userGroupName' => 'string'
+            'userGroupName' => 'string',
+            'staticIp' => 'string'
     ];
 
     /**
@@ -39,7 +41,8 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
     * name  用户名
     * password  用户密码
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
-    * userGroupName  所属用户组ID
+    * userGroupName  所属用户组名称
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
         'name' => null,
         'password' => null,
         'description' => null,
-        'userGroupName' => null
+        'userGroupName' => null,
+        'staticIp' => null
     ];
 
     /**
@@ -76,7 +80,8 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
     * name  用户名
     * password  用户密码
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
-    * userGroupName  所属用户组ID
+    * userGroupName  所属用户组名称
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
             'name' => 'name',
             'password' => 'password',
             'description' => 'description',
-            'userGroupName' => 'user_group_name'
+            'userGroupName' => 'user_group_name',
+            'staticIp' => 'static_ip'
     ];
 
     /**
@@ -92,7 +98,8 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
     * name  用户名
     * password  用户密码
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
-    * userGroupName  所属用户组ID
+    * userGroupName  所属用户组名称
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'password' => 'setPassword',
             'description' => 'setDescription',
-            'userGroupName' => 'setUserGroupName'
+            'userGroupName' => 'setUserGroupName',
+            'staticIp' => 'setStaticIp'
     ];
 
     /**
@@ -108,7 +116,8 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
     * name  用户名
     * password  用户密码
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
-    * userGroupName  所属用户组ID
+    * userGroupName  所属用户组名称
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'password' => 'getPassword',
             'description' => 'getDescription',
-            'userGroupName' => 'getUserGroupName'
+            'userGroupName' => 'getUserGroupName',
+            'staticIp' => 'getStaticIp'
     ];
 
     /**
@@ -181,6 +191,7 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['userGroupName'] = isset($data['userGroupName']) ? $data['userGroupName'] : null;
+        $this->container['staticIp'] = isset($data['staticIp']) ? $data['staticIp'] : null;
     }
 
     /**
@@ -279,7 +290,7 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets userGroupName
-    *  所属用户组ID
+    *  所属用户组名称
     *
     * @return string|null
     */
@@ -291,13 +302,37 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
     /**
     * Sets userGroupName
     *
-    * @param string|null $userGroupName 所属用户组ID
+    * @param string|null $userGroupName 所属用户组名称
     *
     * @return $this
     */
     public function setUserGroupName($userGroupName)
     {
         $this->container['userGroupName'] = $userGroupName;
+        return $this;
+    }
+
+    /**
+    * Gets staticIp
+    *  静态客户端IP地址，默认值disable，表示随机分配客户端IP
+    *
+    * @return string|null
+    */
+    public function getStaticIp()
+    {
+        return $this->container['staticIp'];
+    }
+
+    /**
+    * Sets staticIp
+    *
+    * @param string|null $staticIp 静态客户端IP地址，默认值disable，表示随机分配客户端IP
+    *
+    * @return $this
+    */
+    public function setStaticIp($staticIp)
+    {
+        $this->container['staticIp'] = $staticIp;
         return $this;
     }
 

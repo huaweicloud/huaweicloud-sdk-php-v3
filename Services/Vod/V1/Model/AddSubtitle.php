@@ -20,7 +20,7 @@ class AddSubtitle implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  字幕类型，字幕封装当前仅支持VTT
+    * type  字幕类型，字幕封装当前仅支持VTT和SRT
     * language  字幕语言
     * obsInfo  obsInfo
     *
@@ -34,7 +34,7 @@ class AddSubtitle implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  字幕类型，字幕封装当前仅支持VTT
+    * type  字幕类型，字幕封装当前仅支持VTT和SRT
     * language  字幕语言
     * obsInfo  obsInfo
     *
@@ -69,7 +69,7 @@ class AddSubtitle implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  字幕类型，字幕封装当前仅支持VTT
+    * type  字幕类型，字幕封装当前仅支持VTT和SRT
     * language  字幕语言
     * obsInfo  obsInfo
     *
@@ -83,7 +83,7 @@ class AddSubtitle implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  字幕类型，字幕封装当前仅支持VTT
+    * type  字幕类型，字幕封装当前仅支持VTT和SRT
     * language  字幕语言
     * obsInfo  obsInfo
     *
@@ -97,7 +97,7 @@ class AddSubtitle implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  字幕类型，字幕封装当前仅支持VTT
+    * type  字幕类型，字幕封装当前仅支持VTT和SRT
     * language  字幕语言
     * obsInfo  obsInfo
     *
@@ -150,6 +150,7 @@ class AddSubtitle implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const TYPE_VTT = 'VTT';
+    const TYPE_SRT = 'SRT';
     
 
     /**
@@ -161,6 +162,7 @@ class AddSubtitle implements ModelInterface, ArrayAccess
     {
         return [
             self::TYPE_VTT,
+            self::TYPE_SRT,
         ];
     }
 
@@ -229,7 +231,7 @@ class AddSubtitle implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  字幕类型，字幕封装当前仅支持VTT
+    *  字幕类型，字幕封装当前仅支持VTT和SRT
     *
     * @return string
     */
@@ -241,7 +243,7 @@ class AddSubtitle implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 字幕类型，字幕封装当前仅支持VTT
+    * @param string $type 字幕类型，字幕封装当前仅支持VTT和SRT
     *
     * @return $this
     */

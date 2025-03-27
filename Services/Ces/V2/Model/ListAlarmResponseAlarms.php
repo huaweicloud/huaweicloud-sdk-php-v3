@@ -33,7 +33,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * alarmTemplateId  告警规则关联告警模板ID
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * alarmTemplateId  告警规则关联告警模板ID
     *
     * @var string[]
@@ -130,7 +130,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * alarmTemplateId  告警规则关联告警模板ID
     *
     * @var string[]
@@ -168,7 +168,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * alarmTemplateId  告警规则关联告警模板ID
     *
     * @var string[]
@@ -206,7 +206,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * alarmTemplateId  告警规则关联告警模板ID
     *
     * @var string[]
@@ -691,7 +691,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID
+    *  企业项目ID，不填时会使用默认的企业项目ID
     *
     * @return string|null
     */
@@ -703,7 +703,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID
+    * @param string|null $enterpriseProjectId 企业项目ID，不填时会使用默认的企业项目ID
     *
     * @return $this
     */

@@ -28,6 +28,13 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * migrateSpeed  实施迁移速率，单位Mb/s
     * compressRate  实施文件压缩率
     * remainTime  剩余时间
+    * totalCpuUsage  主机的CPU使用率，0到100，单位是百分比
+    * agentCpuUsage  Agent的CPU使用率，0到100，单位是百分比
+    * totalMemUsage  主机的内存使用值，单位是MB
+    * agentMemUsage  Agent的内存使用值，单位是MB
+    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * agentTime  Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
     *
     * @var string[]
     */
@@ -39,7 +46,14 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
             'processTrace' => 'string',
             'migrateSpeed' => 'double',
             'compressRate' => 'double',
-            'remainTime' => 'int'
+            'remainTime' => 'int',
+            'totalCpuUsage' => 'double',
+            'agentCpuUsage' => 'double',
+            'totalMemUsage' => 'double',
+            'agentMemUsage' => 'double',
+            'totalDiskIo' => 'double',
+            'agentDiskIo' => 'double',
+            'agentTime' => 'string'
     ];
 
     /**
@@ -52,6 +66,13 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * migrateSpeed  实施迁移速率，单位Mb/s
     * compressRate  实施文件压缩率
     * remainTime  剩余时间
+    * totalCpuUsage  主机的CPU使用率，0到100，单位是百分比
+    * agentCpuUsage  Agent的CPU使用率，0到100，单位是百分比
+    * totalMemUsage  主机的内存使用值，单位是MB
+    * agentMemUsage  Agent的内存使用值，单位是MB
+    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * agentTime  Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
     *
     * @var string[]
     */
@@ -63,7 +84,14 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
         'processTrace' => null,
         'migrateSpeed' => 'double',
         'compressRate' => 'double',
-        'remainTime' => 'int64'
+        'remainTime' => 'int64',
+        'totalCpuUsage' => 'double',
+        'agentCpuUsage' => 'double',
+        'totalMemUsage' => 'double',
+        'agentMemUsage' => 'double',
+        'totalDiskIo' => 'double',
+        'agentDiskIo' => 'double',
+        'agentTime' => null
     ];
 
     /**
@@ -97,6 +125,13 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * migrateSpeed  实施迁移速率，单位Mb/s
     * compressRate  实施文件压缩率
     * remainTime  剩余时间
+    * totalCpuUsage  主机的CPU使用率，0到100，单位是百分比
+    * agentCpuUsage  Agent的CPU使用率，0到100，单位是百分比
+    * totalMemUsage  主机的内存使用值，单位是MB
+    * agentMemUsage  Agent的内存使用值，单位是MB
+    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * agentTime  Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
     *
     * @var string[]
     */
@@ -108,7 +143,14 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
             'processTrace' => 'process_trace',
             'migrateSpeed' => 'migrate_speed',
             'compressRate' => 'compress_rate',
-            'remainTime' => 'remain_time'
+            'remainTime' => 'remain_time',
+            'totalCpuUsage' => 'total_cpu_usage',
+            'agentCpuUsage' => 'agent_cpu_usage',
+            'totalMemUsage' => 'total_mem_usage',
+            'agentMemUsage' => 'agent_mem_usage',
+            'totalDiskIo' => 'total_disk_io',
+            'agentDiskIo' => 'agent_disk_io',
+            'agentTime' => 'agent_time'
     ];
 
     /**
@@ -121,6 +163,13 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * migrateSpeed  实施迁移速率，单位Mb/s
     * compressRate  实施文件压缩率
     * remainTime  剩余时间
+    * totalCpuUsage  主机的CPU使用率，0到100，单位是百分比
+    * agentCpuUsage  Agent的CPU使用率，0到100，单位是百分比
+    * totalMemUsage  主机的内存使用值，单位是MB
+    * agentMemUsage  Agent的内存使用值，单位是MB
+    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * agentTime  Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
     *
     * @var string[]
     */
@@ -132,7 +181,14 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
             'processTrace' => 'setProcessTrace',
             'migrateSpeed' => 'setMigrateSpeed',
             'compressRate' => 'setCompressRate',
-            'remainTime' => 'setRemainTime'
+            'remainTime' => 'setRemainTime',
+            'totalCpuUsage' => 'setTotalCpuUsage',
+            'agentCpuUsage' => 'setAgentCpuUsage',
+            'totalMemUsage' => 'setTotalMemUsage',
+            'agentMemUsage' => 'setAgentMemUsage',
+            'totalDiskIo' => 'setTotalDiskIo',
+            'agentDiskIo' => 'setAgentDiskIo',
+            'agentTime' => 'setAgentTime'
     ];
 
     /**
@@ -145,6 +201,13 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * migrateSpeed  实施迁移速率，单位Mb/s
     * compressRate  实施文件压缩率
     * remainTime  剩余时间
+    * totalCpuUsage  主机的CPU使用率，0到100，单位是百分比
+    * agentCpuUsage  Agent的CPU使用率，0到100，单位是百分比
+    * totalMemUsage  主机的内存使用值，单位是MB
+    * agentMemUsage  Agent的内存使用值，单位是MB
+    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * agentTime  Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
     *
     * @var string[]
     */
@@ -156,7 +219,14 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
             'processTrace' => 'getProcessTrace',
             'migrateSpeed' => 'getMigrateSpeed',
             'compressRate' => 'getCompressRate',
-            'remainTime' => 'getRemainTime'
+            'remainTime' => 'getRemainTime',
+            'totalCpuUsage' => 'getTotalCpuUsage',
+            'agentCpuUsage' => 'getAgentCpuUsage',
+            'totalMemUsage' => 'getTotalMemUsage',
+            'agentMemUsage' => 'getAgentMemUsage',
+            'totalDiskIo' => 'getTotalDiskIo',
+            'agentDiskIo' => 'getAgentDiskIo',
+            'agentTime' => 'getAgentTime'
     ];
 
     /**
@@ -274,6 +344,13 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
         $this->container['migrateSpeed'] = isset($data['migrateSpeed']) ? $data['migrateSpeed'] : null;
         $this->container['compressRate'] = isset($data['compressRate']) ? $data['compressRate'] : null;
         $this->container['remainTime'] = isset($data['remainTime']) ? $data['remainTime'] : null;
+        $this->container['totalCpuUsage'] = isset($data['totalCpuUsage']) ? $data['totalCpuUsage'] : null;
+        $this->container['agentCpuUsage'] = isset($data['agentCpuUsage']) ? $data['agentCpuUsage'] : null;
+        $this->container['totalMemUsage'] = isset($data['totalMemUsage']) ? $data['totalMemUsage'] : null;
+        $this->container['agentMemUsage'] = isset($data['agentMemUsage']) ? $data['agentMemUsage'] : null;
+        $this->container['totalDiskIo'] = isset($data['totalDiskIo']) ? $data['totalDiskIo'] : null;
+        $this->container['agentDiskIo'] = isset($data['agentDiskIo']) ? $data['agentDiskIo'] : null;
+        $this->container['agentTime'] = isset($data['agentTime']) ? $data['agentTime'] : null;
     }
 
     /**
@@ -354,6 +431,42 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['remainTime']) && ($this->container['remainTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'remainTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['totalCpuUsage']) && ($this->container['totalCpuUsage'] > 1E+2)) {
+                $invalidProperties[] = "invalid value for 'totalCpuUsage', must be smaller than or equal to 1E+2.";
+            }
+            if (!is_null($this->container['totalCpuUsage']) && ($this->container['totalCpuUsage'] < 0)) {
+                $invalidProperties[] = "invalid value for 'totalCpuUsage', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['agentCpuUsage']) && ($this->container['agentCpuUsage'] > 1E+2)) {
+                $invalidProperties[] = "invalid value for 'agentCpuUsage', must be smaller than or equal to 1E+2.";
+            }
+            if (!is_null($this->container['agentCpuUsage']) && ($this->container['agentCpuUsage'] < 0)) {
+                $invalidProperties[] = "invalid value for 'agentCpuUsage', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['totalMemUsage']) && ($this->container['totalMemUsage'] > 1048576)) {
+                $invalidProperties[] = "invalid value for 'totalMemUsage', must be smaller than or equal to 1048576.";
+            }
+            if (!is_null($this->container['totalMemUsage']) && ($this->container['totalMemUsage'] < 0)) {
+                $invalidProperties[] = "invalid value for 'totalMemUsage', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['agentMemUsage']) && ($this->container['agentMemUsage'] > 1048576)) {
+                $invalidProperties[] = "invalid value for 'agentMemUsage', must be smaller than or equal to 1048576.";
+            }
+            if (!is_null($this->container['agentMemUsage']) && ($this->container['agentMemUsage'] < 0)) {
+                $invalidProperties[] = "invalid value for 'agentMemUsage', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['totalDiskIo']) && ($this->container['totalDiskIo'] > 1E+4)) {
+                $invalidProperties[] = "invalid value for 'totalDiskIo', must be smaller than or equal to 1E+4.";
+            }
+            if (!is_null($this->container['totalDiskIo']) && ($this->container['totalDiskIo'] < 0)) {
+                $invalidProperties[] = "invalid value for 'totalDiskIo', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['agentDiskIo']) && ($this->container['agentDiskIo'] > 1E+4)) {
+                $invalidProperties[] = "invalid value for 'agentDiskIo', must be smaller than or equal to 1E+4.";
+            }
+            if (!is_null($this->container['agentDiskIo']) && ($this->container['agentDiskIo'] < 0)) {
+                $invalidProperties[] = "invalid value for 'agentDiskIo', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -558,6 +671,174 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     public function setRemainTime($remainTime)
     {
         $this->container['remainTime'] = $remainTime;
+        return $this;
+    }
+
+    /**
+    * Gets totalCpuUsage
+    *  主机的CPU使用率，0到100，单位是百分比
+    *
+    * @return double|null
+    */
+    public function getTotalCpuUsage()
+    {
+        return $this->container['totalCpuUsage'];
+    }
+
+    /**
+    * Sets totalCpuUsage
+    *
+    * @param double|null $totalCpuUsage 主机的CPU使用率，0到100，单位是百分比
+    *
+    * @return $this
+    */
+    public function setTotalCpuUsage($totalCpuUsage)
+    {
+        $this->container['totalCpuUsage'] = $totalCpuUsage;
+        return $this;
+    }
+
+    /**
+    * Gets agentCpuUsage
+    *  Agent的CPU使用率，0到100，单位是百分比
+    *
+    * @return double|null
+    */
+    public function getAgentCpuUsage()
+    {
+        return $this->container['agentCpuUsage'];
+    }
+
+    /**
+    * Sets agentCpuUsage
+    *
+    * @param double|null $agentCpuUsage Agent的CPU使用率，0到100，单位是百分比
+    *
+    * @return $this
+    */
+    public function setAgentCpuUsage($agentCpuUsage)
+    {
+        $this->container['agentCpuUsage'] = $agentCpuUsage;
+        return $this;
+    }
+
+    /**
+    * Gets totalMemUsage
+    *  主机的内存使用值，单位是MB
+    *
+    * @return double|null
+    */
+    public function getTotalMemUsage()
+    {
+        return $this->container['totalMemUsage'];
+    }
+
+    /**
+    * Sets totalMemUsage
+    *
+    * @param double|null $totalMemUsage 主机的内存使用值，单位是MB
+    *
+    * @return $this
+    */
+    public function setTotalMemUsage($totalMemUsage)
+    {
+        $this->container['totalMemUsage'] = $totalMemUsage;
+        return $this;
+    }
+
+    /**
+    * Gets agentMemUsage
+    *  Agent的内存使用值，单位是MB
+    *
+    * @return double|null
+    */
+    public function getAgentMemUsage()
+    {
+        return $this->container['agentMemUsage'];
+    }
+
+    /**
+    * Sets agentMemUsage
+    *
+    * @param double|null $agentMemUsage Agent的内存使用值，单位是MB
+    *
+    * @return $this
+    */
+    public function setAgentMemUsage($agentMemUsage)
+    {
+        $this->container['agentMemUsage'] = $agentMemUsage;
+        return $this;
+    }
+
+    /**
+    * Gets totalDiskIo
+    *  主机的磁盘I/O值，单位是MB/s
+    *
+    * @return double|null
+    */
+    public function getTotalDiskIo()
+    {
+        return $this->container['totalDiskIo'];
+    }
+
+    /**
+    * Sets totalDiskIo
+    *
+    * @param double|null $totalDiskIo 主机的磁盘I/O值，单位是MB/s
+    *
+    * @return $this
+    */
+    public function setTotalDiskIo($totalDiskIo)
+    {
+        $this->container['totalDiskIo'] = $totalDiskIo;
+        return $this;
+    }
+
+    /**
+    * Gets agentDiskIo
+    *  Agent的磁盘I/O值，单位是MB/s
+    *
+    * @return double|null
+    */
+    public function getAgentDiskIo()
+    {
+        return $this->container['agentDiskIo'];
+    }
+
+    /**
+    * Sets agentDiskIo
+    *
+    * @param double|null $agentDiskIo Agent的磁盘I/O值，单位是MB/s
+    *
+    * @return $this
+    */
+    public function setAgentDiskIo($agentDiskIo)
+    {
+        $this->container['agentDiskIo'] = $agentDiskIo;
+        return $this;
+    }
+
+    /**
+    * Gets agentTime
+    *  Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
+    *
+    * @return string|null
+    */
+    public function getAgentTime()
+    {
+        return $this->container['agentTime'];
+    }
+
+    /**
+    * Sets agentTime
+    *
+    * @param string|null $agentTime Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
+    *
+    * @return $this
+    */
+    public function setAgentTime($agentTime)
+    {
+        $this->container['agentTime'] = $agentTime;
         return $this;
     }
 

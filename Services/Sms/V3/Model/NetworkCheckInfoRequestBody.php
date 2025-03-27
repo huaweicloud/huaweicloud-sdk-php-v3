@@ -303,11 +303,11 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['evaluationResult'] === null) {
             $invalidProperties[] = "'evaluationResult' can't be null";
         }
-            if ((mb_strlen($this->container['evaluationResult']) > 9)) {
-                $invalidProperties[] = "invalid value for 'evaluationResult', the character length must be smaller than or equal to 9.";
+            if ((mb_strlen($this->container['evaluationResult']) > 8)) {
+                $invalidProperties[] = "invalid value for 'evaluationResult', the character length must be smaller than or equal to 8.";
             }
-            if ((mb_strlen($this->container['evaluationResult']) < 5)) {
-                $invalidProperties[] = "invalid value for 'evaluationResult', the character length must be bigger than or equal to 5.";
+            if ((mb_strlen($this->container['evaluationResult']) < 6)) {
+                $invalidProperties[] = "invalid value for 'evaluationResult', the character length must be bigger than or equal to 6.";
             }
         return $invalidProperties;
     }

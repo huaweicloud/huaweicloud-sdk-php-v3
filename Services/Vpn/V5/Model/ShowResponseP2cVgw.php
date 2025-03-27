@@ -35,6 +35,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * orderId  订单Id
     * adminStateUp  冻结状态
     * frozenEffect  冻结场景：0未冻结；1 冻结可删除；2冻结不可删除
+    * version  网关版本
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -56,6 +57,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             'orderId' => 'string',
             'adminStateUp' => 'bool',
             'frozenEffect' => 'int',
+            'version' => 'string',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime'
     ];
@@ -77,6 +79,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * orderId  订单Id
     * adminStateUp  冻结状态
     * frozenEffect  冻结场景：0未冻结；1 冻结可删除；2冻结不可删除
+    * version  网关版本
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -98,6 +101,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
         'orderId' => null,
         'adminStateUp' => null,
         'frozenEffect' => null,
+        'version' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time'
     ];
@@ -140,6 +144,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * orderId  订单Id
     * adminStateUp  冻结状态
     * frozenEffect  冻结场景：0未冻结；1 冻结可删除；2冻结不可删除
+    * version  网关版本
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -161,6 +166,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             'orderId' => 'order_id',
             'adminStateUp' => 'admin_state_up',
             'frozenEffect' => 'frozen_effect',
+            'version' => 'version',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at'
     ];
@@ -182,6 +188,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * orderId  订单Id
     * adminStateUp  冻结状态
     * frozenEffect  冻结场景：0未冻结；1 冻结可删除；2冻结不可删除
+    * version  网关版本
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -203,6 +210,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             'orderId' => 'setOrderId',
             'adminStateUp' => 'setAdminStateUp',
             'frozenEffect' => 'setFrozenEffect',
+            'version' => 'setVersion',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt'
     ];
@@ -224,6 +232,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * orderId  订单Id
     * adminStateUp  冻结状态
     * frozenEffect  冻结场景：0未冻结；1 冻结可删除；2冻结不可删除
+    * version  网关版本
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -245,6 +254,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             'orderId' => 'getOrderId',
             'adminStateUp' => 'getAdminStateUp',
             'frozenEffect' => 'getFrozenEffect',
+            'version' => 'getVersion',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt'
     ];
@@ -322,6 +332,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['frozenEffect'] = isset($data['frozenEffect']) ? $data['frozenEffect'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
     }
@@ -720,6 +731,30 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     public function setFrozenEffect($frozenEffect)
     {
         $this->container['frozenEffect'] = $frozenEffect;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  网关版本
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version 网关版本
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
         return $this;
     }
 

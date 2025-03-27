@@ -21,21 +21,25 @@ class ExportClientConfigRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * vpnServerId  VPN服务端 ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'vpnServerId' => 'string'
+            'vpnServerId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Vpn\V5\Model\ExportClientConfigRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * vpnServerId  VPN服务端 ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'vpnServerId' => null
+        'vpnServerId' => null,
+        'body' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ExportClientConfigRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * vpnServerId  VPN服务端 ID
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'vpnServerId' => 'vpn_server_id'
+            'vpnServerId' => 'vpn_server_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * vpnServerId  VPN服务端 ID
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'vpnServerId' => 'setVpnServerId'
+            'vpnServerId' => 'setVpnServerId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * vpnServerId  VPN服务端 ID
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'vpnServerId' => 'getVpnServerId'
+            'vpnServerId' => 'getVpnServerId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ExportClientConfigRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['vpnServerId'] = isset($data['vpnServerId']) ? $data['vpnServerId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -199,6 +210,30 @@ class ExportClientConfigRequest implements ModelInterface, ArrayAccess
     public function setVpnServerId($vpnServerId)
     {
         $this->container['vpnServerId'] = $vpnServerId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Vpn\V5\Model\ExportClientConfigRequestBody|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ExportClientConfigRequestBody|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

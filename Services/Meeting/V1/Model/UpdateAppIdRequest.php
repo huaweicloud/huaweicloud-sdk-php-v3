@@ -22,7 +22,7 @@ class UpdateAppIdRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xRequestId  请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用UUID，若不携带，则后台自动生成。
     * acceptLanguage  语言参数，默认为中文zh-CN，英文为en-US。
-    * appId  需要修改的app
+    * appId  企业应用ID
     * body  body
     *
     * @var string[]
@@ -38,7 +38,7 @@ class UpdateAppIdRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xRequestId  请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用UUID，若不携带，则后台自动生成。
     * acceptLanguage  语言参数，默认为中文zh-CN，英文为en-US。
-    * appId  需要修改的app
+    * appId  企业应用ID
     * body  body
     *
     * @var string[]
@@ -75,7 +75,7 @@ class UpdateAppIdRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xRequestId  请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用UUID，若不携带，则后台自动生成。
     * acceptLanguage  语言参数，默认为中文zh-CN，英文为en-US。
-    * appId  需要修改的app
+    * appId  企业应用ID
     * body  body
     *
     * @var string[]
@@ -91,7 +91,7 @@ class UpdateAppIdRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xRequestId  请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用UUID，若不携带，则后台自动生成。
     * acceptLanguage  语言参数，默认为中文zh-CN，英文为en-US。
-    * appId  需要修改的app
+    * appId  企业应用ID
     * body  body
     *
     * @var string[]
@@ -107,7 +107,7 @@ class UpdateAppIdRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xRequestId  请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用UUID，若不携带，则后台自动生成。
     * acceptLanguage  语言参数，默认为中文zh-CN，英文为en-US。
-    * appId  需要修改的app
+    * appId  企业应用ID
     * body  body
     *
     * @var string[]
@@ -261,7 +261,7 @@ class UpdateAppIdRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  需要修改的app
+    *  企业应用ID
     *
     * @return string
     */
@@ -273,7 +273,7 @@ class UpdateAppIdRequest implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string $appId 需要修改的app
+    * @param string $appId 企业应用ID
     *
     * @return $this
     */

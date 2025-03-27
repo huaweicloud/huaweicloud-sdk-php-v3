@@ -54,6 +54,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -93,6 +94,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'restoreHookTimeout' => 'int',
             'heartbeatHandler' => 'string',
             'enableClassIsolation' => 'bool',
+            'enableLtsLog' => 'bool',
             'ltsCustomTag' => 'map[string,string]'
     ];
 
@@ -132,6 +134,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -171,6 +174,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         'restoreHookTimeout' => 'int32',
         'heartbeatHandler' => null,
         'enableClassIsolation' => null,
+        'enableLtsLog' => null,
         'ltsCustomTag' => null
     ];
 
@@ -231,6 +235,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -270,6 +275,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'restoreHookTimeout' => 'restore_hook_timeout',
             'heartbeatHandler' => 'heartbeat_handler',
             'enableClassIsolation' => 'enable_class_isolation',
+            'enableLtsLog' => 'enable_lts_log',
             'ltsCustomTag' => 'lts_custom_tag'
     ];
 
@@ -309,6 +315,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -348,6 +355,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'restoreHookTimeout' => 'setRestoreHookTimeout',
             'heartbeatHandler' => 'setHeartbeatHandler',
             'enableClassIsolation' => 'setEnableClassIsolation',
+            'enableLtsLog' => 'setEnableLtsLog',
             'ltsCustomTag' => 'setLtsCustomTag'
     ];
 
@@ -387,6 +395,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -426,6 +435,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'restoreHookTimeout' => 'getRestoreHookTimeout',
             'heartbeatHandler' => 'getHeartbeatHandler',
             'enableClassIsolation' => 'getEnableClassIsolation',
+            'enableLtsLog' => 'getEnableLtsLog',
             'ltsCustomTag' => 'getLtsCustomTag'
     ];
 
@@ -582,6 +592,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['restoreHookTimeout'] = isset($data['restoreHookTimeout']) ? $data['restoreHookTimeout'] : null;
         $this->container['heartbeatHandler'] = isset($data['heartbeatHandler']) ? $data['heartbeatHandler'] : null;
         $this->container['enableClassIsolation'] = isset($data['enableClassIsolation']) ? $data['enableClassIsolation'] : null;
+        $this->container['enableLtsLog'] = isset($data['enableLtsLog']) ? $data['enableLtsLog'] : null;
         $this->container['ltsCustomTag'] = isset($data['ltsCustomTag']) ? $data['ltsCustomTag'] : null;
     }
 
@@ -1443,6 +1454,30 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     public function setEnableClassIsolation($enableClassIsolation)
     {
         $this->container['enableClassIsolation'] = $enableClassIsolation;
+        return $this;
+    }
+
+    /**
+    * Gets enableLtsLog
+    *  是否开启日志。
+    *
+    * @return bool|null
+    */
+    public function getEnableLtsLog()
+    {
+        return $this->container['enableLtsLog'];
+    }
+
+    /**
+    * Sets enableLtsLog
+    *
+    * @param bool|null $enableLtsLog 是否开启日志。
+    *
+    * @return $this
+    */
+    public function setEnableLtsLog($enableLtsLog)
+    {
+        $this->container['enableLtsLog'] = $enableLtsLog;
         return $this;
     }
 

@@ -504,6 +504,72 @@ class CbrAsyncClient extends Client
     }
 
     /**
+     * 修改付费模式
+     *
+     * 修改资源的付费模式，暂时只支持按需资源转包周期资源。
+     * &gt; 该接口目前输入公测阶段，部分region暂时无法使用。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeVaultChargeModeAsync($request)
+    {
+        return $this->changeVaultChargeModeAsyncWithHttpInfo($request);
+    }
+    
+    public function changeVaultChargeModeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/vaults/change-charge-mode';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ChangeVaultChargeModeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ChangeVaultChargeModeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询agent状态
      *
      * 检查应用一致性Agent状态

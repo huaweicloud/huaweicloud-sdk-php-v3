@@ -22,9 +22,11 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  VPN网关名称
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * erId  VPN网关所连接的ER实例的ID，当attachment_type配置为\"er\"时必填，否则不填
     * vpcId  VPN网关所连接的VPC的ID
-    * localSubnets  本端子网，当attachment_type配置为\"vpc\"时必填，否则不填
+    * localSubnets  本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv4\"时必填，否则不填
+    * localSubnetsV6  使能ipv6的本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv6\"时必填，否则不填
     * connectSubnet  VPN网关所使用的VPC子网ID
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型，当attachment_type为er时不能填写Basic
@@ -45,9 +47,11 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'attachmentType' => 'string',
+            'ipVersion' => 'string',
             'erId' => 'string',
             'vpcId' => 'string',
             'localSubnets' => 'string[]',
+            'localSubnetsV6' => 'string[]',
             'connectSubnet' => 'string',
             'bgpAsn' => 'int',
             'flavor' => 'string',
@@ -68,9 +72,11 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  VPN网关名称
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * erId  VPN网关所连接的ER实例的ID，当attachment_type配置为\"er\"时必填，否则不填
     * vpcId  VPN网关所连接的VPC的ID
-    * localSubnets  本端子网，当attachment_type配置为\"vpc\"时必填，否则不填
+    * localSubnets  本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv4\"时必填，否则不填
+    * localSubnetsV6  使能ipv6的本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv6\"时必填，否则不填
     * connectSubnet  VPN网关所使用的VPC子网ID
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型，当attachment_type为er时不能填写Basic
@@ -91,9 +97,11 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'attachmentType' => null,
+        'ipVersion' => null,
         'erId' => null,
         'vpcId' => null,
         'localSubnets' => null,
+        'localSubnetsV6' => null,
         'connectSubnet' => null,
         'bgpAsn' => 'int64',
         'flavor' => null,
@@ -135,9 +143,11 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  VPN网关名称
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * erId  VPN网关所连接的ER实例的ID，当attachment_type配置为\"er\"时必填，否则不填
     * vpcId  VPN网关所连接的VPC的ID
-    * localSubnets  本端子网，当attachment_type配置为\"vpc\"时必填，否则不填
+    * localSubnets  本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv4\"时必填，否则不填
+    * localSubnetsV6  使能ipv6的本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv6\"时必填，否则不填
     * connectSubnet  VPN网关所使用的VPC子网ID
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型，当attachment_type为er时不能填写Basic
@@ -158,9 +168,11 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'name' => 'name',
             'attachmentType' => 'attachment_type',
+            'ipVersion' => 'ip_version',
             'erId' => 'er_id',
             'vpcId' => 'vpc_id',
             'localSubnets' => 'local_subnets',
+            'localSubnetsV6' => 'local_subnets_v6',
             'connectSubnet' => 'connect_subnet',
             'bgpAsn' => 'bgp_asn',
             'flavor' => 'flavor',
@@ -181,9 +193,11 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  VPN网关名称
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * erId  VPN网关所连接的ER实例的ID，当attachment_type配置为\"er\"时必填，否则不填
     * vpcId  VPN网关所连接的VPC的ID
-    * localSubnets  本端子网，当attachment_type配置为\"vpc\"时必填，否则不填
+    * localSubnets  本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv4\"时必填，否则不填
+    * localSubnetsV6  使能ipv6的本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv6\"时必填，否则不填
     * connectSubnet  VPN网关所使用的VPC子网ID
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型，当attachment_type为er时不能填写Basic
@@ -204,9 +218,11 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     protected static $setters = [
             'name' => 'setName',
             'attachmentType' => 'setAttachmentType',
+            'ipVersion' => 'setIpVersion',
             'erId' => 'setErId',
             'vpcId' => 'setVpcId',
             'localSubnets' => 'setLocalSubnets',
+            'localSubnetsV6' => 'setLocalSubnetsV6',
             'connectSubnet' => 'setConnectSubnet',
             'bgpAsn' => 'setBgpAsn',
             'flavor' => 'setFlavor',
@@ -227,9 +243,11 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  VPN网关名称
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * erId  VPN网关所连接的ER实例的ID，当attachment_type配置为\"er\"时必填，否则不填
     * vpcId  VPN网关所连接的VPC的ID
-    * localSubnets  本端子网，当attachment_type配置为\"vpc\"时必填，否则不填
+    * localSubnets  本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv4\"时必填，否则不填
+    * localSubnetsV6  使能ipv6的本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv6\"时必填，否则不填
     * connectSubnet  VPN网关所使用的VPC子网ID
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型，当attachment_type为er时不能填写Basic
@@ -250,9 +268,11 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     protected static $getters = [
             'name' => 'getName',
             'attachmentType' => 'getAttachmentType',
+            'ipVersion' => 'getIpVersion',
             'erId' => 'getErId',
             'vpcId' => 'getVpcId',
             'localSubnets' => 'getLocalSubnets',
+            'localSubnetsV6' => 'getLocalSubnetsV6',
             'connectSubnet' => 'getConnectSubnet',
             'bgpAsn' => 'getBgpAsn',
             'flavor' => 'getFlavor',
@@ -311,11 +331,16 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     }
     const ATTACHMENT_TYPE_VPC = 'vpc';
     const ATTACHMENT_TYPE_ER = 'er';
+    const IP_VERSION_IPV4 = 'ipv4';
+    const IP_VERSION_IPV6 = 'ipv6';
     const FLAVOR_BASIC = 'Basic';
     const FLAVOR_PROFESSIONAL1 = 'Professional1';
     const FLAVOR_PROFESSIONAL2 = 'Professional2';
+    const FLAVOR_PROFESSIONAL3 = 'Professional3';
     const FLAVOR_PROFESSIONAL1_NON_FIXED_IP = 'Professional1-NonFixedIP';
     const FLAVOR_PROFESSIONAL2_NON_FIXED_IP = 'Professional2-NonFixedIP';
+    const FLAVOR_PROFESSIONAL3_NON_FIXED_IP = 'Professional3-NonFixedIP';
+    const FLAVOR_GM = 'GM';
     const NETWORK_TYPE__PUBLIC = 'public';
     const NETWORK_TYPE__PRIVATE = 'private';
     const HA_MODE_ACTIVE_ACTIVE = 'active-active';
@@ -340,14 +365,30 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
+    public function getIpVersionAllowableValues()
+    {
+        return [
+            self::IP_VERSION_IPV4,
+            self::IP_VERSION_IPV6,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
     public function getFlavorAllowableValues()
     {
         return [
             self::FLAVOR_BASIC,
             self::FLAVOR_PROFESSIONAL1,
             self::FLAVOR_PROFESSIONAL2,
+            self::FLAVOR_PROFESSIONAL3,
             self::FLAVOR_PROFESSIONAL1_NON_FIXED_IP,
             self::FLAVOR_PROFESSIONAL2_NON_FIXED_IP,
+            self::FLAVOR_PROFESSIONAL3_NON_FIXED_IP,
+            self::FLAVOR_GM,
         ];
     }
 
@@ -395,9 +436,11 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['attachmentType'] = isset($data['attachmentType']) ? $data['attachmentType'] : null;
+        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['erId'] = isset($data['erId']) ? $data['erId'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['localSubnets'] = isset($data['localSubnets']) ? $data['localSubnets'] : null;
+        $this->container['localSubnetsV6'] = isset($data['localSubnetsV6']) ? $data['localSubnetsV6'] : null;
         $this->container['connectSubnet'] = isset($data['connectSubnet']) ? $data['connectSubnet'] : null;
         $this->container['bgpAsn'] = isset($data['bgpAsn']) ? $data['bgpAsn'] : null;
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
@@ -435,6 +478,14 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['attachmentType']) && !in_array($this->container['attachmentType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'attachmentType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getIpVersionAllowableValues();
+                if (!is_null($this->container['ipVersion']) && !in_array($this->container['ipVersion'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ipVersion', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -556,6 +607,30 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets ipVersion
+    *  网关的IP协议版本
+    *
+    * @return string|null
+    */
+    public function getIpVersion()
+    {
+        return $this->container['ipVersion'];
+    }
+
+    /**
+    * Sets ipVersion
+    *
+    * @param string|null $ipVersion 网关的IP协议版本
+    *
+    * @return $this
+    */
+    public function setIpVersion($ipVersion)
+    {
+        $this->container['ipVersion'] = $ipVersion;
+        return $this;
+    }
+
+    /**
     * Gets erId
     *  VPN网关所连接的ER实例的ID，当attachment_type配置为\"er\"时必填，否则不填
     *
@@ -605,7 +680,7 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets localSubnets
-    *  本端子网，当attachment_type配置为\"vpc\"时必填，否则不填
+    *  本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv4\"时必填，否则不填
     *
     * @return string[]|null
     */
@@ -617,13 +692,37 @@ class CreateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets localSubnets
     *
-    * @param string[]|null $localSubnets 本端子网，当attachment_type配置为\"vpc\"时必填，否则不填
+    * @param string[]|null $localSubnets 本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv4\"时必填，否则不填
     *
     * @return $this
     */
     public function setLocalSubnets($localSubnets)
     {
         $this->container['localSubnets'] = $localSubnets;
+        return $this;
+    }
+
+    /**
+    * Gets localSubnetsV6
+    *  使能ipv6的本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv6\"时必填，否则不填
+    *
+    * @return string[]|null
+    */
+    public function getLocalSubnetsV6()
+    {
+        return $this->container['localSubnetsV6'];
+    }
+
+    /**
+    * Sets localSubnetsV6
+    *
+    * @param string[]|null $localSubnetsV6 使能ipv6的本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv6\"时必填，否则不填
+    *
+    * @return $this
+    */
+    public function setLocalSubnetsV6($localSubnetsV6)
+    {
+        $this->container['localSubnetsV6'] = $localSubnetsV6;
         return $this;
     }
 

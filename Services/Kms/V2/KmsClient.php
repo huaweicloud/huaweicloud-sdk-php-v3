@@ -536,6 +536,68 @@ class KmsClient extends Client
     }
 
     /**
+     * 创建EC数据密钥对
+     *
+     * - 功能介绍：创建EC数据密钥对，返回结果包含明文公钥和密文私钥，根据参数决定是否返回明文私钥。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createEcDatakeyPair($request)
+    {
+        return $this->createEcDatakeyPairWithHttpInfo($request);
+    }
+
+    public function createEcDatakeyPairWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/create-ec-datakey-pair';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\CreateEcDatakeyPairResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\CreateEcDatakeyPairRequest');
+    }
+
+    /**
      * 创建授权
      *
      * - 功能介绍：创建授权，被授权用户可以对授权密钥进行操作。
@@ -914,6 +976,68 @@ class KmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\CreateRandomResponse',
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\CreateRandomRequest');
+    }
+
+    /**
+     * 创建RSA数据密钥对
+     *
+     * - 功能介绍：创建rsa数据密钥对，返回结果包含明文公钥和密文私钥，根据参数决定是否返回明文私钥。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createRsaDatakeyPair($request)
+    {
+        return $this->createRsaDatakeyPairWithHttpInfo($request);
+    }
+
+    public function createRsaDatakeyPairWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/create-rsa-datakey-pair';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\CreateRsaDatakeyPairResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\CreateRsaDatakeyPairRequest');
     }
 
     /**

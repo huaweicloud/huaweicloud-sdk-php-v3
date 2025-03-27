@@ -47,10 +47,12 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * agentVersion  Agent版本
     * kernelVersion  内核版本信息
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
-    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * oemSystem  是否是OEM操作系统(Windows)
     * startType  启动方式，可以取值MANUAL、MGC或者空。
     * ioReadWait  磁盘IO读时延，单位为ms
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * platform  平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware hyperv other：其他
     *
     * @var string[]
     */
@@ -85,7 +87,9 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             'state' => 'string',
             'oemSystem' => 'bool',
             'startType' => 'string',
-            'ioReadWait' => 'double'
+            'ioReadWait' => 'double',
+            'hasTc' => 'bool',
+            'platform' => 'string'
     ];
 
     /**
@@ -117,10 +121,12 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * agentVersion  Agent版本
     * kernelVersion  内核版本信息
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
-    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * oemSystem  是否是OEM操作系统(Windows)
     * startType  启动方式，可以取值MANUAL、MGC或者空。
     * ioReadWait  磁盘IO读时延，单位为ms
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * platform  平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware hyperv other：其他
     *
     * @var string[]
     */
@@ -155,7 +161,9 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
         'state' => null,
         'oemSystem' => null,
         'startType' => null,
-        'ioReadWait' => 'double'
+        'ioReadWait' => 'double',
+        'hasTc' => null,
+        'platform' => null
     ];
 
     /**
@@ -208,10 +216,12 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * agentVersion  Agent版本
     * kernelVersion  内核版本信息
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
-    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * oemSystem  是否是OEM操作系统(Windows)
     * startType  启动方式，可以取值MANUAL、MGC或者空。
     * ioReadWait  磁盘IO读时延，单位为ms
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * platform  平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware hyperv other：其他
     *
     * @var string[]
     */
@@ -246,7 +256,9 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             'state' => 'state',
             'oemSystem' => 'oem_system',
             'startType' => 'start_type',
-            'ioReadWait' => 'io_read_wait'
+            'ioReadWait' => 'io_read_wait',
+            'hasTc' => 'has_tc',
+            'platform' => 'platform'
     ];
 
     /**
@@ -278,10 +290,12 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * agentVersion  Agent版本
     * kernelVersion  内核版本信息
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
-    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * oemSystem  是否是OEM操作系统(Windows)
     * startType  启动方式，可以取值MANUAL、MGC或者空。
     * ioReadWait  磁盘IO读时延，单位为ms
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * platform  平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware hyperv other：其他
     *
     * @var string[]
     */
@@ -316,7 +330,9 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             'state' => 'setState',
             'oemSystem' => 'setOemSystem',
             'startType' => 'setStartType',
-            'ioReadWait' => 'setIoReadWait'
+            'ioReadWait' => 'setIoReadWait',
+            'hasTc' => 'setHasTc',
+            'platform' => 'setPlatform'
     ];
 
     /**
@@ -348,10 +364,12 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * agentVersion  Agent版本
     * kernelVersion  内核版本信息
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
-    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     * oemSystem  是否是OEM操作系统(Windows)
     * startType  启动方式，可以取值MANUAL、MGC或者空。
     * ioReadWait  磁盘IO读时延，单位为ms
+    * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * platform  平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware hyperv other：其他
     *
     * @var string[]
     */
@@ -386,7 +404,9 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             'state' => 'getState',
             'oemSystem' => 'getOemSystem',
             'startType' => 'getStartType',
-            'ioReadWait' => 'getIoReadWait'
+            'ioReadWait' => 'getIoReadWait',
+            'hasTc' => 'getHasTc',
+            'platform' => 'getPlatform'
     ];
 
     /**
@@ -453,9 +473,21 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     const STATE_CLONING = 'cloning';
     const STATE_CUTOVERING = 'cutovering';
     const STATE_FINISHED = 'finished';
+    const STATE_CLEARING = 'clearing';
+    const STATE_CLEARED = 'cleared';
+    const STATE_CLEARFAILED = 'clearfailed';
     const START_TYPE_MANUAL = 'MANUAL';
     const START_TYPE_MGC = 'MGC';
     const START_TYPE_EMPTY = '';
+    const PLATFORM_HW = 'hw';
+    const PLATFORM_ALI = 'ali';
+    const PLATFORM_AWS = 'aws';
+    const PLATFORM_AZURE = 'azure';
+    const PLATFORM_GCP = 'gcp';
+    const PLATFORM_TENCENT = 'tencent';
+    const PLATFORM_VMWARE = 'vmware';
+    const PLATFORM_HYPERV = 'hyperv';
+    const PLATFORM_OTHER = 'other';
     
 
     /**
@@ -534,6 +566,9 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             self::STATE_CLONING,
             self::STATE_CUTOVERING,
             self::STATE_FINISHED,
+            self::STATE_CLEARING,
+            self::STATE_CLEARED,
+            self::STATE_CLEARFAILED,
         ];
     }
 
@@ -548,6 +583,26 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             self::START_TYPE_MANUAL,
             self::START_TYPE_MGC,
             self::START_TYPE_EMPTY,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPlatformAllowableValues()
+    {
+        return [
+            self::PLATFORM_HW,
+            self::PLATFORM_ALI,
+            self::PLATFORM_AWS,
+            self::PLATFORM_AZURE,
+            self::PLATFORM_GCP,
+            self::PLATFORM_TENCENT,
+            self::PLATFORM_VMWARE,
+            self::PLATFORM_HYPERV,
+            self::PLATFORM_OTHER,
         ];
     }
 
@@ -598,6 +653,8 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
         $this->container['oemSystem'] = isset($data['oemSystem']) ? $data['oemSystem'] : null;
         $this->container['startType'] = isset($data['startType']) ? $data['startType'] : null;
         $this->container['ioReadWait'] = isset($data['ioReadWait']) ? $data['ioReadWait'] : null;
+        $this->container['hasTc'] = isset($data['hasTc']) ? $data['hasTc'] : null;
+        $this->container['platform'] = isset($data['platform']) ? $data['platform'] : null;
     }
 
     /**
@@ -764,6 +821,14 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['ioReadWait']) && ($this->container['ioReadWait'] < 0)) {
                 $invalidProperties[] = "invalid value for 'ioReadWait', must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getPlatformAllowableValues();
+                if (!is_null($this->container['platform']) && !in_array($this->container['platform'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'platform', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -1428,7 +1493,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    *  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @return string|null
     */
@@ -1440,7 +1505,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+    * @param string|null $state 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
     *
     * @return $this
     */
@@ -1519,6 +1584,54 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     public function setIoReadWait($ioReadWait)
     {
         $this->container['ioReadWait'] = $ioReadWait;
+        return $this;
+    }
+
+    /**
+    * Gets hasTc
+    *  是否安装tc组件，Linux系统此参数为必选
+    *
+    * @return bool|null
+    */
+    public function getHasTc()
+    {
+        return $this->container['hasTc'];
+    }
+
+    /**
+    * Sets hasTc
+    *
+    * @param bool|null $hasTc 是否安装tc组件，Linux系统此参数为必选
+    *
+    * @return $this
+    */
+    public function setHasTc($hasTc)
+    {
+        $this->container['hasTc'] = $hasTc;
+        return $this;
+    }
+
+    /**
+    * Gets platform
+    *  平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware hyperv other：其他
+    *
+    * @return string|null
+    */
+    public function getPlatform()
+    {
+        return $this->container['platform'];
+    }
+
+    /**
+    * Sets platform
+    *
+    * @param string|null $platform 平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware hyperv other：其他
+    *
+    * @return $this
+    */
+    public function setPlatform($platform)
+    {
+        $this->container['platform'] = $platform;
         return $this;
     }
 

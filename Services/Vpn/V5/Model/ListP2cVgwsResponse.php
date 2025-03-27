@@ -22,24 +22,32 @@ class ListP2cVgwsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * p2cVpnGateways  网关信息
+    * totalCount  总数
+    * pageInfo  pageInfo
     * requestId  请求ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'p2cVpnGateways' => '\HuaweiCloud\SDK\Vpn\V5\Model\ShowResponseP2cVgw[]',
+            'totalCount' => 'int',
+            'pageInfo' => '\HuaweiCloud\SDK\Vpn\V5\Model\PageInfo',
             'requestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * p2cVpnGateways  网关信息
+    * totalCount  总数
+    * pageInfo  pageInfo
     * requestId  请求ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'p2cVpnGateways' => null,
+        'totalCount' => 'int32',
+        'pageInfo' => null,
         'requestId' => null
     ];
 
@@ -67,36 +75,48 @@ class ListP2cVgwsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * p2cVpnGateways  网关信息
+    * totalCount  总数
+    * pageInfo  pageInfo
     * requestId  请求ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'p2cVpnGateways' => 'p2c_vpn_gateways',
+            'totalCount' => 'total_count',
+            'pageInfo' => 'page_info',
             'requestId' => 'request_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * p2cVpnGateways  网关信息
+    * totalCount  总数
+    * pageInfo  pageInfo
     * requestId  请求ID
     *
     * @var string[]
     */
     protected static $setters = [
             'p2cVpnGateways' => 'setP2cVpnGateways',
+            'totalCount' => 'setTotalCount',
+            'pageInfo' => 'setPageInfo',
             'requestId' => 'setRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * p2cVpnGateways  网关信息
+    * totalCount  总数
+    * pageInfo  pageInfo
     * requestId  请求ID
     *
     * @var string[]
     */
     protected static $getters = [
             'p2cVpnGateways' => 'getP2cVpnGateways',
+            'totalCount' => 'getTotalCount',
+            'pageInfo' => 'getPageInfo',
             'requestId' => 'getRequestId'
     ];
 
@@ -159,6 +179,8 @@ class ListP2cVgwsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['p2cVpnGateways'] = isset($data['p2cVpnGateways']) ? $data['p2cVpnGateways'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
     }
 
@@ -205,6 +227,54 @@ class ListP2cVgwsResponse implements ModelInterface, ArrayAccess
     public function setP2cVpnGateways($p2cVpnGateways)
     {
         $this->container['p2cVpnGateways'] = $p2cVpnGateways;
+        return $this;
+    }
+
+    /**
+    * Gets totalCount
+    *  总数
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 总数
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Vpn\V5\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

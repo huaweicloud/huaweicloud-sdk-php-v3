@@ -53,6 +53,12 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * cloneServer  cloneServer
     * subTasks  任务包含的子任务列表
     * networkCheckInfo  networkCheckInfo
+    * totalCpuUsage  主机的CPU使用率，单位是百分比
+    * agentCpuUsage  Agent的CPU使用率，单位是百分比
+    * totalMemUsage  主机的内存使用值，单位是MB
+    * agentMemUsage  Agent的内存使用值，单位是MB
+    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
     *
     * @var string[]
     */
@@ -88,7 +94,13 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'targetSnapshotId' => 'string',
             'cloneServer' => '\HuaweiCloud\SDK\Sms\V3\Model\CloneServer',
             'subTasks' => '\HuaweiCloud\SDK\Sms\V3\Model\SubTask[]',
-            'networkCheckInfo' => '\HuaweiCloud\SDK\Sms\V3\Model\NetworkCheckInfoRequestBody'
+            'networkCheckInfo' => '\HuaweiCloud\SDK\Sms\V3\Model\NetworkCheckInfoRequestBody',
+            'totalCpuUsage' => 'double',
+            'agentCpuUsage' => 'double',
+            'totalMemUsage' => 'double',
+            'agentMemUsage' => 'double',
+            'totalDiskIo' => 'double',
+            'agentDiskIo' => 'double'
     ];
 
     /**
@@ -125,6 +137,12 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * cloneServer  cloneServer
     * subTasks  任务包含的子任务列表
     * networkCheckInfo  networkCheckInfo
+    * totalCpuUsage  主机的CPU使用率，单位是百分比
+    * agentCpuUsage  Agent的CPU使用率，单位是百分比
+    * totalMemUsage  主机的内存使用值，单位是MB
+    * agentMemUsage  Agent的内存使用值，单位是MB
+    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
     *
     * @var string[]
     */
@@ -160,7 +178,13 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         'targetSnapshotId' => null,
         'cloneServer' => null,
         'subTasks' => null,
-        'networkCheckInfo' => null
+        'networkCheckInfo' => null,
+        'totalCpuUsage' => 'double',
+        'agentCpuUsage' => 'double',
+        'totalMemUsage' => 'double',
+        'agentMemUsage' => 'double',
+        'totalDiskIo' => 'double',
+        'agentDiskIo' => 'double'
     ];
 
     /**
@@ -218,6 +242,12 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * cloneServer  cloneServer
     * subTasks  任务包含的子任务列表
     * networkCheckInfo  networkCheckInfo
+    * totalCpuUsage  主机的CPU使用率，单位是百分比
+    * agentCpuUsage  Agent的CPU使用率，单位是百分比
+    * totalMemUsage  主机的内存使用值，单位是MB
+    * agentMemUsage  Agent的内存使用值，单位是MB
+    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
     *
     * @var string[]
     */
@@ -253,7 +283,13 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'targetSnapshotId' => 'target_snapshot_id',
             'cloneServer' => 'clone_server',
             'subTasks' => 'sub_tasks',
-            'networkCheckInfo' => 'network_check_info'
+            'networkCheckInfo' => 'network_check_info',
+            'totalCpuUsage' => 'total_cpu_usage',
+            'agentCpuUsage' => 'agent_cpu_usage',
+            'totalMemUsage' => 'total_mem_usage',
+            'agentMemUsage' => 'agent_mem_usage',
+            'totalDiskIo' => 'total_disk_io',
+            'agentDiskIo' => 'agent_disk_io'
     ];
 
     /**
@@ -290,6 +326,12 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * cloneServer  cloneServer
     * subTasks  任务包含的子任务列表
     * networkCheckInfo  networkCheckInfo
+    * totalCpuUsage  主机的CPU使用率，单位是百分比
+    * agentCpuUsage  Agent的CPU使用率，单位是百分比
+    * totalMemUsage  主机的内存使用值，单位是MB
+    * agentMemUsage  Agent的内存使用值，单位是MB
+    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
     *
     * @var string[]
     */
@@ -325,7 +367,13 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'targetSnapshotId' => 'setTargetSnapshotId',
             'cloneServer' => 'setCloneServer',
             'subTasks' => 'setSubTasks',
-            'networkCheckInfo' => 'setNetworkCheckInfo'
+            'networkCheckInfo' => 'setNetworkCheckInfo',
+            'totalCpuUsage' => 'setTotalCpuUsage',
+            'agentCpuUsage' => 'setAgentCpuUsage',
+            'totalMemUsage' => 'setTotalMemUsage',
+            'agentMemUsage' => 'setAgentMemUsage',
+            'totalDiskIo' => 'setTotalDiskIo',
+            'agentDiskIo' => 'setAgentDiskIo'
     ];
 
     /**
@@ -362,6 +410,12 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * cloneServer  cloneServer
     * subTasks  任务包含的子任务列表
     * networkCheckInfo  networkCheckInfo
+    * totalCpuUsage  主机的CPU使用率，单位是百分比
+    * agentCpuUsage  Agent的CPU使用率，单位是百分比
+    * totalMemUsage  主机的内存使用值，单位是MB
+    * agentMemUsage  Agent的内存使用值，单位是MB
+    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
     *
     * @var string[]
     */
@@ -397,7 +451,13 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'targetSnapshotId' => 'getTargetSnapshotId',
             'cloneServer' => 'getCloneServer',
             'subTasks' => 'getSubTasks',
-            'networkCheckInfo' => 'getNetworkCheckInfo'
+            'networkCheckInfo' => 'getNetworkCheckInfo',
+            'totalCpuUsage' => 'getTotalCpuUsage',
+            'agentCpuUsage' => 'getAgentCpuUsage',
+            'totalMemUsage' => 'getTotalMemUsage',
+            'agentMemUsage' => 'getAgentMemUsage',
+            'totalDiskIo' => 'getTotalDiskIo',
+            'agentDiskIo' => 'getAgentDiskIo'
     ];
 
     /**
@@ -537,6 +597,12 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         $this->container['cloneServer'] = isset($data['cloneServer']) ? $data['cloneServer'] : null;
         $this->container['subTasks'] = isset($data['subTasks']) ? $data['subTasks'] : null;
         $this->container['networkCheckInfo'] = isset($data['networkCheckInfo']) ? $data['networkCheckInfo'] : null;
+        $this->container['totalCpuUsage'] = isset($data['totalCpuUsage']) ? $data['totalCpuUsage'] : null;
+        $this->container['agentCpuUsage'] = isset($data['agentCpuUsage']) ? $data['agentCpuUsage'] : null;
+        $this->container['totalMemUsage'] = isset($data['totalMemUsage']) ? $data['totalMemUsage'] : null;
+        $this->container['agentMemUsage'] = isset($data['agentMemUsage']) ? $data['agentMemUsage'] : null;
+        $this->container['totalDiskIo'] = isset($data['totalDiskIo']) ? $data['totalDiskIo'] : null;
+        $this->container['agentDiskIo'] = isset($data['agentDiskIo']) ? $data['agentDiskIo'] : null;
     }
 
     /**
@@ -714,6 +780,42 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['targetSnapshotId']) && (mb_strlen($this->container['targetSnapshotId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'targetSnapshotId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['totalCpuUsage']) && ($this->container['totalCpuUsage'] > 1E+2)) {
+                $invalidProperties[] = "invalid value for 'totalCpuUsage', must be smaller than or equal to 1E+2.";
+            }
+            if (!is_null($this->container['totalCpuUsage']) && ($this->container['totalCpuUsage'] < 0)) {
+                $invalidProperties[] = "invalid value for 'totalCpuUsage', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['agentCpuUsage']) && ($this->container['agentCpuUsage'] > 1E+2)) {
+                $invalidProperties[] = "invalid value for 'agentCpuUsage', must be smaller than or equal to 1E+2.";
+            }
+            if (!is_null($this->container['agentCpuUsage']) && ($this->container['agentCpuUsage'] < 0)) {
+                $invalidProperties[] = "invalid value for 'agentCpuUsage', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['totalMemUsage']) && ($this->container['totalMemUsage'] > 1048576)) {
+                $invalidProperties[] = "invalid value for 'totalMemUsage', must be smaller than or equal to 1048576.";
+            }
+            if (!is_null($this->container['totalMemUsage']) && ($this->container['totalMemUsage'] < 0)) {
+                $invalidProperties[] = "invalid value for 'totalMemUsage', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['agentMemUsage']) && ($this->container['agentMemUsage'] > 1048576)) {
+                $invalidProperties[] = "invalid value for 'agentMemUsage', must be smaller than or equal to 1048576.";
+            }
+            if (!is_null($this->container['agentMemUsage']) && ($this->container['agentMemUsage'] < 0)) {
+                $invalidProperties[] = "invalid value for 'agentMemUsage', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['totalDiskIo']) && ($this->container['totalDiskIo'] > 1E+4)) {
+                $invalidProperties[] = "invalid value for 'totalDiskIo', must be smaller than or equal to 1E+4.";
+            }
+            if (!is_null($this->container['totalDiskIo']) && ($this->container['totalDiskIo'] < 0)) {
+                $invalidProperties[] = "invalid value for 'totalDiskIo', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['agentDiskIo']) && ($this->container['agentDiskIo'] > 1E+4)) {
+                $invalidProperties[] = "invalid value for 'agentDiskIo', must be smaller than or equal to 1E+4.";
+            }
+            if (!is_null($this->container['agentDiskIo']) && ($this->container['agentDiskIo'] < 0)) {
+                $invalidProperties[] = "invalid value for 'agentDiskIo', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1494,6 +1596,150 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     public function setNetworkCheckInfo($networkCheckInfo)
     {
         $this->container['networkCheckInfo'] = $networkCheckInfo;
+        return $this;
+    }
+
+    /**
+    * Gets totalCpuUsage
+    *  主机的CPU使用率，单位是百分比
+    *
+    * @return double|null
+    */
+    public function getTotalCpuUsage()
+    {
+        return $this->container['totalCpuUsage'];
+    }
+
+    /**
+    * Sets totalCpuUsage
+    *
+    * @param double|null $totalCpuUsage 主机的CPU使用率，单位是百分比
+    *
+    * @return $this
+    */
+    public function setTotalCpuUsage($totalCpuUsage)
+    {
+        $this->container['totalCpuUsage'] = $totalCpuUsage;
+        return $this;
+    }
+
+    /**
+    * Gets agentCpuUsage
+    *  Agent的CPU使用率，单位是百分比
+    *
+    * @return double|null
+    */
+    public function getAgentCpuUsage()
+    {
+        return $this->container['agentCpuUsage'];
+    }
+
+    /**
+    * Sets agentCpuUsage
+    *
+    * @param double|null $agentCpuUsage Agent的CPU使用率，单位是百分比
+    *
+    * @return $this
+    */
+    public function setAgentCpuUsage($agentCpuUsage)
+    {
+        $this->container['agentCpuUsage'] = $agentCpuUsage;
+        return $this;
+    }
+
+    /**
+    * Gets totalMemUsage
+    *  主机的内存使用值，单位是MB
+    *
+    * @return double|null
+    */
+    public function getTotalMemUsage()
+    {
+        return $this->container['totalMemUsage'];
+    }
+
+    /**
+    * Sets totalMemUsage
+    *
+    * @param double|null $totalMemUsage 主机的内存使用值，单位是MB
+    *
+    * @return $this
+    */
+    public function setTotalMemUsage($totalMemUsage)
+    {
+        $this->container['totalMemUsage'] = $totalMemUsage;
+        return $this;
+    }
+
+    /**
+    * Gets agentMemUsage
+    *  Agent的内存使用值，单位是MB
+    *
+    * @return double|null
+    */
+    public function getAgentMemUsage()
+    {
+        return $this->container['agentMemUsage'];
+    }
+
+    /**
+    * Sets agentMemUsage
+    *
+    * @param double|null $agentMemUsage Agent的内存使用值，单位是MB
+    *
+    * @return $this
+    */
+    public function setAgentMemUsage($agentMemUsage)
+    {
+        $this->container['agentMemUsage'] = $agentMemUsage;
+        return $this;
+    }
+
+    /**
+    * Gets totalDiskIo
+    *  主机的磁盘I/O值，单位是MB/s
+    *
+    * @return double|null
+    */
+    public function getTotalDiskIo()
+    {
+        return $this->container['totalDiskIo'];
+    }
+
+    /**
+    * Sets totalDiskIo
+    *
+    * @param double|null $totalDiskIo 主机的磁盘I/O值，单位是MB/s
+    *
+    * @return $this
+    */
+    public function setTotalDiskIo($totalDiskIo)
+    {
+        $this->container['totalDiskIo'] = $totalDiskIo;
+        return $this;
+    }
+
+    /**
+    * Gets agentDiskIo
+    *  Agent的磁盘I/O值，单位是MB/s
+    *
+    * @return double|null
+    */
+    public function getAgentDiskIo()
+    {
+        return $this->container['agentDiskIo'];
+    }
+
+    /**
+    * Sets agentDiskIo
+    *
+    * @param double|null $agentDiskIo Agent的磁盘I/O值，单位是MB/s
+    *
+    * @return $this
+    */
+    public function setAgentDiskIo($agentDiskIo)
+    {
+        $this->container['agentDiskIo'] = $agentDiskIo;
         return $this;
     }
 

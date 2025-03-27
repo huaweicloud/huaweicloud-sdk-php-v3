@@ -22,6 +22,8 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * vpnServers  vpnServers
+    * totalCount  总数
+    * pageInfo  pageInfo
     * requestId  请求id
     * headerResponseToken  headerResponseToken
     *
@@ -29,6 +31,8 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'vpnServers' => '\HuaweiCloud\SDK\Vpn\V5\Model\ShowServerResponse[]',
+            'totalCount' => 'int',
+            'pageInfo' => '\HuaweiCloud\SDK\Vpn\V5\Model\PageInfo',
             'requestId' => 'string',
             'headerResponseToken' => 'string'
     ];
@@ -36,6 +40,8 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * vpnServers  vpnServers
+    * totalCount  总数
+    * pageInfo  pageInfo
     * requestId  请求id
     * headerResponseToken  headerResponseToken
     *
@@ -43,6 +49,8 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'vpnServers' => null,
+        'totalCount' => 'int32',
+        'pageInfo' => null,
         'requestId' => null,
         'headerResponseToken' => null
     ];
@@ -71,6 +79,8 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * vpnServers  vpnServers
+    * totalCount  总数
+    * pageInfo  pageInfo
     * requestId  请求id
     * headerResponseToken  headerResponseToken
     *
@@ -78,6 +88,8 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'vpnServers' => 'vpn_servers',
+            'totalCount' => 'total_count',
+            'pageInfo' => 'page_info',
             'requestId' => 'request_id',
             'headerResponseToken' => 'header-response-token'
     ];
@@ -85,6 +97,8 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * vpnServers  vpnServers
+    * totalCount  总数
+    * pageInfo  pageInfo
     * requestId  请求id
     * headerResponseToken  headerResponseToken
     *
@@ -92,6 +106,8 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'vpnServers' => 'setVpnServers',
+            'totalCount' => 'setTotalCount',
+            'pageInfo' => 'setPageInfo',
             'requestId' => 'setRequestId',
             'headerResponseToken' => 'setHeaderResponseToken'
     ];
@@ -99,6 +115,8 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * vpnServers  vpnServers
+    * totalCount  总数
+    * pageInfo  pageInfo
     * requestId  请求id
     * headerResponseToken  headerResponseToken
     *
@@ -106,6 +124,8 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'vpnServers' => 'getVpnServers',
+            'totalCount' => 'getTotalCount',
+            'pageInfo' => 'getPageInfo',
             'requestId' => 'getRequestId',
             'headerResponseToken' => 'getHeaderResponseToken'
     ];
@@ -169,6 +189,8 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['vpnServers'] = isset($data['vpnServers']) ? $data['vpnServers'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['headerResponseToken'] = isset($data['headerResponseToken']) ? $data['headerResponseToken'] : null;
     }
@@ -216,6 +238,54 @@ class ListVpnServersByProjectResponse implements ModelInterface, ArrayAccess
     public function setVpnServers($vpnServers)
     {
         $this->container['vpnServers'] = $vpnServers;
+        return $this;
+    }
+
+    /**
+    * Gets totalCount
+    *  总数
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 总数
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Vpn\V5\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

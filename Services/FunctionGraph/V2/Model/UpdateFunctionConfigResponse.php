@@ -70,6 +70,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数
     * customImage  customImage
     * isReturnStream  是否返回流式数据（已废弃）
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -124,6 +125,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
             'enableAuthInHeader' => 'bool',
             'customImage' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\CustomImage',
             'isReturnStream' => 'bool',
+            'enableLtsLog' => 'bool',
             'ltsCustomTag' => 'map[string,string]'
     ];
 
@@ -178,6 +180,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数
     * customImage  customImage
     * isReturnStream  是否返回流式数据（已废弃）
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -232,6 +235,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
         'enableAuthInHeader' => null,
         'customImage' => null,
         'isReturnStream' => null,
+        'enableLtsLog' => null,
         'ltsCustomTag' => null
     ];
 
@@ -307,6 +311,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数
     * customImage  customImage
     * isReturnStream  是否返回流式数据（已废弃）
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -361,6 +366,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
             'enableAuthInHeader' => 'enable_auth_in_header',
             'customImage' => 'custom_image',
             'isReturnStream' => 'is_return_stream',
+            'enableLtsLog' => 'enable_lts_log',
             'ltsCustomTag' => 'lts_custom_tag'
     ];
 
@@ -415,6 +421,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数
     * customImage  customImage
     * isReturnStream  是否返回流式数据（已废弃）
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -469,6 +476,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
             'enableAuthInHeader' => 'setEnableAuthInHeader',
             'customImage' => 'setCustomImage',
             'isReturnStream' => 'setIsReturnStream',
+            'enableLtsLog' => 'setEnableLtsLog',
             'ltsCustomTag' => 'setLtsCustomTag'
     ];
 
@@ -523,6 +531,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数
     * customImage  customImage
     * isReturnStream  是否返回流式数据（已废弃）
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -577,6 +586,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
             'enableAuthInHeader' => 'getEnableAuthInHeader',
             'customImage' => 'getCustomImage',
             'isReturnStream' => 'getIsReturnStream',
+            'enableLtsLog' => 'getEnableLtsLog',
             'ltsCustomTag' => 'getLtsCustomTag'
     ];
 
@@ -784,6 +794,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
         $this->container['enableAuthInHeader'] = isset($data['enableAuthInHeader']) ? $data['enableAuthInHeader'] : null;
         $this->container['customImage'] = isset($data['customImage']) ? $data['customImage'] : null;
         $this->container['isReturnStream'] = isset($data['isReturnStream']) ? $data['isReturnStream'] : null;
+        $this->container['enableLtsLog'] = isset($data['enableLtsLog']) ? $data['enableLtsLog'] : null;
         $this->container['ltsCustomTag'] = isset($data['ltsCustomTag']) ? $data['ltsCustomTag'] : null;
     }
 
@@ -2006,6 +2017,30 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     public function setIsReturnStream($isReturnStream)
     {
         $this->container['isReturnStream'] = $isReturnStream;
+        return $this;
+    }
+
+    /**
+    * Gets enableLtsLog
+    *  是否开启日志。
+    *
+    * @return bool|null
+    */
+    public function getEnableLtsLog()
+    {
+        return $this->container['enableLtsLog'];
+    }
+
+    /**
+    * Sets enableLtsLog
+    *
+    * @param bool|null $enableLtsLog 是否开启日志。
+    *
+    * @return $this
+    */
+    public function setEnableLtsLog($enableLtsLog)
+    {
+        $this->container['enableLtsLog'] = $enableLtsLog;
         return $this;
     }
 

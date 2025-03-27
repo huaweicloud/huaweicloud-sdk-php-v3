@@ -25,6 +25,7 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     * serverCertificate  serverCertificate
     * sslOptions  sslOptions
     * clientAuthType  客户端认证类型
+    * dnsServers  DNS服务器列表，最多两个DNS
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
             'localSubnets' => 'string[]',
             'serverCertificate' => '\HuaweiCloud\SDK\Vpn\V5\Model\UpdateServerRequestServerCertificate',
             'sslOptions' => '\HuaweiCloud\SDK\Vpn\V5\Model\UpdateServerRequestSslOptions',
-            'clientAuthType' => 'string'
+            'clientAuthType' => 'string',
+            'dnsServers' => 'string[]'
     ];
 
     /**
@@ -43,6 +45,7 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     * serverCertificate  serverCertificate
     * sslOptions  sslOptions
     * clientAuthType  客户端认证类型
+    * dnsServers  DNS服务器列表，最多两个DNS
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
         'localSubnets' => null,
         'serverCertificate' => null,
         'sslOptions' => null,
-        'clientAuthType' => null
+        'clientAuthType' => null,
+        'dnsServers' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     * serverCertificate  serverCertificate
     * sslOptions  sslOptions
     * clientAuthType  客户端认证类型
+    * dnsServers  DNS服务器列表，最多两个DNS
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
             'localSubnets' => 'local_subnets',
             'serverCertificate' => 'server_certificate',
             'sslOptions' => 'ssl_options',
-            'clientAuthType' => 'client_auth_type'
+            'clientAuthType' => 'client_auth_type',
+            'dnsServers' => 'dns_servers'
     ];
 
     /**
@@ -100,6 +106,7 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     * serverCertificate  serverCertificate
     * sslOptions  sslOptions
     * clientAuthType  客户端认证类型
+    * dnsServers  DNS服务器列表，最多两个DNS
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
             'localSubnets' => 'setLocalSubnets',
             'serverCertificate' => 'setServerCertificate',
             'sslOptions' => 'setSslOptions',
-            'clientAuthType' => 'setClientAuthType'
+            'clientAuthType' => 'setClientAuthType',
+            'dnsServers' => 'setDnsServers'
     ];
 
     /**
@@ -118,6 +126,7 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     * serverCertificate  serverCertificate
     * sslOptions  sslOptions
     * clientAuthType  客户端认证类型
+    * dnsServers  DNS服务器列表，最多两个DNS
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
             'localSubnets' => 'getLocalSubnets',
             'serverCertificate' => 'getServerCertificate',
             'sslOptions' => 'getSslOptions',
-            'clientAuthType' => 'getClientAuthType'
+            'clientAuthType' => 'getClientAuthType',
+            'dnsServers' => 'getDnsServers'
     ];
 
     /**
@@ -207,6 +217,7 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
         $this->container['serverCertificate'] = isset($data['serverCertificate']) ? $data['serverCertificate'] : null;
         $this->container['sslOptions'] = isset($data['sslOptions']) ? $data['sslOptions'] : null;
         $this->container['clientAuthType'] = isset($data['clientAuthType']) ? $data['clientAuthType'] : null;
+        $this->container['dnsServers'] = isset($data['dnsServers']) ? $data['dnsServers'] : null;
     }
 
     /**
@@ -362,6 +373,30 @@ class UpdateServerRequest implements ModelInterface, ArrayAccess
     public function setClientAuthType($clientAuthType)
     {
         $this->container['clientAuthType'] = $clientAuthType;
+        return $this;
+    }
+
+    /**
+    * Gets dnsServers
+    *  DNS服务器列表，最多两个DNS
+    *
+    * @return string[]|null
+    */
+    public function getDnsServers()
+    {
+        return $this->container['dnsServers'];
+    }
+
+    /**
+    * Sets dnsServers
+    *
+    * @param string[]|null $dnsServers DNS服务器列表，最多两个DNS
+    *
+    * @return $this
+    */
+    public function setDnsServers($dnsServers)
+    {
+        $this->container['dnsServers'] = $dnsServers;
         return $this;
     }
 

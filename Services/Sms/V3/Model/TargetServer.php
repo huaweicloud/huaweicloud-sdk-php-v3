@@ -60,7 +60,7 @@ class TargetServer implements ModelInterface, ArrayAccess
             'firmware' => 'string',
             'cpuQuantity' => 'int',
             'memory' => 'int',
-            'btrfsList' => 'string[]',
+            'btrfsList' => '\HuaweiCloud\SDK\Sms\V3\Model\BtrfsFileSystem[]',
             'networks' => '\HuaweiCloud\SDK\Sms\V3\Model\NetWork[]',
             'domainId' => 'string',
             'hasRsync' => 'bool',
@@ -861,7 +861,7 @@ class TargetServer implements ModelInterface, ArrayAccess
     * Gets btrfsList
     *  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
     *
-    * @return string[]|null
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\BtrfsFileSystem[]|null
     */
     public function getBtrfsList()
     {
@@ -871,7 +871,7 @@ class TargetServer implements ModelInterface, ArrayAccess
     /**
     * Sets btrfsList
     *
-    * @param string[]|null $btrfsList Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\BtrfsFileSystem[]|null $btrfsList Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
     *
     * @return $this
     */

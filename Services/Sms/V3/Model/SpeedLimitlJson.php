@@ -23,13 +23,15 @@ class SpeedLimitlJson implements ModelInterface, ArrayAccess
     * start  时间段开始时间，格式：XX:XX。
     * end  时间段结束时间，格式：XX:XX。
     * speed  时间段的速率，0-1000的整数，单位：Mbit/s。
+    * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'start' => 'string',
             'end' => 'string',
-            'speed' => 'int'
+            'speed' => 'int',
+            'overSpeedThreshold' => 'double'
     ];
 
     /**
@@ -37,13 +39,15 @@ class SpeedLimitlJson implements ModelInterface, ArrayAccess
     * start  时间段开始时间，格式：XX:XX。
     * end  时间段结束时间，格式：XX:XX。
     * speed  时间段的速率，0-1000的整数，单位：Mbit/s。
+    * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'start' => null,
         'end' => null,
-        'speed' => 'int32'
+        'speed' => 'int32',
+        'overSpeedThreshold' => 'double'
     ];
 
     /**
@@ -72,13 +76,15 @@ class SpeedLimitlJson implements ModelInterface, ArrayAccess
     * start  时间段开始时间，格式：XX:XX。
     * end  时间段结束时间，格式：XX:XX。
     * speed  时间段的速率，0-1000的整数，单位：Mbit/s。
+    * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'start' => 'start',
             'end' => 'end',
-            'speed' => 'speed'
+            'speed' => 'speed',
+            'overSpeedThreshold' => 'over_speed_threshold'
     ];
 
     /**
@@ -86,13 +92,15 @@ class SpeedLimitlJson implements ModelInterface, ArrayAccess
     * start  时间段开始时间，格式：XX:XX。
     * end  时间段结束时间，格式：XX:XX。
     * speed  时间段的速率，0-1000的整数，单位：Mbit/s。
+    * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
     *
     * @var string[]
     */
     protected static $setters = [
             'start' => 'setStart',
             'end' => 'setEnd',
-            'speed' => 'setSpeed'
+            'speed' => 'setSpeed',
+            'overSpeedThreshold' => 'setOverSpeedThreshold'
     ];
 
     /**
@@ -100,13 +108,15 @@ class SpeedLimitlJson implements ModelInterface, ArrayAccess
     * start  时间段开始时间，格式：XX:XX。
     * end  时间段结束时间，格式：XX:XX。
     * speed  时间段的速率，0-1000的整数，单位：Mbit/s。
+    * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
     *
     * @var string[]
     */
     protected static $getters = [
             'start' => 'getStart',
             'end' => 'getEnd',
-            'speed' => 'getSpeed'
+            'speed' => 'getSpeed',
+            'overSpeedThreshold' => 'getOverSpeedThreshold'
     ];
 
     /**
@@ -170,6 +180,7 @@ class SpeedLimitlJson implements ModelInterface, ArrayAccess
         $this->container['start'] = isset($data['start']) ? $data['start'] : null;
         $this->container['end'] = isset($data['end']) ? $data['end'] : null;
         $this->container['speed'] = isset($data['speed']) ? $data['speed'] : null;
+        $this->container['overSpeedThreshold'] = isset($data['overSpeedThreshold']) ? $data['overSpeedThreshold'] : null;
     }
 
     /**
@@ -206,6 +217,12 @@ class SpeedLimitlJson implements ModelInterface, ArrayAccess
             }
             if (($this->container['speed'] < 0)) {
                 $invalidProperties[] = "invalid value for 'speed', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['overSpeedThreshold']) && ($this->container['overSpeedThreshold'] > 1E+2)) {
+                $invalidProperties[] = "invalid value for 'overSpeedThreshold', must be smaller than or equal to 1E+2.";
+            }
+            if (!is_null($this->container['overSpeedThreshold']) && ($this->container['overSpeedThreshold'] < 1E+1)) {
+                $invalidProperties[] = "invalid value for 'overSpeedThreshold', must be bigger than or equal to 1E+1.";
             }
         return $invalidProperties;
     }
@@ -290,6 +307,30 @@ class SpeedLimitlJson implements ModelInterface, ArrayAccess
     public function setSpeed($speed)
     {
         $this->container['speed'] = $speed;
+        return $this;
+    }
+
+    /**
+    * Gets overSpeedThreshold
+    *  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
+    *
+    * @return double|null
+    */
+    public function getOverSpeedThreshold()
+    {
+        return $this->container['overSpeedThreshold'];
+    }
+
+    /**
+    * Sets overSpeedThreshold
+    *
+    * @param double|null $overSpeedThreshold 停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
+    *
+    * @return $this
+    */
+    public function setOverSpeedThreshold($overSpeedThreshold)
+    {
+        $this->container['overSpeedThreshold'] = $overSpeedThreshold;
         return $this;
     }
 

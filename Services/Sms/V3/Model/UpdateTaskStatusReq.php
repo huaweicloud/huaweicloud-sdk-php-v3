@@ -20,7 +20,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源
     * templateId  模板id
     * switchHce  是否切换hce
     * isNeedConsistencyCheck  是否进行一致性校验
@@ -36,7 +36,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源
     * templateId  模板id
     * switchHce  是否切换hce
     * isNeedConsistencyCheck  是否进行一致性校验
@@ -73,7 +73,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源
     * templateId  模板id
     * switchHce  是否切换hce
     * isNeedConsistencyCheck  是否进行一致性校验
@@ -89,7 +89,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源
     * templateId  模板id
     * switchHce  是否切换hce
     * isNeedConsistencyCheck  是否进行一致性校验
@@ -105,7 +105,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源
     * templateId  模板id
     * switchHce  是否切换hce
     * isNeedConsistencyCheck  是否进行一致性校验
@@ -165,6 +165,8 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     const OPERATION_CLONE_TEST = 'clone_test';
     const OPERATION_RESTART = 'restart';
     const OPERATION_NETWORK_CHECK = 'network_check';
+    const OPERATION_SKIP = 'skip';
+    const OPERATION_CLEAR = 'clear';
     
 
     /**
@@ -181,6 +183,8 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
             self::OPERATION_CLONE_TEST,
             self::OPERATION_RESTART,
             self::OPERATION_NETWORK_CHECK,
+            self::OPERATION_SKIP,
+            self::OPERATION_CLEAR,
         ];
     }
 
@@ -225,6 +229,12 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'templateId', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'templateId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -241,7 +251,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets operation
-    *  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+    *  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源
     *
     * @return string
     */
@@ -253,7 +263,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     /**
     * Sets operation
     *
-    * @param string $operation 操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+    * @param string $operation 操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源
     *
     * @return $this
     */

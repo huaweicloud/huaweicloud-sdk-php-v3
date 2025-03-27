@@ -252,9 +252,6 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['tunnelProtocol'] === null) {
-            $invalidProperties[] = "'tunnelProtocol' can't be null";
-        }
             $allowedValues = $this->getTunnelProtocolAllowableValues();
                 if (!is_null($this->container['tunnelProtocol']) && !in_array($this->container['tunnelProtocol'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -274,9 +271,6 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
             }
         if ($this->container['localSubnets'] === null) {
             $invalidProperties[] = "'localSubnets' can't be null";
-        }
-        if ($this->container['clientAuthType'] === null) {
-            $invalidProperties[] = "'clientAuthType' can't be null";
         }
             $allowedValues = $this->getClientAuthTypeAllowableValues();
                 if (!is_null($this->container['clientAuthType']) && !in_array($this->container['clientAuthType'], $allowedValues, true)) {
@@ -304,7 +298,7 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
     * Gets tunnelProtocol
     *  隧道协议类型
     *
-    * @return string
+    * @return string|null
     */
     public function getTunnelProtocol()
     {
@@ -314,7 +308,7 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tunnelProtocol
     *
-    * @param string $tunnelProtocol 隧道协议类型
+    * @param string|null $tunnelProtocol 隧道协议类型
     *
     * @return $this
     */
@@ -376,7 +370,7 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
     * Gets clientAuthType
     *  客户端认证类型
     *
-    * @return string
+    * @return string|null
     */
     public function getClientAuthType()
     {
@@ -386,7 +380,7 @@ class CreateServerRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clientAuthType
     *
-    * @param string $clientAuthType 客户端认证类型
+    * @param string|null $clientAuthType 客户端认证类型
     *
     * @return $this
     */

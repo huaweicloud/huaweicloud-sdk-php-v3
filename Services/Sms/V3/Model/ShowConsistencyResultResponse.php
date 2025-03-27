@@ -21,26 +21,26 @@ class ShowConsistencyResultResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * consistencyResult  校验结果
-    * finishedTime  检验完成时间
+    * resultList  一致性校验结果列表
+    * taskId  任务id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'consistencyResult' => '\HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResult[]',
-            'finishedTime' => 'int'
+            'resultList' => '\HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResultRequestBodyResultList[]',
+            'taskId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * consistencyResult  校验结果
-    * finishedTime  检验完成时间
+    * resultList  一致性校验结果列表
+    * taskId  任务id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'consistencyResult' => null,
-        'finishedTime' => 'int64'
+        'resultList' => null,
+        'taskId' => null
     ];
 
     /**
@@ -66,38 +66,38 @@ class ShowConsistencyResultResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * consistencyResult  校验结果
-    * finishedTime  检验完成时间
+    * resultList  一致性校验结果列表
+    * taskId  任务id
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'consistencyResult' => 'consistency_result',
-            'finishedTime' => 'finished_time'
+            'resultList' => 'result_list',
+            'taskId' => 'task_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * consistencyResult  校验结果
-    * finishedTime  检验完成时间
+    * resultList  一致性校验结果列表
+    * taskId  任务id
     *
     * @var string[]
     */
     protected static $setters = [
-            'consistencyResult' => 'setConsistencyResult',
-            'finishedTime' => 'setFinishedTime'
+            'resultList' => 'setResultList',
+            'taskId' => 'setTaskId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * consistencyResult  校验结果
-    * finishedTime  检验完成时间
+    * resultList  一致性校验结果列表
+    * taskId  任务id
     *
     * @var string[]
     */
     protected static $getters = [
-            'consistencyResult' => 'getConsistencyResult',
-            'finishedTime' => 'getFinishedTime'
+            'resultList' => 'getResultList',
+            'taskId' => 'getTaskId'
     ];
 
     /**
@@ -158,8 +158,8 @@ class ShowConsistencyResultResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['consistencyResult'] = isset($data['consistencyResult']) ? $data['consistencyResult'] : null;
-        $this->container['finishedTime'] = isset($data['finishedTime']) ? $data['finishedTime'] : null;
+        $this->container['resultList'] = isset($data['resultList']) ? $data['resultList'] : null;
+        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
     }
 
     /**
@@ -170,12 +170,6 @@ class ShowConsistencyResultResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['finishedTime']) && ($this->container['finishedTime'] > 100000000000)) {
-                $invalidProperties[] = "invalid value for 'finishedTime', must be smaller than or equal to 100000000000.";
-            }
-            if (!is_null($this->container['finishedTime']) && ($this->container['finishedTime'] < 0)) {
-                $invalidProperties[] = "invalid value for 'finishedTime', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -191,50 +185,50 @@ class ShowConsistencyResultResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets consistencyResult
-    *  校验结果
+    * Gets resultList
+    *  一致性校验结果列表
     *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResult[]|null
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResultRequestBodyResultList[]|null
     */
-    public function getConsistencyResult()
+    public function getResultList()
     {
-        return $this->container['consistencyResult'];
+        return $this->container['resultList'];
     }
 
     /**
-    * Sets consistencyResult
+    * Sets resultList
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResult[]|null $consistencyResult 校验结果
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResultRequestBodyResultList[]|null $resultList 一致性校验结果列表
     *
     * @return $this
     */
-    public function setConsistencyResult($consistencyResult)
+    public function setResultList($resultList)
     {
-        $this->container['consistencyResult'] = $consistencyResult;
+        $this->container['resultList'] = $resultList;
         return $this;
     }
 
     /**
-    * Gets finishedTime
-    *  检验完成时间
+    * Gets taskId
+    *  任务id
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getFinishedTime()
+    public function getTaskId()
     {
-        return $this->container['finishedTime'];
+        return $this->container['taskId'];
     }
 
     /**
-    * Sets finishedTime
+    * Sets taskId
     *
-    * @param int|null $finishedTime 检验完成时间
+    * @param string|null $taskId 任务id
     *
     * @return $this
     */
-    public function setFinishedTime($finishedTime)
+    public function setTaskId($taskId)
     {
-        $this->container['finishedTime'] = $finishedTime;
+        $this->container['taskId'] = $taskId;
         return $this;
     }
 

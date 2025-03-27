@@ -22,7 +22,7 @@ class AddAppIdResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * appName  企业应用名称
-    * appId  企业应用
+    * appId  企业应用ID
     * appKey  企业应用appkey
     * description  企业应用描述
     * createTime  企业应用创建时间
@@ -44,7 +44,7 @@ class AddAppIdResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * appName  企业应用名称
-    * appId  企业应用
+    * appId  企业应用ID
     * appKey  企业应用appkey
     * description  企业应用描述
     * createTime  企业应用创建时间
@@ -87,7 +87,7 @@ class AddAppIdResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * appName  企业应用名称
-    * appId  企业应用
+    * appId  企业应用ID
     * appKey  企业应用appkey
     * description  企业应用描述
     * createTime  企业应用创建时间
@@ -109,7 +109,7 @@ class AddAppIdResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * appName  企业应用名称
-    * appId  企业应用
+    * appId  企业应用ID
     * appKey  企业应用appkey
     * description  企业应用描述
     * createTime  企业应用创建时间
@@ -131,7 +131,7 @@ class AddAppIdResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * appName  企业应用名称
-    * appId  企业应用
+    * appId  企业应用ID
     * appKey  企业应用appkey
     * description  企业应用描述
     * createTime  企业应用创建时间
@@ -304,7 +304,7 @@ class AddAppIdResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  企业应用
+    *  企业应用ID
     *
     * @return string|null
     */
@@ -316,7 +316,7 @@ class AddAppIdResponse implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 企业应用
+    * @param string|null $appId 企业应用ID
     *
     * @return $this
     */

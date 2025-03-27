@@ -79,6 +79,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -142,6 +143,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'allowEphemeralStorage' => 'bool',
             'networkController' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\NetworkControlConfig',
             'isReturnStream' => 'bool',
+            'enableLtsLog' => 'bool',
             'ltsCustomTag' => 'map[string,string]'
     ];
 
@@ -205,6 +207,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -268,6 +271,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         'allowEphemeralStorage' => null,
         'networkController' => null,
         'isReturnStream' => null,
+        'enableLtsLog' => null,
         'ltsCustomTag' => null
     ];
 
@@ -352,6 +356,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -415,6 +420,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'allowEphemeralStorage' => 'allow_ephemeral_storage',
             'networkController' => 'network_controller',
             'isReturnStream' => 'is_return_stream',
+            'enableLtsLog' => 'enable_lts_log',
             'ltsCustomTag' => 'lts_custom_tag'
     ];
 
@@ -478,6 +484,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -541,6 +548,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'allowEphemeralStorage' => 'setAllowEphemeralStorage',
             'networkController' => 'setNetworkController',
             'isReturnStream' => 'setIsReturnStream',
+            'enableLtsLog' => 'setEnableLtsLog',
             'ltsCustomTag' => 'setLtsCustomTag'
     ];
 
@@ -604,6 +612,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
+    * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     *
     * @var string[]
@@ -667,6 +676,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'allowEphemeralStorage' => 'getAllowEphemeralStorage',
             'networkController' => 'getNetworkController',
             'isReturnStream' => 'getIsReturnStream',
+            'enableLtsLog' => 'getEnableLtsLog',
             'ltsCustomTag' => 'getLtsCustomTag'
     ];
 
@@ -883,6 +893,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         $this->container['allowEphemeralStorage'] = isset($data['allowEphemeralStorage']) ? $data['allowEphemeralStorage'] : null;
         $this->container['networkController'] = isset($data['networkController']) ? $data['networkController'] : null;
         $this->container['isReturnStream'] = isset($data['isReturnStream']) ? $data['isReturnStream'] : null;
+        $this->container['enableLtsLog'] = isset($data['enableLtsLog']) ? $data['enableLtsLog'] : null;
         $this->container['ltsCustomTag'] = isset($data['ltsCustomTag']) ? $data['ltsCustomTag'] : null;
     }
 
@@ -2321,6 +2332,30 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     public function setIsReturnStream($isReturnStream)
     {
         $this->container['isReturnStream'] = $isReturnStream;
+        return $this;
+    }
+
+    /**
+    * Gets enableLtsLog
+    *  是否开启日志。
+    *
+    * @return bool|null
+    */
+    public function getEnableLtsLog()
+    {
+        return $this->container['enableLtsLog'];
+    }
+
+    /**
+    * Sets enableLtsLog
+    *
+    * @param bool|null $enableLtsLog 是否开启日志。
+    *
+    * @return $this
+    */
+    public function setEnableLtsLog($enableLtsLog)
+    {
+        $this->container['enableLtsLog'] = $enableLtsLog;
         return $this;
     }
 

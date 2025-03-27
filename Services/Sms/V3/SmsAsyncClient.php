@@ -71,11 +71,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -139,11 +139,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json', 'application/x-www-form-urlencoded']
             );
         }
@@ -461,11 +461,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 []
             );
         }
@@ -656,11 +656,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 []
             );
         }
@@ -721,11 +721,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -786,11 +786,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 []
             );
         }
@@ -851,11 +851,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -1342,9 +1342,9 @@ class SmsAsyncClient extends Client
     }
 
     /**
-     * 获取SSL目的端证书和私钥
+     * 获取SSL证书和私钥
      *
-     * 当源端服务器为Windows操作系统时，安装在源端服务器上的迁移Agent通过SSLSocket同目的端服务器通信，该接口用于下载目的端服务器所需要的证书和私钥(PEM格式)。
+     * 当迁移采用块级迁移的方式时，安装在源端服务器上的迁移Agent通过SSLSocket同目的端服务器通信，该接口用于下载迁移传输过程所需要的证书和私钥(PEM格式)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1477,7 +1477,7 @@ class SmsAsyncClient extends Client
     /**
      * 查询配置资源
      *
-     * 使用该接口查询任指定任务的指定配置类型的配置信息
+     * 使用该接口查询指定任务的指定配置类型的配置信息
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2288,11 +2288,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -2356,11 +2356,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -2492,11 +2492,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -2557,11 +2557,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 []
             );
         }
@@ -2790,9 +2790,9 @@ class SmsAsyncClient extends Client
     }
 
     /**
-     * 修改指定ID的源端服务器名称
+     * 修改指定ID的源端服务器信息
      *
-     * 该功能用来修改SMS服务端的源端名称，方便用户对源端进行管理。
+     * 该功能用来修改SMS服务端的源端信息，方便用户对源端进行管理。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2897,11 +2897,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -2997,7 +2997,6 @@ class SmsAsyncClient extends Client
      * 上报数据迁移进度和速率
      *
      * 此接口由安装在源端服务器上的迁移Agent在数据迁移阶段调用，用来将迁移的具体进度上报给SMS服务端。
-     * 
      * 迁移Agent自动调用此接口用于上报数据迁移进度，您无需调用此接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
@@ -3035,11 +3034,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -3066,7 +3065,7 @@ class SmsAsyncClient extends Client
     /**
      * 管理迁移任务
      *
-     * 管理迁移任务，包括启动任务，暂停任务，同步任务，日志上传，回滚失败迁移任务。
+     * 管理迁移任务，包括启动任务，暂停任务，同步任务，日志上传，回滚失败迁移任务，删除快照资源。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3103,11 +3102,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -3171,11 +3170,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -3239,11 +3238,11 @@ class SmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json;charset=UTF-8']
             );
         }

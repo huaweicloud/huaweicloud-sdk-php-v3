@@ -24,10 +24,13 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * name  VPN网关名称
     * status  VPN网关状态
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * certificateId  certificateId
     * erId  VPN网关所连接的ER实例的ID
+    * erAttachmentId  VPN网关关联的ER连接ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
     * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
@@ -37,6 +40,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型
     * availabilityZoneIds  可用区列表
+    * publicBorderGroup  公共边界组
     * connectionNumber  最大可创建的VPN连接数
     * usedConnectionNumber  当前已经使用的VPN连接数
     * usedConnectionGroup  当前已经使用的VPN连接组个数
@@ -48,6 +52,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
     * supportedFlavors  网关可升配到的目标规格
+    * supportedFeatures  网关可支持的特性功能
     * tags  标签
     *
     * @var string[]
@@ -57,10 +62,13 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'name' => 'string',
             'status' => 'string',
             'attachmentType' => 'string',
+            'ipVersion' => 'string',
             'certificateId' => 'string',
             'erId' => 'string',
+            'erAttachmentId' => 'string',
             'vpcId' => 'string',
             'localSubnets' => 'string[]',
+            'localSubnetsV6' => 'string[]',
             'connectSubnet' => 'string',
             'networkType' => 'string',
             'accessVpcId' => 'string',
@@ -70,6 +78,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'bgpAsn' => 'int',
             'flavor' => 'string',
             'availabilityZoneIds' => 'string[]',
+            'publicBorderGroup' => 'string',
             'connectionNumber' => 'int',
             'usedConnectionNumber' => 'int',
             'usedConnectionGroup' => 'int',
@@ -81,6 +90,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'updatedAt' => '\DateTime',
             'policyTemplate' => '\HuaweiCloud\SDK\Vpn\V5\Model\PolicyTemplate',
             'supportedFlavors' => 'string[]',
+            'supportedFeatures' => 'string[]',
             'tags' => '\HuaweiCloud\SDK\Vpn\V5\Model\VpnResourceTag[]'
     ];
 
@@ -90,10 +100,13 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * name  VPN网关名称
     * status  VPN网关状态
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * certificateId  certificateId
     * erId  VPN网关所连接的ER实例的ID
+    * erAttachmentId  VPN网关关联的ER连接ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
     * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
@@ -103,6 +116,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型
     * availabilityZoneIds  可用区列表
+    * publicBorderGroup  公共边界组
     * connectionNumber  最大可创建的VPN连接数
     * usedConnectionNumber  当前已经使用的VPN连接数
     * usedConnectionGroup  当前已经使用的VPN连接组个数
@@ -114,6 +128,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
     * supportedFlavors  网关可升配到的目标规格
+    * supportedFeatures  网关可支持的特性功能
     * tags  标签
     *
     * @var string[]
@@ -123,10 +138,13 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
         'name' => null,
         'status' => null,
         'attachmentType' => null,
+        'ipVersion' => null,
         'certificateId' => null,
         'erId' => null,
+        'erAttachmentId' => null,
         'vpcId' => null,
         'localSubnets' => null,
+        'localSubnetsV6' => null,
         'connectSubnet' => null,
         'networkType' => null,
         'accessVpcId' => null,
@@ -136,6 +154,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
         'bgpAsn' => 'int64',
         'flavor' => null,
         'availabilityZoneIds' => null,
+        'publicBorderGroup' => null,
         'connectionNumber' => 'int32',
         'usedConnectionNumber' => 'int32',
         'usedConnectionGroup' => 'int32',
@@ -147,6 +166,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
         'updatedAt' => 'date-time',
         'policyTemplate' => null,
         'supportedFlavors' => null,
+        'supportedFeatures' => null,
         'tags' => null
     ];
 
@@ -177,10 +197,13 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * name  VPN网关名称
     * status  VPN网关状态
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * certificateId  certificateId
     * erId  VPN网关所连接的ER实例的ID
+    * erAttachmentId  VPN网关关联的ER连接ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
     * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
@@ -190,6 +213,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型
     * availabilityZoneIds  可用区列表
+    * publicBorderGroup  公共边界组
     * connectionNumber  最大可创建的VPN连接数
     * usedConnectionNumber  当前已经使用的VPN连接数
     * usedConnectionGroup  当前已经使用的VPN连接组个数
@@ -201,6 +225,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
     * supportedFlavors  网关可升配到的目标规格
+    * supportedFeatures  网关可支持的特性功能
     * tags  标签
     *
     * @var string[]
@@ -210,10 +235,13 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'name' => 'name',
             'status' => 'status',
             'attachmentType' => 'attachment_type',
+            'ipVersion' => 'ip_version',
             'certificateId' => 'certificate_id',
             'erId' => 'er_id',
+            'erAttachmentId' => 'er_attachment_id',
             'vpcId' => 'vpc_id',
             'localSubnets' => 'local_subnets',
+            'localSubnetsV6' => 'local_subnets_v6',
             'connectSubnet' => 'connect_subnet',
             'networkType' => 'network_type',
             'accessVpcId' => 'access_vpc_id',
@@ -223,6 +251,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'bgpAsn' => 'bgp_asn',
             'flavor' => 'flavor',
             'availabilityZoneIds' => 'availability_zone_ids',
+            'publicBorderGroup' => 'public_border_group',
             'connectionNumber' => 'connection_number',
             'usedConnectionNumber' => 'used_connection_number',
             'usedConnectionGroup' => 'used_connection_group',
@@ -234,6 +263,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'updatedAt' => 'updated_at',
             'policyTemplate' => 'policy_template',
             'supportedFlavors' => 'supported_flavors',
+            'supportedFeatures' => 'supported_features',
             'tags' => 'tags'
     ];
 
@@ -243,10 +273,13 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * name  VPN网关名称
     * status  VPN网关状态
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * certificateId  certificateId
     * erId  VPN网关所连接的ER实例的ID
+    * erAttachmentId  VPN网关关联的ER连接ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
     * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
@@ -256,6 +289,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型
     * availabilityZoneIds  可用区列表
+    * publicBorderGroup  公共边界组
     * connectionNumber  最大可创建的VPN连接数
     * usedConnectionNumber  当前已经使用的VPN连接数
     * usedConnectionGroup  当前已经使用的VPN连接组个数
@@ -267,6 +301,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
     * supportedFlavors  网关可升配到的目标规格
+    * supportedFeatures  网关可支持的特性功能
     * tags  标签
     *
     * @var string[]
@@ -276,10 +311,13 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'status' => 'setStatus',
             'attachmentType' => 'setAttachmentType',
+            'ipVersion' => 'setIpVersion',
             'certificateId' => 'setCertificateId',
             'erId' => 'setErId',
+            'erAttachmentId' => 'setErAttachmentId',
             'vpcId' => 'setVpcId',
             'localSubnets' => 'setLocalSubnets',
+            'localSubnetsV6' => 'setLocalSubnetsV6',
             'connectSubnet' => 'setConnectSubnet',
             'networkType' => 'setNetworkType',
             'accessVpcId' => 'setAccessVpcId',
@@ -289,6 +327,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'bgpAsn' => 'setBgpAsn',
             'flavor' => 'setFlavor',
             'availabilityZoneIds' => 'setAvailabilityZoneIds',
+            'publicBorderGroup' => 'setPublicBorderGroup',
             'connectionNumber' => 'setConnectionNumber',
             'usedConnectionNumber' => 'setUsedConnectionNumber',
             'usedConnectionGroup' => 'setUsedConnectionGroup',
@@ -300,6 +339,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'updatedAt' => 'setUpdatedAt',
             'policyTemplate' => 'setPolicyTemplate',
             'supportedFlavors' => 'setSupportedFlavors',
+            'supportedFeatures' => 'setSupportedFeatures',
             'tags' => 'setTags'
     ];
 
@@ -309,10 +349,13 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * name  VPN网关名称
     * status  VPN网关状态
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * certificateId  certificateId
     * erId  VPN网关所连接的ER实例的ID
+    * erAttachmentId  VPN网关关联的ER连接ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
     * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
@@ -322,6 +365,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型
     * availabilityZoneIds  可用区列表
+    * publicBorderGroup  公共边界组
     * connectionNumber  最大可创建的VPN连接数
     * usedConnectionNumber  当前已经使用的VPN连接数
     * usedConnectionGroup  当前已经使用的VPN连接组个数
@@ -333,6 +377,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
     * supportedFlavors  网关可升配到的目标规格
+    * supportedFeatures  网关可支持的特性功能
     * tags  标签
     *
     * @var string[]
@@ -342,10 +387,13 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'status' => 'getStatus',
             'attachmentType' => 'getAttachmentType',
+            'ipVersion' => 'getIpVersion',
             'certificateId' => 'getCertificateId',
             'erId' => 'getErId',
+            'erAttachmentId' => 'getErAttachmentId',
             'vpcId' => 'getVpcId',
             'localSubnets' => 'getLocalSubnets',
+            'localSubnetsV6' => 'getLocalSubnetsV6',
             'connectSubnet' => 'getConnectSubnet',
             'networkType' => 'getNetworkType',
             'accessVpcId' => 'getAccessVpcId',
@@ -355,6 +403,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'bgpAsn' => 'getBgpAsn',
             'flavor' => 'getFlavor',
             'availabilityZoneIds' => 'getAvailabilityZoneIds',
+            'publicBorderGroup' => 'getPublicBorderGroup',
             'connectionNumber' => 'getConnectionNumber',
             'usedConnectionNumber' => 'getUsedConnectionNumber',
             'usedConnectionGroup' => 'getUsedConnectionGroup',
@@ -366,6 +415,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'updatedAt' => 'getUpdatedAt',
             'policyTemplate' => 'getPolicyTemplate',
             'supportedFlavors' => 'getSupportedFlavors',
+            'supportedFeatures' => 'getSupportedFeatures',
             'tags' => 'getTags'
     ];
 
@@ -411,6 +461,8 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     }
     const ATTACHMENT_TYPE_VPC = 'vpc';
     const ATTACHMENT_TYPE_ER = 'er';
+    const IP_VERSION_IPV4 = 'ipv4';
+    const IP_VERSION_IPV6 = 'ipv6';
     const NETWORK_TYPE__PUBLIC = 'public';
     const NETWORK_TYPE__PRIVATE = 'private';
     
@@ -425,6 +477,19 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
         return [
             self::ATTACHMENT_TYPE_VPC,
             self::ATTACHMENT_TYPE_ER,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIpVersionAllowableValues()
+    {
+        return [
+            self::IP_VERSION_IPV4,
+            self::IP_VERSION_IPV6,
         ];
     }
 
@@ -461,10 +526,13 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['attachmentType'] = isset($data['attachmentType']) ? $data['attachmentType'] : null;
+        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['certificateId'] = isset($data['certificateId']) ? $data['certificateId'] : null;
         $this->container['erId'] = isset($data['erId']) ? $data['erId'] : null;
+        $this->container['erAttachmentId'] = isset($data['erAttachmentId']) ? $data['erAttachmentId'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['localSubnets'] = isset($data['localSubnets']) ? $data['localSubnets'] : null;
+        $this->container['localSubnetsV6'] = isset($data['localSubnetsV6']) ? $data['localSubnetsV6'] : null;
         $this->container['connectSubnet'] = isset($data['connectSubnet']) ? $data['connectSubnet'] : null;
         $this->container['networkType'] = isset($data['networkType']) ? $data['networkType'] : null;
         $this->container['accessVpcId'] = isset($data['accessVpcId']) ? $data['accessVpcId'] : null;
@@ -474,6 +542,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
         $this->container['bgpAsn'] = isset($data['bgpAsn']) ? $data['bgpAsn'] : null;
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
         $this->container['availabilityZoneIds'] = isset($data['availabilityZoneIds']) ? $data['availabilityZoneIds'] : null;
+        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
         $this->container['connectionNumber'] = isset($data['connectionNumber']) ? $data['connectionNumber'] : null;
         $this->container['usedConnectionNumber'] = isset($data['usedConnectionNumber']) ? $data['usedConnectionNumber'] : null;
         $this->container['usedConnectionGroup'] = isset($data['usedConnectionGroup']) ? $data['usedConnectionGroup'] : null;
@@ -485,6 +554,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['policyTemplate'] = isset($data['policyTemplate']) ? $data['policyTemplate'] : null;
         $this->container['supportedFlavors'] = isset($data['supportedFlavors']) ? $data['supportedFlavors'] : null;
+        $this->container['supportedFeatures'] = isset($data['supportedFeatures']) ? $data['supportedFeatures'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
@@ -509,6 +579,14 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['attachmentType']) && !in_array($this->container['attachmentType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'attachmentType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getIpVersionAllowableValues();
+                if (!is_null($this->container['ipVersion']) && !in_array($this->container['ipVersion'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ipVersion', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -544,6 +622,9 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['flavor']) && (mb_strlen($this->container['flavor']) > 64)) {
                 $invalidProperties[] = "invalid value for 'flavor', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) > 64)) {
+                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 64.";
@@ -662,6 +743,30 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets ipVersion
+    *  网关的IP协议版本
+    *
+    * @return string|null
+    */
+    public function getIpVersion()
+    {
+        return $this->container['ipVersion'];
+    }
+
+    /**
+    * Sets ipVersion
+    *
+    * @param string|null $ipVersion 网关的IP协议版本
+    *
+    * @return $this
+    */
+    public function setIpVersion($ipVersion)
+    {
+        $this->container['ipVersion'] = $ipVersion;
+        return $this;
+    }
+
+    /**
     * Gets certificateId
     *  certificateId
     *
@@ -710,6 +815,30 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets erAttachmentId
+    *  VPN网关关联的ER连接ID
+    *
+    * @return string|null
+    */
+    public function getErAttachmentId()
+    {
+        return $this->container['erAttachmentId'];
+    }
+
+    /**
+    * Sets erAttachmentId
+    *
+    * @param string|null $erAttachmentId VPN网关关联的ER连接ID
+    *
+    * @return $this
+    */
+    public function setErAttachmentId($erAttachmentId)
+    {
+        $this->container['erAttachmentId'] = $erAttachmentId;
+        return $this;
+    }
+
+    /**
     * Gets vpcId
     *  VPN网关所连接的VPC的ID
     *
@@ -754,6 +883,30 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     public function setLocalSubnets($localSubnets)
     {
         $this->container['localSubnets'] = $localSubnets;
+        return $this;
+    }
+
+    /**
+    * Gets localSubnetsV6
+    *  使能ipv6的本端子网
+    *
+    * @return string[]|null
+    */
+    public function getLocalSubnetsV6()
+    {
+        return $this->container['localSubnetsV6'];
+    }
+
+    /**
+    * Sets localSubnetsV6
+    *
+    * @param string[]|null $localSubnetsV6 使能ipv6的本端子网
+    *
+    * @return $this
+    */
+    public function setLocalSubnetsV6($localSubnetsV6)
+    {
+        $this->container['localSubnetsV6'] = $localSubnetsV6;
         return $this;
     }
 
@@ -970,6 +1123,30 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     public function setAvailabilityZoneIds($availabilityZoneIds)
     {
         $this->container['availabilityZoneIds'] = $availabilityZoneIds;
+        return $this;
+    }
+
+    /**
+    * Gets publicBorderGroup
+    *  公共边界组
+    *
+    * @return string|null
+    */
+    public function getPublicBorderGroup()
+    {
+        return $this->container['publicBorderGroup'];
+    }
+
+    /**
+    * Sets publicBorderGroup
+    *
+    * @param string|null $publicBorderGroup 公共边界组
+    *
+    * @return $this
+    */
+    public function setPublicBorderGroup($publicBorderGroup)
+    {
+        $this->container['publicBorderGroup'] = $publicBorderGroup;
         return $this;
     }
 
@@ -1234,6 +1411,30 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     public function setSupportedFlavors($supportedFlavors)
     {
         $this->container['supportedFlavors'] = $supportedFlavors;
+        return $this;
+    }
+
+    /**
+    * Gets supportedFeatures
+    *  网关可支持的特性功能
+    *
+    * @return string[]|null
+    */
+    public function getSupportedFeatures()
+    {
+        return $this->container['supportedFeatures'];
+    }
+
+    /**
+    * Sets supportedFeatures
+    *
+    * @param string[]|null $supportedFeatures 网关可支持的特性功能
+    *
+    * @return $this
+    */
+    public function setSupportedFeatures($supportedFeatures)
+    {
+        $this->container['supportedFeatures'] = $supportedFeatures;
         return $this;
     }
 

@@ -23,10 +23,12 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * id  VPN网关ID
     * name  VPN网关名称
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * certificateId  certificateId
     * erId  VPN网关所连接的ER实例的ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
     * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
@@ -47,10 +49,12 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'attachmentType' => 'string',
+            'ipVersion' => 'string',
             'certificateId' => 'string',
             'erId' => 'string',
             'vpcId' => 'string',
             'localSubnets' => 'string[]',
+            'localSubnetsV6' => 'string[]',
             'connectSubnet' => 'string',
             'networkType' => 'string',
             'accessVpcId' => 'string',
@@ -71,10 +75,12 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * id  VPN网关ID
     * name  VPN网关名称
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * certificateId  certificateId
     * erId  VPN网关所连接的ER实例的ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
     * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
@@ -95,10 +101,12 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'attachmentType' => null,
+        'ipVersion' => null,
         'certificateId' => null,
         'erId' => null,
         'vpcId' => null,
         'localSubnets' => null,
+        'localSubnetsV6' => null,
         'connectSubnet' => null,
         'networkType' => null,
         'accessVpcId' => null,
@@ -140,10 +148,12 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * id  VPN网关ID
     * name  VPN网关名称
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * certificateId  certificateId
     * erId  VPN网关所连接的ER实例的ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
     * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
@@ -164,10 +174,12 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'attachmentType' => 'attachment_type',
+            'ipVersion' => 'ip_version',
             'certificateId' => 'certificate_id',
             'erId' => 'er_id',
             'vpcId' => 'vpc_id',
             'localSubnets' => 'local_subnets',
+            'localSubnetsV6' => 'local_subnets_v6',
             'connectSubnet' => 'connect_subnet',
             'networkType' => 'network_type',
             'accessVpcId' => 'access_vpc_id',
@@ -188,10 +200,12 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * id  VPN网关ID
     * name  VPN网关名称
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * certificateId  certificateId
     * erId  VPN网关所连接的ER实例的ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
     * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
@@ -212,10 +226,12 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'attachmentType' => 'setAttachmentType',
+            'ipVersion' => 'setIpVersion',
             'certificateId' => 'setCertificateId',
             'erId' => 'setErId',
             'vpcId' => 'setVpcId',
             'localSubnets' => 'setLocalSubnets',
+            'localSubnetsV6' => 'setLocalSubnetsV6',
             'connectSubnet' => 'setConnectSubnet',
             'networkType' => 'setNetworkType',
             'accessVpcId' => 'setAccessVpcId',
@@ -236,10 +252,12 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * id  VPN网关ID
     * name  VPN网关名称
     * attachmentType  关联模式
+    * ipVersion  网关的IP协议版本
     * certificateId  certificateId
     * erId  VPN网关所连接的ER实例的ID
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
     * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
@@ -260,10 +278,12 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'attachmentType' => 'getAttachmentType',
+            'ipVersion' => 'getIpVersion',
             'certificateId' => 'getCertificateId',
             'erId' => 'getErId',
             'vpcId' => 'getVpcId',
             'localSubnets' => 'getLocalSubnets',
+            'localSubnetsV6' => 'getLocalSubnetsV6',
             'connectSubnet' => 'getConnectSubnet',
             'networkType' => 'getNetworkType',
             'accessVpcId' => 'getAccessVpcId',
@@ -321,6 +341,8 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     }
     const ATTACHMENT_TYPE_VPC = 'vpc';
     const ATTACHMENT_TYPE_ER = 'er';
+    const IP_VERSION_IPV4 = 'ipv4';
+    const IP_VERSION_IPV6 = 'ipv6';
     const NETWORK_TYPE__PUBLIC = 'public';
     const NETWORK_TYPE__PRIVATE = 'private';
     
@@ -335,6 +357,19 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
         return [
             self::ATTACHMENT_TYPE_VPC,
             self::ATTACHMENT_TYPE_ER,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIpVersionAllowableValues()
+    {
+        return [
+            self::IP_VERSION_IPV4,
+            self::IP_VERSION_IPV6,
         ];
     }
 
@@ -370,10 +405,12 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['attachmentType'] = isset($data['attachmentType']) ? $data['attachmentType'] : null;
+        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['certificateId'] = isset($data['certificateId']) ? $data['certificateId'] : null;
         $this->container['erId'] = isset($data['erId']) ? $data['erId'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['localSubnets'] = isset($data['localSubnets']) ? $data['localSubnets'] : null;
+        $this->container['localSubnetsV6'] = isset($data['localSubnetsV6']) ? $data['localSubnetsV6'] : null;
         $this->container['connectSubnet'] = isset($data['connectSubnet']) ? $data['connectSubnet'] : null;
         $this->container['networkType'] = isset($data['networkType']) ? $data['networkType'] : null;
         $this->container['accessVpcId'] = isset($data['accessVpcId']) ? $data['accessVpcId'] : null;
@@ -410,6 +447,14 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['attachmentType']) && !in_array($this->container['attachmentType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'attachmentType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getIpVersionAllowableValues();
+                if (!is_null($this->container['ipVersion']) && !in_array($this->container['ipVersion'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ipVersion', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -533,6 +578,30 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets ipVersion
+    *  网关的IP协议版本
+    *
+    * @return string|null
+    */
+    public function getIpVersion()
+    {
+        return $this->container['ipVersion'];
+    }
+
+    /**
+    * Sets ipVersion
+    *
+    * @param string|null $ipVersion 网关的IP协议版本
+    *
+    * @return $this
+    */
+    public function setIpVersion($ipVersion)
+    {
+        $this->container['ipVersion'] = $ipVersion;
+        return $this;
+    }
+
+    /**
     * Gets certificateId
     *  certificateId
     *
@@ -625,6 +694,30 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     public function setLocalSubnets($localSubnets)
     {
         $this->container['localSubnets'] = $localSubnets;
+        return $this;
+    }
+
+    /**
+    * Gets localSubnetsV6
+    *  使能ipv6的本端子网
+    *
+    * @return string[]|null
+    */
+    public function getLocalSubnetsV6()
+    {
+        return $this->container['localSubnetsV6'];
+    }
+
+    /**
+    * Sets localSubnetsV6
+    *
+    * @param string[]|null $localSubnetsV6 使能ipv6的本端子网
+    *
+    * @return $this
+    */
+    public function setLocalSubnetsV6($localSubnetsV6)
+    {
+        $this->container['localSubnetsV6'] = $localSubnetsV6;
         return $this;
     }
 

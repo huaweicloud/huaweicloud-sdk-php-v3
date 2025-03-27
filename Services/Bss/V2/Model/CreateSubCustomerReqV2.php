@@ -23,8 +23,9 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
     * partyId  企业子账号挂载的组织单元。 组织单元的Party ID，通过查询企业组织结构接口的响应获得。
     * displayName  企业子账号的显示名称，不限制特殊字符。
     * subCustomerAssociationType  子账号关联类型：1：同一法人。 关联类型目前只能是同一法人。
-    * permissionIds  申请的权限列表。 支持的权限项请参见下表。
+    * permissionIds  申请的权限列表。 支持的权限项请参见下表。当financial_custody为1时，此参数不生效，默认指定权限项：READ_FINANCE_INFO、READ_CONSUME_BILL、SHARE-BIZ-DISCOUNT-TO-SUB。
     * newSubCustomer  newSubCustomer
+    * financialCustody  是否开通财务托管，0：不开通；1：开通。默认值0，默认不开通。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
             'displayName' => 'string',
             'subCustomerAssociationType' => 'int',
             'permissionIds' => 'string[]',
-            'newSubCustomer' => '\HuaweiCloud\SDK\Bss\V2\Model\NewCustomerV2'
+            'newSubCustomer' => '\HuaweiCloud\SDK\Bss\V2\Model\NewCustomerV2',
+            'financialCustody' => 'int'
     ];
 
     /**
@@ -41,8 +43,9 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
     * partyId  企业子账号挂载的组织单元。 组织单元的Party ID，通过查询企业组织结构接口的响应获得。
     * displayName  企业子账号的显示名称，不限制特殊字符。
     * subCustomerAssociationType  子账号关联类型：1：同一法人。 关联类型目前只能是同一法人。
-    * permissionIds  申请的权限列表。 支持的权限项请参见下表。
+    * permissionIds  申请的权限列表。 支持的权限项请参见下表。当financial_custody为1时，此参数不生效，默认指定权限项：READ_FINANCE_INFO、READ_CONSUME_BILL、SHARE-BIZ-DISCOUNT-TO-SUB。
     * newSubCustomer  newSubCustomer
+    * financialCustody  是否开通财务托管，0：不开通；1：开通。默认值0，默认不开通。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
         'displayName' => null,
         'subCustomerAssociationType' => 'int32',
         'permissionIds' => null,
-        'newSubCustomer' => null
+        'newSubCustomer' => null,
+        'financialCustody' => 'int32'
     ];
 
     /**
@@ -80,8 +84,9 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
     * partyId  企业子账号挂载的组织单元。 组织单元的Party ID，通过查询企业组织结构接口的响应获得。
     * displayName  企业子账号的显示名称，不限制特殊字符。
     * subCustomerAssociationType  子账号关联类型：1：同一法人。 关联类型目前只能是同一法人。
-    * permissionIds  申请的权限列表。 支持的权限项请参见下表。
+    * permissionIds  申请的权限列表。 支持的权限项请参见下表。当financial_custody为1时，此参数不生效，默认指定权限项：READ_FINANCE_INFO、READ_CONSUME_BILL、SHARE-BIZ-DISCOUNT-TO-SUB。
     * newSubCustomer  newSubCustomer
+    * financialCustody  是否开通财务托管，0：不开通；1：开通。默认值0，默认不开通。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
             'displayName' => 'display_name',
             'subCustomerAssociationType' => 'sub_customer_association_type',
             'permissionIds' => 'permission_ids',
-            'newSubCustomer' => 'new_sub_customer'
+            'newSubCustomer' => 'new_sub_customer',
+            'financialCustody' => 'financial_custody'
     ];
 
     /**
@@ -98,8 +104,9 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
     * partyId  企业子账号挂载的组织单元。 组织单元的Party ID，通过查询企业组织结构接口的响应获得。
     * displayName  企业子账号的显示名称，不限制特殊字符。
     * subCustomerAssociationType  子账号关联类型：1：同一法人。 关联类型目前只能是同一法人。
-    * permissionIds  申请的权限列表。 支持的权限项请参见下表。
+    * permissionIds  申请的权限列表。 支持的权限项请参见下表。当financial_custody为1时，此参数不生效，默认指定权限项：READ_FINANCE_INFO、READ_CONSUME_BILL、SHARE-BIZ-DISCOUNT-TO-SUB。
     * newSubCustomer  newSubCustomer
+    * financialCustody  是否开通财务托管，0：不开通；1：开通。默认值0，默认不开通。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
             'displayName' => 'setDisplayName',
             'subCustomerAssociationType' => 'setSubCustomerAssociationType',
             'permissionIds' => 'setPermissionIds',
-            'newSubCustomer' => 'setNewSubCustomer'
+            'newSubCustomer' => 'setNewSubCustomer',
+            'financialCustody' => 'setFinancialCustody'
     ];
 
     /**
@@ -116,8 +124,9 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
     * partyId  企业子账号挂载的组织单元。 组织单元的Party ID，通过查询企业组织结构接口的响应获得。
     * displayName  企业子账号的显示名称，不限制特殊字符。
     * subCustomerAssociationType  子账号关联类型：1：同一法人。 关联类型目前只能是同一法人。
-    * permissionIds  申请的权限列表。 支持的权限项请参见下表。
+    * permissionIds  申请的权限列表。 支持的权限项请参见下表。当financial_custody为1时，此参数不生效，默认指定权限项：READ_FINANCE_INFO、READ_CONSUME_BILL、SHARE-BIZ-DISCOUNT-TO-SUB。
     * newSubCustomer  newSubCustomer
+    * financialCustody  是否开通财务托管，0：不开通；1：开通。默认值0，默认不开通。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
             'displayName' => 'getDisplayName',
             'subCustomerAssociationType' => 'getSubCustomerAssociationType',
             'permissionIds' => 'getPermissionIds',
-            'newSubCustomer' => 'getNewSubCustomer'
+            'newSubCustomer' => 'getNewSubCustomer',
+            'financialCustody' => 'getFinancialCustody'
     ];
 
     /**
@@ -192,6 +202,7 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
         $this->container['subCustomerAssociationType'] = isset($data['subCustomerAssociationType']) ? $data['subCustomerAssociationType'] : null;
         $this->container['permissionIds'] = isset($data['permissionIds']) ? $data['permissionIds'] : null;
         $this->container['newSubCustomer'] = isset($data['newSubCustomer']) ? $data['newSubCustomer'] : null;
+        $this->container['financialCustody'] = isset($data['financialCustody']) ? $data['financialCustody'] : null;
     }
 
     /**
@@ -229,6 +240,12 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
         if ($this->container['newSubCustomer'] === null) {
             $invalidProperties[] = "'newSubCustomer' can't be null";
         }
+            if (!is_null($this->container['financialCustody']) && ($this->container['financialCustody'] > 1)) {
+                $invalidProperties[] = "invalid value for 'financialCustody', must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['financialCustody']) && ($this->container['financialCustody'] < 0)) {
+                $invalidProperties[] = "invalid value for 'financialCustody', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -317,7 +334,7 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets permissionIds
-    *  申请的权限列表。 支持的权限项请参见下表。
+    *  申请的权限列表。 支持的权限项请参见下表。当financial_custody为1时，此参数不生效，默认指定权限项：READ_FINANCE_INFO、READ_CONSUME_BILL、SHARE-BIZ-DISCOUNT-TO-SUB。
     *
     * @return string[]|null
     */
@@ -329,7 +346,7 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets permissionIds
     *
-    * @param string[]|null $permissionIds 申请的权限列表。 支持的权限项请参见下表。
+    * @param string[]|null $permissionIds 申请的权限列表。 支持的权限项请参见下表。当financial_custody为1时，此参数不生效，默认指定权限项：READ_FINANCE_INFO、READ_CONSUME_BILL、SHARE-BIZ-DISCOUNT-TO-SUB。
     *
     * @return $this
     */
@@ -360,6 +377,30 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
     public function setNewSubCustomer($newSubCustomer)
     {
         $this->container['newSubCustomer'] = $newSubCustomer;
+        return $this;
+    }
+
+    /**
+    * Gets financialCustody
+    *  是否开通财务托管，0：不开通；1：开通。默认值0，默认不开通。
+    *
+    * @return int|null
+    */
+    public function getFinancialCustody()
+    {
+        return $this->container['financialCustody'];
+    }
+
+    /**
+    * Sets financialCustody
+    *
+    * @param int|null $financialCustody 是否开通财务托管，0：不开通；1：开通。默认值0，默认不开通。
+    *
+    * @return $this
+    */
+    public function setFinancialCustody($financialCustody)
+    {
+        $this->container['financialCustody'] = $financialCustody;
         return $this;
     }
 

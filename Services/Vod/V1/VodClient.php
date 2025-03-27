@@ -1369,6 +1369,9 @@ class VodClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2206,7 +2209,7 @@ class VodClient extends Client
     /**
      * 多字幕封装
      *
-     * 多字幕封装，仅支持 HLS VTT格式
+     * 多字幕封装，仅支持 HLS VTT格式和HLS SRT格式
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2233,6 +2236,9 @@ class VodClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3483,6 +3489,9 @@ class VodClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];

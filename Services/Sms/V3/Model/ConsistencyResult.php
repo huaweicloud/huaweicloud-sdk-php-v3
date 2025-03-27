@@ -214,8 +214,8 @@ class ConsistencyResult implements ModelInterface, ArrayAccess
         if ($this->container['numTotalFiles'] === null) {
             $invalidProperties[] = "'numTotalFiles' can't be null";
         }
-            if (($this->container['numTotalFiles'] > 100000)) {
-                $invalidProperties[] = "invalid value for 'numTotalFiles', must be smaller than or equal to 100000.";
+            if (($this->container['numTotalFiles'] > 1000000)) {
+                $invalidProperties[] = "invalid value for 'numTotalFiles', must be smaller than or equal to 1000000.";
             }
             if (($this->container['numTotalFiles'] < 0)) {
                 $invalidProperties[] = "invalid value for 'numTotalFiles', must be bigger than or equal to 0.";
@@ -223,8 +223,8 @@ class ConsistencyResult implements ModelInterface, ArrayAccess
         if ($this->container['numDifferentFiles'] === null) {
             $invalidProperties[] = "'numDifferentFiles' can't be null";
         }
-            if (($this->container['numDifferentFiles'] > 100000)) {
-                $invalidProperties[] = "invalid value for 'numDifferentFiles', must be smaller than or equal to 100000.";
+            if (($this->container['numDifferentFiles'] > 1000000)) {
+                $invalidProperties[] = "invalid value for 'numDifferentFiles', must be smaller than or equal to 1000000.";
             }
             if (($this->container['numDifferentFiles'] < 0)) {
                 $invalidProperties[] = "invalid value for 'numDifferentFiles', must be bigger than or equal to 0.";
@@ -232,8 +232,8 @@ class ConsistencyResult implements ModelInterface, ArrayAccess
         if ($this->container['numTargetMissFiles'] === null) {
             $invalidProperties[] = "'numTargetMissFiles' can't be null";
         }
-            if (($this->container['numTargetMissFiles'] > 100000)) {
-                $invalidProperties[] = "invalid value for 'numTargetMissFiles', must be smaller than or equal to 100000.";
+            if (($this->container['numTargetMissFiles'] > 1000000)) {
+                $invalidProperties[] = "invalid value for 'numTargetMissFiles', must be smaller than or equal to 1000000.";
             }
             if (($this->container['numTargetMissFiles'] < 0)) {
                 $invalidProperties[] = "invalid value for 'numTargetMissFiles', must be bigger than or equal to 0.";
@@ -241,8 +241,8 @@ class ConsistencyResult implements ModelInterface, ArrayAccess
         if ($this->container['numTargetMoreFiles'] === null) {
             $invalidProperties[] = "'numTargetMoreFiles' can't be null";
         }
-            if (($this->container['numTargetMoreFiles'] > 100000)) {
-                $invalidProperties[] = "invalid value for 'numTargetMoreFiles', must be smaller than or equal to 100000.";
+            if (($this->container['numTargetMoreFiles'] > 1000000)) {
+                $invalidProperties[] = "invalid value for 'numTargetMoreFiles', must be smaller than or equal to 1000000.";
             }
             if (($this->container['numTargetMoreFiles'] < 0)) {
                 $invalidProperties[] = "invalid value for 'numTargetMoreFiles', must be bigger than or equal to 0.";
