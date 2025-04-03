@@ -20,7 +20,7 @@ class OutputAssetConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * assetName  **参数解释**： 输出视频资产名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
+    * assetName  **参数解释**： 输出视频资产名称。 > * 视频资产名称最大长度支持256；文件名称最大长度支持240（超过长度的会被舍弃）  **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class OutputAssetConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * assetName  **参数解释**： 输出视频资产名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
+    * assetName  **参数解释**： 输出视频资产名称。 > * 视频资产名称最大长度支持256；文件名称最大长度支持240（超过长度的会被舍弃）  **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class OutputAssetConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * assetName  **参数解释**： 输出视频资产名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
+    * assetName  **参数解释**： 输出视频资产名称。 > * 视频资产名称最大长度支持256；文件名称最大长度支持240（超过长度的会被舍弃）  **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class OutputAssetConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * assetName  **参数解释**： 输出视频资产名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
+    * assetName  **参数解释**： 输出视频资产名称。 > * 视频资产名称最大长度支持256；文件名称最大长度支持240（超过长度的会被舍弃）  **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class OutputAssetConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * assetName  **参数解释**： 输出视频资产名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
+    * assetName  **参数解释**： 输出视频资产名称。 > * 视频资产名称最大长度支持256；文件名称最大长度支持240（超过长度的会被舍弃）  **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class OutputAssetConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetName
-    *  **参数解释**： 输出视频资产名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
+    *  **参数解释**： 输出视频资产名称。 > * 视频资产名称最大长度支持256；文件名称最大长度支持240（超过长度的会被舍弃）  **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -195,7 +195,7 @@ class OutputAssetConfig implements ModelInterface, ArrayAccess
     /**
     * Sets assetName
     *
-    * @param string $assetName **参数解释**： 输出视频资产名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
+    * @param string $assetName **参数解释**： 输出视频资产名称。 > * 视频资产名称最大长度支持256；文件名称最大长度支持240（超过长度的会被舍弃）  **约束限制**： 不涉及。 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     *
     * @return $this
     */

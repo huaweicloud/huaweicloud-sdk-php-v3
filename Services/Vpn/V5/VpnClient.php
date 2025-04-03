@@ -2996,6 +2996,79 @@ class VpnClient extends Client
     }
 
     /**
+     * 查询VPN网关路由表
+     *
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVpnGatewayRoutingTable($request)
+    {
+        return $this->showVpnGatewayRoutingTableWithHttpInfo($request);
+    }
+
+    public function showVpnGatewayRoutingTableWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/vpn-gateways/{vgw_id}/routing-table';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['isIncludeNexthopResource'] !== null) {
+            $queryParams['is_include_nexthop_resource'] = $localVarParams['isIncludeNexthopResource'];
+        }
+        if ($localVarParams['vgwId'] !== null) {
+            $pathParams['vgw_id'] = $localVarParams['vgwId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowVpnGatewayRoutingTableResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowVpnGatewayRoutingTableRequest');
+    }
+
+    /**
      * 修改网关规格
      *
      * 对单个网关规格进行修改，可以升配或降配

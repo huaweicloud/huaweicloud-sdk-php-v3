@@ -20,7 +20,7 @@ class BatchConfirmLiveCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * roomId  剧本ID。
+    * roomId  直播间ID。
     * jobId  任务ID。
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
@@ -42,7 +42,7 @@ class BatchConfirmLiveCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * roomId  剧本ID。
+    * roomId  直播间ID。
     * jobId  任务ID。
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
@@ -85,7 +85,7 @@ class BatchConfirmLiveCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * roomId  剧本ID。
+    * roomId  直播间ID。
     * jobId  任务ID。
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
@@ -107,7 +107,7 @@ class BatchConfirmLiveCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * roomId  剧本ID。
+    * roomId  直播间ID。
     * jobId  任务ID。
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
@@ -129,7 +129,7 @@ class BatchConfirmLiveCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * roomId  剧本ID。
+    * roomId  直播间ID。
     * jobId  任务ID。
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
@@ -282,7 +282,7 @@ class BatchConfirmLiveCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomId
-    *  剧本ID。
+    *  直播间ID。
     *
     * @return string
     */
@@ -294,7 +294,7 @@ class BatchConfirmLiveCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets roomId
     *
-    * @param string $roomId 剧本ID。
+    * @param string $roomId 直播间ID。
     *
     * @return $this
     */

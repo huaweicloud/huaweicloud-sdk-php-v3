@@ -31,6 +31,8 @@ class CreateVideoScriptsReq implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     * shootScripts  拍摄脚本列表。
     *
     * @var string[]
@@ -47,6 +49,8 @@ class CreateVideoScriptsReq implements ModelInterface, ArrayAccess
             'privData' => 'string',
             'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
+            'audioFiles' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptAudioFiles',
+            'actionConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ActionConfig',
             'shootScripts' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[]'
     ];
 
@@ -63,6 +67,8 @@ class CreateVideoScriptsReq implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     * shootScripts  拍摄脚本列表。
     *
     * @var string[]
@@ -79,6 +85,8 @@ class CreateVideoScriptsReq implements ModelInterface, ArrayAccess
         'privData' => null,
         'backgroundMusicConfig' => null,
         'reviewConfig' => null,
+        'audioFiles' => null,
+        'actionConfig' => null,
         'shootScripts' => null
     ];
 
@@ -116,6 +124,8 @@ class CreateVideoScriptsReq implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     * shootScripts  拍摄脚本列表。
     *
     * @var string[]
@@ -132,6 +142,8 @@ class CreateVideoScriptsReq implements ModelInterface, ArrayAccess
             'privData' => 'priv_data',
             'backgroundMusicConfig' => 'background_music_config',
             'reviewConfig' => 'review_config',
+            'audioFiles' => 'audio_files',
+            'actionConfig' => 'action_config',
             'shootScripts' => 'shoot_scripts'
     ];
 
@@ -148,6 +160,8 @@ class CreateVideoScriptsReq implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     * shootScripts  拍摄脚本列表。
     *
     * @var string[]
@@ -164,6 +178,8 @@ class CreateVideoScriptsReq implements ModelInterface, ArrayAccess
             'privData' => 'setPrivData',
             'backgroundMusicConfig' => 'setBackgroundMusicConfig',
             'reviewConfig' => 'setReviewConfig',
+            'audioFiles' => 'setAudioFiles',
+            'actionConfig' => 'setActionConfig',
             'shootScripts' => 'setShootScripts'
     ];
 
@@ -180,6 +196,8 @@ class CreateVideoScriptsReq implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     * shootScripts  拍摄脚本列表。
     *
     * @var string[]
@@ -196,6 +214,8 @@ class CreateVideoScriptsReq implements ModelInterface, ArrayAccess
             'privData' => 'getPrivData',
             'backgroundMusicConfig' => 'getBackgroundMusicConfig',
             'reviewConfig' => 'getReviewConfig',
+            'audioFiles' => 'getAudioFiles',
+            'actionConfig' => 'getActionConfig',
             'shootScripts' => 'getShootScripts'
     ];
 
@@ -298,6 +318,8 @@ class CreateVideoScriptsReq implements ModelInterface, ArrayAccess
         $this->container['privData'] = isset($data['privData']) ? $data['privData'] : null;
         $this->container['backgroundMusicConfig'] = isset($data['backgroundMusicConfig']) ? $data['backgroundMusicConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
+        $this->container['audioFiles'] = isset($data['audioFiles']) ? $data['audioFiles'] : null;
+        $this->container['actionConfig'] = isset($data['actionConfig']) ? $data['actionConfig'] : null;
         $this->container['shootScripts'] = isset($data['shootScripts']) ? $data['shootScripts'] : null;
     }
 
@@ -630,6 +652,54 @@ class CreateVideoScriptsReq implements ModelInterface, ArrayAccess
     public function setReviewConfig($reviewConfig)
     {
         $this->container['reviewConfig'] = $reviewConfig;
+        return $this;
+    }
+
+    /**
+    * Gets audioFiles
+    *  audioFiles
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptAudioFiles|null
+    */
+    public function getAudioFiles()
+    {
+        return $this->container['audioFiles'];
+    }
+
+    /**
+    * Sets audioFiles
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptAudioFiles|null $audioFiles audioFiles
+    *
+    * @return $this
+    */
+    public function setAudioFiles($audioFiles)
+    {
+        $this->container['audioFiles'] = $audioFiles;
+        return $this;
+    }
+
+    /**
+    * Gets actionConfig
+    *  actionConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ActionConfig|null
+    */
+    public function getActionConfig()
+    {
+        return $this->container['actionConfig'];
+    }
+
+    /**
+    * Sets actionConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ActionConfig|null $actionConfig actionConfig
+    *
+    * @return $this
+    */
+    public function setActionConfig($actionConfig)
+    {
+        $this->container['actionConfig'] = $actionConfig;
         return $this;
     }
 

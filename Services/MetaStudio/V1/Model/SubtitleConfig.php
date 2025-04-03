@@ -22,40 +22,56 @@ class SubtitleConfig implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * dx  **参数解释**： 字幕框左下角像素点坐标。 **约束限制**： 不涉及。 **默认取值**： 不涉及。
     * dy  **参数解释**： 字幕框左下角像素点坐标。 **约束限制**： 不涉及。 **默认取值**： 不涉及。
-    * fontName  **参数解释**： 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml) **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位
-    * fontSize  **参数解释**： 字体大小。接口的取值范围为0-120，实际业务使用的取值范围要求为24-120，请以业务实际使用要求为准。 **约束限制**： 不涉及。
     * h  **参数解释**： 字幕框高度。 **约束限制**： 参数h用于方便前端计算字幕框左上角坐标，后台不使用该参数。
     * w  **参数解释**： 字幕框宽度。 **约束限制**： * 字幕框宽度固定为屏幕宽度的80% * 参数w用于方便前端计算字幕框左上角坐标，后台不使用该参数
+    * fontName  **参数解释**： 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml) **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位
+    * fontSize  **参数解释**： 字体大小。接口的取值范围为0-120，实际业务使用的取值范围要求为24-120，请以业务实际使用要求为准。 **约束限制**： 不涉及。
+    * fontColor  **参数解释**： 字幕字体颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
+    * strokeColor  **参数解释**： 字幕字体描边颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
+    * strokeThickness  **参数解释**： 字幕字体描边粗细像素值。 **约束限制**： 无 **取值范围**： 0-50
+    * opacity  **参数解释**： 字幕字体不透明度，0表示完全透明，1表示完全不透明。默认1。 **约束限制**： 无 **取值范围**： 0-1
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'dx' => 'int',
             'dy' => 'int',
+            'h' => 'int',
+            'w' => 'int',
             'fontName' => 'string',
             'fontSize' => 'int',
-            'h' => 'int',
-            'w' => 'int'
+            'fontColor' => 'string',
+            'strokeColor' => 'string',
+            'strokeThickness' => 'float',
+            'opacity' => 'float'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * dx  **参数解释**： 字幕框左下角像素点坐标。 **约束限制**： 不涉及。 **默认取值**： 不涉及。
     * dy  **参数解释**： 字幕框左下角像素点坐标。 **约束限制**： 不涉及。 **默认取值**： 不涉及。
-    * fontName  **参数解释**： 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml) **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位
-    * fontSize  **参数解释**： 字体大小。接口的取值范围为0-120，实际业务使用的取值范围要求为24-120，请以业务实际使用要求为准。 **约束限制**： 不涉及。
     * h  **参数解释**： 字幕框高度。 **约束限制**： 参数h用于方便前端计算字幕框左上角坐标，后台不使用该参数。
     * w  **参数解释**： 字幕框宽度。 **约束限制**： * 字幕框宽度固定为屏幕宽度的80% * 参数w用于方便前端计算字幕框左上角坐标，后台不使用该参数
+    * fontName  **参数解释**： 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml) **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位
+    * fontSize  **参数解释**： 字体大小。接口的取值范围为0-120，实际业务使用的取值范围要求为24-120，请以业务实际使用要求为准。 **约束限制**： 不涉及。
+    * fontColor  **参数解释**： 字幕字体颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
+    * strokeColor  **参数解释**： 字幕字体描边颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
+    * strokeThickness  **参数解释**： 字幕字体描边粗细像素值。 **约束限制**： 无 **取值范围**： 0-50
+    * opacity  **参数解释**： 字幕字体不透明度，0表示完全透明，1表示完全不透明。默认1。 **约束限制**： 无 **取值范围**： 0-1
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'dx' => 'int32',
         'dy' => 'int32',
+        'h' => 'int32',
+        'w' => 'int32',
         'fontName' => null,
         'fontSize' => 'int32',
-        'h' => 'int32',
-        'w' => 'int32'
+        'fontColor' => null,
+        'strokeColor' => null,
+        'strokeThickness' => 'float',
+        'opacity' => 'float'
     ];
 
     /**
@@ -83,60 +99,84 @@ class SubtitleConfig implements ModelInterface, ArrayAccess
     * and the value is the original name
     * dx  **参数解释**： 字幕框左下角像素点坐标。 **约束限制**： 不涉及。 **默认取值**： 不涉及。
     * dy  **参数解释**： 字幕框左下角像素点坐标。 **约束限制**： 不涉及。 **默认取值**： 不涉及。
-    * fontName  **参数解释**： 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml) **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位
-    * fontSize  **参数解释**： 字体大小。接口的取值范围为0-120，实际业务使用的取值范围要求为24-120，请以业务实际使用要求为准。 **约束限制**： 不涉及。
     * h  **参数解释**： 字幕框高度。 **约束限制**： 参数h用于方便前端计算字幕框左上角坐标，后台不使用该参数。
     * w  **参数解释**： 字幕框宽度。 **约束限制**： * 字幕框宽度固定为屏幕宽度的80% * 参数w用于方便前端计算字幕框左上角坐标，后台不使用该参数
+    * fontName  **参数解释**： 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml) **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位
+    * fontSize  **参数解释**： 字体大小。接口的取值范围为0-120，实际业务使用的取值范围要求为24-120，请以业务实际使用要求为准。 **约束限制**： 不涉及。
+    * fontColor  **参数解释**： 字幕字体颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
+    * strokeColor  **参数解释**： 字幕字体描边颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
+    * strokeThickness  **参数解释**： 字幕字体描边粗细像素值。 **约束限制**： 无 **取值范围**： 0-50
+    * opacity  **参数解释**： 字幕字体不透明度，0表示完全透明，1表示完全不透明。默认1。 **约束限制**： 无 **取值范围**： 0-1
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'dx' => 'dx',
             'dy' => 'dy',
+            'h' => 'h',
+            'w' => 'w',
             'fontName' => 'font_name',
             'fontSize' => 'font_size',
-            'h' => 'h',
-            'w' => 'w'
+            'fontColor' => 'font_color',
+            'strokeColor' => 'stroke_color',
+            'strokeThickness' => 'stroke_thickness',
+            'opacity' => 'opacity'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * dx  **参数解释**： 字幕框左下角像素点坐标。 **约束限制**： 不涉及。 **默认取值**： 不涉及。
     * dy  **参数解释**： 字幕框左下角像素点坐标。 **约束限制**： 不涉及。 **默认取值**： 不涉及。
-    * fontName  **参数解释**： 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml) **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位
-    * fontSize  **参数解释**： 字体大小。接口的取值范围为0-120，实际业务使用的取值范围要求为24-120，请以业务实际使用要求为准。 **约束限制**： 不涉及。
     * h  **参数解释**： 字幕框高度。 **约束限制**： 参数h用于方便前端计算字幕框左上角坐标，后台不使用该参数。
     * w  **参数解释**： 字幕框宽度。 **约束限制**： * 字幕框宽度固定为屏幕宽度的80% * 参数w用于方便前端计算字幕框左上角坐标，后台不使用该参数
+    * fontName  **参数解释**： 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml) **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位
+    * fontSize  **参数解释**： 字体大小。接口的取值范围为0-120，实际业务使用的取值范围要求为24-120，请以业务实际使用要求为准。 **约束限制**： 不涉及。
+    * fontColor  **参数解释**： 字幕字体颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
+    * strokeColor  **参数解释**： 字幕字体描边颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
+    * strokeThickness  **参数解释**： 字幕字体描边粗细像素值。 **约束限制**： 无 **取值范围**： 0-50
+    * opacity  **参数解释**： 字幕字体不透明度，0表示完全透明，1表示完全不透明。默认1。 **约束限制**： 无 **取值范围**： 0-1
     *
     * @var string[]
     */
     protected static $setters = [
             'dx' => 'setDx',
             'dy' => 'setDy',
+            'h' => 'setH',
+            'w' => 'setW',
             'fontName' => 'setFontName',
             'fontSize' => 'setFontSize',
-            'h' => 'setH',
-            'w' => 'setW'
+            'fontColor' => 'setFontColor',
+            'strokeColor' => 'setStrokeColor',
+            'strokeThickness' => 'setStrokeThickness',
+            'opacity' => 'setOpacity'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * dx  **参数解释**： 字幕框左下角像素点坐标。 **约束限制**： 不涉及。 **默认取值**： 不涉及。
     * dy  **参数解释**： 字幕框左下角像素点坐标。 **约束限制**： 不涉及。 **默认取值**： 不涉及。
-    * fontName  **参数解释**： 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml) **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位
-    * fontSize  **参数解释**： 字体大小。接口的取值范围为0-120，实际业务使用的取值范围要求为24-120，请以业务实际使用要求为准。 **约束限制**： 不涉及。
     * h  **参数解释**： 字幕框高度。 **约束限制**： 参数h用于方便前端计算字幕框左上角坐标，后台不使用该参数。
     * w  **参数解释**： 字幕框宽度。 **约束限制**： * 字幕框宽度固定为屏幕宽度的80% * 参数w用于方便前端计算字幕框左上角坐标，后台不使用该参数
+    * fontName  **参数解释**： 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml) **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位
+    * fontSize  **参数解释**： 字体大小。接口的取值范围为0-120，实际业务使用的取值范围要求为24-120，请以业务实际使用要求为准。 **约束限制**： 不涉及。
+    * fontColor  **参数解释**： 字幕字体颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
+    * strokeColor  **参数解释**： 字幕字体描边颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
+    * strokeThickness  **参数解释**： 字幕字体描边粗细像素值。 **约束限制**： 无 **取值范围**： 0-50
+    * opacity  **参数解释**： 字幕字体不透明度，0表示完全透明，1表示完全不透明。默认1。 **约束限制**： 无 **取值范围**： 0-1
     *
     * @var string[]
     */
     protected static $getters = [
             'dx' => 'getDx',
             'dy' => 'getDy',
+            'h' => 'getH',
+            'w' => 'getW',
             'fontName' => 'getFontName',
             'fontSize' => 'getFontSize',
-            'h' => 'getH',
-            'w' => 'getW'
+            'fontColor' => 'getFontColor',
+            'strokeColor' => 'getStrokeColor',
+            'strokeThickness' => 'getStrokeThickness',
+            'opacity' => 'getOpacity'
     ];
 
     /**
@@ -199,10 +239,14 @@ class SubtitleConfig implements ModelInterface, ArrayAccess
     {
         $this->container['dx'] = isset($data['dx']) ? $data['dx'] : null;
         $this->container['dy'] = isset($data['dy']) ? $data['dy'] : null;
-        $this->container['fontName'] = isset($data['fontName']) ? $data['fontName'] : null;
-        $this->container['fontSize'] = isset($data['fontSize']) ? $data['fontSize'] : null;
         $this->container['h'] = isset($data['h']) ? $data['h'] : null;
         $this->container['w'] = isset($data['w']) ? $data['w'] : null;
+        $this->container['fontName'] = isset($data['fontName']) ? $data['fontName'] : null;
+        $this->container['fontSize'] = isset($data['fontSize']) ? $data['fontSize'] : null;
+        $this->container['fontColor'] = isset($data['fontColor']) ? $data['fontColor'] : null;
+        $this->container['strokeColor'] = isset($data['strokeColor']) ? $data['strokeColor'] : null;
+        $this->container['strokeThickness'] = isset($data['strokeThickness']) ? $data['strokeThickness'] : null;
+        $this->container['opacity'] = isset($data['opacity']) ? $data['opacity'] : null;
     }
 
     /**
@@ -225,6 +269,18 @@ class SubtitleConfig implements ModelInterface, ArrayAccess
             if (!is_null($this->container['dy']) && ($this->container['dy'] < 0)) {
                 $invalidProperties[] = "invalid value for 'dy', must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['h']) && ($this->container['h'] > 1920)) {
+                $invalidProperties[] = "invalid value for 'h', must be smaller than or equal to 1920.";
+            }
+            if (!is_null($this->container['h']) && ($this->container['h'] < 0)) {
+                $invalidProperties[] = "invalid value for 'h', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['w']) && ($this->container['w'] > 1920)) {
+                $invalidProperties[] = "invalid value for 'w', must be smaller than or equal to 1920.";
+            }
+            if (!is_null($this->container['w']) && ($this->container['w'] < 0)) {
+                $invalidProperties[] = "invalid value for 'w', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['fontName']) && (mb_strlen($this->container['fontName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'fontName', the character length must be smaller than or equal to 64.";
             }
@@ -237,17 +293,29 @@ class SubtitleConfig implements ModelInterface, ArrayAccess
             if (!is_null($this->container['fontSize']) && ($this->container['fontSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'fontSize', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['h']) && ($this->container['h'] > 1920)) {
-                $invalidProperties[] = "invalid value for 'h', must be smaller than or equal to 1920.";
+            if (!is_null($this->container['fontColor']) && (mb_strlen($this->container['fontColor']) > 16)) {
+                $invalidProperties[] = "invalid value for 'fontColor', the character length must be smaller than or equal to 16.";
             }
-            if (!is_null($this->container['h']) && ($this->container['h'] < 0)) {
-                $invalidProperties[] = "invalid value for 'h', must be bigger than or equal to 0.";
+            if (!is_null($this->container['fontColor']) && (mb_strlen($this->container['fontColor']) < 0)) {
+                $invalidProperties[] = "invalid value for 'fontColor', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['w']) && ($this->container['w'] > 1920)) {
-                $invalidProperties[] = "invalid value for 'w', must be smaller than or equal to 1920.";
+            if (!is_null($this->container['fontColor']) && !preg_match("/^#[0-9A-Fa-f]{6}$/", $this->container['fontColor'])) {
+                $invalidProperties[] = "invalid value for 'fontColor', must be conform to the pattern /^#[0-9A-Fa-f]{6}$/.";
             }
-            if (!is_null($this->container['w']) && ($this->container['w'] < 0)) {
-                $invalidProperties[] = "invalid value for 'w', must be bigger than or equal to 0.";
+            if (!is_null($this->container['strokeColor']) && !preg_match("/^#[0-9A-Fa-f]{6}$/", $this->container['strokeColor'])) {
+                $invalidProperties[] = "invalid value for 'strokeColor', must be conform to the pattern /^#[0-9A-Fa-f]{6}$/.";
+            }
+            if (!is_null($this->container['strokeThickness']) && ($this->container['strokeThickness'] > 5E+1)) {
+                $invalidProperties[] = "invalid value for 'strokeThickness', must be smaller than or equal to 5E+1.";
+            }
+            if (!is_null($this->container['strokeThickness']) && ($this->container['strokeThickness'] < 0)) {
+                $invalidProperties[] = "invalid value for 'strokeThickness', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['opacity']) && ($this->container['opacity'] > 1)) {
+                $invalidProperties[] = "invalid value for 'opacity', must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['opacity']) && ($this->container['opacity'] < 0)) {
+                $invalidProperties[] = "invalid value for 'opacity', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -312,6 +380,54 @@ class SubtitleConfig implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets h
+    *  **参数解释**： 字幕框高度。 **约束限制**： 参数h用于方便前端计算字幕框左上角坐标，后台不使用该参数。
+    *
+    * @return int|null
+    */
+    public function getH()
+    {
+        return $this->container['h'];
+    }
+
+    /**
+    * Sets h
+    *
+    * @param int|null $h **参数解释**： 字幕框高度。 **约束限制**： 参数h用于方便前端计算字幕框左上角坐标，后台不使用该参数。
+    *
+    * @return $this
+    */
+    public function setH($h)
+    {
+        $this->container['h'] = $h;
+        return $this;
+    }
+
+    /**
+    * Gets w
+    *  **参数解释**： 字幕框宽度。 **约束限制**： * 字幕框宽度固定为屏幕宽度的80% * 参数w用于方便前端计算字幕框左上角坐标，后台不使用该参数
+    *
+    * @return int|null
+    */
+    public function getW()
+    {
+        return $this->container['w'];
+    }
+
+    /**
+    * Sets w
+    *
+    * @param int|null $w **参数解释**： 字幕框宽度。 **约束限制**： * 字幕框宽度固定为屏幕宽度的80% * 参数w用于方便前端计算字幕框左上角坐标，后台不使用该参数
+    *
+    * @return $this
+    */
+    public function setW($w)
+    {
+        $this->container['w'] = $w;
+        return $this;
+    }
+
+    /**
     * Gets fontName
     *  **参数解释**： 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml) **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位
     *
@@ -360,50 +476,98 @@ class SubtitleConfig implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets h
-    *  **参数解释**： 字幕框高度。 **约束限制**： 参数h用于方便前端计算字幕框左上角坐标，后台不使用该参数。
+    * Gets fontColor
+    *  **参数解释**： 字幕字体颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getH()
+    public function getFontColor()
     {
-        return $this->container['h'];
+        return $this->container['fontColor'];
     }
 
     /**
-    * Sets h
+    * Sets fontColor
     *
-    * @param int|null $h **参数解释**： 字幕框高度。 **约束限制**： 参数h用于方便前端计算字幕框左上角坐标，后台不使用该参数。
+    * @param string|null $fontColor **参数解释**： 字幕字体颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
     *
     * @return $this
     */
-    public function setH($h)
+    public function setFontColor($fontColor)
     {
-        $this->container['h'] = $h;
+        $this->container['fontColor'] = $fontColor;
         return $this;
     }
 
     /**
-    * Gets w
-    *  **参数解释**： 字幕框宽度。 **约束限制**： * 字幕框宽度固定为屏幕宽度的80% * 参数w用于方便前端计算字幕框左上角坐标，后台不使用该参数
+    * Gets strokeColor
+    *  **参数解释**： 字幕字体描边颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getW()
+    public function getStrokeColor()
     {
-        return $this->container['w'];
+        return $this->container['strokeColor'];
     }
 
     /**
-    * Sets w
+    * Sets strokeColor
     *
-    * @param int|null $w **参数解释**： 字幕框宽度。 **约束限制**： * 字幕框宽度固定为屏幕宽度的80% * 参数w用于方便前端计算字幕框左上角坐标，后台不使用该参数
+    * @param string|null $strokeColor **参数解释**： 字幕字体描边颜色的RGB颜色值。 **约束限制**： 无 **取值范围**： 字符长度0-7位，固定长度
     *
     * @return $this
     */
-    public function setW($w)
+    public function setStrokeColor($strokeColor)
     {
-        $this->container['w'] = $w;
+        $this->container['strokeColor'] = $strokeColor;
+        return $this;
+    }
+
+    /**
+    * Gets strokeThickness
+    *  **参数解释**： 字幕字体描边粗细像素值。 **约束限制**： 无 **取值范围**： 0-50
+    *
+    * @return float|null
+    */
+    public function getStrokeThickness()
+    {
+        return $this->container['strokeThickness'];
+    }
+
+    /**
+    * Sets strokeThickness
+    *
+    * @param float|null $strokeThickness **参数解释**： 字幕字体描边粗细像素值。 **约束限制**： 无 **取值范围**： 0-50
+    *
+    * @return $this
+    */
+    public function setStrokeThickness($strokeThickness)
+    {
+        $this->container['strokeThickness'] = $strokeThickness;
+        return $this;
+    }
+
+    /**
+    * Gets opacity
+    *  **参数解释**： 字幕字体不透明度，0表示完全透明，1表示完全不透明。默认1。 **约束限制**： 无 **取值范围**： 0-1
+    *
+    * @return float|null
+    */
+    public function getOpacity()
+    {
+        return $this->container['opacity'];
+    }
+
+    /**
+    * Sets opacity
+    *
+    * @param float|null $opacity **参数解释**： 字幕字体不透明度，0表示完全透明，1表示完全不透明。默认1。 **约束限制**： 无 **取值范围**： 0-1
+    *
+    * @return $this
+    */
+    public function setOpacity($opacity)
+    {
+        $this->container['opacity'] = $opacity;
         return $this;
     }
 

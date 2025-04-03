@@ -396,6 +396,12 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['templateOwnType']) && (mb_strlen($this->container['templateOwnType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'templateOwnType', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['confirmState']) && (mb_strlen($this->container['confirmState']) > 128)) {
+                $invalidProperties[] = "invalid value for 'confirmState', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['confirmState']) && (mb_strlen($this->container['confirmState']) < 0)) {
+                $invalidProperties[] = "invalid value for 'confirmState', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

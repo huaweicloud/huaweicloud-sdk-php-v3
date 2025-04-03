@@ -27,6 +27,7 @@ class VpnUser implements ModelInterface, ArrayAccess
     * userGroupName  所属用户组名称
     * createdAt  创建时间
     * updatedAt  更新时间
+    * staticIp  静态客户端IP地址，disable表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class VpnUser implements ModelInterface, ArrayAccess
             'userGroupId' => 'string',
             'userGroupName' => 'string',
             'createdAt' => '\DateTime',
-            'updatedAt' => '\DateTime'
+            'updatedAt' => '\DateTime',
+            'staticIp' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class VpnUser implements ModelInterface, ArrayAccess
     * userGroupName  所属用户组名称
     * createdAt  创建时间
     * updatedAt  更新时间
+    * staticIp  静态客户端IP地址，disable表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class VpnUser implements ModelInterface, ArrayAccess
         'userGroupId' => null,
         'userGroupName' => null,
         'createdAt' => 'date-time',
-        'updatedAt' => 'date-time'
+        'updatedAt' => 'date-time',
+        'staticIp' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class VpnUser implements ModelInterface, ArrayAccess
     * userGroupName  所属用户组名称
     * createdAt  创建时间
     * updatedAt  更新时间
+    * staticIp  静态客户端IP地址，disable表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class VpnUser implements ModelInterface, ArrayAccess
             'userGroupId' => 'user_group_id',
             'userGroupName' => 'user_group_name',
             'createdAt' => 'created_at',
-            'updatedAt' => 'updated_at'
+            'updatedAt' => 'updated_at',
+            'staticIp' => 'static_ip'
     ];
 
     /**
@@ -114,6 +120,7 @@ class VpnUser implements ModelInterface, ArrayAccess
     * userGroupName  所属用户组名称
     * createdAt  创建时间
     * updatedAt  更新时间
+    * staticIp  静态客户端IP地址，disable表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class VpnUser implements ModelInterface, ArrayAccess
             'userGroupId' => 'setUserGroupId',
             'userGroupName' => 'setUserGroupName',
             'createdAt' => 'setCreatedAt',
-            'updatedAt' => 'setUpdatedAt'
+            'updatedAt' => 'setUpdatedAt',
+            'staticIp' => 'setStaticIp'
     ];
 
     /**
@@ -136,6 +144,7 @@ class VpnUser implements ModelInterface, ArrayAccess
     * userGroupName  所属用户组名称
     * createdAt  创建时间
     * updatedAt  更新时间
+    * staticIp  静态客户端IP地址，disable表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class VpnUser implements ModelInterface, ArrayAccess
             'userGroupId' => 'getUserGroupId',
             'userGroupName' => 'getUserGroupName',
             'createdAt' => 'getCreatedAt',
-            'updatedAt' => 'getUpdatedAt'
+            'updatedAt' => 'getUpdatedAt',
+            'staticIp' => 'getStaticIp'
     ];
 
     /**
@@ -214,6 +224,7 @@ class VpnUser implements ModelInterface, ArrayAccess
         $this->container['userGroupName'] = isset($data['userGroupName']) ? $data['userGroupName'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['staticIp'] = isset($data['staticIp']) ? $data['staticIp'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class VpnUser implements ModelInterface, ArrayAccess
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets staticIp
+    *  静态客户端IP地址，disable表示随机分配客户端IP
+    *
+    * @return string|null
+    */
+    public function getStaticIp()
+    {
+        return $this->container['staticIp'];
+    }
+
+    /**
+    * Sets staticIp
+    *
+    * @param string|null $staticIp 静态客户端IP地址，disable表示随机分配客户端IP
+    *
+    * @return $this
+    */
+    public function setStaticIp($staticIp)
+    {
+        $this->container['staticIp'] = $staticIp;
         return $this;
     }
 

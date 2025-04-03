@@ -20,7 +20,7 @@ class StandardPlatformApiConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiType  API类型
+    * apiType  API类型。 * PRODUCT_QUERY: 查询商品 * LIVE_EVENT_CALLBACK: 直播事件回调
     * url  URL。仅支持HTTPS形式URL
     *
     * @var string[]
@@ -32,7 +32,7 @@ class StandardPlatformApiConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiType  API类型
+    * apiType  API类型。 * PRODUCT_QUERY: 查询商品 * LIVE_EVENT_CALLBACK: 直播事件回调
     * url  URL。仅支持HTTPS形式URL
     *
     * @var string[]
@@ -65,7 +65,7 @@ class StandardPlatformApiConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiType  API类型
+    * apiType  API类型。 * PRODUCT_QUERY: 查询商品 * LIVE_EVENT_CALLBACK: 直播事件回调
     * url  URL。仅支持HTTPS形式URL
     *
     * @var string[]
@@ -77,7 +77,7 @@ class StandardPlatformApiConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiType  API类型
+    * apiType  API类型。 * PRODUCT_QUERY: 查询商品 * LIVE_EVENT_CALLBACK: 直播事件回调
     * url  URL。仅支持HTTPS形式URL
     *
     * @var string[]
@@ -89,7 +89,7 @@ class StandardPlatformApiConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiType  API类型
+    * apiType  API类型。 * PRODUCT_QUERY: 查询商品 * LIVE_EVENT_CALLBACK: 直播事件回调
     * url  URL。仅支持HTTPS形式URL
     *
     * @var string[]
@@ -226,7 +226,7 @@ class StandardPlatformApiConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiType
-    *  API类型
+    *  API类型。 * PRODUCT_QUERY: 查询商品 * LIVE_EVENT_CALLBACK: 直播事件回调
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class StandardPlatformApiConfig implements ModelInterface, ArrayAccess
     /**
     * Sets apiType
     *
-    * @param string $apiType API类型
+    * @param string $apiType API类型。 * PRODUCT_QUERY: 查询商品 * LIVE_EVENT_CALLBACK: 直播事件回调
     *
     * @return $this
     */

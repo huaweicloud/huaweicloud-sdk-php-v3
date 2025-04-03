@@ -22,6 +22,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
+    * audioDuration  语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
     * audioDriveActionConfig  语音驱动时的动作配置。
     * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
     * backgroundConfig  背景配置。
@@ -33,6 +34,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'scriptType' => 'string',
             'textConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\TextConfig',
+            'audioDuration' => 'float',
             'audioDriveActionConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AudioDriveActionConfig[]',
             'audioDriveFileExternalUrl' => 'string',
             'backgroundConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundConfigInfo[]',
@@ -44,6 +46,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
+    * audioDuration  语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
     * audioDriveActionConfig  语音驱动时的动作配置。
     * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
     * backgroundConfig  背景配置。
@@ -55,6 +58,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'scriptType' => null,
         'textConfig' => null,
+        'audioDuration' => 'float',
         'audioDriveActionConfig' => null,
         'audioDriveFileExternalUrl' => null,
         'backgroundConfig' => null,
@@ -87,6 +91,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     * and the value is the original name
     * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
+    * audioDuration  语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
     * audioDriveActionConfig  语音驱动时的动作配置。
     * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
     * backgroundConfig  背景配置。
@@ -98,6 +103,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'scriptType' => 'script_type',
             'textConfig' => 'text_config',
+            'audioDuration' => 'audio_duration',
             'audioDriveActionConfig' => 'audio_drive_action_config',
             'audioDriveFileExternalUrl' => 'audio_drive_file_external_url',
             'backgroundConfig' => 'background_config',
@@ -109,6 +115,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
+    * audioDuration  语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
     * audioDriveActionConfig  语音驱动时的动作配置。
     * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
     * backgroundConfig  背景配置。
@@ -120,6 +127,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     protected static $setters = [
             'scriptType' => 'setScriptType',
             'textConfig' => 'setTextConfig',
+            'audioDuration' => 'setAudioDuration',
             'audioDriveActionConfig' => 'setAudioDriveActionConfig',
             'audioDriveFileExternalUrl' => 'setAudioDriveFileExternalUrl',
             'backgroundConfig' => 'setBackgroundConfig',
@@ -131,6 +139,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
+    * audioDuration  语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
     * audioDriveActionConfig  语音驱动时的动作配置。
     * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
     * backgroundConfig  背景配置。
@@ -142,6 +151,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     protected static $getters = [
             'scriptType' => 'getScriptType',
             'textConfig' => 'getTextConfig',
+            'audioDuration' => 'getAudioDuration',
             'audioDriveActionConfig' => 'getAudioDriveActionConfig',
             'audioDriveFileExternalUrl' => 'getAudioDriveFileExternalUrl',
             'backgroundConfig' => 'getBackgroundConfig',
@@ -224,6 +234,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     {
         $this->container['scriptType'] = isset($data['scriptType']) ? $data['scriptType'] : null;
         $this->container['textConfig'] = isset($data['textConfig']) ? $data['textConfig'] : null;
+        $this->container['audioDuration'] = isset($data['audioDuration']) ? $data['audioDuration'] : null;
         $this->container['audioDriveActionConfig'] = isset($data['audioDriveActionConfig']) ? $data['audioDriveActionConfig'] : null;
         $this->container['audioDriveFileExternalUrl'] = isset($data['audioDriveFileExternalUrl']) ? $data['audioDriveFileExternalUrl'] : null;
         $this->container['backgroundConfig'] = isset($data['backgroundConfig']) ? $data['backgroundConfig'] : null;
@@ -247,6 +258,12 @@ class ShootScript implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['audioDuration']) && ($this->container['audioDuration'] > 3.6E+4)) {
+                $invalidProperties[] = "invalid value for 'audioDuration', must be smaller than or equal to 3.6E+4.";
+            }
+            if (!is_null($this->container['audioDuration']) && ($this->container['audioDuration'] < 0)) {
+                $invalidProperties[] = "invalid value for 'audioDuration', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['audioDriveFileExternalUrl']) && (mb_strlen($this->container['audioDriveFileExternalUrl']) > 2048)) {
                 $invalidProperties[] = "invalid value for 'audioDriveFileExternalUrl', the character length must be smaller than or equal to 2048.";
             }
@@ -312,6 +329,30 @@ class ShootScript implements ModelInterface, ArrayAccess
     public function setTextConfig($textConfig)
     {
         $this->container['textConfig'] = $textConfig;
+        return $this;
+    }
+
+    /**
+    * Gets audioDuration
+    *  语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
+    *
+    * @return float|null
+    */
+    public function getAudioDuration()
+    {
+        return $this->container['audioDuration'];
+    }
+
+    /**
+    * Sets audioDuration
+    *
+    * @param float|null $audioDuration 语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
+    *
+    * @return $this
+    */
+    public function setAudioDuration($audioDuration)
+    {
+        $this->container['audioDuration'] = $audioDuration;
         return $this;
     }
 

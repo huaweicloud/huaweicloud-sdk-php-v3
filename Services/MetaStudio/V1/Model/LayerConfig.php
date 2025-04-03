@@ -25,6 +25,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     * groupId  **参数解释**： 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * position  position
     * size  size
+    * rotation  rotation
     * imageConfig  imageConfig
     * videoConfig  videoConfig
     * textConfig  textConfig
@@ -37,6 +38,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
             'groupId' => 'string',
             'position' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerPositionConfig',
             'size' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerSizeConfig',
+            'rotation' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerRotationConfig',
             'imageConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ImageLayerConfig',
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VideoLayerConfig',
             'textConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\TextLayerConfig'
@@ -49,6 +51,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     * groupId  **参数解释**： 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * position  position
     * size  size
+    * rotation  rotation
     * imageConfig  imageConfig
     * videoConfig  videoConfig
     * textConfig  textConfig
@@ -61,6 +64,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
         'groupId' => null,
         'position' => null,
         'size' => null,
+        'rotation' => null,
         'imageConfig' => null,
         'videoConfig' => null,
         'textConfig' => null
@@ -94,6 +98,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     * groupId  **参数解释**： 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * position  position
     * size  size
+    * rotation  rotation
     * imageConfig  imageConfig
     * videoConfig  videoConfig
     * textConfig  textConfig
@@ -106,6 +111,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
             'groupId' => 'group_id',
             'position' => 'position',
             'size' => 'size',
+            'rotation' => 'rotation',
             'imageConfig' => 'image_config',
             'videoConfig' => 'video_config',
             'textConfig' => 'text_config'
@@ -118,6 +124,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     * groupId  **参数解释**： 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * position  position
     * size  size
+    * rotation  rotation
     * imageConfig  imageConfig
     * videoConfig  videoConfig
     * textConfig  textConfig
@@ -130,6 +137,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
             'groupId' => 'setGroupId',
             'position' => 'setPosition',
             'size' => 'setSize',
+            'rotation' => 'setRotation',
             'imageConfig' => 'setImageConfig',
             'videoConfig' => 'setVideoConfig',
             'textConfig' => 'setTextConfig'
@@ -142,6 +150,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     * groupId  **参数解释**： 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     * position  position
     * size  size
+    * rotation  rotation
     * imageConfig  imageConfig
     * videoConfig  videoConfig
     * textConfig  textConfig
@@ -154,6 +163,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
             'groupId' => 'getGroupId',
             'position' => 'getPosition',
             'size' => 'getSize',
+            'rotation' => 'getRotation',
             'imageConfig' => 'getImageConfig',
             'videoConfig' => 'getVideoConfig',
             'textConfig' => 'getTextConfig'
@@ -241,6 +251,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['rotation'] = isset($data['rotation']) ? $data['rotation'] : null;
         $this->container['imageConfig'] = isset($data['imageConfig']) ? $data['imageConfig'] : null;
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
         $this->container['textConfig'] = isset($data['textConfig']) ? $data['textConfig'] : null;
@@ -408,6 +419,30 @@ class LayerConfig implements ModelInterface, ArrayAccess
     public function setSize($size)
     {
         $this->container['size'] = $size;
+        return $this;
+    }
+
+    /**
+    * Gets rotation
+    *  rotation
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LayerRotationConfig|null
+    */
+    public function getRotation()
+    {
+        return $this->container['rotation'];
+    }
+
+    /**
+    * Sets rotation
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LayerRotationConfig|null $rotation rotation
+    *
+    * @return $this
+    */
+    public function setRotation($rotation)
+    {
+        $this->container['rotation'] = $rotation;
         return $this;
     }
 

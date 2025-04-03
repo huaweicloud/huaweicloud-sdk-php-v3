@@ -29,6 +29,8 @@ class Policy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
+    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
     *
     * @var string[]
     */
@@ -41,7 +43,9 @@ class Policy implements ModelInterface, ArrayAccess
             'unit' => 'string',
             'count' => 'int',
             'suppressDuration' => 'int',
-            'level' => 'int'
+            'level' => 'int',
+            'namespace' => 'string',
+            'dimensionName' => 'string'
     ];
 
     /**
@@ -55,6 +59,8 @@ class Policy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
+    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class Policy implements ModelInterface, ArrayAccess
         'unit' => null,
         'count' => 'int32',
         'suppressDuration' => null,
-        'level' => null
+        'level' => null,
+        'namespace' => null,
+        'dimensionName' => null
     ];
 
     /**
@@ -102,6 +110,8 @@ class Policy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
+    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
     *
     * @var string[]
     */
@@ -114,7 +124,9 @@ class Policy implements ModelInterface, ArrayAccess
             'unit' => 'unit',
             'count' => 'count',
             'suppressDuration' => 'suppress_duration',
-            'level' => 'level'
+            'level' => 'level',
+            'namespace' => 'namespace',
+            'dimensionName' => 'dimension_name'
     ];
 
     /**
@@ -128,6 +140,8 @@ class Policy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
+    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
     *
     * @var string[]
     */
@@ -140,7 +154,9 @@ class Policy implements ModelInterface, ArrayAccess
             'unit' => 'setUnit',
             'count' => 'setCount',
             'suppressDuration' => 'setSuppressDuration',
-            'level' => 'setLevel'
+            'level' => 'setLevel',
+            'namespace' => 'setNamespace',
+            'dimensionName' => 'setDimensionName'
     ];
 
     /**
@@ -154,6 +170,8 @@ class Policy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
+    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class Policy implements ModelInterface, ArrayAccess
             'unit' => 'getUnit',
             'count' => 'getCount',
             'suppressDuration' => 'getSuppressDuration',
-            'level' => 'getLevel'
+            'level' => 'getLevel',
+            'namespace' => 'getNamespace',
+            'dimensionName' => 'getDimensionName'
     ];
 
     /**
@@ -236,6 +256,8 @@ class Policy implements ModelInterface, ArrayAccess
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['suppressDuration'] = isset($data['suppressDuration']) ? $data['suppressDuration'] : null;
         $this->container['level'] = isset($data['level']) ? $data['level'] : null;
+        $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
+        $this->container['dimensionName'] = isset($data['dimensionName']) ? $data['dimensionName'] : null;
     }
 
     /**
@@ -308,6 +330,24 @@ class Policy implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['level']) && ($this->container['level'] < 1)) {
                 $invalidProperties[] = "invalid value for 'level', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['namespace']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['namespace'])) {
+                $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/.";
+            }
+            if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) > 131)) {
+                $invalidProperties[] = "invalid value for 'dimensionName', the character length must be smaller than or equal to 131.";
+            }
+            if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'dimensionName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['dimensionName']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/", $this->container['dimensionName'])) {
+                $invalidProperties[] = "invalid value for 'dimensionName', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/.";
             }
         return $invalidProperties;
     }
@@ -536,6 +576,54 @@ class Policy implements ModelInterface, ArrayAccess
     public function setLevel($level)
     {
         $this->container['level'] = $level;
+        return $this;
+    }
+
+    /**
+    * Gets namespace
+    *  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    *
+    * @return string|null
+    */
+    public function getNamespace()
+    {
+        return $this->container['namespace'];
+    }
+
+    /**
+    * Sets namespace
+    *
+    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    *
+    * @return $this
+    */
+    public function setNamespace($namespace)
+    {
+        $this->container['namespace'] = $namespace;
+        return $this;
+    }
+
+    /**
+    * Gets dimensionName
+    *  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
+    *
+    * @return string|null
+    */
+    public function getDimensionName()
+    {
+        return $this->container['dimensionName'];
+    }
+
+    /**
+    * Sets dimensionName
+    *
+    * @param string|null $dimensionName 资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
+    *
+    * @return $this
+    */
+    public function setDimensionName($dimensionName)
+    {
+        $this->container['dimensionName'] = $dimensionName;
         return $this;
     }
 

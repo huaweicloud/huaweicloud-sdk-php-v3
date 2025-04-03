@@ -26,7 +26,7 @@ class UpdateBizMetricResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateBizMetricResultData'
+            'data' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateBizMetricResultData'
     ];
 
     /**
@@ -177,7 +177,7 @@ class UpdateBizMetricResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  data
     *
-    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateBizMetricResultData|null
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateBizMetricResultData|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class UpdateBizMetricResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateBizMetricResultData|null $data data
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateBizMetricResultData|null $data data
     *
     * @return $this
     */

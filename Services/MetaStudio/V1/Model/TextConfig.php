@@ -161,8 +161,8 @@ class TextConfig implements ModelInterface, ArrayAccess
         if ($this->container['text'] === null) {
             $invalidProperties[] = "'text' can't be null";
         }
-            if ((mb_strlen($this->container['text']) > 131072)) {
-                $invalidProperties[] = "invalid value for 'text', the character length must be smaller than or equal to 131072.";
+            if ((mb_strlen($this->container['text']) > 300000)) {
+                $invalidProperties[] = "invalid value for 'text', the character length must be smaller than or equal to 300000.";
             }
             if ((mb_strlen($this->container['text']) < 1)) {
                 $invalidProperties[] = "invalid value for 'text', the character length must be bigger than or equal to 1.";

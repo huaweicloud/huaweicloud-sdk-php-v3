@@ -29,6 +29,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     * style  风格情感
     * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    * isVocabularyConfigEnable  是否应用当前租户的读法配置
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             'volume' => 'int',
             'businessType' => 'string',
             'style' => 'string',
-            'channels' => 'int'
+            'channels' => 'int',
+            'isVocabularyConfigEnable' => 'bool'
     ];
 
     /**
@@ -55,6 +57,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     * style  风格情感
     * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    * isVocabularyConfigEnable  是否应用当前租户的读法配置
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
         'volume' => 'int32',
         'businessType' => null,
         'style' => null,
-        'channels' => 'int32'
+        'channels' => 'int32',
+        'isVocabularyConfigEnable' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     * style  风格情感
     * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    * isVocabularyConfigEnable  是否应用当前租户的读法配置
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             'volume' => 'volume',
             'businessType' => 'business_type',
             'style' => 'style',
-            'channels' => 'channels'
+            'channels' => 'channels',
+            'isVocabularyConfigEnable' => 'is_vocabulary_config_enable'
     ];
 
     /**
@@ -128,6 +134,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     * style  风格情感
     * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    * isVocabularyConfigEnable  是否应用当前租户的读法配置
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             'volume' => 'setVolume',
             'businessType' => 'setBusinessType',
             'style' => 'setStyle',
-            'channels' => 'setChannels'
+            'channels' => 'setChannels',
+            'isVocabularyConfigEnable' => 'setIsVocabularyConfigEnable'
     ];
 
     /**
@@ -154,6 +162,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     * businessType  业务场景，多个入口调用试听接口时的业务场景
     * style  风格情感
     * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+    * isVocabularyConfigEnable  是否应用当前租户的读法配置
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
             'volume' => 'getVolume',
             'businessType' => 'getBusinessType',
             'style' => 'getStyle',
-            'channels' => 'getChannels'
+            'channels' => 'getChannels',
+            'isVocabularyConfigEnable' => 'getIsVocabularyConfigEnable'
     ];
 
     /**
@@ -236,6 +246,7 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
         $this->container['businessType'] = isset($data['businessType']) ? $data['businessType'] : null;
         $this->container['style'] = isset($data['style']) ? $data['style'] : null;
         $this->container['channels'] = isset($data['channels']) ? $data['channels'] : null;
+        $this->container['isVocabularyConfigEnable'] = isset($data['isVocabularyConfigEnable']) ? $data['isVocabularyConfigEnable'] : null;
     }
 
     /**
@@ -536,6 +547,30 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
     public function setChannels($channels)
     {
         $this->container['channels'] = $channels;
+        return $this;
+    }
+
+    /**
+    * Gets isVocabularyConfigEnable
+    *  是否应用当前租户的读法配置
+    *
+    * @return bool|null
+    */
+    public function getIsVocabularyConfigEnable()
+    {
+        return $this->container['isVocabularyConfigEnable'];
+    }
+
+    /**
+    * Sets isVocabularyConfigEnable
+    *
+    * @param bool|null $isVocabularyConfigEnable 是否应用当前租户的读法配置
+    *
+    * @return $this
+    */
+    public function setIsVocabularyConfigEnable($isVocabularyConfigEnable)
+    {
+        $this->container['isVocabularyConfigEnable'] = $isVocabularyConfigEnable;
         return $this;
     }
 

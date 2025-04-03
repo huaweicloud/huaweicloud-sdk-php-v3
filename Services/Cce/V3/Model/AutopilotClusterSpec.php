@@ -29,7 +29,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * customSan  集群的API Server服务端证书中的自定义SAN（Subject Alternative Name）字段，遵从SSL标准X509定义的格式规范。  1. 不允许出现同名重复。 2. 格式符合IP和域名格式。  示例: ``` SAN 1: DNS Name=example.com SAN 2: DNS Name=www.example.com SAN 3: DNS Name=example.net SAN 4: IP Address=93.184.216.34 ```
     * enableSnat  集群是否配置SNAT。开启后您的集群可以通过NAT网关访问公网，默认使用所选的VPC中已有的NAT网关，否则系统将会为您自动创建一个默认规格的NAT网关并绑定弹性公网IP，自动配置SNAT规则。
     * enableSwrImageAccess  集群是否配置镜像访问。为确保您的集群节点可以从容器镜像服务中拉取镜像，默认使用所选VPC中已有的SWR和OBS终端节点，否则将会为您自动新建SWR和OBS终端节点。
-    * enableAutopilot  是否为Autopilot集群。
     * ipv6enable  集群是否使用IPv6模式。
     * hostNetwork  hostNetwork
     * containerNetwork  containerNetwork
@@ -56,7 +55,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
             'customSan' => 'string[]',
             'enableSnat' => 'bool',
             'enableSwrImageAccess' => 'bool',
-            'enableAutopilot' => 'bool',
             'ipv6enable' => 'bool',
             'hostNetwork' => '\HuaweiCloud\SDK\Cce\V3\Model\AutopilotHostNetwork',
             'containerNetwork' => '\HuaweiCloud\SDK\Cce\V3\Model\AutopilotContainerNetwork',
@@ -83,7 +81,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * customSan  集群的API Server服务端证书中的自定义SAN（Subject Alternative Name）字段，遵从SSL标准X509定义的格式规范。  1. 不允许出现同名重复。 2. 格式符合IP和域名格式。  示例: ``` SAN 1: DNS Name=example.com SAN 2: DNS Name=www.example.com SAN 3: DNS Name=example.net SAN 4: IP Address=93.184.216.34 ```
     * enableSnat  集群是否配置SNAT。开启后您的集群可以通过NAT网关访问公网，默认使用所选的VPC中已有的NAT网关，否则系统将会为您自动创建一个默认规格的NAT网关并绑定弹性公网IP，自动配置SNAT规则。
     * enableSwrImageAccess  集群是否配置镜像访问。为确保您的集群节点可以从容器镜像服务中拉取镜像，默认使用所选VPC中已有的SWR和OBS终端节点，否则将会为您自动新建SWR和OBS终端节点。
-    * enableAutopilot  是否为Autopilot集群。
     * ipv6enable  集群是否使用IPv6模式。
     * hostNetwork  hostNetwork
     * containerNetwork  containerNetwork
@@ -110,7 +107,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
         'customSan' => null,
         'enableSnat' => null,
         'enableSwrImageAccess' => null,
-        'enableAutopilot' => null,
         'ipv6enable' => null,
         'hostNetwork' => null,
         'containerNetwork' => null,
@@ -158,7 +154,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * customSan  集群的API Server服务端证书中的自定义SAN（Subject Alternative Name）字段，遵从SSL标准X509定义的格式规范。  1. 不允许出现同名重复。 2. 格式符合IP和域名格式。  示例: ``` SAN 1: DNS Name=example.com SAN 2: DNS Name=www.example.com SAN 3: DNS Name=example.net SAN 4: IP Address=93.184.216.34 ```
     * enableSnat  集群是否配置SNAT。开启后您的集群可以通过NAT网关访问公网，默认使用所选的VPC中已有的NAT网关，否则系统将会为您自动创建一个默认规格的NAT网关并绑定弹性公网IP，自动配置SNAT规则。
     * enableSwrImageAccess  集群是否配置镜像访问。为确保您的集群节点可以从容器镜像服务中拉取镜像，默认使用所选VPC中已有的SWR和OBS终端节点，否则将会为您自动新建SWR和OBS终端节点。
-    * enableAutopilot  是否为Autopilot集群。
     * ipv6enable  集群是否使用IPv6模式。
     * hostNetwork  hostNetwork
     * containerNetwork  containerNetwork
@@ -185,7 +180,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
             'customSan' => 'customSan',
             'enableSnat' => 'enableSnat',
             'enableSwrImageAccess' => 'enableSWRImageAccess',
-            'enableAutopilot' => 'enableAutopilot',
             'ipv6enable' => 'ipv6enable',
             'hostNetwork' => 'hostNetwork',
             'containerNetwork' => 'containerNetwork',
@@ -212,7 +206,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * customSan  集群的API Server服务端证书中的自定义SAN（Subject Alternative Name）字段，遵从SSL标准X509定义的格式规范。  1. 不允许出现同名重复。 2. 格式符合IP和域名格式。  示例: ``` SAN 1: DNS Name=example.com SAN 2: DNS Name=www.example.com SAN 3: DNS Name=example.net SAN 4: IP Address=93.184.216.34 ```
     * enableSnat  集群是否配置SNAT。开启后您的集群可以通过NAT网关访问公网，默认使用所选的VPC中已有的NAT网关，否则系统将会为您自动创建一个默认规格的NAT网关并绑定弹性公网IP，自动配置SNAT规则。
     * enableSwrImageAccess  集群是否配置镜像访问。为确保您的集群节点可以从容器镜像服务中拉取镜像，默认使用所选VPC中已有的SWR和OBS终端节点，否则将会为您自动新建SWR和OBS终端节点。
-    * enableAutopilot  是否为Autopilot集群。
     * ipv6enable  集群是否使用IPv6模式。
     * hostNetwork  hostNetwork
     * containerNetwork  containerNetwork
@@ -239,7 +232,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
             'customSan' => 'setCustomSan',
             'enableSnat' => 'setEnableSnat',
             'enableSwrImageAccess' => 'setEnableSwrImageAccess',
-            'enableAutopilot' => 'setEnableAutopilot',
             'ipv6enable' => 'setIpv6enable',
             'hostNetwork' => 'setHostNetwork',
             'containerNetwork' => 'setContainerNetwork',
@@ -266,7 +258,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * customSan  集群的API Server服务端证书中的自定义SAN（Subject Alternative Name）字段，遵从SSL标准X509定义的格式规范。  1. 不允许出现同名重复。 2. 格式符合IP和域名格式。  示例: ``` SAN 1: DNS Name=example.com SAN 2: DNS Name=www.example.com SAN 3: DNS Name=example.net SAN 4: IP Address=93.184.216.34 ```
     * enableSnat  集群是否配置SNAT。开启后您的集群可以通过NAT网关访问公网，默认使用所选的VPC中已有的NAT网关，否则系统将会为您自动创建一个默认规格的NAT网关并绑定弹性公网IP，自动配置SNAT规则。
     * enableSwrImageAccess  集群是否配置镜像访问。为确保您的集群节点可以从容器镜像服务中拉取镜像，默认使用所选VPC中已有的SWR和OBS终端节点，否则将会为您自动新建SWR和OBS终端节点。
-    * enableAutopilot  是否为Autopilot集群。
     * ipv6enable  集群是否使用IPv6模式。
     * hostNetwork  hostNetwork
     * containerNetwork  containerNetwork
@@ -293,7 +284,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
             'customSan' => 'getCustomSan',
             'enableSnat' => 'getEnableSnat',
             'enableSwrImageAccess' => 'getEnableSwrImageAccess',
-            'enableAutopilot' => 'getEnableAutopilot',
             'ipv6enable' => 'getIpv6enable',
             'hostNetwork' => 'getHostNetwork',
             'containerNetwork' => 'getContainerNetwork',
@@ -415,7 +405,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
         $this->container['customSan'] = isset($data['customSan']) ? $data['customSan'] : null;
         $this->container['enableSnat'] = isset($data['enableSnat']) ? $data['enableSnat'] : null;
         $this->container['enableSwrImageAccess'] = isset($data['enableSwrImageAccess']) ? $data['enableSwrImageAccess'] : null;
-        $this->container['enableAutopilot'] = isset($data['enableAutopilot']) ? $data['enableAutopilot'] : null;
         $this->container['ipv6enable'] = isset($data['ipv6enable']) ? $data['ipv6enable'] : null;
         $this->container['hostNetwork'] = isset($data['hostNetwork']) ? $data['hostNetwork'] : null;
         $this->container['containerNetwork'] = isset($data['containerNetwork']) ? $data['containerNetwork'] : null;
@@ -708,30 +697,6 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     public function setEnableSwrImageAccess($enableSwrImageAccess)
     {
         $this->container['enableSwrImageAccess'] = $enableSwrImageAccess;
-        return $this;
-    }
-
-    /**
-    * Gets enableAutopilot
-    *  是否为Autopilot集群。
-    *
-    * @return bool|null
-    */
-    public function getEnableAutopilot()
-    {
-        return $this->container['enableAutopilot'];
-    }
-
-    /**
-    * Sets enableAutopilot
-    *
-    * @param bool|null $enableAutopilot 是否为Autopilot集群。
-    *
-    * @return $this
-    */
-    public function setEnableAutopilot($enableAutopilot)
-    {
-        $this->container['enableAutopilot'] = $enableAutopilot;
         return $this;
     }
 

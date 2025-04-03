@@ -22,6 +22,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  资源ID。
     * orderId  cloudServiceId的订单id。 云服务购买清单等场景必填（purchaseMode取值为3、4），每个CloudService生成一个订单；此场景如果为空，则报错。 其他场景，为空。
+    * boundAsset  boundAsset
     * resourceExpireTime  资源截止时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceType  资源类型。详见[资源类型](metastudio_02_0042.xml)。
     * businessType  业务类型。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：flexus版本资源
@@ -31,6 +32,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     * resourceSource  资源来源。 * PURCHASED: 购买 * SP_ALLOCATED：SP分配 * ADMIN_ALLOCATED：系统管理员分配
     * amount  总量
     * usage  使用量
+    * status  资源状态 0:正常 1:冻结
     * unit  单位。 * NUM：个数(形象/声音) * MIN：分钟（视频制作） * HOUR：小时 （直播） * CHANNEL：路（直播/交互） * GB：GB(资产管理) * MILLION_WORDS：百万字 * TEN_THOUSAND_WORDS：万字 * TIME：次
     *
     * @var string[]
@@ -38,6 +40,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'resourceId' => 'string',
             'orderId' => 'string',
+            'boundAsset' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BoundAssetInfo',
             'resourceExpireTime' => 'string',
             'resourceType' => 'string',
             'businessType' => 'string',
@@ -47,6 +50,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
             'resourceSource' => 'string',
             'amount' => 'float',
             'usage' => 'float',
+            'status' => 'int',
             'unit' => 'string'
     ];
 
@@ -54,6 +58,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  资源ID。
     * orderId  cloudServiceId的订单id。 云服务购买清单等场景必填（purchaseMode取值为3、4），每个CloudService生成一个订单；此场景如果为空，则报错。 其他场景，为空。
+    * boundAsset  boundAsset
     * resourceExpireTime  资源截止时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceType  资源类型。详见[资源类型](metastudio_02_0042.xml)。
     * businessType  业务类型。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：flexus版本资源
@@ -63,6 +68,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     * resourceSource  资源来源。 * PURCHASED: 购买 * SP_ALLOCATED：SP分配 * ADMIN_ALLOCATED：系统管理员分配
     * amount  总量
     * usage  使用量
+    * status  资源状态 0:正常 1:冻结
     * unit  单位。 * NUM：个数(形象/声音) * MIN：分钟（视频制作） * HOUR：小时 （直播） * CHANNEL：路（直播/交互） * GB：GB(资产管理) * MILLION_WORDS：百万字 * TEN_THOUSAND_WORDS：万字 * TIME：次
     *
     * @var string[]
@@ -70,6 +76,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'resourceId' => null,
         'orderId' => null,
+        'boundAsset' => null,
         'resourceExpireTime' => null,
         'resourceType' => null,
         'businessType' => null,
@@ -77,8 +84,9 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
         'isSubResource' => null,
         'chargingMode' => null,
         'resourceSource' => 'int64',
-        'amount' => 'float32',
-        'usage' => 'float32',
+        'amount' => 'float',
+        'usage' => 'float',
+        'status' => null,
         'unit' => null
     ];
 
@@ -107,6 +115,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * resourceId  资源ID。
     * orderId  cloudServiceId的订单id。 云服务购买清单等场景必填（purchaseMode取值为3、4），每个CloudService生成一个订单；此场景如果为空，则报错。 其他场景，为空。
+    * boundAsset  boundAsset
     * resourceExpireTime  资源截止时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceType  资源类型。详见[资源类型](metastudio_02_0042.xml)。
     * businessType  业务类型。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：flexus版本资源
@@ -116,6 +125,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     * resourceSource  资源来源。 * PURCHASED: 购买 * SP_ALLOCATED：SP分配 * ADMIN_ALLOCATED：系统管理员分配
     * amount  总量
     * usage  使用量
+    * status  资源状态 0:正常 1:冻结
     * unit  单位。 * NUM：个数(形象/声音) * MIN：分钟（视频制作） * HOUR：小时 （直播） * CHANNEL：路（直播/交互） * GB：GB(资产管理) * MILLION_WORDS：百万字 * TEN_THOUSAND_WORDS：万字 * TIME：次
     *
     * @var string[]
@@ -123,6 +133,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'resourceId' => 'resource_id',
             'orderId' => 'order_id',
+            'boundAsset' => 'bound_asset',
             'resourceExpireTime' => 'resource_expire_time',
             'resourceType' => 'resource_type',
             'businessType' => 'business_type',
@@ -132,6 +143,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
             'resourceSource' => 'resource_source',
             'amount' => 'amount',
             'usage' => 'usage',
+            'status' => 'status',
             'unit' => 'unit'
     ];
 
@@ -139,6 +151,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  资源ID。
     * orderId  cloudServiceId的订单id。 云服务购买清单等场景必填（purchaseMode取值为3、4），每个CloudService生成一个订单；此场景如果为空，则报错。 其他场景，为空。
+    * boundAsset  boundAsset
     * resourceExpireTime  资源截止时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceType  资源类型。详见[资源类型](metastudio_02_0042.xml)。
     * businessType  业务类型。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：flexus版本资源
@@ -148,6 +161,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     * resourceSource  资源来源。 * PURCHASED: 购买 * SP_ALLOCATED：SP分配 * ADMIN_ALLOCATED：系统管理员分配
     * amount  总量
     * usage  使用量
+    * status  资源状态 0:正常 1:冻结
     * unit  单位。 * NUM：个数(形象/声音) * MIN：分钟（视频制作） * HOUR：小时 （直播） * CHANNEL：路（直播/交互） * GB：GB(资产管理) * MILLION_WORDS：百万字 * TEN_THOUSAND_WORDS：万字 * TIME：次
     *
     * @var string[]
@@ -155,6 +169,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'resourceId' => 'setResourceId',
             'orderId' => 'setOrderId',
+            'boundAsset' => 'setBoundAsset',
             'resourceExpireTime' => 'setResourceExpireTime',
             'resourceType' => 'setResourceType',
             'businessType' => 'setBusinessType',
@@ -164,6 +179,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
             'resourceSource' => 'setResourceSource',
             'amount' => 'setAmount',
             'usage' => 'setUsage',
+            'status' => 'setStatus',
             'unit' => 'setUnit'
     ];
 
@@ -171,6 +187,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  资源ID。
     * orderId  cloudServiceId的订单id。 云服务购买清单等场景必填（purchaseMode取值为3、4），每个CloudService生成一个订单；此场景如果为空，则报错。 其他场景，为空。
+    * boundAsset  boundAsset
     * resourceExpireTime  资源截止时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceType  资源类型。详见[资源类型](metastudio_02_0042.xml)。
     * businessType  业务类型。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：flexus版本资源
@@ -180,6 +197,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     * resourceSource  资源来源。 * PURCHASED: 购买 * SP_ALLOCATED：SP分配 * ADMIN_ALLOCATED：系统管理员分配
     * amount  总量
     * usage  使用量
+    * status  资源状态 0:正常 1:冻结
     * unit  单位。 * NUM：个数(形象/声音) * MIN：分钟（视频制作） * HOUR：小时 （直播） * CHANNEL：路（直播/交互） * GB：GB(资产管理) * MILLION_WORDS：百万字 * TEN_THOUSAND_WORDS：万字 * TIME：次
     *
     * @var string[]
@@ -187,6 +205,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'resourceId' => 'getResourceId',
             'orderId' => 'getOrderId',
+            'boundAsset' => 'getBoundAsset',
             'resourceExpireTime' => 'getResourceExpireTime',
             'resourceType' => 'getResourceType',
             'businessType' => 'getBusinessType',
@@ -196,6 +215,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
             'resourceSource' => 'getResourceSource',
             'amount' => 'getAmount',
             'usage' => 'getUsage',
+            'status' => 'getStatus',
             'unit' => 'getUnit'
     ];
 
@@ -340,6 +360,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     {
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
+        $this->container['boundAsset'] = isset($data['boundAsset']) ? $data['boundAsset'] : null;
         $this->container['resourceExpireTime'] = isset($data['resourceExpireTime']) ? $data['resourceExpireTime'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
         $this->container['businessType'] = isset($data['businessType']) ? $data['businessType'] : null;
@@ -349,6 +370,7 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
         $this->container['resourceSource'] = isset($data['resourceSource']) ? $data['resourceSource'] : null;
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
         $this->container['usage'] = isset($data['usage']) ? $data['usage'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['unit'] = isset($data['unit']) ? $data['unit'] : null;
     }
 
@@ -436,6 +458,12 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['usage']) && ($this->container['usage'] < 0)) {
                 $invalidProperties[] = "invalid value for 'usage', must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['status']) && ($this->container['status'] > 10)) {
+                $invalidProperties[] = "invalid value for 'status', must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['status']) && ($this->container['status'] < 0)) {
+                $invalidProperties[] = "invalid value for 'status', must be bigger than or equal to 0.";
+            }
             $allowedValues = $this->getUnitAllowableValues();
                 if (!is_null($this->container['unit']) && !in_array($this->container['unit'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -503,6 +531,30 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     public function setOrderId($orderId)
     {
         $this->container['orderId'] = $orderId;
+        return $this;
+    }
+
+    /**
+    * Gets boundAsset
+    *  boundAsset
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\BoundAssetInfo|null
+    */
+    public function getBoundAsset()
+    {
+        return $this->container['boundAsset'];
+    }
+
+    /**
+    * Sets boundAsset
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\BoundAssetInfo|null $boundAsset boundAsset
+    *
+    * @return $this
+    */
+    public function setBoundAsset($boundAsset)
+    {
+        $this->container['boundAsset'] = $boundAsset;
         return $this;
     }
 
@@ -719,6 +771,30 @@ class ResourceItemInfo implements ModelInterface, ArrayAccess
     public function setUsage($usage)
     {
         $this->container['usage'] = $usage;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  资源状态 0:正常 1:冻结
+    *
+    * @return int|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param int|null $status 资源状态 0:正常 1:冻结
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

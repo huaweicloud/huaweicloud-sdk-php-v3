@@ -24,6 +24,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     * backgroundConfig  **参数解释**： 背景文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 * background_type=IMAGE时需要填写。  **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及。
     * backgroundColorConfig  **参数解释**： 纯色背景的RGB颜色值。 **约束限制**： background_type=COLOR时需要填写。 **取值范围**： 字符长度0-16位
     * backgroundAssetId  **参数解释**： 背景资产ID。 > 背景是背景图片时，填图片资产ID。  **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * backgroundImageConfig  backgroundImageConfig
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
             'backgroundType' => 'string',
             'backgroundConfig' => 'string',
             'backgroundColorConfig' => 'string',
-            'backgroundAssetId' => 'string'
+            'backgroundAssetId' => 'string',
+            'backgroundImageConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundImageConfig'
     ];
 
     /**
@@ -40,6 +42,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     * backgroundConfig  **参数解释**： 背景文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 * background_type=IMAGE时需要填写。  **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及。
     * backgroundColorConfig  **参数解释**： 纯色背景的RGB颜色值。 **约束限制**： background_type=COLOR时需要填写。 **取值范围**： 字符长度0-16位
     * backgroundAssetId  **参数解释**： 背景资产ID。 > 背景是背景图片时，填图片资产ID。  **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * backgroundImageConfig  backgroundImageConfig
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
         'backgroundType' => null,
         'backgroundConfig' => null,
         'backgroundColorConfig' => null,
-        'backgroundAssetId' => null
+        'backgroundAssetId' => null,
+        'backgroundImageConfig' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     * backgroundConfig  **参数解释**： 背景文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 * background_type=IMAGE时需要填写。  **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及。
     * backgroundColorConfig  **参数解释**： 纯色背景的RGB颜色值。 **约束限制**： background_type=COLOR时需要填写。 **取值范围**： 字符长度0-16位
     * backgroundAssetId  **参数解释**： 背景资产ID。 > 背景是背景图片时，填图片资产ID。  **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * backgroundImageConfig  backgroundImageConfig
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
             'backgroundType' => 'background_type',
             'backgroundConfig' => 'background_config',
             'backgroundColorConfig' => 'background_color_config',
-            'backgroundAssetId' => 'background_asset_id'
+            'backgroundAssetId' => 'background_asset_id',
+            'backgroundImageConfig' => 'background_image_config'
     ];
 
     /**
@@ -93,6 +99,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     * backgroundConfig  **参数解释**： 背景文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 * background_type=IMAGE时需要填写。  **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及。
     * backgroundColorConfig  **参数解释**： 纯色背景的RGB颜色值。 **约束限制**： background_type=COLOR时需要填写。 **取值范围**： 字符长度0-16位
     * backgroundAssetId  **参数解释**： 背景资产ID。 > 背景是背景图片时，填图片资产ID。  **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * backgroundImageConfig  backgroundImageConfig
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
             'backgroundType' => 'setBackgroundType',
             'backgroundConfig' => 'setBackgroundConfig',
             'backgroundColorConfig' => 'setBackgroundColorConfig',
-            'backgroundAssetId' => 'setBackgroundAssetId'
+            'backgroundAssetId' => 'setBackgroundAssetId',
+            'backgroundImageConfig' => 'setBackgroundImageConfig'
     ];
 
     /**
@@ -109,6 +117,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     * backgroundConfig  **参数解释**： 背景文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 * background_type=IMAGE时需要填写。  **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及。
     * backgroundColorConfig  **参数解释**： 纯色背景的RGB颜色值。 **约束限制**： background_type=COLOR时需要填写。 **取值范围**： 字符长度0-16位
     * backgroundAssetId  **参数解释**： 背景资产ID。 > 背景是背景图片时，填图片资产ID。  **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * backgroundImageConfig  backgroundImageConfig
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
             'backgroundType' => 'getBackgroundType',
             'backgroundConfig' => 'getBackgroundConfig',
             'backgroundColorConfig' => 'getBackgroundColorConfig',
-            'backgroundAssetId' => 'getBackgroundAssetId'
+            'backgroundAssetId' => 'getBackgroundAssetId',
+            'backgroundImageConfig' => 'getBackgroundImageConfig'
     ];
 
     /**
@@ -202,6 +212,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
         $this->container['backgroundConfig'] = isset($data['backgroundConfig']) ? $data['backgroundConfig'] : null;
         $this->container['backgroundColorConfig'] = isset($data['backgroundColorConfig']) ? $data['backgroundColorConfig'] : null;
         $this->container['backgroundAssetId'] = isset($data['backgroundAssetId']) ? $data['backgroundAssetId'] : null;
+        $this->container['backgroundImageConfig'] = isset($data['backgroundImageConfig']) ? $data['backgroundImageConfig'] : null;
     }
 
     /**
@@ -357,6 +368,30 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     public function setBackgroundAssetId($backgroundAssetId)
     {
         $this->container['backgroundAssetId'] = $backgroundAssetId;
+        return $this;
+    }
+
+    /**
+    * Gets backgroundImageConfig
+    *  backgroundImageConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundImageConfig|null
+    */
+    public function getBackgroundImageConfig()
+    {
+        return $this->container['backgroundImageConfig'];
+    }
+
+    /**
+    * Sets backgroundImageConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundImageConfig|null $backgroundImageConfig backgroundImageConfig
+    *
+    * @return $this
+    */
+    public function setBackgroundImageConfig($backgroundImageConfig)
+    {
+        $this->container['backgroundImageConfig'] = $backgroundImageConfig;
         return $this;
     }
 

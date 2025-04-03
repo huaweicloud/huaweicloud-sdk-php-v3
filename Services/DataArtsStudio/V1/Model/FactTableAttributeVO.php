@@ -26,6 +26,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     * dimensionId  维度ID，ID字符串。
     * role  维度角色。
     * dimension  dimension
+    * dimensionAttrId  维度属性ID，ID字符串。
     * isPrimaryKey  是否主键。
     * isPartitionKey  是否分区键。
     * isForeignKey  是否外键，只读。
@@ -53,6 +54,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
             'dimensionId' => 'string',
             'role' => 'string',
             'dimension' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DimensionVO',
+            'dimensionAttrId' => 'string',
             'isPrimaryKey' => 'bool',
             'isPartitionKey' => 'bool',
             'isForeignKey' => 'bool',
@@ -80,6 +82,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     * dimensionId  维度ID，ID字符串。
     * role  维度角色。
     * dimension  dimension
+    * dimensionAttrId  维度属性ID，ID字符串。
     * isPrimaryKey  是否主键。
     * isPartitionKey  是否分区键。
     * isForeignKey  是否外键，只读。
@@ -107,6 +110,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
         'dimensionId' => null,
         'role' => null,
         'dimension' => null,
+        'dimensionAttrId' => null,
         'isPrimaryKey' => null,
         'isPartitionKey' => null,
         'isForeignKey' => null,
@@ -155,6 +159,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     * dimensionId  维度ID，ID字符串。
     * role  维度角色。
     * dimension  dimension
+    * dimensionAttrId  维度属性ID，ID字符串。
     * isPrimaryKey  是否主键。
     * isPartitionKey  是否分区键。
     * isForeignKey  是否外键，只读。
@@ -182,6 +187,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
             'dimensionId' => 'dimension_id',
             'role' => 'role',
             'dimension' => 'dimension',
+            'dimensionAttrId' => 'dimension_attr_id',
             'isPrimaryKey' => 'is_primary_key',
             'isPartitionKey' => 'is_partition_key',
             'isForeignKey' => 'is_foreign_key',
@@ -209,6 +215,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     * dimensionId  维度ID，ID字符串。
     * role  维度角色。
     * dimension  dimension
+    * dimensionAttrId  维度属性ID，ID字符串。
     * isPrimaryKey  是否主键。
     * isPartitionKey  是否分区键。
     * isForeignKey  是否外键，只读。
@@ -236,6 +243,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
             'dimensionId' => 'setDimensionId',
             'role' => 'setRole',
             'dimension' => 'setDimension',
+            'dimensionAttrId' => 'setDimensionAttrId',
             'isPrimaryKey' => 'setIsPrimaryKey',
             'isPartitionKey' => 'setIsPartitionKey',
             'isForeignKey' => 'setIsForeignKey',
@@ -263,6 +271,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     * dimensionId  维度ID，ID字符串。
     * role  维度角色。
     * dimension  dimension
+    * dimensionAttrId  维度属性ID，ID字符串。
     * isPrimaryKey  是否主键。
     * isPartitionKey  是否分区键。
     * isForeignKey  是否外键，只读。
@@ -290,6 +299,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
             'dimensionId' => 'getDimensionId',
             'role' => 'getRole',
             'dimension' => 'getDimension',
+            'dimensionAttrId' => 'getDimensionAttrId',
             'isPrimaryKey' => 'getIsPrimaryKey',
             'isPartitionKey' => 'getIsPartitionKey',
             'isForeignKey' => 'getIsForeignKey',
@@ -373,6 +383,7 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
         $this->container['dimensionId'] = isset($data['dimensionId']) ? $data['dimensionId'] : null;
         $this->container['role'] = isset($data['role']) ? $data['role'] : null;
         $this->container['dimension'] = isset($data['dimension']) ? $data['dimension'] : null;
+        $this->container['dimensionAttrId'] = isset($data['dimensionAttrId']) ? $data['dimensionAttrId'] : null;
         $this->container['isPrimaryKey'] = isset($data['isPrimaryKey']) ? $data['isPrimaryKey'] : null;
         $this->container['isPartitionKey'] = isset($data['isPartitionKey']) ? $data['isPartitionKey'] : null;
         $this->container['isForeignKey'] = isset($data['isForeignKey']) ? $data['isForeignKey'] : null;
@@ -600,6 +611,30 @@ class FactTableAttributeVO implements ModelInterface, ArrayAccess
     public function setDimension($dimension)
     {
         $this->container['dimension'] = $dimension;
+        return $this;
+    }
+
+    /**
+    * Gets dimensionAttrId
+    *  维度属性ID，ID字符串。
+    *
+    * @return string|null
+    */
+    public function getDimensionAttrId()
+    {
+        return $this->container['dimensionAttrId'];
+    }
+
+    /**
+    * Sets dimensionAttrId
+    *
+    * @param string|null $dimensionAttrId 维度属性ID，ID字符串。
+    *
+    * @return $this
+    */
+    public function setDimensionAttrId($dimensionAttrId)
+    {
+        $this->container['dimensionAttrId'] = $dimensionAttrId;
         return $this;
     }
 

@@ -40,6 +40,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
+    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             'coverUrl' => 'string',
             'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig',
             'liveJobLog' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveJobLog',
-            'relationLivePlatformInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PlatformLiveDetailInfo'
+            'relationLivePlatformInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PlatformLiveDetailInfo',
+            'usedResourceType' => 'string'
     ];
 
     /**
@@ -88,6 +90,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
+    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
         'coverUrl' => null,
         'coStreamerConfig' => null,
         'liveJobLog' => null,
-        'relationLivePlatformInfo' => null
+        'relationLivePlatformInfo' => null,
+        'usedResourceType' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
+    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             'coverUrl' => 'cover_url',
             'coStreamerConfig' => 'co_streamer_config',
             'liveJobLog' => 'live_job_log',
-            'relationLivePlatformInfo' => 'relation_live_platform_info'
+            'relationLivePlatformInfo' => 'relation_live_platform_info',
+            'usedResourceType' => 'used_resource_type'
     ];
 
     /**
@@ -205,6 +211,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
+    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             'coverUrl' => 'setCoverUrl',
             'coStreamerConfig' => 'setCoStreamerConfig',
             'liveJobLog' => 'setLiveJobLog',
-            'relationLivePlatformInfo' => 'setRelationLivePlatformInfo'
+            'relationLivePlatformInfo' => 'setRelationLivePlatformInfo',
+            'usedResourceType' => 'setUsedResourceType'
     ];
 
     /**
@@ -253,6 +261,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
+    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             'coverUrl' => 'getCoverUrl',
             'coStreamerConfig' => 'getCoStreamerConfig',
             'liveJobLog' => 'getLiveJobLog',
-            'relationLivePlatformInfo' => 'getRelationLivePlatformInfo'
+            'relationLivePlatformInfo' => 'getRelationLivePlatformInfo',
+            'usedResourceType' => 'getUsedResourceType'
     ];
 
     /**
@@ -324,6 +334,9 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     const STATE_SUCCEED = 'SUCCEED';
     const STATE_FAILED = 'FAILED';
     const STATE_BLOCKED = 'BLOCKED';
+    const USED_RESOURCE_TYPE_PERIOD = 'PERIOD';
+    const USED_RESOURCE_TYPE_ONDEMAND = 'ONDEMAND';
+    const USED_RESOURCE_TYPE_UNKNOW = 'UNKNOW';
     
 
     /**
@@ -339,6 +352,20 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             self::STATE_SUCCEED,
             self::STATE_FAILED,
             self::STATE_BLOCKED,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getUsedResourceTypeAllowableValues()
+    {
+        return [
+            self::USED_RESOURCE_TYPE_PERIOD,
+            self::USED_RESOURCE_TYPE_ONDEMAND,
+            self::USED_RESOURCE_TYPE_UNKNOW,
         ];
     }
 
@@ -378,6 +405,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
         $this->container['coStreamerConfig'] = isset($data['coStreamerConfig']) ? $data['coStreamerConfig'] : null;
         $this->container['liveJobLog'] = isset($data['liveJobLog']) ? $data['liveJobLog'] : null;
         $this->container['relationLivePlatformInfo'] = isset($data['relationLivePlatformInfo']) ? $data['relationLivePlatformInfo'] : null;
+        $this->container['usedResourceType'] = isset($data['usedResourceType']) ? $data['usedResourceType'] : null;
     }
 
     /**
@@ -473,6 +501,20 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['coverUrl']) && (mb_strlen($this->container['coverUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'coverUrl', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getUsedResourceTypeAllowableValues();
+                if (!is_null($this->container['usedResourceType']) && !in_array($this->container['usedResourceType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'usedResourceType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['usedResourceType']) && (mb_strlen($this->container['usedResourceType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'usedResourceType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['usedResourceType']) && (mb_strlen($this->container['usedResourceType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'usedResourceType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -965,6 +1007,30 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     public function setRelationLivePlatformInfo($relationLivePlatformInfo)
     {
         $this->container['relationLivePlatformInfo'] = $relationLivePlatformInfo;
+        return $this;
+    }
+
+    /**
+    * Gets usedResourceType
+    *  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+    *
+    * @return string|null
+    */
+    public function getUsedResourceType()
+    {
+        return $this->container['usedResourceType'];
+    }
+
+    /**
+    * Sets usedResourceType
+    *
+    * @param string|null $usedResourceType 使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+    *
+    * @return $this
+    */
+    public function setUsedResourceType($usedResourceType)
+    {
+        $this->container['usedResourceType'] = $usedResourceType;
         return $this;
     }
 

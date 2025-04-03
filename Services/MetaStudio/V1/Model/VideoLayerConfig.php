@@ -23,13 +23,17 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
     * videoUrl  **参数解释**： 视频文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     * videoCoverUrl  **参数解释**： 视频封面文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     * loopCount  **参数解释**： 循环播放视频次数。  特殊取值： * 0：表示不播放 * -1：表示持续循环播放  **约束限制**： 不涉及。
+    * videoSound  **参数解释**： 视频声音大小，0 - 100，表示开启视频声音原视频音量的百分比  特殊取值： * 0：表示不开启声音（默认值）  **约束限制**： 不涉及。
+    * isPlayTheEntireVideo  **参数解释**： 是否播放完整个视频，true表示播放完整个视频，false表示当场景文本/音频结束时，视频也同时不再播放。  特殊取值： 默认值为false  **约束限制**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'videoUrl' => 'string',
             'videoCoverUrl' => 'string',
-            'loopCount' => 'int'
+            'loopCount' => 'int',
+            'videoSound' => 'int',
+            'isPlayTheEntireVideo' => 'bool'
     ];
 
     /**
@@ -37,13 +41,17 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
     * videoUrl  **参数解释**： 视频文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     * videoCoverUrl  **参数解释**： 视频封面文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     * loopCount  **参数解释**： 循环播放视频次数。  特殊取值： * 0：表示不播放 * -1：表示持续循环播放  **约束限制**： 不涉及。
+    * videoSound  **参数解释**： 视频声音大小，0 - 100，表示开启视频声音原视频音量的百分比  特殊取值： * 0：表示不开启声音（默认值）  **约束限制**： 不涉及。
+    * isPlayTheEntireVideo  **参数解释**： 是否播放完整个视频，true表示播放完整个视频，false表示当场景文本/音频结束时，视频也同时不再播放。  特殊取值： 默认值为false  **约束限制**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'videoUrl' => null,
         'videoCoverUrl' => null,
-        'loopCount' => 'int32'
+        'loopCount' => 'int32',
+        'videoSound' => 'int32',
+        'isPlayTheEntireVideo' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
     * videoUrl  **参数解释**： 视频文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     * videoCoverUrl  **参数解释**： 视频封面文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     * loopCount  **参数解释**： 循环播放视频次数。  特殊取值： * 0：表示不播放 * -1：表示持续循环播放  **约束限制**： 不涉及。
+    * videoSound  **参数解释**： 视频声音大小，0 - 100，表示开启视频声音原视频音量的百分比  特殊取值： * 0：表示不开启声音（默认值）  **约束限制**： 不涉及。
+    * isPlayTheEntireVideo  **参数解释**： 是否播放完整个视频，true表示播放完整个视频，false表示当场景文本/音频结束时，视频也同时不再播放。  特殊取值： 默认值为false  **约束限制**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'videoUrl' => 'video_url',
             'videoCoverUrl' => 'video_cover_url',
-            'loopCount' => 'loop_count'
+            'loopCount' => 'loop_count',
+            'videoSound' => 'video_sound',
+            'isPlayTheEntireVideo' => 'is_play_the_entire_video'
     ];
 
     /**
@@ -86,13 +98,17 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
     * videoUrl  **参数解释**： 视频文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     * videoCoverUrl  **参数解释**： 视频封面文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     * loopCount  **参数解释**： 循环播放视频次数。  特殊取值： * 0：表示不播放 * -1：表示持续循环播放  **约束限制**： 不涉及。
+    * videoSound  **参数解释**： 视频声音大小，0 - 100，表示开启视频声音原视频音量的百分比  特殊取值： * 0：表示不开启声音（默认值）  **约束限制**： 不涉及。
+    * isPlayTheEntireVideo  **参数解释**： 是否播放完整个视频，true表示播放完整个视频，false表示当场景文本/音频结束时，视频也同时不再播放。  特殊取值： 默认值为false  **约束限制**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'videoUrl' => 'setVideoUrl',
             'videoCoverUrl' => 'setVideoCoverUrl',
-            'loopCount' => 'setLoopCount'
+            'loopCount' => 'setLoopCount',
+            'videoSound' => 'setVideoSound',
+            'isPlayTheEntireVideo' => 'setIsPlayTheEntireVideo'
     ];
 
     /**
@@ -100,13 +116,17 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
     * videoUrl  **参数解释**： 视频文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     * videoCoverUrl  **参数解释**： 视频封面文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     * loopCount  **参数解释**： 循环播放视频次数。  特殊取值： * 0：表示不播放 * -1：表示持续循环播放  **约束限制**： 不涉及。
+    * videoSound  **参数解释**： 视频声音大小，0 - 100，表示开启视频声音原视频音量的百分比  特殊取值： * 0：表示不开启声音（默认值）  **约束限制**： 不涉及。
+    * isPlayTheEntireVideo  **参数解释**： 是否播放完整个视频，true表示播放完整个视频，false表示当场景文本/音频结束时，视频也同时不再播放。  特殊取值： 默认值为false  **约束限制**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'videoUrl' => 'getVideoUrl',
             'videoCoverUrl' => 'getVideoCoverUrl',
-            'loopCount' => 'getLoopCount'
+            'loopCount' => 'getLoopCount',
+            'videoSound' => 'getVideoSound',
+            'isPlayTheEntireVideo' => 'getIsPlayTheEntireVideo'
     ];
 
     /**
@@ -170,6 +190,8 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
         $this->container['videoUrl'] = isset($data['videoUrl']) ? $data['videoUrl'] : null;
         $this->container['videoCoverUrl'] = isset($data['videoCoverUrl']) ? $data['videoCoverUrl'] : null;
         $this->container['loopCount'] = isset($data['loopCount']) ? $data['loopCount'] : null;
+        $this->container['videoSound'] = isset($data['videoSound']) ? $data['videoSound'] : null;
+        $this->container['isPlayTheEntireVideo'] = isset($data['isPlayTheEntireVideo']) ? $data['isPlayTheEntireVideo'] : null;
     }
 
     /**
@@ -197,6 +219,12 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['loopCount']) && ($this->container['loopCount'] < -1)) {
                 $invalidProperties[] = "invalid value for 'loopCount', must be bigger than or equal to -1.";
+            }
+            if (!is_null($this->container['videoSound']) && ($this->container['videoSound'] > 100)) {
+                $invalidProperties[] = "invalid value for 'videoSound', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['videoSound']) && ($this->container['videoSound'] < 0)) {
+                $invalidProperties[] = "invalid value for 'videoSound', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -281,6 +309,54 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
     public function setLoopCount($loopCount)
     {
         $this->container['loopCount'] = $loopCount;
+        return $this;
+    }
+
+    /**
+    * Gets videoSound
+    *  **参数解释**： 视频声音大小，0 - 100，表示开启视频声音原视频音量的百分比  特殊取值： * 0：表示不开启声音（默认值）  **约束限制**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getVideoSound()
+    {
+        return $this->container['videoSound'];
+    }
+
+    /**
+    * Sets videoSound
+    *
+    * @param int|null $videoSound **参数解释**： 视频声音大小，0 - 100，表示开启视频声音原视频音量的百分比  特殊取值： * 0：表示不开启声音（默认值）  **约束限制**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setVideoSound($videoSound)
+    {
+        $this->container['videoSound'] = $videoSound;
+        return $this;
+    }
+
+    /**
+    * Gets isPlayTheEntireVideo
+    *  **参数解释**： 是否播放完整个视频，true表示播放完整个视频，false表示当场景文本/音频结束时，视频也同时不再播放。  特殊取值： 默认值为false  **约束限制**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getIsPlayTheEntireVideo()
+    {
+        return $this->container['isPlayTheEntireVideo'];
+    }
+
+    /**
+    * Sets isPlayTheEntireVideo
+    *
+    * @param bool|null $isPlayTheEntireVideo **参数解释**： 是否播放完整个视频，true表示播放完整个视频，false表示当场景文本/音频结束时，视频也同时不再播放。  特殊取值： 默认值为false  **约束限制**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setIsPlayTheEntireVideo($isPlayTheEntireVideo)
+    {
+        $this->container['isPlayTheEntireVideo'] = $isPlayTheEntireVideo;
         return $this;
     }
 

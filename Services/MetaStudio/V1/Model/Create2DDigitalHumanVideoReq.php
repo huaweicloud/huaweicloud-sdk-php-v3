@@ -29,6 +29,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     * callbackConfig  callbackConfig
+    * actionConfig  actionConfig
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'outputAssetConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\OutputAssetConfig',
             'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
-            'callbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig'
+            'callbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig',
+            'actionConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ActionConfig'
     ];
 
     /**
@@ -55,6 +57,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     * callbackConfig  callbackConfig
+    * actionConfig  actionConfig
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
         'outputAssetConfig' => null,
         'backgroundMusicConfig' => null,
         'reviewConfig' => null,
-        'callbackConfig' => null
+        'callbackConfig' => null,
+        'actionConfig' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     * callbackConfig  callbackConfig
+    * actionConfig  actionConfig
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'outputAssetConfig' => 'output_asset_config',
             'backgroundMusicConfig' => 'background_music_config',
             'reviewConfig' => 'review_config',
-            'callbackConfig' => 'callback_config'
+            'callbackConfig' => 'callback_config',
+            'actionConfig' => 'action_config'
     ];
 
     /**
@@ -128,6 +134,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     * callbackConfig  callbackConfig
+    * actionConfig  actionConfig
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'outputAssetConfig' => 'setOutputAssetConfig',
             'backgroundMusicConfig' => 'setBackgroundMusicConfig',
             'reviewConfig' => 'setReviewConfig',
-            'callbackConfig' => 'setCallbackConfig'
+            'callbackConfig' => 'setCallbackConfig',
+            'actionConfig' => 'setActionConfig'
     ];
 
     /**
@@ -154,6 +162,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     * callbackConfig  callbackConfig
+    * actionConfig  actionConfig
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'outputAssetConfig' => 'getOutputAssetConfig',
             'backgroundMusicConfig' => 'getBackgroundMusicConfig',
             'reviewConfig' => 'getReviewConfig',
-            'callbackConfig' => 'getCallbackConfig'
+            'callbackConfig' => 'getCallbackConfig',
+            'actionConfig' => 'getActionConfig'
     ];
 
     /**
@@ -236,6 +246,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
         $this->container['backgroundMusicConfig'] = isset($data['backgroundMusicConfig']) ? $data['backgroundMusicConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['callbackConfig'] = isset($data['callbackConfig']) ? $data['callbackConfig'] : null;
+        $this->container['actionConfig'] = isset($data['actionConfig']) ? $data['actionConfig'] : null;
     }
 
     /**
@@ -485,6 +496,30 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     public function setCallbackConfig($callbackConfig)
     {
         $this->container['callbackConfig'] = $callbackConfig;
+        return $this;
+    }
+
+    /**
+    * Gets actionConfig
+    *  actionConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ActionConfig|null
+    */
+    public function getActionConfig()
+    {
+        return $this->container['actionConfig'];
+    }
+
+    /**
+    * Sets actionConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ActionConfig|null $actionConfig actionConfig
+    *
+    * @return $this
+    */
+    public function setActionConfig($actionConfig)
+    {
+        $this->container['actionConfig'] = $actionConfig;
         return $this;
     }
 

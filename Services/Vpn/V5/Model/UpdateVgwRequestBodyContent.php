@@ -22,6 +22,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  网关名称
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * eipId1  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
     * eipId2  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
     * policyTemplate  policyTemplate
@@ -31,6 +32,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'localSubnets' => 'string[]',
+            'localSubnetsV6' => 'string[]',
             'eipId1' => 'string',
             'eipId2' => 'string',
             'policyTemplate' => '\HuaweiCloud\SDK\Vpn\V5\Model\UpdateRequestPolicyTemplate'
@@ -40,6 +42,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  网关名称
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * eipId1  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
     * eipId2  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
     * policyTemplate  policyTemplate
@@ -49,6 +52,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'localSubnets' => null,
+        'localSubnetsV6' => null,
         'eipId1' => null,
         'eipId2' => null,
         'policyTemplate' => null
@@ -79,6 +83,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  网关名称
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * eipId1  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
     * eipId2  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
     * policyTemplate  policyTemplate
@@ -88,6 +93,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'name' => 'name',
             'localSubnets' => 'local_subnets',
+            'localSubnetsV6' => 'local_subnets_v6',
             'eipId1' => 'eip_id_1',
             'eipId2' => 'eip_id_2',
             'policyTemplate' => 'policy_template'
@@ -97,6 +103,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  网关名称
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * eipId1  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
     * eipId2  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
     * policyTemplate  policyTemplate
@@ -106,6 +113,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     protected static $setters = [
             'name' => 'setName',
             'localSubnets' => 'setLocalSubnets',
+            'localSubnetsV6' => 'setLocalSubnetsV6',
             'eipId1' => 'setEipId1',
             'eipId2' => 'setEipId2',
             'policyTemplate' => 'setPolicyTemplate'
@@ -115,6 +123,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  网关名称
     * localSubnets  本端子网
+    * localSubnetsV6  使能ipv6的本端子网
     * eipId1  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
     * eipId2  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
     * policyTemplate  policyTemplate
@@ -124,6 +133,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     protected static $getters = [
             'name' => 'getName',
             'localSubnets' => 'getLocalSubnets',
+            'localSubnetsV6' => 'getLocalSubnetsV6',
             'eipId1' => 'getEipId1',
             'eipId2' => 'getEipId2',
             'policyTemplate' => 'getPolicyTemplate'
@@ -189,6 +199,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['localSubnets'] = isset($data['localSubnets']) ? $data['localSubnets'] : null;
+        $this->container['localSubnetsV6'] = isset($data['localSubnetsV6']) ? $data['localSubnetsV6'] : null;
         $this->container['eipId1'] = isset($data['eipId1']) ? $data['eipId1'] : null;
         $this->container['eipId2'] = isset($data['eipId2']) ? $data['eipId2'] : null;
         $this->container['policyTemplate'] = isset($data['policyTemplate']) ? $data['policyTemplate'] : null;
@@ -288,6 +299,30 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     public function setLocalSubnets($localSubnets)
     {
         $this->container['localSubnets'] = $localSubnets;
+        return $this;
+    }
+
+    /**
+    * Gets localSubnetsV6
+    *  使能ipv6的本端子网
+    *
+    * @return string[]|null
+    */
+    public function getLocalSubnetsV6()
+    {
+        return $this->container['localSubnetsV6'];
+    }
+
+    /**
+    * Sets localSubnetsV6
+    *
+    * @param string[]|null $localSubnetsV6 使能ipv6的本端子网
+    *
+    * @return $this
+    */
+    public function setLocalSubnetsV6($localSubnetsV6)
+    {
+        $this->container['localSubnetsV6'] = $localSubnetsV6;
         return $this;
     }
 

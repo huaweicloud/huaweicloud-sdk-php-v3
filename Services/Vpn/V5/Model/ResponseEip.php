@@ -30,6 +30,7 @@ class ResponseEip implements ModelInterface, ArrayAccess
     * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
     * bandwidthName  带宽名称
     * bandwidthBillingInfo  带宽订单信息
+    * shareType  功能说明：类型  \"WHOLE\"为共享带宽，\"PER\"为独占带宽
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ResponseEip implements ModelInterface, ArrayAccess
             'bandwidthId' => 'string',
             'bandwidthSize' => 'int',
             'bandwidthName' => 'string',
-            'bandwidthBillingInfo' => 'string'
+            'bandwidthBillingInfo' => 'string',
+            'shareType' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ResponseEip implements ModelInterface, ArrayAccess
     * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
     * bandwidthName  带宽名称
     * bandwidthBillingInfo  带宽订单信息
+    * shareType  功能说明：类型  \"WHOLE\"为共享带宽，\"PER\"为独占带宽
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ResponseEip implements ModelInterface, ArrayAccess
         'bandwidthId' => null,
         'bandwidthSize' => 'int32',
         'bandwidthName' => null,
-        'bandwidthBillingInfo' => null
+        'bandwidthBillingInfo' => null,
+        'shareType' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class ResponseEip implements ModelInterface, ArrayAccess
     * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
     * bandwidthName  带宽名称
     * bandwidthBillingInfo  带宽订单信息
+    * shareType  功能说明：类型  \"WHOLE\"为共享带宽，\"PER\"为独占带宽
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ResponseEip implements ModelInterface, ArrayAccess
             'bandwidthId' => 'bandwidth_id',
             'bandwidthSize' => 'bandwidth_size',
             'bandwidthName' => 'bandwidth_name',
-            'bandwidthBillingInfo' => 'bandwidth_billing_info'
+            'bandwidthBillingInfo' => 'bandwidth_billing_info',
+            'shareType' => 'share_type'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ResponseEip implements ModelInterface, ArrayAccess
     * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
     * bandwidthName  带宽名称
     * bandwidthBillingInfo  带宽订单信息
+    * shareType  功能说明：类型  \"WHOLE\"为共享带宽，\"PER\"为独占带宽
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ResponseEip implements ModelInterface, ArrayAccess
             'bandwidthId' => 'setBandwidthId',
             'bandwidthSize' => 'setBandwidthSize',
             'bandwidthName' => 'setBandwidthName',
-            'bandwidthBillingInfo' => 'setBandwidthBillingInfo'
+            'bandwidthBillingInfo' => 'setBandwidthBillingInfo',
+            'shareType' => 'setShareType'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ResponseEip implements ModelInterface, ArrayAccess
     * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
     * bandwidthName  带宽名称
     * bandwidthBillingInfo  带宽订单信息
+    * shareType  功能说明：类型  \"WHOLE\"为共享带宽，\"PER\"为独占带宽
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ResponseEip implements ModelInterface, ArrayAccess
             'bandwidthId' => 'getBandwidthId',
             'bandwidthSize' => 'getBandwidthSize',
             'bandwidthName' => 'getBandwidthName',
-            'bandwidthBillingInfo' => 'getBandwidthBillingInfo'
+            'bandwidthBillingInfo' => 'getBandwidthBillingInfo',
+            'shareType' => 'getShareType'
     ];
 
     /**
@@ -264,6 +274,7 @@ class ResponseEip implements ModelInterface, ArrayAccess
         $this->container['bandwidthSize'] = isset($data['bandwidthSize']) ? $data['bandwidthSize'] : null;
         $this->container['bandwidthName'] = isset($data['bandwidthName']) ? $data['bandwidthName'] : null;
         $this->container['bandwidthBillingInfo'] = isset($data['bandwidthBillingInfo']) ? $data['bandwidthBillingInfo'] : null;
+        $this->container['shareType'] = isset($data['shareType']) ? $data['shareType'] : null;
     }
 
     /**
@@ -344,6 +355,12 @@ class ResponseEip implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['bandwidthBillingInfo']) && (mb_strlen($this->container['bandwidthBillingInfo']) < 0)) {
                 $invalidProperties[] = "invalid value for 'bandwidthBillingInfo', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['shareType']) && (mb_strlen($this->container['shareType']) > 36)) {
+                $invalidProperties[] = "invalid value for 'shareType', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['shareType']) && (mb_strlen($this->container['shareType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'shareType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -596,6 +613,30 @@ class ResponseEip implements ModelInterface, ArrayAccess
     public function setBandwidthBillingInfo($bandwidthBillingInfo)
     {
         $this->container['bandwidthBillingInfo'] = $bandwidthBillingInfo;
+        return $this;
+    }
+
+    /**
+    * Gets shareType
+    *  功能说明：类型  \"WHOLE\"为共享带宽，\"PER\"为独占带宽
+    *
+    * @return string|null
+    */
+    public function getShareType()
+    {
+        return $this->container['shareType'];
+    }
+
+    /**
+    * Sets shareType
+    *
+    * @param string|null $shareType 功能说明：类型  \"WHOLE\"为共享带宽，\"PER\"为独占带宽
+    *
+    * @return $this
+    */
+    public function setShareType($shareType)
+    {
+        $this->container['shareType'] = $shareType;
         return $this;
     }
 

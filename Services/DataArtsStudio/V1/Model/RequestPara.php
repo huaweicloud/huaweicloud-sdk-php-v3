@@ -27,6 +27,7 @@ class RequestPara implements ModelInterface, ArrayAccess
     * necessary  参数是否必填
     * exampleValue  实例值
     * defaultValue  默认值
+    * supportNull  支持NULL值。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class RequestPara implements ModelInterface, ArrayAccess
             'description' => 'string',
             'necessary' => 'bool',
             'exampleValue' => 'string',
-            'defaultValue' => 'string'
+            'defaultValue' => 'string',
+            'supportNull' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class RequestPara implements ModelInterface, ArrayAccess
     * necessary  参数是否必填
     * exampleValue  实例值
     * defaultValue  默认值
+    * supportNull  支持NULL值。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class RequestPara implements ModelInterface, ArrayAccess
         'description' => null,
         'necessary' => null,
         'exampleValue' => null,
-        'defaultValue' => null
+        'defaultValue' => null,
+        'supportNull' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class RequestPara implements ModelInterface, ArrayAccess
     * necessary  参数是否必填
     * exampleValue  实例值
     * defaultValue  默认值
+    * supportNull  支持NULL值。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class RequestPara implements ModelInterface, ArrayAccess
             'description' => 'description',
             'necessary' => 'necessary',
             'exampleValue' => 'example_value',
-            'defaultValue' => 'default_value'
+            'defaultValue' => 'default_value',
+            'supportNull' => 'support_null'
     ];
 
     /**
@@ -114,6 +120,7 @@ class RequestPara implements ModelInterface, ArrayAccess
     * necessary  参数是否必填
     * exampleValue  实例值
     * defaultValue  默认值
+    * supportNull  支持NULL值。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class RequestPara implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'necessary' => 'setNecessary',
             'exampleValue' => 'setExampleValue',
-            'defaultValue' => 'setDefaultValue'
+            'defaultValue' => 'setDefaultValue',
+            'supportNull' => 'setSupportNull'
     ];
 
     /**
@@ -136,6 +144,7 @@ class RequestPara implements ModelInterface, ArrayAccess
     * necessary  参数是否必填
     * exampleValue  实例值
     * defaultValue  默认值
+    * supportNull  支持NULL值。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class RequestPara implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'necessary' => 'getNecessary',
             'exampleValue' => 'getExampleValue',
-            'defaultValue' => 'getDefaultValue'
+            'defaultValue' => 'getDefaultValue',
+            'supportNull' => 'getSupportNull'
     ];
 
     /**
@@ -246,6 +256,7 @@ class RequestPara implements ModelInterface, ArrayAccess
         $this->container['necessary'] = isset($data['necessary']) ? $data['necessary'] : null;
         $this->container['exampleValue'] = isset($data['exampleValue']) ? $data['exampleValue'] : null;
         $this->container['defaultValue'] = isset($data['defaultValue']) ? $data['defaultValue'] : null;
+        $this->container['supportNull'] = isset($data['supportNull']) ? $data['supportNull'] : null;
     }
 
     /**
@@ -451,6 +462,30 @@ class RequestPara implements ModelInterface, ArrayAccess
     public function setDefaultValue($defaultValue)
     {
         $this->container['defaultValue'] = $defaultValue;
+        return $this;
+    }
+
+    /**
+    * Gets supportNull
+    *  支持NULL值。
+    *
+    * @return bool|null
+    */
+    public function getSupportNull()
+    {
+        return $this->container['supportNull'];
+    }
+
+    /**
+    * Sets supportNull
+    *
+    * @param bool|null $supportNull 支持NULL值。
+    *
+    * @return $this
+    */
+    public function setSupportNull($supportNull)
+    {
+        $this->container['supportNull'] = $supportNull;
         return $this;
     }
 

@@ -25,6 +25,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * playMode  **参数解释**： 驱动方式。 **约束限制**： 不涉及。 **取值范围**： * TEXT：文本驱动，即通过TTS合成语音。 * AUDIO：语音驱动。 * NO_PRESET：无预置剧本，人工控制模式。
     * randomPlayMode  **参数解释**： 随机播报模式。 **约束限制**： 从第二轮播报开始随机。 **取值范围**： * NONE：不启动随机播报。 * SCENE：按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM：场景和段落都随机播报。
     * needIndependentCaptureClient  **参数解释**： 是否需要独立采集端。用于客户端播放与命令分离场景。 **约束限制**： 不涉及。 **取值范围**： * true：分配CAPTURE、PLAYER两个RTC用户。 * fasle：仅分配PLAYER一个RTC用户。
+    * liveExitConfig  liveExitConfig
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class PlayPolicy implements ModelInterface, ArrayAccess
             'autoPlayScript' => 'bool',
             'playMode' => 'string',
             'randomPlayMode' => 'string',
-            'needIndependentCaptureClient' => 'bool'
+            'needIndependentCaptureClient' => 'bool',
+            'liveExitConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveExitConfig'
     ];
 
     /**
@@ -43,6 +45,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * playMode  **参数解释**： 驱动方式。 **约束限制**： 不涉及。 **取值范围**： * TEXT：文本驱动，即通过TTS合成语音。 * AUDIO：语音驱动。 * NO_PRESET：无预置剧本，人工控制模式。
     * randomPlayMode  **参数解释**： 随机播报模式。 **约束限制**： 从第二轮播报开始随机。 **取值范围**： * NONE：不启动随机播报。 * SCENE：按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM：场景和段落都随机播报。
     * needIndependentCaptureClient  **参数解释**： 是否需要独立采集端。用于客户端播放与命令分离场景。 **约束限制**： 不涉及。 **取值范围**： * true：分配CAPTURE、PLAYER两个RTC用户。 * fasle：仅分配PLAYER一个RTC用户。
+    * liveExitConfig  liveExitConfig
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class PlayPolicy implements ModelInterface, ArrayAccess
         'autoPlayScript' => null,
         'playMode' => null,
         'randomPlayMode' => null,
-        'needIndependentCaptureClient' => null
+        'needIndependentCaptureClient' => null,
+        'liveExitConfig' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * playMode  **参数解释**： 驱动方式。 **约束限制**： 不涉及。 **取值范围**： * TEXT：文本驱动，即通过TTS合成语音。 * AUDIO：语音驱动。 * NO_PRESET：无预置剧本，人工控制模式。
     * randomPlayMode  **参数解释**： 随机播报模式。 **约束限制**： 从第二轮播报开始随机。 **取值范围**： * NONE：不启动随机播报。 * SCENE：按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM：场景和段落都随机播报。
     * needIndependentCaptureClient  **参数解释**： 是否需要独立采集端。用于客户端播放与命令分离场景。 **约束限制**： 不涉及。 **取值范围**： * true：分配CAPTURE、PLAYER两个RTC用户。 * fasle：仅分配PLAYER一个RTC用户。
+    * liveExitConfig  liveExitConfig
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class PlayPolicy implements ModelInterface, ArrayAccess
             'autoPlayScript' => 'auto_play_script',
             'playMode' => 'play_mode',
             'randomPlayMode' => 'random_play_mode',
-            'needIndependentCaptureClient' => 'need_independent_capture_client'
+            'needIndependentCaptureClient' => 'need_independent_capture_client',
+            'liveExitConfig' => 'live_exit_config'
     ];
 
     /**
@@ -100,6 +106,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * playMode  **参数解释**： 驱动方式。 **约束限制**： 不涉及。 **取值范围**： * TEXT：文本驱动，即通过TTS合成语音。 * AUDIO：语音驱动。 * NO_PRESET：无预置剧本，人工控制模式。
     * randomPlayMode  **参数解释**： 随机播报模式。 **约束限制**： 从第二轮播报开始随机。 **取值范围**： * NONE：不启动随机播报。 * SCENE：按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM：场景和段落都随机播报。
     * needIndependentCaptureClient  **参数解释**： 是否需要独立采集端。用于客户端播放与命令分离场景。 **约束限制**： 不涉及。 **取值范围**： * true：分配CAPTURE、PLAYER两个RTC用户。 * fasle：仅分配PLAYER一个RTC用户。
+    * liveExitConfig  liveExitConfig
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class PlayPolicy implements ModelInterface, ArrayAccess
             'autoPlayScript' => 'setAutoPlayScript',
             'playMode' => 'setPlayMode',
             'randomPlayMode' => 'setRandomPlayMode',
-            'needIndependentCaptureClient' => 'setNeedIndependentCaptureClient'
+            'needIndependentCaptureClient' => 'setNeedIndependentCaptureClient',
+            'liveExitConfig' => 'setLiveExitConfig'
     ];
 
     /**
@@ -118,6 +126,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * playMode  **参数解释**： 驱动方式。 **约束限制**： 不涉及。 **取值范围**： * TEXT：文本驱动，即通过TTS合成语音。 * AUDIO：语音驱动。 * NO_PRESET：无预置剧本，人工控制模式。
     * randomPlayMode  **参数解释**： 随机播报模式。 **约束限制**： 从第二轮播报开始随机。 **取值范围**： * NONE：不启动随机播报。 * SCENE：按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM：场景和段落都随机播报。
     * needIndependentCaptureClient  **参数解释**： 是否需要独立采集端。用于客户端播放与命令分离场景。 **约束限制**： 不涉及。 **取值范围**： * true：分配CAPTURE、PLAYER两个RTC用户。 * fasle：仅分配PLAYER一个RTC用户。
+    * liveExitConfig  liveExitConfig
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class PlayPolicy implements ModelInterface, ArrayAccess
             'autoPlayScript' => 'getAutoPlayScript',
             'playMode' => 'getPlayMode',
             'randomPlayMode' => 'getRandomPlayMode',
-            'needIndependentCaptureClient' => 'getNeedIndependentCaptureClient'
+            'needIndependentCaptureClient' => 'getNeedIndependentCaptureClient',
+            'liveExitConfig' => 'getLiveExitConfig'
     ];
 
     /**
@@ -228,6 +238,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
         $this->container['playMode'] = isset($data['playMode']) ? $data['playMode'] : null;
         $this->container['randomPlayMode'] = isset($data['randomPlayMode']) ? $data['randomPlayMode'] : null;
         $this->container['needIndependentCaptureClient'] = isset($data['needIndependentCaptureClient']) ? $data['needIndependentCaptureClient'] : null;
+        $this->container['liveExitConfig'] = isset($data['liveExitConfig']) ? $data['liveExitConfig'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     public function setNeedIndependentCaptureClient($needIndependentCaptureClient)
     {
         $this->container['needIndependentCaptureClient'] = $needIndependentCaptureClient;
+        return $this;
+    }
+
+    /**
+    * Gets liveExitConfig
+    *  liveExitConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveExitConfig|null
+    */
+    public function getLiveExitConfig()
+    {
+        return $this->container['liveExitConfig'];
+    }
+
+    /**
+    * Sets liveExitConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveExitConfig|null $liveExitConfig liveExitConfig
+    *
+    * @return $this
+    */
+    public function setLiveExitConfig($liveExitConfig)
+    {
+        $this->container['liveExitConfig'] = $liveExitConfig;
         return $this;
     }
 

@@ -23,13 +23,15 @@ class ShootScriptAudioFileItem implements ModelInterface, ArrayAccess
     * sequenceNo  剧本序号。
     * audioFileUploadUrl  语音驱动音频文件上传URL。创建和更新脚本时返回。单个文件最大100M。支持上传MP3/WAV/M4A文件。
     * audioFileDownloadUrl  语音驱动音频文件下载URL。查询脚本详情时返回。
+    * audioId  audio id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'sequenceNo' => 'int',
             'audioFileUploadUrl' => 'string',
-            'audioFileDownloadUrl' => 'string'
+            'audioFileDownloadUrl' => 'string',
+            'audioId' => 'int'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ShootScriptAudioFileItem implements ModelInterface, ArrayAccess
     * sequenceNo  剧本序号。
     * audioFileUploadUrl  语音驱动音频文件上传URL。创建和更新脚本时返回。单个文件最大100M。支持上传MP3/WAV/M4A文件。
     * audioFileDownloadUrl  语音驱动音频文件下载URL。查询脚本详情时返回。
+    * audioId  audio id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'sequenceNo' => 'int32',
         'audioFileUploadUrl' => null,
-        'audioFileDownloadUrl' => null
+        'audioFileDownloadUrl' => null,
+        'audioId' => 'int32'
     ];
 
     /**
@@ -72,13 +76,15 @@ class ShootScriptAudioFileItem implements ModelInterface, ArrayAccess
     * sequenceNo  剧本序号。
     * audioFileUploadUrl  语音驱动音频文件上传URL。创建和更新脚本时返回。单个文件最大100M。支持上传MP3/WAV/M4A文件。
     * audioFileDownloadUrl  语音驱动音频文件下载URL。查询脚本详情时返回。
+    * audioId  audio id
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'sequenceNo' => 'sequence_no',
             'audioFileUploadUrl' => 'audio_file_upload_url',
-            'audioFileDownloadUrl' => 'audio_file_download_url'
+            'audioFileDownloadUrl' => 'audio_file_download_url',
+            'audioId' => 'audio_id'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ShootScriptAudioFileItem implements ModelInterface, ArrayAccess
     * sequenceNo  剧本序号。
     * audioFileUploadUrl  语音驱动音频文件上传URL。创建和更新脚本时返回。单个文件最大100M。支持上传MP3/WAV/M4A文件。
     * audioFileDownloadUrl  语音驱动音频文件下载URL。查询脚本详情时返回。
+    * audioId  audio id
     *
     * @var string[]
     */
     protected static $setters = [
             'sequenceNo' => 'setSequenceNo',
             'audioFileUploadUrl' => 'setAudioFileUploadUrl',
-            'audioFileDownloadUrl' => 'setAudioFileDownloadUrl'
+            'audioFileDownloadUrl' => 'setAudioFileDownloadUrl',
+            'audioId' => 'setAudioId'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ShootScriptAudioFileItem implements ModelInterface, ArrayAccess
     * sequenceNo  剧本序号。
     * audioFileUploadUrl  语音驱动音频文件上传URL。创建和更新脚本时返回。单个文件最大100M。支持上传MP3/WAV/M4A文件。
     * audioFileDownloadUrl  语音驱动音频文件下载URL。查询脚本详情时返回。
+    * audioId  audio id
     *
     * @var string[]
     */
     protected static $getters = [
             'sequenceNo' => 'getSequenceNo',
             'audioFileUploadUrl' => 'getAudioFileUploadUrl',
-            'audioFileDownloadUrl' => 'getAudioFileDownloadUrl'
+            'audioFileDownloadUrl' => 'getAudioFileDownloadUrl',
+            'audioId' => 'getAudioId'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ShootScriptAudioFileItem implements ModelInterface, ArrayAccess
         $this->container['sequenceNo'] = isset($data['sequenceNo']) ? $data['sequenceNo'] : null;
         $this->container['audioFileUploadUrl'] = isset($data['audioFileUploadUrl']) ? $data['audioFileUploadUrl'] : null;
         $this->container['audioFileDownloadUrl'] = isset($data['audioFileDownloadUrl']) ? $data['audioFileDownloadUrl'] : null;
+        $this->container['audioId'] = isset($data['audioId']) ? $data['audioId'] : null;
     }
 
     /**
@@ -200,6 +211,12 @@ class ShootScriptAudioFileItem implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['audioFileDownloadUrl']) && (mb_strlen($this->container['audioFileDownloadUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'audioFileDownloadUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['audioId']) && ($this->container['audioId'] > 10000)) {
+                $invalidProperties[] = "invalid value for 'audioId', must be smaller than or equal to 10000.";
+            }
+            if (!is_null($this->container['audioId']) && ($this->container['audioId'] < 0)) {
+                $invalidProperties[] = "invalid value for 'audioId', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -284,6 +301,30 @@ class ShootScriptAudioFileItem implements ModelInterface, ArrayAccess
     public function setAudioFileDownloadUrl($audioFileDownloadUrl)
     {
         $this->container['audioFileDownloadUrl'] = $audioFileDownloadUrl;
+        return $this;
+    }
+
+    /**
+    * Gets audioId
+    *  audio id
+    *
+    * @return int|null
+    */
+    public function getAudioId()
+    {
+        return $this->container['audioId'];
+    }
+
+    /**
+    * Sets audioId
+    *
+    * @param int|null $audioId audio id
+    *
+    * @return $this
+    */
+    public function setAudioId($audioId)
+    {
+        $this->container['audioId'] = $audioId;
         return $this;
     }
 

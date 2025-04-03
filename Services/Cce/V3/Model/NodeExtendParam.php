@@ -34,8 +34,6 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePreInstall  安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64
     * alphaCcePostInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
     * alphaCceNodeImageId  如果创建裸金属节点，需要使用自定义镜像时用此参数。
-    * nicMultiqueue  - 弹性网卡队列数配置，默认配置示例如下：  ``` \"[{\\\"queue\\\":4}]\" ```  包含如下字段： - queue: 弹性网卡队列数。 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 当前支持可配置队列数以及弹性网卡数：{\"1\":128, \"2\":92, \"4\":92, \"8\":32, \"16\":16,\"28\":9}, 既1弹性网卡队列可绑定128张弹性网卡，2队列弹性网卡可绑定92张，以此类推。 - 弹性网卡队列数越多，性能越强，但可绑定弹性网卡数越少，请根据您的需求进行配置（创建后不可修改）。
-    * nicThreshold  - 弹性网卡预绑定比例配置，默认配置示例如下： ``` \"0.3:0.6\" ```   - 第一位小数：预绑定低水位，弹性网卡预绑定的最低比例（最小预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定低水位⌋）   - 第二位小数：预绑定高水位，弹性网卡预绑定的最高比例（最大预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定高水位⌋）   - BMS节点上绑定的弹性网卡数：Pod正在使用的弹性网卡数 + 最小预绑定弹性网卡数 < BMS节点上绑定的弹性网卡数 < Pod正在使用的弹性网卡数 + 最大预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 < 最小预绑定弹性网卡数时：会绑定弹性网卡，使得预绑定弹性网卡数 = 最小预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 > 最大预绑定弹性网卡数时：会定时解绑弹性网卡（约2分钟一次），直到预绑定弹性网卡数 = 最大预绑定弹性网卡数   - 取值范围：[0.0, 1.0]; 一位小数; 低水位 <= 高水位 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 弹性网卡预绑定能加快工作负载的创建，但会占用IP，请根据您的需求进行配置。
     * chargingMode  节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
     * agencyName  委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。 作为响应参数仅在创建节点传入时返回该字段。
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
@@ -60,8 +58,6 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'alphaCcePreInstall' => 'string',
             'alphaCcePostInstall' => 'string',
             'alphaCceNodeImageId' => 'string',
-            'nicMultiqueue' => 'string',
-            'nicThreshold' => 'string',
             'chargingMode' => 'int',
             'agencyName' => 'string',
             'kubeReservedMem' => 'int',
@@ -86,8 +82,6 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePreInstall  安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64
     * alphaCcePostInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
     * alphaCceNodeImageId  如果创建裸金属节点，需要使用自定义镜像时用此参数。
-    * nicMultiqueue  - 弹性网卡队列数配置，默认配置示例如下：  ``` \"[{\\\"queue\\\":4}]\" ```  包含如下字段： - queue: 弹性网卡队列数。 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 当前支持可配置队列数以及弹性网卡数：{\"1\":128, \"2\":92, \"4\":92, \"8\":32, \"16\":16,\"28\":9}, 既1弹性网卡队列可绑定128张弹性网卡，2队列弹性网卡可绑定92张，以此类推。 - 弹性网卡队列数越多，性能越强，但可绑定弹性网卡数越少，请根据您的需求进行配置（创建后不可修改）。
-    * nicThreshold  - 弹性网卡预绑定比例配置，默认配置示例如下： ``` \"0.3:0.6\" ```   - 第一位小数：预绑定低水位，弹性网卡预绑定的最低比例（最小预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定低水位⌋）   - 第二位小数：预绑定高水位，弹性网卡预绑定的最高比例（最大预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定高水位⌋）   - BMS节点上绑定的弹性网卡数：Pod正在使用的弹性网卡数 + 最小预绑定弹性网卡数 < BMS节点上绑定的弹性网卡数 < Pod正在使用的弹性网卡数 + 最大预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 < 最小预绑定弹性网卡数时：会绑定弹性网卡，使得预绑定弹性网卡数 = 最小预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 > 最大预绑定弹性网卡数时：会定时解绑弹性网卡（约2分钟一次），直到预绑定弹性网卡数 = 最大预绑定弹性网卡数   - 取值范围：[0.0, 1.0]; 一位小数; 低水位 <= 高水位 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 弹性网卡预绑定能加快工作负载的创建，但会占用IP，请根据您的需求进行配置。
     * chargingMode  节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
     * agencyName  委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。 作为响应参数仅在创建节点传入时返回该字段。
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
@@ -112,8 +106,6 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
         'alphaCcePreInstall' => null,
         'alphaCcePostInstall' => null,
         'alphaCceNodeImageId' => null,
-        'nicMultiqueue' => null,
-        'nicThreshold' => null,
         'chargingMode' => 'int32',
         'agencyName' => null,
         'kubeReservedMem' => 'int32',
@@ -159,8 +151,6 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePreInstall  安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64
     * alphaCcePostInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
     * alphaCceNodeImageId  如果创建裸金属节点，需要使用自定义镜像时用此参数。
-    * nicMultiqueue  - 弹性网卡队列数配置，默认配置示例如下：  ``` \"[{\\\"queue\\\":4}]\" ```  包含如下字段： - queue: 弹性网卡队列数。 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 当前支持可配置队列数以及弹性网卡数：{\"1\":128, \"2\":92, \"4\":92, \"8\":32, \"16\":16,\"28\":9}, 既1弹性网卡队列可绑定128张弹性网卡，2队列弹性网卡可绑定92张，以此类推。 - 弹性网卡队列数越多，性能越强，但可绑定弹性网卡数越少，请根据您的需求进行配置（创建后不可修改）。
-    * nicThreshold  - 弹性网卡预绑定比例配置，默认配置示例如下： ``` \"0.3:0.6\" ```   - 第一位小数：预绑定低水位，弹性网卡预绑定的最低比例（最小预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定低水位⌋）   - 第二位小数：预绑定高水位，弹性网卡预绑定的最高比例（最大预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定高水位⌋）   - BMS节点上绑定的弹性网卡数：Pod正在使用的弹性网卡数 + 最小预绑定弹性网卡数 < BMS节点上绑定的弹性网卡数 < Pod正在使用的弹性网卡数 + 最大预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 < 最小预绑定弹性网卡数时：会绑定弹性网卡，使得预绑定弹性网卡数 = 最小预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 > 最大预绑定弹性网卡数时：会定时解绑弹性网卡（约2分钟一次），直到预绑定弹性网卡数 = 最大预绑定弹性网卡数   - 取值范围：[0.0, 1.0]; 一位小数; 低水位 <= 高水位 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 弹性网卡预绑定能加快工作负载的创建，但会占用IP，请根据您的需求进行配置。
     * chargingMode  节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
     * agencyName  委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。 作为响应参数仅在创建节点传入时返回该字段。
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
@@ -185,8 +175,6 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'alphaCcePreInstall' => 'alpha.cce/preInstall',
             'alphaCcePostInstall' => 'alpha.cce/postInstall',
             'alphaCceNodeImageId' => 'alpha.cce/NodeImageID',
-            'nicMultiqueue' => 'nicMultiqueue',
-            'nicThreshold' => 'nicThreshold',
             'chargingMode' => 'chargingMode',
             'agencyName' => 'agency_name',
             'kubeReservedMem' => 'kubeReservedMem',
@@ -211,8 +199,6 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePreInstall  安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64
     * alphaCcePostInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
     * alphaCceNodeImageId  如果创建裸金属节点，需要使用自定义镜像时用此参数。
-    * nicMultiqueue  - 弹性网卡队列数配置，默认配置示例如下：  ``` \"[{\\\"queue\\\":4}]\" ```  包含如下字段： - queue: 弹性网卡队列数。 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 当前支持可配置队列数以及弹性网卡数：{\"1\":128, \"2\":92, \"4\":92, \"8\":32, \"16\":16,\"28\":9}, 既1弹性网卡队列可绑定128张弹性网卡，2队列弹性网卡可绑定92张，以此类推。 - 弹性网卡队列数越多，性能越强，但可绑定弹性网卡数越少，请根据您的需求进行配置（创建后不可修改）。
-    * nicThreshold  - 弹性网卡预绑定比例配置，默认配置示例如下： ``` \"0.3:0.6\" ```   - 第一位小数：预绑定低水位，弹性网卡预绑定的最低比例（最小预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定低水位⌋）   - 第二位小数：预绑定高水位，弹性网卡预绑定的最高比例（最大预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定高水位⌋）   - BMS节点上绑定的弹性网卡数：Pod正在使用的弹性网卡数 + 最小预绑定弹性网卡数 < BMS节点上绑定的弹性网卡数 < Pod正在使用的弹性网卡数 + 最大预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 < 最小预绑定弹性网卡数时：会绑定弹性网卡，使得预绑定弹性网卡数 = 最小预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 > 最大预绑定弹性网卡数时：会定时解绑弹性网卡（约2分钟一次），直到预绑定弹性网卡数 = 最大预绑定弹性网卡数   - 取值范围：[0.0, 1.0]; 一位小数; 低水位 <= 高水位 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 弹性网卡预绑定能加快工作负载的创建，但会占用IP，请根据您的需求进行配置。
     * chargingMode  节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
     * agencyName  委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。 作为响应参数仅在创建节点传入时返回该字段。
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
@@ -237,8 +223,6 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'alphaCcePreInstall' => 'setAlphaCcePreInstall',
             'alphaCcePostInstall' => 'setAlphaCcePostInstall',
             'alphaCceNodeImageId' => 'setAlphaCceNodeImageId',
-            'nicMultiqueue' => 'setNicMultiqueue',
-            'nicThreshold' => 'setNicThreshold',
             'chargingMode' => 'setChargingMode',
             'agencyName' => 'setAgencyName',
             'kubeReservedMem' => 'setKubeReservedMem',
@@ -263,8 +247,6 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePreInstall  安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64
     * alphaCcePostInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
     * alphaCceNodeImageId  如果创建裸金属节点，需要使用自定义镜像时用此参数。
-    * nicMultiqueue  - 弹性网卡队列数配置，默认配置示例如下：  ``` \"[{\\\"queue\\\":4}]\" ```  包含如下字段： - queue: 弹性网卡队列数。 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 当前支持可配置队列数以及弹性网卡数：{\"1\":128, \"2\":92, \"4\":92, \"8\":32, \"16\":16,\"28\":9}, 既1弹性网卡队列可绑定128张弹性网卡，2队列弹性网卡可绑定92张，以此类推。 - 弹性网卡队列数越多，性能越强，但可绑定弹性网卡数越少，请根据您的需求进行配置（创建后不可修改）。
-    * nicThreshold  - 弹性网卡预绑定比例配置，默认配置示例如下： ``` \"0.3:0.6\" ```   - 第一位小数：预绑定低水位，弹性网卡预绑定的最低比例（最小预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定低水位⌋）   - 第二位小数：预绑定高水位，弹性网卡预绑定的最高比例（最大预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定高水位⌋）   - BMS节点上绑定的弹性网卡数：Pod正在使用的弹性网卡数 + 最小预绑定弹性网卡数 < BMS节点上绑定的弹性网卡数 < Pod正在使用的弹性网卡数 + 最大预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 < 最小预绑定弹性网卡数时：会绑定弹性网卡，使得预绑定弹性网卡数 = 最小预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 > 最大预绑定弹性网卡数时：会定时解绑弹性网卡（约2分钟一次），直到预绑定弹性网卡数 = 最大预绑定弹性网卡数   - 取值范围：[0.0, 1.0]; 一位小数; 低水位 <= 高水位 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 弹性网卡预绑定能加快工作负载的创建，但会占用IP，请根据您的需求进行配置。
     * chargingMode  节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
     * agencyName  委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。 作为响应参数仅在创建节点传入时返回该字段。
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
@@ -289,8 +271,6 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'alphaCcePreInstall' => 'getAlphaCcePreInstall',
             'alphaCcePostInstall' => 'getAlphaCcePostInstall',
             'alphaCceNodeImageId' => 'getAlphaCceNodeImageId',
-            'nicMultiqueue' => 'getNicMultiqueue',
-            'nicThreshold' => 'getNicThreshold',
             'chargingMode' => 'getChargingMode',
             'agencyName' => 'getAgencyName',
             'kubeReservedMem' => 'getKubeReservedMem',
@@ -386,8 +366,6 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
         $this->container['alphaCcePreInstall'] = isset($data['alphaCcePreInstall']) ? $data['alphaCcePreInstall'] : null;
         $this->container['alphaCcePostInstall'] = isset($data['alphaCcePostInstall']) ? $data['alphaCcePostInstall'] : null;
         $this->container['alphaCceNodeImageId'] = isset($data['alphaCceNodeImageId']) ? $data['alphaCceNodeImageId'] : null;
-        $this->container['nicMultiqueue'] = isset($data['nicMultiqueue']) ? $data['nicMultiqueue'] : null;
-        $this->container['nicThreshold'] = isset($data['nicThreshold']) ? $data['nicThreshold'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
         $this->container['kubeReservedMem'] = isset($data['kubeReservedMem']) ? $data['kubeReservedMem'] : null;
@@ -765,54 +743,6 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     public function setAlphaCceNodeImageId($alphaCceNodeImageId)
     {
         $this->container['alphaCceNodeImageId'] = $alphaCceNodeImageId;
-        return $this;
-    }
-
-    /**
-    * Gets nicMultiqueue
-    *  - 弹性网卡队列数配置，默认配置示例如下：  ``` \"[{\\\"queue\\\":4}]\" ```  包含如下字段： - queue: 弹性网卡队列数。 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 当前支持可配置队列数以及弹性网卡数：{\"1\":128, \"2\":92, \"4\":92, \"8\":32, \"16\":16,\"28\":9}, 既1弹性网卡队列可绑定128张弹性网卡，2队列弹性网卡可绑定92张，以此类推。 - 弹性网卡队列数越多，性能越强，但可绑定弹性网卡数越少，请根据您的需求进行配置（创建后不可修改）。
-    *
-    * @return string|null
-    */
-    public function getNicMultiqueue()
-    {
-        return $this->container['nicMultiqueue'];
-    }
-
-    /**
-    * Sets nicMultiqueue
-    *
-    * @param string|null $nicMultiqueue - 弹性网卡队列数配置，默认配置示例如下：  ``` \"[{\\\"queue\\\":4}]\" ```  包含如下字段： - queue: 弹性网卡队列数。 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 当前支持可配置队列数以及弹性网卡数：{\"1\":128, \"2\":92, \"4\":92, \"8\":32, \"16\":16,\"28\":9}, 既1弹性网卡队列可绑定128张弹性网卡，2队列弹性网卡可绑定92张，以此类推。 - 弹性网卡队列数越多，性能越强，但可绑定弹性网卡数越少，请根据您的需求进行配置（创建后不可修改）。
-    *
-    * @return $this
-    */
-    public function setNicMultiqueue($nicMultiqueue)
-    {
-        $this->container['nicMultiqueue'] = $nicMultiqueue;
-        return $this;
-    }
-
-    /**
-    * Gets nicThreshold
-    *  - 弹性网卡预绑定比例配置，默认配置示例如下： ``` \"0.3:0.6\" ```   - 第一位小数：预绑定低水位，弹性网卡预绑定的最低比例（最小预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定低水位⌋）   - 第二位小数：预绑定高水位，弹性网卡预绑定的最高比例（最大预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定高水位⌋）   - BMS节点上绑定的弹性网卡数：Pod正在使用的弹性网卡数 + 最小预绑定弹性网卡数 < BMS节点上绑定的弹性网卡数 < Pod正在使用的弹性网卡数 + 最大预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 < 最小预绑定弹性网卡数时：会绑定弹性网卡，使得预绑定弹性网卡数 = 最小预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 > 最大预绑定弹性网卡数时：会定时解绑弹性网卡（约2分钟一次），直到预绑定弹性网卡数 = 最大预绑定弹性网卡数   - 取值范围：[0.0, 1.0]; 一位小数; 低水位 <= 高水位 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 弹性网卡预绑定能加快工作负载的创建，但会占用IP，请根据您的需求进行配置。
-    *
-    * @return string|null
-    */
-    public function getNicThreshold()
-    {
-        return $this->container['nicThreshold'];
-    }
-
-    /**
-    * Sets nicThreshold
-    *
-    * @param string|null $nicThreshold - 弹性网卡预绑定比例配置，默认配置示例如下： ``` \"0.3:0.6\" ```   - 第一位小数：预绑定低水位，弹性网卡预绑定的最低比例（最小预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定低水位⌋）   - 第二位小数：预绑定高水位，弹性网卡预绑定的最高比例（最大预绑定弹性网卡数 = ⌊节点的总弹性网卡数 * 预绑定高水位⌋）   - BMS节点上绑定的弹性网卡数：Pod正在使用的弹性网卡数 + 最小预绑定弹性网卡数 < BMS节点上绑定的弹性网卡数 < Pod正在使用的弹性网卡数 + 最大预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 < 最小预绑定弹性网卡数时：会绑定弹性网卡，使得预绑定弹性网卡数 = 最小预绑定弹性网卡数   - BMS节点上当预绑定弹性网卡数 > 最大预绑定弹性网卡数时：会定时解绑弹性网卡（约2分钟一次），直到预绑定弹性网卡数 = 最大预绑定弹性网卡数   - 取值范围：[0.0, 1.0]; 一位小数; 低水位 <= 高水位 - 仅在turbo集群的BMS节点时，该字段才可配置。 - 弹性网卡预绑定能加快工作负载的创建，但会占用IP，请根据您的需求进行配置。
-    *
-    * @return $this
-    */
-    public function setNicThreshold($nicThreshold)
-    {
-        $this->container['nicThreshold'] = $nicThreshold;
         return $this;
     }
 

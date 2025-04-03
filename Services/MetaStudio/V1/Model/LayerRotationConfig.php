@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\DataArtsStudio\V1\Model;
+namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdateBizMetricResultData implements ModelInterface, ArrayAccess
+class LayerRotationConfig implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class UpdateBizMetricResultData implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdateBizMetricResult_data';
+    protected static $openAPIModelName = 'LayerRotationConfig';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * value  value，统一的返回结果的外层数据结构。
+    * angle  **参数解释**： 旋转角度。 **取值范围**： 角度范围0-360度。 **默认取值**： 0度。 **约束限制**： 以素材中心点旋转。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'value' => 'object'
+            'angle' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * value  value，统一的返回结果的外层数据结构。
+    * angle  **参数解释**： 旋转角度。 **取值范围**： 角度范围0-360度。 **默认取值**： 0度。 **约束限制**： 以素材中心点旋转。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'value' => null
+        'angle' => 'int32'
     ];
 
     /**
@@ -61,32 +61,32 @@ class UpdateBizMetricResultData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * value  value，统一的返回结果的外层数据结构。
+    * angle  **参数解释**： 旋转角度。 **取值范围**： 角度范围0-360度。 **默认取值**： 0度。 **约束限制**： 以素材中心点旋转。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'value' => 'value'
+            'angle' => 'angle'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * value  value，统一的返回结果的外层数据结构。
+    * angle  **参数解释**： 旋转角度。 **取值范围**： 角度范围0-360度。 **默认取值**： 0度。 **约束限制**： 以素材中心点旋转。
     *
     * @var string[]
     */
     protected static $setters = [
-            'value' => 'setValue'
+            'angle' => 'setAngle'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * value  value，统一的返回结果的外层数据结构。
+    * angle  **参数解释**： 旋转角度。 **取值范围**： 角度范围0-360度。 **默认取值**： 0度。 **约束限制**： 以素材中心点旋转。
     *
     * @var string[]
     */
     protected static $getters = [
-            'value' => 'getValue'
+            'angle' => 'getAngle'
     ];
 
     /**
@@ -147,7 +147,7 @@ class UpdateBizMetricResultData implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['angle'] = isset($data['angle']) ? $data['angle'] : null;
     }
 
     /**
@@ -158,6 +158,12 @@ class UpdateBizMetricResultData implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['angle']) && ($this->container['angle'] > 360)) {
+                $invalidProperties[] = "invalid value for 'angle', must be smaller than or equal to 360.";
+            }
+            if (!is_null($this->container['angle']) && ($this->container['angle'] < 0)) {
+                $invalidProperties[] = "invalid value for 'angle', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -173,26 +179,26 @@ class UpdateBizMetricResultData implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets value
-    *  value，统一的返回结果的外层数据结构。
+    * Gets angle
+    *  **参数解释**： 旋转角度。 **取值范围**： 角度范围0-360度。 **默认取值**： 0度。 **约束限制**： 以素材中心点旋转。
     *
-    * @return object|null
+    * @return int|null
     */
-    public function getValue()
+    public function getAngle()
     {
-        return $this->container['value'];
+        return $this->container['angle'];
     }
 
     /**
-    * Sets value
+    * Sets angle
     *
-    * @param object|null $value value，统一的返回结果的外层数据结构。
+    * @param int|null $angle **参数解释**： 旋转角度。 **取值范围**： 角度范围0-360度。 **默认取值**： 0度。 **约束限制**： 以素材中心点旋转。
     *
     * @return $this
     */
-    public function setValue($value)
+    public function setAngle($angle)
     {
-        $this->container['value'] = $value;
+        $this->container['angle'] = $angle;
         return $this;
     }
 

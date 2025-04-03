@@ -32,11 +32,12 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     * shootScripts  拍摄脚本列表。
     * scriptId  剧本ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * audioFiles  audioFiles
     * scriptCoverUrl  剧本封面下载url。
     * xRequestId  xRequestId
     *
@@ -54,11 +55,12 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
             'privData' => 'string',
             'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
+            'audioFiles' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptAudioFiles',
+            'actionConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ActionConfig',
             'shootScripts' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptShowItem[]',
             'scriptId' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string',
-            'audioFiles' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptAudioFiles',
             'scriptCoverUrl' => 'string',
             'xRequestId' => 'string'
     ];
@@ -76,11 +78,12 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     * shootScripts  拍摄脚本列表。
     * scriptId  剧本ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * audioFiles  audioFiles
     * scriptCoverUrl  剧本封面下载url。
     * xRequestId  xRequestId
     *
@@ -98,11 +101,12 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
         'privData' => null,
         'backgroundMusicConfig' => null,
         'reviewConfig' => null,
+        'audioFiles' => null,
+        'actionConfig' => null,
         'shootScripts' => null,
         'scriptId' => null,
         'createTime' => null,
         'updateTime' => null,
-        'audioFiles' => null,
         'scriptCoverUrl' => null,
         'xRequestId' => null
     ];
@@ -141,11 +145,12 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     * shootScripts  拍摄脚本列表。
     * scriptId  剧本ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * audioFiles  audioFiles
     * scriptCoverUrl  剧本封面下载url。
     * xRequestId  xRequestId
     *
@@ -163,11 +168,12 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
             'privData' => 'priv_data',
             'backgroundMusicConfig' => 'background_music_config',
             'reviewConfig' => 'review_config',
+            'audioFiles' => 'audio_files',
+            'actionConfig' => 'action_config',
             'shootScripts' => 'shoot_scripts',
             'scriptId' => 'script_id',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
-            'audioFiles' => 'audio_files',
             'scriptCoverUrl' => 'script_cover_url',
             'xRequestId' => 'X-Request-Id'
     ];
@@ -185,11 +191,12 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     * shootScripts  拍摄脚本列表。
     * scriptId  剧本ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * audioFiles  audioFiles
     * scriptCoverUrl  剧本封面下载url。
     * xRequestId  xRequestId
     *
@@ -207,11 +214,12 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
             'privData' => 'setPrivData',
             'backgroundMusicConfig' => 'setBackgroundMusicConfig',
             'reviewConfig' => 'setReviewConfig',
+            'audioFiles' => 'setAudioFiles',
+            'actionConfig' => 'setActionConfig',
             'shootScripts' => 'setShootScripts',
             'scriptId' => 'setScriptId',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
-            'audioFiles' => 'setAudioFiles',
             'scriptCoverUrl' => 'setScriptCoverUrl',
             'xRequestId' => 'setXRequestId'
     ];
@@ -229,11 +237,12 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     * shootScripts  拍摄脚本列表。
     * scriptId  剧本ID。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * audioFiles  audioFiles
     * scriptCoverUrl  剧本封面下载url。
     * xRequestId  xRequestId
     *
@@ -251,11 +260,12 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
             'privData' => 'getPrivData',
             'backgroundMusicConfig' => 'getBackgroundMusicConfig',
             'reviewConfig' => 'getReviewConfig',
+            'audioFiles' => 'getAudioFiles',
+            'actionConfig' => 'getActionConfig',
             'shootScripts' => 'getShootScripts',
             'scriptId' => 'getScriptId',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
-            'audioFiles' => 'getAudioFiles',
             'scriptCoverUrl' => 'getScriptCoverUrl',
             'xRequestId' => 'getXRequestId'
     ];
@@ -359,11 +369,12 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
         $this->container['privData'] = isset($data['privData']) ? $data['privData'] : null;
         $this->container['backgroundMusicConfig'] = isset($data['backgroundMusicConfig']) ? $data['backgroundMusicConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
+        $this->container['audioFiles'] = isset($data['audioFiles']) ? $data['audioFiles'] : null;
+        $this->container['actionConfig'] = isset($data['actionConfig']) ? $data['actionConfig'] : null;
         $this->container['shootScripts'] = isset($data['shootScripts']) ? $data['shootScripts'] : null;
         $this->container['scriptId'] = isset($data['scriptId']) ? $data['scriptId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
-        $this->container['audioFiles'] = isset($data['audioFiles']) ? $data['audioFiles'] : null;
         $this->container['scriptCoverUrl'] = isset($data['scriptCoverUrl']) ? $data['scriptCoverUrl'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
@@ -725,6 +736,54 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets audioFiles
+    *  audioFiles
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptAudioFiles|null
+    */
+    public function getAudioFiles()
+    {
+        return $this->container['audioFiles'];
+    }
+
+    /**
+    * Sets audioFiles
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptAudioFiles|null $audioFiles audioFiles
+    *
+    * @return $this
+    */
+    public function setAudioFiles($audioFiles)
+    {
+        $this->container['audioFiles'] = $audioFiles;
+        return $this;
+    }
+
+    /**
+    * Gets actionConfig
+    *  actionConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ActionConfig|null
+    */
+    public function getActionConfig()
+    {
+        return $this->container['actionConfig'];
+    }
+
+    /**
+    * Sets actionConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ActionConfig|null $actionConfig actionConfig
+    *
+    * @return $this
+    */
+    public function setActionConfig($actionConfig)
+    {
+        $this->container['actionConfig'] = $actionConfig;
+        return $this;
+    }
+
+    /**
     * Gets shootScripts
     *  拍摄脚本列表。
     *
@@ -817,30 +876,6 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     public function setUpdateTime($updateTime)
     {
         $this->container['updateTime'] = $updateTime;
-        return $this;
-    }
-
-    /**
-    * Gets audioFiles
-    *  audioFiles
-    *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptAudioFiles|null
-    */
-    public function getAudioFiles()
-    {
-        return $this->container['audioFiles'];
-    }
-
-    /**
-    * Sets audioFiles
-    *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptAudioFiles|null $audioFiles audioFiles
-    *
-    * @return $this
-    */
-    public function setAudioFiles($audioFiles)
-    {
-        $this->container['audioFiles'] = $audioFiles;
         return $this;
     }
 

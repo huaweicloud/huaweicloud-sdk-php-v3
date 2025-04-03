@@ -34,6 +34,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     * resourceExpireStartTime  资源过期时间段 开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceExpireEndTime  资源过期时间段 结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * subResource  子资源类型。当前只有flexus套餐包存在该字段 * voice_clone_flexus: 语音克隆Flexus版 * modeling_count_2d_model_flexus: 分身数字人形象制作Flexus版 * video_time_flexus_2d_model: 分身数字人Flexus版本视频制作
+    * status  资源状态。
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
             'chargingMode' => 'string',
             'resourceExpireStartTime' => 'string',
             'resourceExpireEndTime' => 'string',
-            'subResource' => 'string'
+            'subResource' => 'string',
+            'status' => 'int'
     ];
 
     /**
@@ -70,6 +72,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     * resourceExpireStartTime  资源过期时间段 开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceExpireEndTime  资源过期时间段 结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * subResource  子资源类型。当前只有flexus套餐包存在该字段 * voice_clone_flexus: 语音克隆Flexus版 * modeling_count_2d_model_flexus: 分身数字人形象制作Flexus版 * video_time_flexus_2d_model: 分身数字人Flexus版本视频制作
+    * status  资源状态。
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
         'chargingMode' => null,
         'resourceExpireStartTime' => null,
         'resourceExpireEndTime' => null,
-        'subResource' => null
+        'subResource' => null,
+        'status' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     * resourceExpireStartTime  资源过期时间段 开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceExpireEndTime  资源过期时间段 结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * subResource  子资源类型。当前只有flexus套餐包存在该字段 * voice_clone_flexus: 语音克隆Flexus版 * modeling_count_2d_model_flexus: 分身数字人形象制作Flexus版 * video_time_flexus_2d_model: 分身数字人Flexus版本视频制作
+    * status  资源状态。
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
             'chargingMode' => 'charging_mode',
             'resourceExpireStartTime' => 'resource_expire_start_time',
             'resourceExpireEndTime' => 'resource_expire_end_time',
-            'subResource' => 'sub_resource'
+            'subResource' => 'sub_resource',
+            'status' => 'status'
     ];
 
     /**
@@ -163,6 +169,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     * resourceExpireStartTime  资源过期时间段 开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceExpireEndTime  资源过期时间段 结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * subResource  子资源类型。当前只有flexus套餐包存在该字段 * voice_clone_flexus: 语音克隆Flexus版 * modeling_count_2d_model_flexus: 分身数字人形象制作Flexus版 * video_time_flexus_2d_model: 分身数字人Flexus版本视频制作
+    * status  资源状态。
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
             'chargingMode' => 'setChargingMode',
             'resourceExpireStartTime' => 'setResourceExpireStartTime',
             'resourceExpireEndTime' => 'setResourceExpireEndTime',
-            'subResource' => 'setSubResource'
+            'subResource' => 'setSubResource',
+            'status' => 'setStatus'
     ];
 
     /**
@@ -199,6 +207,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     * resourceExpireStartTime  资源过期时间段 开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceExpireEndTime  资源过期时间段 结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * subResource  子资源类型。当前只有flexus套餐包存在该字段 * voice_clone_flexus: 语音克隆Flexus版 * modeling_count_2d_model_flexus: 分身数字人形象制作Flexus版 * video_time_flexus_2d_model: 分身数字人Flexus版本视频制作
+    * status  资源状态。
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
             'chargingMode' => 'getChargingMode',
             'resourceExpireStartTime' => 'getResourceExpireStartTime',
             'resourceExpireEndTime' => 'getResourceExpireEndTime',
-            'subResource' => 'getSubResource'
+            'subResource' => 'getSubResource',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -291,6 +301,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
         $this->container['resourceExpireStartTime'] = isset($data['resourceExpireStartTime']) ? $data['resourceExpireStartTime'] : null;
         $this->container['resourceExpireEndTime'] = isset($data['resourceExpireEndTime']) ? $data['resourceExpireEndTime'] : null;
         $this->container['subResource'] = isset($data['subResource']) ? $data['subResource'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -735,6 +746,30 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     public function setSubResource($subResource)
     {
         $this->container['subResource'] = $subResource;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  资源状态。
+    *
+    * @return int|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param int|null $status 资源状态。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

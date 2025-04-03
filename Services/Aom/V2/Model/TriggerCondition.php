@@ -54,7 +54,7 @@ class TriggerCondition implements ModelInterface, ArrayAccess
             'metricLabels' => 'string[]',
             'promql' => 'string',
             'promqlExpr' => 'string[]',
-            'triggerTimes' => 'string',
+            'triggerTimes' => 'int',
             'triggerInterval' => 'string',
             'triggerType' => 'string',
             'promqlFor' => 'string',
@@ -108,7 +108,7 @@ class TriggerCondition implements ModelInterface, ArrayAccess
         'metricLabels' => null,
         'promql' => null,
         'promqlExpr' => null,
-        'triggerTimes' => null,
+        'triggerTimes' => 'int32',
         'triggerInterval' => null,
         'triggerType' => null,
         'promqlFor' => null,
@@ -713,7 +713,7 @@ class TriggerCondition implements ModelInterface, ArrayAccess
     * Gets triggerTimes
     *  连续周期个数。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getTriggerTimes()
     {
@@ -723,7 +723,7 @@ class TriggerCondition implements ModelInterface, ArrayAccess
     /**
     * Sets triggerTimes
     *
-    * @param string|null $triggerTimes 连续周期个数。
+    * @param int|null $triggerTimes 连续周期个数。
     *
     * @return $this
     */

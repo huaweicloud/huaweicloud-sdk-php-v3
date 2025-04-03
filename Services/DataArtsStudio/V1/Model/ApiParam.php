@@ -29,6 +29,7 @@ class ApiParam implements ModelInterface, ArrayAccess
     * apiSpecificTypeStr  API取数方式。
     * startTime  API创建开始时间。
     * endTime  API创建结束时间。
+    * authorizationStatusType  authorizationStatusType
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class ApiParam implements ModelInterface, ArrayAccess
             'publishStatusType' => 'string',
             'apiSpecificTypeStr' => 'string',
             'startTime' => 'string',
-            'endTime' => 'string'
+            'endTime' => 'string',
+            'authorizationStatusType' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class ApiParam implements ModelInterface, ArrayAccess
     * apiSpecificTypeStr  API取数方式。
     * startTime  API创建开始时间。
     * endTime  API创建结束时间。
+    * authorizationStatusType  authorizationStatusType
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class ApiParam implements ModelInterface, ArrayAccess
         'publishStatusType' => null,
         'apiSpecificTypeStr' => null,
         'startTime' => null,
-        'endTime' => null
+        'endTime' => null,
+        'authorizationStatusType' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class ApiParam implements ModelInterface, ArrayAccess
     * apiSpecificTypeStr  API取数方式。
     * startTime  API创建开始时间。
     * endTime  API创建结束时间。
+    * authorizationStatusType  authorizationStatusType
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class ApiParam implements ModelInterface, ArrayAccess
             'publishStatusType' => 'publish_status_type',
             'apiSpecificTypeStr' => 'api_specific_type_str',
             'startTime' => 'start_time',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'authorizationStatusType' => 'authorization_status_type'
     ];
 
     /**
@@ -128,6 +134,7 @@ class ApiParam implements ModelInterface, ArrayAccess
     * apiSpecificTypeStr  API取数方式。
     * startTime  API创建开始时间。
     * endTime  API创建结束时间。
+    * authorizationStatusType  authorizationStatusType
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class ApiParam implements ModelInterface, ArrayAccess
             'publishStatusType' => 'setPublishStatusType',
             'apiSpecificTypeStr' => 'setApiSpecificTypeStr',
             'startTime' => 'setStartTime',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'authorizationStatusType' => 'setAuthorizationStatusType'
     ];
 
     /**
@@ -154,6 +162,7 @@ class ApiParam implements ModelInterface, ArrayAccess
     * apiSpecificTypeStr  API取数方式。
     * startTime  API创建开始时间。
     * endTime  API创建结束时间。
+    * authorizationStatusType  authorizationStatusType
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class ApiParam implements ModelInterface, ArrayAccess
             'publishStatusType' => 'getPublishStatusType',
             'apiSpecificTypeStr' => 'getApiSpecificTypeStr',
             'startTime' => 'getStartTime',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'authorizationStatusType' => 'getAuthorizationStatusType'
     ];
 
     /**
@@ -215,6 +225,9 @@ class ApiParam implements ModelInterface, ArrayAccess
     const API_SPECIFIC_TYPE_STR_API_SPECIFIC_TYPE_SCRIPT = 'API_SPECIFIC_TYPE_SCRIPT';
     const API_SPECIFIC_TYPE_STR_API_SPECIFIC_TYPE_MYBATIS = 'API_SPECIFIC_TYPE_MYBATIS';
     const API_SPECIFIC_TYPE_STR_API_SPECIFIC_TYPE_GROOVY = 'API_SPECIFIC_TYPE_GROOVY';
+    const AUTHORIZATION_STATUS_TYPE_NO_AUTHORIZATION_REQUIRED = 'NO_AUTHORIZATION_REQUIRED';
+    const AUTHORIZATION_STATUS_TYPE_UNAUTHORIZED = 'UNAUTHORIZED';
+    const AUTHORIZATION_STATUS_TYPE_AUTHORIZED = 'AUTHORIZED';
     
 
     /**
@@ -245,6 +258,20 @@ class ApiParam implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAuthorizationStatusTypeAllowableValues()
+    {
+        return [
+            self::AUTHORIZATION_STATUS_TYPE_NO_AUTHORIZATION_REQUIRED,
+            self::AUTHORIZATION_STATUS_TYPE_UNAUTHORIZED,
+            self::AUTHORIZATION_STATUS_TYPE_AUTHORIZED,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -270,6 +297,7 @@ class ApiParam implements ModelInterface, ArrayAccess
         $this->container['apiSpecificTypeStr'] = isset($data['apiSpecificTypeStr']) ? $data['apiSpecificTypeStr'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['authorizationStatusType'] = isset($data['authorizationStatusType']) ? $data['authorizationStatusType'] : null;
     }
 
     /**
@@ -292,6 +320,14 @@ class ApiParam implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['apiSpecificTypeStr']) && !in_array($this->container['apiSpecificTypeStr'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'apiSpecificTypeStr', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getAuthorizationStatusTypeAllowableValues();
+                if (!is_null($this->container['authorizationStatusType']) && !in_array($this->container['authorizationStatusType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'authorizationStatusType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -523,6 +559,30 @@ class ApiParam implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets authorizationStatusType
+    *  authorizationStatusType
+    *
+    * @return string|null
+    */
+    public function getAuthorizationStatusType()
+    {
+        return $this->container['authorizationStatusType'];
+    }
+
+    /**
+    * Sets authorizationStatusType
+    *
+    * @param string|null $authorizationStatusType authorizationStatusType
+    *
+    * @return $this
+    */
+    public function setAuthorizationStatusType($authorizationStatusType)
+    {
+        $this->container['authorizationStatusType'] = $authorizationStatusType;
         return $this;
     }
 

@@ -10687,6 +10687,77 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 查询数据服务集群访问日志列表
+     *
+     * 查询数据服务集群访问日志列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDataServiceInstanceAccesslogs($request)
+    {
+        return $this->listDataServiceInstanceAccesslogsWithHttpInfo($request);
+    }
+
+    public function listDataServiceInstanceAccesslogsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/service/instances/{instance_id}/accesslog';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['isApi'] !== null) {
+            $queryParams['is_api'] = $localVarParams['isApi'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataServiceInstanceAccesslogsResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataServiceInstanceAccesslogsRequest');
+    }
+
+    /**
      * 查询集群详情信息列表
      *
      * 查询集群详情信息列表。
@@ -23301,6 +23372,154 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateCodeTableValuesResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateCodeTableValuesRequest');
+    }
+
+    /**
+     * 开启数据服务集群LTS日志转储
+     *
+     * 开启数据服务集群LTS日志转储。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDataServiceInstanceLtsLog($request)
+    {
+        return $this->updateDataServiceInstanceLtsLogWithHttpInfo($request);
+    }
+
+    public function updateDataServiceInstanceLtsLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/service/instances/{instance_id}/lts-log-dump';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['dlmType'] !== null) {
+            $headerParams[$arr['dlmType']] = $localVarParams['dlmType'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDataServiceInstanceLtsLogResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDataServiceInstanceLtsLogRequest');
+    }
+
+    /**
+     * 开启数据服务集群OBS日志转储
+     *
+     * 开启数据服务集群OBS日志转储。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDataServiceInstanceObsLog($request)
+    {
+        return $this->updateDataServiceInstanceObsLogWithHttpInfo($request);
+    }
+
+    public function updateDataServiceInstanceObsLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/service/instances/{instance_id}/obs-log-dump';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['dlmType'] !== null) {
+            $headerParams[$arr['dlmType']] = $localVarParams['dlmType'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDataServiceInstanceObsLogResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDataServiceInstanceObsLogRequest');
     }
 
     /**

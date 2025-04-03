@@ -36,6 +36,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
+    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  resourceLevel
     *
     * @var string[]
     */
@@ -55,7 +57,9 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'notificationEndTime' => 'string',
             'enterpriseProjectId' => 'string',
             'enabled' => 'bool',
-            'notificationEnabled' => 'bool'
+            'notificationEnabled' => 'bool',
+            'productName' => 'string',
+            'resourceLevel' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceLevel'
     ];
 
     /**
@@ -76,6 +80,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
+    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  resourceLevel
     *
     * @var string[]
     */
@@ -95,7 +101,9 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         'notificationEndTime' => null,
         'enterpriseProjectId' => null,
         'enabled' => null,
-        'notificationEnabled' => null
+        'notificationEnabled' => null,
+        'productName' => null,
+        'resourceLevel' => null
     ];
 
     /**
@@ -137,6 +145,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
+    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  resourceLevel
     *
     * @var string[]
     */
@@ -156,7 +166,9 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'notificationEndTime' => 'notification_end_time',
             'enterpriseProjectId' => 'enterprise_project_id',
             'enabled' => 'enabled',
-            'notificationEnabled' => 'notification_enabled'
+            'notificationEnabled' => 'notification_enabled',
+            'productName' => 'product_name',
+            'resourceLevel' => 'resource_level'
     ];
 
     /**
@@ -177,6 +189,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
+    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  resourceLevel
     *
     * @var string[]
     */
@@ -196,7 +210,9 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'notificationEndTime' => 'setNotificationEndTime',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'enabled' => 'setEnabled',
-            'notificationEnabled' => 'setNotificationEnabled'
+            'notificationEnabled' => 'setNotificationEnabled',
+            'productName' => 'setProductName',
+            'resourceLevel' => 'setResourceLevel'
     ];
 
     /**
@@ -217,6 +233,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
+    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  resourceLevel
     *
     * @var string[]
     */
@@ -236,7 +254,9 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'notificationEndTime' => 'getNotificationEndTime',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'enabled' => 'getEnabled',
-            'notificationEnabled' => 'getNotificationEnabled'
+            'notificationEnabled' => 'getNotificationEnabled',
+            'productName' => 'getProductName',
+            'resourceLevel' => 'getResourceLevel'
     ];
 
     /**
@@ -313,6 +333,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['notificationEnabled'] = isset($data['notificationEnabled']) ? $data['notificationEnabled'] : null;
+        $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
+        $this->container['resourceLevel'] = isset($data['resourceLevel']) ? $data['resourceLevel'] : null;
     }
 
     /**
@@ -398,6 +420,12 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         if ($this->container['notificationEnabled'] === null) {
             $invalidProperties[] = "'notificationEnabled' can't be null";
         }
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -793,6 +821,54 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     public function setNotificationEnabled($notificationEnabled)
     {
         $this->container['notificationEnabled'] = $notificationEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets productName
+    *  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    *
+    * @return string|null
+    */
+    public function getProductName()
+    {
+        return $this->container['productName'];
+    }
+
+    /**
+    * Sets productName
+    *
+    * @param string|null $productName 产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    *
+    * @return $this
+    */
+    public function setProductName($productName)
+    {
+        $this->container['productName'] = $productName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceLevel
+    *  resourceLevel
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceLevel|null
+    */
+    public function getResourceLevel()
+    {
+        return $this->container['resourceLevel'];
+    }
+
+    /**
+    * Sets resourceLevel
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceLevel|null $resourceLevel resourceLevel
+    *
+    * @return $this
+    */
+    public function setResourceLevel($resourceLevel)
+    {
+        $this->container['resourceLevel'] = $resourceLevel;
         return $this;
     }
 

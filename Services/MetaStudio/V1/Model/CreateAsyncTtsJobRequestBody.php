@@ -34,10 +34,12 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * genSrt  是否开启字幕
     * srtLen  字幕最大长度限制
     * srtLineLimit  字幕行数限制，默认为1
+    * sliceSegments  是否对文本进行分段
     * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
     * outputExternalUrl  音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
     * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
+    * isVocabularyConfigEnable  是否应用当前租户的读法配置
     *
     * @var string[]
     */
@@ -56,10 +58,12 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'genSrt' => 'bool',
             'srtLen' => 'int',
             'srtLineLimit' => 'int',
+            'sliceSegments' => 'bool',
             'channels' => 'int',
             'outputExternalUrl' => 'string',
             'srtOutputExternalUrl' => 'string',
-            'actionOutputExternalUrl' => 'string'
+            'actionOutputExternalUrl' => 'string',
+            'isVocabularyConfigEnable' => 'bool'
     ];
 
     /**
@@ -78,10 +82,12 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * genSrt  是否开启字幕
     * srtLen  字幕最大长度限制
     * srtLineLimit  字幕行数限制，默认为1
+    * sliceSegments  是否对文本进行分段
     * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
     * outputExternalUrl  音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
     * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
+    * isVocabularyConfigEnable  是否应用当前租户的读法配置
     *
     * @var string[]
     */
@@ -100,10 +106,12 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
         'genSrt' => null,
         'srtLen' => 'int64',
         'srtLineLimit' => 'int32',
+        'sliceSegments' => null,
         'channels' => 'int32',
         'outputExternalUrl' => null,
         'srtOutputExternalUrl' => null,
-        'actionOutputExternalUrl' => null
+        'actionOutputExternalUrl' => null,
+        'isVocabularyConfigEnable' => null
     ];
 
     /**
@@ -143,10 +151,12 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * genSrt  是否开启字幕
     * srtLen  字幕最大长度限制
     * srtLineLimit  字幕行数限制，默认为1
+    * sliceSegments  是否对文本进行分段
     * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
     * outputExternalUrl  音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
     * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
+    * isVocabularyConfigEnable  是否应用当前租户的读法配置
     *
     * @var string[]
     */
@@ -165,10 +175,12 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'genSrt' => 'gen_srt',
             'srtLen' => 'srt_len',
             'srtLineLimit' => 'srt_line_limit',
+            'sliceSegments' => 'slice_segments',
             'channels' => 'channels',
             'outputExternalUrl' => 'output_external_url',
             'srtOutputExternalUrl' => 'srt_output_external_url',
-            'actionOutputExternalUrl' => 'action_output_external_url'
+            'actionOutputExternalUrl' => 'action_output_external_url',
+            'isVocabularyConfigEnable' => 'is_vocabulary_config_enable'
     ];
 
     /**
@@ -187,10 +199,12 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * genSrt  是否开启字幕
     * srtLen  字幕最大长度限制
     * srtLineLimit  字幕行数限制，默认为1
+    * sliceSegments  是否对文本进行分段
     * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
     * outputExternalUrl  音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
     * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
+    * isVocabularyConfigEnable  是否应用当前租户的读法配置
     *
     * @var string[]
     */
@@ -209,10 +223,12 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'genSrt' => 'setGenSrt',
             'srtLen' => 'setSrtLen',
             'srtLineLimit' => 'setSrtLineLimit',
+            'sliceSegments' => 'setSliceSegments',
             'channels' => 'setChannels',
             'outputExternalUrl' => 'setOutputExternalUrl',
             'srtOutputExternalUrl' => 'setSrtOutputExternalUrl',
-            'actionOutputExternalUrl' => 'setActionOutputExternalUrl'
+            'actionOutputExternalUrl' => 'setActionOutputExternalUrl',
+            'isVocabularyConfigEnable' => 'setIsVocabularyConfigEnable'
     ];
 
     /**
@@ -231,10 +247,12 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * genSrt  是否开启字幕
     * srtLen  字幕最大长度限制
     * srtLineLimit  字幕行数限制，默认为1
+    * sliceSegments  是否对文本进行分段
     * channels  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
     * outputExternalUrl  音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
     * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
+    * isVocabularyConfigEnable  是否应用当前租户的读法配置
     *
     * @var string[]
     */
@@ -253,10 +271,12 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'genSrt' => 'getGenSrt',
             'srtLen' => 'getSrtLen',
             'srtLineLimit' => 'getSrtLineLimit',
+            'sliceSegments' => 'getSliceSegments',
             'channels' => 'getChannels',
             'outputExternalUrl' => 'getOutputExternalUrl',
             'srtOutputExternalUrl' => 'getSrtOutputExternalUrl',
-            'actionOutputExternalUrl' => 'getActionOutputExternalUrl'
+            'actionOutputExternalUrl' => 'getActionOutputExternalUrl',
+            'isVocabularyConfigEnable' => 'getIsVocabularyConfigEnable'
     ];
 
     /**
@@ -346,10 +366,12 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['genSrt'] = isset($data['genSrt']) ? $data['genSrt'] : null;
         $this->container['srtLen'] = isset($data['srtLen']) ? $data['srtLen'] : null;
         $this->container['srtLineLimit'] = isset($data['srtLineLimit']) ? $data['srtLineLimit'] : null;
+        $this->container['sliceSegments'] = isset($data['sliceSegments']) ? $data['sliceSegments'] : null;
         $this->container['channels'] = isset($data['channels']) ? $data['channels'] : null;
         $this->container['outputExternalUrl'] = isset($data['outputExternalUrl']) ? $data['outputExternalUrl'] : null;
         $this->container['srtOutputExternalUrl'] = isset($data['srtOutputExternalUrl']) ? $data['srtOutputExternalUrl'] : null;
         $this->container['actionOutputExternalUrl'] = isset($data['actionOutputExternalUrl']) ? $data['actionOutputExternalUrl'] : null;
+        $this->container['isVocabularyConfigEnable'] = isset($data['isVocabularyConfigEnable']) ? $data['isVocabularyConfigEnable'] : null;
     }
 
     /**
@@ -806,6 +828,30 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets sliceSegments
+    *  是否对文本进行分段
+    *
+    * @return bool|null
+    */
+    public function getSliceSegments()
+    {
+        return $this->container['sliceSegments'];
+    }
+
+    /**
+    * Sets sliceSegments
+    *
+    * @param bool|null $sliceSegments 是否对文本进行分段
+    *
+    * @return $this
+    */
+    public function setSliceSegments($sliceSegments)
+    {
+        $this->container['sliceSegments'] = $sliceSegments;
+        return $this;
+    }
+
+    /**
     * Gets channels
     *  声道。（单声道|双声道） 默认值1，最小值1，最大值2。
     *
@@ -898,6 +944,30 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     public function setActionOutputExternalUrl($actionOutputExternalUrl)
     {
         $this->container['actionOutputExternalUrl'] = $actionOutputExternalUrl;
+        return $this;
+    }
+
+    /**
+    * Gets isVocabularyConfigEnable
+    *  是否应用当前租户的读法配置
+    *
+    * @return bool|null
+    */
+    public function getIsVocabularyConfigEnable()
+    {
+        return $this->container['isVocabularyConfigEnable'];
+    }
+
+    /**
+    * Sets isVocabularyConfigEnable
+    *
+    * @param bool|null $isVocabularyConfigEnable 是否应用当前租户的读法配置
+    *
+    * @return $this
+    */
+    public function setIsVocabularyConfigEnable($isVocabularyConfigEnable)
+    {
+        $this->container['isVocabularyConfigEnable'] = $isVocabularyConfigEnable;
         return $this;
     }
 

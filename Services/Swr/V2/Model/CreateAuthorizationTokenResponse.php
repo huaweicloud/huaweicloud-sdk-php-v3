@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
+namespace HuaweiCloud\SDK\Swr\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ConfirmSmartLiveRoomResponse implements ModelInterface, ArrayAccess
+class CreateAuthorizationTokenResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,26 +17,34 @@ class ConfirmSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ConfirmSmartLiveRoomResponse';
+    protected static $openAPIModelName = 'CreateAuthorizationTokenResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xRequestId  xRequestId
+    * auths  认证信息
+    * xSwrDockerlogin  xSwrDockerlogin
+    * xSwrExpireat  xSwrExpireat
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'xRequestId' => 'string'
+            'auths' => 'map[string,\HuaweiCloud\SDK\Swr\V2\Model\AuthInfo]',
+            'xSwrDockerlogin' => 'string',
+            'xSwrExpireat' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xRequestId  xRequestId
+    * auths  认证信息
+    * xSwrDockerlogin  xSwrDockerlogin
+    * xSwrExpireat  xSwrExpireat
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'xRequestId' => null
+        'auths' => null,
+        'xSwrDockerlogin' => null,
+        'xSwrExpireat' => null
     ];
 
     /**
@@ -62,32 +70,44 @@ class ConfirmSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xRequestId  xRequestId
+    * auths  认证信息
+    * xSwrDockerlogin  xSwrDockerlogin
+    * xSwrExpireat  xSwrExpireat
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'xRequestId' => 'X-Request-Id'
+            'auths' => 'auths',
+            'xSwrDockerlogin' => 'X-Swr-Dockerlogin',
+            'xSwrExpireat' => 'x-swr-expireat'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xRequestId  xRequestId
+    * auths  认证信息
+    * xSwrDockerlogin  xSwrDockerlogin
+    * xSwrExpireat  xSwrExpireat
     *
     * @var string[]
     */
     protected static $setters = [
-            'xRequestId' => 'setXRequestId'
+            'auths' => 'setAuths',
+            'xSwrDockerlogin' => 'setXSwrDockerlogin',
+            'xSwrExpireat' => 'setXSwrExpireat'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xRequestId  xRequestId
+    * auths  认证信息
+    * xSwrDockerlogin  xSwrDockerlogin
+    * xSwrExpireat  xSwrExpireat
     *
     * @var string[]
     */
     protected static $getters = [
-            'xRequestId' => 'getXRequestId'
+            'auths' => 'getAuths',
+            'xSwrDockerlogin' => 'getXSwrDockerlogin',
+            'xSwrExpireat' => 'getXSwrExpireat'
     ];
 
     /**
@@ -148,7 +168,9 @@ class ConfirmSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
+        $this->container['auths'] = isset($data['auths']) ? $data['auths'] : null;
+        $this->container['xSwrDockerlogin'] = isset($data['xSwrDockerlogin']) ? $data['xSwrDockerlogin'] : null;
+        $this->container['xSwrExpireat'] = isset($data['xSwrExpireat']) ? $data['xSwrExpireat'] : null;
     }
 
     /**
@@ -174,26 +196,74 @@ class ConfirmSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets xRequestId
-    *  xRequestId
+    * Gets auths
+    *  认证信息
     *
-    * @return string|null
+    * @return map[string,\HuaweiCloud\SDK\Swr\V2\Model\AuthInfo]|null
     */
-    public function getXRequestId()
+    public function getAuths()
     {
-        return $this->container['xRequestId'];
+        return $this->container['auths'];
     }
 
     /**
-    * Sets xRequestId
+    * Sets auths
     *
-    * @param string|null $xRequestId xRequestId
+    * @param map[string,\HuaweiCloud\SDK\Swr\V2\Model\AuthInfo]|null $auths 认证信息
     *
     * @return $this
     */
-    public function setXRequestId($xRequestId)
+    public function setAuths($auths)
     {
-        $this->container['xRequestId'] = $xRequestId;
+        $this->container['auths'] = $auths;
+        return $this;
+    }
+
+    /**
+    * Gets xSwrDockerlogin
+    *  xSwrDockerlogin
+    *
+    * @return string|null
+    */
+    public function getXSwrDockerlogin()
+    {
+        return $this->container['xSwrDockerlogin'];
+    }
+
+    /**
+    * Sets xSwrDockerlogin
+    *
+    * @param string|null $xSwrDockerlogin xSwrDockerlogin
+    *
+    * @return $this
+    */
+    public function setXSwrDockerlogin($xSwrDockerlogin)
+    {
+        $this->container['xSwrDockerlogin'] = $xSwrDockerlogin;
+        return $this;
+    }
+
+    /**
+    * Gets xSwrExpireat
+    *  xSwrExpireat
+    *
+    * @return string|null
+    */
+    public function getXSwrExpireat()
+    {
+        return $this->container['xSwrExpireat'];
+    }
+
+    /**
+    * Sets xSwrExpireat
+    *
+    * @param string|null $xSwrExpireat xSwrExpireat
+    *
+    * @return $this
+    */
+    public function setXSwrExpireat($xSwrExpireat)
+    {
+        $this->container['xSwrExpireat'] = $xSwrExpireat;
         return $this;
     }
 

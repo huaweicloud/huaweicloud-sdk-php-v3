@@ -52,6 +52,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * includeDeviceName  资产已执行的任务名称
     * excludeDeviceName  资产已执行的任务名称
     * supportedService  资产支持的业务类型。默认查询所有资产。 * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * appUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -87,7 +88,8 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'humanModel2dVersion' => 'string',
             'includeDeviceName' => 'string',
             'excludeDeviceName' => 'string',
-            'supportedService' => 'string'
+            'supportedService' => 'string',
+            'appUserId' => 'string'
     ];
 
     /**
@@ -124,6 +126,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * includeDeviceName  资产已执行的任务名称
     * excludeDeviceName  资产已执行的任务名称
     * supportedService  资产支持的业务类型。默认查询所有资产。 * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * appUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -159,7 +162,8 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
         'humanModel2dVersion' => null,
         'includeDeviceName' => null,
         'excludeDeviceName' => null,
-        'supportedService' => null
+        'supportedService' => null,
+        'appUserId' => null
     ];
 
     /**
@@ -217,6 +221,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * includeDeviceName  资产已执行的任务名称
     * excludeDeviceName  资产已执行的任务名称
     * supportedService  资产支持的业务类型。默认查询所有资产。 * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * appUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -252,7 +257,8 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'humanModel2dVersion' => 'human_model_2d_version',
             'includeDeviceName' => 'include_device_name',
             'excludeDeviceName' => 'exclude_device_name',
-            'supportedService' => 'supported_service'
+            'supportedService' => 'supported_service',
+            'appUserId' => 'app_user_id'
     ];
 
     /**
@@ -289,6 +295,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * includeDeviceName  资产已执行的任务名称
     * excludeDeviceName  资产已执行的任务名称
     * supportedService  资产支持的业务类型。默认查询所有资产。 * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * appUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -324,7 +331,8 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'humanModel2dVersion' => 'setHumanModel2dVersion',
             'includeDeviceName' => 'setIncludeDeviceName',
             'excludeDeviceName' => 'setExcludeDeviceName',
-            'supportedService' => 'setSupportedService'
+            'supportedService' => 'setSupportedService',
+            'appUserId' => 'setAppUserId'
     ];
 
     /**
@@ -361,6 +369,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * includeDeviceName  资产已执行的任务名称
     * excludeDeviceName  资产已执行的任务名称
     * supportedService  资产支持的业务类型。默认查询所有资产。 * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    * appUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -396,7 +405,8 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'humanModel2dVersion' => 'getHumanModel2dVersion',
             'includeDeviceName' => 'getIncludeDeviceName',
             'excludeDeviceName' => 'getExcludeDeviceName',
-            'supportedService' => 'getSupportedService'
+            'supportedService' => 'getSupportedService',
+            'appUserId' => 'getAppUserId'
     ];
 
     /**
@@ -553,6 +563,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
         $this->container['includeDeviceName'] = isset($data['includeDeviceName']) ? $data['includeDeviceName'] : null;
         $this->container['excludeDeviceName'] = isset($data['excludeDeviceName']) ? $data['excludeDeviceName'] : null;
         $this->container['supportedService'] = isset($data['supportedService']) ? $data['supportedService'] : null;
+        $this->container['appUserId'] = isset($data['appUserId']) ? $data['appUserId'] : null;
     }
 
     /**
@@ -736,6 +747,12 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['appUserId']) && (mb_strlen($this->container['appUserId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'appUserId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['appUserId']) && (mb_strlen($this->container['appUserId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'appUserId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -1515,6 +1532,30 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     public function setSupportedService($supportedService)
     {
         $this->container['supportedService'] = $supportedService;
+        return $this;
+    }
+
+    /**
+    * Gets appUserId
+    *  第三方用户ID。不允许输入中文。
+    *
+    * @return string|null
+    */
+    public function getAppUserId()
+    {
+        return $this->container['appUserId'];
+    }
+
+    /**
+    * Sets appUserId
+    *
+    * @param string|null $appUserId 第三方用户ID。不允许输入中文。
+    *
+    * @return $this
+    */
+    public function setAppUserId($appUserId)
+    {
+        $this->container['appUserId'] = $appUserId;
         return $this;
     }
 

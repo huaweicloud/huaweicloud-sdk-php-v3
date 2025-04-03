@@ -65,8 +65,8 @@ class ResourceUsageInfo implements ModelInterface, ArrayAccess
         'isSubResource' => null,
         'chargingMode' => null,
         'resourceSource' => 'int64',
-        'amount' => 'float32',
-        'usage' => 'float32',
+        'amount' => 'float',
+        'usage' => 'float',
         'unit' => null
     ];
 

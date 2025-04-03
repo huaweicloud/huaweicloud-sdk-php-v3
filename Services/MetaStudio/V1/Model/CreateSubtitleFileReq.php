@@ -22,24 +22,28 @@ class CreateSubtitleFileReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * scriptId  剧本ID。
     * sequenceNo  剧本序号。  > * 剧本序号不填生成所有场景的字幕；如果需要生成单场景的字幕，需要填剧本序号。
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'scriptId' => 'string',
-            'sequenceNo' => 'int'
+            'sequenceNo' => 'int',
+            'callbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * scriptId  剧本ID。
     * sequenceNo  剧本序号。  > * 剧本序号不填生成所有场景的字幕；如果需要生成单场景的字幕，需要填剧本序号。
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'scriptId' => null,
-        'sequenceNo' => 'int32'
+        'sequenceNo' => 'int32',
+        'callbackConfig' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class CreateSubtitleFileReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * scriptId  剧本ID。
     * sequenceNo  剧本序号。  > * 剧本序号不填生成所有场景的字幕；如果需要生成单场景的字幕，需要填剧本序号。
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'scriptId' => 'script_id',
-            'sequenceNo' => 'sequence_no'
+            'sequenceNo' => 'sequence_no',
+            'callbackConfig' => 'callback_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * scriptId  剧本ID。
     * sequenceNo  剧本序号。  > * 剧本序号不填生成所有场景的字幕；如果需要生成单场景的字幕，需要填剧本序号。
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
     protected static $setters = [
             'scriptId' => 'setScriptId',
-            'sequenceNo' => 'setSequenceNo'
+            'sequenceNo' => 'setSequenceNo',
+            'callbackConfig' => 'setCallbackConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * scriptId  剧本ID。
     * sequenceNo  剧本序号。  > * 剧本序号不填生成所有场景的字幕；如果需要生成单场景的字幕，需要填剧本序号。
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
     protected static $getters = [
             'scriptId' => 'getScriptId',
-            'sequenceNo' => 'getSequenceNo'
+            'sequenceNo' => 'getSequenceNo',
+            'callbackConfig' => 'getCallbackConfig'
     ];
 
     /**
@@ -159,6 +169,7 @@ class CreateSubtitleFileReq implements ModelInterface, ArrayAccess
     {
         $this->container['scriptId'] = isset($data['scriptId']) ? $data['scriptId'] : null;
         $this->container['sequenceNo'] = isset($data['sequenceNo']) ? $data['sequenceNo'] : null;
+        $this->container['callbackConfig'] = isset($data['callbackConfig']) ? $data['callbackConfig'] : null;
     }
 
     /**
@@ -240,6 +251,30 @@ class CreateSubtitleFileReq implements ModelInterface, ArrayAccess
     public function setSequenceNo($sequenceNo)
     {
         $this->container['sequenceNo'] = $sequenceNo;
+        return $this;
+    }
+
+    /**
+    * Gets callbackConfig
+    *  callbackConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig|null
+    */
+    public function getCallbackConfig()
+    {
+        return $this->container['callbackConfig'];
+    }
+
+    /**
+    * Sets callbackConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig|null $callbackConfig callbackConfig
+    *
+    * @return $this
+    */
+    public function setCallbackConfig($callbackConfig)
+    {
+        $this->container['callbackConfig'] = $callbackConfig;
         return $this;
     }
 

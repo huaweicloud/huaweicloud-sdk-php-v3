@@ -35,6 +35,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * alarmTemplateId  告警规则关联告警模板ID
+    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  resourceLevel
     *
     * @var string[]
     */
@@ -53,7 +55,9 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
             'notificationBeginTime' => 'string',
             'notificationEndTime' => 'string',
             'enterpriseProjectId' => 'string',
-            'alarmTemplateId' => 'string'
+            'alarmTemplateId' => 'string',
+            'productName' => 'string',
+            'resourceLevel' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceLevel'
     ];
 
     /**
@@ -73,6 +77,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * alarmTemplateId  告警规则关联告警模板ID
+    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  resourceLevel
     *
     * @var string[]
     */
@@ -91,7 +97,9 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
         'notificationBeginTime' => null,
         'notificationEndTime' => null,
         'enterpriseProjectId' => null,
-        'alarmTemplateId' => null
+        'alarmTemplateId' => null,
+        'productName' => null,
+        'resourceLevel' => null
     ];
 
     /**
@@ -132,6 +140,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * alarmTemplateId  告警规则关联告警模板ID
+    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  resourceLevel
     *
     * @var string[]
     */
@@ -150,7 +160,9 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
             'notificationBeginTime' => 'notification_begin_time',
             'notificationEndTime' => 'notification_end_time',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'alarmTemplateId' => 'alarm_template_id'
+            'alarmTemplateId' => 'alarm_template_id',
+            'productName' => 'product_name',
+            'resourceLevel' => 'resource_level'
     ];
 
     /**
@@ -170,6 +182,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * alarmTemplateId  告警规则关联告警模板ID
+    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  resourceLevel
     *
     * @var string[]
     */
@@ -188,7 +202,9 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
             'notificationBeginTime' => 'setNotificationBeginTime',
             'notificationEndTime' => 'setNotificationEndTime',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'alarmTemplateId' => 'setAlarmTemplateId'
+            'alarmTemplateId' => 'setAlarmTemplateId',
+            'productName' => 'setProductName',
+            'resourceLevel' => 'setResourceLevel'
     ];
 
     /**
@@ -208,6 +224,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
     * alarmTemplateId  告警规则关联告警模板ID
+    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  resourceLevel
     *
     * @var string[]
     */
@@ -226,7 +244,9 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
             'notificationBeginTime' => 'getNotificationBeginTime',
             'notificationEndTime' => 'getNotificationEndTime',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'alarmTemplateId' => 'getAlarmTemplateId'
+            'alarmTemplateId' => 'getAlarmTemplateId',
+            'productName' => 'getProductName',
+            'resourceLevel' => 'getResourceLevel'
     ];
 
     /**
@@ -302,6 +322,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
         $this->container['notificationEndTime'] = isset($data['notificationEndTime']) ? $data['notificationEndTime'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['alarmTemplateId'] = isset($data['alarmTemplateId']) ? $data['alarmTemplateId'] : null;
+        $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
+        $this->container['resourceLevel'] = isset($data['resourceLevel']) ? $data['resourceLevel'] : null;
     }
 
     /**
@@ -362,6 +384,12 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['alarmTemplateId']) && !preg_match("/^at([0-9A-Za-z])+$/", $this->container['alarmTemplateId'])) {
                 $invalidProperties[] = "invalid value for 'alarmTemplateId', must be conform to the pattern /^at([0-9A-Za-z])+$/.";
+            }
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -734,6 +762,54 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     public function setAlarmTemplateId($alarmTemplateId)
     {
         $this->container['alarmTemplateId'] = $alarmTemplateId;
+        return $this;
+    }
+
+    /**
+    * Gets productName
+    *  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    *
+    * @return string|null
+    */
+    public function getProductName()
+    {
+        return $this->container['productName'];
+    }
+
+    /**
+    * Sets productName
+    *
+    * @param string|null $productName 产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    *
+    * @return $this
+    */
+    public function setProductName($productName)
+    {
+        $this->container['productName'] = $productName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceLevel
+    *  resourceLevel
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceLevel|null
+    */
+    public function getResourceLevel()
+    {
+        return $this->container['resourceLevel'];
+    }
+
+    /**
+    * Sets resourceLevel
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceLevel|null $resourceLevel resourceLevel
+    *
+    * @return $this
+    */
+    public function setResourceLevel($resourceLevel)
+    {
+        $this->container['resourceLevel'] = $resourceLevel;
         return $this;
     }
 

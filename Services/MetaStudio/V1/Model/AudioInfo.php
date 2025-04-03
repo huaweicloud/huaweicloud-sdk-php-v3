@@ -20,7 +20,7 @@ class AudioInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * audioId  **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id **约束限制**： 不涉及 **取值范围**： 0-10000 **默认取值**： 不涉及
+    * audioId  **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id  **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class AudioInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * audioId  **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id **约束限制**： 不涉及 **取值范围**： 0-10000 **默认取值**： 不涉及
+    * audioId  **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id  **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class AudioInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * audioId  **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id **约束限制**： 不涉及 **取值范围**： 0-10000 **默认取值**： 不涉及
+    * audioId  **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id  **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AudioInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * audioId  **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id **约束限制**： 不涉及 **取值范围**： 0-10000 **默认取值**： 不涉及
+    * audioId  **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id  **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class AudioInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * audioId  **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id **约束限制**： 不涉及 **取值范围**： 0-10000 **默认取值**： 不涉及
+    * audioId  **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id  **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class AudioInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets audioId
-    *  **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id **约束限制**： 不涉及 **取值范围**： 0-10000 **默认取值**： 不涉及
+    *  **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id  **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -192,7 +192,7 @@ class AudioInfo implements ModelInterface, ArrayAccess
     /**
     * Sets audioId
     *
-    * @param int|null $audioId **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id **约束限制**： 不涉及 **取值范围**： 0-10000 **默认取值**： 不涉及
+    * @param int|null $audioId **参数解释**： 音频id。 > * 获取方式：剧本为音频驱动时，查询剧本详情或者更新剧本会返回audio_id  **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

@@ -24,16 +24,22 @@ class Api implements ModelInterface, ArrayAccess
     * name  api 名称
     * description  api 描述
     * logFlag  是否启用访问日志
-    * apiType  Api类型
+    * apiType  apiType
     * authType  authType
-    * publishType  发布类型
-    * manager  api 审核人
-    * path  api路径
-    * protocol  api 协议
-    * requestType  请求类型
-    * tags  标签
-    * visibility  可见性
-    * requestParas  API请求参数列表
+    * retentionPeriod  最低保留期限，单位小时。
+    * manager  API审核人。
+    * path  API路径。
+    * protocol  protocol
+    * requestType  requestType
+    * tags  标签。
+    * visibility  visibility
+    * publishType  publishType
+    * dataMaskSwitch  数据脱敏开关。
+    * dataMaskParas  数据脱敏配置。
+    * body  请求体内容描述，仅注册类API使用。
+    * datasourceConfigList  多数据源配置信息，仅Groovy类API使用。
+    * groovyContent  Groovy文本，仅Groovy类API使用。
+    * requestParas  API请求参数列表。
     * datasourceConfig  datasourceConfig
     * backendConfig  backendConfig
     *
@@ -46,13 +52,19 @@ class Api implements ModelInterface, ArrayAccess
             'logFlag' => 'bool',
             'apiType' => 'string',
             'authType' => 'string',
-            'publishType' => 'string',
+            'retentionPeriod' => 'int',
             'manager' => 'string',
             'path' => 'string',
             'protocol' => 'string',
             'requestType' => 'string',
             'tags' => 'string[]',
             'visibility' => 'string',
+            'publishType' => 'string',
+            'dataMaskSwitch' => 'bool',
+            'dataMaskParas' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DataMaskParas[]',
+            'body' => 'string',
+            'datasourceConfigList' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DatasourceConfig[]',
+            'groovyContent' => 'string',
             'requestParas' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\RequestPara[]',
             'datasourceConfig' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DatasourceConfig',
             'backendConfig' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BackendConfig'
@@ -64,16 +76,22 @@ class Api implements ModelInterface, ArrayAccess
     * name  api 名称
     * description  api 描述
     * logFlag  是否启用访问日志
-    * apiType  Api类型
+    * apiType  apiType
     * authType  authType
-    * publishType  发布类型
-    * manager  api 审核人
-    * path  api路径
-    * protocol  api 协议
-    * requestType  请求类型
-    * tags  标签
-    * visibility  可见性
-    * requestParas  API请求参数列表
+    * retentionPeriod  最低保留期限，单位小时。
+    * manager  API审核人。
+    * path  API路径。
+    * protocol  protocol
+    * requestType  requestType
+    * tags  标签。
+    * visibility  visibility
+    * publishType  publishType
+    * dataMaskSwitch  数据脱敏开关。
+    * dataMaskParas  数据脱敏配置。
+    * body  请求体内容描述，仅注册类API使用。
+    * datasourceConfigList  多数据源配置信息，仅Groovy类API使用。
+    * groovyContent  Groovy文本，仅Groovy类API使用。
+    * requestParas  API请求参数列表。
     * datasourceConfig  datasourceConfig
     * backendConfig  backendConfig
     *
@@ -86,13 +104,19 @@ class Api implements ModelInterface, ArrayAccess
         'logFlag' => null,
         'apiType' => null,
         'authType' => null,
-        'publishType' => null,
+        'retentionPeriod' => null,
         'manager' => null,
         'path' => null,
         'protocol' => null,
         'requestType' => null,
         'tags' => null,
         'visibility' => null,
+        'publishType' => null,
+        'dataMaskSwitch' => null,
+        'dataMaskParas' => null,
+        'body' => null,
+        'datasourceConfigList' => null,
+        'groovyContent' => null,
         'requestParas' => null,
         'datasourceConfig' => null,
         'backendConfig' => null
@@ -125,16 +149,22 @@ class Api implements ModelInterface, ArrayAccess
     * name  api 名称
     * description  api 描述
     * logFlag  是否启用访问日志
-    * apiType  Api类型
+    * apiType  apiType
     * authType  authType
-    * publishType  发布类型
-    * manager  api 审核人
-    * path  api路径
-    * protocol  api 协议
-    * requestType  请求类型
-    * tags  标签
-    * visibility  可见性
-    * requestParas  API请求参数列表
+    * retentionPeriod  最低保留期限，单位小时。
+    * manager  API审核人。
+    * path  API路径。
+    * protocol  protocol
+    * requestType  requestType
+    * tags  标签。
+    * visibility  visibility
+    * publishType  publishType
+    * dataMaskSwitch  数据脱敏开关。
+    * dataMaskParas  数据脱敏配置。
+    * body  请求体内容描述，仅注册类API使用。
+    * datasourceConfigList  多数据源配置信息，仅Groovy类API使用。
+    * groovyContent  Groovy文本，仅Groovy类API使用。
+    * requestParas  API请求参数列表。
     * datasourceConfig  datasourceConfig
     * backendConfig  backendConfig
     *
@@ -147,13 +177,19 @@ class Api implements ModelInterface, ArrayAccess
             'logFlag' => 'log_flag',
             'apiType' => 'api_type',
             'authType' => 'auth_type',
-            'publishType' => 'publish_type',
+            'retentionPeriod' => 'retention_period',
             'manager' => 'manager',
             'path' => 'path',
             'protocol' => 'protocol',
             'requestType' => 'request_type',
             'tags' => 'tags',
             'visibility' => 'visibility',
+            'publishType' => 'publish_type',
+            'dataMaskSwitch' => 'data_mask_switch',
+            'dataMaskParas' => 'data_mask_paras',
+            'body' => 'body',
+            'datasourceConfigList' => 'datasource_config_list',
+            'groovyContent' => 'groovy_content',
             'requestParas' => 'request_paras',
             'datasourceConfig' => 'datasource_config',
             'backendConfig' => 'backend_config'
@@ -165,16 +201,22 @@ class Api implements ModelInterface, ArrayAccess
     * name  api 名称
     * description  api 描述
     * logFlag  是否启用访问日志
-    * apiType  Api类型
+    * apiType  apiType
     * authType  authType
-    * publishType  发布类型
-    * manager  api 审核人
-    * path  api路径
-    * protocol  api 协议
-    * requestType  请求类型
-    * tags  标签
-    * visibility  可见性
-    * requestParas  API请求参数列表
+    * retentionPeriod  最低保留期限，单位小时。
+    * manager  API审核人。
+    * path  API路径。
+    * protocol  protocol
+    * requestType  requestType
+    * tags  标签。
+    * visibility  visibility
+    * publishType  publishType
+    * dataMaskSwitch  数据脱敏开关。
+    * dataMaskParas  数据脱敏配置。
+    * body  请求体内容描述，仅注册类API使用。
+    * datasourceConfigList  多数据源配置信息，仅Groovy类API使用。
+    * groovyContent  Groovy文本，仅Groovy类API使用。
+    * requestParas  API请求参数列表。
     * datasourceConfig  datasourceConfig
     * backendConfig  backendConfig
     *
@@ -187,13 +229,19 @@ class Api implements ModelInterface, ArrayAccess
             'logFlag' => 'setLogFlag',
             'apiType' => 'setApiType',
             'authType' => 'setAuthType',
-            'publishType' => 'setPublishType',
+            'retentionPeriod' => 'setRetentionPeriod',
             'manager' => 'setManager',
             'path' => 'setPath',
             'protocol' => 'setProtocol',
             'requestType' => 'setRequestType',
             'tags' => 'setTags',
             'visibility' => 'setVisibility',
+            'publishType' => 'setPublishType',
+            'dataMaskSwitch' => 'setDataMaskSwitch',
+            'dataMaskParas' => 'setDataMaskParas',
+            'body' => 'setBody',
+            'datasourceConfigList' => 'setDatasourceConfigList',
+            'groovyContent' => 'setGroovyContent',
             'requestParas' => 'setRequestParas',
             'datasourceConfig' => 'setDatasourceConfig',
             'backendConfig' => 'setBackendConfig'
@@ -205,16 +253,22 @@ class Api implements ModelInterface, ArrayAccess
     * name  api 名称
     * description  api 描述
     * logFlag  是否启用访问日志
-    * apiType  Api类型
+    * apiType  apiType
     * authType  authType
-    * publishType  发布类型
-    * manager  api 审核人
-    * path  api路径
-    * protocol  api 协议
-    * requestType  请求类型
-    * tags  标签
-    * visibility  可见性
-    * requestParas  API请求参数列表
+    * retentionPeriod  最低保留期限，单位小时。
+    * manager  API审核人。
+    * path  API路径。
+    * protocol  protocol
+    * requestType  requestType
+    * tags  标签。
+    * visibility  visibility
+    * publishType  publishType
+    * dataMaskSwitch  数据脱敏开关。
+    * dataMaskParas  数据脱敏配置。
+    * body  请求体内容描述，仅注册类API使用。
+    * datasourceConfigList  多数据源配置信息，仅Groovy类API使用。
+    * groovyContent  Groovy文本，仅Groovy类API使用。
+    * requestParas  API请求参数列表。
     * datasourceConfig  datasourceConfig
     * backendConfig  backendConfig
     *
@@ -227,13 +281,19 @@ class Api implements ModelInterface, ArrayAccess
             'logFlag' => 'getLogFlag',
             'apiType' => 'getApiType',
             'authType' => 'getAuthType',
-            'publishType' => 'getPublishType',
+            'retentionPeriod' => 'getRetentionPeriod',
             'manager' => 'getManager',
             'path' => 'getPath',
             'protocol' => 'getProtocol',
             'requestType' => 'getRequestType',
             'tags' => 'getTags',
             'visibility' => 'getVisibility',
+            'publishType' => 'getPublishType',
+            'dataMaskSwitch' => 'getDataMaskSwitch',
+            'dataMaskParas' => 'getDataMaskParas',
+            'body' => 'getBody',
+            'datasourceConfigList' => 'getDatasourceConfigList',
+            'groovyContent' => 'getGroovyContent',
             'requestParas' => 'getRequestParas',
             'datasourceConfig' => 'getDatasourceConfig',
             'backendConfig' => 'getBackendConfig'
@@ -279,13 +339,17 @@ class Api implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const API_TYPE_API_SPECIFIC_TYPE_CONFIGURATION = 'API_SPECIFIC_TYPE_CONFIGURATION';
+    const API_TYPE_API_SPECIFIC_TYPE_SCRIPT = 'API_SPECIFIC_TYPE_SCRIPT';
+    const API_TYPE_API_SPECIFIC_TYPE_MYBATIS = 'API_SPECIFIC_TYPE_MYBATIS';
+    const API_TYPE_API_SPECIFIC_TYPE_GROOVY = 'API_SPECIFIC_TYPE_GROOVY';
+    const API_TYPE_API_SPECIFIC_TYPE_REGISTER = 'API_SPECIFIC_TYPE_REGISTER';
+    const API_TYPE_API_SPECIFIC_TYPE_ORCHESTRATE = 'API_SPECIFIC_TYPE_ORCHESTRATE';
     const API_TYPE_API_TYPE_CREATE = 'API_TYPE_CREATE';
     const API_TYPE_API_TYPE_REGISTER = 'API_TYPE_REGISTER';
     const AUTH_TYPE_APP = 'APP';
     const AUTH_TYPE_IAM = 'IAM';
     const AUTH_TYPE_NONE = 'NONE';
-    const PUBLISH_TYPE_PUBLISH_TYPE_PUBLIC = 'PUBLISH_TYPE_PUBLIC';
-    const PUBLISH_TYPE_PUBLISH_TYPE_PRIVATE = 'PUBLISH_TYPE_PRIVATE';
     const PROTOCOL_PROTOCOL_TYPE_HTTP = 'PROTOCOL_TYPE_HTTP';
     const PROTOCOL_PROTOCOL_TYPE_HTTPS = 'PROTOCOL_TYPE_HTTPS';
     const REQUEST_TYPE_REQUEST_TYPE_POST = 'REQUEST_TYPE_POST';
@@ -293,6 +357,8 @@ class Api implements ModelInterface, ArrayAccess
     const VISIBILITY_WORKSPACE = 'WORKSPACE';
     const VISIBILITY_PROJECT = 'PROJECT';
     const VISIBILITY_DOMAIN = 'DOMAIN';
+    const PUBLISH_TYPE_PUBLISH_TYPE_PUBLIC = 'PUBLISH_TYPE_PUBLIC';
+    const PUBLISH_TYPE_PUBLISH_TYPE_PRIVATE = 'PUBLISH_TYPE_PRIVATE';
     
 
     /**
@@ -303,6 +369,12 @@ class Api implements ModelInterface, ArrayAccess
     public function getApiTypeAllowableValues()
     {
         return [
+            self::API_TYPE_API_SPECIFIC_TYPE_CONFIGURATION,
+            self::API_TYPE_API_SPECIFIC_TYPE_SCRIPT,
+            self::API_TYPE_API_SPECIFIC_TYPE_MYBATIS,
+            self::API_TYPE_API_SPECIFIC_TYPE_GROOVY,
+            self::API_TYPE_API_SPECIFIC_TYPE_REGISTER,
+            self::API_TYPE_API_SPECIFIC_TYPE_ORCHESTRATE,
             self::API_TYPE_API_TYPE_CREATE,
             self::API_TYPE_API_TYPE_REGISTER,
         ];
@@ -319,19 +391,6 @@ class Api implements ModelInterface, ArrayAccess
             self::AUTH_TYPE_APP,
             self::AUTH_TYPE_IAM,
             self::AUTH_TYPE_NONE,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getPublishTypeAllowableValues()
-    {
-        return [
-            self::PUBLISH_TYPE_PUBLISH_TYPE_PUBLIC,
-            self::PUBLISH_TYPE_PUBLISH_TYPE_PRIVATE,
         ];
     }
 
@@ -375,6 +434,19 @@ class Api implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPublishTypeAllowableValues()
+    {
+        return [
+            self::PUBLISH_TYPE_PUBLISH_TYPE_PUBLIC,
+            self::PUBLISH_TYPE_PUBLISH_TYPE_PRIVATE,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -397,13 +469,19 @@ class Api implements ModelInterface, ArrayAccess
         $this->container['logFlag'] = isset($data['logFlag']) ? $data['logFlag'] : null;
         $this->container['apiType'] = isset($data['apiType']) ? $data['apiType'] : null;
         $this->container['authType'] = isset($data['authType']) ? $data['authType'] : null;
-        $this->container['publishType'] = isset($data['publishType']) ? $data['publishType'] : null;
+        $this->container['retentionPeriod'] = isset($data['retentionPeriod']) ? $data['retentionPeriod'] : null;
         $this->container['manager'] = isset($data['manager']) ? $data['manager'] : null;
         $this->container['path'] = isset($data['path']) ? $data['path'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['requestType'] = isset($data['requestType']) ? $data['requestType'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['visibility'] = isset($data['visibility']) ? $data['visibility'] : null;
+        $this->container['publishType'] = isset($data['publishType']) ? $data['publishType'] : null;
+        $this->container['dataMaskSwitch'] = isset($data['dataMaskSwitch']) ? $data['dataMaskSwitch'] : null;
+        $this->container['dataMaskParas'] = isset($data['dataMaskParas']) ? $data['dataMaskParas'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['datasourceConfigList'] = isset($data['datasourceConfigList']) ? $data['datasourceConfigList'] : null;
+        $this->container['groovyContent'] = isset($data['groovyContent']) ? $data['groovyContent'] : null;
         $this->container['requestParas'] = isset($data['requestParas']) ? $data['requestParas'] : null;
         $this->container['datasourceConfig'] = isset($data['datasourceConfig']) ? $data['datasourceConfig'] : null;
         $this->container['backendConfig'] = isset($data['backendConfig']) ? $data['backendConfig'] : null;
@@ -433,14 +511,6 @@ class Api implements ModelInterface, ArrayAccess
                 );
             }
 
-            $allowedValues = $this->getPublishTypeAllowableValues();
-                if (!is_null($this->container['publishType']) && !in_array($this->container['publishType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'publishType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             $allowedValues = $this->getProtocolAllowableValues();
                 if (!is_null($this->container['protocol']) && !in_array($this->container['protocol'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -461,6 +531,14 @@ class Api implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['visibility']) && !in_array($this->container['visibility'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'visibility', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getPublishTypeAllowableValues();
+                if (!is_null($this->container['publishType']) && !in_array($this->container['publishType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'publishType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -577,7 +655,7 @@ class Api implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiType
-    *  Api类型
+    *  apiType
     *
     * @return string|null
     */
@@ -589,7 +667,7 @@ class Api implements ModelInterface, ArrayAccess
     /**
     * Sets apiType
     *
-    * @param string|null $apiType Api类型
+    * @param string|null $apiType apiType
     *
     * @return $this
     */
@@ -624,32 +702,32 @@ class Api implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets publishType
-    *  发布类型
+    * Gets retentionPeriod
+    *  最低保留期限，单位小时。
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getPublishType()
+    public function getRetentionPeriod()
     {
-        return $this->container['publishType'];
+        return $this->container['retentionPeriod'];
     }
 
     /**
-    * Sets publishType
+    * Sets retentionPeriod
     *
-    * @param string|null $publishType 发布类型
+    * @param int|null $retentionPeriod 最低保留期限，单位小时。
     *
     * @return $this
     */
-    public function setPublishType($publishType)
+    public function setRetentionPeriod($retentionPeriod)
     {
-        $this->container['publishType'] = $publishType;
+        $this->container['retentionPeriod'] = $retentionPeriod;
         return $this;
     }
 
     /**
     * Gets manager
-    *  api 审核人
+    *  API审核人。
     *
     * @return string|null
     */
@@ -661,7 +739,7 @@ class Api implements ModelInterface, ArrayAccess
     /**
     * Sets manager
     *
-    * @param string|null $manager api 审核人
+    * @param string|null $manager API审核人。
     *
     * @return $this
     */
@@ -673,7 +751,7 @@ class Api implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  api路径
+    *  API路径。
     *
     * @return string|null
     */
@@ -685,7 +763,7 @@ class Api implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path api路径
+    * @param string|null $path API路径。
     *
     * @return $this
     */
@@ -697,7 +775,7 @@ class Api implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  api 协议
+    *  protocol
     *
     * @return string|null
     */
@@ -709,7 +787,7 @@ class Api implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol api 协议
+    * @param string|null $protocol protocol
     *
     * @return $this
     */
@@ -721,7 +799,7 @@ class Api implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestType
-    *  请求类型
+    *  requestType
     *
     * @return string|null
     */
@@ -733,7 +811,7 @@ class Api implements ModelInterface, ArrayAccess
     /**
     * Sets requestType
     *
-    * @param string|null $requestType 请求类型
+    * @param string|null $requestType requestType
     *
     * @return $this
     */
@@ -745,7 +823,7 @@ class Api implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签
+    *  标签。
     *
     * @return string[]|null
     */
@@ -757,7 +835,7 @@ class Api implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string[]|null $tags 标签
+    * @param string[]|null $tags 标签。
     *
     * @return $this
     */
@@ -769,7 +847,7 @@ class Api implements ModelInterface, ArrayAccess
 
     /**
     * Gets visibility
-    *  可见性
+    *  visibility
     *
     * @return string|null
     */
@@ -781,7 +859,7 @@ class Api implements ModelInterface, ArrayAccess
     /**
     * Sets visibility
     *
-    * @param string|null $visibility 可见性
+    * @param string|null $visibility visibility
     *
     * @return $this
     */
@@ -792,8 +870,152 @@ class Api implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets publishType
+    *  publishType
+    *
+    * @return string|null
+    */
+    public function getPublishType()
+    {
+        return $this->container['publishType'];
+    }
+
+    /**
+    * Sets publishType
+    *
+    * @param string|null $publishType publishType
+    *
+    * @return $this
+    */
+    public function setPublishType($publishType)
+    {
+        $this->container['publishType'] = $publishType;
+        return $this;
+    }
+
+    /**
+    * Gets dataMaskSwitch
+    *  数据脱敏开关。
+    *
+    * @return bool|null
+    */
+    public function getDataMaskSwitch()
+    {
+        return $this->container['dataMaskSwitch'];
+    }
+
+    /**
+    * Sets dataMaskSwitch
+    *
+    * @param bool|null $dataMaskSwitch 数据脱敏开关。
+    *
+    * @return $this
+    */
+    public function setDataMaskSwitch($dataMaskSwitch)
+    {
+        $this->container['dataMaskSwitch'] = $dataMaskSwitch;
+        return $this;
+    }
+
+    /**
+    * Gets dataMaskParas
+    *  数据脱敏配置。
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DataMaskParas[]|null
+    */
+    public function getDataMaskParas()
+    {
+        return $this->container['dataMaskParas'];
+    }
+
+    /**
+    * Sets dataMaskParas
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DataMaskParas[]|null $dataMaskParas 数据脱敏配置。
+    *
+    * @return $this
+    */
+    public function setDataMaskParas($dataMaskParas)
+    {
+        $this->container['dataMaskParas'] = $dataMaskParas;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  请求体内容描述，仅注册类API使用。
+    *
+    * @return string|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param string|null $body 请求体内容描述，仅注册类API使用。
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
+        return $this;
+    }
+
+    /**
+    * Gets datasourceConfigList
+    *  多数据源配置信息，仅Groovy类API使用。
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DatasourceConfig[]|null
+    */
+    public function getDatasourceConfigList()
+    {
+        return $this->container['datasourceConfigList'];
+    }
+
+    /**
+    * Sets datasourceConfigList
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DatasourceConfig[]|null $datasourceConfigList 多数据源配置信息，仅Groovy类API使用。
+    *
+    * @return $this
+    */
+    public function setDatasourceConfigList($datasourceConfigList)
+    {
+        $this->container['datasourceConfigList'] = $datasourceConfigList;
+        return $this;
+    }
+
+    /**
+    * Gets groovyContent
+    *  Groovy文本，仅Groovy类API使用。
+    *
+    * @return string|null
+    */
+    public function getGroovyContent()
+    {
+        return $this->container['groovyContent'];
+    }
+
+    /**
+    * Sets groovyContent
+    *
+    * @param string|null $groovyContent Groovy文本，仅Groovy类API使用。
+    *
+    * @return $this
+    */
+    public function setGroovyContent($groovyContent)
+    {
+        $this->container['groovyContent'] = $groovyContent;
+        return $this;
+    }
+
+    /**
     * Gets requestParas
-    *  API请求参数列表
+    *  API请求参数列表。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\RequestPara[]|null
     */
@@ -805,7 +1027,7 @@ class Api implements ModelInterface, ArrayAccess
     /**
     * Sets requestParas
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\RequestPara[]|null $requestParas API请求参数列表
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\RequestPara[]|null $requestParas API请求参数列表。
     *
     * @return $this
     */

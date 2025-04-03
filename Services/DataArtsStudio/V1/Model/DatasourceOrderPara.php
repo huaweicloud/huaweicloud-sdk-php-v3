@@ -25,6 +25,7 @@ class DatasourceOrderPara implements ModelInterface, ArrayAccess
     * optional  是否可选
     * sort  排序方式
     * order  排序参数顺序
+    * description  排序参数描述信息。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class DatasourceOrderPara implements ModelInterface, ArrayAccess
             'field' => 'string',
             'optional' => 'bool',
             'sort' => 'string',
-            'order' => 'int'
+            'order' => 'int',
+            'description' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class DatasourceOrderPara implements ModelInterface, ArrayAccess
     * optional  是否可选
     * sort  排序方式
     * order  排序参数顺序
+    * description  排序参数描述信息。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class DatasourceOrderPara implements ModelInterface, ArrayAccess
         'field' => null,
         'optional' => null,
         'sort' => null,
-        'order' => 'int32'
+        'order' => 'int32',
+        'description' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class DatasourceOrderPara implements ModelInterface, ArrayAccess
     * optional  是否可选
     * sort  排序方式
     * order  排序参数顺序
+    * description  排序参数描述信息。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class DatasourceOrderPara implements ModelInterface, ArrayAccess
             'field' => 'field',
             'optional' => 'optional',
             'sort' => 'sort',
-            'order' => 'order'
+            'order' => 'order',
+            'description' => 'description'
     ];
 
     /**
@@ -100,6 +106,7 @@ class DatasourceOrderPara implements ModelInterface, ArrayAccess
     * optional  是否可选
     * sort  排序方式
     * order  排序参数顺序
+    * description  排序参数描述信息。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class DatasourceOrderPara implements ModelInterface, ArrayAccess
             'field' => 'setField',
             'optional' => 'setOptional',
             'sort' => 'setSort',
-            'order' => 'setOrder'
+            'order' => 'setOrder',
+            'description' => 'setDescription'
     ];
 
     /**
@@ -118,6 +126,7 @@ class DatasourceOrderPara implements ModelInterface, ArrayAccess
     * optional  是否可选
     * sort  排序方式
     * order  排序参数顺序
+    * description  排序参数描述信息。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class DatasourceOrderPara implements ModelInterface, ArrayAccess
             'field' => 'getField',
             'optional' => 'getOptional',
             'sort' => 'getSort',
-            'order' => 'getOrder'
+            'order' => 'getOrder',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -209,6 +219,7 @@ class DatasourceOrderPara implements ModelInterface, ArrayAccess
         $this->container['optional'] = isset($data['optional']) ? $data['optional'] : null;
         $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -358,6 +369,30 @@ class DatasourceOrderPara implements ModelInterface, ArrayAccess
     public function setOrder($order)
     {
         $this->container['order'] = $order;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  排序参数描述信息。
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 排序参数描述信息。
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

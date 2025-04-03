@@ -29,6 +29,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * rtcCallbackConfig  rtcCallbackConfig
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
+    * jobRunConfig  jobRunConfig
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
             'rtcCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCLiveEventCallBackConfig',
             'viewMode' => 'string',
-            'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig'
+            'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig',
+            'jobRunConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveJobRunConfig'
     ];
 
     /**
@@ -55,6 +57,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * rtcCallbackConfig  rtcCallbackConfig
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
+    * jobRunConfig  jobRunConfig
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
         'liveEventCallbackConfig' => null,
         'rtcCallbackConfig' => null,
         'viewMode' => null,
-        'coStreamerConfig' => null
+        'coStreamerConfig' => null,
+        'jobRunConfig' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * rtcCallbackConfig  rtcCallbackConfig
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
+    * jobRunConfig  jobRunConfig
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'liveEventCallbackConfig' => 'live_event_callback_config',
             'rtcCallbackConfig' => 'rtc_callback_config',
             'viewMode' => 'view_mode',
-            'coStreamerConfig' => 'co_streamer_config'
+            'coStreamerConfig' => 'co_streamer_config',
+            'jobRunConfig' => 'job_run_config'
     ];
 
     /**
@@ -128,6 +134,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * rtcCallbackConfig  rtcCallbackConfig
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
+    * jobRunConfig  jobRunConfig
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
             'rtcCallbackConfig' => 'setRtcCallbackConfig',
             'viewMode' => 'setViewMode',
-            'coStreamerConfig' => 'setCoStreamerConfig'
+            'coStreamerConfig' => 'setCoStreamerConfig',
+            'jobRunConfig' => 'setJobRunConfig'
     ];
 
     /**
@@ -154,6 +162,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * rtcCallbackConfig  rtcCallbackConfig
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
+    * jobRunConfig  jobRunConfig
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
             'rtcCallbackConfig' => 'getRtcCallbackConfig',
             'viewMode' => 'getViewMode',
-            'coStreamerConfig' => 'getCoStreamerConfig'
+            'coStreamerConfig' => 'getCoStreamerConfig',
+            'jobRunConfig' => 'getJobRunConfig'
     ];
 
     /**
@@ -251,6 +261,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
         $this->container['rtcCallbackConfig'] = isset($data['rtcCallbackConfig']) ? $data['rtcCallbackConfig'] : null;
         $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
         $this->container['coStreamerConfig'] = isset($data['coStreamerConfig']) ? $data['coStreamerConfig'] : null;
+        $this->container['jobRunConfig'] = isset($data['jobRunConfig']) ? $data['jobRunConfig'] : null;
     }
 
     /**
@@ -502,6 +513,30 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     public function setCoStreamerConfig($coStreamerConfig)
     {
         $this->container['coStreamerConfig'] = $coStreamerConfig;
+        return $this;
+    }
+
+    /**
+    * Gets jobRunConfig
+    *  jobRunConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveJobRunConfig|null
+    */
+    public function getJobRunConfig()
+    {
+        return $this->container['jobRunConfig'];
+    }
+
+    /**
+    * Sets jobRunConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveJobRunConfig|null $jobRunConfig jobRunConfig
+    *
+    * @return $this
+    */
+    public function setJobRunConfig($jobRunConfig)
+    {
+        $this->container['jobRunConfig'] = $jobRunConfig;
         return $this;
     }
 

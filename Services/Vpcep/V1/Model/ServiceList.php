@@ -39,6 +39,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * error  提交任务异常时返回的异常信息
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
+    * supportedEditions  终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
     * publicBorderGroup  终端节点服务对应Pool的Public Border Group信息
     * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
@@ -64,6 +65,7 @@ class ServiceList implements ModelInterface, ArrayAccess
             'tcpProxy' => 'string',
             'error' => '\HuaweiCloud\SDK\Vpcep\V1\Model\Error[]',
             'description' => 'string',
+            'supportedEditions' => 'string[]',
             'publicBorderGroup' => 'string',
             'enablePolicy' => 'bool'
     ];
@@ -89,6 +91,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * error  提交任务异常时返回的异常信息
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
+    * supportedEditions  终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
     * publicBorderGroup  终端节点服务对应Pool的Public Border Group信息
     * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
@@ -114,6 +117,7 @@ class ServiceList implements ModelInterface, ArrayAccess
         'tcpProxy' => null,
         'error' => null,
         'description' => null,
+        'supportedEditions' => null,
         'publicBorderGroup' => null,
         'enablePolicy' => null
     ];
@@ -160,6 +164,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * error  提交任务异常时返回的异常信息
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
+    * supportedEditions  终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
     * publicBorderGroup  终端节点服务对应Pool的Public Border Group信息
     * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
@@ -185,6 +190,7 @@ class ServiceList implements ModelInterface, ArrayAccess
             'tcpProxy' => 'tcp_proxy',
             'error' => 'error',
             'description' => 'description',
+            'supportedEditions' => 'supported_editions',
             'publicBorderGroup' => 'public_border_group',
             'enablePolicy' => 'enable_policy'
     ];
@@ -210,6 +216,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * error  提交任务异常时返回的异常信息
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
+    * supportedEditions  终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
     * publicBorderGroup  终端节点服务对应Pool的Public Border Group信息
     * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
@@ -235,6 +242,7 @@ class ServiceList implements ModelInterface, ArrayAccess
             'tcpProxy' => 'setTcpProxy',
             'error' => 'setError',
             'description' => 'setDescription',
+            'supportedEditions' => 'setSupportedEditions',
             'publicBorderGroup' => 'setPublicBorderGroup',
             'enablePolicy' => 'setEnablePolicy'
     ];
@@ -260,6 +268,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * error  提交任务异常时返回的异常信息
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
+    * supportedEditions  终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
     * publicBorderGroup  终端节点服务对应Pool的Public Border Group信息
     * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
@@ -285,6 +294,7 @@ class ServiceList implements ModelInterface, ArrayAccess
             'tcpProxy' => 'getTcpProxy',
             'error' => 'getError',
             'description' => 'getDescription',
+            'supportedEditions' => 'getSupportedEditions',
             'publicBorderGroup' => 'getPublicBorderGroup',
             'enablePolicy' => 'getEnablePolicy'
     ];
@@ -366,6 +376,7 @@ class ServiceList implements ModelInterface, ArrayAccess
         $this->container['tcpProxy'] = isset($data['tcpProxy']) ? $data['tcpProxy'] : null;
         $this->container['error'] = isset($data['error']) ? $data['error'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['supportedEditions'] = isset($data['supportedEditions']) ? $data['supportedEditions'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
         $this->container['enablePolicy'] = isset($data['enablePolicy']) ? $data['enablePolicy'] : null;
     }
@@ -881,6 +892,30 @@ class ServiceList implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets supportedEditions
+    *  终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
+    *
+    * @return string[]|null
+    */
+    public function getSupportedEditions()
+    {
+        return $this->container['supportedEditions'];
+    }
+
+    /**
+    * Sets supportedEditions
+    *
+    * @param string[]|null $supportedEditions 终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
+    *
+    * @return $this
+    */
+    public function setSupportedEditions($supportedEditions)
+    {
+        $this->container['supportedEditions'] = $supportedEditions;
         return $this;
     }
 

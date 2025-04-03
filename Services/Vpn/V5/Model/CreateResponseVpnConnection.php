@@ -40,8 +40,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * haRole  连接的HA角色
     * tags  标签
     * peerSubnetsV6  使能ipv6的对端子网
-    * tunnelLocalAddressV6  本端ipv6隧道口地址
-    * tunnelPeerAddressV6  对端ipv6隧道口地址
     * policyRulesV6  策略模式的ipv6策略规则组
     *
     * @var string[]
@@ -67,8 +65,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
             'haRole' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpn\V5\Model\VpnResourceTag[]',
             'peerSubnetsV6' => 'string[]',
-            'tunnelLocalAddressV6' => 'string',
-            'tunnelPeerAddressV6' => 'string',
             'policyRulesV6' => '\HuaweiCloud\SDK\Vpn\V5\Model\PolicyRule[]'
     ];
 
@@ -94,8 +90,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * haRole  连接的HA角色
     * tags  标签
     * peerSubnetsV6  使能ipv6的对端子网
-    * tunnelLocalAddressV6  本端ipv6隧道口地址
-    * tunnelPeerAddressV6  对端ipv6隧道口地址
     * policyRulesV6  策略模式的ipv6策略规则组
     *
     * @var string[]
@@ -121,8 +115,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
         'haRole' => null,
         'tags' => null,
         'peerSubnetsV6' => null,
-        'tunnelLocalAddressV6' => null,
-        'tunnelPeerAddressV6' => null,
         'policyRulesV6' => null
     ];
 
@@ -169,8 +161,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * haRole  连接的HA角色
     * tags  标签
     * peerSubnetsV6  使能ipv6的对端子网
-    * tunnelLocalAddressV6  本端ipv6隧道口地址
-    * tunnelPeerAddressV6  对端ipv6隧道口地址
     * policyRulesV6  策略模式的ipv6策略规则组
     *
     * @var string[]
@@ -196,8 +186,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
             'haRole' => 'ha_role',
             'tags' => 'tags',
             'peerSubnetsV6' => 'peer_subnets_v6',
-            'tunnelLocalAddressV6' => 'tunnel_local_address_v6',
-            'tunnelPeerAddressV6' => 'tunnel_peer_address_v6',
             'policyRulesV6' => 'policy_rules_v6'
     ];
 
@@ -223,8 +211,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * haRole  连接的HA角色
     * tags  标签
     * peerSubnetsV6  使能ipv6的对端子网
-    * tunnelLocalAddressV6  本端ipv6隧道口地址
-    * tunnelPeerAddressV6  对端ipv6隧道口地址
     * policyRulesV6  策略模式的ipv6策略规则组
     *
     * @var string[]
@@ -250,8 +236,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
             'haRole' => 'setHaRole',
             'tags' => 'setTags',
             'peerSubnetsV6' => 'setPeerSubnetsV6',
-            'tunnelLocalAddressV6' => 'setTunnelLocalAddressV6',
-            'tunnelPeerAddressV6' => 'setTunnelPeerAddressV6',
             'policyRulesV6' => 'setPolicyRulesV6'
     ];
 
@@ -277,8 +261,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * haRole  连接的HA角色
     * tags  标签
     * peerSubnetsV6  使能ipv6的对端子网
-    * tunnelLocalAddressV6  本端ipv6隧道口地址
-    * tunnelPeerAddressV6  对端ipv6隧道口地址
     * policyRulesV6  策略模式的ipv6策略规则组
     *
     * @var string[]
@@ -304,8 +286,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
             'haRole' => 'getHaRole',
             'tags' => 'getTags',
             'peerSubnetsV6' => 'getPeerSubnetsV6',
-            'tunnelLocalAddressV6' => 'getTunnelLocalAddressV6',
-            'tunnelPeerAddressV6' => 'getTunnelPeerAddressV6',
             'policyRulesV6' => 'getPolicyRulesV6'
     ];
 
@@ -404,8 +384,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
         $this->container['haRole'] = isset($data['haRole']) ? $data['haRole'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['peerSubnetsV6'] = isset($data['peerSubnetsV6']) ? $data['peerSubnetsV6'] : null;
-        $this->container['tunnelLocalAddressV6'] = isset($data['tunnelLocalAddressV6']) ? $data['tunnelLocalAddressV6'] : null;
-        $this->container['tunnelPeerAddressV6'] = isset($data['tunnelPeerAddressV6']) ? $data['tunnelPeerAddressV6'] : null;
         $this->container['policyRulesV6'] = isset($data['policyRulesV6']) ? $data['policyRulesV6'] : null;
     }
 
@@ -940,54 +918,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     public function setPeerSubnetsV6($peerSubnetsV6)
     {
         $this->container['peerSubnetsV6'] = $peerSubnetsV6;
-        return $this;
-    }
-
-    /**
-    * Gets tunnelLocalAddressV6
-    *  本端ipv6隧道口地址
-    *
-    * @return string|null
-    */
-    public function getTunnelLocalAddressV6()
-    {
-        return $this->container['tunnelLocalAddressV6'];
-    }
-
-    /**
-    * Sets tunnelLocalAddressV6
-    *
-    * @param string|null $tunnelLocalAddressV6 本端ipv6隧道口地址
-    *
-    * @return $this
-    */
-    public function setTunnelLocalAddressV6($tunnelLocalAddressV6)
-    {
-        $this->container['tunnelLocalAddressV6'] = $tunnelLocalAddressV6;
-        return $this;
-    }
-
-    /**
-    * Gets tunnelPeerAddressV6
-    *  对端ipv6隧道口地址
-    *
-    * @return string|null
-    */
-    public function getTunnelPeerAddressV6()
-    {
-        return $this->container['tunnelPeerAddressV6'];
-    }
-
-    /**
-    * Sets tunnelPeerAddressV6
-    *
-    * @param string|null $tunnelPeerAddressV6 对端ipv6隧道口地址
-    *
-    * @return $this
-    */
-    public function setTunnelPeerAddressV6($tunnelPeerAddressV6)
-    {
-        $this->container['tunnelPeerAddressV6'] = $tunnelPeerAddressV6;
         return $this;
     }
 

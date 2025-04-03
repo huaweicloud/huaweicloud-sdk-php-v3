@@ -22,6 +22,7 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -29,6 +30,7 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'authorization' => 'string',
             'xSdkDate' => 'string',
+            'xAppUserId' => 'string',
             'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ListAssetSummarysReq'
     ];
 
@@ -36,6 +38,7 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -43,6 +46,7 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'authorization' => null,
         'xSdkDate' => null,
+        'xAppUserId' => null,
         'body' => null
     ];
 
@@ -71,6 +75,7 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -78,6 +83,7 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'authorization' => 'Authorization',
             'xSdkDate' => 'X-Sdk-Date',
+            'xAppUserId' => 'X-App-UserId',
             'body' => 'body'
     ];
 
@@ -85,6 +91,7 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -92,6 +99,7 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'authorization' => 'setAuthorization',
             'xSdkDate' => 'setXSdkDate',
+            'xAppUserId' => 'setXAppUserId',
             'body' => 'setBody'
     ];
 
@@ -99,6 +107,7 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -106,6 +115,7 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'authorization' => 'getAuthorization',
             'xSdkDate' => 'getXSdkDate',
+            'xAppUserId' => 'getXAppUserId',
             'body' => 'getBody'
     ];
 
@@ -169,6 +179,7 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
     {
         $this->container['authorization'] = isset($data['authorization']) ? $data['authorization'] : null;
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
+        $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -191,6 +202,12 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['xSdkDate']) && (mb_strlen($this->container['xSdkDate']) < 16)) {
                 $invalidProperties[] = "invalid value for 'xSdkDate', the character length must be bigger than or equal to 16.";
+            }
+            if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -251,6 +268,30 @@ class ListAssetSummaryRequest implements ModelInterface, ArrayAccess
     public function setXSdkDate($xSdkDate)
     {
         $this->container['xSdkDate'] = $xSdkDate;
+        return $this;
+    }
+
+    /**
+    * Gets xAppUserId
+    *  第三方用户ID。不允许输入中文。
+    *
+    * @return string|null
+    */
+    public function getXAppUserId()
+    {
+        return $this->container['xAppUserId'];
+    }
+
+    /**
+    * Sets xAppUserId
+    *
+    * @param string|null $xAppUserId 第三方用户ID。不允许输入中文。
+    *
+    * @return $this
+    */
+    public function setXAppUserId($xAppUserId)
+    {
+        $this->container['xAppUserId'] = $xAppUserId;
         return $this;
     }
 

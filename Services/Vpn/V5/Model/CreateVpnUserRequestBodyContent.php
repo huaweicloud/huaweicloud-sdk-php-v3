@@ -24,6 +24,7 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
     * password  用户密码
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
     * userGroupId  所属用户组ID
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
             'name' => 'string',
             'password' => 'string',
             'description' => 'string',
-            'userGroupId' => 'string'
+            'userGroupId' => 'string',
+            'staticIp' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
     * password  用户密码
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
     * userGroupId  所属用户组ID
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
         'name' => null,
         'password' => null,
         'description' => null,
-        'userGroupId' => null
+        'userGroupId' => null,
+        'staticIp' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
     * password  用户密码
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
     * userGroupId  所属用户组ID
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
             'name' => 'name',
             'password' => 'password',
             'description' => 'description',
-            'userGroupId' => 'user_group_id'
+            'userGroupId' => 'user_group_id',
+            'staticIp' => 'static_ip'
     ];
 
     /**
@@ -93,6 +99,7 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
     * password  用户密码
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
     * userGroupId  所属用户组ID
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'password' => 'setPassword',
             'description' => 'setDescription',
-            'userGroupId' => 'setUserGroupId'
+            'userGroupId' => 'setUserGroupId',
+            'staticIp' => 'setStaticIp'
     ];
 
     /**
@@ -109,6 +117,7 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
     * password  用户密码
     * description  用户描述，0-64字符，中文、英文、数字包含下划线
     * userGroupId  所属用户组ID
+    * staticIp  静态客户端IP地址，默认值disable，表示随机分配客户端IP
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'password' => 'getPassword',
             'description' => 'getDescription',
-            'userGroupId' => 'getUserGroupId'
+            'userGroupId' => 'getUserGroupId',
+            'staticIp' => 'getStaticIp'
     ];
 
     /**
@@ -181,6 +191,7 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['userGroupId'] = isset($data['userGroupId']) ? $data['userGroupId'] : null;
+        $this->container['staticIp'] = isset($data['staticIp']) ? $data['staticIp'] : null;
     }
 
     /**
@@ -229,6 +240,15 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['userGroupId']) && !preg_match("/[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/", $this->container['userGroupId'])) {
                 $invalidProperties[] = "invalid value for 'userGroupId', must be conform to the pattern /[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/.";
+            }
+            if (!is_null($this->container['staticIp']) && (mb_strlen($this->container['staticIp']) > 18)) {
+                $invalidProperties[] = "invalid value for 'staticIp', the character length must be smaller than or equal to 18.";
+            }
+            if (!is_null($this->container['staticIp']) && (mb_strlen($this->container['staticIp']) < 7)) {
+                $invalidProperties[] = "invalid value for 'staticIp', the character length must be bigger than or equal to 7.";
+            }
+            if (!is_null($this->container['staticIp']) && !preg_match("/^(((25[0-5]|(2[0-4]|1\\d|[1-9]|)\\d)\\.?\\b){4}|disable)$/", $this->container['staticIp'])) {
+                $invalidProperties[] = "invalid value for 'staticIp', must be conform to the pattern /^(((25[0-5]|(2[0-4]|1\\d|[1-9]|)\\d)\\.?\\b){4}|disable)$/.";
             }
         return $invalidProperties;
     }
@@ -337,6 +357,30 @@ class CreateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
     public function setUserGroupId($userGroupId)
     {
         $this->container['userGroupId'] = $userGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets staticIp
+    *  静态客户端IP地址，默认值disable，表示随机分配客户端IP
+    *
+    * @return string|null
+    */
+    public function getStaticIp()
+    {
+        return $this->container['staticIp'];
+    }
+
+    /**
+    * Sets staticIp
+    *
+    * @param string|null $staticIp 静态客户端IP地址，默认值disable，表示随机分配客户端IP
+    *
+    * @return $this
+    */
+    public function setStaticIp($staticIp)
+    {
+        $this->container['staticIp'] = $staticIp;
         return $this;
     }
 

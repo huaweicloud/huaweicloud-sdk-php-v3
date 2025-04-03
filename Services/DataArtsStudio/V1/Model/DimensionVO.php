@@ -57,6 +57,8 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
+    * modelId  所属模型ID，ID字符串。
+    * model  model
     *
     * @var string[]
     */
@@ -97,7 +99,9 @@ class DimensionVO implements ModelInterface, ArrayAccess
             'prodVersion' => 'string',
             'devVersionName' => 'string',
             'prodVersionName' => 'string',
-            'envType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum'
+            'envType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum',
+            'modelId' => 'string',
+            'model' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\WorkspaceVO'
     ];
 
     /**
@@ -139,6 +143,8 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
+    * modelId  所属模型ID，ID字符串。
+    * model  model
     *
     * @var string[]
     */
@@ -179,7 +185,9 @@ class DimensionVO implements ModelInterface, ArrayAccess
         'prodVersion' => null,
         'devVersionName' => null,
         'prodVersionName' => null,
-        'envType' => null
+        'envType' => null,
+        'modelId' => null,
+        'model' => null
     ];
 
     /**
@@ -242,6 +250,8 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
+    * modelId  所属模型ID，ID字符串。
+    * model  model
     *
     * @var string[]
     */
@@ -282,7 +292,9 @@ class DimensionVO implements ModelInterface, ArrayAccess
             'prodVersion' => 'prod_version',
             'devVersionName' => 'dev_version_name',
             'prodVersionName' => 'prod_version_name',
-            'envType' => 'env_type'
+            'envType' => 'env_type',
+            'modelId' => 'model_id',
+            'model' => 'model'
     ];
 
     /**
@@ -324,6 +336,8 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
+    * modelId  所属模型ID，ID字符串。
+    * model  model
     *
     * @var string[]
     */
@@ -364,7 +378,9 @@ class DimensionVO implements ModelInterface, ArrayAccess
             'prodVersion' => 'setProdVersion',
             'devVersionName' => 'setDevVersionName',
             'prodVersionName' => 'setProdVersionName',
-            'envType' => 'setEnvType'
+            'envType' => 'setEnvType',
+            'modelId' => 'setModelId',
+            'model' => 'setModel'
     ];
 
     /**
@@ -406,6 +422,8 @@ class DimensionVO implements ModelInterface, ArrayAccess
     * devVersionName  开发环境版本名称
     * prodVersionName  生产环境版本名称
     * envType  envType
+    * modelId  所属模型ID，ID字符串。
+    * model  model
     *
     * @var string[]
     */
@@ -446,7 +464,9 @@ class DimensionVO implements ModelInterface, ArrayAccess
             'prodVersion' => 'getProdVersion',
             'devVersionName' => 'getDevVersionName',
             'prodVersionName' => 'getProdVersionName',
-            'envType' => 'getEnvType'
+            'envType' => 'getEnvType',
+            'modelId' => 'getModelId',
+            'model' => 'getModel'
     ];
 
     /**
@@ -576,6 +596,8 @@ class DimensionVO implements ModelInterface, ArrayAccess
         $this->container['devVersionName'] = isset($data['devVersionName']) ? $data['devVersionName'] : null;
         $this->container['prodVersionName'] = isset($data['prodVersionName']) ? $data['prodVersionName'] : null;
         $this->container['envType'] = isset($data['envType']) ? $data['envType'] : null;
+        $this->container['modelId'] = isset($data['modelId']) ? $data['modelId'] : null;
+        $this->container['model'] = isset($data['model']) ? $data['model'] : null;
     }
 
     /**
@@ -1552,6 +1574,54 @@ class DimensionVO implements ModelInterface, ArrayAccess
     public function setEnvType($envType)
     {
         $this->container['envType'] = $envType;
+        return $this;
+    }
+
+    /**
+    * Gets modelId
+    *  所属模型ID，ID字符串。
+    *
+    * @return string|null
+    */
+    public function getModelId()
+    {
+        return $this->container['modelId'];
+    }
+
+    /**
+    * Sets modelId
+    *
+    * @param string|null $modelId 所属模型ID，ID字符串。
+    *
+    * @return $this
+    */
+    public function setModelId($modelId)
+    {
+        $this->container['modelId'] = $modelId;
+        return $this;
+    }
+
+    /**
+    * Gets model
+    *  model
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\WorkspaceVO|null
+    */
+    public function getModel()
+    {
+        return $this->container['model'];
+    }
+
+    /**
+    * Sets model
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\WorkspaceVO|null $model model
+    *
+    * @return $this
+    */
+    public function setModel($model)
+    {
+        $this->container['model'] = $model;
         return $this;
     }
 

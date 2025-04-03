@@ -158,6 +158,9 @@ class UpdateClientCaCertificateRequestBody implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['clientCaCertificate'] === null) {
+            $invalidProperties[] = "'clientCaCertificate' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class UpdateClientCaCertificateRequestBody implements ModelInterface, ArrayAcces
     * Gets clientCaCertificate
     *  clientCaCertificate
     *
-    * @return \HuaweiCloud\SDK\Vpn\V5\Model\UpdateClientCaCertificateRequestBodyClientCaCertificate|null
+    * @return \HuaweiCloud\SDK\Vpn\V5\Model\UpdateClientCaCertificateRequestBodyClientCaCertificate
     */
     public function getClientCaCertificate()
     {
@@ -186,7 +189,7 @@ class UpdateClientCaCertificateRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets clientCaCertificate
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\UpdateClientCaCertificateRequestBodyClientCaCertificate|null $clientCaCertificate clientCaCertificate
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\UpdateClientCaCertificateRequestBodyClientCaCertificate $clientCaCertificate clientCaCertificate
     *
     * @return $this
     */

@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
+namespace HuaweiCloud\SDK\DataArtsStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ConfirmSmartLiveRoomReq implements ModelInterface, ArrayAccess
+class UpdateDataServiceInstanceLtsLogResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,24 @@ class ConfirmSmartLiveRoomReq implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ConfirmSmartLiveRoomReq';
+    protected static $openAPIModelName = 'UpdateDataServiceInstanceLtsLogResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  确认操作。 * confirm: 确认。 * reject: 拒绝。
-    * scriptVersion  剧本版本。从查询直播间详情接口中获取。
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'action' => 'string',
-            'scriptVersion' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  确认操作。 * confirm: 确认。 * reject: 拒绝。
-    * scriptVersion  剧本版本。从查询直播间详情接口中获取。
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'action' => null,
-        'scriptVersion' => null
     ];
 
     /**
@@ -65,38 +60,29 @@ class ConfirmSmartLiveRoomReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  确认操作。 * confirm: 确认。 * reject: 拒绝。
-    * scriptVersion  剧本版本。从查询直播间详情接口中获取。
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'action' => 'action',
-            'scriptVersion' => 'script_version'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  确认操作。 * confirm: 确认。 * reject: 拒绝。
-    * scriptVersion  剧本版本。从查询直播间详情接口中获取。
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'action' => 'setAction',
-            'scriptVersion' => 'setScriptVersion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  确认操作。 * confirm: 确认。 * reject: 拒绝。
-    * scriptVersion  剧本版本。从查询直播间详情接口中获取。
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'action' => 'getAction',
-            'scriptVersion' => 'getScriptVersion'
     ];
 
     /**
@@ -139,22 +125,7 @@ class ConfirmSmartLiveRoomReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ACTION_CONFIRM = 'confirm';
-    const ACTION_REJECT = 'reject';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getActionAllowableValues()
-    {
-        return [
-            self::ACTION_CONFIRM,
-            self::ACTION_REJECT,
-        ];
-    }
 
 
     /**
@@ -172,8 +143,6 @@ class ConfirmSmartLiveRoomReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
-        $this->container['scriptVersion'] = isset($data['scriptVersion']) ? $data['scriptVersion'] : null;
     }
 
     /**
@@ -184,26 +153,6 @@ class ConfirmSmartLiveRoomReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getActionAllowableValues();
-                if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'action', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['action']) && (mb_strlen($this->container['action']) > 64)) {
-                $invalidProperties[] = "invalid value for 'action', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['action']) && (mb_strlen($this->container['action']) < 0)) {
-                $invalidProperties[] = "invalid value for 'action', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['scriptVersion']) && (mb_strlen($this->container['scriptVersion']) > 32)) {
-                $invalidProperties[] = "invalid value for 'scriptVersion', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['scriptVersion']) && (mb_strlen($this->container['scriptVersion']) < 0)) {
-                $invalidProperties[] = "invalid value for 'scriptVersion', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -216,54 +165,6 @@ class ConfirmSmartLiveRoomReq implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets action
-    *  确认操作。 * confirm: 确认。 * reject: 拒绝。
-    *
-    * @return string|null
-    */
-    public function getAction()
-    {
-        return $this->container['action'];
-    }
-
-    /**
-    * Sets action
-    *
-    * @param string|null $action 确认操作。 * confirm: 确认。 * reject: 拒绝。
-    *
-    * @return $this
-    */
-    public function setAction($action)
-    {
-        $this->container['action'] = $action;
-        return $this;
-    }
-
-    /**
-    * Gets scriptVersion
-    *  剧本版本。从查询直播间详情接口中获取。
-    *
-    * @return string|null
-    */
-    public function getScriptVersion()
-    {
-        return $this->container['scriptVersion'];
-    }
-
-    /**
-    * Sets scriptVersion
-    *
-    * @param string|null $scriptVersion 剧本版本。从查询直播间详情接口中获取。
-    *
-    * @return $this
-    */
-    public function setScriptVersion($scriptVersion)
-    {
-        $this->container['scriptVersion'] = $scriptVersion;
-        return $this;
     }
 
     /**

@@ -29,6 +29,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
     * approvalEnabled  是否需要审批。  - false：不需要审批，创建的终端节点连接直接为accepted状态。  - true：需要审批，创建的终端节点连接为pendingAcceptance状态， 需要终端节点服务所属用户审核后方可使用。
     * status  终端节点服务的状态。  - creating：创建中  - available：可连接  - failed：失败  - deleting：删除中
     * serviceType  终端节点服务类型。 终端节点服务类型包括“网关（gateway）型”和“接口（interface）型”：  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节。
+    * supportedEditions  终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * projectId  项目ID，获取方法请参见获取项目ID。
@@ -52,6 +53,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
             'approvalEnabled' => 'bool',
             'status' => 'string',
             'serviceType' => 'string',
+            'supportedEditions' => 'string[]',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
             'projectId' => 'string',
@@ -75,6 +77,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
     * approvalEnabled  是否需要审批。  - false：不需要审批，创建的终端节点连接直接为accepted状态。  - true：需要审批，创建的终端节点连接为pendingAcceptance状态， 需要终端节点服务所属用户审核后方可使用。
     * status  终端节点服务的状态。  - creating：创建中  - available：可连接  - failed：失败  - deleting：删除中
     * serviceType  终端节点服务类型。 终端节点服务类型包括“网关（gateway）型”和“接口（interface）型”：  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节。
+    * supportedEditions  终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * projectId  项目ID，获取方法请参见获取项目ID。
@@ -98,6 +101,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
         'approvalEnabled' => null,
         'status' => null,
         'serviceType' => null,
+        'supportedEditions' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
         'projectId' => null,
@@ -142,6 +146,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
     * approvalEnabled  是否需要审批。  - false：不需要审批，创建的终端节点连接直接为accepted状态。  - true：需要审批，创建的终端节点连接为pendingAcceptance状态， 需要终端节点服务所属用户审核后方可使用。
     * status  终端节点服务的状态。  - creating：创建中  - available：可连接  - failed：失败  - deleting：删除中
     * serviceType  终端节点服务类型。 终端节点服务类型包括“网关（gateway）型”和“接口（interface）型”：  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节。
+    * supportedEditions  终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * projectId  项目ID，获取方法请参见获取项目ID。
@@ -165,6 +170,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
             'approvalEnabled' => 'approval_enabled',
             'status' => 'status',
             'serviceType' => 'service_type',
+            'supportedEditions' => 'supported_editions',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'projectId' => 'project_id',
@@ -188,6 +194,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
     * approvalEnabled  是否需要审批。  - false：不需要审批，创建的终端节点连接直接为accepted状态。  - true：需要审批，创建的终端节点连接为pendingAcceptance状态， 需要终端节点服务所属用户审核后方可使用。
     * status  终端节点服务的状态。  - creating：创建中  - available：可连接  - failed：失败  - deleting：删除中
     * serviceType  终端节点服务类型。 终端节点服务类型包括“网关（gateway）型”和“接口（interface）型”：  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节。
+    * supportedEditions  终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * projectId  项目ID，获取方法请参见获取项目ID。
@@ -211,6 +218,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
             'approvalEnabled' => 'setApprovalEnabled',
             'status' => 'setStatus',
             'serviceType' => 'setServiceType',
+            'supportedEditions' => 'setSupportedEditions',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'projectId' => 'setProjectId',
@@ -234,6 +242,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
     * approvalEnabled  是否需要审批。  - false：不需要审批，创建的终端节点连接直接为accepted状态。  - true：需要审批，创建的终端节点连接为pendingAcceptance状态， 需要终端节点服务所属用户审核后方可使用。
     * status  终端节点服务的状态。  - creating：创建中  - available：可连接  - failed：失败  - deleting：删除中
     * serviceType  终端节点服务类型。 终端节点服务类型包括“网关（gateway）型”和“接口（interface）型”：  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节。
+    * supportedEditions  终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * projectId  项目ID，获取方法请参见获取项目ID。
@@ -257,6 +266,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
             'approvalEnabled' => 'getApprovalEnabled',
             'status' => 'getStatus',
             'serviceType' => 'getServiceType',
+            'supportedEditions' => 'getSupportedEditions',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'projectId' => 'getProjectId',
@@ -336,6 +346,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
         $this->container['approvalEnabled'] = isset($data['approvalEnabled']) ? $data['approvalEnabled'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
+        $this->container['supportedEditions'] = isset($data['supportedEditions']) ? $data['supportedEditions'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
@@ -584,6 +595,30 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
     public function setServiceType($serviceType)
     {
         $this->container['serviceType'] = $serviceType;
+        return $this;
+    }
+
+    /**
+    * Gets supportedEditions
+    *  终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
+    *
+    * @return string[]|null
+    */
+    public function getSupportedEditions()
+    {
+        return $this->container['supportedEditions'];
+    }
+
+    /**
+    * Sets supportedEditions
+    *
+    * @param string[]|null $supportedEditions 终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
+    *
+    * @return $this
+    */
+    public function setSupportedEditions($supportedEditions)
+    {
+        $this->container['supportedEditions'] = $supportedEditions;
         return $this;
     }
 

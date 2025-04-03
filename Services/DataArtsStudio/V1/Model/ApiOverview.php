@@ -31,6 +31,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
     * manager  API审核人
     * createUser  API创建者
     * createTime  API 创建时间
+    * authorizationStatus  authorizationStatus
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ApiOverview implements ModelInterface, ArrayAccess
             'type' => 'string',
             'manager' => 'string',
             'createUser' => 'string',
-            'createTime' => 'int'
+            'createTime' => 'int',
+            'authorizationStatus' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
     * manager  API审核人
     * createUser  API创建者
     * createTime  API 创建时间
+    * authorizationStatus  authorizationStatus
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ApiOverview implements ModelInterface, ArrayAccess
         'type' => null,
         'manager' => null,
         'createUser' => null,
-        'createTime' => 'int64'
+        'createTime' => 'int64',
+        'authorizationStatus' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
     * manager  API审核人
     * createUser  API创建者
     * createTime  API 创建时间
+    * authorizationStatus  authorizationStatus
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ApiOverview implements ModelInterface, ArrayAccess
             'type' => 'type',
             'manager' => 'manager',
             'createUser' => 'create_user',
-            'createTime' => 'create_time'
+            'createTime' => 'create_time',
+            'authorizationStatus' => 'authorization_status'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
     * manager  API审核人
     * createUser  API创建者
     * createTime  API 创建时间
+    * authorizationStatus  authorizationStatus
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ApiOverview implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'manager' => 'setManager',
             'createUser' => 'setCreateUser',
-            'createTime' => 'setCreateTime'
+            'createTime' => 'setCreateTime',
+            'authorizationStatus' => 'setAuthorizationStatus'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
     * manager  API审核人
     * createUser  API创建者
     * createTime  API 创建时间
+    * authorizationStatus  authorizationStatus
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ApiOverview implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'manager' => 'getManager',
             'createUser' => 'getCreateUser',
-            'createTime' => 'getCreateTime'
+            'createTime' => 'getCreateTime',
+            'authorizationStatus' => 'getAuthorizationStatus'
     ];
 
     /**
@@ -245,6 +255,9 @@ class ApiOverview implements ModelInterface, ArrayAccess
     const TYPE_API_SPECIFIC_TYPE_CONFIGURATION = 'API_SPECIFIC_TYPE_CONFIGURATION';
     const TYPE_API_SPECIFIC_TYPE_SCRIPT = 'API_SPECIFIC_TYPE_SCRIPT';
     const TYPE_API_SPECIFIC_TYPE_REGISTER = 'API_SPECIFIC_TYPE_REGISTER';
+    const AUTHORIZATION_STATUS_NO_AUTHORIZATION_REQUIRED = 'NO_AUTHORIZATION_REQUIRED';
+    const AUTHORIZATION_STATUS_UNAUTHORIZED = 'UNAUTHORIZED';
+    const AUTHORIZATION_STATUS_AUTHORIZED = 'AUTHORIZED';
     
 
     /**
@@ -296,6 +309,20 @@ class ApiOverview implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAuthorizationStatusAllowableValues()
+    {
+        return [
+            self::AUTHORIZATION_STATUS_NO_AUTHORIZATION_REQUIRED,
+            self::AUTHORIZATION_STATUS_UNAUTHORIZED,
+            self::AUTHORIZATION_STATUS_AUTHORIZED,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -323,6 +350,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
         $this->container['manager'] = isset($data['manager']) ? $data['manager'] : null;
         $this->container['createUser'] = isset($data['createUser']) ? $data['createUser'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['authorizationStatus'] = isset($data['authorizationStatus']) ? $data['authorizationStatus'] : null;
     }
 
     /**
@@ -353,6 +381,14 @@ class ApiOverview implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getAuthorizationStatusAllowableValues();
+                if (!is_null($this->container['authorizationStatus']) && !in_array($this->container['authorizationStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'authorizationStatus', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -632,6 +668,30 @@ class ApiOverview implements ModelInterface, ArrayAccess
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets authorizationStatus
+    *  authorizationStatus
+    *
+    * @return string|null
+    */
+    public function getAuthorizationStatus()
+    {
+        return $this->container['authorizationStatus'];
+    }
+
+    /**
+    * Sets authorizationStatus
+    *
+    * @param string|null $authorizationStatus authorizationStatus
+    *
+    * @return $this
+    */
+    public function setAuthorizationStatus($authorizationStatus)
+    {
+        $this->container['authorizationStatus'] = $authorizationStatus;
         return $this;
     }
 

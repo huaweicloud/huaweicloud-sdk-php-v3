@@ -158,6 +158,9 @@ class UpdateVpnUserGroupRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['userGroup'] === null) {
+            $invalidProperties[] = "'userGroup' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class UpdateVpnUserGroupRequestBody implements ModelInterface, ArrayAccess
     * Gets userGroup
     *  userGroup
     *
-    * @return \HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnUserGroupRequestBodyContent|null
+    * @return \HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnUserGroupRequestBodyContent
     */
     public function getUserGroup()
     {
@@ -186,7 +189,7 @@ class UpdateVpnUserGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets userGroup
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnUserGroupRequestBodyContent|null $userGroup userGroup
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnUserGroupRequestBodyContent $userGroup userGroup
     *
     * @return $this
     */

@@ -34,6 +34,7 @@ class DatasourceConfig implements ModelInterface, ArrayAccess
     * backendParas  API后端参数
     * responseParas  配置类API返回参数
     * orderParas  排序参数
+    * totalSizeSql  总条数计算脚本SQL。
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class DatasourceConfig implements ModelInterface, ArrayAccess
             'sql' => 'string',
             'backendParas' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApiRequestPara[]',
             'responseParas' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApiResponsePara[]',
-            'orderParas' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DatasourceOrderPara[]'
+            'orderParas' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DatasourceOrderPara[]',
+            'totalSizeSql' => 'string'
     ];
 
     /**
@@ -70,6 +72,7 @@ class DatasourceConfig implements ModelInterface, ArrayAccess
     * backendParas  API后端参数
     * responseParas  配置类API返回参数
     * orderParas  排序参数
+    * totalSizeSql  总条数计算脚本SQL。
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class DatasourceConfig implements ModelInterface, ArrayAccess
         'sql' => null,
         'backendParas' => null,
         'responseParas' => null,
-        'orderParas' => null
+        'orderParas' => null,
+        'totalSizeSql' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class DatasourceConfig implements ModelInterface, ArrayAccess
     * backendParas  API后端参数
     * responseParas  配置类API返回参数
     * orderParas  排序参数
+    * totalSizeSql  总条数计算脚本SQL。
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class DatasourceConfig implements ModelInterface, ArrayAccess
             'sql' => 'sql',
             'backendParas' => 'backend_paras',
             'responseParas' => 'response_paras',
-            'orderParas' => 'order_paras'
+            'orderParas' => 'order_paras',
+            'totalSizeSql' => 'total_size_sql'
     ];
 
     /**
@@ -163,6 +169,7 @@ class DatasourceConfig implements ModelInterface, ArrayAccess
     * backendParas  API后端参数
     * responseParas  配置类API返回参数
     * orderParas  排序参数
+    * totalSizeSql  总条数计算脚本SQL。
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class DatasourceConfig implements ModelInterface, ArrayAccess
             'sql' => 'setSql',
             'backendParas' => 'setBackendParas',
             'responseParas' => 'setResponseParas',
-            'orderParas' => 'setOrderParas'
+            'orderParas' => 'setOrderParas',
+            'totalSizeSql' => 'setTotalSizeSql'
     ];
 
     /**
@@ -199,6 +207,7 @@ class DatasourceConfig implements ModelInterface, ArrayAccess
     * backendParas  API后端参数
     * responseParas  配置类API返回参数
     * orderParas  排序参数
+    * totalSizeSql  总条数计算脚本SQL。
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class DatasourceConfig implements ModelInterface, ArrayAccess
             'sql' => 'getSql',
             'backendParas' => 'getBackendParas',
             'responseParas' => 'getResponseParas',
-            'orderParas' => 'getOrderParas'
+            'orderParas' => 'getOrderParas',
+            'totalSizeSql' => 'getTotalSizeSql'
     ];
 
     /**
@@ -359,6 +369,7 @@ class DatasourceConfig implements ModelInterface, ArrayAccess
         $this->container['backendParas'] = isset($data['backendParas']) ? $data['backendParas'] : null;
         $this->container['responseParas'] = isset($data['responseParas']) ? $data['responseParas'] : null;
         $this->container['orderParas'] = isset($data['orderParas']) ? $data['orderParas'] : null;
+        $this->container['totalSizeSql'] = isset($data['totalSizeSql']) ? $data['totalSizeSql'] : null;
     }
 
     /**
@@ -748,6 +759,30 @@ class DatasourceConfig implements ModelInterface, ArrayAccess
     public function setOrderParas($orderParas)
     {
         $this->container['orderParas'] = $orderParas;
+        return $this;
+    }
+
+    /**
+    * Gets totalSizeSql
+    *  总条数计算脚本SQL。
+    *
+    * @return string|null
+    */
+    public function getTotalSizeSql()
+    {
+        return $this->container['totalSizeSql'];
+    }
+
+    /**
+    * Sets totalSizeSql
+    *
+    * @param string|null $totalSizeSql 总条数计算脚本SQL。
+    *
+    * @return $this
+    */
+    public function setTotalSizeSql($totalSizeSql)
+    {
+        $this->container['totalSizeSql'] = $totalSizeSql;
         return $this;
     }
 

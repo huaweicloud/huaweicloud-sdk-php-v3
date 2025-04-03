@@ -26,6 +26,7 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * liveWarningInfo  开播风险告警列表。
+    * limitDuration  **参数解释**： 配置的最大直播时长。单位小时。 0 为不限制。 **约束限制**： 停止直播逻辑配置为立即停止则直播停止误差在5分钟之内。其他逻辑则加上处理时长。 **默认取值**： 不设置则表示不限时。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -36,6 +37,7 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
             'liveEventReportUrl' => 'string',
             'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
             'liveWarningInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveWarningItem[]',
+            'limitDuration' => 'int',
             'xRequestId' => 'string'
     ];
 
@@ -46,6 +48,7 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * liveWarningInfo  开播风险告警列表。
+    * limitDuration  **参数解释**： 配置的最大直播时长。单位小时。 0 为不限制。 **约束限制**： 停止直播逻辑配置为立即停止则直播停止误差在5分钟之内。其他逻辑则加上处理时长。 **默认取值**： 不设置则表示不限时。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -56,6 +59,7 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
         'liveEventReportUrl' => null,
         'liveEventCallbackConfig' => null,
         'liveWarningInfo' => null,
+        'limitDuration' => null,
         'xRequestId' => null
     ];
 
@@ -87,6 +91,7 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * liveWarningInfo  开播风险告警列表。
+    * limitDuration  **参数解释**： 配置的最大直播时长。单位小时。 0 为不限制。 **约束限制**： 停止直播逻辑配置为立即停止则直播停止误差在5分钟之内。其他逻辑则加上处理时长。 **默认取值**： 不设置则表示不限时。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -97,6 +102,7 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
             'liveEventReportUrl' => 'live_event_report_url',
             'liveEventCallbackConfig' => 'live_event_callback_config',
             'liveWarningInfo' => 'live_warning_info',
+            'limitDuration' => 'limit_duration',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -107,6 +113,7 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * liveWarningInfo  开播风险告警列表。
+    * limitDuration  **参数解释**： 配置的最大直播时长。单位小时。 0 为不限制。 **约束限制**： 停止直播逻辑配置为立即停止则直播停止误差在5分钟之内。其他逻辑则加上处理时长。 **默认取值**： 不设置则表示不限时。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -117,6 +124,7 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
             'liveEventReportUrl' => 'setLiveEventReportUrl',
             'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
             'liveWarningInfo' => 'setLiveWarningInfo',
+            'limitDuration' => 'setLimitDuration',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -127,6 +135,7 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * liveWarningInfo  开播风险告警列表。
+    * limitDuration  **参数解释**： 配置的最大直播时长。单位小时。 0 为不限制。 **约束限制**： 停止直播逻辑配置为立即停止则直播停止误差在5分钟之内。其他逻辑则加上处理时长。 **默认取值**： 不设置则表示不限时。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -137,6 +146,7 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
             'liveEventReportUrl' => 'getLiveEventReportUrl',
             'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
             'liveWarningInfo' => 'getLiveWarningInfo',
+            'limitDuration' => 'getLimitDuration',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -203,6 +213,7 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
         $this->container['liveEventReportUrl'] = isset($data['liveEventReportUrl']) ? $data['liveEventReportUrl'] : null;
         $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
         $this->container['liveWarningInfo'] = isset($data['liveWarningInfo']) ? $data['liveWarningInfo'] : null;
+        $this->container['limitDuration'] = isset($data['limitDuration']) ? $data['limitDuration'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -225,6 +236,12 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['liveEventReportUrl']) && (mb_strlen($this->container['liveEventReportUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'liveEventReportUrl', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limitDuration']) && ($this->container['limitDuration'] > 168)) {
+                $invalidProperties[] = "invalid value for 'limitDuration', must be smaller than or equal to 168.";
+            }
+            if (!is_null($this->container['limitDuration']) && ($this->container['limitDuration'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limitDuration', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -357,6 +374,30 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
     public function setLiveWarningInfo($liveWarningInfo)
     {
         $this->container['liveWarningInfo'] = $liveWarningInfo;
+        return $this;
+    }
+
+    /**
+    * Gets limitDuration
+    *  **参数解释**： 配置的最大直播时长。单位小时。 0 为不限制。 **约束限制**： 停止直播逻辑配置为立即停止则直播停止误差在5分钟之内。其他逻辑则加上处理时长。 **默认取值**： 不设置则表示不限时。
+    *
+    * @return int|null
+    */
+    public function getLimitDuration()
+    {
+        return $this->container['limitDuration'];
+    }
+
+    /**
+    * Sets limitDuration
+    *
+    * @param int|null $limitDuration **参数解释**： 配置的最大直播时长。单位小时。 0 为不限制。 **约束限制**： 停止直播逻辑配置为立即停止则直播停止误差在5分钟之内。其他逻辑则加上处理时长。 **默认取值**： 不设置则表示不限时。
+    *
+    * @return $this
+    */
+    public function setLimitDuration($limitDuration)
+    {
+        $this->container['limitDuration'] = $limitDuration;
         return $this;
     }
 

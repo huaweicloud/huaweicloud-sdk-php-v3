@@ -202,6 +202,12 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['password'] === null) {
+            $invalidProperties[] = "'password' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -220,7 +226,7 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
     * Gets name
     *  用户名
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -230,7 +236,7 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 用户名
+    * @param string $name 用户名
     *
     * @return $this
     */
@@ -244,7 +250,7 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
     * Gets password
     *  用户密码
     *
-    * @return string|null
+    * @return string
     */
     public function getPassword()
     {
@@ -254,7 +260,7 @@ class CreateVpnUser implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string|null $password 用户密码
+    * @param string $password 用户密码
     *
     * @return $this
     */

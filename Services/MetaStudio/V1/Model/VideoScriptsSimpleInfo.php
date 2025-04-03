@@ -31,6 +31,8 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     *
     * @var string[]
     */
@@ -45,7 +47,9 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
             'sceneAssetId' => 'string',
             'privData' => 'string',
             'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig',
-            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig'
+            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
+            'audioFiles' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptAudioFiles',
+            'actionConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ActionConfig'
     ];
 
     /**
@@ -61,6 +65,8 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     *
     * @var string[]
     */
@@ -75,7 +81,9 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
         'sceneAssetId' => null,
         'privData' => null,
         'backgroundMusicConfig' => null,
-        'reviewConfig' => null
+        'reviewConfig' => null,
+        'audioFiles' => null,
+        'actionConfig' => null
     ];
 
     /**
@@ -112,6 +120,8 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     *
     * @var string[]
     */
@@ -126,7 +136,9 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
             'sceneAssetId' => 'scene_asset_id',
             'privData' => 'priv_data',
             'backgroundMusicConfig' => 'background_music_config',
-            'reviewConfig' => 'review_config'
+            'reviewConfig' => 'review_config',
+            'audioFiles' => 'audio_files',
+            'actionConfig' => 'action_config'
     ];
 
     /**
@@ -142,6 +154,8 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     *
     * @var string[]
     */
@@ -156,7 +170,9 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
             'sceneAssetId' => 'setSceneAssetId',
             'privData' => 'setPrivData',
             'backgroundMusicConfig' => 'setBackgroundMusicConfig',
-            'reviewConfig' => 'setReviewConfig'
+            'reviewConfig' => 'setReviewConfig',
+            'audioFiles' => 'setAudioFiles',
+            'actionConfig' => 'setActionConfig'
     ];
 
     /**
@@ -172,6 +188,8 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * audioFiles  audioFiles
+    * actionConfig  actionConfig
     *
     * @var string[]
     */
@@ -186,7 +204,9 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
             'sceneAssetId' => 'getSceneAssetId',
             'privData' => 'getPrivData',
             'backgroundMusicConfig' => 'getBackgroundMusicConfig',
-            'reviewConfig' => 'getReviewConfig'
+            'reviewConfig' => 'getReviewConfig',
+            'audioFiles' => 'getAudioFiles',
+            'actionConfig' => 'getActionConfig'
     ];
 
     /**
@@ -288,6 +308,8 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
         $this->container['privData'] = isset($data['privData']) ? $data['privData'] : null;
         $this->container['backgroundMusicConfig'] = isset($data['backgroundMusicConfig']) ? $data['backgroundMusicConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
+        $this->container['audioFiles'] = isset($data['audioFiles']) ? $data['audioFiles'] : null;
+        $this->container['actionConfig'] = isset($data['actionConfig']) ? $data['actionConfig'] : null;
     }
 
     /**
@@ -619,6 +641,54 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     public function setReviewConfig($reviewConfig)
     {
         $this->container['reviewConfig'] = $reviewConfig;
+        return $this;
+    }
+
+    /**
+    * Gets audioFiles
+    *  audioFiles
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptAudioFiles|null
+    */
+    public function getAudioFiles()
+    {
+        return $this->container['audioFiles'];
+    }
+
+    /**
+    * Sets audioFiles
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptAudioFiles|null $audioFiles audioFiles
+    *
+    * @return $this
+    */
+    public function setAudioFiles($audioFiles)
+    {
+        $this->container['audioFiles'] = $audioFiles;
+        return $this;
+    }
+
+    /**
+    * Gets actionConfig
+    *  actionConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ActionConfig|null
+    */
+    public function getActionConfig()
+    {
+        return $this->container['actionConfig'];
+    }
+
+    /**
+    * Sets actionConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ActionConfig|null $actionConfig actionConfig
+    *
+    * @return $this
+    */
+    public function setActionConfig($actionConfig)
+    {
+        $this->container['actionConfig'] = $actionConfig;
         return $this;
     }
 

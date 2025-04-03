@@ -30,6 +30,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * region  算力所在region。 * cn-north-4: 北京4 * cn-southwest-2: 贵阳1
     * chatAccessAddress  智能交互接入地址。
+    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
     * xRequestId  xRequestId
@@ -46,6 +47,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
             'chatVideoType' => 'string',
             'region' => 'string',
             'chatAccessAddress' => 'string',
+            'chatAccessRestAddress' => 'string',
             'isTransparent' => 'bool',
             'defaultLanguage' => 'string',
             'xRequestId' => 'string'
@@ -62,6 +64,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * region  算力所在region。 * cn-north-4: 北京4 * cn-southwest-2: 贵阳1
     * chatAccessAddress  智能交互接入地址。
+    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
     * xRequestId  xRequestId
@@ -78,6 +81,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
         'chatVideoType' => null,
         'region' => null,
         'chatAccessAddress' => null,
+        'chatAccessRestAddress' => null,
         'isTransparent' => null,
         'defaultLanguage' => null,
         'xRequestId' => null
@@ -115,6 +119,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * region  算力所在region。 * cn-north-4: 北京4 * cn-southwest-2: 贵阳1
     * chatAccessAddress  智能交互接入地址。
+    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
     * xRequestId  xRequestId
@@ -131,6 +136,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
             'chatVideoType' => 'chat_video_type',
             'region' => 'region',
             'chatAccessAddress' => 'chat_access_address',
+            'chatAccessRestAddress' => 'chat_access_rest_address',
             'isTransparent' => 'is_transparent',
             'defaultLanguage' => 'default_language',
             'xRequestId' => 'X-Request-Id'
@@ -147,6 +153,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * region  算力所在region。 * cn-north-4: 北京4 * cn-southwest-2: 贵阳1
     * chatAccessAddress  智能交互接入地址。
+    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
     * xRequestId  xRequestId
@@ -163,6 +170,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
             'chatVideoType' => 'setChatVideoType',
             'region' => 'setRegion',
             'chatAccessAddress' => 'setChatAccessAddress',
+            'chatAccessRestAddress' => 'setChatAccessRestAddress',
             'isTransparent' => 'setIsTransparent',
             'defaultLanguage' => 'setDefaultLanguage',
             'xRequestId' => 'setXRequestId'
@@ -179,6 +187,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * region  算力所在region。 * cn-north-4: 北京4 * cn-southwest-2: 贵阳1
     * chatAccessAddress  智能交互接入地址。
+    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
     * xRequestId  xRequestId
@@ -195,6 +204,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
             'chatVideoType' => 'getChatVideoType',
             'region' => 'getRegion',
             'chatAccessAddress' => 'getChatAccessAddress',
+            'chatAccessRestAddress' => 'getChatAccessRestAddress',
             'isTransparent' => 'getIsTransparent',
             'defaultLanguage' => 'getDefaultLanguage',
             'xRequestId' => 'getXRequestId'
@@ -299,6 +309,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
         $this->container['chatVideoType'] = isset($data['chatVideoType']) ? $data['chatVideoType'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['chatAccessAddress'] = isset($data['chatAccessAddress']) ? $data['chatAccessAddress'] : null;
+        $this->container['chatAccessRestAddress'] = isset($data['chatAccessRestAddress']) ? $data['chatAccessRestAddress'] : null;
         $this->container['isTransparent'] = isset($data['isTransparent']) ? $data['isTransparent'] : null;
         $this->container['defaultLanguage'] = isset($data['defaultLanguage']) ? $data['defaultLanguage'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
@@ -343,6 +354,12 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['chatAccessAddress']) && (mb_strlen($this->container['chatAccessAddress']) < 1)) {
                 $invalidProperties[] = "invalid value for 'chatAccessAddress', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['chatAccessRestAddress']) && (mb_strlen($this->container['chatAccessRestAddress']) > 128)) {
+                $invalidProperties[] = "invalid value for 'chatAccessRestAddress', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['chatAccessRestAddress']) && (mb_strlen($this->container['chatAccessRestAddress']) < 1)) {
+                $invalidProperties[] = "invalid value for 'chatAccessRestAddress', the character length must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getDefaultLanguageAllowableValues();
                 if (!is_null($this->container['defaultLanguage']) && !in_array($this->container['defaultLanguage'], $allowedValues, true)) {
@@ -579,6 +596,30 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     public function setChatAccessAddress($chatAccessAddress)
     {
         $this->container['chatAccessAddress'] = $chatAccessAddress;
+        return $this;
+    }
+
+    /**
+    * Gets chatAccessRestAddress
+    *  智能交互Rest接口接入地址。
+    *
+    * @return string|null
+    */
+    public function getChatAccessRestAddress()
+    {
+        return $this->container['chatAccessRestAddress'];
+    }
+
+    /**
+    * Sets chatAccessRestAddress
+    *
+    * @param string|null $chatAccessRestAddress 智能交互Rest接口接入地址。
+    *
+    * @return $this
+    */
+    public function setChatAccessRestAddress($chatAccessRestAddress)
+    {
+        $this->container['chatAccessRestAddress'] = $chatAccessRestAddress;
         return $this;
     }
 

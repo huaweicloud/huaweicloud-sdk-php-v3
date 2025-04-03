@@ -79,6 +79,8 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     * prodVersionName  生产环境版本名称
     * envType  envType
     * secrecyLevels  密级
+    * modelId  所属模型ID，ID字符串。
+    * model  model
     *
     * @var string[]
     */
@@ -141,7 +143,9 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
             'devVersionName' => 'string',
             'prodVersionName' => 'string',
             'envType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum',
-            'secrecyLevels' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecrecyLevelVO[]'
+            'secrecyLevels' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecrecyLevelVO[]',
+            'modelId' => 'string',
+            'model' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\WorkspaceVO'
     ];
 
     /**
@@ -205,6 +209,8 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     * prodVersionName  生产环境版本名称
     * envType  envType
     * secrecyLevels  密级
+    * modelId  所属模型ID，ID字符串。
+    * model  model
     *
     * @var string[]
     */
@@ -267,7 +273,9 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
         'devVersionName' => null,
         'prodVersionName' => null,
         'envType' => null,
-        'secrecyLevels' => null
+        'secrecyLevels' => null,
+        'modelId' => null,
+        'model' => null
     ];
 
     /**
@@ -352,6 +360,8 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     * prodVersionName  生产环境版本名称
     * envType  envType
     * secrecyLevels  密级
+    * modelId  所属模型ID，ID字符串。
+    * model  model
     *
     * @var string[]
     */
@@ -414,7 +424,9 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
             'devVersionName' => 'dev_version_name',
             'prodVersionName' => 'prod_version_name',
             'envType' => 'env_type',
-            'secrecyLevels' => 'secrecy_levels'
+            'secrecyLevels' => 'secrecy_levels',
+            'modelId' => 'model_id',
+            'model' => 'model'
     ];
 
     /**
@@ -478,6 +490,8 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     * prodVersionName  生产环境版本名称
     * envType  envType
     * secrecyLevels  密级
+    * modelId  所属模型ID，ID字符串。
+    * model  model
     *
     * @var string[]
     */
@@ -540,7 +554,9 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
             'devVersionName' => 'setDevVersionName',
             'prodVersionName' => 'setProdVersionName',
             'envType' => 'setEnvType',
-            'secrecyLevels' => 'setSecrecyLevels'
+            'secrecyLevels' => 'setSecrecyLevels',
+            'modelId' => 'setModelId',
+            'model' => 'setModel'
     ];
 
     /**
@@ -604,6 +620,8 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     * prodVersionName  生产环境版本名称
     * envType  envType
     * secrecyLevels  密级
+    * modelId  所属模型ID，ID字符串。
+    * model  model
     *
     * @var string[]
     */
@@ -666,7 +684,9 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
             'devVersionName' => 'getDevVersionName',
             'prodVersionName' => 'getProdVersionName',
             'envType' => 'getEnvType',
-            'secrecyLevels' => 'getSecrecyLevels'
+            'secrecyLevels' => 'getSecrecyLevels',
+            'modelId' => 'getModelId',
+            'model' => 'getModel'
     ];
 
     /**
@@ -801,6 +821,8 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
         $this->container['prodVersionName'] = isset($data['prodVersionName']) ? $data['prodVersionName'] : null;
         $this->container['envType'] = isset($data['envType']) ? $data['envType'] : null;
         $this->container['secrecyLevels'] = isset($data['secrecyLevels']) ? $data['secrecyLevels'] : null;
+        $this->container['modelId'] = isset($data['modelId']) ? $data['modelId'] : null;
+        $this->container['model'] = isset($data['model']) ? $data['model'] : null;
     }
 
     /**
@@ -2291,6 +2313,54 @@ class FactLogicTableVO implements ModelInterface, ArrayAccess
     public function setSecrecyLevels($secrecyLevels)
     {
         $this->container['secrecyLevels'] = $secrecyLevels;
+        return $this;
+    }
+
+    /**
+    * Gets modelId
+    *  所属模型ID，ID字符串。
+    *
+    * @return string|null
+    */
+    public function getModelId()
+    {
+        return $this->container['modelId'];
+    }
+
+    /**
+    * Sets modelId
+    *
+    * @param string|null $modelId 所属模型ID，ID字符串。
+    *
+    * @return $this
+    */
+    public function setModelId($modelId)
+    {
+        $this->container['modelId'] = $modelId;
+        return $this;
+    }
+
+    /**
+    * Gets model
+    *  model
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\WorkspaceVO|null
+    */
+    public function getModel()
+    {
+        return $this->container['model'];
+    }
+
+    /**
+    * Sets model
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\WorkspaceVO|null $model model
+    *
+    * @return $this
+    */
+    public function setModel($model)
+    {
+        $this->container['model'] = $model;
         return $this;
     }
 

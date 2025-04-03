@@ -22,24 +22,32 @@ class PreviewInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * textSha256  文本内容hash值
     * audioFileDownloadUrl  文本对应音频文件下载链接
+    * actionFileDownloadUrl  动作编排列表文件下载链接
+    * audioDuration  音频时长，单位秒。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'textSha256' => 'string',
-            'audioFileDownloadUrl' => 'string'
+            'audioFileDownloadUrl' => 'string',
+            'actionFileDownloadUrl' => 'string',
+            'audioDuration' => 'float'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * textSha256  文本内容hash值
     * audioFileDownloadUrl  文本对应音频文件下载链接
+    * actionFileDownloadUrl  动作编排列表文件下载链接
+    * audioDuration  音频时长，单位秒。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'textSha256' => null,
-        'audioFileDownloadUrl' => null
+        'audioFileDownloadUrl' => null,
+        'actionFileDownloadUrl' => null,
+        'audioDuration' => 'float'
     ];
 
     /**
@@ -67,36 +75,48 @@ class PreviewInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * textSha256  文本内容hash值
     * audioFileDownloadUrl  文本对应音频文件下载链接
+    * actionFileDownloadUrl  动作编排列表文件下载链接
+    * audioDuration  音频时长，单位秒。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'textSha256' => 'text_sha256',
-            'audioFileDownloadUrl' => 'audio_file_download_url'
+            'audioFileDownloadUrl' => 'audio_file_download_url',
+            'actionFileDownloadUrl' => 'action_file_download_url',
+            'audioDuration' => 'audio_duration'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * textSha256  文本内容hash值
     * audioFileDownloadUrl  文本对应音频文件下载链接
+    * actionFileDownloadUrl  动作编排列表文件下载链接
+    * audioDuration  音频时长，单位秒。
     *
     * @var string[]
     */
     protected static $setters = [
             'textSha256' => 'setTextSha256',
-            'audioFileDownloadUrl' => 'setAudioFileDownloadUrl'
+            'audioFileDownloadUrl' => 'setAudioFileDownloadUrl',
+            'actionFileDownloadUrl' => 'setActionFileDownloadUrl',
+            'audioDuration' => 'setAudioDuration'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * textSha256  文本内容hash值
     * audioFileDownloadUrl  文本对应音频文件下载链接
+    * actionFileDownloadUrl  动作编排列表文件下载链接
+    * audioDuration  音频时长，单位秒。
     *
     * @var string[]
     */
     protected static $getters = [
             'textSha256' => 'getTextSha256',
-            'audioFileDownloadUrl' => 'getAudioFileDownloadUrl'
+            'audioFileDownloadUrl' => 'getAudioFileDownloadUrl',
+            'actionFileDownloadUrl' => 'getActionFileDownloadUrl',
+            'audioDuration' => 'getAudioDuration'
     ];
 
     /**
@@ -159,6 +179,8 @@ class PreviewInfo implements ModelInterface, ArrayAccess
     {
         $this->container['textSha256'] = isset($data['textSha256']) ? $data['textSha256'] : null;
         $this->container['audioFileDownloadUrl'] = isset($data['audioFileDownloadUrl']) ? $data['audioFileDownloadUrl'] : null;
+        $this->container['actionFileDownloadUrl'] = isset($data['actionFileDownloadUrl']) ? $data['actionFileDownloadUrl'] : null;
+        $this->container['audioDuration'] = isset($data['audioDuration']) ? $data['audioDuration'] : null;
     }
 
     /**
@@ -180,6 +202,18 @@ class PreviewInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['audioFileDownloadUrl']) && (mb_strlen($this->container['audioFileDownloadUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'audioFileDownloadUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['actionFileDownloadUrl']) && (mb_strlen($this->container['actionFileDownloadUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'actionFileDownloadUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['actionFileDownloadUrl']) && (mb_strlen($this->container['actionFileDownloadUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'actionFileDownloadUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['audioDuration']) && ($this->container['audioDuration'] > 3.6E+4)) {
+                $invalidProperties[] = "invalid value for 'audioDuration', must be smaller than or equal to 3.6E+4.";
+            }
+            if (!is_null($this->container['audioDuration']) && ($this->container['audioDuration'] < 0)) {
+                $invalidProperties[] = "invalid value for 'audioDuration', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -240,6 +274,54 @@ class PreviewInfo implements ModelInterface, ArrayAccess
     public function setAudioFileDownloadUrl($audioFileDownloadUrl)
     {
         $this->container['audioFileDownloadUrl'] = $audioFileDownloadUrl;
+        return $this;
+    }
+
+    /**
+    * Gets actionFileDownloadUrl
+    *  动作编排列表文件下载链接
+    *
+    * @return string|null
+    */
+    public function getActionFileDownloadUrl()
+    {
+        return $this->container['actionFileDownloadUrl'];
+    }
+
+    /**
+    * Sets actionFileDownloadUrl
+    *
+    * @param string|null $actionFileDownloadUrl 动作编排列表文件下载链接
+    *
+    * @return $this
+    */
+    public function setActionFileDownloadUrl($actionFileDownloadUrl)
+    {
+        $this->container['actionFileDownloadUrl'] = $actionFileDownloadUrl;
+        return $this;
+    }
+
+    /**
+    * Gets audioDuration
+    *  音频时长，单位秒。
+    *
+    * @return float|null
+    */
+    public function getAudioDuration()
+    {
+        return $this->container['audioDuration'];
+    }
+
+    /**
+    * Sets audioDuration
+    *
+    * @param float|null $audioDuration 音频时长，单位秒。
+    *
+    * @return $this
+    */
+    public function setAudioDuration($audioDuration)
+    {
+        $this->container['audioDuration'] = $audioDuration;
         return $this;
     }
 

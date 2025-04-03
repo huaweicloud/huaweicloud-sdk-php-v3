@@ -1166,9 +1166,10 @@ class MetaStudioAsyncClient extends Client
      * 创建资产
      *
      * 该接口用于在资产库中添加上传新的媒体资产。可上传的资产类型包括：分身数字人模型、背景图片、素材图片、素材视频、PPT等。
+     * &gt; 上传的图片、视频和背景图片，如果需要在视频制作素材中可见，需要设置system_properties。
      * &gt; - 资产类型是IMAGE时，通过system_properties来区分背景图片（BACKGROUND_IMG）、素材图片（MATERIAL_IMG）。
      * &gt; - 资产类型是VIDEO时，通过system_properties来区分素材视频（MATERIAL_VIDEO）、名片视频（BUSSINESS_CARD_VIDEO）。
-     * &gt; - MetaStudio平台生成的视频，system_properties带CREATED_BY_PLATFORM。
+     * &gt; MetaStudio平台生成的视频，system_properties带CREATED_BY_PLATFORM。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1356,6 +1357,9 @@ class MetaStudioAsyncClient extends Client
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams['x_app_user_id'] = $localVarParams['xAppUserId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1507,6 +1511,9 @@ class MetaStudioAsyncClient extends Client
         }
         if ($localVarParams['supportedService'] !== null) {
             $queryParams['supported_service'] = $localVarParams['supportedService'];
+        }
+        if ($localVarParams['appUserId'] !== null) {
+            $queryParams['app_user_id'] = $localVarParams['appUserId'];
         }
         if ($localVarParams['authorization'] !== null) {
             $headerParams['authorization'] = $localVarParams['authorization'];
@@ -4245,7 +4252,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 创建知识库意图和问法
      *
-     * 该接口用于创建知识库意图和问法。一个意图包含一个主题，一个答案，若干个问法等。
+     * 该接口用于创建知识库意图和问法。一个意图包含一个主题，一个答案，若干个问法等。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4322,7 +4329,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 创建知识库意图
      *
-     * 该接口用于创建知识库意图。一个意图包含一个主题，一个答案，若干个问法等。
+     * 该接口用于创建知识库意图。一个意图包含一个主题，一个答案，若干个问法等。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4399,7 +4406,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 删除知识库意图
      *
-     * 该接口用于删除知识库意图。
+     * 该接口用于删除知识库意图。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4476,7 +4483,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 查询知识库意图列表
      *
-     * 该接口用于查询知识库意图列表。
+     * 该接口用于查询知识库意图列表。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4559,7 +4566,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 查询知识库意图详情
      *
-     * 该接口用于查询知识库意图详情。
+     * 该接口用于查询知识库意图详情。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4636,7 +4643,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 修改知识库意图
      *
-     * 该接口用于修改知识库意图。
+     * 该接口用于修改知识库意图。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4716,7 +4723,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 批量创建知识库问法
      *
-     * 该接口用于批量创建知识库问法。
+     * 该接口用于批量创建知识库问法。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4793,7 +4800,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 创建知识库问法
      *
-     * 该接口用于创建知识库问法。
+     * 该接口用于创建知识库问法。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4870,7 +4877,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 删除知识库问法
      *
-     * 该接口用于删除知识库问法。
+     * 该接口用于删除知识库问法。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4947,7 +4954,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 查询知识库问法列表
      *
-     * 该接口用于查询知识库问法列表。
+     * 该接口用于查询知识库问法列表。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5030,7 +5037,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 查询知识库问法详情
      *
-     * 该接口用于查询知识库问法详情。
+     * 该接口用于查询知识库问法详情。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5107,7 +5114,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 批量修改知识库问法
      *
-     * 该接口用于批量修改知识库问法。
+     * 该接口用于批量修改知识库问法。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5184,7 +5191,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 修改知识库问法
      *
-     * 该接口用于修改知识库问法。
+     * 该接口用于修改知识库问法。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5264,7 +5271,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 创建知识库技能
      *
-     * 该接口用于创建知识库技能。一个技能用于特定场景的交互问答，包含若干个意图等。
+     * 该接口用于创建知识库技能。一个技能用于特定场景的交互问答，包含若干个意图等。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5341,7 +5348,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 删除知识库技能
      *
-     * 该接口用于删除知识库技能。
+     * 该接口用于删除知识库技能。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5418,7 +5425,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 导出知识库技能
      *
-     * 该接口用于导出知识库技能。
+     * 该接口用于导出知识库技能。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5498,7 +5505,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 查询知识库技能列表
      *
-     * 该接口用于查询知识库技能列表。
+     * 该接口用于查询知识库技能列表。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5578,7 +5585,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 查询知识库技能详情
      *
-     * 该接口用于查询知识库技能详情。
+     * 该接口用于查询知识库技能详情。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5655,7 +5662,7 @@ class MetaStudioAsyncClient extends Client
     /**
      * 修改知识库技能
      *
-     * 该接口用于修改知识库技能。
+     * 该接口用于修改知识库技能。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6278,6 +6285,80 @@ class MetaStudioAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateOnceCodeResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateOnceCodeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 订购metastudio云服务产品
+     *
+     * 该接口用于订购MetaStudio服务的包周期,一次性,按需套餐包产品
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createMetaStudioOrdersAsync($request)
+    {
+        return $this->createMetaStudioOrdersAsyncWithHttpInfo($request);
+    }
+    
+    public function createMetaStudioOrdersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/mss/public/orders';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateMetaStudioOrdersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateMetaStudioOrdersRequest',
             $asyncRequest = true);
     }
 
@@ -9722,12 +9803,12 @@ class MetaStudioAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function confirmSmartLiveRoomAsync($request)
+    public function confirmSmarLiveRoomAsync($request)
     {
-        return $this->confirmSmartLiveRoomAsyncWithHttpInfo($request);
+        return $this->confirmSmarLiveRoomAsyncWithHttpInfo($request);
     }
     
-    public function confirmSmartLiveRoomAsyncWithHttpInfo($request){
+    public function confirmSmarLiveRoomAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/smart-live-rooms/{room_id}/confirm';
         $formParams = [];
@@ -9786,9 +9867,9 @@ class MetaStudioAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ConfirmSmartLiveRoomResponse',
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ConfirmSmarLiveRoomResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ConfirmSmartLiveRoomRequest',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ConfirmSmarLiveRoomRequest',
             $asyncRequest = true);
     }
 
@@ -10866,7 +10947,7 @@ class MetaStudioAsyncClient extends Client
      * 查看租户资源列表
      *
      * 查看租户资源列表。
-     * &gt; 按需套餐包用量本接口无法查询，需要调用CBC接口查询。[按需套餐包用量查询](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0001239.html)和[查询资源包信息](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0000511.html)。
+     * &gt; 按需套餐包用量本接口无法查询，需要调用CBC接口查询，详见[按需套餐包用量查询](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0001239.html)和[查询资源包信息](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0000511.html)。
      * &gt; 各种资源的计费方式请参考[计费说明](https://support.huaweicloud.com/productdesc-metastudio/metastudio_01_0006.html)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
@@ -10928,6 +11009,9 @@ class MetaStudioAsyncClient extends Client
         if ($localVarParams['subResource'] !== null) {
             $queryParams['sub_resource'] = $localVarParams['subResource'];
         }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
         if ($localVarParams['authorization'] !== null) {
             $headerParams['authorization'] = $localVarParams['authorization'];
         }
@@ -10972,7 +11056,7 @@ class MetaStudioAsyncClient extends Client
      * 查看租户资源用量信息
      *
      * 查询租户一次性和包周期（包年/包月）资源用量信息。
-     * &gt; 按需套餐包用量本接口无法查询，需要调用CBC接口查询。[按需套餐包用量查询](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0001239.html)和[查询资源包信息](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0000511.html)。
+     * &gt; 按需套餐包用量本接口无法查询，需要调用CBC接口查询，详见[按需套餐包用量查询](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0001239.html)和[查询资源包信息](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0000511.html)。
      * &gt; 各种资源的计费方式请参考[计费说明](https://support.huaweicloud.com/productdesc-metastudio/metastudio_01_0006.html)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.

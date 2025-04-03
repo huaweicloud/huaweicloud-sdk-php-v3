@@ -22,6 +22,7 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * actionNameZh  原子动作中文名称。
     * actionNameEn  原子动作英文名称。
+    * actionDuration  动作时长
     * catalog  动作分类名称。
     * fileName  样例视频文件名，最大长度256，最小长度1。
     * tag  动作标签。
@@ -31,6 +32,7 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'actionNameZh' => 'string',
             'actionNameEn' => 'string',
+            'actionDuration' => 'float',
             'catalog' => 'string',
             'fileName' => 'string',
             'tag' => 'string'
@@ -40,6 +42,7 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * actionNameZh  原子动作中文名称。
     * actionNameEn  原子动作英文名称。
+    * actionDuration  动作时长
     * catalog  动作分类名称。
     * fileName  样例视频文件名，最大长度256，最小长度1。
     * tag  动作标签。
@@ -49,6 +52,7 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'actionNameZh' => null,
         'actionNameEn' => null,
+        'actionDuration' => 'float',
         'catalog' => null,
         'fileName' => null,
         'tag' => null
@@ -79,6 +83,7 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * actionNameZh  原子动作中文名称。
     * actionNameEn  原子动作英文名称。
+    * actionDuration  动作时长
     * catalog  动作分类名称。
     * fileName  样例视频文件名，最大长度256，最小长度1。
     * tag  动作标签。
@@ -88,6 +93,7 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'actionNameZh' => 'action_name_zh',
             'actionNameEn' => 'action_name_en',
+            'actionDuration' => 'action_duration',
             'catalog' => 'catalog',
             'fileName' => 'file_name',
             'tag' => 'tag'
@@ -97,6 +103,7 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * actionNameZh  原子动作中文名称。
     * actionNameEn  原子动作英文名称。
+    * actionDuration  动作时长
     * catalog  动作分类名称。
     * fileName  样例视频文件名，最大长度256，最小长度1。
     * tag  动作标签。
@@ -106,6 +113,7 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'actionNameZh' => 'setActionNameZh',
             'actionNameEn' => 'setActionNameEn',
+            'actionDuration' => 'setActionDuration',
             'catalog' => 'setCatalog',
             'fileName' => 'setFileName',
             'tag' => 'setTag'
@@ -115,6 +123,7 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * actionNameZh  原子动作中文名称。
     * actionNameEn  原子动作英文名称。
+    * actionDuration  动作时长
     * catalog  动作分类名称。
     * fileName  样例视频文件名，最大长度256，最小长度1。
     * tag  动作标签。
@@ -124,6 +133,7 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'actionNameZh' => 'getActionNameZh',
             'actionNameEn' => 'getActionNameEn',
+            'actionDuration' => 'getActionDuration',
             'catalog' => 'getCatalog',
             'fileName' => 'getFileName',
             'tag' => 'getTag'
@@ -189,6 +199,7 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
     {
         $this->container['actionNameZh'] = isset($data['actionNameZh']) ? $data['actionNameZh'] : null;
         $this->container['actionNameEn'] = isset($data['actionNameEn']) ? $data['actionNameEn'] : null;
+        $this->container['actionDuration'] = isset($data['actionDuration']) ? $data['actionDuration'] : null;
         $this->container['catalog'] = isset($data['catalog']) ? $data['catalog'] : null;
         $this->container['fileName'] = isset($data['fileName']) ? $data['fileName'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -219,6 +230,12 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['actionNameEn']) < 1)) {
                 $invalidProperties[] = "invalid value for 'actionNameEn', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['actionDuration']) && ($this->container['actionDuration'] > 1E+2)) {
+                $invalidProperties[] = "invalid value for 'actionDuration', must be smaller than or equal to 1E+2.";
+            }
+            if (!is_null($this->container['actionDuration']) && ($this->container['actionDuration'] < 0)) {
+                $invalidProperties[] = "invalid value for 'actionDuration', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['catalog']) && (mb_strlen($this->container['catalog']) > 128)) {
                 $invalidProperties[] = "invalid value for 'catalog', the character length must be smaller than or equal to 128.";
@@ -303,6 +320,30 @@ class ActionTagInfo implements ModelInterface, ArrayAccess
     public function setActionNameEn($actionNameEn)
     {
         $this->container['actionNameEn'] = $actionNameEn;
+        return $this;
+    }
+
+    /**
+    * Gets actionDuration
+    *  动作时长
+    *
+    * @return float|null
+    */
+    public function getActionDuration()
+    {
+        return $this->container['actionDuration'];
+    }
+
+    /**
+    * Sets actionDuration
+    *
+    * @param float|null $actionDuration 动作时长
+    *
+    * @return $this
+    */
+    public function setActionDuration($actionDuration)
+    {
+        $this->container['actionDuration'] = $actionDuration;
         return $this;
     }
 
