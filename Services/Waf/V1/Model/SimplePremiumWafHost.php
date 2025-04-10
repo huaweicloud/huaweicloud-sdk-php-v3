@@ -32,6 +32,9 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostid  域名id，和id的值是一样的，属于冗余字段
     * enterpriseProjectId  企业项目id
+    * poolIds  云模式elb接入域名返回此字段，表示域名所属独享引擎组
+    * loadbalancerId  云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    * protocolPort  云模式elb接入域名返回此字段，表示业务端口
     *
     * @var string[]
     */
@@ -47,7 +50,10 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
             'accessStatus' => 'int',
             'webTag' => 'string',
             'hostid' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'poolIds' => 'string[]',
+            'loadbalancerId' => 'string',
+            'protocolPort' => 'string'
     ];
 
     /**
@@ -64,6 +70,9 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostid  域名id，和id的值是一样的，属于冗余字段
     * enterpriseProjectId  企业项目id
+    * poolIds  云模式elb接入域名返回此字段，表示域名所属独享引擎组
+    * loadbalancerId  云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    * protocolPort  云模式elb接入域名返回此字段，表示业务端口
     *
     * @var string[]
     */
@@ -79,7 +88,10 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
         'accessStatus' => null,
         'webTag' => null,
         'hostid' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'poolIds' => null,
+        'loadbalancerId' => null,
+        'protocolPort' => null
     ];
 
     /**
@@ -117,6 +129,9 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostid  域名id，和id的值是一样的，属于冗余字段
     * enterpriseProjectId  企业项目id
+    * poolIds  云模式elb接入域名返回此字段，表示域名所属独享引擎组
+    * loadbalancerId  云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    * protocolPort  云模式elb接入域名返回此字段，表示业务端口
     *
     * @var string[]
     */
@@ -132,7 +147,10 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
             'accessStatus' => 'access_status',
             'webTag' => 'web_tag',
             'hostid' => 'hostid',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'poolIds' => 'pool_ids',
+            'loadbalancerId' => 'loadbalancer_id',
+            'protocolPort' => 'protocol_port'
     ];
 
     /**
@@ -149,6 +167,9 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostid  域名id，和id的值是一样的，属于冗余字段
     * enterpriseProjectId  企业项目id
+    * poolIds  云模式elb接入域名返回此字段，表示域名所属独享引擎组
+    * loadbalancerId  云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    * protocolPort  云模式elb接入域名返回此字段，表示业务端口
     *
     * @var string[]
     */
@@ -164,7 +185,10 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
             'accessStatus' => 'setAccessStatus',
             'webTag' => 'setWebTag',
             'hostid' => 'setHostid',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'poolIds' => 'setPoolIds',
+            'loadbalancerId' => 'setLoadbalancerId',
+            'protocolPort' => 'setProtocolPort'
     ];
 
     /**
@@ -181,6 +205,9 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostid  域名id，和id的值是一样的，属于冗余字段
     * enterpriseProjectId  企业项目id
+    * poolIds  云模式elb接入域名返回此字段，表示域名所属独享引擎组
+    * loadbalancerId  云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    * protocolPort  云模式elb接入域名返回此字段，表示业务端口
     *
     * @var string[]
     */
@@ -196,7 +223,10 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
             'accessStatus' => 'getAccessStatus',
             'webTag' => 'getWebTag',
             'hostid' => 'getHostid',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'poolIds' => 'getPoolIds',
+            'loadbalancerId' => 'getLoadbalancerId',
+            'protocolPort' => 'getProtocolPort'
     ];
 
     /**
@@ -269,6 +299,9 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
         $this->container['webTag'] = isset($data['webTag']) ? $data['webTag'] : null;
         $this->container['hostid'] = isset($data['hostid']) ? $data['hostid'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['poolIds'] = isset($data['poolIds']) ? $data['poolIds'] : null;
+        $this->container['loadbalancerId'] = isset($data['loadbalancerId']) ? $data['loadbalancerId'] : null;
+        $this->container['protocolPort'] = isset($data['protocolPort']) ? $data['protocolPort'] : null;
     }
 
     /**
@@ -578,6 +611,78 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets poolIds
+    *  云模式elb接入域名返回此字段，表示域名所属独享引擎组
+    *
+    * @return string[]|null
+    */
+    public function getPoolIds()
+    {
+        return $this->container['poolIds'];
+    }
+
+    /**
+    * Sets poolIds
+    *
+    * @param string[]|null $poolIds 云模式elb接入域名返回此字段，表示域名所属独享引擎组
+    *
+    * @return $this
+    */
+    public function setPoolIds($poolIds)
+    {
+        $this->container['poolIds'] = $poolIds;
+        return $this;
+    }
+
+    /**
+    * Gets loadbalancerId
+    *  云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    *
+    * @return string|null
+    */
+    public function getLoadbalancerId()
+    {
+        return $this->container['loadbalancerId'];
+    }
+
+    /**
+    * Sets loadbalancerId
+    *
+    * @param string|null $loadbalancerId 云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    *
+    * @return $this
+    */
+    public function setLoadbalancerId($loadbalancerId)
+    {
+        $this->container['loadbalancerId'] = $loadbalancerId;
+        return $this;
+    }
+
+    /**
+    * Gets protocolPort
+    *  云模式elb接入域名返回此字段，表示业务端口
+    *
+    * @return string|null
+    */
+    public function getProtocolPort()
+    {
+        return $this->container['protocolPort'];
+    }
+
+    /**
+    * Sets protocolPort
+    *
+    * @param string|null $protocolPort 云模式elb接入域名返回此字段，表示业务端口
+    *
+    * @return $this
+    */
+    public function setProtocolPort($protocolPort)
+    {
+        $this->container['protocolPort'] = $protocolPort;
         return $this;
     }
 

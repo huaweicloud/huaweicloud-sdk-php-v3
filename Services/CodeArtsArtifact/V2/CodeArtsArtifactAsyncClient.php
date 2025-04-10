@@ -1845,6 +1845,68 @@ class CodeArtsArtifactAsyncClient extends Client
     }
 
     /**
+     * 查询用户在项目下的权限
+     *
+     * 查询用户在项目下的权限
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showUserPrivilegesAsync($request)
+    {
+        return $this->showUserPrivilegesAsyncWithHttpInfo($request);
+    }
+    
+    public function showUserPrivilegesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/cloudartifact/v3/user/{project_id}/privileges';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ShowUserPrivilegesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ShowUserPrivilegesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 编辑非maven仓库信息
      *
      * 编辑非maven仓库信息

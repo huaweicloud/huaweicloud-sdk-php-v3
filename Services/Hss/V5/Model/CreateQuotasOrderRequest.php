@@ -22,7 +22,7 @@ class CreateQuotasOrderRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * contentType  缺省值:application/json; charset=utf-8
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * body  body
     *
     * @var string[]
@@ -38,7 +38,7 @@ class CreateQuotasOrderRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * contentType  缺省值:application/json; charset=utf-8
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * body  body
     *
     * @var string[]
@@ -75,7 +75,7 @@ class CreateQuotasOrderRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * contentType  缺省值:application/json; charset=utf-8
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * body  body
     *
     * @var string[]
@@ -91,7 +91,7 @@ class CreateQuotasOrderRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  缺省值:application/json; charset=utf-8
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * body  body
     *
     * @var string[]
@@ -107,7 +107,7 @@ class CreateQuotasOrderRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  缺省值:application/json; charset=utf-8
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * body  body
     *
     * @var string[]
@@ -276,7 +276,7 @@ class CreateQuotasOrderRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class CreateQuotasOrderRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */

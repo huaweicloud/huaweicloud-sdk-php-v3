@@ -305,6 +305,68 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 提交表权限申请
+     *
+     * 提交表权限申请
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function applySecurityTableAuthority($request)
+    {
+        return $this->applySecurityTableAuthorityWithHttpInfo($request);
+    }
+
+    public function applySecurityTableAuthorityWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/permission-application/table';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApplySecurityTableAuthorityResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApplySecurityTableAuthorityRequest');
+    }
+
+    /**
      * 资产关联分类
      *
      * 将一个分类关联到一个或多个指定guid的资产上
@@ -574,6 +636,71 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchApproveApplyResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchApproveApplyRequest');
+    }
+
+    /**
+     * 批量审批通过工单
+     *
+     * 批量审批通过工单
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchApproveSecurityApplications($request)
+    {
+        return $this->batchApproveSecurityApplicationsWithHttpInfo($request);
+    }
+
+    public function batchApproveSecurityApplicationsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/openapi/permission-approve/batch-approve';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchApproveSecurityApplicationsResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchApproveSecurityApplicationsRequest');
     }
 
     /**
@@ -1521,6 +1648,71 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchPublishResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchPublishRequest');
+    }
+
+    /**
+     * 批量驳回工单
+     *
+     * 批量驳回工单
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchRejectSecurityApplications($request)
+    {
+        return $this->batchRejectSecurityApplicationsWithHttpInfo($request);
+    }
+
+    public function batchRejectSecurityApplicationsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/openapi/permission-approve/batch-reject';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchRejectSecurityApplicationsResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchRejectSecurityApplicationsRequest');
     }
 
     /**
@@ -13830,6 +14022,98 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 查询我的权限
+     *
+     * 查询我的权限、空间账号权限
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecurityMemberPermission($request)
+    {
+        return $this->listSecurityMemberPermissionWithHttpInfo($request);
+    }
+
+    public function listSecurityMemberPermissionWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/permission-governance/my-permissions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['userName'] !== null) {
+            $queryParams['user_name'] = $localVarParams['userName'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['datasourceType'] !== null) {
+            $queryParams['datasource_type'] = $localVarParams['datasourceType'];
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $queryParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['tableName'] !== null) {
+            $queryParams['table_name'] = $localVarParams['tableName'];
+        }
+        if ($localVarParams['accountType'] !== null) {
+            $queryParams['account_type'] = $localVarParams['accountType'];
+        }
+        if ($localVarParams['expireStatus'] !== null) {
+            $queryParams['expire_status'] = $localVarParams['expireStatus'];
+        }
+        if ($localVarParams['orderBy'] !== null) {
+            $queryParams['order_by'] = $localVarParams['orderBy'];
+        }
+        if ($localVarParams['orderByAsc'] !== null) {
+            $queryParams['order_by_asc'] = $localVarParams['orderByAsc'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityMemberPermissionResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityMemberPermissionRequest');
+    }
+
+    /**
      * 查询用户同步列表
      *
      * 查询用户同步列表。
@@ -13913,6 +14197,101 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityMemberSyncTasksResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityMemberSyncTasksRequest');
+    }
+
+    /**
+     * 查询用户表权限清单
+     *
+     * 查询用户表权限清单
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecurityMemberTablePermission($request)
+    {
+        return $this->listSecurityMemberTablePermissionWithHttpInfo($request);
+    }
+
+    public function listSecurityMemberTablePermissionWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/member-permission/{user_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['feature'] !== null) {
+            $queryParams['feature'] = $localVarParams['feature'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['datasourceType'] !== null) {
+            $queryParams['datasource_type'] = $localVarParams['datasourceType'];
+        }
+        if ($localVarParams['clusterName'] !== null) {
+            $queryParams['cluster_name'] = $localVarParams['clusterName'];
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $queryParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['schemaName'] !== null) {
+            $queryParams['schema_name'] = $localVarParams['schemaName'];
+        }
+        if ($localVarParams['tableName'] !== null) {
+            $queryParams['table_name'] = $localVarParams['tableName'];
+        }
+        if ($localVarParams['fuzzyTableName'] !== null) {
+            $queryParams['fuzzy_table_name'] = $localVarParams['fuzzyTableName'];
+        }
+        if ($localVarParams['workspaceIds'] !== null) {
+            $queryParams['workspace_ids'] = $localVarParams['workspaceIds'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['userId'] !== null) {
+            $pathParams['user_id'] = $localVarParams['userId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityMemberTablePermissionResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityMemberTablePermissionRequest');
     }
 
     /**
@@ -14500,6 +14879,68 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 获取表权限审批人列表
+     *
+     * 获取表权限审批人列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecurityTableApprovers($request)
+    {
+        return $this->listSecurityTableApproversWithHttpInfo($request);
+    }
+
+    public function listSecurityTableApproversWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/permission-application/table/approvers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityTableApproversResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityTableApproversRequest');
+    }
+
+    /**
      * 查询不合理的权限配置
      *
      * 查询不合理的权限配置。
@@ -14574,6 +15015,71 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityUnreasonablePermissionsResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityUnreasonablePermissionsRequest');
+    }
+
+    /**
+     * 查询用户对表的权限
+     *
+     * 查询用户对表的权限
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecurityUserTablePermission($request)
+    {
+        return $this->listSecurityUserTablePermissionWithHttpInfo($request);
+    }
+
+    public function listSecurityUserTablePermissionWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/permission-application/user-table-permissions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instance'] !== null) {
+            $headerParams[$arr['instance']] = $localVarParams['instance'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityUserTablePermissionResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityUserTablePermissionRequest');
     }
 
     /**
@@ -24576,6 +25082,71 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateSecurityDynamicMaskingPolicyResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateSecurityDynamicMaskingPolicyRequest');
+    }
+
+    /**
+     * 批量变更权限有效期
+     *
+     * 批量变更权限有效期
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSecurityMemberPermissionExpireTime($request)
+    {
+        return $this->updateSecurityMemberPermissionExpireTimeWithHttpInfo($request);
+    }
+
+    public function updateSecurityMemberPermissionExpireTimeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/permission-governance/batch-update-expire-time';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateSecurityMemberPermissionExpireTimeResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateSecurityMemberPermissionExpireTimeRequest');
     }
 
     /**

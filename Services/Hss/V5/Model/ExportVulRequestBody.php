@@ -21,21 +21,29 @@ class ExportVulRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * exportHeaders  导出漏洞数据的表头信息列表
+    * vulIdList  指定导出的漏洞id列表
+    * hostIdList  指定导出的主机id列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'exportHeaders' => 'string[][]'
+            'exportHeaders' => 'string[][]',
+            'vulIdList' => 'string[]',
+            'hostIdList' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * exportHeaders  导出漏洞数据的表头信息列表
+    * vulIdList  指定导出的漏洞id列表
+    * hostIdList  指定导出的主机id列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'exportHeaders' => null
+        'exportHeaders' => null,
+        'vulIdList' => null,
+        'hostIdList' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class ExportVulRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * exportHeaders  导出漏洞数据的表头信息列表
+    * vulIdList  指定导出的漏洞id列表
+    * hostIdList  指定导出的主机id列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'exportHeaders' => 'export_headers'
+            'exportHeaders' => 'export_headers',
+            'vulIdList' => 'vul_id_list',
+            'hostIdList' => 'host_id_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * exportHeaders  导出漏洞数据的表头信息列表
+    * vulIdList  指定导出的漏洞id列表
+    * hostIdList  指定导出的主机id列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'exportHeaders' => 'setExportHeaders'
+            'exportHeaders' => 'setExportHeaders',
+            'vulIdList' => 'setVulIdList',
+            'hostIdList' => 'setHostIdList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * exportHeaders  导出漏洞数据的表头信息列表
+    * vulIdList  指定导出的漏洞id列表
+    * hostIdList  指定导出的主机id列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'exportHeaders' => 'getExportHeaders'
+            'exportHeaders' => 'getExportHeaders',
+            'vulIdList' => 'getVulIdList',
+            'hostIdList' => 'getHostIdList'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ExportVulRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['exportHeaders'] = isset($data['exportHeaders']) ? $data['exportHeaders'] : null;
+        $this->container['vulIdList'] = isset($data['vulIdList']) ? $data['vulIdList'] : null;
+        $this->container['hostIdList'] = isset($data['hostIdList']) ? $data['hostIdList'] : null;
     }
 
     /**
@@ -193,6 +215,54 @@ class ExportVulRequestBody implements ModelInterface, ArrayAccess
     public function setExportHeaders($exportHeaders)
     {
         $this->container['exportHeaders'] = $exportHeaders;
+        return $this;
+    }
+
+    /**
+    * Gets vulIdList
+    *  指定导出的漏洞id列表
+    *
+    * @return string[]|null
+    */
+    public function getVulIdList()
+    {
+        return $this->container['vulIdList'];
+    }
+
+    /**
+    * Sets vulIdList
+    *
+    * @param string[]|null $vulIdList 指定导出的漏洞id列表
+    *
+    * @return $this
+    */
+    public function setVulIdList($vulIdList)
+    {
+        $this->container['vulIdList'] = $vulIdList;
+        return $this;
+    }
+
+    /**
+    * Gets hostIdList
+    *  指定导出的主机id列表
+    *
+    * @return string[]|null
+    */
+    public function getHostIdList()
+    {
+        return $this->container['hostIdList'];
+    }
+
+    /**
+    * Sets hostIdList
+    *
+    * @param string[]|null $hostIdList 指定导出的主机id列表
+    *
+    * @return $this
+    */
+    public function setHostIdList($hostIdList)
+    {
+        $this->container['hostIdList'] = $hostIdList;
         return $this;
     }
 

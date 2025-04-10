@@ -27,6 +27,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下:   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
     * failedReasons  扫描失败的原因列表
+    * vulScanDetails  该主机的扫描详情信息
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
             'privateIp' => 'string',
             'assetValue' => 'string',
             'scanStatus' => 'string',
-            'failedReasons' => '\HuaweiCloud\SDK\Hss\V5\Model\VulScanTaskHostInfoFailedReasons[]'
+            'failedReasons' => '\HuaweiCloud\SDK\Hss\V5\Model\VulScanTaskHostInfoFailedReasons[]',
+            'vulScanDetails' => '\HuaweiCloud\SDK\Hss\V5\Model\VulScanTaskHostInfoVulScanDetails[]'
     ];
 
     /**
@@ -49,6 +51,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下:   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
     * failedReasons  扫描失败的原因列表
+    * vulScanDetails  该主机的扫描详情信息
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
         'privateIp' => null,
         'assetValue' => null,
         'scanStatus' => null,
-        'failedReasons' => null
+        'failedReasons' => null,
+        'vulScanDetails' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下:   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
     * failedReasons  扫描失败的原因列表
+    * vulScanDetails  该主机的扫描详情信息
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
             'privateIp' => 'private_ip',
             'assetValue' => 'asset_value',
             'scanStatus' => 'scan_status',
-            'failedReasons' => 'failed_reasons'
+            'failedReasons' => 'failed_reasons',
+            'vulScanDetails' => 'vul_scan_details'
     ];
 
     /**
@@ -114,6 +120,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下:   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
     * failedReasons  扫描失败的原因列表
+    * vulScanDetails  该主机的扫描详情信息
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
             'privateIp' => 'setPrivateIp',
             'assetValue' => 'setAssetValue',
             'scanStatus' => 'setScanStatus',
-            'failedReasons' => 'setFailedReasons'
+            'failedReasons' => 'setFailedReasons',
+            'vulScanDetails' => 'setVulScanDetails'
     ];
 
     /**
@@ -136,6 +144,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下:   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
     * failedReasons  扫描失败的原因列表
+    * vulScanDetails  该主机的扫描详情信息
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
             'privateIp' => 'getPrivateIp',
             'assetValue' => 'getAssetValue',
             'scanStatus' => 'getScanStatus',
-            'failedReasons' => 'getFailedReasons'
+            'failedReasons' => 'getFailedReasons',
+            'vulScanDetails' => 'getVulScanDetails'
     ];
 
     /**
@@ -214,6 +224,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
         $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['scanStatus'] = isset($data['scanStatus']) ? $data['scanStatus'] : null;
         $this->container['failedReasons'] = isset($data['failedReasons']) ? $data['failedReasons'] : null;
+        $this->container['vulScanDetails'] = isset($data['vulScanDetails']) ? $data['vulScanDetails'] : null;
     }
 
     /**
@@ -439,6 +450,30 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     public function setFailedReasons($failedReasons)
     {
         $this->container['failedReasons'] = $failedReasons;
+        return $this;
+    }
+
+    /**
+    * Gets vulScanDetails
+    *  该主机的扫描详情信息
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\VulScanTaskHostInfoVulScanDetails[]|null
+    */
+    public function getVulScanDetails()
+    {
+        return $this->container['vulScanDetails'];
+    }
+
+    /**
+    * Sets vulScanDetails
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulScanTaskHostInfoVulScanDetails[]|null $vulScanDetails 该主机的扫描详情信息
+    *
+    * @return $this
+    */
+    public function setVulScanDetails($vulScanDetails)
+    {
+        $this->container['vulScanDetails'] = $vulScanDetails;
         return $this;
     }
 

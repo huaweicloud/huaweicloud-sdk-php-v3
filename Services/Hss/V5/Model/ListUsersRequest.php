@@ -27,7 +27,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * loginPermission  是否允许登录
     * rootPermission  是否有root权限
     * userGroup  主机用户组
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
@@ -59,7 +59,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * loginPermission  是否允许登录
     * rootPermission  是否有root权限
     * userGroup  主机用户组
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
@@ -112,7 +112,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * loginPermission  是否允许登录
     * rootPermission  是否有root权限
     * userGroup  主机用户组
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
@@ -144,7 +144,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * loginPermission  是否允许登录
     * rootPermission  是否有root权限
     * userGroup  主机用户组
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
@@ -176,7 +176,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * loginPermission  是否允许登录
     * rootPermission  是否有root权限
     * userGroup  主机用户组
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
@@ -517,7 +517,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -529,7 +529,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */

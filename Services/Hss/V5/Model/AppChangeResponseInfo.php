@@ -27,8 +27,8 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostIp  服务器ip
     * version  版本号
-    * updateTime  软件更新时间
-    * recentScanTime  最近扫描时间
+    * updateTime  软件更新时间，单位毫秒
+    * recentScanTime  最近扫描时间，单位毫秒
     *
     * @var string[]
     */
@@ -53,8 +53,8 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostIp  服务器ip
     * version  版本号
-    * updateTime  软件更新时间
-    * recentScanTime  最近扫描时间
+    * updateTime  软件更新时间，单位毫秒
+    * recentScanTime  最近扫描时间，单位毫秒
     *
     * @var string[]
     */
@@ -100,8 +100,8 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostIp  服务器ip
     * version  版本号
-    * updateTime  软件更新时间
-    * recentScanTime  最近扫描时间
+    * updateTime  软件更新时间，单位毫秒
+    * recentScanTime  最近扫描时间，单位毫秒
     *
     * @var string[]
     */
@@ -126,8 +126,8 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostIp  服务器ip
     * version  版本号
-    * updateTime  软件更新时间
-    * recentScanTime  最近扫描时间
+    * updateTime  软件更新时间，单位毫秒
+    * recentScanTime  最近扫描时间，单位毫秒
     *
     * @var string[]
     */
@@ -152,8 +152,8 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostIp  服务器ip
     * version  版本号
-    * updateTime  软件更新时间
-    * recentScanTime  最近扫描时间
+    * updateTime  软件更新时间，单位毫秒
+    * recentScanTime  最近扫描时间，单位毫秒
     *
     * @var string[]
     */
@@ -484,7 +484,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  软件更新时间
+    *  软件更新时间，单位毫秒
     *
     * @return int|null
     */
@@ -496,7 +496,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 软件更新时间
+    * @param int|null $updateTime 软件更新时间，单位毫秒
     *
     * @return $this
     */
@@ -508,7 +508,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recentScanTime
-    *  最近扫描时间
+    *  最近扫描时间，单位毫秒
     *
     * @return int|null
     */
@@ -520,7 +520,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recentScanTime
     *
-    * @param int|null $recentScanTime 最近扫描时间
+    * @param int|null $recentScanTime 最近扫描时间，单位毫秒
     *
     * @return $this
     */

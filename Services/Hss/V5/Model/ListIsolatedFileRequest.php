@@ -21,7 +21,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * filePath  文件路径
     * hostName  服务器名称
     * privateIp  服务器私有IP
@@ -30,6 +30,10 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
+    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
     *
     * @var string[]
     */
@@ -43,13 +47,17 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
             'fileHash' => 'string',
             'assetValue' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'isolationStatus' => 'string',
+            'lastDays' => 'int',
+            'beginTime' => 'int',
+            'endTime' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * filePath  文件路径
     * hostName  服务器名称
     * privateIp  服务器私有IP
@@ -58,6 +66,10 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
+    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
     *
     * @var string[]
     */
@@ -71,7 +83,11 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
         'fileHash' => null,
         'assetValue' => null,
         'offset' => 'int32',
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'isolationStatus' => null,
+        'lastDays' => 'int32',
+        'beginTime' => 'int64',
+        'endTime' => 'int64'
     ];
 
     /**
@@ -98,7 +114,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * filePath  文件路径
     * hostName  服务器名称
     * privateIp  服务器私有IP
@@ -107,6 +123,10 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
+    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
     *
     * @var string[]
     */
@@ -120,13 +140,17 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
             'fileHash' => 'file_hash',
             'assetValue' => 'asset_value',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'isolationStatus' => 'isolation_status',
+            'lastDays' => 'last_days',
+            'beginTime' => 'begin_time',
+            'endTime' => 'end_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * filePath  文件路径
     * hostName  服务器名称
     * privateIp  服务器私有IP
@@ -135,6 +159,10 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
+    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
     *
     * @var string[]
     */
@@ -148,13 +176,17 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
             'fileHash' => 'setFileHash',
             'assetValue' => 'setAssetValue',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'isolationStatus' => 'setIsolationStatus',
+            'lastDays' => 'setLastDays',
+            'beginTime' => 'setBeginTime',
+            'endTime' => 'setEndTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * filePath  文件路径
     * hostName  服务器名称
     * privateIp  服务器私有IP
@@ -163,6 +195,10 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
+    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    * beginTime  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    * endTime  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
     *
     * @var string[]
     */
@@ -176,7 +212,11 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
             'fileHash' => 'getFileHash',
             'assetValue' => 'getAssetValue',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'isolationStatus' => 'getIsolationStatus',
+            'lastDays' => 'getLastDays',
+            'beginTime' => 'getBeginTime',
+            'endTime' => 'getEndTime'
     ];
 
     /**
@@ -247,6 +287,10 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
         $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['isolationStatus'] = isset($data['isolationStatus']) ? $data['isolationStatus'] : null;
+        $this->container['lastDays'] = isset($data['lastDays']) ? $data['lastDays'] : null;
+        $this->container['beginTime'] = isset($data['beginTime']) ? $data['beginTime'] : null;
+        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
     }
 
     /**
@@ -308,6 +352,12 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['publicIp']) && !preg_match("/^.*$/", $this->container['publicIp'])) {
                 $invalidProperties[] = "invalid value for 'publicIp', must be conform to the pattern /^.*$/.";
             }
+            if (!is_null($this->container['fileHash']) && (mb_strlen($this->container['fileHash']) > 512)) {
+                $invalidProperties[] = "invalid value for 'fileHash', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['fileHash']) && (mb_strlen($this->container['fileHash']) < 1)) {
+                $invalidProperties[] = "invalid value for 'fileHash', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['fileHash']) && !preg_match("/^.*$/", $this->container['fileHash'])) {
                 $invalidProperties[] = "invalid value for 'fileHash', must be conform to the pattern /^.*$/.";
             }
@@ -328,6 +378,18 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
+            }
+            if (!is_null($this->container['isolationStatus']) && (mb_strlen($this->container['isolationStatus']) > 32)) {
+                $invalidProperties[] = "invalid value for 'isolationStatus', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['isolationStatus']) && (mb_strlen($this->container['isolationStatus']) < 0)) {
+                $invalidProperties[] = "invalid value for 'isolationStatus', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['lastDays']) && ($this->container['lastDays'] > 30)) {
+                $invalidProperties[] = "invalid value for 'lastDays', must be smaller than or equal to 30.";
+            }
+            if (!is_null($this->container['lastDays']) && ($this->container['lastDays'] < 1)) {
+                $invalidProperties[] = "invalid value for 'lastDays', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -369,7 +431,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -381,7 +443,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */
@@ -580,6 +642,102 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets isolationStatus
+    *  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    *
+    * @return string|null
+    */
+    public function getIsolationStatus()
+    {
+        return $this->container['isolationStatus'];
+    }
+
+    /**
+    * Sets isolationStatus
+    *
+    * @param string|null $isolationStatus 隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    *
+    * @return $this
+    */
+    public function setIsolationStatus($isolationStatus)
+    {
+        $this->container['isolationStatus'] = $isolationStatus;
+        return $this;
+    }
+
+    /**
+    * Gets lastDays
+    *  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    *
+    * @return int|null
+    */
+    public function getLastDays()
+    {
+        return $this->container['lastDays'];
+    }
+
+    /**
+    * Sets lastDays
+    *
+    * @param int|null $lastDays 查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    *
+    * @return $this
+    */
+    public function setLastDays($lastDays)
+    {
+        $this->container['lastDays'] = $lastDays;
+        return $this;
+    }
+
+    /**
+    * Gets beginTime
+    *  自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    *
+    * @return int|null
+    */
+    public function getBeginTime()
+    {
+        return $this->container['beginTime'];
+    }
+
+    /**
+    * Sets beginTime
+    *
+    * @param int|null $beginTime 自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    *
+    * @return $this
+    */
+    public function setBeginTime($beginTime)
+    {
+        $this->container['beginTime'] = $beginTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    *
+    * @return int|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param int|null $endTime 自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
         return $this;
     }
 

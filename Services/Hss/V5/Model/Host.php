@@ -27,11 +27,14 @@ class Host implements ModelInterface, ArrayAccess
     * publicIp  弹性公网IP地址
     * enterpriseProjectId  企业项目ID
     * enterpriseProjectName  所属企业项目名称
+    * osName  系统名称
+    * osVersion  系统版本
+    * kernelVersion  内核版本
     * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
     * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
     * installResultCode  安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
     * osImage  系统镜像
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
     * osBit  操作系统位数
@@ -58,6 +61,17 @@ class Host implements ModelInterface, ArrayAccess
     * upgradable  该服务器agent是否可升级
     * openTime  开启防护时间，采用时间戳，默认毫秒，
     * protectInterrupt  防护是否中断
+    * protectDegradation  防护是否降级
+    * hostSources  服务器来源
+    * interruptReason  防护中断原因
+    * degradationReason  防护降级原因
+    * keyName  使用的密钥对名称
+    * autoOpenVersion  cce购买主机
+    * installProgress  安装进度
+    * vpcId  vpc id
+    * commonLoginAreaCodes  后台识别服务器常用登录地编号
+    * clusterName  集群名称
+    * clusterId  集群id
     *
     * @var string[]
     */
@@ -69,6 +83,9 @@ class Host implements ModelInterface, ArrayAccess
             'publicIp' => 'string',
             'enterpriseProjectId' => 'string',
             'enterpriseProjectName' => 'string',
+            'osName' => 'string',
+            'osVersion' => 'string',
+            'kernelVersion' => 'string',
             'hostStatus' => 'string',
             'agentStatus' => 'string',
             'installResultCode' => 'string',
@@ -99,7 +116,18 @@ class Host implements ModelInterface, ArrayAccess
             'upgradeResultCode' => 'string',
             'upgradable' => 'bool',
             'openTime' => 'int',
-            'protectInterrupt' => 'bool'
+            'protectInterrupt' => 'bool',
+            'protectDegradation' => 'bool',
+            'hostSources' => 'string',
+            'interruptReason' => 'string',
+            'degradationReason' => 'string',
+            'keyName' => 'string',
+            'autoOpenVersion' => 'string',
+            'installProgress' => 'int',
+            'vpcId' => 'string',
+            'commonLoginAreaCodes' => 'int[]',
+            'clusterName' => 'string',
+            'clusterId' => 'string'
     ];
 
     /**
@@ -111,11 +139,14 @@ class Host implements ModelInterface, ArrayAccess
     * publicIp  弹性公网IP地址
     * enterpriseProjectId  企业项目ID
     * enterpriseProjectName  所属企业项目名称
+    * osName  系统名称
+    * osVersion  系统版本
+    * kernelVersion  内核版本
     * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
     * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
     * installResultCode  安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
     * osImage  系统镜像
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
     * osBit  操作系统位数
@@ -142,6 +173,17 @@ class Host implements ModelInterface, ArrayAccess
     * upgradable  该服务器agent是否可升级
     * openTime  开启防护时间，采用时间戳，默认毫秒，
     * protectInterrupt  防护是否中断
+    * protectDegradation  防护是否降级
+    * hostSources  服务器来源
+    * interruptReason  防护中断原因
+    * degradationReason  防护降级原因
+    * keyName  使用的密钥对名称
+    * autoOpenVersion  cce购买主机
+    * installProgress  安装进度
+    * vpcId  vpc id
+    * commonLoginAreaCodes  后台识别服务器常用登录地编号
+    * clusterName  集群名称
+    * clusterId  集群id
     *
     * @var string[]
     */
@@ -153,6 +195,9 @@ class Host implements ModelInterface, ArrayAccess
         'publicIp' => null,
         'enterpriseProjectId' => null,
         'enterpriseProjectName' => null,
+        'osName' => null,
+        'osVersion' => null,
+        'kernelVersion' => null,
         'hostStatus' => null,
         'agentStatus' => null,
         'installResultCode' => null,
@@ -183,7 +228,18 @@ class Host implements ModelInterface, ArrayAccess
         'upgradeResultCode' => null,
         'upgradable' => null,
         'openTime' => 'int64',
-        'protectInterrupt' => null
+        'protectInterrupt' => null,
+        'protectDegradation' => null,
+        'hostSources' => null,
+        'interruptReason' => null,
+        'degradationReason' => null,
+        'keyName' => null,
+        'autoOpenVersion' => null,
+        'installProgress' => 'int32',
+        'vpcId' => null,
+        'commonLoginAreaCodes' => 'int32',
+        'clusterName' => null,
+        'clusterId' => null
     ];
 
     /**
@@ -216,11 +272,14 @@ class Host implements ModelInterface, ArrayAccess
     * publicIp  弹性公网IP地址
     * enterpriseProjectId  企业项目ID
     * enterpriseProjectName  所属企业项目名称
+    * osName  系统名称
+    * osVersion  系统版本
+    * kernelVersion  内核版本
     * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
     * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
     * installResultCode  安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
     * osImage  系统镜像
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
     * osBit  操作系统位数
@@ -247,6 +306,17 @@ class Host implements ModelInterface, ArrayAccess
     * upgradable  该服务器agent是否可升级
     * openTime  开启防护时间，采用时间戳，默认毫秒，
     * protectInterrupt  防护是否中断
+    * protectDegradation  防护是否降级
+    * hostSources  服务器来源
+    * interruptReason  防护中断原因
+    * degradationReason  防护降级原因
+    * keyName  使用的密钥对名称
+    * autoOpenVersion  cce购买主机
+    * installProgress  安装进度
+    * vpcId  vpc id
+    * commonLoginAreaCodes  后台识别服务器常用登录地编号
+    * clusterName  集群名称
+    * clusterId  集群id
     *
     * @var string[]
     */
@@ -258,6 +328,9 @@ class Host implements ModelInterface, ArrayAccess
             'publicIp' => 'public_ip',
             'enterpriseProjectId' => 'enterprise_project_id',
             'enterpriseProjectName' => 'enterprise_project_name',
+            'osName' => 'os_name',
+            'osVersion' => 'os_version',
+            'kernelVersion' => 'kernel_version',
             'hostStatus' => 'host_status',
             'agentStatus' => 'agent_status',
             'installResultCode' => 'install_result_code',
@@ -288,7 +361,18 @@ class Host implements ModelInterface, ArrayAccess
             'upgradeResultCode' => 'upgrade_result_code',
             'upgradable' => 'upgradable',
             'openTime' => 'open_time',
-            'protectInterrupt' => 'protect_interrupt'
+            'protectInterrupt' => 'protect_interrupt',
+            'protectDegradation' => 'protect_degradation',
+            'hostSources' => 'host_sources',
+            'interruptReason' => 'interrupt_reason',
+            'degradationReason' => 'degradation_reason',
+            'keyName' => 'key_name',
+            'autoOpenVersion' => 'auto_open_version',
+            'installProgress' => 'install_progress',
+            'vpcId' => 'vpc_id',
+            'commonLoginAreaCodes' => 'common_login_area_codes',
+            'clusterName' => 'cluster_name',
+            'clusterId' => 'cluster_id'
     ];
 
     /**
@@ -300,11 +384,14 @@ class Host implements ModelInterface, ArrayAccess
     * publicIp  弹性公网IP地址
     * enterpriseProjectId  企业项目ID
     * enterpriseProjectName  所属企业项目名称
+    * osName  系统名称
+    * osVersion  系统版本
+    * kernelVersion  内核版本
     * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
     * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
     * installResultCode  安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
     * osImage  系统镜像
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
     * osBit  操作系统位数
@@ -331,6 +418,17 @@ class Host implements ModelInterface, ArrayAccess
     * upgradable  该服务器agent是否可升级
     * openTime  开启防护时间，采用时间戳，默认毫秒，
     * protectInterrupt  防护是否中断
+    * protectDegradation  防护是否降级
+    * hostSources  服务器来源
+    * interruptReason  防护中断原因
+    * degradationReason  防护降级原因
+    * keyName  使用的密钥对名称
+    * autoOpenVersion  cce购买主机
+    * installProgress  安装进度
+    * vpcId  vpc id
+    * commonLoginAreaCodes  后台识别服务器常用登录地编号
+    * clusterName  集群名称
+    * clusterId  集群id
     *
     * @var string[]
     */
@@ -342,6 +440,9 @@ class Host implements ModelInterface, ArrayAccess
             'publicIp' => 'setPublicIp',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'enterpriseProjectName' => 'setEnterpriseProjectName',
+            'osName' => 'setOsName',
+            'osVersion' => 'setOsVersion',
+            'kernelVersion' => 'setKernelVersion',
             'hostStatus' => 'setHostStatus',
             'agentStatus' => 'setAgentStatus',
             'installResultCode' => 'setInstallResultCode',
@@ -372,7 +473,18 @@ class Host implements ModelInterface, ArrayAccess
             'upgradeResultCode' => 'setUpgradeResultCode',
             'upgradable' => 'setUpgradable',
             'openTime' => 'setOpenTime',
-            'protectInterrupt' => 'setProtectInterrupt'
+            'protectInterrupt' => 'setProtectInterrupt',
+            'protectDegradation' => 'setProtectDegradation',
+            'hostSources' => 'setHostSources',
+            'interruptReason' => 'setInterruptReason',
+            'degradationReason' => 'setDegradationReason',
+            'keyName' => 'setKeyName',
+            'autoOpenVersion' => 'setAutoOpenVersion',
+            'installProgress' => 'setInstallProgress',
+            'vpcId' => 'setVpcId',
+            'commonLoginAreaCodes' => 'setCommonLoginAreaCodes',
+            'clusterName' => 'setClusterName',
+            'clusterId' => 'setClusterId'
     ];
 
     /**
@@ -384,11 +496,14 @@ class Host implements ModelInterface, ArrayAccess
     * publicIp  弹性公网IP地址
     * enterpriseProjectId  企业项目ID
     * enterpriseProjectName  所属企业项目名称
+    * osName  系统名称
+    * osVersion  系统版本
+    * kernelVersion  内核版本
     * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
     * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
     * installResultCode  安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
     * osImage  系统镜像
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
     * osBit  操作系统位数
@@ -415,6 +530,17 @@ class Host implements ModelInterface, ArrayAccess
     * upgradable  该服务器agent是否可升级
     * openTime  开启防护时间，采用时间戳，默认毫秒，
     * protectInterrupt  防护是否中断
+    * protectDegradation  防护是否降级
+    * hostSources  服务器来源
+    * interruptReason  防护中断原因
+    * degradationReason  防护降级原因
+    * keyName  使用的密钥对名称
+    * autoOpenVersion  cce购买主机
+    * installProgress  安装进度
+    * vpcId  vpc id
+    * commonLoginAreaCodes  后台识别服务器常用登录地编号
+    * clusterName  集群名称
+    * clusterId  集群id
     *
     * @var string[]
     */
@@ -426,6 +552,9 @@ class Host implements ModelInterface, ArrayAccess
             'publicIp' => 'getPublicIp',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'enterpriseProjectName' => 'getEnterpriseProjectName',
+            'osName' => 'getOsName',
+            'osVersion' => 'getOsVersion',
+            'kernelVersion' => 'getKernelVersion',
             'hostStatus' => 'getHostStatus',
             'agentStatus' => 'getAgentStatus',
             'installResultCode' => 'getInstallResultCode',
@@ -456,7 +585,18 @@ class Host implements ModelInterface, ArrayAccess
             'upgradeResultCode' => 'getUpgradeResultCode',
             'upgradable' => 'getUpgradable',
             'openTime' => 'getOpenTime',
-            'protectInterrupt' => 'getProtectInterrupt'
+            'protectInterrupt' => 'getProtectInterrupt',
+            'protectDegradation' => 'getProtectDegradation',
+            'hostSources' => 'getHostSources',
+            'interruptReason' => 'getInterruptReason',
+            'degradationReason' => 'getDegradationReason',
+            'keyName' => 'getKeyName',
+            'autoOpenVersion' => 'getAutoOpenVersion',
+            'installProgress' => 'getInstallProgress',
+            'vpcId' => 'getVpcId',
+            'commonLoginAreaCodes' => 'getCommonLoginAreaCodes',
+            'clusterName' => 'getClusterName',
+            'clusterId' => 'getClusterId'
     ];
 
     /**
@@ -499,7 +639,24 @@ class Host implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const HOST_SOURCES_ECS = 'ecs';
+    const HOST_SOURCES_OUTSIDE = 'outside';
+    const HOST_SOURCES_WORKSPACE = 'workspace';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getHostSourcesAllowableValues()
+    {
+        return [
+            self::HOST_SOURCES_ECS,
+            self::HOST_SOURCES_OUTSIDE,
+            self::HOST_SOURCES_WORKSPACE,
+        ];
+    }
 
 
     /**
@@ -524,6 +681,9 @@ class Host implements ModelInterface, ArrayAccess
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enterpriseProjectName'] = isset($data['enterpriseProjectName']) ? $data['enterpriseProjectName'] : null;
+        $this->container['osName'] = isset($data['osName']) ? $data['osName'] : null;
+        $this->container['osVersion'] = isset($data['osVersion']) ? $data['osVersion'] : null;
+        $this->container['kernelVersion'] = isset($data['kernelVersion']) ? $data['kernelVersion'] : null;
         $this->container['hostStatus'] = isset($data['hostStatus']) ? $data['hostStatus'] : null;
         $this->container['agentStatus'] = isset($data['agentStatus']) ? $data['agentStatus'] : null;
         $this->container['installResultCode'] = isset($data['installResultCode']) ? $data['installResultCode'] : null;
@@ -555,6 +715,17 @@ class Host implements ModelInterface, ArrayAccess
         $this->container['upgradable'] = isset($data['upgradable']) ? $data['upgradable'] : null;
         $this->container['openTime'] = isset($data['openTime']) ? $data['openTime'] : null;
         $this->container['protectInterrupt'] = isset($data['protectInterrupt']) ? $data['protectInterrupt'] : null;
+        $this->container['protectDegradation'] = isset($data['protectDegradation']) ? $data['protectDegradation'] : null;
+        $this->container['hostSources'] = isset($data['hostSources']) ? $data['hostSources'] : null;
+        $this->container['interruptReason'] = isset($data['interruptReason']) ? $data['interruptReason'] : null;
+        $this->container['degradationReason'] = isset($data['degradationReason']) ? $data['degradationReason'] : null;
+        $this->container['keyName'] = isset($data['keyName']) ? $data['keyName'] : null;
+        $this->container['autoOpenVersion'] = isset($data['autoOpenVersion']) ? $data['autoOpenVersion'] : null;
+        $this->container['installProgress'] = isset($data['installProgress']) ? $data['installProgress'] : null;
+        $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
+        $this->container['commonLoginAreaCodes'] = isset($data['commonLoginAreaCodes']) ? $data['commonLoginAreaCodes'] : null;
+        $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
     }
 
     /**
@@ -606,6 +777,24 @@ class Host implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['enterpriseProjectName']) && (mb_strlen($this->container['enterpriseProjectName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['osName']) && (mb_strlen($this->container['osName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'osName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['osName']) && (mb_strlen($this->container['osName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'osName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['osVersion']) && (mb_strlen($this->container['osVersion']) > 256)) {
+                $invalidProperties[] = "invalid value for 'osVersion', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['osVersion']) && (mb_strlen($this->container['osVersion']) < 0)) {
+                $invalidProperties[] = "invalid value for 'osVersion', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['kernelVersion']) && (mb_strlen($this->container['kernelVersion']) > 256)) {
+                $invalidProperties[] = "invalid value for 'kernelVersion', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['kernelVersion']) && (mb_strlen($this->container['kernelVersion']) < 0)) {
+                $invalidProperties[] = "invalid value for 'kernelVersion', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['hostStatus']) && (mb_strlen($this->container['hostStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'hostStatus', the character length must be smaller than or equal to 32.";
@@ -768,6 +957,62 @@ class Host implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['openTime']) && ($this->container['openTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'openTime', must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getHostSourcesAllowableValues();
+                if (!is_null($this->container['hostSources']) && !in_array($this->container['hostSources'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'hostSources', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['interruptReason']) && (mb_strlen($this->container['interruptReason']) > 32)) {
+                $invalidProperties[] = "invalid value for 'interruptReason', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['interruptReason']) && (mb_strlen($this->container['interruptReason']) < 1)) {
+                $invalidProperties[] = "invalid value for 'interruptReason', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['degradationReason']) && (mb_strlen($this->container['degradationReason']) > 32)) {
+                $invalidProperties[] = "invalid value for 'degradationReason', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['degradationReason']) && (mb_strlen($this->container['degradationReason']) < 1)) {
+                $invalidProperties[] = "invalid value for 'degradationReason', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['keyName']) && (mb_strlen($this->container['keyName']) > 32)) {
+                $invalidProperties[] = "invalid value for 'keyName', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['keyName']) && (mb_strlen($this->container['keyName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'keyName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['autoOpenVersion']) && (mb_strlen($this->container['autoOpenVersion']) > 32)) {
+                $invalidProperties[] = "invalid value for 'autoOpenVersion', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['autoOpenVersion']) && (mb_strlen($this->container['autoOpenVersion']) < 1)) {
+                $invalidProperties[] = "invalid value for 'autoOpenVersion', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['installProgress']) && ($this->container['installProgress'] > 100)) {
+                $invalidProperties[] = "invalid value for 'installProgress', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['installProgress']) && ($this->container['installProgress'] < 0)) {
+                $invalidProperties[] = "invalid value for 'installProgress', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['vpcId']) && (mb_strlen($this->container['vpcId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'vpcId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['vpcId']) && (mb_strlen($this->container['vpcId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'vpcId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['clusterName']) && (mb_strlen($this->container['clusterName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'clusterName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['clusterName']) && (mb_strlen($this->container['clusterName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'clusterName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['clusterId']) && (mb_strlen($this->container['clusterId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'clusterId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['clusterId']) && (mb_strlen($this->container['clusterId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'clusterId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -952,6 +1197,78 @@ class Host implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets osName
+    *  系统名称
+    *
+    * @return string|null
+    */
+    public function getOsName()
+    {
+        return $this->container['osName'];
+    }
+
+    /**
+    * Sets osName
+    *
+    * @param string|null $osName 系统名称
+    *
+    * @return $this
+    */
+    public function setOsName($osName)
+    {
+        $this->container['osName'] = $osName;
+        return $this;
+    }
+
+    /**
+    * Gets osVersion
+    *  系统版本
+    *
+    * @return string|null
+    */
+    public function getOsVersion()
+    {
+        return $this->container['osVersion'];
+    }
+
+    /**
+    * Sets osVersion
+    *
+    * @param string|null $osVersion 系统版本
+    *
+    * @return $this
+    */
+    public function setOsVersion($osVersion)
+    {
+        $this->container['osVersion'] = $osVersion;
+        return $this;
+    }
+
+    /**
+    * Gets kernelVersion
+    *  内核版本
+    *
+    * @return string|null
+    */
+    public function getKernelVersion()
+    {
+        return $this->container['kernelVersion'];
+    }
+
+    /**
+    * Sets kernelVersion
+    *
+    * @param string|null $kernelVersion 内核版本
+    *
+    * @return $this
+    */
+    public function setKernelVersion($kernelVersion)
+    {
+        $this->container['kernelVersion'] = $kernelVersion;
+        return $this;
+    }
+
+    /**
     * Gets hostStatus
     *  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
     *
@@ -1049,7 +1366,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    *  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
     *
     * @return string|null
     */
@@ -1061,7 +1378,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * @param string|null $protectStatus 防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
     *
     * @return $this
     */
@@ -1692,6 +2009,270 @@ class Host implements ModelInterface, ArrayAccess
     public function setProtectInterrupt($protectInterrupt)
     {
         $this->container['protectInterrupt'] = $protectInterrupt;
+        return $this;
+    }
+
+    /**
+    * Gets protectDegradation
+    *  防护是否降级
+    *
+    * @return bool|null
+    */
+    public function getProtectDegradation()
+    {
+        return $this->container['protectDegradation'];
+    }
+
+    /**
+    * Sets protectDegradation
+    *
+    * @param bool|null $protectDegradation 防护是否降级
+    *
+    * @return $this
+    */
+    public function setProtectDegradation($protectDegradation)
+    {
+        $this->container['protectDegradation'] = $protectDegradation;
+        return $this;
+    }
+
+    /**
+    * Gets hostSources
+    *  服务器来源
+    *
+    * @return string|null
+    */
+    public function getHostSources()
+    {
+        return $this->container['hostSources'];
+    }
+
+    /**
+    * Sets hostSources
+    *
+    * @param string|null $hostSources 服务器来源
+    *
+    * @return $this
+    */
+    public function setHostSources($hostSources)
+    {
+        $this->container['hostSources'] = $hostSources;
+        return $this;
+    }
+
+    /**
+    * Gets interruptReason
+    *  防护中断原因
+    *
+    * @return string|null
+    */
+    public function getInterruptReason()
+    {
+        return $this->container['interruptReason'];
+    }
+
+    /**
+    * Sets interruptReason
+    *
+    * @param string|null $interruptReason 防护中断原因
+    *
+    * @return $this
+    */
+    public function setInterruptReason($interruptReason)
+    {
+        $this->container['interruptReason'] = $interruptReason;
+        return $this;
+    }
+
+    /**
+    * Gets degradationReason
+    *  防护降级原因
+    *
+    * @return string|null
+    */
+    public function getDegradationReason()
+    {
+        return $this->container['degradationReason'];
+    }
+
+    /**
+    * Sets degradationReason
+    *
+    * @param string|null $degradationReason 防护降级原因
+    *
+    * @return $this
+    */
+    public function setDegradationReason($degradationReason)
+    {
+        $this->container['degradationReason'] = $degradationReason;
+        return $this;
+    }
+
+    /**
+    * Gets keyName
+    *  使用的密钥对名称
+    *
+    * @return string|null
+    */
+    public function getKeyName()
+    {
+        return $this->container['keyName'];
+    }
+
+    /**
+    * Sets keyName
+    *
+    * @param string|null $keyName 使用的密钥对名称
+    *
+    * @return $this
+    */
+    public function setKeyName($keyName)
+    {
+        $this->container['keyName'] = $keyName;
+        return $this;
+    }
+
+    /**
+    * Gets autoOpenVersion
+    *  cce购买主机
+    *
+    * @return string|null
+    */
+    public function getAutoOpenVersion()
+    {
+        return $this->container['autoOpenVersion'];
+    }
+
+    /**
+    * Sets autoOpenVersion
+    *
+    * @param string|null $autoOpenVersion cce购买主机
+    *
+    * @return $this
+    */
+    public function setAutoOpenVersion($autoOpenVersion)
+    {
+        $this->container['autoOpenVersion'] = $autoOpenVersion;
+        return $this;
+    }
+
+    /**
+    * Gets installProgress
+    *  安装进度
+    *
+    * @return int|null
+    */
+    public function getInstallProgress()
+    {
+        return $this->container['installProgress'];
+    }
+
+    /**
+    * Sets installProgress
+    *
+    * @param int|null $installProgress 安装进度
+    *
+    * @return $this
+    */
+    public function setInstallProgress($installProgress)
+    {
+        $this->container['installProgress'] = $installProgress;
+        return $this;
+    }
+
+    /**
+    * Gets vpcId
+    *  vpc id
+    *
+    * @return string|null
+    */
+    public function getVpcId()
+    {
+        return $this->container['vpcId'];
+    }
+
+    /**
+    * Sets vpcId
+    *
+    * @param string|null $vpcId vpc id
+    *
+    * @return $this
+    */
+    public function setVpcId($vpcId)
+    {
+        $this->container['vpcId'] = $vpcId;
+        return $this;
+    }
+
+    /**
+    * Gets commonLoginAreaCodes
+    *  后台识别服务器常用登录地编号
+    *
+    * @return int[]|null
+    */
+    public function getCommonLoginAreaCodes()
+    {
+        return $this->container['commonLoginAreaCodes'];
+    }
+
+    /**
+    * Sets commonLoginAreaCodes
+    *
+    * @param int[]|null $commonLoginAreaCodes 后台识别服务器常用登录地编号
+    *
+    * @return $this
+    */
+    public function setCommonLoginAreaCodes($commonLoginAreaCodes)
+    {
+        $this->container['commonLoginAreaCodes'] = $commonLoginAreaCodes;
+        return $this;
+    }
+
+    /**
+    * Gets clusterName
+    *  集群名称
+    *
+    * @return string|null
+    */
+    public function getClusterName()
+    {
+        return $this->container['clusterName'];
+    }
+
+    /**
+    * Sets clusterName
+    *
+    * @param string|null $clusterName 集群名称
+    *
+    * @return $this
+    */
+    public function setClusterName($clusterName)
+    {
+        $this->container['clusterName'] = $clusterName;
+        return $this;
+    }
+
+    /**
+    * Gets clusterId
+    *  集群id
+    *
+    * @return string|null
+    */
+    public function getClusterId()
+    {
+        return $this->container['clusterId'];
+    }
+
+    /**
+    * Sets clusterId
+    *
+    * @param string|null $clusterId 集群id
+    *
+    * @return $this
+    */
+    public function setClusterId($clusterId)
+    {
+        $this->container['clusterId'] = $clusterId;
         return $this;
     }
 

@@ -20,11 +20,13 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
     * vulId  漏洞ID
     * vulName  漏洞名称
     * hostId  主机id，导出单台主机漏洞时会用到
+    * exportSize  导出数据条数
+    * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * limit  limit
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
@@ -34,8 +36,6 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * status  漏洞状态
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
-    * exportSize  导出数据条数
-    * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * body  body
     *
     * @var string[]
@@ -46,6 +46,8 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             'vulId' => 'string',
             'vulName' => 'string',
             'hostId' => 'string',
+            'exportSize' => 'int',
+            'category' => 'string',
             'limit' => 'int',
             'offset' => 'int',
             'repairPriority' => 'string',
@@ -55,18 +57,18 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             'status' => 'string',
             'assetValue' => 'string',
             'groupName' => 'string',
-            'exportSize' => 'int',
-            'category' => 'string',
             'body' => '\HuaweiCloud\SDK\Hss\V5\Model\ExportVulRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
     * vulId  漏洞ID
     * vulName  漏洞名称
     * hostId  主机id，导出单台主机漏洞时会用到
+    * exportSize  导出数据条数
+    * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * limit  limit
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
@@ -76,8 +78,6 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * status  漏洞状态
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
-    * exportSize  导出数据条数
-    * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * body  body
     *
     * @var string[]
@@ -88,6 +88,8 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
         'vulId' => null,
         'vulName' => null,
         'hostId' => null,
+        'exportSize' => 'int32',
+        'category' => null,
         'limit' => 'int32',
         'offset' => 'int32',
         'repairPriority' => null,
@@ -97,8 +99,6 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
         'status' => null,
         'assetValue' => null,
         'groupName' => null,
-        'exportSize' => 'int32',
-        'category' => null,
         'body' => null
     ];
 
@@ -125,11 +125,13 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
     * vulId  漏洞ID
     * vulName  漏洞名称
     * hostId  主机id，导出单台主机漏洞时会用到
+    * exportSize  导出数据条数
+    * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * limit  limit
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
@@ -139,8 +141,6 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * status  漏洞状态
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
-    * exportSize  导出数据条数
-    * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * body  body
     *
     * @var string[]
@@ -151,6 +151,8 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             'vulId' => 'vul_id',
             'vulName' => 'vul_name',
             'hostId' => 'host_id',
+            'exportSize' => 'export_size',
+            'category' => 'category',
             'limit' => 'limit',
             'offset' => 'offset',
             'repairPriority' => 'repair_priority',
@@ -160,18 +162,18 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             'status' => 'status',
             'assetValue' => 'asset_value',
             'groupName' => 'group_name',
-            'exportSize' => 'export_size',
-            'category' => 'category',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
     * vulId  漏洞ID
     * vulName  漏洞名称
     * hostId  主机id，导出单台主机漏洞时会用到
+    * exportSize  导出数据条数
+    * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * limit  limit
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
@@ -181,8 +183,6 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * status  漏洞状态
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
-    * exportSize  导出数据条数
-    * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * body  body
     *
     * @var string[]
@@ -193,6 +193,8 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             'vulId' => 'setVulId',
             'vulName' => 'setVulName',
             'hostId' => 'setHostId',
+            'exportSize' => 'setExportSize',
+            'category' => 'setCategory',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
             'repairPriority' => 'setRepairPriority',
@@ -202,18 +204,18 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'assetValue' => 'setAssetValue',
             'groupName' => 'setGroupName',
-            'exportSize' => 'setExportSize',
-            'category' => 'setCategory',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
     * vulId  漏洞ID
     * vulName  漏洞名称
     * hostId  主机id，导出单台主机漏洞时会用到
+    * exportSize  导出数据条数
+    * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * limit  limit
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
@@ -223,8 +225,6 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * status  漏洞状态
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
-    * exportSize  导出数据条数
-    * category  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
     * body  body
     *
     * @var string[]
@@ -235,6 +235,8 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             'vulId' => 'getVulId',
             'vulName' => 'getVulName',
             'hostId' => 'getHostId',
+            'exportSize' => 'getExportSize',
+            'category' => 'getCategory',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
             'repairPriority' => 'getRepairPriority',
@@ -244,8 +246,6 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'assetValue' => 'getAssetValue',
             'groupName' => 'getGroupName',
-            'exportSize' => 'getExportSize',
-            'category' => 'getCategory',
             'body' => 'getBody'
     ];
 
@@ -312,6 +312,8 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
         $this->container['vulId'] = isset($data['vulId']) ? $data['vulId'] : null;
         $this->container['vulName'] = isset($data['vulName']) ? $data['vulName'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
+        $this->container['exportSize'] = isset($data['exportSize']) ? $data['exportSize'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['repairPriority'] = isset($data['repairPriority']) ? $data['repairPriority'] : null;
@@ -321,8 +323,6 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
-        $this->container['exportSize'] = isset($data['exportSize']) ? $data['exportSize'] : null;
-        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -363,6 +363,24 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 0.";
+            }
+        if ($this->container['exportSize'] === null) {
+            $invalidProperties[] = "'exportSize' can't be null";
+        }
+            if (($this->container['exportSize'] > 200000)) {
+                $invalidProperties[] = "invalid value for 'exportSize', must be smaller than or equal to 200000.";
+            }
+            if (($this->container['exportSize'] < 1)) {
+                $invalidProperties[] = "invalid value for 'exportSize', must be bigger than or equal to 1.";
+            }
+        if ($this->container['category'] === null) {
+            $invalidProperties[] = "'category' can't be null";
+        }
+            if ((mb_strlen($this->container['category']) > 256)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 256.";
+            }
+            if ((mb_strlen($this->container['category']) < 0)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 500)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 500.";
@@ -418,24 +436,6 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['exportSize'] === null) {
-            $invalidProperties[] = "'exportSize' can't be null";
-        }
-            if (($this->container['exportSize'] > 200000)) {
-                $invalidProperties[] = "invalid value for 'exportSize', must be smaller than or equal to 200000.";
-            }
-            if (($this->container['exportSize'] < 1)) {
-                $invalidProperties[] = "invalid value for 'exportSize', must be bigger than or equal to 1.";
-            }
-        if ($this->container['category'] === null) {
-            $invalidProperties[] = "'category' can't be null";
-        }
-            if ((mb_strlen($this->container['category']) > 256)) {
-                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 256.";
-            }
-            if ((mb_strlen($this->container['category']) < 0)) {
-                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -452,7 +452,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -464,7 +464,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */
@@ -567,6 +567,54 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     public function setHostId($hostId)
     {
         $this->container['hostId'] = $hostId;
+        return $this;
+    }
+
+    /**
+    * Gets exportSize
+    *  导出数据条数
+    *
+    * @return int
+    */
+    public function getExportSize()
+    {
+        return $this->container['exportSize'];
+    }
+
+    /**
+    * Sets exportSize
+    *
+    * @param int $exportSize 导出数据条数
+    *
+    * @return $this
+    */
+    public function setExportSize($exportSize)
+    {
+        $this->container['exportSize'] = $exportSize;
+        return $this;
+    }
+
+    /**
+    * Gets category
+    *  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
+    *
+    * @return string
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param string $category 导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
         return $this;
     }
 
@@ -783,54 +831,6 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     public function setGroupName($groupName)
     {
         $this->container['groupName'] = $groupName;
-        return $this;
-    }
-
-    /**
-    * Gets exportSize
-    *  导出数据条数
-    *
-    * @return int
-    */
-    public function getExportSize()
-    {
-        return $this->container['exportSize'];
-    }
-
-    /**
-    * Sets exportSize
-    *
-    * @param int $exportSize 导出数据条数
-    *
-    * @return $this
-    */
-    public function setExportSize($exportSize)
-    {
-        $this->container['exportSize'] = $exportSize;
-        return $this;
-    }
-
-    /**
-    * Gets category
-    *  导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
-    *
-    * @return string
-    */
-    public function getCategory()
-    {
-        return $this->container['category'];
-    }
-
-    /**
-    * Sets category
-    *
-    * @param string $category 导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
-    *
-    * @return $this
-    */
-    public function setCategory($category)
-    {
-        $this->container['category'] = $category;
         return $this;
     }
 

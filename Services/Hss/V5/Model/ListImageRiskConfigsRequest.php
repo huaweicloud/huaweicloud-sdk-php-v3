@@ -21,13 +21,14 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示数量
     * namespace  组织名称
     * imageName  镜像名称
     * imageVersion  镜像版本名称
+    * imageId  镜像id
     * checkName  基线名称
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
@@ -44,6 +45,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
             'namespace' => 'string',
             'imageName' => 'string',
             'imageVersion' => 'string',
+            'imageId' => 'string',
             'checkName' => 'string',
             'severity' => 'string',
             'standard' => 'string',
@@ -53,13 +55,14 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示数量
     * namespace  组织名称
     * imageName  镜像名称
     * imageVersion  镜像版本名称
+    * imageId  镜像id
     * checkName  基线名称
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
@@ -76,6 +79,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
         'namespace' => null,
         'imageName' => null,
         'imageVersion' => null,
+        'imageId' => null,
         'checkName' => null,
         'severity' => null,
         'standard' => null,
@@ -106,13 +110,14 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示数量
     * namespace  组织名称
     * imageName  镜像名称
     * imageVersion  镜像版本名称
+    * imageId  镜像id
     * checkName  基线名称
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
@@ -129,6 +134,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
             'namespace' => 'namespace',
             'imageName' => 'image_name',
             'imageVersion' => 'image_version',
+            'imageId' => 'image_id',
             'checkName' => 'check_name',
             'severity' => 'severity',
             'standard' => 'standard',
@@ -138,13 +144,14 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示数量
     * namespace  组织名称
     * imageName  镜像名称
     * imageVersion  镜像版本名称
+    * imageId  镜像id
     * checkName  基线名称
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
@@ -161,6 +168,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
             'namespace' => 'setNamespace',
             'imageName' => 'setImageName',
             'imageVersion' => 'setImageVersion',
+            'imageId' => 'setImageId',
             'checkName' => 'setCheckName',
             'severity' => 'setSeverity',
             'standard' => 'setStandard',
@@ -170,13 +178,14 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示数量
     * namespace  组织名称
     * imageName  镜像名称
     * imageVersion  镜像版本名称
+    * imageId  镜像id
     * checkName  基线名称
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
@@ -193,6 +202,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
             'namespace' => 'getNamespace',
             'imageName' => 'getImageName',
             'imageVersion' => 'getImageVersion',
+            'imageId' => 'getImageId',
             'checkName' => 'getCheckName',
             'severity' => 'getSeverity',
             'standard' => 'getStandard',
@@ -265,6 +275,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
         $this->container['imageName'] = isset($data['imageName']) ? $data['imageName'] : null;
         $this->container['imageVersion'] = isset($data['imageVersion']) ? $data['imageVersion'] : null;
+        $this->container['imageId'] = isset($data['imageId']) ? $data['imageId'] : null;
         $this->container['checkName'] = isset($data['checkName']) ? $data['checkName'] : null;
         $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
         $this->container['standard'] = isset($data['standard']) ? $data['standard'] : null;
@@ -336,6 +347,12 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['imageVersion']) && (mb_strlen($this->container['imageVersion']) < 0)) {
                 $invalidProperties[] = "invalid value for 'imageVersion', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['imageId']) && (mb_strlen($this->container['imageId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'imageId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['imageId']) && (mb_strlen($this->container['imageId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'imageId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['checkName']) && (mb_strlen($this->container['checkName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'checkName', the character length must be smaller than or equal to 256.";
             }
@@ -400,7 +417,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -412,7 +429,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */
@@ -563,6 +580,30 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     public function setImageVersion($imageVersion)
     {
         $this->container['imageVersion'] = $imageVersion;
+        return $this;
+    }
+
+    /**
+    * Gets imageId
+    *  镜像id
+    *
+    * @return string|null
+    */
+    public function getImageId()
+    {
+        return $this->container['imageId'];
+    }
+
+    /**
+    * Sets imageId
+    *
+    * @param string|null $imageId 镜像id
+    *
+    * @return $this
+    */
+    public function setImageId($imageId)
+    {
+        $this->container['imageId'] = $imageId;
         return $this;
     }
 

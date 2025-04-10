@@ -20,6 +20,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
+    * enterpriseProjectId  企业项目ID
     * hostId  服务器ID
     * agentId  Agent ID
     * hostName  服务器名称
@@ -57,6 +59,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
+            'enterpriseProjectId' => 'string',
             'hostId' => 'string',
             'agentId' => 'string',
             'hostName' => 'string',
@@ -94,6 +98,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
+    * enterpriseProjectId  企业项目ID
     * hostId  服务器ID
     * agentId  Agent ID
     * hostName  服务器名称
@@ -131,6 +137,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
+        'enterpriseProjectId' => null,
         'hostId' => null,
         'agentId' => null,
         'hostName' => null,
@@ -189,6 +197,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
+    * enterpriseProjectId  企业项目ID
     * hostId  服务器ID
     * agentId  Agent ID
     * hostName  服务器名称
@@ -226,6 +236,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
+            'enterpriseProjectId' => 'enterprise_project_id',
             'hostId' => 'host_id',
             'agentId' => 'agent_id',
             'hostName' => 'host_name',
@@ -263,6 +275,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
+    * enterpriseProjectId  企业项目ID
     * hostId  服务器ID
     * agentId  Agent ID
     * hostName  服务器名称
@@ -300,6 +314,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'hostId' => 'setHostId',
             'agentId' => 'setAgentId',
             'hostName' => 'setHostName',
@@ -337,6 +353,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
+    * enterpriseProjectId  企业项目ID
     * hostId  服务器ID
     * agentId  Agent ID
     * hostName  服务器名称
@@ -374,6 +392,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'hostId' => 'getHostId',
             'agentId' => 'getAgentId',
             'hostName' => 'getHostName',
@@ -467,6 +487,8 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['agentId'] = isset($data['agentId']) ? $data['agentId'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
@@ -510,6 +532,18 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 128.";
             }
@@ -708,6 +742,54 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID
+    *
+    * @return string|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string|null $projectId 项目ID
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目ID
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目ID
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
     }
 
     /**

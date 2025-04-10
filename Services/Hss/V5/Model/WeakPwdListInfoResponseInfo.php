@@ -25,6 +25,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
+    * updateTime  最近扫描时间，时间戳单位：毫秒
     * weakPwdAccounts  弱口令账号列表
     *
     * @var string[]
@@ -35,6 +36,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
             'hostIp' => 'string',
             'privateIp' => 'string',
             'publicIp' => 'string',
+            'updateTime' => 'int',
             'weakPwdAccounts' => '\HuaweiCloud\SDK\Hss\V5\Model\WeakPwdAccountInfoResponseInfo[]'
     ];
 
@@ -45,6 +47,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
+    * updateTime  最近扫描时间，时间戳单位：毫秒
     * weakPwdAccounts  弱口令账号列表
     *
     * @var string[]
@@ -55,6 +58,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
         'hostIp' => null,
         'privateIp' => null,
         'publicIp' => null,
+        'updateTime' => 'int64',
         'weakPwdAccounts' => null
     ];
 
@@ -86,6 +90,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
+    * updateTime  最近扫描时间，时间戳单位：毫秒
     * weakPwdAccounts  弱口令账号列表
     *
     * @var string[]
@@ -96,6 +101,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
             'hostIp' => 'host_ip',
             'privateIp' => 'private_ip',
             'publicIp' => 'public_ip',
+            'updateTime' => 'update_time',
             'weakPwdAccounts' => 'weak_pwd_accounts'
     ];
 
@@ -106,6 +112,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
+    * updateTime  最近扫描时间，时间戳单位：毫秒
     * weakPwdAccounts  弱口令账号列表
     *
     * @var string[]
@@ -116,6 +123,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
             'hostIp' => 'setHostIp',
             'privateIp' => 'setPrivateIp',
             'publicIp' => 'setPublicIp',
+            'updateTime' => 'setUpdateTime',
             'weakPwdAccounts' => 'setWeakPwdAccounts'
     ];
 
@@ -126,6 +134,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
+    * updateTime  最近扫描时间，时间戳单位：毫秒
     * weakPwdAccounts  弱口令账号列表
     *
     * @var string[]
@@ -136,6 +145,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
             'hostIp' => 'getHostIp',
             'privateIp' => 'getPrivateIp',
             'publicIp' => 'getPublicIp',
+            'updateTime' => 'getUpdateTime',
             'weakPwdAccounts' => 'getWeakPwdAccounts'
     ];
 
@@ -202,6 +212,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
         $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
         $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['weakPwdAccounts'] = isset($data['weakPwdAccounts']) ? $data['weakPwdAccounts'] : null;
     }
 
@@ -242,6 +253,12 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 0)) {
                 $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -374,6 +391,30 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     public function setPublicIp($publicIp)
     {
         $this->container['publicIp'] = $publicIp;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  最近扫描时间，时间戳单位：毫秒
+    *
+    * @return int|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param int|null $updateTime 最近扫描时间，时间戳单位：毫秒
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
         return $this;
     }
 

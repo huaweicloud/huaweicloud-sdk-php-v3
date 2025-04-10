@@ -29,7 +29,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
-    * assetValue  资产重要性
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
@@ -69,7 +69,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
-    * assetValue  资产重要性
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
@@ -130,7 +130,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
-    * assetValue  资产重要性
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
@@ -170,7 +170,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
-    * assetValue  资产重要性
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
@@ -210,7 +210,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
-    * assetValue  资产重要性
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
@@ -398,8 +398,14 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
         if ($this->container['assetValue'] === null) {
             $invalidProperties[] = "'assetValue' can't be null";
         }
-            if (!preg_match("/^.*$/", $this->container['assetValue'])) {
-                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^.*$/.";
+            if ((mb_strlen($this->container['assetValue']) > 128)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
+            }
+            if ((mb_strlen($this->container['assetValue']) < 0)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 0.";
+            }
+            if (!preg_match("/^important|common|test$/", $this->container['assetValue'])) {
+                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^important|common|test$/.";
             }
         if ($this->container['updateTime'] === null) {
             $invalidProperties[] = "'updateTime' can't be null";
@@ -663,7 +669,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性
+    *  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     *
     * @return string
     */
@@ -675,7 +681,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string $assetValue 资产重要性
+    * @param string $assetValue 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     *
     * @return $this
     */

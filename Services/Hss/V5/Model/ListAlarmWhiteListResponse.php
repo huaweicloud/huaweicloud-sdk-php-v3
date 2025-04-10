@@ -22,6 +22,8 @@ class ListAlarmWhiteListResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * totalNum  总数
+    * remainNum  可继续添加的白名单数量
+    * limitNum  白名单数量上限
     * eventTypeList  支持筛选的事件类型
     * dataList  告警白名单详情
     *
@@ -29,6 +31,8 @@ class ListAlarmWhiteListResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'totalNum' => 'int',
+            'remainNum' => 'int',
+            'limitNum' => 'int',
             'eventTypeList' => 'int[]',
             'dataList' => '\HuaweiCloud\SDK\Hss\V5\Model\AlarmWhiteListResponseInfo[]'
     ];
@@ -36,6 +40,8 @@ class ListAlarmWhiteListResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * totalNum  总数
+    * remainNum  可继续添加的白名单数量
+    * limitNum  白名单数量上限
     * eventTypeList  支持筛选的事件类型
     * dataList  告警白名单详情
     *
@@ -43,6 +49,8 @@ class ListAlarmWhiteListResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'totalNum' => 'int32',
+        'remainNum' => 'int32',
+        'limitNum' => 'int32',
         'eventTypeList' => 'int32',
         'dataList' => null
     ];
@@ -71,6 +79,8 @@ class ListAlarmWhiteListResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * totalNum  总数
+    * remainNum  可继续添加的白名单数量
+    * limitNum  白名单数量上限
     * eventTypeList  支持筛选的事件类型
     * dataList  告警白名单详情
     *
@@ -78,6 +88,8 @@ class ListAlarmWhiteListResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'totalNum' => 'total_num',
+            'remainNum' => 'remain_num',
+            'limitNum' => 'limit_num',
             'eventTypeList' => 'event_type_list',
             'dataList' => 'data_list'
     ];
@@ -85,6 +97,8 @@ class ListAlarmWhiteListResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * totalNum  总数
+    * remainNum  可继续添加的白名单数量
+    * limitNum  白名单数量上限
     * eventTypeList  支持筛选的事件类型
     * dataList  告警白名单详情
     *
@@ -92,6 +106,8 @@ class ListAlarmWhiteListResponse implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'totalNum' => 'setTotalNum',
+            'remainNum' => 'setRemainNum',
+            'limitNum' => 'setLimitNum',
             'eventTypeList' => 'setEventTypeList',
             'dataList' => 'setDataList'
     ];
@@ -99,6 +115,8 @@ class ListAlarmWhiteListResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * totalNum  总数
+    * remainNum  可继续添加的白名单数量
+    * limitNum  白名单数量上限
     * eventTypeList  支持筛选的事件类型
     * dataList  告警白名单详情
     *
@@ -106,6 +124,8 @@ class ListAlarmWhiteListResponse implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'totalNum' => 'getTotalNum',
+            'remainNum' => 'getRemainNum',
+            'limitNum' => 'getLimitNum',
             'eventTypeList' => 'getEventTypeList',
             'dataList' => 'getDataList'
     ];
@@ -169,6 +189,8 @@ class ListAlarmWhiteListResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['totalNum'] = isset($data['totalNum']) ? $data['totalNum'] : null;
+        $this->container['remainNum'] = isset($data['remainNum']) ? $data['remainNum'] : null;
+        $this->container['limitNum'] = isset($data['limitNum']) ? $data['limitNum'] : null;
         $this->container['eventTypeList'] = isset($data['eventTypeList']) ? $data['eventTypeList'] : null;
         $this->container['dataList'] = isset($data['dataList']) ? $data['dataList'] : null;
     }
@@ -222,6 +244,54 @@ class ListAlarmWhiteListResponse implements ModelInterface, ArrayAccess
     public function setTotalNum($totalNum)
     {
         $this->container['totalNum'] = $totalNum;
+        return $this;
+    }
+
+    /**
+    * Gets remainNum
+    *  可继续添加的白名单数量
+    *
+    * @return int|null
+    */
+    public function getRemainNum()
+    {
+        return $this->container['remainNum'];
+    }
+
+    /**
+    * Sets remainNum
+    *
+    * @param int|null $remainNum 可继续添加的白名单数量
+    *
+    * @return $this
+    */
+    public function setRemainNum($remainNum)
+    {
+        $this->container['remainNum'] = $remainNum;
+        return $this;
+    }
+
+    /**
+    * Gets limitNum
+    *  白名单数量上限
+    *
+    * @return int|null
+    */
+    public function getLimitNum()
+    {
+        return $this->container['limitNum'];
+    }
+
+    /**
+    * Sets limitNum
+    *
+    * @param int|null $limitNum 白名单数量上限
+    *
+    * @return $this
+    */
+    public function setLimitNum($limitNum)
+    {
+        $this->container['limitNum'] = $limitNum;
         return $this;
     }
 

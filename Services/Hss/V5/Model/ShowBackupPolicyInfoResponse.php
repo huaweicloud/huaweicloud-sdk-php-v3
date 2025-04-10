@@ -24,7 +24,7 @@ class ShowBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     * enabled  策略是否启用
     * id  策略ID
     * name  策略名称
-    * operationType  备份类型。备份（backup）、复制(replication)，包含如下2种。   - backup ：备份。   - replication ：复制。
+    * operationType  备份类型。当前包含如下1种。   - backup ：备份
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -44,7 +44,7 @@ class ShowBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     * enabled  策略是否启用
     * id  策略ID
     * name  策略名称
-    * operationType  备份类型。备份（backup）、复制(replication)，包含如下2种。   - backup ：备份。   - replication ：复制。
+    * operationType  备份类型。当前包含如下1种。   - backup ：备份
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -85,7 +85,7 @@ class ShowBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     * enabled  策略是否启用
     * id  策略ID
     * name  策略名称
-    * operationType  备份类型。备份（backup）、复制(replication)，包含如下2种。   - backup ：备份。   - replication ：复制。
+    * operationType  备份类型。当前包含如下1种。   - backup ：备份
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -105,7 +105,7 @@ class ShowBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     * enabled  策略是否启用
     * id  策略ID
     * name  策略名称
-    * operationType  备份类型。备份（backup）、复制(replication)，包含如下2种。   - backup ：备份。   - replication ：复制。
+    * operationType  备份类型。当前包含如下1种。   - backup ：备份
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -125,7 +125,7 @@ class ShowBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     * enabled  策略是否启用
     * id  策略ID
     * name  策略名称
-    * operationType  备份类型。备份（backup）、复制(replication)，包含如下2种。   - backup ：备份。   - replication ：复制。
+    * operationType  备份类型。当前包含如下1种。   - backup ：备份
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -320,7 +320,7 @@ class ShowBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationType
-    *  备份类型。备份（backup）、复制(replication)，包含如下2种。   - backup ：备份。   - replication ：复制。
+    *  备份类型。当前包含如下1种。   - backup ：备份
     *
     * @return string|null
     */
@@ -332,7 +332,7 @@ class ShowBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets operationType
     *
-    * @param string|null $operationType 备份类型。备份（backup）、复制(replication)，包含如下2种。   - backup ：备份。   - replication ：复制。
+    * @param string|null $operationType 备份类型。当前包含如下1种。   - backup ：备份
     *
     * @return $this
     */

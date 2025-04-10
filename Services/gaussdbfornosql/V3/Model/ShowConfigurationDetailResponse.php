@@ -26,6 +26,7 @@ class ShowConfigurationDetailResponse implements ModelInterface, ArrayAccess
     * description  参数模板描述。
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * mode  【参数解释】 数据库实例类型。 【取值范围】 GeminiDB Cassandra经典部署模式集群类型为\"Cluster\"。 GeminiDB Cassandra云原生部署模式集群类型为\"CloudNativeCluster\"。 GeminiDB Mongo副本集类型为\"ReplicaSet\"。 GeminiDB Mongo集群类型为\"Sharding\"。 GeminiDB Influx经典部署模式集群类型为\"Cluster\"。 GeminiDB Redis经典部署模式集群类型为“Cluster”。
     * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * configurationParameters  参数对象，用户基于默认参数模板自定义的参数配置。
@@ -38,6 +39,7 @@ class ShowConfigurationDetailResponse implements ModelInterface, ArrayAccess
             'description' => 'string',
             'datastoreVersionName' => 'string',
             'datastoreName' => 'string',
+            'mode' => 'string',
             'created' => 'string',
             'updated' => 'string',
             'configurationParameters' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ConfigurationParameterResult[]'
@@ -50,6 +52,7 @@ class ShowConfigurationDetailResponse implements ModelInterface, ArrayAccess
     * description  参数模板描述。
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * mode  【参数解释】 数据库实例类型。 【取值范围】 GeminiDB Cassandra经典部署模式集群类型为\"Cluster\"。 GeminiDB Cassandra云原生部署模式集群类型为\"CloudNativeCluster\"。 GeminiDB Mongo副本集类型为\"ReplicaSet\"。 GeminiDB Mongo集群类型为\"Sharding\"。 GeminiDB Influx经典部署模式集群类型为\"Cluster\"。 GeminiDB Redis经典部署模式集群类型为“Cluster”。
     * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * configurationParameters  参数对象，用户基于默认参数模板自定义的参数配置。
@@ -62,6 +65,7 @@ class ShowConfigurationDetailResponse implements ModelInterface, ArrayAccess
         'description' => null,
         'datastoreVersionName' => null,
         'datastoreName' => null,
+        'mode' => null,
         'created' => null,
         'updated' => null,
         'configurationParameters' => null
@@ -95,6 +99,7 @@ class ShowConfigurationDetailResponse implements ModelInterface, ArrayAccess
     * description  参数模板描述。
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * mode  【参数解释】 数据库实例类型。 【取值范围】 GeminiDB Cassandra经典部署模式集群类型为\"Cluster\"。 GeminiDB Cassandra云原生部署模式集群类型为\"CloudNativeCluster\"。 GeminiDB Mongo副本集类型为\"ReplicaSet\"。 GeminiDB Mongo集群类型为\"Sharding\"。 GeminiDB Influx经典部署模式集群类型为\"Cluster\"。 GeminiDB Redis经典部署模式集群类型为“Cluster”。
     * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * configurationParameters  参数对象，用户基于默认参数模板自定义的参数配置。
@@ -107,6 +112,7 @@ class ShowConfigurationDetailResponse implements ModelInterface, ArrayAccess
             'description' => 'description',
             'datastoreVersionName' => 'datastore_version_name',
             'datastoreName' => 'datastore_name',
+            'mode' => 'mode',
             'created' => 'created',
             'updated' => 'updated',
             'configurationParameters' => 'configuration_parameters'
@@ -119,6 +125,7 @@ class ShowConfigurationDetailResponse implements ModelInterface, ArrayAccess
     * description  参数模板描述。
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * mode  【参数解释】 数据库实例类型。 【取值范围】 GeminiDB Cassandra经典部署模式集群类型为\"Cluster\"。 GeminiDB Cassandra云原生部署模式集群类型为\"CloudNativeCluster\"。 GeminiDB Mongo副本集类型为\"ReplicaSet\"。 GeminiDB Mongo集群类型为\"Sharding\"。 GeminiDB Influx经典部署模式集群类型为\"Cluster\"。 GeminiDB Redis经典部署模式集群类型为“Cluster”。
     * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * configurationParameters  参数对象，用户基于默认参数模板自定义的参数配置。
@@ -131,6 +138,7 @@ class ShowConfigurationDetailResponse implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'datastoreVersionName' => 'setDatastoreVersionName',
             'datastoreName' => 'setDatastoreName',
+            'mode' => 'setMode',
             'created' => 'setCreated',
             'updated' => 'setUpdated',
             'configurationParameters' => 'setConfigurationParameters'
@@ -143,6 +151,7 @@ class ShowConfigurationDetailResponse implements ModelInterface, ArrayAccess
     * description  参数模板描述。
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * mode  【参数解释】 数据库实例类型。 【取值范围】 GeminiDB Cassandra经典部署模式集群类型为\"Cluster\"。 GeminiDB Cassandra云原生部署模式集群类型为\"CloudNativeCluster\"。 GeminiDB Mongo副本集类型为\"ReplicaSet\"。 GeminiDB Mongo集群类型为\"Sharding\"。 GeminiDB Influx经典部署模式集群类型为\"Cluster\"。 GeminiDB Redis经典部署模式集群类型为“Cluster”。
     * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * configurationParameters  参数对象，用户基于默认参数模板自定义的参数配置。
@@ -155,6 +164,7 @@ class ShowConfigurationDetailResponse implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'datastoreVersionName' => 'getDatastoreVersionName',
             'datastoreName' => 'getDatastoreName',
+            'mode' => 'getMode',
             'created' => 'getCreated',
             'updated' => 'getUpdated',
             'configurationParameters' => 'getConfigurationParameters'
@@ -223,6 +233,7 @@ class ShowConfigurationDetailResponse implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['datastoreVersionName'] = isset($data['datastoreVersionName']) ? $data['datastoreVersionName'] : null;
         $this->container['datastoreName'] = isset($data['datastoreName']) ? $data['datastoreName'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['configurationParameters'] = isset($data['configurationParameters']) ? $data['configurationParameters'] : null;
@@ -367,6 +378,30 @@ class ShowConfigurationDetailResponse implements ModelInterface, ArrayAccess
     public function setDatastoreName($datastoreName)
     {
         $this->container['datastoreName'] = $datastoreName;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  【参数解释】 数据库实例类型。 【取值范围】 GeminiDB Cassandra经典部署模式集群类型为\"Cluster\"。 GeminiDB Cassandra云原生部署模式集群类型为\"CloudNativeCluster\"。 GeminiDB Mongo副本集类型为\"ReplicaSet\"。 GeminiDB Mongo集群类型为\"Sharding\"。 GeminiDB Influx经典部署模式集群类型为\"Cluster\"。 GeminiDB Redis经典部署模式集群类型为“Cluster”。
+    *
+    * @return string|null
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param string|null $mode 【参数解释】 数据库实例类型。 【取值范围】 GeminiDB Cassandra经典部署模式集群类型为\"Cluster\"。 GeminiDB Cassandra云原生部署模式集群类型为\"CloudNativeCluster\"。 GeminiDB Mongo副本集类型为\"ReplicaSet\"。 GeminiDB Mongo集群类型为\"Sharding\"。 GeminiDB Influx经典部署模式集群类型为\"Cluster\"。 GeminiDB Redis经典部署模式集群类型为“Cluster”。
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
         return $this;
     }
 

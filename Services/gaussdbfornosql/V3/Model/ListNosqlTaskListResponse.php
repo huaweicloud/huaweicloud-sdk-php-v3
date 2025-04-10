@@ -27,7 +27,7 @@ class ListNosqlTaskListResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalCount' => 'int',
+            'totalCount' => 'string',
             'schedules' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ScheduleDetailInfo[]'
     ];
 
@@ -188,7 +188,7 @@ class ListNosqlTaskListResponse implements ModelInterface, ArrayAccess
     * Gets totalCount
     *  记录总数。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getTotalCount()
     {
@@ -198,7 +198,7 @@ class ListNosqlTaskListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount 记录总数。
+    * @param string|null $totalCount 记录总数。
     *
     * @return $this
     */

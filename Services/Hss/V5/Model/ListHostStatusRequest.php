@@ -20,7 +20,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
     * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * detectResult  检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
@@ -31,21 +31,32 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
     * ipAddr  公网或私网IP
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
+    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
     * groupId  服务器组ID
     * groupName  服务器组名称
+    * vpcId  vpc id
     * region  Region ID
     * hasIntrusion  存在告警事件
+    * hasVul  存在漏洞风险
+    * hasBaseline  存在基线风险
+    * sortKey  排序字段，只支持risk_num - risk_num：风险总量
+    * sortDir  排序的顺序 - asc: 正序 - desc: 倒序
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * refresh  是否强制从ECS同步主机
+    * getCommonLoginLocations  是否获取主机常用登录地信息
     * aboveVersion  是否返回比当前版本高的所有版本
     * outsideHost  是否华为云主机
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * label  资产标签
     * serverGroup  资产服务器组
     * agentUpgradable  agent是否可升级
+    * installMode  是否安装模式场景
+    * bindingKey  是否绑定DEW密钥
+    * protectInterrupt  是否防护中断
+    * incluster  是否集群内节点
+    * protectDegradation  是否防护降级
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -66,25 +77,36 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'protectStatus' => 'string',
             'groupId' => 'string',
             'groupName' => 'string',
+            'vpcId' => 'string',
             'region' => 'string',
             'hasIntrusion' => 'bool',
+            'hasVul' => 'bool',
+            'hasBaseline' => 'bool',
+            'sortKey' => 'string',
+            'sortDir' => 'string',
             'policyGroupId' => 'string',
             'policyGroupName' => 'string',
             'chargingMode' => 'string',
             'refresh' => 'bool',
+            'getCommonLoginLocations' => 'bool',
             'aboveVersion' => 'bool',
             'outsideHost' => 'bool',
             'assetValue' => 'string',
             'label' => 'string',
             'serverGroup' => 'string',
             'agentUpgradable' => 'bool',
+            'installMode' => 'bool',
+            'bindingKey' => 'bool',
+            'protectInterrupt' => 'bool',
+            'incluster' => 'bool',
+            'protectDegradation' => 'bool',
             'limit' => 'int',
             'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
     * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * detectResult  检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
@@ -95,21 +117,32 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
     * ipAddr  公网或私网IP
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
+    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
     * groupId  服务器组ID
     * groupName  服务器组名称
+    * vpcId  vpc id
     * region  Region ID
     * hasIntrusion  存在告警事件
+    * hasVul  存在漏洞风险
+    * hasBaseline  存在基线风险
+    * sortKey  排序字段，只支持risk_num - risk_num：风险总量
+    * sortDir  排序的顺序 - asc: 正序 - desc: 倒序
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * refresh  是否强制从ECS同步主机
+    * getCommonLoginLocations  是否获取主机常用登录地信息
     * aboveVersion  是否返回比当前版本高的所有版本
     * outsideHost  是否华为云主机
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * label  资产标签
     * serverGroup  资产服务器组
     * agentUpgradable  agent是否可升级
+    * installMode  是否安装模式场景
+    * bindingKey  是否绑定DEW密钥
+    * protectInterrupt  是否防护中断
+    * incluster  是否集群内节点
+    * protectDegradation  是否防护降级
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -130,18 +163,29 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
         'protectStatus' => null,
         'groupId' => null,
         'groupName' => null,
+        'vpcId' => null,
         'region' => null,
         'hasIntrusion' => null,
+        'hasVul' => null,
+        'hasBaseline' => null,
+        'sortKey' => null,
+        'sortDir' => null,
         'policyGroupId' => null,
         'policyGroupName' => null,
         'chargingMode' => null,
         'refresh' => null,
+        'getCommonLoginLocations' => null,
         'aboveVersion' => null,
         'outsideHost' => null,
         'assetValue' => null,
         'label' => null,
         'serverGroup' => null,
         'agentUpgradable' => null,
+        'installMode' => null,
+        'bindingKey' => null,
+        'protectInterrupt' => null,
+        'incluster' => null,
+        'protectDegradation' => null,
         'limit' => 'int32',
         'offset' => 'int32'
     ];
@@ -169,7 +213,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
     * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * detectResult  检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
@@ -180,21 +224,32 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
     * ipAddr  公网或私网IP
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
+    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
     * groupId  服务器组ID
     * groupName  服务器组名称
+    * vpcId  vpc id
     * region  Region ID
     * hasIntrusion  存在告警事件
+    * hasVul  存在漏洞风险
+    * hasBaseline  存在基线风险
+    * sortKey  排序字段，只支持risk_num - risk_num：风险总量
+    * sortDir  排序的顺序 - asc: 正序 - desc: 倒序
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * refresh  是否强制从ECS同步主机
+    * getCommonLoginLocations  是否获取主机常用登录地信息
     * aboveVersion  是否返回比当前版本高的所有版本
     * outsideHost  是否华为云主机
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * label  资产标签
     * serverGroup  资产服务器组
     * agentUpgradable  agent是否可升级
+    * installMode  是否安装模式场景
+    * bindingKey  是否绑定DEW密钥
+    * protectInterrupt  是否防护中断
+    * incluster  是否集群内节点
+    * protectDegradation  是否防护降级
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -215,25 +270,36 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'protectStatus' => 'protect_status',
             'groupId' => 'group_id',
             'groupName' => 'group_name',
+            'vpcId' => 'vpc_id',
             'region' => 'region',
             'hasIntrusion' => 'has_intrusion',
+            'hasVul' => 'has_vul',
+            'hasBaseline' => 'has_baseline',
+            'sortKey' => 'sort_key',
+            'sortDir' => 'sort_dir',
             'policyGroupId' => 'policy_group_id',
             'policyGroupName' => 'policy_group_name',
             'chargingMode' => 'charging_mode',
             'refresh' => 'refresh',
+            'getCommonLoginLocations' => 'get_common_login_locations',
             'aboveVersion' => 'above_version',
             'outsideHost' => 'outside_host',
             'assetValue' => 'asset_value',
             'label' => 'label',
             'serverGroup' => 'server_group',
             'agentUpgradable' => 'agent_upgradable',
+            'installMode' => 'install_mode',
+            'bindingKey' => 'binding_key',
+            'protectInterrupt' => 'protect_interrupt',
+            'incluster' => 'incluster',
+            'protectDegradation' => 'protect_degradation',
             'limit' => 'limit',
             'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
     * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * detectResult  检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
@@ -244,21 +310,32 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
     * ipAddr  公网或私网IP
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
+    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
     * groupId  服务器组ID
     * groupName  服务器组名称
+    * vpcId  vpc id
     * region  Region ID
     * hasIntrusion  存在告警事件
+    * hasVul  存在漏洞风险
+    * hasBaseline  存在基线风险
+    * sortKey  排序字段，只支持risk_num - risk_num：风险总量
+    * sortDir  排序的顺序 - asc: 正序 - desc: 倒序
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * refresh  是否强制从ECS同步主机
+    * getCommonLoginLocations  是否获取主机常用登录地信息
     * aboveVersion  是否返回比当前版本高的所有版本
     * outsideHost  是否华为云主机
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * label  资产标签
     * serverGroup  资产服务器组
     * agentUpgradable  agent是否可升级
+    * installMode  是否安装模式场景
+    * bindingKey  是否绑定DEW密钥
+    * protectInterrupt  是否防护中断
+    * incluster  是否集群内节点
+    * protectDegradation  是否防护降级
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -279,25 +356,36 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'protectStatus' => 'setProtectStatus',
             'groupId' => 'setGroupId',
             'groupName' => 'setGroupName',
+            'vpcId' => 'setVpcId',
             'region' => 'setRegion',
             'hasIntrusion' => 'setHasIntrusion',
+            'hasVul' => 'setHasVul',
+            'hasBaseline' => 'setHasBaseline',
+            'sortKey' => 'setSortKey',
+            'sortDir' => 'setSortDir',
             'policyGroupId' => 'setPolicyGroupId',
             'policyGroupName' => 'setPolicyGroupName',
             'chargingMode' => 'setChargingMode',
             'refresh' => 'setRefresh',
+            'getCommonLoginLocations' => 'setGetCommonLoginLocations',
             'aboveVersion' => 'setAboveVersion',
             'outsideHost' => 'setOutsideHost',
             'assetValue' => 'setAssetValue',
             'label' => 'setLabel',
             'serverGroup' => 'setServerGroup',
             'agentUpgradable' => 'setAgentUpgradable',
+            'installMode' => 'setInstallMode',
+            'bindingKey' => 'setBindingKey',
+            'protectInterrupt' => 'setProtectInterrupt',
+            'incluster' => 'setIncluster',
+            'protectDegradation' => 'setProtectDegradation',
             'limit' => 'setLimit',
             'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
     * agentStatus  Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
     * detectResult  检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
@@ -308,21 +396,32 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
     * ipAddr  公网或私网IP
-    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
+    * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
     * groupId  服务器组ID
     * groupName  服务器组名称
+    * vpcId  vpc id
     * region  Region ID
     * hasIntrusion  存在告警事件
+    * hasVul  存在漏洞风险
+    * hasBaseline  存在基线风险
+    * sortKey  排序字段，只支持risk_num - risk_num：风险总量
+    * sortDir  排序的顺序 - asc: 正序 - desc: 倒序
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * refresh  是否强制从ECS同步主机
+    * getCommonLoginLocations  是否获取主机常用登录地信息
     * aboveVersion  是否返回比当前版本高的所有版本
     * outsideHost  是否华为云主机
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * label  资产标签
     * serverGroup  资产服务器组
     * agentUpgradable  agent是否可升级
+    * installMode  是否安装模式场景
+    * bindingKey  是否绑定DEW密钥
+    * protectInterrupt  是否防护中断
+    * incluster  是否集群内节点
+    * protectDegradation  是否防护降级
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -343,18 +442,29 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'protectStatus' => 'getProtectStatus',
             'groupId' => 'getGroupId',
             'groupName' => 'getGroupName',
+            'vpcId' => 'getVpcId',
             'region' => 'getRegion',
             'hasIntrusion' => 'getHasIntrusion',
+            'hasVul' => 'getHasVul',
+            'hasBaseline' => 'getHasBaseline',
+            'sortKey' => 'getSortKey',
+            'sortDir' => 'getSortDir',
             'policyGroupId' => 'getPolicyGroupId',
             'policyGroupName' => 'getPolicyGroupName',
             'chargingMode' => 'getChargingMode',
             'refresh' => 'getRefresh',
+            'getCommonLoginLocations' => 'getGetCommonLoginLocations',
             'aboveVersion' => 'getAboveVersion',
             'outsideHost' => 'getOutsideHost',
             'assetValue' => 'getAssetValue',
             'label' => 'getLabel',
             'serverGroup' => 'getServerGroup',
             'agentUpgradable' => 'getAgentUpgradable',
+            'installMode' => 'getInstallMode',
+            'bindingKey' => 'getBindingKey',
+            'protectInterrupt' => 'getProtectInterrupt',
+            'incluster' => 'getIncluster',
+            'protectDegradation' => 'getProtectDegradation',
             'limit' => 'getLimit',
             'offset' => 'getOffset'
     ];
@@ -431,18 +541,29 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
+        $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['hasIntrusion'] = isset($data['hasIntrusion']) ? $data['hasIntrusion'] : null;
+        $this->container['hasVul'] = isset($data['hasVul']) ? $data['hasVul'] : null;
+        $this->container['hasBaseline'] = isset($data['hasBaseline']) ? $data['hasBaseline'] : null;
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
+        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['policyGroupId'] = isset($data['policyGroupId']) ? $data['policyGroupId'] : null;
         $this->container['policyGroupName'] = isset($data['policyGroupName']) ? $data['policyGroupName'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['refresh'] = isset($data['refresh']) ? $data['refresh'] : null;
+        $this->container['getCommonLoginLocations'] = isset($data['getCommonLoginLocations']) ? $data['getCommonLoginLocations'] : null;
         $this->container['aboveVersion'] = isset($data['aboveVersion']) ? $data['aboveVersion'] : null;
         $this->container['outsideHost'] = isset($data['outsideHost']) ? $data['outsideHost'] : null;
         $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
         $this->container['serverGroup'] = isset($data['serverGroup']) ? $data['serverGroup'] : null;
         $this->container['agentUpgradable'] = isset($data['agentUpgradable']) ? $data['agentUpgradable'] : null;
+        $this->container['installMode'] = isset($data['installMode']) ? $data['installMode'] : null;
+        $this->container['bindingKey'] = isset($data['bindingKey']) ? $data['bindingKey'] : null;
+        $this->container['protectInterrupt'] = isset($data['protectInterrupt']) ? $data['protectInterrupt'] : null;
+        $this->container['incluster'] = isset($data['incluster']) ? $data['incluster'] : null;
+        $this->container['protectDegradation'] = isset($data['protectDegradation']) ? $data['protectDegradation'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
@@ -530,6 +651,15 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['groupName']) && !preg_match("/^.*$/", $this->container['groupName'])) {
                 $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^.*$/.";
             }
+            if (!is_null($this->container['vpcId']) && (mb_strlen($this->container['vpcId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'vpcId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['vpcId']) && (mb_strlen($this->container['vpcId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'vpcId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['vpcId']) && !preg_match("/^.*$/", $this->container['vpcId'])) {
+                $invalidProperties[] = "invalid value for 'vpcId', must be conform to the pattern /^.*$/.";
+            }
             if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 128)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 128.";
             }
@@ -538,6 +668,12 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['region']) && !preg_match("/^.*$/", $this->container['region'])) {
                 $invalidProperties[] = "invalid value for 'region', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['sortKey']) && !preg_match("/^risk_num$/", $this->container['sortKey'])) {
+                $invalidProperties[] = "invalid value for 'sortKey', must be conform to the pattern /^risk_num$/.";
+            }
+            if (!is_null($this->container['sortDir']) && !preg_match("/^asc|desc$/", $this->container['sortDir'])) {
+                $invalidProperties[] = "invalid value for 'sortDir', must be conform to the pattern /^asc|desc$/.";
             }
             if (!is_null($this->container['policyGroupId']) && (mb_strlen($this->container['policyGroupId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'policyGroupId', the character length must be smaller than or equal to 128.";
@@ -603,7 +739,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -615,7 +751,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */
@@ -867,7 +1003,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
+    *  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
     *
     * @return string|null
     */
@@ -879,7 +1015,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
+    * @param string|null $protectStatus 防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
     *
     * @return $this
     */
@@ -938,6 +1074,30 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets vpcId
+    *  vpc id
+    *
+    * @return string|null
+    */
+    public function getVpcId()
+    {
+        return $this->container['vpcId'];
+    }
+
+    /**
+    * Sets vpcId
+    *
+    * @param string|null $vpcId vpc id
+    *
+    * @return $this
+    */
+    public function setVpcId($vpcId)
+    {
+        $this->container['vpcId'] = $vpcId;
+        return $this;
+    }
+
+    /**
     * Gets region
     *  Region ID
     *
@@ -982,6 +1142,102 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     public function setHasIntrusion($hasIntrusion)
     {
         $this->container['hasIntrusion'] = $hasIntrusion;
+        return $this;
+    }
+
+    /**
+    * Gets hasVul
+    *  存在漏洞风险
+    *
+    * @return bool|null
+    */
+    public function getHasVul()
+    {
+        return $this->container['hasVul'];
+    }
+
+    /**
+    * Sets hasVul
+    *
+    * @param bool|null $hasVul 存在漏洞风险
+    *
+    * @return $this
+    */
+    public function setHasVul($hasVul)
+    {
+        $this->container['hasVul'] = $hasVul;
+        return $this;
+    }
+
+    /**
+    * Gets hasBaseline
+    *  存在基线风险
+    *
+    * @return bool|null
+    */
+    public function getHasBaseline()
+    {
+        return $this->container['hasBaseline'];
+    }
+
+    /**
+    * Sets hasBaseline
+    *
+    * @param bool|null $hasBaseline 存在基线风险
+    *
+    * @return $this
+    */
+    public function setHasBaseline($hasBaseline)
+    {
+        $this->container['hasBaseline'] = $hasBaseline;
+        return $this;
+    }
+
+    /**
+    * Gets sortKey
+    *  排序字段，只支持risk_num - risk_num：风险总量
+    *
+    * @return string|null
+    */
+    public function getSortKey()
+    {
+        return $this->container['sortKey'];
+    }
+
+    /**
+    * Sets sortKey
+    *
+    * @param string|null $sortKey 排序字段，只支持risk_num - risk_num：风险总量
+    *
+    * @return $this
+    */
+    public function setSortKey($sortKey)
+    {
+        $this->container['sortKey'] = $sortKey;
+        return $this;
+    }
+
+    /**
+    * Gets sortDir
+    *  排序的顺序 - asc: 正序 - desc: 倒序
+    *
+    * @return string|null
+    */
+    public function getSortDir()
+    {
+        return $this->container['sortDir'];
+    }
+
+    /**
+    * Sets sortDir
+    *
+    * @param string|null $sortDir 排序的顺序 - asc: 正序 - desc: 倒序
+    *
+    * @return $this
+    */
+    public function setSortDir($sortDir)
+    {
+        $this->container['sortDir'] = $sortDir;
         return $this;
     }
 
@@ -1078,6 +1334,30 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     public function setRefresh($refresh)
     {
         $this->container['refresh'] = $refresh;
+        return $this;
+    }
+
+    /**
+    * Gets getCommonLoginLocations
+    *  是否获取主机常用登录地信息
+    *
+    * @return bool|null
+    */
+    public function getGetCommonLoginLocations()
+    {
+        return $this->container['getCommonLoginLocations'];
+    }
+
+    /**
+    * Sets getCommonLoginLocations
+    *
+    * @param bool|null $getCommonLoginLocations 是否获取主机常用登录地信息
+    *
+    * @return $this
+    */
+    public function setGetCommonLoginLocations($getCommonLoginLocations)
+    {
+        $this->container['getCommonLoginLocations'] = $getCommonLoginLocations;
         return $this;
     }
 
@@ -1222,6 +1502,126 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     public function setAgentUpgradable($agentUpgradable)
     {
         $this->container['agentUpgradable'] = $agentUpgradable;
+        return $this;
+    }
+
+    /**
+    * Gets installMode
+    *  是否安装模式场景
+    *
+    * @return bool|null
+    */
+    public function getInstallMode()
+    {
+        return $this->container['installMode'];
+    }
+
+    /**
+    * Sets installMode
+    *
+    * @param bool|null $installMode 是否安装模式场景
+    *
+    * @return $this
+    */
+    public function setInstallMode($installMode)
+    {
+        $this->container['installMode'] = $installMode;
+        return $this;
+    }
+
+    /**
+    * Gets bindingKey
+    *  是否绑定DEW密钥
+    *
+    * @return bool|null
+    */
+    public function getBindingKey()
+    {
+        return $this->container['bindingKey'];
+    }
+
+    /**
+    * Sets bindingKey
+    *
+    * @param bool|null $bindingKey 是否绑定DEW密钥
+    *
+    * @return $this
+    */
+    public function setBindingKey($bindingKey)
+    {
+        $this->container['bindingKey'] = $bindingKey;
+        return $this;
+    }
+
+    /**
+    * Gets protectInterrupt
+    *  是否防护中断
+    *
+    * @return bool|null
+    */
+    public function getProtectInterrupt()
+    {
+        return $this->container['protectInterrupt'];
+    }
+
+    /**
+    * Sets protectInterrupt
+    *
+    * @param bool|null $protectInterrupt 是否防护中断
+    *
+    * @return $this
+    */
+    public function setProtectInterrupt($protectInterrupt)
+    {
+        $this->container['protectInterrupt'] = $protectInterrupt;
+        return $this;
+    }
+
+    /**
+    * Gets incluster
+    *  是否集群内节点
+    *
+    * @return bool|null
+    */
+    public function getIncluster()
+    {
+        return $this->container['incluster'];
+    }
+
+    /**
+    * Sets incluster
+    *
+    * @param bool|null $incluster 是否集群内节点
+    *
+    * @return $this
+    */
+    public function setIncluster($incluster)
+    {
+        $this->container['incluster'] = $incluster;
+        return $this;
+    }
+
+    /**
+    * Gets protectDegradation
+    *  是否防护降级
+    *
+    * @return bool|null
+    */
+    public function getProtectDegradation()
+    {
+        return $this->container['protectDegradation'];
+    }
+
+    /**
+    * Sets protectDegradation
+    *
+    * @param bool|null $protectDegradation 是否防护降级
+    *
+    * @return $this
+    */
+    public function setProtectDegradation($protectDegradation)
+    {
+        $this->container['protectDegradation'] = $protectDegradation;
         return $this;
     }
 

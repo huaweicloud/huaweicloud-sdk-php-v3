@@ -21,11 +21,12 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * groupName  策略组名
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * containerMode  是否查询容器版策略
+    * groupId  策略组id
     *
     * @var string[]
     */
@@ -35,17 +36,19 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
             'groupName' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'containerMode' => 'bool'
+            'containerMode' => 'bool',
+            'groupId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * groupName  策略组名
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * containerMode  是否查询容器版策略
+    * groupId  策略组id
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
         'groupName' => null,
         'offset' => 'int32',
         'limit' => 'int32',
-        'containerMode' => null
+        'containerMode' => null,
+        'groupId' => null
     ];
 
     /**
@@ -82,11 +86,12 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * groupName  策略组名
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * containerMode  是否查询容器版策略
+    * groupId  策略组id
     *
     * @var string[]
     */
@@ -96,17 +101,19 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
             'groupName' => 'group_name',
             'offset' => 'offset',
             'limit' => 'limit',
-            'containerMode' => 'container_mode'
+            'containerMode' => 'container_mode',
+            'groupId' => 'group_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * groupName  策略组名
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * containerMode  是否查询容器版策略
+    * groupId  策略组id
     *
     * @var string[]
     */
@@ -116,17 +123,19 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
             'groupName' => 'setGroupName',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'containerMode' => 'setContainerMode'
+            'containerMode' => 'setContainerMode',
+            'groupId' => 'setGroupId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * groupName  策略组名
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * containerMode  是否查询容器版策略
+    * groupId  策略组id
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
             'groupName' => 'getGroupName',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'containerMode' => 'getContainerMode'
+            'containerMode' => 'getContainerMode',
+            'groupId' => 'getGroupId'
     ];
 
     /**
@@ -203,6 +213,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['containerMode'] = isset($data['containerMode']) ? $data['containerMode'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
     }
 
     /**
@@ -255,6 +266,15 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
             }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['groupId']) && !preg_match("/^.*$/", $this->container['groupId'])) {
+                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^.*$/.";
+            }
         return $invalidProperties;
     }
 
@@ -295,7 +315,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -307,7 +327,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */
@@ -410,6 +430,30 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     public function setContainerMode($containerMode)
     {
         $this->container['containerMode'] = $containerMode;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  策略组id
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 策略组id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

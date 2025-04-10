@@ -21,14 +21,15 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  Region Id
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
     * groupName  服务器组名称
     * osType  操作系统类别（linux，windows）   - linux : linux操作系统   - windows : windows操作系统
-    * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
+    * protectStatus  配额状态   - opened : 已绑定网页防篡改配额
+    * wtpStatus  网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
     * offset  偏移量：指定返回记录的开始位置
@@ -45,6 +46,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
             'groupName' => 'string',
             'osType' => 'string',
             'protectStatus' => 'string',
+            'wtpStatus' => 'string',
             'agentStatus' => 'string',
             'limit' => 'int',
             'offset' => 'int'
@@ -53,14 +55,15 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  Region Id
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
     * groupName  服务器组名称
     * osType  操作系统类别（linux，windows）   - linux : linux操作系统   - windows : windows操作系统
-    * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
+    * protectStatus  配额状态   - opened : 已绑定网页防篡改配额
+    * wtpStatus  网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
     * offset  偏移量：指定返回记录的开始位置
@@ -77,6 +80,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
         'groupName' => null,
         'osType' => null,
         'protectStatus' => null,
+        'wtpStatus' => null,
         'agentStatus' => null,
         'limit' => 'int32',
         'offset' => 'int32'
@@ -106,14 +110,15 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  Region Id
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
     * groupName  服务器组名称
     * osType  操作系统类别（linux，windows）   - linux : linux操作系统   - windows : windows操作系统
-    * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
+    * protectStatus  配额状态   - opened : 已绑定网页防篡改配额
+    * wtpStatus  网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
     * offset  偏移量：指定返回记录的开始位置
@@ -130,6 +135,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
             'groupName' => 'group_name',
             'osType' => 'os_type',
             'protectStatus' => 'protect_status',
+            'wtpStatus' => 'wtp_status',
             'agentStatus' => 'agent_status',
             'limit' => 'limit',
             'offset' => 'offset'
@@ -138,14 +144,15 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  Region Id
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
     * groupName  服务器组名称
     * osType  操作系统类别（linux，windows）   - linux : linux操作系统   - windows : windows操作系统
-    * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
+    * protectStatus  配额状态   - opened : 已绑定网页防篡改配额
+    * wtpStatus  网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
     * offset  偏移量：指定返回记录的开始位置
@@ -162,6 +169,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
             'groupName' => 'setGroupName',
             'osType' => 'setOsType',
             'protectStatus' => 'setProtectStatus',
+            'wtpStatus' => 'setWtpStatus',
             'agentStatus' => 'setAgentStatus',
             'limit' => 'setLimit',
             'offset' => 'setOffset'
@@ -170,14 +178,15 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  Region Id
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
     * groupName  服务器组名称
     * osType  操作系统类别（linux，windows）   - linux : linux操作系统   - windows : windows操作系统
-    * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
+    * protectStatus  配额状态   - opened : 已绑定网页防篡改配额
+    * wtpStatus  网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
     * offset  偏移量：指定返回记录的开始位置
@@ -194,6 +203,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
             'groupName' => 'getGroupName',
             'osType' => 'getOsType',
             'protectStatus' => 'getProtectStatus',
+            'wtpStatus' => 'getWtpStatus',
             'agentStatus' => 'getAgentStatus',
             'limit' => 'getLimit',
             'offset' => 'getOffset'
@@ -266,6 +276,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
+        $this->container['wtpStatus'] = isset($data['wtpStatus']) ? $data['wtpStatus'] : null;
         $this->container['agentStatus'] = isset($data['agentStatus']) ? $data['agentStatus'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
@@ -336,6 +347,12 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'protectStatus', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['wtpStatus']) && (mb_strlen($this->container['wtpStatus']) > 32)) {
+                $invalidProperties[] = "invalid value for 'wtpStatus', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['wtpStatus']) && (mb_strlen($this->container['wtpStatus']) < 0)) {
+                $invalidProperties[] = "invalid value for 'wtpStatus', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['agentStatus']) && (mb_strlen($this->container['agentStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'agentStatus', the character length must be smaller than or equal to 32.";
             }
@@ -394,7 +411,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -406,7 +423,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */
@@ -562,7 +579,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态   - closed : 未开启   - opened : 防护中
+    *  配额状态   - opened : 已绑定网页防篡改配额
     *
     * @return string|null
     */
@@ -574,13 +591,37 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态   - closed : 未开启   - opened : 防护中
+    * @param string|null $protectStatus 配额状态   - opened : 已绑定网页防篡改配额
     *
     * @return $this
     */
     public function setProtectStatus($protectStatus)
     {
         $this->container['protectStatus'] = $protectStatus;
+        return $this;
+    }
+
+    /**
+    * Gets wtpStatus
+    *  网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
+    *
+    * @return string|null
+    */
+    public function getWtpStatus()
+    {
+        return $this->container['wtpStatus'];
+    }
+
+    /**
+    * Sets wtpStatus
+    *
+    * @param string|null $wtpStatus 网页防篡改防护状态   - opened : 防护汇总   - opening : 正在开启   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
+    *
+    * @return $this
+    */
+    public function setWtpStatus($wtpStatus)
+    {
+        $this->container['wtpStatus'] = $wtpStatus;
         return $this;
     }
 

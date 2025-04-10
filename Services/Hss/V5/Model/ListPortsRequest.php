@@ -25,7 +25,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * port  端口号
     * type  端口类型：目前包括TCP，UDP两种
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
@@ -38,6 +39,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'hostIp' => 'string',
             'port' => 'int',
             'type' => 'string',
+            'status' => 'string',
             'enterpriseProjectId' => 'string',
             'limit' => 'int',
             'offset' => 'int',
@@ -51,7 +53,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * port  端口号
     * type  端口类型：目前包括TCP，UDP两种
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
@@ -64,6 +67,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         'hostIp' => null,
         'port' => null,
         'type' => null,
+        'status' => null,
         'enterpriseProjectId' => null,
         'limit' => 'int32',
         'offset' => 'int32',
@@ -98,7 +102,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * port  端口号
     * type  端口类型：目前包括TCP，UDP两种
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
@@ -111,6 +116,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'hostIp' => 'host_ip',
             'port' => 'port',
             'type' => 'type',
+            'status' => 'status',
             'enterpriseProjectId' => 'enterprise_project_id',
             'limit' => 'limit',
             'offset' => 'offset',
@@ -124,7 +130,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * port  端口号
     * type  端口类型：目前包括TCP，UDP两种
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
@@ -137,6 +144,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'hostIp' => 'setHostIp',
             'port' => 'setPort',
             'type' => 'setType',
+            'status' => 'setStatus',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
@@ -150,7 +158,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * port  端口号
     * type  端口类型：目前包括TCP，UDP两种
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
@@ -163,6 +172,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'hostIp' => 'getHostIp',
             'port' => 'getPort',
             'type' => 'getType',
+            'status' => 'getStatus',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
@@ -232,6 +242,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
@@ -278,6 +289,12 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 64)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
@@ -438,8 +455,32 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets status
+    *  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
     * Gets enterpriseProjectId
-    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -451,7 +492,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */

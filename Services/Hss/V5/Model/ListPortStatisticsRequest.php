@@ -23,7 +23,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * port  端口号，精确匹配
     * portString  端口字符串，用来进行模糊匹配
     * type  端口类型
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * sortKey  排序的key值，目前支持按照端口号port排序
     * sortDir  升序还是降序，默认升序，asc
     * limit  每页显示数量
@@ -36,6 +37,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             'port' => 'int',
             'portString' => 'string',
             'type' => 'string',
+            'status' => 'string',
             'enterpriseProjectId' => 'string',
             'sortKey' => 'string',
             'sortDir' => 'string',
@@ -49,7 +51,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * port  端口号，精确匹配
     * portString  端口字符串，用来进行模糊匹配
     * type  端口类型
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * sortKey  排序的key值，目前支持按照端口号port排序
     * sortDir  升序还是降序，默认升序，asc
     * limit  每页显示数量
@@ -62,6 +65,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
         'port' => null,
         'portString' => null,
         'type' => null,
+        'status' => null,
         'enterpriseProjectId' => null,
         'sortKey' => null,
         'sortDir' => null,
@@ -96,7 +100,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * port  端口号，精确匹配
     * portString  端口字符串，用来进行模糊匹配
     * type  端口类型
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * sortKey  排序的key值，目前支持按照端口号port排序
     * sortDir  升序还是降序，默认升序，asc
     * limit  每页显示数量
@@ -109,6 +114,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             'port' => 'port',
             'portString' => 'port_string',
             'type' => 'type',
+            'status' => 'status',
             'enterpriseProjectId' => 'enterprise_project_id',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
@@ -122,7 +128,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * port  端口号，精确匹配
     * portString  端口字符串，用来进行模糊匹配
     * type  端口类型
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * sortKey  排序的key值，目前支持按照端口号port排序
     * sortDir  升序还是降序，默认升序，asc
     * limit  每页显示数量
@@ -135,6 +142,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             'port' => 'setPort',
             'portString' => 'setPortString',
             'type' => 'setType',
+            'status' => 'setStatus',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
@@ -148,7 +156,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * port  端口号，精确匹配
     * portString  端口字符串，用来进行模糊匹配
     * type  端口类型
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * status  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * sortKey  排序的key值，目前支持按照端口号port排序
     * sortDir  升序还是降序，默认升序，asc
     * limit  每页显示数量
@@ -161,6 +170,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             'port' => 'getPort',
             'portString' => 'getPortString',
             'type' => 'getType',
+            'status' => 'getStatus',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
@@ -230,6 +240,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['portString'] = isset($data['portString']) ? $data['portString'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
@@ -263,6 +274,12 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 1)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 64)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 128.";
@@ -387,8 +404,32 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets status
+    *  端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
     * Gets enterpriseProjectId
-    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -400,7 +441,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */

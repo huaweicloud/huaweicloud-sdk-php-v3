@@ -2134,9 +2134,9 @@ class GaussDBforNoSQLClient extends Client
     }
 
     /**
-     * 查询支持参数模板的引擎信息
+     * 查询支持参数模板的接口信息
      *
-     * 查询支持参数模板的引擎信息
+     * 查询支持参数模板的接口信息
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2229,6 +2229,12 @@ class GaussDBforNoSQLClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['datastoreName'] !== null) {
+            $queryParams['datastore_name'] = $localVarParams['datastoreName'];
+        }
+        if ($localVarParams['mode'] !== null) {
+            $queryParams['mode'] = $localVarParams['mode'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -2287,6 +2293,12 @@ class GaussDBforNoSQLClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['datastoreName'] !== null) {
+            $queryParams['datastore_name'] = $localVarParams['datastoreName'];
+        }
+        if ($localVarParams['mode'] !== null) {
+            $queryParams['mode'] = $localVarParams['mode'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3243,11 +3255,11 @@ class GaussDBforNoSQLClient extends Client
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
-        if ($localVarParams['mode'] !== null) {
-            $queryParams['mode'] = $localVarParams['mode'];
-        }
         if ($localVarParams['datastoreType'] !== null) {
             $queryParams['datastore_type'] = $localVarParams['datastoreType'];
+        }
+        if ($localVarParams['mode'] !== null) {
+            $queryParams['mode'] = $localVarParams['mode'];
         }
         if ($localVarParams['vpcId'] !== null) {
             $queryParams['vpc_id'] = $localVarParams['vpcId'];
@@ -5388,7 +5400,7 @@ class GaussDBforNoSQLClient extends Client
     }
 
     /**
-     * 重启实例或节点的数据库服务
+     * 重启实例或节点
      *
      * 重启实例或节点的数据库服务。
      * 
@@ -6983,9 +6995,9 @@ class GaussDBforNoSQLClient extends Client
     }
 
     /**
-     * 获取指定实例的参数
+     * 查询实例参数配置
      *
-     * 获取指定实例的参数信息。
+     * 查询实例参数配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8223,7 +8235,7 @@ class GaussDBforNoSQLClient extends Client
     /**
      * Redis主备切换
      *
-     * 切换实例下的主备节点
+     * 切换实例的主备节点。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

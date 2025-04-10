@@ -27,6 +27,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * protectInterrupt  防护是否中断
+    * protectDegradation  防护是否降级
+    * degradationReason  防护降级原因
     * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
     * privateIp  私有IP地址
     * publicIp  弹性公网IP地址
@@ -50,6 +52,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
             'agentStatus' => 'string',
             'protectStatus' => 'string',
             'protectInterrupt' => 'bool',
+            'protectDegradation' => 'bool',
+            'degradationReason' => 'string',
             'containerTags' => 'string',
             'privateIp' => 'string',
             'publicIp' => 'string',
@@ -73,6 +77,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * protectInterrupt  防护是否中断
+    * protectDegradation  防护是否降级
+    * degradationReason  防护降级原因
     * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
     * privateIp  私有IP地址
     * publicIp  弹性公网IP地址
@@ -96,6 +102,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
         'agentStatus' => null,
         'protectStatus' => null,
         'protectInterrupt' => null,
+        'protectDegradation' => null,
+        'degradationReason' => null,
         'containerTags' => null,
         'privateIp' => null,
         'publicIp' => null,
@@ -140,6 +148,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * protectInterrupt  防护是否中断
+    * protectDegradation  防护是否降级
+    * degradationReason  防护降级原因
     * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
     * privateIp  私有IP地址
     * publicIp  弹性公网IP地址
@@ -163,6 +173,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
             'agentStatus' => 'agent_status',
             'protectStatus' => 'protect_status',
             'protectInterrupt' => 'protect_interrupt',
+            'protectDegradation' => 'protect_degradation',
+            'degradationReason' => 'degradation_reason',
             'containerTags' => 'container_tags',
             'privateIp' => 'private_ip',
             'publicIp' => 'public_ip',
@@ -186,6 +198,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * protectInterrupt  防护是否中断
+    * protectDegradation  防护是否降级
+    * degradationReason  防护降级原因
     * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
     * privateIp  私有IP地址
     * publicIp  弹性公网IP地址
@@ -209,6 +223,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
             'agentStatus' => 'setAgentStatus',
             'protectStatus' => 'setProtectStatus',
             'protectInterrupt' => 'setProtectInterrupt',
+            'protectDegradation' => 'setProtectDegradation',
+            'degradationReason' => 'setDegradationReason',
             'containerTags' => 'setContainerTags',
             'privateIp' => 'setPrivateIp',
             'publicIp' => 'setPublicIp',
@@ -232,6 +248,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * protectInterrupt  防护是否中断
+    * protectDegradation  防护是否降级
+    * degradationReason  防护降级原因
     * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
     * privateIp  私有IP地址
     * publicIp  弹性公网IP地址
@@ -255,6 +273,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
             'agentStatus' => 'getAgentStatus',
             'protectStatus' => 'getProtectStatus',
             'protectInterrupt' => 'getProtectInterrupt',
+            'protectDegradation' => 'getProtectDegradation',
+            'degradationReason' => 'getDegradationReason',
             'containerTags' => 'getContainerTags',
             'privateIp' => 'getPrivateIp',
             'publicIp' => 'getPublicIp',
@@ -334,6 +354,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
         $this->container['agentStatus'] = isset($data['agentStatus']) ? $data['agentStatus'] : null;
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
         $this->container['protectInterrupt'] = isset($data['protectInterrupt']) ? $data['protectInterrupt'] : null;
+        $this->container['protectDegradation'] = isset($data['protectDegradation']) ? $data['protectDegradation'] : null;
+        $this->container['degradationReason'] = isset($data['degradationReason']) ? $data['degradationReason'] : null;
         $this->container['containerTags'] = isset($data['containerTags']) ? $data['containerTags'] : null;
         $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
@@ -391,6 +413,12 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) < 1)) {
                 $invalidProperties[] = "invalid value for 'protectStatus', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['degradationReason']) && (mb_strlen($this->container['degradationReason']) > 32)) {
+                $invalidProperties[] = "invalid value for 'degradationReason', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['degradationReason']) && (mb_strlen($this->container['degradationReason']) < 1)) {
+                $invalidProperties[] = "invalid value for 'degradationReason', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['containerTags']) && (mb_strlen($this->container['containerTags']) > 32)) {
                 $invalidProperties[] = "invalid value for 'containerTags', the character length must be smaller than or equal to 32.";
@@ -643,6 +671,54 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     public function setProtectInterrupt($protectInterrupt)
     {
         $this->container['protectInterrupt'] = $protectInterrupt;
+        return $this;
+    }
+
+    /**
+    * Gets protectDegradation
+    *  防护是否降级
+    *
+    * @return bool|null
+    */
+    public function getProtectDegradation()
+    {
+        return $this->container['protectDegradation'];
+    }
+
+    /**
+    * Sets protectDegradation
+    *
+    * @param bool|null $protectDegradation 防护是否降级
+    *
+    * @return $this
+    */
+    public function setProtectDegradation($protectDegradation)
+    {
+        $this->container['protectDegradation'] = $protectDegradation;
+        return $this;
+    }
+
+    /**
+    * Gets degradationReason
+    *  防护降级原因
+    *
+    * @return string|null
+    */
+    public function getDegradationReason()
+    {
+        return $this->container['degradationReason'];
+    }
+
+    /**
+    * Sets degradationReason
+    *
+    * @param string|null $degradationReason 防护降级原因
+    *
+    * @return $this
+    */
+    public function setDegradationReason($degradationReason)
+    {
+        $this->container['degradationReason'] = $degradationReason;
         return $this;
     }
 

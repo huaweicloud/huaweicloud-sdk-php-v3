@@ -25,6 +25,7 @@ class CreateConfigurationResult implements ModelInterface, ArrayAccess
     * description  参数模板描述。
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * mode  【参数解释】 数据库实例类型。 【取值范围】 - GeminiDB Mongo 副本集实例取值为\"ReplicaSet\"。 - GeminiDB Influx 单节点实例取值为\"InfluxdbSingle\"。 - GeminiDB Cassandra云原生部署模式实例取值为\"CloudNativeCluster\"。
     * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     *
@@ -36,6 +37,7 @@ class CreateConfigurationResult implements ModelInterface, ArrayAccess
             'description' => 'string',
             'datastoreVersionName' => 'string',
             'datastoreName' => 'string',
+            'mode' => 'string',
             'created' => 'string',
             'updated' => 'string'
     ];
@@ -47,6 +49,7 @@ class CreateConfigurationResult implements ModelInterface, ArrayAccess
     * description  参数模板描述。
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * mode  【参数解释】 数据库实例类型。 【取值范围】 - GeminiDB Mongo 副本集实例取值为\"ReplicaSet\"。 - GeminiDB Influx 单节点实例取值为\"InfluxdbSingle\"。 - GeminiDB Cassandra云原生部署模式实例取值为\"CloudNativeCluster\"。
     * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     *
@@ -58,6 +61,7 @@ class CreateConfigurationResult implements ModelInterface, ArrayAccess
         'description' => null,
         'datastoreVersionName' => null,
         'datastoreName' => null,
+        'mode' => null,
         'created' => null,
         'updated' => null
     ];
@@ -90,6 +94,7 @@ class CreateConfigurationResult implements ModelInterface, ArrayAccess
     * description  参数模板描述。
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * mode  【参数解释】 数据库实例类型。 【取值范围】 - GeminiDB Mongo 副本集实例取值为\"ReplicaSet\"。 - GeminiDB Influx 单节点实例取值为\"InfluxdbSingle\"。 - GeminiDB Cassandra云原生部署模式实例取值为\"CloudNativeCluster\"。
     * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     *
@@ -101,6 +106,7 @@ class CreateConfigurationResult implements ModelInterface, ArrayAccess
             'description' => 'description',
             'datastoreVersionName' => 'datastore_version_name',
             'datastoreName' => 'datastore_name',
+            'mode' => 'mode',
             'created' => 'created',
             'updated' => 'updated'
     ];
@@ -112,6 +118,7 @@ class CreateConfigurationResult implements ModelInterface, ArrayAccess
     * description  参数模板描述。
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * mode  【参数解释】 数据库实例类型。 【取值范围】 - GeminiDB Mongo 副本集实例取值为\"ReplicaSet\"。 - GeminiDB Influx 单节点实例取值为\"InfluxdbSingle\"。 - GeminiDB Cassandra云原生部署模式实例取值为\"CloudNativeCluster\"。
     * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     *
@@ -123,6 +130,7 @@ class CreateConfigurationResult implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'datastoreVersionName' => 'setDatastoreVersionName',
             'datastoreName' => 'setDatastoreName',
+            'mode' => 'setMode',
             'created' => 'setCreated',
             'updated' => 'setUpdated'
     ];
@@ -134,6 +142,7 @@ class CreateConfigurationResult implements ModelInterface, ArrayAccess
     * description  参数模板描述。
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * mode  【参数解释】 数据库实例类型。 【取值范围】 - GeminiDB Mongo 副本集实例取值为\"ReplicaSet\"。 - GeminiDB Influx 单节点实例取值为\"InfluxdbSingle\"。 - GeminiDB Cassandra云原生部署模式实例取值为\"CloudNativeCluster\"。
     * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     *
@@ -145,6 +154,7 @@ class CreateConfigurationResult implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'datastoreVersionName' => 'getDatastoreVersionName',
             'datastoreName' => 'getDatastoreName',
+            'mode' => 'getMode',
             'created' => 'getCreated',
             'updated' => 'getUpdated'
     ];
@@ -212,6 +222,7 @@ class CreateConfigurationResult implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['datastoreVersionName'] = isset($data['datastoreVersionName']) ? $data['datastoreVersionName'] : null;
         $this->container['datastoreName'] = isset($data['datastoreName']) ? $data['datastoreName'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
@@ -373,6 +384,30 @@ class CreateConfigurationResult implements ModelInterface, ArrayAccess
     public function setDatastoreName($datastoreName)
     {
         $this->container['datastoreName'] = $datastoreName;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  【参数解释】 数据库实例类型。 【取值范围】 - GeminiDB Mongo 副本集实例取值为\"ReplicaSet\"。 - GeminiDB Influx 单节点实例取值为\"InfluxdbSingle\"。 - GeminiDB Cassandra云原生部署模式实例取值为\"CloudNativeCluster\"。
+    *
+    * @return string|null
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param string|null $mode 【参数解释】 数据库实例类型。 【取值范围】 - GeminiDB Mongo 副本集实例取值为\"ReplicaSet\"。 - GeminiDB Influx 单节点实例取值为\"InfluxdbSingle\"。 - GeminiDB Cassandra云原生部署模式实例取值为\"CloudNativeCluster\"。
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
         return $this;
     }
 

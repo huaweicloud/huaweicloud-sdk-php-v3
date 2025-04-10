@@ -26,15 +26,21 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  私有IP
     * ipv6  私有IPv6地址
     * groupName  服务器组名称
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * osBit  操作系统位数
     * osType  操作系统（linux，windows）
-    * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
+    * protectStatus  防护状态   - opening : 正在开启   - opened : 防护中   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
     * raspProtectStatus  动态网页防篡改状态   - closed : 未开启   - opened : 防护中
     * antiTamperingTimes  已防御篡改攻击次数
     * detectTamperingTimes  已发现篡改攻击
     * lastDetectTime  最近检测时间(ms)
     * scheduledShutdownStatus  定时关闭防护开关状态   - opened : 开启   - closed : 未开启
+    * osName  系统名称
+    * osVersion  系统版本
+    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
     * agentStatus  Agent状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
+    * protectDirNum  防护目录数
+    * remoteBackbupInfo  remoteBackbupInfo
     *
     * @var string[]
     */
@@ -45,6 +51,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             'privateIp' => 'string',
             'ipv6' => 'string',
             'groupName' => 'string',
+            'assetValue' => 'string',
             'osBit' => 'string',
             'osType' => 'string',
             'protectStatus' => 'string',
@@ -53,7 +60,12 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             'detectTamperingTimes' => 'int',
             'lastDetectTime' => 'int',
             'scheduledShutdownStatus' => 'string',
-            'agentStatus' => 'string'
+            'osName' => 'string',
+            'osVersion' => 'string',
+            'hostStatus' => 'string',
+            'agentStatus' => 'string',
+            'protectDirNum' => 'int',
+            'remoteBackbupInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\WtpRemoteBackupResponseInfo'
     ];
 
     /**
@@ -64,15 +76,21 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  私有IP
     * ipv6  私有IPv6地址
     * groupName  服务器组名称
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * osBit  操作系统位数
     * osType  操作系统（linux，windows）
-    * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
+    * protectStatus  防护状态   - opening : 正在开启   - opened : 防护中   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
     * raspProtectStatus  动态网页防篡改状态   - closed : 未开启   - opened : 防护中
     * antiTamperingTimes  已防御篡改攻击次数
     * detectTamperingTimes  已发现篡改攻击
     * lastDetectTime  最近检测时间(ms)
     * scheduledShutdownStatus  定时关闭防护开关状态   - opened : 开启   - closed : 未开启
+    * osName  系统名称
+    * osVersion  系统版本
+    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
     * agentStatus  Agent状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
+    * protectDirNum  防护目录数
+    * remoteBackbupInfo  remoteBackbupInfo
     *
     * @var string[]
     */
@@ -83,6 +101,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
         'privateIp' => null,
         'ipv6' => null,
         'groupName' => null,
+        'assetValue' => null,
         'osBit' => null,
         'osType' => null,
         'protectStatus' => null,
@@ -91,7 +110,12 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
         'detectTamperingTimes' => 'int64',
         'lastDetectTime' => 'int64',
         'scheduledShutdownStatus' => null,
-        'agentStatus' => null
+        'osName' => null,
+        'osVersion' => null,
+        'hostStatus' => null,
+        'agentStatus' => null,
+        'protectDirNum' => 'int32',
+        'remoteBackbupInfo' => null
     ];
 
     /**
@@ -123,15 +147,21 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  私有IP
     * ipv6  私有IPv6地址
     * groupName  服务器组名称
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * osBit  操作系统位数
     * osType  操作系统（linux，windows）
-    * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
+    * protectStatus  防护状态   - opening : 正在开启   - opened : 防护中   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
     * raspProtectStatus  动态网页防篡改状态   - closed : 未开启   - opened : 防护中
     * antiTamperingTimes  已防御篡改攻击次数
     * detectTamperingTimes  已发现篡改攻击
     * lastDetectTime  最近检测时间(ms)
     * scheduledShutdownStatus  定时关闭防护开关状态   - opened : 开启   - closed : 未开启
+    * osName  系统名称
+    * osVersion  系统版本
+    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
     * agentStatus  Agent状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
+    * protectDirNum  防护目录数
+    * remoteBackbupInfo  remoteBackbupInfo
     *
     * @var string[]
     */
@@ -142,6 +172,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             'privateIp' => 'private_ip',
             'ipv6' => 'ipv6',
             'groupName' => 'group_name',
+            'assetValue' => 'asset_value',
             'osBit' => 'os_bit',
             'osType' => 'os_type',
             'protectStatus' => 'protect_status',
@@ -150,7 +181,12 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             'detectTamperingTimes' => 'detect_tampering_times',
             'lastDetectTime' => 'last_detect_time',
             'scheduledShutdownStatus' => 'scheduled_shutdown_status',
-            'agentStatus' => 'agent_status'
+            'osName' => 'os_name',
+            'osVersion' => 'os_version',
+            'hostStatus' => 'host_status',
+            'agentStatus' => 'agent_status',
+            'protectDirNum' => 'protect_dir_num',
+            'remoteBackbupInfo' => 'remote_backbup_info'
     ];
 
     /**
@@ -161,15 +197,21 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  私有IP
     * ipv6  私有IPv6地址
     * groupName  服务器组名称
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * osBit  操作系统位数
     * osType  操作系统（linux，windows）
-    * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
+    * protectStatus  防护状态   - opening : 正在开启   - opened : 防护中   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
     * raspProtectStatus  动态网页防篡改状态   - closed : 未开启   - opened : 防护中
     * antiTamperingTimes  已防御篡改攻击次数
     * detectTamperingTimes  已发现篡改攻击
     * lastDetectTime  最近检测时间(ms)
     * scheduledShutdownStatus  定时关闭防护开关状态   - opened : 开启   - closed : 未开启
+    * osName  系统名称
+    * osVersion  系统版本
+    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
     * agentStatus  Agent状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
+    * protectDirNum  防护目录数
+    * remoteBackbupInfo  remoteBackbupInfo
     *
     * @var string[]
     */
@@ -180,6 +222,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             'privateIp' => 'setPrivateIp',
             'ipv6' => 'setIpv6',
             'groupName' => 'setGroupName',
+            'assetValue' => 'setAssetValue',
             'osBit' => 'setOsBit',
             'osType' => 'setOsType',
             'protectStatus' => 'setProtectStatus',
@@ -188,7 +231,12 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             'detectTamperingTimes' => 'setDetectTamperingTimes',
             'lastDetectTime' => 'setLastDetectTime',
             'scheduledShutdownStatus' => 'setScheduledShutdownStatus',
-            'agentStatus' => 'setAgentStatus'
+            'osName' => 'setOsName',
+            'osVersion' => 'setOsVersion',
+            'hostStatus' => 'setHostStatus',
+            'agentStatus' => 'setAgentStatus',
+            'protectDirNum' => 'setProtectDirNum',
+            'remoteBackbupInfo' => 'setRemoteBackbupInfo'
     ];
 
     /**
@@ -199,15 +247,21 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  私有IP
     * ipv6  私有IPv6地址
     * groupName  服务器组名称
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * osBit  操作系统位数
     * osType  操作系统（linux，windows）
-    * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
+    * protectStatus  防护状态   - opening : 正在开启   - opened : 防护中   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
     * raspProtectStatus  动态网页防篡改状态   - closed : 未开启   - opened : 防护中
     * antiTamperingTimes  已防御篡改攻击次数
     * detectTamperingTimes  已发现篡改攻击
     * lastDetectTime  最近检测时间(ms)
     * scheduledShutdownStatus  定时关闭防护开关状态   - opened : 开启   - closed : 未开启
+    * osName  系统名称
+    * osVersion  系统版本
+    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
     * agentStatus  Agent状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
+    * protectDirNum  防护目录数
+    * remoteBackbupInfo  remoteBackbupInfo
     *
     * @var string[]
     */
@@ -218,6 +272,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             'privateIp' => 'getPrivateIp',
             'ipv6' => 'getIpv6',
             'groupName' => 'getGroupName',
+            'assetValue' => 'getAssetValue',
             'osBit' => 'getOsBit',
             'osType' => 'getOsType',
             'protectStatus' => 'getProtectStatus',
@@ -226,7 +281,12 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             'detectTamperingTimes' => 'getDetectTamperingTimes',
             'lastDetectTime' => 'getLastDetectTime',
             'scheduledShutdownStatus' => 'getScheduledShutdownStatus',
-            'agentStatus' => 'getAgentStatus'
+            'osName' => 'getOsName',
+            'osVersion' => 'getOsVersion',
+            'hostStatus' => 'getHostStatus',
+            'agentStatus' => 'getAgentStatus',
+            'protectDirNum' => 'getProtectDirNum',
+            'remoteBackbupInfo' => 'getRemoteBackbupInfo'
     ];
 
     /**
@@ -293,6 +353,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
         $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
         $this->container['ipv6'] = isset($data['ipv6']) ? $data['ipv6'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
+        $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['osBit'] = isset($data['osBit']) ? $data['osBit'] : null;
         $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
@@ -301,7 +362,12 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
         $this->container['detectTamperingTimes'] = isset($data['detectTamperingTimes']) ? $data['detectTamperingTimes'] : null;
         $this->container['lastDetectTime'] = isset($data['lastDetectTime']) ? $data['lastDetectTime'] : null;
         $this->container['scheduledShutdownStatus'] = isset($data['scheduledShutdownStatus']) ? $data['scheduledShutdownStatus'] : null;
+        $this->container['osName'] = isset($data['osName']) ? $data['osName'] : null;
+        $this->container['osVersion'] = isset($data['osVersion']) ? $data['osVersion'] : null;
+        $this->container['hostStatus'] = isset($data['hostStatus']) ? $data['hostStatus'] : null;
         $this->container['agentStatus'] = isset($data['agentStatus']) ? $data['agentStatus'] : null;
+        $this->container['protectDirNum'] = isset($data['protectDirNum']) ? $data['protectDirNum'] : null;
+        $this->container['remoteBackbupInfo'] = isset($data['remoteBackbupInfo']) ? $data['remoteBackbupInfo'] : null;
     }
 
     /**
@@ -347,6 +413,12 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 128)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) < 0)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['osBit']) && (mb_strlen($this->container['osBit']) > 8)) {
                 $invalidProperties[] = "invalid value for 'osBit', the character length must be smaller than or equal to 8.";
@@ -396,11 +468,35 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['scheduledShutdownStatus']) && (mb_strlen($this->container['scheduledShutdownStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'scheduledShutdownStatus', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['osName']) && (mb_strlen($this->container['osName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'osName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['osName']) && (mb_strlen($this->container['osName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'osName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['osVersion']) && (mb_strlen($this->container['osVersion']) > 256)) {
+                $invalidProperties[] = "invalid value for 'osVersion', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['osVersion']) && (mb_strlen($this->container['osVersion']) < 0)) {
+                $invalidProperties[] = "invalid value for 'osVersion', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['hostStatus']) && (mb_strlen($this->container['hostStatus']) > 32)) {
+                $invalidProperties[] = "invalid value for 'hostStatus', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['hostStatus']) && (mb_strlen($this->container['hostStatus']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostStatus', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['agentStatus']) && (mb_strlen($this->container['agentStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'agentStatus', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['agentStatus']) && (mb_strlen($this->container['agentStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'agentStatus', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['protectDirNum']) && ($this->container['protectDirNum'] > 50)) {
+                $invalidProperties[] = "invalid value for 'protectDirNum', must be smaller than or equal to 50.";
+            }
+            if (!is_null($this->container['protectDirNum']) && ($this->container['protectDirNum'] < 0)) {
+                $invalidProperties[] = "invalid value for 'protectDirNum', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -561,6 +657,30 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets assetValue
+    *  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *
+    * @return string|null
+    */
+    public function getAssetValue()
+    {
+        return $this->container['assetValue'];
+    }
+
+    /**
+    * Sets assetValue
+    *
+    * @param string|null $assetValue 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *
+    * @return $this
+    */
+    public function setAssetValue($assetValue)
+    {
+        $this->container['assetValue'] = $assetValue;
+        return $this;
+    }
+
+    /**
     * Gets osBit
     *  操作系统位数
     *
@@ -610,7 +730,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态   - closed : 未开启   - opened : 防护中
+    *  防护状态   - opening : 正在开启   - opened : 防护中   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
     *
     * @return string|null
     */
@@ -622,7 +742,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态   - closed : 未开启   - opened : 防护中
+    * @param string|null $protectStatus 防护状态   - opening : 正在开启   - opened : 防护中   - open_failed : 防护失败   - partial_protection : 部分防护   - protection_interruption : 防护中断
     *
     * @return $this
     */
@@ -753,6 +873,78 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets osName
+    *  系统名称
+    *
+    * @return string|null
+    */
+    public function getOsName()
+    {
+        return $this->container['osName'];
+    }
+
+    /**
+    * Sets osName
+    *
+    * @param string|null $osName 系统名称
+    *
+    * @return $this
+    */
+    public function setOsName($osName)
+    {
+        $this->container['osName'] = $osName;
+        return $this;
+    }
+
+    /**
+    * Gets osVersion
+    *  系统版本
+    *
+    * @return string|null
+    */
+    public function getOsVersion()
+    {
+        return $this->container['osVersion'];
+    }
+
+    /**
+    * Sets osVersion
+    *
+    * @param string|null $osVersion 系统版本
+    *
+    * @return $this
+    */
+    public function setOsVersion($osVersion)
+    {
+        $this->container['osVersion'] = $osVersion;
+        return $this;
+    }
+
+    /**
+    * Gets hostStatus
+    *  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
+    *
+    * @return string|null
+    */
+    public function getHostStatus()
+    {
+        return $this->container['hostStatus'];
+    }
+
+    /**
+    * Sets hostStatus
+    *
+    * @param string|null $hostStatus 服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
+    *
+    * @return $this
+    */
+    public function setHostStatus($hostStatus)
+    {
+        $this->container['hostStatus'] = $hostStatus;
+        return $this;
+    }
+
+    /**
     * Gets agentStatus
     *  Agent状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     *
@@ -773,6 +965,54 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     public function setAgentStatus($agentStatus)
     {
         $this->container['agentStatus'] = $agentStatus;
+        return $this;
+    }
+
+    /**
+    * Gets protectDirNum
+    *  防护目录数
+    *
+    * @return int|null
+    */
+    public function getProtectDirNum()
+    {
+        return $this->container['protectDirNum'];
+    }
+
+    /**
+    * Sets protectDirNum
+    *
+    * @param int|null $protectDirNum 防护目录数
+    *
+    * @return $this
+    */
+    public function setProtectDirNum($protectDirNum)
+    {
+        $this->container['protectDirNum'] = $protectDirNum;
+        return $this;
+    }
+
+    /**
+    * Gets remoteBackbupInfo
+    *  remoteBackbupInfo
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\WtpRemoteBackupResponseInfo|null
+    */
+    public function getRemoteBackbupInfo()
+    {
+        return $this->container['remoteBackbupInfo'];
+    }
+
+    /**
+    * Sets remoteBackbupInfo
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\WtpRemoteBackupResponseInfo|null $remoteBackbupInfo remoteBackbupInfo
+    *
+    * @return $this
+    */
+    public function setRemoteBackbupInfo($remoteBackbupInfo)
+    {
+        $this->container['remoteBackbupInfo'] = $remoteBackbupInfo;
         return $this;
     }
 

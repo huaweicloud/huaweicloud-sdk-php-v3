@@ -20,10 +20,11 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * hostId  主机id，不赋值时，查租户所有主机
+    * resultType  结果类型  - \"unhandled\"#未忽略的  - \"ignored\"#已忽略的
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -34,16 +35,18 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
             'hostName' => 'string',
             'hostIp' => 'string',
             'hostId' => 'string',
+            'resultType' => 'string',
             'limit' => 'int',
             'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * hostId  主机id，不赋值时，查租户所有主机
+    * resultType  结果类型  - \"unhandled\"#未忽略的  - \"ignored\"#已忽略的
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -54,6 +57,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
         'hostName' => null,
         'hostIp' => null,
         'hostId' => null,
+        'resultType' => null,
         'limit' => 'int32',
         'offset' => 'int32'
     ];
@@ -81,10 +85,11 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * hostId  主机id，不赋值时，查租户所有主机
+    * resultType  结果类型  - \"unhandled\"#未忽略的  - \"ignored\"#已忽略的
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -95,16 +100,18 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
             'hostName' => 'host_name',
             'hostIp' => 'host_ip',
             'hostId' => 'host_id',
+            'resultType' => 'result_type',
             'limit' => 'limit',
             'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * hostId  主机id，不赋值时，查租户所有主机
+    * resultType  结果类型  - \"unhandled\"#未忽略的  - \"ignored\"#已忽略的
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -115,16 +122,18 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
             'hostName' => 'setHostName',
             'hostIp' => 'setHostIp',
             'hostId' => 'setHostId',
+            'resultType' => 'setResultType',
             'limit' => 'setLimit',
             'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * hostId  主机id，不赋值时，查租户所有主机
+    * resultType  结果类型  - \"unhandled\"#未忽略的  - \"ignored\"#已忽略的
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -135,6 +144,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
             'hostName' => 'getHostName',
             'hostIp' => 'getHostIp',
             'hostId' => 'getHostId',
+            'resultType' => 'getResultType',
             'limit' => 'getLimit',
             'offset' => 'getOffset'
     ];
@@ -201,6 +211,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
+        $this->container['resultType'] = isset($data['resultType']) ? $data['resultType'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
@@ -237,6 +248,12 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['resultType']) && (mb_strlen($this->container['resultType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'resultType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['resultType']) && (mb_strlen($this->container['resultType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'resultType', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
             }
@@ -265,7 +282,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -277,7 +294,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */
@@ -356,6 +373,30 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     public function setHostId($hostId)
     {
         $this->container['hostId'] = $hostId;
+        return $this;
+    }
+
+    /**
+    * Gets resultType
+    *  结果类型  - \"unhandled\"#未忽略的  - \"ignored\"#已忽略的
+    *
+    * @return string|null
+    */
+    public function getResultType()
+    {
+        return $this->container['resultType'];
+    }
+
+    /**
+    * Sets resultType
+    *
+    * @param string|null $resultType 结果类型  - \"unhandled\"#未忽略的  - \"ignored\"#已忽略的
+    *
+    * @return $this
+    */
+    public function setResultType($resultType)
+    {
+        $this->container['resultType'] = $resultType;
         return $this;
     }
 

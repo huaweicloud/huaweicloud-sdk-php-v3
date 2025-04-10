@@ -23,7 +23,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * checkName  基线名称
     * checkType  基线类型
-    * standard  标准类型，包含如下:     - cn_standard : 等保合规标准     - hw_standard : 云安全实践标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
     * scanResult  检测结果，包含如下：   - pass    通过   - failed  未通过
@@ -45,7 +45,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * checkName  基线名称
     * checkType  基线类型
-    * standard  标准类型，包含如下:     - cn_standard : 等保合规标准     - hw_standard : 云安全实践标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
     * scanResult  检测结果，包含如下：   - pass    通过   - failed  未通过
@@ -88,7 +88,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * checkName  基线名称
     * checkType  基线类型
-    * standard  标准类型，包含如下:     - cn_standard : 等保合规标准     - hw_standard : 云安全实践标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
     * scanResult  检测结果，包含如下：   - pass    通过   - failed  未通过
@@ -110,7 +110,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * checkName  基线名称
     * checkType  基线类型
-    * standard  标准类型，包含如下:     - cn_standard : 等保合规标准     - hw_standard : 云安全实践标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
     * scanResult  检测结果，包含如下：   - pass    通过   - failed  未通过
@@ -132,7 +132,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * checkName  基线名称
     * checkType  基线类型
-    * standard  标准类型，包含如下:     - cn_standard : 等保合规标准     - hw_standard : 云安全实践标准
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
     * scanResult  检测结果，包含如下：   - pass    通过   - failed  未通过
@@ -354,7 +354,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
 
     /**
     * Gets standard
-    *  标准类型，包含如下:     - cn_standard : 等保合规标准     - hw_standard : 云安全实践标准
+    *  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     *
     * @return string|null
     */
@@ -366,7 +366,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     /**
     * Sets standard
     *
-    * @param string|null $standard 标准类型，包含如下:     - cn_standard : 等保合规标准     - hw_standard : 云安全实践标准
+    * @param string|null $standard 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     *
     * @return $this
     */

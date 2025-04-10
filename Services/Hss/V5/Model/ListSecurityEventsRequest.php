@@ -22,7 +22,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * category  事件类别，包含如下:   - host : 主机安全事件   - container : 容器安全事件
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * hostId  主机ID
@@ -43,6 +43,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * tagList  事件标签列表，例如:[\"热点事件\"]
     * attCk  ATT&CK攻击阶，包含如下：   - Reconnaissance : 侦察   - Initial Access : 初始访问   - Execution : 执行   - Persistence : 持久化   - Privilege Escalation : 权限提升   - Defense Evasion : 防御绕过   - Credential Access : 凭据访问   - Command and Control : 命令与控制   - Impact : 影响破坏
     * eventName  告警名称
+    * autoBlock  是否自动阻断告警
     *
     * @var string[]
     */
@@ -69,14 +70,15 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             'assetValue' => 'string',
             'tagList' => 'string[]',
             'attCk' => 'string',
-            'eventName' => 'string'
+            'eventName' => 'string',
+            'autoBlock' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * category  事件类别，包含如下:   - host : 主机安全事件   - container : 容器安全事件
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * hostId  主机ID
@@ -97,6 +99,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * tagList  事件标签列表，例如:[\"热点事件\"]
     * attCk  ATT&CK攻击阶，包含如下：   - Reconnaissance : 侦察   - Initial Access : 初始访问   - Execution : 执行   - Persistence : 持久化   - Privilege Escalation : 权限提升   - Defense Evasion : 防御绕过   - Credential Access : 凭据访问   - Command and Control : 命令与控制   - Impact : 影响破坏
     * eventName  告警名称
+    * autoBlock  是否自动阻断告警
     *
     * @var string[]
     */
@@ -123,7 +126,8 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
         'assetValue' => null,
         'tagList' => null,
         'attCk' => null,
-        'eventName' => null
+        'eventName' => null,
+        'autoBlock' => null
     ];
 
     /**
@@ -151,7 +155,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * category  事件类别，包含如下:   - host : 主机安全事件   - container : 容器安全事件
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * hostId  主机ID
@@ -172,6 +176,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * tagList  事件标签列表，例如:[\"热点事件\"]
     * attCk  ATT&CK攻击阶，包含如下：   - Reconnaissance : 侦察   - Initial Access : 初始访问   - Execution : 执行   - Persistence : 持久化   - Privilege Escalation : 权限提升   - Defense Evasion : 防御绕过   - Credential Access : 凭据访问   - Command and Control : 命令与控制   - Impact : 影响破坏
     * eventName  告警名称
+    * autoBlock  是否自动阻断告警
     *
     * @var string[]
     */
@@ -198,14 +203,15 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             'assetValue' => 'asset_value',
             'tagList' => 'tag_list',
             'attCk' => 'att_ck',
-            'eventName' => 'event_name'
+            'eventName' => 'event_name',
+            'autoBlock' => 'auto_block'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * category  事件类别，包含如下:   - host : 主机安全事件   - container : 容器安全事件
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * hostId  主机ID
@@ -226,6 +232,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * tagList  事件标签列表，例如:[\"热点事件\"]
     * attCk  ATT&CK攻击阶，包含如下：   - Reconnaissance : 侦察   - Initial Access : 初始访问   - Execution : 执行   - Persistence : 持久化   - Privilege Escalation : 权限提升   - Defense Evasion : 防御绕过   - Credential Access : 凭据访问   - Command and Control : 命令与控制   - Impact : 影响破坏
     * eventName  告警名称
+    * autoBlock  是否自动阻断告警
     *
     * @var string[]
     */
@@ -252,14 +259,15 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             'assetValue' => 'setAssetValue',
             'tagList' => 'setTagList',
             'attCk' => 'setAttCk',
-            'eventName' => 'setEventName'
+            'eventName' => 'setEventName',
+            'autoBlock' => 'setAutoBlock'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * category  事件类别，包含如下:   - host : 主机安全事件   - container : 容器安全事件
     * region  Region ID
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * hostId  主机ID
@@ -280,6 +288,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * tagList  事件标签列表，例如:[\"热点事件\"]
     * attCk  ATT&CK攻击阶，包含如下：   - Reconnaissance : 侦察   - Initial Access : 初始访问   - Execution : 执行   - Persistence : 持久化   - Privilege Escalation : 权限提升   - Defense Evasion : 防御绕过   - Credential Access : 凭据访问   - Command and Control : 命令与控制   - Impact : 影响破坏
     * eventName  告警名称
+    * autoBlock  是否自动阻断告警
     *
     * @var string[]
     */
@@ -306,7 +315,8 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             'assetValue' => 'getAssetValue',
             'tagList' => 'getTagList',
             'attCk' => 'getAttCk',
-            'eventName' => 'getEventName'
+            'eventName' => 'getEventName',
+            'autoBlock' => 'getAutoBlock'
     ];
 
     /**
@@ -390,6 +400,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
         $this->container['tagList'] = isset($data['tagList']) ? $data['tagList'] : null;
         $this->container['attCk'] = isset($data['attCk']) ? $data['attCk'] : null;
         $this->container['eventName'] = isset($data['eventName']) ? $data['eventName'] : null;
+        $this->container['autoBlock'] = isset($data['autoBlock']) ? $data['autoBlock'] : null;
     }
 
     /**
@@ -471,6 +482,12 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['publicIp']) && !preg_match("/^.*$/", $this->container['publicIp'])) {
                 $invalidProperties[] = "invalid value for 'publicIp', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) > 512)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['containerName']) && !preg_match("/^.*$/", $this->container['containerName'])) {
                 $invalidProperties[] = "invalid value for 'containerName', must be conform to the pattern /^.*$/.";
@@ -602,7 +619,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -614,7 +631,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */
@@ -1101,6 +1118,30 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     public function setEventName($eventName)
     {
         $this->container['eventName'] = $eventName;
+        return $this;
+    }
+
+    /**
+    * Gets autoBlock
+    *  是否自动阻断告警
+    *
+    * @return bool|null
+    */
+    public function getAutoBlock()
+    {
+        return $this->container['autoBlock'];
+    }
+
+    /**
+    * Sets autoBlock
+    *
+    * @param bool|null $autoBlock 是否自动阻断告警
+    *
+    * @return $this
+    */
+    public function setAutoBlock($autoBlock)
+    {
+        $this->container['autoBlock'] = $autoBlock;
         return $this;
     }
 

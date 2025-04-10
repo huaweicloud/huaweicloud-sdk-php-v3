@@ -20,7 +20,7 @@ class UpdateDatabasesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  对实例的操作: - flush:清理数据
+    * action  对实例的操作:  flush:清理数据
     * dbId  指定需要清理的DB_ID,当action为flush时,才会生效。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateDatabasesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  对实例的操作: - flush:清理数据
+    * action  对实例的操作:  flush:清理数据
     * dbId  指定需要清理的DB_ID,当action为flush时,才会生效。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateDatabasesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  对实例的操作: - flush:清理数据
+    * action  对实例的操作:  flush:清理数据
     * dbId  指定需要清理的DB_ID,当action为flush时,才会生效。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateDatabasesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  对实例的操作: - flush:清理数据
+    * action  对实例的操作:  flush:清理数据
     * dbId  指定需要清理的DB_ID,当action为flush时,才会生效。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateDatabasesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  对实例的操作: - flush:清理数据
+    * action  对实例的操作:  flush:清理数据
     * dbId  指定需要清理的DB_ID,当action为flush时,才会生效。
     *
     * @var string[]
@@ -188,7 +188,7 @@ class UpdateDatabasesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  对实例的操作: - flush:清理数据
+    *  对实例的操作:  flush:清理数据
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class UpdateDatabasesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 对实例的操作: - flush:清理数据
+    * @param string $action 对实例的操作:  flush:清理数据
     *
     * @return $this
     */

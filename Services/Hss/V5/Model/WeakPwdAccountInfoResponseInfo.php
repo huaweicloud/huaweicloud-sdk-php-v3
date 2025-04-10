@@ -23,13 +23,17 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     * userName  弱口令账号名称
     * serviceType  账号类型，包含如下:   - system   - mysql   - redis
     * duration  弱口令使用时长，单位天
+    * desensitizedWeakPasswords  脱敏弱口令
+    * suggestion  修改建议
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'userName' => 'string',
             'serviceType' => 'string',
-            'duration' => 'int'
+            'duration' => 'int',
+            'desensitizedWeakPasswords' => 'string',
+            'suggestion' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     * userName  弱口令账号名称
     * serviceType  账号类型，包含如下:   - system   - mysql   - redis
     * duration  弱口令使用时长，单位天
+    * desensitizedWeakPasswords  脱敏弱口令
+    * suggestion  修改建议
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'userName' => null,
         'serviceType' => null,
-        'duration' => 'int32'
+        'duration' => 'int32',
+        'desensitizedWeakPasswords' => null,
+        'suggestion' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     * userName  弱口令账号名称
     * serviceType  账号类型，包含如下:   - system   - mysql   - redis
     * duration  弱口令使用时长，单位天
+    * desensitizedWeakPasswords  脱敏弱口令
+    * suggestion  修改建议
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'userName' => 'user_name',
             'serviceType' => 'service_type',
-            'duration' => 'duration'
+            'duration' => 'duration',
+            'desensitizedWeakPasswords' => 'desensitized_weak_passwords',
+            'suggestion' => 'suggestion'
     ];
 
     /**
@@ -86,13 +98,17 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     * userName  弱口令账号名称
     * serviceType  账号类型，包含如下:   - system   - mysql   - redis
     * duration  弱口令使用时长，单位天
+    * desensitizedWeakPasswords  脱敏弱口令
+    * suggestion  修改建议
     *
     * @var string[]
     */
     protected static $setters = [
             'userName' => 'setUserName',
             'serviceType' => 'setServiceType',
-            'duration' => 'setDuration'
+            'duration' => 'setDuration',
+            'desensitizedWeakPasswords' => 'setDesensitizedWeakPasswords',
+            'suggestion' => 'setSuggestion'
     ];
 
     /**
@@ -100,13 +116,17 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     * userName  弱口令账号名称
     * serviceType  账号类型，包含如下:   - system   - mysql   - redis
     * duration  弱口令使用时长，单位天
+    * desensitizedWeakPasswords  脱敏弱口令
+    * suggestion  修改建议
     *
     * @var string[]
     */
     protected static $getters = [
             'userName' => 'getUserName',
             'serviceType' => 'getServiceType',
-            'duration' => 'getDuration'
+            'duration' => 'getDuration',
+            'desensitizedWeakPasswords' => 'getDesensitizedWeakPasswords',
+            'suggestion' => 'getSuggestion'
     ];
 
     /**
@@ -170,6 +190,8 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['desensitizedWeakPasswords'] = isset($data['desensitizedWeakPasswords']) ? $data['desensitizedWeakPasswords'] : null;
+        $this->container['suggestion'] = isset($data['suggestion']) ? $data['suggestion'] : null;
     }
 
     /**
@@ -197,6 +219,18 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['duration']) && ($this->container['duration'] < 0)) {
                 $invalidProperties[] = "invalid value for 'duration', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['desensitizedWeakPasswords']) && (mb_strlen($this->container['desensitizedWeakPasswords']) > 128)) {
+                $invalidProperties[] = "invalid value for 'desensitizedWeakPasswords', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['desensitizedWeakPasswords']) && (mb_strlen($this->container['desensitizedWeakPasswords']) < 0)) {
+                $invalidProperties[] = "invalid value for 'desensitizedWeakPasswords', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['suggestion']) && (mb_strlen($this->container['suggestion']) > 65534)) {
+                $invalidProperties[] = "invalid value for 'suggestion', the character length must be smaller than or equal to 65534.";
+            }
+            if (!is_null($this->container['suggestion']) && (mb_strlen($this->container['suggestion']) < 0)) {
+                $invalidProperties[] = "invalid value for 'suggestion', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -281,6 +315,54 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     public function setDuration($duration)
     {
         $this->container['duration'] = $duration;
+        return $this;
+    }
+
+    /**
+    * Gets desensitizedWeakPasswords
+    *  脱敏弱口令
+    *
+    * @return string|null
+    */
+    public function getDesensitizedWeakPasswords()
+    {
+        return $this->container['desensitizedWeakPasswords'];
+    }
+
+    /**
+    * Sets desensitizedWeakPasswords
+    *
+    * @param string|null $desensitizedWeakPasswords 脱敏弱口令
+    *
+    * @return $this
+    */
+    public function setDesensitizedWeakPasswords($desensitizedWeakPasswords)
+    {
+        $this->container['desensitizedWeakPasswords'] = $desensitizedWeakPasswords;
+        return $this;
+    }
+
+    /**
+    * Gets suggestion
+    *  修改建议
+    *
+    * @return string|null
+    */
+    public function getSuggestion()
+    {
+        return $this->container['suggestion'];
+    }
+
+    /**
+    * Sets suggestion
+    *
+    * @param string|null $suggestion 修改建议
+    *
+    * @return $this
+    */
+    public function setSuggestion($suggestion)
+    {
+        $this->container['suggestion'] = $suggestion;
         return $this;
     }
 

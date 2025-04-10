@@ -24,10 +24,10 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * name  实例名称。
     * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
     * port  数据库端口。
-    * mode  实例类型。 -  取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis Proxy经典部署模式集群实例类型。  -  取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。 -  取值为“RedisCluster”，表示GeminiDB Redis Cluster经典部署模式集群实例类型。 -  取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。  -  取值为“InfluxdbSingle”，表示GeminiDB Influx经典部署模式单节点实例类型。 -  取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。 -  如果不传datastore_type参数，自动忽略该参数设置。 -  默认取值：不涉及。
-    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * region  实例所在区域。
     * datastore  datastore
+    * mode  实例类型。与请求参数相同。
+    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * engine  存储引擎。取值为“rocksDB”。
     * created  实例创建时间。
     * updated  实例操作最新变更的时间。
@@ -54,10 +54,10 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'name' => 'string',
             'status' => 'string',
             'port' => 'string',
-            'mode' => 'string',
-            'productType' => 'string',
             'region' => 'string',
             'datastore' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ListInstancesDatastoreResult',
+            'mode' => 'string',
+            'productType' => 'string',
             'engine' => 'string',
             'created' => 'string',
             'updated' => 'string',
@@ -84,10 +84,10 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * name  实例名称。
     * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
     * port  数据库端口。
-    * mode  实例类型。 -  取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis Proxy经典部署模式集群实例类型。  -  取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。 -  取值为“RedisCluster”，表示GeminiDB Redis Cluster经典部署模式集群实例类型。 -  取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。  -  取值为“InfluxdbSingle”，表示GeminiDB Influx经典部署模式单节点实例类型。 -  取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。 -  如果不传datastore_type参数，自动忽略该参数设置。 -  默认取值：不涉及。
-    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * region  实例所在区域。
     * datastore  datastore
+    * mode  实例类型。与请求参数相同。
+    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * engine  存储引擎。取值为“rocksDB”。
     * created  实例创建时间。
     * updated  实例操作最新变更的时间。
@@ -114,10 +114,10 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
         'name' => null,
         'status' => null,
         'port' => null,
-        'mode' => null,
-        'productType' => null,
         'region' => null,
         'datastore' => null,
+        'mode' => null,
+        'productType' => null,
         'engine' => null,
         'created' => null,
         'updated' => null,
@@ -165,10 +165,10 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * name  实例名称。
     * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
     * port  数据库端口。
-    * mode  实例类型。 -  取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis Proxy经典部署模式集群实例类型。  -  取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。 -  取值为“RedisCluster”，表示GeminiDB Redis Cluster经典部署模式集群实例类型。 -  取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。  -  取值为“InfluxdbSingle”，表示GeminiDB Influx经典部署模式单节点实例类型。 -  取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。 -  如果不传datastore_type参数，自动忽略该参数设置。 -  默认取值：不涉及。
-    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * region  实例所在区域。
     * datastore  datastore
+    * mode  实例类型。与请求参数相同。
+    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * engine  存储引擎。取值为“rocksDB”。
     * created  实例创建时间。
     * updated  实例操作最新变更的时间。
@@ -195,10 +195,10 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'name' => 'name',
             'status' => 'status',
             'port' => 'port',
-            'mode' => 'mode',
-            'productType' => 'product_type',
             'region' => 'region',
             'datastore' => 'datastore',
+            'mode' => 'mode',
+            'productType' => 'product_type',
             'engine' => 'engine',
             'created' => 'created',
             'updated' => 'updated',
@@ -225,10 +225,10 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * name  实例名称。
     * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
     * port  数据库端口。
-    * mode  实例类型。 -  取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis Proxy经典部署模式集群实例类型。  -  取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。 -  取值为“RedisCluster”，表示GeminiDB Redis Cluster经典部署模式集群实例类型。 -  取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。  -  取值为“InfluxdbSingle”，表示GeminiDB Influx经典部署模式单节点实例类型。 -  取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。 -  如果不传datastore_type参数，自动忽略该参数设置。 -  默认取值：不涉及。
-    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * region  实例所在区域。
     * datastore  datastore
+    * mode  实例类型。与请求参数相同。
+    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * engine  存储引擎。取值为“rocksDB”。
     * created  实例创建时间。
     * updated  实例操作最新变更的时间。
@@ -255,10 +255,10 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'status' => 'setStatus',
             'port' => 'setPort',
-            'mode' => 'setMode',
-            'productType' => 'setProductType',
             'region' => 'setRegion',
             'datastore' => 'setDatastore',
+            'mode' => 'setMode',
+            'productType' => 'setProductType',
             'engine' => 'setEngine',
             'created' => 'setCreated',
             'updated' => 'setUpdated',
@@ -285,10 +285,10 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * name  实例名称。
     * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
     * port  数据库端口。
-    * mode  实例类型。 -  取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis Proxy经典部署模式集群实例类型。  -  取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。 -  取值为“RedisCluster”，表示GeminiDB Redis Cluster经典部署模式集群实例类型。 -  取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。  -  取值为“InfluxdbSingle”，表示GeminiDB Influx经典部署模式单节点实例类型。 -  取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。 -  如果不传datastore_type参数，自动忽略该参数设置。 -  默认取值：不涉及。
-    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * region  实例所在区域。
     * datastore  datastore
+    * mode  实例类型。与请求参数相同。
+    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     * engine  存储引擎。取值为“rocksDB”。
     * created  实例创建时间。
     * updated  实例操作最新变更的时间。
@@ -315,10 +315,10 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'status' => 'getStatus',
             'port' => 'getPort',
-            'mode' => 'getMode',
-            'productType' => 'getProductType',
             'region' => 'getRegion',
             'datastore' => 'getDatastore',
+            'mode' => 'getMode',
+            'productType' => 'getProductType',
             'engine' => 'getEngine',
             'created' => 'getCreated',
             'updated' => 'getUpdated',
@@ -401,10 +401,10 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
-        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
-        $this->container['productType'] = isset($data['productType']) ? $data['productType'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['datastore'] = isset($data['datastore']) ? $data['datastore'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['productType'] = isset($data['productType']) ? $data['productType'] : null;
         $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
@@ -445,14 +445,14 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
         if ($this->container['port'] === null) {
             $invalidProperties[] = "'port' can't be null";
         }
-        if ($this->container['mode'] === null) {
-            $invalidProperties[] = "'mode' can't be null";
-        }
         if ($this->container['region'] === null) {
             $invalidProperties[] = "'region' can't be null";
         }
         if ($this->container['datastore'] === null) {
             $invalidProperties[] = "'datastore' can't be null";
+        }
+        if ($this->container['mode'] === null) {
+            $invalidProperties[] = "'mode' can't be null";
         }
         if ($this->container['engine'] === null) {
             $invalidProperties[] = "'engine' can't be null";
@@ -607,54 +607,6 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets mode
-    *  实例类型。 -  取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis Proxy经典部署模式集群实例类型。  -  取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。 -  取值为“RedisCluster”，表示GeminiDB Redis Cluster经典部署模式集群实例类型。 -  取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。  -  取值为“InfluxdbSingle”，表示GeminiDB Influx经典部署模式单节点实例类型。 -  取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。 -  如果不传datastore_type参数，自动忽略该参数设置。 -  默认取值：不涉及。
-    *
-    * @return string
-    */
-    public function getMode()
-    {
-        return $this->container['mode'];
-    }
-
-    /**
-    * Sets mode
-    *
-    * @param string $mode 实例类型。 -  取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis Proxy经典部署模式集群实例类型。  -  取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。 -  取值为“RedisCluster”，表示GeminiDB Redis Cluster经典部署模式集群实例类型。 -  取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。  -  取值为“InfluxdbSingle”，表示GeminiDB Influx经典部署模式单节点实例类型。 -  取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。 -  如果不传datastore_type参数，自动忽略该参数设置。 -  默认取值：不涉及。
-    *
-    * @return $this
-    */
-    public function setMode($mode)
-    {
-        $this->container['mode'] = $mode;
-        return $this;
-    }
-
-    /**
-    * Gets productType
-    *  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
-    *
-    * @return string|null
-    */
-    public function getProductType()
-    {
-        return $this->container['productType'];
-    }
-
-    /**
-    * Sets productType
-    *
-    * @param string|null $productType 产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
-    *
-    * @return $this
-    */
-    public function setProductType($productType)
-    {
-        $this->container['productType'] = $productType;
-        return $this;
-    }
-
-    /**
     * Gets region
     *  实例所在区域。
     *
@@ -699,6 +651,54 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     public function setDatastore($datastore)
     {
         $this->container['datastore'] = $datastore;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  实例类型。与请求参数相同。
+    *
+    * @return string
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param string $mode 实例类型。与请求参数相同。
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets productType
+    *  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
+    *
+    * @return string|null
+    */
+    public function getProductType()
+    {
+        return $this->container['productType'];
+    }
+
+    /**
+    * Sets productType
+    *
+    * @param string|null $productType 产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
+    *
+    * @return $this
+    */
+    public function setProductType($productType)
+    {
+        $this->container['productType'] = $productType;
         return $this;
     }
 

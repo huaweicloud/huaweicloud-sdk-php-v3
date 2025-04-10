@@ -29,6 +29,7 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
     * scanningHostNum  该任务处于扫描中状态的主机数量
     * successHostNum  该任务已扫描成功的主机数量
     * failedHostNum  该任务已扫描失败的主机数量
+    * estimatedTime  预计完成时间
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
             'status' => 'string',
             'scanningHostNum' => 'int',
             'successHostNum' => 'int',
-            'failedHostNum' => 'int'
+            'failedHostNum' => 'int',
+            'estimatedTime' => 'int'
     ];
 
     /**
@@ -55,6 +57,7 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
     * scanningHostNum  该任务处于扫描中状态的主机数量
     * successHostNum  该任务已扫描成功的主机数量
     * failedHostNum  该任务已扫描失败的主机数量
+    * estimatedTime  预计完成时间
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
         'status' => null,
         'scanningHostNum' => 'int32',
         'successHostNum' => 'int32',
-        'failedHostNum' => 'int32'
+        'failedHostNum' => 'int32',
+        'estimatedTime' => 'int32'
     ];
 
     /**
@@ -102,6 +106,7 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
     * scanningHostNum  该任务处于扫描中状态的主机数量
     * successHostNum  该任务已扫描成功的主机数量
     * failedHostNum  该任务已扫描失败的主机数量
+    * estimatedTime  预计完成时间
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
             'status' => 'status',
             'scanningHostNum' => 'scanning_host_num',
             'successHostNum' => 'success_host_num',
-            'failedHostNum' => 'failed_host_num'
+            'failedHostNum' => 'failed_host_num',
+            'estimatedTime' => 'estimated_time'
     ];
 
     /**
@@ -128,6 +134,7 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
     * scanningHostNum  该任务处于扫描中状态的主机数量
     * successHostNum  该任务已扫描成功的主机数量
     * failedHostNum  该任务已扫描失败的主机数量
+    * estimatedTime  预计完成时间
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'scanningHostNum' => 'setScanningHostNum',
             'successHostNum' => 'setSuccessHostNum',
-            'failedHostNum' => 'setFailedHostNum'
+            'failedHostNum' => 'setFailedHostNum',
+            'estimatedTime' => 'setEstimatedTime'
     ];
 
     /**
@@ -154,6 +162,7 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
     * scanningHostNum  该任务处于扫描中状态的主机数量
     * successHostNum  该任务已扫描成功的主机数量
     * failedHostNum  该任务已扫描失败的主机数量
+    * estimatedTime  预计完成时间
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'scanningHostNum' => 'getScanningHostNum',
             'successHostNum' => 'getSuccessHostNum',
-            'failedHostNum' => 'getFailedHostNum'
+            'failedHostNum' => 'getFailedHostNum',
+            'estimatedTime' => 'getEstimatedTime'
     ];
 
     /**
@@ -236,6 +246,7 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
         $this->container['scanningHostNum'] = isset($data['scanningHostNum']) ? $data['scanningHostNum'] : null;
         $this->container['successHostNum'] = isset($data['successHostNum']) ? $data['successHostNum'] : null;
         $this->container['failedHostNum'] = isset($data['failedHostNum']) ? $data['failedHostNum'] : null;
+        $this->container['estimatedTime'] = isset($data['estimatedTime']) ? $data['estimatedTime'] : null;
     }
 
     /**
@@ -293,6 +304,12 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['failedHostNum']) && ($this->container['failedHostNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'failedHostNum', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['estimatedTime']) && ($this->container['estimatedTime'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'estimatedTime', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['estimatedTime']) && ($this->container['estimatedTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'estimatedTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -521,6 +538,30 @@ class VulScanTaskInfo implements ModelInterface, ArrayAccess
     public function setFailedHostNum($failedHostNum)
     {
         $this->container['failedHostNum'] = $failedHostNum;
+        return $this;
+    }
+
+    /**
+    * Gets estimatedTime
+    *  预计完成时间
+    *
+    * @return int|null
+    */
+    public function getEstimatedTime()
+    {
+        return $this->container['estimatedTime'];
+    }
+
+    /**
+    * Sets estimatedTime
+    *
+    * @param int|null $estimatedTime 预计完成时间
+    *
+    * @return $this
+    */
+    public function setEstimatedTime($estimatedTime)
+    {
+        $this->container['estimatedTime'] = $estimatedTime;
         return $this;
     }
 

@@ -40,6 +40,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostId  主机ID
     * agentId  Agent ID
+    * nonScanReason  该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
             'severityLevel' => 'string',
             'hostName' => 'string',
             'hostId' => 'string',
-            'agentId' => 'string'
+            'agentId' => 'string',
+            'nonScanReason' => 'string'
     ];
 
     /**
@@ -88,6 +90,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostId  主机ID
     * agentId  Agent ID
+    * nonScanReason  该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
         'severityLevel' => null,
         'hostName' => null,
         'hostId' => null,
-        'agentId' => null
+        'agentId' => null,
+        'nonScanReason' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostId  主机ID
     * agentId  Agent ID
+    * nonScanReason  该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
             'severityLevel' => 'severity_level',
             'hostName' => 'host_name',
             'hostId' => 'host_id',
-            'agentId' => 'agent_id'
+            'agentId' => 'agent_id',
+            'nonScanReason' => 'non_scan_reason'
     ];
 
     /**
@@ -205,6 +211,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostId  主机ID
     * agentId  Agent ID
+    * nonScanReason  该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
             'severityLevel' => 'setSeverityLevel',
             'hostName' => 'setHostName',
             'hostId' => 'setHostId',
-            'agentId' => 'setAgentId'
+            'agentId' => 'setAgentId',
+            'nonScanReason' => 'setNonScanReason'
     ];
 
     /**
@@ -253,6 +261,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostId  主机ID
     * agentId  Agent ID
+    * nonScanReason  该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
             'severityLevel' => 'getSeverityLevel',
             'hostName' => 'getHostName',
             'hostId' => 'getHostId',
-            'agentId' => 'getAgentId'
+            'agentId' => 'getAgentId',
+            'nonScanReason' => 'getNonScanReason'
     ];
 
     /**
@@ -357,6 +367,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['agentId'] = isset($data['agentId']) ? $data['agentId'] : null;
+        $this->container['nonScanReason'] = isset($data['nonScanReason']) ? $data['nonScanReason'] : null;
     }
 
     /**
@@ -486,6 +497,12 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'agentId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['nonScanReason']) && (mb_strlen($this->container['nonScanReason']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'nonScanReason', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['nonScanReason']) && (mb_strlen($this->container['nonScanReason']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nonScanReason', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -978,6 +995,30 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     public function setAgentId($agentId)
     {
         $this->container['agentId'] = $agentId;
+        return $this;
+    }
+
+    /**
+    * Gets nonScanReason
+    *  该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
+    *
+    * @return string|null
+    */
+    public function getNonScanReason()
+    {
+        return $this->container['nonScanReason'];
+    }
+
+    /**
+    * Sets nonScanReason
+    *
+    * @param string|null $nonScanReason 该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
+    *
+    * @return $this
+    */
+    public function setNonScanReason($nonScanReason)
+    {
+        $this->container['nonScanReason'] = $nonScanReason;
         return $this;
     }
 

@@ -31,6 +31,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * operatingSystem  支持该策略的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * processWhitelist  进程白名单
+    * aiProtectionStatus  是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
             'agentIdList' => 'string[]',
             'operatingSystem' => 'string',
             'runtimeDetectionStatus' => 'string',
-            'processWhitelist' => '\HuaweiCloud\SDK\Hss\V5\Model\TrustProcessInfo[]'
+            'processWhitelist' => '\HuaweiCloud\SDK\Hss\V5\Model\TrustProcessInfo[]',
+            'aiProtectionStatus' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * operatingSystem  支持该策略的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * processWhitelist  进程白名单
+    * aiProtectionStatus  是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
         'agentIdList' => null,
         'operatingSystem' => null,
         'runtimeDetectionStatus' => null,
-        'processWhitelist' => null
+        'processWhitelist' => null,
+        'aiProtectionStatus' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * operatingSystem  支持该策略的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * processWhitelist  进程白名单
+    * aiProtectionStatus  是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
             'agentIdList' => 'agent_id_list',
             'operatingSystem' => 'operating_system',
             'runtimeDetectionStatus' => 'runtime_detection_status',
-            'processWhitelist' => 'process_whitelist'
+            'processWhitelist' => 'process_whitelist',
+            'aiProtectionStatus' => 'ai_protection_status'
     ];
 
     /**
@@ -142,6 +148,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * operatingSystem  支持该策略的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * processWhitelist  进程白名单
+    * aiProtectionStatus  是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
             'agentIdList' => 'setAgentIdList',
             'operatingSystem' => 'setOperatingSystem',
             'runtimeDetectionStatus' => 'setRuntimeDetectionStatus',
-            'processWhitelist' => 'setProcessWhitelist'
+            'processWhitelist' => 'setProcessWhitelist',
+            'aiProtectionStatus' => 'setAiProtectionStatus'
     ];
 
     /**
@@ -172,6 +180,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * operatingSystem  支持该策略的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * processWhitelist  进程白名单
+    * aiProtectionStatus  是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
             'agentIdList' => 'getAgentIdList',
             'operatingSystem' => 'getOperatingSystem',
             'runtimeDetectionStatus' => 'getRuntimeDetectionStatus',
-            'processWhitelist' => 'getProcessWhitelist'
+            'processWhitelist' => 'getProcessWhitelist',
+            'aiProtectionStatus' => 'getAiProtectionStatus'
     ];
 
     /**
@@ -258,6 +268,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
         $this->container['operatingSystem'] = isset($data['operatingSystem']) ? $data['operatingSystem'] : null;
         $this->container['runtimeDetectionStatus'] = isset($data['runtimeDetectionStatus']) ? $data['runtimeDetectionStatus'] : null;
         $this->container['processWhitelist'] = isset($data['processWhitelist']) ? $data['processWhitelist'] : null;
+        $this->container['aiProtectionStatus'] = isset($data['aiProtectionStatus']) ? $data['aiProtectionStatus'] : null;
     }
 
     /**
@@ -339,6 +350,9 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
             }
             if (!is_null($this->container['runtimeDetectionStatus']) && (mb_strlen($this->container['runtimeDetectionStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'runtimeDetectionStatus', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['aiProtectionStatus']) && !preg_match("/^closed|opened$/", $this->container['aiProtectionStatus'])) {
+                $invalidProperties[] = "invalid value for 'aiProtectionStatus', must be conform to the pattern /^closed|opened$/.";
             }
         return $invalidProperties;
     }
@@ -615,6 +629,30 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     public function setProcessWhitelist($processWhitelist)
     {
         $this->container['processWhitelist'] = $processWhitelist;
+        return $this;
+    }
+
+    /**
+    * Gets aiProtectionStatus
+    *  是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。
+    *
+    * @return string|null
+    */
+    public function getAiProtectionStatus()
+    {
+        return $this->container['aiProtectionStatus'];
+    }
+
+    /**
+    * Sets aiProtectionStatus
+    *
+    * @param string|null $aiProtectionStatus 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。
+    *
+    * @return $this
+    */
+    public function setAiProtectionStatus($aiProtectionStatus)
+    {
+        $this->container['aiProtectionStatus'] = $aiProtectionStatus;
         return $this;
     }
 

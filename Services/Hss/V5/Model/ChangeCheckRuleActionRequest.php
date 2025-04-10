@@ -20,8 +20,9 @@ class ChangeCheckRuleActionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostId  主机ID，不赋值时，查租户所有主机
+    * checkCce  是否校验cce
     * action  动作 - \"ignore\" - \"unignore\" - \"fix\" - \"verify\"
     * body  body
     *
@@ -30,14 +31,16 @@ class ChangeCheckRuleActionRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'enterpriseProjectId' => 'string',
             'hostId' => 'string',
+            'checkCce' => 'bool',
             'action' => 'string',
             'body' => '\HuaweiCloud\SDK\Hss\V5\Model\CheckRuleIdListRequestInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostId  主机ID，不赋值时，查租户所有主机
+    * checkCce  是否校验cce
     * action  动作 - \"ignore\" - \"unignore\" - \"fix\" - \"verify\"
     * body  body
     *
@@ -46,6 +49,7 @@ class ChangeCheckRuleActionRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'enterpriseProjectId' => null,
         'hostId' => null,
+        'checkCce' => null,
         'action' => null,
         'body' => null
     ];
@@ -73,8 +77,9 @@ class ChangeCheckRuleActionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostId  主机ID，不赋值时，查租户所有主机
+    * checkCce  是否校验cce
     * action  动作 - \"ignore\" - \"unignore\" - \"fix\" - \"verify\"
     * body  body
     *
@@ -83,14 +88,16 @@ class ChangeCheckRuleActionRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'enterpriseProjectId' => 'enterprise_project_id',
             'hostId' => 'host_id',
+            'checkCce' => 'check_cce',
             'action' => 'action',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostId  主机ID，不赋值时，查租户所有主机
+    * checkCce  是否校验cce
     * action  动作 - \"ignore\" - \"unignore\" - \"fix\" - \"verify\"
     * body  body
     *
@@ -99,14 +106,16 @@ class ChangeCheckRuleActionRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'hostId' => 'setHostId',
+            'checkCce' => 'setCheckCce',
             'action' => 'setAction',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostId  主机ID，不赋值时，查租户所有主机
+    * checkCce  是否校验cce
     * action  动作 - \"ignore\" - \"unignore\" - \"fix\" - \"verify\"
     * body  body
     *
@@ -115,6 +124,7 @@ class ChangeCheckRuleActionRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'hostId' => 'getHostId',
+            'checkCce' => 'getCheckCce',
             'action' => 'getAction',
             'body' => 'getBody'
     ];
@@ -179,6 +189,7 @@ class ChangeCheckRuleActionRequest implements ModelInterface, ArrayAccess
     {
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
+        $this->container['checkCce'] = isset($data['checkCce']) ? $data['checkCce'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -228,7 +239,7 @@ class ChangeCheckRuleActionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -240,7 +251,7 @@ class ChangeCheckRuleActionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */
@@ -271,6 +282,30 @@ class ChangeCheckRuleActionRequest implements ModelInterface, ArrayAccess
     public function setHostId($hostId)
     {
         $this->container['hostId'] = $hostId;
+        return $this;
+    }
+
+    /**
+    * Gets checkCce
+    *  是否校验cce
+    *
+    * @return bool|null
+    */
+    public function getCheckCce()
+    {
+        return $this->container['checkCce'];
+    }
+
+    /**
+    * Sets checkCce
+    *
+    * @param bool|null $checkCce 是否校验cce
+    *
+    * @return $this
+    */
+    public function setCheckCce($checkCce)
+    {
+        $this->container['checkCce'] = $checkCce;
         return $this;
     }
 

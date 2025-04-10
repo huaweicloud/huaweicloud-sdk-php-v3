@@ -21,7 +21,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  Region Id
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostId  Host Id，为空时查所有主机
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
@@ -49,7 +49,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  Region Id
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostId  Host Id，为空时查所有主机
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
@@ -98,7 +98,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  Region Id
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostId  Host Id，为空时查所有主机
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
@@ -126,7 +126,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  Region Id
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostId  Host Id，为空时查所有主机
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
@@ -154,7 +154,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  Region Id
-    * enterpriseProjectId  企业项目ID
+    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostId  Host Id，为空时查所有主机
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
@@ -372,7 +372,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID
+    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID
+    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     *
     * @return $this
     */
