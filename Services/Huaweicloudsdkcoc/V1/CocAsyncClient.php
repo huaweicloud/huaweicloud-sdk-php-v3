@@ -812,7 +812,7 @@ class CocAsyncClient extends Client
     
     public function createReportCustomEventAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/event/huawei/custom/{integration_key}';
+        $resourcePath = '/v1/event/huawei/custom/{integration_key}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

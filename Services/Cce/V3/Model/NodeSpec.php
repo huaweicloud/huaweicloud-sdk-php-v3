@@ -41,6 +41,7 @@ class NodeSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * hostnameConfig  hostnameConfig
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
+    * partition  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class NodeSpec implements ModelInterface, ArrayAccess
             'initializedConditions' => 'string[]',
             'extendParam' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeExtendParam',
             'hostnameConfig' => '\HuaweiCloud\SDK\Cce\V3\Model\HostnameConfig',
-            'serverEnterpriseProjectId' => 'string'
+            'serverEnterpriseProjectId' => 'string',
+            'partition' => 'string'
     ];
 
     /**
@@ -91,6 +93,7 @@ class NodeSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * hostnameConfig  hostnameConfig
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
+    * partition  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class NodeSpec implements ModelInterface, ArrayAccess
         'initializedConditions' => null,
         'extendParam' => null,
         'hostnameConfig' => null,
-        'serverEnterpriseProjectId' => null
+        'serverEnterpriseProjectId' => null,
+        'partition' => null
     ];
 
     /**
@@ -162,6 +166,7 @@ class NodeSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * hostnameConfig  hostnameConfig
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
+    * partition  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class NodeSpec implements ModelInterface, ArrayAccess
             'initializedConditions' => 'initializedConditions',
             'extendParam' => 'extendParam',
             'hostnameConfig' => 'hostnameConfig',
-            'serverEnterpriseProjectId' => 'serverEnterpriseProjectID'
+            'serverEnterpriseProjectId' => 'serverEnterpriseProjectID',
+            'partition' => 'partition'
     ];
 
     /**
@@ -212,6 +218,7 @@ class NodeSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * hostnameConfig  hostnameConfig
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
+    * partition  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class NodeSpec implements ModelInterface, ArrayAccess
             'initializedConditions' => 'setInitializedConditions',
             'extendParam' => 'setExtendParam',
             'hostnameConfig' => 'setHostnameConfig',
-            'serverEnterpriseProjectId' => 'setServerEnterpriseProjectId'
+            'serverEnterpriseProjectId' => 'setServerEnterpriseProjectId',
+            'partition' => 'setPartition'
     ];
 
     /**
@@ -262,6 +270,7 @@ class NodeSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * hostnameConfig  hostnameConfig
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
+    * partition  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class NodeSpec implements ModelInterface, ArrayAccess
             'initializedConditions' => 'getInitializedConditions',
             'extendParam' => 'getExtendParam',
             'hostnameConfig' => 'getHostnameConfig',
-            'serverEnterpriseProjectId' => 'getServerEnterpriseProjectId'
+            'serverEnterpriseProjectId' => 'getServerEnterpriseProjectId',
+            'partition' => 'getPartition'
     ];
 
     /**
@@ -368,6 +378,7 @@ class NodeSpec implements ModelInterface, ArrayAccess
         $this->container['extendParam'] = isset($data['extendParam']) ? $data['extendParam'] : null;
         $this->container['hostnameConfig'] = isset($data['hostnameConfig']) ? $data['hostnameConfig'] : null;
         $this->container['serverEnterpriseProjectId'] = isset($data['serverEnterpriseProjectId']) ? $data['serverEnterpriseProjectId'] : null;
+        $this->container['partition'] = isset($data['partition']) ? $data['partition'] : null;
     }
 
     /**
@@ -923,6 +934,30 @@ class NodeSpec implements ModelInterface, ArrayAccess
     public function setServerEnterpriseProjectId($serverEnterpriseProjectId)
     {
         $this->container['serverEnterpriseProjectId'] = $serverEnterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets partition
+    *  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getPartition()
+    {
+        return $this->container['partition'];
+    }
+
+    /**
+    * Sets partition
+    *
+    * @param string|null $partition **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setPartition($partition)
+    {
+        $this->container['partition'] = $partition;
         return $this;
     }
 

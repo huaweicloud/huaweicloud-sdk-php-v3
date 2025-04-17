@@ -33,6 +33,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * listenerId  监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
     * protocolPort  业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
     * description  防护域名备注
+    * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'loadbalancerId' => 'string',
             'listenerId' => 'string',
             'protocolPort' => 'int',
-            'description' => 'string'
+            'description' => 'string',
+            'webTag' => 'string'
     ];
 
     /**
@@ -67,6 +69,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * listenerId  监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
     * protocolPort  业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
     * description  防护域名备注
+    * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
         'loadbalancerId' => null,
         'listenerId' => null,
         'protocolPort' => null,
-        'description' => null
+        'description' => null,
+        'webTag' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * listenerId  监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
     * protocolPort  业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
     * description  防护域名备注
+    * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'loadbalancerId' => 'loadbalancer_id',
             'listenerId' => 'listener_id',
             'protocolPort' => 'protocol_port',
-            'description' => 'description'
+            'description' => 'description',
+            'webTag' => 'web_tag'
     ];
 
     /**
@@ -156,6 +162,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * listenerId  监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
     * protocolPort  业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
     * description  防护域名备注
+    * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'loadbalancerId' => 'setLoadbalancerId',
             'listenerId' => 'setListenerId',
             'protocolPort' => 'setProtocolPort',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'webTag' => 'setWebTag'
     ];
 
     /**
@@ -190,6 +198,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * listenerId  监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
     * protocolPort  业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
     * description  防护域名备注
+    * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'loadbalancerId' => 'getLoadbalancerId',
             'listenerId' => 'getListenerId',
             'protocolPort' => 'getProtocolPort',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'webTag' => 'getWebTag'
     ];
 
     /**
@@ -280,6 +290,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
         $this->container['listenerId'] = isset($data['listenerId']) ? $data['listenerId'] : null;
         $this->container['protocolPort'] = isset($data['protocolPort']) ? $data['protocolPort'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['webTag'] = isset($data['webTag']) ? $data['webTag'] : null;
     }
 
     /**
@@ -622,6 +633,30 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets webTag
+    *  网站名称，对应WAF控制台域名详情中的网站名称
+    *
+    * @return string|null
+    */
+    public function getWebTag()
+    {
+        return $this->container['webTag'];
+    }
+
+    /**
+    * Sets webTag
+    *
+    * @param string|null $webTag 网站名称，对应WAF控制台域名详情中的网站名称
+    *
+    * @return $this
+    */
+    public function setWebTag($webTag)
+    {
+        $this->container['webTag'] = $webTag;
         return $this;
     }
 

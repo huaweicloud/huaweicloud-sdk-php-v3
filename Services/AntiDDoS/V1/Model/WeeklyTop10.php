@@ -172,9 +172,21 @@ class WeeklyTop10 implements ModelInterface, ArrayAccess
         if ($this->container['floatingIpAddress'] === null) {
             $invalidProperties[] = "'floatingIpAddress' can't be null";
         }
+            if ((mb_strlen($this->container['floatingIpAddress']) > 128)) {
+                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be smaller than or equal to 128.";
+            }
+            if ((mb_strlen($this->container['floatingIpAddress']) < 7)) {
+                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be bigger than or equal to 7.";
+            }
         if ($this->container['times'] === null) {
             $invalidProperties[] = "'times' can't be null";
         }
+            if (($this->container['times'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'times', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['times'] < 0)) {
+                $invalidProperties[] = "invalid value for 'times', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

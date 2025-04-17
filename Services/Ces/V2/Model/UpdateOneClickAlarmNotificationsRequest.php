@@ -27,7 +27,7 @@ class UpdateOneClickAlarmNotificationsRequest implements ModelInterface, ArrayAc
     */
     protected static $openAPITypes = [
             'oneClickAlarmId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\PutAlarmNotificationReq'
+            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\UpdateOneClickAlarmNotificationsRequestBody'
     ];
 
     /**
@@ -220,7 +220,7 @@ class UpdateOneClickAlarmNotificationsRequest implements ModelInterface, ArrayAc
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\PutAlarmNotificationReq|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdateOneClickAlarmNotificationsRequestBody|null
     */
     public function getBody()
     {
@@ -230,7 +230,7 @@ class UpdateOneClickAlarmNotificationsRequest implements ModelInterface, ArrayAc
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\PutAlarmNotificationReq|null $body body
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateOneClickAlarmNotificationsRequestBody|null $body body
     *
     * @return $this
     */

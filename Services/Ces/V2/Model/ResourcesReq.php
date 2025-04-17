@@ -21,21 +21,25 @@ class ResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resources  资源信息
+    * productResources  手动创建，选择资源层级为云产品时的资源详情
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\Resource[]'
+            'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\Resource[]',
+            'productResources' => '\HuaweiCloud\SDK\Ces\V2\Model\ProductResource[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resources  资源信息
+    * productResources  手动创建，选择资源层级为云产品时的资源详情
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resources' => null
+        'resources' => null,
+        'productResources' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ResourcesReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resources  资源信息
+    * productResources  手动创建，选择资源层级为云产品时的资源详情
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resources' => 'resources'
+            'resources' => 'resources',
+            'productResources' => 'product_resources'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resources  资源信息
+    * productResources  手动创建，选择资源层级为云产品时的资源详情
     *
     * @var string[]
     */
     protected static $setters = [
-            'resources' => 'setResources'
+            'resources' => 'setResources',
+            'productResources' => 'setProductResources'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resources  资源信息
+    * productResources  手动创建，选择资源层级为云产品时的资源详情
     *
     * @var string[]
     */
     protected static $getters = [
-            'resources' => 'getResources'
+            'resources' => 'getResources',
+            'productResources' => 'getProductResources'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ResourcesReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['productResources'] = isset($data['productResources']) ? $data['productResources'] : null;
     }
 
     /**
@@ -158,9 +169,6 @@ class ResourcesReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['resources'] === null) {
-            $invalidProperties[] = "'resources' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -179,7 +187,7 @@ class ResourcesReq implements ModelInterface, ArrayAccess
     * Gets resources
     *  资源信息
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Resource[]
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\Resource[]|null
     */
     public function getResources()
     {
@@ -189,13 +197,37 @@ class ResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Resource[] $resources 资源信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Resource[]|null $resources 资源信息
     *
     * @return $this
     */
     public function setResources($resources)
     {
         $this->container['resources'] = $resources;
+        return $this;
+    }
+
+    /**
+    * Gets productResources
+    *  手动创建，选择资源层级为云产品时的资源详情
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ProductResource[]|null
+    */
+    public function getProductResources()
+    {
+        return $this->container['productResources'];
+    }
+
+    /**
+    * Sets productResources
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductResource[]|null $productResources 手动创建，选择资源层级为云产品时的资源详情
+    *
+    * @return $this
+    */
+    public function setProductResources($productResources)
+    {
+        $this->container['productResources'] = $productResources;
         return $this;
     }
 

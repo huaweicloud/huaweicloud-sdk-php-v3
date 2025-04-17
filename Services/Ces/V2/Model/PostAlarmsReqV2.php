@@ -24,20 +24,20 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * description  告警描述，长度0-256
     * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * resources  资源列表，监控范围为指定资源时必传
-    * alarmTemplateId  告警规则关联告警模板ID
-    * tags  租户标签列表
+    * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
+    * enterpriseProjectId  企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
+    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * tags  租户标签列表
     * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceLevel  resourceLevel
+    * resourceLevel  产品层级跨纬规则创建时需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
     * @var string[]
     */
@@ -47,8 +47,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'namespace' => 'string',
             'resourceGroupId' => 'string',
             'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]',
-            'alarmTemplateId' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]',
             'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\Policy[]',
             'type' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmType',
             'alarmNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
@@ -58,8 +56,10 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'enabled' => 'bool',
             'notificationEnabled' => 'bool',
+            'alarmTemplateId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]',
             'productName' => 'string',
-            'resourceLevel' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceLevel'
+            'resourceLevel' => 'string'
     ];
 
     /**
@@ -68,20 +68,20 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * description  告警描述，长度0-256
     * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * resources  资源列表，监控范围为指定资源时必传
-    * alarmTemplateId  告警规则关联告警模板ID
-    * tags  租户标签列表
+    * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
+    * enterpriseProjectId  企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
+    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * tags  租户标签列表
     * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceLevel  resourceLevel
+    * resourceLevel  产品层级跨纬规则创建时需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
     * @var string[]
     */
@@ -91,8 +91,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         'namespace' => null,
         'resourceGroupId' => null,
         'resources' => null,
-        'alarmTemplateId' => null,
-        'tags' => null,
         'policies' => null,
         'type' => null,
         'alarmNotifications' => null,
@@ -102,6 +100,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'enabled' => null,
         'notificationEnabled' => null,
+        'alarmTemplateId' => null,
+        'tags' => null,
         'productName' => null,
         'resourceLevel' => null
     ];
@@ -133,20 +133,20 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * description  告警描述，长度0-256
     * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * resources  资源列表，监控范围为指定资源时必传
-    * alarmTemplateId  告警规则关联告警模板ID
-    * tags  租户标签列表
+    * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
+    * enterpriseProjectId  企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
+    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * tags  租户标签列表
     * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceLevel  resourceLevel
+    * resourceLevel  产品层级跨纬规则创建时需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
     * @var string[]
     */
@@ -156,8 +156,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'namespace' => 'namespace',
             'resourceGroupId' => 'resource_group_id',
             'resources' => 'resources',
-            'alarmTemplateId' => 'alarm_template_id',
-            'tags' => 'tags',
             'policies' => 'policies',
             'type' => 'type',
             'alarmNotifications' => 'alarm_notifications',
@@ -167,6 +165,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'enabled' => 'enabled',
             'notificationEnabled' => 'notification_enabled',
+            'alarmTemplateId' => 'alarm_template_id',
+            'tags' => 'tags',
             'productName' => 'product_name',
             'resourceLevel' => 'resource_level'
     ];
@@ -177,20 +177,20 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * description  告警描述，长度0-256
     * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * resources  资源列表，监控范围为指定资源时必传
-    * alarmTemplateId  告警规则关联告警模板ID
-    * tags  租户标签列表
+    * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
+    * enterpriseProjectId  企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
+    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * tags  租户标签列表
     * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceLevel  resourceLevel
+    * resourceLevel  产品层级跨纬规则创建时需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
     * @var string[]
     */
@@ -200,8 +200,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'namespace' => 'setNamespace',
             'resourceGroupId' => 'setResourceGroupId',
             'resources' => 'setResources',
-            'alarmTemplateId' => 'setAlarmTemplateId',
-            'tags' => 'setTags',
             'policies' => 'setPolicies',
             'type' => 'setType',
             'alarmNotifications' => 'setAlarmNotifications',
@@ -211,6 +209,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'enabled' => 'setEnabled',
             'notificationEnabled' => 'setNotificationEnabled',
+            'alarmTemplateId' => 'setAlarmTemplateId',
+            'tags' => 'setTags',
             'productName' => 'setProductName',
             'resourceLevel' => 'setResourceLevel'
     ];
@@ -221,20 +221,20 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * description  告警描述，长度0-256
     * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * resources  资源列表，监控范围为指定资源时必传
-    * alarmTemplateId  告警规则关联告警模板ID
-    * tags  租户标签列表
+    * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
+    * enterpriseProjectId  企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
+    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * tags  租户标签列表
     * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceLevel  resourceLevel
+    * resourceLevel  产品层级跨纬规则创建时需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
     * @var string[]
     */
@@ -244,8 +244,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'namespace' => 'getNamespace',
             'resourceGroupId' => 'getResourceGroupId',
             'resources' => 'getResources',
-            'alarmTemplateId' => 'getAlarmTemplateId',
-            'tags' => 'getTags',
             'policies' => 'getPolicies',
             'type' => 'getType',
             'alarmNotifications' => 'getAlarmNotifications',
@@ -255,6 +253,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'enabled' => 'getEnabled',
             'notificationEnabled' => 'getNotificationEnabled',
+            'alarmTemplateId' => 'getAlarmTemplateId',
+            'tags' => 'getTags',
             'productName' => 'getProductName',
             'resourceLevel' => 'getResourceLevel'
     ];
@@ -299,7 +299,22 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RESOURCE_LEVEL_PRODUCT = 'product';
+    const RESOURCE_LEVEL_DIMENSION = 'dimension';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceLevelAllowableValues()
+    {
+        return [
+            self::RESOURCE_LEVEL_PRODUCT,
+            self::RESOURCE_LEVEL_DIMENSION,
+        ];
+    }
 
 
     /**
@@ -322,8 +337,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
         $this->container['resourceGroupId'] = isset($data['resourceGroupId']) ? $data['resourceGroupId'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
-        $this->container['alarmTemplateId'] = isset($data['alarmTemplateId']) ? $data['alarmTemplateId'] : null;
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['policies'] = isset($data['policies']) ? $data['policies'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['alarmNotifications'] = isset($data['alarmNotifications']) ? $data['alarmNotifications'] : null;
@@ -333,6 +346,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['notificationEnabled'] = isset($data['notificationEnabled']) ? $data['notificationEnabled'] : null;
+        $this->container['alarmTemplateId'] = isset($data['alarmTemplateId']) ? $data['alarmTemplateId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
         $this->container['resourceLevel'] = isset($data['resourceLevel']) ? $data['resourceLevel'] : null;
     }
@@ -381,15 +396,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         if ($this->container['resources'] === null) {
             $invalidProperties[] = "'resources' can't be null";
         }
-            if (!is_null($this->container['alarmTemplateId']) && (mb_strlen($this->container['alarmTemplateId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'alarmTemplateId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['alarmTemplateId']) && (mb_strlen($this->container['alarmTemplateId']) < 2)) {
-                $invalidProperties[] = "invalid value for 'alarmTemplateId', the character length must be bigger than or equal to 2.";
-            }
-            if (!is_null($this->container['alarmTemplateId']) && !preg_match("/^at([0-9A-Za-z])+$/", $this->container['alarmTemplateId'])) {
-                $invalidProperties[] = "invalid value for 'alarmTemplateId', must be conform to the pattern /^at([0-9A-Za-z])+$/.";
-            }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
@@ -420,12 +426,29 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         if ($this->container['notificationEnabled'] === null) {
             $invalidProperties[] = "'notificationEnabled' can't be null";
         }
+            if (!is_null($this->container['alarmTemplateId']) && (mb_strlen($this->container['alarmTemplateId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'alarmTemplateId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['alarmTemplateId']) && (mb_strlen($this->container['alarmTemplateId']) < 2)) {
+                $invalidProperties[] = "invalid value for 'alarmTemplateId', the character length must be bigger than or equal to 2.";
+            }
+            if (!is_null($this->container['alarmTemplateId']) && !preg_match("/^at([0-9A-Za-z])+$/", $this->container['alarmTemplateId'])) {
+                $invalidProperties[] = "invalid value for 'alarmTemplateId', must be conform to the pattern /^at([0-9A-Za-z])+$/.";
+            }
             if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getResourceLevelAllowableValues();
+                if (!is_null($this->container['resourceLevel']) && !in_array($this->container['resourceLevel'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceLevel', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -538,7 +561,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  资源列表，监控范围为指定资源时必传
+    *  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]
     */
@@ -550,61 +573,13 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][] $resources 资源列表，监控范围为指定资源时必传
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][] $resources 资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     *
     * @return $this
     */
     public function setResources($resources)
     {
         $this->container['resources'] = $resources;
-        return $this;
-    }
-
-    /**
-    * Gets alarmTemplateId
-    *  告警规则关联告警模板ID
-    *
-    * @return string|null
-    */
-    public function getAlarmTemplateId()
-    {
-        return $this->container['alarmTemplateId'];
-    }
-
-    /**
-    * Sets alarmTemplateId
-    *
-    * @param string|null $alarmTemplateId 告警规则关联告警模板ID
-    *
-    * @return $this
-    */
-    public function setAlarmTemplateId($alarmTemplateId)
-    {
-        $this->container['alarmTemplateId'] = $alarmTemplateId;
-        return $this;
-    }
-
-    /**
-    * Gets tags
-    *  租户标签列表
-    *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]|null
-    */
-    public function getTags()
-    {
-        return $this->container['tags'];
-    }
-
-    /**
-    * Sets tags
-    *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]|null $tags 租户标签列表
-    *
-    * @return $this
-    */
-    public function setTags($tags)
-    {
-        $this->container['tags'] = $tags;
         return $this;
     }
 
@@ -754,7 +729,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，不填时会使用默认的企业项目ID
+    *  企业项目ID
     *
     * @return string|null
     */
@@ -766,7 +741,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，不填时会使用默认的企业项目ID
+    * @param string|null $enterpriseProjectId 企业项目ID
     *
     * @return $this
     */
@@ -825,6 +800,54 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets alarmTemplateId
+    *  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    *
+    * @return string|null
+    */
+    public function getAlarmTemplateId()
+    {
+        return $this->container['alarmTemplateId'];
+    }
+
+    /**
+    * Sets alarmTemplateId
+    *
+    * @param string|null $alarmTemplateId 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    *
+    * @return $this
+    */
+    public function setAlarmTemplateId($alarmTemplateId)
+    {
+        $this->container['alarmTemplateId'] = $alarmTemplateId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  租户标签列表
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]|null $tags 租户标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
     * Gets productName
     *  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
     *
@@ -850,9 +873,9 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceLevel
-    *  resourceLevel
+    *  产品层级跨纬规则创建时需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceLevel|null
+    * @return string|null
     */
     public function getResourceLevel()
     {
@@ -862,7 +885,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resourceLevel
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceLevel|null $resourceLevel resourceLevel
+    * @param string|null $resourceLevel 产品层级跨纬规则创建时需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
     * @return $this
     */

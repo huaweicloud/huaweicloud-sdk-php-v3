@@ -24,6 +24,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
     * dashboardName  监控看板名称
     * dashboardId  监控看板id
+    * dashboardType  监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
             'enterpriseId' => 'string',
             'isFavorite' => 'bool',
             'dashboardName' => 'string',
-            'dashboardId' => 'string'
+            'dashboardId' => 'string',
+            'dashboardType' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
     * dashboardName  监控看板名称
     * dashboardId  监控看板id
+    * dashboardType  监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
         'enterpriseId' => null,
         'isFavorite' => null,
         'dashboardName' => null,
-        'dashboardId' => null
+        'dashboardId' => null,
+        'dashboardType' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
     * dashboardName  监控看板名称
     * dashboardId  监控看板id
+    * dashboardType  监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
             'enterpriseId' => 'enterprise_id',
             'isFavorite' => 'is_favorite',
             'dashboardName' => 'dashboard_name',
-            'dashboardId' => 'dashboard_id'
+            'dashboardId' => 'dashboard_id',
+            'dashboardType' => 'dashboard_type'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
     * dashboardName  监控看板名称
     * dashboardId  监控看板id
+    * dashboardType  监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
             'enterpriseId' => 'setEnterpriseId',
             'isFavorite' => 'setIsFavorite',
             'dashboardName' => 'setDashboardName',
-            'dashboardId' => 'setDashboardId'
+            'dashboardId' => 'setDashboardId',
+            'dashboardType' => 'setDashboardType'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
     * dashboardName  监控看板名称
     * dashboardId  监控看板id
+    * dashboardType  监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
             'enterpriseId' => 'getEnterpriseId',
             'isFavorite' => 'getIsFavorite',
             'dashboardName' => 'getDashboardName',
-            'dashboardId' => 'getDashboardId'
+            'dashboardId' => 'getDashboardId',
+            'dashboardType' => 'getDashboardType'
     ];
 
     /**
@@ -159,7 +169,22 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const DASHBOARD_TYPE_MONITOR_DASHBOARD = 'monitor_dashboard';
+    const DASHBOARD_TYPE_OTHER = 'other';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDashboardTypeAllowableValues()
+    {
+        return [
+            self::DASHBOARD_TYPE_MONITOR_DASHBOARD,
+            self::DASHBOARD_TYPE_OTHER,
+        ];
+    }
 
 
     /**
@@ -181,6 +206,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
         $this->container['isFavorite'] = isset($data['isFavorite']) ? $data['isFavorite'] : null;
         $this->container['dashboardName'] = isset($data['dashboardName']) ? $data['dashboardName'] : null;
         $this->container['dashboardId'] = isset($data['dashboardId']) ? $data['dashboardId'] : null;
+        $this->container['dashboardType'] = isset($data['dashboardType']) ? $data['dashboardType'] : null;
     }
 
     /**
@@ -206,6 +232,14 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['dashboardId']) && !preg_match("/^db([a-z]|[A-Z]|[0-9]){22}/", $this->container['dashboardId'])) {
                 $invalidProperties[] = "invalid value for 'dashboardId', must be conform to the pattern /^db([a-z]|[A-Z]|[0-9]){22}/.";
             }
+            $allowedValues = $this->getDashboardTypeAllowableValues();
+                if (!is_null($this->container['dashboardType']) && !in_array($this->container['dashboardType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'dashboardType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -313,6 +347,30 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     public function setDashboardId($dashboardId)
     {
         $this->container['dashboardId'] = $dashboardId;
+        return $this;
+    }
+
+    /**
+    * Gets dashboardType
+    *  监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
+    *
+    * @return string|null
+    */
+    public function getDashboardType()
+    {
+        return $this->container['dashboardType'];
+    }
+
+    /**
+    * Sets dashboardType
+    *
+    * @param string|null $dashboardType 监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
+    *
+    * @return $this
+    */
+    public function setDashboardType($dashboardType)
+    {
+        $this->container['dashboardType'] = $dashboardType;
         return $this;
     }
 

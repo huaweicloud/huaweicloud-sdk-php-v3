@@ -25,7 +25,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * name  应用名称。
     * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；7：交互助手；8：奇妙问
     * appKey  应用的AccessKey或帐号。
     * robotType  robotType
     * language  language
@@ -43,6 +43,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * sisProjectId  SIS所在区域的projectId
     * enableHotWords  是否开启热词
     * enableQuestionAudit  是否开启提问文本审核开关
+    * asrType  asrType
+    * asrAccount  ASR帐号。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -70,6 +72,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'sisProjectId' => 'string',
             'enableHotWords' => 'bool',
             'enableQuestionAudit' => 'bool',
+            'asrType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AsrTypeEnum',
+            'asrAccount' => 'string',
             'xRequestId' => 'string'
     ];
 
@@ -79,7 +83,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * name  应用名称。
     * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；7：交互助手；8：奇妙问
     * appKey  应用的AccessKey或帐号。
     * robotType  robotType
     * language  language
@@ -97,6 +101,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * sisProjectId  SIS所在区域的projectId
     * enableHotWords  是否开启热词
     * enableQuestionAudit  是否开启提问文本审核开关
+    * asrType  asrType
+    * asrAccount  ASR帐号。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -124,6 +130,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
         'sisProjectId' => null,
         'enableHotWords' => null,
         'enableQuestionAudit' => null,
+        'asrType' => null,
+        'asrAccount' => null,
         'xRequestId' => null
     ];
 
@@ -154,7 +162,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * name  应用名称。
     * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；7：交互助手；8：奇妙问
     * appKey  应用的AccessKey或帐号。
     * robotType  robotType
     * language  language
@@ -172,6 +180,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * sisProjectId  SIS所在区域的projectId
     * enableHotWords  是否开启热词
     * enableQuestionAudit  是否开启提问文本审核开关
+    * asrType  asrType
+    * asrAccount  ASR帐号。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -199,6 +209,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'sisProjectId' => 'sis_project_id',
             'enableHotWords' => 'enable_hot_words',
             'enableQuestionAudit' => 'enable_question_audit',
+            'asrType' => 'asr_type',
+            'asrAccount' => 'asr_account',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -208,7 +220,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * name  应用名称。
     * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；7：交互助手；8：奇妙问
     * appKey  应用的AccessKey或帐号。
     * robotType  robotType
     * language  language
@@ -226,6 +238,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * sisProjectId  SIS所在区域的projectId
     * enableHotWords  是否开启热词
     * enableQuestionAudit  是否开启提问文本审核开关
+    * asrType  asrType
+    * asrAccount  ASR帐号。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -253,6 +267,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'sisProjectId' => 'setSisProjectId',
             'enableHotWords' => 'setEnableHotWords',
             'enableQuestionAudit' => 'setEnableQuestionAudit',
+            'asrType' => 'setAsrType',
+            'asrAccount' => 'setAsrAccount',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -262,7 +278,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * name  应用名称。
     * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；7：交互助手；8：奇妙问
     * appKey  应用的AccessKey或帐号。
     * robotType  robotType
     * language  language
@@ -280,6 +296,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * sisProjectId  SIS所在区域的projectId
     * enableHotWords  是否开启热词
     * enableQuestionAudit  是否开启提问文本审核开关
+    * asrType  asrType
+    * asrAccount  ASR帐号。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -307,6 +325,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'sisProjectId' => 'getSisProjectId',
             'enableHotWords' => 'getEnableHotWords',
             'enableQuestionAudit' => 'getEnableQuestionAudit',
+            'asrType' => 'getAsrType',
+            'asrAccount' => 'getAsrAccount',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -390,6 +410,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
         $this->container['sisProjectId'] = isset($data['sisProjectId']) ? $data['sisProjectId'] : null;
         $this->container['enableHotWords'] = isset($data['enableHotWords']) ? $data['enableHotWords'] : null;
         $this->container['enableQuestionAudit'] = isset($data['enableQuestionAudit']) ? $data['enableQuestionAudit'] : null;
+        $this->container['asrType'] = isset($data['asrType']) ? $data['asrType'] : null;
+        $this->container['asrAccount'] = isset($data['asrAccount']) ? $data['asrAccount'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -496,6 +518,12 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['asrAccount']) && (mb_strlen($this->container['asrAccount']) > 64)) {
+                $invalidProperties[] = "invalid value for 'asrAccount', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['asrAccount']) && (mb_strlen($this->container['asrAccount']) < 1)) {
+                $invalidProperties[] = "invalid value for 'asrAccount', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -609,7 +637,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appType
-    *  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+    *  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；7：交互助手；8：奇妙问
     *
     * @return int|null
     */
@@ -621,7 +649,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     /**
     * Sets appType
     *
-    * @param int|null $appType 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+    * @param int|null $appType 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；7：交互助手；8：奇妙问
     *
     * @return $this
     */
@@ -1036,6 +1064,54 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     public function setEnableQuestionAudit($enableQuestionAudit)
     {
         $this->container['enableQuestionAudit'] = $enableQuestionAudit;
+        return $this;
+    }
+
+    /**
+    * Gets asrType
+    *  asrType
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\AsrTypeEnum|null
+    */
+    public function getAsrType()
+    {
+        return $this->container['asrType'];
+    }
+
+    /**
+    * Sets asrType
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\AsrTypeEnum|null $asrType asrType
+    *
+    * @return $this
+    */
+    public function setAsrType($asrType)
+    {
+        $this->container['asrType'] = $asrType;
+        return $this;
+    }
+
+    /**
+    * Gets asrAccount
+    *  ASR帐号。
+    *
+    * @return string|null
+    */
+    public function getAsrAccount()
+    {
+        return $this->container['asrAccount'];
+    }
+
+    /**
+    * Sets asrAccount
+    *
+    * @param string|null $asrAccount ASR帐号。
+    *
+    * @return $this
+    */
+    public function setAsrAccount($asrAccount)
+    {
+        $this->container['asrAccount'] = $asrAccount;
         return $this;
     }
 

@@ -20,6 +20,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * streamName  流名，流名仅支持数字、字母、下划线、中划线。 如果流名不填，则点播会按照video_stream_l{index}形式，生成一个流名。
     * quality  画质<br/> 4K默认分辨率3840*2160，码率8000kbit/s<br/> 2K默认分辨率2560*1440，码率7000kbit/s<br/> FULL_HD默认分辨率1920*1080，码率3000kbit/s<br/> HD默认分辨率1280*720，码率1000kbit/s<br/> SD默认分辨率854*480，码率600kbit/s<br/> FLUENT默认分辨率480*270，码率300kbit/s<br/>
     * width  视频宽度<br/>
     * height  视频高度<br/>
@@ -29,6 +30,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'streamName' => 'string',
             'quality' => 'string',
             'width' => 'int',
             'height' => 'int',
@@ -38,6 +40,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * streamName  流名，流名仅支持数字、字母、下划线、中划线。 如果流名不填，则点播会按照video_stream_l{index}形式，生成一个流名。
     * quality  画质<br/> 4K默认分辨率3840*2160，码率8000kbit/s<br/> 2K默认分辨率2560*1440，码率7000kbit/s<br/> FULL_HD默认分辨率1920*1080，码率3000kbit/s<br/> HD默认分辨率1280*720，码率1000kbit/s<br/> SD默认分辨率854*480，码率600kbit/s<br/> FLUENT默认分辨率480*270，码率300kbit/s<br/>
     * width  视频宽度<br/>
     * height  视频高度<br/>
@@ -47,6 +50,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'streamName' => null,
         'quality' => null,
         'width' => null,
         'height' => null,
@@ -77,6 +81,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * streamName  流名，流名仅支持数字、字母、下划线、中划线。 如果流名不填，则点播会按照video_stream_l{index}形式，生成一个流名。
     * quality  画质<br/> 4K默认分辨率3840*2160，码率8000kbit/s<br/> 2K默认分辨率2560*1440，码率7000kbit/s<br/> FULL_HD默认分辨率1920*1080，码率3000kbit/s<br/> HD默认分辨率1280*720，码率1000kbit/s<br/> SD默认分辨率854*480，码率600kbit/s<br/> FLUENT默认分辨率480*270，码率300kbit/s<br/>
     * width  视频宽度<br/>
     * height  视频高度<br/>
@@ -86,6 +91,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'streamName' => 'stream_name',
             'quality' => 'quality',
             'width' => 'width',
             'height' => 'height',
@@ -95,6 +101,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * streamName  流名，流名仅支持数字、字母、下划线、中划线。 如果流名不填，则点播会按照video_stream_l{index}形式，生成一个流名。
     * quality  画质<br/> 4K默认分辨率3840*2160，码率8000kbit/s<br/> 2K默认分辨率2560*1440，码率7000kbit/s<br/> FULL_HD默认分辨率1920*1080，码率3000kbit/s<br/> HD默认分辨率1280*720，码率1000kbit/s<br/> SD默认分辨率854*480，码率600kbit/s<br/> FLUENT默认分辨率480*270，码率300kbit/s<br/>
     * width  视频宽度<br/>
     * height  视频高度<br/>
@@ -104,6 +111,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'streamName' => 'setStreamName',
             'quality' => 'setQuality',
             'width' => 'setWidth',
             'height' => 'setHeight',
@@ -113,6 +121,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * streamName  流名，流名仅支持数字、字母、下划线、中划线。 如果流名不填，则点播会按照video_stream_l{index}形式，生成一个流名。
     * quality  画质<br/> 4K默认分辨率3840*2160，码率8000kbit/s<br/> 2K默认分辨率2560*1440，码率7000kbit/s<br/> FULL_HD默认分辨率1920*1080，码率3000kbit/s<br/> HD默认分辨率1280*720，码率1000kbit/s<br/> SD默认分辨率854*480，码率600kbit/s<br/> FLUENT默认分辨率480*270，码率300kbit/s<br/>
     * width  视频宽度<br/>
     * height  视频高度<br/>
@@ -122,6 +131,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'streamName' => 'getStreamName',
             'quality' => 'getQuality',
             'width' => 'getWidth',
             'height' => 'getHeight',
@@ -212,6 +222,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['streamName'] = isset($data['streamName']) ? $data['streamName'] : null;
         $this->container['quality'] = isset($data['quality']) ? $data['quality'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
@@ -227,6 +238,12 @@ class VideoInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['streamName']) && (mb_strlen($this->container['streamName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'streamName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['streamName']) && (mb_strlen($this->container['streamName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'streamName', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['quality'] === null) {
             $invalidProperties[] = "'quality' can't be null";
         }
@@ -262,6 +279,30 @@ class VideoInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets streamName
+    *  流名，流名仅支持数字、字母、下划线、中划线。 如果流名不填，则点播会按照video_stream_l{index}形式，生成一个流名。
+    *
+    * @return string|null
+    */
+    public function getStreamName()
+    {
+        return $this->container['streamName'];
+    }
+
+    /**
+    * Sets streamName
+    *
+    * @param string|null $streamName 流名，流名仅支持数字、字母、下划线、中划线。 如果流名不填，则点播会按照video_stream_l{index}形式，生成一个流名。
+    *
+    * @return $this
+    */
+    public function setStreamName($streamName)
+    {
+        $this->container['streamName'] = $streamName;
+        return $this;
     }
 
     /**

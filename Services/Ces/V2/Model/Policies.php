@@ -20,13 +20,14 @@ class Policies implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
-    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
+    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * period  告警条件判断周期,单位为秒
     * filter  数据聚合方式
-    * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
-    * value  告警阈值(Number.MAX_VALUE)
+    * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
+    * value  告警阈值(Number.MAX_VALUE)。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。
+    * hierarchicalValue  hierarchicalValue
     * unit  数据的单位字符串，长度不超过32
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
@@ -42,6 +43,7 @@ class Policies implements ModelInterface, ArrayAccess
             'filter' => 'string',
             'comparisonOperator' => 'string',
             'value' => 'float',
+            'hierarchicalValue' => '\HuaweiCloud\SDK\Ces\V2\Model\HierarchicalValue',
             'unit' => 'string',
             'count' => 'int',
             'alarmLevel' => 'int',
@@ -50,13 +52,14 @@ class Policies implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
-    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
+    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * period  告警条件判断周期,单位为秒
     * filter  数据聚合方式
-    * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
-    * value  告警阈值(Number.MAX_VALUE)
+    * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
+    * value  告警阈值(Number.MAX_VALUE)。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。
+    * hierarchicalValue  hierarchicalValue
     * unit  数据的单位字符串，长度不超过32
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
@@ -72,6 +75,7 @@ class Policies implements ModelInterface, ArrayAccess
         'filter' => null,
         'comparisonOperator' => null,
         'value' => null,
+        'hierarchicalValue' => null,
         'unit' => null,
         'count' => 'int32',
         'alarmLevel' => 'int32',
@@ -101,13 +105,14 @@ class Policies implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
-    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
+    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * period  告警条件判断周期,单位为秒
     * filter  数据聚合方式
-    * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
-    * value  告警阈值(Number.MAX_VALUE)
+    * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
+    * value  告警阈值(Number.MAX_VALUE)。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。
+    * hierarchicalValue  hierarchicalValue
     * unit  数据的单位字符串，长度不超过32
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
@@ -123,6 +128,7 @@ class Policies implements ModelInterface, ArrayAccess
             'filter' => 'filter',
             'comparisonOperator' => 'comparison_operator',
             'value' => 'value',
+            'hierarchicalValue' => 'hierarchical_value',
             'unit' => 'unit',
             'count' => 'count',
             'alarmLevel' => 'alarm_level',
@@ -131,13 +137,14 @@ class Policies implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
-    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
+    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * period  告警条件判断周期,单位为秒
     * filter  数据聚合方式
-    * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
-    * value  告警阈值(Number.MAX_VALUE)
+    * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
+    * value  告警阈值(Number.MAX_VALUE)。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。
+    * hierarchicalValue  hierarchicalValue
     * unit  数据的单位字符串，长度不超过32
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
@@ -153,6 +160,7 @@ class Policies implements ModelInterface, ArrayAccess
             'filter' => 'setFilter',
             'comparisonOperator' => 'setComparisonOperator',
             'value' => 'setValue',
+            'hierarchicalValue' => 'setHierarchicalValue',
             'unit' => 'setUnit',
             'count' => 'setCount',
             'alarmLevel' => 'setAlarmLevel',
@@ -161,13 +169,14 @@ class Policies implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
-    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
+    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     * period  告警条件判断周期,单位为秒
     * filter  数据聚合方式
-    * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
-    * value  告警阈值(Number.MAX_VALUE)
+    * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
+    * value  告警阈值(Number.MAX_VALUE)。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。
+    * hierarchicalValue  hierarchicalValue
     * unit  数据的单位字符串，长度不超过32
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
@@ -183,6 +192,7 @@ class Policies implements ModelInterface, ArrayAccess
             'filter' => 'getFilter',
             'comparisonOperator' => 'getComparisonOperator',
             'value' => 'getValue',
+            'hierarchicalValue' => 'getHierarchicalValue',
             'unit' => 'getUnit',
             'count' => 'getCount',
             'alarmLevel' => 'getAlarmLevel',
@@ -310,6 +320,7 @@ class Policies implements ModelInterface, ArrayAccess
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
         $this->container['comparisonOperator'] = isset($data['comparisonOperator']) ? $data['comparisonOperator'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['hierarchicalValue'] = isset($data['hierarchicalValue']) ? $data['hierarchicalValue'] : null;
         $this->container['unit'] = isset($data['unit']) ? $data['unit'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['alarmLevel'] = isset($data['alarmLevel']) ? $data['alarmLevel'] : null;
@@ -342,8 +353,8 @@ class Policies implements ModelInterface, ArrayAccess
             if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'dimensionName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['dimensionName']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/", $this->container['dimensionName'])) {
-                $invalidProperties[] = "invalid value for 'dimensionName', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/.";
+            if (!is_null($this->container['dimensionName']) && !preg_match("/^(([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}|)$/", $this->container['dimensionName'])) {
+                $invalidProperties[] = "invalid value for 'dimensionName', must be conform to the pattern /^(([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}|)$/.";
             }
         if ($this->container['metricName'] === null) {
             $invalidProperties[] = "'metricName' can't be null";
@@ -434,7 +445,7 @@ class Policies implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    *  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return string
     */
@@ -446,7 +457,7 @@ class Policies implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * @param string $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return $this
     */
@@ -458,7 +469,7 @@ class Policies implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionName
-    *  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
+    *  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
     *
     * @return string|null
     */
@@ -470,7 +481,7 @@ class Policies implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionName
     *
-    * @param string|null $dimensionName 资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
+    * @param string|null $dimensionName 资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
     *
     * @return $this
     */
@@ -482,7 +493,7 @@ class Policies implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricName
-    *  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     *
     * @return string
     */
@@ -494,7 +505,7 @@ class Policies implements ModelInterface, ArrayAccess
     /**
     * Sets metricName
     *
-    * @param string $metricName 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string $metricName 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
     *
     * @return $this
     */
@@ -554,7 +565,7 @@ class Policies implements ModelInterface, ArrayAccess
 
     /**
     * Gets comparisonOperator
-    *  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
+    *  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
     *
     * @return string
     */
@@ -566,7 +577,7 @@ class Policies implements ModelInterface, ArrayAccess
     /**
     * Sets comparisonOperator
     *
-    * @param string $comparisonOperator 告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
+    * @param string $comparisonOperator 阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
     *
     * @return $this
     */
@@ -578,7 +589,7 @@ class Policies implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  告警阈值(Number.MAX_VALUE)
+    *  告警阈值(Number.MAX_VALUE)。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。
     *
     * @return float|null
     */
@@ -590,13 +601,37 @@ class Policies implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param float|null $value 告警阈值(Number.MAX_VALUE)
+    * @param float|null $value 告警阈值(Number.MAX_VALUE)。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。
     *
     * @return $this
     */
     public function setValue($value)
     {
         $this->container['value'] = $value;
+        return $this;
+    }
+
+    /**
+    * Gets hierarchicalValue
+    *  hierarchicalValue
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\HierarchicalValue|null
+    */
+    public function getHierarchicalValue()
+    {
+        return $this->container['hierarchicalValue'];
+    }
+
+    /**
+    * Sets hierarchicalValue
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\HierarchicalValue|null $hierarchicalValue hierarchicalValue
+    *
+    * @return $this
+    */
+    public function setHierarchicalValue($hierarchicalValue)
+    {
+        $this->container['hierarchicalValue'] = $hierarchicalValue;
         return $this;
     }
 

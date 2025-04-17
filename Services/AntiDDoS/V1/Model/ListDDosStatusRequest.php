@@ -191,6 +191,18 @@ class ListDDosStatusRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) > 3)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be smaller than or equal to 3.";
+            }
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && (mb_strlen($this->container['offset']) > 10)) {
+                $invalidProperties[] = "invalid value for 'offset', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['offset']) && (mb_strlen($this->container['offset']) < 1)) {
+                $invalidProperties[] = "invalid value for 'offset', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 

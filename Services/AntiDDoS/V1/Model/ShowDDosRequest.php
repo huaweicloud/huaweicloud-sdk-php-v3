@@ -172,6 +172,18 @@ class ShowDDosRequest implements ModelInterface, ArrayAccess
         if ($this->container['floatingIpId'] === null) {
             $invalidProperties[] = "'floatingIpId' can't be null";
         }
+            if ((mb_strlen($this->container['floatingIpId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['floatingIpId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) > 128)) {
+                $invalidProperties[] = "invalid value for 'ip', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) < 7)) {
+                $invalidProperties[] = "invalid value for 'ip', the character length must be bigger than or equal to 7.";
+            }
         return $invalidProperties;
     }
 

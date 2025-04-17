@@ -39,9 +39,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * restoreInfo  restoreInfo
     * port  数据库访问端口号。 目前仅支持GeminiDB Redis实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 不指定端口时，创建GeminiDB Redis实例的访问端口默认为6379。 如果该实例计划用于搭建双活容灾场景，请配置为8635端口。
-    * ipv6Enabled  是否启用IPv6。默认 - true: 启用IPv6。 - false: 不启用IPv6，默认为不启用。
     * availabilityZoneDetail  availabilityZoneDetail
-    * lbAccessControlSettings  lbAccessControlSettings
     *
     * @var string[]
     */
@@ -65,9 +63,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'chargeInfo' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ChargeInfoOption',
             'restoreInfo' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\RestoreInfo',
             'port' => 'string',
-            'ipv6Enabled' => 'bool',
-            'availabilityZoneDetail' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\AvailabilityZoneDetail',
-            'lbAccessControlSettings' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\LbAccessControlSettings'
+            'availabilityZoneDetail' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\AvailabilityZoneDetail'
     ];
 
     /**
@@ -91,9 +87,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * restoreInfo  restoreInfo
     * port  数据库访问端口号。 目前仅支持GeminiDB Redis实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 不指定端口时，创建GeminiDB Redis实例的访问端口默认为6379。 如果该实例计划用于搭建双活容灾场景，请配置为8635端口。
-    * ipv6Enabled  是否启用IPv6。默认 - true: 启用IPv6。 - false: 不启用IPv6，默认为不启用。
     * availabilityZoneDetail  availabilityZoneDetail
-    * lbAccessControlSettings  lbAccessControlSettings
     *
     * @var string[]
     */
@@ -117,9 +111,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         'chargeInfo' => null,
         'restoreInfo' => null,
         'port' => null,
-        'ipv6Enabled' => null,
-        'availabilityZoneDetail' => null,
-        'lbAccessControlSettings' => null
+        'availabilityZoneDetail' => null
     ];
 
     /**
@@ -164,9 +156,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * restoreInfo  restoreInfo
     * port  数据库访问端口号。 目前仅支持GeminiDB Redis实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 不指定端口时，创建GeminiDB Redis实例的访问端口默认为6379。 如果该实例计划用于搭建双活容灾场景，请配置为8635端口。
-    * ipv6Enabled  是否启用IPv6。默认 - true: 启用IPv6。 - false: 不启用IPv6，默认为不启用。
     * availabilityZoneDetail  availabilityZoneDetail
-    * lbAccessControlSettings  lbAccessControlSettings
     *
     * @var string[]
     */
@@ -190,9 +180,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'chargeInfo' => 'charge_info',
             'restoreInfo' => 'restore_info',
             'port' => 'port',
-            'ipv6Enabled' => 'ipv6_enabled',
-            'availabilityZoneDetail' => 'availability_zone_detail',
-            'lbAccessControlSettings' => 'lb_access_control_settings'
+            'availabilityZoneDetail' => 'availability_zone_detail'
     ];
 
     /**
@@ -216,9 +204,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * restoreInfo  restoreInfo
     * port  数据库访问端口号。 目前仅支持GeminiDB Redis实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 不指定端口时，创建GeminiDB Redis实例的访问端口默认为6379。 如果该实例计划用于搭建双活容灾场景，请配置为8635端口。
-    * ipv6Enabled  是否启用IPv6。默认 - true: 启用IPv6。 - false: 不启用IPv6，默认为不启用。
     * availabilityZoneDetail  availabilityZoneDetail
-    * lbAccessControlSettings  lbAccessControlSettings
     *
     * @var string[]
     */
@@ -242,9 +228,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'chargeInfo' => 'setChargeInfo',
             'restoreInfo' => 'setRestoreInfo',
             'port' => 'setPort',
-            'ipv6Enabled' => 'setIpv6Enabled',
-            'availabilityZoneDetail' => 'setAvailabilityZoneDetail',
-            'lbAccessControlSettings' => 'setLbAccessControlSettings'
+            'availabilityZoneDetail' => 'setAvailabilityZoneDetail'
     ];
 
     /**
@@ -268,9 +252,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * restoreInfo  restoreInfo
     * port  数据库访问端口号。 目前仅支持GeminiDB Redis实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 不指定端口时，创建GeminiDB Redis实例的访问端口默认为6379。 如果该实例计划用于搭建双活容灾场景，请配置为8635端口。
-    * ipv6Enabled  是否启用IPv6。默认 - true: 启用IPv6。 - false: 不启用IPv6，默认为不启用。
     * availabilityZoneDetail  availabilityZoneDetail
-    * lbAccessControlSettings  lbAccessControlSettings
     *
     * @var string[]
     */
@@ -294,9 +276,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'chargeInfo' => 'getChargeInfo',
             'restoreInfo' => 'getRestoreInfo',
             'port' => 'getPort',
-            'ipv6Enabled' => 'getIpv6Enabled',
-            'availabilityZoneDetail' => 'getAvailabilityZoneDetail',
-            'lbAccessControlSettings' => 'getLbAccessControlSettings'
+            'availabilityZoneDetail' => 'getAvailabilityZoneDetail'
     ];
 
     /**
@@ -376,9 +356,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['chargeInfo'] = isset($data['chargeInfo']) ? $data['chargeInfo'] : null;
         $this->container['restoreInfo'] = isset($data['restoreInfo']) ? $data['restoreInfo'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
-        $this->container['ipv6Enabled'] = isset($data['ipv6Enabled']) ? $data['ipv6Enabled'] : null;
         $this->container['availabilityZoneDetail'] = isset($data['availabilityZoneDetail']) ? $data['availabilityZoneDetail'] : null;
-        $this->container['lbAccessControlSettings'] = isset($data['lbAccessControlSettings']) ? $data['lbAccessControlSettings'] : null;
     }
 
     /**
@@ -890,30 +868,6 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ipv6Enabled
-    *  是否启用IPv6。默认 - true: 启用IPv6。 - false: 不启用IPv6，默认为不启用。
-    *
-    * @return bool|null
-    */
-    public function getIpv6Enabled()
-    {
-        return $this->container['ipv6Enabled'];
-    }
-
-    /**
-    * Sets ipv6Enabled
-    *
-    * @param bool|null $ipv6Enabled 是否启用IPv6。默认 - true: 启用IPv6。 - false: 不启用IPv6，默认为不启用。
-    *
-    * @return $this
-    */
-    public function setIpv6Enabled($ipv6Enabled)
-    {
-        $this->container['ipv6Enabled'] = $ipv6Enabled;
-        return $this;
-    }
-
-    /**
     * Gets availabilityZoneDetail
     *  availabilityZoneDetail
     *
@@ -934,30 +888,6 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setAvailabilityZoneDetail($availabilityZoneDetail)
     {
         $this->container['availabilityZoneDetail'] = $availabilityZoneDetail;
-        return $this;
-    }
-
-    /**
-    * Gets lbAccessControlSettings
-    *  lbAccessControlSettings
-    *
-    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\LbAccessControlSettings|null
-    */
-    public function getLbAccessControlSettings()
-    {
-        return $this->container['lbAccessControlSettings'];
-    }
-
-    /**
-    * Sets lbAccessControlSettings
-    *
-    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\LbAccessControlSettings|null $lbAccessControlSettings lbAccessControlSettings
-    *
-    * @return $this
-    */
-    public function setLbAccessControlSettings($lbAccessControlSettings)
-    {
-        $this->container['lbAccessControlSettings'] = $lbAccessControlSettings;
         return $this;
     }
 

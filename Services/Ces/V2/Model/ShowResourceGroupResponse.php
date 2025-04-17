@@ -28,6 +28,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
     * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
+    * instances  实例名称匹配参数
     *
     * @var string[]
     */
@@ -38,7 +39,8 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'type' => 'string',
             'associationEpIds' => 'string[]',
-            'tags' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceGroupTagRelation[]'
+            'tags' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceGroupTagRelation[]',
+            'instances' => '\HuaweiCloud\SDK\Ces\V2\Model\Instance[]'
     ];
 
     /**
@@ -50,6 +52,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
     * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
+    * instances  实例名称匹配参数
     *
     * @var string[]
     */
@@ -60,7 +63,8 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'type' => null,
         'associationEpIds' => null,
-        'tags' => null
+        'tags' => null,
+        'instances' => null
     ];
 
     /**
@@ -93,6 +97,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
     * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
+    * instances  实例名称匹配参数
     *
     * @var string[]
     */
@@ -103,7 +108,8 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'type' => 'type',
             'associationEpIds' => 'association_ep_ids',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'instances' => 'instances'
     ];
 
     /**
@@ -115,6 +121,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
     * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
+    * instances  实例名称匹配参数
     *
     * @var string[]
     */
@@ -125,7 +132,8 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'type' => 'setType',
             'associationEpIds' => 'setAssociationEpIds',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'instances' => 'setInstances'
     ];
 
     /**
@@ -137,6 +145,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
     * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
+    * instances  实例名称匹配参数
     *
     * @var string[]
     */
@@ -147,7 +156,8 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'type' => 'getType',
             'associationEpIds' => 'getAssociationEpIds',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'instances' => 'getInstances'
     ];
 
     /**
@@ -232,6 +242,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['associationEpIds'] = isset($data['associationEpIds']) ? $data['associationEpIds'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
     }
 
     /**
@@ -441,6 +452,30 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets instances
+    *  实例名称匹配参数
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\Instance[]|null
+    */
+    public function getInstances()
+    {
+        return $this->container['instances'];
+    }
+
+    /**
+    * Sets instances
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Instance[]|null $instances 实例名称匹配参数
+    *
+    * @return $this
+    */
+    public function setInstances($instances)
+    {
+        $this->container['instances'] = $instances;
         return $this;
     }
 

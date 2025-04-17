@@ -22,24 +22,32 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * status  资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
     * dimensions  资源的维度信息
+    * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'status' => 'string',
-            'dimensions' => '\HuaweiCloud\SDK\Ces\V2\Model\Dimension2[]'
+            'dimensions' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceDimension[]',
+            'tags' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * status  资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
     * dimensions  资源的维度信息
+    * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'status' => null,
-        'dimensions' => null
+        'dimensions' => null,
+        'tags' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     * and the value is the original name
     * status  资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
     * dimensions  资源的维度信息
+    * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'status' => 'status',
-            'dimensions' => 'dimensions'
+            'dimensions' => 'dimensions',
+            'tags' => 'tags',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * status  资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
     * dimensions  资源的维度信息
+    * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
     protected static $setters = [
             'status' => 'setStatus',
-            'dimensions' => 'setDimensions'
+            'dimensions' => 'setDimensions',
+            'tags' => 'setTags',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * status  资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
     * dimensions  资源的维度信息
+    * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
     protected static $getters = [
             'status' => 'getStatus',
-            'dimensions' => 'getDimensions'
+            'dimensions' => 'getDimensions',
+            'tags' => 'getTags',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -176,6 +196,8 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['dimensions'] = isset($data['dimensions']) ? $data['dimensions'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -200,6 +222,18 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
         if ($this->container['dimensions'] === null) {
             $invalidProperties[] = "'dimensions' can't be null";
         }
+            if (!is_null($this->container['tags']) && (mb_strlen($this->container['tags']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'tags', the character length must be smaller than or equal to 10240.";
+            }
+            if (!is_null($this->container['tags']) && (mb_strlen($this->container['tags']) < 0)) {
+                $invalidProperties[] = "invalid value for 'tags', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -242,7 +276,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     * Gets dimensions
     *  资源的维度信息
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Dimension2[]
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceDimension[]
     */
     public function getDimensions()
     {
@@ -252,13 +286,61 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Dimension2[] $dimensions 资源的维度信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceDimension[] $dimensions 资源的维度信息
     *
     * @return $this
     */
     public function setDimensions($dimensions)
     {
         $this->container['dimensions'] = $dimensions;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
+    *
+    * @return string|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string|null $tags 资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目ID
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目ID
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

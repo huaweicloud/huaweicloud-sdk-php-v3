@@ -20,30 +20,58 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filter  聚合类型，目前只有TopN这一种类型
-    * topN  Top值前N个
-    * order  排序字段，asc正序，desc倒序
+    * filter  聚合类型，目前只有TopN这一种类型，折线图不支持该参数
+    * topN  Top值前N个;折线图时表示随机展示的时序数据条数
+    * order  排序字段，asc正序，desc倒序，折线图不支持该参数
+    * description  监控视图的描述信息
+    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
+    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
+    * legendLocation  图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
+    * legendValues  当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
+    * thresholds  监控视图的阈值辅助线配置
+    * isAllCompareEnable  同比环比总开关是否生效;true:生效；false:不生效
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'filter' => 'string',
             'topN' => 'int',
-            'order' => 'string'
+            'order' => 'string',
+            'description' => 'string',
+            'lastWeekCompareEnable' => 'bool',
+            'yesterdayCompareEnable' => 'bool',
+            'legendLocation' => 'string',
+            'legendValues' => 'string[]',
+            'thresholds' => '\HuaweiCloud\SDK\Ces\V2\Model\ThresholdInfo[]',
+            'isAllCompareEnable' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filter  聚合类型，目前只有TopN这一种类型
-    * topN  Top值前N个
-    * order  排序字段，asc正序，desc倒序
+    * filter  聚合类型，目前只有TopN这一种类型，折线图不支持该参数
+    * topN  Top值前N个;折线图时表示随机展示的时序数据条数
+    * order  排序字段，asc正序，desc倒序，折线图不支持该参数
+    * description  监控视图的描述信息
+    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
+    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
+    * legendLocation  图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
+    * legendValues  当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
+    * thresholds  监控视图的阈值辅助线配置
+    * isAllCompareEnable  同比环比总开关是否生效;true:生效；false:不生效
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'filter' => null,
         'topN' => 'int32',
-        'order' => null
+        'order' => null,
+        'description' => null,
+        'lastWeekCompareEnable' => null,
+        'yesterdayCompareEnable' => null,
+        'legendLocation' => null,
+        'legendValues' => null,
+        'thresholds' => null,
+        'isAllCompareEnable' => null
     ];
 
     /**
@@ -69,44 +97,86 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filter  聚合类型，目前只有TopN这一种类型
-    * topN  Top值前N个
-    * order  排序字段，asc正序，desc倒序
+    * filter  聚合类型，目前只有TopN这一种类型，折线图不支持该参数
+    * topN  Top值前N个;折线图时表示随机展示的时序数据条数
+    * order  排序字段，asc正序，desc倒序，折线图不支持该参数
+    * description  监控视图的描述信息
+    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
+    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
+    * legendLocation  图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
+    * legendValues  当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
+    * thresholds  监控视图的阈值辅助线配置
+    * isAllCompareEnable  同比环比总开关是否生效;true:生效；false:不生效
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'filter' => 'filter',
             'topN' => 'topN',
-            'order' => 'order'
+            'order' => 'order',
+            'description' => 'description',
+            'lastWeekCompareEnable' => 'last_week_compare_enable',
+            'yesterdayCompareEnable' => 'yesterday_compare_enable',
+            'legendLocation' => 'legend_location',
+            'legendValues' => 'legend_values',
+            'thresholds' => 'thresholds',
+            'isAllCompareEnable' => 'is_all_compare_enable'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filter  聚合类型，目前只有TopN这一种类型
-    * topN  Top值前N个
-    * order  排序字段，asc正序，desc倒序
+    * filter  聚合类型，目前只有TopN这一种类型，折线图不支持该参数
+    * topN  Top值前N个;折线图时表示随机展示的时序数据条数
+    * order  排序字段，asc正序，desc倒序，折线图不支持该参数
+    * description  监控视图的描述信息
+    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
+    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
+    * legendLocation  图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
+    * legendValues  当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
+    * thresholds  监控视图的阈值辅助线配置
+    * isAllCompareEnable  同比环比总开关是否生效;true:生效；false:不生效
     *
     * @var string[]
     */
     protected static $setters = [
             'filter' => 'setFilter',
             'topN' => 'setTopN',
-            'order' => 'setOrder'
+            'order' => 'setOrder',
+            'description' => 'setDescription',
+            'lastWeekCompareEnable' => 'setLastWeekCompareEnable',
+            'yesterdayCompareEnable' => 'setYesterdayCompareEnable',
+            'legendLocation' => 'setLegendLocation',
+            'legendValues' => 'setLegendValues',
+            'thresholds' => 'setThresholds',
+            'isAllCompareEnable' => 'setIsAllCompareEnable'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filter  聚合类型，目前只有TopN这一种类型
-    * topN  Top值前N个
-    * order  排序字段，asc正序，desc倒序
+    * filter  聚合类型，目前只有TopN这一种类型，折线图不支持该参数
+    * topN  Top值前N个;折线图时表示随机展示的时序数据条数
+    * order  排序字段，asc正序，desc倒序，折线图不支持该参数
+    * description  监控视图的描述信息
+    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
+    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
+    * legendLocation  图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
+    * legendValues  当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
+    * thresholds  监控视图的阈值辅助线配置
+    * isAllCompareEnable  同比环比总开关是否生效;true:生效；false:不生效
     *
     * @var string[]
     */
     protected static $getters = [
             'filter' => 'getFilter',
             'topN' => 'getTopN',
-            'order' => 'getOrder'
+            'order' => 'getOrder',
+            'description' => 'getDescription',
+            'lastWeekCompareEnable' => 'getLastWeekCompareEnable',
+            'yesterdayCompareEnable' => 'getYesterdayCompareEnable',
+            'legendLocation' => 'getLegendLocation',
+            'legendValues' => 'getLegendValues',
+            'thresholds' => 'getThresholds',
+            'isAllCompareEnable' => 'getIsAllCompareEnable'
     ];
 
     /**
@@ -152,6 +222,14 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     const FILTER_TOP_N = 'topN';
     const ORDER_ASC = 'asc';
     const ORDER_DESC = 'desc';
+    const LEGEND_LOCATION_HIDE = 'hide';
+    const LEGEND_LOCATION_RIGHT = 'right';
+    const LEGEND_LOCATION_BOTTOM = 'bottom';
+    const LEGEND_VALUES_LAST = 'last';
+    const LEGEND_VALUES_MAX = 'max';
+    const LEGEND_VALUES_MIN = 'min';
+    const LEGEND_VALUES_AVG = 'avg';
+    const LEGEND_VALUES_SUM = 'sum';
     
 
     /**
@@ -179,6 +257,36 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLegendLocationAllowableValues()
+    {
+        return [
+            self::LEGEND_LOCATION_HIDE,
+            self::LEGEND_LOCATION_RIGHT,
+            self::LEGEND_LOCATION_BOTTOM,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLegendValuesAllowableValues()
+    {
+        return [
+            self::LEGEND_VALUES_LAST,
+            self::LEGEND_VALUES_MAX,
+            self::LEGEND_VALUES_MIN,
+            self::LEGEND_VALUES_AVG,
+            self::LEGEND_VALUES_SUM,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -198,6 +306,13 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
         $this->container['topN'] = isset($data['topN']) ? $data['topN'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['lastWeekCompareEnable'] = isset($data['lastWeekCompareEnable']) ? $data['lastWeekCompareEnable'] : null;
+        $this->container['yesterdayCompareEnable'] = isset($data['yesterdayCompareEnable']) ? $data['yesterdayCompareEnable'] : null;
+        $this->container['legendLocation'] = isset($data['legendLocation']) ? $data['legendLocation'] : null;
+        $this->container['legendValues'] = isset($data['legendValues']) ? $data['legendValues'] : null;
+        $this->container['thresholds'] = isset($data['thresholds']) ? $data['thresholds'] : null;
+        $this->container['isAllCompareEnable'] = isset($data['isAllCompareEnable']) ? $data['isAllCompareEnable'] : null;
     }
 
     /**
@@ -230,6 +345,20 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 200)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getLegendLocationAllowableValues();
+                if (!is_null($this->container['legendLocation']) && !in_array($this->container['legendLocation'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'legendLocation', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -246,7 +375,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets filter
-    *  聚合类型，目前只有TopN这一种类型
+    *  聚合类型，目前只有TopN这一种类型，折线图不支持该参数
     *
     * @return string|null
     */
@@ -258,7 +387,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets filter
     *
-    * @param string|null $filter 聚合类型，目前只有TopN这一种类型
+    * @param string|null $filter 聚合类型，目前只有TopN这一种类型，折线图不支持该参数
     *
     * @return $this
     */
@@ -270,7 +399,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets topN
-    *  Top值前N个
+    *  Top值前N个;折线图时表示随机展示的时序数据条数
     *
     * @return int|null
     */
@@ -282,7 +411,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets topN
     *
-    * @param int|null $topN Top值前N个
+    * @param int|null $topN Top值前N个;折线图时表示随机展示的时序数据条数
     *
     * @return $this
     */
@@ -294,7 +423,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  排序字段，asc正序，desc倒序
+    *  排序字段，asc正序，desc倒序，折线图不支持该参数
     *
     * @return string|null
     */
@@ -306,13 +435,181 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param string|null $order 排序字段，asc正序，desc倒序
+    * @param string|null $order 排序字段，asc正序，desc倒序，折线图不支持该参数
     *
     * @return $this
     */
     public function setOrder($order)
     {
         $this->container['order'] = $order;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  监控视图的描述信息
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 监控视图的描述信息
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets lastWeekCompareEnable
+    *  是否展示同比（上周同一时间）数据，true:展示，false:不展示
+    *
+    * @return bool|null
+    */
+    public function getLastWeekCompareEnable()
+    {
+        return $this->container['lastWeekCompareEnable'];
+    }
+
+    /**
+    * Sets lastWeekCompareEnable
+    *
+    * @param bool|null $lastWeekCompareEnable 是否展示同比（上周同一时间）数据，true:展示，false:不展示
+    *
+    * @return $this
+    */
+    public function setLastWeekCompareEnable($lastWeekCompareEnable)
+    {
+        $this->container['lastWeekCompareEnable'] = $lastWeekCompareEnable;
+        return $this;
+    }
+
+    /**
+    * Gets yesterdayCompareEnable
+    *  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
+    *
+    * @return bool|null
+    */
+    public function getYesterdayCompareEnable()
+    {
+        return $this->container['yesterdayCompareEnable'];
+    }
+
+    /**
+    * Sets yesterdayCompareEnable
+    *
+    * @param bool|null $yesterdayCompareEnable 是否展示环比（昨天同一时间）数据，true:展示，false:不展示
+    *
+    * @return $this
+    */
+    public function setYesterdayCompareEnable($yesterdayCompareEnable)
+    {
+        $this->container['yesterdayCompareEnable'] = $yesterdayCompareEnable;
+        return $this;
+    }
+
+    /**
+    * Gets legendLocation
+    *  图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
+    *
+    * @return string|null
+    */
+    public function getLegendLocation()
+    {
+        return $this->container['legendLocation'];
+    }
+
+    /**
+    * Sets legendLocation
+    *
+    * @param string|null $legendLocation 图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
+    *
+    * @return $this
+    */
+    public function setLegendLocation($legendLocation)
+    {
+        $this->container['legendLocation'] = $legendLocation;
+        return $this;
+    }
+
+    /**
+    * Gets legendValues
+    *  当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
+    *
+    * @return string[]|null
+    */
+    public function getLegendValues()
+    {
+        return $this->container['legendValues'];
+    }
+
+    /**
+    * Sets legendValues
+    *
+    * @param string[]|null $legendValues 当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
+    *
+    * @return $this
+    */
+    public function setLegendValues($legendValues)
+    {
+        $this->container['legendValues'] = $legendValues;
+        return $this;
+    }
+
+    /**
+    * Gets thresholds
+    *  监控视图的阈值辅助线配置
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ThresholdInfo[]|null
+    */
+    public function getThresholds()
+    {
+        return $this->container['thresholds'];
+    }
+
+    /**
+    * Sets thresholds
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ThresholdInfo[]|null $thresholds 监控视图的阈值辅助线配置
+    *
+    * @return $this
+    */
+    public function setThresholds($thresholds)
+    {
+        $this->container['thresholds'] = $thresholds;
+        return $this;
+    }
+
+    /**
+    * Gets isAllCompareEnable
+    *  同比环比总开关是否生效;true:生效；false:不生效
+    *
+    * @return bool|null
+    */
+    public function getIsAllCompareEnable()
+    {
+        return $this->container['isAllCompareEnable'];
+    }
+
+    /**
+    * Sets isAllCompareEnable
+    *
+    * @param bool|null $isAllCompareEnable 同比环比总开关是否生效;true:生效；false:不生效
+    *
+    * @return $this
+    */
+    public function setIsAllCompareEnable($isAllCompareEnable)
+    {
+        $this->container['isAllCompareEnable'] = $isAllCompareEnable;
         return $this;
     }
 

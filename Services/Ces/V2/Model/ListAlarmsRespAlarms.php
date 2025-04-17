@@ -23,7 +23,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -33,6 +33,8 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * notificationPolicyIds  关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -49,7 +51,9 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
             'alarmNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
             'okNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
             'notificationBeginTime' => 'string',
-            'notificationEndTime' => 'string'
+            'notificationEndTime' => 'string',
+            'notificationManner' => 'string',
+            'notificationPolicyIds' => 'string[]'
     ];
 
     /**
@@ -57,7 +61,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -67,6 +71,8 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * notificationPolicyIds  关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -83,7 +89,9 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
         'alarmNotifications' => null,
         'okNotifications' => null,
         'notificationBeginTime' => null,
-        'notificationEndTime' => null
+        'notificationEndTime' => null,
+        'notificationManner' => null,
+        'notificationPolicyIds' => null
     ];
 
     /**
@@ -112,7 +120,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -122,6 +130,8 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * notificationPolicyIds  关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -138,7 +148,9 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
             'alarmNotifications' => 'alarm_notifications',
             'okNotifications' => 'ok_notifications',
             'notificationBeginTime' => 'notification_begin_time',
-            'notificationEndTime' => 'notification_end_time'
+            'notificationEndTime' => 'notification_end_time',
+            'notificationManner' => 'notification_manner',
+            'notificationPolicyIds' => 'notification_policy_ids'
     ];
 
     /**
@@ -146,7 +158,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -156,6 +168,8 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * notificationPolicyIds  关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -172,7 +186,9 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
             'alarmNotifications' => 'setAlarmNotifications',
             'okNotifications' => 'setOkNotifications',
             'notificationBeginTime' => 'setNotificationBeginTime',
-            'notificationEndTime' => 'setNotificationEndTime'
+            'notificationEndTime' => 'setNotificationEndTime',
+            'notificationManner' => 'setNotificationManner',
+            'notificationPolicyIds' => 'setNotificationPolicyIds'
     ];
 
     /**
@@ -180,7 +196,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -190,6 +206,8 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * notificationPolicyIds  关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -206,7 +224,9 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
             'alarmNotifications' => 'getAlarmNotifications',
             'okNotifications' => 'getOkNotifications',
             'notificationBeginTime' => 'getNotificationBeginTime',
-            'notificationEndTime' => 'getNotificationEndTime'
+            'notificationEndTime' => 'getNotificationEndTime',
+            'notificationManner' => 'getNotificationManner',
+            'notificationPolicyIds' => 'getNotificationPolicyIds'
     ];
 
     /**
@@ -249,7 +269,24 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const NOTIFICATION_MANNER_NOTIFICATION_GROUP = 'NOTIFICATION_GROUP';
+    const NOTIFICATION_MANNER_TOPIC_SUBSCRIPTION = 'TOPIC_SUBSCRIPTION';
+    const NOTIFICATION_MANNER_NOTIFICATION_POLICY = 'NOTIFICATION_POLICY';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getNotificationMannerAllowableValues()
+    {
+        return [
+            self::NOTIFICATION_MANNER_NOTIFICATION_GROUP,
+            self::NOTIFICATION_MANNER_TOPIC_SUBSCRIPTION,
+            self::NOTIFICATION_MANNER_NOTIFICATION_POLICY,
+        ];
+    }
 
 
     /**
@@ -280,6 +317,8 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
         $this->container['okNotifications'] = isset($data['okNotifications']) ? $data['okNotifications'] : null;
         $this->container['notificationBeginTime'] = isset($data['notificationBeginTime']) ? $data['notificationBeginTime'] : null;
         $this->container['notificationEndTime'] = isset($data['notificationEndTime']) ? $data['notificationEndTime'] : null;
+        $this->container['notificationManner'] = isset($data['notificationManner']) ? $data['notificationManner'] : null;
+        $this->container['notificationPolicyIds'] = isset($data['notificationPolicyIds']) ? $data['notificationPolicyIds'] : null;
     }
 
     /**
@@ -331,6 +370,20 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['notificationEndTime']) && !preg_match("/^([01][0-9]|2[0-3]):([0-5][0-9])$/", $this->container['notificationEndTime'])) {
                 $invalidProperties[] = "invalid value for 'notificationEndTime', must be conform to the pattern /^([01][0-9]|2[0-3]):([0-5][0-9])$/.";
+            }
+            $allowedValues = $this->getNotificationMannerAllowableValues();
+                if (!is_null($this->container['notificationManner']) && !in_array($this->container['notificationManner'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'notificationManner', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['notificationManner']) && (mb_strlen($this->container['notificationManner']) > 64)) {
+                $invalidProperties[] = "invalid value for 'notificationManner', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['notificationManner']) && (mb_strlen($this->container['notificationManner']) < 0)) {
+                $invalidProperties[] = "invalid value for 'notificationManner', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -420,7 +473,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    *  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return string|null
     */
@@ -432,7 +485,7 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return $this
     */
@@ -655,6 +708,54 @@ class ListAlarmsRespAlarms implements ModelInterface, ArrayAccess
     public function setNotificationEndTime($notificationEndTime)
     {
         $this->container['notificationEndTime'] = $notificationEndTime;
+        return $this;
+    }
+
+    /**
+    * Gets notificationManner
+    *  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    *
+    * @return string|null
+    */
+    public function getNotificationManner()
+    {
+        return $this->container['notificationManner'];
+    }
+
+    /**
+    * Sets notificationManner
+    *
+    * @param string|null $notificationManner NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    *
+    * @return $this
+    */
+    public function setNotificationManner($notificationManner)
+    {
+        $this->container['notificationManner'] = $notificationManner;
+        return $this;
+    }
+
+    /**
+    * Gets notificationPolicyIds
+    *  关联的通知策略ID列表
+    *
+    * @return string[]|null
+    */
+    public function getNotificationPolicyIds()
+    {
+        return $this->container['notificationPolicyIds'];
+    }
+
+    /**
+    * Sets notificationPolicyIds
+    *
+    * @param string[]|null $notificationPolicyIds 关联的通知策略ID列表
+    *
+    * @return $this
+    */
+    public function setNotificationPolicyIds($notificationPolicyIds)
+    {
+        $this->container['notificationPolicyIds'] = $notificationPolicyIds;
         return $this;
     }
 

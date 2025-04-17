@@ -23,6 +23,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     * name  模板组名称<br/>
     * isDefault  是否设置成默认转码模板<br/>
     * isAutoEncrypt  是否开启加密
+    * additionalManifests  自定义索引后缀列表，支持最大设置10个索引后缀。 如果填写索引后缀，则必须指定流名stream_name。
     * qualityInfoList  画质配置信息列表<br/>
     * common  common
     * watermarkTemplateIds  绑定的水印模板组ID数组<br/>
@@ -34,6 +35,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
             'name' => 'string',
             'isDefault' => 'bool',
             'isAutoEncrypt' => 'bool',
+            'additionalManifests' => '\HuaweiCloud\SDK\Vod\V1\Model\AdditionalManifest[]',
             'qualityInfoList' => '\HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[]',
             'common' => '\HuaweiCloud\SDK\Vod\V1\Model\CommonInfo',
             'watermarkTemplateIds' => 'string[]',
@@ -45,6 +47,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     * name  模板组名称<br/>
     * isDefault  是否设置成默认转码模板<br/>
     * isAutoEncrypt  是否开启加密
+    * additionalManifests  自定义索引后缀列表，支持最大设置10个索引后缀。 如果填写索引后缀，则必须指定流名stream_name。
     * qualityInfoList  画质配置信息列表<br/>
     * common  common
     * watermarkTemplateIds  绑定的水印模板组ID数组<br/>
@@ -56,6 +59,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
         'name' => null,
         'isDefault' => null,
         'isAutoEncrypt' => null,
+        'additionalManifests' => null,
         'qualityInfoList' => null,
         'common' => null,
         'watermarkTemplateIds' => null,
@@ -88,6 +92,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     * name  模板组名称<br/>
     * isDefault  是否设置成默认转码模板<br/>
     * isAutoEncrypt  是否开启加密
+    * additionalManifests  自定义索引后缀列表，支持最大设置10个索引后缀。 如果填写索引后缀，则必须指定流名stream_name。
     * qualityInfoList  画质配置信息列表<br/>
     * common  common
     * watermarkTemplateIds  绑定的水印模板组ID数组<br/>
@@ -99,6 +104,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
             'name' => 'name',
             'isDefault' => 'is_default',
             'isAutoEncrypt' => 'is_auto_encrypt',
+            'additionalManifests' => 'additional_manifests',
             'qualityInfoList' => 'quality_info_list',
             'common' => 'common',
             'watermarkTemplateIds' => 'watermark_template_ids',
@@ -110,6 +116,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     * name  模板组名称<br/>
     * isDefault  是否设置成默认转码模板<br/>
     * isAutoEncrypt  是否开启加密
+    * additionalManifests  自定义索引后缀列表，支持最大设置10个索引后缀。 如果填写索引后缀，则必须指定流名stream_name。
     * qualityInfoList  画质配置信息列表<br/>
     * common  common
     * watermarkTemplateIds  绑定的水印模板组ID数组<br/>
@@ -121,6 +128,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'isDefault' => 'setIsDefault',
             'isAutoEncrypt' => 'setIsAutoEncrypt',
+            'additionalManifests' => 'setAdditionalManifests',
             'qualityInfoList' => 'setQualityInfoList',
             'common' => 'setCommon',
             'watermarkTemplateIds' => 'setWatermarkTemplateIds',
@@ -132,6 +140,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     * name  模板组名称<br/>
     * isDefault  是否设置成默认转码模板<br/>
     * isAutoEncrypt  是否开启加密
+    * additionalManifests  自定义索引后缀列表，支持最大设置10个索引后缀。 如果填写索引后缀，则必须指定流名stream_name。
     * qualityInfoList  画质配置信息列表<br/>
     * common  common
     * watermarkTemplateIds  绑定的水印模板组ID数组<br/>
@@ -143,6 +152,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'isDefault' => 'getIsDefault',
             'isAutoEncrypt' => 'getIsAutoEncrypt',
+            'additionalManifests' => 'getAdditionalManifests',
             'qualityInfoList' => 'getQualityInfoList',
             'common' => 'getCommon',
             'watermarkTemplateIds' => 'getWatermarkTemplateIds',
@@ -210,6 +220,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['isDefault'] = isset($data['isDefault']) ? $data['isDefault'] : null;
         $this->container['isAutoEncrypt'] = isset($data['isAutoEncrypt']) ? $data['isAutoEncrypt'] : null;
+        $this->container['additionalManifests'] = isset($data['additionalManifests']) ? $data['additionalManifests'] : null;
         $this->container['qualityInfoList'] = isset($data['qualityInfoList']) ? $data['qualityInfoList'] : null;
         $this->container['common'] = isset($data['common']) ? $data['common'] : null;
         $this->container['watermarkTemplateIds'] = isset($data['watermarkTemplateIds']) ? $data['watermarkTemplateIds'] : null;
@@ -325,6 +336,30 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     public function setIsAutoEncrypt($isAutoEncrypt)
     {
         $this->container['isAutoEncrypt'] = $isAutoEncrypt;
+        return $this;
+    }
+
+    /**
+    * Gets additionalManifests
+    *  自定义索引后缀列表，支持最大设置10个索引后缀。 如果填写索引后缀，则必须指定流名stream_name。
+    *
+    * @return \HuaweiCloud\SDK\Vod\V1\Model\AdditionalManifest[]|null
+    */
+    public function getAdditionalManifests()
+    {
+        return $this->container['additionalManifests'];
+    }
+
+    /**
+    * Sets additionalManifests
+    *
+    * @param \HuaweiCloud\SDK\Vod\V1\Model\AdditionalManifest[]|null $additionalManifests 自定义索引后缀列表，支持最大设置10个索引后缀。 如果填写索引后缀，则必须指定流名stream_name。
+    *
+    * @return $this
+    */
+    public function setAdditionalManifests($additionalManifests)
+    {
+        $this->container['additionalManifests'] = $additionalManifests;
         return $this;
     }
 

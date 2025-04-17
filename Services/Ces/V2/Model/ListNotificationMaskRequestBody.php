@@ -22,11 +22,13 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * relationType  relationType
     * relationIds  关联编号（目前是告警规则ID）
+    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * resourceLevel  dimension: 子维度,product: 云产品
     * maskId  屏蔽规则ID,可选
     * maskName  屏蔽规则名称,可选，只能为字母、数字、汉字、-、_，最大长度为64
     * maskStatus  屏蔽状态,可选。MASK_EFFECTIVE：已生效，MASK_INEFFECTIVE：未生效。
     * resourceId  资源维度值,提供一个维度的资源ID即可,可选
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensions  资源的维度信息
     *
     * @var string[]
@@ -34,23 +36,27 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'relationType' => '\HuaweiCloud\SDK\Ces\V2\Model\ListRelationType',
             'relationIds' => 'string[]',
+            'metricName' => 'string',
+            'resourceLevel' => 'string',
             'maskId' => 'string',
             'maskName' => 'string',
             'maskStatus' => 'string',
             'resourceId' => 'string',
             'namespace' => 'string',
-            'dimensions' => '\HuaweiCloud\SDK\Ces\V2\Model\Dimension2[]'
+            'dimensions' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceDimension[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * relationType  relationType
     * relationIds  关联编号（目前是告警规则ID）
+    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * resourceLevel  dimension: 子维度,product: 云产品
     * maskId  屏蔽规则ID,可选
     * maskName  屏蔽规则名称,可选，只能为字母、数字、汉字、-、_，最大长度为64
     * maskStatus  屏蔽状态,可选。MASK_EFFECTIVE：已生效，MASK_INEFFECTIVE：未生效。
     * resourceId  资源维度值,提供一个维度的资源ID即可,可选
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensions  资源的维度信息
     *
     * @var string[]
@@ -58,6 +64,8 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'relationType' => null,
         'relationIds' => null,
+        'metricName' => null,
+        'resourceLevel' => null,
         'maskId' => null,
         'maskName' => null,
         'maskStatus' => null,
@@ -91,11 +99,13 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * relationType  relationType
     * relationIds  关联编号（目前是告警规则ID）
+    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * resourceLevel  dimension: 子维度,product: 云产品
     * maskId  屏蔽规则ID,可选
     * maskName  屏蔽规则名称,可选，只能为字母、数字、汉字、-、_，最大长度为64
     * maskStatus  屏蔽状态,可选。MASK_EFFECTIVE：已生效，MASK_INEFFECTIVE：未生效。
     * resourceId  资源维度值,提供一个维度的资源ID即可,可选
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensions  资源的维度信息
     *
     * @var string[]
@@ -103,6 +113,8 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'relationType' => 'relation_type',
             'relationIds' => 'relation_ids',
+            'metricName' => 'metric_name',
+            'resourceLevel' => 'resource_level',
             'maskId' => 'mask_id',
             'maskName' => 'mask_name',
             'maskStatus' => 'mask_status',
@@ -115,11 +127,13 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * relationType  relationType
     * relationIds  关联编号（目前是告警规则ID）
+    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * resourceLevel  dimension: 子维度,product: 云产品
     * maskId  屏蔽规则ID,可选
     * maskName  屏蔽规则名称,可选，只能为字母、数字、汉字、-、_，最大长度为64
     * maskStatus  屏蔽状态,可选。MASK_EFFECTIVE：已生效，MASK_INEFFECTIVE：未生效。
     * resourceId  资源维度值,提供一个维度的资源ID即可,可选
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensions  资源的维度信息
     *
     * @var string[]
@@ -127,6 +141,8 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'relationType' => 'setRelationType',
             'relationIds' => 'setRelationIds',
+            'metricName' => 'setMetricName',
+            'resourceLevel' => 'setResourceLevel',
             'maskId' => 'setMaskId',
             'maskName' => 'setMaskName',
             'maskStatus' => 'setMaskStatus',
@@ -139,11 +155,13 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * relationType  relationType
     * relationIds  关联编号（目前是告警规则ID）
+    * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * resourceLevel  dimension: 子维度,product: 云产品
     * maskId  屏蔽规则ID,可选
     * maskName  屏蔽规则名称,可选，只能为字母、数字、汉字、-、_，最大长度为64
     * maskStatus  屏蔽状态,可选。MASK_EFFECTIVE：已生效，MASK_INEFFECTIVE：未生效。
     * resourceId  资源维度值,提供一个维度的资源ID即可,可选
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimensions  资源的维度信息
     *
     * @var string[]
@@ -151,6 +169,8 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'relationType' => 'getRelationType',
             'relationIds' => 'getRelationIds',
+            'metricName' => 'getMetricName',
+            'resourceLevel' => 'getResourceLevel',
             'maskId' => 'getMaskId',
             'maskName' => 'getMaskName',
             'maskStatus' => 'getMaskStatus',
@@ -199,9 +219,24 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RESOURCE_LEVEL_DIMENSION = 'dimension';
+    const RESOURCE_LEVEL_PRODUCT = 'product';
     const MASK_STATUS_MASK_EFFECTIVE = 'MASK_EFFECTIVE';
     const MASK_STATUS_MASK_INEFFECTIVE = 'MASK_INEFFECTIVE';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceLevelAllowableValues()
+    {
+        return [
+            self::RESOURCE_LEVEL_DIMENSION,
+            self::RESOURCE_LEVEL_PRODUCT,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -234,6 +269,8 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['relationType'] = isset($data['relationType']) ? $data['relationType'] : null;
         $this->container['relationIds'] = isset($data['relationIds']) ? $data['relationIds'] : null;
+        $this->container['metricName'] = isset($data['metricName']) ? $data['metricName'] : null;
+        $this->container['resourceLevel'] = isset($data['resourceLevel']) ? $data['resourceLevel'] : null;
         $this->container['maskId'] = isset($data['maskId']) ? $data['maskId'] : null;
         $this->container['maskName'] = isset($data['maskName']) ? $data['maskName'] : null;
         $this->container['maskStatus'] = isset($data['maskStatus']) ? $data['maskStatus'] : null;
@@ -256,6 +293,23 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['relationIds'] === null) {
             $invalidProperties[] = "'relationIds' can't be null";
         }
+            if (!is_null($this->container['metricName']) && (mb_strlen($this->container['metricName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'metricName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['metricName']) && (mb_strlen($this->container['metricName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'metricName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['metricName']) && !preg_match("/^([A-Za-z]){1}([0-9A-Za-z]|_|-)*$/", $this->container['metricName'])) {
+                $invalidProperties[] = "invalid value for 'metricName', must be conform to the pattern /^([A-Za-z]){1}([0-9A-Za-z]|_|-)*$/.";
+            }
+            $allowedValues = $this->getResourceLevelAllowableValues();
+                if (!is_null($this->container['resourceLevel']) && !in_array($this->container['resourceLevel'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceLevel', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['maskId']) && (mb_strlen($this->container['maskId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'maskId', the character length must be smaller than or equal to 64.";
             }
@@ -271,8 +325,8 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['maskName']) && (mb_strlen($this->container['maskName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'maskName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['maskName']) && !preg_match("/^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['maskName'])) {
-                $invalidProperties[] = "invalid value for 'maskName', must be conform to the pattern /^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            if (!is_null($this->container['maskName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['maskName'])) {
+                $invalidProperties[] = "invalid value for 'maskName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
             }
             $allowedValues = $this->getMaskStatusAllowableValues();
                 if (!is_null($this->container['maskStatus']) && !in_array($this->container['maskStatus'], $allowedValues, true)) {
@@ -362,6 +416,54 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     public function setRelationIds($relationIds)
     {
         $this->container['relationIds'] = $relationIds;
+        return $this;
+    }
+
+    /**
+    * Gets metricName
+    *  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    *
+    * @return string|null
+    */
+    public function getMetricName()
+    {
+        return $this->container['metricName'];
+    }
+
+    /**
+    * Sets metricName
+    *
+    * @param string|null $metricName 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    *
+    * @return $this
+    */
+    public function setMetricName($metricName)
+    {
+        $this->container['metricName'] = $metricName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceLevel
+    *  dimension: 子维度,product: 云产品
+    *
+    * @return string|null
+    */
+    public function getResourceLevel()
+    {
+        return $this->container['resourceLevel'];
+    }
+
+    /**
+    * Sets resourceLevel
+    *
+    * @param string|null $resourceLevel dimension: 子维度,product: 云产品
+    *
+    * @return $this
+    */
+    public function setResourceLevel($resourceLevel)
+    {
+        $this->container['resourceLevel'] = $resourceLevel;
         return $this;
     }
 
@@ -463,7 +565,7 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    *  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return string|null
     */
@@ -475,7 +577,7 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return $this
     */
@@ -489,7 +591,7 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     * Gets dimensions
     *  资源的维度信息
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Dimension2[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceDimension[]|null
     */
     public function getDimensions()
     {
@@ -499,7 +601,7 @@ class ListNotificationMaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Dimension2[]|null $dimensions 资源的维度信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceDimension[]|null $dimensions 资源的维度信息
     *
     * @return $this
     */

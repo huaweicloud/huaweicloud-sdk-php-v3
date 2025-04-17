@@ -39,7 +39,8 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatAccessAddress  智能交互接入地址。
     * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * clientId  clientId
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -64,6 +65,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'chatAccessRestAddress' => 'string',
             'isTransparent' => 'bool',
             'defaultLanguage' => 'string',
+            'clientId' => 'string',
             'xRequestId' => 'string'
     ];
 
@@ -87,7 +89,8 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatAccessAddress  智能交互接入地址。
     * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * clientId  clientId
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -112,6 +115,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
         'chatAccessRestAddress' => null,
         'isTransparent' => null,
         'defaultLanguage' => null,
+        'clientId' => null,
         'xRequestId' => null
     ];
 
@@ -156,7 +160,8 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatAccessAddress  智能交互接入地址。
     * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * clientId  clientId
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -181,6 +186,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'chatAccessRestAddress' => 'chat_access_rest_address',
             'isTransparent' => 'is_transparent',
             'defaultLanguage' => 'default_language',
+            'clientId' => 'client_id',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -204,7 +210,8 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatAccessAddress  智能交互接入地址。
     * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * clientId  clientId
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -229,6 +236,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'chatAccessRestAddress' => 'setChatAccessRestAddress',
             'isTransparent' => 'setIsTransparent',
             'defaultLanguage' => 'setDefaultLanguage',
+            'clientId' => 'setClientId',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -252,7 +260,8 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatAccessAddress  智能交互接入地址。
     * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * clientId  clientId
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -277,6 +286,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'chatAccessRestAddress' => 'getChatAccessRestAddress',
             'isTransparent' => 'getIsTransparent',
             'defaultLanguage' => 'getDefaultLanguage',
+            'clientId' => 'getClientId',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -331,6 +341,10 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     const CHAT_VIDEO_TYPE_HUB = 'HUB';
     const DEFAULT_LANGUAGE_CN = 'CN';
     const DEFAULT_LANGUAGE_EN = 'EN';
+    const DEFAULT_LANGUAGE_ESP = 'ESP';
+    const DEFAULT_LANGUAGE_POR = 'por';
+    const DEFAULT_LANGUAGE_ARABIC = 'Arabic';
+    const DEFAULT_LANGUAGE_THAI = 'Thai';
     
 
     /**
@@ -374,6 +388,10 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
         return [
             self::DEFAULT_LANGUAGE_CN,
             self::DEFAULT_LANGUAGE_EN,
+            self::DEFAULT_LANGUAGE_ESP,
+            self::DEFAULT_LANGUAGE_POR,
+            self::DEFAULT_LANGUAGE_ARABIC,
+            self::DEFAULT_LANGUAGE_THAI,
         ];
     }
 
@@ -412,6 +430,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
         $this->container['chatAccessRestAddress'] = isset($data['chatAccessRestAddress']) ? $data['chatAccessRestAddress'] : null;
         $this->container['isTransparent'] = isset($data['isTransparent']) ? $data['isTransparent'] : null;
         $this->container['defaultLanguage'] = isset($data['defaultLanguage']) ? $data['defaultLanguage'] : null;
+        $this->container['clientId'] = isset($data['clientId']) ? $data['clientId'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -513,6 +532,12 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['clientId']) && (mb_strlen($this->container['clientId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'clientId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['clientId']) && (mb_strlen($this->container['clientId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'clientId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -961,7 +986,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultLanguage
-    *  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
+    *  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     *
     * @return string|null
     */
@@ -973,13 +998,37 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets defaultLanguage
     *
-    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
+    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     *
     * @return $this
     */
     public function setDefaultLanguage($defaultLanguage)
     {
         $this->container['defaultLanguage'] = $defaultLanguage;
+        return $this;
+    }
+
+    /**
+    * Gets clientId
+    *  clientId
+    *
+    * @return string|null
+    */
+    public function getClientId()
+    {
+        return $this->container['clientId'];
+    }
+
+    /**
+    * Sets clientId
+    *
+    * @param string|null $clientId clientId
+    *
+    * @return $this
+    */
+    public function setClientId($clientId)
+    {
+        $this->container['clientId'] = $clientId;
         return $this;
     }
 

@@ -34,6 +34,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     * properties  资源详细属性
     * ingestProperties  采集属性
     * isDelegated  是否已托管
+    * operable  用户定义资源是否可运维实例
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
             'agentState' => 'string',
             'properties' => 'map[string,object]',
             'ingestProperties' => 'map[string,string]',
-            'isDelegated' => 'bool'
+            'isDelegated' => 'bool',
+            'operable' => 'string'
     ];
 
     /**
@@ -70,6 +72,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     * properties  资源详细属性
     * ingestProperties  采集属性
     * isDelegated  是否已托管
+    * operable  用户定义资源是否可运维实例
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
         'agentState' => null,
         'properties' => null,
         'ingestProperties' => null,
-        'isDelegated' => null
+        'isDelegated' => null,
+        'operable' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     * properties  资源详细属性
     * ingestProperties  采集属性
     * isDelegated  是否已托管
+    * operable  用户定义资源是否可运维实例
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
             'agentState' => 'agent_state',
             'properties' => 'properties',
             'ingestProperties' => 'ingest_properties',
-            'isDelegated' => 'is_delegated'
+            'isDelegated' => 'is_delegated',
+            'operable' => 'operable'
     ];
 
     /**
@@ -163,6 +169,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     * properties  资源详细属性
     * ingestProperties  采集属性
     * isDelegated  是否已托管
+    * operable  用户定义资源是否可运维实例
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
             'agentState' => 'setAgentState',
             'properties' => 'setProperties',
             'ingestProperties' => 'setIngestProperties',
-            'isDelegated' => 'setIsDelegated'
+            'isDelegated' => 'setIsDelegated',
+            'operable' => 'setOperable'
     ];
 
     /**
@@ -199,6 +207,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     * properties  资源详细属性
     * ingestProperties  采集属性
     * isDelegated  是否已托管
+    * operable  用户定义资源是否可运维实例
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
             'agentState' => 'getAgentState',
             'properties' => 'getProperties',
             'ingestProperties' => 'getIngestProperties',
-            'isDelegated' => 'getIsDelegated'
+            'isDelegated' => 'getIsDelegated',
+            'operable' => 'getOperable'
     ];
 
     /**
@@ -291,6 +301,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
         $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
         $this->container['ingestProperties'] = isset($data['ingestProperties']) ? $data['ingestProperties'] : null;
         $this->container['isDelegated'] = isset($data['isDelegated']) ? $data['isDelegated'] : null;
+        $this->container['operable'] = isset($data['operable']) ? $data['operable'] : null;
     }
 
     /**
@@ -648,6 +659,30 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     public function setIsDelegated($isDelegated)
     {
         $this->container['isDelegated'] = $isDelegated;
+        return $this;
+    }
+
+    /**
+    * Gets operable
+    *  用户定义资源是否可运维实例
+    *
+    * @return string|null
+    */
+    public function getOperable()
+    {
+        return $this->container['operable'];
+    }
+
+    /**
+    * Sets operable
+    *
+    * @param string|null $operable 用户定义资源是否可运维实例
+    *
+    * @return $this
+    */
+    public function setOperable($operable)
+    {
+        $this->container['operable'] = $operable;
         return $this;
     }
 

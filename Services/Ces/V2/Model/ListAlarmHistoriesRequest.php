@@ -23,13 +23,15 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
     * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
     * name  告警规则名称
-    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
     * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
-    * from  查询告警记录的起始时间，例如：2022-02-10T10:05:46+08:00
-    * to  查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
+    * from  查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
+    * to  查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
+    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
+    * createTimeFrom  查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
+    * createTimeTo  查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
     * offset  分页偏移量
     * limit  分页大小
     * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
@@ -37,16 +39,18 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'alarmId' => 'string',
+            'alarmId' => 'string[]',
             'recordId' => 'string',
             'name' => 'string',
-            'alarmType' => 'string',
-            'status' => 'string',
+            'status' => 'string[]',
             'level' => 'int',
             'namespace' => 'string',
             'resourceId' => 'string',
             'from' => 'string',
             'to' => 'string',
+            'alarmType' => 'string',
+            'createTimeFrom' => 'string',
+            'createTimeTo' => 'string',
             'offset' => 'int',
             'limit' => 'int',
             'orderBy' => 'string'
@@ -57,13 +61,15 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
     * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
     * name  告警规则名称
-    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
     * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
-    * from  查询告警记录的起始时间，例如：2022-02-10T10:05:46+08:00
-    * to  查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
+    * from  查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
+    * to  查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
+    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
+    * createTimeFrom  查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
+    * createTimeTo  查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
     * offset  分页偏移量
     * limit  分页大小
     * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
@@ -74,13 +80,15 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
         'alarmId' => null,
         'recordId' => null,
         'name' => null,
-        'alarmType' => null,
         'status' => null,
         'level' => null,
         'namespace' => null,
         'resourceId' => null,
         'from' => null,
         'to' => null,
+        'alarmType' => null,
+        'createTimeFrom' => null,
+        'createTimeTo' => null,
         'offset' => null,
         'limit' => null,
         'orderBy' => null
@@ -112,13 +120,15 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
     * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
     * name  告警规则名称
-    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
     * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
-    * from  查询告警记录的起始时间，例如：2022-02-10T10:05:46+08:00
-    * to  查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
+    * from  查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
+    * to  查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
+    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
+    * createTimeFrom  查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
+    * createTimeTo  查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
     * offset  分页偏移量
     * limit  分页大小
     * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
@@ -129,13 +139,15 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             'alarmId' => 'alarm_id',
             'recordId' => 'record_id',
             'name' => 'name',
-            'alarmType' => 'alarm_type',
             'status' => 'status',
             'level' => 'level',
             'namespace' => 'namespace',
             'resourceId' => 'resource_id',
             'from' => 'from',
             'to' => 'to',
+            'alarmType' => 'alarm_type',
+            'createTimeFrom' => 'create_time_from',
+            'createTimeTo' => 'create_time_to',
             'offset' => 'offset',
             'limit' => 'limit',
             'orderBy' => 'order_by'
@@ -146,13 +158,15 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
     * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
     * name  告警规则名称
-    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
     * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
-    * from  查询告警记录的起始时间，例如：2022-02-10T10:05:46+08:00
-    * to  查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
+    * from  查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
+    * to  查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
+    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
+    * createTimeFrom  查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
+    * createTimeTo  查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
     * offset  分页偏移量
     * limit  分页大小
     * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
@@ -163,13 +177,15 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             'alarmId' => 'setAlarmId',
             'recordId' => 'setRecordId',
             'name' => 'setName',
-            'alarmType' => 'setAlarmType',
             'status' => 'setStatus',
             'level' => 'setLevel',
             'namespace' => 'setNamespace',
             'resourceId' => 'setResourceId',
             'from' => 'setFrom',
             'to' => 'setTo',
+            'alarmType' => 'setAlarmType',
+            'createTimeFrom' => 'setCreateTimeFrom',
+            'createTimeTo' => 'setCreateTimeTo',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'orderBy' => 'setOrderBy'
@@ -180,13 +196,15 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * alarmId  告警ID,以al开头，后跟22位由字母或数字组成的字符串
     * recordId  告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
     * name  告警规则名称
-    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
     * status  告警规则状态, ok为正常，alarm为告警，invalid为已失效
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
-    * from  查询告警记录的起始时间，例如：2022-02-10T10:05:46+08:00
-    * to  查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
+    * from  查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
+    * to  查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
+    * alarmType  告警类型，event：查询事件类型告警，metric：查询指标类型告警
+    * createTimeFrom  查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
+    * createTimeTo  查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
     * offset  分页偏移量
     * limit  分页大小
     * orderBy  按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
@@ -197,13 +215,15 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             'alarmId' => 'getAlarmId',
             'recordId' => 'getRecordId',
             'name' => 'getName',
-            'alarmType' => 'getAlarmType',
             'status' => 'getStatus',
             'level' => 'getLevel',
             'namespace' => 'getNamespace',
             'resourceId' => 'getResourceId',
             'from' => 'getFrom',
             'to' => 'getTo',
+            'alarmType' => 'getAlarmType',
+            'createTimeFrom' => 'getCreateTimeFrom',
+            'createTimeTo' => 'getCreateTimeTo',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'orderBy' => 'getOrderBy'
@@ -249,6 +269,9 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_OK = 'ok';
+    const STATUS_ALARM = 'alarm';
+    const STATUS_INVALID = 'invalid';
     const ALARM_TYPE_EVENT = 'event';
     const ALARM_TYPE_METRIC = 'metric';
     const ORDER_BY_FIRST_ALARM_TIME = 'first_alarm_time';
@@ -256,6 +279,20 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     const ORDER_BY_ALARM_LEVEL = 'alarm_level';
     const ORDER_BY_RECORD_ID = 'record_id';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_OK,
+            self::STATUS_ALARM,
+            self::STATUS_INVALID,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -304,13 +341,15 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
         $this->container['alarmId'] = isset($data['alarmId']) ? $data['alarmId'] : null;
         $this->container['recordId'] = isset($data['recordId']) ? $data['recordId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['alarmType'] = isset($data['alarmType']) ? $data['alarmType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['level'] = isset($data['level']) ? $data['level'] : null;
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['from'] = isset($data['from']) ? $data['from'] : null;
         $this->container['to'] = isset($data['to']) ? $data['to'] : null;
+        $this->container['alarmType'] = isset($data['alarmType']) ? $data['alarmType'] : null;
+        $this->container['createTimeFrom'] = isset($data['createTimeFrom']) ? $data['createTimeFrom'] : null;
+        $this->container['createTimeTo'] = isset($data['createTimeTo']) ? $data['createTimeTo'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['orderBy'] = isset($data['orderBy']) ? $data['orderBy'] : null;
@@ -324,12 +363,6 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['alarmId']) && (mb_strlen($this->container['alarmId']) > 24)) {
-                $invalidProperties[] = "invalid value for 'alarmId', the character length must be smaller than or equal to 24.";
-            }
-            if (!is_null($this->container['alarmId']) && (mb_strlen($this->container['alarmId']) < 24)) {
-                $invalidProperties[] = "invalid value for 'alarmId', the character length must be bigger than or equal to 24.";
-            }
             if (!is_null($this->container['recordId']) && (mb_strlen($this->container['recordId']) > 24)) {
                 $invalidProperties[] = "invalid value for 'recordId', the character length must be smaller than or equal to 24.";
             }
@@ -341,23 +374,6 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
-            }
-            $allowedValues = $this->getAlarmTypeAllowableValues();
-                if (!is_null($this->container['alarmType']) && !in_array($this->container['alarmType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'alarmType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 64)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['status']) && !preg_match("/^(ok|alarm|invalid)$/", $this->container['status'])) {
-                $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /^(ok|alarm|invalid)$/.";
             }
             if (!is_null($this->container['level']) && ($this->container['level'] > 4)) {
                 $invalidProperties[] = "invalid value for 'level', must be smaller than or equal to 4.";
@@ -389,8 +405,28 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['to']) && (mb_strlen($this->container['to']) < 0)) {
                 $invalidProperties[] = "invalid value for 'to', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 999999)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 999999.";
+            $allowedValues = $this->getAlarmTypeAllowableValues();
+                if (!is_null($this->container['alarmType']) && !in_array($this->container['alarmType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'alarmType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['createTimeFrom']) && (mb_strlen($this->container['createTimeFrom']) > 64)) {
+                $invalidProperties[] = "invalid value for 'createTimeFrom', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['createTimeFrom']) && (mb_strlen($this->container['createTimeFrom']) < 0)) {
+                $invalidProperties[] = "invalid value for 'createTimeFrom', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['createTimeTo']) && (mb_strlen($this->container['createTimeTo']) > 64)) {
+                $invalidProperties[] = "invalid value for 'createTimeTo', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['createTimeTo']) && (mb_strlen($this->container['createTimeTo']) < 0)) {
+                $invalidProperties[] = "invalid value for 'createTimeTo', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 1000000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1000000000.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
@@ -427,7 +463,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     * Gets alarmId
     *  告警ID,以al开头，后跟22位由字母或数字组成的字符串
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getAlarmId()
     {
@@ -437,7 +473,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string|null $alarmId 告警ID,以al开头，后跟22位由字母或数字组成的字符串
+    * @param string[]|null $alarmId 告警ID,以al开头，后跟22位由字母或数字组成的字符串
     *
     * @return $this
     */
@@ -496,34 +532,10 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets alarmType
-    *  告警类型，event：查询事件类型告警，metric：查询指标类型告警
-    *
-    * @return string|null
-    */
-    public function getAlarmType()
-    {
-        return $this->container['alarmType'];
-    }
-
-    /**
-    * Sets alarmType
-    *
-    * @param string|null $alarmType 告警类型，event：查询事件类型告警，metric：查询指标类型告警
-    *
-    * @return $this
-    */
-    public function setAlarmType($alarmType)
-    {
-        $this->container['alarmType'] = $alarmType;
-        return $this;
-    }
-
-    /**
     * Gets status
     *  告警规则状态, ok为正常，alarm为告警，invalid为已失效
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getStatus()
     {
@@ -533,7 +545,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 告警规则状态, ok为正常，alarm为告警，invalid为已失效
+    * @param string[]|null $status 告警规则状态, ok为正常，alarm为告警，invalid为已失效
     *
     * @return $this
     */
@@ -569,7 +581,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    *  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return string|null
     */
@@ -581,7 +593,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return $this
     */
@@ -617,7 +629,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets from
-    *  查询告警记录的起始时间，例如：2022-02-10T10:05:46+08:00
+    *  查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
     *
     * @return string|null
     */
@@ -629,7 +641,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets from
     *
-    * @param string|null $from 查询告警记录的起始时间，例如：2022-02-10T10:05:46+08:00
+    * @param string|null $from 查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00
     *
     * @return $this
     */
@@ -641,7 +653,7 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets to
-    *  查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
+    *  查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
     *
     * @return string|null
     */
@@ -653,13 +665,85 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets to
     *
-    * @param string|null $to 查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
+    * @param string|null $to 查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00
     *
     * @return $this
     */
     public function setTo($to)
     {
         $this->container['to'] = $to;
+        return $this;
+    }
+
+    /**
+    * Gets alarmType
+    *  告警类型，event：查询事件类型告警，metric：查询指标类型告警
+    *
+    * @return string|null
+    */
+    public function getAlarmType()
+    {
+        return $this->container['alarmType'];
+    }
+
+    /**
+    * Sets alarmType
+    *
+    * @param string|null $alarmType 告警类型，event：查询事件类型告警，metric：查询指标类型告警
+    *
+    * @return $this
+    */
+    public function setAlarmType($alarmType)
+    {
+        $this->container['alarmType'] = $alarmType;
+        return $this;
+    }
+
+    /**
+    * Gets createTimeFrom
+    *  查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
+    *
+    * @return string|null
+    */
+    public function getCreateTimeFrom()
+    {
+        return $this->container['createTimeFrom'];
+    }
+
+    /**
+    * Sets createTimeFrom
+    *
+    * @param string|null $createTimeFrom 查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00
+    *
+    * @return $this
+    */
+    public function setCreateTimeFrom($createTimeFrom)
+    {
+        $this->container['createTimeFrom'] = $createTimeFrom;
+        return $this;
+    }
+
+    /**
+    * Gets createTimeTo
+    *  查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
+    *
+    * @return string|null
+    */
+    public function getCreateTimeTo()
+    {
+        return $this->container['createTimeTo'];
+    }
+
+    /**
+    * Sets createTimeTo
+    *
+    * @param string|null $createTimeTo 查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00
+    *
+    * @return $this
+    */
+    public function setCreateTimeTo($createTimeTo)
+    {
+        $this->container['createTimeTo'] = $createTimeTo;
         return $this;
     }
 

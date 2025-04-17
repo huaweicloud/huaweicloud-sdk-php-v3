@@ -169,7 +169,22 @@ class ListDailyLogRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SORT_DIR_DESC = 'desc';
+    const SORT_DIR_ASC = 'asc';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSortDirAllowableValues()
+    {
+        return [
+            self::SORT_DIR_DESC,
+            self::SORT_DIR_ASC,
+        ];
+    }
 
 
     /**
@@ -205,6 +220,38 @@ class ListDailyLogRequest implements ModelInterface, ArrayAccess
         if ($this->container['floatingIpId'] === null) {
             $invalidProperties[] = "'floatingIpId' can't be null";
         }
+            if ((mb_strlen($this->container['floatingIpId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['floatingIpId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be bigger than or equal to 32.";
+            }
+            $allowedValues = $this->getSortDirAllowableValues();
+                if (!is_null($this->container['sortDir']) && !in_array($this->container['sortDir'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'sortDir', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) > 3)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be smaller than or equal to 3.";
+            }
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && (mb_strlen($this->container['offset']) > 10)) {
+                $invalidProperties[] = "invalid value for 'offset', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['offset']) && (mb_strlen($this->container['offset']) < 1)) {
+                $invalidProperties[] = "invalid value for 'offset', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) > 128)) {
+                $invalidProperties[] = "invalid value for 'ip', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) < 7)) {
+                $invalidProperties[] = "invalid value for 'ip', the character length must be bigger than or equal to 7.";
+            }
         return $invalidProperties;
     }
 

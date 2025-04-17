@@ -22,21 +22,25 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * value  区域信息项列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'value' => '\HuaweiCloud\SDK\Config\V1\Model\Region[]'
+            'value' => '\HuaweiCloud\SDK\Config\V1\Model\Region[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Config\V1\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * value  区域信息项列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'value' => null
+        'value' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * value  区域信息项列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'value' => 'value'
+            'value' => 'value',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * value  区域信息项列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
-            'value' => 'setValue'
+            'value' => 'setValue',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * value  区域信息项列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
-            'value' => 'getValue'
+            'value' => 'getValue',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     public function setValue($value)
     {
         $this->container['value'] = $value;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Config\V1\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Config\V1\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

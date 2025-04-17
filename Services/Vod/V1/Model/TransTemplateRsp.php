@@ -25,6 +25,7 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
     * isDefault  是否设置成默认转码模板<br/>
     * type  模板组类型<br/>
     * isAutoEncrypt  是否开启加密
+    * additionalManifests  自定义索引后缀列表。
     * qualityInfoList  画质配置信息列表<br/>
     * watermarkTemplateIds  绑定的水印模板组ID数组<br/>
     * description  模板介绍<br/>
@@ -38,6 +39,7 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
             'isDefault' => 'bool',
             'type' => 'string',
             'isAutoEncrypt' => 'bool',
+            'additionalManifests' => '\HuaweiCloud\SDK\Vod\V1\Model\AdditionalManifest[]',
             'qualityInfoList' => '\HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[]',
             'watermarkTemplateIds' => 'string[]',
             'description' => 'string',
@@ -51,6 +53,7 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
     * isDefault  是否设置成默认转码模板<br/>
     * type  模板组类型<br/>
     * isAutoEncrypt  是否开启加密
+    * additionalManifests  自定义索引后缀列表。
     * qualityInfoList  画质配置信息列表<br/>
     * watermarkTemplateIds  绑定的水印模板组ID数组<br/>
     * description  模板介绍<br/>
@@ -64,6 +67,7 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
         'isDefault' => null,
         'type' => null,
         'isAutoEncrypt' => null,
+        'additionalManifests' => null,
         'qualityInfoList' => null,
         'watermarkTemplateIds' => null,
         'description' => null,
@@ -98,6 +102,7 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
     * isDefault  是否设置成默认转码模板<br/>
     * type  模板组类型<br/>
     * isAutoEncrypt  是否开启加密
+    * additionalManifests  自定义索引后缀列表。
     * qualityInfoList  画质配置信息列表<br/>
     * watermarkTemplateIds  绑定的水印模板组ID数组<br/>
     * description  模板介绍<br/>
@@ -111,6 +116,7 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
             'isDefault' => 'is_default',
             'type' => 'type',
             'isAutoEncrypt' => 'is_auto_encrypt',
+            'additionalManifests' => 'additional_manifests',
             'qualityInfoList' => 'quality_info_list',
             'watermarkTemplateIds' => 'watermark_template_ids',
             'description' => 'description',
@@ -124,6 +130,7 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
     * isDefault  是否设置成默认转码模板<br/>
     * type  模板组类型<br/>
     * isAutoEncrypt  是否开启加密
+    * additionalManifests  自定义索引后缀列表。
     * qualityInfoList  画质配置信息列表<br/>
     * watermarkTemplateIds  绑定的水印模板组ID数组<br/>
     * description  模板介绍<br/>
@@ -137,6 +144,7 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
             'isDefault' => 'setIsDefault',
             'type' => 'setType',
             'isAutoEncrypt' => 'setIsAutoEncrypt',
+            'additionalManifests' => 'setAdditionalManifests',
             'qualityInfoList' => 'setQualityInfoList',
             'watermarkTemplateIds' => 'setWatermarkTemplateIds',
             'description' => 'setDescription',
@@ -150,6 +158,7 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
     * isDefault  是否设置成默认转码模板<br/>
     * type  模板组类型<br/>
     * isAutoEncrypt  是否开启加密
+    * additionalManifests  自定义索引后缀列表。
     * qualityInfoList  画质配置信息列表<br/>
     * watermarkTemplateIds  绑定的水印模板组ID数组<br/>
     * description  模板介绍<br/>
@@ -163,6 +172,7 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
             'isDefault' => 'getIsDefault',
             'type' => 'getType',
             'isAutoEncrypt' => 'getIsAutoEncrypt',
+            'additionalManifests' => 'getAdditionalManifests',
             'qualityInfoList' => 'getQualityInfoList',
             'watermarkTemplateIds' => 'getWatermarkTemplateIds',
             'description' => 'getDescription',
@@ -232,6 +242,7 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
         $this->container['isDefault'] = isset($data['isDefault']) ? $data['isDefault'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['isAutoEncrypt'] = isset($data['isAutoEncrypt']) ? $data['isAutoEncrypt'] : null;
+        $this->container['additionalManifests'] = isset($data['additionalManifests']) ? $data['additionalManifests'] : null;
         $this->container['qualityInfoList'] = isset($data['qualityInfoList']) ? $data['qualityInfoList'] : null;
         $this->container['watermarkTemplateIds'] = isset($data['watermarkTemplateIds']) ? $data['watermarkTemplateIds'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -377,6 +388,30 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
     public function setIsAutoEncrypt($isAutoEncrypt)
     {
         $this->container['isAutoEncrypt'] = $isAutoEncrypt;
+        return $this;
+    }
+
+    /**
+    * Gets additionalManifests
+    *  自定义索引后缀列表。
+    *
+    * @return \HuaweiCloud\SDK\Vod\V1\Model\AdditionalManifest[]|null
+    */
+    public function getAdditionalManifests()
+    {
+        return $this->container['additionalManifests'];
+    }
+
+    /**
+    * Sets additionalManifests
+    *
+    * @param \HuaweiCloud\SDK\Vod\V1\Model\AdditionalManifest[]|null $additionalManifests 自定义索引后缀列表。
+    *
+    * @return $this
+    */
+    public function setAdditionalManifests($additionalManifests)
+    {
+        $this->container['additionalManifests'] = $additionalManifests;
         return $this;
     }
 

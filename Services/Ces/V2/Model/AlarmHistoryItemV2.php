@@ -23,13 +23,13 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     * recordId  告警记录ID
     * alarmId  告警规则的ID，如：al1603131199286dzxpqK3Ez。
     * name  告警规则的名称，如：alarm-test01。
-    * status  告警记录的状态，取值为ok，alarm，invalid； ok为正常，alarm为告警，invalid为已失效。
+    * status  告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
     * level  告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
     * type  type
     * actionEnabled  是否发送通知，值为true或者false。
     * beginTime  产生时间,UTC时间
     * endTime  结束时间，UTC时间
-    * firstAlarmTime  第一次告警时间戳，UTC时间
+    * firstAlarmTime  第一次告警时间，UTC时间
     * lastAlarmTime  最后一次告警时间，UTC时间
     * alarmRecoveryTime  告警恢复时间，UTC时间
     * metric  metric
@@ -67,13 +67,13 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     * recordId  告警记录ID
     * alarmId  告警规则的ID，如：al1603131199286dzxpqK3Ez。
     * name  告警规则的名称，如：alarm-test01。
-    * status  告警记录的状态，取值为ok，alarm，invalid； ok为正常，alarm为告警，invalid为已失效。
+    * status  告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
     * level  告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
     * type  type
     * actionEnabled  是否发送通知，值为true或者false。
     * beginTime  产生时间,UTC时间
     * endTime  结束时间，UTC时间
-    * firstAlarmTime  第一次告警时间戳，UTC时间
+    * firstAlarmTime  第一次告警时间，UTC时间
     * lastAlarmTime  最后一次告警时间，UTC时间
     * alarmRecoveryTime  告警恢复时间，UTC时间
     * metric  metric
@@ -132,13 +132,13 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     * recordId  告警记录ID
     * alarmId  告警规则的ID，如：al1603131199286dzxpqK3Ez。
     * name  告警规则的名称，如：alarm-test01。
-    * status  告警记录的状态，取值为ok，alarm，invalid； ok为正常，alarm为告警，invalid为已失效。
+    * status  告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
     * level  告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
     * type  type
     * actionEnabled  是否发送通知，值为true或者false。
     * beginTime  产生时间,UTC时间
     * endTime  结束时间，UTC时间
-    * firstAlarmTime  第一次告警时间戳，UTC时间
+    * firstAlarmTime  第一次告警时间，UTC时间
     * lastAlarmTime  最后一次告警时间，UTC时间
     * alarmRecoveryTime  告警恢复时间，UTC时间
     * metric  metric
@@ -176,13 +176,13 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     * recordId  告警记录ID
     * alarmId  告警规则的ID，如：al1603131199286dzxpqK3Ez。
     * name  告警规则的名称，如：alarm-test01。
-    * status  告警记录的状态，取值为ok，alarm，invalid； ok为正常，alarm为告警，invalid为已失效。
+    * status  告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
     * level  告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
     * type  type
     * actionEnabled  是否发送通知，值为true或者false。
     * beginTime  产生时间,UTC时间
     * endTime  结束时间，UTC时间
-    * firstAlarmTime  第一次告警时间戳，UTC时间
+    * firstAlarmTime  第一次告警时间，UTC时间
     * lastAlarmTime  最后一次告警时间，UTC时间
     * alarmRecoveryTime  告警恢复时间，UTC时间
     * metric  metric
@@ -220,13 +220,13 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     * recordId  告警记录ID
     * alarmId  告警规则的ID，如：al1603131199286dzxpqK3Ez。
     * name  告警规则的名称，如：alarm-test01。
-    * status  告警记录的状态，取值为ok，alarm，invalid； ok为正常，alarm为告警，invalid为已失效。
+    * status  告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
     * level  告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
     * type  type
     * actionEnabled  是否发送通知，值为true或者false。
     * beginTime  产生时间,UTC时间
     * endTime  结束时间，UTC时间
-    * firstAlarmTime  第一次告警时间戳，UTC时间
+    * firstAlarmTime  第一次告警时间，UTC时间
     * lastAlarmTime  最后一次告警时间，UTC时间
     * alarmRecoveryTime  告警恢复时间，UTC时间
     * metric  metric
@@ -302,6 +302,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     const STATUS_OK = 'ok';
     const STATUS_ALARM = 'alarm';
     const STATUS_INVALID = 'invalid';
+    const STATUS_OK_MANUAL = 'ok_manual';
     const LEVEL_1 = 1;
     const LEVEL_2 = 2;
     const LEVEL_3 = 3;
@@ -319,6 +320,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
             self::STATUS_OK,
             self::STATUS_ALARM,
             self::STATUS_INVALID,
+            self::STATUS_OK_MANUAL,
         ];
     }
 
@@ -503,7 +505,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  告警记录的状态，取值为ok，alarm，invalid； ok为正常，alarm为告警，invalid为已失效。
+    *  告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
     *
     * @return string|null
     */
@@ -515,7 +517,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 告警记录的状态，取值为ok，alarm，invalid； ok为正常，alarm为告警，invalid为已失效。
+    * @param string|null $status 告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
     *
     * @return $this
     */
@@ -647,7 +649,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets firstAlarmTime
-    *  第一次告警时间戳，UTC时间
+    *  第一次告警时间，UTC时间
     *
     * @return \DateTime|null
     */
@@ -659,7 +661,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets firstAlarmTime
     *
-    * @param \DateTime|null $firstAlarmTime 第一次告警时间戳，UTC时间
+    * @param \DateTime|null $firstAlarmTime 第一次告警时间，UTC时间
     *
     * @return $this
     */

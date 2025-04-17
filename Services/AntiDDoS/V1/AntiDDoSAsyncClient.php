@@ -153,68 +153,6 @@ class AntiDDoSAsyncClient extends Client
     }
 
     /**
-     * 查询告警配置信息
-     *
-     * 查询用户配置信息，用户可以通过此接口查询是否接收某类告警，同时可以配置是手机短信还是电子邮件接收告警信息。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showAlertConfigAsync($request)
-    {
-        return $this->showAlertConfigAsyncWithHttpInfo($request);
-    }
-    
-    public function showAlertConfigAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2/{project_id}/warnalert/alertconfig/query';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\ShowAlertConfigResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\ShowAlertConfigRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 查询Ani-DDoS默认防护策略
      *
      * 查询用户配置的默认防护策略。
@@ -277,23 +215,23 @@ class AntiDDoSAsyncClient extends Client
     }
 
     /**
-     * 更新告警配置信息
+     * 开通DDoS服务
      *
-     * 更新用户配置信息，用户可以通过此接口更新是否接收某类告警，同时可以配置是手机短信还是电子邮件接收告警信息。
+     * 开通DDoS服务
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function updateAlertConfigAsync($request)
+    public function enableDefensePolicyAsync($request)
     {
-        return $this->updateAlertConfigAsyncWithHttpInfo($request);
+        return $this->enableDefensePolicyAsyncWithHttpInfo($request);
     }
     
-    public function updateAlertConfigAsyncWithHttpInfo($request){
+    public function enableDefensePolicyAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/{project_id}/warnalert/alertconfig/update';
+        $resourcePath = '/v1/{project_id}/antiddos/{floating_ip_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -306,6 +244,9 @@ class AntiDDoSAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['floatingIpId'] !== null) {
+            $pathParams['floating_ip_id'] = $localVarParams['floatingIpId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -335,9 +276,9 @@ class AntiDDoSAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\UpdateAlertConfigResponse',
+            $responseType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\EnableDefensePolicyResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\UpdateAlertConfigRequest',
+            $requestType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\EnableDefensePolicyRequest',
             $asyncRequest = true);
     }
 
@@ -561,23 +502,23 @@ class AntiDDoSAsyncClient extends Client
     }
 
     /**
-     * 查询Anti-DDoS配置可选范围
+     * 查询配额
      *
-     * 查询系统支持的Anti-DDoS防护策略配置的可选范围，用户根据范围列表选择适合自已业务的防护策略进行Anti-DDoS流量清洗。
+     * 查询配额
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function listNewConfigsAsync($request)
+    public function listQuotaAsync($request)
     {
-        return $this->listNewConfigsAsyncWithHttpInfo($request);
+        return $this->listQuotaAsyncWithHttpInfo($request);
     }
     
-    public function listNewConfigsAsyncWithHttpInfo($request){
+    public function listQuotaAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/{project_id}/antiddos/query-config-list';
+        $resourcePath = '/v1/{project_id}/antiddos/quotas';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -616,9 +557,9 @@ class AntiDDoSAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\ListNewConfigsResponse',
+            $responseType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\ListQuotaResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\ListNewConfigsRequest',
+            $requestType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\ListQuotaRequest',
             $asyncRequest = true);
     }
 
@@ -824,23 +765,23 @@ class AntiDDoSAsyncClient extends Client
     }
 
     /**
-     * 查询Anti-DDoS任务
+     * 查询全量日志设置
      *
-     * 用户查询指定的Anti-DDoS防护配置任务，得到任务当前执行的状态。
+     * 查询全量日志设置
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function showNewTaskStatusAsync($request)
+    public function showLogConfigAsync($request)
     {
-        return $this->showNewTaskStatusAsyncWithHttpInfo($request);
+        return $this->showLogConfigAsyncWithHttpInfo($request);
     }
     
-    public function showNewTaskStatusAsyncWithHttpInfo($request){
+    public function showLogConfigAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/{project_id}/query-task-status';
+        $resourcePath = '/v1/{project_id}/antiddos/lts-config';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -854,8 +795,8 @@ class AntiDDoSAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['taskId'] !== null) {
-            $queryParams['task_id'] = $localVarParams['taskId'];
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
 
         if ($multipart) {
@@ -882,9 +823,9 @@ class AntiDDoSAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\ShowNewTaskStatusResponse',
+            $responseType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\ShowLogConfigResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\ShowNewTaskStatusRequest',
+            $requestType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\ShowLogConfigRequest',
             $asyncRequest = true);
     }
 
@@ -956,6 +897,74 @@ class AntiDDoSAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\UpdateDDosResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\UpdateDDosRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新用户全量日志设置
+     *
+     * 更新用户全量日志设置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateLogConfigAsync($request)
+    {
+        return $this->updateLogConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function updateLogConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/antiddos/lts-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\UpdateLogConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AntiDDoS\V1\Model\UpdateLogConfigRequest',
             $asyncRequest = true);
     }
 

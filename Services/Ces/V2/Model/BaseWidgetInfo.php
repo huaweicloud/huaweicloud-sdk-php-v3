@@ -20,11 +20,12 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * groupId  视图分区id
     * metrics  指标列表
     * title  监控视图标题
     * threshold  监控视图指标的阈值
     * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar柱状图，line折线图
+    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
@@ -33,24 +34,26 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'groupId' => 'string',
             'metrics' => '\HuaweiCloud\SDK\Ces\V2\Model\WidgetMetric[]',
             'title' => 'string',
             'threshold' => 'double',
             'thresholdEnabled' => 'bool',
             'view' => 'string',
             'metricDisplayMode' => 'string',
-            'properties' => '\HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoProperties',
+            'properties' => '\HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoProperties',
             'location' => '\HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation',
             'unit' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * groupId  视图分区id
     * metrics  指标列表
     * title  监控视图标题
     * threshold  监控视图指标的阈值
     * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar柱状图，line折线图
+    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
@@ -59,6 +62,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'groupId' => null,
         'metrics' => null,
         'title' => null,
         'threshold' => 'double',
@@ -93,11 +97,12 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * groupId  视图分区id
     * metrics  指标列表
     * title  监控视图标题
     * threshold  监控视图指标的阈值
     * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar柱状图，line折线图
+    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
@@ -106,6 +111,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'groupId' => 'group_id',
             'metrics' => 'metrics',
             'title' => 'title',
             'threshold' => 'threshold',
@@ -119,11 +125,12 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * groupId  视图分区id
     * metrics  指标列表
     * title  监控视图标题
     * threshold  监控视图指标的阈值
     * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar柱状图，line折线图
+    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
@@ -132,6 +139,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'groupId' => 'setGroupId',
             'metrics' => 'setMetrics',
             'title' => 'setTitle',
             'threshold' => 'setThreshold',
@@ -145,11 +153,12 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * groupId  视图分区id
     * metrics  指标列表
     * title  监控视图标题
     * threshold  监控视图指标的阈值
     * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar柱状图，line折线图
+    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
@@ -158,6 +167,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'groupId' => 'getGroupId',
             'metrics' => 'getMetrics',
             'title' => 'getTitle',
             'threshold' => 'getThreshold',
@@ -211,6 +221,10 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     }
     const VIEW_BAR = 'bar';
     const VIEW_LINE = 'line';
+    const VIEW_BAR_CHART = 'bar_chart';
+    const VIEW_TABLE = 'table';
+    const VIEW_CIRCULAR_BAR = 'circular_bar';
+    const VIEW_AREA_CHART = 'area_chart';
     const METRIC_DISPLAY_MODE_SINGLE = 'single';
     const METRIC_DISPLAY_MODE_MULTIPLE = 'multiple';
     
@@ -225,6 +239,10 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
         return [
             self::VIEW_BAR,
             self::VIEW_LINE,
+            self::VIEW_BAR_CHART,
+            self::VIEW_TABLE,
+            self::VIEW_CIRCULAR_BAR,
+            self::VIEW_AREA_CHART,
         ];
     }
 
@@ -257,6 +275,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['metrics'] = isset($data['metrics']) ? $data['metrics'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
@@ -276,13 +295,22 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['title']) && (mb_strlen($this->container['title']) > 128)) {
+            if (!is_null($this->container['groupId']) && !preg_match("/^dg([a-z]|[A-Z]|[0-9]){22}|default$/", $this->container['groupId'])) {
+                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^dg([a-z]|[A-Z]|[0-9]){22}|default$/.";
+            }
+        if ($this->container['metrics'] === null) {
+            $invalidProperties[] = "'metrics' can't be null";
+        }
+        if ($this->container['title'] === null) {
+            $invalidProperties[] = "'title' can't be null";
+        }
+            if ((mb_strlen($this->container['title']) > 128)) {
                 $invalidProperties[] = "invalid value for 'title', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['title']) && (mb_strlen($this->container['title']) < 1)) {
+            if ((mb_strlen($this->container['title']) < 1)) {
                 $invalidProperties[] = "invalid value for 'title', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['title']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|:|;|\\(|\\)|\\.|~|（|）)+$/", $this->container['title'])) {
+            if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|:|;|\\(|\\)|\\.|~|（|）)+$/", $this->container['title'])) {
                 $invalidProperties[] = "invalid value for 'title', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|:|;|\\(|\\)|\\.|~|（|）)+$/.";
             }
             if (!is_null($this->container['threshold']) && ($this->container['threshold'] > 1.7976931348623157E+308)) {
@@ -291,6 +319,12 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['threshold']) && ($this->container['threshold'] < 0)) {
                 $invalidProperties[] = "invalid value for 'threshold', must be bigger than or equal to 0.";
             }
+        if ($this->container['thresholdEnabled'] === null) {
+            $invalidProperties[] = "'thresholdEnabled' can't be null";
+        }
+        if ($this->container['view'] === null) {
+            $invalidProperties[] = "'view' can't be null";
+        }
             $allowedValues = $this->getViewAllowableValues();
                 if (!is_null($this->container['view']) && !in_array($this->container['view'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -299,6 +333,9 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['metricDisplayMode'] === null) {
+            $invalidProperties[] = "'metricDisplayMode' can't be null";
+        }
             $allowedValues = $this->getMetricDisplayModeAllowableValues();
                 if (!is_null($this->container['metricDisplayMode']) && !in_array($this->container['metricDisplayMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -307,6 +344,9 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['location'] === null) {
+            $invalidProperties[] = "'location' can't be null";
+        }
             if (!is_null($this->container['unit']) && (mb_strlen($this->container['unit']) > 32)) {
                 $invalidProperties[] = "invalid value for 'unit', the character length must be smaller than or equal to 32.";
             }
@@ -328,10 +368,34 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets groupId
+    *  视图分区id
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 视图分区id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
     * Gets metrics
     *  指标列表
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\WidgetMetric[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\WidgetMetric[]
     */
     public function getMetrics()
     {
@@ -341,7 +405,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets metrics
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\WidgetMetric[]|null $metrics 指标列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\WidgetMetric[] $metrics 指标列表
     *
     * @return $this
     */
@@ -355,7 +419,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     * Gets title
     *  监控视图标题
     *
-    * @return string|null
+    * @return string
     */
     public function getTitle()
     {
@@ -365,7 +429,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets title
     *
-    * @param string|null $title 监控视图标题
+    * @param string $title 监控视图标题
     *
     * @return $this
     */
@@ -403,7 +467,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     * Gets thresholdEnabled
     *  阈值是否展示，true:展示，false:不展示
     *
-    * @return bool|null
+    * @return bool
     */
     public function getThresholdEnabled()
     {
@@ -413,7 +477,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets thresholdEnabled
     *
-    * @param bool|null $thresholdEnabled 阈值是否展示，true:展示，false:不展示
+    * @param bool $thresholdEnabled 阈值是否展示，true:展示，false:不展示
     *
     * @return $this
     */
@@ -425,9 +489,9 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets view
-    *  监控视图图表类型, bar柱状图，line折线图
+    *  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     *
-    * @return string|null
+    * @return string
     */
     public function getView()
     {
@@ -437,7 +501,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets view
     *
-    * @param string|null $view 监控视图图表类型, bar柱状图，line折线图
+    * @param string $view 监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     *
     * @return $this
     */
@@ -451,7 +515,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     * Gets metricDisplayMode
     *  指标展示类型，single 单指标展示，multiple 多指标展示
     *
-    * @return string|null
+    * @return string
     */
     public function getMetricDisplayMode()
     {
@@ -461,7 +525,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets metricDisplayMode
     *
-    * @param string|null $metricDisplayMode 指标展示类型，single 单指标展示，multiple 多指标展示
+    * @param string $metricDisplayMode 指标展示类型，single 单指标展示，multiple 多指标展示
     *
     * @return $this
     */
@@ -475,7 +539,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     * Gets properties
     *  properties
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoProperties|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoProperties|null
     */
     public function getProperties()
     {
@@ -485,7 +549,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets properties
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoProperties|null $properties properties
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoProperties|null $properties properties
     *
     * @return $this
     */
@@ -499,7 +563,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     * Gets location
     *  location
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation
     */
     public function getLocation()
     {
@@ -509,7 +573,7 @@ class BaseWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets location
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation|null $location location
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation $location location
     *
     * @return $this
     */

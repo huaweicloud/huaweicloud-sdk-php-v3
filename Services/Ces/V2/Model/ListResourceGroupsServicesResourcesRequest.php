@@ -27,6 +27,11 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
     * dimValue  资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
+    * tag  资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
+    * extendRelationId  企业项目ID
+    * productName  资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceName  资源名称
+    * eventStatus  按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
     *
     * @var string[]
     */
@@ -37,7 +42,12 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
             'limit' => 'string',
             'offset' => 'int',
             'status' => 'string',
-            'dimValue' => 'string'
+            'dimValue' => 'string',
+            'tag' => 'string',
+            'extendRelationId' => 'string',
+            'productName' => 'string',
+            'resourceName' => 'string',
+            'eventStatus' => 'string'
     ];
 
     /**
@@ -49,6 +59,11 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
     * dimValue  资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
+    * tag  资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
+    * extendRelationId  企业项目ID
+    * productName  资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceName  资源名称
+    * eventStatus  按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
     *
     * @var string[]
     */
@@ -59,7 +74,12 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
         'limit' => null,
         'offset' => 'int32',
         'status' => null,
-        'dimValue' => null
+        'dimValue' => null,
+        'tag' => null,
+        'extendRelationId' => null,
+        'productName' => null,
+        'resourceName' => null,
+        'eventStatus' => null
     ];
 
     /**
@@ -92,6 +112,11 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
     * dimValue  资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
+    * tag  资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
+    * extendRelationId  企业项目ID
+    * productName  资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceName  资源名称
+    * eventStatus  按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
     *
     * @var string[]
     */
@@ -102,7 +127,12 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
             'limit' => 'limit',
             'offset' => 'offset',
             'status' => 'status',
-            'dimValue' => 'dim_value'
+            'dimValue' => 'dim_value',
+            'tag' => 'tag',
+            'extendRelationId' => 'extend_relation_id',
+            'productName' => 'product_name',
+            'resourceName' => 'resource_name',
+            'eventStatus' => 'event_status'
     ];
 
     /**
@@ -114,6 +144,11 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
     * dimValue  资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
+    * tag  资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
+    * extendRelationId  企业项目ID
+    * productName  资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceName  资源名称
+    * eventStatus  按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
     *
     * @var string[]
     */
@@ -124,7 +159,12 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
             'limit' => 'setLimit',
             'offset' => 'setOffset',
             'status' => 'setStatus',
-            'dimValue' => 'setDimValue'
+            'dimValue' => 'setDimValue',
+            'tag' => 'setTag',
+            'extendRelationId' => 'setExtendRelationId',
+            'productName' => 'setProductName',
+            'resourceName' => 'setResourceName',
+            'eventStatus' => 'setEventStatus'
     ];
 
     /**
@@ -136,6 +176,11 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
     * dimValue  资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
+    * tag  资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
+    * extendRelationId  企业项目ID
+    * productName  资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceName  资源名称
+    * eventStatus  按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
     *
     * @var string[]
     */
@@ -146,7 +191,12 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
             'limit' => 'getLimit',
             'offset' => 'getOffset',
             'status' => 'getStatus',
-            'dimValue' => 'getDimValue'
+            'dimValue' => 'getDimValue',
+            'tag' => 'getTag',
+            'extendRelationId' => 'getExtendRelationId',
+            'productName' => 'getProductName',
+            'resourceName' => 'getResourceName',
+            'eventStatus' => 'getEventStatus'
     ];
 
     /**
@@ -192,6 +242,9 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     const STATUS_HEALTH = 'health';
     const STATUS_UNHEALTHY = 'unhealthy';
     const STATUS_NO_ALARM_RULE = 'no_alarm_rule';
+    const EVENT_STATUS_HEALTH = 'health';
+    const EVENT_STATUS_UNHEALTHY = 'unhealthy';
+    const EVENT_STATUS_NO_ALARM_RULE = 'no_alarm_rule';
     
 
     /**
@@ -205,6 +258,20 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
             self::STATUS_HEALTH,
             self::STATUS_UNHEALTHY,
             self::STATUS_NO_ALARM_RULE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEventStatusAllowableValues()
+    {
+        return [
+            self::EVENT_STATUS_HEALTH,
+            self::EVENT_STATUS_UNHEALTHY,
+            self::EVENT_STATUS_NO_ALARM_RULE,
         ];
     }
 
@@ -231,6 +298,11 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['dimValue'] = isset($data['dimValue']) ? $data['dimValue'] : null;
+        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
+        $this->container['extendRelationId'] = isset($data['extendRelationId']) ? $data['extendRelationId'] : null;
+        $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
+        $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
+        $this->container['eventStatus'] = isset($data['eventStatus']) ? $data['eventStatus'] : null;
     }
 
     /**
@@ -291,6 +363,41 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
             if (!is_null($this->container['dimValue']) && (mb_strlen($this->container['dimValue']) < 1)) {
                 $invalidProperties[] = "invalid value for 'dimValue', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['tag']) && (mb_strlen($this->container['tag']) > 500)) {
+                $invalidProperties[] = "invalid value for 'tag', the character length must be smaller than or equal to 500.";
+            }
+            if (!is_null($this->container['tag']) && (mb_strlen($this->container['tag']) < 0)) {
+                $invalidProperties[] = "invalid value for 'tag', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['extendRelationId']) && (mb_strlen($this->container['extendRelationId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'extendRelationId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['extendRelationId']) && (mb_strlen($this->container['extendRelationId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'extendRelationId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'resourceName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'resourceName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['resourceName']) && !preg_match("/^$|^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\\\.|)+$/", $this->container['resourceName'])) {
+                $invalidProperties[] = "invalid value for 'resourceName', must be conform to the pattern /^$|^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\\\.|)+$/.";
+            }
+            $allowedValues = $this->getEventStatusAllowableValues();
+                if (!is_null($this->container['eventStatus']) && !in_array($this->container['eventStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'eventStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -470,6 +577,126 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     public function setDimValue($dimValue)
     {
         $this->container['dimValue'] = $dimValue;
+        return $this;
+    }
+
+    /**
+    * Gets tag
+    *  资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
+    *
+    * @return string|null
+    */
+    public function getTag()
+    {
+        return $this->container['tag'];
+    }
+
+    /**
+    * Sets tag
+    *
+    * @param string|null $tag 资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
+    *
+    * @return $this
+    */
+    public function setTag($tag)
+    {
+        $this->container['tag'] = $tag;
+        return $this;
+    }
+
+    /**
+    * Gets extendRelationId
+    *  企业项目ID
+    *
+    * @return string|null
+    */
+    public function getExtendRelationId()
+    {
+        return $this->container['extendRelationId'];
+    }
+
+    /**
+    * Sets extendRelationId
+    *
+    * @param string|null $extendRelationId 企业项目ID
+    *
+    * @return $this
+    */
+    public function setExtendRelationId($extendRelationId)
+    {
+        $this->container['extendRelationId'] = $extendRelationId;
+        return $this;
+    }
+
+    /**
+    * Gets productName
+    *  资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    *
+    * @return string|null
+    */
+    public function getProductName()
+    {
+        return $this->container['productName'];
+    }
+
+    /**
+    * Sets productName
+    *
+    * @param string|null $productName 资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    *
+    * @return $this
+    */
+    public function setProductName($productName)
+    {
+        $this->container['productName'] = $productName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceName
+    *  资源名称
+    *
+    * @return string|null
+    */
+    public function getResourceName()
+    {
+        return $this->container['resourceName'];
+    }
+
+    /**
+    * Sets resourceName
+    *
+    * @param string|null $resourceName 资源名称
+    *
+    * @return $this
+    */
+    public function setResourceName($resourceName)
+    {
+        $this->container['resourceName'] = $resourceName;
+        return $this;
+    }
+
+    /**
+    * Gets eventStatus
+    *  按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
+    *
+    * @return string|null
+    */
+    public function getEventStatus()
+    {
+        return $this->container['eventStatus'];
+    }
+
+    /**
+    * Sets eventStatus
+    *
+    * @param string|null $eventStatus 按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
+    *
+    * @return $this
+    */
+    public function setEventStatus($eventStatus)
+    {
+        $this->container['eventStatus'] = $eventStatus;
         return $this;
     }
 

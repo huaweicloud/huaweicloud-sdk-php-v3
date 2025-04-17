@@ -64,7 +64,7 @@ class TriggerCondition implements ModelInterface, ArrayAccess
             'aggregationWindow' => 'string',
             'cmdb' => '\HuaweiCloud\SDK\Aom\V2\Model\CmdbInfo',
             'queryMatch' => 'string',
-            'queryParam' => 'string',
+            'queryParam' => 'object',
             'aomMonitorLevel' => 'string',
             'aggregateType' => 'string',
             'metricStatisticMethod' => 'string',
@@ -953,7 +953,7 @@ class TriggerCondition implements ModelInterface, ArrayAccess
     * Gets queryParam
     *  查询参数
     *
-    * @return string
+    * @return object
     */
     public function getQueryParam()
     {
@@ -963,7 +963,7 @@ class TriggerCondition implements ModelInterface, ArrayAccess
     /**
     * Sets queryParam
     *
-    * @param string $queryParam 查询参数
+    * @param object $queryParam 查询参数
     *
     * @return $this
     */

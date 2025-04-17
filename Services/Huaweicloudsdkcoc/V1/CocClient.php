@@ -783,7 +783,7 @@ class CocClient extends Client
 
     public function createReportCustomEventWithHttpInfo($request)
     {
-        $resourcePath = '/event/huawei/custom/{integration_key}';
+        $resourcePath = '/v1/event/huawei/custom/{integration_key}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

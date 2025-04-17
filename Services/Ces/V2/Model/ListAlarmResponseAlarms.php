@@ -33,10 +33,10 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
-    * alarmTemplateId  告警规则关联告警模板ID
-    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceLevel  resourceLevel
+    * enterpriseProjectId  企业项目ID
+    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * productName  产品层级跨纬规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'alarmTemplateId' => 'string',
             'productName' => 'string',
-            'resourceLevel' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceLevel'
+            'resourceLevel' => 'string'
     ];
 
     /**
@@ -75,10 +75,10 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
-    * alarmTemplateId  告警规则关联告警模板ID
-    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceLevel  resourceLevel
+    * enterpriseProjectId  企业项目ID
+    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * productName  产品层级跨纬规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
     * @var string[]
     */
@@ -138,10 +138,10 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
-    * alarmTemplateId  告警规则关联告警模板ID
-    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceLevel  resourceLevel
+    * enterpriseProjectId  企业项目ID
+    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * productName  产品层级跨纬规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
     * @var string[]
     */
@@ -180,10 +180,10 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
-    * alarmTemplateId  告警规则关联告警模板ID
-    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceLevel  resourceLevel
+    * enterpriseProjectId  企业项目ID
+    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * productName  产品层级跨纬规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
     * @var string[]
     */
@@ -222,10 +222,10 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
-    * enterpriseProjectId  企业项目ID，不填时会使用默认的企业项目ID
-    * alarmTemplateId  告警规则关联告警模板ID
-    * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceLevel  resourceLevel
+    * enterpriseProjectId  企业项目ID
+    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * productName  产品层级跨纬规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
     * @var string[]
     */
@@ -289,7 +289,22 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RESOURCE_LEVEL_PRODUCT = 'product';
+    const RESOURCE_LEVEL_DIMENSION = 'dimension';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceLevelAllowableValues()
+    {
+        return [
+            self::RESOURCE_LEVEL_PRODUCT,
+            self::RESOURCE_LEVEL_DIMENSION,
+        ];
+    }
 
 
     /**
@@ -391,6 +406,14 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
             if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getResourceLevelAllowableValues();
+                if (!is_null($this->container['resourceLevel']) && !in_array($this->container['resourceLevel'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceLevel', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -719,7 +742,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，不填时会使用默认的企业项目ID
+    *  企业项目ID
     *
     * @return string|null
     */
@@ -731,7 +754,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，不填时会使用默认的企业项目ID
+    * @param string|null $enterpriseProjectId 企业项目ID
     *
     * @return $this
     */
@@ -743,7 +766,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmTemplateId
-    *  告警规则关联告警模板ID
+    *  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     *
     * @return string|null
     */
@@ -755,7 +778,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets alarmTemplateId
     *
-    * @param string|null $alarmTemplateId 告警规则关联告警模板ID
+    * @param string|null $alarmTemplateId 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     *
     * @return $this
     */
@@ -767,7 +790,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets productName
-    *  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    *  产品层级跨纬规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
     *
     * @return string|null
     */
@@ -779,7 +802,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets productName
     *
-    * @param string|null $productName 产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * @param string|null $productName 产品层级跨纬规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
     *
     * @return $this
     */
@@ -791,9 +814,9 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceLevel
-    *  resourceLevel
+    *  产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceLevel|null
+    * @return string|null
     */
     public function getResourceLevel()
     {
@@ -803,7 +826,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets resourceLevel
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceLevel|null $resourceLevel resourceLevel
+    * @param string|null $resourceLevel 产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     *
     * @return $this
     */

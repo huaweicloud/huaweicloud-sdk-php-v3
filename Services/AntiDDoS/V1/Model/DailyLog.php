@@ -179,7 +179,22 @@ class DailyLog implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_1 = 1;
+    const STATUS_2 = 2;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_1,
+            self::STATUS_2,
+        ];
+    }
 
 
     /**
@@ -216,21 +231,59 @@ class DailyLog implements ModelInterface, ArrayAccess
         if ($this->container['startTime'] === null) {
             $invalidProperties[] = "'startTime' can't be null";
         }
+            if (($this->container['startTime'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 9999999999999.";
+            }
+            if (($this->container['startTime'] < 1)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be bigger than or equal to 1.";
+            }
         if ($this->container['endTime'] === null) {
             $invalidProperties[] = "'endTime' can't be null";
         }
+            if (($this->container['endTime'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 9999999999999.";
+            }
+            if (($this->container['endTime'] < 1)) {
+                $invalidProperties[] = "invalid value for 'endTime', must be bigger than or equal to 1.";
+            }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['triggerBps'] === null) {
             $invalidProperties[] = "'triggerBps' can't be null";
         }
+            if (($this->container['triggerBps'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'triggerBps', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['triggerBps'] < 0)) {
+                $invalidProperties[] = "invalid value for 'triggerBps', must be bigger than or equal to 0.";
+            }
         if ($this->container['triggerPps'] === null) {
             $invalidProperties[] = "'triggerPps' can't be null";
         }
+            if (($this->container['triggerPps'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'triggerPps', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['triggerPps'] < 0)) {
+                $invalidProperties[] = "invalid value for 'triggerPps', must be bigger than or equal to 0.";
+            }
         if ($this->container['triggerHttpPps'] === null) {
             $invalidProperties[] = "'triggerHttpPps' can't be null";
         }
+            if (($this->container['triggerHttpPps'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'triggerHttpPps', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['triggerHttpPps'] < 0)) {
+                $invalidProperties[] = "invalid value for 'triggerHttpPps', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

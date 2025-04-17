@@ -170,6 +170,18 @@ class DeleteDefaultConfigResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['errorCode']) && (mb_strlen($this->container['errorCode']) > 20)) {
+                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['errorCode']) && (mb_strlen($this->container['errorCode']) < 1)) {
+                $invalidProperties[] = "invalid value for 'errorCode', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) > 255)) {
+                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) < 1)) {
+                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 

@@ -20,8 +20,8 @@ class Notification implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  通知类型, notification代表通过SMN通知
-    * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
+    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
+    * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空；当type为autoscaling时，列表必须为[]。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Notification implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  通知类型, notification代表通过SMN通知
-    * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
+    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
+    * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空；当type为autoscaling时，列表必须为[]。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Notification implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  通知类型, notification代表通过SMN通知
-    * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
+    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
+    * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空；当type为autoscaling时，列表必须为[]。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Notification implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  通知类型, notification代表通过SMN通知
-    * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
+    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
+    * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空；当type为autoscaling时，列表必须为[]。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Notification implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  通知类型, notification代表通过SMN通知
-    * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
+    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
+    * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空；当type为autoscaling时，列表必须为[]。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
     *
     * @var string[]
     */
@@ -139,7 +139,32 @@ class Notification implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_NOTIFICATION = 'notification';
+    const TYPE_AUTOSCALING = 'autoscaling';
+    const TYPE_GROUPWATCH = 'groupwatch';
+    const TYPE_ECS_RECOVERY = 'ecsRecovery';
+    const TYPE_CONTACT = 'contact';
+    const TYPE_CONTACT_GROUP = 'contactGroup';
+    const TYPE_IEC_ACTION = 'iecAction';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_NOTIFICATION,
+            self::TYPE_AUTOSCALING,
+            self::TYPE_GROUPWATCH,
+            self::TYPE_ECS_RECOVERY,
+            self::TYPE_CONTACT,
+            self::TYPE_CONTACT_GROUP,
+            self::TYPE_IEC_ACTION,
+        ];
+    }
 
 
     /**
@@ -172,9 +197,14 @@ class Notification implements ModelInterface, ArrayAccess
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
-            if (!preg_match("/^(notification|autoscaling|ecsRecovery|contact|contactGroup|iecAction)$/", $this->container['type'])) {
-                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /^(notification|autoscaling|ecsRecovery|contact|contactGroup|iecAction)$/.";
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
+
         if ($this->container['notificationList'] === null) {
             $invalidProperties[] = "'notificationList' can't be null";
         }
@@ -194,7 +224,7 @@ class Notification implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  通知类型, notification代表通过SMN通知
+    *  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
     *
     * @return string
     */
@@ -206,7 +236,7 @@ class Notification implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 通知类型, notification代表通过SMN通知
+    * @param string $type 通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
     *
     * @return $this
     */
@@ -218,7 +248,7 @@ class Notification implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationList
-    *  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
+    *  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空；当type为autoscaling时，列表必须为[]。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
     *
     * @return string[]
     */
@@ -230,7 +260,7 @@ class Notification implements ModelInterface, ArrayAccess
     /**
     * Sets notificationList
     *
-    * @param string[] $notificationList 告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
+    * @param string[] $notificationList 告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空；当type为autoscaling时，列表必须为[]。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
     *
     * @return $this
     */

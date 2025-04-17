@@ -25,7 +25,7 @@ class DeleteDashboardsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteDashboardRequestBody'
+            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteDashboardsRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class DeleteDashboardsRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteDashboardRequestBody|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteDashboardsRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class DeleteDashboardsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteDashboardRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteDashboardsRequestBody|null $body body
     *
     * @return $this
     */

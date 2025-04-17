@@ -27,7 +27,10 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
-    * enableHotWords  是否开启热词
+    * enableHotWords  是否开启热词（asr_type选择EI_SIS时生效）
+    * asrType  asrType
+    * asrAccount  ASR帐号（asr_type选择EI_SIS时不需要配置）。
+    * asrSecret  ASR密钥（asr_type选择EI_SIS时不需要配置）。
     *
     * @var string[]
     */
@@ -39,7 +42,10 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             'chatRounds' => 'int',
             'sisRegion' => 'int',
             'sisProjectId' => 'string',
-            'enableHotWords' => 'bool'
+            'enableHotWords' => 'bool',
+            'asrType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AsrTypeEnum',
+            'asrAccount' => 'string',
+            'asrSecret' => 'string'
     ];
 
     /**
@@ -51,7 +57,10 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
-    * enableHotWords  是否开启热词
+    * enableHotWords  是否开启热词（asr_type选择EI_SIS时生效）
+    * asrType  asrType
+    * asrAccount  ASR帐号（asr_type选择EI_SIS时不需要配置）。
+    * asrSecret  ASR密钥（asr_type选择EI_SIS时不需要配置）。
     *
     * @var string[]
     */
@@ -63,7 +72,10 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
         'chatRounds' => null,
         'sisRegion' => null,
         'sisProjectId' => null,
-        'enableHotWords' => null
+        'enableHotWords' => null,
+        'asrType' => null,
+        'asrAccount' => null,
+        'asrSecret' => null
     ];
 
     /**
@@ -96,7 +108,10 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
-    * enableHotWords  是否开启热词
+    * enableHotWords  是否开启热词（asr_type选择EI_SIS时生效）
+    * asrType  asrType
+    * asrAccount  ASR帐号（asr_type选择EI_SIS时不需要配置）。
+    * asrSecret  ASR密钥（asr_type选择EI_SIS时不需要配置）。
     *
     * @var string[]
     */
@@ -108,7 +123,10 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             'chatRounds' => 'chat_rounds',
             'sisRegion' => 'sis_region',
             'sisProjectId' => 'sis_project_id',
-            'enableHotWords' => 'enable_hot_words'
+            'enableHotWords' => 'enable_hot_words',
+            'asrType' => 'asr_type',
+            'asrAccount' => 'asr_account',
+            'asrSecret' => 'asr_secret'
     ];
 
     /**
@@ -120,7 +138,10 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
-    * enableHotWords  是否开启热词
+    * enableHotWords  是否开启热词（asr_type选择EI_SIS时生效）
+    * asrType  asrType
+    * asrAccount  ASR帐号（asr_type选择EI_SIS时不需要配置）。
+    * asrSecret  ASR密钥（asr_type选择EI_SIS时不需要配置）。
     *
     * @var string[]
     */
@@ -132,7 +153,10 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             'chatRounds' => 'setChatRounds',
             'sisRegion' => 'setSisRegion',
             'sisProjectId' => 'setSisProjectId',
-            'enableHotWords' => 'setEnableHotWords'
+            'enableHotWords' => 'setEnableHotWords',
+            'asrType' => 'setAsrType',
+            'asrAccount' => 'setAsrAccount',
+            'asrSecret' => 'setAsrSecret'
     ];
 
     /**
@@ -144,7 +168,10 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
-    * enableHotWords  是否开启热词
+    * enableHotWords  是否开启热词（asr_type选择EI_SIS时生效）
+    * asrType  asrType
+    * asrAccount  ASR帐号（asr_type选择EI_SIS时不需要配置）。
+    * asrSecret  ASR密钥（asr_type选择EI_SIS时不需要配置）。
     *
     * @var string[]
     */
@@ -156,7 +183,10 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             'chatRounds' => 'getChatRounds',
             'sisRegion' => 'getSisRegion',
             'sisProjectId' => 'getSisProjectId',
-            'enableHotWords' => 'getEnableHotWords'
+            'enableHotWords' => 'getEnableHotWords',
+            'asrType' => 'getAsrType',
+            'asrAccount' => 'getAsrAccount',
+            'asrSecret' => 'getAsrSecret'
     ];
 
     /**
@@ -225,6 +255,9 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
         $this->container['sisRegion'] = isset($data['sisRegion']) ? $data['sisRegion'] : null;
         $this->container['sisProjectId'] = isset($data['sisProjectId']) ? $data['sisProjectId'] : null;
         $this->container['enableHotWords'] = isset($data['enableHotWords']) ? $data['enableHotWords'] : null;
+        $this->container['asrType'] = isset($data['asrType']) ? $data['asrType'] : null;
+        $this->container['asrAccount'] = isset($data['asrAccount']) ? $data['asrAccount'] : null;
+        $this->container['asrSecret'] = isset($data['asrSecret']) ? $data['asrSecret'] : null;
     }
 
     /**
@@ -270,6 +303,18 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['asrAccount']) && (mb_strlen($this->container['asrAccount']) > 64)) {
+                $invalidProperties[] = "invalid value for 'asrAccount', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['asrAccount']) && (mb_strlen($this->container['asrAccount']) < 0)) {
+                $invalidProperties[] = "invalid value for 'asrAccount', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['asrSecret']) && (mb_strlen($this->container['asrSecret']) > 128)) {
+                $invalidProperties[] = "invalid value for 'asrSecret', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['asrSecret']) && (mb_strlen($this->container['asrSecret']) < 0)) {
+                $invalidProperties[] = "invalid value for 'asrSecret', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -455,7 +500,7 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableHotWords
-    *  是否开启热词
+    *  是否开启热词（asr_type选择EI_SIS时生效）
     *
     * @return bool|null
     */
@@ -467,13 +512,85 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     /**
     * Sets enableHotWords
     *
-    * @param bool|null $enableHotWords 是否开启热词
+    * @param bool|null $enableHotWords 是否开启热词（asr_type选择EI_SIS时生效）
     *
     * @return $this
     */
     public function setEnableHotWords($enableHotWords)
     {
         $this->container['enableHotWords'] = $enableHotWords;
+        return $this;
+    }
+
+    /**
+    * Gets asrType
+    *  asrType
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\AsrTypeEnum|null
+    */
+    public function getAsrType()
+    {
+        return $this->container['asrType'];
+    }
+
+    /**
+    * Sets asrType
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\AsrTypeEnum|null $asrType asrType
+    *
+    * @return $this
+    */
+    public function setAsrType($asrType)
+    {
+        $this->container['asrType'] = $asrType;
+        return $this;
+    }
+
+    /**
+    * Gets asrAccount
+    *  ASR帐号（asr_type选择EI_SIS时不需要配置）。
+    *
+    * @return string|null
+    */
+    public function getAsrAccount()
+    {
+        return $this->container['asrAccount'];
+    }
+
+    /**
+    * Sets asrAccount
+    *
+    * @param string|null $asrAccount ASR帐号（asr_type选择EI_SIS时不需要配置）。
+    *
+    * @return $this
+    */
+    public function setAsrAccount($asrAccount)
+    {
+        $this->container['asrAccount'] = $asrAccount;
+        return $this;
+    }
+
+    /**
+    * Gets asrSecret
+    *  ASR密钥（asr_type选择EI_SIS时不需要配置）。
+    *
+    * @return string|null
+    */
+    public function getAsrSecret()
+    {
+        return $this->container['asrSecret'];
+    }
+
+    /**
+    * Sets asrSecret
+    *
+    * @param string|null $asrSecret ASR密钥（asr_type选择EI_SIS时不需要配置）。
+    *
+    * @return $this
+    */
+    public function setAsrSecret($asrSecret)
+    {
+        $this->container['asrSecret'] = $asrSecret;
         return $this;
     }
 

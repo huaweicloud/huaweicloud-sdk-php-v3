@@ -22,9 +22,11 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * alarmId  告警规则ID
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
     * enterpriseProjectId  企业项目ID
+    * productName  产品层级跨纬规则查询时支持产品名称查询，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  产品层级跨纬规则查询时支持规则所属类型查询，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     * offset  分页偏移量
     * limit  分页大小
     *
@@ -36,6 +38,8 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
             'namespace' => 'string',
             'resourceId' => 'string',
             'enterpriseProjectId' => 'string',
+            'productName' => 'string',
+            'resourceLevel' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
@@ -44,9 +48,11 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * alarmId  告警规则ID
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
     * enterpriseProjectId  企业项目ID
+    * productName  产品层级跨纬规则查询时支持产品名称查询，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  产品层级跨纬规则查询时支持规则所属类型查询，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     * offset  分页偏移量
     * limit  分页大小
     *
@@ -58,6 +64,8 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
         'namespace' => null,
         'resourceId' => null,
         'enterpriseProjectId' => null,
+        'productName' => null,
+        'resourceLevel' => null,
         'offset' => null,
         'limit' => null
     ];
@@ -87,9 +95,11 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * alarmId  告警规则ID
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
     * enterpriseProjectId  企业项目ID
+    * productName  产品层级跨纬规则查询时支持产品名称查询，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  产品层级跨纬规则查询时支持规则所属类型查询，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     * offset  分页偏移量
     * limit  分页大小
     *
@@ -101,6 +111,8 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
             'namespace' => 'namespace',
             'resourceId' => 'resource_id',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'productName' => 'product_name',
+            'resourceLevel' => 'resource_level',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
@@ -109,9 +121,11 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * alarmId  告警规则ID
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
     * enterpriseProjectId  企业项目ID
+    * productName  产品层级跨纬规则查询时支持产品名称查询，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  产品层级跨纬规则查询时支持规则所属类型查询，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     * offset  分页偏移量
     * limit  分页大小
     *
@@ -123,6 +137,8 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
             'namespace' => 'setNamespace',
             'resourceId' => 'setResourceId',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'productName' => 'setProductName',
+            'resourceLevel' => 'setResourceLevel',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
@@ -131,9 +147,11 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * alarmId  告警规则ID
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * resourceId  告警资源ID，多维度情况按字母升序排列并使用逗号分隔
     * enterpriseProjectId  企业项目ID
+    * productName  产品层级跨纬规则查询时支持产品名称查询，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * resourceLevel  产品层级跨纬规则查询时支持规则所属类型查询，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
     * offset  分页偏移量
     * limit  分页大小
     *
@@ -145,6 +163,8 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
             'namespace' => 'getNamespace',
             'resourceId' => 'getResourceId',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'productName' => 'getProductName',
+            'resourceLevel' => 'getResourceLevel',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -189,7 +209,22 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RESOURCE_LEVEL_PRODUCT = 'product';
+    const RESOURCE_LEVEL_DIMENSION = 'dimension';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceLevelAllowableValues()
+    {
+        return [
+            self::RESOURCE_LEVEL_PRODUCT,
+            self::RESOURCE_LEVEL_DIMENSION,
+        ];
+    }
 
 
     /**
@@ -212,6 +247,8 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
+        $this->container['resourceLevel'] = isset($data['resourceLevel']) ? $data['resourceLevel'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -245,12 +282,26 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 700)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 700.";
             }
-            if (!is_null($this->container['resourceId']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|:|,|\\.|\\*|\/|#|\\(|\\))+$/", $this->container['resourceId'])) {
-                $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-|:|,|\\.|\\*|\/|#|\\(|\\))+$/.";
+            if (!is_null($this->container['resourceId']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|:|,|\\.|)+$/", $this->container['resourceId'])) {
+                $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-|:|,|\\.|)+$/.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/.";
             }
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getResourceLevelAllowableValues();
+                if (!is_null($this->container['resourceLevel']) && !in_array($this->container['resourceLevel'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceLevel', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 10000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 10000.";
             }
@@ -327,7 +378,7 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    *  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return string|null
     */
@@ -339,7 +390,7 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return $this
     */
@@ -394,6 +445,54 @@ class ListAlarmRulesRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets productName
+    *  产品层级跨纬规则查询时支持产品名称查询，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    *
+    * @return string|null
+    */
+    public function getProductName()
+    {
+        return $this->container['productName'];
+    }
+
+    /**
+    * Sets productName
+    *
+    * @param string|null $productName 产品层级跨纬规则查询时支持产品名称查询，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    *
+    * @return $this
+    */
+    public function setProductName($productName)
+    {
+        $this->container['productName'] = $productName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceLevel
+    *  产品层级跨纬规则查询时支持规则所属类型查询，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
+    *
+    * @return string|null
+    */
+    public function getResourceLevel()
+    {
+        return $this->container['resourceLevel'];
+    }
+
+    /**
+    * Sets resourceLevel
+    *
+    * @param string|null $resourceLevel 产品层级跨纬规则查询时支持规则所属类型查询，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
+    *
+    * @return $this
+    */
+    public function setResourceLevel($resourceLevel)
+    {
+        $this->container['resourceLevel'] = $resourceLevel;
         return $this;
     }
 

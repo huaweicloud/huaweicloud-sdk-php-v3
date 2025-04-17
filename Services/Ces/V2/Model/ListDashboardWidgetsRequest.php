@@ -21,21 +21,25 @@ class ListDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * dashboardId  监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+    * groupId  视图所在的分组id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'dashboardId' => 'string'
+            'dashboardId' => 'string',
+            'groupId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * dashboardId  监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+    * groupId  视图所在的分组id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'dashboardId' => null
+        'dashboardId' => null,
+        'groupId' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ListDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * dashboardId  监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+    * groupId  视图所在的分组id
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'dashboardId' => 'dashboard_id'
+            'dashboardId' => 'dashboard_id',
+            'groupId' => 'group_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * dashboardId  监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+    * groupId  视图所在的分组id
     *
     * @var string[]
     */
     protected static $setters = [
-            'dashboardId' => 'setDashboardId'
+            'dashboardId' => 'setDashboardId',
+            'groupId' => 'setGroupId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * dashboardId  监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+    * groupId  视图所在的分组id
     *
     * @var string[]
     */
     protected static $getters = [
-            'dashboardId' => 'getDashboardId'
+            'dashboardId' => 'getDashboardId',
+            'groupId' => 'getGroupId'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ListDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['dashboardId'] = isset($data['dashboardId']) ? $data['dashboardId'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
     }
 
     /**
@@ -163,6 +174,9 @@ class ListDashboardWidgetsRequest implements ModelInterface, ArrayAccess
         }
             if (!preg_match("/^db([a-z]|[A-Z]|[0-9]){22}$/", $this->container['dashboardId'])) {
                 $invalidProperties[] = "invalid value for 'dashboardId', must be conform to the pattern /^db([a-z]|[A-Z]|[0-9]){22}$/.";
+            }
+            if (!is_null($this->container['groupId']) && !preg_match("/^dg([a-z]|[A-Z]|[0-9]){22}|default$/", $this->container['groupId'])) {
+                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^dg([a-z]|[A-Z]|[0-9]){22}|default$/.";
             }
         return $invalidProperties;
     }
@@ -199,6 +213,30 @@ class ListDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     public function setDashboardId($dashboardId)
     {
         $this->container['dashboardId'] = $dashboardId;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  视图所在的分组id
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 视图所在的分组id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

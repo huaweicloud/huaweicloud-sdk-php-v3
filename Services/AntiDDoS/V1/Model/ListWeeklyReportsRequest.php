@@ -158,6 +158,12 @@ class ListWeeklyReportsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['periodStartDate']) && (mb_strlen($this->container['periodStartDate']) > 13)) {
+                $invalidProperties[] = "invalid value for 'periodStartDate', the character length must be smaller than or equal to 13.";
+            }
+            if (!is_null($this->container['periodStartDate']) && (mb_strlen($this->container['periodStartDate']) < 13)) {
+                $invalidProperties[] = "invalid value for 'periodStartDate', the character length must be bigger than or equal to 13.";
+            }
         return $invalidProperties;
     }
 

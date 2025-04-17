@@ -27,6 +27,10 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * notificationPolicyIds  关联的通知策略ID列表
+    * isReset  是否以默认一键告警规则重置创建
+    * oneClickUpdateAlarms  打开一键告警需要同时修改告警策略及通知(当前仅支持通知策略修改)时传递的参数
     *
     * @var string[]
     */
@@ -37,7 +41,11 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
             'alarmNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
             'okNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
             'notificationBeginTime' => 'string',
-            'notificationEndTime' => 'string'
+            'notificationEndTime' => 'string',
+            'notificationManner' => 'string',
+            'notificationPolicyIds' => 'string[]',
+            'isReset' => 'bool',
+            'oneClickUpdateAlarms' => '\HuaweiCloud\SDK\Ces\V2\Model\EnableOneClickAlarmRequestBodyOneClickUpdateAlarms[]'
     ];
 
     /**
@@ -49,6 +57,10 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * notificationPolicyIds  关联的通知策略ID列表
+    * isReset  是否以默认一键告警规则重置创建
+    * oneClickUpdateAlarms  打开一键告警需要同时修改告警策略及通知(当前仅支持通知策略修改)时传递的参数
     *
     * @var string[]
     */
@@ -59,7 +71,11 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
         'alarmNotifications' => null,
         'okNotifications' => null,
         'notificationBeginTime' => null,
-        'notificationEndTime' => null
+        'notificationEndTime' => null,
+        'notificationManner' => null,
+        'notificationPolicyIds' => null,
+        'isReset' => null,
+        'oneClickUpdateAlarms' => null
     ];
 
     /**
@@ -92,6 +108,10 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * notificationPolicyIds  关联的通知策略ID列表
+    * isReset  是否以默认一键告警规则重置创建
+    * oneClickUpdateAlarms  打开一键告警需要同时修改告警策略及通知(当前仅支持通知策略修改)时传递的参数
     *
     * @var string[]
     */
@@ -102,7 +122,11 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
             'alarmNotifications' => 'alarm_notifications',
             'okNotifications' => 'ok_notifications',
             'notificationBeginTime' => 'notification_begin_time',
-            'notificationEndTime' => 'notification_end_time'
+            'notificationEndTime' => 'notification_end_time',
+            'notificationManner' => 'notification_manner',
+            'notificationPolicyIds' => 'notification_policy_ids',
+            'isReset' => 'is_reset',
+            'oneClickUpdateAlarms' => 'one_click_update_alarms'
     ];
 
     /**
@@ -114,6 +138,10 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * notificationPolicyIds  关联的通知策略ID列表
+    * isReset  是否以默认一键告警规则重置创建
+    * oneClickUpdateAlarms  打开一键告警需要同时修改告警策略及通知(当前仅支持通知策略修改)时传递的参数
     *
     * @var string[]
     */
@@ -124,7 +152,11 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
             'alarmNotifications' => 'setAlarmNotifications',
             'okNotifications' => 'setOkNotifications',
             'notificationBeginTime' => 'setNotificationBeginTime',
-            'notificationEndTime' => 'setNotificationEndTime'
+            'notificationEndTime' => 'setNotificationEndTime',
+            'notificationManner' => 'setNotificationManner',
+            'notificationPolicyIds' => 'setNotificationPolicyIds',
+            'isReset' => 'setIsReset',
+            'oneClickUpdateAlarms' => 'setOneClickUpdateAlarms'
     ];
 
     /**
@@ -136,6 +168,10 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
+    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * notificationPolicyIds  关联的通知策略ID列表
+    * isReset  是否以默认一键告警规则重置创建
+    * oneClickUpdateAlarms  打开一键告警需要同时修改告警策略及通知(当前仅支持通知策略修改)时传递的参数
     *
     * @var string[]
     */
@@ -146,7 +182,11 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
             'alarmNotifications' => 'getAlarmNotifications',
             'okNotifications' => 'getOkNotifications',
             'notificationBeginTime' => 'getNotificationBeginTime',
-            'notificationEndTime' => 'getNotificationEndTime'
+            'notificationEndTime' => 'getNotificationEndTime',
+            'notificationManner' => 'getNotificationManner',
+            'notificationPolicyIds' => 'getNotificationPolicyIds',
+            'isReset' => 'getIsReset',
+            'oneClickUpdateAlarms' => 'getOneClickUpdateAlarms'
     ];
 
     /**
@@ -189,7 +229,24 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const NOTIFICATION_MANNER_NOTIFICATION_GROUP = 'NOTIFICATION_GROUP';
+    const NOTIFICATION_MANNER_TOPIC_SUBSCRIPTION = 'TOPIC_SUBSCRIPTION';
+    const NOTIFICATION_MANNER_NOTIFICATION_POLICY = 'NOTIFICATION_POLICY';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getNotificationMannerAllowableValues()
+    {
+        return [
+            self::NOTIFICATION_MANNER_NOTIFICATION_GROUP,
+            self::NOTIFICATION_MANNER_TOPIC_SUBSCRIPTION,
+            self::NOTIFICATION_MANNER_NOTIFICATION_POLICY,
+        ];
+    }
 
 
     /**
@@ -214,6 +271,10 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
         $this->container['okNotifications'] = isset($data['okNotifications']) ? $data['okNotifications'] : null;
         $this->container['notificationBeginTime'] = isset($data['notificationBeginTime']) ? $data['notificationBeginTime'] : null;
         $this->container['notificationEndTime'] = isset($data['notificationEndTime']) ? $data['notificationEndTime'] : null;
+        $this->container['notificationManner'] = isset($data['notificationManner']) ? $data['notificationManner'] : null;
+        $this->container['notificationPolicyIds'] = isset($data['notificationPolicyIds']) ? $data['notificationPolicyIds'] : null;
+        $this->container['isReset'] = isset($data['isReset']) ? $data['isReset'] : null;
+        $this->container['oneClickUpdateAlarms'] = isset($data['oneClickUpdateAlarms']) ? $data['oneClickUpdateAlarms'] : null;
     }
 
     /**
@@ -259,6 +320,20 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['notificationEndTime']) && !preg_match("/^([01][0-9]|2[0-3]):([0-5][0-9])$/", $this->container['notificationEndTime'])) {
                 $invalidProperties[] = "invalid value for 'notificationEndTime', must be conform to the pattern /^([01][0-9]|2[0-3]):([0-5][0-9])$/.";
+            }
+            $allowedValues = $this->getNotificationMannerAllowableValues();
+                if (!is_null($this->container['notificationManner']) && !in_array($this->container['notificationManner'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'notificationManner', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['notificationManner']) && (mb_strlen($this->container['notificationManner']) > 64)) {
+                $invalidProperties[] = "invalid value for 'notificationManner', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['notificationManner']) && (mb_strlen($this->container['notificationManner']) < 0)) {
+                $invalidProperties[] = "invalid value for 'notificationManner', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -439,6 +514,102 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     public function setNotificationEndTime($notificationEndTime)
     {
         $this->container['notificationEndTime'] = $notificationEndTime;
+        return $this;
+    }
+
+    /**
+    * Gets notificationManner
+    *  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    *
+    * @return string|null
+    */
+    public function getNotificationManner()
+    {
+        return $this->container['notificationManner'];
+    }
+
+    /**
+    * Sets notificationManner
+    *
+    * @param string|null $notificationManner NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    *
+    * @return $this
+    */
+    public function setNotificationManner($notificationManner)
+    {
+        $this->container['notificationManner'] = $notificationManner;
+        return $this;
+    }
+
+    /**
+    * Gets notificationPolicyIds
+    *  关联的通知策略ID列表
+    *
+    * @return string[]|null
+    */
+    public function getNotificationPolicyIds()
+    {
+        return $this->container['notificationPolicyIds'];
+    }
+
+    /**
+    * Sets notificationPolicyIds
+    *
+    * @param string[]|null $notificationPolicyIds 关联的通知策略ID列表
+    *
+    * @return $this
+    */
+    public function setNotificationPolicyIds($notificationPolicyIds)
+    {
+        $this->container['notificationPolicyIds'] = $notificationPolicyIds;
+        return $this;
+    }
+
+    /**
+    * Gets isReset
+    *  是否以默认一键告警规则重置创建
+    *
+    * @return bool|null
+    */
+    public function getIsReset()
+    {
+        return $this->container['isReset'];
+    }
+
+    /**
+    * Sets isReset
+    *
+    * @param bool|null $isReset 是否以默认一键告警规则重置创建
+    *
+    * @return $this
+    */
+    public function setIsReset($isReset)
+    {
+        $this->container['isReset'] = $isReset;
+        return $this;
+    }
+
+    /**
+    * Gets oneClickUpdateAlarms
+    *  打开一键告警需要同时修改告警策略及通知(当前仅支持通知策略修改)时传递的参数
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\EnableOneClickAlarmRequestBodyOneClickUpdateAlarms[]|null
+    */
+    public function getOneClickUpdateAlarms()
+    {
+        return $this->container['oneClickUpdateAlarms'];
+    }
+
+    /**
+    * Sets oneClickUpdateAlarms
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\EnableOneClickAlarmRequestBodyOneClickUpdateAlarms[]|null $oneClickUpdateAlarms 打开一键告警需要同时修改告警策略及通知(当前仅支持通知策略修改)时传递的参数
+    *
+    * @return $this
+    */
+    public function setOneClickUpdateAlarms($oneClickUpdateAlarms)
+    {
+        $this->container['oneClickUpdateAlarms'] = $oneClickUpdateAlarms;
         return $this;
     }
 

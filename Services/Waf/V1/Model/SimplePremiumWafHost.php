@@ -53,7 +53,7 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'poolIds' => 'string[]',
             'loadbalancerId' => 'string',
-            'protocolPort' => 'string'
+            'protocolPort' => 'int'
     ];
 
     /**
@@ -666,7 +666,7 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     * Gets protocolPort
     *  云模式elb接入域名返回此字段，表示业务端口
     *
-    * @return string|null
+    * @return int|null
     */
     public function getProtocolPort()
     {
@@ -676,7 +676,7 @@ class SimplePremiumWafHost implements ModelInterface, ArrayAccess
     /**
     * Sets protocolPort
     *
-    * @param string|null $protocolPort 云模式elb接入域名返回此字段，表示业务端口
+    * @param int|null $protocolPort 云模式elb接入域名返回此字段，表示业务端口
     *
     * @return $this
     */

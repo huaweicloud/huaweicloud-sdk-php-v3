@@ -20,12 +20,13 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * groupId  视图分区id
     * widgetId  视图id
     * metrics  指标列表
     * title  监控视图标题
     * threshold  监控视图指标的阈值
     * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar柱状图，line折线图
+    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
@@ -34,6 +35,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'groupId' => 'string',
             'widgetId' => 'string',
             'metrics' => '\HuaweiCloud\SDK\Ces\V2\Model\WidgetMetric[]',
             'title' => 'string',
@@ -48,12 +50,13 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * groupId  视图分区id
     * widgetId  视图id
     * metrics  指标列表
     * title  监控视图标题
     * threshold  监控视图指标的阈值
     * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar柱状图，line折线图
+    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
@@ -62,6 +65,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'groupId' => null,
         'widgetId' => null,
         'metrics' => null,
         'title' => null,
@@ -97,12 +101,13 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * groupId  视图分区id
     * widgetId  视图id
     * metrics  指标列表
     * title  监控视图标题
     * threshold  监控视图指标的阈值
     * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar柱状图，line折线图
+    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
@@ -111,6 +116,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'groupId' => 'group_id',
             'widgetId' => 'widget_id',
             'metrics' => 'metrics',
             'title' => 'title',
@@ -125,12 +131,13 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * groupId  视图分区id
     * widgetId  视图id
     * metrics  指标列表
     * title  监控视图标题
     * threshold  监控视图指标的阈值
     * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar柱状图，line折线图
+    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
@@ -139,6 +146,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'groupId' => 'setGroupId',
             'widgetId' => 'setWidgetId',
             'metrics' => 'setMetrics',
             'title' => 'setTitle',
@@ -153,12 +161,13 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * groupId  视图分区id
     * widgetId  视图id
     * metrics  指标列表
     * title  监控视图标题
     * threshold  监控视图指标的阈值
     * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar柱状图，line折线图
+    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
     * properties  properties
     * location  location
@@ -167,6 +176,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'groupId' => 'getGroupId',
             'widgetId' => 'getWidgetId',
             'metrics' => 'getMetrics',
             'title' => 'getTitle',
@@ -221,6 +231,10 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     }
     const VIEW_BAR = 'bar';
     const VIEW_LINE = 'line';
+    const VIEW_BAR_CHART = 'bar_chart';
+    const VIEW_TABLE = 'table';
+    const VIEW_CIRCULAR_BAR = 'circular_bar';
+    const VIEW_AREA_CHART = 'area_chart';
     const METRIC_DISPLAY_MODE_SINGLE = 'single';
     const METRIC_DISPLAY_MODE_MULTIPLE = 'multiple';
     
@@ -235,6 +249,10 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
         return [
             self::VIEW_BAR,
             self::VIEW_LINE,
+            self::VIEW_BAR_CHART,
+            self::VIEW_TABLE,
+            self::VIEW_CIRCULAR_BAR,
+            self::VIEW_AREA_CHART,
         ];
     }
 
@@ -267,6 +285,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['widgetId'] = isset($data['widgetId']) ? $data['widgetId'] : null;
         $this->container['metrics'] = isset($data['metrics']) ? $data['metrics'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
@@ -287,6 +306,9 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['groupId']) && !preg_match("/^dg([a-z]|[A-Z]|[0-9]){22}|default$/", $this->container['groupId'])) {
+                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^dg([a-z]|[A-Z]|[0-9]){22}|default$/.";
+            }
         if ($this->container['widgetId'] === null) {
             $invalidProperties[] = "'widgetId' can't be null";
         }
@@ -342,6 +364,30 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets groupId
+    *  视图分区id
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 视图分区id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
     }
 
     /**
@@ -466,7 +512,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets view
-    *  监控视图图表类型, bar柱状图，line折线图
+    *  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     *
     * @return string|null
     */
@@ -478,7 +524,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets view
     *
-    * @param string|null $view 监控视图图表类型, bar柱状图，line折线图
+    * @param string|null $view 监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
     *
     * @return $this
     */

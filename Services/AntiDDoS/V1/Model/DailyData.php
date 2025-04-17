@@ -227,24 +227,66 @@ class DailyData implements ModelInterface, ArrayAccess
         if ($this->container['periodStart'] === null) {
             $invalidProperties[] = "'periodStart' can't be null";
         }
+            if (($this->container['periodStart'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'periodStart', must be smaller than or equal to 9999999999999.";
+            }
+            if (($this->container['periodStart'] < 1)) {
+                $invalidProperties[] = "invalid value for 'periodStart', must be bigger than or equal to 1.";
+            }
         if ($this->container['bpsIn'] === null) {
             $invalidProperties[] = "'bpsIn' can't be null";
         }
+            if (($this->container['bpsIn'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'bpsIn', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['bpsIn'] < 0)) {
+                $invalidProperties[] = "invalid value for 'bpsIn', must be bigger than or equal to 0.";
+            }
         if ($this->container['bpsAttack'] === null) {
             $invalidProperties[] = "'bpsAttack' can't be null";
         }
+            if (($this->container['bpsAttack'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'bpsAttack', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['bpsAttack'] < 0)) {
+                $invalidProperties[] = "invalid value for 'bpsAttack', must be bigger than or equal to 0.";
+            }
         if ($this->container['totalBps'] === null) {
             $invalidProperties[] = "'totalBps' can't be null";
         }
+            if (($this->container['totalBps'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'totalBps', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['totalBps'] < 0)) {
+                $invalidProperties[] = "invalid value for 'totalBps', must be bigger than or equal to 0.";
+            }
         if ($this->container['ppsIn'] === null) {
             $invalidProperties[] = "'ppsIn' can't be null";
         }
+            if (($this->container['ppsIn'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'ppsIn', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['ppsIn'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ppsIn', must be bigger than or equal to 0.";
+            }
         if ($this->container['ppsAttack'] === null) {
             $invalidProperties[] = "'ppsAttack' can't be null";
         }
+            if (($this->container['ppsAttack'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'ppsAttack', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['ppsAttack'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ppsAttack', must be bigger than or equal to 0.";
+            }
         if ($this->container['totalPps'] === null) {
             $invalidProperties[] = "'totalPps' can't be null";
         }
+            if (($this->container['totalPps'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'totalPps', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['totalPps'] < 0)) {
+                $invalidProperties[] = "invalid value for 'totalPps', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

@@ -25,7 +25,7 @@ class ListResourceGroupsRequest implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型
+    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型,COMB（智能添加-组合匹配）,NAME（资源名称模糊匹配）
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ListResourceGroupsRequest implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型
+    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型,COMB（智能添加-组合匹配）,NAME（资源名称模糊匹配）
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListResourceGroupsRequest implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型
+    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型,COMB（智能添加-组合匹配）,NAME（资源名称模糊匹配）
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ListResourceGroupsRequest implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型
+    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型,COMB（智能添加-组合匹配）,NAME（资源名称模糊匹配）
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ListResourceGroupsRequest implements ModelInterface, ArrayAccess
     * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
     * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型
+    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型,COMB（智能添加-组合匹配）,NAME（资源名称模糊匹配）
     *
     * @var string[]
     */
@@ -182,6 +182,8 @@ class ListResourceGroupsRequest implements ModelInterface, ArrayAccess
     const TYPE_EPS = 'EPS';
     const TYPE_TAG = 'TAG';
     const TYPE_MANUAL = 'Manual';
+    const TYPE_COMB = 'COMB';
+    const TYPE_NAME = 'NAME';
     
 
     /**
@@ -195,6 +197,8 @@ class ListResourceGroupsRequest implements ModelInterface, ArrayAccess
             self::TYPE_EPS,
             self::TYPE_TAG,
             self::TYPE_MANUAL,
+            self::TYPE_COMB,
+            self::TYPE_NAME,
         ];
     }
 
@@ -401,7 +405,7 @@ class ListResourceGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型
+    *  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型,COMB（智能添加-组合匹配）,NAME（资源名称模糊匹配）
     *
     * @return string|null
     */
@@ -413,7 +417,7 @@ class ListResourceGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型
+    * @param string|null $type 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型,COMB（智能添加-组合匹配）,NAME（资源名称模糊匹配）
     *
     * @return $this
     */

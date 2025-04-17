@@ -21,32 +21,36 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     * templateType  自定义告警模板类型 0：指标 2： 事件
+    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * isOverwrite  是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
     * policies  告警模板策略列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'templateName' => 'string',
-            'templateDescription' => 'string',
             'templateType' => 'int',
+            'templateDescription' => 'string',
+            'isOverwrite' => 'bool',
             'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\Policies[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     * templateType  自定义告警模板类型 0：指标 2： 事件
+    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * isOverwrite  是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
     * policies  告警模板策略列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'templateName' => null,
-        'templateDescription' => null,
         'templateType' => 'int32',
+        'templateDescription' => null,
+        'isOverwrite' => null,
         'policies' => null
     ];
 
@@ -74,48 +78,54 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     * templateType  自定义告警模板类型 0：指标 2： 事件
+    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * isOverwrite  是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
     * policies  告警模板策略列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'templateName' => 'template_name',
-            'templateDescription' => 'template_description',
             'templateType' => 'template_type',
+            'templateDescription' => 'template_description',
+            'isOverwrite' => 'is_overwrite',
             'policies' => 'policies'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     * templateType  自定义告警模板类型 0：指标 2： 事件
+    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * isOverwrite  是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
     * policies  告警模板策略列表
     *
     * @var string[]
     */
     protected static $setters = [
             'templateName' => 'setTemplateName',
-            'templateDescription' => 'setTemplateDescription',
             'templateType' => 'setTemplateType',
+            'templateDescription' => 'setTemplateDescription',
+            'isOverwrite' => 'setIsOverwrite',
             'policies' => 'setPolicies'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
-    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     * templateType  自定义告警模板类型 0：指标 2： 事件
+    * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * isOverwrite  是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
     * policies  告警模板策略列表
     *
     * @var string[]
     */
     protected static $getters = [
             'templateName' => 'getTemplateName',
-            'templateDescription' => 'getTemplateDescription',
             'templateType' => 'getTemplateType',
+            'templateDescription' => 'getTemplateDescription',
+            'isOverwrite' => 'getIsOverwrite',
             'policies' => 'getPolicies'
     ];
 
@@ -193,8 +203,9 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
-        $this->container['templateDescription'] = isset($data['templateDescription']) ? $data['templateDescription'] : null;
         $this->container['templateType'] = isset($data['templateType']) ? $data['templateType'] : null;
+        $this->container['templateDescription'] = isset($data['templateDescription']) ? $data['templateDescription'] : null;
+        $this->container['isOverwrite'] = isset($data['isOverwrite']) ? $data['isOverwrite'] : null;
         $this->container['policies'] = isset($data['policies']) ? $data['policies'] : null;
     }
 
@@ -218,6 +229,14 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
             if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s)+$/", $this->container['templateName'])) {
                 $invalidProperties[] = "invalid value for 'templateName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s)+$/.";
             }
+            $allowedValues = $this->getTemplateTypeAllowableValues();
+                if (!is_null($this->container['templateType']) && !in_array($this->container['templateType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'templateType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['templateDescription']) && (mb_strlen($this->container['templateDescription']) > 256)) {
                 $invalidProperties[] = "invalid value for 'templateDescription', the character length must be smaller than or equal to 256.";
             }
@@ -227,14 +246,6 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['templateDescription']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|| |_|-|\\.|。|,|，|:|：|;|；|\"|\"|“|”|'|'|‘|’)+$/", $this->container['templateDescription'])) {
                 $invalidProperties[] = "invalid value for 'templateDescription', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|| |_|-|\\.|。|,|，|:|：|;|；|\"|\"|“|”|'|'|‘|’)+$/.";
             }
-            $allowedValues = $this->getTemplateTypeAllowableValues();
-                if (!is_null($this->container['templateType']) && !in_array($this->container['templateType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'templateType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['policies'] === null) {
             $invalidProperties[] = "'policies' can't be null";
         }
@@ -277,6 +288,30 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets templateType
+    *  自定义告警模板类型 0：指标 2： 事件
+    *
+    * @return int|null
+    */
+    public function getTemplateType()
+    {
+        return $this->container['templateType'];
+    }
+
+    /**
+    * Sets templateType
+    *
+    * @param int|null $templateType 自定义告警模板类型 0：指标 2： 事件
+    *
+    * @return $this
+    */
+    public function setTemplateType($templateType)
+    {
+        $this->container['templateType'] = $templateType;
+        return $this;
+    }
+
+    /**
     * Gets templateDescription
     *  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     *
@@ -301,26 +336,26 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets templateType
-    *  自定义告警模板类型 0：指标 2： 事件
+    * Gets isOverwrite
+    *  是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
     *
-    * @return int|null
+    * @return bool|null
     */
-    public function getTemplateType()
+    public function getIsOverwrite()
     {
-        return $this->container['templateType'];
+        return $this->container['isOverwrite'];
     }
 
     /**
-    * Sets templateType
+    * Sets isOverwrite
     *
-    * @param int|null $templateType 自定义告警模板类型 0：指标 2： 事件
+    * @param bool|null $isOverwrite 是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
     *
     * @return $this
     */
-    public function setTemplateType($templateType)
+    public function setIsOverwrite($isOverwrite)
     {
-        $this->container['templateType'] = $templateType;
+        $this->container['isOverwrite'] = $isOverwrite;
         return $this;
     }
 

@@ -29,6 +29,9 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
     * authOpt  authOpt
     * cors  是否支持跨域 - TRUE：支持 - FALSE：不支持
+    * traceEnabled  是否开启链路追踪，默认关闭。
+    * samplingStrategy  采样策略，当选择开启链路追踪时，此字段必填。 - RATE：按比例采样
+    * samplingParam  采样参数。 - 当采样策略为RATE时，此字段取值为字符串化的整数，范围为0-100，缺省为'100'，'100'为采集每个请求，建议与后端应用的采样率保持一致。
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
     * backendType  后端类型 - HTTP：web后端 - FUNCTION：函数工作流，当backend_type取值为FUNCTION时，func_info字段必须传入 - MOCK：模拟的后端，当backend_type取值为MOCK时，mock_info字段必须传入 - GRPC：grpc后端
     * remark  API描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
@@ -63,6 +66,9 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
             'authType' => 'string',
             'authOpt' => '\HuaweiCloud\SDK\Apig\V2\Model\AuthOpt',
             'cors' => 'bool',
+            'traceEnabled' => 'bool',
+            'samplingStrategy' => 'string',
+            'samplingParam' => 'string',
             'matchMode' => 'string',
             'backendType' => 'string',
             'remark' => 'string',
@@ -97,6 +103,9 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
     * authOpt  authOpt
     * cors  是否支持跨域 - TRUE：支持 - FALSE：不支持
+    * traceEnabled  是否开启链路追踪，默认关闭。
+    * samplingStrategy  采样策略，当选择开启链路追踪时，此字段必填。 - RATE：按比例采样
+    * samplingParam  采样参数。 - 当采样策略为RATE时，此字段取值为字符串化的整数，范围为0-100，缺省为'100'，'100'为采集每个请求，建议与后端应用的采样率保持一致。
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
     * backendType  后端类型 - HTTP：web后端 - FUNCTION：函数工作流，当backend_type取值为FUNCTION时，func_info字段必须传入 - MOCK：模拟的后端，当backend_type取值为MOCK时，mock_info字段必须传入 - GRPC：grpc后端
     * remark  API描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
@@ -131,6 +140,9 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
         'authType' => null,
         'authOpt' => null,
         'cors' => null,
+        'traceEnabled' => null,
+        'samplingStrategy' => null,
+        'samplingParam' => null,
         'matchMode' => null,
         'backendType' => null,
         'remark' => null,
@@ -186,6 +198,9 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
     * authOpt  authOpt
     * cors  是否支持跨域 - TRUE：支持 - FALSE：不支持
+    * traceEnabled  是否开启链路追踪，默认关闭。
+    * samplingStrategy  采样策略，当选择开启链路追踪时，此字段必填。 - RATE：按比例采样
+    * samplingParam  采样参数。 - 当采样策略为RATE时，此字段取值为字符串化的整数，范围为0-100，缺省为'100'，'100'为采集每个请求，建议与后端应用的采样率保持一致。
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
     * backendType  后端类型 - HTTP：web后端 - FUNCTION：函数工作流，当backend_type取值为FUNCTION时，func_info字段必须传入 - MOCK：模拟的后端，当backend_type取值为MOCK时，mock_info字段必须传入 - GRPC：grpc后端
     * remark  API描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
@@ -220,6 +235,9 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
             'authType' => 'auth_type',
             'authOpt' => 'auth_opt',
             'cors' => 'cors',
+            'traceEnabled' => 'trace_enabled',
+            'samplingStrategy' => 'sampling_strategy',
+            'samplingParam' => 'sampling_param',
             'matchMode' => 'match_mode',
             'backendType' => 'backend_type',
             'remark' => 'remark',
@@ -254,6 +272,9 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
     * authOpt  authOpt
     * cors  是否支持跨域 - TRUE：支持 - FALSE：不支持
+    * traceEnabled  是否开启链路追踪，默认关闭。
+    * samplingStrategy  采样策略，当选择开启链路追踪时，此字段必填。 - RATE：按比例采样
+    * samplingParam  采样参数。 - 当采样策略为RATE时，此字段取值为字符串化的整数，范围为0-100，缺省为'100'，'100'为采集每个请求，建议与后端应用的采样率保持一致。
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
     * backendType  后端类型 - HTTP：web后端 - FUNCTION：函数工作流，当backend_type取值为FUNCTION时，func_info字段必须传入 - MOCK：模拟的后端，当backend_type取值为MOCK时，mock_info字段必须传入 - GRPC：grpc后端
     * remark  API描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
@@ -288,6 +309,9 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
             'authType' => 'setAuthType',
             'authOpt' => 'setAuthOpt',
             'cors' => 'setCors',
+            'traceEnabled' => 'setTraceEnabled',
+            'samplingStrategy' => 'setSamplingStrategy',
+            'samplingParam' => 'setSamplingParam',
             'matchMode' => 'setMatchMode',
             'backendType' => 'setBackendType',
             'remark' => 'setRemark',
@@ -322,6 +346,9 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
     * authOpt  authOpt
     * cors  是否支持跨域 - TRUE：支持 - FALSE：不支持
+    * traceEnabled  是否开启链路追踪，默认关闭。
+    * samplingStrategy  采样策略，当选择开启链路追踪时，此字段必填。 - RATE：按比例采样
+    * samplingParam  采样参数。 - 当采样策略为RATE时，此字段取值为字符串化的整数，范围为0-100，缺省为'100'，'100'为采集每个请求，建议与后端应用的采样率保持一致。
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
     * backendType  后端类型 - HTTP：web后端 - FUNCTION：函数工作流，当backend_type取值为FUNCTION时，func_info字段必须传入 - MOCK：模拟的后端，当backend_type取值为MOCK时，mock_info字段必须传入 - GRPC：grpc后端
     * remark  API描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
@@ -356,6 +383,9 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
             'authType' => 'getAuthType',
             'authOpt' => 'getAuthOpt',
             'cors' => 'getCors',
+            'traceEnabled' => 'getTraceEnabled',
+            'samplingStrategy' => 'getSamplingStrategy',
+            'samplingParam' => 'getSamplingParam',
             'matchMode' => 'getMatchMode',
             'backendType' => 'getBackendType',
             'remark' => 'getRemark',
@@ -437,6 +467,7 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     const AUTH_TYPE_APP = 'APP';
     const AUTH_TYPE_IAM = 'IAM';
     const AUTH_TYPE_AUTHORIZER = 'AUTHORIZER';
+    const SAMPLING_STRATEGY_RATE = 'RATE';
     const MATCH_MODE_SWA = 'SWA';
     const MATCH_MODE_NORMAL = 'NORMAL';
     const BACKEND_TYPE_HTTP = 'HTTP';
@@ -516,6 +547,18 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
+    public function getSamplingStrategyAllowableValues()
+    {
+        return [
+            self::SAMPLING_STRATEGY_RATE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
     public function getMatchModeAllowableValues()
     {
         return [
@@ -579,6 +622,9 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
         $this->container['authType'] = isset($data['authType']) ? $data['authType'] : null;
         $this->container['authOpt'] = isset($data['authOpt']) ? $data['authOpt'] : null;
         $this->container['cors'] = isset($data['cors']) ? $data['cors'] : null;
+        $this->container['traceEnabled'] = isset($data['traceEnabled']) ? $data['traceEnabled'] : null;
+        $this->container['samplingStrategy'] = isset($data['samplingStrategy']) ? $data['samplingStrategy'] : null;
+        $this->container['samplingParam'] = isset($data['samplingParam']) ? $data['samplingParam'] : null;
         $this->container['matchMode'] = isset($data['matchMode']) ? $data['matchMode'] : null;
         $this->container['backendType'] = isset($data['backendType']) ? $data['backendType'] : null;
         $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
@@ -663,6 +709,20 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getSamplingStrategyAllowableValues();
+                if (!is_null($this->container['samplingStrategy']) && !in_array($this->container['samplingStrategy'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'samplingStrategy', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['samplingParam']) && (mb_strlen($this->container['samplingParam']) > 64)) {
+                $invalidProperties[] = "invalid value for 'samplingParam', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['samplingParam']) && (mb_strlen($this->container['samplingParam']) < 1)) {
+                $invalidProperties[] = "invalid value for 'samplingParam', the character length must be bigger than or equal to 1.";
+            }
             $allowedValues = $this->getMatchModeAllowableValues();
                 if (!is_null($this->container['matchMode']) && !in_array($this->container['matchMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -920,6 +980,78 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     public function setCors($cors)
     {
         $this->container['cors'] = $cors;
+        return $this;
+    }
+
+    /**
+    * Gets traceEnabled
+    *  是否开启链路追踪，默认关闭。
+    *
+    * @return bool|null
+    */
+    public function getTraceEnabled()
+    {
+        return $this->container['traceEnabled'];
+    }
+
+    /**
+    * Sets traceEnabled
+    *
+    * @param bool|null $traceEnabled 是否开启链路追踪，默认关闭。
+    *
+    * @return $this
+    */
+    public function setTraceEnabled($traceEnabled)
+    {
+        $this->container['traceEnabled'] = $traceEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets samplingStrategy
+    *  采样策略，当选择开启链路追踪时，此字段必填。 - RATE：按比例采样
+    *
+    * @return string|null
+    */
+    public function getSamplingStrategy()
+    {
+        return $this->container['samplingStrategy'];
+    }
+
+    /**
+    * Sets samplingStrategy
+    *
+    * @param string|null $samplingStrategy 采样策略，当选择开启链路追踪时，此字段必填。 - RATE：按比例采样
+    *
+    * @return $this
+    */
+    public function setSamplingStrategy($samplingStrategy)
+    {
+        $this->container['samplingStrategy'] = $samplingStrategy;
+        return $this;
+    }
+
+    /**
+    * Gets samplingParam
+    *  采样参数。 - 当采样策略为RATE时，此字段取值为字符串化的整数，范围为0-100，缺省为'100'，'100'为采集每个请求，建议与后端应用的采样率保持一致。
+    *
+    * @return string|null
+    */
+    public function getSamplingParam()
+    {
+        return $this->container['samplingParam'];
+    }
+
+    /**
+    * Sets samplingParam
+    *
+    * @param string|null $samplingParam 采样参数。 - 当采样策略为RATE时，此字段取值为字符串化的整数，范围为0-100，缺省为'100'，'100'为采集每个请求，建议与后端应用的采样率保持一致。
+    *
+    * @return $this
+    */
+    public function setSamplingParam($samplingParam)
+    {
+        $this->container['samplingParam'] = $samplingParam;
         return $this;
     }
 

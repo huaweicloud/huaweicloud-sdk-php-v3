@@ -181,6 +181,12 @@ class ListWeeklyReportsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['ddosInterceptTimes']) && ($this->container['ddosInterceptTimes'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'ddosInterceptTimes', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['ddosInterceptTimes']) && ($this->container['ddosInterceptTimes'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ddosInterceptTimes', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

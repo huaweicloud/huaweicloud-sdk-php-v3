@@ -205,18 +205,48 @@ class WeeklyCount implements ModelInterface, ArrayAccess
         if ($this->container['ddosInterceptTimes'] === null) {
             $invalidProperties[] = "'ddosInterceptTimes' can't be null";
         }
+            if (($this->container['ddosInterceptTimes'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'ddosInterceptTimes', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['ddosInterceptTimes'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ddosInterceptTimes', must be bigger than or equal to 0.";
+            }
         if ($this->container['ddosBlackholeTimes'] === null) {
             $invalidProperties[] = "'ddosBlackholeTimes' can't be null";
         }
+            if (($this->container['ddosBlackholeTimes'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'ddosBlackholeTimes', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['ddosBlackholeTimes'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ddosBlackholeTimes', must be bigger than or equal to 0.";
+            }
         if ($this->container['maxAttackBps'] === null) {
             $invalidProperties[] = "'maxAttackBps' can't be null";
         }
+            if (($this->container['maxAttackBps'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'maxAttackBps', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['maxAttackBps'] < 0)) {
+                $invalidProperties[] = "invalid value for 'maxAttackBps', must be bigger than or equal to 0.";
+            }
         if ($this->container['maxAttackConns'] === null) {
             $invalidProperties[] = "'maxAttackConns' can't be null";
         }
+            if (($this->container['maxAttackConns'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'maxAttackConns', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['maxAttackConns'] < 0)) {
+                $invalidProperties[] = "invalid value for 'maxAttackConns', must be bigger than or equal to 0.";
+            }
         if ($this->container['periodStartDate'] === null) {
             $invalidProperties[] = "'periodStartDate' can't be null";
         }
+            if (($this->container['periodStartDate'] > 999999999)) {
+                $invalidProperties[] = "invalid value for 'periodStartDate', must be smaller than or equal to 999999999.";
+            }
+            if (($this->container['periodStartDate'] < 0)) {
+                $invalidProperties[] = "invalid value for 'periodStartDate', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

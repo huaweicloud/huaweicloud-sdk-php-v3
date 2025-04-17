@@ -130,7 +130,28 @@ class ShowDDosStatusResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_NORMAL = 'normal';
+    const STATUS_CONFIGGING = 'configging';
+    const STATUS_NOT_CONFIG = 'notConfig';
+    const STATUS_PACKETCLEANING = 'packetcleaning';
+    const STATUS_PACKETDROPPING = 'packetdropping';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_NORMAL,
+            self::STATUS_CONFIGGING,
+            self::STATUS_NOT_CONFIG,
+            self::STATUS_PACKETCLEANING,
+            self::STATUS_PACKETDROPPING,
+        ];
+    }
 
 
     /**
@@ -159,6 +180,14 @@ class ShowDDosStatusResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 

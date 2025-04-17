@@ -20,7 +20,7 @@ class Dimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。
     * value  资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class Dimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。
     * value  资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class Dimension implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。
     * value  资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class Dimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。
     * value  资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class Dimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * name  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。
     * value  资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。
     *
     * @var string[]
@@ -175,8 +175,8 @@ class Dimension implements ModelInterface, ArrayAccess
             if (!preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){1,32}$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){1,32}$/.";
             }
-            if (!is_null($this->container['value']) && !preg_match("/^((([a-z]|[A-Z]|[0-9]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\\.|\/|#|\\(|\\))*)|\\*){1,256}$/", $this->container['value'])) {
-                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^((([a-z]|[A-Z]|[0-9]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\\.|\/|#|\\(|\\))*)|\\*){1,256}$/.";
+            if (!is_null($this->container['value']) && !preg_match("/^((([a-z]|[A-Z]|[0-9]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.)*)|\\*){1,256}$/", $this->container['value'])) {
+                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^((([a-z]|[A-Z]|[0-9]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.)*)|\\*){1,256}$/.";
             }
         return $invalidProperties;
     }
@@ -194,7 +194,7 @@ class Dimension implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    *  资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class Dimension implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+    * @param string $name 资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。
     *
     * @return $this
     */

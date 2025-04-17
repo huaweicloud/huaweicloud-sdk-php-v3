@@ -27,6 +27,10 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
     * creatorName  监控看板的创建用户名
     * createTime  监控看板创建时间
+    * widgetsNum  看板下的视图总数
+    * namespace  命名空间
+    * subProduct  子产品标识
+    * dashboardTemplateId  监控大盘模板id
     *
     * @var string[]
     */
@@ -37,7 +41,11 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
             'rowWidgetNum' => 'int',
             'isFavorite' => 'bool',
             'creatorName' => 'string',
-            'createTime' => 'int'
+            'createTime' => 'int',
+            'widgetsNum' => 'int',
+            'namespace' => 'string',
+            'subProduct' => 'string',
+            'dashboardTemplateId' => 'string'
     ];
 
     /**
@@ -49,6 +57,10 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
     * creatorName  监控看板的创建用户名
     * createTime  监控看板创建时间
+    * widgetsNum  看板下的视图总数
+    * namespace  命名空间
+    * subProduct  子产品标识
+    * dashboardTemplateId  监控大盘模板id
     *
     * @var string[]
     */
@@ -59,7 +71,11 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
         'rowWidgetNum' => null,
         'isFavorite' => null,
         'creatorName' => null,
-        'createTime' => 'int64'
+        'createTime' => 'int64',
+        'widgetsNum' => 'integer',
+        'namespace' => null,
+        'subProduct' => null,
+        'dashboardTemplateId' => null
     ];
 
     /**
@@ -92,6 +108,10 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
     * creatorName  监控看板的创建用户名
     * createTime  监控看板创建时间
+    * widgetsNum  看板下的视图总数
+    * namespace  命名空间
+    * subProduct  子产品标识
+    * dashboardTemplateId  监控大盘模板id
     *
     * @var string[]
     */
@@ -102,7 +122,11 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
             'rowWidgetNum' => 'row_widget_num',
             'isFavorite' => 'is_favorite',
             'creatorName' => 'creator_name',
-            'createTime' => 'create_time'
+            'createTime' => 'create_time',
+            'widgetsNum' => 'widgets_num',
+            'namespace' => 'namespace',
+            'subProduct' => 'sub_product',
+            'dashboardTemplateId' => 'dashboard_template_id'
     ];
 
     /**
@@ -114,6 +138,10 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
     * creatorName  监控看板的创建用户名
     * createTime  监控看板创建时间
+    * widgetsNum  看板下的视图总数
+    * namespace  命名空间
+    * subProduct  子产品标识
+    * dashboardTemplateId  监控大盘模板id
     *
     * @var string[]
     */
@@ -124,7 +152,11 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
             'rowWidgetNum' => 'setRowWidgetNum',
             'isFavorite' => 'setIsFavorite',
             'creatorName' => 'setCreatorName',
-            'createTime' => 'setCreateTime'
+            'createTime' => 'setCreateTime',
+            'widgetsNum' => 'setWidgetsNum',
+            'namespace' => 'setNamespace',
+            'subProduct' => 'setSubProduct',
+            'dashboardTemplateId' => 'setDashboardTemplateId'
     ];
 
     /**
@@ -136,6 +168,10 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
     * creatorName  监控看板的创建用户名
     * createTime  监控看板创建时间
+    * widgetsNum  看板下的视图总数
+    * namespace  命名空间
+    * subProduct  子产品标识
+    * dashboardTemplateId  监控大盘模板id
     *
     * @var string[]
     */
@@ -146,7 +182,11 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
             'rowWidgetNum' => 'getRowWidgetNum',
             'isFavorite' => 'getIsFavorite',
             'creatorName' => 'getCreatorName',
-            'createTime' => 'getCreateTime'
+            'createTime' => 'getCreateTime',
+            'widgetsNum' => 'getWidgetsNum',
+            'namespace' => 'getNamespace',
+            'subProduct' => 'getSubProduct',
+            'dashboardTemplateId' => 'getDashboardTemplateId'
     ];
 
     /**
@@ -214,6 +254,10 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
         $this->container['isFavorite'] = isset($data['isFavorite']) ? $data['isFavorite'] : null;
         $this->container['creatorName'] = isset($data['creatorName']) ? $data['creatorName'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['widgetsNum'] = isset($data['widgetsNum']) ? $data['widgetsNum'] : null;
+        $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
+        $this->container['subProduct'] = isset($data['subProduct']) ? $data['subProduct'] : null;
+        $this->container['dashboardTemplateId'] = isset($data['dashboardTemplateId']) ? $data['dashboardTemplateId'] : null;
     }
 
     /**
@@ -259,6 +303,30 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 1111111111111)) {
                 $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 1111111111111.";
+            }
+            if (!is_null($this->container['widgetsNum']) && ($this->container['widgetsNum'] > 50)) {
+                $invalidProperties[] = "invalid value for 'widgetsNum', must be smaller than or equal to 50.";
+            }
+            if (!is_null($this->container['widgetsNum']) && ($this->container['widgetsNum'] < 0)) {
+                $invalidProperties[] = "invalid value for 'widgetsNum', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['namespace']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['namespace'])) {
+                $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/.";
+            }
+            if (!is_null($this->container['subProduct']) && (mb_strlen($this->container['subProduct']) > 128)) {
+                $invalidProperties[] = "invalid value for 'subProduct', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['subProduct']) && (mb_strlen($this->container['subProduct']) < 1)) {
+                $invalidProperties[] = "invalid value for 'subProduct', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['dashboardTemplateId']) && !preg_match("/^mb([a-z]|[A-Z]|[0-9]){22}/", $this->container['dashboardTemplateId'])) {
+                $invalidProperties[] = "invalid value for 'dashboardTemplateId', must be conform to the pattern /^mb([a-z]|[A-Z]|[0-9]){22}/.";
             }
         return $invalidProperties;
     }
@@ -439,6 +507,102 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets widgetsNum
+    *  看板下的视图总数
+    *
+    * @return int|null
+    */
+    public function getWidgetsNum()
+    {
+        return $this->container['widgetsNum'];
+    }
+
+    /**
+    * Sets widgetsNum
+    *
+    * @param int|null $widgetsNum 看板下的视图总数
+    *
+    * @return $this
+    */
+    public function setWidgetsNum($widgetsNum)
+    {
+        $this->container['widgetsNum'] = $widgetsNum;
+        return $this;
+    }
+
+    /**
+    * Gets namespace
+    *  命名空间
+    *
+    * @return string|null
+    */
+    public function getNamespace()
+    {
+        return $this->container['namespace'];
+    }
+
+    /**
+    * Sets namespace
+    *
+    * @param string|null $namespace 命名空间
+    *
+    * @return $this
+    */
+    public function setNamespace($namespace)
+    {
+        $this->container['namespace'] = $namespace;
+        return $this;
+    }
+
+    /**
+    * Gets subProduct
+    *  子产品标识
+    *
+    * @return string|null
+    */
+    public function getSubProduct()
+    {
+        return $this->container['subProduct'];
+    }
+
+    /**
+    * Sets subProduct
+    *
+    * @param string|null $subProduct 子产品标识
+    *
+    * @return $this
+    */
+    public function setSubProduct($subProduct)
+    {
+        $this->container['subProduct'] = $subProduct;
+        return $this;
+    }
+
+    /**
+    * Gets dashboardTemplateId
+    *  监控大盘模板id
+    *
+    * @return string|null
+    */
+    public function getDashboardTemplateId()
+    {
+        return $this->container['dashboardTemplateId'];
+    }
+
+    /**
+    * Sets dashboardTemplateId
+    *
+    * @param string|null $dashboardTemplateId 监控大盘模板id
+    *
+    * @return $this
+    */
+    public function setDashboardTemplateId($dashboardTemplateId)
+    {
+        $this->container['dashboardTemplateId'] = $dashboardTemplateId;
         return $this;
     }
 

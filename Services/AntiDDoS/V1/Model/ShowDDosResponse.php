@@ -21,11 +21,11 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enableL7  是否开启L7层防护
-    * trafficPosId  流量分段ID，取值范围：1～9
-    * httpRequestPosId  HTTP请求数分段ID，取值范围：1～15
-    * cleaningAccessPosId  清洗时访问限制分段ID，取值范围：1～8
-    * appTypeId  应用类型ID，可选取值： - 0 - 1
+    * enableL7  是否开启L7层防护，固定值为fasle
+    * trafficPosId  流量分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
+    * httpRequestPosId  HTTP请求数分段ID，固定值为1
+    * cleaningAccessPosId  清洗时访问限制分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
+    * appTypeId  应用类型ID，固定值为0
     *
     * @var string[]
     */
@@ -39,11 +39,11 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enableL7  是否开启L7层防护
-    * trafficPosId  流量分段ID，取值范围：1～9
-    * httpRequestPosId  HTTP请求数分段ID，取值范围：1～15
-    * cleaningAccessPosId  清洗时访问限制分段ID，取值范围：1～8
-    * appTypeId  应用类型ID，可选取值： - 0 - 1
+    * enableL7  是否开启L7层防护，固定值为fasle
+    * trafficPosId  流量分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
+    * httpRequestPosId  HTTP请求数分段ID，固定值为1
+    * cleaningAccessPosId  清洗时访问限制分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
+    * appTypeId  应用类型ID，固定值为0
     *
     * @var string[]
     */
@@ -78,11 +78,11 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enableL7  是否开启L7层防护
-    * trafficPosId  流量分段ID，取值范围：1～9
-    * httpRequestPosId  HTTP请求数分段ID，取值范围：1～15
-    * cleaningAccessPosId  清洗时访问限制分段ID，取值范围：1～8
-    * appTypeId  应用类型ID，可选取值： - 0 - 1
+    * enableL7  是否开启L7层防护，固定值为fasle
+    * trafficPosId  流量分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
+    * httpRequestPosId  HTTP请求数分段ID，固定值为1
+    * cleaningAccessPosId  清洗时访问限制分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
+    * appTypeId  应用类型ID，固定值为0
     *
     * @var string[]
     */
@@ -96,11 +96,11 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enableL7  是否开启L7层防护
-    * trafficPosId  流量分段ID，取值范围：1～9
-    * httpRequestPosId  HTTP请求数分段ID，取值范围：1～15
-    * cleaningAccessPosId  清洗时访问限制分段ID，取值范围：1～8
-    * appTypeId  应用类型ID，可选取值： - 0 - 1
+    * enableL7  是否开启L7层防护，固定值为fasle
+    * trafficPosId  流量分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
+    * httpRequestPosId  HTTP请求数分段ID，固定值为1
+    * cleaningAccessPosId  清洗时访问限制分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
+    * appTypeId  应用类型ID，固定值为0
     *
     * @var string[]
     */
@@ -114,11 +114,11 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enableL7  是否开启L7层防护
-    * trafficPosId  流量分段ID，取值范围：1～9
-    * httpRequestPosId  HTTP请求数分段ID，取值范围：1～15
-    * cleaningAccessPosId  清洗时访问限制分段ID，取值范围：1～8
-    * appTypeId  应用类型ID，可选取值： - 0 - 1
+    * enableL7  是否开启L7层防护，固定值为fasle
+    * trafficPosId  流量分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
+    * httpRequestPosId  HTTP请求数分段ID，固定值为1
+    * cleaningAccessPosId  清洗时访问限制分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
+    * appTypeId  应用类型ID，固定值为0
     *
     * @var string[]
     */
@@ -170,7 +170,22 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const APP_TYPE_ID_0 = 0;
+    const APP_TYPE_ID_1 = 1;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAppTypeIdAllowableValues()
+    {
+        return [
+            self::APP_TYPE_ID_0,
+            self::APP_TYPE_ID_1,
+        ];
+    }
 
 
     /**
@@ -203,6 +218,32 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['trafficPosId']) && ($this->container['trafficPosId'] > 99)) {
+                $invalidProperties[] = "invalid value for 'trafficPosId', must be smaller than or equal to 99.";
+            }
+            if (!is_null($this->container['trafficPosId']) && ($this->container['trafficPosId'] < 1)) {
+                $invalidProperties[] = "invalid value for 'trafficPosId', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['httpRequestPosId']) && ($this->container['httpRequestPosId'] > 15)) {
+                $invalidProperties[] = "invalid value for 'httpRequestPosId', must be smaller than or equal to 15.";
+            }
+            if (!is_null($this->container['httpRequestPosId']) && ($this->container['httpRequestPosId'] < 1)) {
+                $invalidProperties[] = "invalid value for 'httpRequestPosId', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['cleaningAccessPosId']) && ($this->container['cleaningAccessPosId'] > 99)) {
+                $invalidProperties[] = "invalid value for 'cleaningAccessPosId', must be smaller than or equal to 99.";
+            }
+            if (!is_null($this->container['cleaningAccessPosId']) && ($this->container['cleaningAccessPosId'] < 1)) {
+                $invalidProperties[] = "invalid value for 'cleaningAccessPosId', must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getAppTypeIdAllowableValues();
+                if (!is_null($this->container['appTypeId']) && !in_array($this->container['appTypeId'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'appTypeId', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -219,7 +260,7 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableL7
-    *  是否开启L7层防护
+    *  是否开启L7层防护，固定值为fasle
     *
     * @return bool|null
     */
@@ -231,7 +272,7 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enableL7
     *
-    * @param bool|null $enableL7 是否开启L7层防护
+    * @param bool|null $enableL7 是否开启L7层防护，固定值为fasle
     *
     * @return $this
     */
@@ -243,7 +284,7 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets trafficPosId
-    *  流量分段ID，取值范围：1～9
+    *  流量分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
     *
     * @return int|null
     */
@@ -255,7 +296,7 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
     /**
     * Sets trafficPosId
     *
-    * @param int|null $trafficPosId 流量分段ID，取值范围：1～9
+    * @param int|null $trafficPosId 流量分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
     *
     * @return $this
     */
@@ -267,7 +308,7 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpRequestPosId
-    *  HTTP请求数分段ID，取值范围：1～15
+    *  HTTP请求数分段ID，固定值为1
     *
     * @return int|null
     */
@@ -279,7 +320,7 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
     /**
     * Sets httpRequestPosId
     *
-    * @param int|null $httpRequestPosId HTTP请求数分段ID，取值范围：1～15
+    * @param int|null $httpRequestPosId HTTP请求数分段ID，固定值为1
     *
     * @return $this
     */
@@ -291,7 +332,7 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets cleaningAccessPosId
-    *  清洗时访问限制分段ID，取值范围：1～8
+    *  清洗时访问限制分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
     *
     * @return int|null
     */
@@ -303,7 +344,7 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cleaningAccessPosId
     *
-    * @param int|null $cleaningAccessPosId 清洗时访问限制分段ID，取值范围：1～8
+    * @param int|null $cleaningAccessPosId 清洗时访问限制分段ID，取值范围：1：10M;2：30M;3：50M;4：70M;5：100M;6：150M;7：200M;8：250M;9：300M;10：500M;11：800M;88：1000M;99：默认防护。
     *
     * @return $this
     */
@@ -315,7 +356,7 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appTypeId
-    *  应用类型ID，可选取值： - 0 - 1
+    *  应用类型ID，固定值为0
     *
     * @return int|null
     */
@@ -327,7 +368,7 @@ class ShowDDosResponse implements ModelInterface, ArrayAccess
     /**
     * Sets appTypeId
     *
-    * @param int|null $appTypeId 应用类型ID，可选取值： - 0 - 1
+    * @param int|null $appTypeId 应用类型ID，固定值为0
     *
     * @return $this
     */

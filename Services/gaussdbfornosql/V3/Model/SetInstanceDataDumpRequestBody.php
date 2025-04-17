@@ -184,6 +184,9 @@ class SetInstanceDataDumpRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['bucketName'] === null) {
+            $invalidProperties[] = "'bucketName' can't be null";
+        }
         if ($this->container['action'] === null) {
             $invalidProperties[] = "'action' can't be null";
         }
@@ -213,7 +216,7 @@ class SetInstanceDataDumpRequestBody implements ModelInterface, ArrayAccess
     * Gets bucketName
     *  OBS桶名。
     *
-    * @return string|null
+    * @return string
     */
     public function getBucketName()
     {
@@ -223,7 +226,7 @@ class SetInstanceDataDumpRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets bucketName
     *
-    * @param string|null $bucketName OBS桶名。
+    * @param string $bucketName OBS桶名。
     *
     * @return $this
     */

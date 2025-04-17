@@ -27,6 +27,9 @@ class ApplicationQueryResponseData implements ModelInterface, ArrayAccess
     * parentId  父节点id
     * description  描述信息
     * path  应用path路径，由应用id用.拼接
+    * isCollection  是否为收藏应用
+    * createTime  创建时间
+    * updateTime  修改时间
     *
     * @var string[]
     */
@@ -37,7 +40,10 @@ class ApplicationQueryResponseData implements ModelInterface, ArrayAccess
             'domainId' => 'string',
             'parentId' => 'string',
             'description' => 'string',
-            'path' => 'string'
+            'path' => 'string',
+            'isCollection' => 'bool',
+            'createTime' => 'string',
+            'updateTime' => 'string'
     ];
 
     /**
@@ -49,6 +55,9 @@ class ApplicationQueryResponseData implements ModelInterface, ArrayAccess
     * parentId  父节点id
     * description  描述信息
     * path  应用path路径，由应用id用.拼接
+    * isCollection  是否为收藏应用
+    * createTime  创建时间
+    * updateTime  修改时间
     *
     * @var string[]
     */
@@ -59,7 +68,10 @@ class ApplicationQueryResponseData implements ModelInterface, ArrayAccess
         'domainId' => null,
         'parentId' => null,
         'description' => null,
-        'path' => null
+        'path' => null,
+        'isCollection' => null,
+        'createTime' => null,
+        'updateTime' => null
     ];
 
     /**
@@ -92,6 +104,9 @@ class ApplicationQueryResponseData implements ModelInterface, ArrayAccess
     * parentId  父节点id
     * description  描述信息
     * path  应用path路径，由应用id用.拼接
+    * isCollection  是否为收藏应用
+    * createTime  创建时间
+    * updateTime  修改时间
     *
     * @var string[]
     */
@@ -102,7 +117,10 @@ class ApplicationQueryResponseData implements ModelInterface, ArrayAccess
             'domainId' => 'domain_id',
             'parentId' => 'parent_id',
             'description' => 'description',
-            'path' => 'path'
+            'path' => 'path',
+            'isCollection' => 'is_collection',
+            'createTime' => 'create_time',
+            'updateTime' => 'update_time'
     ];
 
     /**
@@ -114,6 +132,9 @@ class ApplicationQueryResponseData implements ModelInterface, ArrayAccess
     * parentId  父节点id
     * description  描述信息
     * path  应用path路径，由应用id用.拼接
+    * isCollection  是否为收藏应用
+    * createTime  创建时间
+    * updateTime  修改时间
     *
     * @var string[]
     */
@@ -124,7 +145,10 @@ class ApplicationQueryResponseData implements ModelInterface, ArrayAccess
             'domainId' => 'setDomainId',
             'parentId' => 'setParentId',
             'description' => 'setDescription',
-            'path' => 'setPath'
+            'path' => 'setPath',
+            'isCollection' => 'setIsCollection',
+            'createTime' => 'setCreateTime',
+            'updateTime' => 'setUpdateTime'
     ];
 
     /**
@@ -136,6 +160,9 @@ class ApplicationQueryResponseData implements ModelInterface, ArrayAccess
     * parentId  父节点id
     * description  描述信息
     * path  应用path路径，由应用id用.拼接
+    * isCollection  是否为收藏应用
+    * createTime  创建时间
+    * updateTime  修改时间
     *
     * @var string[]
     */
@@ -146,7 +173,10 @@ class ApplicationQueryResponseData implements ModelInterface, ArrayAccess
             'domainId' => 'getDomainId',
             'parentId' => 'getParentId',
             'description' => 'getDescription',
-            'path' => 'getPath'
+            'path' => 'getPath',
+            'isCollection' => 'getIsCollection',
+            'createTime' => 'getCreateTime',
+            'updateTime' => 'getUpdateTime'
     ];
 
     /**
@@ -214,6 +244,9 @@ class ApplicationQueryResponseData implements ModelInterface, ArrayAccess
         $this->container['parentId'] = isset($data['parentId']) ? $data['parentId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['path'] = isset($data['path']) ? $data['path'] : null;
+        $this->container['isCollection'] = isset($data['isCollection']) ? $data['isCollection'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
 
     /**
@@ -403,6 +436,78 @@ class ApplicationQueryResponseData implements ModelInterface, ArrayAccess
     public function setPath($path)
     {
         $this->container['path'] = $path;
+        return $this;
+    }
+
+    /**
+    * Gets isCollection
+    *  是否为收藏应用
+    *
+    * @return bool|null
+    */
+    public function getIsCollection()
+    {
+        return $this->container['isCollection'];
+    }
+
+    /**
+    * Sets isCollection
+    *
+    * @param bool|null $isCollection 是否为收藏应用
+    *
+    * @return $this
+    */
+    public function setIsCollection($isCollection)
+    {
+        $this->container['isCollection'] = $isCollection;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  创建时间
+    *
+    * @return string|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param string|null $createTime 创建时间
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  修改时间
+    *
+    * @return string|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param string|null $updateTime 修改时间
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
         return $this;
     }
 

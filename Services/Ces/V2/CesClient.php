@@ -316,12 +316,12 @@ class CesClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/plain; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/plain; charset=utf-8'],
-                ['application/json', 'text/plain; charset=utf-8']
+                ['application/json'],
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -634,7 +634,7 @@ class CesClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 [],
-                ['application/json', 'text/plain; charset=utf-8']
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -691,12 +691,12 @@ class CesClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/plain; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/plain; charset=utf-8'],
-                ['application/json', 'text/plain; charset=utf-8']
+                ['application/json'],
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -913,7 +913,7 @@ class CesClient extends Client
     }
 
     /**
-     * 创建告警规则
+     * 创建告警规则（推荐）
      *
      * 创建告警规则
      * 
@@ -1226,7 +1226,7 @@ class CesClient extends Client
     }
 
     /**
-     * 创建资源分组
+     * 创建资源分组（推荐）
      *
      * 创建资源分组
      * 
@@ -1479,7 +1479,7 @@ class CesClient extends Client
     /**
      * 查询主机监控维度指标信息
      *
-     * 根据ECS/BMS资源ID查询磁盘、挂载点、进程、显卡、RAID控制器维度指标信息。
+     * 根据ECS/BMS资源ID查询磁盘、挂载点、进程、显卡、RAID控制器维度指标信息；维度NPU已经为原始值，不需要调用该接口进行额外查询获取指标信息
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1590,9 +1590,6 @@ class CesClient extends Client
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
-        if ($localVarParams['alarmType'] !== null) {
-            $queryParams['alarm_type'] = $localVarParams['alarmType'];
-        }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }
@@ -1610,6 +1607,15 @@ class CesClient extends Client
         }
         if ($localVarParams['to'] !== null) {
             $queryParams['to'] = $localVarParams['to'];
+        }
+        if ($localVarParams['alarmType'] !== null) {
+            $queryParams['alarm_type'] = $localVarParams['alarmType'];
+        }
+        if ($localVarParams['createTimeFrom'] !== null) {
+            $queryParams['create_time_from'] = $localVarParams['createTimeFrom'];
+        }
+        if ($localVarParams['createTimeTo'] !== null) {
+            $queryParams['create_time_to'] = $localVarParams['createTimeTo'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -1785,7 +1791,7 @@ class CesClient extends Client
     }
 
     /**
-     * 查询告警规则列表
+     * 查询告警规则列表（推荐）
      *
      * 查询告警规则列表
      * 
@@ -1829,6 +1835,12 @@ class CesClient extends Client
         }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['productName'] !== null) {
+            $queryParams['product_name'] = $localVarParams['productName'];
+        }
+        if ($localVarParams['resourceLevel'] !== null) {
+            $queryParams['resource_level'] = $localVarParams['resourceLevel'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -1981,6 +1993,9 @@ class CesClient extends Client
         if ($localVarParams['templateName'] !== null) {
             $queryParams['template_name'] = $localVarParams['templateName'];
         }
+        if ($localVarParams['productName'] !== null) {
+            $queryParams['product_name'] = $localVarParams['productName'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json', 'text/plain; charset=utf-8']
@@ -2114,6 +2129,9 @@ class CesClient extends Client
         if ($localVarParams['dashboardId'] !== null) {
             $queryParams['dashboard_id'] = $localVarParams['dashboardId'];
         }
+        if ($localVarParams['dashboardType'] !== null) {
+            $queryParams['dashboard_type'] = $localVarParams['dashboardType'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json', 'text/plain; charset=utf-8']
@@ -2173,16 +2191,19 @@ class CesClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
+        }
         if ($localVarParams['dashboardId'] !== null) {
             $pathParams['dashboard_id'] = $localVarParams['dashboardId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/plain; charset=utf-8']
+                ['application/json', 'text/plain; charset=utf-8', 'widgets']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8', 'widgets'],
                 []
             );
         }
@@ -2246,11 +2267,11 @@ class CesClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/plain; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json'],
                 []
             );
         }
@@ -2309,17 +2330,23 @@ class CesClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/plain; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/plain; charset=utf-8'],
-                ['application/json', 'text/plain; charset=utf-8']
+                ['application/json'],
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -2583,6 +2610,21 @@ class CesClient extends Client
         }
         if ($localVarParams['dimValue'] !== null) {
             $queryParams['dim_value'] = $localVarParams['dimValue'];
+        }
+        if ($localVarParams['tag'] !== null) {
+            $queryParams['tag'] = $localVarParams['tag'];
+        }
+        if ($localVarParams['extendRelationId'] !== null) {
+            $queryParams['extend_relation_id'] = $localVarParams['extendRelationId'];
+        }
+        if ($localVarParams['productName'] !== null) {
+            $queryParams['product_name'] = $localVarParams['productName'];
+        }
+        if ($localVarParams['resourceName'] !== null) {
+            $queryParams['resource_name'] = $localVarParams['resourceName'];
+        }
+        if ($localVarParams['eventStatus'] !== null) {
+            $queryParams['event_status'] = $localVarParams['eventStatus'];
         }
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
@@ -3108,7 +3150,7 @@ class CesClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 [],
-                ['application/json', 'text/plain; charset=utf-8']
+                ['application/json']
             );
         }
         $headers = array_merge(

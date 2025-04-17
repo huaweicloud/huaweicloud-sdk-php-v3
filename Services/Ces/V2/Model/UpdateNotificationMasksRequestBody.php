@@ -23,6 +23,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
     * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则编号；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略编号；
     * relationType  relationType
+    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+    * productMetrics  按云产品维度屏蔽时的指标信息
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productName  资源为云产品时云产品名称
     * resources  关联资源
     * maskType  maskType
     * startDate  屏蔽起始日期，yyyy-MM-dd。
@@ -36,6 +40,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
             'maskName' => 'string',
             'relationIds' => 'string[]',
             'relationType' => '\HuaweiCloud\SDK\Ces\V2\Model\RelationType',
+            'metricNames' => 'string[]',
+            'productMetrics' => '\HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]',
+            'resourceLevel' => 'string',
+            'productName' => 'string',
             'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\Resource[]',
             'maskType' => '\HuaweiCloud\SDK\Ces\V2\Model\MaskType',
             'startDate' => '\DateTime',
@@ -49,6 +57,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
     * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则编号；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略编号；
     * relationType  relationType
+    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+    * productMetrics  按云产品维度屏蔽时的指标信息
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productName  资源为云产品时云产品名称
     * resources  关联资源
     * maskType  maskType
     * startDate  屏蔽起始日期，yyyy-MM-dd。
@@ -62,6 +74,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
         'maskName' => null,
         'relationIds' => null,
         'relationType' => null,
+        'metricNames' => null,
+        'productMetrics' => null,
+        'resourceLevel' => null,
+        'productName' => null,
         'resources' => null,
         'maskType' => null,
         'startDate' => 'date',
@@ -96,6 +112,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
     * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则编号；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略编号；
     * relationType  relationType
+    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+    * productMetrics  按云产品维度屏蔽时的指标信息
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productName  资源为云产品时云产品名称
     * resources  关联资源
     * maskType  maskType
     * startDate  屏蔽起始日期，yyyy-MM-dd。
@@ -109,6 +129,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
             'maskName' => 'mask_name',
             'relationIds' => 'relation_ids',
             'relationType' => 'relation_type',
+            'metricNames' => 'metric_names',
+            'productMetrics' => 'product_metrics',
+            'resourceLevel' => 'resource_level',
+            'productName' => 'product_name',
             'resources' => 'resources',
             'maskType' => 'mask_type',
             'startDate' => 'start_date',
@@ -122,6 +146,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
     * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则编号；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略编号；
     * relationType  relationType
+    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+    * productMetrics  按云产品维度屏蔽时的指标信息
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productName  资源为云产品时云产品名称
     * resources  关联资源
     * maskType  maskType
     * startDate  屏蔽起始日期，yyyy-MM-dd。
@@ -135,6 +163,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
             'maskName' => 'setMaskName',
             'relationIds' => 'setRelationIds',
             'relationType' => 'setRelationType',
+            'metricNames' => 'setMetricNames',
+            'productMetrics' => 'setProductMetrics',
+            'resourceLevel' => 'setResourceLevel',
+            'productName' => 'setProductName',
             'resources' => 'setResources',
             'maskType' => 'setMaskType',
             'startDate' => 'setStartDate',
@@ -148,6 +180,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
     * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则编号；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略编号；
     * relationType  relationType
+    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+    * productMetrics  按云产品维度屏蔽时的指标信息
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productName  资源为云产品时云产品名称
     * resources  关联资源
     * maskType  maskType
     * startDate  屏蔽起始日期，yyyy-MM-dd。
@@ -161,6 +197,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
             'maskName' => 'getMaskName',
             'relationIds' => 'getRelationIds',
             'relationType' => 'getRelationType',
+            'metricNames' => 'getMetricNames',
+            'productMetrics' => 'getProductMetrics',
+            'resourceLevel' => 'getResourceLevel',
+            'productName' => 'getProductName',
             'resources' => 'getResources',
             'maskType' => 'getMaskType',
             'startDate' => 'getStartDate',
@@ -209,7 +249,22 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RESOURCE_LEVEL_DIMENSION = 'dimension';
+    const RESOURCE_LEVEL_PRODUCT = 'product';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceLevelAllowableValues()
+    {
+        return [
+            self::RESOURCE_LEVEL_DIMENSION,
+            self::RESOURCE_LEVEL_PRODUCT,
+        ];
+    }
 
 
     /**
@@ -230,6 +285,10 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
         $this->container['maskName'] = isset($data['maskName']) ? $data['maskName'] : null;
         $this->container['relationIds'] = isset($data['relationIds']) ? $data['relationIds'] : null;
         $this->container['relationType'] = isset($data['relationType']) ? $data['relationType'] : null;
+        $this->container['metricNames'] = isset($data['metricNames']) ? $data['metricNames'] : null;
+        $this->container['productMetrics'] = isset($data['productMetrics']) ? $data['productMetrics'] : null;
+        $this->container['resourceLevel'] = isset($data['resourceLevel']) ? $data['resourceLevel'] : null;
+        $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
         $this->container['maskType'] = isset($data['maskType']) ? $data['maskType'] : null;
         $this->container['startDate'] = isset($data['startDate']) ? $data['startDate'] : null;
@@ -257,6 +316,20 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['maskName'])) {
                 $invalidProperties[] = "invalid value for 'maskName', must be conform to the pattern /^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            }
+            $allowedValues = $this->getResourceLevelAllowableValues();
+                if (!is_null($this->container['resourceLevel']) && !in_array($this->container['resourceLevel'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceLevel', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['resources'] === null) {
             $invalidProperties[] = "'resources' can't be null";
@@ -359,6 +432,102 @@ class UpdateNotificationMasksRequestBody implements ModelInterface, ArrayAccess
     public function setRelationType($relationType)
     {
         $this->container['relationType'] = $relationType;
+        return $this;
+    }
+
+    /**
+    * Gets metricNames
+    *  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+    *
+    * @return string[]|null
+    */
+    public function getMetricNames()
+    {
+        return $this->container['metricNames'];
+    }
+
+    /**
+    * Sets metricNames
+    *
+    * @param string[]|null $metricNames 关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+    *
+    * @return $this
+    */
+    public function setMetricNames($metricNames)
+    {
+        $this->container['metricNames'] = $metricNames;
+        return $this;
+    }
+
+    /**
+    * Gets productMetrics
+    *  按云产品维度屏蔽时的指标信息
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null
+    */
+    public function getProductMetrics()
+    {
+        return $this->container['productMetrics'];
+    }
+
+    /**
+    * Sets productMetrics
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null $productMetrics 按云产品维度屏蔽时的指标信息
+    *
+    * @return $this
+    */
+    public function setProductMetrics($productMetrics)
+    {
+        $this->container['productMetrics'] = $productMetrics;
+        return $this;
+    }
+
+    /**
+    * Gets resourceLevel
+    *  dimension: 子维度,product: 云产品
+    *
+    * @return string|null
+    */
+    public function getResourceLevel()
+    {
+        return $this->container['resourceLevel'];
+    }
+
+    /**
+    * Sets resourceLevel
+    *
+    * @param string|null $resourceLevel dimension: 子维度,product: 云产品
+    *
+    * @return $this
+    */
+    public function setResourceLevel($resourceLevel)
+    {
+        $this->container['resourceLevel'] = $resourceLevel;
+        return $this;
+    }
+
+    /**
+    * Gets productName
+    *  资源为云产品时云产品名称
+    *
+    * @return string|null
+    */
+    public function getProductName()
+    {
+        return $this->container['productName'];
+    }
+
+    /**
+    * Sets productName
+    *
+    * @param string|null $productName 资源为云产品时云产品名称
+    *
+    * @return $this
+    */
+    public function setProductName($productName)
+    {
+        $this->container['productName'] = $productName;
         return $this;
     }
 

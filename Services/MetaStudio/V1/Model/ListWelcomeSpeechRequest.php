@@ -27,7 +27,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * robotId  应用ID。
-    * language  智能交互语言  * CN:中文  * EN:英文
+    * language  智能交互语言  * CN:中文  * EN:英文  * ESP：西班牙语（仅海外站点支持）  * por：葡萄牙语（仅海外站点支持）  * Arabic：阿拉伯语（仅海外站点支持）  * Thai：泰语（仅海外站点支持）
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * robotId  应用ID。
-    * language  智能交互语言  * CN:中文  * EN:英文
+    * language  智能交互语言  * CN:中文  * EN:英文  * ESP：西班牙语（仅海外站点支持）  * por：葡萄牙语（仅海外站点支持）  * Arabic：阿拉伯语（仅海外站点支持）  * Thai：泰语（仅海外站点支持）
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * robotId  应用ID。
-    * language  智能交互语言  * CN:中文  * EN:英文
+    * language  智能交互语言  * CN:中文  * EN:英文  * ESP：西班牙语（仅海外站点支持）  * por：葡萄牙语（仅海外站点支持）  * Arabic：阿拉伯语（仅海外站点支持）  * Thai：泰语（仅海外站点支持）
     *
     * @var string[]
     */
@@ -120,7 +120,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * robotId  应用ID。
-    * language  智能交互语言  * CN:中文  * EN:英文
+    * language  智能交互语言  * CN:中文  * EN:英文  * ESP：西班牙语（仅海外站点支持）  * por：葡萄牙语（仅海外站点支持）  * Arabic：阿拉伯语（仅海外站点支持）  * Thai：泰语（仅海外站点支持）
     *
     * @var string[]
     */
@@ -144,7 +144,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * robotId  应用ID。
-    * language  智能交互语言  * CN:中文  * EN:英文
+    * language  智能交互语言  * CN:中文  * EN:英文  * ESP：西班牙语（仅海外站点支持）  * por：葡萄牙语（仅海外站点支持）  * Arabic：阿拉伯语（仅海外站点支持）  * Thai：泰语（仅海外站点支持）
     *
     * @var string[]
     */
@@ -201,6 +201,10 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     }
     const LANGUAGE_CN = 'CN';
     const LANGUAGE_EN = 'EN';
+    const LANGUAGE_ESP = 'ESP';
+    const LANGUAGE_POR = 'por';
+    const LANGUAGE_ARABIC = 'Arabic';
+    const LANGUAGE_THAI = 'Thai';
     
 
     /**
@@ -213,6 +217,10 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
         return [
             self::LANGUAGE_CN,
             self::LANGUAGE_EN,
+            self::LANGUAGE_ESP,
+            self::LANGUAGE_POR,
+            self::LANGUAGE_ARABIC,
+            self::LANGUAGE_THAI,
         ];
     }
 
@@ -487,7 +495,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  智能交互语言  * CN:中文  * EN:英文
+    *  智能交互语言  * CN:中文  * EN:英文  * ESP：西班牙语（仅海外站点支持）  * por：葡萄牙语（仅海外站点支持）  * Arabic：阿拉伯语（仅海外站点支持）  * Thai：泰语（仅海外站点支持）
     *
     * @return string|null
     */
@@ -499,7 +507,7 @@ class ListWelcomeSpeechRequest implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 智能交互语言  * CN:中文  * EN:英文
+    * @param string|null $language 智能交互语言  * CN:中文  * EN:英文  * ESP：西班牙语（仅海外站点支持）  * por：葡萄牙语（仅海外站点支持）  * Arabic：阿拉伯语（仅海外站点支持）  * Thai：泰语（仅海外站点支持）
     *
     * @return $this
     */

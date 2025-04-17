@@ -24,9 +24,16 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
     * relationType  relationType
     * relationId  关联编号
+    * resourceType  resourceType
+    * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
+    * productMetrics  按云产品维度屏蔽时的指标信息
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productName  资源为云产品时的云产品名称
     * resources  关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     * maskStatus  maskStatus
     * maskType  maskType
+    * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
+    * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
     * startDate  屏蔽起始日期，yyyy-MM-dd。
     * startTime  屏蔽起始时间，HH:mm:ss。
     * endDate  屏蔽截止日期，yyyy-MM-dd。
@@ -40,9 +47,16 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
             'maskName' => 'string',
             'relationType' => '\HuaweiCloud\SDK\Ces\V2\Model\RelationType',
             'relationId' => 'string',
+            'resourceType' => '\HuaweiCloud\SDK\Ces\V2\Model\MaskResourceType',
+            'metricNames' => 'string[]',
+            'productMetrics' => '\HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]',
+            'resourceLevel' => 'string',
+            'productName' => 'string',
             'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceCategory[]',
             'maskStatus' => '\HuaweiCloud\SDK\Ces\V2\Model\MaskStatus',
             'maskType' => '\HuaweiCloud\SDK\Ces\V2\Model\MaskType',
+            'createTime' => 'int',
+            'updateTime' => 'int',
             'startDate' => '\DateTime',
             'startTime' => 'string',
             'endDate' => '\DateTime',
@@ -56,9 +70,16 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
     * relationType  relationType
     * relationId  关联编号
+    * resourceType  resourceType
+    * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
+    * productMetrics  按云产品维度屏蔽时的指标信息
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productName  资源为云产品时的云产品名称
     * resources  关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     * maskStatus  maskStatus
     * maskType  maskType
+    * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
+    * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
     * startDate  屏蔽起始日期，yyyy-MM-dd。
     * startTime  屏蔽起始时间，HH:mm:ss。
     * endDate  屏蔽截止日期，yyyy-MM-dd。
@@ -72,9 +93,16 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
         'maskName' => null,
         'relationType' => null,
         'relationId' => null,
+        'resourceType' => null,
+        'metricNames' => null,
+        'productMetrics' => null,
+        'resourceLevel' => null,
+        'productName' => null,
         'resources' => null,
         'maskStatus' => null,
         'maskType' => null,
+        'createTime' => 'int64',
+        'updateTime' => 'int64',
         'startDate' => 'date',
         'startTime' => null,
         'endDate' => 'date',
@@ -109,9 +137,16 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
     * relationType  relationType
     * relationId  关联编号
+    * resourceType  resourceType
+    * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
+    * productMetrics  按云产品维度屏蔽时的指标信息
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productName  资源为云产品时的云产品名称
     * resources  关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     * maskStatus  maskStatus
     * maskType  maskType
+    * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
+    * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
     * startDate  屏蔽起始日期，yyyy-MM-dd。
     * startTime  屏蔽起始时间，HH:mm:ss。
     * endDate  屏蔽截止日期，yyyy-MM-dd。
@@ -125,9 +160,16 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
             'maskName' => 'mask_name',
             'relationType' => 'relation_type',
             'relationId' => 'relation_id',
+            'resourceType' => 'resource_type',
+            'metricNames' => 'metric_names',
+            'productMetrics' => 'product_metrics',
+            'resourceLevel' => 'resource_level',
+            'productName' => 'product_name',
             'resources' => 'resources',
             'maskStatus' => 'mask_status',
             'maskType' => 'mask_type',
+            'createTime' => 'create_time',
+            'updateTime' => 'update_time',
             'startDate' => 'start_date',
             'startTime' => 'start_time',
             'endDate' => 'end_date',
@@ -141,9 +183,16 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
     * relationType  relationType
     * relationId  关联编号
+    * resourceType  resourceType
+    * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
+    * productMetrics  按云产品维度屏蔽时的指标信息
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productName  资源为云产品时的云产品名称
     * resources  关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     * maskStatus  maskStatus
     * maskType  maskType
+    * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
+    * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
     * startDate  屏蔽起始日期，yyyy-MM-dd。
     * startTime  屏蔽起始时间，HH:mm:ss。
     * endDate  屏蔽截止日期，yyyy-MM-dd。
@@ -157,9 +206,16 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
             'maskName' => 'setMaskName',
             'relationType' => 'setRelationType',
             'relationId' => 'setRelationId',
+            'resourceType' => 'setResourceType',
+            'metricNames' => 'setMetricNames',
+            'productMetrics' => 'setProductMetrics',
+            'resourceLevel' => 'setResourceLevel',
+            'productName' => 'setProductName',
             'resources' => 'setResources',
             'maskStatus' => 'setMaskStatus',
             'maskType' => 'setMaskType',
+            'createTime' => 'setCreateTime',
+            'updateTime' => 'setUpdateTime',
             'startDate' => 'setStartDate',
             'startTime' => 'setStartTime',
             'endDate' => 'setEndDate',
@@ -173,9 +229,16 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * maskName  屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
     * relationType  relationType
     * relationId  关联编号
+    * resourceType  resourceType
+    * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
+    * productMetrics  按云产品维度屏蔽时的指标信息
+    * resourceLevel  dimension: 子维度,product: 云产品
+    * productName  资源为云产品时的云产品名称
     * resources  关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     * maskStatus  maskStatus
     * maskType  maskType
+    * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
+    * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
     * startDate  屏蔽起始日期，yyyy-MM-dd。
     * startTime  屏蔽起始时间，HH:mm:ss。
     * endDate  屏蔽截止日期，yyyy-MM-dd。
@@ -189,9 +252,16 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
             'maskName' => 'getMaskName',
             'relationType' => 'getRelationType',
             'relationId' => 'getRelationId',
+            'resourceType' => 'getResourceType',
+            'metricNames' => 'getMetricNames',
+            'productMetrics' => 'getProductMetrics',
+            'resourceLevel' => 'getResourceLevel',
+            'productName' => 'getProductName',
             'resources' => 'getResources',
             'maskStatus' => 'getMaskStatus',
             'maskType' => 'getMaskType',
+            'createTime' => 'getCreateTime',
+            'updateTime' => 'getUpdateTime',
             'startDate' => 'getStartDate',
             'startTime' => 'getStartTime',
             'endDate' => 'getEndDate',
@@ -239,7 +309,22 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     {
         return self::$openAPIModelName;
     }
+    const RESOURCE_LEVEL_DIMENSION = 'dimension';
+    const RESOURCE_LEVEL_PRODUCT = 'product';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceLevelAllowableValues()
+    {
+        return [
+            self::RESOURCE_LEVEL_DIMENSION,
+            self::RESOURCE_LEVEL_PRODUCT,
+        ];
+    }
 
 
     /**
@@ -261,9 +346,16 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
         $this->container['maskName'] = isset($data['maskName']) ? $data['maskName'] : null;
         $this->container['relationType'] = isset($data['relationType']) ? $data['relationType'] : null;
         $this->container['relationId'] = isset($data['relationId']) ? $data['relationId'] : null;
+        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
+        $this->container['metricNames'] = isset($data['metricNames']) ? $data['metricNames'] : null;
+        $this->container['productMetrics'] = isset($data['productMetrics']) ? $data['productMetrics'] : null;
+        $this->container['resourceLevel'] = isset($data['resourceLevel']) ? $data['resourceLevel'] : null;
+        $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
         $this->container['maskStatus'] = isset($data['maskStatus']) ? $data['maskStatus'] : null;
         $this->container['maskType'] = isset($data['maskType']) ? $data['maskType'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['startDate'] = isset($data['startDate']) ? $data['startDate'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endDate'] = isset($data['endDate']) ? $data['endDate'] : null;
@@ -311,6 +403,20 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
             }
             if (!is_null($this->container['relationId']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|-){1,64}$/", $this->container['relationId'])) {
                 $invalidProperties[] = "invalid value for 'relationId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|-){1,64}$/.";
+            }
+            $allowedValues = $this->getResourceLevelAllowableValues();
+                if (!is_null($this->container['resourceLevel']) && !in_array($this->container['resourceLevel'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceLevel', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['maskStatus'] === null) {
             $invalidProperties[] = "'maskStatus' can't be null";
@@ -441,6 +547,126 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     }
 
     /**
+    * Gets resourceType
+    *  resourceType
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\MaskResourceType|null
+    */
+    public function getResourceType()
+    {
+        return $this->container['resourceType'];
+    }
+
+    /**
+    * Sets resourceType
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\MaskResourceType|null $resourceType resourceType
+    *
+    * @return $this
+    */
+    public function setResourceType($resourceType)
+    {
+        $this->container['resourceType'] = $resourceType;
+        return $this;
+    }
+
+    /**
+    * Gets metricNames
+    *  关联指标名称，relation_type为RESOURCE时存在该字段
+    *
+    * @return string[]|null
+    */
+    public function getMetricNames()
+    {
+        return $this->container['metricNames'];
+    }
+
+    /**
+    * Sets metricNames
+    *
+    * @param string[]|null $metricNames 关联指标名称，relation_type为RESOURCE时存在该字段
+    *
+    * @return $this
+    */
+    public function setMetricNames($metricNames)
+    {
+        $this->container['metricNames'] = $metricNames;
+        return $this;
+    }
+
+    /**
+    * Gets productMetrics
+    *  按云产品维度屏蔽时的指标信息
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null
+    */
+    public function getProductMetrics()
+    {
+        return $this->container['productMetrics'];
+    }
+
+    /**
+    * Sets productMetrics
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null $productMetrics 按云产品维度屏蔽时的指标信息
+    *
+    * @return $this
+    */
+    public function setProductMetrics($productMetrics)
+    {
+        $this->container['productMetrics'] = $productMetrics;
+        return $this;
+    }
+
+    /**
+    * Gets resourceLevel
+    *  dimension: 子维度,product: 云产品
+    *
+    * @return string|null
+    */
+    public function getResourceLevel()
+    {
+        return $this->container['resourceLevel'];
+    }
+
+    /**
+    * Sets resourceLevel
+    *
+    * @param string|null $resourceLevel dimension: 子维度,product: 云产品
+    *
+    * @return $this
+    */
+    public function setResourceLevel($resourceLevel)
+    {
+        $this->container['resourceLevel'] = $resourceLevel;
+        return $this;
+    }
+
+    /**
+    * Gets productName
+    *  资源为云产品时的云产品名称
+    *
+    * @return string|null
+    */
+    public function getProductName()
+    {
+        return $this->container['productName'];
+    }
+
+    /**
+    * Sets productName
+    *
+    * @param string|null $productName 资源为云产品时的云产品名称
+    *
+    * @return $this
+    */
+    public function setProductName($productName)
+    {
+        $this->container['productName'] = $productName;
+        return $this;
+    }
+
+    /**
     * Gets resources
     *  关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     *
@@ -509,6 +735,54 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     public function setMaskType($maskType)
     {
         $this->container['maskType'] = $maskType;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
+    *
+    * @return int|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param int|null $createTime 告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
+    *
+    * @return int|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param int|null $updateTime 告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
         return $this;
     }
 

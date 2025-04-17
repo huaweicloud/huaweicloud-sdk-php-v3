@@ -21,7 +21,7 @@ class OpenGaussDatastoreOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  数据库引擎，不区分大小写，取值如下：  GaussDB。
-    * version  数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDB&api=ListDatastores)。
+    * version  数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDBforopenGauss&api=ListDatastores)。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class OpenGaussDatastoreOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  数据库引擎，不区分大小写，取值如下：  GaussDB。
-    * version  数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDB&api=ListDatastores)。
+    * version  数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDBforopenGauss&api=ListDatastores)。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class OpenGaussDatastoreOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  数据库引擎，不区分大小写，取值如下：  GaussDB。
-    * version  数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDB&api=ListDatastores)。
+    * version  数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDBforopenGauss&api=ListDatastores)。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class OpenGaussDatastoreOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  数据库引擎，不区分大小写，取值如下：  GaussDB。
-    * version  数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDB&api=ListDatastores)。
+    * version  数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDBforopenGauss&api=ListDatastores)。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class OpenGaussDatastoreOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  数据库引擎，不区分大小写，取值如下：  GaussDB。
-    * version  数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDB&api=ListDatastores)。
+    * version  数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDBforopenGauss&api=ListDatastores)。
     *
     * @var string[]
     */
@@ -233,7 +233,7 @@ class OpenGaussDatastoreOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDB&api=ListDatastores)。
+    *  数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDBforopenGauss&api=ListDatastores)。
     *
     * @return string|null
     */
@@ -245,7 +245,7 @@ class OpenGaussDatastoreOption implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDB&api=ListDatastores)。
+    * @param string|null $version 数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDBforopenGauss&api=ListDatastores)。
     *
     * @return $this
     */

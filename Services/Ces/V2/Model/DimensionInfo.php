@@ -20,7 +20,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”
+    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
     * filterType  资源类型, all_instances: 全部资源, specific_instances: 指定资源
     * values  维度值列表
     *
@@ -34,7 +34,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”
+    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
     * filterType  资源类型, all_instances: 全部资源, specific_instances: 指定资源
     * values  维度值列表
     *
@@ -69,7 +69,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”
+    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
     * filterType  资源类型, all_instances: 全部资源, specific_instances: 指定资源
     * values  维度值列表
     *
@@ -83,7 +83,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”
+    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
     * filterType  资源类型, all_instances: 全部资源, specific_instances: 指定资源
     * values  维度值列表
     *
@@ -97,7 +97,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”
+    * name  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
     * filterType  资源类型, all_instances: 全部资源, specific_instances: 指定资源
     * values  维度值列表
     *
@@ -234,7 +234,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”
+    *  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
     *
     * @return string
     */
@@ -246,7 +246,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”
+    * @param string $name 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
     *
     * @return $this
     */
