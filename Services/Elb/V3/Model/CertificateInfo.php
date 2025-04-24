@@ -34,7 +34,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * projectId  证书所在项目ID。
     * encCertificate  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * scmCertificateId  SCM证书ID
+    * scmCertificateId  SCM证书ID。
     * commonName  证书绑定的主域名。
     * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
@@ -78,7 +78,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * projectId  证书所在项目ID。
     * encCertificate  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * scmCertificateId  SCM证书ID
+    * scmCertificateId  SCM证书ID。
     * commonName  证书绑定的主域名。
     * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
@@ -143,7 +143,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * projectId  证书所在项目ID。
     * encCertificate  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * scmCertificateId  SCM证书ID
+    * scmCertificateId  SCM证书ID。
     * commonName  证书绑定的主域名。
     * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
@@ -187,7 +187,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * projectId  证书所在项目ID。
     * encCertificate  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * scmCertificateId  SCM证书ID
+    * scmCertificateId  SCM证书ID。
     * commonName  证书绑定的主域名。
     * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
@@ -231,7 +231,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * projectId  证书所在项目ID。
     * encCertificate  HTTPS协议使用的SM加密证书内容。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
     * encPrivateKey  HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
-    * scmCertificateId  SCM证书ID
+    * scmCertificateId  SCM证书ID。
     * commonName  证书绑定的主域名。
     * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
@@ -751,7 +751,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scmCertificateId
-    *  SCM证书ID
+    *  SCM证书ID。
     *
     * @return string|null
     */
@@ -763,7 +763,7 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scmCertificateId
     *
-    * @param string|null $scmCertificateId SCM证书ID
+    * @param string|null $scmCertificateId SCM证书ID。
     *
     * @return $this
     */

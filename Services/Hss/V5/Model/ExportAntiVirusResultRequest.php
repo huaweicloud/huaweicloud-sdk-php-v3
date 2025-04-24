@@ -401,8 +401,8 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['filePath']) && !preg_match("/^.*$/", $this->container['filePath'])) {
                 $invalidProperties[] = "invalid value for 'filePath', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['exportSize']) && ($this->container['exportSize'] > 30)) {
-                $invalidProperties[] = "invalid value for 'exportSize', must be smaller than or equal to 30.";
+            if (!is_null($this->container['exportSize']) && ($this->container['exportSize'] > 500000)) {
+                $invalidProperties[] = "invalid value for 'exportSize', must be smaller than or equal to 500000.";
             }
             if (!is_null($this->container['exportSize']) && ($this->container['exportSize'] < 1)) {
                 $invalidProperties[] = "invalid value for 'exportSize', must be bigger than or equal to 1.";

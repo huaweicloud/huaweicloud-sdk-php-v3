@@ -22,7 +22,7 @@ class ListLoginCommonLocationResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * totalNum  常用登录地已设置的个数
-    * dataList  返回常用登陆地信息列表
+    * dataList  返回常用登录地信息列表
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListLoginCommonLocationResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * totalNum  常用登录地已设置的个数
-    * dataList  返回常用登陆地信息列表
+    * dataList  返回常用登录地信息列表
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListLoginCommonLocationResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * totalNum  常用登录地已设置的个数
-    * dataList  返回常用登陆地信息列表
+    * dataList  返回常用登录地信息列表
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListLoginCommonLocationResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * totalNum  常用登录地已设置的个数
-    * dataList  返回常用登陆地信息列表
+    * dataList  返回常用登录地信息列表
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListLoginCommonLocationResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * totalNum  常用登录地已设置的个数
-    * dataList  返回常用登陆地信息列表
+    * dataList  返回常用登录地信息列表
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class ListLoginCommonLocationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  返回常用登陆地信息列表
+    *  返回常用登录地信息列表
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\LoginCommonLocationResponseInfo[]|null
     */
@@ -222,7 +222,7 @@ class ListLoginCommonLocationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\LoginCommonLocationResponseInfo[]|null $dataList 返回常用登陆地信息列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\LoginCommonLocationResponseInfo[]|null $dataList 返回常用登录地信息列表
     *
     * @return $this
     */

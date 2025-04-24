@@ -39,6 +39,8 @@ class Quota implements ModelInterface, ArrayAccess
     * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceMembersPerPool  单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceListenersPerLoadbalancer  单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -61,7 +63,9 @@ class Quota implements ModelInterface, ArrayAccess
             'listenersPerLoadbalancer' => 'int',
             'ipgroupsPerListener' => 'int',
             'poolsPerL7policy' => 'int',
-            'l7policiesPerListener' => 'int'
+            'l7policiesPerListener' => 'int',
+            'freeInstanceMembersPerPool' => 'int',
+            'freeInstanceListenersPerLoadbalancer' => 'int'
     ];
 
     /**
@@ -85,6 +89,8 @@ class Quota implements ModelInterface, ArrayAccess
     * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceMembersPerPool  单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceListenersPerLoadbalancer  单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -107,7 +113,9 @@ class Quota implements ModelInterface, ArrayAccess
         'listenersPerLoadbalancer' => 'int32',
         'ipgroupsPerListener' => 'int32',
         'poolsPerL7policy' => 'int32',
-        'l7policiesPerListener' => 'int32'
+        'l7policiesPerListener' => 'int32',
+        'freeInstanceMembersPerPool' => 'int32',
+        'freeInstanceListenersPerLoadbalancer' => 'int32'
     ];
 
     /**
@@ -152,6 +160,8 @@ class Quota implements ModelInterface, ArrayAccess
     * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceMembersPerPool  单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceListenersPerLoadbalancer  单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -174,7 +184,9 @@ class Quota implements ModelInterface, ArrayAccess
             'listenersPerLoadbalancer' => 'listeners_per_loadbalancer',
             'ipgroupsPerListener' => 'ipgroups_per_listener',
             'poolsPerL7policy' => 'pools_per_l7policy',
-            'l7policiesPerListener' => 'l7policies_per_listener'
+            'l7policiesPerListener' => 'l7policies_per_listener',
+            'freeInstanceMembersPerPool' => 'free_instance_members_per_pool',
+            'freeInstanceListenersPerLoadbalancer' => 'free_instance_listeners_per_loadbalancer'
     ];
 
     /**
@@ -198,6 +210,8 @@ class Quota implements ModelInterface, ArrayAccess
     * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceMembersPerPool  单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceListenersPerLoadbalancer  单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -220,7 +234,9 @@ class Quota implements ModelInterface, ArrayAccess
             'listenersPerLoadbalancer' => 'setListenersPerLoadbalancer',
             'ipgroupsPerListener' => 'setIpgroupsPerListener',
             'poolsPerL7policy' => 'setPoolsPerL7policy',
-            'l7policiesPerListener' => 'setL7policiesPerListener'
+            'l7policiesPerListener' => 'setL7policiesPerListener',
+            'freeInstanceMembersPerPool' => 'setFreeInstanceMembersPerPool',
+            'freeInstanceListenersPerLoadbalancer' => 'setFreeInstanceListenersPerLoadbalancer'
     ];
 
     /**
@@ -244,6 +260,8 @@ class Quota implements ModelInterface, ArrayAccess
     * ipgroupsPerListener  单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * poolsPerL7policy  单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * l7policiesPerListener  单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceMembersPerPool  单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    * freeInstanceListenersPerLoadbalancer  单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     *
     * @var string[]
     */
@@ -266,7 +284,9 @@ class Quota implements ModelInterface, ArrayAccess
             'listenersPerLoadbalancer' => 'getListenersPerLoadbalancer',
             'ipgroupsPerListener' => 'getIpgroupsPerListener',
             'poolsPerL7policy' => 'getPoolsPerL7policy',
-            'l7policiesPerListener' => 'getL7policiesPerListener'
+            'l7policiesPerListener' => 'getL7policiesPerListener',
+            'freeInstanceMembersPerPool' => 'getFreeInstanceMembersPerPool',
+            'freeInstanceListenersPerLoadbalancer' => 'getFreeInstanceListenersPerLoadbalancer'
     ];
 
     /**
@@ -346,6 +366,8 @@ class Quota implements ModelInterface, ArrayAccess
         $this->container['ipgroupsPerListener'] = isset($data['ipgroupsPerListener']) ? $data['ipgroupsPerListener'] : null;
         $this->container['poolsPerL7policy'] = isset($data['poolsPerL7policy']) ? $data['poolsPerL7policy'] : null;
         $this->container['l7policiesPerListener'] = isset($data['l7policiesPerListener']) ? $data['l7policiesPerListener'] : null;
+        $this->container['freeInstanceMembersPerPool'] = isset($data['freeInstanceMembersPerPool']) ? $data['freeInstanceMembersPerPool'] : null;
+        $this->container['freeInstanceListenersPerLoadbalancer'] = isset($data['freeInstanceListenersPerLoadbalancer']) ? $data['freeInstanceListenersPerLoadbalancer'] : null;
     }
 
     /**
@@ -412,6 +434,12 @@ class Quota implements ModelInterface, ArrayAccess
         }
         if ($this->container['l7policiesPerListener'] === null) {
             $invalidProperties[] = "'l7policiesPerListener' can't be null";
+        }
+        if ($this->container['freeInstanceMembersPerPool'] === null) {
+            $invalidProperties[] = "'freeInstanceMembersPerPool' can't be null";
+        }
+        if ($this->container['freeInstanceListenersPerLoadbalancer'] === null) {
+            $invalidProperties[] = "'freeInstanceListenersPerLoadbalancer' can't be null";
         }
         return $invalidProperties;
     }
@@ -880,6 +908,54 @@ class Quota implements ModelInterface, ArrayAccess
     public function setL7policiesPerListener($l7policiesPerListener)
     {
         $this->container['l7policiesPerListener'] = $l7policiesPerListener;
+        return $this;
+    }
+
+    /**
+    * Gets freeInstanceMembersPerPool
+    *  单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *
+    * @return int
+    */
+    public function getFreeInstanceMembersPerPool()
+    {
+        return $this->container['freeInstanceMembersPerPool'];
+    }
+
+    /**
+    * Sets freeInstanceMembersPerPool
+    *
+    * @param int $freeInstanceMembersPerPool 单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *
+    * @return $this
+    */
+    public function setFreeInstanceMembersPerPool($freeInstanceMembersPerPool)
+    {
+        $this->container['freeInstanceMembersPerPool'] = $freeInstanceMembersPerPool;
+        return $this;
+    }
+
+    /**
+    * Gets freeInstanceListenersPerLoadbalancer
+    *  单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *
+    * @return int
+    */
+    public function getFreeInstanceListenersPerLoadbalancer()
+    {
+        return $this->container['freeInstanceListenersPerLoadbalancer'];
+    }
+
+    /**
+    * Sets freeInstanceListenersPerLoadbalancer
+    *
+    * @param int $freeInstanceListenersPerLoadbalancer 单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+    *
+    * @return $this
+    */
+    public function setFreeInstanceListenersPerLoadbalancer($freeInstanceListenersPerLoadbalancer)
+    {
+        $this->container['freeInstanceListenersPerLoadbalancer'] = $freeInstanceListenersPerLoadbalancer;
         return $this;
     }
 

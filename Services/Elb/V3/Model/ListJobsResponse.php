@@ -22,24 +22,28 @@ class ListJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobs  任务列表
+    * pageInfo  pageInfo
     * requestId  请求ID。 注：自动生成 。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'jobs' => '\HuaweiCloud\SDK\Elb\V3\Model\MainJob[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Elb\V3\Model\PageInfo',
             'requestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobs  任务列表
+    * pageInfo  pageInfo
     * requestId  请求ID。 注：自动生成 。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'jobs' => null,
+        'pageInfo' => null,
         'requestId' => null
     ];
 
@@ -67,36 +71,42 @@ class ListJobsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobs  任务列表
+    * pageInfo  pageInfo
     * requestId  请求ID。 注：自动生成 。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'jobs' => 'jobs',
+            'pageInfo' => 'page_info',
             'requestId' => 'request_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobs  任务列表
+    * pageInfo  pageInfo
     * requestId  请求ID。 注：自动生成 。
     *
     * @var string[]
     */
     protected static $setters = [
             'jobs' => 'setJobs',
+            'pageInfo' => 'setPageInfo',
             'requestId' => 'setRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobs  任务列表
+    * pageInfo  pageInfo
     * requestId  请求ID。 注：自动生成 。
     *
     * @var string[]
     */
     protected static $getters = [
             'jobs' => 'getJobs',
+            'pageInfo' => 'getPageInfo',
             'requestId' => 'getRequestId'
     ];
 
@@ -159,6 +169,7 @@ class ListJobsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobs'] = isset($data['jobs']) ? $data['jobs'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
     }
 
@@ -205,6 +216,30 @@ class ListJobsResponse implements ModelInterface, ArrayAccess
     public function setJobs($jobs)
     {
         $this->container['jobs'] = $jobs;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Hss\V5\Model;
+namespace HuaweiCloud\SDK\Elb\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class VulHostInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
+class ProxyProtocolExtension implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class VulHostInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'VulHostInfo_disabled_operate_types';
+    protected static $openAPIModelName = 'ProxyProtocolExtension';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * reason  不可进行操作的原因
+    * vipAddress  ipv4 vip地址
+    * ipv6VipAddress  ipv6 vip地址
+    * extension  extension
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'operateType' => 'string',
-            'reason' => 'string'
+            'vipAddress' => 'string',
+            'ipv6VipAddress' => 'string',
+            'extension' => '\HuaweiCloud\SDK\Elb\V3\Model\Extension'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * reason  不可进行操作的原因
+    * vipAddress  ipv4 vip地址
+    * ipv6VipAddress  ipv6 vip地址
+    * extension  extension
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'operateType' => null,
-        'reason' => null
+        'vipAddress' => null,
+        'ipv6VipAddress' => null,
+        'extension' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class VulHostInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * reason  不可进行操作的原因
+    * vipAddress  ipv4 vip地址
+    * ipv6VipAddress  ipv6 vip地址
+    * extension  extension
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'operateType' => 'operate_type',
-            'reason' => 'reason'
+            'vipAddress' => 'vip_address',
+            'ipv6VipAddress' => 'ipv6_vip_address',
+            'extension' => 'extension'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * reason  不可进行操作的原因
+    * vipAddress  ipv4 vip地址
+    * ipv6VipAddress  ipv6 vip地址
+    * extension  extension
     *
     * @var string[]
     */
     protected static $setters = [
-            'operateType' => 'setOperateType',
-            'reason' => 'setReason'
+            'vipAddress' => 'setVipAddress',
+            'ipv6VipAddress' => 'setIpv6VipAddress',
+            'extension' => 'setExtension'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * reason  不可进行操作的原因
+    * vipAddress  ipv4 vip地址
+    * ipv6VipAddress  ipv6 vip地址
+    * extension  extension
     *
     * @var string[]
     */
     protected static $getters = [
-            'operateType' => 'getOperateType',
-            'reason' => 'getReason'
+            'vipAddress' => 'getVipAddress',
+            'ipv6VipAddress' => 'getIpv6VipAddress',
+            'extension' => 'getExtension'
     ];
 
     /**
@@ -157,8 +167,9 @@ class VulHostInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['operateType'] = isset($data['operateType']) ? $data['operateType'] : null;
-        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['vipAddress'] = isset($data['vipAddress']) ? $data['vipAddress'] : null;
+        $this->container['ipv6VipAddress'] = isset($data['ipv6VipAddress']) ? $data['ipv6VipAddress'] : null;
+        $this->container['extension'] = isset($data['extension']) ? $data['extension'] : null;
     }
 
     /**
@@ -169,18 +180,9 @@ class VulHostInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['operateType']) && (mb_strlen($this->container['operateType']) > 64)) {
-                $invalidProperties[] = "invalid value for 'operateType', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['operateType']) && (mb_strlen($this->container['operateType']) < 1)) {
-                $invalidProperties[] = "invalid value for 'operateType', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 512)) {
-                $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 512.";
-            }
-            if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) < 0)) {
-                $invalidProperties[] = "invalid value for 'reason', the character length must be bigger than or equal to 0.";
-            }
+        if ($this->container['extension'] === null) {
+            $invalidProperties[] = "'extension' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,50 +198,74 @@ class VulHostInfoDisabledOperateTypes implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets operateType
-    *  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
+    * Gets vipAddress
+    *  ipv4 vip地址
     *
     * @return string|null
     */
-    public function getOperateType()
+    public function getVipAddress()
     {
-        return $this->container['operateType'];
+        return $this->container['vipAddress'];
     }
 
     /**
-    * Sets operateType
+    * Sets vipAddress
     *
-    * @param string|null $operateType 操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
+    * @param string|null $vipAddress ipv4 vip地址
     *
     * @return $this
     */
-    public function setOperateType($operateType)
+    public function setVipAddress($vipAddress)
     {
-        $this->container['operateType'] = $operateType;
+        $this->container['vipAddress'] = $vipAddress;
         return $this;
     }
 
     /**
-    * Gets reason
-    *  不可进行操作的原因
+    * Gets ipv6VipAddress
+    *  ipv6 vip地址
     *
     * @return string|null
     */
-    public function getReason()
+    public function getIpv6VipAddress()
     {
-        return $this->container['reason'];
+        return $this->container['ipv6VipAddress'];
     }
 
     /**
-    * Sets reason
+    * Sets ipv6VipAddress
     *
-    * @param string|null $reason 不可进行操作的原因
+    * @param string|null $ipv6VipAddress ipv6 vip地址
     *
     * @return $this
     */
-    public function setReason($reason)
+    public function setIpv6VipAddress($ipv6VipAddress)
     {
-        $this->container['reason'] = $reason;
+        $this->container['ipv6VipAddress'] = $ipv6VipAddress;
+        return $this;
+    }
+
+    /**
+    * Gets extension
+    *  extension
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\Extension
+    */
+    public function getExtension()
+    {
+        return $this->container['extension'];
+    }
+
+    /**
+    * Sets extension
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\Extension $extension extension
+    *
+    * @return $this
+    */
+    public function setExtension($extension)
+    {
+        $this->container['extension'] = $extension;
         return $this;
     }
 

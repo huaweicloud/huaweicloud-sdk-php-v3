@@ -22,10 +22,11 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  CMDB分配的资源ID
     * resourceId  云服务分配的资源ID
+    * domainId  租户ID
     * name  资源名称
     * provider  云服务名称
     * type  资源类型
-    * projectId  Openstack中的项目I
+    * projectId  Openstack中的项目ID
     * regionId  region ID
     * epId  企业项目ID
     * tags  资源标签
@@ -41,6 +42,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'resourceId' => 'string',
+            'domainId' => 'string',
             'name' => 'string',
             'provider' => 'string',
             'type' => 'string',
@@ -60,10 +62,11 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  CMDB分配的资源ID
     * resourceId  云服务分配的资源ID
+    * domainId  租户ID
     * name  资源名称
     * provider  云服务名称
     * type  资源类型
-    * projectId  Openstack中的项目I
+    * projectId  Openstack中的项目ID
     * regionId  region ID
     * epId  企业项目ID
     * tags  资源标签
@@ -79,6 +82,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'resourceId' => null,
+        'domainId' => null,
         'name' => null,
         'provider' => null,
         'type' => null,
@@ -119,10 +123,11 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  CMDB分配的资源ID
     * resourceId  云服务分配的资源ID
+    * domainId  租户ID
     * name  资源名称
     * provider  云服务名称
     * type  资源类型
-    * projectId  Openstack中的项目I
+    * projectId  Openstack中的项目ID
     * regionId  region ID
     * epId  企业项目ID
     * tags  资源标签
@@ -138,6 +143,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'resourceId' => 'resource_id',
+            'domainId' => 'domain_id',
             'name' => 'name',
             'provider' => 'provider',
             'type' => 'type',
@@ -157,10 +163,11 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  CMDB分配的资源ID
     * resourceId  云服务分配的资源ID
+    * domainId  租户ID
     * name  资源名称
     * provider  云服务名称
     * type  资源类型
-    * projectId  Openstack中的项目I
+    * projectId  Openstack中的项目ID
     * regionId  region ID
     * epId  企业项目ID
     * tags  资源标签
@@ -176,6 +183,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'resourceId' => 'setResourceId',
+            'domainId' => 'setDomainId',
             'name' => 'setName',
             'provider' => 'setProvider',
             'type' => 'setType',
@@ -195,10 +203,11 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  CMDB分配的资源ID
     * resourceId  云服务分配的资源ID
+    * domainId  租户ID
     * name  资源名称
     * provider  云服务名称
     * type  资源类型
-    * projectId  Openstack中的项目I
+    * projectId  Openstack中的项目ID
     * regionId  region ID
     * epId  企业项目ID
     * tags  资源标签
@@ -214,6 +223,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'resourceId' => 'getResourceId',
+            'domainId' => 'getDomainId',
             'name' => 'getName',
             'provider' => 'getProvider',
             'type' => 'getType',
@@ -289,6 +299,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
@@ -375,6 +386,30 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets domainId
+    *  租户ID
+    *
+    * @return string|null
+    */
+    public function getDomainId()
+    {
+        return $this->container['domainId'];
+    }
+
+    /**
+    * Sets domainId
+    *
+    * @param string|null $domainId 租户ID
+    *
+    * @return $this
+    */
+    public function setDomainId($domainId)
+    {
+        $this->container['domainId'] = $domainId;
+        return $this;
+    }
+
+    /**
     * Gets name
     *  资源名称
     *
@@ -448,7 +483,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  Openstack中的项目I
+    *  Openstack中的项目ID
     *
     * @return string|null
     */
@@ -460,7 +495,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId Openstack中的项目I
+    * @param string|null $projectId Openstack中的项目ID
     *
     * @return $this
     */

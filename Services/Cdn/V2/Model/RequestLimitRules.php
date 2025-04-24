@@ -27,6 +27,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
     * type  限速方式，当前仅支持按流量大小限速，取值为size。
     * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输表示传输50个字节后开始限速且限速值为limit_rate_value， 单位byte，取值范围：0-1073741824。
     * limitRateValue  限速值,单位Bps，取值范围 0-104857600。
+    * limitTime  指明限速的时段，按照每天24小时设置限速时段，格式为：HHMM-HHMM（HH为时，MM为分，时区为UTC+8），多个时段限速时用“,”分隔，最多可配置10个时段，例如：0100-0200,2200-2300。不传或传空时默认值为0000-2400，代表限速对所有时段生效。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
             'matchValue' => 'string',
             'type' => 'string',
             'limitRateAfter' => 'int',
-            'limitRateValue' => 'int'
+            'limitRateValue' => 'int',
+            'limitTime' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
     * type  限速方式，当前仅支持按流量大小限速，取值为size。
     * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输表示传输50个字节后开始限速且限速值为limit_rate_value， 单位byte，取值范围：0-1073741824。
     * limitRateValue  限速值,单位Bps，取值范围 0-104857600。
+    * limitTime  指明限速的时段，按照每天24小时设置限速时段，格式为：HHMM-HHMM（HH为时，MM为分，时区为UTC+8），多个时段限速时用“,”分隔，最多可配置10个时段，例如：0100-0200,2200-2300。不传或传空时默认值为0000-2400，代表限速对所有时段生效。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
         'matchValue' => null,
         'type' => null,
         'limitRateAfter' => 'int64',
-        'limitRateValue' => 'int32'
+        'limitRateValue' => 'int32',
+        'limitTime' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
     * type  限速方式，当前仅支持按流量大小限速，取值为size。
     * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输表示传输50个字节后开始限速且限速值为limit_rate_value， 单位byte，取值范围：0-1073741824。
     * limitRateValue  限速值,单位Bps，取值范围 0-104857600。
+    * limitTime  指明限速的时段，按照每天24小时设置限速时段，格式为：HHMM-HHMM（HH为时，MM为分，时区为UTC+8），多个时段限速时用“,”分隔，最多可配置10个时段，例如：0100-0200,2200-2300。不传或传空时默认值为0000-2400，代表限速对所有时段生效。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
             'matchValue' => 'match_value',
             'type' => 'type',
             'limitRateAfter' => 'limit_rate_after',
-            'limitRateValue' => 'limit_rate_value'
+            'limitRateValue' => 'limit_rate_value',
+            'limitTime' => 'limit_time'
     ];
 
     /**
@@ -114,6 +120,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
     * type  限速方式，当前仅支持按流量大小限速，取值为size。
     * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输表示传输50个字节后开始限速且限速值为limit_rate_value， 单位byte，取值范围：0-1073741824。
     * limitRateValue  限速值,单位Bps，取值范围 0-104857600。
+    * limitTime  指明限速的时段，按照每天24小时设置限速时段，格式为：HHMM-HHMM（HH为时，MM为分，时区为UTC+8），多个时段限速时用“,”分隔，最多可配置10个时段，例如：0100-0200,2200-2300。不传或传空时默认值为0000-2400，代表限速对所有时段生效。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
             'matchValue' => 'setMatchValue',
             'type' => 'setType',
             'limitRateAfter' => 'setLimitRateAfter',
-            'limitRateValue' => 'setLimitRateValue'
+            'limitRateValue' => 'setLimitRateValue',
+            'limitTime' => 'setLimitTime'
     ];
 
     /**
@@ -136,6 +144,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
     * type  限速方式，当前仅支持按流量大小限速，取值为size。
     * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输表示传输50个字节后开始限速且限速值为limit_rate_value， 单位byte，取值范围：0-1073741824。
     * limitRateValue  限速值,单位Bps，取值范围 0-104857600。
+    * limitTime  指明限速的时段，按照每天24小时设置限速时段，格式为：HHMM-HHMM（HH为时，MM为分，时区为UTC+8），多个时段限速时用“,”分隔，最多可配置10个时段，例如：0100-0200,2200-2300。不传或传空时默认值为0000-2400，代表限速对所有时段生效。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
             'matchValue' => 'getMatchValue',
             'type' => 'getType',
             'limitRateAfter' => 'getLimitRateAfter',
-            'limitRateValue' => 'getLimitRateValue'
+            'limitRateValue' => 'getLimitRateValue',
+            'limitTime' => 'getLimitTime'
     ];
 
     /**
@@ -214,6 +224,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['limitRateAfter'] = isset($data['limitRateAfter']) ? $data['limitRateAfter'] : null;
         $this->container['limitRateValue'] = isset($data['limitRateValue']) ? $data['limitRateValue'] : null;
+        $this->container['limitTime'] = isset($data['limitTime']) ? $data['limitTime'] : null;
     }
 
     /**
@@ -418,6 +429,30 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
     public function setLimitRateValue($limitRateValue)
     {
         $this->container['limitRateValue'] = $limitRateValue;
+        return $this;
+    }
+
+    /**
+    * Gets limitTime
+    *  指明限速的时段，按照每天24小时设置限速时段，格式为：HHMM-HHMM（HH为时，MM为分，时区为UTC+8），多个时段限速时用“,”分隔，最多可配置10个时段，例如：0100-0200,2200-2300。不传或传空时默认值为0000-2400，代表限速对所有时段生效。
+    *
+    * @return string|null
+    */
+    public function getLimitTime()
+    {
+        return $this->container['limitTime'];
+    }
+
+    /**
+    * Sets limitTime
+    *
+    * @param string|null $limitTime 指明限速的时段，按照每天24小时设置限速时段，格式为：HHMM-HHMM（HH为时，MM为分，时区为UTC+8），多个时段限速时用“,”分隔，最多可配置10个时段，例如：0100-0200,2200-2300。不传或传空时默认值为0000-2400，代表限速对所有时段生效。
+    *
+    * @return $this
+    */
+    public function setLimitTime($limitTime)
+    {
+        $this->container['limitTime'] = $limitTime;
         return $this;
     }
 

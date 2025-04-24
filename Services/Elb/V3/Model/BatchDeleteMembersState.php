@@ -20,7 +20,7 @@ class BatchDeleteMembersState implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  后端服务器ID。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  后端服务器ID。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * retStatus  当前后端服务器删除结果状态。  取值： - successful：删除成功。 - not found：member不存在。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class BatchDeleteMembersState implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  后端服务器ID。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  后端服务器ID。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * retStatus  当前后端服务器删除结果状态。  取值： - successful：删除成功。 - not found：member不存在。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class BatchDeleteMembersState implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  后端服务器ID。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  后端服务器ID。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * retStatus  当前后端服务器删除结果状态。  取值： - successful：删除成功。 - not found：member不存在。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class BatchDeleteMembersState implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  后端服务器ID。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  后端服务器ID。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * retStatus  当前后端服务器删除结果状态。  取值： - successful：删除成功。 - not found：member不存在。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class BatchDeleteMembersState implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  后端服务器ID。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  后端服务器ID。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * retStatus  当前后端服务器删除结果状态。  取值： - successful：删除成功。 - not found：member不存在。
     *
     * @var string[]
@@ -191,7 +191,7 @@ class BatchDeleteMembersState implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  后端服务器ID。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    *  后端服务器ID。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class BatchDeleteMembersState implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 后端服务器ID。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * @param string $id 后端服务器ID。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     *
     * @return $this
     */

@@ -21,20 +21,26 @@ class DeleteVocabularyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * vocabularyId  删除的热词表的名称。
+    * message  删除成功的消息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'vocabularyId' => 'string',
+            'message' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * vocabularyId  删除的热词表的名称。
+    * message  删除成功的消息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'vocabularyId' => null,
+        'message' => null
     ];
 
     /**
@@ -60,29 +66,38 @@ class DeleteVocabularyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * vocabularyId  删除的热词表的名称。
+    * message  删除成功的消息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'vocabularyId' => 'vocabulary_id',
+            'message' => 'message'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * vocabularyId  删除的热词表的名称。
+    * message  删除成功的消息。
     *
     * @var string[]
     */
     protected static $setters = [
+            'vocabularyId' => 'setVocabularyId',
+            'message' => 'setMessage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * vocabularyId  删除的热词表的名称。
+    * message  删除成功的消息。
     *
     * @var string[]
     */
     protected static $getters = [
+            'vocabularyId' => 'getVocabularyId',
+            'message' => 'getMessage'
     ];
 
     /**
@@ -143,6 +158,8 @@ class DeleteVocabularyResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['vocabularyId'] = isset($data['vocabularyId']) ? $data['vocabularyId'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
     /**
@@ -165,6 +182,54 @@ class DeleteVocabularyResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets vocabularyId
+    *  删除的热词表的名称。
+    *
+    * @return string|null
+    */
+    public function getVocabularyId()
+    {
+        return $this->container['vocabularyId'];
+    }
+
+    /**
+    * Sets vocabularyId
+    *
+    * @param string|null $vocabularyId 删除的热词表的名称。
+    *
+    * @return $this
+    */
+    public function setVocabularyId($vocabularyId)
+    {
+        $this->container['vocabularyId'] = $vocabularyId;
+        return $this;
+    }
+
+    /**
+    * Gets message
+    *  删除成功的消息。
+    *
+    * @return string|null
+    */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+    * Sets message
+    *
+    * @param string|null $message 删除成功的消息。
+    *
+    * @return $this
+    */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
+        return $this;
     }
 
     /**

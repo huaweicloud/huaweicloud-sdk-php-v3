@@ -23,28 +23,24 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * requestId  参数解释：请求ID。  注：自动生成。
     * availabilityZones  参数解释：返回创建LB时可使用的可用区集合列表。如：[[az1,az2],[az2,az3]] ,则在创建LB时，只能从其中的一个子列表中选择一个或多个可用区，不能跨列表选择。在上述例子中，不能选择az1和az3。
-    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'availabilityZones' => '\HuaweiCloud\SDK\Elb\V3\Model\AvailabilityZone[][]',
-            'specCode' => 'string'
+            'availabilityZones' => '\HuaweiCloud\SDK\Elb\V3\Model\AvailabilityZone[][]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * requestId  参数解释：请求ID。  注：自动生成。
     * availabilityZones  参数解释：返回创建LB时可使用的可用区集合列表。如：[[az1,az2],[az2,az3]] ,则在创建LB时，只能从其中的一个子列表中选择一个或多个可用区，不能跨列表选择。在上述例子中，不能选择az1和az3。
-    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
-        'availabilityZones' => null,
-        'specCode' => null
+        'availabilityZones' => null
     ];
 
     /**
@@ -72,42 +68,36 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * requestId  参数解释：请求ID。  注：自动生成。
     * availabilityZones  参数解释：返回创建LB时可使用的可用区集合列表。如：[[az1,az2],[az2,az3]] ,则在创建LB时，只能从其中的一个子列表中选择一个或多个可用区，不能跨列表选择。在上述例子中，不能选择az1和az3。
-    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
-            'availabilityZones' => 'availability_zones',
-            'specCode' => 'spec_code'
+            'availabilityZones' => 'availability_zones'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  参数解释：请求ID。  注：自动生成。
     * availabilityZones  参数解释：返回创建LB时可使用的可用区集合列表。如：[[az1,az2],[az2,az3]] ,则在创建LB时，只能从其中的一个子列表中选择一个或多个可用区，不能跨列表选择。在上述例子中，不能选择az1和az3。
-    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
-            'availabilityZones' => 'setAvailabilityZones',
-            'specCode' => 'setSpecCode'
+            'availabilityZones' => 'setAvailabilityZones'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  参数解释：请求ID。  注：自动生成。
     * availabilityZones  参数解释：返回创建LB时可使用的可用区集合列表。如：[[az1,az2],[az2,az3]] ,则在创建LB时，只能从其中的一个子列表中选择一个或多个可用区，不能跨列表选择。在上述例子中，不能选择az1和az3。
-    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
-            'availabilityZones' => 'getAvailabilityZones',
-            'specCode' => 'getSpecCode'
+            'availabilityZones' => 'getAvailabilityZones'
     ];
 
     /**
@@ -170,7 +160,6 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['availabilityZones'] = isset($data['availabilityZones']) ? $data['availabilityZones'] : null;
-        $this->container['specCode'] = isset($data['specCode']) ? $data['specCode'] : null;
     }
 
     /**
@@ -240,30 +229,6 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
     public function setAvailabilityZones($availabilityZones)
     {
         $this->container['availabilityZones'] = $availabilityZones;
-        return $this;
-    }
-
-    /**
-    * Gets specCode
-    *  参数解释：可用区的产品编码，仅边缘场景有效。
-    *
-    * @return string|null
-    */
-    public function getSpecCode()
-    {
-        return $this->container['specCode'];
-    }
-
-    /**
-    * Sets specCode
-    *
-    * @param string|null $specCode 参数解释：可用区的产品编码，仅边缘场景有效。
-    *
-    * @return $this
-    */
-    public function setSpecCode($specCode)
-    {
-        $this->container['specCode'] = $specCode;
         return $this;
     }
 

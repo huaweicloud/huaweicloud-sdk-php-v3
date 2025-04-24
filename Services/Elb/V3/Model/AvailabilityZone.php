@@ -25,6 +25,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
     * publicBorderGroup  参数解释：网络公共边界组，如：center
     * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
+    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
             'state' => 'string',
             'protocol' => 'string[]',
             'publicBorderGroup' => 'string',
-            'category' => 'int'
+            'category' => 'int',
+            'specCode' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
     * publicBorderGroup  参数解释：网络公共边界组，如：center
     * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
+    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
         'state' => null,
         'protocol' => null,
         'publicBorderGroup' => null,
-        'category' => null
+        'category' => null,
+        'specCode' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
     * publicBorderGroup  参数解释：网络公共边界组，如：center
     * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
+    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
             'state' => 'state',
             'protocol' => 'protocol',
             'publicBorderGroup' => 'public_border_group',
-            'category' => 'category'
+            'category' => 'category',
+            'specCode' => 'spec_code'
     ];
 
     /**
@@ -100,6 +106,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
     * publicBorderGroup  参数解释：网络公共边界组，如：center
     * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
+    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
             'state' => 'setState',
             'protocol' => 'setProtocol',
             'publicBorderGroup' => 'setPublicBorderGroup',
-            'category' => 'setCategory'
+            'category' => 'setCategory',
+            'specCode' => 'setSpecCode'
     ];
 
     /**
@@ -118,6 +126,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * protocol  [参数解释：未售罄的LB规格类别。  取值范围：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hws_hk,hws_eu,otc,tlf,ct,sbc,g42,hk_g42,mix,hk_sbc,hws_ocb,dt) [参数解释：LB规格类别。  取值范围：L4 表示网络型LB；L7 表示应用型LB。](tag:ctc,cmcc,ocb,tm,srg,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)
     * publicBorderGroup  参数解释：网络公共边界组，如：center
     * category  参数解释：范围编码。  取值范围：0表示center，21表示homezone。
+    * specCode  参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
             'state' => 'getState',
             'protocol' => 'getProtocol',
             'publicBorderGroup' => 'getPublicBorderGroup',
-            'category' => 'getCategory'
+            'category' => 'getCategory',
+            'specCode' => 'getSpecCode'
     ];
 
     /**
@@ -192,6 +202,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['specCode'] = isset($data['specCode']) ? $data['specCode'] : null;
     }
 
     /**
@@ -348,6 +359,30 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     public function setCategory($category)
     {
         $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
+    * Gets specCode
+    *  参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    *
+    * @return string|null
+    */
+    public function getSpecCode()
+    {
+        return $this->container['specCode'];
+    }
+
+    /**
+    * Sets specCode
+    *
+    * @param string|null $specCode 参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    *
+    * @return $this
+    */
+    public function setSpecCode($specCode)
+    {
+        $this->container['specCode'] = $specCode;
         return $this;
     }
 

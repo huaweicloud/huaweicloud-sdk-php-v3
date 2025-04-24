@@ -1122,7 +1122,7 @@ class ElbAsyncClient extends Client
     /**
      * 创建云日志
      *
-     * 创建云日志。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
+     * 创建云日志。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2046,7 +2046,7 @@ class ElbAsyncClient extends Client
     /**
      * 删除云日志
      *
-     * 删除云日志。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
+     * 删除云日志。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3023,6 +3023,15 @@ class ElbAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['pageReverse'] !== null) {
+            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
+        }
         if ($localVarParams['jobId'] !== null) {
             $queryParams['job_id'] = $localVarParams['jobId'];
         }
@@ -3676,7 +3685,7 @@ class ElbAsyncClient extends Client
     /**
      * 查询云日志列表
      *
-     * 查询云日志列表。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
+     * 查询云日志列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5002,7 +5011,7 @@ class ElbAsyncClient extends Client
     /**
      * 查询云日志详情
      *
-     * 云日志详情。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
+     * 云日志详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5803,7 +5812,7 @@ class ElbAsyncClient extends Client
     /**
      * 更新云日志
      *
-     * 更新云日志。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
+     * 更新云日志。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

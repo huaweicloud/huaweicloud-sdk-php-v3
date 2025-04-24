@@ -20,57 +20,57 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
-    * brokerNum  代理个数。
-    * name  实例名称。
-    * engine  消息引擎。
-    * engineVersion  消息引擎版本。
-    * specification  实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
-    * storageSpace  消息存储空间，单位：GB。
-    * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
-    * connectAddress  实例内网连接IP地址。
-    * connectDomainName  实例内网连接域名。
-    * publicConnectAddress  实例公网连接IP地址。
-    * publicConnectDomainName  实例公网连接域名。
-    * port  实例连接端口。
-    * status  实例的状态。
-    * description  实例描述。
-    * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
-    * chargingMode  付费模式，1表示按需计费，0表示包年/包月计费。
-    * vpcId  VPC ID。
-    * vpcName  VPC的名称。
-    * createdAt  完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
-    * userId  用户ID。
-    * userName  用户名。
-    * orderId  订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：未开启
-    * publicipAddress  RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
-    * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
-    * managementConnectAddress  RabbitMQ实例的管理地址。
-    * managementConnectDomainName  RabbitMQ实例的管理域名。
-    * publicManagementConnectAddress  RabbitMQ实例的公网管理地址。
-    * publicManagementConnectDomainName  RabbitMQ实例的公网管理域名。
-    * sslEnable  是否开启安全认证。   - true：开启   - false：未开启
-    * enterpriseProjectId  企业项目ID。
-    * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
-    * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * type  实例类型：集群，cluster。
-    * productId  产品标识。
-    * securityGroupId  安全组ID。
-    * securityGroupName  租户安全组名称。
-    * subnetId  子网ID。
-    * availableZones  实例节点所在的可用区，返回“可用区ID”。
-    * availableZoneNames  实例节点所在的可用区，返回“可用区名称”。
-    * totalStorageSpace  总共消息存储空间，单位：GB。
-    * storageResourceId  存储资源ID。
-    * storageSpecCode  IO规格。
-    * ipv6Enable  是否开启ipv6。
-    * ipv6ConnectAddresses  IPv6的连接地址。
-    * tags  标签列表。
+    * accessUser  **参数解释**： 认证用户名。 **取值范围**： 不涉及。
+    * brokerNum  **参数解释**： 代理个数。 **取值范围**： - 1 - 3 - 5 - 7
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
+    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
+    * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
+    * connectAddress  **参数解释**： 实例内网连接IP地址。 **取值范围**： 不涉及。
+    * connectDomainName  **参数解释**： 实例内网连接域名。 **取值范围**： 不涉及。
+    * publicConnectAddress  **参数解释**： 实例公网连接IP地址。 **取值范围**： 不涉及。
+    * publicConnectDomainName  **参数解释**： 实例公网连接域名。 **取值范围**： 不涉及。
+    * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+    * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    * chargingMode  **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
+    * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * enablePublicip  **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
+    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+    * publicipId  **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
+    * managementConnectAddress  **参数解释**： RabbitMQ实例的管理地址。 **取值范围**： 不涉及。
+    * managementConnectDomainName  **参数解释**： RabbitMQ实例的管理域名。 **取值范围**： 不涉及。
+    * publicManagementConnectAddress  **参数解释**： RabbitMQ实例的公网管理地址。 **取值范围**： 不涉及。
+    * publicManagementConnectDomainName  **参数解释**： RabbitMQ实例的公网管理域名。 **取值范围**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
+    * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
+    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * securityGroupName  **参数解释**： 租户安全组名称。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 实例节点所在的可用区ID。
+    * availableZoneNames  **参数解释**： 实例节点所在的可用区名称。
+    * totalStorageSpace  **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：不开启。
+    * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
+    * tags  **参数解释**： 标签列表。
     *
     * @var string[]
     */
@@ -130,57 +130,57 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
-    * brokerNum  代理个数。
-    * name  实例名称。
-    * engine  消息引擎。
-    * engineVersion  消息引擎版本。
-    * specification  实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
-    * storageSpace  消息存储空间，单位：GB。
-    * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
-    * connectAddress  实例内网连接IP地址。
-    * connectDomainName  实例内网连接域名。
-    * publicConnectAddress  实例公网连接IP地址。
-    * publicConnectDomainName  实例公网连接域名。
-    * port  实例连接端口。
-    * status  实例的状态。
-    * description  实例描述。
-    * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
-    * chargingMode  付费模式，1表示按需计费，0表示包年/包月计费。
-    * vpcId  VPC ID。
-    * vpcName  VPC的名称。
-    * createdAt  完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
-    * userId  用户ID。
-    * userName  用户名。
-    * orderId  订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：未开启
-    * publicipAddress  RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
-    * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
-    * managementConnectAddress  RabbitMQ实例的管理地址。
-    * managementConnectDomainName  RabbitMQ实例的管理域名。
-    * publicManagementConnectAddress  RabbitMQ实例的公网管理地址。
-    * publicManagementConnectDomainName  RabbitMQ实例的公网管理域名。
-    * sslEnable  是否开启安全认证。   - true：开启   - false：未开启
-    * enterpriseProjectId  企业项目ID。
-    * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
-    * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * type  实例类型：集群，cluster。
-    * productId  产品标识。
-    * securityGroupId  安全组ID。
-    * securityGroupName  租户安全组名称。
-    * subnetId  子网ID。
-    * availableZones  实例节点所在的可用区，返回“可用区ID”。
-    * availableZoneNames  实例节点所在的可用区，返回“可用区名称”。
-    * totalStorageSpace  总共消息存储空间，单位：GB。
-    * storageResourceId  存储资源ID。
-    * storageSpecCode  IO规格。
-    * ipv6Enable  是否开启ipv6。
-    * ipv6ConnectAddresses  IPv6的连接地址。
-    * tags  标签列表。
+    * accessUser  **参数解释**： 认证用户名。 **取值范围**： 不涉及。
+    * brokerNum  **参数解释**： 代理个数。 **取值范围**： - 1 - 3 - 5 - 7
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
+    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
+    * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
+    * connectAddress  **参数解释**： 实例内网连接IP地址。 **取值范围**： 不涉及。
+    * connectDomainName  **参数解释**： 实例内网连接域名。 **取值范围**： 不涉及。
+    * publicConnectAddress  **参数解释**： 实例公网连接IP地址。 **取值范围**： 不涉及。
+    * publicConnectDomainName  **参数解释**： 实例公网连接域名。 **取值范围**： 不涉及。
+    * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+    * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    * chargingMode  **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
+    * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * enablePublicip  **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
+    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+    * publicipId  **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
+    * managementConnectAddress  **参数解释**： RabbitMQ实例的管理地址。 **取值范围**： 不涉及。
+    * managementConnectDomainName  **参数解释**： RabbitMQ实例的管理域名。 **取值范围**： 不涉及。
+    * publicManagementConnectAddress  **参数解释**： RabbitMQ实例的公网管理地址。 **取值范围**： 不涉及。
+    * publicManagementConnectDomainName  **参数解释**： RabbitMQ实例的公网管理域名。 **取值范围**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
+    * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
+    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * securityGroupName  **参数解释**： 租户安全组名称。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 实例节点所在的可用区ID。
+    * availableZoneNames  **参数解释**： 实例节点所在的可用区名称。
+    * totalStorageSpace  **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：不开启。
+    * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
+    * tags  **参数解释**： 标签列表。
     *
     * @var string[]
     */
@@ -261,57 +261,57 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
-    * brokerNum  代理个数。
-    * name  实例名称。
-    * engine  消息引擎。
-    * engineVersion  消息引擎版本。
-    * specification  实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
-    * storageSpace  消息存储空间，单位：GB。
-    * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
-    * connectAddress  实例内网连接IP地址。
-    * connectDomainName  实例内网连接域名。
-    * publicConnectAddress  实例公网连接IP地址。
-    * publicConnectDomainName  实例公网连接域名。
-    * port  实例连接端口。
-    * status  实例的状态。
-    * description  实例描述。
-    * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
-    * chargingMode  付费模式，1表示按需计费，0表示包年/包月计费。
-    * vpcId  VPC ID。
-    * vpcName  VPC的名称。
-    * createdAt  完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
-    * userId  用户ID。
-    * userName  用户名。
-    * orderId  订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：未开启
-    * publicipAddress  RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
-    * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
-    * managementConnectAddress  RabbitMQ实例的管理地址。
-    * managementConnectDomainName  RabbitMQ实例的管理域名。
-    * publicManagementConnectAddress  RabbitMQ实例的公网管理地址。
-    * publicManagementConnectDomainName  RabbitMQ实例的公网管理域名。
-    * sslEnable  是否开启安全认证。   - true：开启   - false：未开启
-    * enterpriseProjectId  企业项目ID。
-    * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
-    * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * type  实例类型：集群，cluster。
-    * productId  产品标识。
-    * securityGroupId  安全组ID。
-    * securityGroupName  租户安全组名称。
-    * subnetId  子网ID。
-    * availableZones  实例节点所在的可用区，返回“可用区ID”。
-    * availableZoneNames  实例节点所在的可用区，返回“可用区名称”。
-    * totalStorageSpace  总共消息存储空间，单位：GB。
-    * storageResourceId  存储资源ID。
-    * storageSpecCode  IO规格。
-    * ipv6Enable  是否开启ipv6。
-    * ipv6ConnectAddresses  IPv6的连接地址。
-    * tags  标签列表。
+    * accessUser  **参数解释**： 认证用户名。 **取值范围**： 不涉及。
+    * brokerNum  **参数解释**： 代理个数。 **取值范围**： - 1 - 3 - 5 - 7
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
+    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
+    * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
+    * connectAddress  **参数解释**： 实例内网连接IP地址。 **取值范围**： 不涉及。
+    * connectDomainName  **参数解释**： 实例内网连接域名。 **取值范围**： 不涉及。
+    * publicConnectAddress  **参数解释**： 实例公网连接IP地址。 **取值范围**： 不涉及。
+    * publicConnectDomainName  **参数解释**： 实例公网连接域名。 **取值范围**： 不涉及。
+    * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+    * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    * chargingMode  **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
+    * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * enablePublicip  **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
+    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+    * publicipId  **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
+    * managementConnectAddress  **参数解释**： RabbitMQ实例的管理地址。 **取值范围**： 不涉及。
+    * managementConnectDomainName  **参数解释**： RabbitMQ实例的管理域名。 **取值范围**： 不涉及。
+    * publicManagementConnectAddress  **参数解释**： RabbitMQ实例的公网管理地址。 **取值范围**： 不涉及。
+    * publicManagementConnectDomainName  **参数解释**： RabbitMQ实例的公网管理域名。 **取值范围**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
+    * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
+    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * securityGroupName  **参数解释**： 租户安全组名称。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 实例节点所在的可用区ID。
+    * availableZoneNames  **参数解释**： 实例节点所在的可用区名称。
+    * totalStorageSpace  **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：不开启。
+    * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
+    * tags  **参数解释**： 标签列表。
     *
     * @var string[]
     */
@@ -371,57 +371,57 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
-    * brokerNum  代理个数。
-    * name  实例名称。
-    * engine  消息引擎。
-    * engineVersion  消息引擎版本。
-    * specification  实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
-    * storageSpace  消息存储空间，单位：GB。
-    * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
-    * connectAddress  实例内网连接IP地址。
-    * connectDomainName  实例内网连接域名。
-    * publicConnectAddress  实例公网连接IP地址。
-    * publicConnectDomainName  实例公网连接域名。
-    * port  实例连接端口。
-    * status  实例的状态。
-    * description  实例描述。
-    * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
-    * chargingMode  付费模式，1表示按需计费，0表示包年/包月计费。
-    * vpcId  VPC ID。
-    * vpcName  VPC的名称。
-    * createdAt  完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
-    * userId  用户ID。
-    * userName  用户名。
-    * orderId  订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：未开启
-    * publicipAddress  RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
-    * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
-    * managementConnectAddress  RabbitMQ实例的管理地址。
-    * managementConnectDomainName  RabbitMQ实例的管理域名。
-    * publicManagementConnectAddress  RabbitMQ实例的公网管理地址。
-    * publicManagementConnectDomainName  RabbitMQ实例的公网管理域名。
-    * sslEnable  是否开启安全认证。   - true：开启   - false：未开启
-    * enterpriseProjectId  企业项目ID。
-    * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
-    * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * type  实例类型：集群，cluster。
-    * productId  产品标识。
-    * securityGroupId  安全组ID。
-    * securityGroupName  租户安全组名称。
-    * subnetId  子网ID。
-    * availableZones  实例节点所在的可用区，返回“可用区ID”。
-    * availableZoneNames  实例节点所在的可用区，返回“可用区名称”。
-    * totalStorageSpace  总共消息存储空间，单位：GB。
-    * storageResourceId  存储资源ID。
-    * storageSpecCode  IO规格。
-    * ipv6Enable  是否开启ipv6。
-    * ipv6ConnectAddresses  IPv6的连接地址。
-    * tags  标签列表。
+    * accessUser  **参数解释**： 认证用户名。 **取值范围**： 不涉及。
+    * brokerNum  **参数解释**： 代理个数。 **取值范围**： - 1 - 3 - 5 - 7
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
+    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
+    * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
+    * connectAddress  **参数解释**： 实例内网连接IP地址。 **取值范围**： 不涉及。
+    * connectDomainName  **参数解释**： 实例内网连接域名。 **取值范围**： 不涉及。
+    * publicConnectAddress  **参数解释**： 实例公网连接IP地址。 **取值范围**： 不涉及。
+    * publicConnectDomainName  **参数解释**： 实例公网连接域名。 **取值范围**： 不涉及。
+    * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+    * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    * chargingMode  **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
+    * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * enablePublicip  **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
+    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+    * publicipId  **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
+    * managementConnectAddress  **参数解释**： RabbitMQ实例的管理地址。 **取值范围**： 不涉及。
+    * managementConnectDomainName  **参数解释**： RabbitMQ实例的管理域名。 **取值范围**： 不涉及。
+    * publicManagementConnectAddress  **参数解释**： RabbitMQ实例的公网管理地址。 **取值范围**： 不涉及。
+    * publicManagementConnectDomainName  **参数解释**： RabbitMQ实例的公网管理域名。 **取值范围**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
+    * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
+    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * securityGroupName  **参数解释**： 租户安全组名称。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 实例节点所在的可用区ID。
+    * availableZoneNames  **参数解释**： 实例节点所在的可用区名称。
+    * totalStorageSpace  **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：不开启。
+    * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
+    * tags  **参数解释**： 标签列表。
     *
     * @var string[]
     */
@@ -481,57 +481,57 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
-    * brokerNum  代理个数。
-    * name  实例名称。
-    * engine  消息引擎。
-    * engineVersion  消息引擎版本。
-    * specification  实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
-    * storageSpace  消息存储空间，单位：GB。
-    * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
-    * connectAddress  实例内网连接IP地址。
-    * connectDomainName  实例内网连接域名。
-    * publicConnectAddress  实例公网连接IP地址。
-    * publicConnectDomainName  实例公网连接域名。
-    * port  实例连接端口。
-    * status  实例的状态。
-    * description  实例描述。
-    * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
-    * chargingMode  付费模式，1表示按需计费，0表示包年/包月计费。
-    * vpcId  VPC ID。
-    * vpcName  VPC的名称。
-    * createdAt  完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
-    * userId  用户ID。
-    * userName  用户名。
-    * orderId  订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：未开启
-    * publicipAddress  RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
-    * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
-    * managementConnectAddress  RabbitMQ实例的管理地址。
-    * managementConnectDomainName  RabbitMQ实例的管理域名。
-    * publicManagementConnectAddress  RabbitMQ实例的公网管理地址。
-    * publicManagementConnectDomainName  RabbitMQ实例的公网管理域名。
-    * sslEnable  是否开启安全认证。   - true：开启   - false：未开启
-    * enterpriseProjectId  企业项目ID。
-    * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
-    * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * type  实例类型：集群，cluster。
-    * productId  产品标识。
-    * securityGroupId  安全组ID。
-    * securityGroupName  租户安全组名称。
-    * subnetId  子网ID。
-    * availableZones  实例节点所在的可用区，返回“可用区ID”。
-    * availableZoneNames  实例节点所在的可用区，返回“可用区名称”。
-    * totalStorageSpace  总共消息存储空间，单位：GB。
-    * storageResourceId  存储资源ID。
-    * storageSpecCode  IO规格。
-    * ipv6Enable  是否开启ipv6。
-    * ipv6ConnectAddresses  IPv6的连接地址。
-    * tags  标签列表。
+    * accessUser  **参数解释**： 认证用户名。 **取值范围**： 不涉及。
+    * brokerNum  **参数解释**： 代理个数。 **取值范围**： - 1 - 3 - 5 - 7
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
+    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
+    * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
+    * connectAddress  **参数解释**： 实例内网连接IP地址。 **取值范围**： 不涉及。
+    * connectDomainName  **参数解释**： 实例内网连接域名。 **取值范围**： 不涉及。
+    * publicConnectAddress  **参数解释**： 实例公网连接IP地址。 **取值范围**： 不涉及。
+    * publicConnectDomainName  **参数解释**： 实例公网连接域名。 **取值范围**： 不涉及。
+    * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+    * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    * chargingMode  **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
+    * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * enablePublicip  **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
+    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+    * publicipId  **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
+    * managementConnectAddress  **参数解释**： RabbitMQ实例的管理地址。 **取值范围**： 不涉及。
+    * managementConnectDomainName  **参数解释**： RabbitMQ实例的管理域名。 **取值范围**： 不涉及。
+    * publicManagementConnectAddress  **参数解释**： RabbitMQ实例的公网管理地址。 **取值范围**： 不涉及。
+    * publicManagementConnectDomainName  **参数解释**： RabbitMQ实例的公网管理域名。 **取值范围**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
+    * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
+    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * securityGroupName  **参数解释**： 租户安全组名称。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 实例节点所在的可用区ID。
+    * availableZoneNames  **参数解释**： 实例节点所在的可用区名称。
+    * totalStorageSpace  **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：不开启。
+    * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
+    * tags  **参数解释**： 标签列表。
     *
     * @var string[]
     */
@@ -774,7 +774,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessUser
-    *  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+    *  **参数解释**： 认证用户名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -786,7 +786,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets accessUser
     *
-    * @param string|null $accessUser 认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+    * @param string|null $accessUser **参数解释**： 认证用户名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -798,7 +798,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerNum
-    *  代理个数。
+    *  **参数解释**： 代理个数。 **取值范围**： - 1 - 3 - 5 - 7
     *
     * @return int|null
     */
@@ -810,7 +810,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets brokerNum
     *
-    * @param int|null $brokerNum 代理个数。
+    * @param int|null $brokerNum **参数解释**： 代理个数。 **取值范围**： - 1 - 3 - 5 - 7
     *
     * @return $this
     */
@@ -822,7 +822,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名称。
+    *  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -834,7 +834,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例名称。
+    * @param string|null $name **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -846,7 +846,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  消息引擎。
+    *  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -858,7 +858,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string|null $engine 消息引擎。
+    * @param string|null $engine **参数解释**： 消息引擎。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -870,7 +870,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineVersion
-    *  消息引擎版本。
+    *  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -882,7 +882,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets engineVersion
     *
-    * @param string|null $engineVersion 消息引擎版本。
+    * @param string|null $engineVersion **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -894,7 +894,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets specification
-    *  实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
+    *  **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
     *
     * @return string|null
     */
@@ -906,7 +906,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets specification
     *
-    * @param string|null $specification 实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
+    * @param string|null $specification **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
     *
     * @return $this
     */
@@ -918,7 +918,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageSpace
-    *  消息存储空间，单位：GB。
+    *  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -930,7 +930,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets storageSpace
     *
-    * @param int|null $storageSpace 消息存储空间，单位：GB。
+    * @param int|null $storageSpace **参数解释**： 消息存储空间，单位：GB。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -942,7 +942,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedStorageSpace
-    *  已使用的消息存储空间，单位：GB。
+    *  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -954,7 +954,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets usedStorageSpace
     *
-    * @param int|null $usedStorageSpace 已使用的消息存储空间，单位：GB。
+    * @param int|null $usedStorageSpace **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -966,7 +966,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnsEnable
-    *  实例是否开启域名访问功能。 - true：开启 - false：未开启
+    *  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
     *
     * @return bool|null
     */
@@ -978,7 +978,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets dnsEnable
     *
-    * @param bool|null $dnsEnable 实例是否开启域名访问功能。 - true：开启 - false：未开启
+    * @param bool|null $dnsEnable **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
     *
     * @return $this
     */
@@ -990,7 +990,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectAddress
-    *  实例内网连接IP地址。
+    *  **参数解释**： 实例内网连接IP地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1002,7 +1002,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets connectAddress
     *
-    * @param string|null $connectAddress 实例内网连接IP地址。
+    * @param string|null $connectAddress **参数解释**： 实例内网连接IP地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1014,7 +1014,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectDomainName
-    *  实例内网连接域名。
+    *  **参数解释**： 实例内网连接域名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1026,7 +1026,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets connectDomainName
     *
-    * @param string|null $connectDomainName 实例内网连接域名。
+    * @param string|null $connectDomainName **参数解释**： 实例内网连接域名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1038,7 +1038,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicConnectAddress
-    *  实例公网连接IP地址。
+    *  **参数解释**： 实例公网连接IP地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1050,7 +1050,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicConnectAddress
     *
-    * @param string|null $publicConnectAddress 实例公网连接IP地址。
+    * @param string|null $publicConnectAddress **参数解释**： 实例公网连接IP地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1062,7 +1062,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicConnectDomainName
-    *  实例公网连接域名。
+    *  **参数解释**： 实例公网连接域名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1074,7 +1074,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicConnectDomainName
     *
-    * @param string|null $publicConnectDomainName 实例公网连接域名。
+    * @param string|null $publicConnectDomainName **参数解释**： 实例公网连接域名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1086,7 +1086,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  实例连接端口。
+    *  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1098,7 +1098,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int|null $port 实例连接端口。
+    * @param int|null $port **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1110,7 +1110,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  实例的状态。
+    *  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
     *
     * @return string|null
     */
@@ -1122,7 +1122,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 实例的状态。
+    * @param string|null $status **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
     *
     * @return $this
     */
@@ -1134,7 +1134,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  实例描述。
+    *  **参数解释**： 实例描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1146,7 +1146,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 实例描述。
+    * @param string|null $description **参数解释**： 实例描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1158,7 +1158,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1170,7 +1170,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。
+    * @param string|null $instanceId **参数解释**： 实例ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1182,7 +1182,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    *  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
     *
     * @return string|null
     */
@@ -1194,7 +1194,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode 资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    * @param string|null $resourceSpecCode **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
     *
     * @return $this
     */
@@ -1206,7 +1206,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  付费模式，1表示按需计费，0表示包年/包月计费。
+    *  **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
     *
     * @return int|null
     */
@@ -1218,7 +1218,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param int|null $chargingMode 付费模式，1表示按需计费，0表示包年/包月计费。
+    * @param int|null $chargingMode **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
     *
     * @return $this
     */
@@ -1230,7 +1230,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  VPC ID。
+    *  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1242,7 +1242,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId VPC ID。
+    * @param string|null $vpcId **参数解释**： VPC ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1254,7 +1254,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcName
-    *  VPC的名称。
+    *  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1266,7 +1266,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets vpcName
     *
-    * @param string|null $vpcName VPC的名称。
+    * @param string|null $vpcName **参数解释**： VPC的名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1278,7 +1278,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
+    *  **参数解释**： 完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1290,7 +1290,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
+    * @param string|null $createdAt **参数解释**： 完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1302,7 +1302,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  用户ID。
+    *  **参数解释**： 用户ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1314,7 +1314,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId 用户ID。
+    * @param string|null $userId **参数解释**： 用户ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1326,7 +1326,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名。
+    *  **参数解释**： 用户名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1338,7 +1338,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 用户名。
+    * @param string|null $userName **参数解释**： 用户名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1350,7 +1350,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
+    *  **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1362,7 +1362,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
+    * @param string|null $orderId **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1374,7 +1374,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainBegin
-    *  维护时间窗开始时间，格式为HH:mm:ss。
+    *  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1386,7 +1386,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets maintainBegin
     *
-    * @param string|null $maintainBegin 维护时间窗开始时间，格式为HH:mm:ss。
+    * @param string|null $maintainBegin **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1398,7 +1398,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainEnd
-    *  维护时间窗结束时间，格式为HH:mm:ss。
+    *  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1410,7 +1410,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets maintainEnd
     *
-    * @param string|null $maintainEnd 维护时间窗结束时间，格式为HH:mm:ss。
+    * @param string|null $maintainEnd **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1422,7 +1422,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets enablePublicip
-    *  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：未开启
+    *  **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
     *
     * @return bool|null
     */
@@ -1434,7 +1434,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets enablePublicip
     *
-    * @param bool|null $enablePublicip RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：未开启
+    * @param bool|null $enablePublicip **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
     *
     * @return $this
     */
@@ -1446,7 +1446,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipAddress
-    *  RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
+    *  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
     *
     * @return string|null
     */
@@ -1458,7 +1458,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicipAddress
     *
-    * @param string|null $publicipAddress RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
+    * @param string|null $publicipAddress **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
     *
     * @return $this
     */
@@ -1470,7 +1470,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipId
-    *  RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
+    *  **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1482,7 +1482,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicipId
     *
-    * @param string|null $publicipId RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
+    * @param string|null $publicipId **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1494,7 +1494,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets managementConnectAddress
-    *  RabbitMQ实例的管理地址。
+    *  **参数解释**： RabbitMQ实例的管理地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1506,7 +1506,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets managementConnectAddress
     *
-    * @param string|null $managementConnectAddress RabbitMQ实例的管理地址。
+    * @param string|null $managementConnectAddress **参数解释**： RabbitMQ实例的管理地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1518,7 +1518,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets managementConnectDomainName
-    *  RabbitMQ实例的管理域名。
+    *  **参数解释**： RabbitMQ实例的管理域名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1530,7 +1530,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets managementConnectDomainName
     *
-    * @param string|null $managementConnectDomainName RabbitMQ实例的管理域名。
+    * @param string|null $managementConnectDomainName **参数解释**： RabbitMQ实例的管理域名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1542,7 +1542,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicManagementConnectAddress
-    *  RabbitMQ实例的公网管理地址。
+    *  **参数解释**： RabbitMQ实例的公网管理地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1554,7 +1554,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicManagementConnectAddress
     *
-    * @param string|null $publicManagementConnectAddress RabbitMQ实例的公网管理地址。
+    * @param string|null $publicManagementConnectAddress **参数解释**： RabbitMQ实例的公网管理地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1566,7 +1566,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicManagementConnectDomainName
-    *  RabbitMQ实例的公网管理域名。
+    *  **参数解释**： RabbitMQ实例的公网管理域名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1578,7 +1578,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicManagementConnectDomainName
     *
-    * @param string|null $publicManagementConnectDomainName RabbitMQ实例的公网管理域名。
+    * @param string|null $publicManagementConnectDomainName **参数解释**： RabbitMQ实例的公网管理域名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1590,7 +1590,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets sslEnable
-    *  是否开启安全认证。   - true：开启   - false：未开启
+    *  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
     *
     * @return bool|null
     */
@@ -1602,7 +1602,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets sslEnable
     *
-    * @param bool|null $sslEnable 是否开启安全认证。   - true：开启   - false：未开启
+    * @param bool|null $sslEnable **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
     *
     * @return $this
     */
@@ -1614,7 +1614,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID。
+    *  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1626,7 +1626,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID。
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1638,7 +1638,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets isLogicalVolume
-    *  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
+    *  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
     *
     * @return bool|null
     */
@@ -1650,7 +1650,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets isLogicalVolume
     *
-    * @param bool|null $isLogicalVolume 实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
+    * @param bool|null $isLogicalVolume **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
     *
     * @return $this
     */
@@ -1662,7 +1662,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendTimes
-    *  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
+    *  **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1674,7 +1674,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets extendTimes
     *
-    * @param int|null $extendTimes 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
+    * @param int|null $extendTimes **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1686,7 +1686,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  实例类型：集群，cluster。
+    *  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     *
     * @return string|null
     */
@@ -1698,7 +1698,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 实例类型：集群，cluster。
+    * @param string|null $type **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     *
     * @return $this
     */
@@ -1710,7 +1710,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  产品标识。
+    *  **参数解释**： 产品标识。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1722,7 +1722,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId 产品标识。
+    * @param string|null $productId **参数解释**： 产品标识。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1734,7 +1734,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  安全组ID。
+    *  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1746,7 +1746,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string|null $securityGroupId 安全组ID。
+    * @param string|null $securityGroupId **参数解释**： 安全组ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1758,7 +1758,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupName
-    *  租户安全组名称。
+    *  **参数解释**： 租户安全组名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1770,7 +1770,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupName
     *
-    * @param string|null $securityGroupName 租户安全组名称。
+    * @param string|null $securityGroupName **参数解释**： 租户安全组名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1782,7 +1782,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  子网ID。
+    *  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1794,7 +1794,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string|null $subnetId 子网ID。
+    * @param string|null $subnetId **参数解释**： 子网ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1806,7 +1806,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  实例节点所在的可用区，返回“可用区ID”。
+    *  **参数解释**： 实例节点所在的可用区ID。
     *
     * @return string[]|null
     */
@@ -1818,7 +1818,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[]|null $availableZones 实例节点所在的可用区，返回“可用区ID”。
+    * @param string[]|null $availableZones **参数解释**： 实例节点所在的可用区ID。
     *
     * @return $this
     */
@@ -1830,7 +1830,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZoneNames
-    *  实例节点所在的可用区，返回“可用区名称”。
+    *  **参数解释**： 实例节点所在的可用区名称。
     *
     * @return string[]|null
     */
@@ -1842,7 +1842,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets availableZoneNames
     *
-    * @param string[]|null $availableZoneNames 实例节点所在的可用区，返回“可用区名称”。
+    * @param string[]|null $availableZoneNames **参数解释**： 实例节点所在的可用区名称。
     *
     * @return $this
     */
@@ -1854,7 +1854,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalStorageSpace
-    *  总共消息存储空间，单位：GB。
+    *  **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1866,7 +1866,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets totalStorageSpace
     *
-    * @param int|null $totalStorageSpace 总共消息存储空间，单位：GB。
+    * @param int|null $totalStorageSpace **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1878,7 +1878,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageResourceId
-    *  存储资源ID。
+    *  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1890,7 +1890,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets storageResourceId
     *
-    * @param string|null $storageResourceId 存储资源ID。
+    * @param string|null $storageResourceId **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1902,7 +1902,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageSpecCode
-    *  IO规格。
+    *  **参数解释**： IO规格。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1914,7 +1914,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets storageSpecCode
     *
-    * @param string|null $storageSpecCode IO规格。
+    * @param string|null $storageSpecCode **参数解释**： IO规格。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1926,7 +1926,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Enable
-    *  是否开启ipv6。
+    *  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：不开启。
     *
     * @return bool|null
     */
@@ -1938,7 +1938,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Enable
     *
-    * @param bool|null $ipv6Enable 是否开启ipv6。
+    * @param bool|null $ipv6Enable **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：不开启。
     *
     * @return $this
     */
@@ -1950,7 +1950,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6ConnectAddresses
-    *  IPv6的连接地址。
+    *  **参数解释**： IPv6的连接地址。
     *
     * @return string[]|null
     */
@@ -1962,7 +1962,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6ConnectAddresses
     *
-    * @param string[]|null $ipv6ConnectAddresses IPv6的连接地址。
+    * @param string[]|null $ipv6ConnectAddresses **参数解释**： IPv6的连接地址。
     *
     * @return $this
     */
@@ -1974,7 +1974,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表。
+    *  **参数解释**： 标签列表。
     *
     * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\TagEntity[]|null
     */
@@ -1986,7 +1986,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\TagEntity[]|null $tags 标签列表。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\TagEntity[]|null $tags **参数解释**： 标签列表。
     *
     * @return $this
     */

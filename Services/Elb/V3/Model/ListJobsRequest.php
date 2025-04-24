@@ -20,6 +20,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
     * jobId  参数解释：任务ID。
     * jobType  参数解释：任务类型。
     * status  参数解释：任务状态。  取值范围：INIT,RUNNING,FAIL,SUCCESS,ROLLBACKING,COMPLETE,ROLLBACK_FAIL,CANCEL
@@ -30,6 +33,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'limit' => 'int',
+            'marker' => 'string',
+            'pageReverse' => 'bool',
             'jobId' => 'string',
             'jobType' => 'string',
             'status' => 'string',
@@ -40,6 +46,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
     * jobId  参数解释：任务ID。
     * jobType  参数解释：任务类型。
     * status  参数解释：任务状态。  取值范围：INIT,RUNNING,FAIL,SUCCESS,ROLLBACKING,COMPLETE,ROLLBACK_FAIL,CANCEL
@@ -50,6 +59,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'limit' => 'int32',
+        'marker' => null,
+        'pageReverse' => null,
         'jobId' => null,
         'jobType' => null,
         'status' => null,
@@ -81,6 +93,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
     * jobId  参数解释：任务ID。
     * jobType  参数解释：任务类型。
     * status  参数解释：任务状态。  取值范围：INIT,RUNNING,FAIL,SUCCESS,ROLLBACKING,COMPLETE,ROLLBACK_FAIL,CANCEL
@@ -91,6 +106,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'limit' => 'limit',
+            'marker' => 'marker',
+            'pageReverse' => 'page_reverse',
             'jobId' => 'job_id',
             'jobType' => 'job_type',
             'status' => 'status',
@@ -101,6 +119,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
     * jobId  参数解释：任务ID。
     * jobType  参数解释：任务类型。
     * status  参数解释：任务状态。  取值范围：INIT,RUNNING,FAIL,SUCCESS,ROLLBACKING,COMPLETE,ROLLBACK_FAIL,CANCEL
@@ -111,6 +132,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'limit' => 'setLimit',
+            'marker' => 'setMarker',
+            'pageReverse' => 'setPageReverse',
             'jobId' => 'setJobId',
             'jobType' => 'setJobType',
             'status' => 'setStatus',
@@ -121,6 +145,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
     * jobId  参数解释：任务ID。
     * jobType  参数解释：任务类型。
     * status  参数解释：任务状态。  取值范围：INIT,RUNNING,FAIL,SUCCESS,ROLLBACKING,COMPLETE,ROLLBACK_FAIL,CANCEL
@@ -131,6 +158,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'limit' => 'getLimit',
+            'marker' => 'getMarker',
+            'pageReverse' => 'getPageReverse',
             'jobId' => 'getJobId',
             'jobType' => 'getJobType',
             'status' => 'getStatus',
@@ -197,6 +227,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['pageReverse'] = isset($data['pageReverse']) ? $data['pageReverse'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -213,6 +246,12 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -225,6 +264,78 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets limit
+    *  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets pageReverse
+    *  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
+    *
+    * @return bool|null
+    */
+    public function getPageReverse()
+    {
+        return $this->container['pageReverse'];
+    }
+
+    /**
+    * Sets pageReverse
+    *
+    * @param bool|null $pageReverse 是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
+    *
+    * @return $this
+    */
+    public function setPageReverse($pageReverse)
+    {
+        $this->container['pageReverse'] = $pageReverse;
+        return $this;
     }
 
     /**

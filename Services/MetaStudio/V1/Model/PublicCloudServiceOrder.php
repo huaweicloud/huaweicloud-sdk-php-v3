@@ -21,7 +21,7 @@ class PublicCloudServiceOrder implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * isAutoPay  是否自动支付：下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付；  1：是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券)。 0：否（需要客户手动去支付，客户可以选择折扣和优惠券）。 默认值为“0”。
-    * periodType  订购周期类型： 2：月； 3：年； 6：一次性（chargingMode=1 一次性计费场景使用）
+    * periodType  订购周期类型： 2：月； 3：年； 6：一次性;
     * periodNum  订购周期数 取值大于0；小于等于0会报错
     * isAutoRenew  是否自动续订，为空时表示不自动续订； 1：自动续订 0：不自动续订（默认）
     * subscriptionNum  订购数量； 取值大于0
@@ -41,7 +41,7 @@ class PublicCloudServiceOrder implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * isAutoPay  是否自动支付：下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付；  1：是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券)。 0：否（需要客户手动去支付，客户可以选择折扣和优惠券）。 默认值为“0”。
-    * periodType  订购周期类型： 2：月； 3：年； 6：一次性（chargingMode=1 一次性计费场景使用）
+    * periodType  订购周期类型： 2：月； 3：年； 6：一次性;
     * periodNum  订购周期数 取值大于0；小于等于0会报错
     * isAutoRenew  是否自动续订，为空时表示不自动续订； 1：自动续订 0：不自动续订（默认）
     * subscriptionNum  订购数量； 取值大于0
@@ -82,7 +82,7 @@ class PublicCloudServiceOrder implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * isAutoPay  是否自动支付：下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付；  1：是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券)。 0：否（需要客户手动去支付，客户可以选择折扣和优惠券）。 默认值为“0”。
-    * periodType  订购周期类型： 2：月； 3：年； 6：一次性（chargingMode=1 一次性计费场景使用）
+    * periodType  订购周期类型： 2：月； 3：年； 6：一次性;
     * periodNum  订购周期数 取值大于0；小于等于0会报错
     * isAutoRenew  是否自动续订，为空时表示不自动续订； 1：自动续订 0：不自动续订（默认）
     * subscriptionNum  订购数量； 取值大于0
@@ -102,7 +102,7 @@ class PublicCloudServiceOrder implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * isAutoPay  是否自动支付：下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付；  1：是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券)。 0：否（需要客户手动去支付，客户可以选择折扣和优惠券）。 默认值为“0”。
-    * periodType  订购周期类型： 2：月； 3：年； 6：一次性（chargingMode=1 一次性计费场景使用）
+    * periodType  订购周期类型： 2：月； 3：年； 6：一次性;
     * periodNum  订购周期数 取值大于0；小于等于0会报错
     * isAutoRenew  是否自动续订，为空时表示不自动续订； 1：自动续订 0：不自动续订（默认）
     * subscriptionNum  订购数量； 取值大于0
@@ -122,7 +122,7 @@ class PublicCloudServiceOrder implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * isAutoPay  是否自动支付：下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付；  1：是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券)。 0：否（需要客户手动去支付，客户可以选择折扣和优惠券）。 默认值为“0”。
-    * periodType  订购周期类型： 2：月； 3：年； 6：一次性（chargingMode=1 一次性计费场景使用）
+    * periodType  订购周期类型： 2：月； 3：年； 6：一次性;
     * periodNum  订购周期数 取值大于0；小于等于0会报错
     * isAutoRenew  是否自动续订，为空时表示不自动续订； 1：自动续订 0：不自动续订（默认）
     * subscriptionNum  订购数量； 取值大于0
@@ -213,8 +213,8 @@ class PublicCloudServiceOrder implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['isAutoPay']) && ($this->container['isAutoPay'] > 10)) {
-                $invalidProperties[] = "invalid value for 'isAutoPay', must be smaller than or equal to 10.";
+            if (!is_null($this->container['isAutoPay']) && ($this->container['isAutoPay'] > 1)) {
+                $invalidProperties[] = "invalid value for 'isAutoPay', must be smaller than or equal to 1.";
             }
             if (!is_null($this->container['isAutoPay']) && ($this->container['isAutoPay'] < 0)) {
                 $invalidProperties[] = "invalid value for 'isAutoPay', must be bigger than or equal to 0.";
@@ -301,7 +301,7 @@ class PublicCloudServiceOrder implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  订购周期类型： 2：月； 3：年； 6：一次性（chargingMode=1 一次性计费场景使用）
+    *  订购周期类型： 2：月； 3：年； 6：一次性;
     *
     * @return int
     */
@@ -313,7 +313,7 @@ class PublicCloudServiceOrder implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param int $periodType 订购周期类型： 2：月； 3：年； 6：一次性（chargingMode=1 一次性计费场景使用）
+    * @param int $periodType 订购周期类型： 2：月； 3：年； 6：一次性;
     *
     * @return $this
     */

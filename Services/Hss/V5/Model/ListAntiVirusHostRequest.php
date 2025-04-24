@@ -360,6 +360,12 @@ class ListAntiVirusHostRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['startType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'startType', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['policyId']) && (mb_strlen($this->container['policyId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'policyId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['policyId']) && (mb_strlen($this->container['policyId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'policyId', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['policyId']) && !preg_match("/^.*$/", $this->container['policyId'])) {
                 $invalidProperties[] = "invalid value for 'policyId', must be conform to the pattern /^.*$/.";
             }

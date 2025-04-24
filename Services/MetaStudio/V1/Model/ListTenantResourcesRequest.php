@@ -399,6 +399,12 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['subResource']) && (mb_strlen($this->container['subResource']) < 1)) {
                 $invalidProperties[] = "invalid value for 'subResource', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['status']) && ($this->container['status'] > 10)) {
+                $invalidProperties[] = "invalid value for 'status', must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['status']) && ($this->container['status'] < 0)) {
+                $invalidProperties[] = "invalid value for 'status', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

@@ -23,13 +23,17 @@ class MemberStatus implements ModelInterface, ArrayAccess
     * listenerId  参数解释：监听器ID
     * operatingStatus  参数解释：后端服务器的健康状态。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
     * reason  reason
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'listenerId' => 'string',
             'operatingStatus' => 'string',
-            'reason' => '\HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason'
+            'reason' => '\HuaweiCloud\SDK\Elb\V3\Model\MemberHealthCheckFailedReason',
+            'createdAt' => 'string',
+            'updatedAt' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class MemberStatus implements ModelInterface, ArrayAccess
     * listenerId  参数解释：监听器ID
     * operatingStatus  参数解释：后端服务器的健康状态。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
     * reason  reason
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'listenerId' => null,
         'operatingStatus' => null,
-        'reason' => null
+        'reason' => null,
+        'createdAt' => null,
+        'updatedAt' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class MemberStatus implements ModelInterface, ArrayAccess
     * listenerId  参数解释：监听器ID
     * operatingStatus  参数解释：后端服务器的健康状态。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
     * reason  reason
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'listenerId' => 'listener_id',
             'operatingStatus' => 'operating_status',
-            'reason' => 'reason'
+            'reason' => 'reason',
+            'createdAt' => 'created_at',
+            'updatedAt' => 'updated_at'
     ];
 
     /**
@@ -86,13 +98,17 @@ class MemberStatus implements ModelInterface, ArrayAccess
     * listenerId  参数解释：监听器ID
     * operatingStatus  参数解释：后端服务器的健康状态。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
     * reason  reason
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
     protected static $setters = [
             'listenerId' => 'setListenerId',
             'operatingStatus' => 'setOperatingStatus',
-            'reason' => 'setReason'
+            'reason' => 'setReason',
+            'createdAt' => 'setCreatedAt',
+            'updatedAt' => 'setUpdatedAt'
     ];
 
     /**
@@ -100,13 +116,17 @@ class MemberStatus implements ModelInterface, ArrayAccess
     * listenerId  参数解释：监听器ID
     * operatingStatus  参数解释：后端服务器的健康状态。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
     * reason  reason
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
     * @var string[]
     */
     protected static $getters = [
             'listenerId' => 'getListenerId',
             'operatingStatus' => 'getOperatingStatus',
-            'reason' => 'getReason'
+            'reason' => 'getReason',
+            'createdAt' => 'getCreatedAt',
+            'updatedAt' => 'getUpdatedAt'
     ];
 
     /**
@@ -170,6 +190,8 @@ class MemberStatus implements ModelInterface, ArrayAccess
         $this->container['listenerId'] = isset($data['listenerId']) ? $data['listenerId'] : null;
         $this->container['operatingStatus'] = isset($data['operatingStatus']) ? $data['operatingStatus'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
     }
 
     /**
@@ -269,6 +291,54 @@ class MemberStatus implements ModelInterface, ArrayAccess
     public function setReason($reason)
     {
         $this->container['reason'] = $reason;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    *
+    * @return string|null
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param string|null $createdAt 创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets updatedAt
+    *  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    *
+    * @return string|null
+    */
+    public function getUpdatedAt()
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+    * Sets updatedAt
+    *
+    * @param string|null $updatedAt 更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+    *
+    * @return $this
+    */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->container['updatedAt'] = $updatedAt;
         return $this;
     }
 

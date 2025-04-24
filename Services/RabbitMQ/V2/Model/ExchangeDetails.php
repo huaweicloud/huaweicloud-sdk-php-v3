@@ -23,6 +23,7 @@ class ExchangeDetails implements ModelInterface, ArrayAccess
     * durable  是否持久化
     * default  是否是默认Exchange
     * internal  是否是内部Exchange
+    * arguments  参数列表
     * name  Exchange名称
     * autoDelete  是否自动删除
     * type  Exchange类型
@@ -34,6 +35,7 @@ class ExchangeDetails implements ModelInterface, ArrayAccess
             'durable' => 'bool',
             'default' => 'bool',
             'internal' => 'bool',
+            'arguments' => 'object',
             'name' => 'string',
             'autoDelete' => 'bool',
             'type' => 'string',
@@ -45,6 +47,7 @@ class ExchangeDetails implements ModelInterface, ArrayAccess
     * durable  是否持久化
     * default  是否是默认Exchange
     * internal  是否是内部Exchange
+    * arguments  参数列表
     * name  Exchange名称
     * autoDelete  是否自动删除
     * type  Exchange类型
@@ -56,6 +59,7 @@ class ExchangeDetails implements ModelInterface, ArrayAccess
         'durable' => null,
         'default' => null,
         'internal' => null,
+        'arguments' => null,
         'name' => null,
         'autoDelete' => null,
         'type' => null,
@@ -88,6 +92,7 @@ class ExchangeDetails implements ModelInterface, ArrayAccess
     * durable  是否持久化
     * default  是否是默认Exchange
     * internal  是否是内部Exchange
+    * arguments  参数列表
     * name  Exchange名称
     * autoDelete  是否自动删除
     * type  Exchange类型
@@ -99,6 +104,7 @@ class ExchangeDetails implements ModelInterface, ArrayAccess
             'durable' => 'durable',
             'default' => 'default',
             'internal' => 'internal',
+            'arguments' => 'arguments',
             'name' => 'name',
             'autoDelete' => 'auto_delete',
             'type' => 'type',
@@ -110,6 +116,7 @@ class ExchangeDetails implements ModelInterface, ArrayAccess
     * durable  是否持久化
     * default  是否是默认Exchange
     * internal  是否是内部Exchange
+    * arguments  参数列表
     * name  Exchange名称
     * autoDelete  是否自动删除
     * type  Exchange类型
@@ -121,6 +128,7 @@ class ExchangeDetails implements ModelInterface, ArrayAccess
             'durable' => 'setDurable',
             'default' => 'setDefault',
             'internal' => 'setInternal',
+            'arguments' => 'setArguments',
             'name' => 'setName',
             'autoDelete' => 'setAutoDelete',
             'type' => 'setType',
@@ -132,6 +140,7 @@ class ExchangeDetails implements ModelInterface, ArrayAccess
     * durable  是否持久化
     * default  是否是默认Exchange
     * internal  是否是内部Exchange
+    * arguments  参数列表
     * name  Exchange名称
     * autoDelete  是否自动删除
     * type  Exchange类型
@@ -143,6 +152,7 @@ class ExchangeDetails implements ModelInterface, ArrayAccess
             'durable' => 'getDurable',
             'default' => 'getDefault',
             'internal' => 'getInternal',
+            'arguments' => 'getArguments',
             'name' => 'getName',
             'autoDelete' => 'getAutoDelete',
             'type' => 'getType',
@@ -210,6 +220,7 @@ class ExchangeDetails implements ModelInterface, ArrayAccess
         $this->container['durable'] = isset($data['durable']) ? $data['durable'] : null;
         $this->container['default'] = isset($data['default']) ? $data['default'] : null;
         $this->container['internal'] = isset($data['internal']) ? $data['internal'] : null;
+        $this->container['arguments'] = isset($data['arguments']) ? $data['arguments'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['autoDelete'] = isset($data['autoDelete']) ? $data['autoDelete'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
@@ -307,6 +318,30 @@ class ExchangeDetails implements ModelInterface, ArrayAccess
     public function setInternal($internal)
     {
         $this->container['internal'] = $internal;
+        return $this;
+    }
+
+    /**
+    * Gets arguments
+    *  参数列表
+    *
+    * @return object|null
+    */
+    public function getArguments()
+    {
+        return $this->container['arguments'];
+    }
+
+    /**
+    * Sets arguments
+    *
+    * @param object|null $arguments 参数列表
+    *
+    * @return $this
+    */
+    public function setArguments($arguments)
+    {
+        $this->container['arguments'] = $arguments;
         return $this;
     }
 

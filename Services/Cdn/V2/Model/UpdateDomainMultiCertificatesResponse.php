@@ -22,24 +22,32 @@ class UpdateDomainMultiCertificatesResponse implements ModelInterface, ArrayAcce
     /**
     * Array of property to type mappings. Used for (de)serialization
     * https  https
+    * status  执行结果，success，fail
+    * result  详情
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'https' => '\HuaweiCloud\SDK\Cdn\V2\Model\UpdateDomainMultiCertificatesResponseBodyContent',
+            'status' => 'string',
+            'result' => '\HuaweiCloud\SDK\Cdn\V2\Model\UpdateDomainMultiCertificatesResponseBodyResult[]',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * https  https
+    * status  执行结果，success，fail
+    * result  详情
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'https' => null,
+        'status' => null,
+        'result' => null,
         'xRequestId' => null
     ];
 
@@ -67,36 +75,48 @@ class UpdateDomainMultiCertificatesResponse implements ModelInterface, ArrayAcce
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * https  https
+    * status  执行结果，success，fail
+    * result  详情
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'https' => 'https',
+            'status' => 'status',
+            'result' => 'result',
             'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * https  https
+    * status  执行结果，success，fail
+    * result  详情
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'https' => 'setHttps',
+            'status' => 'setStatus',
+            'result' => 'setResult',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * https  https
+    * status  执行结果，success，fail
+    * result  详情
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'https' => 'getHttps',
+            'status' => 'getStatus',
+            'result' => 'getResult',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -159,6 +179,8 @@ class UpdateDomainMultiCertificatesResponse implements ModelInterface, ArrayAcce
     public function __construct(array $data = null)
     {
         $this->container['https'] = isset($data['https']) ? $data['https'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -205,6 +227,54 @@ class UpdateDomainMultiCertificatesResponse implements ModelInterface, ArrayAcce
     public function setHttps($https)
     {
         $this->container['https'] = $https;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  执行结果，success，fail
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 执行结果，success，fail
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets result
+    *  详情
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\UpdateDomainMultiCertificatesResponseBodyResult[]|null
+    */
+    public function getResult()
+    {
+        return $this->container['result'];
+    }
+
+    /**
+    * Sets result
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\UpdateDomainMultiCertificatesResponseBodyResult[]|null $result 详情
+    *
+    * @return $this
+    */
+    public function setResult($result)
+    {
+        $this->container['result'] = $result;
         return $this;
     }
 

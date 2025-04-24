@@ -70,7 +70,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'appPath' => 'string',
             'version' => 'string',
             'supportRestore' => 'bool',
-            'disabledOperateTypes' => '\HuaweiCloud\SDK\Hss\V5\Model\VulHostInfoDisabledOperateTypes[]',
+            'disabledOperateTypes' => '\HuaweiCloud\SDK\Hss\V5\Model\HostVulInfoDisabledOperateTypes[]',
             'repairPriority' => 'string'
     ];
 
@@ -1065,7 +1065,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * Gets disabledOperateTypes
     *  该漏洞不可进行的操作类型列表
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\VulHostInfoDisabledOperateTypes[]|null
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\HostVulInfoDisabledOperateTypes[]|null
     */
     public function getDisabledOperateTypes()
     {
@@ -1075,7 +1075,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets disabledOperateTypes
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulHostInfoDisabledOperateTypes[]|null $disabledOperateTypes 该漏洞不可进行的操作类型列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\HostVulInfoDisabledOperateTypes[]|null $disabledOperateTypes 该漏洞不可进行的操作类型列表
     *
     * @return $this
     */

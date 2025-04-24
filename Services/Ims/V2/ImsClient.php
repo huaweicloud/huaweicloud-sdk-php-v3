@@ -283,6 +283,71 @@ class ImsClient extends Client
     }
 
     /**
+     * 批量删除镜像标签
+     *
+     * 该接口用于为指定镜像批量删除标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteTags($request)
+    {
+        return $this->batchDeleteTagsWithHttpInfo($request);
+    }
+
+    public function batchDeleteTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudimages/{image_id}/tags/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\BatchDeleteTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\BatchDeleteTagsRequest');
+    }
+
+    /**
      * 批量更新镜像成员状态
      *
      * 该接口为扩展接口，主要用于用户接受或者拒绝多个共享镜像时批量更新镜像成员的状态。
@@ -994,6 +1059,68 @@ class ImsClient extends Client
     }
 
     /**
+     * 获取镜像成员列表
+     *
+     * 该接口用于共享镜像过程中，获取接受该镜像的成员列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listImageMembers($request)
+    {
+        return $this->listImageMembersWithHttpInfo($request);
+    }
+
+    public function listImageMembersWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudimages/{image_id}/members';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListImageMembersResponse',
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListImageMembersRequest');
+    }
+
+    /**
      * 查询镜像标签
      *
      * 该接口用于为查询指定镜像上的所有标签
@@ -1520,6 +1647,71 @@ class ImsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\RegisterImageResponse',
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\RegisterImageRequest');
+    }
+
+    /**
+     * 获取镜像成员详情
+     *
+     * 该接口主要用于镜像共享中查询某个镜像成员的详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showImageMember($request)
+    {
+        return $this->showImageMemberWithHttpInfo($request);
+    }
+
+    public function showImageMemberWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudimages/{image_id}/members/{member_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['memberId'] !== null) {
+            $pathParams['member_id'] = $localVarParams['memberId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ShowImageMemberResponse',
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ShowImageMemberRequest');
     }
 
     /**

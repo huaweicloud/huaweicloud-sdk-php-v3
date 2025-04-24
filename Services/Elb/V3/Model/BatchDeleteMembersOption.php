@@ -20,7 +20,7 @@ class BatchDeleteMembersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * address  后端服务器IP地址。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段
     * protocolPort  后端服务器端口。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段 - 可以传0，用于删除端口透传pool下的member
     *
@@ -34,7 +34,7 @@ class BatchDeleteMembersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * address  后端服务器IP地址。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段
     * protocolPort  后端服务器端口。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段 - 可以传0，用于删除端口透传pool下的member
     *
@@ -69,7 +69,7 @@ class BatchDeleteMembersOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * address  后端服务器IP地址。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段
     * protocolPort  后端服务器端口。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段 - 可以传0，用于删除端口透传pool下的member
     *
@@ -83,7 +83,7 @@ class BatchDeleteMembersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * address  后端服务器IP地址。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段
     * protocolPort  后端服务器端口。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段 - 可以传0，用于删除端口透传pool下的member
     *
@@ -97,7 +97,7 @@ class BatchDeleteMembersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * address  后端服务器IP地址。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段
     * protocolPort  后端服务器端口。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段 - 可以传0，用于删除端口透传pool下的member
     *
@@ -196,7 +196,7 @@ class BatchDeleteMembersOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    *  需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class BatchDeleteMembersOption implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * @param string|null $id 需要删除的后端服务器ID。  使用说明： - 若传入id则不能传其他参数，否则报错。  > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     *
     * @return $this
     */

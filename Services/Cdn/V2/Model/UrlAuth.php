@@ -24,7 +24,8 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
-    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
+    * matchType  鉴权范围 - all：所有文件 - include_file_extension：指定后缀文件参与鉴权 - exclude_file_extension：指定后缀文件不参与鉴权
+    * matchRule  鉴权文件匹配规则，当match_type为all时，置空。当match_type为include_file_extension或exclude_file_extension时，输入文件后缀，后缀以“.”为首字符，多个后缀以“,”分隔，如.jpg,.zip,.exe。
     * inheritConfig  inheritConfig
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
@@ -40,6 +41,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
             'expireTime' => 'int',
             'signMethod' => 'string',
             'matchType' => 'string',
+            'matchRule' => 'string',
             'inheritConfig' => '\HuaweiCloud\SDK\Cdn\V2\Model\InheritConfig',
             'key' => 'string',
             'backupKey' => 'string',
@@ -54,7 +56,8 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
-    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
+    * matchType  鉴权范围 - all：所有文件 - include_file_extension：指定后缀文件参与鉴权 - exclude_file_extension：指定后缀文件不参与鉴权
+    * matchRule  鉴权文件匹配规则，当match_type为all时，置空。当match_type为include_file_extension或exclude_file_extension时，输入文件后缀，后缀以“.”为首字符，多个后缀以“,”分隔，如.jpg,.zip,.exe。
     * inheritConfig  inheritConfig
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
@@ -70,6 +73,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
         'expireTime' => 'int32',
         'signMethod' => null,
         'matchType' => null,
+        'matchRule' => null,
         'inheritConfig' => null,
         'key' => null,
         'backupKey' => null,
@@ -105,7 +109,8 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
-    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
+    * matchType  鉴权范围 - all：所有文件 - include_file_extension：指定后缀文件参与鉴权 - exclude_file_extension：指定后缀文件不参与鉴权
+    * matchRule  鉴权文件匹配规则，当match_type为all时，置空。当match_type为include_file_extension或exclude_file_extension时，输入文件后缀，后缀以“.”为首字符，多个后缀以“,”分隔，如.jpg,.zip,.exe。
     * inheritConfig  inheritConfig
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
@@ -121,6 +126,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
             'expireTime' => 'expire_time',
             'signMethod' => 'sign_method',
             'matchType' => 'match_type',
+            'matchRule' => 'match_rule',
             'inheritConfig' => 'inherit_config',
             'key' => 'key',
             'backupKey' => 'backup_key',
@@ -135,7 +141,8 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
-    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
+    * matchType  鉴权范围 - all：所有文件 - include_file_extension：指定后缀文件参与鉴权 - exclude_file_extension：指定后缀文件不参与鉴权
+    * matchRule  鉴权文件匹配规则，当match_type为all时，置空。当match_type为include_file_extension或exclude_file_extension时，输入文件后缀，后缀以“.”为首字符，多个后缀以“,”分隔，如.jpg,.zip,.exe。
     * inheritConfig  inheritConfig
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
@@ -151,6 +158,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
             'expireTime' => 'setExpireTime',
             'signMethod' => 'setSignMethod',
             'matchType' => 'setMatchType',
+            'matchRule' => 'setMatchRule',
             'inheritConfig' => 'setInheritConfig',
             'key' => 'setKey',
             'backupKey' => 'setBackupKey',
@@ -165,7 +173,8 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
-    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
+    * matchType  鉴权范围 - all：所有文件 - include_file_extension：指定后缀文件参与鉴权 - exclude_file_extension：指定后缀文件不参与鉴权
+    * matchRule  鉴权文件匹配规则，当match_type为all时，置空。当match_type为include_file_extension或exclude_file_extension时，输入文件后缀，后缀以“.”为首字符，多个后缀以“,”分隔，如.jpg,.zip,.exe。
     * inheritConfig  inheritConfig
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
@@ -181,6 +190,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
             'expireTime' => 'getExpireTime',
             'signMethod' => 'getSignMethod',
             'matchType' => 'getMatchType',
+            'matchRule' => 'getMatchRule',
             'inheritConfig' => 'getInheritConfig',
             'key' => 'getKey',
             'backupKey' => 'getBackupKey',
@@ -252,6 +262,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['signMethod'] = isset($data['signMethod']) ? $data['signMethod'] : null;
         $this->container['matchType'] = isset($data['matchType']) ? $data['matchType'] : null;
+        $this->container['matchRule'] = isset($data['matchRule']) ? $data['matchRule'] : null;
         $this->container['inheritConfig'] = isset($data['inheritConfig']) ? $data['inheritConfig'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['backupKey'] = isset($data['backupKey']) ? $data['backupKey'] : null;
@@ -383,7 +394,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Gets matchType
-    *  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
+    *  鉴权范围 - all：所有文件 - include_file_extension：指定后缀文件参与鉴权 - exclude_file_extension：指定后缀文件不参与鉴权
     *
     * @return string|null
     */
@@ -395,13 +406,37 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Sets matchType
     *
-    * @param string|null $matchType 鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
+    * @param string|null $matchType 鉴权范围 - all：所有文件 - include_file_extension：指定后缀文件参与鉴权 - exclude_file_extension：指定后缀文件不参与鉴权
     *
     * @return $this
     */
     public function setMatchType($matchType)
     {
         $this->container['matchType'] = $matchType;
+        return $this;
+    }
+
+    /**
+    * Gets matchRule
+    *  鉴权文件匹配规则，当match_type为all时，置空。当match_type为include_file_extension或exclude_file_extension时，输入文件后缀，后缀以“.”为首字符，多个后缀以“,”分隔，如.jpg,.zip,.exe。
+    *
+    * @return string|null
+    */
+    public function getMatchRule()
+    {
+        return $this->container['matchRule'];
+    }
+
+    /**
+    * Sets matchRule
+    *
+    * @param string|null $matchRule 鉴权文件匹配规则，当match_type为all时，置空。当match_type为include_file_extension或exclude_file_extension时，输入文件后缀，后缀以“.”为首字符，多个后缀以“,”分隔，如.jpg,.zip,.exe。
+    *
+    * @return $this
+    */
+    public function setMatchRule($matchRule)
+    {
+        $this->container['matchRule'] = $matchRule;
         return $this;
     }
 

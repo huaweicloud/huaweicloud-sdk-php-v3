@@ -49,17 +49,22 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     * l4ScaleFlavorId  参数解释：四层弹性Flavor ID。  不支持该字段，请勿使用。
     * l7FlavorId  参数解释：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  约束限制： - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
     * l7ScaleFlavorId  参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
+    * gwFlavorId  网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
+    * loadbalancerType  参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
     * publicips  参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
     * globalEips  参数解释：负载均衡器绑定的global eip。  约束限制：只支持绑定一个globaleip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
     * elbVirsubnetIds  参数解释：下联面子网的网络ID列表。
     * elbVirsubnetType  参数解释：下联面子网类型。  取值范围： - ipv4：ipv4 - dualstack：双栈
     * ipTargetEnable  参数解释：是否启用跨VPC后端转发。 [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他云、云下数据中心的服务器。](tag:srg,fcs)  约束限制： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  取值范围： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * frozenScene  参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
-    * ipv6Bandwidth  ipv6Bandwidth
     * deletionProtectionEnable  参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * autoscaling  autoscaling
     * publicBorderGroup  参数解释：LB所属AZ组。
-    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。
+    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * serviceLbMode  参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
+    * instanceType  参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
+    * instanceId  参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
+    * proxyProtocolExtensions  参数解释：pp扩展。  不支持该字段，请勿使用。
     * wafFailureAction  参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
@@ -98,17 +103,22 @@ class LoadBalancer implements ModelInterface, ArrayAccess
             'l4ScaleFlavorId' => 'string',
             'l7FlavorId' => 'string',
             'l7ScaleFlavorId' => 'string',
+            'gwFlavorId' => 'string',
+            'loadbalancerType' => 'string',
             'publicips' => '\HuaweiCloud\SDK\Elb\V3\Model\PublicIpInfo[]',
             'globalEips' => '\HuaweiCloud\SDK\Elb\V3\Model\GlobalEipInfo[]',
             'elbVirsubnetIds' => 'string[]',
             'elbVirsubnetType' => 'string',
             'ipTargetEnable' => 'bool',
             'frozenScene' => 'string',
-            'ipv6Bandwidth' => '\HuaweiCloud\SDK\Elb\V3\Model\BandwidthRef',
             'deletionProtectionEnable' => 'bool',
             'autoscaling' => '\HuaweiCloud\SDK\Elb\V3\Model\AutoscalingRef',
             'publicBorderGroup' => 'string',
             'chargeMode' => 'string',
+            'serviceLbMode' => 'string',
+            'instanceType' => 'string',
+            'instanceId' => 'string',
+            'proxyProtocolExtensions' => '\HuaweiCloud\SDK\Elb\V3\Model\ProxyProtocolExtension[]',
             'wafFailureAction' => 'string',
             'protectionStatus' => 'string',
             'protectionReason' => 'string',
@@ -147,17 +157,22 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     * l4ScaleFlavorId  参数解释：四层弹性Flavor ID。  不支持该字段，请勿使用。
     * l7FlavorId  参数解释：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  约束限制： - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
     * l7ScaleFlavorId  参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
+    * gwFlavorId  网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
+    * loadbalancerType  参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
     * publicips  参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
     * globalEips  参数解释：负载均衡器绑定的global eip。  约束限制：只支持绑定一个globaleip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
     * elbVirsubnetIds  参数解释：下联面子网的网络ID列表。
     * elbVirsubnetType  参数解释：下联面子网类型。  取值范围： - ipv4：ipv4 - dualstack：双栈
     * ipTargetEnable  参数解释：是否启用跨VPC后端转发。 [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他云、云下数据中心的服务器。](tag:srg,fcs)  约束限制： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  取值范围： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * frozenScene  参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
-    * ipv6Bandwidth  ipv6Bandwidth
     * deletionProtectionEnable  参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * autoscaling  autoscaling
     * publicBorderGroup  参数解释：LB所属AZ组。
-    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。
+    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * serviceLbMode  参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
+    * instanceType  参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
+    * instanceId  参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
+    * proxyProtocolExtensions  参数解释：pp扩展。  不支持该字段，请勿使用。
     * wafFailureAction  参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
@@ -196,17 +211,22 @@ class LoadBalancer implements ModelInterface, ArrayAccess
         'l4ScaleFlavorId' => null,
         'l7FlavorId' => null,
         'l7ScaleFlavorId' => null,
+        'gwFlavorId' => null,
+        'loadbalancerType' => null,
         'publicips' => null,
         'globalEips' => null,
         'elbVirsubnetIds' => null,
         'elbVirsubnetType' => null,
         'ipTargetEnable' => null,
         'frozenScene' => null,
-        'ipv6Bandwidth' => null,
         'deletionProtectionEnable' => null,
         'autoscaling' => null,
         'publicBorderGroup' => null,
         'chargeMode' => null,
+        'serviceLbMode' => null,
+        'instanceType' => null,
+        'instanceId' => null,
+        'proxyProtocolExtensions' => null,
         'wafFailureAction' => null,
         'protectionStatus' => null,
         'protectionReason' => null,
@@ -266,17 +286,22 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     * l4ScaleFlavorId  参数解释：四层弹性Flavor ID。  不支持该字段，请勿使用。
     * l7FlavorId  参数解释：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  约束限制： - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
     * l7ScaleFlavorId  参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
+    * gwFlavorId  网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
+    * loadbalancerType  参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
     * publicips  参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
     * globalEips  参数解释：负载均衡器绑定的global eip。  约束限制：只支持绑定一个globaleip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
     * elbVirsubnetIds  参数解释：下联面子网的网络ID列表。
     * elbVirsubnetType  参数解释：下联面子网类型。  取值范围： - ipv4：ipv4 - dualstack：双栈
     * ipTargetEnable  参数解释：是否启用跨VPC后端转发。 [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他云、云下数据中心的服务器。](tag:srg,fcs)  约束限制： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  取值范围： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * frozenScene  参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
-    * ipv6Bandwidth  ipv6Bandwidth
     * deletionProtectionEnable  参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * autoscaling  autoscaling
     * publicBorderGroup  参数解释：LB所属AZ组。
-    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。
+    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * serviceLbMode  参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
+    * instanceType  参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
+    * instanceId  参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
+    * proxyProtocolExtensions  参数解释：pp扩展。  不支持该字段，请勿使用。
     * wafFailureAction  参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
@@ -315,17 +340,22 @@ class LoadBalancer implements ModelInterface, ArrayAccess
             'l4ScaleFlavorId' => 'l4_scale_flavor_id',
             'l7FlavorId' => 'l7_flavor_id',
             'l7ScaleFlavorId' => 'l7_scale_flavor_id',
+            'gwFlavorId' => 'gw_flavor_id',
+            'loadbalancerType' => 'loadbalancer_type',
             'publicips' => 'publicips',
             'globalEips' => 'global_eips',
             'elbVirsubnetIds' => 'elb_virsubnet_ids',
             'elbVirsubnetType' => 'elb_virsubnet_type',
             'ipTargetEnable' => 'ip_target_enable',
             'frozenScene' => 'frozen_scene',
-            'ipv6Bandwidth' => 'ipv6_bandwidth',
             'deletionProtectionEnable' => 'deletion_protection_enable',
             'autoscaling' => 'autoscaling',
             'publicBorderGroup' => 'public_border_group',
             'chargeMode' => 'charge_mode',
+            'serviceLbMode' => 'service_lb_mode',
+            'instanceType' => 'instance_type',
+            'instanceId' => 'instance_id',
+            'proxyProtocolExtensions' => 'proxy_protocol_extensions',
             'wafFailureAction' => 'waf_failure_action',
             'protectionStatus' => 'protection_status',
             'protectionReason' => 'protection_reason',
@@ -364,17 +394,22 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     * l4ScaleFlavorId  参数解释：四层弹性Flavor ID。  不支持该字段，请勿使用。
     * l7FlavorId  参数解释：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  约束限制： - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
     * l7ScaleFlavorId  参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
+    * gwFlavorId  网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
+    * loadbalancerType  参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
     * publicips  参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
     * globalEips  参数解释：负载均衡器绑定的global eip。  约束限制：只支持绑定一个globaleip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
     * elbVirsubnetIds  参数解释：下联面子网的网络ID列表。
     * elbVirsubnetType  参数解释：下联面子网类型。  取值范围： - ipv4：ipv4 - dualstack：双栈
     * ipTargetEnable  参数解释：是否启用跨VPC后端转发。 [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他云、云下数据中心的服务器。](tag:srg,fcs)  约束限制： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  取值范围： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * frozenScene  参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
-    * ipv6Bandwidth  ipv6Bandwidth
     * deletionProtectionEnable  参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * autoscaling  autoscaling
     * publicBorderGroup  参数解释：LB所属AZ组。
-    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。
+    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * serviceLbMode  参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
+    * instanceType  参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
+    * instanceId  参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
+    * proxyProtocolExtensions  参数解释：pp扩展。  不支持该字段，请勿使用。
     * wafFailureAction  参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
@@ -413,17 +448,22 @@ class LoadBalancer implements ModelInterface, ArrayAccess
             'l4ScaleFlavorId' => 'setL4ScaleFlavorId',
             'l7FlavorId' => 'setL7FlavorId',
             'l7ScaleFlavorId' => 'setL7ScaleFlavorId',
+            'gwFlavorId' => 'setGwFlavorId',
+            'loadbalancerType' => 'setLoadbalancerType',
             'publicips' => 'setPublicips',
             'globalEips' => 'setGlobalEips',
             'elbVirsubnetIds' => 'setElbVirsubnetIds',
             'elbVirsubnetType' => 'setElbVirsubnetType',
             'ipTargetEnable' => 'setIpTargetEnable',
             'frozenScene' => 'setFrozenScene',
-            'ipv6Bandwidth' => 'setIpv6Bandwidth',
             'deletionProtectionEnable' => 'setDeletionProtectionEnable',
             'autoscaling' => 'setAutoscaling',
             'publicBorderGroup' => 'setPublicBorderGroup',
             'chargeMode' => 'setChargeMode',
+            'serviceLbMode' => 'setServiceLbMode',
+            'instanceType' => 'setInstanceType',
+            'instanceId' => 'setInstanceId',
+            'proxyProtocolExtensions' => 'setProxyProtocolExtensions',
             'wafFailureAction' => 'setWafFailureAction',
             'protectionStatus' => 'setProtectionStatus',
             'protectionReason' => 'setProtectionReason',
@@ -462,17 +502,22 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     * l4ScaleFlavorId  参数解释：四层弹性Flavor ID。  不支持该字段，请勿使用。
     * l7FlavorId  参数解释：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  约束限制： - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
     * l7ScaleFlavorId  参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
+    * gwFlavorId  网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
+    * loadbalancerType  参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
     * publicips  参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
     * globalEips  参数解释：负载均衡器绑定的global eip。  约束限制：只支持绑定一个globaleip。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hk_vdf,srg,fcs,ctc,ocb,hws_ocb)
     * elbVirsubnetIds  参数解释：下联面子网的网络ID列表。
     * elbVirsubnetType  参数解释：下联面子网类型。  取值范围： - ipv4：ipv4 - dualstack：双栈
     * ipTargetEnable  参数解释：是否启用跨VPC后端转发。 [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他云、云下数据中心的服务器。](tag:srg,fcs)  约束限制： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  取值范围： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * frozenScene  参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
-    * ipv6Bandwidth  ipv6Bandwidth
     * deletionProtectionEnable  参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     * autoscaling  autoscaling
     * publicBorderGroup  参数解释：LB所属AZ组。
-    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。
+    * chargeMode  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    * serviceLbMode  参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
+    * instanceType  参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
+    * instanceId  参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
+    * proxyProtocolExtensions  参数解释：pp扩展。  不支持该字段，请勿使用。
     * wafFailureAction  参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
@@ -511,17 +556,22 @@ class LoadBalancer implements ModelInterface, ArrayAccess
             'l4ScaleFlavorId' => 'getL4ScaleFlavorId',
             'l7FlavorId' => 'getL7FlavorId',
             'l7ScaleFlavorId' => 'getL7ScaleFlavorId',
+            'gwFlavorId' => 'getGwFlavorId',
+            'loadbalancerType' => 'getLoadbalancerType',
             'publicips' => 'getPublicips',
             'globalEips' => 'getGlobalEips',
             'elbVirsubnetIds' => 'getElbVirsubnetIds',
             'elbVirsubnetType' => 'getElbVirsubnetType',
             'ipTargetEnable' => 'getIpTargetEnable',
             'frozenScene' => 'getFrozenScene',
-            'ipv6Bandwidth' => 'getIpv6Bandwidth',
             'deletionProtectionEnable' => 'getDeletionProtectionEnable',
             'autoscaling' => 'getAutoscaling',
             'publicBorderGroup' => 'getPublicBorderGroup',
             'chargeMode' => 'getChargeMode',
+            'serviceLbMode' => 'getServiceLbMode',
+            'instanceType' => 'getInstanceType',
+            'instanceId' => 'getInstanceId',
+            'proxyProtocolExtensions' => 'getProxyProtocolExtensions',
             'wafFailureAction' => 'getWafFailureAction',
             'protectionStatus' => 'getProtectionStatus',
             'protectionReason' => 'getProtectionReason',
@@ -571,6 +621,8 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     }
     const ELB_VIRSUBNET_TYPE_IPV4 = 'ipv4';
     const ELB_VIRSUBNET_TYPE_DUALSTACK = 'dualstack';
+    const SERVICE_LB_MODE_LB = 'lb';
+    const SERVICE_LB_MODE_EP = 'ep';
     const PROTECTION_STATUS_NON_PROTECTION = 'nonProtection';
     const PROTECTION_STATUS_CONSOLE_PROTECTION = 'consoleProtection';
     
@@ -585,6 +637,19 @@ class LoadBalancer implements ModelInterface, ArrayAccess
         return [
             self::ELB_VIRSUBNET_TYPE_IPV4,
             self::ELB_VIRSUBNET_TYPE_DUALSTACK,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getServiceLbModeAllowableValues()
+    {
+        return [
+            self::SERVICE_LB_MODE_LB,
+            self::SERVICE_LB_MODE_EP,
         ];
     }
 
@@ -646,17 +711,22 @@ class LoadBalancer implements ModelInterface, ArrayAccess
         $this->container['l4ScaleFlavorId'] = isset($data['l4ScaleFlavorId']) ? $data['l4ScaleFlavorId'] : null;
         $this->container['l7FlavorId'] = isset($data['l7FlavorId']) ? $data['l7FlavorId'] : null;
         $this->container['l7ScaleFlavorId'] = isset($data['l7ScaleFlavorId']) ? $data['l7ScaleFlavorId'] : null;
+        $this->container['gwFlavorId'] = isset($data['gwFlavorId']) ? $data['gwFlavorId'] : null;
+        $this->container['loadbalancerType'] = isset($data['loadbalancerType']) ? $data['loadbalancerType'] : null;
         $this->container['publicips'] = isset($data['publicips']) ? $data['publicips'] : null;
         $this->container['globalEips'] = isset($data['globalEips']) ? $data['globalEips'] : null;
         $this->container['elbVirsubnetIds'] = isset($data['elbVirsubnetIds']) ? $data['elbVirsubnetIds'] : null;
         $this->container['elbVirsubnetType'] = isset($data['elbVirsubnetType']) ? $data['elbVirsubnetType'] : null;
         $this->container['ipTargetEnable'] = isset($data['ipTargetEnable']) ? $data['ipTargetEnable'] : null;
         $this->container['frozenScene'] = isset($data['frozenScene']) ? $data['frozenScene'] : null;
-        $this->container['ipv6Bandwidth'] = isset($data['ipv6Bandwidth']) ? $data['ipv6Bandwidth'] : null;
         $this->container['deletionProtectionEnable'] = isset($data['deletionProtectionEnable']) ? $data['deletionProtectionEnable'] : null;
         $this->container['autoscaling'] = isset($data['autoscaling']) ? $data['autoscaling'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
+        $this->container['serviceLbMode'] = isset($data['serviceLbMode']) ? $data['serviceLbMode'] : null;
+        $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['proxyProtocolExtensions'] = isset($data['proxyProtocolExtensions']) ? $data['proxyProtocolExtensions'] : null;
         $this->container['wafFailureAction'] = isset($data['wafFailureAction']) ? $data['wafFailureAction'] : null;
         $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
         $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
@@ -795,6 +865,12 @@ class LoadBalancer implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['l7ScaleFlavorId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'l7ScaleFlavorId', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['gwFlavorId']) && (mb_strlen($this->container['gwFlavorId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'gwFlavorId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['gwFlavorId']) && (mb_strlen($this->container['gwFlavorId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'gwFlavorId', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['publicips'] === null) {
             $invalidProperties[] = "'publicips' can't be null";
         }
@@ -821,9 +897,32 @@ class LoadBalancer implements ModelInterface, ArrayAccess
         if ($this->container['frozenScene'] === null) {
             $invalidProperties[] = "'frozenScene' can't be null";
         }
-        if ($this->container['ipv6Bandwidth'] === null) {
-            $invalidProperties[] = "'ipv6Bandwidth' can't be null";
-        }
+            $allowedValues = $this->getServiceLbModeAllowableValues();
+                if (!is_null($this->container['serviceLbMode']) && !in_array($this->container['serviceLbMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'serviceLbMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['serviceLbMode']) && (mb_strlen($this->container['serviceLbMode']) > 36)) {
+                $invalidProperties[] = "invalid value for 'serviceLbMode', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['serviceLbMode']) && (mb_strlen($this->container['serviceLbMode']) < 1)) {
+                $invalidProperties[] = "invalid value for 'serviceLbMode', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['instanceType']) && (mb_strlen($this->container['instanceType']) > 36)) {
+                $invalidProperties[] = "invalid value for 'instanceType', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['instanceType']) && (mb_strlen($this->container['instanceType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'instanceType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 1.";
+            }
             $allowedValues = $this->getProtectionStatusAllowableValues();
                 if (!is_null($this->container['protectionStatus']) && !in_array($this->container['protectionStatus'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -1549,6 +1648,54 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets gwFlavorId
+    *  网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
+    *
+    * @return string|null
+    */
+    public function getGwFlavorId()
+    {
+        return $this->container['gwFlavorId'];
+    }
+
+    /**
+    * Sets gwFlavorId
+    *
+    * @param string|null $gwFlavorId 网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
+    *
+    * @return $this
+    */
+    public function setGwFlavorId($gwFlavorId)
+    {
+        $this->container['gwFlavorId'] = $gwFlavorId;
+        return $this;
+    }
+
+    /**
+    * Gets loadbalancerType
+    *  参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
+    *
+    * @return string|null
+    */
+    public function getLoadbalancerType()
+    {
+        return $this->container['loadbalancerType'];
+    }
+
+    /**
+    * Sets loadbalancerType
+    *
+    * @param string|null $loadbalancerType 参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
+    *
+    * @return $this
+    */
+    public function setLoadbalancerType($loadbalancerType)
+    {
+        $this->container['loadbalancerType'] = $loadbalancerType;
+        return $this;
+    }
+
+    /**
     * Gets publicips
     *  参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
     *
@@ -1693,30 +1840,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ipv6Bandwidth
-    *  ipv6Bandwidth
-    *
-    * @return \HuaweiCloud\SDK\Elb\V3\Model\BandwidthRef
-    */
-    public function getIpv6Bandwidth()
-    {
-        return $this->container['ipv6Bandwidth'];
-    }
-
-    /**
-    * Sets ipv6Bandwidth
-    *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\BandwidthRef $ipv6Bandwidth ipv6Bandwidth
-    *
-    * @return $this
-    */
-    public function setIpv6Bandwidth($ipv6Bandwidth)
-    {
-        $this->container['ipv6Bandwidth'] = $ipv6Bandwidth;
-        return $this;
-    }
-
-    /**
     * Gets deletionProtectionEnable
     *  参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
     *
@@ -1790,7 +1913,7 @@ class LoadBalancer implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。
+    *  参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     *
     * @return string|null
     */
@@ -1802,13 +1925,109 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。
+    * @param string|null $chargeMode 参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     *
     * @return $this
     */
     public function setChargeMode($chargeMode)
     {
         $this->container['chargeMode'] = $chargeMode;
+        return $this;
+    }
+
+    /**
+    * Gets serviceLbMode
+    *  参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
+    *
+    * @return string|null
+    */
+    public function getServiceLbMode()
+    {
+        return $this->container['serviceLbMode'];
+    }
+
+    /**
+    * Sets serviceLbMode
+    *
+    * @param string|null $serviceLbMode 参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
+    *
+    * @return $this
+    */
+    public function setServiceLbMode($serviceLbMode)
+    {
+        $this->container['serviceLbMode'] = $serviceLbMode;
+        return $this;
+    }
+
+    /**
+    * Gets instanceType
+    *  参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
+    *
+    * @return string|null
+    */
+    public function getInstanceType()
+    {
+        return $this->container['instanceType'];
+    }
+
+    /**
+    * Sets instanceType
+    *
+    * @param string|null $instanceType 参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
+    *
+    * @return $this
+    */
+    public function setInstanceType($instanceType)
+    {
+        $this->container['instanceType'] = $instanceType;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets proxyProtocolExtensions
+    *  参数解释：pp扩展。  不支持该字段，请勿使用。
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\ProxyProtocolExtension[]|null
+    */
+    public function getProxyProtocolExtensions()
+    {
+        return $this->container['proxyProtocolExtensions'];
+    }
+
+    /**
+    * Sets proxyProtocolExtensions
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ProxyProtocolExtension[]|null $proxyProtocolExtensions 参数解释：pp扩展。  不支持该字段，请勿使用。
+    *
+    * @return $this
+    */
+    public function setProxyProtocolExtensions($proxyProtocolExtensions)
+    {
+        $this->container['proxyProtocolExtensions'] = $proxyProtocolExtensions;
         return $this;
     }
 
