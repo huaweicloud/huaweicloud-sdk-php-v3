@@ -22,7 +22,7 @@ class UpdateRecordSetsReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。  长度不超过255个字符。  如果为空，表示维持原值。  默认值为空。
-    * type  Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * type  记录集的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * weight  解析记录的权重。  当weight不填时，表示该解析记录将保持原有设置的权重。 当weight=0，表示该解析记录为备用域名解析记录。 当weight>0，表示该解析记录为主用域名解析记录。 取值范围：0~100  默认值为空。
@@ -42,7 +42,7 @@ class UpdateRecordSetsReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。  长度不超过255个字符。  如果为空，表示维持原值。  默认值为空。
-    * type  Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * type  记录集的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * weight  解析记录的权重。  当weight不填时，表示该解析记录将保持原有设置的权重。 当weight=0，表示该解析记录为备用域名解析记录。 当weight>0，表示该解析记录为主用域名解析记录。 取值范围：0~100  默认值为空。
@@ -83,7 +83,7 @@ class UpdateRecordSetsReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。  长度不超过255个字符。  如果为空，表示维持原值。  默认值为空。
-    * type  Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * type  记录集的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * weight  解析记录的权重。  当weight不填时，表示该解析记录将保持原有设置的权重。 当weight=0，表示该解析记录为备用域名解析记录。 当weight>0，表示该解析记录为主用域名解析记录。 取值范围：0~100  默认值为空。
@@ -103,7 +103,7 @@ class UpdateRecordSetsReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。  长度不超过255个字符。  如果为空，表示维持原值。  默认值为空。
-    * type  Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * type  记录集的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * weight  解析记录的权重。  当weight不填时，表示该解析记录将保持原有设置的权重。 当weight=0，表示该解析记录为备用域名解析记录。 当weight>0，表示该解析记录为主用域名解析记录。 取值范围：0~100  默认值为空。
@@ -123,7 +123,7 @@ class UpdateRecordSetsReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。  长度不超过255个字符。  如果为空，表示维持原值。  默认值为空。
-    * type  Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * type  记录集的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * weight  解析记录的权重。  当weight不填时，表示该解析记录将保持原有设置的权重。 当weight=0，表示该解析记录为备用域名解析记录。 当weight>0，表示该解析记录为主用域名解析记录。 取值范围：0~100  默认值为空。
@@ -283,7 +283,7 @@ class UpdateRecordSetsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    *  记录集的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
     *
     * @return string
     */
@@ -295,7 +295,7 @@ class UpdateRecordSetsReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * @param string $type 记录集的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class BatchDeleteRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordsetIds  Record Set ID列表。最多支持100个。
+    * recordsetIds  记录集ID列表。最多支持100个。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordsetIds  Record Set ID列表。最多支持100个。
+    * recordsetIds  记录集ID列表。最多支持100个。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordsetIds  Record Set ID列表。最多支持100个。
+    * recordsetIds  记录集ID列表。最多支持100个。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordsetIds  Record Set ID列表。最多支持100个。
+    * recordsetIds  记录集ID列表。最多支持100个。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordsetIds  Record Set ID列表。最多支持100个。
+    * recordsetIds  记录集ID列表。最多支持100个。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchDeleteRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets recordsetIds
-    *  Record Set ID列表。最多支持100个。
+    *  记录集ID列表。最多支持100个。
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class BatchDeleteRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets recordsetIds
     *
-    * @param string[] $recordsetIds Record Set ID列表。最多支持100个。
+    * @param string[] $recordsetIds 记录集ID列表。最多支持100个。
     *
     * @return $this
     */

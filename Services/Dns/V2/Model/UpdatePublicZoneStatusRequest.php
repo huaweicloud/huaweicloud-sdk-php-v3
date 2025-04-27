@@ -20,19 +20,19 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneId  待设置状态Zone的ID
+    * zoneId  域名ID。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'zoneId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneStatusRequestBody'
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\UpdateZoneStatusRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneId  待设置状态Zone的ID
+    * zoneId  域名ID。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneId  待设置状态Zone的ID
+    * zoneId  域名ID。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneId  待设置状态Zone的ID
+    * zoneId  域名ID。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneId  待设置状态Zone的ID
+    * zoneId  域名ID。
     * body  body
     *
     * @var string[]
@@ -172,6 +172,12 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
         if ($this->container['zoneId'] === null) {
             $invalidProperties[] = "'zoneId' can't be null";
         }
+            if ((mb_strlen($this->container['zoneId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'zoneId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['zoneId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'zoneId', the character length must be bigger than or equal to 32.";
+            }
         return $invalidProperties;
     }
 
@@ -188,7 +194,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneId
-    *  待设置状态Zone的ID
+    *  域名ID。
     *
     * @return string
     */
@@ -200,7 +206,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets zoneId
     *
-    * @param string $zoneId 待设置状态Zone的ID
+    * @param string $zoneId 域名ID。
     *
     * @return $this
     */
@@ -214,7 +220,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneStatusRequestBody|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\UpdateZoneStatusRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +230,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneStatusRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\UpdateZoneStatusRequestBody|null $body body
     *
     * @return $this
     */

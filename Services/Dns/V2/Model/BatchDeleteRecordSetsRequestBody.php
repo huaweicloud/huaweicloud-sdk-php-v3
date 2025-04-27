@@ -20,8 +20,8 @@ class BatchDeleteRecordSetsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneType  Zone的类型，取值为public或private。
-    * recordsetIds  待删除的Record Set ID列表。 最多支持100个。
+    * zoneType  域名的类型，取值为public或private。
+    * recordsetIds  待删除的记录集ID列表。 最多支持100个。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchDeleteRecordSetsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneType  Zone的类型，取值为public或private。
-    * recordsetIds  待删除的Record Set ID列表。 最多支持100个。
+    * zoneType  域名的类型，取值为public或private。
+    * recordsetIds  待删除的记录集ID列表。 最多支持100个。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchDeleteRecordSetsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneType  Zone的类型，取值为public或private。
-    * recordsetIds  待删除的Record Set ID列表。 最多支持100个。
+    * zoneType  域名的类型，取值为public或private。
+    * recordsetIds  待删除的记录集ID列表。 最多支持100个。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchDeleteRecordSetsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneType  Zone的类型，取值为public或private。
-    * recordsetIds  待删除的Record Set ID列表。 最多支持100个。
+    * zoneType  域名的类型，取值为public或private。
+    * recordsetIds  待删除的记录集ID列表。 最多支持100个。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchDeleteRecordSetsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneType  Zone的类型，取值为public或private。
-    * recordsetIds  待删除的Record Set ID列表。 最多支持100个。
+    * zoneType  域名的类型，取值为public或private。
+    * recordsetIds  待删除的记录集ID列表。 最多支持100个。
     *
     * @var string[]
     */
@@ -194,7 +194,7 @@ class BatchDeleteRecordSetsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneType
-    *  Zone的类型，取值为public或private。
+    *  域名的类型，取值为public或private。
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class BatchDeleteRecordSetsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets zoneType
     *
-    * @param string $zoneType Zone的类型，取值为public或private。
+    * @param string $zoneType 域名的类型，取值为public或private。
     *
     * @return $this
     */
@@ -218,7 +218,7 @@ class BatchDeleteRecordSetsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordsetIds
-    *  待删除的Record Set ID列表。 最多支持100个。
+    *  待删除的记录集ID列表。 最多支持100个。
     *
     * @return string[]
     */
@@ -230,7 +230,7 @@ class BatchDeleteRecordSetsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets recordsetIds
     *
-    * @param string[] $recordsetIds 待删除的Record Set ID列表。 最多支持100个。
+    * @param string[] $recordsetIds 待删除的记录集ID列表。 最多支持100个。
     *
     * @return $this
     */

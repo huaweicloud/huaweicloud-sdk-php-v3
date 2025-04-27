@@ -23,12 +23,12 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * name  待创建的域名。
     * description  域名的描述信息。
     * zoneType  域名类型。取值：private。
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
-    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
+    * proxyPattern  内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
     * tags  资源标签。
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。默认值为0。
     *
     * @var string[]
     */
@@ -49,12 +49,12 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * name  待创建的域名。
     * description  域名的描述信息。
     * zoneType  域名类型。取值：private。
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
-    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
+    * proxyPattern  内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
     * tags  资源标签。
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。默认值为0。
     *
     * @var string[]
     */
@@ -96,12 +96,12 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * name  待创建的域名。
     * description  域名的描述信息。
     * zoneType  域名类型。取值：private。
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
-    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
+    * proxyPattern  内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
     * tags  资源标签。
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。默认值为0。
     *
     * @var string[]
     */
@@ -122,12 +122,12 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * name  待创建的域名。
     * description  域名的描述信息。
     * zoneType  域名类型。取值：private。
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
-    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
+    * proxyPattern  内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
     * tags  资源标签。
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。默认值为0。
     *
     * @var string[]
     */
@@ -148,12 +148,12 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * name  待创建的域名。
     * description  域名的描述信息。
     * zoneType  域名类型。取值：private。
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
-    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
+    * proxyPattern  内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
     * tags  资源标签。
-    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。默认值为0。
     *
     * @var string[]
     */
@@ -343,7 +343,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
+    *  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
     *
     * @return string|null
     */
@@ -355,7 +355,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
+    * @param string|null $email 管理该域名的管理员邮箱，用于生成该域名的SOA记录。
     *
     * @return $this
     */
@@ -415,7 +415,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyPattern
-    *  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
+    *  内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
     *
     * @return string|null
     */
@@ -427,7 +427,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets proxyPattern
     *
-    * @param string|null $proxyPattern 内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
+    * @param string|null $proxyPattern 内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    *  域名关联的企业项目ID，长度不超过36个字符。默认值为0。
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+    * @param string|null $enterpriseProjectId 域名关联的企业项目ID，长度不超过36个字符。默认值为0。
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class ListRecordSetsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * links  links
-    * recordsets  recordset列表对象。
+    * recordsets  记录集列表对象。
     * metadata  metadata
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ListRecordSetsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * links  links
-    * recordsets  recordset列表对象。
+    * recordsets  记录集列表对象。
     * metadata  metadata
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListRecordSetsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * links  links
-    * recordsets  recordset列表对象。
+    * recordsets  记录集列表对象。
     * metadata  metadata
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListRecordSetsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * links  links
-    * recordsets  recordset列表对象。
+    * recordsets  记录集列表对象。
     * metadata  metadata
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListRecordSetsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * links  links
-    * recordsets  recordset列表对象。
+    * recordsets  记录集列表对象。
     * metadata  metadata
     *
     * @var string[]
@@ -221,7 +221,7 @@ class ListRecordSetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordsets
-    *  recordset列表对象。
+    *  记录集列表对象。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\ListRecordSetsWithTags[]|null
     */
@@ -233,7 +233,7 @@ class ListRecordSetsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets recordsets
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\ListRecordSetsWithTags[]|null $recordsets recordset列表对象。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\ListRecordSetsWithTags[]|null $recordsets 记录集列表对象。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class BatchSetRecordSetsStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  待设置Record Set状态，当前仅支持DISABLE或ENABLE。
-    * recordsetIds  待设置Record Set ID列表。 最多支持50个。
+    * status  待设置记录集状态，支持DISABLE或ENABLE。
+    * recordsetIds  待设置记录集ID列表。 最多支持50个。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchSetRecordSetsStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  待设置Record Set状态，当前仅支持DISABLE或ENABLE。
-    * recordsetIds  待设置Record Set ID列表。 最多支持50个。
+    * status  待设置记录集状态，支持DISABLE或ENABLE。
+    * recordsetIds  待设置记录集ID列表。 最多支持50个。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchSetRecordSetsStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  待设置Record Set状态，当前仅支持DISABLE或ENABLE。
-    * recordsetIds  待设置Record Set ID列表。 最多支持50个。
+    * status  待设置记录集状态，支持DISABLE或ENABLE。
+    * recordsetIds  待设置记录集ID列表。 最多支持50个。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchSetRecordSetsStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  待设置Record Set状态，当前仅支持DISABLE或ENABLE。
-    * recordsetIds  待设置Record Set ID列表。 最多支持50个。
+    * status  待设置记录集状态，支持DISABLE或ENABLE。
+    * recordsetIds  待设置记录集ID列表。 最多支持50个。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchSetRecordSetsStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  待设置Record Set状态，当前仅支持DISABLE或ENABLE。
-    * recordsetIds  待设置Record Set ID列表。 最多支持50个。
+    * status  待设置记录集状态，支持DISABLE或ENABLE。
+    * recordsetIds  待设置记录集ID列表。 最多支持50个。
     *
     * @var string[]
     */
@@ -194,7 +194,7 @@ class BatchSetRecordSetsStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  待设置Record Set状态，当前仅支持DISABLE或ENABLE。
+    *  待设置记录集状态，支持DISABLE或ENABLE。
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class BatchSetRecordSetsStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 待设置Record Set状态，当前仅支持DISABLE或ENABLE。
+    * @param string $status 待设置记录集状态，支持DISABLE或ENABLE。
     *
     * @return $this
     */
@@ -218,7 +218,7 @@ class BatchSetRecordSetsStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordsetIds
-    *  待设置Record Set ID列表。 最多支持50个。
+    *  待设置记录集ID列表。 最多支持50个。
     *
     * @return string[]
     */
@@ -230,7 +230,7 @@ class BatchSetRecordSetsStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets recordsetIds
     *
-    * @param string[] $recordsetIds 待设置Record Set ID列表。 最多支持50个。
+    * @param string[] $recordsetIds 待设置记录集ID列表。 最多支持50个。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class UpdatePublicZoneInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * description  域名的描述信息。长度不超过255个字符。
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。  如果为空，表示维持原值。  默认值为空。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。  如果为空，表示维持原值。  默认值为空。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class UpdatePublicZoneInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * description  域名的描述信息。长度不超过255个字符。
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。  如果为空，表示维持原值。  默认值为空。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。  如果为空，表示维持原值。  默认值为空。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class UpdatePublicZoneInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * description  域名的描述信息。长度不超过255个字符。
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。  如果为空，表示维持原值。  默认值为空。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。  如果为空，表示维持原值。  默认值为空。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class UpdatePublicZoneInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * description  域名的描述信息。长度不超过255个字符。
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。  如果为空，表示维持原值。  默认值为空。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。  如果为空，表示维持原值。  默认值为空。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class UpdatePublicZoneInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * description  域名的描述信息。长度不超过255个字符。
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。  如果为空，表示维持原值。  默认值为空。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。  如果为空，表示维持原值。  默认值为空。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     *
     * @var string[]
@@ -220,7 +220,7 @@ class UpdatePublicZoneInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。  如果为空，表示维持原值。  默认值为空。
+    *  管理该域名的管理员邮箱，用于生成该域名的SOA记录。  如果为空，表示维持原值。  默认值为空。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class UpdatePublicZoneInfo implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 管理该zone的管理员邮箱，用于生成该Zone的SOA记录。  如果为空，表示维持原值。  默认值为空。
+    * @param string|null $email 管理该域名的管理员邮箱，用于生成该域名的SOA记录。  如果为空，表示维持原值。  默认值为空。
     *
     * @return $this
     */

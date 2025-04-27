@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdatePublicZoneStatusRequestBody implements ModelInterface, ArrayAccess
+class IpaddressInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class UpdatePublicZoneStatusRequestBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdatePublicZoneStatusRequestBody';
+    protected static $openAPIModelName = 'IpaddressInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * subnetId  子网的ID。
+    * ip  自定义IP地址，需在子网的网段内部。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'status' => 'string'
+            'subnetId' => 'string',
+            'ip' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * subnetId  子网的ID。
+    * ip  自定义IP地址，需在子网的网段内部。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'status' => null
+        'subnetId' => null,
+        'ip' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class UpdatePublicZoneStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * subnetId  子网的ID。
+    * ip  自定义IP地址，需在子网的网段内部。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'status' => 'status'
+            'subnetId' => 'subnet_id',
+            'ip' => 'ip'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * subnetId  子网的ID。
+    * ip  自定义IP地址，需在子网的网段内部。
     *
     * @var string[]
     */
     protected static $setters = [
-            'status' => 'setStatus'
+            'subnetId' => 'setSubnetId',
+            'ip' => 'setIp'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * subnetId  子网的ID。
+    * ip  自定义IP地址，需在子网的网段内部。
     *
     * @var string[]
     */
     protected static $getters = [
-            'status' => 'getStatus'
+            'subnetId' => 'getSubnetId',
+            'ip' => 'getIp'
     ];
 
     /**
@@ -147,7 +157,8 @@ class UpdatePublicZoneStatusRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
+        $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
     }
 
     /**
@@ -158,9 +169,15 @@ class UpdatePublicZoneStatusRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
+        if ($this->container['subnetId'] === null) {
+            $invalidProperties[] = "'subnetId' can't be null";
         }
+            if (!preg_match("/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/", $this->container['subnetId'])) {
+                $invalidProperties[] = "invalid value for 'subnetId', must be conform to the pattern /[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/.";
+            }
+            if (!is_null($this->container['ip']) && !preg_match("/^(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$/", $this->container['ip'])) {
+                $invalidProperties[] = "invalid value for 'ip', must be conform to the pattern /^(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$/.";
+            }
         return $invalidProperties;
     }
 
@@ -176,26 +193,50 @@ class UpdatePublicZoneStatusRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets status
-    *  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * Gets subnetId
+    *  子网的ID。
     *
     * @return string
     */
-    public function getStatus()
+    public function getSubnetId()
     {
-        return $this->container['status'];
+        return $this->container['subnetId'];
     }
 
     /**
-    * Sets status
+    * Sets subnetId
     *
-    * @param string $status Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * @param string $subnetId 子网的ID。
     *
     * @return $this
     */
-    public function setStatus($status)
+    public function setSubnetId($subnetId)
     {
-        $this->container['status'] = $status;
+        $this->container['subnetId'] = $subnetId;
+        return $this;
+    }
+
+    /**
+    * Gets ip
+    *  自定义IP地址，需在子网的网段内部。
+    *
+    * @return string|null
+    */
+    public function getIp()
+    {
+        return $this->container['ip'];
+    }
+
+    /**
+    * Sets ip
+    *
+    * @param string|null $ip 自定义IP地址，需在子网的网段内部。
+    *
+    * @return $this
+    */
+    public function setIp($ip)
+    {
+        $this->container['ip'] = $ip;
         return $this;
     }
 

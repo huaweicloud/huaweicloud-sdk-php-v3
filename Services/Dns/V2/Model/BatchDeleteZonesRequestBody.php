@@ -20,8 +20,8 @@ class BatchDeleteZonesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneType  待删除zone类型，当前仅支持 public 或 private。
-    * zoneIds  待删除Zone ID列表。 最多支持50个。
+    * zoneType  待删除域名类型，支持public或private。
+    * zoneIds  待删除域名ID列表。 最多支持50个。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchDeleteZonesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneType  待删除zone类型，当前仅支持 public 或 private。
-    * zoneIds  待删除Zone ID列表。 最多支持50个。
+    * zoneType  待删除域名类型，支持public或private。
+    * zoneIds  待删除域名ID列表。 最多支持50个。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchDeleteZonesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneType  待删除zone类型，当前仅支持 public 或 private。
-    * zoneIds  待删除Zone ID列表。 最多支持50个。
+    * zoneType  待删除域名类型，支持public或private。
+    * zoneIds  待删除域名ID列表。 最多支持50个。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchDeleteZonesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneType  待删除zone类型，当前仅支持 public 或 private。
-    * zoneIds  待删除Zone ID列表。 最多支持50个。
+    * zoneType  待删除域名类型，支持public或private。
+    * zoneIds  待删除域名ID列表。 最多支持50个。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchDeleteZonesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneType  待删除zone类型，当前仅支持 public 或 private。
-    * zoneIds  待删除Zone ID列表。 最多支持50个。
+    * zoneType  待删除域名类型，支持public或private。
+    * zoneIds  待删除域名ID列表。 最多支持50个。
     *
     * @var string[]
     */
@@ -194,7 +194,7 @@ class BatchDeleteZonesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneType
-    *  待删除zone类型，当前仅支持 public 或 private。
+    *  待删除域名类型，支持public或private。
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class BatchDeleteZonesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets zoneType
     *
-    * @param string $zoneType 待删除zone类型，当前仅支持 public 或 private。
+    * @param string $zoneType 待删除域名类型，支持public或private。
     *
     * @return $this
     */
@@ -218,7 +218,7 @@ class BatchDeleteZonesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneIds
-    *  待删除Zone ID列表。 最多支持50个。
+    *  待删除域名ID列表。 最多支持50个。
     *
     * @return string[]
     */
@@ -230,7 +230,7 @@ class BatchDeleteZonesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets zoneIds
     *
-    * @param string[] $zoneIds 待删除Zone ID列表。 最多支持50个。
+    * @param string[] $zoneIds 待删除域名ID列表。 最多支持50个。
     *
     * @return $this
     */

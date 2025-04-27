@@ -20,19 +20,19 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  Record Set的ID。
-    * name  Record Set的名称。
-    * description  Record Set的描述信息。
-    * zoneId  托管该记录的zone_id。
-    * zoneName  托管该记录的zone_name。
+    * id  记录集的ID。
+    * name  记录集的名称。
+    * description  记录集的描述信息。
+    * zoneId  托管该记录的域名ID。
+    * zoneName  托管该记录的域名。
     * type  记录类型。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * status  资源状态。
-    * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
-    * projectId  该Record Set所属的项目ID。
+    * default  标识是否由系统默认生成，系统默认生成的记录集不能删除。
+    * projectId  该记录集所属的项目ID。
     * links  links
     * line  解析线路ID。
     * weight  解析记录的权重。
@@ -66,19 +66,19 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  Record Set的ID。
-    * name  Record Set的名称。
-    * description  Record Set的描述信息。
-    * zoneId  托管该记录的zone_id。
-    * zoneName  托管该记录的zone_name。
+    * id  记录集的ID。
+    * name  记录集的名称。
+    * description  记录集的描述信息。
+    * zoneId  托管该记录的域名ID。
+    * zoneName  托管该记录的域名。
     * type  记录类型。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * status  资源状态。
-    * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
-    * projectId  该Record Set所属的项目ID。
+    * default  标识是否由系统默认生成，系统默认生成的记录集不能删除。
+    * projectId  该记录集所属的项目ID。
     * links  links
     * line  解析线路ID。
     * weight  解析记录的权重。
@@ -133,19 +133,19 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  Record Set的ID。
-    * name  Record Set的名称。
-    * description  Record Set的描述信息。
-    * zoneId  托管该记录的zone_id。
-    * zoneName  托管该记录的zone_name。
+    * id  记录集的ID。
+    * name  记录集的名称。
+    * description  记录集的描述信息。
+    * zoneId  托管该记录的域名ID。
+    * zoneName  托管该记录的域名。
     * type  记录类型。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * status  资源状态。
-    * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
-    * projectId  该Record Set所属的项目ID。
+    * default  标识是否由系统默认生成，系统默认生成的记录集不能删除。
+    * projectId  该记录集所属的项目ID。
     * links  links
     * line  解析线路ID。
     * weight  解析记录的权重。
@@ -179,19 +179,19 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  Record Set的ID。
-    * name  Record Set的名称。
-    * description  Record Set的描述信息。
-    * zoneId  托管该记录的zone_id。
-    * zoneName  托管该记录的zone_name。
+    * id  记录集的ID。
+    * name  记录集的名称。
+    * description  记录集的描述信息。
+    * zoneId  托管该记录的域名ID。
+    * zoneName  托管该记录的域名。
     * type  记录类型。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * status  资源状态。
-    * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
-    * projectId  该Record Set所属的项目ID。
+    * default  标识是否由系统默认生成，系统默认生成的记录集不能删除。
+    * projectId  该记录集所属的项目ID。
     * links  links
     * line  解析线路ID。
     * weight  解析记录的权重。
@@ -225,19 +225,19 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  Record Set的ID。
-    * name  Record Set的名称。
-    * description  Record Set的描述信息。
-    * zoneId  托管该记录的zone_id。
-    * zoneName  托管该记录的zone_name。
+    * id  记录集的ID。
+    * name  记录集的名称。
+    * description  记录集的描述信息。
+    * zoneId  托管该记录的域名ID。
+    * zoneName  托管该记录的域名。
     * type  记录类型。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * status  资源状态。
-    * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
-    * projectId  该Record Set所属的项目ID。
+    * default  标识是否由系统默认生成，系统默认生成的记录集不能删除。
+    * projectId  该记录集所属的项目ID。
     * links  links
     * line  解析线路ID。
     * weight  解析记录的权重。
@@ -372,7 +372,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  Record Set的ID。
+    *  记录集的ID。
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id Record Set的ID。
+    * @param string|null $id 记录集的ID。
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  Record Set的名称。
+    *  记录集的名称。
     *
     * @return string|null
     */
@@ -408,7 +408,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name Record Set的名称。
+    * @param string|null $name 记录集的名称。
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  Record Set的描述信息。
+    *  记录集的描述信息。
     *
     * @return string|null
     */
@@ -432,7 +432,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description Record Set的描述信息。
+    * @param string|null $description 记录集的描述信息。
     *
     * @return $this
     */
@@ -444,7 +444,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneId
-    *  托管该记录的zone_id。
+    *  托管该记录的域名ID。
     *
     * @return string|null
     */
@@ -456,7 +456,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
     /**
     * Sets zoneId
     *
-    * @param string|null $zoneId 托管该记录的zone_id。
+    * @param string|null $zoneId 托管该记录的域名ID。
     *
     * @return $this
     */
@@ -468,7 +468,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneName
-    *  托管该记录的zone_name。
+    *  托管该记录的域名。
     *
     * @return string|null
     */
@@ -480,7 +480,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
     /**
     * Sets zoneName
     *
-    * @param string|null $zoneName 托管该记录的zone_name。
+    * @param string|null $zoneName 托管该记录的域名。
     *
     * @return $this
     */
@@ -564,7 +564,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间。
+    *  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
     * @return string|null
     */
@@ -576,7 +576,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间。
+    * @param string|null $createdAt 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
     * @return $this
     */
@@ -588,7 +588,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  更新时间。
+    *  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
     * @return string|null
     */
@@ -600,7 +600,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 更新时间。
+    * @param string|null $updatedAt 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
     * @return $this
     */
@@ -636,7 +636,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets default
-    *  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
+    *  标识是否由系统默认生成，系统默认生成的记录集不能删除。
     *
     * @return bool|null
     */
@@ -648,7 +648,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
     /**
     * Sets default
     *
-    * @param bool|null $default 标识是否由系统默认生成，系统默认生成的Record Set不能删除。
+    * @param bool|null $default 标识是否由系统默认生成，系统默认生成的记录集不能删除。
     *
     * @return $this
     */
@@ -660,7 +660,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  该Record Set所属的项目ID。
+    *  该记录集所属的项目ID。
     *
     * @return string|null
     */
@@ -672,7 +672,7 @@ class QueryRecordSetWithLineResp implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 该Record Set所属的项目ID。
+    * @param string|null $projectId 该记录集所属的项目ID。
     *
     * @return $this
     */

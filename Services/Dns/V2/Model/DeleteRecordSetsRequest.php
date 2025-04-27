@@ -20,8 +20,8 @@ class DeleteRecordSetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneId  Record Set所属的zone_id。
-    * recordsetId  Record Set的id信息。
+    * zoneId  域名ID。
+    * recordsetId  记录集ID。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DeleteRecordSetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneId  Record Set所属的zone_id。
-    * recordsetId  Record Set的id信息。
+    * zoneId  域名ID。
+    * recordsetId  记录集ID。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DeleteRecordSetsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneId  Record Set所属的zone_id。
-    * recordsetId  Record Set的id信息。
+    * zoneId  域名ID。
+    * recordsetId  记录集ID。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DeleteRecordSetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneId  Record Set所属的zone_id。
-    * recordsetId  Record Set的id信息。
+    * zoneId  域名ID。
+    * recordsetId  记录集ID。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DeleteRecordSetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneId  Record Set所属的zone_id。
-    * recordsetId  Record Set的id信息。
+    * zoneId  域名ID。
+    * recordsetId  记录集ID。
     *
     * @var string[]
     */
@@ -172,9 +172,21 @@ class DeleteRecordSetsRequest implements ModelInterface, ArrayAccess
         if ($this->container['zoneId'] === null) {
             $invalidProperties[] = "'zoneId' can't be null";
         }
+            if ((mb_strlen($this->container['zoneId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'zoneId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['zoneId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'zoneId', the character length must be bigger than or equal to 32.";
+            }
         if ($this->container['recordsetId'] === null) {
             $invalidProperties[] = "'recordsetId' can't be null";
         }
+            if ((mb_strlen($this->container['recordsetId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'recordsetId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['recordsetId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'recordsetId', the character length must be bigger than or equal to 32.";
+            }
         return $invalidProperties;
     }
 
@@ -191,7 +203,7 @@ class DeleteRecordSetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneId
-    *  Record Set所属的zone_id。
+    *  域名ID。
     *
     * @return string
     */
@@ -203,7 +215,7 @@ class DeleteRecordSetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets zoneId
     *
-    * @param string $zoneId Record Set所属的zone_id。
+    * @param string $zoneId 域名ID。
     *
     * @return $this
     */
@@ -215,7 +227,7 @@ class DeleteRecordSetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordsetId
-    *  Record Set的id信息。
+    *  记录集ID。
     *
     * @return string
     */
@@ -227,7 +239,7 @@ class DeleteRecordSetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets recordsetId
     *
-    * @param string $recordsetId Record Set的id信息。
+    * @param string $recordsetId 记录集ID。
     *
     * @return $this
     */

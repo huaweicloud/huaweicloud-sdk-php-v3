@@ -23,7 +23,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * links  links
     * metadata  metadata
-    * floatingips  弹性公网IP的PTR记录ID列表信息。
+    * floatingips  弹性公网IP的反向解析记录ID列表信息。
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * links  links
     * metadata  metadata
-    * floatingips  弹性公网IP的PTR记录ID列表信息。
+    * floatingips  弹性公网IP的反向解析记录ID列表信息。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * links  links
     * metadata  metadata
-    * floatingips  弹性公网IP的PTR记录ID列表信息。
+    * floatingips  弹性公网IP的反向解析记录ID列表信息。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * links  links
     * metadata  metadata
-    * floatingips  弹性公网IP的PTR记录ID列表信息。
+    * floatingips  弹性公网IP的反向解析记录ID列表信息。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * links  links
     * metadata  metadata
-    * floatingips  弹性公网IP的PTR记录ID列表信息。
+    * floatingips  弹性公网IP的反向解析记录ID列表信息。
     *
     * @var string[]
     */
@@ -245,7 +245,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingips
-    *  弹性公网IP的PTR记录ID列表信息。
+    *  弹性公网IP的反向解析记录ID列表信息。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\ListPtrRecordsFloatingResp[]|null
     */
@@ -257,7 +257,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets floatingips
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\ListPtrRecordsFloatingResp[]|null $floatingips 弹性公网IP的PTR记录ID列表信息。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\ListPtrRecordsFloatingResp[]|null $floatingips 弹性公网IP的反向解析记录ID列表信息。
     *
     * @return $this
     */

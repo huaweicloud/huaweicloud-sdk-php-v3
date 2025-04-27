@@ -20,7 +20,7 @@ class AssociateRouterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneId  关联VPC的Zone ID。
+    * zoneId  域名ID。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AssociateRouterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneId  关联VPC的Zone ID。
+    * zoneId  域名ID。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AssociateRouterRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneId  关联VPC的Zone ID。
+    * zoneId  域名ID。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AssociateRouterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneId  关联VPC的Zone ID。
+    * zoneId  域名ID。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AssociateRouterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneId  关联VPC的Zone ID。
+    * zoneId  域名ID。
     * body  body
     *
     * @var string[]
@@ -172,6 +172,12 @@ class AssociateRouterRequest implements ModelInterface, ArrayAccess
         if ($this->container['zoneId'] === null) {
             $invalidProperties[] = "'zoneId' can't be null";
         }
+            if ((mb_strlen($this->container['zoneId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'zoneId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['zoneId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'zoneId', the character length must be bigger than or equal to 32.";
+            }
         return $invalidProperties;
     }
 
@@ -188,7 +194,7 @@ class AssociateRouterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneId
-    *  关联VPC的Zone ID。
+    *  域名ID。
     *
     * @return string
     */
@@ -200,7 +206,7 @@ class AssociateRouterRequest implements ModelInterface, ArrayAccess
     /**
     * Sets zoneId
     *
-    * @param string $zoneId 关联VPC的Zone ID。
+    * @param string $zoneId 域名ID。
     *
     * @return $this
     */

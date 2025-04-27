@@ -20,7 +20,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * linegroupId  线路分组ID
+    * linegroupId  线路分组ID。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * linegroupId  线路分组ID
+    * linegroupId  线路分组ID。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * linegroupId  线路分组ID
+    * linegroupId  线路分组ID。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * linegroupId  线路分组ID
+    * linegroupId  线路分组ID。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * linegroupId  线路分组ID
+    * linegroupId  线路分组ID。
     * body  body
     *
     * @var string[]
@@ -191,7 +191,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets linegroupId
-    *  线路分组ID
+    *  线路分组ID。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets linegroupId
     *
-    * @param string $linegroupId 线路分组ID
+    * @param string $linegroupId 线路分组ID。
     *
     * @return $this
     */

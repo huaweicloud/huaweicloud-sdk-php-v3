@@ -20,7 +20,7 @@ class DeletePublicZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneId  待删除zone的ID
+    * zoneId  域名ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeletePublicZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneId  待删除zone的ID
+    * zoneId  域名ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeletePublicZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneId  待删除zone的ID
+    * zoneId  域名ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeletePublicZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneId  待删除zone的ID
+    * zoneId  域名ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeletePublicZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneId  待删除zone的ID
+    * zoneId  域名ID。
     *
     * @var string[]
     */
@@ -161,8 +161,8 @@ class DeletePublicZoneRequest implements ModelInterface, ArrayAccess
         if ($this->container['zoneId'] === null) {
             $invalidProperties[] = "'zoneId' can't be null";
         }
-            if ((mb_strlen($this->container['zoneId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'zoneId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['zoneId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'zoneId', the character length must be smaller than or equal to 32.";
             }
             if ((mb_strlen($this->container['zoneId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'zoneId', the character length must be bigger than or equal to 32.";
@@ -183,7 +183,7 @@ class DeletePublicZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneId
-    *  待删除zone的ID
+    *  域名ID。
     *
     * @return string
     */
@@ -195,7 +195,7 @@ class DeletePublicZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Sets zoneId
     *
-    * @param string $zoneId 待删除zone的ID
+    * @param string $zoneId 域名ID。
     *
     * @return $this
     */

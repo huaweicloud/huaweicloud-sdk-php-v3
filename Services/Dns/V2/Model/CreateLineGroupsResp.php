@@ -24,7 +24,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
     * lines  线路分组包含的线路列表。 解析线路ID。
     * status  资源状态。 取值范围：PENDING_CREATE，ACTIVE，PENDING_DELETE，PENDING_UPDATE，ERROR，FREEZE，DISABLE。
     * description  线路分组的描述信息
-    * lineId  线路分组的id。
+    * lineId  线路分组的ID。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
@@ -46,7 +46,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
     * lines  线路分组包含的线路列表。 解析线路ID。
     * status  资源状态。 取值范围：PENDING_CREATE，ACTIVE，PENDING_DELETE，PENDING_UPDATE，ERROR，FREEZE，DISABLE。
     * description  线路分组的描述信息
-    * lineId  线路分组的id。
+    * lineId  线路分组的ID。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
@@ -89,7 +89,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
     * lines  线路分组包含的线路列表。 解析线路ID。
     * status  资源状态。 取值范围：PENDING_CREATE，ACTIVE，PENDING_DELETE，PENDING_UPDATE，ERROR，FREEZE，DISABLE。
     * description  线路分组的描述信息
-    * lineId  线路分组的id。
+    * lineId  线路分组的ID。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
@@ -111,7 +111,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
     * lines  线路分组包含的线路列表。 解析线路ID。
     * status  资源状态。 取值范围：PENDING_CREATE，ACTIVE，PENDING_DELETE，PENDING_UPDATE，ERROR，FREEZE，DISABLE。
     * description  线路分组的描述信息
-    * lineId  线路分组的id。
+    * lineId  线路分组的ID。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
@@ -133,7 +133,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
     * lines  线路分组包含的线路列表。 解析线路ID。
     * status  资源状态。 取值范围：PENDING_CREATE，ACTIVE，PENDING_DELETE，PENDING_UPDATE，ERROR，FREEZE，DISABLE。
     * description  线路分组的描述信息
-    * lineId  线路分组的id。
+    * lineId  线路分组的ID。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
@@ -336,7 +336,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets lineId
-    *  线路分组的id。
+    *  线路分组的ID。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
     /**
     * Sets lineId
     *
-    * @param string|null $lineId 线路分组的id。
+    * @param string|null $lineId 线路分组的ID。
     *
     * @return $this
     */

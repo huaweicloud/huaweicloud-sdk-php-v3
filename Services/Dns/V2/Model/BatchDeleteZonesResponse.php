@@ -21,7 +21,7 @@ class BatchDeleteZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zones  删除zone的列表响应。
+    * zones  删除域名的列表响应。
     * metadata  metadata
     *
     * @var string[]
@@ -33,7 +33,7 @@ class BatchDeleteZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zones  删除zone的列表响应。
+    * zones  删除域名的列表响应。
     * metadata  metadata
     *
     * @var string[]
@@ -66,7 +66,7 @@ class BatchDeleteZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zones  删除zone的列表响应。
+    * zones  删除域名的列表响应。
     * metadata  metadata
     *
     * @var string[]
@@ -78,7 +78,7 @@ class BatchDeleteZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zones  删除zone的列表响应。
+    * zones  删除域名的列表响应。
     * metadata  metadata
     *
     * @var string[]
@@ -90,7 +90,7 @@ class BatchDeleteZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zones  删除zone的列表响应。
+    * zones  删除域名的列表响应。
     * metadata  metadata
     *
     * @var string[]
@@ -186,7 +186,7 @@ class BatchDeleteZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets zones
-    *  删除zone的列表响应。
+    *  删除域名的列表响应。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\ZoneData[]|null
     */
@@ -198,7 +198,7 @@ class BatchDeleteZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets zones
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\ZoneData[]|null $zones 删除zone的列表响应。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\ZoneData[]|null $zones 删除域名的列表响应。
     *
     * @return $this
     */

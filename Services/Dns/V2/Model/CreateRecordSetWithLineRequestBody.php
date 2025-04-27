@@ -22,12 +22,12 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
-    * type  Record Set的类型。
-    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
+    * type  记录集的类型。
+    * status  解析记录的状态。  取值范围： ENABLE：启用 DISABLE：暂停  默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
-    * line  解析线路ID
-    * tags  资源标签
+    * line  解析线路ID。
+    * tags  资源标签。
     * weight  解析记录的权重。
     * aliasTarget  aliasTarget
     *
@@ -50,12 +50,12 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
-    * type  Record Set的类型。
-    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
+    * type  记录集的类型。
+    * status  解析记录的状态。  取值范围： ENABLE：启用 DISABLE：暂停  默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
-    * line  解析线路ID
-    * tags  资源标签
+    * line  解析线路ID。
+    * tags  资源标签。
     * weight  解析记录的权重。
     * aliasTarget  aliasTarget
     *
@@ -99,12 +99,12 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
-    * type  Record Set的类型。
-    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
+    * type  记录集的类型。
+    * status  解析记录的状态。  取值范围： ENABLE：启用 DISABLE：暂停  默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
-    * line  解析线路ID
-    * tags  资源标签
+    * line  解析线路ID。
+    * tags  资源标签。
     * weight  解析记录的权重。
     * aliasTarget  aliasTarget
     *
@@ -127,12 +127,12 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
-    * type  Record Set的类型。
-    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
+    * type  记录集的类型。
+    * status  解析记录的状态。  取值范围： ENABLE：启用 DISABLE：暂停  默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
-    * line  解析线路ID
-    * tags  资源标签
+    * line  解析线路ID。
+    * tags  资源标签。
     * weight  解析记录的权重。
     * aliasTarget  aliasTarget
     *
@@ -155,12 +155,12 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
-    * type  Record Set的类型。
-    * status  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
+    * type  记录集的类型。
+    * status  解析记录的状态。  取值范围： ENABLE：启用 DISABLE：暂停  默认值为ENABLE。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
-    * line  解析线路ID
-    * tags  资源标签
+    * line  解析线路ID。
+    * tags  资源标签。
     * weight  解析记录的权重。
     * aliasTarget  aliasTarget
     *
@@ -327,7 +327,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  Record Set的类型。
+    *  记录集的类型。
     *
     * @return string
     */
@@ -339,7 +339,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type Record Set的类型。
+    * @param string $type 记录集的类型。
     *
     * @return $this
     */
@@ -351,7 +351,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
+    *  解析记录的状态。  取值范围： ENABLE：启用 DISABLE：暂停  默认值为ENABLE。
     *
     * @return string|null
     */
@@ -363,7 +363,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
+    * @param string|null $status 解析记录的状态。  取值范围： ENABLE：启用 DISABLE：暂停  默认值为ENABLE。
     *
     * @return $this
     */
@@ -423,7 +423,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets line
-    *  解析线路ID
+    *  解析线路ID。
     *
     * @return string|null
     */
@@ -435,7 +435,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets line
     *
-    * @param string|null $line 解析线路ID
+    * @param string|null $line 解析线路ID。
     *
     * @return $this
     */
@@ -447,7 +447,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  资源标签
+    *  资源标签。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null
     */
@@ -459,7 +459,7 @@ class CreateRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null $tags 资源标签
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null $tags 资源标签。
     *
     * @return $this
     */

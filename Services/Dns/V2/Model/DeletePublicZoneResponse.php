@@ -21,20 +21,20 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  Zone的ID
-    * name  zone名称
-    * description  对zone的描述信息
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
-    * zoneType  zone类型，公网（public）
-    * ttl  该zone下SOA记录中的ttl值
-    * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步
-    * status  资源状态
-    * recordNum  该zone下的recordset个数
-    * poolId  托管该zone的pool，由系统分配
-    * projectId  zone所属的项目ID
-    * createdAt  创建时间
-    * updatedAt  更新时间
-    * masters  主从模式中，从DNS服务器获取DNS信息
+    * id  域名ID。
+    * name  域名。
+    * description  对域名的描述信息。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
+    * zoneType  域名类型，公网（public）。
+    * ttl  该域名下SOA记录中的ttl值。
+    * serial  该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
+    * status  资源状态。
+    * recordNum  该域名下的记录集个数。
+    * poolId  托管该域名的pool，由系统分配。
+    * projectId  域名所属的项目ID。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * links  links
     *
     * @var string[]
@@ -59,20 +59,20 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  Zone的ID
-    * name  zone名称
-    * description  对zone的描述信息
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
-    * zoneType  zone类型，公网（public）
-    * ttl  该zone下SOA记录中的ttl值
-    * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步
-    * status  资源状态
-    * recordNum  该zone下的recordset个数
-    * poolId  托管该zone的pool，由系统分配
-    * projectId  zone所属的项目ID
-    * createdAt  创建时间
-    * updatedAt  更新时间
-    * masters  主从模式中，从DNS服务器获取DNS信息
+    * id  域名ID。
+    * name  域名。
+    * description  对域名的描述信息。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
+    * zoneType  域名类型，公网（public）。
+    * ttl  该域名下SOA记录中的ttl值。
+    * serial  该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
+    * status  资源状态。
+    * recordNum  该域名下的记录集个数。
+    * poolId  托管该域名的pool，由系统分配。
+    * projectId  域名所属的项目ID。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * links  links
     *
     * @var string[]
@@ -118,20 +118,20 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  Zone的ID
-    * name  zone名称
-    * description  对zone的描述信息
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
-    * zoneType  zone类型，公网（public）
-    * ttl  该zone下SOA记录中的ttl值
-    * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步
-    * status  资源状态
-    * recordNum  该zone下的recordset个数
-    * poolId  托管该zone的pool，由系统分配
-    * projectId  zone所属的项目ID
-    * createdAt  创建时间
-    * updatedAt  更新时间
-    * masters  主从模式中，从DNS服务器获取DNS信息
+    * id  域名ID。
+    * name  域名。
+    * description  对域名的描述信息。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
+    * zoneType  域名类型，公网（public）。
+    * ttl  该域名下SOA记录中的ttl值。
+    * serial  该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
+    * status  资源状态。
+    * recordNum  该域名下的记录集个数。
+    * poolId  托管该域名的pool，由系统分配。
+    * projectId  域名所属的项目ID。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * links  links
     *
     * @var string[]
@@ -156,20 +156,20 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  Zone的ID
-    * name  zone名称
-    * description  对zone的描述信息
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
-    * zoneType  zone类型，公网（public）
-    * ttl  该zone下SOA记录中的ttl值
-    * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步
-    * status  资源状态
-    * recordNum  该zone下的recordset个数
-    * poolId  托管该zone的pool，由系统分配
-    * projectId  zone所属的项目ID
-    * createdAt  创建时间
-    * updatedAt  更新时间
-    * masters  主从模式中，从DNS服务器获取DNS信息
+    * id  域名ID。
+    * name  域名。
+    * description  对域名的描述信息。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
+    * zoneType  域名类型，公网（public）。
+    * ttl  该域名下SOA记录中的ttl值。
+    * serial  该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
+    * status  资源状态。
+    * recordNum  该域名下的记录集个数。
+    * poolId  托管该域名的pool，由系统分配。
+    * projectId  域名所属的项目ID。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * links  links
     *
     * @var string[]
@@ -194,20 +194,20 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  Zone的ID
-    * name  zone名称
-    * description  对zone的描述信息
-    * email  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
-    * zoneType  zone类型，公网（public）
-    * ttl  该zone下SOA记录中的ttl值
-    * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步
-    * status  资源状态
-    * recordNum  该zone下的recordset个数
-    * poolId  托管该zone的pool，由系统分配
-    * projectId  zone所属的项目ID
-    * createdAt  创建时间
-    * updatedAt  更新时间
-    * masters  主从模式中，从DNS服务器获取DNS信息
+    * id  域名ID。
+    * name  域名。
+    * description  对域名的描述信息。
+    * email  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
+    * zoneType  域名类型，公网（public）。
+    * ttl  该域名下SOA记录中的ttl值。
+    * serial  该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
+    * status  资源状态。
+    * recordNum  该域名下的记录集个数。
+    * poolId  托管该域名的pool，由系统分配。
+    * projectId  域名所属的项目ID。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * links  links
     *
     * @var string[]
@@ -329,7 +329,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  Zone的ID
+    *  域名ID。
     *
     * @return string|null
     */
@@ -341,7 +341,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id Zone的ID
+    * @param string|null $id 域名ID。
     *
     * @return $this
     */
@@ -353,7 +353,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  zone名称
+    *  域名。
     *
     * @return string|null
     */
@@ -365,7 +365,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name zone名称
+    * @param string|null $name 域名。
     *
     * @return $this
     */
@@ -377,7 +377,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  对zone的描述信息
+    *  对域名的描述信息。
     *
     * @return string|null
     */
@@ -389,7 +389,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 对zone的描述信息
+    * @param string|null $description 对域名的描述信息。
     *
     * @return $this
     */
@@ -401,7 +401,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
+    *  管理该域名的管理员邮箱，用于生成该域名的SOA记录。
     *
     * @return string|null
     */
@@ -413,7 +413,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
+    * @param string|null $email 管理该域名的管理员邮箱，用于生成该域名的SOA记录。
     *
     * @return $this
     */
@@ -425,7 +425,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneType
-    *  zone类型，公网（public）
+    *  域名类型，公网（public）。
     *
     * @return string|null
     */
@@ -437,7 +437,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets zoneType
     *
-    * @param string|null $zoneType zone类型，公网（public）
+    * @param string|null $zoneType 域名类型，公网（public）。
     *
     * @return $this
     */
@@ -449,7 +449,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttl
-    *  该zone下SOA记录中的ttl值
+    *  该域名下SOA记录中的ttl值。
     *
     * @return int|null
     */
@@ -461,7 +461,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ttl
     *
-    * @param int|null $ttl 该zone下SOA记录中的ttl值
+    * @param int|null $ttl 该域名下SOA记录中的ttl值。
     *
     * @return $this
     */
@@ -473,7 +473,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serial
-    *  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步
+    *  该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
     *
     * @return int|null
     */
@@ -485,7 +485,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serial
     *
-    * @param int|null $serial 该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步
+    * @param int|null $serial 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。
     *
     * @return $this
     */
@@ -497,7 +497,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态
+    *  资源状态。
     *
     * @return string|null
     */
@@ -509,7 +509,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态
+    * @param string|null $status 资源状态。
     *
     * @return $this
     */
@@ -521,7 +521,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordNum
-    *  该zone下的recordset个数
+    *  该域名下的记录集个数。
     *
     * @return int|null
     */
@@ -533,7 +533,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets recordNum
     *
-    * @param int|null $recordNum 该zone下的recordset个数
+    * @param int|null $recordNum 该域名下的记录集个数。
     *
     * @return $this
     */
@@ -545,7 +545,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets poolId
-    *  托管该zone的pool，由系统分配
+    *  托管该域名的pool，由系统分配。
     *
     * @return string|null
     */
@@ -557,7 +557,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets poolId
     *
-    * @param string|null $poolId 托管该zone的pool，由系统分配
+    * @param string|null $poolId 托管该域名的pool，由系统分配。
     *
     * @return $this
     */
@@ -569,7 +569,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  zone所属的项目ID
+    *  域名所属的项目ID。
     *
     * @return string|null
     */
@@ -581,7 +581,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId zone所属的项目ID
+    * @param string|null $projectId 域名所属的项目ID。
     *
     * @return $this
     */
@@ -593,7 +593,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间
+    *  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
     * @return string|null
     */
@@ -605,7 +605,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间
+    * @param string|null $createdAt 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
     * @return $this
     */
@@ -617,7 +617,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  更新时间
+    *  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
     * @return string|null
     */
@@ -629,7 +629,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 更新时间
+    * @param string|null $updatedAt 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
     * @return $this
     */
@@ -641,7 +641,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets masters
-    *  主从模式中，从DNS服务器获取DNS信息
+    *  主从模式中，从DNS服务器获取DNS信息。
     *
     * @return string[]|null
     */
@@ -653,7 +653,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets masters
     *
-    * @param string[]|null $masters 主从模式中，从DNS服务器获取DNS信息
+    * @param string[]|null $masters 主从模式中，从DNS服务器获取DNS信息。
     *
     * @return $this
     */

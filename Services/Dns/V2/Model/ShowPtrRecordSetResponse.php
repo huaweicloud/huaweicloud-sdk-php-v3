@@ -21,10 +21,10 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  PTR记录的ID，格式形如{region}:{floatingip_id}。
-    * ptrdname  PTR记录对应的域名。
-    * description  对PTR记录的描述。
-    * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * id  反向解析记录的ID，格式形如{region}:{floatingip_id}。
+    * ptrdname  反向解析记录对应的域名。
+    * description  对反向解析记录的描述。
+    * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
@@ -47,10 +47,10 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  PTR记录的ID，格式形如{region}:{floatingip_id}。
-    * ptrdname  PTR记录对应的域名。
-    * description  对PTR记录的描述。
-    * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * id  反向解析记录的ID，格式形如{region}:{floatingip_id}。
+    * ptrdname  反向解析记录对应的域名。
+    * description  对反向解析记录的描述。
+    * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
@@ -94,10 +94,10 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  PTR记录的ID，格式形如{region}:{floatingip_id}。
-    * ptrdname  PTR记录对应的域名。
-    * description  对PTR记录的描述。
-    * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * id  反向解析记录的ID，格式形如{region}:{floatingip_id}。
+    * ptrdname  反向解析记录对应的域名。
+    * description  对反向解析记录的描述。
+    * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
@@ -120,10 +120,10 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  PTR记录的ID，格式形如{region}:{floatingip_id}。
-    * ptrdname  PTR记录对应的域名。
-    * description  对PTR记录的描述。
-    * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * id  反向解析记录的ID，格式形如{region}:{floatingip_id}。
+    * ptrdname  反向解析记录对应的域名。
+    * description  对反向解析记录的描述。
+    * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
@@ -146,10 +146,10 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  PTR记录的ID，格式形如{region}:{floatingip_id}。
-    * ptrdname  PTR记录对应的域名。
-    * description  对PTR记录的描述。
-    * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * id  反向解析记录的ID，格式形如{region}:{floatingip_id}。
+    * ptrdname  反向解析记录对应的域名。
+    * description  对反向解析记录的描述。
+    * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
@@ -263,7 +263,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  PTR记录的ID，格式形如{region}:{floatingip_id}。
+    *  反向解析记录的ID，格式形如{region}:{floatingip_id}。
     *
     * @return string|null
     */
@@ -275,7 +275,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id PTR记录的ID，格式形如{region}:{floatingip_id}。
+    * @param string|null $id 反向解析记录的ID，格式形如{region}:{floatingip_id}。
     *
     * @return $this
     */
@@ -287,7 +287,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ptrdname
-    *  PTR记录对应的域名。
+    *  反向解析记录对应的域名。
     *
     * @return string|null
     */
@@ -299,7 +299,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ptrdname
     *
-    * @param string|null $ptrdname PTR记录对应的域名。
+    * @param string|null $ptrdname 反向解析记录对应的域名。
     *
     * @return $this
     */
@@ -311,7 +311,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  对PTR记录的描述。
+    *  对反向解析记录的描述。
     *
     * @return string|null
     */
@@ -323,7 +323,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 对PTR记录的描述。
+    * @param string|null $description 对反向解析记录的描述。
     *
     * @return $this
     */
@@ -335,7 +335,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttl
-    *  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    *  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     *
     * @return int|null
     */
@@ -347,7 +347,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ttl
     *
-    * @param int|null $ttl PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * @param int|null $ttl 反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     *
     * @return $this
     */

@@ -22,6 +22,28 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * actionProgress  actionProgress
     * actions  集群操作记录
+    * localHdfs  是否开启hdfs。 - false：不开启 - true：开启
+    * isShow222VersionFeature  是否开222版本特性。 - false：不开启 - true：开启
+    * actionsCount  集群操作记录
+    * supportAuth  是否支持开启认证。 - false：不支持 - true：支持
+    * epsId  eps_id。
+    * clusterType  集群类型。
+    * orderId  包周期订单号。
+    * orderStatus  包周期订单状态。
+    * isLocalHdfs  是否开启hdfs。 - false：不开启 - true：开启
+    * ckDeployMode  ClickHouse部署模式。
+    * flavorTypeEn  节点磁盘类型。
+    * enableHotColdFeatureCluster  集群是否支持开启冷热分离。
+    * enableHotColdFeature  集群是否开启冷热分离。
+    * dataFlavor  数据节点规格。
+    * controlFlavor  数据同步节点规格。
+    * dataNodeNum  数据节点个数。
+    * controlNodeNum  数据同步节点个数。
+    * dataNodeTotalStorageSize  数据节点磁盘容量。
+    * controlNodeTotalStorageSize  数据同步节点磁盘容量。
+    * coldStorageUsedSize  冷存储使用量。
+    * dataNodeVolumeType  数据节点磁盘类型。
+    * controlNodeVolumeType  数据同步节点磁盘类型。
     * authMode  是否开启IAM权限认证。 - false：不开启 - true：开启
     * azCode  集群所在的可用区（AZ)。
     * clusterId  集群ID，集群唯一标识。
@@ -41,6 +63,28 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'actionProgress' => '\HuaweiCloud\SDK\CloudTable\V2\Model\ActionProgress',
             'actions' => 'string[]',
+            'localHdfs' => 'bool',
+            'isShow222VersionFeature' => 'string',
+            'actionsCount' => 'string[]',
+            'supportAuth' => 'bool',
+            'epsId' => 'string',
+            'clusterType' => 'string',
+            'orderId' => 'string',
+            'orderStatus' => 'string',
+            'isLocalHdfs' => 'bool',
+            'ckDeployMode' => 'string',
+            'flavorTypeEn' => 'string',
+            'enableHotColdFeatureCluster' => 'string',
+            'enableHotColdFeature' => 'string',
+            'dataFlavor' => 'string',
+            'controlFlavor' => 'string',
+            'dataNodeNum' => 'string',
+            'controlNodeNum' => 'string',
+            'dataNodeTotalStorageSize' => 'string',
+            'controlNodeTotalStorageSize' => 'string',
+            'coldStorageUsedSize' => 'string',
+            'dataNodeVolumeType' => 'string',
+            'controlNodeVolumeType' => 'string',
             'authMode' => 'string',
             'azCode' => 'string',
             'clusterId' => 'string',
@@ -60,6 +104,28 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * actionProgress  actionProgress
     * actions  集群操作记录
+    * localHdfs  是否开启hdfs。 - false：不开启 - true：开启
+    * isShow222VersionFeature  是否开222版本特性。 - false：不开启 - true：开启
+    * actionsCount  集群操作记录
+    * supportAuth  是否支持开启认证。 - false：不支持 - true：支持
+    * epsId  eps_id。
+    * clusterType  集群类型。
+    * orderId  包周期订单号。
+    * orderStatus  包周期订单状态。
+    * isLocalHdfs  是否开启hdfs。 - false：不开启 - true：开启
+    * ckDeployMode  ClickHouse部署模式。
+    * flavorTypeEn  节点磁盘类型。
+    * enableHotColdFeatureCluster  集群是否支持开启冷热分离。
+    * enableHotColdFeature  集群是否开启冷热分离。
+    * dataFlavor  数据节点规格。
+    * controlFlavor  数据同步节点规格。
+    * dataNodeNum  数据节点个数。
+    * controlNodeNum  数据同步节点个数。
+    * dataNodeTotalStorageSize  数据节点磁盘容量。
+    * controlNodeTotalStorageSize  数据同步节点磁盘容量。
+    * coldStorageUsedSize  冷存储使用量。
+    * dataNodeVolumeType  数据节点磁盘类型。
+    * controlNodeVolumeType  数据同步节点磁盘类型。
     * authMode  是否开启IAM权限认证。 - false：不开启 - true：开启
     * azCode  集群所在的可用区（AZ)。
     * clusterId  集群ID，集群唯一标识。
@@ -79,6 +145,28 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'actionProgress' => null,
         'actions' => null,
+        'localHdfs' => null,
+        'isShow222VersionFeature' => null,
+        'actionsCount' => null,
+        'supportAuth' => null,
+        'epsId' => null,
+        'clusterType' => null,
+        'orderId' => null,
+        'orderStatus' => null,
+        'isLocalHdfs' => null,
+        'ckDeployMode' => null,
+        'flavorTypeEn' => null,
+        'enableHotColdFeatureCluster' => null,
+        'enableHotColdFeature' => null,
+        'dataFlavor' => null,
+        'controlFlavor' => null,
+        'dataNodeNum' => null,
+        'controlNodeNum' => null,
+        'dataNodeTotalStorageSize' => null,
+        'controlNodeTotalStorageSize' => null,
+        'coldStorageUsedSize' => null,
+        'dataNodeVolumeType' => null,
+        'controlNodeVolumeType' => null,
         'authMode' => null,
         'azCode' => null,
         'clusterId' => null,
@@ -119,6 +207,28 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     * and the value is the original name
     * actionProgress  actionProgress
     * actions  集群操作记录
+    * localHdfs  是否开启hdfs。 - false：不开启 - true：开启
+    * isShow222VersionFeature  是否开222版本特性。 - false：不开启 - true：开启
+    * actionsCount  集群操作记录
+    * supportAuth  是否支持开启认证。 - false：不支持 - true：支持
+    * epsId  eps_id。
+    * clusterType  集群类型。
+    * orderId  包周期订单号。
+    * orderStatus  包周期订单状态。
+    * isLocalHdfs  是否开启hdfs。 - false：不开启 - true：开启
+    * ckDeployMode  ClickHouse部署模式。
+    * flavorTypeEn  节点磁盘类型。
+    * enableHotColdFeatureCluster  集群是否支持开启冷热分离。
+    * enableHotColdFeature  集群是否开启冷热分离。
+    * dataFlavor  数据节点规格。
+    * controlFlavor  数据同步节点规格。
+    * dataNodeNum  数据节点个数。
+    * controlNodeNum  数据同步节点个数。
+    * dataNodeTotalStorageSize  数据节点磁盘容量。
+    * controlNodeTotalStorageSize  数据同步节点磁盘容量。
+    * coldStorageUsedSize  冷存储使用量。
+    * dataNodeVolumeType  数据节点磁盘类型。
+    * controlNodeVolumeType  数据同步节点磁盘类型。
     * authMode  是否开启IAM权限认证。 - false：不开启 - true：开启
     * azCode  集群所在的可用区（AZ)。
     * clusterId  集群ID，集群唯一标识。
@@ -138,6 +248,28 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'actionProgress' => 'action_progress',
             'actions' => 'actions',
+            'localHdfs' => 'localHdfs',
+            'isShow222VersionFeature' => 'is_show_222_version_feature',
+            'actionsCount' => 'actionsCount',
+            'supportAuth' => 'support_auth',
+            'epsId' => 'eps_id',
+            'clusterType' => 'cluster_type',
+            'orderId' => 'order_id',
+            'orderStatus' => 'order_status',
+            'isLocalHdfs' => 'is_local_hdfs',
+            'ckDeployMode' => 'ck_deploy_mode',
+            'flavorTypeEn' => 'flavor_type_en',
+            'enableHotColdFeatureCluster' => 'enable_hot_cold_feature_cluster',
+            'enableHotColdFeature' => 'enable_hot_cold_feature',
+            'dataFlavor' => 'data_flavor',
+            'controlFlavor' => 'control_flavor',
+            'dataNodeNum' => 'data_node_num',
+            'controlNodeNum' => 'control_node_num',
+            'dataNodeTotalStorageSize' => 'data_node_total_storage_size',
+            'controlNodeTotalStorageSize' => 'control_node_total_storage_size',
+            'coldStorageUsedSize' => 'cold_storage_used_size',
+            'dataNodeVolumeType' => 'data_node_volume_type',
+            'controlNodeVolumeType' => 'control_node_volume_type',
             'authMode' => 'auth_mode',
             'azCode' => 'az_code',
             'clusterId' => 'cluster_id',
@@ -157,6 +289,28 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * actionProgress  actionProgress
     * actions  集群操作记录
+    * localHdfs  是否开启hdfs。 - false：不开启 - true：开启
+    * isShow222VersionFeature  是否开222版本特性。 - false：不开启 - true：开启
+    * actionsCount  集群操作记录
+    * supportAuth  是否支持开启认证。 - false：不支持 - true：支持
+    * epsId  eps_id。
+    * clusterType  集群类型。
+    * orderId  包周期订单号。
+    * orderStatus  包周期订单状态。
+    * isLocalHdfs  是否开启hdfs。 - false：不开启 - true：开启
+    * ckDeployMode  ClickHouse部署模式。
+    * flavorTypeEn  节点磁盘类型。
+    * enableHotColdFeatureCluster  集群是否支持开启冷热分离。
+    * enableHotColdFeature  集群是否开启冷热分离。
+    * dataFlavor  数据节点规格。
+    * controlFlavor  数据同步节点规格。
+    * dataNodeNum  数据节点个数。
+    * controlNodeNum  数据同步节点个数。
+    * dataNodeTotalStorageSize  数据节点磁盘容量。
+    * controlNodeTotalStorageSize  数据同步节点磁盘容量。
+    * coldStorageUsedSize  冷存储使用量。
+    * dataNodeVolumeType  数据节点磁盘类型。
+    * controlNodeVolumeType  数据同步节点磁盘类型。
     * authMode  是否开启IAM权限认证。 - false：不开启 - true：开启
     * azCode  集群所在的可用区（AZ)。
     * clusterId  集群ID，集群唯一标识。
@@ -176,6 +330,28 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     protected static $setters = [
             'actionProgress' => 'setActionProgress',
             'actions' => 'setActions',
+            'localHdfs' => 'setLocalHdfs',
+            'isShow222VersionFeature' => 'setIsShow222VersionFeature',
+            'actionsCount' => 'setActionsCount',
+            'supportAuth' => 'setSupportAuth',
+            'epsId' => 'setEpsId',
+            'clusterType' => 'setClusterType',
+            'orderId' => 'setOrderId',
+            'orderStatus' => 'setOrderStatus',
+            'isLocalHdfs' => 'setIsLocalHdfs',
+            'ckDeployMode' => 'setCkDeployMode',
+            'flavorTypeEn' => 'setFlavorTypeEn',
+            'enableHotColdFeatureCluster' => 'setEnableHotColdFeatureCluster',
+            'enableHotColdFeature' => 'setEnableHotColdFeature',
+            'dataFlavor' => 'setDataFlavor',
+            'controlFlavor' => 'setControlFlavor',
+            'dataNodeNum' => 'setDataNodeNum',
+            'controlNodeNum' => 'setControlNodeNum',
+            'dataNodeTotalStorageSize' => 'setDataNodeTotalStorageSize',
+            'controlNodeTotalStorageSize' => 'setControlNodeTotalStorageSize',
+            'coldStorageUsedSize' => 'setColdStorageUsedSize',
+            'dataNodeVolumeType' => 'setDataNodeVolumeType',
+            'controlNodeVolumeType' => 'setControlNodeVolumeType',
             'authMode' => 'setAuthMode',
             'azCode' => 'setAzCode',
             'clusterId' => 'setClusterId',
@@ -195,6 +371,28 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * actionProgress  actionProgress
     * actions  集群操作记录
+    * localHdfs  是否开启hdfs。 - false：不开启 - true：开启
+    * isShow222VersionFeature  是否开222版本特性。 - false：不开启 - true：开启
+    * actionsCount  集群操作记录
+    * supportAuth  是否支持开启认证。 - false：不支持 - true：支持
+    * epsId  eps_id。
+    * clusterType  集群类型。
+    * orderId  包周期订单号。
+    * orderStatus  包周期订单状态。
+    * isLocalHdfs  是否开启hdfs。 - false：不开启 - true：开启
+    * ckDeployMode  ClickHouse部署模式。
+    * flavorTypeEn  节点磁盘类型。
+    * enableHotColdFeatureCluster  集群是否支持开启冷热分离。
+    * enableHotColdFeature  集群是否开启冷热分离。
+    * dataFlavor  数据节点规格。
+    * controlFlavor  数据同步节点规格。
+    * dataNodeNum  数据节点个数。
+    * controlNodeNum  数据同步节点个数。
+    * dataNodeTotalStorageSize  数据节点磁盘容量。
+    * controlNodeTotalStorageSize  数据同步节点磁盘容量。
+    * coldStorageUsedSize  冷存储使用量。
+    * dataNodeVolumeType  数据节点磁盘类型。
+    * controlNodeVolumeType  数据同步节点磁盘类型。
     * authMode  是否开启IAM权限认证。 - false：不开启 - true：开启
     * azCode  集群所在的可用区（AZ)。
     * clusterId  集群ID，集群唯一标识。
@@ -214,6 +412,28 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     protected static $getters = [
             'actionProgress' => 'getActionProgress',
             'actions' => 'getActions',
+            'localHdfs' => 'getLocalHdfs',
+            'isShow222VersionFeature' => 'getIsShow222VersionFeature',
+            'actionsCount' => 'getActionsCount',
+            'supportAuth' => 'getSupportAuth',
+            'epsId' => 'getEpsId',
+            'clusterType' => 'getClusterType',
+            'orderId' => 'getOrderId',
+            'orderStatus' => 'getOrderStatus',
+            'isLocalHdfs' => 'getIsLocalHdfs',
+            'ckDeployMode' => 'getCkDeployMode',
+            'flavorTypeEn' => 'getFlavorTypeEn',
+            'enableHotColdFeatureCluster' => 'getEnableHotColdFeatureCluster',
+            'enableHotColdFeature' => 'getEnableHotColdFeature',
+            'dataFlavor' => 'getDataFlavor',
+            'controlFlavor' => 'getControlFlavor',
+            'dataNodeNum' => 'getDataNodeNum',
+            'controlNodeNum' => 'getControlNodeNum',
+            'dataNodeTotalStorageSize' => 'getDataNodeTotalStorageSize',
+            'controlNodeTotalStorageSize' => 'getControlNodeTotalStorageSize',
+            'coldStorageUsedSize' => 'getColdStorageUsedSize',
+            'dataNodeVolumeType' => 'getDataNodeVolumeType',
+            'controlNodeVolumeType' => 'getControlNodeVolumeType',
             'authMode' => 'getAuthMode',
             'azCode' => 'getAzCode',
             'clusterId' => 'getClusterId',
@@ -289,6 +509,28 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     {
         $this->container['actionProgress'] = isset($data['actionProgress']) ? $data['actionProgress'] : null;
         $this->container['actions'] = isset($data['actions']) ? $data['actions'] : null;
+        $this->container['localHdfs'] = isset($data['localHdfs']) ? $data['localHdfs'] : null;
+        $this->container['isShow222VersionFeature'] = isset($data['isShow222VersionFeature']) ? $data['isShow222VersionFeature'] : null;
+        $this->container['actionsCount'] = isset($data['actionsCount']) ? $data['actionsCount'] : null;
+        $this->container['supportAuth'] = isset($data['supportAuth']) ? $data['supportAuth'] : null;
+        $this->container['epsId'] = isset($data['epsId']) ? $data['epsId'] : null;
+        $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
+        $this->container['orderStatus'] = isset($data['orderStatus']) ? $data['orderStatus'] : null;
+        $this->container['isLocalHdfs'] = isset($data['isLocalHdfs']) ? $data['isLocalHdfs'] : null;
+        $this->container['ckDeployMode'] = isset($data['ckDeployMode']) ? $data['ckDeployMode'] : null;
+        $this->container['flavorTypeEn'] = isset($data['flavorTypeEn']) ? $data['flavorTypeEn'] : null;
+        $this->container['enableHotColdFeatureCluster'] = isset($data['enableHotColdFeatureCluster']) ? $data['enableHotColdFeatureCluster'] : null;
+        $this->container['enableHotColdFeature'] = isset($data['enableHotColdFeature']) ? $data['enableHotColdFeature'] : null;
+        $this->container['dataFlavor'] = isset($data['dataFlavor']) ? $data['dataFlavor'] : null;
+        $this->container['controlFlavor'] = isset($data['controlFlavor']) ? $data['controlFlavor'] : null;
+        $this->container['dataNodeNum'] = isset($data['dataNodeNum']) ? $data['dataNodeNum'] : null;
+        $this->container['controlNodeNum'] = isset($data['controlNodeNum']) ? $data['controlNodeNum'] : null;
+        $this->container['dataNodeTotalStorageSize'] = isset($data['dataNodeTotalStorageSize']) ? $data['dataNodeTotalStorageSize'] : null;
+        $this->container['controlNodeTotalStorageSize'] = isset($data['controlNodeTotalStorageSize']) ? $data['controlNodeTotalStorageSize'] : null;
+        $this->container['coldStorageUsedSize'] = isset($data['coldStorageUsedSize']) ? $data['coldStorageUsedSize'] : null;
+        $this->container['dataNodeVolumeType'] = isset($data['dataNodeVolumeType']) ? $data['dataNodeVolumeType'] : null;
+        $this->container['controlNodeVolumeType'] = isset($data['controlNodeVolumeType']) ? $data['controlNodeVolumeType'] : null;
         $this->container['authMode'] = isset($data['authMode']) ? $data['authMode'] : null;
         $this->container['azCode'] = isset($data['azCode']) ? $data['azCode'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
@@ -371,6 +613,534 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     public function setActions($actions)
     {
         $this->container['actions'] = $actions;
+        return $this;
+    }
+
+    /**
+    * Gets localHdfs
+    *  是否开启hdfs。 - false：不开启 - true：开启
+    *
+    * @return bool|null
+    */
+    public function getLocalHdfs()
+    {
+        return $this->container['localHdfs'];
+    }
+
+    /**
+    * Sets localHdfs
+    *
+    * @param bool|null $localHdfs 是否开启hdfs。 - false：不开启 - true：开启
+    *
+    * @return $this
+    */
+    public function setLocalHdfs($localHdfs)
+    {
+        $this->container['localHdfs'] = $localHdfs;
+        return $this;
+    }
+
+    /**
+    * Gets isShow222VersionFeature
+    *  是否开222版本特性。 - false：不开启 - true：开启
+    *
+    * @return string|null
+    */
+    public function getIsShow222VersionFeature()
+    {
+        return $this->container['isShow222VersionFeature'];
+    }
+
+    /**
+    * Sets isShow222VersionFeature
+    *
+    * @param string|null $isShow222VersionFeature 是否开222版本特性。 - false：不开启 - true：开启
+    *
+    * @return $this
+    */
+    public function setIsShow222VersionFeature($isShow222VersionFeature)
+    {
+        $this->container['isShow222VersionFeature'] = $isShow222VersionFeature;
+        return $this;
+    }
+
+    /**
+    * Gets actionsCount
+    *  集群操作记录
+    *
+    * @return string[]|null
+    */
+    public function getActionsCount()
+    {
+        return $this->container['actionsCount'];
+    }
+
+    /**
+    * Sets actionsCount
+    *
+    * @param string[]|null $actionsCount 集群操作记录
+    *
+    * @return $this
+    */
+    public function setActionsCount($actionsCount)
+    {
+        $this->container['actionsCount'] = $actionsCount;
+        return $this;
+    }
+
+    /**
+    * Gets supportAuth
+    *  是否支持开启认证。 - false：不支持 - true：支持
+    *
+    * @return bool|null
+    */
+    public function getSupportAuth()
+    {
+        return $this->container['supportAuth'];
+    }
+
+    /**
+    * Sets supportAuth
+    *
+    * @param bool|null $supportAuth 是否支持开启认证。 - false：不支持 - true：支持
+    *
+    * @return $this
+    */
+    public function setSupportAuth($supportAuth)
+    {
+        $this->container['supportAuth'] = $supportAuth;
+        return $this;
+    }
+
+    /**
+    * Gets epsId
+    *  eps_id。
+    *
+    * @return string|null
+    */
+    public function getEpsId()
+    {
+        return $this->container['epsId'];
+    }
+
+    /**
+    * Sets epsId
+    *
+    * @param string|null $epsId eps_id。
+    *
+    * @return $this
+    */
+    public function setEpsId($epsId)
+    {
+        $this->container['epsId'] = $epsId;
+        return $this;
+    }
+
+    /**
+    * Gets clusterType
+    *  集群类型。
+    *
+    * @return string|null
+    */
+    public function getClusterType()
+    {
+        return $this->container['clusterType'];
+    }
+
+    /**
+    * Sets clusterType
+    *
+    * @param string|null $clusterType 集群类型。
+    *
+    * @return $this
+    */
+    public function setClusterType($clusterType)
+    {
+        $this->container['clusterType'] = $clusterType;
+        return $this;
+    }
+
+    /**
+    * Gets orderId
+    *  包周期订单号。
+    *
+    * @return string|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param string|null $orderId 包周期订单号。
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
+        return $this;
+    }
+
+    /**
+    * Gets orderStatus
+    *  包周期订单状态。
+    *
+    * @return string|null
+    */
+    public function getOrderStatus()
+    {
+        return $this->container['orderStatus'];
+    }
+
+    /**
+    * Sets orderStatus
+    *
+    * @param string|null $orderStatus 包周期订单状态。
+    *
+    * @return $this
+    */
+    public function setOrderStatus($orderStatus)
+    {
+        $this->container['orderStatus'] = $orderStatus;
+        return $this;
+    }
+
+    /**
+    * Gets isLocalHdfs
+    *  是否开启hdfs。 - false：不开启 - true：开启
+    *
+    * @return bool|null
+    */
+    public function getIsLocalHdfs()
+    {
+        return $this->container['isLocalHdfs'];
+    }
+
+    /**
+    * Sets isLocalHdfs
+    *
+    * @param bool|null $isLocalHdfs 是否开启hdfs。 - false：不开启 - true：开启
+    *
+    * @return $this
+    */
+    public function setIsLocalHdfs($isLocalHdfs)
+    {
+        $this->container['isLocalHdfs'] = $isLocalHdfs;
+        return $this;
+    }
+
+    /**
+    * Gets ckDeployMode
+    *  ClickHouse部署模式。
+    *
+    * @return string|null
+    */
+    public function getCkDeployMode()
+    {
+        return $this->container['ckDeployMode'];
+    }
+
+    /**
+    * Sets ckDeployMode
+    *
+    * @param string|null $ckDeployMode ClickHouse部署模式。
+    *
+    * @return $this
+    */
+    public function setCkDeployMode($ckDeployMode)
+    {
+        $this->container['ckDeployMode'] = $ckDeployMode;
+        return $this;
+    }
+
+    /**
+    * Gets flavorTypeEn
+    *  节点磁盘类型。
+    *
+    * @return string|null
+    */
+    public function getFlavorTypeEn()
+    {
+        return $this->container['flavorTypeEn'];
+    }
+
+    /**
+    * Sets flavorTypeEn
+    *
+    * @param string|null $flavorTypeEn 节点磁盘类型。
+    *
+    * @return $this
+    */
+    public function setFlavorTypeEn($flavorTypeEn)
+    {
+        $this->container['flavorTypeEn'] = $flavorTypeEn;
+        return $this;
+    }
+
+    /**
+    * Gets enableHotColdFeatureCluster
+    *  集群是否支持开启冷热分离。
+    *
+    * @return string|null
+    */
+    public function getEnableHotColdFeatureCluster()
+    {
+        return $this->container['enableHotColdFeatureCluster'];
+    }
+
+    /**
+    * Sets enableHotColdFeatureCluster
+    *
+    * @param string|null $enableHotColdFeatureCluster 集群是否支持开启冷热分离。
+    *
+    * @return $this
+    */
+    public function setEnableHotColdFeatureCluster($enableHotColdFeatureCluster)
+    {
+        $this->container['enableHotColdFeatureCluster'] = $enableHotColdFeatureCluster;
+        return $this;
+    }
+
+    /**
+    * Gets enableHotColdFeature
+    *  集群是否开启冷热分离。
+    *
+    * @return string|null
+    */
+    public function getEnableHotColdFeature()
+    {
+        return $this->container['enableHotColdFeature'];
+    }
+
+    /**
+    * Sets enableHotColdFeature
+    *
+    * @param string|null $enableHotColdFeature 集群是否开启冷热分离。
+    *
+    * @return $this
+    */
+    public function setEnableHotColdFeature($enableHotColdFeature)
+    {
+        $this->container['enableHotColdFeature'] = $enableHotColdFeature;
+        return $this;
+    }
+
+    /**
+    * Gets dataFlavor
+    *  数据节点规格。
+    *
+    * @return string|null
+    */
+    public function getDataFlavor()
+    {
+        return $this->container['dataFlavor'];
+    }
+
+    /**
+    * Sets dataFlavor
+    *
+    * @param string|null $dataFlavor 数据节点规格。
+    *
+    * @return $this
+    */
+    public function setDataFlavor($dataFlavor)
+    {
+        $this->container['dataFlavor'] = $dataFlavor;
+        return $this;
+    }
+
+    /**
+    * Gets controlFlavor
+    *  数据同步节点规格。
+    *
+    * @return string|null
+    */
+    public function getControlFlavor()
+    {
+        return $this->container['controlFlavor'];
+    }
+
+    /**
+    * Sets controlFlavor
+    *
+    * @param string|null $controlFlavor 数据同步节点规格。
+    *
+    * @return $this
+    */
+    public function setControlFlavor($controlFlavor)
+    {
+        $this->container['controlFlavor'] = $controlFlavor;
+        return $this;
+    }
+
+    /**
+    * Gets dataNodeNum
+    *  数据节点个数。
+    *
+    * @return string|null
+    */
+    public function getDataNodeNum()
+    {
+        return $this->container['dataNodeNum'];
+    }
+
+    /**
+    * Sets dataNodeNum
+    *
+    * @param string|null $dataNodeNum 数据节点个数。
+    *
+    * @return $this
+    */
+    public function setDataNodeNum($dataNodeNum)
+    {
+        $this->container['dataNodeNum'] = $dataNodeNum;
+        return $this;
+    }
+
+    /**
+    * Gets controlNodeNum
+    *  数据同步节点个数。
+    *
+    * @return string|null
+    */
+    public function getControlNodeNum()
+    {
+        return $this->container['controlNodeNum'];
+    }
+
+    /**
+    * Sets controlNodeNum
+    *
+    * @param string|null $controlNodeNum 数据同步节点个数。
+    *
+    * @return $this
+    */
+    public function setControlNodeNum($controlNodeNum)
+    {
+        $this->container['controlNodeNum'] = $controlNodeNum;
+        return $this;
+    }
+
+    /**
+    * Gets dataNodeTotalStorageSize
+    *  数据节点磁盘容量。
+    *
+    * @return string|null
+    */
+    public function getDataNodeTotalStorageSize()
+    {
+        return $this->container['dataNodeTotalStorageSize'];
+    }
+
+    /**
+    * Sets dataNodeTotalStorageSize
+    *
+    * @param string|null $dataNodeTotalStorageSize 数据节点磁盘容量。
+    *
+    * @return $this
+    */
+    public function setDataNodeTotalStorageSize($dataNodeTotalStorageSize)
+    {
+        $this->container['dataNodeTotalStorageSize'] = $dataNodeTotalStorageSize;
+        return $this;
+    }
+
+    /**
+    * Gets controlNodeTotalStorageSize
+    *  数据同步节点磁盘容量。
+    *
+    * @return string|null
+    */
+    public function getControlNodeTotalStorageSize()
+    {
+        return $this->container['controlNodeTotalStorageSize'];
+    }
+
+    /**
+    * Sets controlNodeTotalStorageSize
+    *
+    * @param string|null $controlNodeTotalStorageSize 数据同步节点磁盘容量。
+    *
+    * @return $this
+    */
+    public function setControlNodeTotalStorageSize($controlNodeTotalStorageSize)
+    {
+        $this->container['controlNodeTotalStorageSize'] = $controlNodeTotalStorageSize;
+        return $this;
+    }
+
+    /**
+    * Gets coldStorageUsedSize
+    *  冷存储使用量。
+    *
+    * @return string|null
+    */
+    public function getColdStorageUsedSize()
+    {
+        return $this->container['coldStorageUsedSize'];
+    }
+
+    /**
+    * Sets coldStorageUsedSize
+    *
+    * @param string|null $coldStorageUsedSize 冷存储使用量。
+    *
+    * @return $this
+    */
+    public function setColdStorageUsedSize($coldStorageUsedSize)
+    {
+        $this->container['coldStorageUsedSize'] = $coldStorageUsedSize;
+        return $this;
+    }
+
+    /**
+    * Gets dataNodeVolumeType
+    *  数据节点磁盘类型。
+    *
+    * @return string|null
+    */
+    public function getDataNodeVolumeType()
+    {
+        return $this->container['dataNodeVolumeType'];
+    }
+
+    /**
+    * Sets dataNodeVolumeType
+    *
+    * @param string|null $dataNodeVolumeType 数据节点磁盘类型。
+    *
+    * @return $this
+    */
+    public function setDataNodeVolumeType($dataNodeVolumeType)
+    {
+        $this->container['dataNodeVolumeType'] = $dataNodeVolumeType;
+        return $this;
+    }
+
+    /**
+    * Gets controlNodeVolumeType
+    *  数据同步节点磁盘类型。
+    *
+    * @return string|null
+    */
+    public function getControlNodeVolumeType()
+    {
+        return $this->container['controlNodeVolumeType'];
+    }
+
+    /**
+    * Sets controlNodeVolumeType
+    *
+    * @param string|null $controlNodeVolumeType 数据同步节点磁盘类型。
+    *
+    * @return $this
+    */
+    public function setControlNodeVolumeType($controlNodeVolumeType)
+    {
+        $this->container['controlNodeVolumeType'] = $controlNodeVolumeType;
         return $this;
     }
 

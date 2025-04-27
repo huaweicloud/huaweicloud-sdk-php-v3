@@ -20,8 +20,8 @@ class UpdateRecordSetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneId  所属zone的ID。
-    * recordsetId  待修改的recordset的ID信息。
+    * zoneId  域名ID。
+    * recordsetId  记录集ID。
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class UpdateRecordSetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneId  所属zone的ID。
-    * recordsetId  待修改的recordset的ID信息。
+    * zoneId  域名ID。
+    * recordsetId  记录集ID。
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class UpdateRecordSetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneId  所属zone的ID。
-    * recordsetId  待修改的recordset的ID信息。
+    * zoneId  域名ID。
+    * recordsetId  记录集ID。
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class UpdateRecordSetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneId  所属zone的ID。
-    * recordsetId  待修改的recordset的ID信息。
+    * zoneId  域名ID。
+    * recordsetId  记录集ID。
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class UpdateRecordSetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneId  所属zone的ID。
-    * recordsetId  待修改的recordset的ID信息。
+    * zoneId  域名ID。
+    * recordsetId  记录集ID。
     * body  body
     *
     * @var string[]
@@ -183,9 +183,21 @@ class UpdateRecordSetRequest implements ModelInterface, ArrayAccess
         if ($this->container['zoneId'] === null) {
             $invalidProperties[] = "'zoneId' can't be null";
         }
+            if ((mb_strlen($this->container['zoneId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'zoneId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['zoneId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'zoneId', the character length must be bigger than or equal to 32.";
+            }
         if ($this->container['recordsetId'] === null) {
             $invalidProperties[] = "'recordsetId' can't be null";
         }
+            if ((mb_strlen($this->container['recordsetId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'recordsetId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['recordsetId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'recordsetId', the character length must be bigger than or equal to 32.";
+            }
         return $invalidProperties;
     }
 
@@ -202,7 +214,7 @@ class UpdateRecordSetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneId
-    *  所属zone的ID。
+    *  域名ID。
     *
     * @return string
     */
@@ -214,7 +226,7 @@ class UpdateRecordSetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets zoneId
     *
-    * @param string $zoneId 所属zone的ID。
+    * @param string $zoneId 域名ID。
     *
     * @return $this
     */
@@ -226,7 +238,7 @@ class UpdateRecordSetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordsetId
-    *  待修改的recordset的ID信息。
+    *  记录集ID。
     *
     * @return string
     */
@@ -238,7 +250,7 @@ class UpdateRecordSetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets recordsetId
     *
-    * @param string $recordsetId 待修改的recordset的ID信息。
+    * @param string $recordsetId 记录集ID。
     *
     * @return $this
     */

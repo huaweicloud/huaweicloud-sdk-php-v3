@@ -22,7 +22,7 @@ class UpdateRecordSetReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
-    * type  Record Set的类型。
+    * type  记录集的类型。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     *
@@ -40,7 +40,7 @@ class UpdateRecordSetReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
-    * type  Record Set的类型。
+    * type  记录集的类型。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     *
@@ -79,7 +79,7 @@ class UpdateRecordSetReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
-    * type  Record Set的类型。
+    * type  记录集的类型。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     *
@@ -97,7 +97,7 @@ class UpdateRecordSetReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
-    * type  Record Set的类型。
+    * type  记录集的类型。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     *
@@ -115,7 +115,7 @@ class UpdateRecordSetReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     * description  可选配置，对域名的描述。
-    * type  Record Set的类型。
+    * type  记录集的类型。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     *
@@ -266,7 +266,7 @@ class UpdateRecordSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  Record Set的类型。
+    *  记录集的类型。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class UpdateRecordSetReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type Record Set的类型。
+    * @param string|null $type 记录集的类型。
     *
     * @return $this
     */

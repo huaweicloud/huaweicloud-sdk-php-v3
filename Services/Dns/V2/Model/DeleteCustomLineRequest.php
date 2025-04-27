@@ -20,7 +20,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * lineId  自定义线路id
+    * lineId  自定义线路ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * lineId  自定义线路id
+    * lineId  自定义线路ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * lineId  自定义线路id
+    * lineId  自定义线路ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * lineId  自定义线路id
+    * lineId  自定义线路ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * lineId  自定义线路id
+    * lineId  自定义线路ID。
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets lineId
-    *  自定义线路id
+    *  自定义线路ID。
     *
     * @return string
     */
@@ -192,7 +192,7 @@ class DeleteCustomLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets lineId
     *
-    * @param string $lineId 自定义线路id
+    * @param string $lineId 自定义线路ID。
     *
     * @return $this
     */

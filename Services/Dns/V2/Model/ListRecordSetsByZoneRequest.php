@@ -20,18 +20,18 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneId  所属zone id。
+    * zoneId  域名ID。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
-    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
-    * status  待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
-    * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
-    * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
-    * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
+    * status  待查询的记录集的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    * type  待查询的记录集的类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
+    * name  待查询的记录集的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的记录集ID。
+    * sortKey  查询结果中记录集列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
+    * sortDir  查询结果中记录集列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneId  所属zone id。
+    * zoneId  域名ID。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
-    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
-    * status  待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
-    * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
-    * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
-    * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
+    * status  待查询的记录集的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    * type  待查询的记录集的类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
+    * name  待查询的记录集的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的记录集ID。
+    * sortKey  查询结果中记录集列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
+    * sortDir  查询结果中记录集列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneId  所属zone id。
+    * zoneId  域名ID。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
-    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
-    * status  待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
-    * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
-    * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
-    * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
+    * status  待查询的记录集的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    * type  待查询的记录集的类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
+    * name  待查询的记录集的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的记录集ID。
+    * sortKey  查询结果中记录集列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
+    * sortDir  查询结果中记录集列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneId  所属zone id。
+    * zoneId  域名ID。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
-    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
-    * status  待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
-    * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
-    * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
-    * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
+    * status  待查询的记录集的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    * type  待查询的记录集的类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
+    * name  待查询的记录集的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的记录集ID。
+    * sortKey  查询结果中记录集列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
+    * sortDir  查询结果中记录集列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneId  所属zone id。
+    * zoneId  域名ID。
     * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
-    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
-    * status  待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
-    * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
-    * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
-    * id  待查询的Record Set的id包含此id。
-    * sortKey  查询结果中Record Set列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
-    * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
+    * status  待查询的记录集的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    * type  待查询的记录集的类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
+    * name  待查询的记录集的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
+    * id  待查询的记录集ID。
+    * sortKey  查询结果中记录集列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
+    * sortDir  查询结果中记录集列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     *
     * @var string[]
     */
@@ -282,8 +282,8 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
         if ($this->container['zoneId'] === null) {
             $invalidProperties[] = "'zoneId' can't be null";
         }
-            if ((mb_strlen($this->container['zoneId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'zoneId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['zoneId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'zoneId', the character length must be smaller than or equal to 32.";
             }
             if ((mb_strlen($this->container['zoneId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'zoneId', the character length must be bigger than or equal to 32.";
@@ -304,7 +304,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneId
-    *  所属zone id。
+    *  域名ID。
     *
     * @return string
     */
@@ -316,7 +316,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Sets zoneId
     *
-    * @param string $zoneId 所属zone id。
+    * @param string $zoneId 域名ID。
     *
     * @return $this
     */
@@ -424,7 +424,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
+    *  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
     *
     * @return string|null
     */
@@ -436,7 +436,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags 资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
+    * @param string|null $tags 资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
     *
     * @return $this
     */
@@ -448,7 +448,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    *  待查询的记录集的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     *
     * @return string|null
     */
@@ -460,7 +460,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    * @param string|null $status 待查询的记录集的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     *
     * @return $this
     */
@@ -472,7 +472,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
+    *  待查询的记录集的类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     *
     * @return string|null
     */
@@ -484,7 +484,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
+    * @param string|null $type 待查询的记录集的类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     *
     * @return $this
     */
@@ -496,7 +496,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
+    *  待查询的记录集的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
     *
     * @return string|null
     */
@@ -508,7 +508,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
+    * @param string|null $name 待查询的记录集的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  待查询的Record Set的id包含此id。
+    *  待查询的记录集ID。
     *
     * @return string|null
     */
@@ -532,7 +532,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 待查询的Record Set的id包含此id。
+    * @param string|null $id 待查询的记录集ID。
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  查询结果中Record Set列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
+    *  查询结果中记录集列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     *
     * @return string|null
     */
@@ -556,7 +556,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 查询结果中Record Set列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
+    * @param string|null $sortKey 查询结果中记录集列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    *  查询结果中记录集列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     *
     * @return string|null
     */
@@ -580,7 +580,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+    * @param string|null $sortDir 查询结果中记录集列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     *
     * @return $this
     */

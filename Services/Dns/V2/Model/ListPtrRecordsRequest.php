@@ -24,7 +24,7 @@ class ListPtrRecordsRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
-    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
+    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
     * status  资源状态。
     *
     * @var string[]
@@ -44,7 +44,7 @@ class ListPtrRecordsRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
-    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
+    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
     * status  资源状态。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListPtrRecordsRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
-    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
+    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
     * status  资源状态。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class ListPtrRecordsRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
-    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
+    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
     * status  资源状态。
     *
     * @var string[]
@@ -125,7 +125,7 @@ class ListPtrRecordsRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
-    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
+    * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
     * status  资源状态。
     *
     * @var string[]
@@ -325,7 +325,7 @@ class ListPtrRecordsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
+    *  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class ListPtrRecordsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags 资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
+    * @param string|null $tags 资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
     *
     * @return $this
     */

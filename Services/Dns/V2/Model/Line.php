@@ -23,8 +23,8 @@ class Line implements ModelInterface, ArrayAccess
     * lineId  解析线路ID。
     * name  解析线路名称。
     * ipSegments  IP地址段。
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * status  资源状态。
     * description  自定义线路的描述信息。
     *
@@ -45,8 +45,8 @@ class Line implements ModelInterface, ArrayAccess
     * lineId  解析线路ID。
     * name  解析线路名称。
     * ipSegments  IP地址段。
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * status  资源状态。
     * description  自定义线路的描述信息。
     *
@@ -88,8 +88,8 @@ class Line implements ModelInterface, ArrayAccess
     * lineId  解析线路ID。
     * name  解析线路名称。
     * ipSegments  IP地址段。
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * status  资源状态。
     * description  自定义线路的描述信息。
     *
@@ -110,8 +110,8 @@ class Line implements ModelInterface, ArrayAccess
     * lineId  解析线路ID。
     * name  解析线路名称。
     * ipSegments  IP地址段。
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * status  资源状态。
     * description  自定义线路的描述信息。
     *
@@ -132,8 +132,8 @@ class Line implements ModelInterface, ArrayAccess
     * lineId  解析线路ID。
     * name  解析线路名称。
     * ipSegments  IP地址段。
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * status  资源状态。
     * description  自定义线路的描述信息。
     *
@@ -312,7 +312,7 @@ class Line implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间。
+    *  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class Line implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间。
+    * @param string|null $createdAt 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class Line implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  更新时间。
+    *  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class Line implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 更新时间。
+    * @param string|null $updatedAt 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     *
     * @return $this
     */

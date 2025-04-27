@@ -20,7 +20,7 @@ class SetRecordSetsStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordsetId  待设置Record Set的ID信息。
+    * recordsetId  记录集ID。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class SetRecordSetsStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordsetId  待设置Record Set的ID信息。
+    * recordsetId  记录集ID。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class SetRecordSetsStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordsetId  待设置Record Set的ID信息。
+    * recordsetId  记录集ID。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class SetRecordSetsStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordsetId  待设置Record Set的ID信息。
+    * recordsetId  记录集ID。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class SetRecordSetsStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordsetId  待设置Record Set的ID信息。
+    * recordsetId  记录集ID。
     * body  body
     *
     * @var string[]
@@ -172,6 +172,12 @@ class SetRecordSetsStatusRequest implements ModelInterface, ArrayAccess
         if ($this->container['recordsetId'] === null) {
             $invalidProperties[] = "'recordsetId' can't be null";
         }
+            if ((mb_strlen($this->container['recordsetId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'recordsetId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['recordsetId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'recordsetId', the character length must be bigger than or equal to 32.";
+            }
         return $invalidProperties;
     }
 
@@ -188,7 +194,7 @@ class SetRecordSetsStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordsetId
-    *  待设置Record Set的ID信息。
+    *  记录集ID。
     *
     * @return string
     */
@@ -200,7 +206,7 @@ class SetRecordSetsStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets recordsetId
     *
-    * @param string $recordsetId 待设置Record Set的ID信息。
+    * @param string $recordsetId 记录集ID。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class RestorePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ptrdname  PTR记录对应的域名。  此处值为null。
+    * ptrdname  反向解析记录对应的域名。  此处值为null。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class RestorePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ptrdname  PTR记录对应的域名。  此处值为null。
+    * ptrdname  反向解析记录对应的域名。  此处值为null。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class RestorePtrReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ptrdname  PTR记录对应的域名。  此处值为null。
+    * ptrdname  反向解析记录对应的域名。  此处值为null。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RestorePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ptrdname  PTR记录对应的域名。  此处值为null。
+    * ptrdname  反向解析记录对应的域名。  此处值为null。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class RestorePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ptrdname  PTR记录对应的域名。  此处值为null。
+    * ptrdname  反向解析记录对应的域名。  此处值为null。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class RestorePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ptrdname
-    *  PTR记录对应的域名。  此处值为null。
+    *  反向解析记录对应的域名。  此处值为null。
     *
     * @return object
     */
@@ -189,7 +189,7 @@ class RestorePtrReq implements ModelInterface, ArrayAccess
     /**
     * Sets ptrdname
     *
-    * @param object $ptrdname PTR记录对应的域名。  此处值为null。
+    * @param object $ptrdname 反向解析记录对应的域名。  此处值为null。
     *
     * @return $this
     */

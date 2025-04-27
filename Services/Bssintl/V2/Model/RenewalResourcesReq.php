@@ -23,7 +23,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     * resourceIds  资源ID列表。 只支持传入主资源ID，最多10个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     * periodType  周期类型： 2：月3：年
     * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
-    * expirePolicy  到期策略（字段已废弃，请勿使用该字段。此字段必填，需携带，但携带的枚举实际并不生效）： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
@@ -32,7 +31,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
             'resourceIds' => 'string[]',
             'periodType' => 'int',
             'periodNum' => 'int',
-            'expirePolicy' => 'int',
             'isAutoPay' => 'int'
     ];
 
@@ -41,7 +39,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     * resourceIds  资源ID列表。 只支持传入主资源ID，最多10个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     * periodType  周期类型： 2：月3：年
     * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
-    * expirePolicy  到期策略（字段已废弃，请勿使用该字段。此字段必填，需携带，但携带的枚举实际并不生效）： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
@@ -50,7 +47,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
         'resourceIds' => null,
         'periodType' => 'int32',
         'periodNum' => 'int32',
-        'expirePolicy' => 'int32',
         'isAutoPay' => 'int32'
     ];
 
@@ -80,7 +76,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     * resourceIds  资源ID列表。 只支持传入主资源ID，最多10个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     * periodType  周期类型： 2：月3：年
     * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
-    * expirePolicy  到期策略（字段已废弃，请勿使用该字段。此字段必填，需携带，但携带的枚举实际并不生效）： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
@@ -89,7 +84,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
             'resourceIds' => 'resource_ids',
             'periodType' => 'period_type',
             'periodNum' => 'period_num',
-            'expirePolicy' => 'expire_policy',
             'isAutoPay' => 'is_auto_pay'
     ];
 
@@ -98,7 +92,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     * resourceIds  资源ID列表。 只支持传入主资源ID，最多10个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     * periodType  周期类型： 2：月3：年
     * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
-    * expirePolicy  到期策略（字段已废弃，请勿使用该字段。此字段必填，需携带，但携带的枚举实际并不生效）： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
@@ -107,7 +100,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
             'resourceIds' => 'setResourceIds',
             'periodType' => 'setPeriodType',
             'periodNum' => 'setPeriodNum',
-            'expirePolicy' => 'setExpirePolicy',
             'isAutoPay' => 'setIsAutoPay'
     ];
 
@@ -116,7 +108,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     * resourceIds  资源ID列表。 只支持传入主资源ID，最多10个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     * periodType  周期类型： 2：月3：年
     * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
-    * expirePolicy  到期策略（字段已废弃，请勿使用该字段。此字段必填，需携带，但携带的枚举实际并不生效）： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
@@ -125,7 +116,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
             'resourceIds' => 'getResourceIds',
             'periodType' => 'getPeriodType',
             'periodNum' => 'getPeriodNum',
-            'expirePolicy' => 'getExpirePolicy',
             'isAutoPay' => 'getIsAutoPay'
     ];
 
@@ -190,7 +180,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
         $this->container['resourceIds'] = isset($data['resourceIds']) ? $data['resourceIds'] : null;
         $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
-        $this->container['expirePolicy'] = isset($data['expirePolicy']) ? $data['expirePolicy'] : null;
         $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
     }
 
@@ -222,12 +211,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
             }
             if (($this->container['periodNum'] < 1)) {
                 $invalidProperties[] = "invalid value for 'periodNum', must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['expirePolicy']) && ($this->container['expirePolicy'] > 3)) {
-                $invalidProperties[] = "invalid value for 'expirePolicy', must be smaller than or equal to 3.";
-            }
-            if (!is_null($this->container['expirePolicy']) && ($this->container['expirePolicy'] < 0)) {
-                $invalidProperties[] = "invalid value for 'expirePolicy', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['isAutoPay']) && ($this->container['isAutoPay'] > 1)) {
                 $invalidProperties[] = "invalid value for 'isAutoPay', must be smaller than or equal to 1.";
@@ -318,30 +301,6 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     public function setPeriodNum($periodNum)
     {
         $this->container['periodNum'] = $periodNum;
-        return $this;
-    }
-
-    /**
-    * Gets expirePolicy
-    *  到期策略（字段已废弃，请勿使用该字段。此字段必填，需携带，但携带的枚举实际并不生效）： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
-    *
-    * @return int|null
-    */
-    public function getExpirePolicy()
-    {
-        return $this->container['expirePolicy'];
-    }
-
-    /**
-    * Sets expirePolicy
-    *
-    * @param int|null $expirePolicy 到期策略（字段已废弃，请勿使用该字段。此字段必填，需携带，但携带的枚举实际并不生效）： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
-    *
-    * @return $this
-    */
-    public function setExpirePolicy($expirePolicy)
-    {
-        $this->container['expirePolicy'] = $expirePolicy;
         return $this;
     }
 

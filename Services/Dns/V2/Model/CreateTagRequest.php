@@ -21,7 +21,7 @@ class CreateTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceType  资源的类型：DNS-public_zone，DNS-private_zone，DNS-public_recordset，DNS-private_recordset，DNS-ptr_record。
-    * resourceId  资源id。
+    * resourceId  资源ID。
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class CreateTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceType  资源的类型：DNS-public_zone，DNS-private_zone，DNS-public_recordset，DNS-private_recordset，DNS-ptr_record。
-    * resourceId  资源id。
+    * resourceId  资源ID。
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class CreateTagRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceType  资源的类型：DNS-public_zone，DNS-private_zone，DNS-public_recordset，DNS-private_recordset，DNS-ptr_record。
-    * resourceId  资源id。
+    * resourceId  资源ID。
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class CreateTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceType  资源的类型：DNS-public_zone，DNS-private_zone，DNS-public_recordset，DNS-private_recordset，DNS-ptr_record。
-    * resourceId  资源id。
+    * resourceId  资源ID。
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreateTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceType  资源的类型：DNS-public_zone，DNS-private_zone，DNS-public_recordset，DNS-private_recordset，DNS-ptr_record。
-    * resourceId  资源id。
+    * resourceId  资源ID。
     * body  body
     *
     * @var string[]
@@ -226,7 +226,7 @@ class CreateTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  资源id。
+    *  资源ID。
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class CreateTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 资源id。
+    * @param string $resourceId 资源ID。
     *
     * @return $this
     */

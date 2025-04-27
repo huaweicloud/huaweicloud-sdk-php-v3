@@ -20,7 +20,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordsets  RecordSet 列表。
+    * recordsets  记录集列表。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordsets  RecordSet 列表。
+    * recordsets  记录集列表。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordsets  RecordSet 列表。
+    * recordsets  记录集列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordsets  RecordSet 列表。
+    * recordsets  记录集列表。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordsets  RecordSet 列表。
+    * recordsets  记录集列表。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets recordsets
-    *  RecordSet 列表。
+    *  记录集列表。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSet[]
     */
@@ -189,7 +189,7 @@ class BatchUpdateRecordSetWithLineRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets recordsets
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSet[] $recordsets RecordSet 列表。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSet[] $recordsets 记录集列表。
     *
     * @return $this
     */

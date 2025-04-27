@@ -22,7 +22,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * links  links
-    * recordsets  设置record set的列表响应。
+    * recordsets  设置记录集的列表响应。
     * metadata  metadata
     *
     * @var string[]
@@ -36,7 +36,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * links  links
-    * recordsets  设置record set的列表响应。
+    * recordsets  设置记录集的列表响应。
     * metadata  metadata
     *
     * @var string[]
@@ -71,7 +71,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * links  links
-    * recordsets  设置record set的列表响应。
+    * recordsets  设置记录集的列表响应。
     * metadata  metadata
     *
     * @var string[]
@@ -85,7 +85,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * links  links
-    * recordsets  设置record set的列表响应。
+    * recordsets  设置记录集的列表响应。
     * metadata  metadata
     *
     * @var string[]
@@ -99,7 +99,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * links  links
-    * recordsets  设置record set的列表响应。
+    * recordsets  设置记录集的列表响应。
     * metadata  metadata
     *
     * @var string[]
@@ -221,7 +221,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordsets
-    *  设置record set的列表响应。
+    *  设置记录集的列表响应。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\RecordsetData[]|null
     */
@@ -233,7 +233,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets recordsets
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\RecordsetData[]|null $recordsets 设置record set的列表响应。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\RecordsetData[]|null $recordsets 设置记录集的列表响应。
     *
     * @return $this
     */

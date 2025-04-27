@@ -20,10 +20,10 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ptrdname  PTR记录对应的域名。
-    * description  对PTR记录的描述。
-    * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
-    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
+    * ptrdname  反向解析记录对应的域名。
+    * description  对反向解析记录的描述。
+    * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
+    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。默认值为0。
     * tags  资源标签。
     *
     * @var string[]
@@ -38,10 +38,10 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ptrdname  PTR记录对应的域名。
-    * description  对PTR记录的描述。
-    * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
-    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
+    * ptrdname  反向解析记录对应的域名。
+    * description  对反向解析记录的描述。
+    * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
+    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。默认值为0。
     * tags  资源标签。
     *
     * @var string[]
@@ -77,10 +77,10 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ptrdname  PTR记录对应的域名。
-    * description  对PTR记录的描述。
-    * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
-    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
+    * ptrdname  反向解析记录对应的域名。
+    * description  对反向解析记录的描述。
+    * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
+    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。默认值为0。
     * tags  资源标签。
     *
     * @var string[]
@@ -95,10 +95,10 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ptrdname  PTR记录对应的域名。
-    * description  对PTR记录的描述。
-    * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
-    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
+    * ptrdname  反向解析记录对应的域名。
+    * description  对反向解析记录的描述。
+    * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
+    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。默认值为0。
     * tags  资源标签。
     *
     * @var string[]
@@ -113,10 +113,10 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ptrdname  PTR记录对应的域名。
-    * description  对PTR记录的描述。
-    * ttl  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
-    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
+    * ptrdname  反向解析记录对应的域名。
+    * description  对反向解析记录的描述。
+    * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
+    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。默认值为0。
     * tags  资源标签。
     *
     * @var string[]
@@ -221,7 +221,7 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ptrdname
-    *  PTR记录对应的域名。
+    *  反向解析记录对应的域名。
     *
     * @return string
     */
@@ -233,7 +233,7 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
     /**
     * Sets ptrdname
     *
-    * @param string $ptrdname PTR记录对应的域名。
+    * @param string $ptrdname 反向解析记录对应的域名。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  对PTR记录的描述。
+    *  对反向解析记录的描述。
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 对PTR记录的描述。
+    * @param string|null $description 对反向解析记录的描述。
     *
     * @return $this
     */
@@ -269,7 +269,7 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttl
-    *  PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
+    *  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
     *
     * @return int|null
     */
@@ -281,7 +281,7 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
     /**
     * Sets ttl
     *
-    * @param int|null $ttl PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
+    * @param int|null $ttl 反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。取值范围：1～2147483647
     *
     * @return $this
     */
@@ -293,7 +293,7 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  反向解析关联的企业项目ID，长度不超过36个字符。
+    *  反向解析关联的企业项目ID，长度不超过36个字符。默认值为0。
     *
     * @return string|null
     */
@@ -305,7 +305,7 @@ class CreatePtrReq implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 反向解析关联的企业项目ID，长度不超过36个字符。
+    * @param string|null $enterpriseProjectId 反向解析关联的企业项目ID，长度不超过36个字符。默认值为0。
     *
     * @return $this
     */
