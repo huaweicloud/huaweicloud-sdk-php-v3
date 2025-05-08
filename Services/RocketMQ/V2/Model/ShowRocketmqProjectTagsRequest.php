@@ -20,20 +20,26 @@ class ShowRocketmqProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'limit' => 'int32',
+        'offset' => 'int32'
     ];
 
     /**
@@ -59,29 +65,38 @@ class ShowRocketmqProjectTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -142,6 +157,8 @@ class ShowRocketmqProjectTagsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -164,6 +181,54 @@ class ShowRocketmqProjectTagsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
     }
 
     /**

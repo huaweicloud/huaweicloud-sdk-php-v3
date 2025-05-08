@@ -21,12 +21,12 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topics  Topic列表（当查询Topic消费“列表”时才显示此参数）。
-    * total  Topic总数（当查询Topic消费“列表”时才显示此参数）。
-    * lag  消费堆积总数。
-    * maxOffset  消息总数。
-    * consumerOffset  已消费消息数。
-    * brokers  Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
+    * maxOffset  **参数解释**： 消息总数。 **取值范围**： 不涉及。
+    * consumerOffset  **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
+    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
     *
     * @var string[]
     */
@@ -41,12 +41,12 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topics  Topic列表（当查询Topic消费“列表”时才显示此参数）。
-    * total  Topic总数（当查询Topic消费“列表”时才显示此参数）。
-    * lag  消费堆积总数。
-    * maxOffset  消息总数。
-    * consumerOffset  已消费消息数。
-    * brokers  Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
+    * maxOffset  **参数解释**： 消息总数。 **取值范围**： 不涉及。
+    * consumerOffset  **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
+    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
     *
     * @var string[]
     */
@@ -82,12 +82,12 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topics  Topic列表（当查询Topic消费“列表”时才显示此参数）。
-    * total  Topic总数（当查询Topic消费“列表”时才显示此参数）。
-    * lag  消费堆积总数。
-    * maxOffset  消息总数。
-    * consumerOffset  已消费消息数。
-    * brokers  Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
+    * maxOffset  **参数解释**： 消息总数。 **取值范围**： 不涉及。
+    * consumerOffset  **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
+    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
     *
     * @var string[]
     */
@@ -102,12 +102,12 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topics  Topic列表（当查询Topic消费“列表”时才显示此参数）。
-    * total  Topic总数（当查询Topic消费“列表”时才显示此参数）。
-    * lag  消费堆积总数。
-    * maxOffset  消息总数。
-    * consumerOffset  已消费消息数。
-    * brokers  Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
+    * maxOffset  **参数解释**： 消息总数。 **取值范围**： 不涉及。
+    * consumerOffset  **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
+    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
     *
     * @var string[]
     */
@@ -122,12 +122,12 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topics  Topic列表（当查询Topic消费“列表”时才显示此参数）。
-    * total  Topic总数（当查询Topic消费“列表”时才显示此参数）。
-    * lag  消费堆积总数。
-    * maxOffset  消息总数。
-    * consumerOffset  已消费消息数。
-    * brokers  Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
+    * maxOffset  **参数解释**： 消息总数。 **取值范围**： 不涉及。
+    * consumerOffset  **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
+    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
     *
     * @var string[]
     */
@@ -230,7 +230,7 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    *  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
     *
     * @return string[]|null
     */
@@ -242,7 +242,7 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param string[]|null $topics Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    * @param string[]|null $topics **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
     *
     * @return $this
     */
@@ -254,7 +254,7 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  Topic总数（当查询Topic消费“列表”时才显示此参数）。
+    *  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -266,7 +266,7 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total Topic总数（当查询Topic消费“列表”时才显示此参数）。
+    * @param int|null $total **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lag
-    *  消费堆积总数。
+    *  **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -290,7 +290,7 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lag
     *
-    * @param int|null $lag 消费堆积总数。
+    * @param int|null $lag **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxOffset
-    *  消息总数。
+    *  **参数解释**： 消息总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -314,7 +314,7 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets maxOffset
     *
-    * @param int|null $maxOffset 消息总数。
+    * @param int|null $maxOffset **参数解释**： 消息总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumerOffset
-    *  已消费消息数。
+    *  **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -338,7 +338,7 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets consumerOffset
     *
-    * @param int|null $consumerOffset 已消费消息数。
+    * @param int|null $consumerOffset **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokers
-    *  Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    *  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\Brokers[]|null
     */
@@ -362,7 +362,7 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets brokers
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\Brokers[]|null $brokers Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\Brokers[]|null $brokers **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
     *
     * @return $this
     */

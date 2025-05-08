@@ -72,6 +72,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * isReturnStream  是否返回流式数据（已废弃）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -126,7 +127,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
             'customImage' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\CustomImage',
             'isReturnStream' => 'bool',
             'enableLtsLog' => 'bool',
-            'ltsCustomTag' => 'map[string,string]'
+            'ltsCustomTag' => 'map[string,string]',
+            'userDataEncryptKmsKeyId' => 'string'
     ];
 
     /**
@@ -182,6 +184,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * isReturnStream  是否返回流式数据（已废弃）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -236,7 +239,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
         'customImage' => null,
         'isReturnStream' => null,
         'enableLtsLog' => null,
-        'ltsCustomTag' => null
+        'ltsCustomTag' => null,
+        'userDataEncryptKmsKeyId' => null
     ];
 
     /**
@@ -313,6 +317,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * isReturnStream  是否返回流式数据（已废弃）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -367,7 +372,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
             'customImage' => 'custom_image',
             'isReturnStream' => 'is_return_stream',
             'enableLtsLog' => 'enable_lts_log',
-            'ltsCustomTag' => 'lts_custom_tag'
+            'ltsCustomTag' => 'lts_custom_tag',
+            'userDataEncryptKmsKeyId' => 'user_data_encrypt_kms_key_id'
     ];
 
     /**
@@ -423,6 +429,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * isReturnStream  是否返回流式数据（已废弃）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -477,7 +484,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
             'customImage' => 'setCustomImage',
             'isReturnStream' => 'setIsReturnStream',
             'enableLtsLog' => 'setEnableLtsLog',
-            'ltsCustomTag' => 'setLtsCustomTag'
+            'ltsCustomTag' => 'setLtsCustomTag',
+            'userDataEncryptKmsKeyId' => 'setUserDataEncryptKmsKeyId'
     ];
 
     /**
@@ -533,6 +541,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * isReturnStream  是否返回流式数据（已废弃）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -587,7 +596,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
             'customImage' => 'getCustomImage',
             'isReturnStream' => 'getIsReturnStream',
             'enableLtsLog' => 'getEnableLtsLog',
-            'ltsCustomTag' => 'getLtsCustomTag'
+            'ltsCustomTag' => 'getLtsCustomTag',
+            'userDataEncryptKmsKeyId' => 'getUserDataEncryptKmsKeyId'
     ];
 
     /**
@@ -796,6 +806,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
         $this->container['isReturnStream'] = isset($data['isReturnStream']) ? $data['isReturnStream'] : null;
         $this->container['enableLtsLog'] = isset($data['enableLtsLog']) ? $data['enableLtsLog'] : null;
         $this->container['ltsCustomTag'] = isset($data['ltsCustomTag']) ? $data['ltsCustomTag'] : null;
+        $this->container['userDataEncryptKmsKeyId'] = isset($data['userDataEncryptKmsKeyId']) ? $data['userDataEncryptKmsKeyId'] : null;
     }
 
     /**
@@ -2065,6 +2076,30 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     public function setLtsCustomTag($ltsCustomTag)
     {
         $this->container['ltsCustomTag'] = $ltsCustomTag;
+        return $this;
+    }
+
+    /**
+    * Gets userDataEncryptKmsKeyId
+    *  用于环境变量加密的kms主秘钥ID。
+    *
+    * @return string|null
+    */
+    public function getUserDataEncryptKmsKeyId()
+    {
+        return $this->container['userDataEncryptKmsKeyId'];
+    }
+
+    /**
+    * Sets userDataEncryptKmsKeyId
+    *
+    * @param string|null $userDataEncryptKmsKeyId 用于环境变量加密的kms主秘钥ID。
+    *
+    * @return $this
+    */
+    public function setUserDataEncryptKmsKeyId($userDataEncryptKmsKeyId)
+    {
+        $this->container['userDataEncryptKmsKeyId'] = $userDataEncryptKmsKeyId;
         return $this;
     }
 

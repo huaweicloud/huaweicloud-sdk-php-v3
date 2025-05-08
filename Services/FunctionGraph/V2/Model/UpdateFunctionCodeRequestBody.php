@@ -25,6 +25,7 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * funcCode  funcCode
     * dependVersionList  依赖版本id列表
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
             'codeUrl' => 'string',
             'codeFilename' => 'string',
             'funcCode' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FuncCode',
-            'dependVersionList' => 'string[]'
+            'dependVersionList' => 'string[]',
+            'codeEncryptKmsKeyId' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * funcCode  funcCode
     * dependVersionList  依赖版本id列表
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
         'codeUrl' => null,
         'codeFilename' => null,
         'funcCode' => null,
-        'dependVersionList' => null
+        'dependVersionList' => null,
+        'codeEncryptKmsKeyId' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * funcCode  funcCode
     * dependVersionList  依赖版本id列表
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
             'codeUrl' => 'code_url',
             'codeFilename' => 'code_filename',
             'funcCode' => 'func_code',
-            'dependVersionList' => 'depend_version_list'
+            'dependVersionList' => 'depend_version_list',
+            'codeEncryptKmsKeyId' => 'code_encrypt_kms_key_id'
     ];
 
     /**
@@ -100,6 +106,7 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * funcCode  funcCode
     * dependVersionList  依赖版本id列表
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
             'codeUrl' => 'setCodeUrl',
             'codeFilename' => 'setCodeFilename',
             'funcCode' => 'setFuncCode',
-            'dependVersionList' => 'setDependVersionList'
+            'dependVersionList' => 'setDependVersionList',
+            'codeEncryptKmsKeyId' => 'setCodeEncryptKmsKeyId'
     ];
 
     /**
@@ -118,6 +126,7 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * funcCode  funcCode
     * dependVersionList  依赖版本id列表
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
             'codeUrl' => 'getCodeUrl',
             'codeFilename' => 'getCodeFilename',
             'funcCode' => 'getFuncCode',
-            'dependVersionList' => 'getDependVersionList'
+            'dependVersionList' => 'getDependVersionList',
+            'codeEncryptKmsKeyId' => 'getCodeEncryptKmsKeyId'
     ];
 
     /**
@@ -213,6 +223,7 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
         $this->container['codeFilename'] = isset($data['codeFilename']) ? $data['codeFilename'] : null;
         $this->container['funcCode'] = isset($data['funcCode']) ? $data['funcCode'] : null;
         $this->container['dependVersionList'] = isset($data['dependVersionList']) ? $data['dependVersionList'] : null;
+        $this->container['codeEncryptKmsKeyId'] = isset($data['codeEncryptKmsKeyId']) ? $data['codeEncryptKmsKeyId'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
     public function setDependVersionList($dependVersionList)
     {
         $this->container['dependVersionList'] = $dependVersionList;
+        return $this;
+    }
+
+    /**
+    * Gets codeEncryptKmsKeyId
+    *  用于用户代码加密的kms主秘钥ID。
+    *
+    * @return string|null
+    */
+    public function getCodeEncryptKmsKeyId()
+    {
+        return $this->container['codeEncryptKmsKeyId'];
+    }
+
+    /**
+    * Sets codeEncryptKmsKeyId
+    *
+    * @param string|null $codeEncryptKmsKeyId 用于用户代码加密的kms主秘钥ID。
+    *
+    * @return $this
+    */
+    public function setCodeEncryptKmsKeyId($codeEncryptKmsKeyId)
+    {
+        $this->container['codeEncryptKmsKeyId'] = $codeEncryptKmsKeyId;
         return $this;
     }
 

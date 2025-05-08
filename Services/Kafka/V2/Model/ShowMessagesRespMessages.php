@@ -20,11 +20,11 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  topic名称。
-    * partition  分区编号。
-    * messageOffset  消息编号。
-    * size  消息大小，单位字节。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * messageOffset  **参数解释**： 消息编号。 **取值范围**： 不涉及。
+    * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  topic名称。
-    * partition  分区编号。
-    * messageOffset  消息编号。
-    * size  消息大小，单位字节。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * messageOffset  **参数解释**： 消息编号。 **取值范围**： 不涉及。
+    * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  topic名称。
-    * partition  分区编号。
-    * messageOffset  消息编号。
-    * size  消息大小，单位字节。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * messageOffset  **参数解释**： 消息编号。 **取值范围**： 不涉及。
+    * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  topic名称。
-    * partition  分区编号。
-    * messageOffset  消息编号。
-    * size  消息大小，单位字节。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * messageOffset  **参数解释**： 消息编号。 **取值范围**： 不涉及。
+    * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  topic名称。
-    * partition  分区编号。
-    * messageOffset  消息编号。
-    * size  消息大小，单位字节。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * messageOffset  **参数解释**： 消息编号。 **取值范围**： 不涉及。
+    * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  topic名称。
+    *  **参数解释**： topic名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic topic名称。
+    * @param string|null $topic **参数解释**： topic名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Gets partition
-    *  分区编号。
+    *  **参数解释**： 分区编号。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -254,7 +254,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
     /**
     * Sets partition
     *
-    * @param int|null $partition 分区编号。
+    * @param int|null $partition **参数解释**： 分区编号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageOffset
-    *  消息编号。
+    *  **参数解释**： 消息编号。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
     /**
     * Sets messageOffset
     *
-    * @param int|null $messageOffset 消息编号。
+    * @param int|null $messageOffset **参数解释**： 消息编号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  消息大小，单位字节。
+    *  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 消息大小，单位字节。
+    * @param int|null $size **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Gets timestamp
-    *  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    *  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param int|null $timestamp 生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * @param int|null $timestamp **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @return $this
     */

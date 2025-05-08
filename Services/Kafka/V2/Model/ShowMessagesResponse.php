@@ -21,10 +21,10 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * messages  消息列表。
-    * messagesCount  消息总数。
-    * offsetsCount  总页数。
-    * offset  当前页数。
+    * messages  **参数解释**： 消息列表。
+    * messagesCount  **参数解释**： 消息总数。 **取值范围**： 不涉及。
+    * offsetsCount  **参数解释**： 总页数。 **取值范围**： 不涉及。
+    * offset  **参数解释**： 当前页数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * messages  消息列表。
-    * messagesCount  消息总数。
-    * offsetsCount  总页数。
-    * offset  当前页数。
+    * messages  **参数解释**： 消息列表。
+    * messagesCount  **参数解释**： 消息总数。 **取值范围**： 不涉及。
+    * offsetsCount  **参数解释**： 总页数。 **取值范围**： 不涉及。
+    * offset  **参数解释**： 当前页数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * messages  消息列表。
-    * messagesCount  消息总数。
-    * offsetsCount  总页数。
-    * offset  当前页数。
+    * messages  **参数解释**： 消息列表。
+    * messagesCount  **参数解释**： 消息总数。 **取值范围**： 不涉及。
+    * offsetsCount  **参数解释**： 总页数。 **取值范围**： 不涉及。
+    * offset  **参数解释**： 当前页数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * messages  消息列表。
-    * messagesCount  消息总数。
-    * offsetsCount  总页数。
-    * offset  当前页数。
+    * messages  **参数解释**： 消息列表。
+    * messagesCount  **参数解释**： 消息总数。 **取值范围**： 不涉及。
+    * offsetsCount  **参数解释**： 总页数。 **取值范围**： 不涉及。
+    * offset  **参数解释**： 当前页数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * messages  消息列表。
-    * messagesCount  消息总数。
-    * offsetsCount  总页数。
-    * offset  当前页数。
+    * messages  **参数解释**： 消息列表。
+    * messagesCount  **参数解释**： 消息总数。 **取值范围**： 不涉及。
+    * offsetsCount  **参数解释**： 总页数。 **取值范围**： 不涉及。
+    * offset  **参数解释**： 当前页数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets messages
-    *  消息列表。
+    *  **参数解释**： 消息列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowMessagesRespMessages[]|null
     */
@@ -220,7 +220,7 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets messages
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowMessagesRespMessages[]|null $messages 消息列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowMessagesRespMessages[]|null $messages **参数解释**： 消息列表。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets messagesCount
-    *  消息总数。
+    *  **参数解释**： 消息总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -244,7 +244,7 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets messagesCount
     *
-    * @param int|null $messagesCount 消息总数。
+    * @param int|null $messagesCount **参数解释**： 消息总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets offsetsCount
-    *  总页数。
+    *  **参数解释**： 总页数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -268,7 +268,7 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets offsetsCount
     *
-    * @param int|null $offsetsCount 总页数。
+    * @param int|null $offsetsCount **参数解释**： 总页数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  当前页数。
+    *  **参数解释**： 当前页数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -292,7 +292,7 @@ class ShowMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 当前页数。
+    * @param int|null $offset **参数解释**： 当前页数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  数字人智能交互对话任务ID。
-    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳
+    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
     * duration  数字人智能交互对话时长，单位秒。
     * startTime  数字人智能交互对话任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -72,7 +72,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  数字人智能交互对话任务ID。
-    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳
+    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
     * duration  数字人智能交互对话时长，单位秒。
     * startTime  数字人智能交互对话任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -143,7 +143,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  数字人智能交互对话任务ID。
-    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳
+    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
     * duration  数字人智能交互对话时长，单位秒。
     * startTime  数字人智能交互对话任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -193,7 +193,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  数字人智能交互对话任务ID。
-    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳
+    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
     * duration  数字人智能交互对话时长，单位秒。
     * startTime  数字人智能交互对话任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -243,7 +243,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  数字人智能交互对话任务ID。
-    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳
+    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
     * duration  数字人智能交互对话时长，单位秒。
     * startTime  数字人智能交互对话任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -336,6 +336,8 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     const STATE_FAILED = 'FAILED';
     const STATE_CANCELED = 'CANCELED';
     const STATE_HEARTBEAT = 'HEARTBEAT';
+    const STATE_IDLE = 'IDLE';
+    const STATE_DELETING = 'DELETING';
     const CHAT_VIDEO_TYPE_COMPUTER = 'COMPUTER';
     const CHAT_VIDEO_TYPE_MOBILE = 'MOBILE';
     const CHAT_VIDEO_TYPE_HUB = 'HUB';
@@ -361,6 +363,8 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             self::STATE_FAILED,
             self::STATE_CANCELED,
             self::STATE_HEARTBEAT,
+            self::STATE_IDLE,
+            self::STATE_DELETING,
         ];
     }
 
@@ -578,7 +582,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳
+    *  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
     *
     * @return string|null
     */
@@ -590,7 +594,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳
+    * @param string|null $state 数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
     *
     * @return $this
     */

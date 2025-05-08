@@ -20,13 +20,13 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * partition  分区ID。
-    * leader  leader副本所在节点的id。
-    * leo  分区leader副本的LEO（Log End Offset）。
-    * hw  分区高水位（HW，High Watermark）。
-    * lso  分区leader副本的LSO（Log Start Offset）。
-    * lastUpdateTimestamp  分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。
-    * replicas  副本列表。
+    * partition  **参数解释**： 分区ID。 **取值范围**： 不涉及
+    * leader  **参数解释**： leader副本所在节点的id。 **取值范围**： 不涉及
+    * leo  **参数解释**： 分区leader副本的LEO（Log End Offset）。 **取值范围**： 不涉及
+    * hw  **参数解释**： 分区高水位（HW，High Watermark）。 **取值范围**： 不涉及
+    * lso  **参数解释**： 分区leader副本的LSO（Log Start Offset）。 **取值范围**： 不涉及
+    * lastUpdateTimestamp  **参数解释**： 分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。 **取值范围**： 不涉及
+    * replicas  **参数解释**： 副本列表。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * partition  分区ID。
-    * leader  leader副本所在节点的id。
-    * leo  分区leader副本的LEO（Log End Offset）。
-    * hw  分区高水位（HW，High Watermark）。
-    * lso  分区leader副本的LSO（Log Start Offset）。
-    * lastUpdateTimestamp  分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。
-    * replicas  副本列表。
+    * partition  **参数解释**： 分区ID。 **取值范围**： 不涉及
+    * leader  **参数解释**： leader副本所在节点的id。 **取值范围**： 不涉及
+    * leo  **参数解释**： 分区leader副本的LEO（Log End Offset）。 **取值范围**： 不涉及
+    * hw  **参数解释**： 分区高水位（HW，High Watermark）。 **取值范围**： 不涉及
+    * lso  **参数解释**： 分区leader副本的LSO（Log Start Offset）。 **取值范围**： 不涉及
+    * lastUpdateTimestamp  **参数解释**： 分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。 **取值范围**： 不涉及
+    * replicas  **参数解释**： 副本列表。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * partition  分区ID。
-    * leader  leader副本所在节点的id。
-    * leo  分区leader副本的LEO（Log End Offset）。
-    * hw  分区高水位（HW，High Watermark）。
-    * lso  分区leader副本的LSO（Log Start Offset）。
-    * lastUpdateTimestamp  分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。
-    * replicas  副本列表。
+    * partition  **参数解释**： 分区ID。 **取值范围**： 不涉及
+    * leader  **参数解释**： leader副本所在节点的id。 **取值范围**： 不涉及
+    * leo  **参数解释**： 分区leader副本的LEO（Log End Offset）。 **取值范围**： 不涉及
+    * hw  **参数解释**： 分区高水位（HW，High Watermark）。 **取值范围**： 不涉及
+    * lso  **参数解释**： 分区leader副本的LSO（Log Start Offset）。 **取值范围**： 不涉及
+    * lastUpdateTimestamp  **参数解释**： 分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。 **取值范围**： 不涉及
+    * replicas  **参数解释**： 副本列表。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * partition  分区ID。
-    * leader  leader副本所在节点的id。
-    * leo  分区leader副本的LEO（Log End Offset）。
-    * hw  分区高水位（HW，High Watermark）。
-    * lso  分区leader副本的LSO（Log Start Offset）。
-    * lastUpdateTimestamp  分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。
-    * replicas  副本列表。
+    * partition  **参数解释**： 分区ID。 **取值范围**： 不涉及
+    * leader  **参数解释**： leader副本所在节点的id。 **取值范围**： 不涉及
+    * leo  **参数解释**： 分区leader副本的LEO（Log End Offset）。 **取值范围**： 不涉及
+    * hw  **参数解释**： 分区高水位（HW，High Watermark）。 **取值范围**： 不涉及
+    * lso  **参数解释**： 分区leader副本的LSO（Log Start Offset）。 **取值范围**： 不涉及
+    * lastUpdateTimestamp  **参数解释**： 分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。 **取值范围**： 不涉及
+    * replicas  **参数解释**： 副本列表。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * partition  分区ID。
-    * leader  leader副本所在节点的id。
-    * leo  分区leader副本的LEO（Log End Offset）。
-    * hw  分区高水位（HW，High Watermark）。
-    * lso  分区leader副本的LSO（Log Start Offset）。
-    * lastUpdateTimestamp  分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。
-    * replicas  副本列表。
+    * partition  **参数解释**： 分区ID。 **取值范围**： 不涉及
+    * leader  **参数解释**： leader副本所在节点的id。 **取值范围**： 不涉及
+    * leo  **参数解释**： 分区leader副本的LEO（Log End Offset）。 **取值范围**： 不涉及
+    * hw  **参数解释**： 分区高水位（HW，High Watermark）。 **取值范围**： 不涉及
+    * lso  **参数解释**： 分区leader副本的LSO（Log Start Offset）。 **取值范围**： 不涉及
+    * lastUpdateTimestamp  **参数解释**： 分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。 **取值范围**： 不涉及
+    * replicas  **参数解释**： 副本列表。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
 
     /**
     * Gets partition
-    *  分区ID。
+    *  **参数解释**： 分区ID。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -252,7 +252,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
     /**
     * Sets partition
     *
-    * @param int|null $partition 分区ID。
+    * @param int|null $partition **参数解释**： 分区ID。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
 
     /**
     * Gets leader
-    *  leader副本所在节点的id。
+    *  **参数解释**： leader副本所在节点的id。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -276,7 +276,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
     /**
     * Sets leader
     *
-    * @param int|null $leader leader副本所在节点的id。
+    * @param int|null $leader **参数解释**： leader副本所在节点的id。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
 
     /**
     * Gets leo
-    *  分区leader副本的LEO（Log End Offset）。
+    *  **参数解释**： 分区leader副本的LEO（Log End Offset）。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -300,7 +300,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
     /**
     * Sets leo
     *
-    * @param int|null $leo 分区leader副本的LEO（Log End Offset）。
+    * @param int|null $leo **参数解释**： 分区leader副本的LEO（Log End Offset）。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
 
     /**
     * Gets hw
-    *  分区高水位（HW，High Watermark）。
+    *  **参数解释**： 分区高水位（HW，High Watermark）。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -324,7 +324,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
     /**
     * Sets hw
     *
-    * @param int|null $hw 分区高水位（HW，High Watermark）。
+    * @param int|null $hw **参数解释**： 分区高水位（HW，High Watermark）。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
 
     /**
     * Gets lso
-    *  分区leader副本的LSO（Log Start Offset）。
+    *  **参数解释**： 分区leader副本的LSO（Log Start Offset）。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -348,7 +348,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
     /**
     * Sets lso
     *
-    * @param int|null $lso 分区leader副本的LSO（Log Start Offset）。
+    * @param int|null $lso **参数解释**： 分区leader副本的LSO（Log Start Offset）。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
 
     /**
     * Gets lastUpdateTimestamp
-    *  分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。
+    *  **参数解释**： 分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -372,7 +372,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
     /**
     * Sets lastUpdateTimestamp
     *
-    * @param int|null $lastUpdateTimestamp 分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。
+    * @param int|null $lastUpdateTimestamp **参数解释**： 分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
 
     /**
     * Gets replicas
-    *  副本列表。
+    *  **参数解释**： 副本列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowInstanceTopicDetailRespReplicas[]|null
     */
@@ -396,7 +396,7 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
     /**
     * Sets replicas
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowInstanceTopicDetailRespReplicas[]|null $replicas 副本列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowInstanceTopicDetailRespReplicas[]|null $replicas **参数解释**： 副本列表。
     *
     * @return $this
     */

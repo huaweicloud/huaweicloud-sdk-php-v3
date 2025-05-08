@@ -20,8 +20,8 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键。
-    * values  标签值。
+    * key  **参数解释**： 标签键。 **取值范围**： 不涉及。
+    * values  **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键。
-    * values  标签值。
+    * key  **参数解释**： 标签键。 **取值范围**： 不涉及。
+    * values  **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键。
-    * values  标签值。
+    * key  **参数解释**： 标签键。 **取值范围**： 不涉及。
+    * values  **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键。
-    * values  标签值。
+    * key  **参数解释**： 标签键。 **取值范围**： 不涉及。
+    * values  **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键。
-    * values  标签值。
+    * key  **参数解释**： 标签键。 **取值范围**： 不涉及。
+    * values  **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标签键。
+    *  **参数解释**： 标签键。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 标签键。
+    * @param string|null $key **参数解释**： 标签键。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  标签值。
+    *  **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -221,7 +221,7 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[]|null $values 标签值。
+    * @param string[]|null $values **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * userName  用户名。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userName  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * userName  用户名。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userName  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * userName  用户名。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userName  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * userName  用户名。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userName  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * userName  用户名。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userName  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -202,7 +202,7 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名。
+    *  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string $userName 用户名。
+    * @param string $userName **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

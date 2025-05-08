@@ -20,13 +20,13 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * startTime  查询起始时间，为unix时间戳格式，默认值为0。
-    * endTime  查询结束时间，为unix时间戳格式，默认值为系统当前时间。
-    * limit  单页返回消息数，默认值为10。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * partition  分区编号，默认值为-1，若传入值为-1，则查询所有分区。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 查询起始时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
+    * endTime  **参数解释**： 查询结束时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 系统当前时间。
+    * limit  **参数解释**： 单页返回消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 默认值为-1，若传入值为-1，则查询所有分区。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * startTime  查询起始时间，为unix时间戳格式，默认值为0。
-    * endTime  查询结束时间，为unix时间戳格式，默认值为系统当前时间。
-    * limit  单页返回消息数，默认值为10。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * partition  分区编号，默认值为-1，若传入值为-1，则查询所有分区。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 查询起始时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
+    * endTime  **参数解释**： 查询结束时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 系统当前时间。
+    * limit  **参数解释**： 单页返回消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 默认值为-1，若传入值为-1，则查询所有分区。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * startTime  查询起始时间，为unix时间戳格式，默认值为0。
-    * endTime  查询结束时间，为unix时间戳格式，默认值为系统当前时间。
-    * limit  单页返回消息数，默认值为10。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * partition  分区编号，默认值为-1，若传入值为-1，则查询所有分区。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 查询起始时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
+    * endTime  **参数解释**： 查询结束时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 系统当前时间。
+    * limit  **参数解释**： 单页返回消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 默认值为-1，若传入值为-1，则查询所有分区。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * startTime  查询起始时间，为unix时间戳格式，默认值为0。
-    * endTime  查询结束时间，为unix时间戳格式，默认值为系统当前时间。
-    * limit  单页返回消息数，默认值为10。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * partition  分区编号，默认值为-1，若传入值为-1，则查询所有分区。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 查询起始时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
+    * endTime  **参数解释**： 查询结束时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 系统当前时间。
+    * limit  **参数解释**： 单页返回消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 默认值为-1，若传入值为-1，则查询所有分区。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * startTime  查询起始时间，为unix时间戳格式，默认值为0。
-    * endTime  查询结束时间，为unix时间戳格式，默认值为系统当前时间。
-    * limit  单页返回消息数，默认值为10。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * partition  分区编号，默认值为-1，若传入值为-1，则查询所有分区。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 查询起始时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
+    * endTime  **参数解释**： 查询结束时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 系统当前时间。
+    * limit  **参数解释**： 单页返回消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 默认值为-1，若传入值为-1，则查询所有分区。
     *
     * @var string[]
     */
@@ -246,7 +246,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -258,7 +258,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -270,7 +270,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    *  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -282,7 +282,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string $topic Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    * @param string $topic **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -294,7 +294,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  查询起始时间，为unix时间戳格式，默认值为0。
+    *  **参数解释**： 查询起始时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @return string|null
     */
@@ -306,7 +306,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 查询起始时间，为unix时间戳格式，默认值为0。
+    * @param string|null $startTime **参数解释**： 查询起始时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @return $this
     */
@@ -318,7 +318,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  查询结束时间，为unix时间戳格式，默认值为系统当前时间。
+    *  **参数解释**： 查询结束时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 系统当前时间。
     *
     * @return string|null
     */
@@ -330,7 +330,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 查询结束时间，为unix时间戳格式，默认值为系统当前时间。
+    * @param string|null $endTime **参数解释**： 查询结束时间，为Unix时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 系统当前时间。
     *
     * @return $this
     */
@@ -342,7 +342,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  单页返回消息数，默认值为10。
+    *  **参数解释**： 单页返回消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
     *
     * @return int|null
     */
@@ -354,7 +354,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 单页返回消息数，默认值为10。
+    * @param int|null $limit **参数解释**： 单页返回消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
     *
     * @return $this
     */
@@ -366,7 +366,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    *  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -378,7 +378,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * @param int|null $offset **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -390,7 +390,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets partition
-    *  分区编号，默认值为-1，若传入值为-1，则查询所有分区。
+    *  **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 默认值为-1，若传入值为-1，则查询所有分区。
     *
     * @return string|null
     */
@@ -402,7 +402,7 @@ class ShowMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets partition
     *
-    * @param string|null $partition 分区编号，默认值为-1，若传入值为-1，则查询所有分区。
+    * @param string|null $partition **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 默认值为-1，若传入值为-1，则查询所有分区。
     *
     * @return $this
     */

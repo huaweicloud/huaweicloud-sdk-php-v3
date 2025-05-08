@@ -21,9 +21,9 @@ class ShowInstanceTopicDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  topic名称。
-    * partitions  分区列表。
-    * groupSubscribed  订阅该topic的消费组名称列表。
+    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及
+    * partitions  **参数解释**： 分区列表。
+    * groupSubscribed  **参数解释**： 订阅该topic的消费组名称列表。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ShowInstanceTopicDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  topic名称。
-    * partitions  分区列表。
-    * groupSubscribed  订阅该topic的消费组名称列表。
+    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及
+    * partitions  **参数解释**： 分区列表。
+    * groupSubscribed  **参数解释**： 订阅该topic的消费组名称列表。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ShowInstanceTopicDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  topic名称。
-    * partitions  分区列表。
-    * groupSubscribed  订阅该topic的消费组名称列表。
+    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及
+    * partitions  **参数解释**： 分区列表。
+    * groupSubscribed  **参数解释**： 订阅该topic的消费组名称列表。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ShowInstanceTopicDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  topic名称。
-    * partitions  分区列表。
-    * groupSubscribed  订阅该topic的消费组名称列表。
+    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及
+    * partitions  **参数解释**： 分区列表。
+    * groupSubscribed  **参数解释**： 订阅该topic的消费组名称列表。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ShowInstanceTopicDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  topic名称。
-    * partitions  分区列表。
-    * groupSubscribed  订阅该topic的消费组名称列表。
+    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及
+    * partitions  **参数解释**： 分区列表。
+    * groupSubscribed  **参数解释**： 订阅该topic的消费组名称列表。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ShowInstanceTopicDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  topic名称。
+    *  **参数解释**： topic名称。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ShowInstanceTopicDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic topic名称。
+    * @param string|null $topic **参数解释**： topic名称。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ShowInstanceTopicDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets partitions
-    *  分区列表。
+    *  **参数解释**： 分区列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowInstanceTopicDetailRespPartitions[]|null
     */
@@ -233,7 +233,7 @@ class ShowInstanceTopicDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets partitions
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowInstanceTopicDetailRespPartitions[]|null $partitions 分区列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowInstanceTopicDetailRespPartitions[]|null $partitions **参数解释**： 分区列表。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ShowInstanceTopicDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupSubscribed
-    *  订阅该topic的消费组名称列表。
+    *  **参数解释**： 订阅该topic的消费组名称列表。
     *
     * @return string[]|null
     */
@@ -257,7 +257,7 @@ class ShowInstanceTopicDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupSubscribed
     *
-    * @param string[]|null $groupSubscribed 订阅该topic的消费组名称列表。
+    * @param string[]|null $groupSubscribed **参数解释**： 订阅该topic的消费组名称列表。
     *
     * @return $this
     */

@@ -20,10 +20,6 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * redisAddress  Redis实例地址。（仅目标端类型为Redis时需要填写）
-    * redisType  Redis实例类型。（仅目标端类型为Redis时需要填写）
-    * dcsInstanceId  DCS实例ID。（仅目标端类型为Redis时需要填写）
-    * redisPassword  Redis密码。（仅目标端类型为Redis时需要填写）
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时需要填写）
     * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时需要填写）
     * deliverTimeInterval  数据转储周期（秒），默认配置为300秒。（仅目标端类型为OBS时需要填写）
@@ -38,10 +34,6 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'redisAddress' => 'string',
-            'redisType' => 'string',
-            'dcsInstanceId' => 'string',
-            'redisPassword' => 'string',
             'consumerStrategy' => 'string',
             'destinationFileType' => 'string',
             'deliverTimeInterval' => 'int',
@@ -56,10 +48,6 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * redisAddress  Redis实例地址。（仅目标端类型为Redis时需要填写）
-    * redisType  Redis实例类型。（仅目标端类型为Redis时需要填写）
-    * dcsInstanceId  DCS实例ID。（仅目标端类型为Redis时需要填写）
-    * redisPassword  Redis密码。（仅目标端类型为Redis时需要填写）
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时需要填写）
     * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时需要填写）
     * deliverTimeInterval  数据转储周期（秒），默认配置为300秒。（仅目标端类型为OBS时需要填写）
@@ -74,10 +62,6 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'redisAddress' => null,
-        'redisType' => null,
-        'dcsInstanceId' => null,
-        'redisPassword' => null,
         'consumerStrategy' => null,
         'destinationFileType' => null,
         'deliverTimeInterval' => null,
@@ -113,10 +97,6 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * redisAddress  Redis实例地址。（仅目标端类型为Redis时需要填写）
-    * redisType  Redis实例类型。（仅目标端类型为Redis时需要填写）
-    * dcsInstanceId  DCS实例ID。（仅目标端类型为Redis时需要填写）
-    * redisPassword  Redis密码。（仅目标端类型为Redis时需要填写）
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时需要填写）
     * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时需要填写）
     * deliverTimeInterval  数据转储周期（秒），默认配置为300秒。（仅目标端类型为OBS时需要填写）
@@ -131,10 +111,6 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'redisAddress' => 'redis_address',
-            'redisType' => 'redis_type',
-            'dcsInstanceId' => 'dcs_instance_id',
-            'redisPassword' => 'redis_password',
             'consumerStrategy' => 'consumer_strategy',
             'destinationFileType' => 'destination_file_type',
             'deliverTimeInterval' => 'deliver_time_interval',
@@ -149,10 +125,6 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * redisAddress  Redis实例地址。（仅目标端类型为Redis时需要填写）
-    * redisType  Redis实例类型。（仅目标端类型为Redis时需要填写）
-    * dcsInstanceId  DCS实例ID。（仅目标端类型为Redis时需要填写）
-    * redisPassword  Redis密码。（仅目标端类型为Redis时需要填写）
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时需要填写）
     * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时需要填写）
     * deliverTimeInterval  数据转储周期（秒），默认配置为300秒。（仅目标端类型为OBS时需要填写）
@@ -167,10 +139,6 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'redisAddress' => 'setRedisAddress',
-            'redisType' => 'setRedisType',
-            'dcsInstanceId' => 'setDcsInstanceId',
-            'redisPassword' => 'setRedisPassword',
             'consumerStrategy' => 'setConsumerStrategy',
             'destinationFileType' => 'setDestinationFileType',
             'deliverTimeInterval' => 'setDeliverTimeInterval',
@@ -185,10 +153,6 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * redisAddress  Redis实例地址。（仅目标端类型为Redis时需要填写）
-    * redisType  Redis实例类型。（仅目标端类型为Redis时需要填写）
-    * dcsInstanceId  DCS实例ID。（仅目标端类型为Redis时需要填写）
-    * redisPassword  Redis密码。（仅目标端类型为Redis时需要填写）
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时需要填写）
     * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时需要填写）
     * deliverTimeInterval  数据转储周期（秒），默认配置为300秒。（仅目标端类型为OBS时需要填写）
@@ -203,10 +167,6 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'redisAddress' => 'getRedisAddress',
-            'redisType' => 'getRedisType',
-            'dcsInstanceId' => 'getDcsInstanceId',
-            'redisPassword' => 'getRedisPassword',
             'consumerStrategy' => 'getConsumerStrategy',
             'destinationFileType' => 'getDestinationFileType',
             'deliverTimeInterval' => 'getDeliverTimeInterval',
@@ -277,10 +237,6 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['redisAddress'] = isset($data['redisAddress']) ? $data['redisAddress'] : null;
-        $this->container['redisType'] = isset($data['redisType']) ? $data['redisType'] : null;
-        $this->container['dcsInstanceId'] = isset($data['dcsInstanceId']) ? $data['dcsInstanceId'] : null;
-        $this->container['redisPassword'] = isset($data['redisPassword']) ? $data['redisPassword'] : null;
         $this->container['consumerStrategy'] = isset($data['consumerStrategy']) ? $data['consumerStrategy'] : null;
         $this->container['destinationFileType'] = isset($data['destinationFileType']) ? $data['destinationFileType'] : null;
         $this->container['deliverTimeInterval'] = isset($data['deliverTimeInterval']) ? $data['deliverTimeInterval'] : null;
@@ -313,102 +269,6 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets redisAddress
-    *  Redis实例地址。（仅目标端类型为Redis时需要填写）
-    *
-    * @return string|null
-    */
-    public function getRedisAddress()
-    {
-        return $this->container['redisAddress'];
-    }
-
-    /**
-    * Sets redisAddress
-    *
-    * @param string|null $redisAddress Redis实例地址。（仅目标端类型为Redis时需要填写）
-    *
-    * @return $this
-    */
-    public function setRedisAddress($redisAddress)
-    {
-        $this->container['redisAddress'] = $redisAddress;
-        return $this;
-    }
-
-    /**
-    * Gets redisType
-    *  Redis实例类型。（仅目标端类型为Redis时需要填写）
-    *
-    * @return string|null
-    */
-    public function getRedisType()
-    {
-        return $this->container['redisType'];
-    }
-
-    /**
-    * Sets redisType
-    *
-    * @param string|null $redisType Redis实例类型。（仅目标端类型为Redis时需要填写）
-    *
-    * @return $this
-    */
-    public function setRedisType($redisType)
-    {
-        $this->container['redisType'] = $redisType;
-        return $this;
-    }
-
-    /**
-    * Gets dcsInstanceId
-    *  DCS实例ID。（仅目标端类型为Redis时需要填写）
-    *
-    * @return string|null
-    */
-    public function getDcsInstanceId()
-    {
-        return $this->container['dcsInstanceId'];
-    }
-
-    /**
-    * Sets dcsInstanceId
-    *
-    * @param string|null $dcsInstanceId DCS实例ID。（仅目标端类型为Redis时需要填写）
-    *
-    * @return $this
-    */
-    public function setDcsInstanceId($dcsInstanceId)
-    {
-        $this->container['dcsInstanceId'] = $dcsInstanceId;
-        return $this;
-    }
-
-    /**
-    * Gets redisPassword
-    *  Redis密码。（仅目标端类型为Redis时需要填写）
-    *
-    * @return string|null
-    */
-    public function getRedisPassword()
-    {
-        return $this->container['redisPassword'];
-    }
-
-    /**
-    * Sets redisPassword
-    *
-    * @param string|null $redisPassword Redis密码。（仅目标端类型为Redis时需要填写）
-    *
-    * @return $this
-    */
-    public function setRedisPassword($redisPassword)
-    {
-        $this->container['redisPassword'] = $redisPassword;
-        return $this;
     }
 
     /**

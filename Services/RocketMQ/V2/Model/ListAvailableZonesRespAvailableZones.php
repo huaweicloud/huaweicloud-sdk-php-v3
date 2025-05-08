@@ -20,15 +20,15 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * soldOut  是否售罄。
-    * id  可用区ID。
-    * code  可用区编码。
-    * name  可用区名称。
-    * port  可用区端口号。
-    * resourceAvailability  分区上是否还有可用资源。
-    * defaultAz  是否为默认可用区。
-    * remainTime  剩余时间。
-    * ipv6Enable  是否支持IPv6。
+    * soldOut  **参数解释**： 是否售罄。 **取值范围**： - true：售罄。 - false：未售罄。
+    * id  **参数解释**： 可用区ID。 **取值范围**： 不涉及。
+    * code  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
+    * name  **参数解释**： 可用区名称。 **取值范围**： 不涉及。
+    * port  **参数解释**： 可用区端口号。 **取值范围**： 不涉及。
+    * resourceAvailability  **参数解释**： 分区上是否还有可用资源。 **取值范围**： 不涉及。
+    * defaultAz  **参数解释**： 是否为默认可用区。 **取值范围**： - true：默认可用区 - false：不是默认可用区
+    * remainTime  **参数解释**： 剩余时间。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * soldOut  是否售罄。
-    * id  可用区ID。
-    * code  可用区编码。
-    * name  可用区名称。
-    * port  可用区端口号。
-    * resourceAvailability  分区上是否还有可用资源。
-    * defaultAz  是否为默认可用区。
-    * remainTime  剩余时间。
-    * ipv6Enable  是否支持IPv6。
+    * soldOut  **参数解释**： 是否售罄。 **取值范围**： - true：售罄。 - false：未售罄。
+    * id  **参数解释**： 可用区ID。 **取值范围**： 不涉及。
+    * code  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
+    * name  **参数解释**： 可用区名称。 **取值范围**： 不涉及。
+    * port  **参数解释**： 可用区端口号。 **取值范围**： 不涉及。
+    * resourceAvailability  **参数解释**： 分区上是否还有可用资源。 **取值范围**： 不涉及。
+    * defaultAz  **参数解释**： 是否为默认可用区。 **取值范围**： - true：默认可用区 - false：不是默认可用区
+    * remainTime  **参数解释**： 剩余时间。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * soldOut  是否售罄。
-    * id  可用区ID。
-    * code  可用区编码。
-    * name  可用区名称。
-    * port  可用区端口号。
-    * resourceAvailability  分区上是否还有可用资源。
-    * defaultAz  是否为默认可用区。
-    * remainTime  剩余时间。
-    * ipv6Enable  是否支持IPv6。
+    * soldOut  **参数解释**： 是否售罄。 **取值范围**： - true：售罄。 - false：未售罄。
+    * id  **参数解释**： 可用区ID。 **取值范围**： 不涉及。
+    * code  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
+    * name  **参数解释**： 可用区名称。 **取值范围**： 不涉及。
+    * port  **参数解释**： 可用区端口号。 **取值范围**： 不涉及。
+    * resourceAvailability  **参数解释**： 分区上是否还有可用资源。 **取值范围**： 不涉及。
+    * defaultAz  **参数解释**： 是否为默认可用区。 **取值范围**： - true：默认可用区 - false：不是默认可用区
+    * remainTime  **参数解释**： 剩余时间。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * soldOut  是否售罄。
-    * id  可用区ID。
-    * code  可用区编码。
-    * name  可用区名称。
-    * port  可用区端口号。
-    * resourceAvailability  分区上是否还有可用资源。
-    * defaultAz  是否为默认可用区。
-    * remainTime  剩余时间。
-    * ipv6Enable  是否支持IPv6。
+    * soldOut  **参数解释**： 是否售罄。 **取值范围**： - true：售罄。 - false：未售罄。
+    * id  **参数解释**： 可用区ID。 **取值范围**： 不涉及。
+    * code  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
+    * name  **参数解释**： 可用区名称。 **取值范围**： 不涉及。
+    * port  **参数解释**： 可用区端口号。 **取值范围**： 不涉及。
+    * resourceAvailability  **参数解释**： 分区上是否还有可用资源。 **取值范围**： 不涉及。
+    * defaultAz  **参数解释**： 是否为默认可用区。 **取值范围**： - true：默认可用区 - false：不是默认可用区
+    * remainTime  **参数解释**： 剩余时间。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * soldOut  是否售罄。
-    * id  可用区ID。
-    * code  可用区编码。
-    * name  可用区名称。
-    * port  可用区端口号。
-    * resourceAvailability  分区上是否还有可用资源。
-    * defaultAz  是否为默认可用区。
-    * remainTime  剩余时间。
-    * ipv6Enable  是否支持IPv6。
+    * soldOut  **参数解释**： 是否售罄。 **取值范围**： - true：售罄。 - false：未售罄。
+    * id  **参数解释**： 可用区ID。 **取值范围**： 不涉及。
+    * code  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
+    * name  **参数解释**： 可用区名称。 **取值范围**： 不涉及。
+    * port  **参数解释**： 可用区端口号。 **取值范围**： 不涉及。
+    * resourceAvailability  **参数解释**： 分区上是否还有可用资源。 **取值范围**： 不涉及。
+    * defaultAz  **参数解释**： 是否为默认可用区。 **取值范围**： - true：默认可用区 - false：不是默认可用区
+    * remainTime  **参数解释**： 剩余时间。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Gets soldOut
-    *  是否售罄。
+    *  **参数解释**： 是否售罄。 **取值范围**： - true：售罄。 - false：未售罄。
     *
     * @return bool|null
     */
@@ -274,7 +274,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     /**
     * Sets soldOut
     *
-    * @param bool|null $soldOut 是否售罄。
+    * @param bool|null $soldOut **参数解释**： 是否售罄。 **取值范围**： - true：售罄。 - false：未售罄。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Gets id
-    *  可用区ID。
+    *  **参数解释**： 可用区ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     /**
     * Sets id
     *
-    * @param string|null $id 可用区ID。
+    * @param string|null $id **参数解释**： 可用区ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Gets code
-    *  可用区编码。
+    *  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     /**
     * Sets code
     *
-    * @param string|null $code 可用区编码。
+    * @param string|null $code **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Gets name
-    *  可用区名称。
+    *  **参数解释**： 可用区名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     /**
     * Sets name
     *
-    * @param string|null $name 可用区名称。
+    * @param string|null $name **参数解释**： 可用区名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Gets port
-    *  可用区端口号。
+    *  **参数解释**： 可用区端口号。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     /**
     * Sets port
     *
-    * @param string|null $port 可用区端口号。
+    * @param string|null $port **参数解释**： 可用区端口号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Gets resourceAvailability
-    *  分区上是否还有可用资源。
+    *  **参数解释**： 分区上是否还有可用资源。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     /**
     * Sets resourceAvailability
     *
-    * @param string|null $resourceAvailability 分区上是否还有可用资源。
+    * @param string|null $resourceAvailability **参数解释**： 分区上是否还有可用资源。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Gets defaultAz
-    *  是否为默认可用区。
+    *  **参数解释**： 是否为默认可用区。 **取值范围**： - true：默认可用区 - false：不是默认可用区
     *
     * @return bool|null
     */
@@ -418,7 +418,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     /**
     * Sets defaultAz
     *
-    * @param bool|null $defaultAz 是否为默认可用区。
+    * @param bool|null $defaultAz **参数解释**： 是否为默认可用区。 **取值范围**： - true：默认可用区 - false：不是默认可用区
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Gets remainTime
-    *  剩余时间。
+    *  **参数解释**： 剩余时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -442,7 +442,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     /**
     * Sets remainTime
     *
-    * @param int|null $remainTime 剩余时间。
+    * @param int|null $remainTime **参数解释**： 剩余时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Gets ipv6Enable
-    *  是否支持IPv6。
+    *  **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
     *
     * @return bool|null
     */
@@ -466,7 +466,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     /**
     * Sets ipv6Enable
     *
-    * @param bool|null $ipv6Enable 是否支持IPv6。
+    * @param bool|null $ipv6Enable **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
     *
     * @return $this
     */

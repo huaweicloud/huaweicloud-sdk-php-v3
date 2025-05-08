@@ -20,15 +20,15 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * groupDesc  消费组描述，长度0~200个字符。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * createdAt  创建时间戳。
-    * permissions  权限集。
-    * consumeOrderly  是否按顺序消费。
+    * enabled  **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
+    * broadcast  **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
+    * brokers  **参数解释**： 关联的代理列表。
+    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **取值范围**： 1~16。
+    * createdAt  **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
+    * permissions  **参数解释**： 权限集。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * groupDesc  消费组描述，长度0~200个字符。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * createdAt  创建时间戳。
-    * permissions  权限集。
-    * consumeOrderly  是否按顺序消费。
+    * enabled  **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
+    * broadcast  **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
+    * brokers  **参数解释**： 关联的代理列表。
+    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **取值范围**： 1~16。
+    * createdAt  **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
+    * permissions  **参数解释**： 权限集。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * groupDesc  消费组描述，长度0~200个字符。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * createdAt  创建时间戳。
-    * permissions  权限集。
-    * consumeOrderly  是否按顺序消费。
+    * enabled  **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
+    * broadcast  **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
+    * brokers  **参数解释**： 关联的代理列表。
+    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **取值范围**： 1~16。
+    * createdAt  **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
+    * permissions  **参数解释**： 权限集。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * groupDesc  消费组描述，长度0~200个字符。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * createdAt  创建时间戳。
-    * permissions  权限集。
-    * consumeOrderly  是否按顺序消费。
+    * enabled  **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
+    * broadcast  **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
+    * brokers  **参数解释**： 关联的代理列表。
+    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **取值范围**： 1~16。
+    * createdAt  **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
+    * permissions  **参数解释**： 权限集。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * groupDesc  消费组描述，长度0~200个字符。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * createdAt  创建时间戳。
-    * permissions  权限集。
-    * consumeOrderly  是否按顺序消费。
+    * enabled  **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
+    * broadcast  **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
+    * brokers  **参数解释**： 关联的代理列表。
+    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **取值范围**： 1~16。
+    * createdAt  **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
+    * permissions  **参数解释**： 权限集。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
     *
     * @var string[]
     */
@@ -268,7 +268,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否可以消费。
+    *  **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
     *
     * @return bool|null
     */
@@ -280,7 +280,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 是否可以消费。
+    * @param bool|null $enabled **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
     *
     * @return $this
     */
@@ -292,7 +292,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets broadcast
-    *  是否广播。
+    *  **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
     *
     * @return bool|null
     */
@@ -304,7 +304,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets broadcast
     *
-    * @param bool|null $broadcast 是否广播。
+    * @param bool|null $broadcast **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
     *
     * @return $this
     */
@@ -316,7 +316,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokers
-    *  关联的代理列表。
+    *  **参数解释**： 关联的代理列表。
     *
     * @return string[]|null
     */
@@ -328,7 +328,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets brokers
     *
-    * @param string[]|null $brokers 关联的代理列表。
+    * @param string[]|null $brokers **参数解释**： 关联的代理列表。
     *
     * @return $this
     */
@@ -340,7 +340,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    *  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -352,7 +352,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    * @param string|null $name **参数解释**： 消费组名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -364,7 +364,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupDesc
-    *  消费组描述，长度0~200个字符。
+    *  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -376,7 +376,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets groupDesc
     *
-    * @param string|null $groupDesc 消费组描述，长度0~200个字符。
+    * @param string|null $groupDesc **参数解释**： 消费组描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -388,7 +388,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets retryMaxTime
-    *  最大重试次数，取值范围为1~16。
+    *  **参数解释**： 最大重试次数。 **取值范围**： 1~16。
     *
     * @return int|null
     */
@@ -400,7 +400,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets retryMaxTime
     *
-    * @param int|null $retryMaxTime 最大重试次数，取值范围为1~16。
+    * @param int|null $retryMaxTime **参数解释**： 最大重试次数。 **取值范围**： 1~16。
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间戳。
+    *  **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -424,7 +424,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param int|null $createdAt 创建时间戳。
+    * @param int|null $createdAt **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -436,7 +436,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets permissions
-    *  权限集。
+    *  **参数解释**： 权限集。
     *
     * @return string[]|null
     */
@@ -448,7 +448,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets permissions
     *
-    * @param string[]|null $permissions 权限集。
+    * @param string[]|null $permissions **参数解释**： 权限集。
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeOrderly
-    *  是否按顺序消费。
+    *  **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
     *
     * @return bool|null
     */
@@ -472,7 +472,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets consumeOrderly
     *
-    * @param bool|null $consumeOrderly 是否按顺序消费。
+    * @param bool|null $consumeOrderly **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
     *
     * @return $this
     */

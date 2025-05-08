@@ -191,6 +191,12 @@ class ResendReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['group'] === null) {
+            $invalidProperties[] = "'group' can't be null";
+        }
+        if ($this->container['clientId'] === null) {
+            $invalidProperties[] = "'clientId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -209,7 +215,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     * Gets group
     *  Group ID。
     *
-    * @return string|null
+    * @return string
     */
     public function getGroup()
     {
@@ -219,7 +225,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Sets group
     *
-    * @param string|null $group Group ID。
+    * @param string $group Group ID。
     *
     * @return $this
     */
@@ -257,7 +263,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     * Gets clientId
     *  客户端ID。
     *
-    * @return string|null
+    * @return string
     */
     public function getClientId()
     {
@@ -267,7 +273,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Sets clientId
     *
-    * @param string|null $clientId 客户端ID。
+    * @param string $clientId 客户端ID。
     *
     * @return $this
     */

@@ -82,6 +82,8 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数（创建函数时不支持修改）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -146,7 +148,9 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
             'isReturnStream' => 'bool',
             'enableAuthInHeader' => 'bool',
             'enableLtsLog' => 'bool',
-            'ltsCustomTag' => 'map[string,string]'
+            'ltsCustomTag' => 'map[string,string]',
+            'userDataEncryptKmsKeyId' => 'string',
+            'codeEncryptKmsKeyId' => 'string'
     ];
 
     /**
@@ -212,6 +216,8 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数（创建函数时不支持修改）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -276,7 +282,9 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
         'isReturnStream' => null,
         'enableAuthInHeader' => null,
         'enableLtsLog' => null,
-        'ltsCustomTag' => null
+        'ltsCustomTag' => null,
+        'userDataEncryptKmsKeyId' => null,
+        'codeEncryptKmsKeyId' => null
     ];
 
     /**
@@ -363,6 +371,8 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数（创建函数时不支持修改）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -427,7 +437,9 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
             'isReturnStream' => 'is_return_stream',
             'enableAuthInHeader' => 'enable_auth_in_header',
             'enableLtsLog' => 'enable_lts_log',
-            'ltsCustomTag' => 'lts_custom_tag'
+            'ltsCustomTag' => 'lts_custom_tag',
+            'userDataEncryptKmsKeyId' => 'user_data_encrypt_kms_key_id',
+            'codeEncryptKmsKeyId' => 'code_encrypt_kms_key_id'
     ];
 
     /**
@@ -493,6 +505,8 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数（创建函数时不支持修改）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -557,7 +571,9 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
             'isReturnStream' => 'setIsReturnStream',
             'enableAuthInHeader' => 'setEnableAuthInHeader',
             'enableLtsLog' => 'setEnableLtsLog',
-            'ltsCustomTag' => 'setLtsCustomTag'
+            'ltsCustomTag' => 'setLtsCustomTag',
+            'userDataEncryptKmsKeyId' => 'setUserDataEncryptKmsKeyId',
+            'codeEncryptKmsKeyId' => 'setCodeEncryptKmsKeyId'
     ];
 
     /**
@@ -623,6 +639,8 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息，只支持自定义镜像函数（创建函数时不支持修改）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -687,7 +705,9 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
             'isReturnStream' => 'getIsReturnStream',
             'enableAuthInHeader' => 'getEnableAuthInHeader',
             'enableLtsLog' => 'getEnableLtsLog',
-            'ltsCustomTag' => 'getLtsCustomTag'
+            'ltsCustomTag' => 'getLtsCustomTag',
+            'userDataEncryptKmsKeyId' => 'getUserDataEncryptKmsKeyId',
+            'codeEncryptKmsKeyId' => 'getCodeEncryptKmsKeyId'
     ];
 
     /**
@@ -906,6 +926,8 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
         $this->container['enableAuthInHeader'] = isset($data['enableAuthInHeader']) ? $data['enableAuthInHeader'] : null;
         $this->container['enableLtsLog'] = isset($data['enableLtsLog']) ? $data['enableLtsLog'] : null;
         $this->container['ltsCustomTag'] = isset($data['ltsCustomTag']) ? $data['ltsCustomTag'] : null;
+        $this->container['userDataEncryptKmsKeyId'] = isset($data['userDataEncryptKmsKeyId']) ? $data['userDataEncryptKmsKeyId'] : null;
+        $this->container['codeEncryptKmsKeyId'] = isset($data['codeEncryptKmsKeyId']) ? $data['codeEncryptKmsKeyId'] : null;
     }
 
     /**
@@ -2415,6 +2437,54 @@ class CreateFunctionResponse implements ModelInterface, ArrayAccess
     public function setLtsCustomTag($ltsCustomTag)
     {
         $this->container['ltsCustomTag'] = $ltsCustomTag;
+        return $this;
+    }
+
+    /**
+    * Gets userDataEncryptKmsKeyId
+    *  用于环境变量加密的kms主秘钥ID。
+    *
+    * @return string|null
+    */
+    public function getUserDataEncryptKmsKeyId()
+    {
+        return $this->container['userDataEncryptKmsKeyId'];
+    }
+
+    /**
+    * Sets userDataEncryptKmsKeyId
+    *
+    * @param string|null $userDataEncryptKmsKeyId 用于环境变量加密的kms主秘钥ID。
+    *
+    * @return $this
+    */
+    public function setUserDataEncryptKmsKeyId($userDataEncryptKmsKeyId)
+    {
+        $this->container['userDataEncryptKmsKeyId'] = $userDataEncryptKmsKeyId;
+        return $this;
+    }
+
+    /**
+    * Gets codeEncryptKmsKeyId
+    *  用于用户代码加密的kms主秘钥ID。
+    *
+    * @return string|null
+    */
+    public function getCodeEncryptKmsKeyId()
+    {
+        return $this->container['codeEncryptKmsKeyId'];
+    }
+
+    /**
+    * Sets codeEncryptKmsKeyId
+    *
+    * @param string|null $codeEncryptKmsKeyId 用于用户代码加密的kms主秘钥ID。
+    *
+    * @return $this
+    */
+    public function setCodeEncryptKmsKeyId($codeEncryptKmsKeyId)
+    {
+        $this->container['codeEncryptKmsKeyId'] = $codeEncryptKmsKeyId;
         return $this;
     }
 

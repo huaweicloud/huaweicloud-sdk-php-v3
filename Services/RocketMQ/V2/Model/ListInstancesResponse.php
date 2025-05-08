@@ -21,20 +21,20 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instances  实例列表。
-    * instanceNum  实例数量。
+    * instances  **参数解释**： 实例列表。 **取值范围**： 不涉及。
+    * instanceNum  **参数解释**： 实例数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instances' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ShowInstanceResp[]',
+            'instances' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\InstanceDetail[]',
             'instanceNum' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instances  实例列表。
-    * instanceNum  实例数量。
+    * instances  **参数解释**： 实例列表。 **取值范围**： 不涉及。
+    * instanceNum  **参数解释**： 实例数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instances  实例列表。
-    * instanceNum  实例数量。
+    * instances  **参数解释**： 实例列表。 **取值范围**： 不涉及。
+    * instanceNum  **参数解释**： 实例数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instances  实例列表。
-    * instanceNum  实例数量。
+    * instances  **参数解释**： 实例列表。 **取值范围**： 不涉及。
+    * instanceNum  **参数解释**： 实例数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instances  实例列表。
-    * instanceNum  实例数量。
+    * instances  **参数解释**： 实例列表。 **取值范围**： 不涉及。
+    * instanceNum  **参数解释**： 实例数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,9 +186,9 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  实例列表。
+    *  **参数解释**： 实例列表。 **取值范围**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ShowInstanceResp[]|null
+    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\InstanceDetail[]|null
     */
     public function getInstances()
     {
@@ -198,7 +198,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ShowInstanceResp[]|null $instances 实例列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\InstanceDetail[]|null $instances **参数解释**： 实例列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceNum
-    *  实例数量。
+    *  **参数解释**： 实例数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instanceNum
     *
-    * @param int|null $instanceNum 实例数量。
+    * @param int|null $instanceNum **参数解释**： 实例数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */

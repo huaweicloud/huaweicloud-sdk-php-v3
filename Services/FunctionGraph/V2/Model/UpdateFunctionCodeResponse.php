@@ -36,6 +36,7 @@ class UpdateFunctionCodeResponse implements ModelInterface, ArrayAccess
     * dependVersionList  依赖版本id列表
     * strategyConfig  strategyConfig
     * dependencies  函数依赖代码包列表。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -54,7 +55,8 @@ class UpdateFunctionCodeResponse implements ModelInterface, ArrayAccess
             'dependList' => 'string[]',
             'dependVersionList' => 'string[]',
             'strategyConfig' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\StrategyConfig',
-            'dependencies' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\Dependency[]'
+            'dependencies' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\Dependency[]',
+            'codeEncryptKmsKeyId' => 'string'
     ];
 
     /**
@@ -74,6 +76,7 @@ class UpdateFunctionCodeResponse implements ModelInterface, ArrayAccess
     * dependVersionList  依赖版本id列表
     * strategyConfig  strategyConfig
     * dependencies  函数依赖代码包列表。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -92,7 +95,8 @@ class UpdateFunctionCodeResponse implements ModelInterface, ArrayAccess
         'dependList' => null,
         'dependVersionList' => null,
         'strategyConfig' => null,
-        'dependencies' => null
+        'dependencies' => null,
+        'codeEncryptKmsKeyId' => null
     ];
 
     /**
@@ -133,6 +137,7 @@ class UpdateFunctionCodeResponse implements ModelInterface, ArrayAccess
     * dependVersionList  依赖版本id列表
     * strategyConfig  strategyConfig
     * dependencies  函数依赖代码包列表。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -151,7 +156,8 @@ class UpdateFunctionCodeResponse implements ModelInterface, ArrayAccess
             'dependList' => 'depend_list',
             'dependVersionList' => 'depend_version_list',
             'strategyConfig' => 'strategy_config',
-            'dependencies' => 'dependencies'
+            'dependencies' => 'dependencies',
+            'codeEncryptKmsKeyId' => 'code_encrypt_kms_key_id'
     ];
 
     /**
@@ -171,6 +177,7 @@ class UpdateFunctionCodeResponse implements ModelInterface, ArrayAccess
     * dependVersionList  依赖版本id列表
     * strategyConfig  strategyConfig
     * dependencies  函数依赖代码包列表。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -189,7 +196,8 @@ class UpdateFunctionCodeResponse implements ModelInterface, ArrayAccess
             'dependList' => 'setDependList',
             'dependVersionList' => 'setDependVersionList',
             'strategyConfig' => 'setStrategyConfig',
-            'dependencies' => 'setDependencies'
+            'dependencies' => 'setDependencies',
+            'codeEncryptKmsKeyId' => 'setCodeEncryptKmsKeyId'
     ];
 
     /**
@@ -209,6 +217,7 @@ class UpdateFunctionCodeResponse implements ModelInterface, ArrayAccess
     * dependVersionList  依赖版本id列表
     * strategyConfig  strategyConfig
     * dependencies  函数依赖代码包列表。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -227,7 +236,8 @@ class UpdateFunctionCodeResponse implements ModelInterface, ArrayAccess
             'dependList' => 'getDependList',
             'dependVersionList' => 'getDependVersionList',
             'strategyConfig' => 'getStrategyConfig',
-            'dependencies' => 'getDependencies'
+            'dependencies' => 'getDependencies',
+            'codeEncryptKmsKeyId' => 'getCodeEncryptKmsKeyId'
     ];
 
     /**
@@ -385,6 +395,7 @@ class UpdateFunctionCodeResponse implements ModelInterface, ArrayAccess
         $this->container['dependVersionList'] = isset($data['dependVersionList']) ? $data['dependVersionList'] : null;
         $this->container['strategyConfig'] = isset($data['strategyConfig']) ? $data['strategyConfig'] : null;
         $this->container['dependencies'] = isset($data['dependencies']) ? $data['dependencies'] : null;
+        $this->container['codeEncryptKmsKeyId'] = isset($data['codeEncryptKmsKeyId']) ? $data['codeEncryptKmsKeyId'] : null;
     }
 
     /**
@@ -782,6 +793,30 @@ class UpdateFunctionCodeResponse implements ModelInterface, ArrayAccess
     public function setDependencies($dependencies)
     {
         $this->container['dependencies'] = $dependencies;
+        return $this;
+    }
+
+    /**
+    * Gets codeEncryptKmsKeyId
+    *  用于用户代码加密的kms主秘钥ID。
+    *
+    * @return string|null
+    */
+    public function getCodeEncryptKmsKeyId()
+    {
+        return $this->container['codeEncryptKmsKeyId'];
+    }
+
+    /**
+    * Sets codeEncryptKmsKeyId
+    *
+    * @param string|null $codeEncryptKmsKeyId 用于用户代码加密的kms主秘钥ID。
+    *
+    * @return $this
+    */
+    public function setCodeEncryptKmsKeyId($codeEncryptKmsKeyId)
+    {
+        $this->container['codeEncryptKmsKeyId'] = $codeEncryptKmsKeyId;
         return $this;
     }
 

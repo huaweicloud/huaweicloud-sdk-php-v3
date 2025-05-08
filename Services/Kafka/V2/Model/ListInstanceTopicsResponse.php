@@ -21,12 +21,12 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  topic总数。
-    * size  分页查询的大小。
-    * remainPartitions  剩余分区数。
-    * maxPartitions  分区总数。
-    * topicMaxPartitions  单个topic最大占用分区数。
-    * topics  topic列表。
+    * total  **参数解释**： Topic总数。 **取值范围**： 不涉及。
+    * size  **参数解释**： 分页查询的大小。 **取值范围**： 不涉及。
+    * remainPartitions  **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
+    * maxPartitions  **参数解释**： 分区总数。 **取值范围**： 不涉及。
+    * topicMaxPartitions  **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
+    * topics  **参数解释**： topic列表。
     *
     * @var string[]
     */
@@ -41,12 +41,12 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  topic总数。
-    * size  分页查询的大小。
-    * remainPartitions  剩余分区数。
-    * maxPartitions  分区总数。
-    * topicMaxPartitions  单个topic最大占用分区数。
-    * topics  topic列表。
+    * total  **参数解释**： Topic总数。 **取值范围**： 不涉及。
+    * size  **参数解释**： 分页查询的大小。 **取值范围**： 不涉及。
+    * remainPartitions  **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
+    * maxPartitions  **参数解释**： 分区总数。 **取值范围**： 不涉及。
+    * topicMaxPartitions  **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
+    * topics  **参数解释**： topic列表。
     *
     * @var string[]
     */
@@ -82,12 +82,12 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  topic总数。
-    * size  分页查询的大小。
-    * remainPartitions  剩余分区数。
-    * maxPartitions  分区总数。
-    * topicMaxPartitions  单个topic最大占用分区数。
-    * topics  topic列表。
+    * total  **参数解释**： Topic总数。 **取值范围**： 不涉及。
+    * size  **参数解释**： 分页查询的大小。 **取值范围**： 不涉及。
+    * remainPartitions  **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
+    * maxPartitions  **参数解释**： 分区总数。 **取值范围**： 不涉及。
+    * topicMaxPartitions  **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
+    * topics  **参数解释**： topic列表。
     *
     * @var string[]
     */
@@ -102,12 +102,12 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  topic总数。
-    * size  分页查询的大小。
-    * remainPartitions  剩余分区数。
-    * maxPartitions  分区总数。
-    * topicMaxPartitions  单个topic最大占用分区数。
-    * topics  topic列表。
+    * total  **参数解释**： Topic总数。 **取值范围**： 不涉及。
+    * size  **参数解释**： 分页查询的大小。 **取值范围**： 不涉及。
+    * remainPartitions  **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
+    * maxPartitions  **参数解释**： 分区总数。 **取值范围**： 不涉及。
+    * topicMaxPartitions  **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
+    * topics  **参数解释**： topic列表。
     *
     * @var string[]
     */
@@ -122,12 +122,12 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  topic总数。
-    * size  分页查询的大小。
-    * remainPartitions  剩余分区数。
-    * maxPartitions  分区总数。
-    * topicMaxPartitions  单个topic最大占用分区数。
-    * topics  topic列表。
+    * total  **参数解释**： Topic总数。 **取值范围**： 不涉及。
+    * size  **参数解释**： 分页查询的大小。 **取值范围**： 不涉及。
+    * remainPartitions  **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
+    * maxPartitions  **参数解释**： 分区总数。 **取值范围**： 不涉及。
+    * topicMaxPartitions  **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
+    * topics  **参数解释**： topic列表。
     *
     * @var string[]
     */
@@ -230,7 +230,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  topic总数。
+    *  **参数解释**： Topic总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -242,7 +242,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total topic总数。
+    * @param int|null $total **参数解释**： Topic总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -254,7 +254,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  分页查询的大小。
+    *  **参数解释**： 分页查询的大小。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -266,7 +266,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 分页查询的大小。
+    * @param int|null $size **参数解释**： 分页查询的大小。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets remainPartitions
-    *  剩余分区数。
+    *  **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -290,7 +290,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets remainPartitions
     *
-    * @param int|null $remainPartitions 剩余分区数。
+    * @param int|null $remainPartitions **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxPartitions
-    *  分区总数。
+    *  **参数解释**： 分区总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -314,7 +314,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets maxPartitions
     *
-    * @param int|null $maxPartitions 分区总数。
+    * @param int|null $maxPartitions **参数解释**： 分区总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicMaxPartitions
-    *  单个topic最大占用分区数。
+    *  **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -338,7 +338,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topicMaxPartitions
     *
-    * @param int|null $topicMaxPartitions 单个topic最大占用分区数。
+    * @param int|null $topicMaxPartitions **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  topic列表。
+    *  **参数解释**： topic列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\TopicEntity[]|null
     */
@@ -362,7 +362,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\TopicEntity[]|null $topics topic列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\TopicEntity[]|null $topics **参数解释**： topic列表。
     *
     * @return $this
     */

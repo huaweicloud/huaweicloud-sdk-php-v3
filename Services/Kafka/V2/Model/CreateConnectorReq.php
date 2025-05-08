@@ -20,7 +20,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。[仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB](tag:hws,hws_hk,g42,hk_g42,ctc)
     * nodeCnt  Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
     * specCode  转储节点规格编码。仅老规格实例需要填写。
     *
@@ -34,7 +34,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。[仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB](tag:hws,hws_hk,g42,hk_g42,ctc)
     * nodeCnt  Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
     * specCode  转储节点规格编码。仅老规格实例需要填写。
     *
@@ -69,7 +69,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。[仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB](tag:hws,hws_hk,g42,hk_g42,ctc)
     * nodeCnt  Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
     * specCode  转储节点规格编码。仅老规格实例需要填写。
     *
@@ -83,7 +83,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。[仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB](tag:hws,hws_hk,g42,hk_g42,ctc)
     * nodeCnt  Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
     * specCode  转储节点规格编码。仅老规格实例需要填写。
     *
@@ -97,7 +97,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。[仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB](tag:hws,hws_hk,g42,hk_g42,ctc)
     * nodeCnt  Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
     * specCode  转储节点规格编码。仅老规格实例需要填写。
     *
@@ -223,7 +223,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets specification
-    *  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+    *  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。[仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB](tag:hws,hws_hk,g42,hk_g42,ctc)
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
     /**
     * Sets specification
     *
-    * @param string|null $specification 部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+    * @param string|null $specification 部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。[仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB](tag:hws,hws_hk,g42,hk_g42,ctc)
     *
     * @return $this
     */

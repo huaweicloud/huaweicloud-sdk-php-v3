@@ -20,10 +20,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * redisAddress  Redis实例地址。（仅目标端类型为Redis时会显示）
-    * redisType  Redis实例类型。（仅目标端类型为Redis时会显示）
-    * dcsInstanceId  DCS实例ID。（仅目标端类型为Redis时会显示）
-    * targetDb  目标数据库，默认为-1。（仅目标端类型为Redis时会显示）
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
     * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示）
     * deliverTimeInterval  记数据转储周期（秒）。（仅目标端类型为OBS时会显示）
@@ -44,10 +40,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'redisAddress' => 'string',
-            'redisType' => 'string',
-            'dcsInstanceId' => 'string',
-            'targetDb' => 'int',
             'consumerStrategy' => 'string',
             'destinationFileType' => 'string',
             'deliverTimeInterval' => 'int',
@@ -68,10 +60,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * redisAddress  Redis实例地址。（仅目标端类型为Redis时会显示）
-    * redisType  Redis实例类型。（仅目标端类型为Redis时会显示）
-    * dcsInstanceId  DCS实例ID。（仅目标端类型为Redis时会显示）
-    * targetDb  目标数据库，默认为-1。（仅目标端类型为Redis时会显示）
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
     * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示）
     * deliverTimeInterval  记数据转储周期（秒）。（仅目标端类型为OBS时会显示）
@@ -92,10 +80,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'redisAddress' => null,
-        'redisType' => null,
-        'dcsInstanceId' => null,
-        'targetDb' => 'int32',
         'consumerStrategy' => null,
         'destinationFileType' => null,
         'deliverTimeInterval' => null,
@@ -137,10 +121,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * redisAddress  Redis实例地址。（仅目标端类型为Redis时会显示）
-    * redisType  Redis实例类型。（仅目标端类型为Redis时会显示）
-    * dcsInstanceId  DCS实例ID。（仅目标端类型为Redis时会显示）
-    * targetDb  目标数据库，默认为-1。（仅目标端类型为Redis时会显示）
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
     * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示）
     * deliverTimeInterval  记数据转储周期（秒）。（仅目标端类型为OBS时会显示）
@@ -161,10 +141,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'redisAddress' => 'redis_address',
-            'redisType' => 'redis_type',
-            'dcsInstanceId' => 'dcs_instance_id',
-            'targetDb' => 'target_db',
             'consumerStrategy' => 'consumer_strategy',
             'destinationFileType' => 'destination_file_type',
             'deliverTimeInterval' => 'deliver_time_interval',
@@ -185,10 +161,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * redisAddress  Redis实例地址。（仅目标端类型为Redis时会显示）
-    * redisType  Redis实例类型。（仅目标端类型为Redis时会显示）
-    * dcsInstanceId  DCS实例ID。（仅目标端类型为Redis时会显示）
-    * targetDb  目标数据库，默认为-1。（仅目标端类型为Redis时会显示）
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
     * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示）
     * deliverTimeInterval  记数据转储周期（秒）。（仅目标端类型为OBS时会显示）
@@ -209,10 +181,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'redisAddress' => 'setRedisAddress',
-            'redisType' => 'setRedisType',
-            'dcsInstanceId' => 'setDcsInstanceId',
-            'targetDb' => 'setTargetDb',
             'consumerStrategy' => 'setConsumerStrategy',
             'destinationFileType' => 'setDestinationFileType',
             'deliverTimeInterval' => 'setDeliverTimeInterval',
@@ -233,10 +201,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * redisAddress  Redis实例地址。（仅目标端类型为Redis时会显示）
-    * redisType  Redis实例类型。（仅目标端类型为Redis时会显示）
-    * dcsInstanceId  DCS实例ID。（仅目标端类型为Redis时会显示）
-    * targetDb  目标数据库，默认为-1。（仅目标端类型为Redis时会显示）
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
     * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示）
     * deliverTimeInterval  记数据转储周期（秒）。（仅目标端类型为OBS时会显示）
@@ -257,10 +221,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'redisAddress' => 'getRedisAddress',
-            'redisType' => 'getRedisType',
-            'dcsInstanceId' => 'getDcsInstanceId',
-            'targetDb' => 'getTargetDb',
             'consumerStrategy' => 'getConsumerStrategy',
             'destinationFileType' => 'getDestinationFileType',
             'deliverTimeInterval' => 'getDeliverTimeInterval',
@@ -337,10 +297,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['redisAddress'] = isset($data['redisAddress']) ? $data['redisAddress'] : null;
-        $this->container['redisType'] = isset($data['redisType']) ? $data['redisType'] : null;
-        $this->container['dcsInstanceId'] = isset($data['dcsInstanceId']) ? $data['dcsInstanceId'] : null;
-        $this->container['targetDb'] = isset($data['targetDb']) ? $data['targetDb'] : null;
         $this->container['consumerStrategy'] = isset($data['consumerStrategy']) ? $data['consumerStrategy'] : null;
         $this->container['destinationFileType'] = isset($data['destinationFileType']) ? $data['destinationFileType'] : null;
         $this->container['deliverTimeInterval'] = isset($data['deliverTimeInterval']) ? $data['deliverTimeInterval'] : null;
@@ -379,102 +335,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets redisAddress
-    *  Redis实例地址。（仅目标端类型为Redis时会显示）
-    *
-    * @return string|null
-    */
-    public function getRedisAddress()
-    {
-        return $this->container['redisAddress'];
-    }
-
-    /**
-    * Sets redisAddress
-    *
-    * @param string|null $redisAddress Redis实例地址。（仅目标端类型为Redis时会显示）
-    *
-    * @return $this
-    */
-    public function setRedisAddress($redisAddress)
-    {
-        $this->container['redisAddress'] = $redisAddress;
-        return $this;
-    }
-
-    /**
-    * Gets redisType
-    *  Redis实例类型。（仅目标端类型为Redis时会显示）
-    *
-    * @return string|null
-    */
-    public function getRedisType()
-    {
-        return $this->container['redisType'];
-    }
-
-    /**
-    * Sets redisType
-    *
-    * @param string|null $redisType Redis实例类型。（仅目标端类型为Redis时会显示）
-    *
-    * @return $this
-    */
-    public function setRedisType($redisType)
-    {
-        $this->container['redisType'] = $redisType;
-        return $this;
-    }
-
-    /**
-    * Gets dcsInstanceId
-    *  DCS实例ID。（仅目标端类型为Redis时会显示）
-    *
-    * @return string|null
-    */
-    public function getDcsInstanceId()
-    {
-        return $this->container['dcsInstanceId'];
-    }
-
-    /**
-    * Sets dcsInstanceId
-    *
-    * @param string|null $dcsInstanceId DCS实例ID。（仅目标端类型为Redis时会显示）
-    *
-    * @return $this
-    */
-    public function setDcsInstanceId($dcsInstanceId)
-    {
-        $this->container['dcsInstanceId'] = $dcsInstanceId;
-        return $this;
-    }
-
-    /**
-    * Gets targetDb
-    *  目标数据库，默认为-1。（仅目标端类型为Redis时会显示）
-    *
-    * @return int|null
-    */
-    public function getTargetDb()
-    {
-        return $this->container['targetDb'];
-    }
-
-    /**
-    * Sets targetDb
-    *
-    * @param int|null $targetDb 目标数据库，默认为-1。（仅目标端类型为Redis时会显示）
-    *
-    * @return $this
-    */
-    public function setTargetDb($targetDb)
-    {
-        $this->container['targetDb'] = $targetDb;
-        return $this;
     }
 
     /**

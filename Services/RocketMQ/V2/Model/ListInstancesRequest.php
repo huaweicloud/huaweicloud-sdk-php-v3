@@ -20,15 +20,15 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  消息引擎：rocketmq。
-    * name  实例名称。
-    * instanceId  实例ID。
-    * status  实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
-    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
-    * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
-    * enterpriseProjectId  企业项目ID。
-    * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * includeFailure  **参数解释**： 是否返回创建失败的实例数。 **约束限制**： 不涉及。 **取值范围**： - 'true'：返回创建失败的实例数。 - 'false'：不返回创建失败的实例数。  **默认取值**： 不涉及。
+    * exactMatchName  **参数解释**： 是否按照实例名称进行精确匹配查询。 **约束限制**： 不涉及。 **取值范围**： - 'true'：表示按照实例名称进行精确匹配查询。 - 'false'：表示模糊匹配实例名称查询。  **默认取值**： 'false'。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当次查询返回的实例最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  消息引擎：rocketmq。
-    * name  实例名称。
-    * instanceId  实例ID。
-    * status  实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
-    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
-    * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
-    * enterpriseProjectId  企业项目ID。
-    * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * includeFailure  **参数解释**： 是否返回创建失败的实例数。 **约束限制**： 不涉及。 **取值范围**： - 'true'：返回创建失败的实例数。 - 'false'：不返回创建失败的实例数。  **默认取值**： 不涉及。
+    * exactMatchName  **参数解释**： 是否按照实例名称进行精确匹配查询。 **约束限制**： 不涉及。 **取值范围**： - 'true'：表示按照实例名称进行精确匹配查询。 - 'false'：表示模糊匹配实例名称查询。  **默认取值**： 'false'。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当次查询返回的实例最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  消息引擎：rocketmq。
-    * name  实例名称。
-    * instanceId  实例ID。
-    * status  实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
-    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
-    * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
-    * enterpriseProjectId  企业项目ID。
-    * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * includeFailure  **参数解释**： 是否返回创建失败的实例数。 **约束限制**： 不涉及。 **取值范围**： - 'true'：返回创建失败的实例数。 - 'false'：不返回创建失败的实例数。  **默认取值**： 不涉及。
+    * exactMatchName  **参数解释**： 是否按照实例名称进行精确匹配查询。 **约束限制**： 不涉及。 **取值范围**： - 'true'：表示按照实例名称进行精确匹配查询。 - 'false'：表示模糊匹配实例名称查询。  **默认取值**： 'false'。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当次查询返回的实例最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  消息引擎：rocketmq。
-    * name  实例名称。
-    * instanceId  实例ID。
-    * status  实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
-    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
-    * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
-    * enterpriseProjectId  企业项目ID。
-    * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * includeFailure  **参数解释**： 是否返回创建失败的实例数。 **约束限制**： 不涉及。 **取值范围**： - 'true'：返回创建失败的实例数。 - 'false'：不返回创建失败的实例数。  **默认取值**： 不涉及。
+    * exactMatchName  **参数解释**： 是否按照实例名称进行精确匹配查询。 **约束限制**： 不涉及。 **取值范围**： - 'true'：表示按照实例名称进行精确匹配查询。 - 'false'：表示模糊匹配实例名称查询。  **默认取值**： 'false'。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当次查询返回的实例最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  消息引擎：rocketmq。
-    * name  实例名称。
-    * instanceId  实例ID。
-    * status  实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
-    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
-    * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
-    * enterpriseProjectId  企业项目ID。
-    * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * includeFailure  **参数解释**： 是否返回创建失败的实例数。 **约束限制**： 不涉及。 **取值范围**： - 'true'：返回创建失败的实例数。 - 'false'：不返回创建失败的实例数。  **默认取值**： 不涉及。
+    * exactMatchName  **参数解释**： 是否按照实例名称进行精确匹配查询。 **约束限制**： 不涉及。 **取值范围**： - 'true'：表示按照实例名称进行精确匹配查询。 - 'false'：表示模糊匹配实例名称查询。  **默认取值**： 'false'。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当次查询返回的实例最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -381,7 +381,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  消息引擎：rocketmq。
+    *  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -393,7 +393,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 消息引擎：rocketmq。
+    * @param string $engine **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -405,7 +405,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名称。
+    *  **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -417,7 +417,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例名称。
+    * @param string|null $name **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -429,7 +429,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -441,7 +441,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。
+    * @param string|null $instanceId **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -453,7 +453,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
+    *  **参数解释**： 实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -465,7 +465,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
+    * @param string|null $status **参数解释**： 实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -477,7 +477,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets includeFailure
-    *  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
+    *  **参数解释**： 是否返回创建失败的实例数。 **约束限制**： 不涉及。 **取值范围**： - 'true'：返回创建失败的实例数。 - 'false'：不返回创建失败的实例数。  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -489,7 +489,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets includeFailure
     *
-    * @param string|null $includeFailure 是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
+    * @param string|null $includeFailure **参数解释**： 是否返回创建失败的实例数。 **约束限制**： 不涉及。 **取值范围**： - 'true'：返回创建失败的实例数。 - 'false'：不返回创建失败的实例数。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -501,7 +501,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets exactMatchName
-    *  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
+    *  **参数解释**： 是否按照实例名称进行精确匹配查询。 **约束限制**： 不涉及。 **取值范围**： - 'true'：表示按照实例名称进行精确匹配查询。 - 'false'：表示模糊匹配实例名称查询。  **默认取值**： 'false'。
     *
     * @return string|null
     */
@@ -513,7 +513,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets exactMatchName
     *
-    * @param string|null $exactMatchName 是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
+    * @param string|null $exactMatchName **参数解释**： 是否按照实例名称进行精确匹配查询。 **约束限制**： 不涉及。 **取值范围**： - 'true'：表示按照实例名称进行精确匹配查询。 - 'false'：表示模糊匹配实例名称查询。  **默认取值**： 'false'。
     *
     * @return $this
     */
@@ -525,7 +525,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID。
+    *  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -537,7 +537,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID。
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -549,7 +549,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  当次查询返回的最大个数，默认值为10，取值范围为1~50。
+    *  **参数解释**： 当次查询返回的实例最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
     *
     * @return int|null
     */
@@ -561,7 +561,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 当次查询返回的最大个数，默认值为10，取值范围为1~50。
+    * @param int|null $limit **参数解释**： 当次查询返回的实例最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
     *
     * @return $this
     */
@@ -573,7 +573,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    *  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -585,7 +585,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * @param int|null $offset **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @return $this
     */

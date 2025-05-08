@@ -20,12 +20,12 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  配置名称
-    * validValues  配置有效值
-    * defaultValue  配置默认值
-    * configType  配置类型：dynamic/static
-    * value  配置值
-    * valueType  配置值类型
+    * name  **参数解释**： 配置名称。 **取值范围**： 不涉及
+    * validValues  **参数解释**： 配置有效值。 **取值范围**： 不涉及
+    * defaultValue  **参数解释**： 配置默认值。 **取值范围**： 不涉及
+    * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
+    * value  **参数解释**： 配置值。 **取值范围**： 不涉及
+    * valueType  **参数解释**： 配置值类型。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  配置名称
-    * validValues  配置有效值
-    * defaultValue  配置默认值
-    * configType  配置类型：dynamic/static
-    * value  配置值
-    * valueType  配置值类型
+    * name  **参数解释**： 配置名称。 **取值范围**： 不涉及
+    * validValues  **参数解释**： 配置有效值。 **取值范围**： 不涉及
+    * defaultValue  **参数解释**： 配置默认值。 **取值范围**： 不涉及
+    * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
+    * value  **参数解释**： 配置值。 **取值范围**： 不涉及
+    * valueType  **参数解释**： 配置值类型。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  配置名称
-    * validValues  配置有效值
-    * defaultValue  配置默认值
-    * configType  配置类型：dynamic/static
-    * value  配置值
-    * valueType  配置值类型
+    * name  **参数解释**： 配置名称。 **取值范围**： 不涉及
+    * validValues  **参数解释**： 配置有效值。 **取值范围**： 不涉及
+    * defaultValue  **参数解释**： 配置默认值。 **取值范围**： 不涉及
+    * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
+    * value  **参数解释**： 配置值。 **取值范围**： 不涉及
+    * valueType  **参数解释**： 配置值类型。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  配置名称
-    * validValues  配置有效值
-    * defaultValue  配置默认值
-    * configType  配置类型：dynamic/static
-    * value  配置值
-    * valueType  配置值类型
+    * name  **参数解释**： 配置名称。 **取值范围**： 不涉及
+    * validValues  **参数解释**： 配置有效值。 **取值范围**： 不涉及
+    * defaultValue  **参数解释**： 配置默认值。 **取值范围**： 不涉及
+    * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
+    * value  **参数解释**： 配置值。 **取值范围**： 不涉及
+    * valueType  **参数解释**： 配置值类型。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  配置名称
-    * validValues  配置有效值
-    * defaultValue  配置默认值
-    * configType  配置类型：dynamic/static
-    * value  配置值
-    * valueType  配置值类型
+    * name  **参数解释**： 配置名称。 **取值范围**： 不涉及
+    * validValues  **参数解释**： 配置有效值。 **取值范围**： 不涉及
+    * defaultValue  **参数解释**： 配置默认值。 **取值范围**： 不涉及
+    * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
+    * value  **参数解释**： 配置值。 **取值范围**： 不涉及
+    * valueType  **参数解释**： 配置值类型。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  配置名称
+    *  **参数解释**： 配置名称。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 配置名称
+    * @param string|null $name **参数解释**： 配置名称。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Gets validValues
-    *  配置有效值
+    *  **参数解释**： 配置有效值。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     /**
     * Sets validValues
     *
-    * @param string|null $validValues 配置有效值
+    * @param string|null $validValues **参数解释**： 配置有效值。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultValue
-    *  配置默认值
+    *  **参数解释**： 配置默认值。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     /**
     * Sets defaultValue
     *
-    * @param string|null $defaultValue 配置默认值
+    * @param string|null $defaultValue **参数解释**： 配置默认值。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Gets configType
-    *  配置类型：dynamic/static
+    *  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     /**
     * Sets configType
     *
-    * @param string|null $configType 配置类型：dynamic/static
+    * @param string|null $configType **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  配置值
+    *  **参数解释**： 配置值。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 配置值
+    * @param string|null $value **参数解释**： 配置值。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Gets valueType
-    *  配置值类型
+    *  **参数解释**： 配置值类型。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     /**
     * Sets valueType
     *
-    * @param string|null $valueType 配置值类型
+    * @param string|null $valueType **参数解释**： 配置值类型。 **取值范围**： 不涉及
     *
     * @return $this
     */

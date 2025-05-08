@@ -21,12 +21,12 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  消费组总数。
-    * groups  消费组列表。
-    * max  最大可创建消费组数量。
-    * remaining  剩余可创建消费组数量。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
+    * total  **参数解释**： 消费组总数。 **取值范围**： 不涉及。
+    * groups  **参数解释**： 消费组列表。
+    * max  **参数解释**： 最大可创建消费组数量。 **取值范围**： 不涉及。
+    * remaining  **参数解释**： 剩余可创建消费组数量。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -41,12 +41,12 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  消费组总数。
-    * groups  消费组列表。
-    * max  最大可创建消费组数量。
-    * remaining  剩余可创建消费组数量。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
+    * total  **参数解释**： 消费组总数。 **取值范围**： 不涉及。
+    * groups  **参数解释**： 消费组列表。
+    * max  **参数解释**： 最大可创建消费组数量。 **取值范围**： 不涉及。
+    * remaining  **参数解释**： 剩余可创建消费组数量。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,12 +82,12 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  消费组总数。
-    * groups  消费组列表。
-    * max  最大可创建消费组数量。
-    * remaining  剩余可创建消费组数量。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
+    * total  **参数解释**： 消费组总数。 **取值范围**： 不涉及。
+    * groups  **参数解释**： 消费组列表。
+    * max  **参数解释**： 最大可创建消费组数量。 **取值范围**： 不涉及。
+    * remaining  **参数解释**： 剩余可创建消费组数量。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -102,12 +102,12 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  消费组总数。
-    * groups  消费组列表。
-    * max  最大可创建消费组数量。
-    * remaining  剩余可创建消费组数量。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
+    * total  **参数解释**： 消费组总数。 **取值范围**： 不涉及。
+    * groups  **参数解释**： 消费组列表。
+    * max  **参数解释**： 最大可创建消费组数量。 **取值范围**： 不涉及。
+    * remaining  **参数解释**： 剩余可创建消费组数量。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -122,12 +122,12 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  消费组总数。
-    * groups  消费组列表。
-    * max  最大可创建消费组数量。
-    * remaining  剩余可创建消费组数量。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
+    * total  **参数解释**： 消费组总数。 **取值范围**： 不涉及。
+    * groups  **参数解释**： 消费组列表。
+    * max  **参数解释**： 最大可创建消费组数量。 **取值范围**： 不涉及。
+    * remaining  **参数解释**： 剩余可创建消费组数量。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -230,7 +230,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  消费组总数。
+    *  **参数解释**： 消费组总数。 **取值范围**： 不涉及。
     *
     * @return float|null
     */
@@ -242,7 +242,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param float|null $total 消费组总数。
+    * @param float|null $total **参数解释**： 消费组总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -254,7 +254,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groups
-    *  消费组列表。
+    *  **参数解释**： 消费组列表。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ConsumerGroup[]|null
     */
@@ -266,7 +266,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groups
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ConsumerGroup[]|null $groups 消费组列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ConsumerGroup[]|null $groups **参数解释**： 消费组列表。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets max
-    *  最大可创建消费组数量。
+    *  **参数解释**： 最大可创建消费组数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -290,7 +290,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets max
     *
-    * @param int|null $max 最大可创建消费组数量。
+    * @param int|null $max **参数解释**： 最大可创建消费组数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets remaining
-    *  剩余可创建消费组数量。
+    *  **参数解释**： 剩余可创建消费组数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -314,7 +314,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets remaining
     *
-    * @param int|null $remaining 剩余可创建消费组数量。
+    * @param int|null $remaining **参数解释**： 剩余可创建消费组数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextOffset
-    *  下个分页的offset。
+    *  **参数解释**： 下个分页的offset。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -338,7 +338,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nextOffset
     *
-    * @param int|null $nextOffset 下个分页的offset。
+    * @param int|null $nextOffset **参数解释**： 下个分页的offset。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets previousOffset
-    *  上个分页的offset。
+    *  **参数解释**： 上个分页的offset。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -362,7 +362,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets previousOffset
     *
-    * @param int|null $previousOffset 上个分页的offset。
+    * @param int|null $previousOffset **参数解释**： 上个分页的offset。 **取值范围**： 不涉及。
     *
     * @return $this
     */

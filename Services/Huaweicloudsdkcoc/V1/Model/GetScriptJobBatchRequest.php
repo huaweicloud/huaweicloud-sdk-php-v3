@@ -291,13 +291,10 @@ class GetScriptJobBatchRequest implements ModelInterface, ArrayAccess
             if (($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-        if ($this->container['marker'] === null) {
-            $invalidProperties[] = "'marker' can't be null";
-        }
-            if (($this->container['marker'] > 2147483647)) {
+            if (!is_null($this->container['marker']) && ($this->container['marker'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'marker', must be smaller than or equal to 2147483647.";
             }
-            if (($this->container['marker'] < 0)) {
+            if (!is_null($this->container['marker']) && ($this->container['marker'] < 0)) {
                 $invalidProperties[] = "invalid value for 'marker', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -414,7 +411,7 @@ class GetScriptJobBatchRequest implements ModelInterface, ArrayAccess
     * Gets marker
     *  分页参数：上一页最后一个记录id
     *
-    * @return int
+    * @return int|null
     */
     public function getMarker()
     {
@@ -424,7 +421,7 @@ class GetScriptJobBatchRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param int $marker 分页参数：上一页最后一个记录id
+    * @param int|null $marker 分页参数：上一页最后一个记录id
     *
     * @return $this
     */

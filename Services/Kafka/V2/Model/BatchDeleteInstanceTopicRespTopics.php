@@ -20,8 +20,8 @@ class BatchDeleteInstanceTopicRespTopics implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  Topic名称。
-    * success  是否删除成功。
+    * id  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * success  **参数解释**： 是否删除成功。 **取值范围**： - true：删除成功。 - false：删除失败。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchDeleteInstanceTopicRespTopics implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  Topic名称。
-    * success  是否删除成功。
+    * id  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * success  **参数解释**： 是否删除成功。 **取值范围**： - true：删除成功。 - false：删除失败。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchDeleteInstanceTopicRespTopics implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  Topic名称。
-    * success  是否删除成功。
+    * id  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * success  **参数解释**： 是否删除成功。 **取值范围**： - true：删除成功。 - false：删除失败。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchDeleteInstanceTopicRespTopics implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  Topic名称。
-    * success  是否删除成功。
+    * id  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * success  **参数解释**： 是否删除成功。 **取值范围**： - true：删除成功。 - false：删除失败。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchDeleteInstanceTopicRespTopics implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  Topic名称。
-    * success  是否删除成功。
+    * id  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * success  **参数解释**： 是否删除成功。 **取值范围**： - true：删除成功。 - false：删除失败。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class BatchDeleteInstanceTopicRespTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  Topic名称。
+    *  **参数解释**： Topic名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class BatchDeleteInstanceTopicRespTopics implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id Topic名称。
+    * @param string|null $id **参数解释**： Topic名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class BatchDeleteInstanceTopicRespTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets success
-    *  是否删除成功。
+    *  **参数解释**： 是否删除成功。 **取值范围**： - true：删除成功。 - false：删除失败。
     *
     * @return bool|null
     */
@@ -221,7 +221,7 @@ class BatchDeleteInstanceTopicRespTopics implements ModelInterface, ArrayAccess
     /**
     * Sets success
     *
-    * @param bool|null $success 是否删除成功。
+    * @param bool|null $success **参数解释**： 是否删除成功。 **取值范围**： - true：删除成功。 - false：删除失败。
     *
     * @return $this
     */

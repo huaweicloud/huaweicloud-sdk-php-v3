@@ -1065,6 +1065,83 @@ class BmsClient extends Client
     }
 
     /**
+     * 查询裸金属服务器列表
+     *
+     * 用户根据设置的请求条件筛选裸金属服务器，并获取裸金属服务器的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBareMetalServersDetail($request)
+    {
+        return $this->listBareMetalServersDetailWithHttpInfo($request);
+    }
+
+    public function listBareMetalServersDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.1/{project_id}/baremetalservers/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['flavor'] !== null) {
+            $queryParams['flavor'] = $localVarParams['flavor'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['detail'] !== null) {
+            $queryParams['detail'] = $localVarParams['detail'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bms\V1\Model\ListBareMetalServersDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Bms\V1\Model\ListBareMetalServersDetailRequest');
+    }
+
+    /**
      * 查询规格详情和规格扩展信息列表
      *
      * 查询裸金属服务器的规格详情和规格的扩展信息。您可以调用此接口查询“baremetal:extBootType”参数取值，以确认某个规格是否支持快速发放

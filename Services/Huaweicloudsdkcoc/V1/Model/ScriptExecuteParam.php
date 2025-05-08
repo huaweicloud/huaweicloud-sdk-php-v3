@@ -20,7 +20,7 @@ class ScriptExecuteParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceful  是否资源受限，true表示不受限，false表示受限
+    * resourceful  该参数已废弃，传入该参数不会生效。
     * timeout  超时时间，单位：秒，取值范围待定，5 < timeout < 1800
     * successRate  成功率，支持小数点后一位
     * executeUser  脚本执行用户，如：root
@@ -38,7 +38,7 @@ class ScriptExecuteParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceful  是否资源受限，true表示不受限，false表示受限
+    * resourceful  该参数已废弃，传入该参数不会生效。
     * timeout  超时时间，单位：秒，取值范围待定，5 < timeout < 1800
     * successRate  成功率，支持小数点后一位
     * executeUser  脚本执行用户，如：root
@@ -77,7 +77,7 @@ class ScriptExecuteParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceful  是否资源受限，true表示不受限，false表示受限
+    * resourceful  该参数已废弃，传入该参数不会生效。
     * timeout  超时时间，单位：秒，取值范围待定，5 < timeout < 1800
     * successRate  成功率，支持小数点后一位
     * executeUser  脚本执行用户，如：root
@@ -95,7 +95,7 @@ class ScriptExecuteParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceful  是否资源受限，true表示不受限，false表示受限
+    * resourceful  该参数已废弃，传入该参数不会生效。
     * timeout  超时时间，单位：秒，取值范围待定，5 < timeout < 1800
     * successRate  成功率，支持小数点后一位
     * executeUser  脚本执行用户，如：root
@@ -113,7 +113,7 @@ class ScriptExecuteParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceful  是否资源受限，true表示不受限，false表示受限
+    * resourceful  该参数已废弃，传入该参数不会生效。
     * timeout  超时时间，单位：秒，取值范围待定，5 < timeout < 1800
     * successRate  成功率，支持小数点后一位
     * executeUser  脚本执行用户，如：root
@@ -245,7 +245,7 @@ class ScriptExecuteParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceful
-    *  是否资源受限，true表示不受限，false表示受限
+    *  该参数已废弃，传入该参数不会生效。
     *
     * @return bool|null
     */
@@ -257,7 +257,7 @@ class ScriptExecuteParam implements ModelInterface, ArrayAccess
     /**
     * Sets resourceful
     *
-    * @param bool|null $resourceful 是否资源受限，true表示不受限，false表示受限
+    * @param bool|null $resourceful 该参数已废弃，传入该参数不会生效。
     *
     * @return $this
     */

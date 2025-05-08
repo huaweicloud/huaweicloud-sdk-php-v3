@@ -159,6 +159,12 @@ class CreateScriptResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['data']) && (mb_strlen($this->container['data']) > 128)) {
+                $invalidProperties[] = "invalid value for 'data', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['data']) && (mb_strlen($this->container['data']) < 1)) {
+                $invalidProperties[] = "invalid value for 'data', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 

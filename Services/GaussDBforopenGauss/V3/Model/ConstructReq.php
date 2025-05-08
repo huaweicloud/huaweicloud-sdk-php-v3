@@ -25,7 +25,6 @@ class ConstructReq implements ModelInterface, ArrayAccess
     * drUserName  对端实例账户名称。
     * drUserPassword  对端实例账户密码。
     * drTaskName  容灾任务名称
-    * liteDrMode  灾备实例为轻量化部署.
     *
     * @var string[]
     */
@@ -34,8 +33,7 @@ class ConstructReq implements ModelInterface, ArrayAccess
             'drIp' => 'string',
             'drUserName' => 'string',
             'drUserPassword' => 'string',
-            'drTaskName' => 'string',
-            'liteDrMode' => 'string'
+            'drTaskName' => 'string'
     ];
 
     /**
@@ -45,7 +43,6 @@ class ConstructReq implements ModelInterface, ArrayAccess
     * drUserName  对端实例账户名称。
     * drUserPassword  对端实例账户密码。
     * drTaskName  容灾任务名称
-    * liteDrMode  灾备实例为轻量化部署.
     *
     * @var string[]
     */
@@ -54,8 +51,7 @@ class ConstructReq implements ModelInterface, ArrayAccess
         'drIp' => null,
         'drUserName' => null,
         'drUserPassword' => null,
-        'drTaskName' => null,
-        'liteDrMode' => null
+        'drTaskName' => null
     ];
 
     /**
@@ -86,7 +82,6 @@ class ConstructReq implements ModelInterface, ArrayAccess
     * drUserName  对端实例账户名称。
     * drUserPassword  对端实例账户密码。
     * drTaskName  容灾任务名称
-    * liteDrMode  灾备实例为轻量化部署.
     *
     * @var string[]
     */
@@ -95,8 +90,7 @@ class ConstructReq implements ModelInterface, ArrayAccess
             'drIp' => 'dr_ip',
             'drUserName' => 'dr_user_name',
             'drUserPassword' => 'dr_user_password',
-            'drTaskName' => 'dr_task_name',
-            'liteDrMode' => 'lite_dr_mode'
+            'drTaskName' => 'dr_task_name'
     ];
 
     /**
@@ -106,7 +100,6 @@ class ConstructReq implements ModelInterface, ArrayAccess
     * drUserName  对端实例账户名称。
     * drUserPassword  对端实例账户密码。
     * drTaskName  容灾任务名称
-    * liteDrMode  灾备实例为轻量化部署.
     *
     * @var string[]
     */
@@ -115,8 +108,7 @@ class ConstructReq implements ModelInterface, ArrayAccess
             'drIp' => 'setDrIp',
             'drUserName' => 'setDrUserName',
             'drUserPassword' => 'setDrUserPassword',
-            'drTaskName' => 'setDrTaskName',
-            'liteDrMode' => 'setLiteDrMode'
+            'drTaskName' => 'setDrTaskName'
     ];
 
     /**
@@ -126,7 +118,6 @@ class ConstructReq implements ModelInterface, ArrayAccess
     * drUserName  对端实例账户名称。
     * drUserPassword  对端实例账户密码。
     * drTaskName  容灾任务名称
-    * liteDrMode  灾备实例为轻量化部署.
     *
     * @var string[]
     */
@@ -135,8 +126,7 @@ class ConstructReq implements ModelInterface, ArrayAccess
             'drIp' => 'getDrIp',
             'drUserName' => 'getDrUserName',
             'drUserPassword' => 'getDrUserPassword',
-            'drTaskName' => 'getDrTaskName',
-            'liteDrMode' => 'getLiteDrMode'
+            'drTaskName' => 'getDrTaskName'
     ];
 
     /**
@@ -217,7 +207,6 @@ class ConstructReq implements ModelInterface, ArrayAccess
         $this->container['drUserName'] = isset($data['drUserName']) ? $data['drUserName'] : null;
         $this->container['drUserPassword'] = isset($data['drUserPassword']) ? $data['drUserPassword'] : null;
         $this->container['drTaskName'] = isset($data['drTaskName']) ? $data['drTaskName'] : null;
-        $this->container['liteDrMode'] = isset($data['liteDrMode']) ? $data['liteDrMode'] : null;
     }
 
     /**
@@ -248,12 +237,6 @@ class ConstructReq implements ModelInterface, ArrayAccess
         if ($this->container['drUserPassword'] === null) {
             $invalidProperties[] = "'drUserPassword' can't be null";
         }
-            if (!is_null($this->container['liteDrMode']) && (mb_strlen($this->container['liteDrMode']) > 10)) {
-                $invalidProperties[] = "invalid value for 'liteDrMode', the character length must be smaller than or equal to 10.";
-            }
-            if (!is_null($this->container['liteDrMode']) && (mb_strlen($this->container['liteDrMode']) < 1)) {
-                $invalidProperties[] = "invalid value for 'liteDrMode', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -385,30 +368,6 @@ class ConstructReq implements ModelInterface, ArrayAccess
     public function setDrTaskName($drTaskName)
     {
         $this->container['drTaskName'] = $drTaskName;
-        return $this;
-    }
-
-    /**
-    * Gets liteDrMode
-    *  灾备实例为轻量化部署.
-    *
-    * @return string|null
-    */
-    public function getLiteDrMode()
-    {
-        return $this->container['liteDrMode'];
-    }
-
-    /**
-    * Sets liteDrMode
-    *
-    * @param string|null $liteDrMode 灾备实例为轻量化部署.
-    *
-    * @return $this
-    */
-    public function setLiteDrMode($liteDrMode)
-    {
-        $this->container['liteDrMode'] = $liteDrMode;
         return $this;
     }
 

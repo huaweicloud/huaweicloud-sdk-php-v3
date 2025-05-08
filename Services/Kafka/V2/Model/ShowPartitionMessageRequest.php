@@ -20,10 +20,10 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * partition  分区编号。
-    * messageOffset  消息位置。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * messageOffset  **参数解释**： 消息位置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * partition  分区编号。
-    * messageOffset  消息位置。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * messageOffset  **参数解释**： 消息位置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * partition  分区编号。
-    * messageOffset  消息位置。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * messageOffset  **参数解释**： 消息位置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * partition  分区编号。
-    * messageOffset  消息位置。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * messageOffset  **参数解释**： 消息位置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * partition  分区编号。
-    * messageOffset  消息位置。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * messageOffset  **参数解释**： 消息位置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    *  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string $topic Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    * @param string $topic **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets partition
-    *  分区编号。
+    *  **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -279,7 +279,7 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
     /**
     * Sets partition
     *
-    * @param int $partition 分区编号。
+    * @param int $partition **参数解释**： 分区编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageOffset
-    *  消息位置。
+    *  **参数解释**： 消息位置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -303,7 +303,7 @@ class ShowPartitionMessageRequest implements ModelInterface, ArrayAccess
     /**
     * Sets messageOffset
     *
-    * @param string $messageOffset 消息位置。
+    * @param string $messageOffset **参数解释**： 消息位置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

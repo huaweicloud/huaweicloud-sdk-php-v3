@@ -20,13 +20,13 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  消息的key。
-    * value  消息内容。
-    * topic  Topic名称。
-    * partition  分区编号。
-    * messageOffset  消息位置。
-    * size  消息大小，单位字节。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * key  **参数解释**： 消息的key。 **取值范围**： 不涉及
+    * value  **参数解释**： 消息内容。 **取值范围**： 不涉及
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及
+    * messageOffset  **参数解释**： 消息位置。 **取值范围**： 不涉及
+    * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  消息的key。
-    * value  消息内容。
-    * topic  Topic名称。
-    * partition  分区编号。
-    * messageOffset  消息位置。
-    * size  消息大小，单位字节。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * key  **参数解释**： 消息的key。 **取值范围**： 不涉及
+    * value  **参数解释**： 消息内容。 **取值范围**： 不涉及
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及
+    * messageOffset  **参数解释**： 消息位置。 **取值范围**： 不涉及
+    * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  消息的key。
-    * value  消息内容。
-    * topic  Topic名称。
-    * partition  分区编号。
-    * messageOffset  消息位置。
-    * size  消息大小，单位字节。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * key  **参数解释**： 消息的key。 **取值范围**： 不涉及
+    * value  **参数解释**： 消息内容。 **取值范围**： 不涉及
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及
+    * messageOffset  **参数解释**： 消息位置。 **取值范围**： 不涉及
+    * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  消息的key。
-    * value  消息内容。
-    * topic  Topic名称。
-    * partition  分区编号。
-    * messageOffset  消息位置。
-    * size  消息大小，单位字节。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * key  **参数解释**： 消息的key。 **取值范围**： 不涉及
+    * value  **参数解释**： 消息内容。 **取值范围**： 不涉及
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及
+    * messageOffset  **参数解释**： 消息位置。 **取值范围**： 不涉及
+    * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  消息的key。
-    * value  消息内容。
-    * topic  Topic名称。
-    * partition  分区编号。
-    * messageOffset  消息位置。
-    * size  消息大小，单位字节。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * key  **参数解释**： 消息的key。 **取值范围**： 不涉及
+    * value  **参数解释**： 消息内容。 **取值范围**： 不涉及
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及
+    * messageOffset  **参数解释**： 消息位置。 **取值范围**： 不涉及
+    * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  消息的key。
+    *  **参数解释**： 消息的key。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 消息的key。
+    * @param string|null $key **参数解释**： 消息的key。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  消息内容。
+    *  **参数解释**： 消息内容。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 消息内容。
+    * @param string|null $value **参数解释**： 消息内容。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  Topic名称。
+    *  **参数解释**： Topic名称。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic Topic名称。
+    * @param string|null $topic **参数解释**： Topic名称。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets partition
-    *  分区编号。
+    *  **参数解释**： 分区编号。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -324,7 +324,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
     /**
     * Sets partition
     *
-    * @param int|null $partition 分区编号。
+    * @param int|null $partition **参数解释**： 分区编号。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageOffset
-    *  消息位置。
+    *  **参数解释**： 消息位置。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -348,7 +348,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
     /**
     * Sets messageOffset
     *
-    * @param int|null $messageOffset 消息位置。
+    * @param int|null $messageOffset **参数解释**： 消息位置。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  消息大小，单位字节。
+    *  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -372,7 +372,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 消息大小，单位字节。
+    * @param int|null $size **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets timestamp
-    *  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    *  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -396,7 +396,7 @@ class ShowPartitionMessageEntity implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param int|null $timestamp 生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * @param int|null $timestamp **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及
     *
     * @return $this
     */

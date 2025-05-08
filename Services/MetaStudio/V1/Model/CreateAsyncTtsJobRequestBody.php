@@ -40,6 +40,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     * isVocabularyConfigEnable  是否应用当前租户的读法配置
+    * isConcurrentResource  是否使用包周期路数资源进行计费
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'outputExternalUrl' => 'string',
             'srtOutputExternalUrl' => 'string',
             'actionOutputExternalUrl' => 'string',
-            'isVocabularyConfigEnable' => 'bool'
+            'isVocabularyConfigEnable' => 'bool',
+            'isConcurrentResource' => 'bool'
     ];
 
     /**
@@ -88,6 +90,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     * isVocabularyConfigEnable  是否应用当前租户的读法配置
+    * isConcurrentResource  是否使用包周期路数资源进行计费
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
         'outputExternalUrl' => null,
         'srtOutputExternalUrl' => null,
         'actionOutputExternalUrl' => null,
-        'isVocabularyConfigEnable' => null
+        'isVocabularyConfigEnable' => null,
+        'isConcurrentResource' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     * isVocabularyConfigEnable  是否应用当前租户的读法配置
+    * isConcurrentResource  是否使用包周期路数资源进行计费
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'outputExternalUrl' => 'output_external_url',
             'srtOutputExternalUrl' => 'srt_output_external_url',
             'actionOutputExternalUrl' => 'action_output_external_url',
-            'isVocabularyConfigEnable' => 'is_vocabulary_config_enable'
+            'isVocabularyConfigEnable' => 'is_vocabulary_config_enable',
+            'isConcurrentResource' => 'is_concurrent_resource'
     ];
 
     /**
@@ -205,6 +211,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     * isVocabularyConfigEnable  是否应用当前租户的读法配置
+    * isConcurrentResource  是否使用包周期路数资源进行计费
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'outputExternalUrl' => 'setOutputExternalUrl',
             'srtOutputExternalUrl' => 'setSrtOutputExternalUrl',
             'actionOutputExternalUrl' => 'setActionOutputExternalUrl',
-            'isVocabularyConfigEnable' => 'setIsVocabularyConfigEnable'
+            'isVocabularyConfigEnable' => 'setIsVocabularyConfigEnable',
+            'isConcurrentResource' => 'setIsConcurrentResource'
     ];
 
     /**
@@ -253,6 +261,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * srtOutputExternalUrl  字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     * isVocabularyConfigEnable  是否应用当前租户的读法配置
+    * isConcurrentResource  是否使用包周期路数资源进行计费
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'outputExternalUrl' => 'getOutputExternalUrl',
             'srtOutputExternalUrl' => 'getSrtOutputExternalUrl',
             'actionOutputExternalUrl' => 'getActionOutputExternalUrl',
-            'isVocabularyConfigEnable' => 'getIsVocabularyConfigEnable'
+            'isVocabularyConfigEnable' => 'getIsVocabularyConfigEnable',
+            'isConcurrentResource' => 'getIsConcurrentResource'
     ];
 
     /**
@@ -372,6 +382,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['srtOutputExternalUrl'] = isset($data['srtOutputExternalUrl']) ? $data['srtOutputExternalUrl'] : null;
         $this->container['actionOutputExternalUrl'] = isset($data['actionOutputExternalUrl']) ? $data['actionOutputExternalUrl'] : null;
         $this->container['isVocabularyConfigEnable'] = isset($data['isVocabularyConfigEnable']) ? $data['isVocabularyConfigEnable'] : null;
+        $this->container['isConcurrentResource'] = isset($data['isConcurrentResource']) ? $data['isConcurrentResource'] : null;
     }
 
     /**
@@ -968,6 +979,30 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     public function setIsVocabularyConfigEnable($isVocabularyConfigEnable)
     {
         $this->container['isVocabularyConfigEnable'] = $isVocabularyConfigEnable;
+        return $this;
+    }
+
+    /**
+    * Gets isConcurrentResource
+    *  是否使用包周期路数资源进行计费
+    *
+    * @return bool|null
+    */
+    public function getIsConcurrentResource()
+    {
+        return $this->container['isConcurrentResource'];
+    }
+
+    /**
+    * Sets isConcurrentResource
+    *
+    * @param bool|null $isConcurrentResource 是否使用包周期路数资源进行计费
+    *
+    * @return $this
+    */
+    public function setIsConcurrentResource($isConcurrentResource)
+    {
+        $this->container['isConcurrentResource'] = $isConcurrentResource;
         return $this;
     }
 

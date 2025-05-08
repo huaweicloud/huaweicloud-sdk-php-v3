@@ -27,6 +27,7 @@ class CustomImage implements ModelInterface, ArrayAccess
     * workingDir  镜像容器工作目录
     * uid  镜像容器的用户id
     * gid  镜像容器的用户组id
+    * isPublic  是否是公共镜像
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class CustomImage implements ModelInterface, ArrayAccess
             'args' => 'string',
             'workingDir' => 'string',
             'uid' => 'string',
-            'gid' => 'string'
+            'gid' => 'string',
+            'isPublic' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class CustomImage implements ModelInterface, ArrayAccess
     * workingDir  镜像容器工作目录
     * uid  镜像容器的用户id
     * gid  镜像容器的用户组id
+    * isPublic  是否是公共镜像
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class CustomImage implements ModelInterface, ArrayAccess
         'args' => null,
         'workingDir' => null,
         'uid' => null,
-        'gid' => null
+        'gid' => null,
+        'isPublic' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class CustomImage implements ModelInterface, ArrayAccess
     * workingDir  镜像容器工作目录
     * uid  镜像容器的用户id
     * gid  镜像容器的用户组id
+    * isPublic  是否是公共镜像
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class CustomImage implements ModelInterface, ArrayAccess
             'args' => 'args',
             'workingDir' => 'working_dir',
             'uid' => 'uid',
-            'gid' => 'gid'
+            'gid' => 'gid',
+            'isPublic' => 'is_public'
     ];
 
     /**
@@ -114,6 +120,7 @@ class CustomImage implements ModelInterface, ArrayAccess
     * workingDir  镜像容器工作目录
     * uid  镜像容器的用户id
     * gid  镜像容器的用户组id
+    * isPublic  是否是公共镜像
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class CustomImage implements ModelInterface, ArrayAccess
             'args' => 'setArgs',
             'workingDir' => 'setWorkingDir',
             'uid' => 'setUid',
-            'gid' => 'setGid'
+            'gid' => 'setGid',
+            'isPublic' => 'setIsPublic'
     ];
 
     /**
@@ -136,6 +144,7 @@ class CustomImage implements ModelInterface, ArrayAccess
     * workingDir  镜像容器工作目录
     * uid  镜像容器的用户id
     * gid  镜像容器的用户组id
+    * isPublic  是否是公共镜像
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class CustomImage implements ModelInterface, ArrayAccess
             'args' => 'getArgs',
             'workingDir' => 'getWorkingDir',
             'uid' => 'getUid',
-            'gid' => 'getGid'
+            'gid' => 'getGid',
+            'isPublic' => 'getIsPublic'
     ];
 
     /**
@@ -214,6 +224,7 @@ class CustomImage implements ModelInterface, ArrayAccess
         $this->container['workingDir'] = isset($data['workingDir']) ? $data['workingDir'] : null;
         $this->container['uid'] = isset($data['uid']) ? $data['uid'] : null;
         $this->container['gid'] = isset($data['gid']) ? $data['gid'] : null;
+        $this->container['isPublic'] = isset($data['isPublic']) ? $data['isPublic'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class CustomImage implements ModelInterface, ArrayAccess
     public function setGid($gid)
     {
         $this->container['gid'] = $gid;
+        return $this;
+    }
+
+    /**
+    * Gets isPublic
+    *  是否是公共镜像
+    *
+    * @return bool|null
+    */
+    public function getIsPublic()
+    {
+        return $this->container['isPublic'];
+    }
+
+    /**
+    * Sets isPublic
+    *
+    * @param bool|null $isPublic 是否是公共镜像
+    *
+    * @return $this
+    */
+    public function setIsPublic($isPublic)
+    {
+        $this->container['isPublic'] = $isPublic;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class CreateReassignmentTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  任务ID（当执行重平衡任务时仅返回job_id）。
+    * jobId  任务ID（当执行分区平衡任务时仅返回job_id）。
     * reassignmentTime  预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。
     *
     * @var string[]
@@ -33,7 +33,7 @@ class CreateReassignmentTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  任务ID（当执行重平衡任务时仅返回job_id）。
+    * jobId  任务ID（当执行分区平衡任务时仅返回job_id）。
     * reassignmentTime  预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。
     *
     * @var string[]
@@ -66,7 +66,7 @@ class CreateReassignmentTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  任务ID（当执行重平衡任务时仅返回job_id）。
+    * jobId  任务ID（当执行分区平衡任务时仅返回job_id）。
     * reassignmentTime  预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。
     *
     * @var string[]
@@ -78,7 +78,7 @@ class CreateReassignmentTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  任务ID（当执行重平衡任务时仅返回job_id）。
+    * jobId  任务ID（当执行分区平衡任务时仅返回job_id）。
     * reassignmentTime  预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class CreateReassignmentTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  任务ID（当执行重平衡任务时仅返回job_id）。
+    * jobId  任务ID（当执行分区平衡任务时仅返回job_id）。
     * reassignmentTime  预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。
     *
     * @var string[]
@@ -186,7 +186,7 @@ class CreateReassignmentTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务ID（当执行重平衡任务时仅返回job_id）。
+    *  任务ID（当执行分区平衡任务时仅返回job_id）。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class CreateReassignmentTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 任务ID（当执行重平衡任务时仅返回job_id）。
+    * @param string|null $jobId 任务ID（当执行分区平衡任务时仅返回job_id）。
     *
     * @return $this
     */

@@ -56,6 +56,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -95,7 +96,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'heartbeatHandler' => 'string',
             'enableClassIsolation' => 'bool',
             'enableLtsLog' => 'bool',
-            'ltsCustomTag' => 'map[string,string]'
+            'ltsCustomTag' => 'map[string,string]',
+            'userDataEncryptKmsKeyId' => 'string'
     ];
 
     /**
@@ -136,6 +138,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -175,7 +178,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         'heartbeatHandler' => null,
         'enableClassIsolation' => null,
         'enableLtsLog' => null,
-        'ltsCustomTag' => null
+        'ltsCustomTag' => null,
+        'userDataEncryptKmsKeyId' => null
     ];
 
     /**
@@ -237,6 +241,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -276,7 +281,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'heartbeatHandler' => 'heartbeat_handler',
             'enableClassIsolation' => 'enable_class_isolation',
             'enableLtsLog' => 'enable_lts_log',
-            'ltsCustomTag' => 'lts_custom_tag'
+            'ltsCustomTag' => 'lts_custom_tag',
+            'userDataEncryptKmsKeyId' => 'user_data_encrypt_kms_key_id'
     ];
 
     /**
@@ -317,6 +323,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -356,7 +363,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'heartbeatHandler' => 'setHeartbeatHandler',
             'enableClassIsolation' => 'setEnableClassIsolation',
             'enableLtsLog' => 'setEnableLtsLog',
-            'ltsCustomTag' => 'setLtsCustomTag'
+            'ltsCustomTag' => 'setLtsCustomTag',
+            'userDataEncryptKmsKeyId' => 'setUserDataEncryptKmsKeyId'
     ];
 
     /**
@@ -397,6 +405,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -436,7 +445,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'heartbeatHandler' => 'getHeartbeatHandler',
             'enableClassIsolation' => 'getEnableClassIsolation',
             'enableLtsLog' => 'getEnableLtsLog',
-            'ltsCustomTag' => 'getLtsCustomTag'
+            'ltsCustomTag' => 'getLtsCustomTag',
+            'userDataEncryptKmsKeyId' => 'getUserDataEncryptKmsKeyId'
     ];
 
     /**
@@ -594,6 +604,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['enableClassIsolation'] = isset($data['enableClassIsolation']) ? $data['enableClassIsolation'] : null;
         $this->container['enableLtsLog'] = isset($data['enableLtsLog']) ? $data['enableLtsLog'] : null;
         $this->container['ltsCustomTag'] = isset($data['ltsCustomTag']) ? $data['ltsCustomTag'] : null;
+        $this->container['userDataEncryptKmsKeyId'] = isset($data['userDataEncryptKmsKeyId']) ? $data['userDataEncryptKmsKeyId'] : null;
     }
 
     /**
@@ -1502,6 +1513,30 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     public function setLtsCustomTag($ltsCustomTag)
     {
         $this->container['ltsCustomTag'] = $ltsCustomTag;
+        return $this;
+    }
+
+    /**
+    * Gets userDataEncryptKmsKeyId
+    *  用于环境变量加密的kms主秘钥ID。
+    *
+    * @return string|null
+    */
+    public function getUserDataEncryptKmsKeyId()
+    {
+        return $this->container['userDataEncryptKmsKeyId'];
+    }
+
+    /**
+    * Sets userDataEncryptKmsKeyId
+    *
+    * @param string|null $userDataEncryptKmsKeyId 用于环境变量加密的kms主秘钥ID。
+    *
+    * @return $this
+    */
+    public function setUserDataEncryptKmsKeyId($userDataEncryptKmsKeyId)
+    {
+        $this->container['userDataEncryptKmsKeyId'] = $userDataEncryptKmsKeyId;
         return $this;
     }
 

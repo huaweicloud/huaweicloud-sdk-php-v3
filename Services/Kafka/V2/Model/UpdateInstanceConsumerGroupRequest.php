@@ -20,9 +20,9 @@ class UpdateInstanceConsumerGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  消息引擎的类型。
+    * engine  引擎。
     * instanceId  实例ID。
-    * group  消费者组。
+    * group  消费组ID。
     * body  body
     *
     * @var string[]
@@ -31,14 +31,14 @@ class UpdateInstanceConsumerGroupRequest implements ModelInterface, ArrayAccess
             'engine' => 'string',
             'instanceId' => 'string',
             'group' => 'string',
-            'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\CreateGroupReq'
+            'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\GroupCreateReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  消息引擎的类型。
+    * engine  引擎。
     * instanceId  实例ID。
-    * group  消费者组。
+    * group  消费组ID。
     * body  body
     *
     * @var string[]
@@ -73,9 +73,9 @@ class UpdateInstanceConsumerGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  消息引擎的类型。
+    * engine  引擎。
     * instanceId  实例ID。
-    * group  消费者组。
+    * group  消费组ID。
     * body  body
     *
     * @var string[]
@@ -89,9 +89,9 @@ class UpdateInstanceConsumerGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  消息引擎的类型。
+    * engine  引擎。
     * instanceId  实例ID。
-    * group  消费者组。
+    * group  消费组ID。
     * body  body
     *
     * @var string[]
@@ -105,9 +105,9 @@ class UpdateInstanceConsumerGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  消息引擎的类型。
+    * engine  引擎。
     * instanceId  实例ID。
-    * group  消费者组。
+    * group  消费组ID。
     * body  body
     *
     * @var string[]
@@ -216,7 +216,7 @@ class UpdateInstanceConsumerGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  消息引擎的类型。
+    *  引擎。
     *
     * @return string
     */
@@ -228,7 +228,7 @@ class UpdateInstanceConsumerGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 消息引擎的类型。
+    * @param string $engine 引擎。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class UpdateInstanceConsumerGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
-    *  消费者组。
+    *  消费组ID。
     *
     * @return string
     */
@@ -276,7 +276,7 @@ class UpdateInstanceConsumerGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets group
     *
-    * @param string $group 消费者组。
+    * @param string $group 消费组ID。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class UpdateInstanceConsumerGroupRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\CreateGroupReq|null
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\GroupCreateReq|null
     */
     public function getBody()
     {
@@ -300,7 +300,7 @@ class UpdateInstanceConsumerGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\CreateGroupReq|null $body body
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\GroupCreateReq|null $body body
     *
     * @return $this
     */

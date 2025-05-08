@@ -21,14 +21,14 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessKey  用户名，只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。
-    * secretKey  密钥。 8-32个字符。 至少包含以下字符中的3种：   - 大写字母   - 小写字母   - 数字   - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。
-    * whiteRemoteAddress  IP白名单。
-    * admin  是否为管理员。
-    * defaultTopicPerm  默认的主题权限。
-    * defaultGroupPerm  默认的消费组权限。
-    * topicPerms  特殊的主题权限。
-    * groupPerms  特殊的消费组权限。
+    * accessKey  **参数解释**： 用户名。 **约束限制**： 只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * secretKey  **参数解释**： 密钥。 **约束限制**： 8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * whiteRemoteAddress  **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * admin  **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。  **默认取值**： 不涉及。
+    * defaultTopicPerm  **参数解释**： 默认的主题权限。 **约束限制**： 不涉及。 **取值范围**： - pub：拥有发布权限。 - sub：拥有订阅权限。 - PUB|sub：拥有发布订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * defaultGroupPerm  **参数解释**： 默认的消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * topicPerms  **参数解释**： 特殊的主题权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupPerms  **参数解释**： 特殊的消费组权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -45,14 +45,14 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessKey  用户名，只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。
-    * secretKey  密钥。 8-32个字符。 至少包含以下字符中的3种：   - 大写字母   - 小写字母   - 数字   - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。
-    * whiteRemoteAddress  IP白名单。
-    * admin  是否为管理员。
-    * defaultTopicPerm  默认的主题权限。
-    * defaultGroupPerm  默认的消费组权限。
-    * topicPerms  特殊的主题权限。
-    * groupPerms  特殊的消费组权限。
+    * accessKey  **参数解释**： 用户名。 **约束限制**： 只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * secretKey  **参数解释**： 密钥。 **约束限制**： 8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * whiteRemoteAddress  **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * admin  **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。  **默认取值**： 不涉及。
+    * defaultTopicPerm  **参数解释**： 默认的主题权限。 **约束限制**： 不涉及。 **取值范围**： - pub：拥有发布权限。 - sub：拥有订阅权限。 - PUB|sub：拥有发布订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * defaultGroupPerm  **参数解释**： 默认的消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * topicPerms  **参数解释**： 特殊的主题权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupPerms  **参数解释**： 特殊的消费组权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,14 +90,14 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessKey  用户名，只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。
-    * secretKey  密钥。 8-32个字符。 至少包含以下字符中的3种：   - 大写字母   - 小写字母   - 数字   - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。
-    * whiteRemoteAddress  IP白名单。
-    * admin  是否为管理员。
-    * defaultTopicPerm  默认的主题权限。
-    * defaultGroupPerm  默认的消费组权限。
-    * topicPerms  特殊的主题权限。
-    * groupPerms  特殊的消费组权限。
+    * accessKey  **参数解释**： 用户名。 **约束限制**： 只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * secretKey  **参数解释**： 密钥。 **约束限制**： 8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * whiteRemoteAddress  **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * admin  **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。  **默认取值**： 不涉及。
+    * defaultTopicPerm  **参数解释**： 默认的主题权限。 **约束限制**： 不涉及。 **取值范围**： - pub：拥有发布权限。 - sub：拥有订阅权限。 - PUB|sub：拥有发布订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * defaultGroupPerm  **参数解释**： 默认的消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * topicPerms  **参数解释**： 特殊的主题权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupPerms  **参数解释**： 特殊的消费组权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -114,14 +114,14 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessKey  用户名，只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。
-    * secretKey  密钥。 8-32个字符。 至少包含以下字符中的3种：   - 大写字母   - 小写字母   - 数字   - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。
-    * whiteRemoteAddress  IP白名单。
-    * admin  是否为管理员。
-    * defaultTopicPerm  默认的主题权限。
-    * defaultGroupPerm  默认的消费组权限。
-    * topicPerms  特殊的主题权限。
-    * groupPerms  特殊的消费组权限。
+    * accessKey  **参数解释**： 用户名。 **约束限制**： 只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * secretKey  **参数解释**： 密钥。 **约束限制**： 8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * whiteRemoteAddress  **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * admin  **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。  **默认取值**： 不涉及。
+    * defaultTopicPerm  **参数解释**： 默认的主题权限。 **约束限制**： 不涉及。 **取值范围**： - pub：拥有发布权限。 - sub：拥有订阅权限。 - PUB|sub：拥有发布订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * defaultGroupPerm  **参数解释**： 默认的消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * topicPerms  **参数解释**： 特殊的主题权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupPerms  **参数解释**： 特殊的消费组权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -138,14 +138,14 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessKey  用户名，只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。
-    * secretKey  密钥。 8-32个字符。 至少包含以下字符中的3种：   - 大写字母   - 小写字母   - 数字   - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。
-    * whiteRemoteAddress  IP白名单。
-    * admin  是否为管理员。
-    * defaultTopicPerm  默认的主题权限。
-    * defaultGroupPerm  默认的消费组权限。
-    * topicPerms  特殊的主题权限。
-    * groupPerms  特殊的消费组权限。
+    * accessKey  **参数解释**： 用户名。 **约束限制**： 只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * secretKey  **参数解释**： 密钥。 **约束限制**： 8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * whiteRemoteAddress  **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * admin  **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。  **默认取值**： 不涉及。
+    * defaultTopicPerm  **参数解释**： 默认的主题权限。 **约束限制**： 不涉及。 **取值范围**： - pub：拥有发布权限。 - sub：拥有订阅权限。 - PUB|sub：拥有发布订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * defaultGroupPerm  **参数解释**： 默认的消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * topicPerms  **参数解释**： 特殊的主题权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupPerms  **参数解释**： 特殊的消费组权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -302,7 +302,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessKey
-    *  用户名，只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。
+    *  **参数解释**： 用户名。 **约束限制**： 只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -314,7 +314,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accessKey
     *
-    * @param string|null $accessKey 用户名，只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。
+    * @param string|null $accessKey **参数解释**： 用户名。 **约束限制**： 只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets secretKey
-    *  密钥。 8-32个字符。 至少包含以下字符中的3种：   - 大写字母   - 小写字母   - 数字   - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。
+    *  **参数解释**： 密钥。 **约束限制**： 8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -338,7 +338,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets secretKey
     *
-    * @param string|null $secretKey 密钥。 8-32个字符。 至少包含以下字符中的3种：   - 大写字母   - 小写字母   - 数字   - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。
+    * @param string|null $secretKey **参数解释**： 密钥。 **约束限制**： 8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?密钥。 不能与名称或倒序的名称相同。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets whiteRemoteAddress
-    *  IP白名单。
+    *  **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -362,7 +362,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets whiteRemoteAddress
     *
-    * @param string|null $whiteRemoteAddress IP白名单。
+    * @param string|null $whiteRemoteAddress **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -374,7 +374,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets admin
-    *  是否为管理员。
+    *  **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。  **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -386,7 +386,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets admin
     *
-    * @param bool|null $admin 是否为管理员。
+    * @param bool|null $admin **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -398,7 +398,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultTopicPerm
-    *  默认的主题权限。
+    *  **参数解释**： 默认的主题权限。 **约束限制**： 不涉及。 **取值范围**： - pub：拥有发布权限。 - sub：拥有订阅权限。 - PUB|sub：拥有发布订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -410,7 +410,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets defaultTopicPerm
     *
-    * @param string|null $defaultTopicPerm 默认的主题权限。
+    * @param string|null $defaultTopicPerm **参数解释**： 默认的主题权限。 **约束限制**： 不涉及。 **取值范围**： - pub：拥有发布权限。 - sub：拥有订阅权限。 - PUB|sub：拥有发布订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -422,7 +422,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultGroupPerm
-    *  默认的消费组权限。
+    *  **参数解释**： 默认的消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -434,7 +434,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets defaultGroupPerm
     *
-    * @param string|null $defaultGroupPerm 默认的消费组权限。
+    * @param string|null $defaultGroupPerm **参数解释**： 默认的消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -446,7 +446,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicPerms
-    *  特殊的主题权限。
+    *  **参数解释**： 特殊的主题权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\UserTopicPerms[]|null
     */
@@ -458,7 +458,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topicPerms
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\UserTopicPerms[]|null $topicPerms 特殊的主题权限。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\UserTopicPerms[]|null $topicPerms **参数解释**： 特殊的主题权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -470,7 +470,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupPerms
-    *  特殊的消费组权限。
+    *  **参数解释**： 特殊的消费组权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\UserGroupPerms[]|null
     */
@@ -482,7 +482,7 @@ class ShowUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupPerms
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\UserGroupPerms[]|null $groupPerms 特殊的消费组权限。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\UserGroupPerms[]|null $groupPerms **参数解释**： 特殊的消费组权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

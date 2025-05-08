@@ -21,8 +21,8 @@ class ListTopicProducersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  总条数
-    * producers  生产者列表
+    * total  **参数解释**： 总条数。 **取值范围**： 0~10000。
+    * producers  **参数解释**： 生产者列表。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListTopicProducersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  总条数
-    * producers  生产者列表
+    * total  **参数解释**： 总条数。 **取值范围**： 0~10000。
+    * producers  **参数解释**： 生产者列表。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListTopicProducersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  总条数
-    * producers  生产者列表
+    * total  **参数解释**： 总条数。 **取值范围**： 0~10000。
+    * producers  **参数解释**： 生产者列表。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListTopicProducersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  总条数
-    * producers  生产者列表
+    * total  **参数解释**： 总条数。 **取值范围**： 0~10000。
+    * producers  **参数解释**： 生产者列表。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListTopicProducersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  总条数
-    * producers  生产者列表
+    * total  **参数解释**： 总条数。 **取值范围**： 0~10000。
+    * producers  **参数解释**： 生产者列表。
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListTopicProducersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总条数
+    *  **参数解释**： 总条数。 **取值范围**： 0~10000。
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListTopicProducersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总条数
+    * @param int|null $total **参数解释**： 总条数。 **取值范围**： 0~10000。
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListTopicProducersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets producers
-    *  生产者列表
+    *  **参数解释**： 生产者列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\KafkaTopicProducerResponseProducers[]|null
     */
@@ -228,7 +228,7 @@ class ListTopicProducersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets producers
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\KafkaTopicProducerResponseProducers[]|null $producers 生产者列表
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\KafkaTopicProducerResponseProducers[]|null $producers **参数解释**： 生产者列表。
     *
     * @return $this
     */

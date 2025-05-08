@@ -81,6 +81,8 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * isReturnStream  是否返回流式数据（已废弃）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -144,7 +146,9 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'networkController' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\NetworkControlConfig',
             'isReturnStream' => 'bool',
             'enableLtsLog' => 'bool',
-            'ltsCustomTag' => 'map[string,string]'
+            'ltsCustomTag' => 'map[string,string]',
+            'userDataEncryptKmsKeyId' => 'string',
+            'codeEncryptKmsKeyId' => 'string'
     ];
 
     /**
@@ -209,6 +213,8 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * isReturnStream  是否返回流式数据（已废弃）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -272,7 +278,9 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         'networkController' => null,
         'isReturnStream' => null,
         'enableLtsLog' => null,
-        'ltsCustomTag' => null
+        'ltsCustomTag' => null,
+        'userDataEncryptKmsKeyId' => null,
+        'codeEncryptKmsKeyId' => null
     ];
 
     /**
@@ -358,6 +366,8 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * isReturnStream  是否返回流式数据（已废弃）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -421,7 +431,9 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'networkController' => 'network_controller',
             'isReturnStream' => 'is_return_stream',
             'enableLtsLog' => 'enable_lts_log',
-            'ltsCustomTag' => 'lts_custom_tag'
+            'ltsCustomTag' => 'lts_custom_tag',
+            'userDataEncryptKmsKeyId' => 'user_data_encrypt_kms_key_id',
+            'codeEncryptKmsKeyId' => 'code_encrypt_kms_key_id'
     ];
 
     /**
@@ -486,6 +498,8 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * isReturnStream  是否返回流式数据（已废弃）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -549,7 +563,9 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'networkController' => 'setNetworkController',
             'isReturnStream' => 'setIsReturnStream',
             'enableLtsLog' => 'setEnableLtsLog',
-            'ltsCustomTag' => 'setLtsCustomTag'
+            'ltsCustomTag' => 'setLtsCustomTag',
+            'userDataEncryptKmsKeyId' => 'setUserDataEncryptKmsKeyId',
+            'codeEncryptKmsKeyId' => 'setCodeEncryptKmsKeyId'
     ];
 
     /**
@@ -614,6 +630,8 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * isReturnStream  是否返回流式数据（已废弃）
     * enableLtsLog  是否开启日志。
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+    * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
+    * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
     *
     * @var string[]
     */
@@ -677,7 +695,9 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'networkController' => 'getNetworkController',
             'isReturnStream' => 'getIsReturnStream',
             'enableLtsLog' => 'getEnableLtsLog',
-            'ltsCustomTag' => 'getLtsCustomTag'
+            'ltsCustomTag' => 'getLtsCustomTag',
+            'userDataEncryptKmsKeyId' => 'getUserDataEncryptKmsKeyId',
+            'codeEncryptKmsKeyId' => 'getCodeEncryptKmsKeyId'
     ];
 
     /**
@@ -895,6 +915,8 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         $this->container['isReturnStream'] = isset($data['isReturnStream']) ? $data['isReturnStream'] : null;
         $this->container['enableLtsLog'] = isset($data['enableLtsLog']) ? $data['enableLtsLog'] : null;
         $this->container['ltsCustomTag'] = isset($data['ltsCustomTag']) ? $data['ltsCustomTag'] : null;
+        $this->container['userDataEncryptKmsKeyId'] = isset($data['userDataEncryptKmsKeyId']) ? $data['userDataEncryptKmsKeyId'] : null;
+        $this->container['codeEncryptKmsKeyId'] = isset($data['codeEncryptKmsKeyId']) ? $data['codeEncryptKmsKeyId'] : null;
     }
 
     /**
@@ -2380,6 +2402,54 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     public function setLtsCustomTag($ltsCustomTag)
     {
         $this->container['ltsCustomTag'] = $ltsCustomTag;
+        return $this;
+    }
+
+    /**
+    * Gets userDataEncryptKmsKeyId
+    *  用于环境变量加密的kms主秘钥ID。
+    *
+    * @return string|null
+    */
+    public function getUserDataEncryptKmsKeyId()
+    {
+        return $this->container['userDataEncryptKmsKeyId'];
+    }
+
+    /**
+    * Sets userDataEncryptKmsKeyId
+    *
+    * @param string|null $userDataEncryptKmsKeyId 用于环境变量加密的kms主秘钥ID。
+    *
+    * @return $this
+    */
+    public function setUserDataEncryptKmsKeyId($userDataEncryptKmsKeyId)
+    {
+        $this->container['userDataEncryptKmsKeyId'] = $userDataEncryptKmsKeyId;
+        return $this;
+    }
+
+    /**
+    * Gets codeEncryptKmsKeyId
+    *  用于用户代码加密的kms主秘钥ID。
+    *
+    * @return string|null
+    */
+    public function getCodeEncryptKmsKeyId()
+    {
+        return $this->container['codeEncryptKmsKeyId'];
+    }
+
+    /**
+    * Sets codeEncryptKmsKeyId
+    *
+    * @param string|null $codeEncryptKmsKeyId 用于用户代码加密的kms主秘钥ID。
+    *
+    * @return $this
+    */
+    public function setCodeEncryptKmsKeyId($codeEncryptKmsKeyId)
+    {
+        $this->container['codeEncryptKmsKeyId'] = $codeEncryptKmsKeyId;
         return $this;
     }
 

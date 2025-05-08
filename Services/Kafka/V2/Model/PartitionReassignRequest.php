@@ -20,11 +20,11 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * reassignments  重平衡分配方案。
-    * throttle  重平衡门限值。
-    * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    * reassignments  分区平衡分配方案。
+    * throttle  分区平衡门限值。
+    * isSchedule  是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
     * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
-    * timeEstimate  设为true表示执行时间预估任务，false为执行重平衡任务。
+    * timeEstimate  设为true表示执行时间预估任务，false为执行分区平衡任务。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * reassignments  重平衡分配方案。
-    * throttle  重平衡门限值。
-    * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    * reassignments  分区平衡分配方案。
+    * throttle  分区平衡门限值。
+    * isSchedule  是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
     * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
-    * timeEstimate  设为true表示执行时间预估任务，false为执行重平衡任务。
+    * timeEstimate  设为true表示执行时间预估任务，false为执行分区平衡任务。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * reassignments  重平衡分配方案。
-    * throttle  重平衡门限值。
-    * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    * reassignments  分区平衡分配方案。
+    * throttle  分区平衡门限值。
+    * isSchedule  是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
     * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
-    * timeEstimate  设为true表示执行时间预估任务，false为执行重平衡任务。
+    * timeEstimate  设为true表示执行时间预估任务，false为执行分区平衡任务。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * reassignments  重平衡分配方案。
-    * throttle  重平衡门限值。
-    * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    * reassignments  分区平衡分配方案。
+    * throttle  分区平衡门限值。
+    * isSchedule  是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
     * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
-    * timeEstimate  设为true表示执行时间预估任务，false为执行重平衡任务。
+    * timeEstimate  设为true表示执行时间预估任务，false为执行分区平衡任务。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * reassignments  重平衡分配方案。
-    * throttle  重平衡门限值。
-    * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    * reassignments  分区平衡分配方案。
+    * throttle  分区平衡门限值。
+    * isSchedule  是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
     * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
-    * timeEstimate  设为true表示执行时间预估任务，false为执行重平衡任务。
+    * timeEstimate  设为true表示执行时间预估任务，false为执行分区平衡任务。
     *
     * @var string[]
     */
@@ -221,7 +221,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets reassignments
-    *  重平衡分配方案。
+    *  分区平衡分配方案。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\PartitionReassignEntity[]
     */
@@ -233,7 +233,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     /**
     * Sets reassignments
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\PartitionReassignEntity[] $reassignments 重平衡分配方案。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\PartitionReassignEntity[] $reassignments 分区平衡分配方案。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets throttle
-    *  重平衡门限值。
+    *  分区平衡门限值。
     *
     * @return int|null
     */
@@ -257,7 +257,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     /**
     * Sets throttle
     *
-    * @param int|null $throttle 重平衡门限值。
+    * @param int|null $throttle 分区平衡门限值。
     *
     * @return $this
     */
@@ -269,7 +269,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSchedule
-    *  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    *  是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
     *
     * @return bool|null
     */
@@ -281,7 +281,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isSchedule
     *
-    * @param bool|null $isSchedule 是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    * @param bool|null $isSchedule 是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeEstimate
-    *  设为true表示执行时间预估任务，false为执行重平衡任务。
+    *  设为true表示执行时间预估任务，false为执行分区平衡任务。
     *
     * @return bool|null
     */
@@ -329,7 +329,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     /**
     * Sets timeEstimate
     *
-    * @param bool|null $timeEstimate 设为true表示执行时间预估任务，false为执行重平衡任务。
+    * @param bool|null $timeEstimate 设为true表示执行时间预估任务，false为执行分区平衡任务。
     *
     * @return $this
     */

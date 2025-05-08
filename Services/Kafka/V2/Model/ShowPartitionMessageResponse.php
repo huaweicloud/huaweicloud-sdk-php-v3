@@ -21,7 +21,7 @@ class ShowPartitionMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * message  消息列表。
+    * message  **参数解释**： 消息列表。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowPartitionMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * message  消息列表。
+    * message  **参数解释**： 消息列表。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowPartitionMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * message  消息列表。
+    * message  **参数解释**： 消息列表。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowPartitionMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * message  消息列表。
+    * message  **参数解释**： 消息列表。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowPartitionMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * message  消息列表。
+    * message  **参数解释**： 消息列表。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowPartitionMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  消息列表。
+    *  **参数解释**： 消息列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowPartitionMessageEntity[]|null
     */
@@ -187,7 +187,7 @@ class ShowPartitionMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowPartitionMessageEntity[]|null $message 消息列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowPartitionMessageEntity[]|null $message **参数解释**： 消息列表。
     *
     * @return $this
     */

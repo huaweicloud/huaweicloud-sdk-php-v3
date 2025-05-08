@@ -26,6 +26,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * type  自定义读法类型 CHINESE_G2P：拼音
+    * ttsServiceName  声音模型名称
+    * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -41,6 +43,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'string',
             'xAppUserId' => 'string',
             'type' => 'string',
+            'ttsServiceName' => 'string',
+            'isVocabularyConfigEnable' => 'string',
             'limit' => 'int',
             'offset' => 'int',
             'startTime' => 'string',
@@ -56,6 +60,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * type  自定义读法类型 CHINESE_G2P：拼音
+    * ttsServiceName  声音模型名称
+    * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -71,6 +77,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
         'xProjectId' => null,
         'xAppUserId' => null,
         'type' => null,
+        'ttsServiceName' => null,
+        'isVocabularyConfigEnable' => null,
         'limit' => 'uint32',
         'offset' => 'uint32',
         'startTime' => null,
@@ -107,6 +115,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * type  自定义读法类型 CHINESE_G2P：拼音
+    * ttsServiceName  声音模型名称
+    * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -122,6 +132,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'X-Project-Id',
             'xAppUserId' => 'X-App-UserId',
             'type' => 'type',
+            'ttsServiceName' => 'tts_service_name',
+            'isVocabularyConfigEnable' => 'is_vocabulary_config_enable',
             'limit' => 'limit',
             'offset' => 'offset',
             'startTime' => 'start_time',
@@ -137,6 +149,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * type  自定义读法类型 CHINESE_G2P：拼音
+    * ttsServiceName  声音模型名称
+    * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -152,6 +166,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'setXProjectId',
             'xAppUserId' => 'setXAppUserId',
             'type' => 'setType',
+            'ttsServiceName' => 'setTtsServiceName',
+            'isVocabularyConfigEnable' => 'setIsVocabularyConfigEnable',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
             'startTime' => 'setStartTime',
@@ -167,6 +183,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * type  自定义读法类型 CHINESE_G2P：拼音
+    * ttsServiceName  声音模型名称
+    * isVocabularyConfigEnable  是否应用词表配置，从周边服务传递
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -182,6 +200,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'getXProjectId',
             'xAppUserId' => 'getXAppUserId',
             'type' => 'getType',
+            'ttsServiceName' => 'getTtsServiceName',
+            'isVocabularyConfigEnable' => 'getIsVocabularyConfigEnable',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
             'startTime' => 'getStartTime',
@@ -253,6 +273,8 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
         $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['ttsServiceName'] = isset($data['ttsServiceName']) ? $data['ttsServiceName'] : null;
+        $this->container['isVocabularyConfigEnable'] = isset($data['isVocabularyConfigEnable']) ? $data['isVocabularyConfigEnable'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
@@ -298,14 +320,23 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-            if ((mb_strlen($this->container['type']) > 64)) {
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 64)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['type']) < 1)) {
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 1)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['ttsServiceName']) && (mb_strlen($this->container['ttsServiceName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'ttsServiceName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['ttsServiceName']) && (mb_strlen($this->container['ttsServiceName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'ttsServiceName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['isVocabularyConfigEnable']) && (mb_strlen($this->container['isVocabularyConfigEnable']) > 64)) {
+                $invalidProperties[] = "invalid value for 'isVocabularyConfigEnable', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['isVocabularyConfigEnable']) && (mb_strlen($this->container['isVocabularyConfigEnable']) < 1)) {
+                $invalidProperties[] = "invalid value for 'isVocabularyConfigEnable', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
@@ -475,7 +506,7 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     * Gets type
     *  自定义读法类型 CHINESE_G2P：拼音
     *
-    * @return string
+    * @return string|null
     */
     public function getType()
     {
@@ -485,13 +516,61 @@ class ListTtscVocabularyConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 自定义读法类型 CHINESE_G2P：拼音
+    * @param string|null $type 自定义读法类型 CHINESE_G2P：拼音
     *
     * @return $this
     */
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets ttsServiceName
+    *  声音模型名称
+    *
+    * @return string|null
+    */
+    public function getTtsServiceName()
+    {
+        return $this->container['ttsServiceName'];
+    }
+
+    /**
+    * Sets ttsServiceName
+    *
+    * @param string|null $ttsServiceName 声音模型名称
+    *
+    * @return $this
+    */
+    public function setTtsServiceName($ttsServiceName)
+    {
+        $this->container['ttsServiceName'] = $ttsServiceName;
+        return $this;
+    }
+
+    /**
+    * Gets isVocabularyConfigEnable
+    *  是否应用词表配置，从周边服务传递
+    *
+    * @return string|null
+    */
+    public function getIsVocabularyConfigEnable()
+    {
+        return $this->container['isVocabularyConfigEnable'];
+    }
+
+    /**
+    * Sets isVocabularyConfigEnable
+    *
+    * @param string|null $isVocabularyConfigEnable 是否应用词表配置，从周边服务传递
+    *
+    * @return $this
+    */
+    public function setIsVocabularyConfigEnable($isVocabularyConfigEnable)
+    {
+        $this->container['isVocabularyConfigEnable'] = $isVocabularyConfigEnable;
         return $this;
     }
 

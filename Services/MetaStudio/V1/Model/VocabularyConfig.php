@@ -23,6 +23,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     * id  id
     * key  原始词
     * value  设置的自定义读法
+    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -32,6 +33,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
             'id' => 'string',
             'key' => 'string',
             'value' => 'string',
+            'type' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string'
     ];
@@ -41,6 +43,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     * id  id
     * key  原始词
     * value  设置的自定义读法
+    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -50,6 +53,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
         'id' => null,
         'key' => null,
         'value' => null,
+        'type' => null,
         'createTime' => null,
         'updateTime' => null
     ];
@@ -80,6 +84,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     * id  id
     * key  原始词
     * value  设置的自定义读法
+    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -89,6 +94,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
             'id' => 'id',
             'key' => 'key',
             'value' => 'value',
+            'type' => 'type',
             'createTime' => 'create_time',
             'updateTime' => 'update_time'
     ];
@@ -98,6 +104,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     * id  id
     * key  原始词
     * value  设置的自定义读法
+    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -107,6 +114,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'key' => 'setKey',
             'value' => 'setValue',
+            'type' => 'setType',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime'
     ];
@@ -116,6 +124,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     * id  id
     * key  原始词
     * value  设置的自定义读法
+    * type  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -125,6 +134,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'key' => 'getKey',
             'value' => 'getValue',
+            'type' => 'getType',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime'
     ];
@@ -190,6 +200,7 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
@@ -219,6 +230,12 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 0)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 200)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 20)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 20.";
@@ -315,6 +332,30 @@ class VocabularyConfig implements ModelInterface, ArrayAccess
     public function setValue($value)
     {
         $this->container['value'] = $value;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

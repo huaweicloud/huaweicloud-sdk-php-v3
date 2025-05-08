@@ -845,6 +845,71 @@ class RocketMQAsyncClient extends Client
     }
 
     /**
+     * 开启RocketMQ实例域名访问能力
+     *
+     * 开启RocketMQ实例域名访问能力。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function enableDnsAsync($request)
+    {
+        return $this->enableDnsAsyncWithHttpInfo($request);
+    }
+    
+    public function enableDnsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/rocketmq/instances/{instance_id}/dns';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RocketMQ\V2\Model\EnableDnsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RocketMQ\V2\Model\EnableDnsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 导出死信消息
      *
      * 导出死信消息。
@@ -1005,6 +1070,12 @@ class RocketMQAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -1113,6 +1184,83 @@ class RocketMQAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\RocketMQ\V2\Model\ListConsumeGroupAccessPolicyResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\RocketMQ\V2\Model\ListConsumeGroupAccessPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询产品规格列表
+     *
+     * 查询相应引擎的产品规格列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listEngineProductsAsync($request)
+    {
+        return $this->listEngineProductsAsyncWithHttpInfo($request);
+    }
+    
+    public function listEngineProductsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{engine}/products';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['productId'] !== null) {
+            $queryParams['product_id'] = $localVarParams['productId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['engine'] !== null) {
+            $pathParams['engine'] = $localVarParams['engine'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RocketMQ\V2\Model\ListEngineProductsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RocketMQ\V2\Model\ListEngineProductsRequest',
             $asyncRequest = true);
     }
 
@@ -1313,6 +1461,12 @@ class RocketMQAsyncClient extends Client
         if ($localVarParams['msgId'] !== null) {
             $queryParams['msg_id'] = $localVarParams['msgId'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
         if ($localVarParams['engine'] !== null) {
             $pathParams['engine'] = $localVarParams['engine'];
         }
@@ -1322,11 +1476,11 @@ class RocketMQAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'trace']
+                ['application/json', 'total', 'next_offset', 'previous_offset', 'trace']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'trace'],
+                ['application/json', 'total', 'next_offset', 'previous_offset', 'trace'],
                 []
             );
         }
@@ -1813,6 +1967,74 @@ class RocketMQAsyncClient extends Client
     }
 
     /**
+     * 重启指定实例
+     *
+     * 重启指定实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function restartInstanceAsync($request)
+    {
+        return $this->restartInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function restartInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/{engine}/instances/{instance_id}/restart';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['engine'] !== null) {
+            $pathParams['engine'] = $localVarParams['engine'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RocketMQ\V2\Model\RestartInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RocketMQ\V2\Model\RestartInstanceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 重发死信消息
      *
      * 重发死信消息。
@@ -2071,6 +2293,12 @@ class RocketMQAsyncClient extends Client
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
         if ($localVarParams['engine'] !== null) {
             $pathParams['engine'] = $localVarParams['engine'];
         }
@@ -2242,6 +2470,68 @@ class RocketMQAsyncClient extends Client
     }
 
     /**
+     * 查看租户配额
+     *
+     * 查询租户最大可以创建的实例个数和已创建的实例个数，以及每个实例最大可以创建标签的个数。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showQuotasAsync($request)
+    {
+        return $this->showQuotasAsyncWithHttpInfo($request);
+    }
+    
+    public function showQuotasAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/quotas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RocketMQ\V2\Model\ShowQuotasResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RocketMQ\V2\Model\ShowQuotasRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询RocketMQ配置
      *
      * 该接口用于查询RocketMQ配置，若成功则返回配置的相关信息。
@@ -2271,6 +2561,12 @@ class RocketMQAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -2337,6 +2633,12 @@ class RocketMQAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2398,6 +2700,12 @@ class RocketMQAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];

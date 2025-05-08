@@ -22,24 +22,28 @@ class ObsInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * bucket  OBS的bucket名称
     * object  OBS对象路径
+    * region  桶所在区域
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'bucket' => 'string',
-            'object' => 'string'
+            'object' => 'string',
+            'region' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bucket  OBS的bucket名称
     * object  OBS对象路径
+    * region  桶所在区域
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'bucket' => null,
-        'object' => null
+        'object' => null,
+        'region' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ObsInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * bucket  OBS的bucket名称
     * object  OBS对象路径
+    * region  桶所在区域
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'bucket' => 'bucket',
-            'object' => 'object'
+            'object' => 'object',
+            'region' => 'region'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bucket  OBS的bucket名称
     * object  OBS对象路径
+    * region  桶所在区域
     *
     * @var string[]
     */
     protected static $setters = [
             'bucket' => 'setBucket',
-            'object' => 'setObject'
+            'object' => 'setObject',
+            'region' => 'setRegion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bucket  OBS的bucket名称
     * object  OBS对象路径
+    * region  桶所在区域
     *
     * @var string[]
     */
     protected static $getters = [
             'bucket' => 'getBucket',
-            'object' => 'getObject'
+            'object' => 'getObject',
+            'region' => 'getRegion'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ObsInfo implements ModelInterface, ArrayAccess
     {
         $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
         $this->container['object'] = isset($data['object']) ? $data['object'] : null;
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
     }
 
     /**
@@ -183,6 +194,9 @@ class ObsInfo implements ModelInterface, ArrayAccess
         }
             if ((mb_strlen($this->container['object']) > 1023)) {
                 $invalidProperties[] = "invalid value for 'object', the character length must be smaller than or equal to 1023.";
+            }
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 128)) {
+                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 128.";
             }
         return $invalidProperties;
     }
@@ -243,6 +257,30 @@ class ObsInfo implements ModelInterface, ArrayAccess
     public function setObject($object)
     {
         $this->container['object'] = $object;
+        return $this;
+    }
+
+    /**
+    * Gets region
+    *  桶所在区域
+    *
+    * @return string|null
+    */
+    public function getRegion()
+    {
+        return $this->container['region'];
+    }
+
+    /**
+    * Sets region
+    *
+    * @param string|null $region 桶所在区域
+    *
+    * @return $this
+    */
+    public function setRegion($region)
+    {
+        $this->container['region'] = $region;
         return $this;
     }
 

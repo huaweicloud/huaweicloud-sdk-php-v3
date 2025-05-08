@@ -21,7 +21,7 @@ class BatchDeleteInstanceTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topics  Topic列表。
+    * topics  **参数解释**： Topic列表。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class BatchDeleteInstanceTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topics  Topic列表。
+    * topics  **参数解释**： Topic列表。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchDeleteInstanceTopicResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topics  Topic列表。
+    * topics  **参数解释**： Topic列表。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchDeleteInstanceTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topics  Topic列表。
+    * topics  **参数解释**： Topic列表。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchDeleteInstanceTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topics  Topic列表。
+    * topics  **参数解释**： Topic列表。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class BatchDeleteInstanceTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  Topic列表。
+    *  **参数解释**： Topic列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\BatchDeleteInstanceTopicRespTopics[]|null
     */
@@ -187,7 +187,7 @@ class BatchDeleteInstanceTopicResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\BatchDeleteInstanceTopicRespTopics[]|null $topics Topic列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\BatchDeleteInstanceTopicRespTopics[]|null $topics **参数解释**： Topic列表。
     *
     * @return $this
     */

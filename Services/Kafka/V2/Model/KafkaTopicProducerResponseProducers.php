@@ -20,9 +20,9 @@ class KafkaTopicProducerResponseProducers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * producerAddress  生产者地址
-    * brokerAddress  broker地址
-    * joinTime  加入时间
+    * producerAddress  **参数解释**： 生产者地址。 **取值范围**： 不涉及
+    * brokerAddress  **参数解释**： broker地址。 **取值范围**： 不涉及
+    * joinTime  **参数解释**： 加入时间，以Unix时间戳显示。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class KafkaTopicProducerResponseProducers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * producerAddress  生产者地址
-    * brokerAddress  broker地址
-    * joinTime  加入时间
+    * producerAddress  **参数解释**： 生产者地址。 **取值范围**： 不涉及
+    * brokerAddress  **参数解释**： broker地址。 **取值范围**： 不涉及
+    * joinTime  **参数解释**： 加入时间，以Unix时间戳显示。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class KafkaTopicProducerResponseProducers implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * producerAddress  生产者地址
-    * brokerAddress  broker地址
-    * joinTime  加入时间
+    * producerAddress  **参数解释**： 生产者地址。 **取值范围**： 不涉及
+    * brokerAddress  **参数解释**： broker地址。 **取值范围**： 不涉及
+    * joinTime  **参数解释**： 加入时间，以Unix时间戳显示。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class KafkaTopicProducerResponseProducers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * producerAddress  生产者地址
-    * brokerAddress  broker地址
-    * joinTime  加入时间
+    * producerAddress  **参数解释**： 生产者地址。 **取值范围**： 不涉及
+    * brokerAddress  **参数解释**： broker地址。 **取值范围**： 不涉及
+    * joinTime  **参数解释**： 加入时间，以Unix时间戳显示。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class KafkaTopicProducerResponseProducers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * producerAddress  生产者地址
-    * brokerAddress  broker地址
-    * joinTime  加入时间
+    * producerAddress  **参数解释**： 生产者地址。 **取值范围**： 不涉及
+    * brokerAddress  **参数解释**： broker地址。 **取值范围**： 不涉及
+    * joinTime  **参数解释**： 加入时间，以Unix时间戳显示。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class KafkaTopicProducerResponseProducers implements ModelInterface, ArrayAccess
 
     /**
     * Gets producerAddress
-    *  生产者地址
+    *  **参数解释**： 生产者地址。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -226,7 +226,7 @@ class KafkaTopicProducerResponseProducers implements ModelInterface, ArrayAccess
     /**
     * Sets producerAddress
     *
-    * @param string|null $producerAddress 生产者地址
+    * @param string|null $producerAddress **参数解释**： 生产者地址。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class KafkaTopicProducerResponseProducers implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerAddress
-    *  broker地址
+    *  **参数解释**： broker地址。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class KafkaTopicProducerResponseProducers implements ModelInterface, ArrayAccess
     /**
     * Sets brokerAddress
     *
-    * @param string|null $brokerAddress broker地址
+    * @param string|null $brokerAddress **参数解释**： broker地址。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class KafkaTopicProducerResponseProducers implements ModelInterface, ArrayAccess
 
     /**
     * Gets joinTime
-    *  加入时间
+    *  **参数解释**： 加入时间，以Unix时间戳显示。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -274,7 +274,7 @@ class KafkaTopicProducerResponseProducers implements ModelInterface, ArrayAccess
     /**
     * Sets joinTime
     *
-    * @param int|null $joinTime 加入时间
+    * @param int|null $joinTime **参数解释**： 加入时间，以Unix时间戳显示。 **取值范围**： 不涉及
     *
     * @return $this
     */

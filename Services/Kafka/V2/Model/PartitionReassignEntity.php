@@ -21,7 +21,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * topic  topic名称
-    * brokers  分区重平衡到的broker列表，自动生成分配方案时需指定该参数。
+    * brokers  分区平衡到的broker列表，自动生成分配方案时需指定该参数。
     * replicationFactor  副本因子，自动生成分配方案时可指定。
     * assignment  手动指定的分配方案。brokers参数与该参数不能同时为空。
     *
@@ -37,7 +37,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * topic  topic名称
-    * brokers  分区重平衡到的broker列表，自动生成分配方案时需指定该参数。
+    * brokers  分区平衡到的broker列表，自动生成分配方案时需指定该参数。
     * replicationFactor  副本因子，自动生成分配方案时可指定。
     * assignment  手动指定的分配方案。brokers参数与该参数不能同时为空。
     *
@@ -74,7 +74,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * topic  topic名称
-    * brokers  分区重平衡到的broker列表，自动生成分配方案时需指定该参数。
+    * brokers  分区平衡到的broker列表，自动生成分配方案时需指定该参数。
     * replicationFactor  副本因子，自动生成分配方案时可指定。
     * assignment  手动指定的分配方案。brokers参数与该参数不能同时为空。
     *
@@ -90,7 +90,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * topic  topic名称
-    * brokers  分区重平衡到的broker列表，自动生成分配方案时需指定该参数。
+    * brokers  分区平衡到的broker列表，自动生成分配方案时需指定该参数。
     * replicationFactor  副本因子，自动生成分配方案时可指定。
     * assignment  手动指定的分配方案。brokers参数与该参数不能同时为空。
     *
@@ -106,7 +106,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * topic  topic名称
-    * brokers  分区重平衡到的broker列表，自动生成分配方案时需指定该参数。
+    * brokers  分区平衡到的broker列表，自动生成分配方案时需指定该参数。
     * replicationFactor  副本因子，自动生成分配方案时可指定。
     * assignment  手动指定的分配方案。brokers参数与该参数不能同时为空。
     *
@@ -234,7 +234,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokers
-    *  分区重平衡到的broker列表，自动生成分配方案时需指定该参数。
+    *  分区平衡到的broker列表，自动生成分配方案时需指定该参数。
     *
     * @return int[]|null
     */
@@ -246,7 +246,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
     /**
     * Sets brokers
     *
-    * @param int[]|null $brokers 分区重平衡到的broker列表，自动生成分配方案时需指定该参数。
+    * @param int[]|null $brokers 分区平衡到的broker列表，自动生成分配方案时需指定该参数。
     *
     * @return $this
     */

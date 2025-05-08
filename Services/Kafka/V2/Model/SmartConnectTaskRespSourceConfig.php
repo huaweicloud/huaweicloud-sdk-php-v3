@@ -20,13 +20,6 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * redisAddress  Redis实例地址。（仅源端类型为Redis时会显示）
-    * redisType  Redis实例类型。（仅源端类型为Redis时会显示）
-    * dcsInstanceId  DCS实例ID。（仅源端类型为Redis时会显示）
-    * syncMode  同步类型，“RDB_ONLY”为全量同步，“CUSTOM_OFFSET”为全量同步+增量同步。（仅源端类型为Redis时会显示）
-    * fullSyncWaitMs  全量同步重试间隔时间，单位：毫秒。（仅源端类型为Redis时会显示）
-    * fullSyncMaxRetry  全量同步最大重试次数。（仅源端类型为Redis时会显示）
-    * ratelimit  限速，单位为KB/s。-1表示不限速（仅源端类型为Redis时会显示）
     * currentClusterName  当前Kafka实例别名。（仅源端类型为Kafka时会显示）
     * clusterName  对端Kafka实例别名。（仅源端类型为Kafka时会显示）
     * userName  对端Kafka用户名。（仅源端类型为Kafka时会显示）
@@ -47,13 +40,6 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'redisAddress' => 'string',
-            'redisType' => 'string',
-            'dcsInstanceId' => 'string',
-            'syncMode' => 'string',
-            'fullSyncWaitMs' => 'int',
-            'fullSyncMaxRetry' => 'int',
-            'ratelimit' => 'int',
             'currentClusterName' => 'string',
             'clusterName' => 'string',
             'userName' => 'string',
@@ -74,13 +60,6 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * redisAddress  Redis实例地址。（仅源端类型为Redis时会显示）
-    * redisType  Redis实例类型。（仅源端类型为Redis时会显示）
-    * dcsInstanceId  DCS实例ID。（仅源端类型为Redis时会显示）
-    * syncMode  同步类型，“RDB_ONLY”为全量同步，“CUSTOM_OFFSET”为全量同步+增量同步。（仅源端类型为Redis时会显示）
-    * fullSyncWaitMs  全量同步重试间隔时间，单位：毫秒。（仅源端类型为Redis时会显示）
-    * fullSyncMaxRetry  全量同步最大重试次数。（仅源端类型为Redis时会显示）
-    * ratelimit  限速，单位为KB/s。-1表示不限速（仅源端类型为Redis时会显示）
     * currentClusterName  当前Kafka实例别名。（仅源端类型为Kafka时会显示）
     * clusterName  对端Kafka实例别名。（仅源端类型为Kafka时会显示）
     * userName  对端Kafka用户名。（仅源端类型为Kafka时会显示）
@@ -101,13 +80,6 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'redisAddress' => null,
-        'redisType' => null,
-        'dcsInstanceId' => null,
-        'syncMode' => null,
-        'fullSyncWaitMs' => null,
-        'fullSyncMaxRetry' => null,
-        'ratelimit' => null,
         'currentClusterName' => null,
         'clusterName' => null,
         'userName' => null,
@@ -149,13 +121,6 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * redisAddress  Redis实例地址。（仅源端类型为Redis时会显示）
-    * redisType  Redis实例类型。（仅源端类型为Redis时会显示）
-    * dcsInstanceId  DCS实例ID。（仅源端类型为Redis时会显示）
-    * syncMode  同步类型，“RDB_ONLY”为全量同步，“CUSTOM_OFFSET”为全量同步+增量同步。（仅源端类型为Redis时会显示）
-    * fullSyncWaitMs  全量同步重试间隔时间，单位：毫秒。（仅源端类型为Redis时会显示）
-    * fullSyncMaxRetry  全量同步最大重试次数。（仅源端类型为Redis时会显示）
-    * ratelimit  限速，单位为KB/s。-1表示不限速（仅源端类型为Redis时会显示）
     * currentClusterName  当前Kafka实例别名。（仅源端类型为Kafka时会显示）
     * clusterName  对端Kafka实例别名。（仅源端类型为Kafka时会显示）
     * userName  对端Kafka用户名。（仅源端类型为Kafka时会显示）
@@ -176,13 +141,6 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'redisAddress' => 'redis_address',
-            'redisType' => 'redis_type',
-            'dcsInstanceId' => 'dcs_instance_id',
-            'syncMode' => 'sync_mode',
-            'fullSyncWaitMs' => 'full_sync_wait_ms',
-            'fullSyncMaxRetry' => 'full_sync_max_retry',
-            'ratelimit' => 'ratelimit',
             'currentClusterName' => 'current_cluster_name',
             'clusterName' => 'cluster_name',
             'userName' => 'user_name',
@@ -203,13 +161,6 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * redisAddress  Redis实例地址。（仅源端类型为Redis时会显示）
-    * redisType  Redis实例类型。（仅源端类型为Redis时会显示）
-    * dcsInstanceId  DCS实例ID。（仅源端类型为Redis时会显示）
-    * syncMode  同步类型，“RDB_ONLY”为全量同步，“CUSTOM_OFFSET”为全量同步+增量同步。（仅源端类型为Redis时会显示）
-    * fullSyncWaitMs  全量同步重试间隔时间，单位：毫秒。（仅源端类型为Redis时会显示）
-    * fullSyncMaxRetry  全量同步最大重试次数。（仅源端类型为Redis时会显示）
-    * ratelimit  限速，单位为KB/s。-1表示不限速（仅源端类型为Redis时会显示）
     * currentClusterName  当前Kafka实例别名。（仅源端类型为Kafka时会显示）
     * clusterName  对端Kafka实例别名。（仅源端类型为Kafka时会显示）
     * userName  对端Kafka用户名。（仅源端类型为Kafka时会显示）
@@ -230,13 +181,6 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'redisAddress' => 'setRedisAddress',
-            'redisType' => 'setRedisType',
-            'dcsInstanceId' => 'setDcsInstanceId',
-            'syncMode' => 'setSyncMode',
-            'fullSyncWaitMs' => 'setFullSyncWaitMs',
-            'fullSyncMaxRetry' => 'setFullSyncMaxRetry',
-            'ratelimit' => 'setRatelimit',
             'currentClusterName' => 'setCurrentClusterName',
             'clusterName' => 'setClusterName',
             'userName' => 'setUserName',
@@ -257,13 +201,6 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * redisAddress  Redis实例地址。（仅源端类型为Redis时会显示）
-    * redisType  Redis实例类型。（仅源端类型为Redis时会显示）
-    * dcsInstanceId  DCS实例ID。（仅源端类型为Redis时会显示）
-    * syncMode  同步类型，“RDB_ONLY”为全量同步，“CUSTOM_OFFSET”为全量同步+增量同步。（仅源端类型为Redis时会显示）
-    * fullSyncWaitMs  全量同步重试间隔时间，单位：毫秒。（仅源端类型为Redis时会显示）
-    * fullSyncMaxRetry  全量同步最大重试次数。（仅源端类型为Redis时会显示）
-    * ratelimit  限速，单位为KB/s。-1表示不限速（仅源端类型为Redis时会显示）
     * currentClusterName  当前Kafka实例别名。（仅源端类型为Kafka时会显示）
     * clusterName  对端Kafka实例别名。（仅源端类型为Kafka时会显示）
     * userName  对端Kafka用户名。（仅源端类型为Kafka时会显示）
@@ -284,13 +221,6 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'redisAddress' => 'getRedisAddress',
-            'redisType' => 'getRedisType',
-            'dcsInstanceId' => 'getDcsInstanceId',
-            'syncMode' => 'getSyncMode',
-            'fullSyncWaitMs' => 'getFullSyncWaitMs',
-            'fullSyncMaxRetry' => 'getFullSyncMaxRetry',
-            'ratelimit' => 'getRatelimit',
             'currentClusterName' => 'getCurrentClusterName',
             'clusterName' => 'getClusterName',
             'userName' => 'getUserName',
@@ -367,13 +297,6 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['redisAddress'] = isset($data['redisAddress']) ? $data['redisAddress'] : null;
-        $this->container['redisType'] = isset($data['redisType']) ? $data['redisType'] : null;
-        $this->container['dcsInstanceId'] = isset($data['dcsInstanceId']) ? $data['dcsInstanceId'] : null;
-        $this->container['syncMode'] = isset($data['syncMode']) ? $data['syncMode'] : null;
-        $this->container['fullSyncWaitMs'] = isset($data['fullSyncWaitMs']) ? $data['fullSyncWaitMs'] : null;
-        $this->container['fullSyncMaxRetry'] = isset($data['fullSyncMaxRetry']) ? $data['fullSyncMaxRetry'] : null;
-        $this->container['ratelimit'] = isset($data['ratelimit']) ? $data['ratelimit'] : null;
         $this->container['currentClusterName'] = isset($data['currentClusterName']) ? $data['currentClusterName'] : null;
         $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
@@ -412,174 +335,6 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets redisAddress
-    *  Redis实例地址。（仅源端类型为Redis时会显示）
-    *
-    * @return string|null
-    */
-    public function getRedisAddress()
-    {
-        return $this->container['redisAddress'];
-    }
-
-    /**
-    * Sets redisAddress
-    *
-    * @param string|null $redisAddress Redis实例地址。（仅源端类型为Redis时会显示）
-    *
-    * @return $this
-    */
-    public function setRedisAddress($redisAddress)
-    {
-        $this->container['redisAddress'] = $redisAddress;
-        return $this;
-    }
-
-    /**
-    * Gets redisType
-    *  Redis实例类型。（仅源端类型为Redis时会显示）
-    *
-    * @return string|null
-    */
-    public function getRedisType()
-    {
-        return $this->container['redisType'];
-    }
-
-    /**
-    * Sets redisType
-    *
-    * @param string|null $redisType Redis实例类型。（仅源端类型为Redis时会显示）
-    *
-    * @return $this
-    */
-    public function setRedisType($redisType)
-    {
-        $this->container['redisType'] = $redisType;
-        return $this;
-    }
-
-    /**
-    * Gets dcsInstanceId
-    *  DCS实例ID。（仅源端类型为Redis时会显示）
-    *
-    * @return string|null
-    */
-    public function getDcsInstanceId()
-    {
-        return $this->container['dcsInstanceId'];
-    }
-
-    /**
-    * Sets dcsInstanceId
-    *
-    * @param string|null $dcsInstanceId DCS实例ID。（仅源端类型为Redis时会显示）
-    *
-    * @return $this
-    */
-    public function setDcsInstanceId($dcsInstanceId)
-    {
-        $this->container['dcsInstanceId'] = $dcsInstanceId;
-        return $this;
-    }
-
-    /**
-    * Gets syncMode
-    *  同步类型，“RDB_ONLY”为全量同步，“CUSTOM_OFFSET”为全量同步+增量同步。（仅源端类型为Redis时会显示）
-    *
-    * @return string|null
-    */
-    public function getSyncMode()
-    {
-        return $this->container['syncMode'];
-    }
-
-    /**
-    * Sets syncMode
-    *
-    * @param string|null $syncMode 同步类型，“RDB_ONLY”为全量同步，“CUSTOM_OFFSET”为全量同步+增量同步。（仅源端类型为Redis时会显示）
-    *
-    * @return $this
-    */
-    public function setSyncMode($syncMode)
-    {
-        $this->container['syncMode'] = $syncMode;
-        return $this;
-    }
-
-    /**
-    * Gets fullSyncWaitMs
-    *  全量同步重试间隔时间，单位：毫秒。（仅源端类型为Redis时会显示）
-    *
-    * @return int|null
-    */
-    public function getFullSyncWaitMs()
-    {
-        return $this->container['fullSyncWaitMs'];
-    }
-
-    /**
-    * Sets fullSyncWaitMs
-    *
-    * @param int|null $fullSyncWaitMs 全量同步重试间隔时间，单位：毫秒。（仅源端类型为Redis时会显示）
-    *
-    * @return $this
-    */
-    public function setFullSyncWaitMs($fullSyncWaitMs)
-    {
-        $this->container['fullSyncWaitMs'] = $fullSyncWaitMs;
-        return $this;
-    }
-
-    /**
-    * Gets fullSyncMaxRetry
-    *  全量同步最大重试次数。（仅源端类型为Redis时会显示）
-    *
-    * @return int|null
-    */
-    public function getFullSyncMaxRetry()
-    {
-        return $this->container['fullSyncMaxRetry'];
-    }
-
-    /**
-    * Sets fullSyncMaxRetry
-    *
-    * @param int|null $fullSyncMaxRetry 全量同步最大重试次数。（仅源端类型为Redis时会显示）
-    *
-    * @return $this
-    */
-    public function setFullSyncMaxRetry($fullSyncMaxRetry)
-    {
-        $this->container['fullSyncMaxRetry'] = $fullSyncMaxRetry;
-        return $this;
-    }
-
-    /**
-    * Gets ratelimit
-    *  限速，单位为KB/s。-1表示不限速（仅源端类型为Redis时会显示）
-    *
-    * @return int|null
-    */
-    public function getRatelimit()
-    {
-        return $this->container['ratelimit'];
-    }
-
-    /**
-    * Sets ratelimit
-    *
-    * @param int|null $ratelimit 限速，单位为KB/s。-1表示不限速（仅源端类型为Redis时会显示）
-    *
-    * @return $this
-    */
-    public function setRatelimit($ratelimit)
-    {
-        $this->container['ratelimit'] = $ratelimit;
-        return $this;
     }
 
     /**

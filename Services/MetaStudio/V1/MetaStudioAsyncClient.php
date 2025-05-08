@@ -13410,6 +13410,12 @@ class MetaStudioAsyncClient extends Client
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
+        if ($localVarParams['ttsServiceName'] !== null) {
+            $queryParams['tts_service_name'] = $localVarParams['ttsServiceName'];
+        }
+        if ($localVarParams['isVocabularyConfigEnable'] !== null) {
+            $queryParams['is_vocabulary_config_enable'] = $localVarParams['isVocabularyConfigEnable'];
+        }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }

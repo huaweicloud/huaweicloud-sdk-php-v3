@@ -20,18 +20,18 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policiesOnly  是否为默认策略。
-    * name  topic名称。
-    * replication  副本数，配置数据的可靠性。
-    * partition  topic分区数，设置消费的并发数。
-    * retentionTime  消息老化时间。
-    * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * externalConfigs  扩展配置。
-    * topicType  topic类型(0:普通Topic 1:系统(内部)Topic)。
-    * topicOtherConfigs  topic其他配置
-    * topicDesc  topic描述
-    * createdAt  topic创建时间
+    * policiesOnly  **参数解释**： 是否为默认策略。 **取值范围**： - true：默认策略。 - fasle：不是默认策略。
+    * name  **参数解释**： topic名称。 **取值范围**： 不涉及
+    * replication  **参数解释**： 副本数，配置数据的可靠性。 **取值范围**： 不涉及
+    * partition  **参数解释**： topic分区数，设置消费的并发数。 **取值范围**： 不涉及
+    * retentionTime  **参数解释**： 消息老化时间。 **取值范围**： 0-720
+    * syncReplication  **参数解释**： 是否开启同步复制，默认关闭。 **取值范围**： - true：开启，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：关闭。
+    * syncMessageFlush  **参数解释**： 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。 **取值范围**： - true：同步落盘。 - false：不同步落盘。
+    * externalConfigs  **参数解释**： 扩展配置。
+    * topicType  **参数解释**： topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
+    * topicOtherConfigs  **参数解释**： topic其他配置。
+    * topicDesc  **参数解释**： topic描述。 **取值范围**： 不涉及
+    * createdAt  **参数解释**： topic创建时间。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policiesOnly  是否为默认策略。
-    * name  topic名称。
-    * replication  副本数，配置数据的可靠性。
-    * partition  topic分区数，设置消费的并发数。
-    * retentionTime  消息老化时间。
-    * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * externalConfigs  扩展配置。
-    * topicType  topic类型(0:普通Topic 1:系统(内部)Topic)。
-    * topicOtherConfigs  topic其他配置
-    * topicDesc  topic描述
-    * createdAt  topic创建时间
+    * policiesOnly  **参数解释**： 是否为默认策略。 **取值范围**： - true：默认策略。 - fasle：不是默认策略。
+    * name  **参数解释**： topic名称。 **取值范围**： 不涉及
+    * replication  **参数解释**： 副本数，配置数据的可靠性。 **取值范围**： 不涉及
+    * partition  **参数解释**： topic分区数，设置消费的并发数。 **取值范围**： 不涉及
+    * retentionTime  **参数解释**： 消息老化时间。 **取值范围**： 0-720
+    * syncReplication  **参数解释**： 是否开启同步复制，默认关闭。 **取值范围**： - true：开启，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：关闭。
+    * syncMessageFlush  **参数解释**： 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。 **取值范围**： - true：同步落盘。 - false：不同步落盘。
+    * externalConfigs  **参数解释**： 扩展配置。
+    * topicType  **参数解释**： topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
+    * topicOtherConfigs  **参数解释**： topic其他配置。
+    * topicDesc  **参数解释**： topic描述。 **取值范围**： 不涉及
+    * createdAt  **参数解释**： topic创建时间。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policiesOnly  是否为默认策略。
-    * name  topic名称。
-    * replication  副本数，配置数据的可靠性。
-    * partition  topic分区数，设置消费的并发数。
-    * retentionTime  消息老化时间。
-    * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * externalConfigs  扩展配置。
-    * topicType  topic类型(0:普通Topic 1:系统(内部)Topic)。
-    * topicOtherConfigs  topic其他配置
-    * topicDesc  topic描述
-    * createdAt  topic创建时间
+    * policiesOnly  **参数解释**： 是否为默认策略。 **取值范围**： - true：默认策略。 - fasle：不是默认策略。
+    * name  **参数解释**： topic名称。 **取值范围**： 不涉及
+    * replication  **参数解释**： 副本数，配置数据的可靠性。 **取值范围**： 不涉及
+    * partition  **参数解释**： topic分区数，设置消费的并发数。 **取值范围**： 不涉及
+    * retentionTime  **参数解释**： 消息老化时间。 **取值范围**： 0-720
+    * syncReplication  **参数解释**： 是否开启同步复制，默认关闭。 **取值范围**： - true：开启，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：关闭。
+    * syncMessageFlush  **参数解释**： 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。 **取值范围**： - true：同步落盘。 - false：不同步落盘。
+    * externalConfigs  **参数解释**： 扩展配置。
+    * topicType  **参数解释**： topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
+    * topicOtherConfigs  **参数解释**： topic其他配置。
+    * topicDesc  **参数解释**： topic描述。 **取值范围**： 不涉及
+    * createdAt  **参数解释**： topic创建时间。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policiesOnly  是否为默认策略。
-    * name  topic名称。
-    * replication  副本数，配置数据的可靠性。
-    * partition  topic分区数，设置消费的并发数。
-    * retentionTime  消息老化时间。
-    * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * externalConfigs  扩展配置。
-    * topicType  topic类型(0:普通Topic 1:系统(内部)Topic)。
-    * topicOtherConfigs  topic其他配置
-    * topicDesc  topic描述
-    * createdAt  topic创建时间
+    * policiesOnly  **参数解释**： 是否为默认策略。 **取值范围**： - true：默认策略。 - fasle：不是默认策略。
+    * name  **参数解释**： topic名称。 **取值范围**： 不涉及
+    * replication  **参数解释**： 副本数，配置数据的可靠性。 **取值范围**： 不涉及
+    * partition  **参数解释**： topic分区数，设置消费的并发数。 **取值范围**： 不涉及
+    * retentionTime  **参数解释**： 消息老化时间。 **取值范围**： 0-720
+    * syncReplication  **参数解释**： 是否开启同步复制，默认关闭。 **取值范围**： - true：开启，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：关闭。
+    * syncMessageFlush  **参数解释**： 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。 **取值范围**： - true：同步落盘。 - false：不同步落盘。
+    * externalConfigs  **参数解释**： 扩展配置。
+    * topicType  **参数解释**： topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
+    * topicOtherConfigs  **参数解释**： topic其他配置。
+    * topicDesc  **参数解释**： topic描述。 **取值范围**： 不涉及
+    * createdAt  **参数解释**： topic创建时间。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policiesOnly  是否为默认策略。
-    * name  topic名称。
-    * replication  副本数，配置数据的可靠性。
-    * partition  topic分区数，设置消费的并发数。
-    * retentionTime  消息老化时间。
-    * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * externalConfigs  扩展配置。
-    * topicType  topic类型(0:普通Topic 1:系统(内部)Topic)。
-    * topicOtherConfigs  topic其他配置
-    * topicDesc  topic描述
-    * createdAt  topic创建时间
+    * policiesOnly  **参数解释**： 是否为默认策略。 **取值范围**： - true：默认策略。 - fasle：不是默认策略。
+    * name  **参数解释**： topic名称。 **取值范围**： 不涉及
+    * replication  **参数解释**： 副本数，配置数据的可靠性。 **取值范围**： 不涉及
+    * partition  **参数解释**： topic分区数，设置消费的并发数。 **取值范围**： 不涉及
+    * retentionTime  **参数解释**： 消息老化时间。 **取值范围**： 0-720
+    * syncReplication  **参数解释**： 是否开启同步复制，默认关闭。 **取值范围**： - true：开启，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：关闭。
+    * syncMessageFlush  **参数解释**： 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。 **取值范围**： - true：同步落盘。 - false：不同步落盘。
+    * externalConfigs  **参数解释**： 扩展配置。
+    * topicType  **参数解释**： topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
+    * topicOtherConfigs  **参数解释**： topic其他配置。
+    * topicDesc  **参数解释**： topic描述。 **取值范围**： 不涉及
+    * createdAt  **参数解释**： topic创建时间。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -295,7 +295,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets policiesOnly
-    *  是否为默认策略。
+    *  **参数解释**： 是否为默认策略。 **取值范围**： - true：默认策略。 - fasle：不是默认策略。
     *
     * @return bool|null
     */
@@ -307,7 +307,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets policiesOnly
     *
-    * @param bool|null $policiesOnly 是否为默认策略。
+    * @param bool|null $policiesOnly **参数解释**： 是否为默认策略。 **取值范围**： - true：默认策略。 - fasle：不是默认策略。
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  topic名称。
+    *  **参数解释**： topic名称。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -331,7 +331,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name topic名称。
+    * @param string|null $name **参数解释**： topic名称。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets replication
-    *  副本数，配置数据的可靠性。
+    *  **参数解释**： 副本数，配置数据的可靠性。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -355,7 +355,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets replication
     *
-    * @param int|null $replication 副本数，配置数据的可靠性。
+    * @param int|null $replication **参数解释**： 副本数，配置数据的可靠性。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets partition
-    *  topic分区数，设置消费的并发数。
+    *  **参数解释**： topic分区数，设置消费的并发数。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -379,7 +379,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets partition
     *
-    * @param int|null $partition topic分区数，设置消费的并发数。
+    * @param int|null $partition **参数解释**： topic分区数，设置消费的并发数。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets retentionTime
-    *  消息老化时间。
+    *  **参数解释**： 消息老化时间。 **取值范围**： 0-720
     *
     * @return int|null
     */
@@ -403,7 +403,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets retentionTime
     *
-    * @param int|null $retentionTime 消息老化时间。
+    * @param int|null $retentionTime **参数解释**： 消息老化时间。 **取值范围**： 0-720
     *
     * @return $this
     */
@@ -415,7 +415,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets syncReplication
-    *  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
+    *  **参数解释**： 是否开启同步复制，默认关闭。 **取值范围**： - true：开启，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：关闭。
     *
     * @return bool|null
     */
@@ -427,7 +427,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets syncReplication
     *
-    * @param bool|null $syncReplication 是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
+    * @param bool|null $syncReplication **参数解释**： 是否开启同步复制，默认关闭。 **取值范围**： - true：开启，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：关闭。
     *
     * @return $this
     */
@@ -439,7 +439,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets syncMessageFlush
-    *  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
+    *  **参数解释**： 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。 **取值范围**： - true：同步落盘。 - false：不同步落盘。
     *
     * @return bool|null
     */
@@ -451,7 +451,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets syncMessageFlush
     *
-    * @param bool|null $syncMessageFlush 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
+    * @param bool|null $syncMessageFlush **参数解释**： 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。 **取值范围**： - true：同步落盘。 - false：不同步落盘。
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets externalConfigs
-    *  扩展配置。
+    *  **参数解释**： 扩展配置。
     *
     * @return object|null
     */
@@ -475,7 +475,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets externalConfigs
     *
-    * @param object|null $externalConfigs 扩展配置。
+    * @param object|null $externalConfigs **参数解释**： 扩展配置。
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicType
-    *  topic类型(0:普通Topic 1:系统(内部)Topic)。
+    *  **参数解释**： topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
     *
     * @return int|null
     */
@@ -499,7 +499,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets topicType
     *
-    * @param int|null $topicType topic类型(0:普通Topic 1:系统(内部)Topic)。
+    * @param int|null $topicType **参数解释**： topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicOtherConfigs
-    *  topic其他配置
+    *  **参数解释**： topic其他配置。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\TopicEntityTopicOtherConfigs[]|null
     */
@@ -523,7 +523,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets topicOtherConfigs
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\TopicEntityTopicOtherConfigs[]|null $topicOtherConfigs topic其他配置
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\TopicEntityTopicOtherConfigs[]|null $topicOtherConfigs **参数解释**： topic其他配置。
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicDesc
-    *  topic描述
+    *  **参数解释**： topic描述。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -547,7 +547,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets topicDesc
     *
-    * @param string|null $topicDesc topic描述
+    * @param string|null $topicDesc **参数解释**： topic描述。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -559,7 +559,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  topic创建时间
+    *  **参数解释**： topic创建时间。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -571,7 +571,7 @@ class TopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param int|null $createdAt topic创建时间
+    * @param int|null $createdAt **参数解释**： topic创建时间。 **取值范围**： 不涉及
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * broker  副本所在的节点ID。
-    * leader  该副本是否为leader。
-    * inSync  该副本是否在ISR副本中。
-    * size  该副本当前日志大小。单位：Byte。
-    * lag  该副本当前落后hw的消息数。
+    * broker  **参数解释**： 副本所在的节点ID。 **取值范围**： 不涉及
+    * leader  **参数解释**： 该副本是否为leader。 **取值范围**： - true：该副本是leader。 - false：该副本不是leader。
+    * inSync  **参数解释**： 该副本是否在ISR副本中。 **取值范围**： - true：在ISR副本中。 - false：不在ISR副本中。
+    * size  **参数解释**： 该副本当前日志大小。单位：Byte。 **取值范围**： 不涉及
+    * lag  **参数解释**： 该副本当前落后hw的消息数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * broker  副本所在的节点ID。
-    * leader  该副本是否为leader。
-    * inSync  该副本是否在ISR副本中。
-    * size  该副本当前日志大小。单位：Byte。
-    * lag  该副本当前落后hw的消息数。
+    * broker  **参数解释**： 副本所在的节点ID。 **取值范围**： 不涉及
+    * leader  **参数解释**： 该副本是否为leader。 **取值范围**： - true：该副本是leader。 - false：该副本不是leader。
+    * inSync  **参数解释**： 该副本是否在ISR副本中。 **取值范围**： - true：在ISR副本中。 - false：不在ISR副本中。
+    * size  **参数解释**： 该副本当前日志大小。单位：Byte。 **取值范围**： 不涉及
+    * lag  **参数解释**： 该副本当前落后hw的消息数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * broker  副本所在的节点ID。
-    * leader  该副本是否为leader。
-    * inSync  该副本是否在ISR副本中。
-    * size  该副本当前日志大小。单位：Byte。
-    * lag  该副本当前落后hw的消息数。
+    * broker  **参数解释**： 副本所在的节点ID。 **取值范围**： 不涉及
+    * leader  **参数解释**： 该副本是否为leader。 **取值范围**： - true：该副本是leader。 - false：该副本不是leader。
+    * inSync  **参数解释**： 该副本是否在ISR副本中。 **取值范围**： - true：在ISR副本中。 - false：不在ISR副本中。
+    * size  **参数解释**： 该副本当前日志大小。单位：Byte。 **取值范围**： 不涉及
+    * lag  **参数解释**： 该副本当前落后hw的消息数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * broker  副本所在的节点ID。
-    * leader  该副本是否为leader。
-    * inSync  该副本是否在ISR副本中。
-    * size  该副本当前日志大小。单位：Byte。
-    * lag  该副本当前落后hw的消息数。
+    * broker  **参数解释**： 副本所在的节点ID。 **取值范围**： 不涉及
+    * leader  **参数解释**： 该副本是否为leader。 **取值范围**： - true：该副本是leader。 - false：该副本不是leader。
+    * inSync  **参数解释**： 该副本是否在ISR副本中。 **取值范围**： - true：在ISR副本中。 - false：不在ISR副本中。
+    * size  **参数解释**： 该副本当前日志大小。单位：Byte。 **取值范围**： 不涉及
+    * lag  **参数解释**： 该副本当前落后hw的消息数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * broker  副本所在的节点ID。
-    * leader  该副本是否为leader。
-    * inSync  该副本是否在ISR副本中。
-    * size  该副本当前日志大小。单位：Byte。
-    * lag  该副本当前落后hw的消息数。
+    * broker  **参数解释**： 副本所在的节点ID。 **取值范围**： 不涉及
+    * leader  **参数解释**： 该副本是否为leader。 **取值范围**： - true：该副本是leader。 - false：该副本不是leader。
+    * inSync  **参数解释**： 该副本是否在ISR副本中。 **取值范围**： - true：在ISR副本中。 - false：不在ISR副本中。
+    * size  **参数解释**： 该副本当前日志大小。单位：Byte。 **取值范围**： 不涉及
+    * lag  **参数解释**： 该副本当前落后hw的消息数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
 
     /**
     * Gets broker
-    *  副本所在的节点ID。
+    *  **参数解释**： 副本所在的节点ID。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -230,7 +230,7 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
     /**
     * Sets broker
     *
-    * @param int|null $broker 副本所在的节点ID。
+    * @param int|null $broker **参数解释**： 副本所在的节点ID。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
 
     /**
     * Gets leader
-    *  该副本是否为leader。
+    *  **参数解释**： 该副本是否为leader。 **取值范围**： - true：该副本是leader。 - false：该副本不是leader。
     *
     * @return bool|null
     */
@@ -254,7 +254,7 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
     /**
     * Sets leader
     *
-    * @param bool|null $leader 该副本是否为leader。
+    * @param bool|null $leader **参数解释**： 该副本是否为leader。 **取值范围**： - true：该副本是leader。 - false：该副本不是leader。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
 
     /**
     * Gets inSync
-    *  该副本是否在ISR副本中。
+    *  **参数解释**： 该副本是否在ISR副本中。 **取值范围**： - true：在ISR副本中。 - false：不在ISR副本中。
     *
     * @return bool|null
     */
@@ -278,7 +278,7 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
     /**
     * Sets inSync
     *
-    * @param bool|null $inSync 该副本是否在ISR副本中。
+    * @param bool|null $inSync **参数解释**： 该副本是否在ISR副本中。 **取值范围**： - true：在ISR副本中。 - false：不在ISR副本中。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  该副本当前日志大小。单位：Byte。
+    *  **参数解释**： 该副本当前日志大小。单位：Byte。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 该副本当前日志大小。单位：Byte。
+    * @param int|null $size **参数解释**： 该副本当前日志大小。单位：Byte。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
 
     /**
     * Gets lag
-    *  该副本当前落后hw的消息数。
+    *  **参数解释**： 该副本当前落后hw的消息数。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
     /**
     * Sets lag
     *
-    * @param int|null $lag 该副本当前落后hw的消息数。
+    * @param int|null $lag **参数解释**： 该副本当前落后hw的消息数。 **取值范围**： 不涉及
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * group  消费组名称。
-    * topic  待查询的Topic，不指定时查询Topic列表，指定时查询详情。
-    * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： 待查询的Topic，不指定时查询Topic列表，指定时查询详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当次查询返回Topic的最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * group  消费组名称。
-    * topic  待查询的Topic，不指定时查询Topic列表，指定时查询详情。
-    * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： 待查询的Topic，不指定时查询Topic列表，指定时查询详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当次查询返回Topic的最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * group  消费组名称。
-    * topic  待查询的Topic，不指定时查询Topic列表，指定时查询详情。
-    * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： 待查询的Topic，不指定时查询Topic列表，指定时查询详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当次查询返回Topic的最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * group  消费组名称。
-    * topic  待查询的Topic，不指定时查询Topic列表，指定时查询详情。
-    * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： 待查询的Topic，不指定时查询Topic列表，指定时查询详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当次查询返回Topic的最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * group  消费组名称。
-    * topic  待查询的Topic，不指定时查询Topic列表，指定时查询详情。
-    * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： 待查询的Topic，不指定时查询Topic列表，指定时查询详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当次查询返回Topic的最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -233,7 +233,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：登录RocketMQ控制台，在RocketMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -257,7 +257,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
-    *  消费组名称。
+    *  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -269,7 +269,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets group
     *
-    * @param string $group 消费组名称。
+    * @param string $group **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -281,7 +281,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  待查询的Topic，不指定时查询Topic列表，指定时查询详情。
+    *  **参数解释**： 待查询的Topic，不指定时查询Topic列表，指定时查询详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -293,7 +293,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic 待查询的Topic，不指定时查询Topic列表，指定时查询详情。
+    * @param string|null $topic **参数解释**： 待查询的Topic，不指定时查询Topic列表，指定时查询详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  当次查询返回的最大个数，默认值为10，取值范围为1~50。
+    *  **参数解释**： 当次查询返回Topic的最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
     *
     * @return int|null
     */
@@ -317,7 +317,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 当次查询返回的最大个数，默认值为10，取值范围为1~50。
+    * @param int|null $limit **参数解释**： 当次查询返回Topic的最大个数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 10。
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    *  **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @return int|null
     */
@@ -341,7 +341,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * @param int|null $offset **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @return $this
     */

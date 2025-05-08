@@ -23,13 +23,17 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎。
     * instanceId  实例ID。
     * msgId  消息ID。
+    * limit  查询数量。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'engine' => 'string',
             'instanceId' => 'string',
-            'msgId' => 'string'
+            'msgId' => 'string',
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
@@ -37,13 +41,17 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎。
     * instanceId  实例ID。
     * msgId  消息ID。
+    * limit  查询数量。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'engine' => null,
         'instanceId' => null,
-        'msgId' => null
+        'msgId' => null,
+        'limit' => 'int32',
+        'offset' => 'int32'
     ];
 
     /**
@@ -72,13 +80,17 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎。
     * instanceId  实例ID。
     * msgId  消息ID。
+    * limit  查询数量。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'engine' => 'engine',
             'instanceId' => 'instance_id',
-            'msgId' => 'msg_id'
+            'msgId' => 'msg_id',
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
@@ -86,13 +98,17 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎。
     * instanceId  实例ID。
     * msgId  消息ID。
+    * limit  查询数量。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     *
     * @var string[]
     */
     protected static $setters = [
             'engine' => 'setEngine',
             'instanceId' => 'setInstanceId',
-            'msgId' => 'setMsgId'
+            'msgId' => 'setMsgId',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
@@ -100,13 +116,17 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎。
     * instanceId  实例ID。
     * msgId  消息ID。
+    * limit  查询数量。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     *
     * @var string[]
     */
     protected static $getters = [
             'engine' => 'getEngine',
             'instanceId' => 'getInstanceId',
-            'msgId' => 'getMsgId'
+            'msgId' => 'getMsgId',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -183,6 +203,8 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
         $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['msgId'] = isset($data['msgId']) ? $data['msgId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -293,6 +315,54 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     public function setMsgId($msgId)
     {
         $this->container['msgId'] = $msgId;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  查询数量。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 查询数量。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 偏移量，表示从此偏移量开始查询，offset大于等于0。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

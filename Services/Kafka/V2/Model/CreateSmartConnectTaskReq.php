@@ -199,10 +199,8 @@ class CreateSmartConnectTaskReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const SOURCE_TYPE_REDIS_REPLICATOR_SOURCE = 'REDIS_REPLICATOR_SOURCE';
     const SOURCE_TYPE_KAFKA_REPLICATOR_SOURCE = 'KAFKA_REPLICATOR_SOURCE';
     const SOURCE_TYPE_NONE = 'NONE';
-    const SINK_TYPE_REDIS_REPLICATOR_SINK = 'REDIS_REPLICATOR_SINK';
     const SINK_TYPE_OBS_SINK = 'OBS_SINK';
     const SINK_TYPE_NONE = 'NONE';
     
@@ -215,7 +213,6 @@ class CreateSmartConnectTaskReq implements ModelInterface, ArrayAccess
     public function getSourceTypeAllowableValues()
     {
         return [
-            self::SOURCE_TYPE_REDIS_REPLICATOR_SOURCE,
             self::SOURCE_TYPE_KAFKA_REPLICATOR_SOURCE,
             self::SOURCE_TYPE_NONE,
         ];
@@ -229,7 +226,6 @@ class CreateSmartConnectTaskReq implements ModelInterface, ArrayAccess
     public function getSinkTypeAllowableValues()
     {
         return [
-            self::SINK_TYPE_REDIS_REPLICATOR_SINK,
             self::SINK_TYPE_OBS_SINK,
             self::SINK_TYPE_NONE,
         ];

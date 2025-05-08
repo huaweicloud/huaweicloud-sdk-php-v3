@@ -23,13 +23,17 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * engine  消息引擎的类型。支持的类型为rocketmq。
     * instanceId  实例ID。
     * type  产品的类型。 advanced：专享版。
+    * limit  查询数量。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'engine' => 'string',
             'instanceId' => 'string',
-            'type' => 'string'
+            'type' => 'string',
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
@@ -37,13 +41,17 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * engine  消息引擎的类型。支持的类型为rocketmq。
     * instanceId  实例ID。
     * type  产品的类型。 advanced：专享版。
+    * limit  查询数量。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'engine' => null,
         'instanceId' => null,
-        'type' => null
+        'type' => null,
+        'limit' => 'int32',
+        'offset' => 'int32'
     ];
 
     /**
@@ -72,13 +80,17 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * engine  消息引擎的类型。支持的类型为rocketmq。
     * instanceId  实例ID。
     * type  产品的类型。 advanced：专享版。
+    * limit  查询数量。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'engine' => 'engine',
             'instanceId' => 'instance_id',
-            'type' => 'type'
+            'type' => 'type',
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
@@ -86,13 +98,17 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * engine  消息引擎的类型。支持的类型为rocketmq。
     * instanceId  实例ID。
     * type  产品的类型。 advanced：专享版。
+    * limit  查询数量。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     *
     * @var string[]
     */
     protected static $setters = [
             'engine' => 'setEngine',
             'instanceId' => 'setInstanceId',
-            'type' => 'setType'
+            'type' => 'setType',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
@@ -100,13 +116,17 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * engine  消息引擎的类型。支持的类型为rocketmq。
     * instanceId  实例ID。
     * type  产品的类型。 advanced：专享版。
+    * limit  查询数量。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     *
     * @var string[]
     */
     protected static $getters = [
             'engine' => 'getEngine',
             'instanceId' => 'getInstanceId',
-            'type' => 'getType'
+            'type' => 'getType',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -183,6 +203,8 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
         $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -290,6 +312,54 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  查询数量。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 查询数量。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 偏移量，表示从此偏移量开始查询，offset大于等于0。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

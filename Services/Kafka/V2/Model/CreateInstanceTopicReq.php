@@ -23,9 +23,9 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     * id  topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
     * replication  副本数，配置数据的可靠性。 取值范围：1-3。
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * partition  topic分区数，设置消费的并发数。 取值范围：[1-200](tag:hws,hws_hk,dt,hcs,fcs,sbc,hk_sbc,g42,hk_g42,ctc,tm,hk_tm)[1-100](tag:cmcc,hws_ocb,ocb)。
+    * partition  topic分区数，设置消费的并发数。 取值范围：1-200。
     * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * retentionTime  消息老化时间。默认值为72。 取值范围[1~168](tag:cmcc)[1-720](tag:ocb,dt,hws_ocb,hws,hws_hk,ctc,sbc,hk_sbc,hws_eu,g42,tm,hk_g42,hk_tm,hcs,fcs)，单位小时。
+    * retentionTime  消息老化时间。默认值为72。 取值范围1-720，单位小时。
     * topicOtherConfigs  topic配置
     * topicDesc  topic描述
     *
@@ -47,9 +47,9 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     * id  topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
     * replication  副本数，配置数据的可靠性。 取值范围：1-3。
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * partition  topic分区数，设置消费的并发数。 取值范围：[1-200](tag:hws,hws_hk,dt,hcs,fcs,sbc,hk_sbc,g42,hk_g42,ctc,tm,hk_tm)[1-100](tag:cmcc,hws_ocb,ocb)。
+    * partition  topic分区数，设置消费的并发数。 取值范围：1-200。
     * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * retentionTime  消息老化时间。默认值为72。 取值范围[1~168](tag:cmcc)[1-720](tag:ocb,dt,hws_ocb,hws,hws_hk,ctc,sbc,hk_sbc,hws_eu,g42,tm,hk_g42,hk_tm,hcs,fcs)，单位小时。
+    * retentionTime  消息老化时间。默认值为72。 取值范围1-720，单位小时。
     * topicOtherConfigs  topic配置
     * topicDesc  topic描述
     *
@@ -92,9 +92,9 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     * id  topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
     * replication  副本数，配置数据的可靠性。 取值范围：1-3。
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * partition  topic分区数，设置消费的并发数。 取值范围：[1-200](tag:hws,hws_hk,dt,hcs,fcs,sbc,hk_sbc,g42,hk_g42,ctc,tm,hk_tm)[1-100](tag:cmcc,hws_ocb,ocb)。
+    * partition  topic分区数，设置消费的并发数。 取值范围：1-200。
     * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * retentionTime  消息老化时间。默认值为72。 取值范围[1~168](tag:cmcc)[1-720](tag:ocb,dt,hws_ocb,hws,hws_hk,ctc,sbc,hk_sbc,hws_eu,g42,tm,hk_g42,hk_tm,hcs,fcs)，单位小时。
+    * retentionTime  消息老化时间。默认值为72。 取值范围1-720，单位小时。
     * topicOtherConfigs  topic配置
     * topicDesc  topic描述
     *
@@ -116,9 +116,9 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     * id  topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
     * replication  副本数，配置数据的可靠性。 取值范围：1-3。
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * partition  topic分区数，设置消费的并发数。 取值范围：[1-200](tag:hws,hws_hk,dt,hcs,fcs,sbc,hk_sbc,g42,hk_g42,ctc,tm,hk_tm)[1-100](tag:cmcc,hws_ocb,ocb)。
+    * partition  topic分区数，设置消费的并发数。 取值范围：1-200。
     * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * retentionTime  消息老化时间。默认值为72。 取值范围[1~168](tag:cmcc)[1-720](tag:ocb,dt,hws_ocb,hws,hws_hk,ctc,sbc,hk_sbc,hws_eu,g42,tm,hk_g42,hk_tm,hcs,fcs)，单位小时。
+    * retentionTime  消息老化时间。默认值为72。 取值范围1-720，单位小时。
     * topicOtherConfigs  topic配置
     * topicDesc  topic描述
     *
@@ -140,9 +140,9 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     * id  topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
     * replication  副本数，配置数据的可靠性。 取值范围：1-3。
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * partition  topic分区数，设置消费的并发数。 取值范围：[1-200](tag:hws,hws_hk,dt,hcs,fcs,sbc,hk_sbc,g42,hk_g42,ctc,tm,hk_tm)[1-100](tag:cmcc,hws_ocb,ocb)。
+    * partition  topic分区数，设置消费的并发数。 取值范围：1-200。
     * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * retentionTime  消息老化时间。默认值为72。 取值范围[1~168](tag:cmcc)[1-720](tag:ocb,dt,hws_ocb,hws,hws_hk,ctc,sbc,hk_sbc,hws_eu,g42,tm,hk_g42,hk_tm,hcs,fcs)，单位小时。
+    * retentionTime  消息老化时间。默认值为72。 取值范围1-720，单位小时。
     * topicOtherConfigs  topic配置
     * topicDesc  topic描述
     *
@@ -344,7 +344,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets partition
-    *  topic分区数，设置消费的并发数。 取值范围：[1-200](tag:hws,hws_hk,dt,hcs,fcs,sbc,hk_sbc,g42,hk_g42,ctc,tm,hk_tm)[1-100](tag:cmcc,hws_ocb,ocb)。
+    *  topic分区数，设置消费的并发数。 取值范围：1-200。
     *
     * @return int|null
     */
@@ -356,7 +356,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets partition
     *
-    * @param int|null $partition topic分区数，设置消费的并发数。 取值范围：[1-200](tag:hws,hws_hk,dt,hcs,fcs,sbc,hk_sbc,g42,hk_g42,ctc,tm,hk_tm)[1-100](tag:cmcc,hws_ocb,ocb)。
+    * @param int|null $partition topic分区数，设置消费的并发数。 取值范围：1-200。
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets retentionTime
-    *  消息老化时间。默认值为72。 取值范围[1~168](tag:cmcc)[1-720](tag:ocb,dt,hws_ocb,hws,hws_hk,ctc,sbc,hk_sbc,hws_eu,g42,tm,hk_g42,hk_tm,hcs,fcs)，单位小时。
+    *  消息老化时间。默认值为72。 取值范围1-720，单位小时。
     *
     * @return int|null
     */
@@ -404,7 +404,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets retentionTime
     *
-    * @param int|null $retentionTime 消息老化时间。默认值为72。 取值范围[1~168](tag:cmcc)[1-720](tag:ocb,dt,hws_ocb,hws,hws_hk,ctc,sbc,hk_sbc,hws_eu,g42,tm,hk_g42,hk_tm,hcs,fcs)，单位小时。
+    * @param int|null $retentionTime 消息老化时间。默认值为72。 取值范围1-720，单位小时。
     *
     * @return $this
     */

@@ -41,6 +41,7 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     * vmrId  绑定给当前创会帐号的VMR ID。通过[[查询云会议室及个人会议ID](https://support.huaweicloud.com/api-meeting/meeting_21_1106.html)](tag:hws)[[查询云会议室及个人会议ID](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_1106.html)](tag:hk)接口获取。 > * vmrID取上述查询接口中返回的id，不是vmrId > * 创建个人会议ID的会议时，使用vmrMode=0的VMR；创建云会议室的会议时，使用vmrMode=1的VMR
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
     * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
+    * confResType  会议资源类型：  * 0: 并发 * 1: 云会议室 * 2: 网络研讨会 * 3: 共享vmr * 4: 共享网络研讨会
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
             'cycleParams' => '\HuaweiCloud\SDK\Meeting\V1\Model\CycleParams',
             'vmrId' => 'string',
             'concurrentParticipants' => 'int',
-            'supportSimultaneousInterpretation' => 'bool'
+            'supportSimultaneousInterpretation' => 'bool',
+            'confResType' => 'int'
     ];
 
     /**
@@ -91,6 +93,7 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     * vmrId  绑定给当前创会帐号的VMR ID。通过[[查询云会议室及个人会议ID](https://support.huaweicloud.com/api-meeting/meeting_21_1106.html)](tag:hws)[[查询云会议室及个人会议ID](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_1106.html)](tag:hk)接口获取。 > * vmrID取上述查询接口中返回的id，不是vmrId > * 创建个人会议ID的会议时，使用vmrMode=0的VMR；创建云会议室的会议时，使用vmrMode=1的VMR
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
     * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
+    * confResType  会议资源类型：  * 0: 并发 * 1: 云会议室 * 2: 网络研讨会 * 3: 共享vmr * 4: 共享网络研讨会
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
         'cycleParams' => null,
         'vmrId' => null,
         'concurrentParticipants' => 'int32',
-        'supportSimultaneousInterpretation' => null
+        'supportSimultaneousInterpretation' => null,
+        'confResType' => 'int32'
     ];
 
     /**
@@ -162,6 +166,7 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     * vmrId  绑定给当前创会帐号的VMR ID。通过[[查询云会议室及个人会议ID](https://support.huaweicloud.com/api-meeting/meeting_21_1106.html)](tag:hws)[[查询云会议室及个人会议ID](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_1106.html)](tag:hk)接口获取。 > * vmrID取上述查询接口中返回的id，不是vmrId > * 创建个人会议ID的会议时，使用vmrMode=0的VMR；创建云会议室的会议时，使用vmrMode=1的VMR
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
     * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
+    * confResType  会议资源类型：  * 0: 并发 * 1: 云会议室 * 2: 网络研讨会 * 3: 共享vmr * 4: 共享网络研讨会
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
             'cycleParams' => 'cycleParams',
             'vmrId' => 'vmrID',
             'concurrentParticipants' => 'concurrentParticipants',
-            'supportSimultaneousInterpretation' => 'supportSimultaneousInterpretation'
+            'supportSimultaneousInterpretation' => 'supportSimultaneousInterpretation',
+            'confResType' => 'confResType'
     ];
 
     /**
@@ -212,6 +218,7 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     * vmrId  绑定给当前创会帐号的VMR ID。通过[[查询云会议室及个人会议ID](https://support.huaweicloud.com/api-meeting/meeting_21_1106.html)](tag:hws)[[查询云会议室及个人会议ID](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_1106.html)](tag:hk)接口获取。 > * vmrID取上述查询接口中返回的id，不是vmrId > * 创建个人会议ID的会议时，使用vmrMode=0的VMR；创建云会议室的会议时，使用vmrMode=1的VMR
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
     * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
+    * confResType  会议资源类型：  * 0: 并发 * 1: 云会议室 * 2: 网络研讨会 * 3: 共享vmr * 4: 共享网络研讨会
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
             'cycleParams' => 'setCycleParams',
             'vmrId' => 'setVmrId',
             'concurrentParticipants' => 'setConcurrentParticipants',
-            'supportSimultaneousInterpretation' => 'setSupportSimultaneousInterpretation'
+            'supportSimultaneousInterpretation' => 'setSupportSimultaneousInterpretation',
+            'confResType' => 'setConfResType'
     ];
 
     /**
@@ -262,6 +270,7 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     * vmrId  绑定给当前创会帐号的VMR ID。通过[[查询云会议室及个人会议ID](https://support.huaweicloud.com/api-meeting/meeting_21_1106.html)](tag:hws)[[查询云会议室及个人会议ID](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_1106.html)](tag:hk)接口获取。 > * vmrID取上述查询接口中返回的id，不是vmrId > * 创建个人会议ID的会议时，使用vmrMode=0的VMR；创建云会议室的会议时，使用vmrMode=1的VMR
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
     * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
+    * confResType  会议资源类型：  * 0: 并发 * 1: 云会议室 * 2: 网络研讨会 * 3: 共享vmr * 4: 共享网络研讨会
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
             'cycleParams' => 'getCycleParams',
             'vmrId' => 'getVmrId',
             'concurrentParticipants' => 'getConcurrentParticipants',
-            'supportSimultaneousInterpretation' => 'getSupportSimultaneousInterpretation'
+            'supportSimultaneousInterpretation' => 'getSupportSimultaneousInterpretation',
+            'confResType' => 'getConfResType'
     ];
 
     /**
@@ -368,6 +378,7 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
         $this->container['vmrId'] = isset($data['vmrId']) ? $data['vmrId'] : null;
         $this->container['concurrentParticipants'] = isset($data['concurrentParticipants']) ? $data['concurrentParticipants'] : null;
         $this->container['supportSimultaneousInterpretation'] = isset($data['supportSimultaneousInterpretation']) ? $data['supportSimultaneousInterpretation'] : null;
+        $this->container['confResType'] = isset($data['confResType']) ? $data['confResType'] : null;
     }
 
     /**
@@ -458,6 +469,12 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['vmrId']) && (mb_strlen($this->container['vmrId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'vmrId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['confResType']) && ($this->container['confResType'] > 4)) {
+                $invalidProperties[] = "invalid value for 'confResType', must be smaller than or equal to 4.";
+            }
+            if (!is_null($this->container['confResType']) && ($this->container['confResType'] < 0)) {
+                $invalidProperties[] = "invalid value for 'confResType', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -974,6 +991,30 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     public function setSupportSimultaneousInterpretation($supportSimultaneousInterpretation)
     {
         $this->container['supportSimultaneousInterpretation'] = $supportSimultaneousInterpretation;
+        return $this;
+    }
+
+    /**
+    * Gets confResType
+    *  会议资源类型：  * 0: 并发 * 1: 云会议室 * 2: 网络研讨会 * 3: 共享vmr * 4: 共享网络研讨会
+    *
+    * @return int|null
+    */
+    public function getConfResType()
+    {
+        return $this->container['confResType'];
+    }
+
+    /**
+    * Sets confResType
+    *
+    * @param int|null $confResType 会议资源类型：  * 0: 并发 * 1: 云会议室 * 2: 网络研讨会 * 3: 共享vmr * 4: 共享网络研讨会
+    *
+    * @return $this
+    */
+    public function setConfResType($confResType)
+    {
+        $this->container['confResType'] = $confResType;
         return $this;
     }
 

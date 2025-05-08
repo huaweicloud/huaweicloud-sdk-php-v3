@@ -29,6 +29,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * storageSpace  消息存储空间，单位：GB。
     * partitionNum  Kafka实例的分区数量。
     * usedStorageSpace  已使用的消息存储空间，单位：GB。
+    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
     * connectAddress  实例连接IP地址。
     * port  实例连接端口。
     * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
@@ -50,7 +51,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
     * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    * kafkaSecurityProtocol  Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
     * certReplaced  是否能够证书替换。
@@ -68,6 +69,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
+    * publicConnectDomainName  实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
     * storageResourceId  存储资源ID。
     * storageSpecCode  IO规格。
     * serviceType  服务类型。
@@ -75,8 +77,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * retentionPolicy  消息老化策略。
     * kafkaPublicStatus  Kafka公网开启状态。
     * publicBandwidth  kafka公网访问带宽。
-    * kafkaManagerEnable  是否已开启kafka manager
-    * kafkaManagerUser  登录Kafka Manager的用户名。
     * enableLogCollection  是否开启消息收集功能。
     * newAuthCert  是否开启新证书。
     * crossVpcInfo  跨VPC访问信息。
@@ -96,10 +96,12 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * podConnectAddress  租户侧连接地址。
     * diskEncrypted  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空。
-    * kafkaPrivateConnectAddress  Kafka实例私有连接地址。
+    * kafkaPrivateConnectAddress  Kafka实例内网连接地址。
+    * kafkaPrivateConnectDomainName  Kafka实例内网连接域名。
     * cesVersion  云监控版本。
     * publicAccessEnabled  区分实例什么时候开启的公网访问  取值范围：   - true：已开启公网访问   - actived：已开启公网访问   - closed：已关闭公网访问   - false：已关闭公网访问
     * nodeNum  节点数。
+    * portProtocols  portProtocols
     * enableAcl  是否开启访问控制。
     * newSpecBillingEnable  是否启用新规格计费。
     * brokerNum  节点数量。
@@ -117,6 +119,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'storageSpace' => 'int',
             'partitionNum' => 'string',
             'usedStorageSpace' => 'int',
+            'dnsEnable' => 'bool',
             'connectAddress' => 'string',
             'port' => 'int',
             'status' => 'string',
@@ -156,6 +159,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'availableZoneNames' => 'string[]',
             'totalStorageSpace' => 'int',
             'publicConnectAddress' => 'string',
+            'publicConnectDomainName' => 'string',
             'storageResourceId' => 'string',
             'storageSpecCode' => 'string',
             'serviceType' => 'string',
@@ -163,8 +167,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'retentionPolicy' => 'string',
             'kafkaPublicStatus' => 'string',
             'publicBandwidth' => 'int',
-            'kafkaManagerEnable' => 'bool',
-            'kafkaManagerUser' => 'string',
             'enableLogCollection' => 'bool',
             'newAuthCert' => 'bool',
             'crossVpcInfo' => 'string',
@@ -185,9 +187,11 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'diskEncrypted' => 'bool',
             'diskEncryptedKey' => 'string',
             'kafkaPrivateConnectAddress' => 'string',
+            'kafkaPrivateConnectDomainName' => 'string',
             'cesVersion' => 'string',
             'publicAccessEnabled' => 'string',
             'nodeNum' => 'int',
+            'portProtocols' => '\HuaweiCloud\SDK\Kafka\V2\Model\PortProtocolsEntity',
             'enableAcl' => 'bool',
             'newSpecBillingEnable' => 'bool',
             'brokerNum' => 'int',
@@ -205,6 +209,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * storageSpace  消息存储空间，单位：GB。
     * partitionNum  Kafka实例的分区数量。
     * usedStorageSpace  已使用的消息存储空间，单位：GB。
+    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
     * connectAddress  实例连接IP地址。
     * port  实例连接端口。
     * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
@@ -226,7 +231,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
     * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    * kafkaSecurityProtocol  Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
     * certReplaced  是否能够证书替换。
@@ -244,6 +249,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
+    * publicConnectDomainName  实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
     * storageResourceId  存储资源ID。
     * storageSpecCode  IO规格。
     * serviceType  服务类型。
@@ -251,8 +257,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * retentionPolicy  消息老化策略。
     * kafkaPublicStatus  Kafka公网开启状态。
     * publicBandwidth  kafka公网访问带宽。
-    * kafkaManagerEnable  是否已开启kafka manager
-    * kafkaManagerUser  登录Kafka Manager的用户名。
     * enableLogCollection  是否开启消息收集功能。
     * newAuthCert  是否开启新证书。
     * crossVpcInfo  跨VPC访问信息。
@@ -272,10 +276,12 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * podConnectAddress  租户侧连接地址。
     * diskEncrypted  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空。
-    * kafkaPrivateConnectAddress  Kafka实例私有连接地址。
+    * kafkaPrivateConnectAddress  Kafka实例内网连接地址。
+    * kafkaPrivateConnectDomainName  Kafka实例内网连接域名。
     * cesVersion  云监控版本。
     * publicAccessEnabled  区分实例什么时候开启的公网访问  取值范围：   - true：已开启公网访问   - actived：已开启公网访问   - closed：已关闭公网访问   - false：已关闭公网访问
     * nodeNum  节点数。
+    * portProtocols  portProtocols
     * enableAcl  是否开启访问控制。
     * newSpecBillingEnable  是否启用新规格计费。
     * brokerNum  节点数量。
@@ -293,6 +299,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'storageSpace' => null,
         'partitionNum' => null,
         'usedStorageSpace' => null,
+        'dnsEnable' => null,
         'connectAddress' => null,
         'port' => null,
         'status' => null,
@@ -332,6 +339,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'availableZoneNames' => null,
         'totalStorageSpace' => null,
         'publicConnectAddress' => null,
+        'publicConnectDomainName' => null,
         'storageResourceId' => null,
         'storageSpecCode' => null,
         'serviceType' => null,
@@ -339,8 +347,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'retentionPolicy' => null,
         'kafkaPublicStatus' => null,
         'publicBandwidth' => null,
-        'kafkaManagerEnable' => null,
-        'kafkaManagerUser' => null,
         'enableLogCollection' => null,
         'newAuthCert' => null,
         'crossVpcInfo' => null,
@@ -361,9 +367,11 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'diskEncrypted' => null,
         'diskEncryptedKey' => null,
         'kafkaPrivateConnectAddress' => null,
+        'kafkaPrivateConnectDomainName' => null,
         'cesVersion' => null,
         'publicAccessEnabled' => null,
         'nodeNum' => 'int32',
+        'portProtocols' => null,
         'enableAcl' => null,
         'newSpecBillingEnable' => null,
         'brokerNum' => 'int32',
@@ -402,6 +410,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * storageSpace  消息存储空间，单位：GB。
     * partitionNum  Kafka实例的分区数量。
     * usedStorageSpace  已使用的消息存储空间，单位：GB。
+    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
     * connectAddress  实例连接IP地址。
     * port  实例连接端口。
     * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
@@ -423,7 +432,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
     * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    * kafkaSecurityProtocol  Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
     * certReplaced  是否能够证书替换。
@@ -441,6 +450,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
+    * publicConnectDomainName  实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
     * storageResourceId  存储资源ID。
     * storageSpecCode  IO规格。
     * serviceType  服务类型。
@@ -448,8 +458,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * retentionPolicy  消息老化策略。
     * kafkaPublicStatus  Kafka公网开启状态。
     * publicBandwidth  kafka公网访问带宽。
-    * kafkaManagerEnable  是否已开启kafka manager
-    * kafkaManagerUser  登录Kafka Manager的用户名。
     * enableLogCollection  是否开启消息收集功能。
     * newAuthCert  是否开启新证书。
     * crossVpcInfo  跨VPC访问信息。
@@ -469,10 +477,12 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * podConnectAddress  租户侧连接地址。
     * diskEncrypted  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空。
-    * kafkaPrivateConnectAddress  Kafka实例私有连接地址。
+    * kafkaPrivateConnectAddress  Kafka实例内网连接地址。
+    * kafkaPrivateConnectDomainName  Kafka实例内网连接域名。
     * cesVersion  云监控版本。
     * publicAccessEnabled  区分实例什么时候开启的公网访问  取值范围：   - true：已开启公网访问   - actived：已开启公网访问   - closed：已关闭公网访问   - false：已关闭公网访问
     * nodeNum  节点数。
+    * portProtocols  portProtocols
     * enableAcl  是否开启访问控制。
     * newSpecBillingEnable  是否启用新规格计费。
     * brokerNum  节点数量。
@@ -490,6 +500,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'storageSpace' => 'storage_space',
             'partitionNum' => 'partition_num',
             'usedStorageSpace' => 'used_storage_space',
+            'dnsEnable' => 'dns_enable',
             'connectAddress' => 'connect_address',
             'port' => 'port',
             'status' => 'status',
@@ -529,6 +540,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'availableZoneNames' => 'available_zone_names',
             'totalStorageSpace' => 'total_storage_space',
             'publicConnectAddress' => 'public_connect_address',
+            'publicConnectDomainName' => 'public_connect_domain_name',
             'storageResourceId' => 'storage_resource_id',
             'storageSpecCode' => 'storage_spec_code',
             'serviceType' => 'service_type',
@@ -536,8 +548,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'retentionPolicy' => 'retention_policy',
             'kafkaPublicStatus' => 'kafka_public_status',
             'publicBandwidth' => 'public_bandwidth',
-            'kafkaManagerEnable' => 'kafka_manager_enable',
-            'kafkaManagerUser' => 'kafka_manager_user',
             'enableLogCollection' => 'enable_log_collection',
             'newAuthCert' => 'new_auth_cert',
             'crossVpcInfo' => 'cross_vpc_info',
@@ -558,9 +568,11 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'diskEncrypted' => 'disk_encrypted',
             'diskEncryptedKey' => 'disk_encrypted_key',
             'kafkaPrivateConnectAddress' => 'kafka_private_connect_address',
+            'kafkaPrivateConnectDomainName' => 'kafka_private_connect_domain_name',
             'cesVersion' => 'ces_version',
             'publicAccessEnabled' => 'public_access_enabled',
             'nodeNum' => 'node_num',
+            'portProtocols' => 'port_protocols',
             'enableAcl' => 'enable_acl',
             'newSpecBillingEnable' => 'new_spec_billing_enable',
             'brokerNum' => 'broker_num',
@@ -578,6 +590,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * storageSpace  消息存储空间，单位：GB。
     * partitionNum  Kafka实例的分区数量。
     * usedStorageSpace  已使用的消息存储空间，单位：GB。
+    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
     * connectAddress  实例连接IP地址。
     * port  实例连接端口。
     * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
@@ -599,7 +612,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
     * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    * kafkaSecurityProtocol  Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
     * certReplaced  是否能够证书替换。
@@ -617,6 +630,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
+    * publicConnectDomainName  实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
     * storageResourceId  存储资源ID。
     * storageSpecCode  IO规格。
     * serviceType  服务类型。
@@ -624,8 +638,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * retentionPolicy  消息老化策略。
     * kafkaPublicStatus  Kafka公网开启状态。
     * publicBandwidth  kafka公网访问带宽。
-    * kafkaManagerEnable  是否已开启kafka manager
-    * kafkaManagerUser  登录Kafka Manager的用户名。
     * enableLogCollection  是否开启消息收集功能。
     * newAuthCert  是否开启新证书。
     * crossVpcInfo  跨VPC访问信息。
@@ -645,10 +657,12 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * podConnectAddress  租户侧连接地址。
     * diskEncrypted  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空。
-    * kafkaPrivateConnectAddress  Kafka实例私有连接地址。
+    * kafkaPrivateConnectAddress  Kafka实例内网连接地址。
+    * kafkaPrivateConnectDomainName  Kafka实例内网连接域名。
     * cesVersion  云监控版本。
     * publicAccessEnabled  区分实例什么时候开启的公网访问  取值范围：   - true：已开启公网访问   - actived：已开启公网访问   - closed：已关闭公网访问   - false：已关闭公网访问
     * nodeNum  节点数。
+    * portProtocols  portProtocols
     * enableAcl  是否开启访问控制。
     * newSpecBillingEnable  是否启用新规格计费。
     * brokerNum  节点数量。
@@ -666,6 +680,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'storageSpace' => 'setStorageSpace',
             'partitionNum' => 'setPartitionNum',
             'usedStorageSpace' => 'setUsedStorageSpace',
+            'dnsEnable' => 'setDnsEnable',
             'connectAddress' => 'setConnectAddress',
             'port' => 'setPort',
             'status' => 'setStatus',
@@ -705,6 +720,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'availableZoneNames' => 'setAvailableZoneNames',
             'totalStorageSpace' => 'setTotalStorageSpace',
             'publicConnectAddress' => 'setPublicConnectAddress',
+            'publicConnectDomainName' => 'setPublicConnectDomainName',
             'storageResourceId' => 'setStorageResourceId',
             'storageSpecCode' => 'setStorageSpecCode',
             'serviceType' => 'setServiceType',
@@ -712,8 +728,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'retentionPolicy' => 'setRetentionPolicy',
             'kafkaPublicStatus' => 'setKafkaPublicStatus',
             'publicBandwidth' => 'setPublicBandwidth',
-            'kafkaManagerEnable' => 'setKafkaManagerEnable',
-            'kafkaManagerUser' => 'setKafkaManagerUser',
             'enableLogCollection' => 'setEnableLogCollection',
             'newAuthCert' => 'setNewAuthCert',
             'crossVpcInfo' => 'setCrossVpcInfo',
@@ -734,9 +748,11 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'diskEncrypted' => 'setDiskEncrypted',
             'diskEncryptedKey' => 'setDiskEncryptedKey',
             'kafkaPrivateConnectAddress' => 'setKafkaPrivateConnectAddress',
+            'kafkaPrivateConnectDomainName' => 'setKafkaPrivateConnectDomainName',
             'cesVersion' => 'setCesVersion',
             'publicAccessEnabled' => 'setPublicAccessEnabled',
             'nodeNum' => 'setNodeNum',
+            'portProtocols' => 'setPortProtocols',
             'enableAcl' => 'setEnableAcl',
             'newSpecBillingEnable' => 'setNewSpecBillingEnable',
             'brokerNum' => 'setBrokerNum',
@@ -754,6 +770,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * storageSpace  消息存储空间，单位：GB。
     * partitionNum  Kafka实例的分区数量。
     * usedStorageSpace  已使用的消息存储空间，单位：GB。
+    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
     * connectAddress  实例连接IP地址。
     * port  实例连接端口。
     * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
@@ -775,7 +792,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
     * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    * kafkaSecurityProtocol  Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
     * certReplaced  是否能够证书替换。
@@ -793,6 +810,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
+    * publicConnectDomainName  实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
     * storageResourceId  存储资源ID。
     * storageSpecCode  IO规格。
     * serviceType  服务类型。
@@ -800,8 +818,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * retentionPolicy  消息老化策略。
     * kafkaPublicStatus  Kafka公网开启状态。
     * publicBandwidth  kafka公网访问带宽。
-    * kafkaManagerEnable  是否已开启kafka manager
-    * kafkaManagerUser  登录Kafka Manager的用户名。
     * enableLogCollection  是否开启消息收集功能。
     * newAuthCert  是否开启新证书。
     * crossVpcInfo  跨VPC访问信息。
@@ -821,10 +837,12 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * podConnectAddress  租户侧连接地址。
     * diskEncrypted  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空。
-    * kafkaPrivateConnectAddress  Kafka实例私有连接地址。
+    * kafkaPrivateConnectAddress  Kafka实例内网连接地址。
+    * kafkaPrivateConnectDomainName  Kafka实例内网连接域名。
     * cesVersion  云监控版本。
     * publicAccessEnabled  区分实例什么时候开启的公网访问  取值范围：   - true：已开启公网访问   - actived：已开启公网访问   - closed：已关闭公网访问   - false：已关闭公网访问
     * nodeNum  节点数。
+    * portProtocols  portProtocols
     * enableAcl  是否开启访问控制。
     * newSpecBillingEnable  是否启用新规格计费。
     * brokerNum  节点数量。
@@ -842,6 +860,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'storageSpace' => 'getStorageSpace',
             'partitionNum' => 'getPartitionNum',
             'usedStorageSpace' => 'getUsedStorageSpace',
+            'dnsEnable' => 'getDnsEnable',
             'connectAddress' => 'getConnectAddress',
             'port' => 'getPort',
             'status' => 'getStatus',
@@ -881,6 +900,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'availableZoneNames' => 'getAvailableZoneNames',
             'totalStorageSpace' => 'getTotalStorageSpace',
             'publicConnectAddress' => 'getPublicConnectAddress',
+            'publicConnectDomainName' => 'getPublicConnectDomainName',
             'storageResourceId' => 'getStorageResourceId',
             'storageSpecCode' => 'getStorageSpecCode',
             'serviceType' => 'getServiceType',
@@ -888,8 +908,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'retentionPolicy' => 'getRetentionPolicy',
             'kafkaPublicStatus' => 'getKafkaPublicStatus',
             'publicBandwidth' => 'getPublicBandwidth',
-            'kafkaManagerEnable' => 'getKafkaManagerEnable',
-            'kafkaManagerUser' => 'getKafkaManagerUser',
             'enableLogCollection' => 'getEnableLogCollection',
             'newAuthCert' => 'getNewAuthCert',
             'crossVpcInfo' => 'getCrossVpcInfo',
@@ -910,9 +928,11 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'diskEncrypted' => 'getDiskEncrypted',
             'diskEncryptedKey' => 'getDiskEncryptedKey',
             'kafkaPrivateConnectAddress' => 'getKafkaPrivateConnectAddress',
+            'kafkaPrivateConnectDomainName' => 'getKafkaPrivateConnectDomainName',
             'cesVersion' => 'getCesVersion',
             'publicAccessEnabled' => 'getPublicAccessEnabled',
             'nodeNum' => 'getNodeNum',
+            'portProtocols' => 'getPortProtocols',
             'enableAcl' => 'getEnableAcl',
             'newSpecBillingEnable' => 'getNewSpecBillingEnable',
             'brokerNum' => 'getBrokerNum',
@@ -1031,6 +1051,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['storageSpace'] = isset($data['storageSpace']) ? $data['storageSpace'] : null;
         $this->container['partitionNum'] = isset($data['partitionNum']) ? $data['partitionNum'] : null;
         $this->container['usedStorageSpace'] = isset($data['usedStorageSpace']) ? $data['usedStorageSpace'] : null;
+        $this->container['dnsEnable'] = isset($data['dnsEnable']) ? $data['dnsEnable'] : null;
         $this->container['connectAddress'] = isset($data['connectAddress']) ? $data['connectAddress'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -1070,6 +1091,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['availableZoneNames'] = isset($data['availableZoneNames']) ? $data['availableZoneNames'] : null;
         $this->container['totalStorageSpace'] = isset($data['totalStorageSpace']) ? $data['totalStorageSpace'] : null;
         $this->container['publicConnectAddress'] = isset($data['publicConnectAddress']) ? $data['publicConnectAddress'] : null;
+        $this->container['publicConnectDomainName'] = isset($data['publicConnectDomainName']) ? $data['publicConnectDomainName'] : null;
         $this->container['storageResourceId'] = isset($data['storageResourceId']) ? $data['storageResourceId'] : null;
         $this->container['storageSpecCode'] = isset($data['storageSpecCode']) ? $data['storageSpecCode'] : null;
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
@@ -1077,8 +1099,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['retentionPolicy'] = isset($data['retentionPolicy']) ? $data['retentionPolicy'] : null;
         $this->container['kafkaPublicStatus'] = isset($data['kafkaPublicStatus']) ? $data['kafkaPublicStatus'] : null;
         $this->container['publicBandwidth'] = isset($data['publicBandwidth']) ? $data['publicBandwidth'] : null;
-        $this->container['kafkaManagerEnable'] = isset($data['kafkaManagerEnable']) ? $data['kafkaManagerEnable'] : null;
-        $this->container['kafkaManagerUser'] = isset($data['kafkaManagerUser']) ? $data['kafkaManagerUser'] : null;
         $this->container['enableLogCollection'] = isset($data['enableLogCollection']) ? $data['enableLogCollection'] : null;
         $this->container['newAuthCert'] = isset($data['newAuthCert']) ? $data['newAuthCert'] : null;
         $this->container['crossVpcInfo'] = isset($data['crossVpcInfo']) ? $data['crossVpcInfo'] : null;
@@ -1099,9 +1119,11 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['diskEncrypted'] = isset($data['diskEncrypted']) ? $data['diskEncrypted'] : null;
         $this->container['diskEncryptedKey'] = isset($data['diskEncryptedKey']) ? $data['diskEncryptedKey'] : null;
         $this->container['kafkaPrivateConnectAddress'] = isset($data['kafkaPrivateConnectAddress']) ? $data['kafkaPrivateConnectAddress'] : null;
+        $this->container['kafkaPrivateConnectDomainName'] = isset($data['kafkaPrivateConnectDomainName']) ? $data['kafkaPrivateConnectDomainName'] : null;
         $this->container['cesVersion'] = isset($data['cesVersion']) ? $data['cesVersion'] : null;
         $this->container['publicAccessEnabled'] = isset($data['publicAccessEnabled']) ? $data['publicAccessEnabled'] : null;
         $this->container['nodeNum'] = isset($data['nodeNum']) ? $data['nodeNum'] : null;
+        $this->container['portProtocols'] = isset($data['portProtocols']) ? $data['portProtocols'] : null;
         $this->container['enableAcl'] = isset($data['enableAcl']) ? $data['enableAcl'] : null;
         $this->container['newSpecBillingEnable'] = isset($data['newSpecBillingEnable']) ? $data['newSpecBillingEnable'] : null;
         $this->container['brokerNum'] = isset($data['brokerNum']) ? $data['brokerNum'] : null;
@@ -1336,6 +1358,30 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function setUsedStorageSpace($usedStorageSpace)
     {
         $this->container['usedStorageSpace'] = $usedStorageSpace;
+        return $this;
+    }
+
+    /**
+    * Gets dnsEnable
+    *  实例是否开启域名访问功能。 - true：开启 - false：未开启
+    *
+    * @return bool|null
+    */
+    public function getDnsEnable()
+    {
+        return $this->container['dnsEnable'];
+    }
+
+    /**
+    * Sets dnsEnable
+    *
+    * @param bool|null $dnsEnable 实例是否开启域名访问功能。 - true：开启 - false：未开启
+    *
+    * @return $this
+    */
+    public function setDnsEnable($dnsEnable)
+    {
+        $this->container['dnsEnable'] = $dnsEnable;
         return $this;
     }
 
@@ -1845,7 +1891,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaSecurityProtocol
-    *  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    *  Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     *
     * @return string|null
     */
@@ -1857,7 +1903,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets kafkaSecurityProtocol
     *
-    * @param string|null $kafkaSecurityProtocol 开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    * @param string|null $kafkaSecurityProtocol Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     *
     * @return $this
     */
@@ -2276,6 +2322,30 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets publicConnectDomainName
+    *  实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
+    *
+    * @return string|null
+    */
+    public function getPublicConnectDomainName()
+    {
+        return $this->container['publicConnectDomainName'];
+    }
+
+    /**
+    * Sets publicConnectDomainName
+    *
+    * @param string|null $publicConnectDomainName 实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
+    *
+    * @return $this
+    */
+    public function setPublicConnectDomainName($publicConnectDomainName)
+    {
+        $this->container['publicConnectDomainName'] = $publicConnectDomainName;
+        return $this;
+    }
+
+    /**
     * Gets storageResourceId
     *  存储资源ID。
     *
@@ -2440,54 +2510,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function setPublicBandwidth($publicBandwidth)
     {
         $this->container['publicBandwidth'] = $publicBandwidth;
-        return $this;
-    }
-
-    /**
-    * Gets kafkaManagerEnable
-    *  是否已开启kafka manager
-    *
-    * @return bool|null
-    */
-    public function getKafkaManagerEnable()
-    {
-        return $this->container['kafkaManagerEnable'];
-    }
-
-    /**
-    * Sets kafkaManagerEnable
-    *
-    * @param bool|null $kafkaManagerEnable 是否已开启kafka manager
-    *
-    * @return $this
-    */
-    public function setKafkaManagerEnable($kafkaManagerEnable)
-    {
-        $this->container['kafkaManagerEnable'] = $kafkaManagerEnable;
-        return $this;
-    }
-
-    /**
-    * Gets kafkaManagerUser
-    *  登录Kafka Manager的用户名。
-    *
-    * @return string|null
-    */
-    public function getKafkaManagerUser()
-    {
-        return $this->container['kafkaManagerUser'];
-    }
-
-    /**
-    * Sets kafkaManagerUser
-    *
-    * @param string|null $kafkaManagerUser 登录Kafka Manager的用户名。
-    *
-    * @return $this
-    */
-    public function setKafkaManagerUser($kafkaManagerUser)
-    {
-        $this->container['kafkaManagerUser'] = $kafkaManagerUser;
         return $this;
     }
 
@@ -2949,7 +2971,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaPrivateConnectAddress
-    *  Kafka实例私有连接地址。
+    *  Kafka实例内网连接地址。
     *
     * @return string|null
     */
@@ -2961,13 +2983,37 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets kafkaPrivateConnectAddress
     *
-    * @param string|null $kafkaPrivateConnectAddress Kafka实例私有连接地址。
+    * @param string|null $kafkaPrivateConnectAddress Kafka实例内网连接地址。
     *
     * @return $this
     */
     public function setKafkaPrivateConnectAddress($kafkaPrivateConnectAddress)
     {
         $this->container['kafkaPrivateConnectAddress'] = $kafkaPrivateConnectAddress;
+        return $this;
+    }
+
+    /**
+    * Gets kafkaPrivateConnectDomainName
+    *  Kafka实例内网连接域名。
+    *
+    * @return string|null
+    */
+    public function getKafkaPrivateConnectDomainName()
+    {
+        return $this->container['kafkaPrivateConnectDomainName'];
+    }
+
+    /**
+    * Sets kafkaPrivateConnectDomainName
+    *
+    * @param string|null $kafkaPrivateConnectDomainName Kafka实例内网连接域名。
+    *
+    * @return $this
+    */
+    public function setKafkaPrivateConnectDomainName($kafkaPrivateConnectDomainName)
+    {
+        $this->container['kafkaPrivateConnectDomainName'] = $kafkaPrivateConnectDomainName;
         return $this;
     }
 
@@ -3040,6 +3086,30 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function setNodeNum($nodeNum)
     {
         $this->container['nodeNum'] = $nodeNum;
+        return $this;
+    }
+
+    /**
+    * Gets portProtocols
+    *  portProtocols
+    *
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\PortProtocolsEntity|null
+    */
+    public function getPortProtocols()
+    {
+        return $this->container['portProtocols'];
+    }
+
+    /**
+    * Sets portProtocols
+    *
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\PortProtocolsEntity|null $portProtocols portProtocols
+    *
+    * @return $this
+    */
+    public function setPortProtocols($portProtocols)
+    {
+        $this->container['portProtocols'] = $portProtocols;
         return $this;
     }
 

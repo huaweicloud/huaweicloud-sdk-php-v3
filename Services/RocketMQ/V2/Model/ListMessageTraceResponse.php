@@ -21,21 +21,33 @@ class ListMessageTraceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * total  总数。
+    * nextOffset  下个分页的offset。
+    * previousOffset  上个分页的offset。
     * trace  消息轨迹列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'total' => 'float',
+            'nextOffset' => 'int',
+            'previousOffset' => 'int',
             'trace' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ListMessageTraceRespTrace[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * total  总数。
+    * nextOffset  下个分页的offset。
+    * previousOffset  上个分页的offset。
     * trace  消息轨迹列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'total' => null,
+        'nextOffset' => 'int32',
+        'previousOffset' => 'int32',
         'trace' => null
     ];
 
@@ -62,31 +74,49 @@ class ListMessageTraceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * total  总数。
+    * nextOffset  下个分页的offset。
+    * previousOffset  上个分页的offset。
     * trace  消息轨迹列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'total' => 'total',
+            'nextOffset' => 'next_offset',
+            'previousOffset' => 'previous_offset',
             'trace' => 'trace'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * total  总数。
+    * nextOffset  下个分页的offset。
+    * previousOffset  上个分页的offset。
     * trace  消息轨迹列表。
     *
     * @var string[]
     */
     protected static $setters = [
+            'total' => 'setTotal',
+            'nextOffset' => 'setNextOffset',
+            'previousOffset' => 'setPreviousOffset',
             'trace' => 'setTrace'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * total  总数。
+    * nextOffset  下个分页的offset。
+    * previousOffset  上个分页的offset。
     * trace  消息轨迹列表。
     *
     * @var string[]
     */
     protected static $getters = [
+            'total' => 'getTotal',
+            'nextOffset' => 'getNextOffset',
+            'previousOffset' => 'getPreviousOffset',
             'trace' => 'getTrace'
     ];
 
@@ -148,6 +178,9 @@ class ListMessageTraceResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['nextOffset'] = isset($data['nextOffset']) ? $data['nextOffset'] : null;
+        $this->container['previousOffset'] = isset($data['previousOffset']) ? $data['previousOffset'] : null;
         $this->container['trace'] = isset($data['trace']) ? $data['trace'] : null;
     }
 
@@ -171,6 +204,78 @@ class ListMessageTraceResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets total
+    *  总数。
+    *
+    * @return float|null
+    */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+    * Sets total
+    *
+    * @param float|null $total 总数。
+    *
+    * @return $this
+    */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+        return $this;
+    }
+
+    /**
+    * Gets nextOffset
+    *  下个分页的offset。
+    *
+    * @return int|null
+    */
+    public function getNextOffset()
+    {
+        return $this->container['nextOffset'];
+    }
+
+    /**
+    * Sets nextOffset
+    *
+    * @param int|null $nextOffset 下个分页的offset。
+    *
+    * @return $this
+    */
+    public function setNextOffset($nextOffset)
+    {
+        $this->container['nextOffset'] = $nextOffset;
+        return $this;
+    }
+
+    /**
+    * Gets previousOffset
+    *  上个分页的offset。
+    *
+    * @return int|null
+    */
+    public function getPreviousOffset()
+    {
+        return $this->container['previousOffset'];
+    }
+
+    /**
+    * Sets previousOffset
+    *
+    * @param int|null $previousOffset 上个分页的offset。
+    *
+    * @return $this
+    */
+    public function setPreviousOffset($previousOffset)
+    {
+        $this->container['previousOffset'] = $previousOffset;
+        return $this;
     }
 
     /**

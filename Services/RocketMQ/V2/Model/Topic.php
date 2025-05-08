@@ -20,12 +20,12 @@ class Topic implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  Topic名称。
-    * totalReadQueueNum  总读队列个数。
-    * totalWriteQueueNum  总写队列个数。
-    * permission  权限。
+    * name  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * totalReadQueueNum  **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
+    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
+    * permission  **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
     * brokers  关联的代理。
-    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
+    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class Topic implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  Topic名称。
-    * totalReadQueueNum  总读队列个数。
-    * totalWriteQueueNum  总写队列个数。
-    * permission  权限。
+    * name  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * totalReadQueueNum  **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
+    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
+    * permission  **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
     * brokers  关联的代理。
-    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
+    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class Topic implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  Topic名称。
-    * totalReadQueueNum  总读队列个数。
-    * totalWriteQueueNum  总写队列个数。
-    * permission  权限。
+    * name  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * totalReadQueueNum  **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
+    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
+    * permission  **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
     * brokers  关联的代理。
-    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
+    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class Topic implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  Topic名称。
-    * totalReadQueueNum  总读队列个数。
-    * totalWriteQueueNum  总写队列个数。
-    * permission  权限。
+    * name  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * totalReadQueueNum  **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
+    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
+    * permission  **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
     * brokers  关联的代理。
-    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
+    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class Topic implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  Topic名称。
-    * totalReadQueueNum  总读队列个数。
-    * totalWriteQueueNum  总写队列个数。
-    * permission  权限。
+    * name  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * totalReadQueueNum  **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
+    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
+    * permission  **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
     * brokers  关联的代理。
-    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
+    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
     *
     * @var string[]
     */
@@ -281,7 +281,7 @@ class Topic implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  Topic名称。
+    *  **参数解释**： Topic名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -293,7 +293,7 @@ class Topic implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name Topic名称。
+    * @param string|null $name **参数解释**： Topic名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class Topic implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalReadQueueNum
-    *  总读队列个数。
+    *  **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
     *
     * @return float|null
     */
@@ -317,7 +317,7 @@ class Topic implements ModelInterface, ArrayAccess
     /**
     * Sets totalReadQueueNum
     *
-    * @param float|null $totalReadQueueNum 总读队列个数。
+    * @param float|null $totalReadQueueNum **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class Topic implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalWriteQueueNum
-    *  总写队列个数。
+    *  **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
     *
     * @return float|null
     */
@@ -341,7 +341,7 @@ class Topic implements ModelInterface, ArrayAccess
     /**
     * Sets totalWriteQueueNum
     *
-    * @param float|null $totalWriteQueueNum 总写队列个数。
+    * @param float|null $totalWriteQueueNum **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -353,7 +353,7 @@ class Topic implements ModelInterface, ArrayAccess
 
     /**
     * Gets permission
-    *  权限。
+    *  **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
     *
     * @return string|null
     */
@@ -365,7 +365,7 @@ class Topic implements ModelInterface, ArrayAccess
     /**
     * Sets permission
     *
-    * @param string|null $permission 权限。
+    * @param string|null $permission **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
     *
     * @return $this
     */
@@ -401,7 +401,7 @@ class Topic implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageType
-    *  消息类型（RocketMQ实例5.x版本才包含此参数）。
+    *  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
     *
     * @return string|null
     */
@@ -413,7 +413,7 @@ class Topic implements ModelInterface, ArrayAccess
     /**
     * Sets messageType
     *
-    * @param string|null $messageType 消息类型（RocketMQ实例5.x版本才包含此参数）。
+    * @param string|null $messageType **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
     *
     * @return $this
     */

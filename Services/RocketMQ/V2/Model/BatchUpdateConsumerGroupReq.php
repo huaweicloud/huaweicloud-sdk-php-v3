@@ -25,7 +25,7 @@ class BatchUpdateConsumerGroupReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'groups' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\CreateOrUpdateConsumerGroup[]'
+            'groups' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\BatchUpdateConsumerGroup[]'
     ];
 
     /**
@@ -176,7 +176,7 @@ class BatchUpdateConsumerGroupReq implements ModelInterface, ArrayAccess
     * Gets groups
     *  消费组列表。
     *
-    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\CreateOrUpdateConsumerGroup[]|null
+    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\BatchUpdateConsumerGroup[]|null
     */
     public function getGroups()
     {
@@ -186,7 +186,7 @@ class BatchUpdateConsumerGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets groups
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\CreateOrUpdateConsumerGroup[]|null $groups 消费组列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\BatchUpdateConsumerGroup[]|null $groups 消费组列表。
     *
     * @return $this
     */

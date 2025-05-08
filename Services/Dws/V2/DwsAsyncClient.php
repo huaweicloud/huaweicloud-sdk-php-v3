@@ -1795,6 +1795,74 @@ class DwsAsyncClient extends Client
     }
 
     /**
+     * 添加逻辑集群定时增删计划
+     *
+     * 此接口用于添加逻辑集群定时增删计划。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createLogicalClusterPlanAsync($request)
+    {
+        return $this->createLogicalClusterPlanAsyncWithHttpInfo($request);
+    }
+    
+    public function createLogicalClusterPlanAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/logical-cluster-plans';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\CreateLogicalClusterPlanResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\CreateLogicalClusterPlanRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建快照
      *
      * 该接口用于为指定集群创建快照。
@@ -2605,6 +2673,74 @@ class DwsAsyncClient extends Client
     }
 
     /**
+     * 删除逻辑集群定时增删计划
+     *
+     * 此接口用于删除逻辑集群定时增删计划。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteLogicalClusterPlanAsync($request)
+    {
+        return $this->deleteLogicalClusterPlanAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteLogicalClusterPlanAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/logical-cluster-plans/{plan_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['planId'] !== null) {
+            $pathParams['plan_id'] = $localVarParams['planId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\DeleteLogicalClusterPlanResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\DeleteLogicalClusterPlanRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 删除工作负载队列的绑定用户
      *
      * 删除工作负载队列的绑定用户。
@@ -3084,6 +3220,74 @@ class DwsAsyncClient extends Client
     }
 
     /**
+     * 停用逻辑集群定时增删计划
+     *
+     * 停用逻辑集群定时增删计划
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disableLogicalClusterPlanAsync($request)
+    {
+        return $this->disableLogicalClusterPlanAsyncWithHttpInfo($request);
+    }
+    
+    public function disableLogicalClusterPlanAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/logical-cluster-plans/{plan_id}/disable';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['planId'] !== null) {
+            $pathParams['plan_id'] = $localVarParams['planId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\DisableLogicalClusterPlanResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\DisableLogicalClusterPlanRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 关闭云服务日志
      *
      * 该接口用于关闭集群LTS云日志服务
@@ -3349,6 +3553,74 @@ class DwsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\EnableLogicalClusterResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\EnableLogicalClusterRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 启用逻辑集群定时增删计划
+     *
+     * 启用逻辑集群定时增删计划
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function enableLogicalClusterPlanAsync($request)
+    {
+        return $this->enableLogicalClusterPlanAsyncWithHttpInfo($request);
+    }
+    
+    public function enableLogicalClusterPlanAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/logical-cluster-plans/{plan_id}/enable';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['planId'] !== null) {
+            $pathParams['plan_id'] = $localVarParams['planId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\EnableLogicalClusterPlanResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\EnableLogicalClusterPlanRequest',
             $asyncRequest = true);
     }
 
@@ -5779,6 +6051,71 @@ class DwsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListJobDetailsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListJobDetailsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询逻辑集群定时增删计划
+     *
+     * 此接口用于查询逻辑集群定时增删计划。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLogicalClusterPlansAsync($request)
+    {
+        return $this->listLogicalClusterPlansAsyncWithHttpInfo($request);
+    }
+    
+    public function listLogicalClusterPlansAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/logical-cluster-plans';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListLogicalClusterPlansResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListLogicalClusterPlansRequest',
             $asyncRequest = true);
     }
 
@@ -10993,6 +11330,77 @@ class DwsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateLogicalClusterResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateLogicalClusterRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 编辑逻辑集群增删计划
+     *
+     * 此接口用于编辑修改编辑逻辑集群增删计划。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateLogicalClusterPlanAsync($request)
+    {
+        return $this->updateLogicalClusterPlanAsyncWithHttpInfo($request);
+    }
+    
+    public function updateLogicalClusterPlanAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/logical-cluster-plans/{plan_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['planId'] !== null) {
+            $pathParams['plan_id'] = $localVarParams['planId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateLogicalClusterPlanResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateLogicalClusterPlanRequest',
             $asyncRequest = true);
     }
 

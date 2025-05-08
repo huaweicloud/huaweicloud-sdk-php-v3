@@ -21,10 +21,10 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  Topic名称。
-    * partition  分区编号。
-    * offset  最新消息位置。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * offset  **参数解释**： 消息位置。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  Topic名称。
-    * partition  分区编号。
-    * offset  最新消息位置。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * offset  **参数解释**： 消息位置。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  Topic名称。
-    * partition  分区编号。
-    * offset  最新消息位置。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * offset  **参数解释**： 消息位置。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  Topic名称。
-    * partition  分区编号。
-    * offset  最新消息位置。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * offset  **参数解释**： 消息位置。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  Topic名称。
-    * partition  分区编号。
-    * offset  最新消息位置。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * offset  **参数解释**： 消息位置。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  Topic名称。
+    *  **参数解释**： Topic名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic Topic名称。
+    * @param string|null $topic **参数解释**： Topic名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets partition
-    *  分区编号。
+    *  **参数解释**： 分区编号。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -244,7 +244,7 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets partition
     *
-    * @param int|null $partition 分区编号。
+    * @param int|null $partition **参数解释**： 分区编号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  最新消息位置。
+    *  **参数解释**： 消息位置。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -268,7 +268,7 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 最新消息位置。
+    * @param int|null $offset **参数解释**： 消息位置。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets timestamp
-    *  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    *  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -292,7 +292,7 @@ class ShowPartitionEndMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param int|null $timestamp 生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * @param int|null $timestamp **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @return $this
     */
