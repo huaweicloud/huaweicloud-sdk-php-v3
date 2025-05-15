@@ -178,8 +178,8 @@ class Tag implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[A-Za-z0-9\\u4E00-\\u9FFF-_]+$/", $this->container['key'])) {
-                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^[A-Za-z0-9\\u4E00-\\u9FFF-_]+$/.";
+            if (!preg_match("/^((?!\\s)(?!_sys_)[\\p{L}\\p{Z}\\p{N}_.:=+\\-@]*)(?<!\\s)$/", $this->container['key'])) {
+                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^((?!\\s)(?!_sys_)[\\p{L}\\p{Z}\\p{N}_.:=+\\-@]*)(?<!\\s)$/.";
             }
             if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 255)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
@@ -187,8 +187,8 @@ class Tag implements ModelInterface, ArrayAccess
             if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 0)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['value']) && !preg_match("/^[A-Za-z0-9\\u4E00-\\u9FFF-_.]*$/", $this->container['value'])) {
-                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^[A-Za-z0-9\\u4E00-\\u9FFF-_.]*$/.";
+            if (!is_null($this->container['value']) && !preg_match("/^([\\p{L}\\p{Z}\\p{N}_.:\/=+\\-@]*)$/", $this->container['value'])) {
+                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^([\\p{L}\\p{Z}\\p{N}_.:\/=+\\-@]*)$/.";
             }
         return $invalidProperties;
     }

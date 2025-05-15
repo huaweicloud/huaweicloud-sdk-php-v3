@@ -23,8 +23,8 @@ class SiteInformation implements ModelInterface, ArrayAccess
     * regionId  RegionID。
     * projectId  实例所属项目ID。
     * gatewayType  gatewayType
-    * gatewayId  实例ID。
-    * siteCode  站点编码定义
+    * gatewayId  网关的ID。
+    * siteCode  站点编码。
     * asn  网络实例BGP协议的AS号。
     *
     * @var string[]
@@ -43,8 +43,8 @@ class SiteInformation implements ModelInterface, ArrayAccess
     * regionId  RegionID。
     * projectId  实例所属项目ID。
     * gatewayType  gatewayType
-    * gatewayId  实例ID。
-    * siteCode  站点编码定义
+    * gatewayId  网关的ID。
+    * siteCode  站点编码。
     * asn  网络实例BGP协议的AS号。
     *
     * @var string[]
@@ -84,8 +84,8 @@ class SiteInformation implements ModelInterface, ArrayAccess
     * regionId  RegionID。
     * projectId  实例所属项目ID。
     * gatewayType  gatewayType
-    * gatewayId  实例ID。
-    * siteCode  站点编码定义
+    * gatewayId  网关的ID。
+    * siteCode  站点编码。
     * asn  网络实例BGP协议的AS号。
     *
     * @var string[]
@@ -104,8 +104,8 @@ class SiteInformation implements ModelInterface, ArrayAccess
     * regionId  RegionID。
     * projectId  实例所属项目ID。
     * gatewayType  gatewayType
-    * gatewayId  实例ID。
-    * siteCode  站点编码定义
+    * gatewayId  网关的ID。
+    * siteCode  站点编码。
     * asn  网络实例BGP协议的AS号。
     *
     * @var string[]
@@ -124,8 +124,8 @@ class SiteInformation implements ModelInterface, ArrayAccess
     * regionId  RegionID。
     * projectId  实例所属项目ID。
     * gatewayType  gatewayType
-    * gatewayId  实例ID。
-    * siteCode  站点编码定义
+    * gatewayId  网关的ID。
+    * siteCode  站点编码。
     * asn  网络实例BGP协议的AS号。
     *
     * @var string[]
@@ -358,7 +358,7 @@ class SiteInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets gatewayId
-    *  实例ID。
+    *  网关的ID。
     *
     * @return string
     */
@@ -370,7 +370,7 @@ class SiteInformation implements ModelInterface, ArrayAccess
     /**
     * Sets gatewayId
     *
-    * @param string $gatewayId 实例ID。
+    * @param string $gatewayId 网关的ID。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class SiteInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets siteCode
-    *  站点编码定义
+    *  站点编码。
     *
     * @return string
     */
@@ -394,7 +394,7 @@ class SiteInformation implements ModelInterface, ArrayAccess
     /**
     * Sets siteCode
     *
-    * @param string $siteCode 站点编码定义
+    * @param string $siteCode 站点编码。
     *
     * @return $this
     */

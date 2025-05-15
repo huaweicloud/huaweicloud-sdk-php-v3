@@ -24,13 +24,15 @@ class CreateReportCustomEventResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
+    * data  响应数据
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'providerCode' => 'string',
             'errorCode' => 'string',
-            'errorMsg' => 'string'
+            'errorMsg' => 'string',
+            'data' => 'object'
     ];
 
     /**
@@ -38,13 +40,15 @@ class CreateReportCustomEventResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
+    * data  响应数据
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'providerCode' => null,
         'errorCode' => null,
-        'errorMsg' => null
+        'errorMsg' => null,
+        'data' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class CreateReportCustomEventResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
+    * data  响应数据
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'providerCode' => 'provider_code',
             'errorCode' => 'error_code',
-            'errorMsg' => 'error_msg'
+            'errorMsg' => 'error_msg',
+            'data' => 'data'
     ];
 
     /**
@@ -87,13 +93,15 @@ class CreateReportCustomEventResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
+    * data  响应数据
     *
     * @var string[]
     */
     protected static $setters = [
             'providerCode' => 'setProviderCode',
             'errorCode' => 'setErrorCode',
-            'errorMsg' => 'setErrorMsg'
+            'errorMsg' => 'setErrorMsg',
+            'data' => 'setData'
     ];
 
     /**
@@ -101,13 +109,15 @@ class CreateReportCustomEventResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
+    * data  响应数据
     *
     * @var string[]
     */
     protected static $getters = [
             'providerCode' => 'getProviderCode',
             'errorCode' => 'getErrorCode',
-            'errorMsg' => 'getErrorMsg'
+            'errorMsg' => 'getErrorMsg',
+            'data' => 'getData'
     ];
 
     /**
@@ -171,6 +181,7 @@ class CreateReportCustomEventResponse implements ModelInterface, ArrayAccess
         $this->container['providerCode'] = isset($data['providerCode']) ? $data['providerCode'] : null;
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
         $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -181,20 +192,20 @@ class CreateReportCustomEventResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['providerCode']) && (mb_strlen($this->container['providerCode']) > 100000000)) {
-                $invalidProperties[] = "invalid value for 'providerCode', the character length must be smaller than or equal to 100000000.";
+            if (!is_null($this->container['providerCode']) && (mb_strlen($this->container['providerCode']) > 3)) {
+                $invalidProperties[] = "invalid value for 'providerCode', the character length must be smaller than or equal to 3.";
             }
             if (!is_null($this->container['providerCode']) && (mb_strlen($this->container['providerCode']) < 3)) {
                 $invalidProperties[] = "invalid value for 'providerCode', the character length must be bigger than or equal to 3.";
             }
-            if (!is_null($this->container['errorCode']) && (mb_strlen($this->container['errorCode']) > 100000000)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 100000000.";
+            if (!is_null($this->container['errorCode']) && (mb_strlen($this->container['errorCode']) > 20)) {
+                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 20.";
             }
             if (!is_null($this->container['errorCode']) && (mb_strlen($this->container['errorCode']) < 1)) {
                 $invalidProperties[] = "invalid value for 'errorCode', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) > 100000000)) {
-                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 100000000.";
+            if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 10240.";
             }
             if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) < 0)) {
                 $invalidProperties[] = "invalid value for 'errorMsg', the character length must be bigger than or equal to 0.";
@@ -282,6 +293,30 @@ class CreateReportCustomEventResponse implements ModelInterface, ArrayAccess
     public function setErrorMsg($errorMsg)
     {
         $this->container['errorMsg'] = $errorMsg;
+        return $this;
+    }
+
+    /**
+    * Gets data
+    *  响应数据
+    *
+    * @return object|null
+    */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+    * Sets data
+    *
+    * @param object|null $data 响应数据
+    *
+    * @return $this
+    */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
         return $this;
     }
 

@@ -23,13 +23,15 @@ class BackupPolicyItem implements ModelInterface, ArrayAccess
     * keepDays  备份文件可以保存的天数。
     * startTime  备份时间段。自动备份将在该时间段内触发。
     * period  备份周期配置。自动备份将在每星期指定的天进行。
+    * enableIncrementalBackup  是否开启增量备份。true：表示增量备份策略为开启状态；false：表示增量备份策略为关闭状态。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'keepDays' => 'int',
             'startTime' => 'string',
-            'period' => 'string'
+            'period' => 'string',
+            'enableIncrementalBackup' => 'bool'
     ];
 
     /**
@@ -37,13 +39,15 @@ class BackupPolicyItem implements ModelInterface, ArrayAccess
     * keepDays  备份文件可以保存的天数。
     * startTime  备份时间段。自动备份将在该时间段内触发。
     * period  备份周期配置。自动备份将在每星期指定的天进行。
+    * enableIncrementalBackup  是否开启增量备份。true：表示增量备份策略为开启状态；false：表示增量备份策略为关闭状态。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'keepDays' => null,
         'startTime' => null,
-        'period' => null
+        'period' => null,
+        'enableIncrementalBackup' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class BackupPolicyItem implements ModelInterface, ArrayAccess
     * keepDays  备份文件可以保存的天数。
     * startTime  备份时间段。自动备份将在该时间段内触发。
     * period  备份周期配置。自动备份将在每星期指定的天进行。
+    * enableIncrementalBackup  是否开启增量备份。true：表示增量备份策略为开启状态；false：表示增量备份策略为关闭状态。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'keepDays' => 'keep_days',
             'startTime' => 'start_time',
-            'period' => 'period'
+            'period' => 'period',
+            'enableIncrementalBackup' => 'enable_incremental_backup'
     ];
 
     /**
@@ -86,13 +92,15 @@ class BackupPolicyItem implements ModelInterface, ArrayAccess
     * keepDays  备份文件可以保存的天数。
     * startTime  备份时间段。自动备份将在该时间段内触发。
     * period  备份周期配置。自动备份将在每星期指定的天进行。
+    * enableIncrementalBackup  是否开启增量备份。true：表示增量备份策略为开启状态；false：表示增量备份策略为关闭状态。
     *
     * @var string[]
     */
     protected static $setters = [
             'keepDays' => 'setKeepDays',
             'startTime' => 'setStartTime',
-            'period' => 'setPeriod'
+            'period' => 'setPeriod',
+            'enableIncrementalBackup' => 'setEnableIncrementalBackup'
     ];
 
     /**
@@ -100,13 +108,15 @@ class BackupPolicyItem implements ModelInterface, ArrayAccess
     * keepDays  备份文件可以保存的天数。
     * startTime  备份时间段。自动备份将在该时间段内触发。
     * period  备份周期配置。自动备份将在每星期指定的天进行。
+    * enableIncrementalBackup  是否开启增量备份。true：表示增量备份策略为开启状态；false：表示增量备份策略为关闭状态。
     *
     * @var string[]
     */
     protected static $getters = [
             'keepDays' => 'getKeepDays',
             'startTime' => 'getStartTime',
-            'period' => 'getPeriod'
+            'period' => 'getPeriod',
+            'enableIncrementalBackup' => 'getEnableIncrementalBackup'
     ];
 
     /**
@@ -170,6 +180,7 @@ class BackupPolicyItem implements ModelInterface, ArrayAccess
         $this->container['keepDays'] = isset($data['keepDays']) ? $data['keepDays'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['period'] = isset($data['period']) ? $data['period'] : null;
+        $this->container['enableIncrementalBackup'] = isset($data['enableIncrementalBackup']) ? $data['enableIncrementalBackup'] : null;
     }
 
     /**
@@ -272,6 +283,30 @@ class BackupPolicyItem implements ModelInterface, ArrayAccess
     public function setPeriod($period)
     {
         $this->container['period'] = $period;
+        return $this;
+    }
+
+    /**
+    * Gets enableIncrementalBackup
+    *  是否开启增量备份。true：表示增量备份策略为开启状态；false：表示增量备份策略为关闭状态。
+    *
+    * @return bool|null
+    */
+    public function getEnableIncrementalBackup()
+    {
+        return $this->container['enableIncrementalBackup'];
+    }
+
+    /**
+    * Sets enableIncrementalBackup
+    *
+    * @param bool|null $enableIncrementalBackup 是否开启增量备份。true：表示增量备份策略为开启状态；false：表示增量备份策略为关闭状态。
+    *
+    * @return $this
+    */
+    public function setEnableIncrementalBackup($enableIncrementalBackup)
+    {
+        $this->container['enableIncrementalBackup'] = $enableIncrementalBackup;
         return $this;
     }
 

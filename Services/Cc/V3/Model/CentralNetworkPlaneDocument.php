@@ -20,7 +20,7 @@ class CentralNetworkPlaneDocument implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  实例名字。
+    * name  实例名称。
     * associateErTables  关联的中心网络ER实例列表。
     * excludeErConnections  当自动连接所有ER实例时，排除中心网络的ER实例的连接。
     *
@@ -34,7 +34,7 @@ class CentralNetworkPlaneDocument implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  实例名字。
+    * name  实例名称。
     * associateErTables  关联的中心网络ER实例列表。
     * excludeErConnections  当自动连接所有ER实例时，排除中心网络的ER实例的连接。
     *
@@ -69,7 +69,7 @@ class CentralNetworkPlaneDocument implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  实例名字。
+    * name  实例名称。
     * associateErTables  关联的中心网络ER实例列表。
     * excludeErConnections  当自动连接所有ER实例时，排除中心网络的ER实例的连接。
     *
@@ -83,7 +83,7 @@ class CentralNetworkPlaneDocument implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  实例名字。
+    * name  实例名称。
     * associateErTables  关联的中心网络ER实例列表。
     * excludeErConnections  当自动连接所有ER实例时，排除中心网络的ER实例的连接。
     *
@@ -97,7 +97,7 @@ class CentralNetworkPlaneDocument implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  实例名字。
+    * name  实例名称。
     * associateErTables  关联的中心网络ER实例列表。
     * excludeErConnections  当自动连接所有ER实例时，排除中心网络的ER实例的连接。
     *
@@ -208,7 +208,7 @@ class CentralNetworkPlaneDocument implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名字。
+    *  实例名称。
     *
     * @return string
     */
@@ -220,7 +220,7 @@ class CentralNetworkPlaneDocument implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 实例名字。
+    * @param string $name 实例名称。
     *
     * @return $this
     */

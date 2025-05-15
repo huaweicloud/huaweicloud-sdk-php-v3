@@ -20,7 +20,7 @@ class ApplyPolicyId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * applyPolicyId  实例ID。
+    * applyPolicyId  应用策略ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ApplyPolicyId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * applyPolicyId  实例ID。
+    * applyPolicyId  应用策略ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ApplyPolicyId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * applyPolicyId  实例ID。
+    * applyPolicyId  应用策略ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ApplyPolicyId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * applyPolicyId  实例ID。
+    * applyPolicyId  应用策略ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ApplyPolicyId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * applyPolicyId  实例ID。
+    * applyPolicyId  应用策略ID。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ApplyPolicyId implements ModelInterface, ArrayAccess
 
     /**
     * Gets applyPolicyId
-    *  实例ID。
+    *  应用策略ID。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class ApplyPolicyId implements ModelInterface, ArrayAccess
     /**
     * Sets applyPolicyId
     *
-    * @param string $applyPolicyId 实例ID。
+    * @param string $applyPolicyId 应用策略ID。
     *
     * @return $this
     */

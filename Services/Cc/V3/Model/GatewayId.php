@@ -20,7 +20,7 @@ class GatewayId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class GatewayId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class GatewayId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class GatewayId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class GatewayId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class GatewayId implements ModelInterface, ArrayAccess
 
     /**
     * Gets gatewayId
-    *  实例ID。
+    *  网关的ID。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class GatewayId implements ModelInterface, ArrayAccess
     /**
     * Sets gatewayId
     *
-    * @param string $gatewayId 实例ID。
+    * @param string $gatewayId 网关的ID。
     *
     * @return $this
     */

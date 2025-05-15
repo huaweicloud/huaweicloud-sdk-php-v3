@@ -20,13 +20,17 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * siteCode  根据站点编码进行查询
-    * regionId  根据区域ID进行查询
-    * name  根据名称模糊查询
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    * siteCode  根据站点编码进行查询。
+    * regionId  根据区域ID进行查询。
+    * name  根据名称模糊查询。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'limit' => 'int',
+            'marker' => 'string',
             'siteCode' => 'string',
             'regionId' => 'string',
             'name' => 'string'
@@ -34,13 +38,17 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * siteCode  根据站点编码进行查询
-    * regionId  根据区域ID进行查询
-    * name  根据名称模糊查询
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    * siteCode  根据站点编码进行查询。
+    * regionId  根据区域ID进行查询。
+    * name  根据名称模糊查询。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'limit' => 'int32',
+        'marker' => null,
         'siteCode' => null,
         'regionId' => null,
         'name' => null
@@ -69,13 +77,17 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * siteCode  根据站点编码进行查询
-    * regionId  根据区域ID进行查询
-    * name  根据名称模糊查询
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    * siteCode  根据站点编码进行查询。
+    * regionId  根据区域ID进行查询。
+    * name  根据名称模糊查询。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'limit' => 'limit',
+            'marker' => 'marker',
             'siteCode' => 'site_code',
             'regionId' => 'region_id',
             'name' => 'name'
@@ -83,13 +95,17 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * siteCode  根据站点编码进行查询
-    * regionId  根据区域ID进行查询
-    * name  根据名称模糊查询
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    * siteCode  根据站点编码进行查询。
+    * regionId  根据区域ID进行查询。
+    * name  根据名称模糊查询。
     *
     * @var string[]
     */
     protected static $setters = [
+            'limit' => 'setLimit',
+            'marker' => 'setMarker',
             'siteCode' => 'setSiteCode',
             'regionId' => 'setRegionId',
             'name' => 'setName'
@@ -97,13 +113,17 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * siteCode  根据站点编码进行查询
-    * regionId  根据区域ID进行查询
-    * name  根据名称模糊查询
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    * siteCode  根据站点编码进行查询。
+    * regionId  根据区域ID进行查询。
+    * name  根据名称模糊查询。
     *
     * @var string[]
     */
     protected static $getters = [
+            'limit' => 'getLimit',
+            'marker' => 'getMarker',
             'siteCode' => 'getSiteCode',
             'regionId' => 'getRegionId',
             'name' => 'getName'
@@ -167,6 +187,8 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['siteCode'] = isset($data['siteCode']) ? $data['siteCode'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -180,6 +202,18 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 4096.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 1)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['siteCode']) && (mb_strlen($this->container['siteCode']) > 64)) {
                 $invalidProperties[] = "invalid value for 'siteCode', the character length must be smaller than or equal to 64.";
             }
@@ -213,8 +247,56 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets limit
+    *  每页返回的个数。 取值范围：1~1000。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页返回的个数。 取值范围：1~1000。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
     * Gets siteCode
-    *  根据站点编码进行查询
+    *  根据站点编码进行查询。
     *
     * @return string|null
     */
@@ -226,7 +308,7 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets siteCode
     *
-    * @param string|null $siteCode 根据站点编码进行查询
+    * @param string|null $siteCode 根据站点编码进行查询。
     *
     * @return $this
     */
@@ -238,7 +320,7 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  根据区域ID进行查询
+    *  根据区域ID进行查询。
     *
     * @return string|null
     */
@@ -250,7 +332,7 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string|null $regionId 根据区域ID进行查询
+    * @param string|null $regionId 根据区域ID进行查询。
     *
     * @return $this
     */
@@ -262,7 +344,7 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  根据名称模糊查询
+    *  根据名称模糊查询。
     *
     * @return string|null
     */
@@ -274,7 +356,7 @@ class ListBandwidthPackageSitesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 根据名称模糊查询
+    * @param string|null $name 根据名称模糊查询。
     *
     * @return $this
     */

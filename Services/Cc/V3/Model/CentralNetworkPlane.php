@@ -21,7 +21,7 @@ class CentralNetworkPlane implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * associateErTables  关联的中心网络ER实例列表。
     * excludeErConnections  当自动连接所有ER实例时，排除中心网络的ER实例的连接。
     *
@@ -37,7 +37,7 @@ class CentralNetworkPlane implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * associateErTables  关联的中心网络ER实例列表。
     * excludeErConnections  当自动连接所有ER实例时，排除中心网络的ER实例的连接。
     *
@@ -74,7 +74,7 @@ class CentralNetworkPlane implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * associateErTables  关联的中心网络ER实例列表。
     * excludeErConnections  当自动连接所有ER实例时，排除中心网络的ER实例的连接。
     *
@@ -90,7 +90,7 @@ class CentralNetworkPlane implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * associateErTables  关联的中心网络ER实例列表。
     * excludeErConnections  当自动连接所有ER实例时，排除中心网络的ER实例的连接。
     *
@@ -106,7 +106,7 @@ class CentralNetworkPlane implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * associateErTables  关联的中心网络ER实例列表。
     * excludeErConnections  当自动连接所有ER实例时，排除中心网络的ER实例的连接。
     *
@@ -255,7 +255,7 @@ class CentralNetworkPlane implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名字。
+    *  实例名称。
     *
     * @return string
     */
@@ -267,7 +267,7 @@ class CentralNetworkPlane implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 实例名字。
+    * @param string $name 实例名称。
     *
     * @return $this
     */

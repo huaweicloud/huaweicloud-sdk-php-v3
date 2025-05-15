@@ -20,7 +20,7 @@ class CreateSiteInformationPair implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sites  端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    * sites  端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CreateSiteInformationPair implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sites  端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    * sites  端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CreateSiteInformationPair implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sites  端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    * sites  端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CreateSiteInformationPair implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sites  端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    * sites  端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CreateSiteInformationPair implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sites  端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    * sites  端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class CreateSiteInformationPair implements ModelInterface, ArrayAccess
 
     /**
     * Gets sites
-    *  端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    *  端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @return \HuaweiCloud\SDK\Cc\V3\Model\CreateSiteInformation[]
     */
@@ -189,7 +189,7 @@ class CreateSiteInformationPair implements ModelInterface, ArrayAccess
     /**
     * Sets sites
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\CreateSiteInformation[] $sites 端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\CreateSiteInformation[] $sites 端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @return $this
     */

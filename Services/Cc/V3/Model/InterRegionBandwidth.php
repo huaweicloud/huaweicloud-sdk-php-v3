@@ -21,7 +21,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -49,7 +49,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -98,7 +98,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -126,7 +126,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -154,7 +154,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -378,7 +378,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名字。
+    *  实例名称。
     *
     * @return string
     */
@@ -390,7 +390,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 实例名字。
+    * @param string $name 实例名称。
     *
     * @return $this
     */

@@ -27,7 +27,7 @@ class MetricDataValue implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'dataPoints' => '\HuaweiCloud\SDK\Aom\V2\Model\MetricDataPoints[]',
-            'metric' => '\HuaweiCloud\SDK\Aom\V2\Model\MetricQueryMeritcParam'
+            'metric' => '\HuaweiCloud\SDK\Aom\V2\Model\MetricQueryMetricParam'
     ];
 
     /**
@@ -211,7 +211,7 @@ class MetricDataValue implements ModelInterface, ArrayAccess
     * Gets metric
     *  metric
     *
-    * @return \HuaweiCloud\SDK\Aom\V2\Model\MetricQueryMeritcParam|null
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\MetricQueryMetricParam|null
     */
     public function getMetric()
     {
@@ -221,7 +221,7 @@ class MetricDataValue implements ModelInterface, ArrayAccess
     /**
     * Sets metric
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\MetricQueryMeritcParam|null $metric metric
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\MetricQueryMetricParam|null $metric metric
     *
     * @return $this
     */

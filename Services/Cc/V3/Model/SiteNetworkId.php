@@ -20,7 +20,7 @@ class SiteNetworkId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * siteNetworkId  实例ID。
+    * siteNetworkId  分支网络ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class SiteNetworkId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * siteNetworkId  实例ID。
+    * siteNetworkId  分支网络ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class SiteNetworkId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * siteNetworkId  实例ID。
+    * siteNetworkId  分支网络ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SiteNetworkId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * siteNetworkId  实例ID。
+    * siteNetworkId  分支网络ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class SiteNetworkId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * siteNetworkId  实例ID。
+    * siteNetworkId  分支网络ID。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class SiteNetworkId implements ModelInterface, ArrayAccess
 
     /**
     * Gets siteNetworkId
-    *  实例ID。
+    *  分支网络ID。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class SiteNetworkId implements ModelInterface, ArrayAccess
     /**
     * Sets siteNetworkId
     *
-    * @param string $siteNetworkId 实例ID。
+    * @param string $siteNetworkId 分支网络ID。
     *
     * @return $this
     */

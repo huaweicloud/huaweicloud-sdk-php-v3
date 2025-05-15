@@ -21,7 +21,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * enterpriseProjectId  实例所属企业项目ID。
@@ -31,7 +31,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值，单位Mbps。
     * state  state
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -61,7 +61,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * enterpriseProjectId  实例所属企业项目ID。
@@ -71,7 +71,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值，单位Mbps。
     * state  state
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -122,7 +122,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * enterpriseProjectId  实例所属企业项目ID。
@@ -132,7 +132,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值，单位Mbps。
     * state  state
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -162,7 +162,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * enterpriseProjectId  实例所属企业项目ID。
@@ -172,7 +172,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值，单位Mbps。
     * state  state
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -202,7 +202,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * enterpriseProjectId  实例所属企业项目ID。
@@ -212,7 +212,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值，单位Mbps。
     * state  state
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -477,7 +477,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名字。
+    *  实例名称。
     *
     * @return string
     */
@@ -489,7 +489,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 实例名字。
+    * @param string $name 实例名称。
     *
     * @return $this
     */
@@ -717,7 +717,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFrozen
-    *  是否冻结
+    *  是否冻结。
     *
     * @return bool
     */
@@ -729,7 +729,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Sets isFrozen
     *
-    * @param bool $isFrozen 是否冻结
+    * @param bool $isFrozen 是否冻结。
     *
     * @return $this
     */

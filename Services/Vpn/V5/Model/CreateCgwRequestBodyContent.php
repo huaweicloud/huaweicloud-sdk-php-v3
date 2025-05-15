@@ -23,7 +23,7 @@ class CreateCgwRequestBodyContent implements ModelInterface, ArrayAccess
     * name  网关名称
     * idType  对端网关标识类型
     * idValue  对端网关标识值
-    * bgpAsn  网关的bgp asn号，默认值为65000
+    * bgpAsn  网关的bgp asn号
     * caCertificate  caCertificate
     * tags  标签
     *
@@ -43,7 +43,7 @@ class CreateCgwRequestBodyContent implements ModelInterface, ArrayAccess
     * name  网关名称
     * idType  对端网关标识类型
     * idValue  对端网关标识值
-    * bgpAsn  网关的bgp asn号，默认值为65000
+    * bgpAsn  网关的bgp asn号
     * caCertificate  caCertificate
     * tags  标签
     *
@@ -84,7 +84,7 @@ class CreateCgwRequestBodyContent implements ModelInterface, ArrayAccess
     * name  网关名称
     * idType  对端网关标识类型
     * idValue  对端网关标识值
-    * bgpAsn  网关的bgp asn号，默认值为65000
+    * bgpAsn  网关的bgp asn号
     * caCertificate  caCertificate
     * tags  标签
     *
@@ -104,7 +104,7 @@ class CreateCgwRequestBodyContent implements ModelInterface, ArrayAccess
     * name  网关名称
     * idType  对端网关标识类型
     * idValue  对端网关标识值
-    * bgpAsn  网关的bgp asn号，默认值为65000
+    * bgpAsn  网关的bgp asn号
     * caCertificate  caCertificate
     * tags  标签
     *
@@ -124,7 +124,7 @@ class CreateCgwRequestBodyContent implements ModelInterface, ArrayAccess
     * name  网关名称
     * idType  对端网关标识类型
     * idValue  对端网关标识值
-    * bgpAsn  网关的bgp asn号，默认值为65000
+    * bgpAsn  网关的bgp asn号
     * caCertificate  caCertificate
     * tags  标签
     *
@@ -348,7 +348,7 @@ class CreateCgwRequestBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets bgpAsn
-    *  网关的bgp asn号，默认值为65000
+    *  网关的bgp asn号
     *
     * @return int|null
     */
@@ -360,7 +360,7 @@ class CreateCgwRequestBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets bgpAsn
     *
-    * @param int|null $bgpAsn 网关的bgp asn号，默认值为65000
+    * @param int|null $bgpAsn 网关的bgp asn号
     *
     * @return $this
     */

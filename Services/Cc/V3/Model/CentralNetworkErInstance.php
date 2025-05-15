@@ -25,7 +25,7 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * asn  网络实例BGP协议的AS号。
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * asn  网络实例BGP协议的AS号。
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * asn  网络实例BGP协议的AS号。
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * asn  网络实例BGP协议的AS号。
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * asn  网络实例BGP协议的AS号。
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     *
     * @var string[]
     */
@@ -415,7 +415,7 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets siteCode
-    *  站点编码定义
+    *  站点编码。
     *
     * @return string
     */
@@ -427,7 +427,7 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
     /**
     * Sets siteCode
     *
-    * @param string $siteCode 站点编码定义
+    * @param string $siteCode 站点编码。
     *
     * @return $this
     */

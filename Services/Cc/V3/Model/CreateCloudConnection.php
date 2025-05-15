@@ -20,7 +20,7 @@ class CreateCloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * enterpriseProjectId  实例所属企业项目ID。
     *
@@ -34,7 +34,7 @@ class CreateCloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * enterpriseProjectId  实例所属企业项目ID。
     *
@@ -69,7 +69,7 @@ class CreateCloudConnection implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * enterpriseProjectId  实例所属企业项目ID。
     *
@@ -83,7 +83,7 @@ class CreateCloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * enterpriseProjectId  实例所属企业项目ID。
     *
@@ -97,7 +97,7 @@ class CreateCloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * enterpriseProjectId  实例所属企业项目ID。
     *
@@ -226,7 +226,7 @@ class CreateCloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名字。
+    *  实例名称。
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class CreateCloudConnection implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 实例名字。
+    * @param string $name 实例名称。
     *
     * @return $this
     */

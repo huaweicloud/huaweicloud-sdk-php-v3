@@ -21,8 +21,8 @@ class ListGlobalConnectionBandwidthSpecCodesRequest implements ModelInterface, A
     /**
     * Array of property to type mappings. Used for (de)serialization
     * limit  每页返回的个数。 取值范围：1~1000。
-    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
-    * id  根据id查询，可查询多个id。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    * id  根据ID查询，可查询多个ID。
     * localArea  线路规格本端接入点编码信息。
     * remoteArea  线路规格远端接入点编码信息。
     * level  带宽等级： - Pt: 铂金 - Au: 金 - Ag: 银
@@ -41,8 +41,8 @@ class ListGlobalConnectionBandwidthSpecCodesRequest implements ModelInterface, A
     /**
     * Array of property to format mappings. Used for (de)serialization
     * limit  每页返回的个数。 取值范围：1~1000。
-    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
-    * id  根据id查询，可查询多个id。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    * id  根据ID查询，可查询多个ID。
     * localArea  线路规格本端接入点编码信息。
     * remoteArea  线路规格远端接入点编码信息。
     * level  带宽等级： - Pt: 铂金 - Au: 金 - Ag: 银
@@ -82,8 +82,8 @@ class ListGlobalConnectionBandwidthSpecCodesRequest implements ModelInterface, A
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * limit  每页返回的个数。 取值范围：1~1000。
-    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
-    * id  根据id查询，可查询多个id。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    * id  根据ID查询，可查询多个ID。
     * localArea  线路规格本端接入点编码信息。
     * remoteArea  线路规格远端接入点编码信息。
     * level  带宽等级： - Pt: 铂金 - Au: 金 - Ag: 银
@@ -102,8 +102,8 @@ class ListGlobalConnectionBandwidthSpecCodesRequest implements ModelInterface, A
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * limit  每页返回的个数。 取值范围：1~1000。
-    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
-    * id  根据id查询，可查询多个id。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    * id  根据ID查询，可查询多个ID。
     * localArea  线路规格本端接入点编码信息。
     * remoteArea  线路规格远端接入点编码信息。
     * level  带宽等级： - Pt: 铂金 - Au: 金 - Ag: 银
@@ -122,8 +122,8 @@ class ListGlobalConnectionBandwidthSpecCodesRequest implements ModelInterface, A
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * limit  每页返回的个数。 取值范围：1~1000。
-    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
-    * id  根据id查询，可查询多个id。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    * id  根据ID查询，可查询多个ID。
     * localArea  线路规格本端接入点编码信息。
     * remoteArea  线路规格远端接入点编码信息。
     * level  带宽等级： - Pt: 铂金 - Au: 金 - Ag: 银
@@ -294,7 +294,7 @@ class ListGlobalConnectionBandwidthSpecCodesRequest implements ModelInterface, A
 
     /**
     * Gets marker
-    *  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
+    *  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     *
     * @return string|null
     */
@@ -306,7 +306,7 @@ class ListGlobalConnectionBandwidthSpecCodesRequest implements ModelInterface, A
     /**
     * Sets marker
     *
-    * @param string|null $marker 翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
+    * @param string|null $marker 翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     *
     * @return $this
     */
@@ -318,7 +318,7 @@ class ListGlobalConnectionBandwidthSpecCodesRequest implements ModelInterface, A
 
     /**
     * Gets id
-    *  根据id查询，可查询多个id。
+    *  根据ID查询，可查询多个ID。
     *
     * @return string[]|null
     */
@@ -330,7 +330,7 @@ class ListGlobalConnectionBandwidthSpecCodesRequest implements ModelInterface, A
     /**
     * Sets id
     *
-    * @param string[]|null $id 根据id查询，可查询多个id。
+    * @param string[]|null $id 根据ID查询，可查询多个ID。
     *
     * @return $this
     */

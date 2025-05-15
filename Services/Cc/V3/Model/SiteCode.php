@@ -20,7 +20,7 @@ class SiteCode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class SiteCode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class SiteCode implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SiteCode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class SiteCode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class SiteCode implements ModelInterface, ArrayAccess
 
     /**
     * Gets siteCode
-    *  站点编码定义
+    *  站点编码。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class SiteCode implements ModelInterface, ArrayAccess
     /**
     * Sets siteCode
     *
-    * @param string $siteCode 站点编码定义
+    * @param string $siteCode 站点编码。
     *
     * @return $this
     */

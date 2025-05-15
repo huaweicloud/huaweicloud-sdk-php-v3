@@ -21,18 +21,18 @@ class SiteNetworkEntry implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * domainId  实例所属账号ID。
     * state  state
     * enterpriseProjectId  实例所属企业项目ID。
-    * applyPolicyId  实例ID。
+    * applyPolicyId  应用策略ID。
     * tags  实例标签。
     * topology  topology
     * connections  分支连接列表。
-    * sites  p2p拓扑或者网状(mesh)拓扑中的节点。
+    * sites  点对点拓扑或者网状拓扑中的节点。
     * hubSite  hubSite
     * spokeSites  分支列表。
     *
@@ -59,18 +59,18 @@ class SiteNetworkEntry implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * domainId  实例所属账号ID。
     * state  state
     * enterpriseProjectId  实例所属企业项目ID。
-    * applyPolicyId  实例ID。
+    * applyPolicyId  应用策略ID。
     * tags  实例标签。
     * topology  topology
     * connections  分支连接列表。
-    * sites  p2p拓扑或者网状(mesh)拓扑中的节点。
+    * sites  点对点拓扑或者网状拓扑中的节点。
     * hubSite  hubSite
     * spokeSites  分支列表。
     *
@@ -118,18 +118,18 @@ class SiteNetworkEntry implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * domainId  实例所属账号ID。
     * state  state
     * enterpriseProjectId  实例所属企业项目ID。
-    * applyPolicyId  实例ID。
+    * applyPolicyId  应用策略ID。
     * tags  实例标签。
     * topology  topology
     * connections  分支连接列表。
-    * sites  p2p拓扑或者网状(mesh)拓扑中的节点。
+    * sites  点对点拓扑或者网状拓扑中的节点。
     * hubSite  hubSite
     * spokeSites  分支列表。
     *
@@ -156,18 +156,18 @@ class SiteNetworkEntry implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * domainId  实例所属账号ID。
     * state  state
     * enterpriseProjectId  实例所属企业项目ID。
-    * applyPolicyId  实例ID。
+    * applyPolicyId  应用策略ID。
     * tags  实例标签。
     * topology  topology
     * connections  分支连接列表。
-    * sites  p2p拓扑或者网状(mesh)拓扑中的节点。
+    * sites  点对点拓扑或者网状拓扑中的节点。
     * hubSite  hubSite
     * spokeSites  分支列表。
     *
@@ -194,18 +194,18 @@ class SiteNetworkEntry implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * domainId  实例所属账号ID。
     * state  state
     * enterpriseProjectId  实例所属企业项目ID。
-    * applyPolicyId  实例ID。
+    * applyPolicyId  应用策略ID。
     * tags  实例标签。
     * topology  topology
     * connections  分支连接列表。
-    * sites  p2p拓扑或者网状(mesh)拓扑中的节点。
+    * sites  点对点拓扑或者网状拓扑中的节点。
     * hubSite  hubSite
     * spokeSites  分支列表。
     *
@@ -433,7 +433,7 @@ class SiteNetworkEntry implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名字。
+    *  实例名称。
     *
     * @return string
     */
@@ -445,7 +445,7 @@ class SiteNetworkEntry implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 实例名字。
+    * @param string $name 实例名称。
     *
     * @return $this
     */
@@ -601,7 +601,7 @@ class SiteNetworkEntry implements ModelInterface, ArrayAccess
 
     /**
     * Gets applyPolicyId
-    *  实例ID。
+    *  应用策略ID。
     *
     * @return string
     */
@@ -613,7 +613,7 @@ class SiteNetworkEntry implements ModelInterface, ArrayAccess
     /**
     * Sets applyPolicyId
     *
-    * @param string $applyPolicyId 实例ID。
+    * @param string $applyPolicyId 应用策略ID。
     *
     * @return $this
     */
@@ -697,7 +697,7 @@ class SiteNetworkEntry implements ModelInterface, ArrayAccess
 
     /**
     * Gets sites
-    *  p2p拓扑或者网状(mesh)拓扑中的节点。
+    *  点对点拓扑或者网状拓扑中的节点。
     *
     * @return \HuaweiCloud\SDK\Cc\V3\Model\SiteInformation[]|null
     */
@@ -709,7 +709,7 @@ class SiteNetworkEntry implements ModelInterface, ArrayAccess
     /**
     * Sets sites
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\SiteInformation[]|null $sites p2p拓扑或者网状(mesh)拓扑中的节点。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\SiteInformation[]|null $sites 点对点拓扑或者网状拓扑中的节点。
     *
     * @return $this
     */

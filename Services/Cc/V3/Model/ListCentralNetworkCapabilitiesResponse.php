@@ -22,24 +22,28 @@ class ListCentralNetworkCapabilitiesResponse implements ModelInterface, ArrayAcc
     /**
     * Array of property to type mappings. Used for (de)serialization
     * requestId  请求ID。
+    * pageInfo  pageInfo
     * capabilities  租户能力列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
+            'pageInfo' => '\HuaweiCloud\SDK\Cc\V3\Model\PageInfo',
             'capabilities' => '\HuaweiCloud\SDK\Cc\V3\Model\CentralNetworkCapability[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * requestId  请求ID。
+    * pageInfo  pageInfo
     * capabilities  租户能力列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
+        'pageInfo' => null,
         'capabilities' => null
     ];
 
@@ -67,36 +71,42 @@ class ListCentralNetworkCapabilitiesResponse implements ModelInterface, ArrayAcc
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * requestId  请求ID。
+    * pageInfo  pageInfo
     * capabilities  租户能力列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
+            'pageInfo' => 'page_info',
             'capabilities' => 'capabilities'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  请求ID。
+    * pageInfo  pageInfo
     * capabilities  租户能力列表
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
+            'pageInfo' => 'setPageInfo',
             'capabilities' => 'setCapabilities'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  请求ID。
+    * pageInfo  pageInfo
     * capabilities  租户能力列表
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
+            'pageInfo' => 'getPageInfo',
             'capabilities' => 'getCapabilities'
     ];
 
@@ -159,6 +169,7 @@ class ListCentralNetworkCapabilitiesResponse implements ModelInterface, ArrayAcc
     public function __construct(array $data = null)
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
         $this->container['capabilities'] = isset($data['capabilities']) ? $data['capabilities'] : null;
     }
 
@@ -217,6 +228,30 @@ class ListCentralNetworkCapabilitiesResponse implements ModelInterface, ArrayAcc
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

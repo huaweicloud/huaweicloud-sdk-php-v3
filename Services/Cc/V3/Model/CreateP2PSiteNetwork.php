@@ -20,11 +20,11 @@ class CreateP2PSiteNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * tags  实例标签。
     * enterpriseProjectId  实例所属企业项目ID。
-    * sites  端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    * sites  端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class CreateP2PSiteNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * tags  实例标签。
     * enterpriseProjectId  实例所属企业项目ID。
-    * sites  端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    * sites  端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class CreateP2PSiteNetwork implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * tags  实例标签。
     * enterpriseProjectId  实例所属企业项目ID。
-    * sites  端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    * sites  端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class CreateP2PSiteNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * tags  实例标签。
     * enterpriseProjectId  实例所属企业项目ID。
-    * sites  端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    * sites  端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class CreateP2PSiteNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * tags  实例标签。
     * enterpriseProjectId  实例所属企业项目ID。
-    * sites  端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    * sites  端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class CreateP2PSiteNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名字。
+    *  实例名称。
     *
     * @return string
     */
@@ -263,7 +263,7 @@ class CreateP2PSiteNetwork implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 实例名字。
+    * @param string $name 实例名称。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class CreateP2PSiteNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Gets sites
-    *  端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    *  端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @return \HuaweiCloud\SDK\Cc\V3\Model\CreateSiteInformation[]
     */
@@ -359,7 +359,7 @@ class CreateP2PSiteNetwork implements ModelInterface, ArrayAccess
     /**
     * Sets sites
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\CreateSiteInformation[] $sites 端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\CreateSiteInformation[] $sites 端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @return $this
     */

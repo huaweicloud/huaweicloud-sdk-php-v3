@@ -23,13 +23,15 @@ class BaseResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
+    * data  响应数据
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'providerCode' => 'string',
             'errorCode' => 'string',
-            'errorMsg' => 'string'
+            'errorMsg' => 'string',
+            'data' => 'object'
     ];
 
     /**
@@ -37,13 +39,15 @@ class BaseResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
+    * data  响应数据
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'providerCode' => null,
         'errorCode' => null,
-        'errorMsg' => null
+        'errorMsg' => null,
+        'data' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class BaseResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
+    * data  响应数据
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'providerCode' => 'provider_code',
             'errorCode' => 'error_code',
-            'errorMsg' => 'error_msg'
+            'errorMsg' => 'error_msg',
+            'data' => 'data'
     ];
 
     /**
@@ -86,13 +92,15 @@ class BaseResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
+    * data  响应数据
     *
     * @var string[]
     */
     protected static $setters = [
             'providerCode' => 'setProviderCode',
             'errorCode' => 'setErrorCode',
-            'errorMsg' => 'setErrorMsg'
+            'errorMsg' => 'setErrorMsg',
+            'data' => 'setData'
     ];
 
     /**
@@ -100,13 +108,15 @@ class BaseResponse implements ModelInterface, ArrayAccess
     * providerCode  服务标识
     * errorCode  请求响应代码，范围：0000~9999，正常时取值：0
     * errorMsg  请求响应描述
+    * data  响应数据
     *
     * @var string[]
     */
     protected static $getters = [
             'providerCode' => 'getProviderCode',
             'errorCode' => 'getErrorCode',
-            'errorMsg' => 'getErrorMsg'
+            'errorMsg' => 'getErrorMsg',
+            'data' => 'getData'
     ];
 
     /**
@@ -170,6 +180,7 @@ class BaseResponse implements ModelInterface, ArrayAccess
         $this->container['providerCode'] = isset($data['providerCode']) ? $data['providerCode'] : null;
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
         $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -183,8 +194,8 @@ class BaseResponse implements ModelInterface, ArrayAccess
         if ($this->container['providerCode'] === null) {
             $invalidProperties[] = "'providerCode' can't be null";
         }
-            if ((mb_strlen($this->container['providerCode']) > 100000000)) {
-                $invalidProperties[] = "invalid value for 'providerCode', the character length must be smaller than or equal to 100000000.";
+            if ((mb_strlen($this->container['providerCode']) > 3)) {
+                $invalidProperties[] = "invalid value for 'providerCode', the character length must be smaller than or equal to 3.";
             }
             if ((mb_strlen($this->container['providerCode']) < 3)) {
                 $invalidProperties[] = "invalid value for 'providerCode', the character length must be bigger than or equal to 3.";
@@ -192,18 +203,24 @@ class BaseResponse implements ModelInterface, ArrayAccess
         if ($this->container['errorCode'] === null) {
             $invalidProperties[] = "'errorCode' can't be null";
         }
-            if ((mb_strlen($this->container['errorCode']) > 100000000)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 100000000.";
+            if ((mb_strlen($this->container['errorCode']) > 20)) {
+                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 20.";
             }
             if ((mb_strlen($this->container['errorCode']) < 1)) {
                 $invalidProperties[] = "invalid value for 'errorCode', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) > 100000000)) {
-                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 100000000.";
+        if ($this->container['errorMsg'] === null) {
+            $invalidProperties[] = "'errorMsg' can't be null";
+        }
+            if ((mb_strlen($this->container['errorMsg']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 10240.";
             }
-            if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) < 0)) {
+            if ((mb_strlen($this->container['errorMsg']) < 0)) {
                 $invalidProperties[] = "invalid value for 'errorMsg', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -270,7 +287,7 @@ class BaseResponse implements ModelInterface, ArrayAccess
     * Gets errorMsg
     *  请求响应描述
     *
-    * @return string|null
+    * @return string
     */
     public function getErrorMsg()
     {
@@ -280,13 +297,37 @@ class BaseResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg 请求响应描述
+    * @param string $errorMsg 请求响应描述
     *
     * @return $this
     */
     public function setErrorMsg($errorMsg)
     {
         $this->container['errorMsg'] = $errorMsg;
+        return $this;
+    }
+
+    /**
+    * Gets data
+    *  响应数据
+    *
+    * @return object
+    */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+    * Sets data
+    *
+    * @param object $data 响应数据
+    *
+    * @return $this
+    */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
         return $this;
     }
 

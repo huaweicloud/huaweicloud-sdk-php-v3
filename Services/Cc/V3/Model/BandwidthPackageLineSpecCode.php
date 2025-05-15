@@ -20,9 +20,9 @@ class BandwidthPackageLineSpecCode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * level  带宽包等级
-    * nameCn  实例名字。
-    * nameEn  实例名字。
+    * level  带宽包等级。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
     * specCode  带宽包实例的规格编码。
     * maxBandwidth  最大带宽。
     * minBandwidth  最小带宽。
@@ -42,9 +42,9 @@ class BandwidthPackageLineSpecCode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * level  带宽包等级
-    * nameCn  实例名字。
-    * nameEn  实例名字。
+    * level  带宽包等级。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
     * specCode  带宽包实例的规格编码。
     * maxBandwidth  最大带宽。
     * minBandwidth  最小带宽。
@@ -85,9 +85,9 @@ class BandwidthPackageLineSpecCode implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * level  带宽包等级
-    * nameCn  实例名字。
-    * nameEn  实例名字。
+    * level  带宽包等级。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
     * specCode  带宽包实例的规格编码。
     * maxBandwidth  最大带宽。
     * minBandwidth  最小带宽。
@@ -107,9 +107,9 @@ class BandwidthPackageLineSpecCode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * level  带宽包等级
-    * nameCn  实例名字。
-    * nameEn  实例名字。
+    * level  带宽包等级。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
     * specCode  带宽包实例的规格编码。
     * maxBandwidth  最大带宽。
     * minBandwidth  最小带宽。
@@ -129,9 +129,9 @@ class BandwidthPackageLineSpecCode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * level  带宽包等级
-    * nameCn  实例名字。
-    * nameEn  实例名字。
+    * level  带宽包等级。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
     * specCode  带宽包实例的规格编码。
     * maxBandwidth  最大带宽。
     * minBandwidth  最小带宽。
@@ -282,7 +282,7 @@ class BandwidthPackageLineSpecCode implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  带宽包等级
+    *  带宽包等级。
     *
     * @return string|null
     */
@@ -294,7 +294,7 @@ class BandwidthPackageLineSpecCode implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param string|null $level 带宽包等级
+    * @param string|null $level 带宽包等级。
     *
     * @return $this
     */
@@ -306,7 +306,7 @@ class BandwidthPackageLineSpecCode implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCn
-    *  实例名字。
+    *  实例名称。
     *
     * @return string|null
     */
@@ -318,7 +318,7 @@ class BandwidthPackageLineSpecCode implements ModelInterface, ArrayAccess
     /**
     * Sets nameCn
     *
-    * @param string|null $nameCn 实例名字。
+    * @param string|null $nameCn 实例名称。
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class BandwidthPackageLineSpecCode implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  实例名字。
+    *  实例名称。
     *
     * @return string|null
     */
@@ -342,7 +342,7 @@ class BandwidthPackageLineSpecCode implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string|null $nameEn 实例名字。
+    * @param string|null $nameEn 实例名称。
     *
     * @return $this
     */

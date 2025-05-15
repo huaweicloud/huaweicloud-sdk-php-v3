@@ -23,7 +23,7 @@ class CreateSiteInformation implements ModelInterface, ArrayAccess
     * regionId  RegionID。
     * projectId  实例所属项目ID。
     * gatewayType  gatewayType
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class CreateSiteInformation implements ModelInterface, ArrayAccess
     * regionId  RegionID。
     * projectId  实例所属项目ID。
     * gatewayType  gatewayType
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class CreateSiteInformation implements ModelInterface, ArrayAccess
     * regionId  RegionID。
     * projectId  实例所属项目ID。
     * gatewayType  gatewayType
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class CreateSiteInformation implements ModelInterface, ArrayAccess
     * regionId  RegionID。
     * projectId  实例所属项目ID。
     * gatewayType  gatewayType
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class CreateSiteInformation implements ModelInterface, ArrayAccess
     * regionId  RegionID。
     * projectId  实例所属项目ID。
     * gatewayType  gatewayType
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     *
     * @var string[]
     */
@@ -315,7 +315,7 @@ class CreateSiteInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets gatewayId
-    *  实例ID。
+    *  网关的ID。
     *
     * @return string
     */
@@ -327,7 +327,7 @@ class CreateSiteInformation implements ModelInterface, ArrayAccess
     /**
     * Sets gatewayId
     *
-    * @param string $gatewayId 实例ID。
+    * @param string $gatewayId 网关的ID。
     *
     * @return $this
     */

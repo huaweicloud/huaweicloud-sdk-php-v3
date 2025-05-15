@@ -21,7 +21,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * state  state
@@ -32,7 +32,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值，单位Mbps。
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
     * enterpriseRouterRegionId  ER路由器的regionID。
@@ -42,7 +42,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * globalDcGatewayProjectId  Gdgw的项目ID。
     * globalDcGatewayRegionId  Gdgw的RegionID。
     * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
-    * globalDcGatewaySiteCode  站点编码定义
+    * globalDcGatewaySiteCode  站点编码。
     *
     * @var string[]
     */
@@ -75,7 +75,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * state  state
@@ -86,7 +86,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值，单位Mbps。
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
     * enterpriseRouterRegionId  ER路由器的regionID。
@@ -96,7 +96,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * globalDcGatewayProjectId  Gdgw的项目ID。
     * globalDcGatewayRegionId  Gdgw的RegionID。
     * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
-    * globalDcGatewaySiteCode  站点编码定义
+    * globalDcGatewaySiteCode  站点编码。
     *
     * @var string[]
     */
@@ -150,7 +150,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * state  state
@@ -161,7 +161,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值，单位Mbps。
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
     * enterpriseRouterRegionId  ER路由器的regionID。
@@ -171,7 +171,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * globalDcGatewayProjectId  Gdgw的项目ID。
     * globalDcGatewayRegionId  Gdgw的RegionID。
     * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
-    * globalDcGatewaySiteCode  站点编码定义
+    * globalDcGatewaySiteCode  站点编码。
     *
     * @var string[]
     */
@@ -204,7 +204,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * state  state
@@ -215,7 +215,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值，单位Mbps。
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
     * enterpriseRouterRegionId  ER路由器的regionID。
@@ -225,7 +225,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * globalDcGatewayProjectId  Gdgw的项目ID。
     * globalDcGatewayRegionId  Gdgw的RegionID。
     * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
-    * globalDcGatewaySiteCode  站点编码定义
+    * globalDcGatewaySiteCode  站点编码。
     *
     * @var string[]
     */
@@ -258,7 +258,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * domainId  实例所属账号ID。
     * state  state
@@ -269,7 +269,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值，单位Mbps。
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
     * enterpriseRouterRegionId  ER路由器的regionID。
@@ -279,7 +279,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * globalDcGatewayProjectId  Gdgw的项目ID。
     * globalDcGatewayRegionId  Gdgw的RegionID。
     * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
-    * globalDcGatewaySiteCode  站点编码定义
+    * globalDcGatewaySiteCode  站点编码。
     *
     * @var string[]
     */
@@ -647,7 +647,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名字。
+    *  实例名称。
     *
     * @return string
     */
@@ -659,7 +659,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 实例名字。
+    * @param string $name 实例名称。
     *
     * @return $this
     */
@@ -911,7 +911,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFrozen
-    *  是否冻结
+    *  是否冻结。
     *
     * @return bool
     */
@@ -923,7 +923,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets isFrozen
     *
-    * @param bool $isFrozen 是否冻结
+    * @param bool $isFrozen 是否冻结。
     *
     * @return $this
     */
@@ -1151,7 +1151,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalDcGatewaySiteCode
-    *  站点编码定义
+    *  站点编码。
     *
     * @return string
     */
@@ -1163,7 +1163,7 @@ class CentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets globalDcGatewaySiteCode
     *
-    * @param string $globalDcGatewaySiteCode 站点编码定义
+    * @param string $globalDcGatewaySiteCode 站点编码。
     *
     * @return $this
     */

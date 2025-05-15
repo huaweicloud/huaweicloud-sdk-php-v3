@@ -22,6 +22,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     const ER_INSTANCE_SUPPORT_DSCP_REGIONS = 'er-instance.support-dscp-regions';
     const ER_INSTANCE_SUPPORT_STS5_REGIONS = 'er-instance.support-sts5-regions';
     const ER_INSTANCE_SUPPORT_SITES = 'er-instance.support-sites';
+    const CUSTOM_CONNECTIONS_IS_SUPPORT = 'custom-connections.is-support';
+    const CUSTOM_CONNECTIONS_SUPPORT_REGIONS = 'custom-connections.support-regions';
     const GDGW_INSTANCE_SUPPORT_DSCP_REGIONS = 'gdgw-instance.support-dscp-regions';
     const GDGW_INSTANCE_SUPPORT_FREEZE_REGIONS = 'gdgw-instance.support-freeze-regions';
     const GDGW_ATTACHMENT_IS_SUPPORT = 'gdgw-attachment.is-support';
@@ -51,6 +53,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
             self::ER_INSTANCE_SUPPORT_DSCP_REGIONS,
             self::ER_INSTANCE_SUPPORT_STS5_REGIONS,
             self::ER_INSTANCE_SUPPORT_SITES,
+            self::CUSTOM_CONNECTIONS_IS_SUPPORT,
+            self::CUSTOM_CONNECTIONS_SUPPORT_REGIONS,
             self::GDGW_INSTANCE_SUPPORT_DSCP_REGIONS,
             self::GDGW_INSTANCE_SUPPORT_FREEZE_REGIONS,
             self::GDGW_ATTACHMENT_IS_SUPPORT,

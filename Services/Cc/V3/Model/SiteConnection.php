@@ -21,15 +21,15 @@ class SiteConnection implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
-    * siteNetworkId  实例ID。
+    * siteNetworkId  分支网络ID。
     * state  state
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * edgePair  分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    * edgePair  分支网络连接的两个端点定义，长度固定为2的数组。
     * crossRegionType  crossRegionType
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值，单位Mbps。
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * frozenEffect  frozenEffect
     * isBindBandwidth  是否绑定带宽包。
     *
@@ -53,15 +53,15 @@ class SiteConnection implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
-    * siteNetworkId  实例ID。
+    * siteNetworkId  分支网络ID。
     * state  state
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * edgePair  分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    * edgePair  分支网络连接的两个端点定义，长度固定为2的数组。
     * crossRegionType  crossRegionType
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值，单位Mbps。
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * frozenEffect  frozenEffect
     * isBindBandwidth  是否绑定带宽包。
     *
@@ -106,15 +106,15 @@ class SiteConnection implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  实例ID。
-    * siteNetworkId  实例ID。
+    * siteNetworkId  分支网络ID。
     * state  state
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * edgePair  分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    * edgePair  分支网络连接的两个端点定义，长度固定为2的数组。
     * crossRegionType  crossRegionType
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值，单位Mbps。
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * frozenEffect  frozenEffect
     * isBindBandwidth  是否绑定带宽包。
     *
@@ -138,15 +138,15 @@ class SiteConnection implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
-    * siteNetworkId  实例ID。
+    * siteNetworkId  分支网络ID。
     * state  state
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * edgePair  分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    * edgePair  分支网络连接的两个端点定义，长度固定为2的数组。
     * crossRegionType  crossRegionType
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值，单位Mbps。
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * frozenEffect  frozenEffect
     * isBindBandwidth  是否绑定带宽包。
     *
@@ -170,15 +170,15 @@ class SiteConnection implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
-    * siteNetworkId  实例ID。
+    * siteNetworkId  分支网络ID。
     * state  state
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * edgePair  分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    * edgePair  分支网络连接的两个端点定义，长度固定为2的数组。
     * crossRegionType  crossRegionType
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值，单位Mbps。
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     * frozenEffect  frozenEffect
     * isBindBandwidth  是否绑定带宽包。
     *
@@ -376,7 +376,7 @@ class SiteConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets siteNetworkId
-    *  实例ID。
+    *  分支网络ID。
     *
     * @return string
     */
@@ -388,7 +388,7 @@ class SiteConnection implements ModelInterface, ArrayAccess
     /**
     * Sets siteNetworkId
     *
-    * @param string $siteNetworkId 实例ID。
+    * @param string $siteNetworkId 分支网络ID。
     *
     * @return $this
     */
@@ -472,7 +472,7 @@ class SiteConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets edgePair
-    *  分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    *  分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @return \HuaweiCloud\SDK\Cc\V3\Model\DirectedEdge[]
     */
@@ -484,7 +484,7 @@ class SiteConnection implements ModelInterface, ArrayAccess
     /**
     * Sets edgePair
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\DirectedEdge[] $edgePair 分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\DirectedEdge[] $edgePair 分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class SiteConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFrozen
-    *  是否冻结
+    *  是否冻结。
     *
     * @return bool
     */
@@ -580,7 +580,7 @@ class SiteConnection implements ModelInterface, ArrayAccess
     /**
     * Sets isFrozen
     *
-    * @param bool $isFrozen 是否冻结
+    * @param bool $isFrozen 是否冻结。
     *
     * @return $this
     */

@@ -21,21 +21,25 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * flavorId  规格id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'availabilityZone' => 'string'
+            'availabilityZone' => 'string',
+            'flavorId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * flavorId  规格id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'availabilityZone' => null
+        'availabilityZone' => null,
+        'flavorId' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * flavorId  规格id
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'availabilityZone' => 'availability_zone'
+            'availabilityZone' => 'availability_zone',
+            'flavorId' => 'flavor_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * flavorId  规格id
     *
     * @var string[]
     */
     protected static $setters = [
-            'availabilityZone' => 'setAvailabilityZone'
+            'availabilityZone' => 'setAvailabilityZone',
+            'flavorId' => 'setFlavorId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * flavorId  规格id
     *
     * @var string[]
     */
     protected static $getters = [
-            'availabilityZone' => 'getAvailabilityZone'
+            'availabilityZone' => 'getAvailabilityZone',
+            'flavorId' => 'getFlavorId'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
+        $this->container['flavorId'] = isset($data['flavorId']) ? $data['flavorId'] : null;
     }
 
     /**
@@ -193,6 +204,30 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     public function setAvailabilityZone($availabilityZone)
     {
         $this->container['availabilityZone'] = $availabilityZone;
+        return $this;
+    }
+
+    /**
+    * Gets flavorId
+    *  规格id
+    *
+    * @return string|null
+    */
+    public function getFlavorId()
+    {
+        return $this->container['flavorId'];
+    }
+
+    /**
+    * Sets flavorId
+    *
+    * @param string|null $flavorId 规格id
+    *
+    * @return $this
+    */
+    public function setFlavorId($flavorId)
+    {
+        $this->container['flavorId'] = $flavorId;
         return $this;
     }
 

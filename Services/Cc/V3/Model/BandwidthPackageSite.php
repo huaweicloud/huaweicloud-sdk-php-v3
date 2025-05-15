@@ -21,11 +21,11 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
-    * siteCode  站点编码
+    * siteCode  站点编码。
     * regionId  RegionID。
-    * siteType  站点类型。默认Region级别
-    * nameCn  实例名字。
-    * nameEn  实例名字。
+    * siteType  站点类型。默认Region级别。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
     * description  描述。不支持 <>。
     * createdAt  创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -47,11 +47,11 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
-    * siteCode  站点编码
+    * siteCode  站点编码。
     * regionId  RegionID。
-    * siteType  站点类型。默认Region级别
-    * nameCn  实例名字。
-    * nameEn  实例名字。
+    * siteType  站点类型。默认Region级别。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
     * description  描述。不支持 <>。
     * createdAt  创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -94,11 +94,11 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  实例ID。
-    * siteCode  站点编码
+    * siteCode  站点编码。
     * regionId  RegionID。
-    * siteType  站点类型。默认Region级别
-    * nameCn  实例名字。
-    * nameEn  实例名字。
+    * siteType  站点类型。默认Region级别。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
     * description  描述。不支持 <>。
     * createdAt  创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -120,11 +120,11 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
-    * siteCode  站点编码
+    * siteCode  站点编码。
     * regionId  RegionID。
-    * siteType  站点类型。默认Region级别
-    * nameCn  实例名字。
-    * nameEn  实例名字。
+    * siteType  站点类型。默认Region级别。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
     * description  描述。不支持 <>。
     * createdAt  创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -146,11 +146,11 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
-    * siteCode  站点编码
+    * siteCode  站点编码。
     * regionId  RegionID。
-    * siteType  站点类型。默认Region级别
-    * nameCn  实例名字。
-    * nameEn  实例名字。
+    * siteType  站点类型。默认Region级别。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
     * description  描述。不支持 <>。
     * createdAt  创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -340,7 +340,7 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
 
     /**
     * Gets siteCode
-    *  站点编码
+    *  站点编码。
     *
     * @return string|null
     */
@@ -352,7 +352,7 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
     /**
     * Sets siteCode
     *
-    * @param string|null $siteCode 站点编码
+    * @param string|null $siteCode 站点编码。
     *
     * @return $this
     */
@@ -388,7 +388,7 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
 
     /**
     * Gets siteType
-    *  站点类型。默认Region级别
+    *  站点类型。默认Region级别。
     *
     * @return string|null
     */
@@ -400,7 +400,7 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
     /**
     * Sets siteType
     *
-    * @param string|null $siteType 站点类型。默认Region级别
+    * @param string|null $siteType 站点类型。默认Region级别。
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCn
-    *  实例名字。
+    *  实例名称。
     *
     * @return string|null
     */
@@ -424,7 +424,7 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
     /**
     * Sets nameCn
     *
-    * @param string|null $nameCn 实例名字。
+    * @param string|null $nameCn 实例名称。
     *
     * @return $this
     */
@@ -436,7 +436,7 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  实例名字。
+    *  实例名称。
     *
     * @return string|null
     */
@@ -448,7 +448,7 @@ class BandwidthPackageSite implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string|null $nameEn 实例名字。
+    * @param string|null $nameEn 实例名称。
     *
     * @return $this
     */

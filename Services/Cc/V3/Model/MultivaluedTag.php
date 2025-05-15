@@ -178,8 +178,8 @@ class MultivaluedTag implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[A-Za-z0-9\\u4E00-\\u9FFF-_]+$/", $this->container['key'])) {
-                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^[A-Za-z0-9\\u4E00-\\u9FFF-_]+$/.";
+            if (!preg_match("/^((?!\\s)(?!_sys_)[\\p{L}\\p{Z}\\p{N}_.:=+\\-@]*)(?<!\\s)$/", $this->container['key'])) {
+                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^((?!\\s)(?!_sys_)[\\p{L}\\p{Z}\\p{N}_.:=+\\-@]*)(?<!\\s)$/.";
             }
         if ($this->container['values'] === null) {
             $invalidProperties[] = "'values' can't be null";

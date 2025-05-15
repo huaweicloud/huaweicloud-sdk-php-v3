@@ -23,7 +23,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     * id  实例ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     * instanceId  连接点的实例ID。
     * parentInstanceId  连接点的实例的父资源ID。
     * type  type
@@ -45,7 +45,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     * id  实例ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     * instanceId  连接点的实例ID。
     * parentInstanceId  连接点的实例的父资源ID。
     * type  type
@@ -88,7 +88,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     * id  实例ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     * instanceId  连接点的实例ID。
     * parentInstanceId  连接点的实例的父资源ID。
     * type  type
@@ -110,7 +110,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     * id  实例ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     * instanceId  连接点的实例ID。
     * parentInstanceId  连接点的实例的父资源ID。
     * type  type
@@ -132,7 +132,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     * id  实例ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     * instanceId  连接点的实例ID。
     * parentInstanceId  连接点的实例的父资源ID。
     * type  type
@@ -381,7 +381,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets siteCode
-    *  站点编码定义
+    *  站点编码。
     *
     * @return string
     */
@@ -393,7 +393,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     /**
     * Sets siteCode
     *
-    * @param string $siteCode 站点编码定义
+    * @param string $siteCode 站点编码。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * instanceId  网络实例（VPC，VGW）的ID。
     * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
@@ -46,7 +46,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * instanceId  网络实例（VPC，VGW）的ID。
     * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
@@ -93,7 +93,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * instanceId  网络实例（VPC，VGW）的ID。
     * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
@@ -119,7 +119,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * instanceId  网络实例（VPC，VGW）的ID。
     * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
@@ -145,7 +145,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * instanceId  网络实例（VPC，VGW）的ID。
     * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
@@ -369,7 +369,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名字。
+    *  实例名称。
     *
     * @return string|null
     */
@@ -381,7 +381,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例名字。
+    * @param string|null $name 实例名称。
     *
     * @return $this
     */

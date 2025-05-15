@@ -195,8 +195,8 @@ class HandleCocIncidentResponse implements ModelInterface, ArrayAccess
         if ($this->container['providerCode'] === null) {
             $invalidProperties[] = "'providerCode' can't be null";
         }
-            if ((mb_strlen($this->container['providerCode']) > 100000000)) {
-                $invalidProperties[] = "invalid value for 'providerCode', the character length must be smaller than or equal to 100000000.";
+            if ((mb_strlen($this->container['providerCode']) > 3)) {
+                $invalidProperties[] = "invalid value for 'providerCode', the character length must be smaller than or equal to 3.";
             }
             if ((mb_strlen($this->container['providerCode']) < 3)) {
                 $invalidProperties[] = "invalid value for 'providerCode', the character length must be bigger than or equal to 3.";
@@ -204,18 +204,24 @@ class HandleCocIncidentResponse implements ModelInterface, ArrayAccess
         if ($this->container['errorCode'] === null) {
             $invalidProperties[] = "'errorCode' can't be null";
         }
-            if ((mb_strlen($this->container['errorCode']) > 100000000)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 100000000.";
+            if ((mb_strlen($this->container['errorCode']) > 20)) {
+                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 20.";
             }
             if ((mb_strlen($this->container['errorCode']) < 1)) {
                 $invalidProperties[] = "invalid value for 'errorCode', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) > 100000000)) {
-                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 100000000.";
+        if ($this->container['errorMsg'] === null) {
+            $invalidProperties[] = "'errorMsg' can't be null";
+        }
+            if ((mb_strlen($this->container['errorMsg']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 10240.";
             }
-            if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) < 0)) {
+            if ((mb_strlen($this->container['errorMsg']) < 0)) {
                 $invalidProperties[] = "invalid value for 'errorMsg', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -282,7 +288,7 @@ class HandleCocIncidentResponse implements ModelInterface, ArrayAccess
     * Gets errorMsg
     *  请求响应描述
     *
-    * @return string|null
+    * @return string
     */
     public function getErrorMsg()
     {
@@ -292,7 +298,7 @@ class HandleCocIncidentResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg 请求响应描述
+    * @param string $errorMsg 请求响应描述
     *
     * @return $this
     */
@@ -306,7 +312,7 @@ class HandleCocIncidentResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  data
     *
-    * @return \HuaweiCloud\SDK\Coc\V1\Model\HandleExternalIncidentResponseData|null
+    * @return \HuaweiCloud\SDK\Coc\V1\Model\HandleExternalIncidentResponseData
     */
     public function getData()
     {
@@ -316,7 +322,7 @@ class HandleCocIncidentResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\HandleExternalIncidentResponseData|null $data data
+    * @param \HuaweiCloud\SDK\Coc\V1\Model\HandleExternalIncidentResponseData $data data
     *
     * @return $this
     */

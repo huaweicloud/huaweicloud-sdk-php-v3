@@ -21,10 +21,10 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
-    * level  带宽包等级
-    * nameCn  实例名字。
-    * nameEn  实例名字。
-    * displayPriority  展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50 金牌系列优先级范围：51-100 银牌系列优先级范围：101-150 其他：大于151
+    * level  带宽包等级。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
+    * displayPriority  展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50。 金牌系列优先级范围：51-100。 银牌系列优先级范围：101-150。 其他：大于151。
     * description  描述。不支持 <>。
     * createdAt  创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -45,10 +45,10 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
-    * level  带宽包等级
-    * nameCn  实例名字。
-    * nameEn  实例名字。
-    * displayPriority  展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50 金牌系列优先级范围：51-100 银牌系列优先级范围：101-150 其他：大于151
+    * level  带宽包等级。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
+    * displayPriority  展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50。 金牌系列优先级范围：51-100。 银牌系列优先级范围：101-150。 其他：大于151。
     * description  描述。不支持 <>。
     * createdAt  创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -90,10 +90,10 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  实例ID。
-    * level  带宽包等级
-    * nameCn  实例名字。
-    * nameEn  实例名字。
-    * displayPriority  展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50 金牌系列优先级范围：51-100 银牌系列优先级范围：101-150 其他：大于151
+    * level  带宽包等级。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
+    * displayPriority  展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50。 金牌系列优先级范围：51-100。 银牌系列优先级范围：101-150。 其他：大于151。
     * description  描述。不支持 <>。
     * createdAt  创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -114,10 +114,10 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
-    * level  带宽包等级
-    * nameCn  实例名字。
-    * nameEn  实例名字。
-    * displayPriority  展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50 金牌系列优先级范围：51-100 银牌系列优先级范围：101-150 其他：大于151
+    * level  带宽包等级。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
+    * displayPriority  展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50。 金牌系列优先级范围：51-100。 银牌系列优先级范围：101-150。 其他：大于151。
     * description  描述。不支持 <>。
     * createdAt  创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -138,10 +138,10 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
-    * level  带宽包等级
-    * nameCn  实例名字。
-    * nameEn  实例名字。
-    * displayPriority  展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50 金牌系列优先级范围：51-100 银牌系列优先级范围：101-150 其他：大于151
+    * level  带宽包等级。
+    * nameCn  实例名称。
+    * nameEn  实例名称。
+    * displayPriority  展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50。 金牌系列优先级范围：51-100。 银牌系列优先级范围：101-150。 其他：大于151。
     * description  描述。不支持 <>。
     * createdAt  创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -323,7 +323,7 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  带宽包等级
+    *  带宽包等级。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param string|null $level 带宽包等级
+    * @param string|null $level 带宽包等级。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCn
-    *  实例名字。
+    *  实例名称。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
     /**
     * Sets nameCn
     *
-    * @param string|null $nameCn 实例名字。
+    * @param string|null $nameCn 实例名称。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  实例名字。
+    *  实例名称。
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string|null $nameEn 实例名字。
+    * @param string|null $nameEn 实例名称。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayPriority
-    *  展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50 金牌系列优先级范围：51-100 银牌系列优先级范围：101-150 其他：大于151
+    *  展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50。 金牌系列优先级范围：51-100。 银牌系列优先级范围：101-150。 其他：大于151。
     *
     * @return int|null
     */
@@ -407,7 +407,7 @@ class BandwidthPackageLevel implements ModelInterface, ArrayAccess
     /**
     * Sets displayPriority
     *
-    * @param int|null $displayPriority 展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50 金牌系列优先级范围：51-100 银牌系列优先级范围：101-150 其他：大于151
+    * @param int|null $displayPriority 展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50。 金牌系列优先级范围：51-100。 银牌系列优先级范围：101-150。 其他：大于151。
     *
     * @return $this
     */

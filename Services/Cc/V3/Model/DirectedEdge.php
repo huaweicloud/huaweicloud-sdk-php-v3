@@ -22,9 +22,9 @@ class DirectedEdge implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
     * regionId  RegionID。
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     * gatewayType  gatewayType
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     * projectId  实例所属项目ID。
     *
     * @var string[]
@@ -42,9 +42,9 @@ class DirectedEdge implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
     * regionId  RegionID。
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     * gatewayType  gatewayType
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     * projectId  实例所属项目ID。
     *
     * @var string[]
@@ -83,9 +83,9 @@ class DirectedEdge implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  实例ID。
     * regionId  RegionID。
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     * gatewayType  gatewayType
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     * projectId  实例所属项目ID。
     *
     * @var string[]
@@ -103,9 +103,9 @@ class DirectedEdge implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
     * regionId  RegionID。
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     * gatewayType  gatewayType
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     * projectId  实例所属项目ID。
     *
     * @var string[]
@@ -123,9 +123,9 @@ class DirectedEdge implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
     * regionId  RegionID。
-    * gatewayId  实例ID。
+    * gatewayId  网关的ID。
     * gatewayType  gatewayType
-    * siteCode  站点编码定义
+    * siteCode  站点编码。
     * projectId  实例所属项目ID。
     *
     * @var string[]
@@ -337,7 +337,7 @@ class DirectedEdge implements ModelInterface, ArrayAccess
 
     /**
     * Gets gatewayId
-    *  实例ID。
+    *  网关的ID。
     *
     * @return string
     */
@@ -349,7 +349,7 @@ class DirectedEdge implements ModelInterface, ArrayAccess
     /**
     * Sets gatewayId
     *
-    * @param string $gatewayId 实例ID。
+    * @param string $gatewayId 网关的ID。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class DirectedEdge implements ModelInterface, ArrayAccess
 
     /**
     * Gets siteCode
-    *  站点编码定义
+    *  站点编码。
     *
     * @return string
     */
@@ -397,7 +397,7 @@ class DirectedEdge implements ModelInterface, ArrayAccess
     /**
     * Sets siteCode
     *
-    * @param string $siteCode 站点编码定义
+    * @param string $siteCode 站点编码。
     *
     * @return $this
     */

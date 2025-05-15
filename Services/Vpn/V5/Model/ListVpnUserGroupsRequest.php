@@ -22,7 +22,7 @@ class ListVpnUserGroupsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * vpnServerId  VPN服务端 ID
     * limit  分页查询时每页返回的记录数量
-    * marker  上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
+    * marker  上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ListVpnUserGroupsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * vpnServerId  VPN服务端 ID
     * limit  分页查询时每页返回的记录数量
-    * marker  上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
+    * marker  上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListVpnUserGroupsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * vpnServerId  VPN服务端 ID
     * limit  分页查询时每页返回的记录数量
-    * marker  上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
+    * marker  上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ListVpnUserGroupsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * vpnServerId  VPN服务端 ID
     * limit  分页查询时每页返回的记录数量
-    * marker  上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
+    * marker  上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListVpnUserGroupsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * vpnServerId  VPN服务端 ID
     * limit  分页查询时每页返回的记录数量
-    * marker  上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
+    * marker  上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class ListVpnUserGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
+    *  上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class ListVpnUserGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker 上一页最后一条记录的id，为空时为查询第一页。使用说明：必须与limit一起使用。
+    * @param string|null $marker 上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @return $this
     */

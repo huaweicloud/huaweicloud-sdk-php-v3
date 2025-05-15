@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model;
+namespace HuaweiCloud\SDK\Cc\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListTopIoTrafficsResponse implements ModelInterface, ArrayAccess
+class ListCloudConnectionCapabilitiesResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,26 +17,30 @@ class ListTopIoTrafficsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListTopIoTrafficsResponse';
+    protected static $openAPIModelName = 'ListCloudConnectionCapabilitiesResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topIoInfos  Top IO列表
+    * requestId  请求ID。
+    * capabilities  租户能力列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'topIoInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\TopIoInfo[]'
+            'requestId' => 'string',
+            'capabilities' => '\HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionCapability[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topIoInfos  Top IO列表
+    * requestId  请求ID。
+    * capabilities  租户能力列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'topIoInfos' => null
+        'requestId' => null,
+        'capabilities' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class ListTopIoTrafficsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topIoInfos  Top IO列表
+    * requestId  请求ID。
+    * capabilities  租户能力列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'topIoInfos' => 'top_io_infos'
+            'requestId' => 'request_id',
+            'capabilities' => 'capabilities'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topIoInfos  Top IO列表
+    * requestId  请求ID。
+    * capabilities  租户能力列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'topIoInfos' => 'setTopIoInfos'
+            'requestId' => 'setRequestId',
+            'capabilities' => 'setCapabilities'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topIoInfos  Top IO列表
+    * requestId  请求ID。
+    * capabilities  租户能力列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'topIoInfos' => 'getTopIoInfos'
+            'requestId' => 'getRequestId',
+            'capabilities' => 'getCapabilities'
     ];
 
     /**
@@ -148,7 +158,8 @@ class ListTopIoTrafficsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['topIoInfos'] = isset($data['topIoInfos']) ? $data['topIoInfos'] : null;
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['capabilities'] = isset($data['capabilities']) ? $data['capabilities'] : null;
     }
 
     /**
@@ -159,6 +170,18 @@ class ListTopIoTrafficsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['requestId'] === null) {
+            $invalidProperties[] = "'requestId' can't be null";
+        }
+            if ((mb_strlen($this->container['requestId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['requestId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 32.";
+            }
+        if ($this->container['capabilities'] === null) {
+            $invalidProperties[] = "'capabilities' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -174,26 +197,50 @@ class ListTopIoTrafficsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets topIoInfos
-    *  Top IO列表
+    * Gets requestId
+    *  请求ID。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\TopIoInfo[]|null
+    * @return string
     */
-    public function getTopIoInfos()
+    public function getRequestId()
     {
-        return $this->container['topIoInfos'];
+        return $this->container['requestId'];
     }
 
     /**
-    * Sets topIoInfos
+    * Sets requestId
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\TopIoInfo[]|null $topIoInfos Top IO列表
+    * @param string $requestId 请求ID。
     *
     * @return $this
     */
-    public function setTopIoInfos($topIoInfos)
+    public function setRequestId($requestId)
     {
-        $this->container['topIoInfos'] = $topIoInfos;
+        $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets capabilities
+    *  租户能力列表。
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionCapability[]
+    */
+    public function getCapabilities()
+    {
+        return $this->container['capabilities'];
+    }
+
+    /**
+    * Sets capabilities
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionCapability[] $capabilities 租户能力列表。
+    *
+    * @return $this
+    */
+    public function setCapabilities($capabilities)
+    {
+        $this->container['capabilities'] = $capabilities;
         return $this;
     }
 

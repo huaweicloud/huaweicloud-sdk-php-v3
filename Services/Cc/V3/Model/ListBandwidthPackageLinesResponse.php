@@ -23,24 +23,28 @@ class ListBandwidthPackageLinesResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * bandwidthPackageLines  带宽包线路列表。
     * requestId  请求ID。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'bandwidthPackageLines' => '\HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackageLine[]',
-            'requestId' => 'string'
+            'requestId' => 'string',
+            'pageInfo' => '\HuaweiCloud\SDK\Cc\V3\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bandwidthPackageLines  带宽包线路列表。
     * requestId  请求ID。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'bandwidthPackageLines' => null,
-        'requestId' => null
+        'requestId' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListBandwidthPackageLinesResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * bandwidthPackageLines  带宽包线路列表。
     * requestId  请求ID。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'bandwidthPackageLines' => 'bandwidth_package_lines',
-            'requestId' => 'request_id'
+            'requestId' => 'request_id',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bandwidthPackageLines  带宽包线路列表。
     * requestId  请求ID。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
             'bandwidthPackageLines' => 'setBandwidthPackageLines',
-            'requestId' => 'setRequestId'
+            'requestId' => 'setRequestId',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bandwidthPackageLines  带宽包线路列表。
     * requestId  请求ID。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
             'bandwidthPackageLines' => 'getBandwidthPackageLines',
-            'requestId' => 'getRequestId'
+            'requestId' => 'getRequestId',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListBandwidthPackageLinesResponse implements ModelInterface, ArrayAccess
     {
         $this->container['bandwidthPackageLines'] = isset($data['bandwidthPackageLines']) ? $data['bandwidthPackageLines'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -235,6 +246,30 @@ class ListBandwidthPackageLinesResponse implements ModelInterface, ArrayAccess
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

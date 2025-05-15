@@ -2805,6 +2805,12 @@ class CcClient extends Client
         if ($localVarParams['capability'] !== null) {
             $queryParams['capability'] = $localVarParams['capability'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -3652,6 +3658,68 @@ class CcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateCloudConnectionResponse',
             $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateCloudConnectionRequest');
+    }
+
+    /**
+     * 查询云连接的能力列表
+     *
+     * 查询云连接的能力列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCloudConnectionCapabilities($request)
+    {
+        return $this->listCloudConnectionCapabilitiesWithHttpInfo($request);
+    }
+
+    public function listCloudConnectionCapabilitiesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/capabilities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $queryParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCloudConnectionCapabilitiesResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCloudConnectionCapabilitiesRequest');
     }
 
     /**
@@ -5684,7 +5752,7 @@ class CcClient extends Client
     /**
      * 查询网络实例列表
      *
-     * 查询云连接列表。
+     * 查询网络实例列表。
      * 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
@@ -6545,6 +6613,12 @@ class CcClient extends Client
         if ($localVarParams['specification'] !== null) {
             $queryParams['specification'] = $localVarParams['specification'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -6642,9 +6716,133 @@ class CcClient extends Client
     }
 
     /**
+     * 查询大区互通类型的带宽包资源规格列表
+     *
+     * 查询大区互通类型的带宽包资源规格列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAreaBandwidthPackageSpecifications($request)
+    {
+        return $this->listAreaBandwidthPackageSpecificationsWithHttpInfo($request);
+    }
+
+    public function listAreaBandwidthPackageSpecificationsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/bandwidth-packages/area-specifications';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['localAreaId'] !== null) {
+            $queryParams['local_area_id'] = $localVarParams['localAreaId'];
+        }
+        if ($localVarParams['remoteAreaId'] !== null) {
+            $queryParams['remote_area_id'] = $localVarParams['remoteAreaId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListAreaBandwidthPackageSpecificationsResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListAreaBandwidthPackageSpecificationsRequest');
+    }
+
+    /**
+     * 查询当前支持的Area列表
+     *
+     * 查询当前支持的大区列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAreas($request)
+    {
+        return $this->listAreasWithHttpInfo($request);
+    }
+
+    public function listAreasWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/areas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListAreasResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListAreasRequest');
+    }
+
+    /**
      * 查询带宽包等级列表
      *
-     * 查询带宽包等级列表
+     * 查询带宽包等级列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6671,6 +6869,12 @@ class CcClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
         }
         if ($localVarParams['level'] !== null) {
             $queryParams['level'] = $localVarParams['level'];
@@ -6709,7 +6913,7 @@ class CcClient extends Client
     /**
      * 查询带宽包线路列表
      *
-     * 查询带宽包线路列表
+     * 查询带宽包线路列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6736,6 +6940,12 @@ class CcClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
         }
         if ($localVarParams['level'] !== null) {
             $queryParams['level'] = $localVarParams['level'];
@@ -6774,7 +6984,7 @@ class CcClient extends Client
     /**
      * 查询带宽包站点列表
      *
-     * 查询带宽包站点列表
+     * 查询带宽包站点列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6801,6 +7011,12 @@ class CcClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
         }
         if ($localVarParams['siteCode'] !== null) {
             $queryParams['site_code'] = $localVarParams['siteCode'];
@@ -6837,6 +7053,130 @@ class CcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackageSitesResponse',
             $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackageSitesRequest');
+    }
+
+    /**
+     * 查询区域互通类型的带宽包规格列表
+     *
+     * 查询区域互通类型的带宽包规格列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRegionBandwidthPackageSpecifications($request)
+    {
+        return $this->listRegionBandwidthPackageSpecificationsWithHttpInfo($request);
+    }
+
+    public function listRegionBandwidthPackageSpecificationsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/bandwidth-packages/region-specifications';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['localRegionId'] !== null) {
+            $queryParams['local_region_id'] = $localVarParams['localRegionId'];
+        }
+        if ($localVarParams['remoteRegionId'] !== null) {
+            $queryParams['remote_region_id'] = $localVarParams['remoteRegionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListRegionBandwidthPackageSpecificationsResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListRegionBandwidthPackageSpecificationsRequest');
+    }
+
+    /**
+     * 查询当前支持的Region列表
+     *
+     * 查询当前支持的Region列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRegions($request)
+    {
+        return $this->listRegionsWithHttpInfo($request);
+    }
+
+    public function listRegionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/regions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListRegionsResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListRegionsRequest');
     }
 
     protected function callApi(

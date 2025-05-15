@@ -20,7 +20,7 @@ class IsFrozen implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class IsFrozen implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class IsFrozen implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class IsFrozen implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class IsFrozen implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isFrozen  是否冻结
+    * isFrozen  是否冻结。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class IsFrozen implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFrozen
-    *  是否冻结
+    *  是否冻结。
     *
     * @return bool
     */
@@ -189,7 +189,7 @@ class IsFrozen implements ModelInterface, ArrayAccess
     /**
     * Sets isFrozen
     *
-    * @param bool $isFrozen 是否冻结
+    * @param bool $isFrozen 是否冻结。
     *
     * @return $this
     */

@@ -28,7 +28,7 @@ class QueryMetricDataParam implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'metrics' => '\HuaweiCloud\SDK\Aom\V2\Model\MetricQueryMeritcParam[]',
+            'metrics' => '\HuaweiCloud\SDK\Aom\V2\Model\MetricQueryMetricParam[]',
             'period' => 'int',
             'statistics' => 'string[]',
             'timerange' => 'string'
@@ -221,7 +221,7 @@ class QueryMetricDataParam implements ModelInterface, ArrayAccess
     * Gets metrics
     *  指标对象列表。 取值范围 JSON数组大小不超过20
     *
-    * @return \HuaweiCloud\SDK\Aom\V2\Model\MetricQueryMeritcParam[]
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\MetricQueryMetricParam[]
     */
     public function getMetrics()
     {
@@ -231,7 +231,7 @@ class QueryMetricDataParam implements ModelInterface, ArrayAccess
     /**
     * Sets metrics
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\MetricQueryMeritcParam[] $metrics 指标对象列表。 取值范围 JSON数组大小不超过20
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\MetricQueryMetricParam[] $metrics 指标对象列表。 取值范围 JSON数组大小不超过20
     *
     * @return $this
     */

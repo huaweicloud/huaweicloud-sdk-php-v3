@@ -20,7 +20,7 @@ class DirectedEdgePair implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * edgePair  分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    * edgePair  分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DirectedEdgePair implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * edgePair  分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    * edgePair  分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DirectedEdgePair implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * edgePair  分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    * edgePair  分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DirectedEdgePair implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * edgePair  分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    * edgePair  分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DirectedEdgePair implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * edgePair  分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    * edgePair  分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DirectedEdgePair implements ModelInterface, ArrayAccess
 
     /**
     * Gets edgePair
-    *  分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    *  分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @return \HuaweiCloud\SDK\Cc\V3\Model\DirectedEdge[]
     */
@@ -189,7 +189,7 @@ class DirectedEdgePair implements ModelInterface, ArrayAccess
     /**
     * Sets edgePair
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\DirectedEdge[] $edgePair 分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\DirectedEdge[] $edgePair 分支网络连接的两个端点定义，长度固定为2的数组。
     *
     * @return $this
     */

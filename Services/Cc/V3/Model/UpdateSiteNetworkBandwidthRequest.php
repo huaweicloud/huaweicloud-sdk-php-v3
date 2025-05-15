@@ -29,7 +29,7 @@ class UpdateSiteNetworkBandwidthRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'siteNetworkId' => 'string',
             'siteConnectionId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Cc\V3\Model\AssociateSiteConnectionBandwidthRequestBody'
+            'body' => '\HuaweiCloud\SDK\Cc\V3\Model\UpdateSiteConnectionBandwidthRequestBody'
     ];
 
     /**
@@ -270,7 +270,7 @@ class UpdateSiteNetworkBandwidthRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\AssociateSiteConnectionBandwidthRequestBody|null
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\UpdateSiteConnectionBandwidthRequestBody|null
     */
     public function getBody()
     {
@@ -280,7 +280,7 @@ class UpdateSiteNetworkBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\AssociateSiteConnectionBandwidthRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\UpdateSiteConnectionBandwidthRequestBody|null $body body
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
@@ -36,7 +36,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
@@ -73,7 +73,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
@@ -89,7 +89,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
@@ -105,7 +105,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  实例名字。
+    * name  实例名称。
     * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
@@ -254,7 +254,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名字。
+    *  实例名称。
     *
     * @return string|null
     */
@@ -266,7 +266,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例名字。
+    * @param string|null $name 实例名称。
     *
     * @return $this
     */

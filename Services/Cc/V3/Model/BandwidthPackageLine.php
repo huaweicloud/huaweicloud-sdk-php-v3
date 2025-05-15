@@ -22,10 +22,10 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * localRegionId  RegionID。
     * remoteRegionId  RegionID。
-    * localSiteCode  站点编码
-    * remoteSiteCode  站点编码
-    * supportLevels  支持的等级列表
-    * specCodes  产品编码列表
+    * localSiteCode  站点编码。
+    * remoteSiteCode  站点编码。
+    * supportLevels  支持的等级列表。
+    * specCodes  产品编码列表。
     *
     * @var string[]
     */
@@ -42,10 +42,10 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * localRegionId  RegionID。
     * remoteRegionId  RegionID。
-    * localSiteCode  站点编码
-    * remoteSiteCode  站点编码
-    * supportLevels  支持的等级列表
-    * specCodes  产品编码列表
+    * localSiteCode  站点编码。
+    * remoteSiteCode  站点编码。
+    * supportLevels  支持的等级列表。
+    * specCodes  产品编码列表。
     *
     * @var string[]
     */
@@ -83,10 +83,10 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
     * and the value is the original name
     * localRegionId  RegionID。
     * remoteRegionId  RegionID。
-    * localSiteCode  站点编码
-    * remoteSiteCode  站点编码
-    * supportLevels  支持的等级列表
-    * specCodes  产品编码列表
+    * localSiteCode  站点编码。
+    * remoteSiteCode  站点编码。
+    * supportLevels  支持的等级列表。
+    * specCodes  产品编码列表。
     *
     * @var string[]
     */
@@ -103,10 +103,10 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * localRegionId  RegionID。
     * remoteRegionId  RegionID。
-    * localSiteCode  站点编码
-    * remoteSiteCode  站点编码
-    * supportLevels  支持的等级列表
-    * specCodes  产品编码列表
+    * localSiteCode  站点编码。
+    * remoteSiteCode  站点编码。
+    * supportLevels  支持的等级列表。
+    * specCodes  产品编码列表。
     *
     * @var string[]
     */
@@ -123,10 +123,10 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * localRegionId  RegionID。
     * remoteRegionId  RegionID。
-    * localSiteCode  站点编码
-    * remoteSiteCode  站点编码
-    * supportLevels  支持的等级列表
-    * specCodes  产品编码列表
+    * localSiteCode  站点编码。
+    * remoteSiteCode  站点编码。
+    * supportLevels  支持的等级列表。
+    * specCodes  产品编码列表。
     *
     * @var string[]
     */
@@ -301,7 +301,7 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
 
     /**
     * Gets localSiteCode
-    *  站点编码
+    *  站点编码。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
     /**
     * Sets localSiteCode
     *
-    * @param string|null $localSiteCode 站点编码
+    * @param string|null $localSiteCode 站点编码。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteSiteCode
-    *  站点编码
+    *  站点编码。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
     /**
     * Sets remoteSiteCode
     *
-    * @param string|null $remoteSiteCode 站点编码
+    * @param string|null $remoteSiteCode 站点编码。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportLevels
-    *  支持的等级列表
+    *  支持的等级列表。
     *
     * @return string[]|null
     */
@@ -361,7 +361,7 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
     /**
     * Sets supportLevels
     *
-    * @param string[]|null $supportLevels 支持的等级列表
+    * @param string[]|null $supportLevels 支持的等级列表。
     *
     * @return $this
     */
@@ -373,7 +373,7 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
 
     /**
     * Gets specCodes
-    *  产品编码列表
+    *  产品编码列表。
     *
     * @return \HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackageLineSpecCode[]|null
     */
@@ -385,7 +385,7 @@ class BandwidthPackageLine implements ModelInterface, ArrayAccess
     /**
     * Sets specCodes
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackageLineSpecCode[]|null $specCodes 产品编码列表
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackageLineSpecCode[]|null $specCodes 产品编码列表。
     *
     * @return $this
     */

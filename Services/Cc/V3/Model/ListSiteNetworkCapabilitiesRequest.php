@@ -21,21 +21,29 @@ class ListSiteNetworkCapabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * specification  根据分支网络租户能力名查询，可查询多个类型。
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'specification' => '\HuaweiCloud\SDK\Cc\V3\Model\SiteNetworkSpecificationEnum[]'
+            'specification' => '\HuaweiCloud\SDK\Cc\V3\Model\SiteNetworkSpecificationEnum[]',
+            'limit' => 'int',
+            'marker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * specification  根据分支网络租户能力名查询，可查询多个类型。
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'specification' => null
+        'specification' => null,
+        'limit' => 'int32',
+        'marker' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class ListSiteNetworkCapabilitiesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * specification  根据分支网络租户能力名查询，可查询多个类型。
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'specification' => 'specification'
+            'specification' => 'specification',
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * specification  根据分支网络租户能力名查询，可查询多个类型。
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     *
     * @var string[]
     */
     protected static $setters = [
-            'specification' => 'setSpecification'
+            'specification' => 'setSpecification',
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * specification  根据分支网络租户能力名查询，可查询多个类型。
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
     *
     * @var string[]
     */
     protected static $getters = [
-            'specification' => 'getSpecification'
+            'specification' => 'getSpecification',
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ListSiteNetworkCapabilitiesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['specification'] = isset($data['specification']) ? $data['specification'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -158,6 +180,18 @@ class ListSiteNetworkCapabilitiesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 4096.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 1)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -193,6 +227,54 @@ class ListSiteNetworkCapabilitiesRequest implements ModelInterface, ArrayAccess
     public function setSpecification($specification)
     {
         $this->container['specification'] = $specification;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页返回的个数。 取值范围：1~1000。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页返回的个数。 取值范围：1~1000。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向后翻页。 翻页过程中，查询条件不能修改，包括过滤条件、排序条件、limit。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 
