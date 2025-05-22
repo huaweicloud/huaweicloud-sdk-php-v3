@@ -20,9 +20,9 @@ class UpdateLogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  更新逻辑集群增删行动ID
-    * type  更新逻辑集群增删计划行动类型，取值范围为(create|delete)
-    * strategy  更新逻辑集群增删计划行为Cron策略表达式
+    * id  **参数解释**： 逻辑集群增删行动ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 更新逻辑集群增删计划行动类型。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
+    * strategy  **参数解释**： 更新逻辑集群增删计划行为Cron策略表达式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class UpdateLogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  更新逻辑集群增删行动ID
-    * type  更新逻辑集群增删计划行动类型，取值范围为(create|delete)
-    * strategy  更新逻辑集群增删计划行为Cron策略表达式
+    * id  **参数解释**： 逻辑集群增删行动ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 更新逻辑集群增删计划行动类型。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
+    * strategy  **参数解释**： 更新逻辑集群增删计划行为Cron策略表达式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class UpdateLogicalClusterPlanActions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  更新逻辑集群增删行动ID
-    * type  更新逻辑集群增删计划行动类型，取值范围为(create|delete)
-    * strategy  更新逻辑集群增删计划行为Cron策略表达式
+    * id  **参数解释**： 逻辑集群增删行动ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 更新逻辑集群增删计划行动类型。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
+    * strategy  **参数解释**： 更新逻辑集群增删计划行为Cron策略表达式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class UpdateLogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  更新逻辑集群增删行动ID
-    * type  更新逻辑集群增删计划行动类型，取值范围为(create|delete)
-    * strategy  更新逻辑集群增删计划行为Cron策略表达式
+    * id  **参数解释**： 逻辑集群增删行动ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 更新逻辑集群增删计划行动类型。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
+    * strategy  **参数解释**： 更新逻辑集群增删计划行为Cron策略表达式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class UpdateLogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  更新逻辑集群增删行动ID
-    * type  更新逻辑集群增删计划行动类型，取值范围为(create|delete)
-    * strategy  更新逻辑集群增删计划行为Cron策略表达式
+    * id  **参数解释**： 逻辑集群增删行动ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 更新逻辑集群增删计划行动类型。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
+    * strategy  **参数解释**： 更新逻辑集群增删计划行为Cron策略表达式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class UpdateLogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  更新逻辑集群增删行动ID
+    *  **参数解释**： 逻辑集群增删行动ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class UpdateLogicalClusterPlanActions implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 更新逻辑集群增删行动ID
+    * @param string|null $id **参数解释**： 逻辑集群增删行动ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class UpdateLogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  更新逻辑集群增删计划行动类型，取值范围为(create|delete)
+    *  **参数解释**： 更新逻辑集群增删计划行动类型。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class UpdateLogicalClusterPlanActions implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 更新逻辑集群增删计划行动类型，取值范围为(create|delete)
+    * @param string|null $type **参数解释**： 更新逻辑集群增删计划行动类型。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class UpdateLogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Gets strategy
-    *  更新逻辑集群增删计划行为Cron策略表达式
+    *  **参数解释**： 更新逻辑集群增删计划行为Cron策略表达式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class UpdateLogicalClusterPlanActions implements ModelInterface, ArrayAccess
     /**
     * Sets strategy
     *
-    * @param string|null $strategy 更新逻辑集群增删计划行为Cron策略表达式
+    * @param string|null $strategy **参数解释**： 更新逻辑集群增删计划行为Cron策略表达式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

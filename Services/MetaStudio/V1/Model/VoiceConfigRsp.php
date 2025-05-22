@@ -25,7 +25,7 @@ class VoiceConfigRsp implements ModelInterface, ArrayAccess
     * pitch  音高。默认值100，最小值50，最大值200。
     * volume  音量。默认值140，最小值90，最大值240。
     * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * language  语言类型。默认值CN。 * CN：简体中文。 * EN：英语。
+    * language  语言类型。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * languageDesc  语言描述
     *
     * @var string[]
@@ -47,7 +47,7 @@ class VoiceConfigRsp implements ModelInterface, ArrayAccess
     * pitch  音高。默认值100，最小值50，最大值200。
     * volume  音量。默认值140，最小值90，最大值240。
     * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * language  语言类型。默认值CN。 * CN：简体中文。 * EN：英语。
+    * language  语言类型。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * languageDesc  语言描述
     *
     * @var string[]
@@ -90,7 +90,7 @@ class VoiceConfigRsp implements ModelInterface, ArrayAccess
     * pitch  音高。默认值100，最小值50，最大值200。
     * volume  音量。默认值140，最小值90，最大值240。
     * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * language  语言类型。默认值CN。 * CN：简体中文。 * EN：英语。
+    * language  语言类型。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * languageDesc  语言描述
     *
     * @var string[]
@@ -112,7 +112,7 @@ class VoiceConfigRsp implements ModelInterface, ArrayAccess
     * pitch  音高。默认值100，最小值50，最大值200。
     * volume  音量。默认值140，最小值90，最大值240。
     * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * language  语言类型。默认值CN。 * CN：简体中文。 * EN：英语。
+    * language  语言类型。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * languageDesc  语言描述
     *
     * @var string[]
@@ -134,7 +134,7 @@ class VoiceConfigRsp implements ModelInterface, ArrayAccess
     * pitch  音高。默认值100，最小值50，最大值200。
     * volume  音量。默认值140，最小值90，最大值240。
     * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * language  语言类型。默认值CN。 * CN：简体中文。 * EN：英语。
+    * language  语言类型。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * languageDesc  语言描述
     *
     * @var string[]
@@ -191,6 +191,10 @@ class VoiceConfigRsp implements ModelInterface, ArrayAccess
     }
     const LANGUAGE_CN = 'CN';
     const LANGUAGE_EN = 'EN';
+    const LANGUAGE_ESP = 'ESP';
+    const LANGUAGE_POR = 'por';
+    const LANGUAGE_ARABIC = 'Arabic';
+    const LANGUAGE_THAI = 'Thai';
     
 
     /**
@@ -203,6 +207,10 @@ class VoiceConfigRsp implements ModelInterface, ArrayAccess
         return [
             self::LANGUAGE_CN,
             self::LANGUAGE_EN,
+            self::LANGUAGE_ESP,
+            self::LANGUAGE_POR,
+            self::LANGUAGE_ARABIC,
+            self::LANGUAGE_THAI,
         ];
     }
 
@@ -419,7 +427,7 @@ class VoiceConfigRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  语言类型。默认值CN。 * CN：简体中文。 * EN：英语。
+    *  语言类型。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     *
     * @return string|null
     */
@@ -431,7 +439,7 @@ class VoiceConfigRsp implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 语言类型。默认值CN。 * CN：简体中文。 * EN：英语。
+    * @param string|null $language 语言类型。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     *
     * @return $this
     */

@@ -25,6 +25,10 @@ class RenameCommandResp implements ModelInterface, ArrayAccess
     * flushdb  命令flushdb
     * hgetall  命令hgetall
     * keys  命令keys
+    * hscan  命令hscan
+    * scan  命令scan
+    * sscan  命令sscan
+    * zscan  命令zscan
     *
     * @var string[]
     */
@@ -33,7 +37,11 @@ class RenameCommandResp implements ModelInterface, ArrayAccess
             'flushall' => 'string',
             'flushdb' => 'string',
             'hgetall' => 'string',
-            'keys' => 'string'
+            'keys' => 'string',
+            'hscan' => 'string',
+            'scan' => 'string',
+            'sscan' => 'string',
+            'zscan' => 'string'
     ];
 
     /**
@@ -43,6 +51,10 @@ class RenameCommandResp implements ModelInterface, ArrayAccess
     * flushdb  命令flushdb
     * hgetall  命令hgetall
     * keys  命令keys
+    * hscan  命令hscan
+    * scan  命令scan
+    * sscan  命令sscan
+    * zscan  命令zscan
     *
     * @var string[]
     */
@@ -51,7 +63,11 @@ class RenameCommandResp implements ModelInterface, ArrayAccess
         'flushall' => null,
         'flushdb' => null,
         'hgetall' => null,
-        'keys' => null
+        'keys' => null,
+        'hscan' => null,
+        'scan' => null,
+        'sscan' => null,
+        'zscan' => null
     ];
 
     /**
@@ -82,6 +98,10 @@ class RenameCommandResp implements ModelInterface, ArrayAccess
     * flushdb  命令flushdb
     * hgetall  命令hgetall
     * keys  命令keys
+    * hscan  命令hscan
+    * scan  命令scan
+    * sscan  命令sscan
+    * zscan  命令zscan
     *
     * @var string[]
     */
@@ -90,7 +110,11 @@ class RenameCommandResp implements ModelInterface, ArrayAccess
             'flushall' => 'flushall',
             'flushdb' => 'flushdb',
             'hgetall' => 'hgetall',
-            'keys' => 'keys'
+            'keys' => 'keys',
+            'hscan' => 'hscan',
+            'scan' => 'scan',
+            'sscan' => 'sscan',
+            'zscan' => 'zscan'
     ];
 
     /**
@@ -100,6 +124,10 @@ class RenameCommandResp implements ModelInterface, ArrayAccess
     * flushdb  命令flushdb
     * hgetall  命令hgetall
     * keys  命令keys
+    * hscan  命令hscan
+    * scan  命令scan
+    * sscan  命令sscan
+    * zscan  命令zscan
     *
     * @var string[]
     */
@@ -108,7 +136,11 @@ class RenameCommandResp implements ModelInterface, ArrayAccess
             'flushall' => 'setFlushall',
             'flushdb' => 'setFlushdb',
             'hgetall' => 'setHgetall',
-            'keys' => 'setKeys'
+            'keys' => 'setKeys',
+            'hscan' => 'setHscan',
+            'scan' => 'setScan',
+            'sscan' => 'setSscan',
+            'zscan' => 'setZscan'
     ];
 
     /**
@@ -118,6 +150,10 @@ class RenameCommandResp implements ModelInterface, ArrayAccess
     * flushdb  命令flushdb
     * hgetall  命令hgetall
     * keys  命令keys
+    * hscan  命令hscan
+    * scan  命令scan
+    * sscan  命令sscan
+    * zscan  命令zscan
     *
     * @var string[]
     */
@@ -126,7 +162,11 @@ class RenameCommandResp implements ModelInterface, ArrayAccess
             'flushall' => 'getFlushall',
             'flushdb' => 'getFlushdb',
             'hgetall' => 'getHgetall',
-            'keys' => 'getKeys'
+            'keys' => 'getKeys',
+            'hscan' => 'getHscan',
+            'scan' => 'getScan',
+            'sscan' => 'getSscan',
+            'zscan' => 'getZscan'
     ];
 
     /**
@@ -192,6 +232,10 @@ class RenameCommandResp implements ModelInterface, ArrayAccess
         $this->container['flushdb'] = isset($data['flushdb']) ? $data['flushdb'] : null;
         $this->container['hgetall'] = isset($data['hgetall']) ? $data['hgetall'] : null;
         $this->container['keys'] = isset($data['keys']) ? $data['keys'] : null;
+        $this->container['hscan'] = isset($data['hscan']) ? $data['hscan'] : null;
+        $this->container['scan'] = isset($data['scan']) ? $data['scan'] : null;
+        $this->container['sscan'] = isset($data['sscan']) ? $data['sscan'] : null;
+        $this->container['zscan'] = isset($data['zscan']) ? $data['zscan'] : null;
     }
 
     /**
@@ -333,6 +377,102 @@ class RenameCommandResp implements ModelInterface, ArrayAccess
     public function setKeys($keys)
     {
         $this->container['keys'] = $keys;
+        return $this;
+    }
+
+    /**
+    * Gets hscan
+    *  命令hscan
+    *
+    * @return string|null
+    */
+    public function getHscan()
+    {
+        return $this->container['hscan'];
+    }
+
+    /**
+    * Sets hscan
+    *
+    * @param string|null $hscan 命令hscan
+    *
+    * @return $this
+    */
+    public function setHscan($hscan)
+    {
+        $this->container['hscan'] = $hscan;
+        return $this;
+    }
+
+    /**
+    * Gets scan
+    *  命令scan
+    *
+    * @return string|null
+    */
+    public function getScan()
+    {
+        return $this->container['scan'];
+    }
+
+    /**
+    * Sets scan
+    *
+    * @param string|null $scan 命令scan
+    *
+    * @return $this
+    */
+    public function setScan($scan)
+    {
+        $this->container['scan'] = $scan;
+        return $this;
+    }
+
+    /**
+    * Gets sscan
+    *  命令sscan
+    *
+    * @return string|null
+    */
+    public function getSscan()
+    {
+        return $this->container['sscan'];
+    }
+
+    /**
+    * Sets sscan
+    *
+    * @param string|null $sscan 命令sscan
+    *
+    * @return $this
+    */
+    public function setSscan($sscan)
+    {
+        $this->container['sscan'] = $sscan;
+        return $this;
+    }
+
+    /**
+    * Gets zscan
+    *  命令zscan
+    *
+    * @return string|null
+    */
+    public function getZscan()
+    {
+        return $this->container['zscan'];
+    }
+
+    /**
+    * Sets zscan
+    *
+    * @param string|null $zscan 命令zscan
+    *
+    * @return $this
+    */
+    public function setZscan($zscan)
+    {
+        $this->container['zscan'] = $zscan;
         return $this;
     }
 

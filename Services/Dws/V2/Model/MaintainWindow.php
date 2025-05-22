@@ -20,9 +20,9 @@ class MaintainWindow implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * day  每周的维护时间，以天为粒度，取值如下：  - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
-    * startTime  维护开始时间，显示格式为 HH：mm，时区为GMT+0。
-    * endTime  维护结束时间，显示格式为 HH：mm, 时区为GMT+0。
+    * day  **参数解释**： 每周的维护时间，以天为粒度。 **取值范围**： - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
+    * startTime  **参数解释**： 维护开始时间，显示格式为 HH：mm，时区为GMT+0。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 维护结束时间，显示格式为 HH：mm, 时区为GMT+0。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class MaintainWindow implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * day  每周的维护时间，以天为粒度，取值如下：  - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
-    * startTime  维护开始时间，显示格式为 HH：mm，时区为GMT+0。
-    * endTime  维护结束时间，显示格式为 HH：mm, 时区为GMT+0。
+    * day  **参数解释**： 每周的维护时间，以天为粒度。 **取值范围**： - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
+    * startTime  **参数解释**： 维护开始时间，显示格式为 HH：mm，时区为GMT+0。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 维护结束时间，显示格式为 HH：mm, 时区为GMT+0。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class MaintainWindow implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * day  每周的维护时间，以天为粒度，取值如下：  - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
-    * startTime  维护开始时间，显示格式为 HH：mm，时区为GMT+0。
-    * endTime  维护结束时间，显示格式为 HH：mm, 时区为GMT+0。
+    * day  **参数解释**： 每周的维护时间，以天为粒度。 **取值范围**： - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
+    * startTime  **参数解释**： 维护开始时间，显示格式为 HH：mm，时区为GMT+0。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 维护结束时间，显示格式为 HH：mm, 时区为GMT+0。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class MaintainWindow implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * day  每周的维护时间，以天为粒度，取值如下：  - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
-    * startTime  维护开始时间，显示格式为 HH：mm，时区为GMT+0。
-    * endTime  维护结束时间，显示格式为 HH：mm, 时区为GMT+0。
+    * day  **参数解释**： 每周的维护时间，以天为粒度。 **取值范围**： - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
+    * startTime  **参数解释**： 维护开始时间，显示格式为 HH：mm，时区为GMT+0。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 维护结束时间，显示格式为 HH：mm, 时区为GMT+0。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class MaintainWindow implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * day  每周的维护时间，以天为粒度，取值如下：  - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
-    * startTime  维护开始时间，显示格式为 HH：mm，时区为GMT+0。
-    * endTime  维护结束时间，显示格式为 HH：mm, 时区为GMT+0。
+    * day  **参数解释**： 每周的维护时间，以天为粒度。 **取值范围**： - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
+    * startTime  **参数解释**： 维护开始时间，显示格式为 HH：mm，时区为GMT+0。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 维护结束时间，显示格式为 HH：mm, 时区为GMT+0。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class MaintainWindow implements ModelInterface, ArrayAccess
 
     /**
     * Gets day
-    *  每周的维护时间，以天为粒度，取值如下：  - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
+    *  **参数解释**： 每周的维护时间，以天为粒度。 **取值范围**： - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class MaintainWindow implements ModelInterface, ArrayAccess
     /**
     * Sets day
     *
-    * @param string|null $day 每周的维护时间，以天为粒度，取值如下：  - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
+    * @param string|null $day **参数解释**： 每周的维护时间，以天为粒度。 **取值范围**： - Mon：星期一 - Tue：星期二 - Wed：星期三 - Thu：星期四 - Fri：星期五 - Sat：星期六 - Sun：星期日
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class MaintainWindow implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  维护开始时间，显示格式为 HH：mm，时区为GMT+0。
+    *  **参数解释**： 维护开始时间，显示格式为 HH：mm，时区为GMT+0。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class MaintainWindow implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 维护开始时间，显示格式为 HH：mm，时区为GMT+0。
+    * @param string|null $startTime **参数解释**： 维护开始时间，显示格式为 HH：mm，时区为GMT+0。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class MaintainWindow implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  维护结束时间，显示格式为 HH：mm, 时区为GMT+0。
+    *  **参数解释**： 维护结束时间，显示格式为 HH：mm, 时区为GMT+0。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class MaintainWindow implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 维护结束时间，显示格式为 HH：mm, 时区为GMT+0。
+    * @param string|null $endTime **参数解释**： 维护结束时间，显示格式为 HH：mm, 时区为GMT+0。 **取值范围**： 不涉及。
     *
     * @return $this
     */

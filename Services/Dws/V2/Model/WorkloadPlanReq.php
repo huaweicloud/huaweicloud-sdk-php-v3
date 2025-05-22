@@ -20,8 +20,8 @@ class WorkloadPlanReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * planName  计划名称
-    * logicalClusterName  逻辑集群名称
+    * planName  **参数解释**： 计划名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class WorkloadPlanReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * planName  计划名称
-    * logicalClusterName  逻辑集群名称
+    * planName  **参数解释**： 计划名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class WorkloadPlanReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * planName  计划名称
-    * logicalClusterName  逻辑集群名称
+    * planName  **参数解释**： 计划名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class WorkloadPlanReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * planName  计划名称
-    * logicalClusterName  逻辑集群名称
+    * planName  **参数解释**： 计划名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class WorkloadPlanReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * planName  计划名称
-    * logicalClusterName  逻辑集群名称
+    * planName  **参数解释**： 计划名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class WorkloadPlanReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets planName
-    *  计划名称
+    *  **参数解释**： 计划名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class WorkloadPlanReq implements ModelInterface, ArrayAccess
     /**
     * Sets planName
     *
-    * @param string $planName 计划名称
+    * @param string $planName **参数解释**： 计划名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class WorkloadPlanReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterName
-    *  逻辑集群名称
+    *  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -224,7 +224,7 @@ class WorkloadPlanReq implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterName
     *
-    * @param string|null $logicalClusterName 逻辑集群名称
+    * @param string|null $logicalClusterName **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

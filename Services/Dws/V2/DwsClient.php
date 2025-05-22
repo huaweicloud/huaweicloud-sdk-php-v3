@@ -97,7 +97,7 @@ class DwsClient extends Client
     /**
      * 设置跨区域备份配置
      *
-     * 该接口用于设置跨区域备份配置
+     * 该接口用于设置跨区域备份配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -227,7 +227,7 @@ class DwsClient extends Client
     /**
      * 添加工作负载队列
      *
-     * 添加工作负载队列
+     * 添加工作负载队列。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -263,11 +263,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -290,9 +290,71 @@ class DwsClient extends Client
     }
 
     /**
+     * 添加异常规则
+     *
+     * 添加异常规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addWorkloadRule($request)
+    {
+        return $this->addWorkloadRuleWithHttpInfo($request);
+    }
+
+    public function addWorkloadRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/workload/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\AddWorkloadRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\AddWorkloadRuleRequest');
+    }
+
+    /**
      * 集群绑定EIP
      *
-     * 集群绑定Eip
+     * 集群绑定Eip。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -357,7 +419,7 @@ class DwsClient extends Client
     /**
      * 集群绑定ELB
      *
-     * 集群绑定Elb接口
+     * 集群绑定Elb接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -688,8 +750,7 @@ class DwsClient extends Client
     /**
      * 解除只读
      *
-     * 当集群进入只读状态时，无法进行数据库相关操作，用户可以在管理控制台解除集群的只读状态。触发只读状态可能是由于磁盘使用率过高，因此需要对集群数据进行清理或扩容。
-     * - 解除只读支持1.7.2及以上版本。
+     * 当集群进入只读状态时，无法进行数据库相关操作，用户可以在管理控制台解除集群的只读状态。触发只读状态可能是由于磁盘使用率过高，因此需要对集群数据进行清理或扩容。 - 解除只读支持1.7.2及以上版本。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -751,7 +812,7 @@ class DwsClient extends Client
     /**
      * 修改集群安全组
      *
-     * 该接口用于修改集群安全组
+     * 该接口用于修改集群安全组。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -816,7 +877,7 @@ class DwsClient extends Client
     /**
      * 创建集群前检查
      *
-     * 创建集群前预检查
+     * 创建集群前预检查，提前识别子网不足、配额不足等问题，避免发起创建集群请求后创建失败。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -873,6 +934,74 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\CheckClusterResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\CheckClusterRequest');
+    }
+
+    /**
+     * 集群缩容前检查
+     *
+     * 缩容前检查，确保缩容前、缩容后均满足正常操作要求。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkClusterShrink($request)
+    {
+        return $this->checkClusterShrinkWithHttpInfo($request);
+    }
+
+    public function checkClusterShrinkWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/shrink-check';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['checkItem'] !== null) {
+            $queryParams['check_item'] = $localVarParams['checkItem'];
+        }
+        if ($localVarParams['shrinkCount'] !== null) {
+            $queryParams['shrink_count'] = $localVarParams['shrinkCount'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\CheckClusterShrinkResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\CheckClusterShrinkRequest');
     }
 
     /**
@@ -947,9 +1076,74 @@ class DwsClient extends Client
     }
 
     /**
+     * 集群扩容前检查
+     *
+     * 此接口用于集群扩容前检查，提前识别子网不足、权限不足等问题导致的扩容失败。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkGrowCluster($request)
+    {
+        return $this->checkGrowClusterWithHttpInfo($request);
+    }
+
+    public function checkGrowClusterWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/grow-check';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\CheckGrowClusterResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\CheckGrowClusterRequest');
+    }
+
+    /**
      * 用户恢复表名检测
      *
-     * 该接口用于用户恢复表名检测
+     * 该接口用于用户恢复表名检测。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1014,7 +1208,7 @@ class DwsClient extends Client
     /**
      * 物理集群转换到逻辑集群
      *
-     * 逻辑集群-物理集群转换到逻辑集群
+     * 物理集群转换到逻辑集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1115,11 +1309,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1144,7 +1338,7 @@ class DwsClient extends Client
     /**
      * 创建告警订阅
      *
-     * 创建告警订阅
+     * 创建告警订阅。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1241,11 +1435,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1333,7 +1527,7 @@ class DwsClient extends Client
     }
 
     /**
-     * V2创建集群
+     * 创建集群V2
      *
      * 该接口用于创建集群。
      * 集群必须要运行在VPC之内，创建集群前，您需要先创建VPC，并获取VPC和子网的id。
@@ -1370,11 +1564,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1397,9 +1591,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 设置资源管理
+     * 打开或关闭资源管理功能
      *
-     * 设置资源管理。
+     * 打开或关闭资源管理功能，新集群默认是打开状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1435,11 +1629,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1500,11 +1694,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1524,6 +1718,71 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\CreateDataSourceResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\CreateDataSourceRequest');
+    }
+
+    /**
+     * 创建数据库用户/角色
+     *
+     * 创建数据库用户/角色。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDatabaseUser($request)
+    {
+        return $this->createDatabaseUserWithHttpInfo($request);
+    }
+
+    public function createDatabaseUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\CreateDatabaseUserResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\CreateDatabaseUserRequest');
     }
 
     /**
@@ -1593,7 +1852,7 @@ class DwsClient extends Client
     /**
      * 创建订阅事件
      *
-     * 添加订阅的事件
+     * 添加订阅的事件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1655,7 +1914,7 @@ class DwsClient extends Client
     /**
      * 创建逻辑集群
      *
-     * 逻辑集群-创建逻辑集群
+     * 创建逻辑集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1818,11 +2077,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1912,7 +2171,7 @@ class DwsClient extends Client
     /**
      * 添加工作负载计划
      *
-     * 添加工作负载计划
+     * 添加工作负载计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1948,11 +2207,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1977,7 +2236,7 @@ class DwsClient extends Client
     /**
      * 删除告警订阅
      *
-     * 删除订阅的告警
+     * 删除订阅的告警。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2167,9 +2426,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 删除节点
+     * 删除空闲节点
      *
-     * 此接口用于删除节点。
+     * 此接口用于删除空闲节点。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2294,6 +2553,74 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\DeleteDataSourceResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\DeleteDataSourceRequest');
+    }
+
+    /**
+     * 删除数据库用户
+     *
+     * 删除数据库用户。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDatabaseUser($request)
+    {
+        return $this->deleteDatabaseUserWithHttpInfo($request);
+    }
+
+    public function deleteDatabaseUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/users/{name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['cascade'] !== null) {
+            $queryParams['cascade'] = $localVarParams['cascade'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $pathParams['name'] = $localVarParams['name'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\DeleteDatabaseUserResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\DeleteDatabaseUserRequest');
     }
 
     /**
@@ -2432,7 +2759,7 @@ class DwsClient extends Client
     /**
      * 删除订阅事件
      *
-     * 删除订阅的事件
+     * 删除订阅的事件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2754,7 +3081,7 @@ class DwsClient extends Client
     /**
      * 删除跨区域备份配置
      *
-     * 该接口用于删除跨区域备份配置
+     * 该接口用于删除跨区域备份配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2881,7 +3208,7 @@ class DwsClient extends Client
     /**
      * 删除工作负载计划
      *
-     * 删除工作负载计划
+     * 删除工作负载计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3053,11 +3380,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -3082,7 +3409,7 @@ class DwsClient extends Client
     /**
      * 停用逻辑集群定时增删计划
      *
-     * 停用逻辑集群定时增删计划
+     * 停用逻辑集群定时增删计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3147,7 +3474,7 @@ class DwsClient extends Client
     /**
      * 关闭云服务日志
      *
-     * 该接口用于关闭集群LTS云日志服务
+     * 该接口用于关闭集群LTS云日志服务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3209,7 +3536,7 @@ class DwsClient extends Client
     /**
      * 集群解绑EIP
      *
-     * 集群解绑Eip
+     * 集群解绑Eip。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3274,7 +3601,7 @@ class DwsClient extends Client
     /**
      * 集群解绑ELB
      *
-     * 集群解绑Elb接口
+     * 集群解绑Elb接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3404,7 +3731,7 @@ class DwsClient extends Client
     /**
      * 启用逻辑集群定时增删计划
      *
-     * 启用逻辑集群定时增删计划
+     * 启用逻辑集群定时增删计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3469,7 +3796,7 @@ class DwsClient extends Client
     /**
      * 开启云服务日志
      *
-     * 该接口用于开启集群LTS云日志服务
+     * 该接口用于开启集群LTS云日志服务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3529,9 +3856,77 @@ class DwsClient extends Client
     }
 
     /**
+     * 转加密集群
+     *
+     * 转加密集群。
+     * **约束限制**：
+     * 转加密集群起始支持版本：8.0.0
+     * 转加密集群guestAgent起始支持版本：8.3.0.200
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function encryptCluster($request)
+    {
+        return $this->encryptClusterWithHttpInfo($request);
+    }
+
+    public function encryptClusterWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/encrypt';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\EncryptClusterResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\EncryptClusterRequest');
+    }
+
+    /**
      * 下发集群升级相关操作
      *
-     * 下发集群升级相关操作
+     * 下发集群升级相关操作。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3596,7 +3991,7 @@ class DwsClient extends Client
     /**
      * 执行运维用户操作
      *
-     * 进行数据库运维账户操作
+     * 进行数据库运维账户操作。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3656,6 +4051,73 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ExecuteDatabaseOmUserActionResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ExecuteDatabaseOmUserActionRequest');
+    }
+
+    /**
+     * 执行规格变更
+     *
+     * 执行规格变更。
+     * **约束限制**：
+     * 包周期集群暂不支持。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function executeFlavorChange($request)
+    {
+        return $this->executeFlavorChangeWithHttpInfo($request);
+    }
+
+    public function executeFlavorChangeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/flavor';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ExecuteFlavorChangeResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ExecuteFlavorChangeRequest');
     }
 
     /**
@@ -3796,9 +4258,151 @@ class DwsClient extends Client
     }
 
     /**
+     * 导出数据库用户/角色
+     *
+     * 导出数据库用户/角色，接口返回的是输出流，xlsx文件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportDatabaseUsers($request)
+    {
+        return $this->exportDatabaseUsersWithHttpInfo($request);
+    }
+
+    public function exportDatabaseUsersWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/users/export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/octet-stream']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/octet-stream'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ExportDatabaseUsersResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ExportDatabaseUsersRequest');
+    }
+
+    /**
+     * 导出数据库用户/角色的权限
+     *
+     * 导出数据库用户/角色的权限列表，接口返回的是输出流，xlsx文件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportUserAuthority($request)
+    {
+        return $this->exportUserAuthorityWithHttpInfo($request);
+    }
+
+    public function exportUserAuthorityWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/users/{name}/authority/export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $pathParams['name'] = $localVarParams['name'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/octet-stream']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/octet-stream'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ExportUserAuthorityResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ExportUserAuthorityRequest');
+    }
+
+    /**
      * 查询告警配置
      *
-     * 查询告警配置
+     * 查询告警配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3863,7 +4467,7 @@ class DwsClient extends Client
     /**
      * 查询告警详情列表
      *
-     * 查询告警详情列表
+     * 查询告警详情列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3931,7 +4535,7 @@ class DwsClient extends Client
     /**
      * 查询告警统计列表
      *
-     * 查询告警统计
+     * 查询告警统计。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3993,7 +4597,7 @@ class DwsClient extends Client
     /**
      * 查询告警订阅列表
      *
-     * 查询订阅告警
+     * 查询订阅告警。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4263,6 +4867,71 @@ class DwsClient extends Client
     }
 
     /**
+     * 查询集群任务详情
+     *
+     * 查询集群任务详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClusterActions($request)
+    {
+        return $this->listClusterActionsWithHttpInfo($request);
+    }
+
+    public function listClusterActionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/actions/{action_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['actionName'] !== null) {
+            $pathParams['action_name'] = $localVarParams['actionName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListClusterActionsResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListClusterActionsRequest');
+    }
+
+    /**
      * 查询集群CN节点
      *
      * 查询集群的CN节点列表。
@@ -4360,11 +5029,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -4425,11 +5094,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -4514,9 +5183,71 @@ class DwsClient extends Client
     }
 
     /**
+     * 查询连接信息
+     *
+     * 查询连接信息。包括公网域名、内网域名等。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClusterEndpoints($request)
+    {
+        return $this->listClusterEndpointsWithHttpInfo($request);
+    }
+
+    public function listClusterEndpointsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/endpoints';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListClusterEndpointsResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListClusterEndpointsRequest');
+    }
+
+    /**
      * 查询节点列表
      *
-     * 查询节点列表
+     * 查询节点列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4544,9 +5275,6 @@ class DwsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['deleted'] !== null) {
-            $queryParams['deleted'] = $localVarParams['deleted'];
-        }
         if ($localVarParams['nodeIds'] !== null) {
             $queryParams['node_ids'] = $localVarParams['nodeIds'];
         }
@@ -4567,6 +5295,9 @@ class DwsClient extends Client
         }
         if ($localVarParams['order'] !== null) {
             $queryParams['order'] = $localVarParams['order'];
+        }
+        if ($localVarParams['deleted'] !== null) {
+            $queryParams['deleted'] = $localVarParams['deleted'];
         }
         if ($localVarParams['clusterId'] !== null) {
             $pathParams['cluster_id'] = $localVarParams['clusterId'];
@@ -4602,7 +5333,7 @@ class DwsClient extends Client
     /**
      * 查询合适的缩容数
      *
-     * 查询合适的缩容数
+     * 查询合适的缩容数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4635,11 +5366,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -4862,7 +5593,7 @@ class DwsClient extends Client
     /**
      * 查询集群列表
      *
-     * 该接口用于查询并显示集群列表
+     * 该接口用于查询并显示集群列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4924,7 +5655,7 @@ class DwsClient extends Client
     /**
      * 查询参数修改审计记录
      *
-     * 查询参数修改审计记录
+     * 查询参数修改审计记录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5061,9 +5792,80 @@ class DwsClient extends Client
     }
 
     /**
+     * 查询用户/角色拥有权限
+     *
+     * 查询用户/角色拥有权限。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDatabaseUserAuthorities($request)
+    {
+        return $this->listDatabaseUserAuthoritiesWithHttpInfo($request);
+    }
+
+    public function listDatabaseUserAuthoritiesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/users/{name}/authority';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $pathParams['name'] = $localVarParams['name'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListDatabaseUserAuthoritiesResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListDatabaseUserAuthoritiesRequest');
+    }
+
+    /**
      * 查询所有数据库用户/角色
      *
-     * 查询所有数据库用户/角色
+     * 查询所有数据库用户/角色。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5096,11 +5898,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -5244,7 +6046,7 @@ class DwsClient extends Client
     /**
      * 获取集群可绑定的ELB列表
      *
-     * 查询集群可以关联的Elb列表
+     * 查询集群可以关联的Elb列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5306,7 +6108,7 @@ class DwsClient extends Client
     /**
      * 查询事件配置
      *
-     * 查询事件配置
+     * 查询事件配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5386,7 +6188,7 @@ class DwsClient extends Client
     /**
      * 查询订阅事件
      *
-     * 查询订阅的事件
+     * 查询订阅的事件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5451,7 +6253,7 @@ class DwsClient extends Client
     /**
      * 查询事件列表
      *
-     * 查询事件列表
+     * 查询事件列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5516,7 +6318,7 @@ class DwsClient extends Client
     /**
      * openApi查询磁盘信息
      *
-     * openApi查询磁盘信息
+     * openApi查询磁盘信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5590,7 +6392,7 @@ class DwsClient extends Client
     /**
      * openapi获取网卡状态
      *
-     * openapi获取网卡状态
+     * openapi获取网卡状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5661,7 +6463,7 @@ class DwsClient extends Client
     /**
      * openApi查询主机概览
      *
-     * openApi查询主机概览
+     * openApi查询主机概览。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5730,9 +6532,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 查询job进度
+     * 查询任务进度
      *
-     * 查询job进度信息
+     * 查询任务进度信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5856,7 +6658,7 @@ class DwsClient extends Client
     /**
      * 查询逻辑集群可用ring环节点信息
      *
-     * 查询逻辑集群可用ring环节点信息
+     * 查询逻辑集群可用ring环节点信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5924,7 +6726,7 @@ class DwsClient extends Client
     /**
      * 查询逻辑集群任务信息
      *
-     * 逻辑集群-查询逻辑集群任务信息
+     * 查询逻辑集群任务信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6004,7 +6806,7 @@ class DwsClient extends Client
     /**
      * 查询逻辑集群磁盘信息
      *
-     * 逻辑集群-查询逻辑集群磁盘信息
+     * 查询逻辑集群磁盘信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6072,7 +6874,7 @@ class DwsClient extends Client
     /**
      * 查询逻辑集群列表
      *
-     * 逻辑集群-查询逻辑集群列表
+     * 查询逻辑集群列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6208,7 +7010,7 @@ class DwsClient extends Client
     /**
      * 查询集群使用指标列表
      *
-     * 查询集群使用指标列表
+     * 查询集群使用指标列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6282,7 +7084,7 @@ class DwsClient extends Client
     /**
      * 获取指定指标相关采集数据
      *
-     * 获取指定指标相关采集数据
+     * 获取指定指标相关采集数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6365,7 +7167,7 @@ class DwsClient extends Client
     /**
      * openApi查询历史监控数据
      *
-     * openApi查询历史监控数据
+     * openApi查询历史监控数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6443,9 +7245,9 @@ class DwsClient extends Client
     }
 
     /**
-     * openApi查询性能监控指标
+     * 查询性能监控指标
      *
-     * openApi查询性能监控指标
+     * 查询性能监控指标。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6502,9 +7304,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 查询节点类型
+     * 查询规格信息
      *
-     * 该接口用于查询所有GaussDB(DWS)服务支持的节点类型。
+     * 该接口用于查询所有GaussDB(DWS)服务支持的规格信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6534,11 +7336,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -6729,11 +7531,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -6753,6 +7555,80 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListQuotasResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListQuotasRequest');
+    }
+
+    /**
+     * 获取待重分布表所属模式信息
+     *
+     * 获取待重分布表所属模式信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRedistributionSchema($request)
+    {
+        return $this->listRedistributionSchemaWithHttpInfo($request);
+    }
+
+    public function listRedistributionSchemaWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/redistribution/schemas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['dbName'] !== null) {
+            $queryParams['db_name'] = $localVarParams['dbName'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['schemaName'] !== null) {
+            $queryParams['schema_name'] = $localVarParams['schemaName'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListRedistributionSchemaResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListRedistributionSchemaRequest');
     }
 
     /**
@@ -6838,7 +7714,7 @@ class DwsClient extends Client
     /**
      * 获取跨区域快照可用region
      *
-     * 该接口用于获取跨区域快照可用region
+     * 该接口用于获取跨区域快照可用局点。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6903,7 +7779,7 @@ class DwsClient extends Client
     /**
      * 查询所有跨区域快照配置
      *
-     * 该接口用于查询所有跨区域快照配置
+     * 该接口用于查询所有跨区域快照配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7004,11 +7880,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -7128,11 +8004,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -7187,11 +8063,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -7270,6 +8146,76 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListStatisticsResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListStatisticsRequest');
+    }
+
+    /**
+     * 查询身份源同步记录
+     *
+     * 查询身份源同步记录。
+     * **约束限制**：
+     * 该功能在页面默认未开放给所有用户，当特性开启且有同步记录时查询才有结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSyncRecords($request)
+    {
+        return $this->listSyncRecordsWithHttpInfo($request);
+    }
+
+    public function listSyncRecordsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/sync-records';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListSyncRecordsResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListSyncRecordsRequest');
     }
 
     /**
@@ -7415,9 +8361,145 @@ class DwsClient extends Client
     }
 
     /**
+     * 查询集群企业项目信息
+     *
+     * 查询指定集群的企业项目信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTagsForResource($request)
+    {
+        return $this->listTagsForResourceWithHttpInfo($request);
+    }
+
+    public function listTagsForResourceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/enterprise-projects';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListTagsForResourceResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListTagsForResourceRequest');
+    }
+
+    /**
+     * 查询支持变更的目标规格列表
+     *
+     * 查询支持变更的目标规格列表。
+     * **约束限制**：
+     * 无cluster_id时：可查询所有支持转换的目标规格，但是由于配额等原因，部分规格可能存在售罄无法使用。
+     * 存在cluster_id时：会自动关联此集群所在可用区下的配额充足的目标规格。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTargetFlavors($request)
+    {
+        return $this->listTargetFlavorsWithHttpInfo($request);
+    }
+
+    public function listTargetFlavorsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/flavors/{flavor_id}/target-flavors';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['flavorId'] !== null) {
+            $pathParams['flavor_id'] = $localVarParams['flavorId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListTargetFlavorsResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListTargetFlavorsRequest');
+    }
+
+    /**
      * 查询集群拓扑ring环节点信息
      *
-     * 查询集群拓扑ring环节点信息
+     * 查询集群拓扑ring环节点信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7485,7 +8567,7 @@ class DwsClient extends Client
     /**
      * 获取集群可升级的目标版本
      *
-     * 获取集群可升级的目标版本
+     * 获取集群可升级的目标版本。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7556,7 +8638,7 @@ class DwsClient extends Client
     /**
      * 获取集群升级记录
      *
-     * 通过此api获取当前集群升级记录
+     * 通过此接口获取当前集群升级记录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7695,7 +8777,7 @@ class DwsClient extends Client
     /**
      * 查询工作负载队列
      *
-     * 查询工作负载队列
+     * 查询工作负载队列。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7829,6 +8911,214 @@ class DwsClient extends Client
     }
 
     /**
+     * 查询当前集群的异常规则列表
+     *
+     * 查询当前集群的异常规则列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listWorkloadRules($request)
+    {
+        return $this->listWorkloadRulesWithHttpInfo($request);
+    }
+
+    public function listWorkloadRulesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/workload/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['ruleName'] !== null) {
+            $queryParams['rule_name'] = $localVarParams['ruleName'];
+        }
+        if ($localVarParams['queueName'] !== null) {
+            $queryParams['queue_name'] = $localVarParams['queueName'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListWorkloadRulesResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListWorkloadRulesRequest');
+    }
+
+    /**
+     * 修改集群名称
+     *
+     * 修改集群名称。
+     * **约束限制**：
+     * guestAgent插件版本8.3.1及以上才支持。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyClusterName($request)
+    {
+        return $this->modifyClusterNameWithHttpInfo($request);
+    }
+
+    public function modifyClusterNameWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/cluster-name';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ModifyClusterNameResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ModifyClusterNameRequest');
+    }
+
+    /**
+     * 修改集群时区
+     *
+     * 修改集群时区。该操作会将操作系统及数据库的时区都进行修改。
+     * **约束限制**：
+     * 修改时区依赖集群安装的guestAgent插件，插件版本在8.3.0.202及以上支持。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyClusterTimezone($request)
+    {
+        return $this->modifyClusterTimezoneWithHttpInfo($request);
+    }
+
+    public function modifyClusterTimezoneWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/timezone';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ModifyClusterTimezoneResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ModifyClusterTimezoneRequest');
+    }
+
+    /**
      * 停止容灾
      *
      * 该接口用于停止容灾操作。
@@ -7932,11 +9222,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -7959,9 +9249,12 @@ class DwsClient extends Client
     }
 
     /**
-     * 扩容集群调整集群大小
+     * 扩容集群
      *
-     * 此接口用于扩容集群。
+     * 此接口用于扩容集群，亦可用于添加空闲节点。默认情况下：表示执行扩容操作。
+     * 通过create_node_only字段用以区分当前是**扩容**、**添加空闲节点**：
+     * - true：仅添加空闲节点
+     * - false：表示执行扩容操作
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7997,11 +9290,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -8127,11 +9420,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -8257,11 +9550,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -8351,7 +9644,7 @@ class DwsClient extends Client
     /**
      * 恢复重分布
      *
-     * 此接口用于恢复暂停状态下的重分布操作,仅支持DWS2.0集群。
+     * 此接口用于恢复暂停状态下的重分布操作，仅支持DWS2.0集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8413,7 +9706,7 @@ class DwsClient extends Client
     /**
      * 恢复表
      *
-     * 该接口用于恢复表
+     * 该接口用于恢复表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8476,9 +9769,74 @@ class DwsClient extends Client
     }
 
     /**
-     * 保存集群描述信息
+     * 轮转密钥
      *
-     * 保存集群描述信息
+     * 轮转加密集群密钥。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function rotateKey($request)
+    {
+        return $this->rotateKeyWithHttpInfo($request);
+    }
+
+    public function rotateKeyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/rotate-key';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\RotateKeyResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\RotateKeyRequest');
+    }
+
+    /**
+     * 修改集群描述信息
+     *
+     * 修改集群描述信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8544,9 +9902,139 @@ class DwsClient extends Client
     }
 
     /**
+     * 更新重分布表优先级
+     *
+     * 更新重分布表优先级。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setRedistributionPriority($request)
+    {
+        return $this->setRedistributionPriorityWithHttpInfo($request);
+    }
+
+    public function setRedistributionPriorityWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/redistribution/priority';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\SetRedistributionPriorityResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\SetRedistributionPriorityRequest');
+    }
+
+    /**
+     * 获取集群加密信息
+     *
+     * 获取集群加密信息。非加密集群不支持该功能，返回信息为空。
+     * **约束限制**：
+     * 转加密集群起始支持版本：8.0.0
+     * 转加密集群guestAgent起始支持版本：8.3.0.200
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showClusterEncryptInfo($request)
+    {
+        return $this->showClusterEncryptInfoWithHttpInfo($request);
+    }
+
+    public function showClusterEncryptInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/encrypt-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ShowClusterEncryptInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ShowClusterEncryptInfoRequest');
+    }
+
+    /**
      * 查询集群规格详情
      *
-     * 查询集群使用的规格详情
+     * 查询集群使用的规格详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8687,9 +10175,136 @@ class DwsClient extends Client
     }
 
     /**
+     * 查询磁盘扩容范围
+     *
+     * 此接口可用于查看磁盘扩容操作时支持的扩容范围。
+     * 
+     * - 磁盘扩容功能仅8.1.1.203及以上版本支持，并且创建集群规格需要为云数仓SSD云盘或实时数仓类型。
+     * - 按需+折扣套餐包消费模式下，存储扩容后超出折扣套餐包部分将按需收费。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showClusterStorageExpandRange($request)
+    {
+        return $this->showClusterStorageExpandRangeWithHttpInfo($request);
+    }
+
+    public function showClusterStorageExpandRangeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/storage-expand-range';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ShowClusterStorageExpandRangeResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ShowClusterStorageExpandRangeRequest');
+    }
+
+    /**
+     * 查询磁盘使用情况
+     *
+     * 查询租户侧节点磁盘使用情况信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showClusterVolume($request)
+    {
+        return $this->showClusterVolumeWithHttpInfo($request);
+    }
+
+    public function showClusterVolumeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/volume';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ShowClusterVolumeResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ShowClusterVolumeRequest');
+    }
+
+    /**
      * 查询集群列表V2
      *
-     * 该接口用于查询并显示集群列表
+     * 该接口用于查询并显示集群列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8748,7 +10363,7 @@ class DwsClient extends Client
     /**
      * 查询数据库对象权限
      *
-     * 查询数据库对象权限
+     * 查询数据库对象权限。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8796,11 +10411,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -8825,7 +10440,7 @@ class DwsClient extends Client
     /**
      * 获得集群运维账户状态
      *
-     * 获得数据库运维账户状态
+     * 获得数据库运维账户状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8887,7 +10502,7 @@ class DwsClient extends Client
     /**
      * 查询指定用户信息
      *
-     * 查询指定用户信息
+     * 查询指定用户信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8923,11 +10538,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -9076,7 +10691,7 @@ class DwsClient extends Client
     /**
      * 查询单个实例
      *
-     * 查询单个实例
+     * 查询单个实例。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9138,7 +10753,7 @@ class DwsClient extends Client
     /**
      * 查询SQL执行信息
      *
-     * 查询SQL执行信息
+     * 查询SQL执行信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9206,7 +10821,7 @@ class DwsClient extends Client
     /**
      * 查询资源统计
      *
-     * 该接口用于查询资源统计
+     * 该接口用于查询资源统计。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9532,9 +11147,77 @@ class DwsClient extends Client
     }
 
     /**
+     * 逻辑集群缩容
+     *
+     * 逻辑集群缩容，支持从弹性池缩容，或是从逻辑集群中缩容。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function shrinkLogicalCluster($request)
+    {
+        return $this->shrinkLogicalClusterWithHttpInfo($request);
+    }
+
+    public function shrinkLogicalClusterWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/logical-clusters/{logical_cluster_id}/shrink';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['logicalClusterId'] !== null) {
+            $pathParams['logical_cluster_id'] = $localVarParams['logicalClusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ShrinkLogicalClusterResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ShrinkLogicalClusterRequest');
+    }
+
+    /**
      * 启动集群
      *
-     * 集群管理-启动集群
+     * 启动集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9662,7 +11345,7 @@ class DwsClient extends Client
     /**
      * 启动工作负载计划
      *
-     * 启动工作负载计划
+     * 启动工作负载计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9727,7 +11410,7 @@ class DwsClient extends Client
     /**
      * 停止集群
      *
-     * 集群管理-停止集群
+     * 停止集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9823,11 +11506,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -9852,7 +11535,7 @@ class DwsClient extends Client
     /**
      * 停止工作负载计划
      *
-     * 停止工作负载计划
+     * 停止工作负载计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9921,7 +11604,7 @@ class DwsClient extends Client
      * “异常切换”按钮用于容灾异常或者生产集群故障情况下主备切换操作。
      * 容灾异常切换仅8.1.2及以上集群版本支持。
      * 异常切换会将灾备集群升为主，若原生产集群故障后存在部分数据未同步到灾备集群，那灾备集群升主后将缺少这些数据，切换时请确认容灾最后同步时间，谨慎操作。
-     * 仅支持DWS 2.0集群
+     * 仅支持DWS 2.0集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9954,11 +11637,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -10184,7 +11867,7 @@ class DwsClient extends Client
     /**
      * 同步IAM用户到数据库
      *
-     * 同步IAM用户到数据库
+     * 同步IAM用户到数据库。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10217,11 +11900,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -10246,7 +11929,7 @@ class DwsClient extends Client
     /**
      * 更新告警订阅
      *
-     * 更新订阅的告警
+     * 更新订阅的告警。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10512,7 +12195,7 @@ class DwsClient extends Client
     /**
      * 修改数据库对象权限
      *
-     * 修改数据库对象权限
+     * 修改数据库对象权限。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10548,11 +12231,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -10577,7 +12260,7 @@ class DwsClient extends Client
     /**
      * 修改指定用户信息
      *
-     * 修改指定用户信息
+     * 修改指定用户信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10712,7 +12395,7 @@ class DwsClient extends Client
     /**
      * 更新订阅事件
      *
-     * 更新订阅事件
+     * 更新订阅事件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11044,6 +12727,71 @@ class DwsClient extends Client
     }
 
     /**
+     * 更新重分布配置
+     *
+     * 更新重分布配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateRedistributionConfigurations($request)
+    {
+        return $this->updateRedistributionConfigurationsWithHttpInfo($request);
+    }
+
+    public function updateRedistributionConfigurationsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/redistribution/configurations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateRedistributionConfigurationsResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateRedistributionConfigurationsRequest');
+    }
+
+    /**
      * 更新模式空间限额
      *
      * 更新模式空间限额。
@@ -11109,6 +12857,77 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateSchemasResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateSchemasRequest');
+    }
+
+    /**
+     * 修改资源管理计划阶段
+     *
+     * 修改资源管理计划阶段。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateWorkloadPlanStage($request)
+    {
+        return $this->updateWorkloadPlanStageWithHttpInfo($request);
+    }
+
+    public function updateWorkloadPlanStageWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/workload/plans/{plan_id}/stages/{stage_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['planId'] !== null) {
+            $pathParams['plan_id'] = $localVarParams['planId'];
+        }
+        if ($localVarParams['stageId'] !== null) {
+            $pathParams['stage_id'] = $localVarParams['stageId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateWorkloadPlanStageResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateWorkloadPlanStageRequest');
     }
 
     protected function callApi(

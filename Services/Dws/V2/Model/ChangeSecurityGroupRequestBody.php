@@ -20,7 +20,7 @@ class ChangeSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * securityGroups  安全组ID数组
+    * securityGroups  **参数解释**： 安全组ID数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ChangeSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * securityGroups  安全组ID数组
+    * securityGroups  **参数解释**： 安全组ID数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ChangeSecurityGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * securityGroups  安全组ID数组
+    * securityGroups  **参数解释**： 安全组ID数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ChangeSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * securityGroups  安全组ID数组
+    * securityGroups  **参数解释**： 安全组ID数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ChangeSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * securityGroups  安全组ID数组
+    * securityGroups  **参数解释**： 安全组ID数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ChangeSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroups
-    *  安全组ID数组
+    *  **参数解释**： 安全组ID数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class ChangeSecurityGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroups
     *
-    * @param string[] $securityGroups 安全组ID数组
+    * @param string[] $securityGroups **参数解释**： 安全组ID数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -20,12 +20,12 @@ class ElbResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publicIp  公网ip
-    * privateIp  内网ip
-    * privateEndpoint  Elb终端地址
-    * name  Elb名称
-    * id  Elb的ID
-    * vpcId  Elb所属VPC的ID
+    * publicIp  **参数解释**： 公网ip。 **取值范围**： 有效的公网ipv4地址。
+    * privateIp  **参数解释**： 内网ip。 **取值范围**： 有效的内网ipv4地址。
+    * privateEndpoint  **参数解释**： Elb终端地址。 **取值范围**： 不涉及。
+    * name  **参数解释**： Elb名称。 **取值范围**： 不涉及。
+    * id  **参数解释**： Elb的ID。 **取值范围**： 不涉及。
+    * vpcId  **参数解释**： Elb所属VPC的ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class ElbResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publicIp  公网ip
-    * privateIp  内网ip
-    * privateEndpoint  Elb终端地址
-    * name  Elb名称
-    * id  Elb的ID
-    * vpcId  Elb所属VPC的ID
+    * publicIp  **参数解释**： 公网ip。 **取值范围**： 有效的公网ipv4地址。
+    * privateIp  **参数解释**： 内网ip。 **取值范围**： 有效的内网ipv4地址。
+    * privateEndpoint  **参数解释**： Elb终端地址。 **取值范围**： 不涉及。
+    * name  **参数解释**： Elb名称。 **取值范围**： 不涉及。
+    * id  **参数解释**： Elb的ID。 **取值范围**： 不涉及。
+    * vpcId  **参数解释**： Elb所属VPC的ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class ElbResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publicIp  公网ip
-    * privateIp  内网ip
-    * privateEndpoint  Elb终端地址
-    * name  Elb名称
-    * id  Elb的ID
-    * vpcId  Elb所属VPC的ID
+    * publicIp  **参数解释**： 公网ip。 **取值范围**： 有效的公网ipv4地址。
+    * privateIp  **参数解释**： 内网ip。 **取值范围**： 有效的内网ipv4地址。
+    * privateEndpoint  **参数解释**： Elb终端地址。 **取值范围**： 不涉及。
+    * name  **参数解释**： Elb名称。 **取值范围**： 不涉及。
+    * id  **参数解释**： Elb的ID。 **取值范围**： 不涉及。
+    * vpcId  **参数解释**： Elb所属VPC的ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ElbResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publicIp  公网ip
-    * privateIp  内网ip
-    * privateEndpoint  Elb终端地址
-    * name  Elb名称
-    * id  Elb的ID
-    * vpcId  Elb所属VPC的ID
+    * publicIp  **参数解释**： 公网ip。 **取值范围**： 有效的公网ipv4地址。
+    * privateIp  **参数解释**： 内网ip。 **取值范围**： 有效的内网ipv4地址。
+    * privateEndpoint  **参数解释**： Elb终端地址。 **取值范围**： 不涉及。
+    * name  **参数解释**： Elb名称。 **取值范围**： 不涉及。
+    * id  **参数解释**： Elb的ID。 **取值范围**： 不涉及。
+    * vpcId  **参数解释**： Elb所属VPC的ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ElbResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publicIp  公网ip
-    * privateIp  内网ip
-    * privateEndpoint  Elb终端地址
-    * name  Elb名称
-    * id  Elb的ID
-    * vpcId  Elb所属VPC的ID
+    * publicIp  **参数解释**： 公网ip。 **取值范围**： 有效的公网ipv4地址。
+    * privateIp  **参数解释**： 内网ip。 **取值范围**： 有效的内网ipv4地址。
+    * privateEndpoint  **参数解释**： Elb终端地址。 **取值范围**： 不涉及。
+    * name  **参数解释**： Elb名称。 **取值范围**： 不涉及。
+    * id  **参数解释**： Elb的ID。 **取值范围**： 不涉及。
+    * vpcId  **参数解释**： Elb所属VPC的ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class ElbResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  公网ip
+    *  **参数解释**： 公网ip。 **取值范围**： 有效的公网ipv4地址。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class ElbResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 公网ip
+    * @param string|null $publicIp **参数解释**： 公网ip。 **取值范围**： 有效的公网ipv4地址。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class ElbResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  内网ip
+    *  **参数解释**： 内网ip。 **取值范围**： 有效的内网ipv4地址。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class ElbResp implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 内网ip
+    * @param string|null $privateIp **参数解释**： 内网ip。 **取值范围**： 有效的内网ipv4地址。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class ElbResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateEndpoint
-    *  Elb终端地址
+    *  **参数解释**： Elb终端地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class ElbResp implements ModelInterface, ArrayAccess
     /**
     * Sets privateEndpoint
     *
-    * @param string|null $privateEndpoint Elb终端地址
+    * @param string|null $privateEndpoint **参数解释**： Elb终端地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class ElbResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  Elb名称
+    *  **参数解释**： Elb名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class ElbResp implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name Elb名称
+    * @param string|null $name **参数解释**： Elb名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class ElbResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  Elb的ID
+    *  **参数解释**： Elb的ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class ElbResp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id Elb的ID
+    * @param string|null $id **参数解释**： Elb的ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class ElbResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  Elb所属VPC的ID
+    *  **参数解释**： Elb所属VPC的ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class ElbResp implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId Elb所属VPC的ID
+    * @param string|null $vpcId **参数解释**： Elb所属VPC的ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -20,26 +20,30 @@ class Nodes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  集群实例ID
-    * status  集群实例状态 - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
+    * id  **参数解释**： 集群实例ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
-            'status' => 'string'
+            'status' => 'string',
+            'name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  集群实例ID
-    * status  集群实例状态 - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
+    * id  **参数解释**： 集群实例ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
-        'status' => null
+        'status' => null,
+        'name' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class Nodes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  集群实例ID
-    * status  集群实例状态 - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
+    * id  **参数解释**： 集群实例ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
-            'status' => 'status'
+            'status' => 'status',
+            'name' => 'name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  集群实例ID
-    * status  集群实例状态 - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
+    * id  **参数解释**： 集群实例ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'name' => 'setName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  集群实例ID
-    * status  集群实例状态 - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
+    * id  **参数解释**： 集群实例ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'name' => 'getName'
     ];
 
     /**
@@ -159,6 +169,7 @@ class Nodes implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -191,7 +202,7 @@ class Nodes implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  集群实例ID
+    *  **参数解释**： 集群实例ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +214,7 @@ class Nodes implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 集群实例ID
+    * @param string $id **参数解释**： 集群实例ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +226,7 @@ class Nodes implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  集群实例状态 - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
+    *  **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
     *
     * @return string
     */
@@ -227,13 +238,37 @@ class Nodes implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 集群实例状态 - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
+    * @param string $status **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
     *
     * @return $this
     */
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
         return $this;
     }
 

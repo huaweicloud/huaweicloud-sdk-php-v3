@@ -21,8 +21,8 @@ class RestartLogicalClusterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class RestartLogicalClusterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class RestartLogicalClusterResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class RestartLogicalClusterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class RestartLogicalClusterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class RestartLogicalClusterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  错误码
+    *  **参数解释**： 错误码。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class RestartLogicalClusterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode 错误码
+    * @param string|null $errorCode **参数解释**： 错误码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class RestartLogicalClusterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  错误信息
+    *  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class RestartLogicalClusterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg 错误信息
+    * @param string|null $errorMsg **参数解释**： 错误信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

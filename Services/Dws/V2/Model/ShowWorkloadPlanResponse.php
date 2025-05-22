@@ -21,8 +21,8 @@ class ShowWorkloadPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     * workloadPlan  workloadPlan
     *
     * @var string[]
@@ -35,8 +35,8 @@ class ShowWorkloadPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     * workloadPlan  workloadPlan
     *
     * @var string[]
@@ -70,8 +70,8 @@ class ShowWorkloadPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     * workloadPlan  workloadPlan
     *
     * @var string[]
@@ -84,8 +84,8 @@ class ShowWorkloadPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     * workloadPlan  workloadPlan
     *
     * @var string[]
@@ -98,8 +98,8 @@ class ShowWorkloadPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     * workloadPlan  workloadPlan
     *
     * @var string[]
@@ -197,7 +197,7 @@ class ShowWorkloadPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadResCode
-    *  结果状态码。
+    *  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -209,7 +209,7 @@ class ShowWorkloadPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workloadResCode
     *
-    * @param int|null $workloadResCode 结果状态码。
+    * @param int|null $workloadResCode **参数解释**： 结果状态码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ShowWorkloadPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadResStr
-    *  结果描述。
+    *  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class ShowWorkloadPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workloadResStr
     *
-    * @param string|null $workloadResStr 结果描述。
+    * @param string|null $workloadResStr **参数解释**： 结果描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */

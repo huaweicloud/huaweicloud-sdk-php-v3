@@ -22,8 +22,8 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * dataSources  数据源列表。
-    * projectId  项目ID。
-    * clusterId  集群ID。
+    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * type  数据源类型。
     * count  总数。
     *
@@ -40,8 +40,8 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * dataSources  数据源列表。
-    * projectId  项目ID。
-    * clusterId  集群ID。
+    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * type  数据源类型。
     * count  总数。
     *
@@ -79,8 +79,8 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * dataSources  数据源列表。
-    * projectId  项目ID。
-    * clusterId  集群ID。
+    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * type  数据源类型。
     * count  总数。
     *
@@ -97,8 +97,8 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * dataSources  数据源列表。
-    * projectId  项目ID。
-    * clusterId  集群ID。
+    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * type  数据源类型。
     * count  总数。
     *
@@ -115,8 +115,8 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * dataSources  数据源列表。
-    * projectId  项目ID。
-    * clusterId  集群ID。
+    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * type  数据源类型。
     * count  总数。
     *
@@ -243,7 +243,7 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID。
+    *  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID。
+    * @param string|null $projectId **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID。
+    *  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return string|null
     */
@@ -279,7 +279,7 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID。
+    * @param string|null $clusterId **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return $this
     */

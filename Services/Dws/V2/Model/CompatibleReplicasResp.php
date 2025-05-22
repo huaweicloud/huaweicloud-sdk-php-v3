@@ -20,9 +20,9 @@ class CompatibleReplicasResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * name  名称
-    * links  连接
+    * id  **参数解释**： ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CompatibleReplicasResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * name  名称
-    * links  连接
+    * id  **参数解释**： ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CompatibleReplicasResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * name  名称
-    * links  连接
+    * id  **参数解释**： ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CompatibleReplicasResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * name  名称
-    * links  连接
+    * id  **参数解释**： ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CompatibleReplicasResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * name  名称
-    * links  连接
+    * id  **参数解释**： ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class CompatibleReplicasResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  **参数解释**： ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class CompatibleReplicasResp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id **参数解释**： ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class CompatibleReplicasResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**： 名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class CompatibleReplicasResp implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释**： 名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class CompatibleReplicasResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
-    *  连接
+    *  **参数解释**： 链接。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\LinkResp[]|null
     */
@@ -256,7 +256,7 @@ class CompatibleReplicasResp implements ModelInterface, ArrayAccess
     /**
     * Sets links
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\LinkResp[]|null $links 连接
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\LinkResp[]|null $links **参数解释**： 链接。 **取值范围**： 不涉及。
     *
     * @return $this
     */

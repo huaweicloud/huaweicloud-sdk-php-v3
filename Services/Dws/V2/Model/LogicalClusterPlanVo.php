@@ -20,16 +20,16 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  增删逻辑集群计划ID
-    * logicalClusterName  逻辑集群名字
-    * nodeNum  逻辑集群节点个数
-    * planType  逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性
-    * status  逻辑集群增删计划状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
-    * startTime  逻辑集群增删计划开始时间
-    * endTime  逻辑集群增删计划结束时间
-    * updateTime  逻辑集群增删计划更新时间
-    * user  逻辑集群增删计划绑定的用户
-    * actions  逻辑集群增删计划行动
+    * id  **参数解释**： 增删逻辑集群计划ID。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名字。 **取值范围**： 不涉及。
+    * nodeNum  **参数解释**： 逻辑集群节点个数。 **取值范围**： 不涉及。
+    * planType  **参数解释**： 逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群增删计划状态。 **取值范围**： running：运行中 waiting：等待中 deleted：已删除 finished：已完成 disabled：已禁用 failed：失败
+    * startTime  **参数解释**： 逻辑集群增删计划开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 逻辑集群增删计划结束时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 逻辑集群增删计划更新时间。 **取值范围**： 不涉及。
+    * user  **参数解释**： 逻辑集群增删计划绑定的用户。 **取值范围**： 不涉及。
+    * actions  **参数解释**： 任务信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  增删逻辑集群计划ID
-    * logicalClusterName  逻辑集群名字
-    * nodeNum  逻辑集群节点个数
-    * planType  逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性
-    * status  逻辑集群增删计划状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
-    * startTime  逻辑集群增删计划开始时间
-    * endTime  逻辑集群增删计划结束时间
-    * updateTime  逻辑集群增删计划更新时间
-    * user  逻辑集群增删计划绑定的用户
-    * actions  逻辑集群增删计划行动
+    * id  **参数解释**： 增删逻辑集群计划ID。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名字。 **取值范围**： 不涉及。
+    * nodeNum  **参数解释**： 逻辑集群节点个数。 **取值范围**： 不涉及。
+    * planType  **参数解释**： 逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群增删计划状态。 **取值范围**： running：运行中 waiting：等待中 deleted：已删除 finished：已完成 disabled：已禁用 failed：失败
+    * startTime  **参数解释**： 逻辑集群增删计划开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 逻辑集群增删计划结束时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 逻辑集群增删计划更新时间。 **取值范围**： 不涉及。
+    * user  **参数解释**： 逻辑集群增删计划绑定的用户。 **取值范围**： 不涉及。
+    * actions  **参数解释**： 任务信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  增删逻辑集群计划ID
-    * logicalClusterName  逻辑集群名字
-    * nodeNum  逻辑集群节点个数
-    * planType  逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性
-    * status  逻辑集群增删计划状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
-    * startTime  逻辑集群增删计划开始时间
-    * endTime  逻辑集群增删计划结束时间
-    * updateTime  逻辑集群增删计划更新时间
-    * user  逻辑集群增删计划绑定的用户
-    * actions  逻辑集群增删计划行动
+    * id  **参数解释**： 增删逻辑集群计划ID。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名字。 **取值范围**： 不涉及。
+    * nodeNum  **参数解释**： 逻辑集群节点个数。 **取值范围**： 不涉及。
+    * planType  **参数解释**： 逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群增删计划状态。 **取值范围**： running：运行中 waiting：等待中 deleted：已删除 finished：已完成 disabled：已禁用 failed：失败
+    * startTime  **参数解释**： 逻辑集群增删计划开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 逻辑集群增删计划结束时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 逻辑集群增删计划更新时间。 **取值范围**： 不涉及。
+    * user  **参数解释**： 逻辑集群增删计划绑定的用户。 **取值范围**： 不涉及。
+    * actions  **参数解释**： 任务信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  增删逻辑集群计划ID
-    * logicalClusterName  逻辑集群名字
-    * nodeNum  逻辑集群节点个数
-    * planType  逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性
-    * status  逻辑集群增删计划状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
-    * startTime  逻辑集群增删计划开始时间
-    * endTime  逻辑集群增删计划结束时间
-    * updateTime  逻辑集群增删计划更新时间
-    * user  逻辑集群增删计划绑定的用户
-    * actions  逻辑集群增删计划行动
+    * id  **参数解释**： 增删逻辑集群计划ID。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名字。 **取值范围**： 不涉及。
+    * nodeNum  **参数解释**： 逻辑集群节点个数。 **取值范围**： 不涉及。
+    * planType  **参数解释**： 逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群增删计划状态。 **取值范围**： running：运行中 waiting：等待中 deleted：已删除 finished：已完成 disabled：已禁用 failed：失败
+    * startTime  **参数解释**： 逻辑集群增删计划开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 逻辑集群增删计划结束时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 逻辑集群增删计划更新时间。 **取值范围**： 不涉及。
+    * user  **参数解释**： 逻辑集群增删计划绑定的用户。 **取值范围**： 不涉及。
+    * actions  **参数解释**： 任务信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  增删逻辑集群计划ID
-    * logicalClusterName  逻辑集群名字
-    * nodeNum  逻辑集群节点个数
-    * planType  逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性
-    * status  逻辑集群增删计划状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
-    * startTime  逻辑集群增删计划开始时间
-    * endTime  逻辑集群增删计划结束时间
-    * updateTime  逻辑集群增删计划更新时间
-    * user  逻辑集群增删计划绑定的用户
-    * actions  逻辑集群增删计划行动
+    * id  **参数解释**： 增删逻辑集群计划ID。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名字。 **取值范围**： 不涉及。
+    * nodeNum  **参数解释**： 逻辑集群节点个数。 **取值范围**： 不涉及。
+    * planType  **参数解释**： 逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群增删计划状态。 **取值范围**： running：运行中 waiting：等待中 deleted：已删除 finished：已完成 disabled：已禁用 failed：失败
+    * startTime  **参数解释**： 逻辑集群增删计划开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 逻辑集群增删计划结束时间。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 逻辑集群增删计划更新时间。 **取值范围**： 不涉及。
+    * user  **参数解释**： 逻辑集群增删计划绑定的用户。 **取值范围**： 不涉及。
+    * actions  **参数解释**： 任务信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -273,7 +273,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  增删逻辑集群计划ID
+    *  **参数解释**： 增删逻辑集群计划ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 增删逻辑集群计划ID
+    * @param string|null $id **参数解释**： 增删逻辑集群计划ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterName
-    *  逻辑集群名字
+    *  **参数解释**： 逻辑集群名字。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterName
     *
-    * @param string|null $logicalClusterName 逻辑集群名字
+    * @param string|null $logicalClusterName **参数解释**： 逻辑集群名字。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeNum
-    *  逻辑集群节点个数
+    *  **参数解释**： 逻辑集群节点个数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -333,7 +333,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
     /**
     * Sets nodeNum
     *
-    * @param int|null $nodeNum 逻辑集群节点个数
+    * @param int|null $nodeNum **参数解释**： 逻辑集群节点个数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets planType
-    *  逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性
+    *  **参数解释**： 逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
     /**
     * Sets planType
     *
-    * @param string|null $planType 逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性
+    * @param string|null $planType **参数解释**： 逻辑集群增删计划类型，取值范围为 (once|periodicity)，表示单次或周期性。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  逻辑集群增删计划状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
+    *  **参数解释**： 逻辑集群增删计划状态。 **取值范围**： running：运行中 waiting：等待中 deleted：已删除 finished：已完成 disabled：已禁用 failed：失败
     *
     * @return string|null
     */
@@ -381,7 +381,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 逻辑集群增删计划状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
+    * @param string|null $status **参数解释**： 逻辑集群增删计划状态。 **取值范围**： running：运行中 waiting：等待中 deleted：已删除 finished：已完成 disabled：已禁用 failed：失败
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  逻辑集群增删计划开始时间
+    *  **参数解释**： 逻辑集群增删计划开始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 逻辑集群增删计划开始时间
+    * @param string|null $startTime **参数解释**： 逻辑集群增删计划开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  逻辑集群增删计划结束时间
+    *  **参数解释**： 逻辑集群增删计划结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -429,7 +429,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 逻辑集群增删计划结束时间
+    * @param string|null $endTime **参数解释**： 逻辑集群增删计划结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  逻辑集群增删计划更新时间
+    *  **参数解释**： 逻辑集群增删计划更新时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -453,7 +453,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime 逻辑集群增删计划更新时间
+    * @param string|null $updateTime **参数解释**： 逻辑集群增删计划更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets user
-    *  逻辑集群增删计划绑定的用户
+    *  **参数解释**： 逻辑集群增删计划绑定的用户。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -477,7 +477,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
     /**
     * Sets user
     *
-    * @param string|null $user 逻辑集群增删计划绑定的用户
+    * @param string|null $user **参数解释**： 逻辑集群增删计划绑定的用户。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets actions
-    *  逻辑集群增删计划行动
+    *  **参数解释**： 任务信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterPlanActions[]|null
     */
@@ -501,7 +501,7 @@ class LogicalClusterPlanVo implements ModelInterface, ArrayAccess
     /**
     * Sets actions
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterPlanActions[]|null $actions 逻辑集群增删计划行动
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterPlanActions[]|null $actions **参数解释**： 任务信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

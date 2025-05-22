@@ -20,7 +20,7 @@ class BatchDeleteCn implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instances  批量删除CN节点ID
+    * instances  **参数解释**： 批量删除CN节点ID。 **约束限制**： 不涉及。 **取值范围**： 非空。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteCn implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instances  批量删除CN节点ID
+    * instances  **参数解释**： 批量删除CN节点ID。 **约束限制**： 不涉及。 **取值范围**： 非空。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteCn implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instances  批量删除CN节点ID
+    * instances  **参数解释**： 批量删除CN节点ID。 **约束限制**： 不涉及。 **取值范围**： 非空。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteCn implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instances  批量删除CN节点ID
+    * instances  **参数解释**： 批量删除CN节点ID。 **约束限制**： 不涉及。 **取值范围**： 非空。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteCn implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instances  批量删除CN节点ID
+    * instances  **参数解释**： 批量删除CN节点ID。 **约束限制**： 不涉及。 **取值范围**： 非空。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class BatchDeleteCn implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  批量删除CN节点ID
+    *  **参数解释**： 批量删除CN节点ID。 **约束限制**： 不涉及。 **取值范围**： 非空。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class BatchDeleteCn implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param string[]|null $instances 批量删除CN节点ID
+    * @param string[]|null $instances **参数解释**： 批量删除CN节点ID。 **约束限制**： 不涉及。 **取值范围**： 非空。 **默认取值**： 不涉及。
     *
     * @return $this
     */

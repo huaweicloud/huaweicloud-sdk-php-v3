@@ -28,12 +28,14 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
+    * chatResourceConfig  资源配置。
     *
     * @var string[]
     */
@@ -51,7 +53,9 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'layerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerConfig[]',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'chatSubtitleConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatSubtitleConfig',
-            'chatVideoType' => 'string'
+            'chatVideoType' => 'string',
+            'exitMuteThreshold' => 'int',
+            'chatResourceConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatResourceConfig[]'
     ];
 
     /**
@@ -64,12 +68,14 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
+    * chatResourceConfig  资源配置。
     *
     * @var string[]
     */
@@ -87,7 +93,9 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
         'layerConfig' => null,
         'reviewConfig' => null,
         'chatSubtitleConfig' => null,
-        'chatVideoType' => null
+        'chatVideoType' => null,
+        'exitMuteThreshold' => 'int32',
+        'chatResourceConfig' => null
     ];
 
     /**
@@ -121,12 +129,14 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
+    * chatResourceConfig  资源配置。
     *
     * @var string[]
     */
@@ -144,7 +154,9 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'layerConfig' => 'layer_config',
             'reviewConfig' => 'review_config',
             'chatSubtitleConfig' => 'chat_subtitle_config',
-            'chatVideoType' => 'chat_video_type'
+            'chatVideoType' => 'chat_video_type',
+            'exitMuteThreshold' => 'exit_mute_threshold',
+            'chatResourceConfig' => 'chat_resource_config'
     ];
 
     /**
@@ -157,12 +169,14 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
+    * chatResourceConfig  资源配置。
     *
     * @var string[]
     */
@@ -180,7 +194,9 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'layerConfig' => 'setLayerConfig',
             'reviewConfig' => 'setReviewConfig',
             'chatSubtitleConfig' => 'setChatSubtitleConfig',
-            'chatVideoType' => 'setChatVideoType'
+            'chatVideoType' => 'setChatVideoType',
+            'exitMuteThreshold' => 'setExitMuteThreshold',
+            'chatResourceConfig' => 'setChatResourceConfig'
     ];
 
     /**
@@ -193,12 +209,14 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
+    * chatResourceConfig  资源配置。
     *
     * @var string[]
     */
@@ -216,7 +234,9 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'layerConfig' => 'getLayerConfig',
             'reviewConfig' => 'getReviewConfig',
             'chatSubtitleConfig' => 'getChatSubtitleConfig',
-            'chatVideoType' => 'getChatVideoType'
+            'chatVideoType' => 'getChatVideoType',
+            'exitMuteThreshold' => 'getExitMuteThreshold',
+            'chatResourceConfig' => 'getChatResourceConfig'
     ];
 
     /**
@@ -261,6 +281,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     }
     const DEFAULT_LANGUAGE_CN = 'CN';
     const DEFAULT_LANGUAGE_EN = 'EN';
+    const DEFAULT_LANGUAGE_ESP = 'ESP';
+    const DEFAULT_LANGUAGE_POR = 'por';
+    const DEFAULT_LANGUAGE_ARABIC = 'Arabic';
+    const DEFAULT_LANGUAGE_THAI = 'Thai';
     const CHAT_VIDEO_TYPE_COMPUTER = 'COMPUTER';
     const CHAT_VIDEO_TYPE_MOBILE = 'MOBILE';
     const CHAT_VIDEO_TYPE_HUB = 'HUB';
@@ -276,6 +300,10 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
         return [
             self::DEFAULT_LANGUAGE_CN,
             self::DEFAULT_LANGUAGE_EN,
+            self::DEFAULT_LANGUAGE_ESP,
+            self::DEFAULT_LANGUAGE_POR,
+            self::DEFAULT_LANGUAGE_ARABIC,
+            self::DEFAULT_LANGUAGE_THAI,
         ];
     }
 
@@ -323,6 +351,8 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['chatSubtitleConfig'] = isset($data['chatSubtitleConfig']) ? $data['chatSubtitleConfig'] : null;
         $this->container['chatVideoType'] = isset($data['chatVideoType']) ? $data['chatVideoType'] : null;
+        $this->container['exitMuteThreshold'] = isset($data['exitMuteThreshold']) ? $data['exitMuteThreshold'] : null;
+        $this->container['chatResourceConfig'] = isset($data['chatResourceConfig']) ? $data['chatResourceConfig'] : null;
     }
 
     /**
@@ -387,6 +417,12 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['chatVideoType']) && (mb_strlen($this->container['chatVideoType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'chatVideoType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['exitMuteThreshold']) && ($this->container['exitMuteThreshold'] > 1440)) {
+                $invalidProperties[] = "invalid value for 'exitMuteThreshold', must be smaller than or equal to 1440.";
+            }
+            if (!is_null($this->container['exitMuteThreshold']) && ($this->container['exitMuteThreshold'] < 0)) {
+                $invalidProperties[] = "invalid value for 'exitMuteThreshold', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -596,7 +632,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultLanguage
-    *  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    *  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     *
     * @return string|null
     */
@@ -608,7 +644,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     /**
     * Sets defaultLanguage
     *
-    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     *
     * @return $this
     */
@@ -735,6 +771,54 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     public function setChatVideoType($chatVideoType)
     {
         $this->container['chatVideoType'] = $chatVideoType;
+        return $this;
+    }
+
+    /**
+    * Gets exitMuteThreshold
+    *  **参数解释**： 静默退出时长。
+    *
+    * @return int|null
+    */
+    public function getExitMuteThreshold()
+    {
+        return $this->container['exitMuteThreshold'];
+    }
+
+    /**
+    * Sets exitMuteThreshold
+    *
+    * @param int|null $exitMuteThreshold **参数解释**： 静默退出时长。
+    *
+    * @return $this
+    */
+    public function setExitMuteThreshold($exitMuteThreshold)
+    {
+        $this->container['exitMuteThreshold'] = $exitMuteThreshold;
+        return $this;
+    }
+
+    /**
+    * Gets chatResourceConfig
+    *  资源配置。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ChatResourceConfig[]|null
+    */
+    public function getChatResourceConfig()
+    {
+        return $this->container['chatResourceConfig'];
+    }
+
+    /**
+    * Sets chatResourceConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ChatResourceConfig[]|null $chatResourceConfig 资源配置。
+    *
+    * @return $this
+    */
+    public function setChatResourceConfig($chatResourceConfig)
+    {
+        $this->container['chatResourceConfig'] = $chatResourceConfig;
         return $this;
     }
 

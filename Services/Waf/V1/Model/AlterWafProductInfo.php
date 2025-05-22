@@ -20,7 +20,7 @@ class AlterWafProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceSpecCode  waf规格   - professional：标准版   - enterprise：专业版   ultimate：铂金版
+    * resourceSpecCode  waf规格   - professional：标准版   - enterprise：专业版   ultimate：企业版
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class AlterWafProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceSpecCode  waf规格   - professional：标准版   - enterprise：专业版   ultimate：铂金版
+    * resourceSpecCode  waf规格   - professional：标准版   - enterprise：专业版   ultimate：企业版
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class AlterWafProductInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceSpecCode  waf规格   - professional：标准版   - enterprise：专业版   ultimate：铂金版
+    * resourceSpecCode  waf规格   - professional：标准版   - enterprise：专业版   ultimate：企业版
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AlterWafProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceSpecCode  waf规格   - professional：标准版   - enterprise：专业版   ultimate：铂金版
+    * resourceSpecCode  waf规格   - professional：标准版   - enterprise：专业版   ultimate：企业版
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class AlterWafProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceSpecCode  waf规格   - professional：标准版   - enterprise：专业版   ultimate：铂金版
+    * resourceSpecCode  waf规格   - professional：标准版   - enterprise：专业版   ultimate：企业版
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class AlterWafProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  waf规格   - professional：标准版   - enterprise：专业版   ultimate：铂金版
+    *  waf规格   - professional：标准版   - enterprise：专业版   ultimate：企业版
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class AlterWafProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode waf规格   - professional：标准版   - enterprise：专业版   ultimate：铂金版
+    * @param string|null $resourceSpecCode waf规格   - professional：标准版   - enterprise：专业版   ultimate：企业版
     *
     * @return $this
     */

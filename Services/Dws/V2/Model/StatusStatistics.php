@@ -20,8 +20,8 @@ class StatusStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * active  活跃资源
-    * total  总资源
+    * active  **参数解释**： 活跃资源。 **取值范围**： 不涉及。
+    * total  **参数解释**： 总资源。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class StatusStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * active  活跃资源
-    * total  总资源
+    * active  **参数解释**： 活跃资源。 **取值范围**： 不涉及。
+    * total  **参数解释**： 总资源。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class StatusStatistics implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * active  活跃资源
-    * total  总资源
+    * active  **参数解释**： 活跃资源。 **取值范围**： 不涉及。
+    * total  **参数解释**： 总资源。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class StatusStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * active  活跃资源
-    * total  总资源
+    * active  **参数解释**： 活跃资源。 **取值范围**： 不涉及。
+    * total  **参数解释**： 总资源。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class StatusStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * active  活跃资源
-    * total  总资源
+    * active  **参数解释**： 活跃资源。 **取值范围**： 不涉及。
+    * total  **参数解释**： 总资源。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class StatusStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Gets active
-    *  活跃资源
+    *  **参数解释**： 活跃资源。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -197,7 +197,7 @@ class StatusStatistics implements ModelInterface, ArrayAccess
     /**
     * Sets active
     *
-    * @param int|null $active 活跃资源
+    * @param int|null $active **参数解释**： 活跃资源。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class StatusStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总资源
+    *  **参数解释**： 总资源。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class StatusStatistics implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总资源
+    * @param int|null $total **参数解释**： 总资源。 **取值范围**： 不涉及。
     *
     * @return $this
     */

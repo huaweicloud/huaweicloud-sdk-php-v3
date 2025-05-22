@@ -36,6 +36,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     * ipVersion  当前后端服务器的IP地址版本。取值：v4、v6。
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。  支持多值查询，查询条件格式：*member_type=xxx&member_type=xxx*。
     * instanceId  member关联的ECS实例ID，空表示跨VPC场景的member。  支持多值查询，查询条件格式：*instance_id=xxx&instance_id=xxx*。
+    * availabilityZone  后端服务器的可用区。  支持多值查询，查询条件格式：*availability_zone=xxx&availability_zone=xxx*。
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string[]',
             'ipVersion' => 'string[]',
             'memberType' => 'string[]',
-            'instanceId' => 'string[]'
+            'instanceId' => 'string[]',
+            'availabilityZone' => 'string[]'
     ];
 
     /**
@@ -76,6 +78,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     * ipVersion  当前后端服务器的IP地址版本。取值：v4、v6。
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。  支持多值查询，查询条件格式：*member_type=xxx&member_type=xxx*。
     * instanceId  member关联的ECS实例ID，空表示跨VPC场景的member。  支持多值查询，查询条件格式：*instance_id=xxx&instance_id=xxx*。
+    * availabilityZone  后端服务器的可用区。  支持多值查询，查询条件格式：*availability_zone=xxx&availability_zone=xxx*。
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'ipVersion' => null,
         'memberType' => null,
-        'instanceId' => null
+        'instanceId' => null,
+        'availabilityZone' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     * ipVersion  当前后端服务器的IP地址版本。取值：v4、v6。
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。  支持多值查询，查询条件格式：*member_type=xxx&member_type=xxx*。
     * instanceId  member关联的ECS实例ID，空表示跨VPC场景的member。  支持多值查询，查询条件格式：*instance_id=xxx&instance_id=xxx*。
+    * availabilityZone  后端服务器的可用区。  支持多值查询，查询条件格式：*availability_zone=xxx&availability_zone=xxx*。
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'ipVersion' => 'ip_version',
             'memberType' => 'member_type',
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'availabilityZone' => 'availability_zone'
     ];
 
     /**
@@ -177,6 +183,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     * ipVersion  当前后端服务器的IP地址版本。取值：v4、v6。
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。  支持多值查询，查询条件格式：*member_type=xxx&member_type=xxx*。
     * instanceId  member关联的ECS实例ID，空表示跨VPC场景的member。  支持多值查询，查询条件格式：*instance_id=xxx&instance_id=xxx*。
+    * availabilityZone  后端服务器的可用区。  支持多值查询，查询条件格式：*availability_zone=xxx&availability_zone=xxx*。
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'ipVersion' => 'setIpVersion',
             'memberType' => 'setMemberType',
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'availabilityZone' => 'setAvailabilityZone'
     ];
 
     /**
@@ -217,6 +225,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     * ipVersion  当前后端服务器的IP地址版本。取值：v4、v6。
     * memberType  后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。  支持多值查询，查询条件格式：*member_type=xxx&member_type=xxx*。
     * instanceId  member关联的ECS实例ID，空表示跨VPC场景的member。  支持多值查询，查询条件格式：*instance_id=xxx&instance_id=xxx*。
+    * availabilityZone  后端服务器的可用区。  支持多值查询，查询条件格式：*availability_zone=xxx&availability_zone=xxx*。
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'ipVersion' => 'getIpVersion',
             'memberType' => 'getMemberType',
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'availabilityZone' => 'getAvailabilityZone'
     ];
 
     /**
@@ -313,6 +323,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['memberType'] = isset($data['memberType']) ? $data['memberType'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
     }
 
     /**
@@ -727,6 +738,30 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZone
+    *  后端服务器的可用区。  支持多值查询，查询条件格式：*availability_zone=xxx&availability_zone=xxx*。
+    *
+    * @return string[]|null
+    */
+    public function getAvailabilityZone()
+    {
+        return $this->container['availabilityZone'];
+    }
+
+    /**
+    * Sets availabilityZone
+    *
+    * @param string[]|null $availabilityZone 后端服务器的可用区。  支持多值查询，查询条件格式：*availability_zone=xxx&availability_zone=xxx*。
+    *
+    * @return $this
+    */
+    public function setAvailabilityZone($availabilityZone)
+    {
+        $this->container['availabilityZone'] = $availabilityZone;
         return $this;
     }
 

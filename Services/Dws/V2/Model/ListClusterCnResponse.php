@@ -21,9 +21,9 @@ class ListClusterCnResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * minNum  集群支持的最小CN节点数量。
-    * maxNum  集群支持的最大CN节点数量。
-    * instances  CN节点详情列表。
+    * minNum  **参数解释**： 集群支持的最小CN节点数量。 **取值范围**： 不涉及。
+    * maxNum  **参数解释**： 集群支持的最大CN节点数量。 **取值范围**： 不涉及。
+    * instances  **参数解释**： CN节点详情列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListClusterCnResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * minNum  集群支持的最小CN节点数量。
-    * maxNum  集群支持的最大CN节点数量。
-    * instances  CN节点详情列表。
+    * minNum  **参数解释**： 集群支持的最小CN节点数量。 **取值范围**： 不涉及。
+    * maxNum  **参数解释**： 集群支持的最大CN节点数量。 **取值范围**： 不涉及。
+    * instances  **参数解释**： CN节点详情列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListClusterCnResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * minNum  集群支持的最小CN节点数量。
-    * maxNum  集群支持的最大CN节点数量。
-    * instances  CN节点详情列表。
+    * minNum  **参数解释**： 集群支持的最小CN节点数量。 **取值范围**： 不涉及。
+    * maxNum  **参数解释**： 集群支持的最大CN节点数量。 **取值范围**： 不涉及。
+    * instances  **参数解释**： CN节点详情列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListClusterCnResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * minNum  集群支持的最小CN节点数量。
-    * maxNum  集群支持的最大CN节点数量。
-    * instances  CN节点详情列表。
+    * minNum  **参数解释**： 集群支持的最小CN节点数量。 **取值范围**： 不涉及。
+    * maxNum  **参数解释**： 集群支持的最大CN节点数量。 **取值范围**： 不涉及。
+    * instances  **参数解释**： CN节点详情列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListClusterCnResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * minNum  集群支持的最小CN节点数量。
-    * maxNum  集群支持的最大CN节点数量。
-    * instances  CN节点详情列表。
+    * minNum  **参数解释**： 集群支持的最小CN节点数量。 **取值范围**： 不涉及。
+    * maxNum  **参数解释**： 集群支持的最大CN节点数量。 **取值范围**： 不涉及。
+    * instances  **参数解释**： CN节点详情列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListClusterCnResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets minNum
-    *  集群支持的最小CN节点数量。
+    *  **参数解释**： 集群支持的最小CN节点数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -209,7 +209,7 @@ class ListClusterCnResponse implements ModelInterface, ArrayAccess
     /**
     * Sets minNum
     *
-    * @param int|null $minNum 集群支持的最小CN节点数量。
+    * @param int|null $minNum **参数解释**： 集群支持的最小CN节点数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListClusterCnResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxNum
-    *  集群支持的最大CN节点数量。
+    *  **参数解释**： 集群支持的最大CN节点数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ListClusterCnResponse implements ModelInterface, ArrayAccess
     /**
     * Sets maxNum
     *
-    * @param int|null $maxNum 集群支持的最大CN节点数量。
+    * @param int|null $maxNum **参数解释**： 集群支持的最大CN节点数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListClusterCnResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  CN节点详情列表。
+    *  **参数解释**： CN节点详情列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\CoordinatorNode[]|null
     */
@@ -257,7 +257,7 @@ class ListClusterCnResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\CoordinatorNode[]|null $instances CN节点详情列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\CoordinatorNode[]|null $instances **参数解释**： CN节点详情列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

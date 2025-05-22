@@ -20,8 +20,8 @@ class Endpoints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * connectInfo  内网连接信息。
-    * jdbcUrl  内网JDBC URL，默认格式如下： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
+    * connectInfo  **参数解释**： 内网连接信息。 **取值范围**： 不涉及。
+    * jdbcUrl  **参数解释**： 内网JDBC URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Endpoints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * connectInfo  内网连接信息。
-    * jdbcUrl  内网JDBC URL，默认格式如下： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
+    * connectInfo  **参数解释**： 内网连接信息。 **取值范围**： 不涉及。
+    * jdbcUrl  **参数解释**： 内网JDBC URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Endpoints implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * connectInfo  内网连接信息。
-    * jdbcUrl  内网JDBC URL，默认格式如下： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
+    * connectInfo  **参数解释**： 内网连接信息。 **取值范围**： 不涉及。
+    * jdbcUrl  **参数解释**： 内网JDBC URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Endpoints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * connectInfo  内网连接信息。
-    * jdbcUrl  内网JDBC URL，默认格式如下： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
+    * connectInfo  **参数解释**： 内网连接信息。 **取值范围**： 不涉及。
+    * jdbcUrl  **参数解释**： 内网JDBC URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Endpoints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * connectInfo  内网连接信息。
-    * jdbcUrl  内网JDBC URL，默认格式如下： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
+    * connectInfo  **参数解释**： 内网连接信息。 **取值范围**： 不涉及。
+    * jdbcUrl  **参数解释**： 内网JDBC URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class Endpoints implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectInfo
-    *  内网连接信息。
+    *  **参数解释**： 内网连接信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class Endpoints implements ModelInterface, ArrayAccess
     /**
     * Sets connectInfo
     *
-    * @param string|null $connectInfo 内网连接信息。
+    * @param string|null $connectInfo **参数解释**： 内网连接信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class Endpoints implements ModelInterface, ArrayAccess
 
     /**
     * Gets jdbcUrl
-    *  内网JDBC URL，默认格式如下： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
+    *  **参数解释**： 内网JDBC URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class Endpoints implements ModelInterface, ArrayAccess
     /**
     * Sets jdbcUrl
     *
-    * @param string|null $jdbcUrl 内网JDBC URL，默认格式如下： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
+    * @param string|null $jdbcUrl **参数解释**： 内网JDBC URL。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<connect_info>/<YOUR_DATABASE_NAME>
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * availabilityZones  可用区列表对象。
-    * count  可用区数量。
+    * availabilityZones  **参数解释**： 可用区列表。 **取值范围**： 非空对象列表。
+    * count  **参数解释**： 可用区数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * availabilityZones  可用区列表对象。
-    * count  可用区数量。
+    * availabilityZones  **参数解释**： 可用区列表。 **取值范围**： 非空对象列表。
+    * count  **参数解释**： 可用区数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * availabilityZones  可用区列表对象。
-    * count  可用区数量。
+    * availabilityZones  **参数解释**： 可用区列表。 **取值范围**： 非空对象列表。
+    * count  **参数解释**： 可用区数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * availabilityZones  可用区列表对象。
-    * count  可用区数量。
+    * availabilityZones  **参数解释**： 可用区列表。 **取值范围**： 非空对象列表。
+    * count  **参数解释**： 可用区数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * availabilityZones  可用区列表对象。
-    * count  可用区数量。
+    * availabilityZones  **参数解释**： 可用区列表。 **取值范围**： 非空对象列表。
+    * count  **参数解释**： 可用区数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZones
-    *  可用区列表对象。
+    *  **参数解释**： 可用区列表。 **取值范围**： 非空对象列表。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\AvailabilityZone[]|null
     */
@@ -198,7 +198,7 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZones
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\AvailabilityZone[]|null $availabilityZones 可用区列表对象。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\AvailabilityZone[]|null $availabilityZones **参数解释**： 可用区列表。 **取值范围**： 非空对象列表。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  可用区数量。
+    *  **参数解释**： 可用区数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 可用区数量。
+    * @param int|null $count **参数解释**： 可用区数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class CreateLogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logicalClusterName  逻辑集群名称
-    * clusterRings  逻辑集群环信息
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterRings  **参数解释**： 逻辑集群环信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateLogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logicalClusterName  逻辑集群名称
-    * clusterRings  逻辑集群环信息
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterRings  **参数解释**： 逻辑集群环信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateLogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logicalClusterName  逻辑集群名称
-    * clusterRings  逻辑集群环信息
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterRings  **参数解释**： 逻辑集群环信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateLogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logicalClusterName  逻辑集群名称
-    * clusterRings  逻辑集群环信息
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterRings  **参数解释**： 逻辑集群环信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateLogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logicalClusterName  逻辑集群名称
-    * clusterRings  逻辑集群环信息
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterRings  **参数解释**： 逻辑集群环信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class CreateLogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterName
-    *  逻辑集群名称
+    *  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class CreateLogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterName
     *
-    * @param string $logicalClusterName 逻辑集群名称
+    * @param string $logicalClusterName **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class CreateLogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterRings
-    *  逻辑集群环信息
+    *  **参数解释**： 逻辑集群环信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]
     */
@@ -227,7 +227,7 @@ class CreateLogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterRings
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[] $clusterRings 逻辑集群环信息
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[] $clusterRings **参数解释**： 逻辑集群环信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

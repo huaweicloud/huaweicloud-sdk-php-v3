@@ -20,10 +20,10 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * rateType  查询类型。固定取值。 skew：表倾斜率。 dirtyPage：表脏页率。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量。
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     * orderBy  排序字段。固定取值。 table_size：表大小。rate：表倾斜率或脏页率。
     * sortBy  正序还是倒叙。固定取值。 ASC：正序。DESC：倒序
     * filter  查询条件。固定取值。 db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。
@@ -44,10 +44,10 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * rateType  查询类型。固定取值。 skew：表倾斜率。 dirtyPage：表脏页率。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量。
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     * orderBy  排序字段。固定取值。 table_size：表大小。rate：表倾斜率或脏页率。
     * sortBy  正序还是倒叙。固定取值。 ASC：正序。DESC：倒序
     * filter  查询条件。固定取值。 db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。
@@ -89,10 +89,10 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * rateType  查询类型。固定取值。 skew：表倾斜率。 dirtyPage：表脏页率。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量。
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     * orderBy  排序字段。固定取值。 table_size：表大小。rate：表倾斜率或脏页率。
     * sortBy  正序还是倒叙。固定取值。 ASC：正序。DESC：倒序
     * filter  查询条件。固定取值。 db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。
@@ -113,10 +113,10 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * rateType  查询类型。固定取值。 skew：表倾斜率。 dirtyPage：表脏页率。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量。
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     * orderBy  排序字段。固定取值。 table_size：表大小。rate：表倾斜率或脏页率。
     * sortBy  正序还是倒叙。固定取值。 ASC：正序。DESC：倒序
     * filter  查询条件。固定取值。 db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。
@@ -137,10 +137,10 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * rateType  查询类型。固定取值。 skew：表倾斜率。 dirtyPage：表脏页率。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量。
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     * orderBy  排序字段。固定取值。 table_size：表大小。rate：表倾斜率或脏页率。
     * sortBy  正序还是倒叙。固定取值。 ASC：正序。DESC：倒序
     * filter  查询条件。固定取值。 db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。
@@ -263,7 +263,7 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID。
+    *  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -275,7 +275,7 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 集群ID。
+    * @param string $clusterId **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -311,7 +311,7 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询，offset>=0。
+    *  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return int
     */
@@ -323,7 +323,7 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int $offset 偏移量，表示从此偏移量开始查询，offset>=0。
+    * @param int $offset **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return $this
     */
@@ -335,7 +335,7 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示的条目数量。
+    *  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     *
     * @return int
     */
@@ -347,7 +347,7 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit 每页显示的条目数量。
+    * @param int $limit **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     *
     * @return $this
     */

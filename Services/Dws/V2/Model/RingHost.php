@@ -20,11 +20,11 @@ class RingHost implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostName  主机名称
-    * backIp  后端IP地址
-    * cpuCores  主机CPU核数
-    * memory  主机内存
-    * diskSize  主机磁盘大小
+    * hostName  **参数解释**： 主机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * backIp  **参数解释**： 后端IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cpuCores  **参数解释**： 主机CPU核数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * memory  **参数解释**： 主机内存。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * diskSize  **参数解释**： 主机磁盘大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class RingHost implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostName  主机名称
-    * backIp  后端IP地址
-    * cpuCores  主机CPU核数
-    * memory  主机内存
-    * diskSize  主机磁盘大小
+    * hostName  **参数解释**： 主机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * backIp  **参数解释**： 后端IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cpuCores  **参数解释**： 主机CPU核数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * memory  **参数解释**： 主机内存。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * diskSize  **参数解释**： 主机磁盘大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class RingHost implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostName  主机名称
-    * backIp  后端IP地址
-    * cpuCores  主机CPU核数
-    * memory  主机内存
-    * diskSize  主机磁盘大小
+    * hostName  **参数解释**： 主机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * backIp  **参数解释**： 后端IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cpuCores  **参数解释**： 主机CPU核数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * memory  **参数解释**： 主机内存。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * diskSize  **参数解释**： 主机磁盘大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class RingHost implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostName  主机名称
-    * backIp  后端IP地址
-    * cpuCores  主机CPU核数
-    * memory  主机内存
-    * diskSize  主机磁盘大小
+    * hostName  **参数解释**： 主机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * backIp  **参数解释**： 后端IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cpuCores  **参数解释**： 主机CPU核数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * memory  **参数解释**： 主机内存。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * diskSize  **参数解释**： 主机磁盘大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class RingHost implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostName  主机名称
-    * backIp  后端IP地址
-    * cpuCores  主机CPU核数
-    * memory  主机内存
-    * diskSize  主机磁盘大小
+    * hostName  **参数解释**： 主机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * backIp  **参数解释**： 后端IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cpuCores  **参数解释**： 主机CPU核数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * memory  **参数解释**： 主机内存。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * diskSize  **参数解释**： 主机磁盘大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -233,7 +233,7 @@ class RingHost implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  主机名称
+    *  **参数解释**： 主机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class RingHost implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string $hostName 主机名称
+    * @param string $hostName **参数解释**： 主机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -257,7 +257,7 @@ class RingHost implements ModelInterface, ArrayAccess
 
     /**
     * Gets backIp
-    *  后端IP地址
+    *  **参数解释**： 后端IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -269,7 +269,7 @@ class RingHost implements ModelInterface, ArrayAccess
     /**
     * Sets backIp
     *
-    * @param string $backIp 后端IP地址
+    * @param string $backIp **参数解释**： 后端IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -281,7 +281,7 @@ class RingHost implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpuCores
-    *  主机CPU核数
+    *  **参数解释**： 主机CPU核数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -293,7 +293,7 @@ class RingHost implements ModelInterface, ArrayAccess
     /**
     * Sets cpuCores
     *
-    * @param int $cpuCores 主机CPU核数
+    * @param int $cpuCores **参数解释**： 主机CPU核数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class RingHost implements ModelInterface, ArrayAccess
 
     /**
     * Gets memory
-    *  主机内存
+    *  **参数解释**： 主机内存。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return double
     */
@@ -317,7 +317,7 @@ class RingHost implements ModelInterface, ArrayAccess
     /**
     * Sets memory
     *
-    * @param double $memory 主机内存
+    * @param double $memory **参数解释**： 主机内存。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class RingHost implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskSize
-    *  主机磁盘大小
+    *  **参数解释**： 主机磁盘大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return double
     */
@@ -341,7 +341,7 @@ class RingHost implements ModelInterface, ArrayAccess
     /**
     * Sets diskSize
     *
-    * @param double $diskSize 主机磁盘大小
+    * @param double $diskSize **参数解释**： 主机磁盘大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

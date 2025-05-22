@@ -21,21 +21,25 @@ class EncoderSettingsExpand implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * audioDescriptions  音频输出配置的描述信息
+    * videoDescriptions  videoDescriptions
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'audioDescriptions' => '\HuaweiCloud\SDK\Live\V1\Model\EncoderSettingsExpandAudioDescriptions[]'
+            'audioDescriptions' => '\HuaweiCloud\SDK\Live\V1\Model\EncoderSettingsExpandAudioDescriptions[]',
+            'videoDescriptions' => '\HuaweiCloud\SDK\Live\V1\Model\VideoDescriptions'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * audioDescriptions  音频输出配置的描述信息
+    * videoDescriptions  videoDescriptions
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'audioDescriptions' => null
+        'audioDescriptions' => null,
+        'videoDescriptions' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class EncoderSettingsExpand implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * audioDescriptions  音频输出配置的描述信息
+    * videoDescriptions  videoDescriptions
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'audioDescriptions' => 'audio_descriptions'
+            'audioDescriptions' => 'audio_descriptions',
+            'videoDescriptions' => 'video_descriptions'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * audioDescriptions  音频输出配置的描述信息
+    * videoDescriptions  videoDescriptions
     *
     * @var string[]
     */
     protected static $setters = [
-            'audioDescriptions' => 'setAudioDescriptions'
+            'audioDescriptions' => 'setAudioDescriptions',
+            'videoDescriptions' => 'setVideoDescriptions'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * audioDescriptions  音频输出配置的描述信息
+    * videoDescriptions  videoDescriptions
     *
     * @var string[]
     */
     protected static $getters = [
-            'audioDescriptions' => 'getAudioDescriptions'
+            'audioDescriptions' => 'getAudioDescriptions',
+            'videoDescriptions' => 'getVideoDescriptions'
     ];
 
     /**
@@ -148,6 +158,7 @@ class EncoderSettingsExpand implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['audioDescriptions'] = isset($data['audioDescriptions']) ? $data['audioDescriptions'] : null;
+        $this->container['videoDescriptions'] = isset($data['videoDescriptions']) ? $data['videoDescriptions'] : null;
     }
 
     /**
@@ -193,6 +204,30 @@ class EncoderSettingsExpand implements ModelInterface, ArrayAccess
     public function setAudioDescriptions($audioDescriptions)
     {
         $this->container['audioDescriptions'] = $audioDescriptions;
+        return $this;
+    }
+
+    /**
+    * Gets videoDescriptions
+    *  videoDescriptions
+    *
+    * @return \HuaweiCloud\SDK\Live\V1\Model\VideoDescriptions|null
+    */
+    public function getVideoDescriptions()
+    {
+        return $this->container['videoDescriptions'];
+    }
+
+    /**
+    * Sets videoDescriptions
+    *
+    * @param \HuaweiCloud\SDK\Live\V1\Model\VideoDescriptions|null $videoDescriptions videoDescriptions
+    *
+    * @return $this
+    */
+    public function setVideoDescriptions($videoDescriptions)
+    {
+        $this->container['videoDescriptions'] = $videoDescriptions;
         return $this;
     }
 

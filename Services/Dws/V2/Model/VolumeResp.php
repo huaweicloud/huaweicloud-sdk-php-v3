@@ -20,8 +20,8 @@ class VolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  磁盘类型，仅支持SSD。
-    * size  磁盘可用容量。
+    * type  **参数解释**： 磁盘类型，仅支持SSD。 **取值范围**： 仅支持SSD。
+    * size  **参数解释**： 磁盘可用容量。 **取值范围**： 仅支持SSD。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class VolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  磁盘类型，仅支持SSD。
-    * size  磁盘可用容量。
+    * type  **参数解释**： 磁盘类型，仅支持SSD。 **取值范围**： 仅支持SSD。
+    * size  **参数解释**： 磁盘可用容量。 **取值范围**： 仅支持SSD。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class VolumeResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  磁盘类型，仅支持SSD。
-    * size  磁盘可用容量。
+    * type  **参数解释**： 磁盘类型，仅支持SSD。 **取值范围**： 仅支持SSD。
+    * size  **参数解释**： 磁盘可用容量。 **取值范围**： 仅支持SSD。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class VolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  磁盘类型，仅支持SSD。
-    * size  磁盘可用容量。
+    * type  **参数解释**： 磁盘类型，仅支持SSD。 **取值范围**： 仅支持SSD。
+    * size  **参数解释**： 磁盘可用容量。 **取值范围**： 仅支持SSD。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class VolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  磁盘类型，仅支持SSD。
-    * size  磁盘可用容量。
+    * type  **参数解释**： 磁盘类型，仅支持SSD。 **取值范围**： 仅支持SSD。
+    * size  **参数解释**： 磁盘可用容量。 **取值范围**： 仅支持SSD。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class VolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  磁盘类型，仅支持SSD。
+    *  **参数解释**： 磁盘类型，仅支持SSD。 **取值范围**： 仅支持SSD。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class VolumeResp implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 磁盘类型，仅支持SSD。
+    * @param string $type **参数解释**： 磁盘类型，仅支持SSD。 **取值范围**： 仅支持SSD。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class VolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  磁盘可用容量。
+    *  **参数解释**： 磁盘可用容量。 **取值范围**： 仅支持SSD。
     *
     * @return int
     */
@@ -227,7 +227,7 @@ class VolumeResp implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int $size 磁盘可用容量。
+    * @param int $size **参数解释**： 磁盘可用容量。 **取值范围**： 仅支持SSD。
     *
     * @return $this
     */

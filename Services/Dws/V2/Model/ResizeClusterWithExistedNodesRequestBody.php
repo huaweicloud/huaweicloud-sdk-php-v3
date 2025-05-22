@@ -21,11 +21,11 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
     /**
     * Array of property to type mappings. Used for (de)serialization
     * scaleOut  scaleOut
-    * forceBackup  是否强制备份
-    * mode  扩容备份模式，不传默认离线read-only。
-    * logicalClusterName  逻辑集群名称。非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。
-    * expandWithExistedNode  是否是使用已添加的空闲节点进行扩容
-    * autoRedistribute  扩容完成后是否自动启动重分布，默认true
+    * forceBackup  **参数解释**： 是否强制备份。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 扩容模式，不传默认离线read-only。 **约束限制**： 在线模式在大部分低版本集群不支持，请在联系运维人员确认后方才可用。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。 **默认取值**： elastic_group
+    * expandWithExistedNode  **参数解释**： 是否是使用已添加的空闲节点进行扩容。 **约束限制**： 不涉及。 **取值范围**： true：使用空闲节点扩容 false：不使用空闲节点扩容 **默认取值**： false
+    * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认true。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： true
     * redisConf  redisConf
     *
     * @var string[]
@@ -43,11 +43,11 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
     /**
     * Array of property to format mappings. Used for (de)serialization
     * scaleOut  scaleOut
-    * forceBackup  是否强制备份
-    * mode  扩容备份模式，不传默认离线read-only。
-    * logicalClusterName  逻辑集群名称。非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。
-    * expandWithExistedNode  是否是使用已添加的空闲节点进行扩容
-    * autoRedistribute  扩容完成后是否自动启动重分布，默认true
+    * forceBackup  **参数解释**： 是否强制备份。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 扩容模式，不传默认离线read-only。 **约束限制**： 在线模式在大部分低版本集群不支持，请在联系运维人员确认后方才可用。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。 **默认取值**： elastic_group
+    * expandWithExistedNode  **参数解释**： 是否是使用已添加的空闲节点进行扩容。 **约束限制**： 不涉及。 **取值范围**： true：使用空闲节点扩容 false：不使用空闲节点扩容 **默认取值**： false
+    * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认true。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： true
     * redisConf  redisConf
     *
     * @var string[]
@@ -86,11 +86,11 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * scaleOut  scaleOut
-    * forceBackup  是否强制备份
-    * mode  扩容备份模式，不传默认离线read-only。
-    * logicalClusterName  逻辑集群名称。非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。
-    * expandWithExistedNode  是否是使用已添加的空闲节点进行扩容
-    * autoRedistribute  扩容完成后是否自动启动重分布，默认true
+    * forceBackup  **参数解释**： 是否强制备份。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 扩容模式，不传默认离线read-only。 **约束限制**： 在线模式在大部分低版本集群不支持，请在联系运维人员确认后方才可用。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。 **默认取值**： elastic_group
+    * expandWithExistedNode  **参数解释**： 是否是使用已添加的空闲节点进行扩容。 **约束限制**： 不涉及。 **取值范围**： true：使用空闲节点扩容 false：不使用空闲节点扩容 **默认取值**： false
+    * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认true。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： true
     * redisConf  redisConf
     *
     * @var string[]
@@ -108,11 +108,11 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * scaleOut  scaleOut
-    * forceBackup  是否强制备份
-    * mode  扩容备份模式，不传默认离线read-only。
-    * logicalClusterName  逻辑集群名称。非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。
-    * expandWithExistedNode  是否是使用已添加的空闲节点进行扩容
-    * autoRedistribute  扩容完成后是否自动启动重分布，默认true
+    * forceBackup  **参数解释**： 是否强制备份。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 扩容模式，不传默认离线read-only。 **约束限制**： 在线模式在大部分低版本集群不支持，请在联系运维人员确认后方才可用。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。 **默认取值**： elastic_group
+    * expandWithExistedNode  **参数解释**： 是否是使用已添加的空闲节点进行扩容。 **约束限制**： 不涉及。 **取值范围**： true：使用空闲节点扩容 false：不使用空闲节点扩容 **默认取值**： false
+    * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认true。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： true
     * redisConf  redisConf
     *
     * @var string[]
@@ -130,11 +130,11 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * scaleOut  scaleOut
-    * forceBackup  是否强制备份
-    * mode  扩容备份模式，不传默认离线read-only。
-    * logicalClusterName  逻辑集群名称。非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。
-    * expandWithExistedNode  是否是使用已添加的空闲节点进行扩容
-    * autoRedistribute  扩容完成后是否自动启动重分布，默认true
+    * forceBackup  **参数解释**： 是否强制备份。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 扩容模式，不传默认离线read-only。 **约束限制**： 在线模式在大部分低版本集群不支持，请在联系运维人员确认后方才可用。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。 **默认取值**： elastic_group
+    * expandWithExistedNode  **参数解释**： 是否是使用已添加的空闲节点进行扩容。 **约束限制**： 不涉及。 **取值范围**： true：使用空闲节点扩容 false：不使用空闲节点扩容 **默认取值**： false
+    * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认true。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： true
     * redisConf  redisConf
     *
     * @var string[]
@@ -270,7 +270,7 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
 
     /**
     * Gets forceBackup
-    *  是否强制备份
+    *  **参数解释**： 是否强制备份。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -282,7 +282,7 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
     /**
     * Sets forceBackup
     *
-    * @param bool|null $forceBackup 是否强制备份
+    * @param bool|null $forceBackup **参数解释**： 是否强制备份。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -294,7 +294,7 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
 
     /**
     * Gets mode
-    *  扩容备份模式，不传默认离线read-only。
+    *  **参数解释**： 扩容模式，不传默认离线read-only。 **约束限制**： 在线模式在大部分低版本集群不支持，请在联系运维人员确认后方才可用。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -306,7 +306,7 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
     /**
     * Sets mode
     *
-    * @param string|null $mode 扩容备份模式，不传默认离线read-only。
+    * @param string|null $mode **参数解释**： 扩容模式，不传默认离线read-only。 **约束限制**： 在线模式在大部分低版本集群不支持，请在联系运维人员确认后方才可用。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -318,7 +318,7 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
 
     /**
     * Gets logicalClusterName
-    *  逻辑集群名称。非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。
+    *  **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。 **默认取值**： elastic_group
     *
     * @return string|null
     */
@@ -330,7 +330,7 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
     /**
     * Sets logicalClusterName
     *
-    * @param string|null $logicalClusterName 逻辑集群名称。非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。
+    * @param string|null $logicalClusterName **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。 **默认取值**： elastic_group
     *
     * @return $this
     */
@@ -342,7 +342,7 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
 
     /**
     * Gets expandWithExistedNode
-    *  是否是使用已添加的空闲节点进行扩容
+    *  **参数解释**： 是否是使用已添加的空闲节点进行扩容。 **约束限制**： 不涉及。 **取值范围**： true：使用空闲节点扩容 false：不使用空闲节点扩容 **默认取值**： false
     *
     * @return bool
     */
@@ -354,7 +354,7 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
     /**
     * Sets expandWithExistedNode
     *
-    * @param bool $expandWithExistedNode 是否是使用已添加的空闲节点进行扩容
+    * @param bool $expandWithExistedNode **参数解释**： 是否是使用已添加的空闲节点进行扩容。 **约束限制**： 不涉及。 **取值范围**： true：使用空闲节点扩容 false：不使用空闲节点扩容 **默认取值**： false
     *
     * @return $this
     */
@@ -366,7 +366,7 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
 
     /**
     * Gets autoRedistribute
-    *  扩容完成后是否自动启动重分布，默认true
+    *  **参数解释**： 扩容完成后是否自动启动重分布，默认true。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： true
     *
     * @return bool|null
     */
@@ -378,7 +378,7 @@ class ResizeClusterWithExistedNodesRequestBody implements ModelInterface, ArrayA
     /**
     * Sets autoRedistribute
     *
-    * @param bool|null $autoRedistribute 扩容完成后是否自动启动重分布，默认true
+    * @param bool|null $autoRedistribute **参数解释**： 扩容完成后是否自动启动重分布，默认true。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： true
     *
     * @return $this
     */

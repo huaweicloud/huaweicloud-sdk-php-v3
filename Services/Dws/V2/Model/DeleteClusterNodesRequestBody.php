@@ -20,8 +20,8 @@ class DeleteClusterNodesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodeList  逻辑集群节点ID列表
-    * operateType  操作类型，clear|delete
+    * nodeList  **参数解释**： 空闲节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * operateType  **参数解释**： 操作类型，一般传delete即可。 **约束限制**： 不涉及。 **取值范围**： clear：清理创建失败的空闲节点 delete：删除空闲节点 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DeleteClusterNodesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodeList  逻辑集群节点ID列表
-    * operateType  操作类型，clear|delete
+    * nodeList  **参数解释**： 空闲节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * operateType  **参数解释**： 操作类型，一般传delete即可。 **约束限制**： 不涉及。 **取值范围**： clear：清理创建失败的空闲节点 delete：删除空闲节点 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DeleteClusterNodesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodeList  逻辑集群节点ID列表
-    * operateType  操作类型，clear|delete
+    * nodeList  **参数解释**： 空闲节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * operateType  **参数解释**： 操作类型，一般传delete即可。 **约束限制**： 不涉及。 **取值范围**： clear：清理创建失败的空闲节点 delete：删除空闲节点 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DeleteClusterNodesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodeList  逻辑集群节点ID列表
-    * operateType  操作类型，clear|delete
+    * nodeList  **参数解释**： 空闲节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * operateType  **参数解释**： 操作类型，一般传delete即可。 **约束限制**： 不涉及。 **取值范围**： clear：清理创建失败的空闲节点 delete：删除空闲节点 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DeleteClusterNodesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodeList  逻辑集群节点ID列表
-    * operateType  操作类型，clear|delete
+    * nodeList  **参数解释**： 空闲节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * operateType  **参数解释**： 操作类型，一般传delete即可。 **约束限制**： 不涉及。 **取值范围**： clear：清理创建失败的空闲节点 delete：删除空闲节点 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class DeleteClusterNodesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeList
-    *  逻辑集群节点ID列表
+    *  **参数解释**： 空闲节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]
     */
@@ -203,7 +203,7 @@ class DeleteClusterNodesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets nodeList
     *
-    * @param string[] $nodeList 逻辑集群节点ID列表
+    * @param string[] $nodeList **参数解释**： 空闲节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class DeleteClusterNodesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets operateType
-    *  操作类型，clear|delete
+    *  **参数解释**： 操作类型，一般传delete即可。 **约束限制**： 不涉及。 **取值范围**： clear：清理创建失败的空闲节点 delete：删除空闲节点 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class DeleteClusterNodesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets operateType
     *
-    * @param string $operateType 操作类型，clear|delete
+    * @param string $operateType **参数解释**： 操作类型，一般传delete即可。 **约束限制**： 不涉及。 **取值范围**： clear：清理创建失败的空闲节点 delete：删除空闲节点 **默认取值**： 不涉及。
     *
     * @return $this
     */

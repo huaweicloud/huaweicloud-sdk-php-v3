@@ -21,9 +21,9 @@ class ListClusterNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodeList  逻辑集群节点列表
-    * count  逻辑集群节点总数
-    * failedCount  逻辑集群节点失败总数
+    * nodeList  **参数解释**： 集群节点列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 集群节点总数。 **取值范围**： 大于0的整数。
+    * failedCount  **参数解释**： 逻辑集群节点失败总数。一般为0。 **取值范围**： 大于等于0的整数。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListClusterNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodeList  逻辑集群节点列表
-    * count  逻辑集群节点总数
-    * failedCount  逻辑集群节点失败总数
+    * nodeList  **参数解释**： 集群节点列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 集群节点总数。 **取值范围**： 大于0的整数。
+    * failedCount  **参数解释**： 逻辑集群节点失败总数。一般为0。 **取值范围**： 大于等于0的整数。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListClusterNodesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodeList  逻辑集群节点列表
-    * count  逻辑集群节点总数
-    * failedCount  逻辑集群节点失败总数
+    * nodeList  **参数解释**： 集群节点列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 集群节点总数。 **取值范围**： 大于0的整数。
+    * failedCount  **参数解释**： 逻辑集群节点失败总数。一般为0。 **取值范围**： 大于等于0的整数。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListClusterNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodeList  逻辑集群节点列表
-    * count  逻辑集群节点总数
-    * failedCount  逻辑集群节点失败总数
+    * nodeList  **参数解释**： 集群节点列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 集群节点总数。 **取值范围**： 大于0的整数。
+    * failedCount  **参数解释**： 逻辑集群节点失败总数。一般为0。 **取值范围**： 大于等于0的整数。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListClusterNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodeList  逻辑集群节点列表
-    * count  逻辑集群节点总数
-    * failedCount  逻辑集群节点失败总数
+    * nodeList  **参数解释**： 集群节点列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 集群节点总数。 **取值范围**： 大于0的整数。
+    * failedCount  **参数解释**： 逻辑集群节点失败总数。一般为0。 **取值范围**： 大于等于0的整数。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListClusterNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeList
-    *  逻辑集群节点列表
+    *  **参数解释**： 集群节点列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterNodeInfo[]|null
     */
@@ -209,7 +209,7 @@ class ListClusterNodesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nodeList
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterNodeInfo[]|null $nodeList 逻辑集群节点列表
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterNodeInfo[]|null $nodeList **参数解释**： 集群节点列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListClusterNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  逻辑集群节点总数
+    *  **参数解释**： 集群节点总数。 **取值范围**： 大于0的整数。
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ListClusterNodesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 逻辑集群节点总数
+    * @param int|null $count **参数解释**： 集群节点总数。 **取值范围**： 大于0的整数。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListClusterNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedCount
-    *  逻辑集群节点失败总数
+    *  **参数解释**： 逻辑集群节点失败总数。一般为0。 **取值范围**： 大于等于0的整数。
     *
     * @return int|null
     */
@@ -257,7 +257,7 @@ class ListClusterNodesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets failedCount
     *
-    * @param int|null $failedCount 逻辑集群节点失败总数
+    * @param int|null $failedCount **参数解释**： 逻辑集群节点失败总数。一般为0。 **取值范围**： 大于等于0的整数。
     *
     * @return $this
     */

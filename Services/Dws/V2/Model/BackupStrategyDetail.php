@@ -20,13 +20,14 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policyId  策略ID。
-    * policyName  策略名称。
-    * backupStrategy  执行策略。
-    * backupType  备份类型。
-    * backupLevel  备份级别。
-    * nextFireTime  下次触发时间。
-    * updateTime  更新时间。
+    * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
+    * policyName  **参数解释**： 策略名称。 **取值范围**： 不涉及。
+    * backupStrategy  **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
+    * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * timeZoneOffset  **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
     *
     * @var string[]
     */
@@ -37,18 +38,20 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
             'backupType' => 'string',
             'backupLevel' => 'string',
             'nextFireTime' => 'string',
-            'updateTime' => 'string'
+            'updateTime' => 'string',
+            'timeZoneOffset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policyId  策略ID。
-    * policyName  策略名称。
-    * backupStrategy  执行策略。
-    * backupType  备份类型。
-    * backupLevel  备份级别。
-    * nextFireTime  下次触发时间。
-    * updateTime  更新时间。
+    * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
+    * policyName  **参数解释**： 策略名称。 **取值范围**： 不涉及。
+    * backupStrategy  **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
+    * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * timeZoneOffset  **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
         'backupType' => null,
         'backupLevel' => null,
         'nextFireTime' => null,
-        'updateTime' => null
+        'updateTime' => null,
+        'timeZoneOffset' => 'int32'
     ];
 
     /**
@@ -85,13 +89,14 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policyId  策略ID。
-    * policyName  策略名称。
-    * backupStrategy  执行策略。
-    * backupType  备份类型。
-    * backupLevel  备份级别。
-    * nextFireTime  下次触发时间。
-    * updateTime  更新时间。
+    * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
+    * policyName  **参数解释**： 策略名称。 **取值范围**： 不涉及。
+    * backupStrategy  **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
+    * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * timeZoneOffset  **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
     *
     * @var string[]
     */
@@ -102,18 +107,20 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
             'backupType' => 'backup_type',
             'backupLevel' => 'backup_level',
             'nextFireTime' => 'next_fire_time',
-            'updateTime' => 'update_time'
+            'updateTime' => 'update_time',
+            'timeZoneOffset' => 'time_zone_offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policyId  策略ID。
-    * policyName  策略名称。
-    * backupStrategy  执行策略。
-    * backupType  备份类型。
-    * backupLevel  备份级别。
-    * nextFireTime  下次触发时间。
-    * updateTime  更新时间。
+    * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
+    * policyName  **参数解释**： 策略名称。 **取值范围**： 不涉及。
+    * backupStrategy  **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
+    * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * timeZoneOffset  **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
     *
     * @var string[]
     */
@@ -124,18 +131,20 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
             'backupType' => 'setBackupType',
             'backupLevel' => 'setBackupLevel',
             'nextFireTime' => 'setNextFireTime',
-            'updateTime' => 'setUpdateTime'
+            'updateTime' => 'setUpdateTime',
+            'timeZoneOffset' => 'setTimeZoneOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policyId  策略ID。
-    * policyName  策略名称。
-    * backupStrategy  执行策略。
-    * backupType  备份类型。
-    * backupLevel  备份级别。
-    * nextFireTime  下次触发时间。
-    * updateTime  更新时间。
+    * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
+    * policyName  **参数解释**： 策略名称。 **取值范围**： 不涉及。
+    * backupStrategy  **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
+    * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
+    * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * timeZoneOffset  **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
             'backupType' => 'getBackupType',
             'backupLevel' => 'getBackupLevel',
             'nextFireTime' => 'getNextFireTime',
-            'updateTime' => 'getUpdateTime'
+            'updateTime' => 'getUpdateTime',
+            'timeZoneOffset' => 'getTimeZoneOffset'
     ];
 
     /**
@@ -214,6 +224,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
         $this->container['backupLevel'] = isset($data['backupLevel']) ? $data['backupLevel'] : null;
         $this->container['nextFireTime'] = isset($data['nextFireTime']) ? $data['nextFireTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['timeZoneOffset'] = isset($data['timeZoneOffset']) ? $data['timeZoneOffset'] : null;
     }
 
     /**
@@ -240,7 +251,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyId
-    *  策略ID。
+    *  **参数解释**： 策略ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -252,7 +263,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     /**
     * Sets policyId
     *
-    * @param string|null $policyId 策略ID。
+    * @param string|null $policyId **参数解释**： 策略ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -264,7 +275,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyName
-    *  策略名称。
+    *  **参数解释**： 策略名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -276,7 +287,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     /**
     * Sets policyName
     *
-    * @param string|null $policyName 策略名称。
+    * @param string|null $policyName **参数解释**： 策略名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -288,7 +299,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupStrategy
-    *  执行策略。
+    *  **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -300,7 +311,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     /**
     * Sets backupStrategy
     *
-    * @param string|null $backupStrategy 执行策略。
+    * @param string|null $backupStrategy **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -312,7 +323,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupType
-    *  备份类型。
+    *  **参数解释**： 备份类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -324,7 +335,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     /**
     * Sets backupType
     *
-    * @param string|null $backupType 备份类型。
+    * @param string|null $backupType **参数解释**： 备份类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -336,7 +347,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupLevel
-    *  备份级别。
+    *  **参数解释**： 备份级别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -348,7 +359,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     /**
     * Sets backupLevel
     *
-    * @param string|null $backupLevel 备份级别。
+    * @param string|null $backupLevel **参数解释**： 备份级别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -360,7 +371,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextFireTime
-    *  下次触发时间。
+    *  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -372,7 +383,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     /**
     * Sets nextFireTime
     *
-    * @param string|null $nextFireTime 下次触发时间。
+    * @param string|null $nextFireTime **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -384,7 +395,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间。
+    *  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -396,13 +407,37 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime 更新时间。
+    * @param string|null $updateTime **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
     public function setUpdateTime($updateTime)
     {
         $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets timeZoneOffset
+    *  **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
+    *
+    * @return int|null
+    */
+    public function getTimeZoneOffset()
+    {
+        return $this->container['timeZoneOffset'];
+    }
+
+    /**
+    * Sets timeZoneOffset
+    *
+    * @param int|null $timeZoneOffset **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
+    *
+    * @return $this
+    */
+    public function setTimeZoneOffset($timeZoneOffset)
+    {
+        $this->container['timeZoneOffset'] = $timeZoneOffset;
         return $this;
     }
 

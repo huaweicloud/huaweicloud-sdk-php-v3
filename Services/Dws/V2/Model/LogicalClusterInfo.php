@@ -20,19 +20,19 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logicalClusterId  逻辑集群ID
-    * logicalClusterName  逻辑集群名称
-    * clusterRings  逻辑集群主机信息
-    * status  逻辑集群状态
-    * firstLogicalCluster  是否为第一个逻辑集群。第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图
+    * logicalClusterId  **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * clusterRings  **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+    * firstLogicalCluster  **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
     * actionInfo  actionInfo
-    * editEnable  是否允许编辑
-    * restartEnable  是否允许重启
-    * deleteEnable  是否允许删除
-    * addToElastic  是否允许弹性伸缩
-    * mode  逻辑集群模式
-    * waitingForKilling  等待被销毁
-    * clusterType  集群类型
+    * editEnable  **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
+    * restartEnable  **参数解释**： 是否允许重启。 **取值范围**： 不涉及。
+    * deleteEnable  **参数解释**： 是否允许删除。 **取值范围**： 不涉及。
+    * addToElastic  **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
+    * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
+    * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
+    * clusterType  **参数解释**： 集群类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -54,19 +54,19 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logicalClusterId  逻辑集群ID
-    * logicalClusterName  逻辑集群名称
-    * clusterRings  逻辑集群主机信息
-    * status  逻辑集群状态
-    * firstLogicalCluster  是否为第一个逻辑集群。第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图
+    * logicalClusterId  **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * clusterRings  **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+    * firstLogicalCluster  **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
     * actionInfo  actionInfo
-    * editEnable  是否允许编辑
-    * restartEnable  是否允许重启
-    * deleteEnable  是否允许删除
-    * addToElastic  是否允许弹性伸缩
-    * mode  逻辑集群模式
-    * waitingForKilling  等待被销毁
-    * clusterType  集群类型
+    * editEnable  **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
+    * restartEnable  **参数解释**： 是否允许重启。 **取值范围**： 不涉及。
+    * deleteEnable  **参数解释**： 是否允许删除。 **取值范围**： 不涉及。
+    * addToElastic  **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
+    * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
+    * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
+    * clusterType  **参数解释**： 集群类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -109,19 +109,19 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logicalClusterId  逻辑集群ID
-    * logicalClusterName  逻辑集群名称
-    * clusterRings  逻辑集群主机信息
-    * status  逻辑集群状态
-    * firstLogicalCluster  是否为第一个逻辑集群。第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图
+    * logicalClusterId  **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * clusterRings  **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+    * firstLogicalCluster  **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
     * actionInfo  actionInfo
-    * editEnable  是否允许编辑
-    * restartEnable  是否允许重启
-    * deleteEnable  是否允许删除
-    * addToElastic  是否允许弹性伸缩
-    * mode  逻辑集群模式
-    * waitingForKilling  等待被销毁
-    * clusterType  集群类型
+    * editEnable  **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
+    * restartEnable  **参数解释**： 是否允许重启。 **取值范围**： 不涉及。
+    * deleteEnable  **参数解释**： 是否允许删除。 **取值范围**： 不涉及。
+    * addToElastic  **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
+    * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
+    * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
+    * clusterType  **参数解释**： 集群类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -143,19 +143,19 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logicalClusterId  逻辑集群ID
-    * logicalClusterName  逻辑集群名称
-    * clusterRings  逻辑集群主机信息
-    * status  逻辑集群状态
-    * firstLogicalCluster  是否为第一个逻辑集群。第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图
+    * logicalClusterId  **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * clusterRings  **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+    * firstLogicalCluster  **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
     * actionInfo  actionInfo
-    * editEnable  是否允许编辑
-    * restartEnable  是否允许重启
-    * deleteEnable  是否允许删除
-    * addToElastic  是否允许弹性伸缩
-    * mode  逻辑集群模式
-    * waitingForKilling  等待被销毁
-    * clusterType  集群类型
+    * editEnable  **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
+    * restartEnable  **参数解释**： 是否允许重启。 **取值范围**： 不涉及。
+    * deleteEnable  **参数解释**： 是否允许删除。 **取值范围**： 不涉及。
+    * addToElastic  **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
+    * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
+    * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
+    * clusterType  **参数解释**： 集群类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -177,19 +177,19 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logicalClusterId  逻辑集群ID
-    * logicalClusterName  逻辑集群名称
-    * clusterRings  逻辑集群主机信息
-    * status  逻辑集群状态
-    * firstLogicalCluster  是否为第一个逻辑集群。第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图
+    * logicalClusterId  **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * clusterRings  **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+    * firstLogicalCluster  **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
     * actionInfo  actionInfo
-    * editEnable  是否允许编辑
-    * restartEnable  是否允许重启
-    * deleteEnable  是否允许删除
-    * addToElastic  是否允许弹性伸缩
-    * mode  逻辑集群模式
-    * waitingForKilling  等待被销毁
-    * clusterType  集群类型
+    * editEnable  **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
+    * restartEnable  **参数解释**： 是否允许重启。 **取值范围**： 不涉及。
+    * deleteEnable  **参数解释**： 是否允许删除。 **取值范围**： 不涉及。
+    * addToElastic  **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
+    * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
+    * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
+    * clusterType  **参数解释**： 集群类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -306,7 +306,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterId
-    *  逻辑集群ID
+    *  **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -318,7 +318,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterId
     *
-    * @param string|null $logicalClusterId 逻辑集群ID
+    * @param string|null $logicalClusterId **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterName
-    *  逻辑集群名称
+    *  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -342,7 +342,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterName
     *
-    * @param string|null $logicalClusterName 逻辑集群名称
+    * @param string|null $logicalClusterName **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -354,7 +354,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterRings
-    *  逻辑集群主机信息
+    *  **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]|null
     */
@@ -366,7 +366,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterRings
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]|null $clusterRings 逻辑集群主机信息
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]|null $clusterRings **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  逻辑集群状态
+    *  **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 逻辑集群状态
+    * @param string|null $status **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets firstLogicalCluster
-    *  是否为第一个逻辑集群。第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图
+    *  **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -414,7 +414,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets firstLogicalCluster
     *
-    * @param bool|null $firstLogicalCluster 是否为第一个逻辑集群。第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图
+    * @param bool|null $firstLogicalCluster **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -450,7 +450,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets editEnable
-    *  是否允许编辑
+    *  **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -462,7 +462,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets editEnable
     *
-    * @param bool|null $editEnable 是否允许编辑
+    * @param bool|null $editEnable **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -474,7 +474,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets restartEnable
-    *  是否允许重启
+    *  **参数解释**： 是否允许重启。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -486,7 +486,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets restartEnable
     *
-    * @param bool|null $restartEnable 是否允许重启
+    * @param bool|null $restartEnable **参数解释**： 是否允许重启。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -498,7 +498,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleteEnable
-    *  是否允许删除
+    *  **参数解释**： 是否允许删除。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -510,7 +510,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets deleteEnable
     *
-    * @param bool|null $deleteEnable 是否允许删除
+    * @param bool|null $deleteEnable **参数解释**： 是否允许删除。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -522,7 +522,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets addToElastic
-    *  是否允许弹性伸缩
+    *  **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -534,7 +534,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets addToElastic
     *
-    * @param bool|null $addToElastic 是否允许弹性伸缩
+    * @param bool|null $addToElastic **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -546,7 +546,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  逻辑集群模式
+    *  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -558,7 +558,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode 逻辑集群模式
+    * @param string|null $mode **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets waitingForKilling
-    *  等待被销毁
+    *  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -582,7 +582,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets waitingForKilling
     *
-    * @param int|null $waitingForKilling 等待被销毁
+    * @param int|null $waitingForKilling **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -594,7 +594,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  集群类型
+    *  **参数解释**： 集群类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -606,7 +606,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType 集群类型
+    * @param string|null $clusterType **参数解释**： 集群类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */

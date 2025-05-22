@@ -21,8 +21,8 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * timeZone  时区
-    * offset  当前页
-    * limit  总页数
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * timeZone  时区
-    * offset  当前页
-    * limit  总页数
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * timeZone  时区
-    * offset  当前页
-    * limit  总页数
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * timeZone  时区
-    * offset  当前页
-    * limit  总页数
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * timeZone  时区
-    * offset  当前页
-    * limit  总页数
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     *
     * @var string[]
     */
@@ -223,7 +223,7 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  当前页
+    *  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 当前页
+    * @param string|null $offset **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  总页数
+    *  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     *
     * @return string|null
     */
@@ -259,7 +259,7 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 总页数
+    * @param string|null $limit **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
     *
     * @return $this
     */

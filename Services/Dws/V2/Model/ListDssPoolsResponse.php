@@ -21,8 +21,8 @@ class ListDssPoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pools  专属分布式存储池详情列表。
-    * count  专属分布式存储池个数。
+    * pools  **参数解释**： 专属分布式存储池详情列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 专属分布式存储池个数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListDssPoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pools  专属分布式存储池详情列表。
-    * count  专属分布式存储池个数。
+    * pools  **参数解释**： 专属分布式存储池详情列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 专属分布式存储池个数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListDssPoolsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pools  专属分布式存储池详情列表。
-    * count  专属分布式存储池个数。
+    * pools  **参数解释**： 专属分布式存储池详情列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 专属分布式存储池个数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListDssPoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pools  专属分布式存储池详情列表。
-    * count  专属分布式存储池个数。
+    * pools  **参数解释**： 专属分布式存储池详情列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 专属分布式存储池个数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListDssPoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pools  专属分布式存储池详情列表。
-    * count  专属分布式存储池个数。
+    * pools  **参数解释**： 专属分布式存储池详情列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 专属分布式存储池个数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListDssPoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pools
-    *  专属分布式存储池详情列表。
+    *  **参数解释**： 专属分布式存储池详情列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\DssPool[]|null
     */
@@ -198,7 +198,7 @@ class ListDssPoolsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pools
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\DssPool[]|null $pools 专属分布式存储池详情列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\DssPool[]|null $pools **参数解释**： 专属分布式存储池详情列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListDssPoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  专属分布式存储池个数。
+    *  **参数解释**： 专属分布式存储池个数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListDssPoolsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 专属分布式存储池个数。
+    * @param int|null $count **参数解释**： 专属分布式存储池个数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

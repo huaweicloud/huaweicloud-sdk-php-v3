@@ -22,7 +22,7 @@ class ShowPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  策略id
-    * packageId  防护包id
+    * packageId  实例id
     * name  策略名
     * cleanThreshold  清洗阈值
     * popPolicy  popPolicy
@@ -40,7 +40,7 @@ class ShowPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  策略id
-    * packageId  防护包id
+    * packageId  实例id
     * name  策略名
     * cleanThreshold  清洗阈值
     * popPolicy  popPolicy
@@ -79,7 +79,7 @@ class ShowPolicyResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  策略id
-    * packageId  防护包id
+    * packageId  实例id
     * name  策略名
     * cleanThreshold  清洗阈值
     * popPolicy  popPolicy
@@ -97,7 +97,7 @@ class ShowPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  策略id
-    * packageId  防护包id
+    * packageId  实例id
     * name  策略名
     * cleanThreshold  清洗阈值
     * popPolicy  popPolicy
@@ -115,7 +115,7 @@ class ShowPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  策略id
-    * packageId  防护包id
+    * packageId  实例id
     * name  策略名
     * cleanThreshold  清洗阈值
     * popPolicy  popPolicy
@@ -267,7 +267,7 @@ class ShowPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageId
-    *  防护包id
+    *  实例id
     *
     * @return string|null
     */
@@ -279,7 +279,7 @@ class ShowPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets packageId
     *
-    * @param string|null $packageId 防护包id
+    * @param string|null $packageId 实例id
     *
     * @return $this
     */

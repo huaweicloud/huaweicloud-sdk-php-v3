@@ -21,6 +21,7 @@ class UpdateMemberOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * adminStateUp  后端服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。
+    * availabilityZone  参数解释：后端服务器的可用区。  约束限制： 仅支持iptarget类型的后端服务器更新该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段，且无法更新为\"\"。 取值范围：本region中ECS可选择的可用区。
     * name  后端服务器名称。
     * weight  后端服务器的权重，请求将根据pool配置的负载均衡算法和后端服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值：0-100，默认1。  使用说明：若所在pool的lb_algorithm取值为SOURCE_IP或QUIC_CID，该字段无效。
     * protocolPort  后端服务器端口。  在开启端口透传的pool下的member，该字段无法更新。  [网关型LB，即pool协议为IP时，protocol_port必须设置为0。](tag:hws_eu)
@@ -29,6 +30,7 @@ class UpdateMemberOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'adminStateUp' => 'bool',
+            'availabilityZone' => 'string',
             'name' => 'string',
             'weight' => 'int',
             'protocolPort' => 'int'
@@ -37,6 +39,7 @@ class UpdateMemberOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * adminStateUp  后端服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。
+    * availabilityZone  参数解释：后端服务器的可用区。  约束限制： 仅支持iptarget类型的后端服务器更新该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段，且无法更新为\"\"。 取值范围：本region中ECS可选择的可用区。
     * name  后端服务器名称。
     * weight  后端服务器的权重，请求将根据pool配置的负载均衡算法和后端服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值：0-100，默认1。  使用说明：若所在pool的lb_algorithm取值为SOURCE_IP或QUIC_CID，该字段无效。
     * protocolPort  后端服务器端口。  在开启端口透传的pool下的member，该字段无法更新。  [网关型LB，即pool协议为IP时，protocol_port必须设置为0。](tag:hws_eu)
@@ -45,6 +48,7 @@ class UpdateMemberOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'adminStateUp' => null,
+        'availabilityZone' => null,
         'name' => null,
         'weight' => 'int32',
         'protocolPort' => 'int32'
@@ -74,6 +78,7 @@ class UpdateMemberOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * adminStateUp  后端服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。
+    * availabilityZone  参数解释：后端服务器的可用区。  约束限制： 仅支持iptarget类型的后端服务器更新该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段，且无法更新为\"\"。 取值范围：本region中ECS可选择的可用区。
     * name  后端服务器名称。
     * weight  后端服务器的权重，请求将根据pool配置的负载均衡算法和后端服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值：0-100，默认1。  使用说明：若所在pool的lb_algorithm取值为SOURCE_IP或QUIC_CID，该字段无效。
     * protocolPort  后端服务器端口。  在开启端口透传的pool下的member，该字段无法更新。  [网关型LB，即pool协议为IP时，protocol_port必须设置为0。](tag:hws_eu)
@@ -82,6 +87,7 @@ class UpdateMemberOption implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'adminStateUp' => 'admin_state_up',
+            'availabilityZone' => 'availability_zone',
             'name' => 'name',
             'weight' => 'weight',
             'protocolPort' => 'protocol_port'
@@ -90,6 +96,7 @@ class UpdateMemberOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * adminStateUp  后端服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。
+    * availabilityZone  参数解释：后端服务器的可用区。  约束限制： 仅支持iptarget类型的后端服务器更新该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段，且无法更新为\"\"。 取值范围：本region中ECS可选择的可用区。
     * name  后端服务器名称。
     * weight  后端服务器的权重，请求将根据pool配置的负载均衡算法和后端服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值：0-100，默认1。  使用说明：若所在pool的lb_algorithm取值为SOURCE_IP或QUIC_CID，该字段无效。
     * protocolPort  后端服务器端口。  在开启端口透传的pool下的member，该字段无法更新。  [网关型LB，即pool协议为IP时，protocol_port必须设置为0。](tag:hws_eu)
@@ -98,6 +105,7 @@ class UpdateMemberOption implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'adminStateUp' => 'setAdminStateUp',
+            'availabilityZone' => 'setAvailabilityZone',
             'name' => 'setName',
             'weight' => 'setWeight',
             'protocolPort' => 'setProtocolPort'
@@ -106,6 +114,7 @@ class UpdateMemberOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * adminStateUp  后端服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。
+    * availabilityZone  参数解释：后端服务器的可用区。  约束限制： 仅支持iptarget类型的后端服务器更新该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段，且无法更新为\"\"。 取值范围：本region中ECS可选择的可用区。
     * name  后端服务器名称。
     * weight  后端服务器的权重，请求将根据pool配置的负载均衡算法和后端服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值：0-100，默认1。  使用说明：若所在pool的lb_algorithm取值为SOURCE_IP或QUIC_CID，该字段无效。
     * protocolPort  后端服务器端口。  在开启端口透传的pool下的member，该字段无法更新。  [网关型LB，即pool协议为IP时，protocol_port必须设置为0。](tag:hws_eu)
@@ -114,6 +123,7 @@ class UpdateMemberOption implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'adminStateUp' => 'getAdminStateUp',
+            'availabilityZone' => 'getAvailabilityZone',
             'name' => 'getName',
             'weight' => 'getWeight',
             'protocolPort' => 'getProtocolPort'
@@ -178,6 +188,7 @@ class UpdateMemberOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
+        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
         $this->container['protocolPort'] = isset($data['protocolPort']) ? $data['protocolPort'] : null;
@@ -244,6 +255,30 @@ class UpdateMemberOption implements ModelInterface, ArrayAccess
     public function setAdminStateUp($adminStateUp)
     {
         $this->container['adminStateUp'] = $adminStateUp;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZone
+    *  参数解释：后端服务器的可用区。  约束限制： 仅支持iptarget类型的后端服务器更新该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段，且无法更新为\"\"。 取值范围：本region中ECS可选择的可用区。
+    *
+    * @return string|null
+    */
+    public function getAvailabilityZone()
+    {
+        return $this->container['availabilityZone'];
+    }
+
+    /**
+    * Sets availabilityZone
+    *
+    * @param string|null $availabilityZone 参数解释：后端服务器的可用区。  约束限制： 仅支持iptarget类型的后端服务器更新该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段，且无法更新为\"\"。 取值范围：本region中ECS可选择的可用区。
+    *
+    * @return $this
+    */
+    public function setAvailabilityZone($availabilityZone)
+    {
+        $this->container['availabilityZone'] = $availabilityZone;
         return $this;
     }
 

@@ -20,16 +20,16 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  实例ID
-    * name  实例名称
-    * manageIp  实例管理IP
-    * trafficIp  业务IP
-    * internalIp  内部通信IP
-    * internalMgntIp  内部管理IP
-    * eip  EIP
-    * elb  elb地址
-    * status  实例状态
-    * azCode  可用区编码
+    * id  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * manageIp  **参数解释**： 实例管理IP。 **取值范围**： 不涉及。
+    * trafficIp  **参数解释**： 业务IP。 **取值范围**： 不涉及。
+    * internalIp  **参数解释**： 内部通信IP。 **取值范围**： 不涉及。
+    * internalMgntIp  **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
+    * eip  **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
+    * elb  **参数解释**： elb地址。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例状态。 **取值范围**： 不涉及。
+    * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  实例ID
-    * name  实例名称
-    * manageIp  实例管理IP
-    * trafficIp  业务IP
-    * internalIp  内部通信IP
-    * internalMgntIp  内部管理IP
-    * eip  EIP
-    * elb  elb地址
-    * status  实例状态
-    * azCode  可用区编码
+    * id  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * manageIp  **参数解释**： 实例管理IP。 **取值范围**： 不涉及。
+    * trafficIp  **参数解释**： 业务IP。 **取值范围**： 不涉及。
+    * internalIp  **参数解释**： 内部通信IP。 **取值范围**： 不涉及。
+    * internalMgntIp  **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
+    * eip  **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
+    * elb  **参数解释**： elb地址。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例状态。 **取值范围**： 不涉及。
+    * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  实例ID
-    * name  实例名称
-    * manageIp  实例管理IP
-    * trafficIp  业务IP
-    * internalIp  内部通信IP
-    * internalMgntIp  内部管理IP
-    * eip  EIP
-    * elb  elb地址
-    * status  实例状态
-    * azCode  可用区编码
+    * id  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * manageIp  **参数解释**： 实例管理IP。 **取值范围**： 不涉及。
+    * trafficIp  **参数解释**： 业务IP。 **取值范围**： 不涉及。
+    * internalIp  **参数解释**： 内部通信IP。 **取值范围**： 不涉及。
+    * internalMgntIp  **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
+    * eip  **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
+    * elb  **参数解释**： elb地址。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例状态。 **取值范围**： 不涉及。
+    * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  实例ID
-    * name  实例名称
-    * manageIp  实例管理IP
-    * trafficIp  业务IP
-    * internalIp  内部通信IP
-    * internalMgntIp  内部管理IP
-    * eip  EIP
-    * elb  elb地址
-    * status  实例状态
-    * azCode  可用区编码
+    * id  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * manageIp  **参数解释**： 实例管理IP。 **取值范围**： 不涉及。
+    * trafficIp  **参数解释**： 业务IP。 **取值范围**： 不涉及。
+    * internalIp  **参数解释**： 内部通信IP。 **取值范围**： 不涉及。
+    * internalMgntIp  **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
+    * eip  **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
+    * elb  **参数解释**： elb地址。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例状态。 **取值范围**： 不涉及。
+    * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  实例ID
-    * name  实例名称
-    * manageIp  实例管理IP
-    * trafficIp  业务IP
-    * internalIp  内部通信IP
-    * internalMgntIp  内部管理IP
-    * eip  EIP
-    * elb  elb地址
-    * status  实例状态
-    * azCode  可用区编码
+    * id  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * manageIp  **参数解释**： 实例管理IP。 **取值范围**： 不涉及。
+    * trafficIp  **参数解释**： 业务IP。 **取值范围**： 不涉及。
+    * internalIp  **参数解释**： 内部通信IP。 **取值范围**： 不涉及。
+    * internalMgntIp  **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
+    * eip  **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
+    * elb  **参数解释**： elb地址。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例状态。 **取值范围**： 不涉及。
+    * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -273,7 +273,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  实例ID
+    *  **参数解释**： 实例ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 实例ID
+    * @param string|null $id **参数解释**： 实例ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名称
+    *  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例名称
+    * @param string|null $name **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets manageIp
-    *  实例管理IP
+    *  **参数解释**： 实例管理IP。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets manageIp
     *
-    * @param string|null $manageIp 实例管理IP
+    * @param string|null $manageIp **参数解释**： 实例管理IP。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets trafficIp
-    *  业务IP
+    *  **参数解释**： 业务IP。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets trafficIp
     *
-    * @param string|null $trafficIp 业务IP
+    * @param string|null $trafficIp **参数解释**： 业务IP。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets internalIp
-    *  内部通信IP
+    *  **参数解释**： 内部通信IP。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -381,7 +381,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets internalIp
     *
-    * @param string|null $internalIp 内部通信IP
+    * @param string|null $internalIp **参数解释**： 内部通信IP。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets internalMgntIp
-    *  内部管理IP
+    *  **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets internalMgntIp
     *
-    * @param string|null $internalMgntIp 内部管理IP
+    * @param string|null $internalMgntIp **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eip
-    *  EIP
+    *  **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -429,7 +429,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eip
     *
-    * @param string|null $eip EIP
+    * @param string|null $eip **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets elb
-    *  elb地址
+    *  **参数解释**： elb地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -453,7 +453,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets elb
     *
-    * @param string|null $elb elb地址
+    * @param string|null $elb **参数解释**： elb地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  实例状态
+    *  **参数解释**： 实例状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -477,7 +477,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 实例状态
+    * @param string|null $status **参数解释**： 实例状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets azCode
-    *  可用区编码
+    *  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -501,7 +501,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets azCode
     *
-    * @param string|null $azCode 可用区编码
+    * @param string|null $azCode **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @return $this
     */

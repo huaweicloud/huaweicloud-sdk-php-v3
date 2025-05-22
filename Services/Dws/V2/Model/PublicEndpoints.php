@@ -20,8 +20,8 @@ class PublicEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publicConnectInfo  公网连接信息
-    * jdbcUrl  公网JDBC URL，默认格式如下： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
+    * publicConnectInfo  **参数解释**： 公网连接信息。 **取值范围**： 不涉及。
+    * jdbcUrl  **参数解释**： 公网JDBC连接串。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class PublicEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publicConnectInfo  公网连接信息
-    * jdbcUrl  公网JDBC URL，默认格式如下： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
+    * publicConnectInfo  **参数解释**： 公网连接信息。 **取值范围**： 不涉及。
+    * jdbcUrl  **参数解释**： 公网JDBC连接串。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class PublicEndpoints implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publicConnectInfo  公网连接信息
-    * jdbcUrl  公网JDBC URL，默认格式如下： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
+    * publicConnectInfo  **参数解释**： 公网连接信息。 **取值范围**： 不涉及。
+    * jdbcUrl  **参数解释**： 公网JDBC连接串。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class PublicEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publicConnectInfo  公网连接信息
-    * jdbcUrl  公网JDBC URL，默认格式如下： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
+    * publicConnectInfo  **参数解释**： 公网连接信息。 **取值范围**： 不涉及。
+    * jdbcUrl  **参数解释**： 公网JDBC连接串。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class PublicEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publicConnectInfo  公网连接信息
-    * jdbcUrl  公网JDBC URL，默认格式如下： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
+    * publicConnectInfo  **参数解释**： 公网连接信息。 **取值范围**： 不涉及。
+    * jdbcUrl  **参数解释**： 公网JDBC连接串。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class PublicEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicConnectInfo
-    *  公网连接信息
+    *  **参数解释**： 公网连接信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class PublicEndpoints implements ModelInterface, ArrayAccess
     /**
     * Sets publicConnectInfo
     *
-    * @param string|null $publicConnectInfo 公网连接信息
+    * @param string|null $publicConnectInfo **参数解释**： 公网连接信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class PublicEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Gets jdbcUrl
-    *  公网JDBC URL，默认格式如下： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
+    *  **参数解释**： 公网JDBC连接串。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class PublicEndpoints implements ModelInterface, ArrayAccess
     /**
     * Sets jdbcUrl
     *
-    * @param string|null $jdbcUrl 公网JDBC URL，默认格式如下： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
+    * @param string|null $jdbcUrl **参数解释**： 公网JDBC连接串。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
     *
     * @return $this
     */

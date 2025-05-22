@@ -20,8 +20,8 @@ class ClusterFlavorResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * links  连接
+    * id  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ClusterFlavorResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * links  连接
+    * id  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ClusterFlavorResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * links  连接
+    * id  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ClusterFlavorResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * links  连接
+    * id  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ClusterFlavorResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * links  连接
+    * id  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ClusterFlavorResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  **参数解释**： 规格ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ClusterFlavorResp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id **参数解释**： 规格ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ClusterFlavorResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
-    *  连接
+    *  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\LinkResp[]|null
     */
@@ -221,7 +221,7 @@ class ClusterFlavorResp implements ModelInterface, ArrayAccess
     /**
     * Sets links
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\LinkResp[]|null $links 连接
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\LinkResp[]|null $links **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

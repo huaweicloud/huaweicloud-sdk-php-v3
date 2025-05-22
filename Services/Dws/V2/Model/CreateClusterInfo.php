@@ -20,19 +20,19 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodeType  节点类型
-    * numberOfNode  集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
-    * subnetId  指定子网ID，用于集群网络配置。
-    * securityGroupId  指定安全组ID，用于集群网络配置。
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。
-    * availabilityZone  配置集群可用区。
-    * port  集群服务端口，取值范围为8000~30000，默认值：8000。
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
-    * userName  DWS集群管理员用户名。用户命名要求如下：  - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。
-    * userPwd  DWS集群管理员密码。
+    * nodeType  **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
+    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是虚拟私有云ID下的某个子网。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 参数非空时必须是有效的安全组ID。参数为空时将自动创建安全组。 **默认取值**： null
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是有效的虚拟私有云ID。 **默认取值**： 不涉及。
+    * availabilityZone  **参数解释**： 配置集群可用区。 **约束限制**： 不涉及。 **取值范围**： 必须是当前局点下状态有效且当前用户可见的可用区编码。 **默认取值**： 查询可用区时第一个可用的可用区编码。
+    * port  **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * name  **参数解释**： 集群名称。 **约束限制**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **取值范围**： 4~64个字符。 **默认取值**： 8000
+    * userName  **参数解释**： DWS集群管理员用户名。 **约束限制**： - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。    **取值范围**：   1~63个字符； **默认取值**： dbadmin
+    * userPwd  **参数解释**： DWS集群管理员密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符的3种：大写字母、小写字母、数字和特殊字符(~!?,.:;_(){}[]/<>@#%^&*+|\\\\=-)； 不能与用户名或倒序的用户名相同； **默认取值**： 不涉及。
     * publicIp  publicIp
-    * numberOfCn  CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * numberOfCn  **参数解释**： CN部署量。 **约束限制**： 不涉及。 **取值范围**： 2~集群节点数，最大值为20。 **默认取值**： 默认值为3。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * tags  tags
     *
     * @var string[]
@@ -56,19 +56,19 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodeType  节点类型
-    * numberOfNode  集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
-    * subnetId  指定子网ID，用于集群网络配置。
-    * securityGroupId  指定安全组ID，用于集群网络配置。
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。
-    * availabilityZone  配置集群可用区。
-    * port  集群服务端口，取值范围为8000~30000，默认值：8000。
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
-    * userName  DWS集群管理员用户名。用户命名要求如下：  - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。
-    * userPwd  DWS集群管理员密码。
+    * nodeType  **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
+    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是虚拟私有云ID下的某个子网。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 参数非空时必须是有效的安全组ID。参数为空时将自动创建安全组。 **默认取值**： null
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是有效的虚拟私有云ID。 **默认取值**： 不涉及。
+    * availabilityZone  **参数解释**： 配置集群可用区。 **约束限制**： 不涉及。 **取值范围**： 必须是当前局点下状态有效且当前用户可见的可用区编码。 **默认取值**： 查询可用区时第一个可用的可用区编码。
+    * port  **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * name  **参数解释**： 集群名称。 **约束限制**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **取值范围**： 4~64个字符。 **默认取值**： 8000
+    * userName  **参数解释**： DWS集群管理员用户名。 **约束限制**： - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。    **取值范围**：   1~63个字符； **默认取值**： dbadmin
+    * userPwd  **参数解释**： DWS集群管理员密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符的3种：大写字母、小写字母、数字和特殊字符(~!?,.:;_(){}[]/<>@#%^&*+|\\\\=-)； 不能与用户名或倒序的用户名相同； **默认取值**： 不涉及。
     * publicIp  publicIp
-    * numberOfCn  CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * numberOfCn  **参数解释**： CN部署量。 **约束限制**： 不涉及。 **取值范围**： 2~集群节点数，最大值为20。 **默认取值**： 默认值为3。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * tags  tags
     *
     * @var string[]
@@ -113,19 +113,19 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodeType  节点类型
-    * numberOfNode  集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
-    * subnetId  指定子网ID，用于集群网络配置。
-    * securityGroupId  指定安全组ID，用于集群网络配置。
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。
-    * availabilityZone  配置集群可用区。
-    * port  集群服务端口，取值范围为8000~30000，默认值：8000。
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
-    * userName  DWS集群管理员用户名。用户命名要求如下：  - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。
-    * userPwd  DWS集群管理员密码。
+    * nodeType  **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
+    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是虚拟私有云ID下的某个子网。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 参数非空时必须是有效的安全组ID。参数为空时将自动创建安全组。 **默认取值**： null
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是有效的虚拟私有云ID。 **默认取值**： 不涉及。
+    * availabilityZone  **参数解释**： 配置集群可用区。 **约束限制**： 不涉及。 **取值范围**： 必须是当前局点下状态有效且当前用户可见的可用区编码。 **默认取值**： 查询可用区时第一个可用的可用区编码。
+    * port  **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * name  **参数解释**： 集群名称。 **约束限制**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **取值范围**： 4~64个字符。 **默认取值**： 8000
+    * userName  **参数解释**： DWS集群管理员用户名。 **约束限制**： - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。    **取值范围**：   1~63个字符； **默认取值**： dbadmin
+    * userPwd  **参数解释**： DWS集群管理员密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符的3种：大写字母、小写字母、数字和特殊字符(~!?,.:;_(){}[]/<>@#%^&*+|\\\\=-)； 不能与用户名或倒序的用户名相同； **默认取值**： 不涉及。
     * publicIp  publicIp
-    * numberOfCn  CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * numberOfCn  **参数解释**： CN部署量。 **约束限制**： 不涉及。 **取值范围**： 2~集群节点数，最大值为20。 **默认取值**： 默认值为3。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * tags  tags
     *
     * @var string[]
@@ -149,19 +149,19 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodeType  节点类型
-    * numberOfNode  集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
-    * subnetId  指定子网ID，用于集群网络配置。
-    * securityGroupId  指定安全组ID，用于集群网络配置。
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。
-    * availabilityZone  配置集群可用区。
-    * port  集群服务端口，取值范围为8000~30000，默认值：8000。
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
-    * userName  DWS集群管理员用户名。用户命名要求如下：  - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。
-    * userPwd  DWS集群管理员密码。
+    * nodeType  **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
+    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是虚拟私有云ID下的某个子网。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 参数非空时必须是有效的安全组ID。参数为空时将自动创建安全组。 **默认取值**： null
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是有效的虚拟私有云ID。 **默认取值**： 不涉及。
+    * availabilityZone  **参数解释**： 配置集群可用区。 **约束限制**： 不涉及。 **取值范围**： 必须是当前局点下状态有效且当前用户可见的可用区编码。 **默认取值**： 查询可用区时第一个可用的可用区编码。
+    * port  **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * name  **参数解释**： 集群名称。 **约束限制**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **取值范围**： 4~64个字符。 **默认取值**： 8000
+    * userName  **参数解释**： DWS集群管理员用户名。 **约束限制**： - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。    **取值范围**：   1~63个字符； **默认取值**： dbadmin
+    * userPwd  **参数解释**： DWS集群管理员密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符的3种：大写字母、小写字母、数字和特殊字符(~!?,.:;_(){}[]/<>@#%^&*+|\\\\=-)； 不能与用户名或倒序的用户名相同； **默认取值**： 不涉及。
     * publicIp  publicIp
-    * numberOfCn  CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * numberOfCn  **参数解释**： CN部署量。 **约束限制**： 不涉及。 **取值范围**： 2~集群节点数，最大值为20。 **默认取值**： 默认值为3。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * tags  tags
     *
     * @var string[]
@@ -185,19 +185,19 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodeType  节点类型
-    * numberOfNode  集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
-    * subnetId  指定子网ID，用于集群网络配置。
-    * securityGroupId  指定安全组ID，用于集群网络配置。
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。
-    * availabilityZone  配置集群可用区。
-    * port  集群服务端口，取值范围为8000~30000，默认值：8000。
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
-    * userName  DWS集群管理员用户名。用户命名要求如下：  - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。
-    * userPwd  DWS集群管理员密码。
+    * nodeType  **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
+    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是虚拟私有云ID下的某个子网。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 参数非空时必须是有效的安全组ID。参数为空时将自动创建安全组。 **默认取值**： null
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是有效的虚拟私有云ID。 **默认取值**： 不涉及。
+    * availabilityZone  **参数解释**： 配置集群可用区。 **约束限制**： 不涉及。 **取值范围**： 必须是当前局点下状态有效且当前用户可见的可用区编码。 **默认取值**： 查询可用区时第一个可用的可用区编码。
+    * port  **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * name  **参数解释**： 集群名称。 **约束限制**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **取值范围**： 4~64个字符。 **默认取值**： 8000
+    * userName  **参数解释**： DWS集群管理员用户名。 **约束限制**： - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。    **取值范围**：   1~63个字符； **默认取值**： dbadmin
+    * userPwd  **参数解释**： DWS集群管理员密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符的3种：大写字母、小写字母、数字和特殊字符(~!?,.:;_(){}[]/<>@#%^&*+|\\\\=-)； 不能与用户名或倒序的用户名相同； **默认取值**： 不涉及。
     * publicIp  publicIp
-    * numberOfCn  CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * numberOfCn  **参数解释**： CN部署量。 **约束限制**： 不涉及。 **取值范围**： 2~集群节点数，最大值为20。 **默认取值**： 默认值为3。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * tags  tags
     *
     * @var string[]
@@ -310,8 +310,8 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
             if (($this->container['numberOfNode'] > 256)) {
                 $invalidProperties[] = "invalid value for 'numberOfNode', must be smaller than or equal to 256.";
             }
-            if (($this->container['numberOfNode'] < 2)) {
-                $invalidProperties[] = "invalid value for 'numberOfNode', must be bigger than or equal to 2.";
+            if (($this->container['numberOfNode'] < 1)) {
+                $invalidProperties[] = "invalid value for 'numberOfNode', must be bigger than or equal to 1.";
             }
         if ($this->container['subnetId'] === null) {
             $invalidProperties[] = "'subnetId' can't be null";
@@ -334,9 +334,21 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
         if ($this->container['userName'] === null) {
             $invalidProperties[] = "'userName' can't be null";
         }
+            if ((mb_strlen($this->container['userName']) > 63)) {
+                $invalidProperties[] = "invalid value for 'userName', the character length must be smaller than or equal to 63.";
+            }
+            if ((mb_strlen($this->container['userName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'userName', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['userPwd'] === null) {
             $invalidProperties[] = "'userPwd' can't be null";
         }
+            if (!is_null($this->container['numberOfCn']) && ($this->container['numberOfCn'] > 20)) {
+                $invalidProperties[] = "invalid value for 'numberOfCn', must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['numberOfCn']) && ($this->container['numberOfCn'] < 2)) {
+                $invalidProperties[] = "invalid value for 'numberOfCn', must be bigger than or equal to 2.";
+            }
         return $invalidProperties;
     }
 
@@ -353,7 +365,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeType
-    *  节点类型
+    *  **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -365,7 +377,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nodeType
     *
-    * @param string $nodeType 节点类型
+    * @param string $nodeType **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -377,7 +389,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets numberOfNode
-    *  集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
+    *  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -389,7 +401,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets numberOfNode
     *
-    * @param int $numberOfNode 集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
+    * @param int $numberOfNode **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -401,7 +413,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  指定子网ID，用于集群网络配置。
+    *  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是虚拟私有云ID下的某个子网。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -413,7 +425,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId 指定子网ID，用于集群网络配置。
+    * @param string $subnetId **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是虚拟私有云ID下的某个子网。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -425,7 +437,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  指定安全组ID，用于集群网络配置。
+    *  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 参数非空时必须是有效的安全组ID。参数为空时将自动创建安全组。 **默认取值**： null
     *
     * @return string
     */
@@ -437,7 +449,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string $securityGroupId 指定安全组ID，用于集群网络配置。
+    * @param string $securityGroupId **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 参数非空时必须是有效的安全组ID。参数为空时将自动创建安全组。 **默认取值**： null
     *
     * @return $this
     */
@@ -449,7 +461,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  指定虚拟私有云ID，用于集群网络配置。
+    *  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是有效的虚拟私有云ID。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -461,7 +473,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId 指定虚拟私有云ID，用于集群网络配置。
+    * @param string $vpcId **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是有效的虚拟私有云ID。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -473,7 +485,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  配置集群可用区。
+    *  **参数解释**： 配置集群可用区。 **约束限制**： 不涉及。 **取值范围**： 必须是当前局点下状态有效且当前用户可见的可用区编码。 **默认取值**： 查询可用区时第一个可用的可用区编码。
     *
     * @return string|null
     */
@@ -485,7 +497,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string|null $availabilityZone 配置集群可用区。
+    * @param string|null $availabilityZone **参数解释**： 配置集群可用区。 **约束限制**： 不涉及。 **取值范围**： 必须是当前局点下状态有效且当前用户可见的可用区编码。 **默认取值**： 查询可用区时第一个可用的可用区编码。
     *
     * @return $this
     */
@@ -497,7 +509,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  集群服务端口，取值范围为8000~30000，默认值：8000。
+    *  **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
     *
     * @return int|null
     */
@@ -509,7 +521,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int|null $port 集群服务端口，取值范围为8000~30000，默认值：8000。
+    * @param int|null $port **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
     *
     * @return $this
     */
@@ -521,7 +533,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
+    *  **参数解释**： 集群名称。 **约束限制**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **取值范围**： 4~64个字符。 **默认取值**： 8000
     *
     * @return string
     */
@@ -533,7 +545,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
+    * @param string $name **参数解释**： 集群名称。 **约束限制**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **取值范围**： 4~64个字符。 **默认取值**： 8000
     *
     * @return $this
     */
@@ -545,7 +557,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  DWS集群管理员用户名。用户命名要求如下：  - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。
+    *  **参数解释**： DWS集群管理员用户名。 **约束限制**： - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。    **取值范围**：   1~63个字符； **默认取值**： dbadmin
     *
     * @return string
     */
@@ -557,7 +569,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string $userName DWS集群管理员用户名。用户命名要求如下：  - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。
+    * @param string $userName **参数解释**： DWS集群管理员用户名。 **约束限制**： - 只能由小写字母、数字或下划线组成。 - 必须由小写字母或下划线开头。 - 长度为1~63个字符。 - 用户名不能为DWS数据库的关键字。    **取值范围**：   1~63个字符； **默认取值**： dbadmin
     *
     * @return $this
     */
@@ -569,7 +581,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userPwd
-    *  DWS集群管理员密码。
+    *  **参数解释**： DWS集群管理员密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符的3种：大写字母、小写字母、数字和特殊字符(~!?,.:;_(){}[]/<>@#%^&*+|\\\\=-)； 不能与用户名或倒序的用户名相同； **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -581,7 +593,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userPwd
     *
-    * @param string $userPwd DWS集群管理员密码。
+    * @param string $userPwd **参数解释**： DWS集群管理员密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符的3种：大写字母、小写字母、数字和特殊字符(~!?,.:;_(){}[]/<>@#%^&*+|\\\\=-)； 不能与用户名或倒序的用户名相同； **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -617,7 +629,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets numberOfCn
-    *  CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
+    *  **参数解释**： CN部署量。 **约束限制**： 不涉及。 **取值范围**： 2~集群节点数，最大值为20。 **默认取值**： 默认值为3。
     *
     * @return int|null
     */
@@ -629,7 +641,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets numberOfCn
     *
-    * @param int|null $numberOfCn CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
+    * @param int|null $numberOfCn **参数解释**： CN部署量。 **约束限制**： 不涉及。 **取值范围**： 2~集群节点数，最大值为20。 **默认取值**： 默认值为3。
     *
     * @return $this
     */
@@ -641,7 +653,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    *  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return string|null
     */
@@ -653,7 +665,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return $this
     */

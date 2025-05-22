@@ -20,26 +20,26 @@ class NodeTypeDatastoresAttachments implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * minCn  内核版本支持的最小CN。
-    * maxCn  内核版本支持的最大CN。
+    * minCn  **参数解释**： 内核版本支持的最小CN。 **取值范围**： 大于0的正整数。
+    * maxCn  **参数解释**： 内核版本支持的最大CN。 **取值范围**： 大于0的正整数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'minCn' => 'string',
-            'maxCn' => 'string'
+            'minCn' => 'int',
+            'maxCn' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * minCn  内核版本支持的最小CN。
-    * maxCn  内核版本支持的最大CN。
+    * minCn  **参数解释**： 内核版本支持的最小CN。 **取值范围**： 大于0的正整数。
+    * maxCn  **参数解释**： 内核版本支持的最大CN。 **取值范围**： 大于0的正整数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'minCn' => null,
-        'maxCn' => null
+        'minCn' => 'int32',
+        'maxCn' => 'int32'
     ];
 
     /**
@@ -65,8 +65,8 @@ class NodeTypeDatastoresAttachments implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * minCn  内核版本支持的最小CN。
-    * maxCn  内核版本支持的最大CN。
+    * minCn  **参数解释**： 内核版本支持的最小CN。 **取值范围**： 大于0的正整数。
+    * maxCn  **参数解释**： 内核版本支持的最大CN。 **取值范围**： 大于0的正整数。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class NodeTypeDatastoresAttachments implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * minCn  内核版本支持的最小CN。
-    * maxCn  内核版本支持的最大CN。
+    * minCn  **参数解释**： 内核版本支持的最小CN。 **取值范围**： 大于0的正整数。
+    * maxCn  **参数解释**： 内核版本支持的最大CN。 **取值范围**： 大于0的正整数。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class NodeTypeDatastoresAttachments implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * minCn  内核版本支持的最小CN。
-    * maxCn  内核版本支持的最大CN。
+    * minCn  **参数解释**： 内核版本支持的最小CN。 **取值范围**： 大于0的正整数。
+    * maxCn  **参数解释**： 内核版本支持的最大CN。 **取值范围**： 大于0的正整数。
     *
     * @var string[]
     */
@@ -169,12 +169,6 @@ class NodeTypeDatastoresAttachments implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['minCn'] === null) {
-            $invalidProperties[] = "'minCn' can't be null";
-        }
-        if ($this->container['maxCn'] === null) {
-            $invalidProperties[] = "'maxCn' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -191,9 +185,9 @@ class NodeTypeDatastoresAttachments implements ModelInterface, ArrayAccess
 
     /**
     * Gets minCn
-    *  内核版本支持的最小CN。
+    *  **参数解释**： 内核版本支持的最小CN。 **取值范围**： 大于0的正整数。
     *
-    * @return string
+    * @return int|null
     */
     public function getMinCn()
     {
@@ -203,7 +197,7 @@ class NodeTypeDatastoresAttachments implements ModelInterface, ArrayAccess
     /**
     * Sets minCn
     *
-    * @param string $minCn 内核版本支持的最小CN。
+    * @param int|null $minCn **参数解释**： 内核版本支持的最小CN。 **取值范围**： 大于0的正整数。
     *
     * @return $this
     */
@@ -215,9 +209,9 @@ class NodeTypeDatastoresAttachments implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxCn
-    *  内核版本支持的最大CN。
+    *  **参数解释**： 内核版本支持的最大CN。 **取值范围**： 大于0的正整数。
     *
-    * @return string
+    * @return int|null
     */
     public function getMaxCn()
     {
@@ -227,7 +221,7 @@ class NodeTypeDatastoresAttachments implements ModelInterface, ArrayAccess
     /**
     * Sets maxCn
     *
-    * @param string $maxCn 内核版本支持的最大CN。
+    * @param int|null $maxCn **参数解释**： 内核版本支持的最大CN。 **取值范围**： 大于0的正整数。
     *
     * @return $this
     */

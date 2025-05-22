@@ -21,8 +21,8 @@ class ListNodeTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodeTypes  节点类型对象列表。
-    * count  节点类型总数
+    * nodeTypes  **参数解释**： 可用的规格列表。 **取值范围**： 非空对象列表。
+    * count  **参数解释**： 规格总数 **取值范围**： 大于等于0的正整数。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListNodeTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodeTypes  节点类型对象列表。
-    * count  节点类型总数
+    * nodeTypes  **参数解释**： 可用的规格列表。 **取值范围**： 非空对象列表。
+    * count  **参数解释**： 规格总数 **取值范围**： 大于等于0的正整数。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListNodeTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodeTypes  节点类型对象列表。
-    * count  节点类型总数
+    * nodeTypes  **参数解释**： 可用的规格列表。 **取值范围**： 非空对象列表。
+    * count  **参数解释**： 规格总数 **取值范围**： 大于等于0的正整数。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListNodeTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodeTypes  节点类型对象列表。
-    * count  节点类型总数
+    * nodeTypes  **参数解释**： 可用的规格列表。 **取值范围**： 非空对象列表。
+    * count  **参数解释**： 规格总数 **取值范围**： 大于等于0的正整数。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListNodeTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodeTypes  节点类型对象列表。
-    * count  节点类型总数
+    * nodeTypes  **参数解释**： 可用的规格列表。 **取值范围**： 非空对象列表。
+    * count  **参数解释**： 规格总数 **取值范围**： 大于等于0的正整数。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListNodeTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeTypes
-    *  节点类型对象列表。
+    *  **参数解释**： 可用的规格列表。 **取值范围**： 非空对象列表。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\NodeTypes[]|null
     */
@@ -198,7 +198,7 @@ class ListNodeTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nodeTypes
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeTypes[]|null $nodeTypes 节点类型对象列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeTypes[]|null $nodeTypes **参数解释**： 可用的规格列表。 **取值范围**： 非空对象列表。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListNodeTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  节点类型总数
+    *  **参数解释**： 规格总数 **取值范围**： 大于等于0的正整数。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListNodeTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 节点类型总数
+    * @param int|null $count **参数解释**： 规格总数 **取值范围**： 大于等于0的正整数。
     *
     * @return $this
     */

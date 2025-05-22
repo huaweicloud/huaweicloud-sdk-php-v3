@@ -20,8 +20,8 @@ class LinkResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * rel  关联
-    * href  连接
+    * rel  **参数解释**： 关联信息。 **取值范围**： 不涉及。
+    * href  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class LinkResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * rel  关联
-    * href  连接
+    * rel  **参数解释**： 关联信息。 **取值范围**： 不涉及。
+    * href  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class LinkResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * rel  关联
-    * href  连接
+    * rel  **参数解释**： 关联信息。 **取值范围**： 不涉及。
+    * href  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class LinkResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * rel  关联
-    * href  连接
+    * rel  **参数解释**： 关联信息。 **取值范围**： 不涉及。
+    * href  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class LinkResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * rel  关联
-    * href  连接
+    * rel  **参数解释**： 关联信息。 **取值范围**： 不涉及。
+    * href  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class LinkResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets rel
-    *  关联
+    *  **参数解释**： 关联信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class LinkResp implements ModelInterface, ArrayAccess
     /**
     * Sets rel
     *
-    * @param string|null $rel 关联
+    * @param string|null $rel **参数解释**： 关联信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class LinkResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets href
-    *  连接
+    *  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class LinkResp implements ModelInterface, ArrayAccess
     /**
     * Sets href
     *
-    * @param string|null $href 连接
+    * @param string|null $href **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

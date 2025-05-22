@@ -21,8 +21,8 @@ class ListLogicalClusterTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logicalClusterTasks  逻辑集群任务信息
-    * count  逻辑集群任务总数
+    * logicalClusterTasks  **参数解释**： 逻辑集群任务信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * count  **参数解释**： 逻辑集群任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListLogicalClusterTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logicalClusterTasks  逻辑集群任务信息
-    * count  逻辑集群任务总数
+    * logicalClusterTasks  **参数解释**： 逻辑集群任务信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * count  **参数解释**： 逻辑集群任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListLogicalClusterTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logicalClusterTasks  逻辑集群任务信息
-    * count  逻辑集群任务总数
+    * logicalClusterTasks  **参数解释**： 逻辑集群任务信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * count  **参数解释**： 逻辑集群任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListLogicalClusterTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logicalClusterTasks  逻辑集群任务信息
-    * count  逻辑集群任务总数
+    * logicalClusterTasks  **参数解释**： 逻辑集群任务信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * count  **参数解释**： 逻辑集群任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListLogicalClusterTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logicalClusterTasks  逻辑集群任务信息
-    * count  逻辑集群任务总数
+    * logicalClusterTasks  **参数解释**： 逻辑集群任务信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * count  **参数解释**： 逻辑集群任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListLogicalClusterTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterTasks
-    *  逻辑集群任务信息
+    *  **参数解释**： 逻辑集群任务信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterTaskInfo[]|null
     */
@@ -198,7 +198,7 @@ class ListLogicalClusterTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterTasks
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterTaskInfo[]|null $logicalClusterTasks 逻辑集群任务信息
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterTaskInfo[]|null $logicalClusterTasks **参数解释**： 逻辑集群任务信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListLogicalClusterTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  逻辑集群任务总数
+    *  **参数解释**： 逻辑集群任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListLogicalClusterTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 逻辑集群任务总数
+    * @param int|null $count **参数解释**： 逻辑集群任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

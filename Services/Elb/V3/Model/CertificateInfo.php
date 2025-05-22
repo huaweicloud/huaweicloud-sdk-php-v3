@@ -38,6 +38,9 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * commonName  证书绑定的主域名。
     * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
+    * source  参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    * protectionStatus  参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
+    * protectionReason  参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
     *
     * @var string[]
     */
@@ -59,7 +62,10 @@ class CertificateInfo implements ModelInterface, ArrayAccess
             'scmCertificateId' => 'string',
             'commonName' => 'string',
             'fingerprint' => 'string',
-            'subjectAlternativeNames' => 'string[]'
+            'subjectAlternativeNames' => 'string[]',
+            'source' => 'string',
+            'protectionStatus' => 'string',
+            'protectionReason' => 'string'
     ];
 
     /**
@@ -82,6 +88,9 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * commonName  证书绑定的主域名。
     * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
+    * source  参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    * protectionStatus  参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
+    * protectionReason  参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
     *
     * @var string[]
     */
@@ -103,7 +112,10 @@ class CertificateInfo implements ModelInterface, ArrayAccess
         'scmCertificateId' => null,
         'commonName' => null,
         'fingerprint' => null,
-        'subjectAlternativeNames' => null
+        'subjectAlternativeNames' => null,
+        'source' => null,
+        'protectionStatus' => null,
+        'protectionReason' => null
     ];
 
     /**
@@ -147,6 +159,9 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * commonName  证书绑定的主域名。
     * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
+    * source  参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    * protectionStatus  参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
+    * protectionReason  参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
     *
     * @var string[]
     */
@@ -168,7 +183,10 @@ class CertificateInfo implements ModelInterface, ArrayAccess
             'scmCertificateId' => 'scm_certificate_id',
             'commonName' => 'common_name',
             'fingerprint' => 'fingerprint',
-            'subjectAlternativeNames' => 'subject_alternative_names'
+            'subjectAlternativeNames' => 'subject_alternative_names',
+            'source' => 'source',
+            'protectionStatus' => 'protection_status',
+            'protectionReason' => 'protection_reason'
     ];
 
     /**
@@ -191,6 +209,9 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * commonName  证书绑定的主域名。
     * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
+    * source  参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    * protectionStatus  参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
+    * protectionReason  参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
     *
     * @var string[]
     */
@@ -212,7 +233,10 @@ class CertificateInfo implements ModelInterface, ArrayAccess
             'scmCertificateId' => 'setScmCertificateId',
             'commonName' => 'setCommonName',
             'fingerprint' => 'setFingerprint',
-            'subjectAlternativeNames' => 'setSubjectAlternativeNames'
+            'subjectAlternativeNames' => 'setSubjectAlternativeNames',
+            'source' => 'setSource',
+            'protectionStatus' => 'setProtectionStatus',
+            'protectionReason' => 'setProtectionReason'
     ];
 
     /**
@@ -235,6 +259,9 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     * commonName  证书绑定的主域名。
     * fingerprint  证书指纹。
     * subjectAlternativeNames  证书绑定的所有域名。
+    * source  参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    * protectionStatus  参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
+    * protectionReason  参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
     *
     * @var string[]
     */
@@ -256,7 +283,10 @@ class CertificateInfo implements ModelInterface, ArrayAccess
             'scmCertificateId' => 'getScmCertificateId',
             'commonName' => 'getCommonName',
             'fingerprint' => 'getFingerprint',
-            'subjectAlternativeNames' => 'getSubjectAlternativeNames'
+            'subjectAlternativeNames' => 'getSubjectAlternativeNames',
+            'source' => 'getSource',
+            'protectionStatus' => 'getProtectionStatus',
+            'protectionReason' => 'getProtectionReason'
     ];
 
     /**
@@ -299,7 +329,22 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PROTECTION_STATUS_NON_PROTECTION = 'nonProtection';
+    const PROTECTION_STATUS_CONSOLE_PROTECTION = 'consoleProtection';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtectionStatusAllowableValues()
+    {
+        return [
+            self::PROTECTION_STATUS_NON_PROTECTION,
+            self::PROTECTION_STATUS_CONSOLE_PROTECTION,
+        ];
+    }
 
 
     /**
@@ -335,6 +380,9 @@ class CertificateInfo implements ModelInterface, ArrayAccess
         $this->container['commonName'] = isset($data['commonName']) ? $data['commonName'] : null;
         $this->container['fingerprint'] = isset($data['fingerprint']) ? $data['fingerprint'] : null;
         $this->container['subjectAlternativeNames'] = isset($data['subjectAlternativeNames']) ? $data['subjectAlternativeNames'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
+        $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
+        $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
     }
 
     /**
@@ -399,6 +447,14 @@ class CertificateInfo implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
+            $allowedValues = $this->getProtectionStatusAllowableValues();
+                if (!is_null($this->container['protectionStatus']) && !in_array($this->container['protectionStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protectionStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -842,6 +898,78 @@ class CertificateInfo implements ModelInterface, ArrayAccess
     public function setSubjectAlternativeNames($subjectAlternativeNames)
     {
         $this->container['subjectAlternativeNames'] = $subjectAlternativeNames;
+        return $this;
+    }
+
+    /**
+    * Gets source
+    *  参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    *
+    * @return string|null
+    */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+    * Sets source
+    *
+    * @param string|null $source 参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+    *
+    * @return $this
+    */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
+        return $this;
+    }
+
+    /**
+    * Gets protectionStatus
+    *  参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
+    *
+    * @return string|null
+    */
+    public function getProtectionStatus()
+    {
+        return $this->container['protectionStatus'];
+    }
+
+    /**
+    * Sets protectionStatus
+    *
+    * @param string|null $protectionStatus 参数解释：修改保护状态  约束限制：无  取值范围：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
+    *
+    * @return $this
+    */
+    public function setProtectionStatus($protectionStatus)
+    {
+        $this->container['protectionStatus'] = $protectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets protectionReason
+    *  参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
+    *
+    * @return string|null
+    */
+    public function getProtectionReason()
+    {
+        return $this->container['protectionReason'];
+    }
+
+    /**
+    * Sets protectionReason
+    *
+    * @param string|null $protectionReason 参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
+    *
+    * @return $this
+    */
+    public function setProtectionReason($protectionReason)
+    {
+        $this->container['protectionReason'] = $protectionReason;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class ScaleOut implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  扩容节点数。
-    * subnetId  指定子网ID。
+    * count  **参数解释**： 扩容节点数。 **取值范围**： 大于等于3。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 同VPC下有效的子网ID。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ScaleOut implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  扩容节点数。
-    * subnetId  指定子网ID。
+    * count  **参数解释**： 扩容节点数。 **取值范围**： 大于等于3。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 同VPC下有效的子网ID。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ScaleOut implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  扩容节点数。
-    * subnetId  指定子网ID。
+    * count  **参数解释**： 扩容节点数。 **取值范围**： 大于等于3。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 同VPC下有效的子网ID。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ScaleOut implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  扩容节点数。
-    * subnetId  指定子网ID。
+    * count  **参数解释**： 扩容节点数。 **取值范围**： 大于等于3。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 同VPC下有效的子网ID。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ScaleOut implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  扩容节点数。
-    * subnetId  指定子网ID。
+    * count  **参数解释**： 扩容节点数。 **取值范围**： 大于等于3。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 同VPC下有效的子网ID。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class ScaleOut implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  扩容节点数。
+    *  **参数解释**： 扩容节点数。 **取值范围**： 大于等于3。
     *
     * @return int
     */
@@ -200,7 +200,7 @@ class ScaleOut implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int $count 扩容节点数。
+    * @param int $count **参数解释**： 扩容节点数。 **取值范围**： 大于等于3。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class ScaleOut implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  指定子网ID。
+    *  **参数解释**： 子网ID。 **取值范围**： 同VPC下有效的子网ID。
     *
     * @return string|null
     */
@@ -224,7 +224,7 @@ class ScaleOut implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string|null $subnetId 指定子网ID。
+    * @param string|null $subnetId **参数解释**： 子网ID。 **取值范围**： 同VPC下有效的子网ID。
     *
     * @return $this
     */

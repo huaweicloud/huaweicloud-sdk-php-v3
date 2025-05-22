@@ -29,6 +29,7 @@ class ListListenersRequest implements ModelInterface, ArrayAccess
     * defaultTlsContainerRef  监听器的服务器证书ID。  支持多值查询，查询条件格式： *default_tls_container_ref=xxx&default_tls_container_ref=xxx*。
     * clientCaTlsContainerRef  监听器的CA证书ID。  支持多值查询，查询条件格式： *client_ca_tls_container_ref=xxx&client_ca_tls_container_ref=xxx*。
     * adminStateUp  监听器的管理状态。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * includeRecycleBin  参数解释：查询结果是否包含回收站负载均衡器的监听器  取值范围： - true ：包含回收站elb的监听器。 - false：不包含回收站elb的监听器。
     * connectionLimit  ​监听器的最大连接数。  取值：-1表示不限制连接数。  支持多值查询，查询条件格式：*connection_limit=xxx&connection_limit=xxx*。  不支持该字段，请勿使用。
     * defaultPoolId  监听器的默认后端服务器组ID。当请求没有匹配的转发策略时，转发到默认后端服务器上处理。  支持多值查询，查询条件格式：*default_pool_id=xxx&default_pool_id=xxx*。
     * id  监听器ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
@@ -63,6 +64,7 @@ class ListListenersRequest implements ModelInterface, ArrayAccess
             'defaultTlsContainerRef' => 'string[]',
             'clientCaTlsContainerRef' => 'string[]',
             'adminStateUp' => 'bool',
+            'includeRecycleBin' => 'bool',
             'connectionLimit' => 'int[]',
             'defaultPoolId' => 'string[]',
             'id' => 'string[]',
@@ -97,6 +99,7 @@ class ListListenersRequest implements ModelInterface, ArrayAccess
     * defaultTlsContainerRef  监听器的服务器证书ID。  支持多值查询，查询条件格式： *default_tls_container_ref=xxx&default_tls_container_ref=xxx*。
     * clientCaTlsContainerRef  监听器的CA证书ID。  支持多值查询，查询条件格式： *client_ca_tls_container_ref=xxx&client_ca_tls_container_ref=xxx*。
     * adminStateUp  监听器的管理状态。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * includeRecycleBin  参数解释：查询结果是否包含回收站负载均衡器的监听器  取值范围： - true ：包含回收站elb的监听器。 - false：不包含回收站elb的监听器。
     * connectionLimit  ​监听器的最大连接数。  取值：-1表示不限制连接数。  支持多值查询，查询条件格式：*connection_limit=xxx&connection_limit=xxx*。  不支持该字段，请勿使用。
     * defaultPoolId  监听器的默认后端服务器组ID。当请求没有匹配的转发策略时，转发到默认后端服务器上处理。  支持多值查询，查询条件格式：*default_pool_id=xxx&default_pool_id=xxx*。
     * id  监听器ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
@@ -131,6 +134,7 @@ class ListListenersRequest implements ModelInterface, ArrayAccess
         'defaultTlsContainerRef' => null,
         'clientCaTlsContainerRef' => null,
         'adminStateUp' => null,
+        'includeRecycleBin' => null,
         'connectionLimit' => 'int32',
         'defaultPoolId' => null,
         'id' => null,
@@ -186,6 +190,7 @@ class ListListenersRequest implements ModelInterface, ArrayAccess
     * defaultTlsContainerRef  监听器的服务器证书ID。  支持多值查询，查询条件格式： *default_tls_container_ref=xxx&default_tls_container_ref=xxx*。
     * clientCaTlsContainerRef  监听器的CA证书ID。  支持多值查询，查询条件格式： *client_ca_tls_container_ref=xxx&client_ca_tls_container_ref=xxx*。
     * adminStateUp  监听器的管理状态。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * includeRecycleBin  参数解释：查询结果是否包含回收站负载均衡器的监听器  取值范围： - true ：包含回收站elb的监听器。 - false：不包含回收站elb的监听器。
     * connectionLimit  ​监听器的最大连接数。  取值：-1表示不限制连接数。  支持多值查询，查询条件格式：*connection_limit=xxx&connection_limit=xxx*。  不支持该字段，请勿使用。
     * defaultPoolId  监听器的默认后端服务器组ID。当请求没有匹配的转发策略时，转发到默认后端服务器上处理。  支持多值查询，查询条件格式：*default_pool_id=xxx&default_pool_id=xxx*。
     * id  监听器ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
@@ -220,6 +225,7 @@ class ListListenersRequest implements ModelInterface, ArrayAccess
             'defaultTlsContainerRef' => 'default_tls_container_ref',
             'clientCaTlsContainerRef' => 'client_ca_tls_container_ref',
             'adminStateUp' => 'admin_state_up',
+            'includeRecycleBin' => 'include_recycle_bin',
             'connectionLimit' => 'connection_limit',
             'defaultPoolId' => 'default_pool_id',
             'id' => 'id',
@@ -254,6 +260,7 @@ class ListListenersRequest implements ModelInterface, ArrayAccess
     * defaultTlsContainerRef  监听器的服务器证书ID。  支持多值查询，查询条件格式： *default_tls_container_ref=xxx&default_tls_container_ref=xxx*。
     * clientCaTlsContainerRef  监听器的CA证书ID。  支持多值查询，查询条件格式： *client_ca_tls_container_ref=xxx&client_ca_tls_container_ref=xxx*。
     * adminStateUp  监听器的管理状态。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * includeRecycleBin  参数解释：查询结果是否包含回收站负载均衡器的监听器  取值范围： - true ：包含回收站elb的监听器。 - false：不包含回收站elb的监听器。
     * connectionLimit  ​监听器的最大连接数。  取值：-1表示不限制连接数。  支持多值查询，查询条件格式：*connection_limit=xxx&connection_limit=xxx*。  不支持该字段，请勿使用。
     * defaultPoolId  监听器的默认后端服务器组ID。当请求没有匹配的转发策略时，转发到默认后端服务器上处理。  支持多值查询，查询条件格式：*default_pool_id=xxx&default_pool_id=xxx*。
     * id  监听器ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
@@ -288,6 +295,7 @@ class ListListenersRequest implements ModelInterface, ArrayAccess
             'defaultTlsContainerRef' => 'setDefaultTlsContainerRef',
             'clientCaTlsContainerRef' => 'setClientCaTlsContainerRef',
             'adminStateUp' => 'setAdminStateUp',
+            'includeRecycleBin' => 'setIncludeRecycleBin',
             'connectionLimit' => 'setConnectionLimit',
             'defaultPoolId' => 'setDefaultPoolId',
             'id' => 'setId',
@@ -322,6 +330,7 @@ class ListListenersRequest implements ModelInterface, ArrayAccess
     * defaultTlsContainerRef  监听器的服务器证书ID。  支持多值查询，查询条件格式： *default_tls_container_ref=xxx&default_tls_container_ref=xxx*。
     * clientCaTlsContainerRef  监听器的CA证书ID。  支持多值查询，查询条件格式： *client_ca_tls_container_ref=xxx&client_ca_tls_container_ref=xxx*。
     * adminStateUp  监听器的管理状态。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * includeRecycleBin  参数解释：查询结果是否包含回收站负载均衡器的监听器  取值范围： - true ：包含回收站elb的监听器。 - false：不包含回收站elb的监听器。
     * connectionLimit  ​监听器的最大连接数。  取值：-1表示不限制连接数。  支持多值查询，查询条件格式：*connection_limit=xxx&connection_limit=xxx*。  不支持该字段，请勿使用。
     * defaultPoolId  监听器的默认后端服务器组ID。当请求没有匹配的转发策略时，转发到默认后端服务器上处理。  支持多值查询，查询条件格式：*default_pool_id=xxx&default_pool_id=xxx*。
     * id  监听器ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
@@ -356,6 +365,7 @@ class ListListenersRequest implements ModelInterface, ArrayAccess
             'defaultTlsContainerRef' => 'getDefaultTlsContainerRef',
             'clientCaTlsContainerRef' => 'getClientCaTlsContainerRef',
             'adminStateUp' => 'getAdminStateUp',
+            'includeRecycleBin' => 'getIncludeRecycleBin',
             'connectionLimit' => 'getConnectionLimit',
             'defaultPoolId' => 'getDefaultPoolId',
             'id' => 'getId',
@@ -446,6 +456,7 @@ class ListListenersRequest implements ModelInterface, ArrayAccess
         $this->container['defaultTlsContainerRef'] = isset($data['defaultTlsContainerRef']) ? $data['defaultTlsContainerRef'] : null;
         $this->container['clientCaTlsContainerRef'] = isset($data['clientCaTlsContainerRef']) ? $data['clientCaTlsContainerRef'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
+        $this->container['includeRecycleBin'] = isset($data['includeRecycleBin']) ? $data['includeRecycleBin'] : null;
         $this->container['connectionLimit'] = isset($data['connectionLimit']) ? $data['connectionLimit'] : null;
         $this->container['defaultPoolId'] = isset($data['defaultPoolId']) ? $data['defaultPoolId'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -710,6 +721,30 @@ class ListListenersRequest implements ModelInterface, ArrayAccess
     public function setAdminStateUp($adminStateUp)
     {
         $this->container['adminStateUp'] = $adminStateUp;
+        return $this;
+    }
+
+    /**
+    * Gets includeRecycleBin
+    *  参数解释：查询结果是否包含回收站负载均衡器的监听器  取值范围： - true ：包含回收站elb的监听器。 - false：不包含回收站elb的监听器。
+    *
+    * @return bool|null
+    */
+    public function getIncludeRecycleBin()
+    {
+        return $this->container['includeRecycleBin'];
+    }
+
+    /**
+    * Sets includeRecycleBin
+    *
+    * @param bool|null $includeRecycleBin 参数解释：查询结果是否包含回收站负载均衡器的监听器  取值范围： - true ：包含回收站elb的监听器。 - false：不包含回收站elb的监听器。
+    *
+    * @return $this
+    */
+    public function setIncludeRecycleBin($includeRecycleBin)
+    {
+        $this->container['includeRecycleBin'] = $includeRecycleBin;
         return $this;
     }
 

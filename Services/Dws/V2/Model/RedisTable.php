@@ -20,12 +20,12 @@ class RedisTable implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tableName  表名
-    * id  表唯一id
-    * schemaName  schema名
-    * logicalClusterName  逻辑集群名
-    * size  表大小
-    * status  重分布类型 i：重分布中； y：重分布完成； n：未开始
+    * tableName  **参数解释**： 表名。 **取值范围**： 不涉及。
+    * id  **参数解释**： 表唯一id。 **取值范围**： 不涉及。
+    * schemaName  **参数解释**： schema名。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名。 **取值范围**： 不涉及。
+    * size  **参数解释**： 表大小。 **取值范围**： 不涉及。
+    * status  **参数解释**： 重分布类型。 **取值范围**： i：重分布中； y：重分布完成； n：未开始。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class RedisTable implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tableName  表名
-    * id  表唯一id
-    * schemaName  schema名
-    * logicalClusterName  逻辑集群名
-    * size  表大小
-    * status  重分布类型 i：重分布中； y：重分布完成； n：未开始
+    * tableName  **参数解释**： 表名。 **取值范围**： 不涉及。
+    * id  **参数解释**： 表唯一id。 **取值范围**： 不涉及。
+    * schemaName  **参数解释**： schema名。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名。 **取值范围**： 不涉及。
+    * size  **参数解释**： 表大小。 **取值范围**： 不涉及。
+    * status  **参数解释**： 重分布类型。 **取值范围**： i：重分布中； y：重分布完成； n：未开始。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class RedisTable implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tableName  表名
-    * id  表唯一id
-    * schemaName  schema名
-    * logicalClusterName  逻辑集群名
-    * size  表大小
-    * status  重分布类型 i：重分布中； y：重分布完成； n：未开始
+    * tableName  **参数解释**： 表名。 **取值范围**： 不涉及。
+    * id  **参数解释**： 表唯一id。 **取值范围**： 不涉及。
+    * schemaName  **参数解释**： schema名。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名。 **取值范围**： 不涉及。
+    * size  **参数解释**： 表大小。 **取值范围**： 不涉及。
+    * status  **参数解释**： 重分布类型。 **取值范围**： i：重分布中； y：重分布完成； n：未开始。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class RedisTable implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tableName  表名
-    * id  表唯一id
-    * schemaName  schema名
-    * logicalClusterName  逻辑集群名
-    * size  表大小
-    * status  重分布类型 i：重分布中； y：重分布完成； n：未开始
+    * tableName  **参数解释**： 表名。 **取值范围**： 不涉及。
+    * id  **参数解释**： 表唯一id。 **取值范围**： 不涉及。
+    * schemaName  **参数解释**： schema名。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名。 **取值范围**： 不涉及。
+    * size  **参数解释**： 表大小。 **取值范围**： 不涉及。
+    * status  **参数解释**： 重分布类型。 **取值范围**： i：重分布中； y：重分布完成； n：未开始。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class RedisTable implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tableName  表名
-    * id  表唯一id
-    * schemaName  schema名
-    * logicalClusterName  逻辑集群名
-    * size  表大小
-    * status  重分布类型 i：重分布中； y：重分布完成； n：未开始
+    * tableName  **参数解释**： 表名。 **取值范围**： 不涉及。
+    * id  **参数解释**： 表唯一id。 **取值范围**： 不涉及。
+    * schemaName  **参数解释**： schema名。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名。 **取值范围**： 不涉及。
+    * size  **参数解释**： 表大小。 **取值范围**： 不涉及。
+    * status  **参数解释**： 重分布类型。 **取值范围**： i：重分布中； y：重分布完成； n：未开始。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class RedisTable implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableName
-    *  表名
+    *  **参数解释**： 表名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class RedisTable implements ModelInterface, ArrayAccess
     /**
     * Sets tableName
     *
-    * @param string|null $tableName 表名
+    * @param string|null $tableName **参数解释**： 表名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class RedisTable implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  表唯一id
+    *  **参数解释**： 表唯一id。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -265,7 +265,7 @@ class RedisTable implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 表唯一id
+    * @param int|null $id **参数解释**： 表唯一id。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class RedisTable implements ModelInterface, ArrayAccess
 
     /**
     * Gets schemaName
-    *  schema名
+    *  **参数解释**： schema名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class RedisTable implements ModelInterface, ArrayAccess
     /**
     * Sets schemaName
     *
-    * @param string|null $schemaName schema名
+    * @param string|null $schemaName **参数解释**： schema名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class RedisTable implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterName
-    *  逻辑集群名
+    *  **参数解释**： 逻辑集群名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class RedisTable implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterName
     *
-    * @param string|null $logicalClusterName 逻辑集群名
+    * @param string|null $logicalClusterName **参数解释**： 逻辑集群名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class RedisTable implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  表大小
+    *  **参数解释**： 表大小。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -337,7 +337,7 @@ class RedisTable implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 表大小
+    * @param int|null $size **参数解释**： 表大小。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class RedisTable implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  重分布类型 i：重分布中； y：重分布完成； n：未开始
+    *  **参数解释**： 重分布类型。 **取值范围**： i：重分布中； y：重分布完成； n：未开始。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class RedisTable implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 重分布类型 i：重分布中； y：重分布完成； n：未开始
+    * @param string|null $status **参数解释**： 重分布类型。 **取值范围**： i：重分布中； y：重分布完成； n：未开始。
     *
     * @return $this
     */

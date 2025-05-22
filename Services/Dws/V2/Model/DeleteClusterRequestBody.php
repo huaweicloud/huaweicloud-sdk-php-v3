@@ -20,7 +20,7 @@ class DeleteClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * keepLastManualSnapshot  集群需要保留的快照数
+    * keepLastManualSnapshot  **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * keepLastManualSnapshot  集群需要保留的快照数
+    * keepLastManualSnapshot  **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * keepLastManualSnapshot  集群需要保留的快照数
+    * keepLastManualSnapshot  **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * keepLastManualSnapshot  集群需要保留的快照数
+    * keepLastManualSnapshot  **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * keepLastManualSnapshot  集群需要保留的快照数
+    * keepLastManualSnapshot  **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DeleteClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets keepLastManualSnapshot
-    *  集群需要保留的快照数
+    *  **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -189,7 +189,7 @@ class DeleteClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets keepLastManualSnapshot
     *
-    * @param int $keepLastManualSnapshot 集群需要保留的快照数
+    * @param int $keepLastManualSnapshot **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

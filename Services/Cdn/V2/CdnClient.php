@@ -965,6 +965,68 @@ class CdnClient extends Client
     }
 
     /**
+     * 修改租户配置
+     *
+     * 修改租户配置，当前仅支持开启OBS和SCM委托授权。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyAccountInfo($request)
+    {
+        return $this->modifyAccountInfoWithHttpInfo($request);
+    }
+
+    public function modifyAccountInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/cdn/configuration/account-configs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ModifyAccountInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ModifyAccountInfoRequest');
+    }
+
+    /**
      * 设置用户计费模式
      *
      * - 设置用户计费模式。

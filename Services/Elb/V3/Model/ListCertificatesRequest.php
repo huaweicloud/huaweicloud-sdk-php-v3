@@ -32,6 +32,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * scmCertificateId  SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
     * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
     * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
+    * source  证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
+    * protectionStatus  修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
+    * protectionReason  设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
     *
     * @var string[]
     */
@@ -47,7 +50,10 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'type' => 'string[]',
             'scmCertificateId' => 'string[]',
             'commonName' => 'string[]',
-            'fingerprint' => 'string[]'
+            'fingerprint' => 'string[]',
+            'source' => 'string[]',
+            'protectionStatus' => 'string[]',
+            'protectionReason' => 'string[]'
     ];
 
     /**
@@ -64,6 +70,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * scmCertificateId  SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
     * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
     * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
+    * source  证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
+    * protectionStatus  修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
+    * protectionReason  设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
     *
     * @var string[]
     */
@@ -79,7 +88,10 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         'type' => null,
         'scmCertificateId' => null,
         'commonName' => null,
-        'fingerprint' => null
+        'fingerprint' => null,
+        'source' => null,
+        'protectionStatus' => null,
+        'protectionReason' => null
     ];
 
     /**
@@ -117,6 +129,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * scmCertificateId  SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
     * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
     * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
+    * source  证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
+    * protectionStatus  修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
+    * protectionReason  设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
     *
     * @var string[]
     */
@@ -132,7 +147,10 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'type' => 'type',
             'scmCertificateId' => 'scm_certificate_id',
             'commonName' => 'common_name',
-            'fingerprint' => 'fingerprint'
+            'fingerprint' => 'fingerprint',
+            'source' => 'source',
+            'protectionStatus' => 'protection_status',
+            'protectionReason' => 'protection_reason'
     ];
 
     /**
@@ -149,6 +167,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * scmCertificateId  SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
     * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
     * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
+    * source  证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
+    * protectionStatus  修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
+    * protectionReason  设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
     *
     * @var string[]
     */
@@ -164,7 +185,10 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'scmCertificateId' => 'setScmCertificateId',
             'commonName' => 'setCommonName',
-            'fingerprint' => 'setFingerprint'
+            'fingerprint' => 'setFingerprint',
+            'source' => 'setSource',
+            'protectionStatus' => 'setProtectionStatus',
+            'protectionReason' => 'setProtectionReason'
     ];
 
     /**
@@ -181,6 +205,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * scmCertificateId  SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
     * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
     * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
+    * source  证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
+    * protectionStatus  修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
+    * protectionReason  设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
     *
     * @var string[]
     */
@@ -196,7 +223,10 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'scmCertificateId' => 'getScmCertificateId',
             'commonName' => 'getCommonName',
-            'fingerprint' => 'getFingerprint'
+            'fingerprint' => 'getFingerprint',
+            'source' => 'getSource',
+            'protectionStatus' => 'getProtectionStatus',
+            'protectionReason' => 'getProtectionReason'
     ];
 
     /**
@@ -269,6 +299,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         $this->container['scmCertificateId'] = isset($data['scmCertificateId']) ? $data['scmCertificateId'] : null;
         $this->container['commonName'] = isset($data['commonName']) ? $data['commonName'] : null;
         $this->container['fingerprint'] = isset($data['fingerprint']) ? $data['fingerprint'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
+        $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
+        $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
     }
 
     /**
@@ -584,6 +617,78 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     public function setFingerprint($fingerprint)
     {
         $this->container['fingerprint'] = $fingerprint;
+        return $this;
+    }
+
+    /**
+    * Gets source
+    *  证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
+    *
+    * @return string[]|null
+    */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+    * Sets source
+    *
+    * @param string[]|null $source 证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
+    *
+    * @return $this
+    */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
+        return $this;
+    }
+
+    /**
+    * Gets protectionStatus
+    *  修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
+    *
+    * @return string[]|null
+    */
+    public function getProtectionStatus()
+    {
+        return $this->container['protectionStatus'];
+    }
+
+    /**
+    * Sets protectionStatus
+    *
+    * @param string[]|null $protectionStatus 修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
+    *
+    * @return $this
+    */
+    public function setProtectionStatus($protectionStatus)
+    {
+        $this->container['protectionStatus'] = $protectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets protectionReason
+    *  设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
+    *
+    * @return string[]|null
+    */
+    public function getProtectionReason()
+    {
+        return $this->container['protectionReason'];
+    }
+
+    /**
+    * Sets protectionReason
+    *
+    * @param string[]|null $protectionReason 设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
+    *
+    * @return $this
+    */
+    public function setProtectionReason($protectionReason)
+    {
+        $this->container['protectionReason'] = $protectionReason;
         return $this;
     }
 

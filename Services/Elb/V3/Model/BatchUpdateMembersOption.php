@@ -21,6 +21,7 @@ class BatchUpdateMembersOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  后端服务器ID。 >此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * availabilityZone  参数解释：后端服务器的可用区。 约束限制：  仅支持iptarget类型的后端服务器设置该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段为有效非空值。 取值范围：本region中ECS可选择的可用区。
     * adminStateUp  后端服务器的管理状态。取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。
     * name  后端服务器名称。
     * protocolPort  后端服务器端口。  在开启端口透传的pool下的member，该字段无法更新。  [网关型LB，即pool协议为IP时，protocol_port必须设置为0。](tag:hws_eu)
@@ -30,6 +31,7 @@ class BatchUpdateMembersOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'id' => 'string',
+            'availabilityZone' => 'string',
             'adminStateUp' => 'bool',
             'name' => 'string',
             'protocolPort' => 'int',
@@ -39,6 +41,7 @@ class BatchUpdateMembersOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  后端服务器ID。 >此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * availabilityZone  参数解释：后端服务器的可用区。 约束限制：  仅支持iptarget类型的后端服务器设置该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段为有效非空值。 取值范围：本region中ECS可选择的可用区。
     * adminStateUp  后端服务器的管理状态。取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。
     * name  后端服务器名称。
     * protocolPort  后端服务器端口。  在开启端口透传的pool下的member，该字段无法更新。  [网关型LB，即pool协议为IP时，protocol_port必须设置为0。](tag:hws_eu)
@@ -48,6 +51,7 @@ class BatchUpdateMembersOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'id' => null,
+        'availabilityZone' => null,
         'adminStateUp' => null,
         'name' => null,
         'protocolPort' => 'int32',
@@ -78,6 +82,7 @@ class BatchUpdateMembersOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  后端服务器ID。 >此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * availabilityZone  参数解释：后端服务器的可用区。 约束限制：  仅支持iptarget类型的后端服务器设置该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段为有效非空值。 取值范围：本region中ECS可选择的可用区。
     * adminStateUp  后端服务器的管理状态。取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。
     * name  后端服务器名称。
     * protocolPort  后端服务器端口。  在开启端口透传的pool下的member，该字段无法更新。  [网关型LB，即pool协议为IP时，protocol_port必须设置为0。](tag:hws_eu)
@@ -87,6 +92,7 @@ class BatchUpdateMembersOption implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'id' => 'id',
+            'availabilityZone' => 'availability_zone',
             'adminStateUp' => 'admin_state_up',
             'name' => 'name',
             'protocolPort' => 'protocol_port',
@@ -96,6 +102,7 @@ class BatchUpdateMembersOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  后端服务器ID。 >此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * availabilityZone  参数解释：后端服务器的可用区。 约束限制：  仅支持iptarget类型的后端服务器设置该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段为有效非空值。 取值范围：本region中ECS可选择的可用区。
     * adminStateUp  后端服务器的管理状态。取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。
     * name  后端服务器名称。
     * protocolPort  后端服务器端口。  在开启端口透传的pool下的member，该字段无法更新。  [网关型LB，即pool协议为IP时，protocol_port必须设置为0。](tag:hws_eu)
@@ -105,6 +112,7 @@ class BatchUpdateMembersOption implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'id' => 'setId',
+            'availabilityZone' => 'setAvailabilityZone',
             'adminStateUp' => 'setAdminStateUp',
             'name' => 'setName',
             'protocolPort' => 'setProtocolPort',
@@ -114,6 +122,7 @@ class BatchUpdateMembersOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  后端服务器ID。 >此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * availabilityZone  参数解释：后端服务器的可用区。 约束限制：  仅支持iptarget类型的后端服务器设置该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段为有效非空值。 取值范围：本region中ECS可选择的可用区。
     * adminStateUp  后端服务器的管理状态。取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。
     * name  后端服务器名称。
     * protocolPort  后端服务器端口。  在开启端口透传的pool下的member，该字段无法更新。  [网关型LB，即pool协议为IP时，protocol_port必须设置为0。](tag:hws_eu)
@@ -123,6 +132,7 @@ class BatchUpdateMembersOption implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'id' => 'getId',
+            'availabilityZone' => 'getAvailabilityZone',
             'adminStateUp' => 'getAdminStateUp',
             'name' => 'getName',
             'protocolPort' => 'getProtocolPort',
@@ -188,6 +198,7 @@ class BatchUpdateMembersOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['protocolPort'] = isset($data['protocolPort']) ? $data['protocolPort'] : null;
@@ -258,6 +269,30 @@ class BatchUpdateMembersOption implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZone
+    *  参数解释：后端服务器的可用区。 约束限制：  仅支持iptarget类型的后端服务器设置该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段为有效非空值。 取值范围：本region中ECS可选择的可用区。
+    *
+    * @return string|null
+    */
+    public function getAvailabilityZone()
+    {
+        return $this->container['availabilityZone'];
+    }
+
+    /**
+    * Sets availabilityZone
+    *
+    * @param string|null $availabilityZone 参数解释：后端服务器的可用区。 约束限制：  仅支持iptarget类型的后端服务器设置该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段为有效非空值。 取值范围：本region中ECS可选择的可用区。
+    *
+    * @return $this
+    */
+    public function setAvailabilityZone($availabilityZone)
+    {
+        $this->container['availabilityZone'] = $availabilityZone;
         return $this;
     }
 

@@ -23,7 +23,9 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * computeEngineSparkNativeEnabled  是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
     * networkCidrInVpc  设置队列网段
+    * jobSaveJobResultToJobBucket  是否使用作业桶保存SQL查询结果
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
             'computeEngineMaxInstance' => 'int',
             'jobMaxConcurrent' => 'int',
             'computeEngineMaxPrefetchInstance' => 'int',
-            'networkCidrInVpc' => 'string'
+            'computeEngineSparkNativeEnabled' => 'string',
+            'networkCidrInVpc' => 'string',
+            'jobSaveJobResultToJobBucket' => 'string'
     ];
 
     /**
@@ -39,7 +43,9 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * computeEngineSparkNativeEnabled  是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
     * networkCidrInVpc  设置队列网段
+    * jobSaveJobResultToJobBucket  是否使用作业桶保存SQL查询结果
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
         'computeEngineMaxInstance' => 'int32',
         'jobMaxConcurrent' => 'int32',
         'computeEngineMaxPrefetchInstance' => 'int32',
-        'networkCidrInVpc' => null
+        'computeEngineSparkNativeEnabled' => null,
+        'networkCidrInVpc' => null,
+        'jobSaveJobResultToJobBucket' => null
     ];
 
     /**
@@ -76,7 +84,9 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * computeEngineSparkNativeEnabled  是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
     * networkCidrInVpc  设置队列网段
+    * jobSaveJobResultToJobBucket  是否使用作业桶保存SQL查询结果
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
             'computeEngineMaxInstance' => 'computeEngine.maxInstance',
             'jobMaxConcurrent' => 'job.maxConcurrent',
             'computeEngineMaxPrefetchInstance' => 'computeEngine.maxPrefetchInstance',
-            'networkCidrInVpc' => 'network.cidrInVpc'
+            'computeEngineSparkNativeEnabled' => 'computeEngine.spark.nativeEnabled',
+            'networkCidrInVpc' => 'network.cidrInVpc',
+            'jobSaveJobResultToJobBucket' => 'job.saveJobResultToJobBucket'
     ];
 
     /**
@@ -92,7 +104,9 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * computeEngineSparkNativeEnabled  是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
     * networkCidrInVpc  设置队列网段
+    * jobSaveJobResultToJobBucket  是否使用作业桶保存SQL查询结果
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
             'computeEngineMaxInstance' => 'setComputeEngineMaxInstance',
             'jobMaxConcurrent' => 'setJobMaxConcurrent',
             'computeEngineMaxPrefetchInstance' => 'setComputeEngineMaxPrefetchInstance',
-            'networkCidrInVpc' => 'setNetworkCidrInVpc'
+            'computeEngineSparkNativeEnabled' => 'setComputeEngineSparkNativeEnabled',
+            'networkCidrInVpc' => 'setNetworkCidrInVpc',
+            'jobSaveJobResultToJobBucket' => 'setJobSaveJobResultToJobBucket'
     ];
 
     /**
@@ -108,7 +124,9 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * computeEngineSparkNativeEnabled  是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
     * networkCidrInVpc  设置队列网段
+    * jobSaveJobResultToJobBucket  是否使用作业桶保存SQL查询结果
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
             'computeEngineMaxInstance' => 'getComputeEngineMaxInstance',
             'jobMaxConcurrent' => 'getJobMaxConcurrent',
             'computeEngineMaxPrefetchInstance' => 'getComputeEngineMaxPrefetchInstance',
-            'networkCidrInVpc' => 'getNetworkCidrInVpc'
+            'computeEngineSparkNativeEnabled' => 'getComputeEngineSparkNativeEnabled',
+            'networkCidrInVpc' => 'getNetworkCidrInVpc',
+            'jobSaveJobResultToJobBucket' => 'getJobSaveJobResultToJobBucket'
     ];
 
     /**
@@ -180,7 +200,9 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
         $this->container['computeEngineMaxInstance'] = isset($data['computeEngineMaxInstance']) ? $data['computeEngineMaxInstance'] : null;
         $this->container['jobMaxConcurrent'] = isset($data['jobMaxConcurrent']) ? $data['jobMaxConcurrent'] : null;
         $this->container['computeEngineMaxPrefetchInstance'] = isset($data['computeEngineMaxPrefetchInstance']) ? $data['computeEngineMaxPrefetchInstance'] : null;
+        $this->container['computeEngineSparkNativeEnabled'] = isset($data['computeEngineSparkNativeEnabled']) ? $data['computeEngineSparkNativeEnabled'] : null;
         $this->container['networkCidrInVpc'] = isset($data['networkCidrInVpc']) ? $data['networkCidrInVpc'] : null;
+        $this->container['jobSaveJobResultToJobBucket'] = isset($data['jobSaveJobResultToJobBucket']) ? $data['jobSaveJobResultToJobBucket'] : null;
     }
 
     /**
@@ -284,6 +306,30 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets computeEngineSparkNativeEnabled
+    *  是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
+    *
+    * @return string|null
+    */
+    public function getComputeEngineSparkNativeEnabled()
+    {
+        return $this->container['computeEngineSparkNativeEnabled'];
+    }
+
+    /**
+    * Sets computeEngineSparkNativeEnabled
+    *
+    * @param string|null $computeEngineSparkNativeEnabled 是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
+    *
+    * @return $this
+    */
+    public function setComputeEngineSparkNativeEnabled($computeEngineSparkNativeEnabled)
+    {
+        $this->container['computeEngineSparkNativeEnabled'] = $computeEngineSparkNativeEnabled;
+        return $this;
+    }
+
+    /**
     * Gets networkCidrInVpc
     *  设置队列网段
     *
@@ -304,6 +350,30 @@ class AdvancedQueueProperty implements ModelInterface, ArrayAccess
     public function setNetworkCidrInVpc($networkCidrInVpc)
     {
         $this->container['networkCidrInVpc'] = $networkCidrInVpc;
+        return $this;
+    }
+
+    /**
+    * Gets jobSaveJobResultToJobBucket
+    *  是否使用作业桶保存SQL查询结果
+    *
+    * @return string|null
+    */
+    public function getJobSaveJobResultToJobBucket()
+    {
+        return $this->container['jobSaveJobResultToJobBucket'];
+    }
+
+    /**
+    * Sets jobSaveJobResultToJobBucket
+    *
+    * @param string|null $jobSaveJobResultToJobBucket 是否使用作业桶保存SQL查询结果
+    *
+    * @return $this
+    */
+    public function setJobSaveJobResultToJobBucket($jobSaveJobResultToJobBucket)
+    {
+        $this->container['jobSaveJobResultToJobBucket'] = $jobSaveJobResultToJobBucket;
         return $this;
     }
 

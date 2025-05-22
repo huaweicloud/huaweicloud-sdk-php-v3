@@ -20,7 +20,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * clusterName  集群名称
     * sourceRegion  源区域
     * sourceProjectId  源项目ID
@@ -46,7 +46,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * clusterName  集群名称
     * sourceRegion  源区域
     * sourceProjectId  源项目ID
@@ -93,7 +93,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * clusterName  集群名称
     * sourceRegion  源区域
     * sourceProjectId  源项目ID
@@ -119,7 +119,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * clusterName  集群名称
     * sourceRegion  源区域
     * sourceProjectId  源项目ID
@@ -145,7 +145,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * clusterName  集群名称
     * sourceRegion  源区域
     * sourceProjectId  源项目ID
@@ -262,7 +262,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID
+    *  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID
+    * @param string|null $clusterId **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return $this
     */

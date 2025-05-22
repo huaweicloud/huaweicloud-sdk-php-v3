@@ -20,7 +20,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  集群ID
+    * id  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * name  集群名称
     *
     * @var string[]
@@ -32,7 +32,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  集群ID
+    * id  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * name  集群名称
     *
     * @var string[]
@@ -65,7 +65,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  集群ID
+    * id  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * name  集群名称
     *
     * @var string[]
@@ -77,7 +77,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  集群ID
+    * id  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * name  集群名称
     *
     * @var string[]
@@ -89,7 +89,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  集群ID
+    * id  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * name  集群名称
     *
     * @var string[]
@@ -185,7 +185,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  集群ID
+    *  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 集群ID
+    * @param string|null $id **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return $this
     */

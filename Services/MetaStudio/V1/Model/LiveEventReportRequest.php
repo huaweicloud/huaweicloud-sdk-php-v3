@@ -27,7 +27,9 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
-    * expiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
+    * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+    * xMssAuthKey  鉴权Key。通过HmacSHA256生成的鉴权key
+    * xMssExpiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
     * refreshUrl  是否刷新URL
     * body  body
     *
@@ -42,6 +44,8 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'string',
             'authKey' => 'string',
             'expiresTime' => 'int',
+            'xMssAuthKey' => 'string',
+            'xMssExpiresTime' => 'int',
             'refreshUrl' => 'bool',
             'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReportLiveEventReq'
     ];
@@ -55,7 +59,9 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
-    * expiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
+    * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+    * xMssAuthKey  鉴权Key。通过HmacSHA256生成的鉴权key
+    * xMssExpiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
     * refreshUrl  是否刷新URL
     * body  body
     *
@@ -70,6 +76,8 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
         'xAppUserId' => null,
         'authKey' => null,
         'expiresTime' => 'int64',
+        'xMssAuthKey' => null,
+        'xMssExpiresTime' => 'int64',
         'refreshUrl' => null,
         'body' => null
     ];
@@ -104,7 +112,9 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
-    * expiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
+    * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+    * xMssAuthKey  鉴权Key。通过HmacSHA256生成的鉴权key
+    * xMssExpiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
     * refreshUrl  是否刷新URL
     * body  body
     *
@@ -119,6 +129,8 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'X-App-UserId',
             'authKey' => 'auth_key',
             'expiresTime' => 'expires_time',
+            'xMssAuthKey' => 'x-mss-auth-key',
+            'xMssExpiresTime' => 'x-mss-expires-time',
             'refreshUrl' => 'refresh_url',
             'body' => 'body'
     ];
@@ -132,7 +144,9 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
-    * expiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
+    * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+    * xMssAuthKey  鉴权Key。通过HmacSHA256生成的鉴权key
+    * xMssExpiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
     * refreshUrl  是否刷新URL
     * body  body
     *
@@ -147,6 +161,8 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'setXAppUserId',
             'authKey' => 'setAuthKey',
             'expiresTime' => 'setExpiresTime',
+            'xMssAuthKey' => 'setXMssAuthKey',
+            'xMssExpiresTime' => 'setXMssExpiresTime',
             'refreshUrl' => 'setRefreshUrl',
             'body' => 'setBody'
     ];
@@ -160,7 +176,9 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
-    * expiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
+    * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+    * xMssAuthKey  鉴权Key。通过HmacSHA256生成的鉴权key
+    * xMssExpiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
     * refreshUrl  是否刷新URL
     * body  body
     *
@@ -175,6 +193,8 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'getXAppUserId',
             'authKey' => 'getAuthKey',
             'expiresTime' => 'getExpiresTime',
+            'xMssAuthKey' => 'getXMssAuthKey',
+            'xMssExpiresTime' => 'getXMssExpiresTime',
             'refreshUrl' => 'getRefreshUrl',
             'body' => 'getBody'
     ];
@@ -245,6 +265,8 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['authKey'] = isset($data['authKey']) ? $data['authKey'] : null;
         $this->container['expiresTime'] = isset($data['expiresTime']) ? $data['expiresTime'] : null;
+        $this->container['xMssAuthKey'] = isset($data['xMssAuthKey']) ? $data['xMssAuthKey'] : null;
+        $this->container['xMssExpiresTime'] = isset($data['xMssExpiresTime']) ? $data['xMssExpiresTime'] : null;
         $this->container['refreshUrl'] = isset($data['refreshUrl']) ? $data['refreshUrl'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -310,6 +332,18 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['expiresTime']) && ($this->container['expiresTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'expiresTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['xMssAuthKey']) && (mb_strlen($this->container['xMssAuthKey']) > 64)) {
+                $invalidProperties[] = "invalid value for 'xMssAuthKey', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['xMssAuthKey']) && (mb_strlen($this->container['xMssAuthKey']) < 0)) {
+                $invalidProperties[] = "invalid value for 'xMssAuthKey', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['xMssExpiresTime']) && ($this->container['xMssExpiresTime'] > 4102415999000)) {
+                $invalidProperties[] = "invalid value for 'xMssExpiresTime', must be smaller than or equal to 4102415999000.";
+            }
+            if (!is_null($this->container['xMssExpiresTime']) && ($this->container['xMssExpiresTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'xMssExpiresTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -495,7 +529,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets expiresTime
-    *  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
+    *  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     *
     * @return int|null
     */
@@ -507,13 +541,61 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     /**
     * Sets expiresTime
     *
-    * @param int|null $expiresTime **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
+    * @param int|null $expiresTime 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     *
     * @return $this
     */
     public function setExpiresTime($expiresTime)
     {
         $this->container['expiresTime'] = $expiresTime;
+        return $this;
+    }
+
+    /**
+    * Gets xMssAuthKey
+    *  鉴权Key。通过HmacSHA256生成的鉴权key
+    *
+    * @return string|null
+    */
+    public function getXMssAuthKey()
+    {
+        return $this->container['xMssAuthKey'];
+    }
+
+    /**
+    * Sets xMssAuthKey
+    *
+    * @param string|null $xMssAuthKey 鉴权Key。通过HmacSHA256生成的鉴权key
+    *
+    * @return $this
+    */
+    public function setXMssAuthKey($xMssAuthKey)
+    {
+        $this->container['xMssAuthKey'] = $xMssAuthKey;
+        return $this;
+    }
+
+    /**
+    * Gets xMssExpiresTime
+    *  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
+    *
+    * @return int|null
+    */
+    public function getXMssExpiresTime()
+    {
+        return $this->container['xMssExpiresTime'];
+    }
+
+    /**
+    * Sets xMssExpiresTime
+    *
+    * @param int|null $xMssExpiresTime **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
+    *
+    * @return $this
+    */
+    public function setXMssExpiresTime($xMssExpiresTime)
+    {
+        $this->container['xMssExpiresTime'] = $xMssExpiresTime;
         return $this;
     }
 

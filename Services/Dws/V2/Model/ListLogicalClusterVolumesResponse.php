@@ -21,8 +21,8 @@ class ListLogicalClusterVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * volumes  逻辑集群磁盘信息列表
-    * count  逻辑集群磁盘总数
+    * volumes  **参数解释**： 逻辑集群磁盘信息列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 逻辑集群磁盘总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListLogicalClusterVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * volumes  逻辑集群磁盘信息列表
-    * count  逻辑集群磁盘总数
+    * volumes  **参数解释**： 逻辑集群磁盘信息列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 逻辑集群磁盘总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListLogicalClusterVolumesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * volumes  逻辑集群磁盘信息列表
-    * count  逻辑集群磁盘总数
+    * volumes  **参数解释**： 逻辑集群磁盘信息列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 逻辑集群磁盘总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListLogicalClusterVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * volumes  逻辑集群磁盘信息列表
-    * count  逻辑集群磁盘总数
+    * volumes  **参数解释**： 逻辑集群磁盘信息列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 逻辑集群磁盘总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListLogicalClusterVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * volumes  逻辑集群磁盘信息列表
-    * count  逻辑集群磁盘总数
+    * volumes  **参数解释**： 逻辑集群磁盘信息列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 逻辑集群磁盘总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListLogicalClusterVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumes
-    *  逻辑集群磁盘信息列表
+    *  **参数解释**： 逻辑集群磁盘信息列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterVolume[]|null
     */
@@ -198,7 +198,7 @@ class ListLogicalClusterVolumesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets volumes
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterVolume[]|null $volumes 逻辑集群磁盘信息列表
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterVolume[]|null $volumes **参数解释**： 逻辑集群磁盘信息列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListLogicalClusterVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  逻辑集群磁盘总数
+    *  **参数解释**： 逻辑集群磁盘总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListLogicalClusterVolumesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 逻辑集群磁盘总数
+    * @param int|null $count **参数解释**： 逻辑集群磁盘总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

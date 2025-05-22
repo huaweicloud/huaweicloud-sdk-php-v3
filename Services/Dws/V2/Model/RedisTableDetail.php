@@ -20,8 +20,8 @@ class RedisTableDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  具体数据
-    * total  总条数
+    * data  **参数解释**： 重分布具体数据。 **取值范围**： 不涉及。
+    * total  **参数解释**： 重分布表张数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class RedisTableDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  具体数据
-    * total  总条数
+    * data  **参数解释**： 重分布具体数据。 **取值范围**： 不涉及。
+    * total  **参数解释**： 重分布表张数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RedisTableDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  具体数据
-    * total  总条数
+    * data  **参数解释**： 重分布具体数据。 **取值范围**： 不涉及。
+    * total  **参数解释**： 重分布表张数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RedisTableDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  具体数据
-    * total  总条数
+    * data  **参数解释**： 重分布具体数据。 **取值范围**： 不涉及。
+    * total  **参数解释**： 重分布表张数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RedisTableDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  具体数据
-    * total  总条数
+    * data  **参数解释**： 重分布具体数据。 **取值范围**： 不涉及。
+    * total  **参数解释**： 重分布表张数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class RedisTableDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  具体数据
+    *  **参数解释**： 重分布具体数据。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\RedisTable[]|null
     */
@@ -197,7 +197,7 @@ class RedisTableDetail implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\RedisTable[]|null $data 具体数据
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\RedisTable[]|null $data **参数解释**： 重分布具体数据。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class RedisTableDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总条数
+    *  **参数解释**： 重分布表张数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class RedisTableDetail implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总条数
+    * @param int|null $total **参数解释**： 重分布表张数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

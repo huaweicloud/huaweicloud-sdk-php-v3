@@ -20,20 +20,20 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bytesDone  已完成字节数
-    * byteLeft  剩余字节数
-    * tablesDone  完成表数量
-    * tablesLeft  剩余表数量
-    * tableProgress  表重分布进度
-    * totalProgress  总进度
-    * redisRate  重分布比例
-    * estimatedTime  预计时间
-    * completed  是否已完成
-    * initialed  是否完成初始化
-    * failCount  失败总数
-    * redistributing  cm_ctl 结果
-    * status  状态
-    * pauseByUser  是否用户暂停
+    * bytesDone  **参数解释**： 已完成字节数。 **取值范围**： 不涉及。
+    * byteLeft  **参数解释**： 剩余字节数。 **取值范围**： 不涉及。
+    * tablesDone  **参数解释**： 完成表数量。 **取值范围**： 不涉及。
+    * tablesLeft  **参数解释**： 剩余表数量。 **取值范围**： 不涉及。
+    * tableProgress  **参数解释**： 表重分布进度。 **取值范围**： 1~100。
+    * totalProgress  **参数解释**： 总进度。 **取值范围**： 1~100。
+    * redisRate  **参数解释**： 重分布速度。 **取值范围**： 不涉及。
+    * estimatedTime  **参数解释**： 预估时间。 **取值范围**： 不涉及。
+    * completed  **参数解释**： 是否已完成。 **取值范围**： 不涉及。
+    * initialed  **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
+    * failCount  **参数解释**： 失败次数。 **取值范围**： 不涉及。
+    * redistributing  **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * pauseByUser  **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bytesDone  已完成字节数
-    * byteLeft  剩余字节数
-    * tablesDone  完成表数量
-    * tablesLeft  剩余表数量
-    * tableProgress  表重分布进度
-    * totalProgress  总进度
-    * redisRate  重分布比例
-    * estimatedTime  预计时间
-    * completed  是否已完成
-    * initialed  是否完成初始化
-    * failCount  失败总数
-    * redistributing  cm_ctl 结果
-    * status  状态
-    * pauseByUser  是否用户暂停
+    * bytesDone  **参数解释**： 已完成字节数。 **取值范围**： 不涉及。
+    * byteLeft  **参数解释**： 剩余字节数。 **取值范围**： 不涉及。
+    * tablesDone  **参数解释**： 完成表数量。 **取值范围**： 不涉及。
+    * tablesLeft  **参数解释**： 剩余表数量。 **取值范围**： 不涉及。
+    * tableProgress  **参数解释**： 表重分布进度。 **取值范围**： 1~100。
+    * totalProgress  **参数解释**： 总进度。 **取值范围**： 1~100。
+    * redisRate  **参数解释**： 重分布速度。 **取值范围**： 不涉及。
+    * estimatedTime  **参数解释**： 预估时间。 **取值范围**： 不涉及。
+    * completed  **参数解释**： 是否已完成。 **取值范围**： 不涉及。
+    * initialed  **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
+    * failCount  **参数解释**： 失败次数。 **取值范围**： 不涉及。
+    * redistributing  **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * pauseByUser  **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bytesDone  已完成字节数
-    * byteLeft  剩余字节数
-    * tablesDone  完成表数量
-    * tablesLeft  剩余表数量
-    * tableProgress  表重分布进度
-    * totalProgress  总进度
-    * redisRate  重分布比例
-    * estimatedTime  预计时间
-    * completed  是否已完成
-    * initialed  是否完成初始化
-    * failCount  失败总数
-    * redistributing  cm_ctl 结果
-    * status  状态
-    * pauseByUser  是否用户暂停
+    * bytesDone  **参数解释**： 已完成字节数。 **取值范围**： 不涉及。
+    * byteLeft  **参数解释**： 剩余字节数。 **取值范围**： 不涉及。
+    * tablesDone  **参数解释**： 完成表数量。 **取值范围**： 不涉及。
+    * tablesLeft  **参数解释**： 剩余表数量。 **取值范围**： 不涉及。
+    * tableProgress  **参数解释**： 表重分布进度。 **取值范围**： 1~100。
+    * totalProgress  **参数解释**： 总进度。 **取值范围**： 1~100。
+    * redisRate  **参数解释**： 重分布速度。 **取值范围**： 不涉及。
+    * estimatedTime  **参数解释**： 预估时间。 **取值范围**： 不涉及。
+    * completed  **参数解释**： 是否已完成。 **取值范围**： 不涉及。
+    * initialed  **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
+    * failCount  **参数解释**： 失败次数。 **取值范围**： 不涉及。
+    * redistributing  **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * pauseByUser  **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bytesDone  已完成字节数
-    * byteLeft  剩余字节数
-    * tablesDone  完成表数量
-    * tablesLeft  剩余表数量
-    * tableProgress  表重分布进度
-    * totalProgress  总进度
-    * redisRate  重分布比例
-    * estimatedTime  预计时间
-    * completed  是否已完成
-    * initialed  是否完成初始化
-    * failCount  失败总数
-    * redistributing  cm_ctl 结果
-    * status  状态
-    * pauseByUser  是否用户暂停
+    * bytesDone  **参数解释**： 已完成字节数。 **取值范围**： 不涉及。
+    * byteLeft  **参数解释**： 剩余字节数。 **取值范围**： 不涉及。
+    * tablesDone  **参数解释**： 完成表数量。 **取值范围**： 不涉及。
+    * tablesLeft  **参数解释**： 剩余表数量。 **取值范围**： 不涉及。
+    * tableProgress  **参数解释**： 表重分布进度。 **取值范围**： 1~100。
+    * totalProgress  **参数解释**： 总进度。 **取值范围**： 1~100。
+    * redisRate  **参数解释**： 重分布速度。 **取值范围**： 不涉及。
+    * estimatedTime  **参数解释**： 预估时间。 **取值范围**： 不涉及。
+    * completed  **参数解释**： 是否已完成。 **取值范围**： 不涉及。
+    * initialed  **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
+    * failCount  **参数解释**： 失败次数。 **取值范围**： 不涉及。
+    * redistributing  **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * pauseByUser  **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bytesDone  已完成字节数
-    * byteLeft  剩余字节数
-    * tablesDone  完成表数量
-    * tablesLeft  剩余表数量
-    * tableProgress  表重分布进度
-    * totalProgress  总进度
-    * redisRate  重分布比例
-    * estimatedTime  预计时间
-    * completed  是否已完成
-    * initialed  是否完成初始化
-    * failCount  失败总数
-    * redistributing  cm_ctl 结果
-    * status  状态
-    * pauseByUser  是否用户暂停
+    * bytesDone  **参数解释**： 已完成字节数。 **取值范围**： 不涉及。
+    * byteLeft  **参数解释**： 剩余字节数。 **取值范围**： 不涉及。
+    * tablesDone  **参数解释**： 完成表数量。 **取值范围**： 不涉及。
+    * tablesLeft  **参数解释**： 剩余表数量。 **取值范围**： 不涉及。
+    * tableProgress  **参数解释**： 表重分布进度。 **取值范围**： 1~100。
+    * totalProgress  **参数解释**： 总进度。 **取值范围**： 1~100。
+    * redisRate  **参数解释**： 重分布速度。 **取值范围**： 不涉及。
+    * estimatedTime  **参数解释**： 预估时间。 **取值范围**： 不涉及。
+    * completed  **参数解释**： 是否已完成。 **取值范围**： 不涉及。
+    * initialed  **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
+    * failCount  **参数解释**： 失败次数。 **取值范围**： 不涉及。
+    * redistributing  **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * pauseByUser  **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -317,7 +317,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets bytesDone
-    *  已完成字节数
+    *  **参数解释**： 已完成字节数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -329,7 +329,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets bytesDone
     *
-    * @param int|null $bytesDone 已完成字节数
+    * @param int|null $bytesDone **参数解释**： 已完成字节数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets byteLeft
-    *  剩余字节数
+    *  **参数解释**： 剩余字节数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -353,7 +353,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets byteLeft
     *
-    * @param int|null $byteLeft 剩余字节数
+    * @param int|null $byteLeft **参数解释**： 剩余字节数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets tablesDone
-    *  完成表数量
+    *  **参数解释**： 完成表数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -377,7 +377,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets tablesDone
     *
-    * @param int|null $tablesDone 完成表数量
+    * @param int|null $tablesDone **参数解释**： 完成表数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets tablesLeft
-    *  剩余表数量
+    *  **参数解释**： 剩余表数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -401,7 +401,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets tablesLeft
     *
-    * @param int|null $tablesLeft 剩余表数量
+    * @param int|null $tablesLeft **参数解释**： 剩余表数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableProgress
-    *  表重分布进度
+    *  **参数解释**： 表重分布进度。 **取值范围**： 1~100。
     *
     * @return int|null
     */
@@ -425,7 +425,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets tableProgress
     *
-    * @param int|null $tableProgress 表重分布进度
+    * @param int|null $tableProgress **参数解释**： 表重分布进度。 **取值范围**： 1~100。
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalProgress
-    *  总进度
+    *  **参数解释**： 总进度。 **取值范围**： 1~100。
     *
     * @return int|null
     */
@@ -449,7 +449,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets totalProgress
     *
-    * @param int|null $totalProgress 总进度
+    * @param int|null $totalProgress **参数解释**： 总进度。 **取值范围**： 1~100。
     *
     * @return $this
     */
@@ -461,7 +461,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets redisRate
-    *  重分布比例
+    *  **参数解释**： 重分布速度。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -473,7 +473,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets redisRate
     *
-    * @param string|null $redisRate 重分布比例
+    * @param string|null $redisRate **参数解释**： 重分布速度。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -485,7 +485,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets estimatedTime
-    *  预计时间
+    *  **参数解释**： 预估时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -497,7 +497,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets estimatedTime
     *
-    * @param string|null $estimatedTime 预计时间
+    * @param string|null $estimatedTime **参数解释**： 预估时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -509,7 +509,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets completed
-    *  是否已完成
+    *  **参数解释**： 是否已完成。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -521,7 +521,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets completed
     *
-    * @param bool|null $completed 是否已完成
+    * @param bool|null $completed **参数解释**： 是否已完成。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -533,7 +533,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets initialed
-    *  是否完成初始化
+    *  **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -545,7 +545,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets initialed
     *
-    * @param bool|null $initialed 是否完成初始化
+    * @param bool|null $initialed **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets failCount
-    *  失败总数
+    *  **参数解释**： 失败次数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -569,7 +569,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets failCount
     *
-    * @param int|null $failCount 失败总数
+    * @param int|null $failCount **参数解释**： 失败次数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -581,7 +581,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets redistributing
-    *  cm_ctl 结果
+    *  **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -593,7 +593,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets redistributing
     *
-    * @param bool|null $redistributing cm_ctl 结果
+    * @param bool|null $redistributing **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -605,7 +605,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -617,7 +617,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -629,7 +629,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets pauseByUser
-    *  是否用户暂停
+    *  **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -641,7 +641,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets pauseByUser
     *
-    * @param bool|null $pauseByUser 是否用户暂停
+    * @param bool|null $pauseByUser **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
     *
     * @return $this
     */

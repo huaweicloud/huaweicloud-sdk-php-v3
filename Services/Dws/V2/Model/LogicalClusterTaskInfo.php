@@ -20,12 +20,12 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  任务类型
-    * logicalClusterName  逻辑集群名称
-    * startTime  任务开始时间
-    * endTime  任务结束时间
-    * result  任务执行结果
-    * log  任务执行日志
+    * type  **参数解释**： 任务类型。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * result  **参数解释**： 任务执行结果。 **取值范围**： 不涉及。
+    * log  **参数解释**： 任务执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  任务类型
-    * logicalClusterName  逻辑集群名称
-    * startTime  任务开始时间
-    * endTime  任务结束时间
-    * result  任务执行结果
-    * log  任务执行日志
+    * type  **参数解释**： 任务类型。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * result  **参数解释**： 任务执行结果。 **取值范围**： 不涉及。
+    * log  **参数解释**： 任务执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  任务类型
-    * logicalClusterName  逻辑集群名称
-    * startTime  任务开始时间
-    * endTime  任务结束时间
-    * result  任务执行结果
-    * log  任务执行日志
+    * type  **参数解释**： 任务类型。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * result  **参数解释**： 任务执行结果。 **取值范围**： 不涉及。
+    * log  **参数解释**： 任务执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  任务类型
-    * logicalClusterName  逻辑集群名称
-    * startTime  任务开始时间
-    * endTime  任务结束时间
-    * result  任务执行结果
-    * log  任务执行日志
+    * type  **参数解释**： 任务类型。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * result  **参数解释**： 任务执行结果。 **取值范围**： 不涉及。
+    * log  **参数解释**： 任务执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  任务类型
-    * logicalClusterName  逻辑集群名称
-    * startTime  任务开始时间
-    * endTime  任务结束时间
-    * result  任务执行结果
-    * log  任务执行日志
+    * type  **参数解释**： 任务类型。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * result  **参数解释**： 任务执行结果。 **取值范围**： 不涉及。
+    * log  **参数解释**： 任务执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  任务类型
+    *  **参数解释**： 任务类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 任务类型
+    * @param string|null $type **参数解释**： 任务类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterName
-    *  逻辑集群名称
+    *  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterName
     *
-    * @param string|null $logicalClusterName 逻辑集群名称
+    * @param string|null $logicalClusterName **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  任务开始时间
+    *  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 任务开始时间
+    * @param string|null $startTime **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  任务结束时间
+    *  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 任务结束时间
+    * @param string|null $endTime **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  任务执行结果
+    *  **参数解释**： 任务执行结果。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 任务执行结果
+    * @param string|null $result **参数解释**： 任务执行结果。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets log
-    *  任务执行日志
+    *  **参数解释**： 任务执行日志。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class LogicalClusterTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Sets log
     *
-    * @param string|null $log 任务执行日志
+    * @param string|null $log **参数解释**： 任务执行日志。 **取值范围**： 不涉及。
     *
     * @return $this
     */

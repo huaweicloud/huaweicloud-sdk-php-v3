@@ -20,26 +20,30 @@ class NodeTypeDatastores implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  内核版本号。
+    * version  **参数解释**： 内核版本号。 **取值范围**： 数字、小数点，格式一般如 9.1.0、9.1.1.100。
     * attachments  attachments
+    * role  **参数解释**： 版本类型。 **取值范围**： - STABLE：稳定版 - PREVIEW：预览版
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'version' => 'string',
-            'attachments' => '\HuaweiCloud\SDK\Dws\V2\Model\NodeTypeDatastoresAttachments'
+            'attachments' => '\HuaweiCloud\SDK\Dws\V2\Model\NodeTypeDatastoresAttachments',
+            'role' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  内核版本号。
+    * version  **参数解释**： 内核版本号。 **取值范围**： 数字、小数点，格式一般如 9.1.0、9.1.1.100。
     * attachments  attachments
+    * role  **参数解释**： 版本类型。 **取值范围**： - STABLE：稳定版 - PREVIEW：预览版
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'version' => null,
-        'attachments' => null
+        'attachments' => null,
+        'role' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class NodeTypeDatastores implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  内核版本号。
+    * version  **参数解释**： 内核版本号。 **取值范围**： 数字、小数点，格式一般如 9.1.0、9.1.1.100。
     * attachments  attachments
+    * role  **参数解释**： 版本类型。 **取值范围**： - STABLE：稳定版 - PREVIEW：预览版
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'version' => 'version',
-            'attachments' => 'attachments'
+            'attachments' => 'attachments',
+            'role' => 'role'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  内核版本号。
+    * version  **参数解释**： 内核版本号。 **取值范围**： 数字、小数点，格式一般如 9.1.0、9.1.1.100。
     * attachments  attachments
+    * role  **参数解释**： 版本类型。 **取值范围**： - STABLE：稳定版 - PREVIEW：预览版
     *
     * @var string[]
     */
     protected static $setters = [
             'version' => 'setVersion',
-            'attachments' => 'setAttachments'
+            'attachments' => 'setAttachments',
+            'role' => 'setRole'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  内核版本号。
+    * version  **参数解释**： 内核版本号。 **取值范围**： 数字、小数点，格式一般如 9.1.0、9.1.1.100。
     * attachments  attachments
+    * role  **参数解释**： 版本类型。 **取值范围**： - STABLE：稳定版 - PREVIEW：预览版
     *
     * @var string[]
     */
     protected static $getters = [
             'version' => 'getVersion',
-            'attachments' => 'getAttachments'
+            'attachments' => 'getAttachments',
+            'role' => 'getRole'
     ];
 
     /**
@@ -159,6 +169,7 @@ class NodeTypeDatastores implements ModelInterface, ArrayAccess
     {
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['attachments'] = isset($data['attachments']) ? $data['attachments'] : null;
+        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
     }
 
     /**
@@ -171,9 +182,6 @@ class NodeTypeDatastores implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['version'] === null) {
             $invalidProperties[] = "'version' can't be null";
-        }
-        if ($this->container['attachments'] === null) {
-            $invalidProperties[] = "'attachments' can't be null";
         }
         return $invalidProperties;
     }
@@ -191,7 +199,7 @@ class NodeTypeDatastores implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  内核版本号。
+    *  **参数解释**： 内核版本号。 **取值范围**： 数字、小数点，格式一般如 9.1.0、9.1.1.100。
     *
     * @return string
     */
@@ -203,7 +211,7 @@ class NodeTypeDatastores implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 内核版本号。
+    * @param string $version **参数解释**： 内核版本号。 **取值范围**： 数字、小数点，格式一般如 9.1.0、9.1.1.100。
     *
     * @return $this
     */
@@ -217,7 +225,7 @@ class NodeTypeDatastores implements ModelInterface, ArrayAccess
     * Gets attachments
     *  attachments
     *
-    * @return \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeDatastoresAttachments
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeDatastoresAttachments|null
     */
     public function getAttachments()
     {
@@ -227,13 +235,37 @@ class NodeTypeDatastores implements ModelInterface, ArrayAccess
     /**
     * Sets attachments
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeDatastoresAttachments $attachments attachments
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeDatastoresAttachments|null $attachments attachments
     *
     * @return $this
     */
     public function setAttachments($attachments)
     {
         $this->container['attachments'] = $attachments;
+        return $this;
+    }
+
+    /**
+    * Gets role
+    *  **参数解释**： 版本类型。 **取值范围**： - STABLE：稳定版 - PREVIEW：预览版
+    *
+    * @return string|null
+    */
+    public function getRole()
+    {
+        return $this->container['role'];
+    }
+
+    /**
+    * Sets role
+    *
+    * @param string|null $role **参数解释**： 版本类型。 **取值范围**： - STABLE：稳定版 - PREVIEW：预览版
+    *
+    * @return $this
+    */
+    public function setRole($role)
+    {
+        $this->container['role'] = $role;
         return $this;
     }
 

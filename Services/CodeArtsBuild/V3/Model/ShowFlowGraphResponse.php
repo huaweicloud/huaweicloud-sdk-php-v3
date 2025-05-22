@@ -32,7 +32,7 @@ class ShowFlowGraphResponse implements ModelInterface, ArrayAccess
             'success' => 'bool',
             'message' => 'string',
             'errCode' => 'string',
-            'result' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\FlowGraphResult'
+            'result' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\FlowGraph2Result'
     ];
 
     /**
@@ -282,7 +282,7 @@ class ShowFlowGraphResponse implements ModelInterface, ArrayAccess
     * Gets result
     *  result
     *
-    * @return \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\FlowGraphResult|null
+    * @return \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\FlowGraph2Result|null
     */
     public function getResult()
     {
@@ -292,7 +292,7 @@ class ShowFlowGraphResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\FlowGraphResult|null $result result
+    * @param \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\FlowGraph2Result|null $result result
     *
     * @return $this
     */

@@ -32,6 +32,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     * feature  队列特性。支持以下两种类型：basic：基础型ai：AI增强型（仅SQL的x86_64专属队列支持选择）默认值为“basic”。
     * tags  标签
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
+    * properties  properties
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
             'labels' => 'object[]',
             'feature' => 'string',
             'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]',
-            'elasticResourcePoolName' => 'string'
+            'elasticResourcePoolName' => 'string',
+            'properties' => '\HuaweiCloud\SDK\Dli\V1\Model\CommonQueueProperty'
     ];
 
     /**
@@ -64,6 +66,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     * feature  队列特性。支持以下两种类型：basic：基础型ai：AI增强型（仅SQL的x86_64专属队列支持选择）默认值为“basic”。
     * tags  标签
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
+    * properties  properties
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
         'labels' => null,
         'feature' => null,
         'tags' => null,
-        'elasticResourcePoolName' => null
+        'elasticResourcePoolName' => null,
+        'properties' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     * feature  队列特性。支持以下两种类型：basic：基础型ai：AI增强型（仅SQL的x86_64专属队列支持选择）默认值为“basic”。
     * tags  标签
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
+    * properties  properties
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
             'labels' => 'labels',
             'feature' => 'feature',
             'tags' => 'tags',
-            'elasticResourcePoolName' => 'elastic_resource_pool_name'
+            'elasticResourcePoolName' => 'elastic_resource_pool_name',
+            'properties' => 'properties'
     ];
 
     /**
@@ -149,6 +155,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     * feature  队列特性。支持以下两种类型：basic：基础型ai：AI增强型（仅SQL的x86_64专属队列支持选择）默认值为“basic”。
     * tags  标签
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
+    * properties  properties
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
             'labels' => 'setLabels',
             'feature' => 'setFeature',
             'tags' => 'setTags',
-            'elasticResourcePoolName' => 'setElasticResourcePoolName'
+            'elasticResourcePoolName' => 'setElasticResourcePoolName',
+            'properties' => 'setProperties'
     ];
 
     /**
@@ -181,6 +189,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     * feature  队列特性。支持以下两种类型：basic：基础型ai：AI增强型（仅SQL的x86_64专属队列支持选择）默认值为“basic”。
     * tags  标签
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
+    * properties  properties
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
             'labels' => 'getLabels',
             'feature' => 'getFeature',
             'tags' => 'getTags',
-            'elasticResourcePoolName' => 'getElasticResourcePoolName'
+            'elasticResourcePoolName' => 'getElasticResourcePoolName',
+            'properties' => 'getProperties'
     ];
 
     /**
@@ -269,6 +279,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
         $this->container['feature'] = isset($data['feature']) ? $data['feature'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['elasticResourcePoolName'] = isset($data['elasticResourcePoolName']) ? $data['elasticResourcePoolName'] : null;
+        $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
     }
 
     /**
@@ -584,6 +595,30 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     public function setElasticResourcePoolName($elasticResourcePoolName)
     {
         $this->container['elasticResourcePoolName'] = $elasticResourcePoolName;
+        return $this;
+    }
+
+    /**
+    * Gets properties
+    *  properties
+    *
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CommonQueueProperty|null
+    */
+    public function getProperties()
+    {
+        return $this->container['properties'];
+    }
+
+    /**
+    * Sets properties
+    *
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CommonQueueProperty|null $properties properties
+    *
+    * @return $this
+    */
+    public function setProperties($properties)
+    {
+        $this->container['properties'] = $properties;
         return $this;
     }
 

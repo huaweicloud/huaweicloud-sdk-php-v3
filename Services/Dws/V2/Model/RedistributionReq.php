@@ -20,8 +20,8 @@ class RedistributionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * redisMode  重分布模式
-    * parallelJobs  重分布并发数
+    * redisMode  **参数解释**： 重分布模式 **约束限制**： 不涉及。 **取值范围**： online：在线重分布； offline：离线重分布； **默认取值**： offline
+    * parallelJobs  **参数解释**： 重分布并发数。 **约束限制**： 不涉及。 **取值范围**： 4~200 **默认取值**： 4
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class RedistributionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * redisMode  重分布模式
-    * parallelJobs  重分布并发数
+    * redisMode  **参数解释**： 重分布模式 **约束限制**： 不涉及。 **取值范围**： online：在线重分布； offline：离线重分布； **默认取值**： offline
+    * parallelJobs  **参数解释**： 重分布并发数。 **约束限制**： 不涉及。 **取值范围**： 4~200 **默认取值**： 4
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RedistributionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * redisMode  重分布模式
-    * parallelJobs  重分布并发数
+    * redisMode  **参数解释**： 重分布模式 **约束限制**： 不涉及。 **取值范围**： online：在线重分布； offline：离线重分布； **默认取值**： offline
+    * parallelJobs  **参数解释**： 重分布并发数。 **约束限制**： 不涉及。 **取值范围**： 4~200 **默认取值**： 4
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RedistributionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * redisMode  重分布模式
-    * parallelJobs  重分布并发数
+    * redisMode  **参数解释**： 重分布模式 **约束限制**： 不涉及。 **取值范围**： online：在线重分布； offline：离线重分布； **默认取值**： offline
+    * parallelJobs  **参数解释**： 重分布并发数。 **约束限制**： 不涉及。 **取值范围**： 4~200 **默认取值**： 4
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RedistributionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * redisMode  重分布模式
-    * parallelJobs  重分布并发数
+    * redisMode  **参数解释**： 重分布模式 **约束限制**： 不涉及。 **取值范围**： online：在线重分布； offline：离线重分布； **默认取值**： offline
+    * parallelJobs  **参数解释**： 重分布并发数。 **约束限制**： 不涉及。 **取值范围**： 4~200 **默认取值**： 4
     *
     * @var string[]
     */
@@ -139,7 +139,22 @@ class RedistributionReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const REDIS_MODE_OFFLINE = 'offline';
+    const REDIS_MODE_ONLINE = 'online';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRedisModeAllowableValues()
+    {
+        return [
+            self::REDIS_MODE_OFFLINE,
+            self::REDIS_MODE_ONLINE,
+        ];
+    }
 
 
     /**
@@ -172,9 +187,29 @@ class RedistributionReq implements ModelInterface, ArrayAccess
         if ($this->container['redisMode'] === null) {
             $invalidProperties[] = "'redisMode' can't be null";
         }
+            $allowedValues = $this->getRedisModeAllowableValues();
+                if (!is_null($this->container['redisMode']) && !in_array($this->container['redisMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'redisMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if ((mb_strlen($this->container['redisMode']) > 16)) {
+                $invalidProperties[] = "invalid value for 'redisMode', the character length must be smaller than or equal to 16.";
+            }
+            if ((mb_strlen($this->container['redisMode']) < 0)) {
+                $invalidProperties[] = "invalid value for 'redisMode', the character length must be bigger than or equal to 0.";
+            }
         if ($this->container['parallelJobs'] === null) {
             $invalidProperties[] = "'parallelJobs' can't be null";
         }
+            if (($this->container['parallelJobs'] > 200)) {
+                $invalidProperties[] = "invalid value for 'parallelJobs', must be smaller than or equal to 200.";
+            }
+            if (($this->container['parallelJobs'] < 4)) {
+                $invalidProperties[] = "invalid value for 'parallelJobs', must be bigger than or equal to 4.";
+            }
         return $invalidProperties;
     }
 
@@ -191,7 +226,7 @@ class RedistributionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets redisMode
-    *  重分布模式
+    *  **参数解释**： 重分布模式 **约束限制**： 不涉及。 **取值范围**： online：在线重分布； offline：离线重分布； **默认取值**： offline
     *
     * @return string
     */
@@ -203,7 +238,7 @@ class RedistributionReq implements ModelInterface, ArrayAccess
     /**
     * Sets redisMode
     *
-    * @param string $redisMode 重分布模式
+    * @param string $redisMode **参数解释**： 重分布模式 **约束限制**： 不涉及。 **取值范围**： online：在线重分布； offline：离线重分布； **默认取值**： offline
     *
     * @return $this
     */
@@ -215,7 +250,7 @@ class RedistributionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets parallelJobs
-    *  重分布并发数
+    *  **参数解释**： 重分布并发数。 **约束限制**： 不涉及。 **取值范围**： 4~200 **默认取值**： 4
     *
     * @return int
     */
@@ -227,7 +262,7 @@ class RedistributionReq implements ModelInterface, ArrayAccess
     /**
     * Sets parallelJobs
     *
-    * @param int $parallelJobs 重分布并发数
+    * @param int $parallelJobs **参数解释**： 重分布并发数。 **约束限制**： 不涉及。 **取值范围**： 4~200 **默认取值**： 4
     *
     * @return $this
     */

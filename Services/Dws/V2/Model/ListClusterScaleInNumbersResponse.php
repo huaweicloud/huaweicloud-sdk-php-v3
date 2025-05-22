@@ -21,7 +21,7 @@ class ListClusterScaleInNumbersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * shrinkSequence  合适的缩容数
+    * shrinkSequence  参数解释: 合适的缩容数。 取值范围: 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListClusterScaleInNumbersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * shrinkSequence  合适的缩容数
+    * shrinkSequence  参数解释: 合适的缩容数。 取值范围: 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListClusterScaleInNumbersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * shrinkSequence  合适的缩容数
+    * shrinkSequence  参数解释: 合适的缩容数。 取值范围: 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListClusterScaleInNumbersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * shrinkSequence  合适的缩容数
+    * shrinkSequence  参数解释: 合适的缩容数。 取值范围: 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListClusterScaleInNumbersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * shrinkSequence  合适的缩容数
+    * shrinkSequence  参数解释: 合适的缩容数。 取值范围: 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListClusterScaleInNumbersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets shrinkSequence
-    *  合适的缩容数
+    *  参数解释: 合适的缩容数。 取值范围: 不涉及。
     *
     * @return string[]|null
     */
@@ -187,7 +187,7 @@ class ListClusterScaleInNumbersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets shrinkSequence
     *
-    * @param string[]|null $shrinkSequence 合适的缩容数
+    * @param string[]|null $shrinkSequence 参数解释: 合适的缩容数。 取值范围: 不涉及。
     *
     * @return $this
     */

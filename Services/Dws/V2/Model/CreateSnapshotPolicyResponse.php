@@ -21,17 +21,17 @@ class CreateSnapshotPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * body  **参数解释**： 请求成功时的空白响应。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'body' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * body  **参数解释**： 请求成功时的空白响应。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateSnapshotPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * body  **参数解释**： 请求成功时的空白响应。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateSnapshotPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * body  **参数解释**： 请求成功时的空白响应。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateSnapshotPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * body  **参数解释**： 请求成功时的空白响应。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class CreateSnapshotPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  body
+    *  **参数解释**： 请求成功时的空白响应。 **取值范围**： 不涉及。
     *
-    * @return string|null
+    * @return object|null
     */
     public function getBody()
     {
@@ -187,7 +187,7 @@ class CreateSnapshotPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param string|null $body body
+    * @param object|null $body **参数解释**： 请求成功时的空白响应。 **取值范围**： 不涉及。
     *
     * @return $this
     */

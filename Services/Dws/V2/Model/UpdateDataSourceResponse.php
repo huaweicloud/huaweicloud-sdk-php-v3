@@ -22,21 +22,25 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  更新数据源job_id。
+    * dataSourceId  数据源id。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobId' => 'string'
+            'jobId' => 'string',
+            'dataSourceId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  更新数据源job_id。
+    * dataSourceId  数据源id。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'jobId' => null
+        'jobId' => null,
+        'dataSourceId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  更新数据源job_id。
+    * dataSourceId  数据源id。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobId' => 'job_id'
+            'jobId' => 'job_id',
+            'dataSourceId' => 'data_source_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  更新数据源job_id。
+    * dataSourceId  数据源id。
     *
     * @var string[]
     */
     protected static $setters = [
-            'jobId' => 'setJobId'
+            'jobId' => 'setJobId',
+            'dataSourceId' => 'setDataSourceId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  更新数据源job_id。
+    * dataSourceId  数据源id。
     *
     * @var string[]
     */
     protected static $getters = [
-            'jobId' => 'getJobId'
+            'jobId' => 'getJobId',
+            'dataSourceId' => 'getDataSourceId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['dataSourceId'] = isset($data['dataSourceId']) ? $data['dataSourceId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets dataSourceId
+    *  数据源id。
+    *
+    * @return string|null
+    */
+    public function getDataSourceId()
+    {
+        return $this->container['dataSourceId'];
+    }
+
+    /**
+    * Sets dataSourceId
+    *
+    * @param string|null $dataSourceId 数据源id。
+    *
+    * @return $this
+    */
+    public function setDataSourceId($dataSourceId)
+    {
+        $this->container['dataSourceId'] = $dataSourceId;
         return $this;
     }
 

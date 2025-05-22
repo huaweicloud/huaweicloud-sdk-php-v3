@@ -29,9 +29,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * voiceConfig  voiceConfig
     * concurrency  **参数解释**： 并发路数。
     * voiceConfigList  语音配置参数列表。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'voiceConfigList' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfigRsp[]',
             'defaultLanguage' => 'string',
             'createTime' => 'string',
-            'updateTime' => 'string'
+            'updateTime' => 'string',
+            'exitMuteThreshold' => 'int'
     ];
 
     /**
@@ -61,9 +63,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * voiceConfig  voiceConfig
     * concurrency  **参数解释**： 并发路数。
     * voiceConfigList  语音配置参数列表。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
         'voiceConfigList' => null,
         'defaultLanguage' => null,
         'createTime' => null,
-        'updateTime' => null
+        'updateTime' => null,
+        'exitMuteThreshold' => 'int32'
     ];
 
     /**
@@ -114,9 +118,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * voiceConfig  voiceConfig
     * concurrency  **参数解释**： 并发路数。
     * voiceConfigList  语音配置参数列表。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'voiceConfigList' => 'voice_config_list',
             'defaultLanguage' => 'default_language',
             'createTime' => 'create_time',
-            'updateTime' => 'update_time'
+            'updateTime' => 'update_time',
+            'exitMuteThreshold' => 'exit_mute_threshold'
     ];
 
     /**
@@ -146,9 +152,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * voiceConfig  voiceConfig
     * concurrency  **参数解释**： 并发路数。
     * voiceConfigList  语音配置参数列表。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'voiceConfigList' => 'setVoiceConfigList',
             'defaultLanguage' => 'setDefaultLanguage',
             'createTime' => 'setCreateTime',
-            'updateTime' => 'setUpdateTime'
+            'updateTime' => 'setUpdateTime',
+            'exitMuteThreshold' => 'setExitMuteThreshold'
     ];
 
     /**
@@ -178,9 +186,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * voiceConfig  voiceConfig
     * concurrency  **参数解释**： 并发路数。
     * voiceConfigList  语音配置参数列表。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'voiceConfigList' => 'getVoiceConfigList',
             'defaultLanguage' => 'getDefaultLanguage',
             'createTime' => 'getCreateTime',
-            'updateTime' => 'getUpdateTime'
+            'updateTime' => 'getUpdateTime',
+            'exitMuteThreshold' => 'getExitMuteThreshold'
     ];
 
     /**
@@ -241,6 +251,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     }
     const DEFAULT_LANGUAGE_CN = 'CN';
     const DEFAULT_LANGUAGE_EN = 'EN';
+    const DEFAULT_LANGUAGE_ESP = 'ESP';
+    const DEFAULT_LANGUAGE_POR = 'por';
+    const DEFAULT_LANGUAGE_ARABIC = 'Arabic';
+    const DEFAULT_LANGUAGE_THAI = 'Thai';
     
 
     /**
@@ -253,6 +267,10 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
         return [
             self::DEFAULT_LANGUAGE_CN,
             self::DEFAULT_LANGUAGE_EN,
+            self::DEFAULT_LANGUAGE_ESP,
+            self::DEFAULT_LANGUAGE_POR,
+            self::DEFAULT_LANGUAGE_ARABIC,
+            self::DEFAULT_LANGUAGE_THAI,
         ];
     }
 
@@ -284,6 +302,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
         $this->container['defaultLanguage'] = isset($data['defaultLanguage']) ? $data['defaultLanguage'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['exitMuteThreshold'] = isset($data['exitMuteThreshold']) ? $data['exitMuteThreshold'] : null;
     }
 
     /**
@@ -349,6 +368,12 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['updateTime']) && (mb_strlen($this->container['updateTime']) < 20)) {
                 $invalidProperties[] = "invalid value for 'updateTime', the character length must be bigger than or equal to 20.";
+            }
+            if (!is_null($this->container['exitMuteThreshold']) && ($this->container['exitMuteThreshold'] > 1440)) {
+                $invalidProperties[] = "invalid value for 'exitMuteThreshold', must be smaller than or equal to 1440.";
+            }
+            if (!is_null($this->container['exitMuteThreshold']) && ($this->container['exitMuteThreshold'] < 0)) {
+                $invalidProperties[] = "invalid value for 'exitMuteThreshold', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -582,7 +607,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultLanguage
-    *  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    *  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     *
     * @return string|null
     */
@@ -594,7 +619,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets defaultLanguage
     *
-    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     *
     * @return $this
     */
@@ -649,6 +674,30 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     public function setUpdateTime($updateTime)
     {
         $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets exitMuteThreshold
+    *  **参数解释**： 静默退出时长。
+    *
+    * @return int|null
+    */
+    public function getExitMuteThreshold()
+    {
+        return $this->container['exitMuteThreshold'];
+    }
+
+    /**
+    * Sets exitMuteThreshold
+    *
+    * @param int|null $exitMuteThreshold **参数解释**： 静默退出时长。
+    *
+    * @return $this
+    */
+    public function setExitMuteThreshold($exitMuteThreshold)
+    {
+        $this->container['exitMuteThreshold'] = $exitMuteThreshold;
         return $this;
     }
 

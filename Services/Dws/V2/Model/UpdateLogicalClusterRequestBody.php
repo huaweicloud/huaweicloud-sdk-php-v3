@@ -20,9 +20,9 @@ class UpdateLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterRings  逻辑集群编辑环列表信息
-    * mode  模式
-    * waitingForKilling  是否等待销毁
+    * clusterRings  **参数解释**： 逻辑集群编辑环列表信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 重分布模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * waitingForKilling  **参数解释**： 查杀作业等待时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class UpdateLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterRings  逻辑集群编辑环列表信息
-    * mode  模式
-    * waitingForKilling  是否等待销毁
+    * clusterRings  **参数解释**： 逻辑集群编辑环列表信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 重分布模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * waitingForKilling  **参数解释**： 查杀作业等待时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class UpdateLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterRings  逻辑集群编辑环列表信息
-    * mode  模式
-    * waitingForKilling  是否等待销毁
+    * clusterRings  **参数解释**： 逻辑集群编辑环列表信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 重分布模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * waitingForKilling  **参数解释**： 查杀作业等待时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class UpdateLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterRings  逻辑集群编辑环列表信息
-    * mode  模式
-    * waitingForKilling  是否等待销毁
+    * clusterRings  **参数解释**： 逻辑集群编辑环列表信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 重分布模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * waitingForKilling  **参数解释**： 查杀作业等待时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class UpdateLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterRings  逻辑集群编辑环列表信息
-    * mode  模式
-    * waitingForKilling  是否等待销毁
+    * clusterRings  **参数解释**： 逻辑集群编辑环列表信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 重分布模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * waitingForKilling  **参数解释**： 查杀作业等待时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -199,7 +199,7 @@ class UpdateLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterRings
-    *  逻辑集群编辑环列表信息
+    *  **参数解释**： 逻辑集群编辑环列表信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]
     */
@@ -211,7 +211,7 @@ class UpdateLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clusterRings
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[] $clusterRings 逻辑集群编辑环列表信息
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[] $clusterRings **参数解释**： 逻辑集群编辑环列表信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class UpdateLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  模式
+    *  **参数解释**： 重分布模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class UpdateLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode 模式
+    * @param string|null $mode **参数解释**： 重分布模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class UpdateLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets waitingForKilling
-    *  是否等待销毁
+    *  **参数解释**： 查杀作业等待时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -259,7 +259,7 @@ class UpdateLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets waitingForKilling
     *
-    * @param int|null $waitingForKilling 是否等待销毁
+    * @param int|null $waitingForKilling **参数解释**： 查杀作业等待时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -21,6 +21,7 @@ class PrepaidChangeChargeModeOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * includePublicip  是否连同独享按带宽计费的弹性公网IP一起转包周期。 1. 弹性公网IP转包周期之后可以单独解绑，绑定到其他实例，删除 2. 只有独享且按带宽计费的弹性公网IP才被允许转包周期 默认值：false
+    * publicipIds  需要一起按需转包的弹性公网IP的ID。 若include_publicip为false，不能指定该字段。 若include_publicip为true，该字段为未指定时，表示所有绑定的v4 eip都需要一起转包周期。 若include_publicip为true，该字段列表非空，表示只将指定的v4 eip转包。 若include_publicip为true，该字段列表为空，表示不指定任一eip转包，与include_publicip为false等效。
     * periodType  订购周期类型，当前支持包月和包年： month：月（默认）； year：年；
     * periodNum  订购周期数（默认1），取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
     * autoRenew  是否自动续订； true：自动续订 false：不自动续订（默认）
@@ -30,6 +31,7 @@ class PrepaidChangeChargeModeOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'includePublicip' => 'bool',
+            'publicipIds' => 'string[]',
             'periodType' => 'string',
             'periodNum' => 'int',
             'autoRenew' => 'bool',
@@ -39,6 +41,7 @@ class PrepaidChangeChargeModeOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * includePublicip  是否连同独享按带宽计费的弹性公网IP一起转包周期。 1. 弹性公网IP转包周期之后可以单独解绑，绑定到其他实例，删除 2. 只有独享且按带宽计费的弹性公网IP才被允许转包周期 默认值：false
+    * publicipIds  需要一起按需转包的弹性公网IP的ID。 若include_publicip为false，不能指定该字段。 若include_publicip为true，该字段为未指定时，表示所有绑定的v4 eip都需要一起转包周期。 若include_publicip为true，该字段列表非空，表示只将指定的v4 eip转包。 若include_publicip为true，该字段列表为空，表示不指定任一eip转包，与include_publicip为false等效。
     * periodType  订购周期类型，当前支持包月和包年： month：月（默认）； year：年；
     * periodNum  订购周期数（默认1），取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
     * autoRenew  是否自动续订； true：自动续订 false：不自动续订（默认）
@@ -48,6 +51,7 @@ class PrepaidChangeChargeModeOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'includePublicip' => null,
+        'publicipIds' => null,
         'periodType' => null,
         'periodNum' => 'int32',
         'autoRenew' => null,
@@ -78,6 +82,7 @@ class PrepaidChangeChargeModeOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * includePublicip  是否连同独享按带宽计费的弹性公网IP一起转包周期。 1. 弹性公网IP转包周期之后可以单独解绑，绑定到其他实例，删除 2. 只有独享且按带宽计费的弹性公网IP才被允许转包周期 默认值：false
+    * publicipIds  需要一起按需转包的弹性公网IP的ID。 若include_publicip为false，不能指定该字段。 若include_publicip为true，该字段为未指定时，表示所有绑定的v4 eip都需要一起转包周期。 若include_publicip为true，该字段列表非空，表示只将指定的v4 eip转包。 若include_publicip为true，该字段列表为空，表示不指定任一eip转包，与include_publicip为false等效。
     * periodType  订购周期类型，当前支持包月和包年： month：月（默认）； year：年；
     * periodNum  订购周期数（默认1），取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
     * autoRenew  是否自动续订； true：自动续订 false：不自动续订（默认）
@@ -87,6 +92,7 @@ class PrepaidChangeChargeModeOption implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'includePublicip' => 'include_publicip',
+            'publicipIds' => 'publicip_ids',
             'periodType' => 'period_type',
             'periodNum' => 'period_num',
             'autoRenew' => 'auto_renew',
@@ -96,6 +102,7 @@ class PrepaidChangeChargeModeOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * includePublicip  是否连同独享按带宽计费的弹性公网IP一起转包周期。 1. 弹性公网IP转包周期之后可以单独解绑，绑定到其他实例，删除 2. 只有独享且按带宽计费的弹性公网IP才被允许转包周期 默认值：false
+    * publicipIds  需要一起按需转包的弹性公网IP的ID。 若include_publicip为false，不能指定该字段。 若include_publicip为true，该字段为未指定时，表示所有绑定的v4 eip都需要一起转包周期。 若include_publicip为true，该字段列表非空，表示只将指定的v4 eip转包。 若include_publicip为true，该字段列表为空，表示不指定任一eip转包，与include_publicip为false等效。
     * periodType  订购周期类型，当前支持包月和包年： month：月（默认）； year：年；
     * periodNum  订购周期数（默认1），取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
     * autoRenew  是否自动续订； true：自动续订 false：不自动续订（默认）
@@ -105,6 +112,7 @@ class PrepaidChangeChargeModeOption implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'includePublicip' => 'setIncludePublicip',
+            'publicipIds' => 'setPublicipIds',
             'periodType' => 'setPeriodType',
             'periodNum' => 'setPeriodNum',
             'autoRenew' => 'setAutoRenew',
@@ -114,6 +122,7 @@ class PrepaidChangeChargeModeOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * includePublicip  是否连同独享按带宽计费的弹性公网IP一起转包周期。 1. 弹性公网IP转包周期之后可以单独解绑，绑定到其他实例，删除 2. 只有独享且按带宽计费的弹性公网IP才被允许转包周期 默认值：false
+    * publicipIds  需要一起按需转包的弹性公网IP的ID。 若include_publicip为false，不能指定该字段。 若include_publicip为true，该字段为未指定时，表示所有绑定的v4 eip都需要一起转包周期。 若include_publicip为true，该字段列表非空，表示只将指定的v4 eip转包。 若include_publicip为true，该字段列表为空，表示不指定任一eip转包，与include_publicip为false等效。
     * periodType  订购周期类型，当前支持包月和包年： month：月（默认）； year：年；
     * periodNum  订购周期数（默认1），取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
     * autoRenew  是否自动续订； true：自动续订 false：不自动续订（默认）
@@ -123,6 +132,7 @@ class PrepaidChangeChargeModeOption implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'includePublicip' => 'getIncludePublicip',
+            'publicipIds' => 'getPublicipIds',
             'periodType' => 'getPeriodType',
             'periodNum' => 'getPeriodNum',
             'autoRenew' => 'getAutoRenew',
@@ -203,6 +213,7 @@ class PrepaidChangeChargeModeOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['includePublicip'] = isset($data['includePublicip']) ? $data['includePublicip'] : null;
+        $this->container['publicipIds'] = isset($data['publicipIds']) ? $data['publicipIds'] : null;
         $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
         $this->container['autoRenew'] = isset($data['autoRenew']) ? $data['autoRenew'] : null;
@@ -269,6 +280,30 @@ class PrepaidChangeChargeModeOption implements ModelInterface, ArrayAccess
     public function setIncludePublicip($includePublicip)
     {
         $this->container['includePublicip'] = $includePublicip;
+        return $this;
+    }
+
+    /**
+    * Gets publicipIds
+    *  需要一起按需转包的弹性公网IP的ID。 若include_publicip为false，不能指定该字段。 若include_publicip为true，该字段为未指定时，表示所有绑定的v4 eip都需要一起转包周期。 若include_publicip为true，该字段列表非空，表示只将指定的v4 eip转包。 若include_publicip为true，该字段列表为空，表示不指定任一eip转包，与include_publicip为false等效。
+    *
+    * @return string[]|null
+    */
+    public function getPublicipIds()
+    {
+        return $this->container['publicipIds'];
+    }
+
+    /**
+    * Sets publicipIds
+    *
+    * @param string[]|null $publicipIds 需要一起按需转包的弹性公网IP的ID。 若include_publicip为false，不能指定该字段。 若include_publicip为true，该字段为未指定时，表示所有绑定的v4 eip都需要一起转包周期。 若include_publicip为true，该字段列表非空，表示只将指定的v4 eip转包。 若include_publicip为true，该字段列表为空，表示不指定任一eip转包，与include_publicip为false等效。
+    *
+    * @return $this
+    */
+    public function setPublicipIds($publicipIds)
+    {
+        $this->container['publicipIds'] = $publicipIds;
         return $this;
     }
 

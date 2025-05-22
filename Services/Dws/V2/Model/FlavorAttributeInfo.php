@@ -20,8 +20,8 @@ class FlavorAttributeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  属性编码
-    * value  属性值
+    * code  **参数解释**： 属性编码。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class FlavorAttributeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  属性编码
-    * value  属性值
+    * code  **参数解释**： 属性编码。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class FlavorAttributeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  属性编码
-    * value  属性值
+    * code  **参数解释**： 属性编码。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class FlavorAttributeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  属性编码
-    * value  属性值
+    * code  **参数解释**： 属性编码。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class FlavorAttributeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  属性编码
-    * value  属性值
+    * code  **参数解释**： 属性编码。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class FlavorAttributeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  属性编码
+    *  **参数解释**： 属性编码。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class FlavorAttributeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string $code 属性编码
+    * @param string $code **参数解释**： 属性编码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class FlavorAttributeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  属性值
+    *  **参数解释**： 属性值。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class FlavorAttributeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 属性值
+    * @param string $value **参数解释**： 属性值。 **取值范围**： 不涉及。
     *
     * @return $this
     */

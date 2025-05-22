@@ -21,42 +21,54 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * keepDay  保留天数。
-    * backupStrategies  备份策略。
-    * deviceName  备份设备。
-    * serverIps  服务IP。
-    * serverPort  服务端口。
-    * backupParam  参数。
+    * keepDay  **参数解释**： 保留天数。 **取值范围**： 大于等于0。
+    * backupStrategies  **参数解释**： 备份策略列表。 **取值范围**： 不涉及。
+    * deviceName  **参数解释**： 备份设备，一般为OBS。 **取值范围**： 不涉及。
+    * serverIps  **参数解释**： 服务IP。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： 服务端口。 **取值范围**： 不涉及。
+    * backupParam  **参数解释**： 备份参数。 **取值范围**： 不涉及。
+    * autoBackup  **参数解释**： 自动备份开关状态。 **取值范围**： true：已开启自动备份选项； false：已关闭自动备份选项；
+    * backupStrategyClusterTypeLimitNum  **参数解释**： 此策略下集群级快照最大数量。 **取值范围**： 大于等于0。
+    * backupStrategySchemaTypeLimitNum  **参数解释**： 此策略下schema级快照最大数量。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'keepDay' => 'string',
+            'keepDay' => 'int',
             'backupStrategies' => '\HuaweiCloud\SDK\Dws\V2\Model\BackupStrategyDetail[]',
             'deviceName' => 'string',
             'serverIps' => 'string[]',
             'serverPort' => 'string',
-            'backupParam' => 'string'
+            'backupParam' => 'string',
+            'autoBackup' => 'bool',
+            'backupStrategyClusterTypeLimitNum' => 'int',
+            'backupStrategySchemaTypeLimitNum' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * keepDay  保留天数。
-    * backupStrategies  备份策略。
-    * deviceName  备份设备。
-    * serverIps  服务IP。
-    * serverPort  服务端口。
-    * backupParam  参数。
+    * keepDay  **参数解释**： 保留天数。 **取值范围**： 大于等于0。
+    * backupStrategies  **参数解释**： 备份策略列表。 **取值范围**： 不涉及。
+    * deviceName  **参数解释**： 备份设备，一般为OBS。 **取值范围**： 不涉及。
+    * serverIps  **参数解释**： 服务IP。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： 服务端口。 **取值范围**： 不涉及。
+    * backupParam  **参数解释**： 备份参数。 **取值范围**： 不涉及。
+    * autoBackup  **参数解释**： 自动备份开关状态。 **取值范围**： true：已开启自动备份选项； false：已关闭自动备份选项；
+    * backupStrategyClusterTypeLimitNum  **参数解释**： 此策略下集群级快照最大数量。 **取值范围**： 大于等于0。
+    * backupStrategySchemaTypeLimitNum  **参数解释**： 此策略下schema级快照最大数量。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'keepDay' => null,
+        'keepDay' => 'int32',
         'backupStrategies' => null,
         'deviceName' => null,
         'serverIps' => null,
         'serverPort' => null,
-        'backupParam' => null
+        'backupParam' => null,
+        'autoBackup' => null,
+        'backupStrategyClusterTypeLimitNum' => 'int32',
+        'backupStrategySchemaTypeLimitNum' => 'int32'
     ];
 
     /**
@@ -82,12 +94,15 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * keepDay  保留天数。
-    * backupStrategies  备份策略。
-    * deviceName  备份设备。
-    * serverIps  服务IP。
-    * serverPort  服务端口。
-    * backupParam  参数。
+    * keepDay  **参数解释**： 保留天数。 **取值范围**： 大于等于0。
+    * backupStrategies  **参数解释**： 备份策略列表。 **取值范围**： 不涉及。
+    * deviceName  **参数解释**： 备份设备，一般为OBS。 **取值范围**： 不涉及。
+    * serverIps  **参数解释**： 服务IP。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： 服务端口。 **取值范围**： 不涉及。
+    * backupParam  **参数解释**： 备份参数。 **取值范围**： 不涉及。
+    * autoBackup  **参数解释**： 自动备份开关状态。 **取值范围**： true：已开启自动备份选项； false：已关闭自动备份选项；
+    * backupStrategyClusterTypeLimitNum  **参数解释**： 此策略下集群级快照最大数量。 **取值范围**： 大于等于0。
+    * backupStrategySchemaTypeLimitNum  **参数解释**： 此策略下schema级快照最大数量。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -97,17 +112,23 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
             'deviceName' => 'device_name',
             'serverIps' => 'server_ips',
             'serverPort' => 'server_port',
-            'backupParam' => 'backup_param'
+            'backupParam' => 'backup_param',
+            'autoBackup' => 'auto_backup',
+            'backupStrategyClusterTypeLimitNum' => 'backup_strategy_cluster_type_limit_num',
+            'backupStrategySchemaTypeLimitNum' => 'backup_strategy_schema_type_limit_num'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * keepDay  保留天数。
-    * backupStrategies  备份策略。
-    * deviceName  备份设备。
-    * serverIps  服务IP。
-    * serverPort  服务端口。
-    * backupParam  参数。
+    * keepDay  **参数解释**： 保留天数。 **取值范围**： 大于等于0。
+    * backupStrategies  **参数解释**： 备份策略列表。 **取值范围**： 不涉及。
+    * deviceName  **参数解释**： 备份设备，一般为OBS。 **取值范围**： 不涉及。
+    * serverIps  **参数解释**： 服务IP。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： 服务端口。 **取值范围**： 不涉及。
+    * backupParam  **参数解释**： 备份参数。 **取值范围**： 不涉及。
+    * autoBackup  **参数解释**： 自动备份开关状态。 **取值范围**： true：已开启自动备份选项； false：已关闭自动备份选项；
+    * backupStrategyClusterTypeLimitNum  **参数解释**： 此策略下集群级快照最大数量。 **取值范围**： 大于等于0。
+    * backupStrategySchemaTypeLimitNum  **参数解释**： 此策略下schema级快照最大数量。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -117,17 +138,23 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
             'deviceName' => 'setDeviceName',
             'serverIps' => 'setServerIps',
             'serverPort' => 'setServerPort',
-            'backupParam' => 'setBackupParam'
+            'backupParam' => 'setBackupParam',
+            'autoBackup' => 'setAutoBackup',
+            'backupStrategyClusterTypeLimitNum' => 'setBackupStrategyClusterTypeLimitNum',
+            'backupStrategySchemaTypeLimitNum' => 'setBackupStrategySchemaTypeLimitNum'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * keepDay  保留天数。
-    * backupStrategies  备份策略。
-    * deviceName  备份设备。
-    * serverIps  服务IP。
-    * serverPort  服务端口。
-    * backupParam  参数。
+    * keepDay  **参数解释**： 保留天数。 **取值范围**： 大于等于0。
+    * backupStrategies  **参数解释**： 备份策略列表。 **取值范围**： 不涉及。
+    * deviceName  **参数解释**： 备份设备，一般为OBS。 **取值范围**： 不涉及。
+    * serverIps  **参数解释**： 服务IP。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： 服务端口。 **取值范围**： 不涉及。
+    * backupParam  **参数解释**： 备份参数。 **取值范围**： 不涉及。
+    * autoBackup  **参数解释**： 自动备份开关状态。 **取值范围**： true：已开启自动备份选项； false：已关闭自动备份选项；
+    * backupStrategyClusterTypeLimitNum  **参数解释**： 此策略下集群级快照最大数量。 **取值范围**： 大于等于0。
+    * backupStrategySchemaTypeLimitNum  **参数解释**： 此策略下schema级快照最大数量。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -137,7 +164,10 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
             'deviceName' => 'getDeviceName',
             'serverIps' => 'getServerIps',
             'serverPort' => 'getServerPort',
-            'backupParam' => 'getBackupParam'
+            'backupParam' => 'getBackupParam',
+            'autoBackup' => 'getAutoBackup',
+            'backupStrategyClusterTypeLimitNum' => 'getBackupStrategyClusterTypeLimitNum',
+            'backupStrategySchemaTypeLimitNum' => 'getBackupStrategySchemaTypeLimitNum'
     ];
 
     /**
@@ -204,6 +234,9 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
         $this->container['serverIps'] = isset($data['serverIps']) ? $data['serverIps'] : null;
         $this->container['serverPort'] = isset($data['serverPort']) ? $data['serverPort'] : null;
         $this->container['backupParam'] = isset($data['backupParam']) ? $data['backupParam'] : null;
+        $this->container['autoBackup'] = isset($data['autoBackup']) ? $data['autoBackup'] : null;
+        $this->container['backupStrategyClusterTypeLimitNum'] = isset($data['backupStrategyClusterTypeLimitNum']) ? $data['backupStrategyClusterTypeLimitNum'] : null;
+        $this->container['backupStrategySchemaTypeLimitNum'] = isset($data['backupStrategySchemaTypeLimitNum']) ? $data['backupStrategySchemaTypeLimitNum'] : null;
     }
 
     /**
@@ -230,9 +263,9 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets keepDay
-    *  保留天数。
+    *  **参数解释**： 保留天数。 **取值范围**： 大于等于0。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getKeepDay()
     {
@@ -242,7 +275,7 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets keepDay
     *
-    * @param string|null $keepDay 保留天数。
+    * @param int|null $keepDay **参数解释**： 保留天数。 **取值范围**： 大于等于0。
     *
     * @return $this
     */
@@ -254,7 +287,7 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupStrategies
-    *  备份策略。
+    *  **参数解释**： 备份策略列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\BackupStrategyDetail[]|null
     */
@@ -266,7 +299,7 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets backupStrategies
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\BackupStrategyDetail[]|null $backupStrategies 备份策略。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\BackupStrategyDetail[]|null $backupStrategies **参数解释**： 备份策略列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -278,7 +311,7 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceName
-    *  备份设备。
+    *  **参数解释**： 备份设备，一般为OBS。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -290,7 +323,7 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets deviceName
     *
-    * @param string|null $deviceName 备份设备。
+    * @param string|null $deviceName **参数解释**： 备份设备，一般为OBS。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -302,7 +335,7 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverIps
-    *  服务IP。
+    *  **参数解释**： 服务IP。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -314,7 +347,7 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serverIps
     *
-    * @param string[]|null $serverIps 服务IP。
+    * @param string[]|null $serverIps **参数解释**： 服务IP。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -326,7 +359,7 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverPort
-    *  服务端口。
+    *  **参数解释**： 服务端口。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -338,7 +371,7 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serverPort
     *
-    * @param string|null $serverPort 服务端口。
+    * @param string|null $serverPort **参数解释**： 服务端口。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -350,7 +383,7 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupParam
-    *  参数。
+    *  **参数解释**： 备份参数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -362,13 +395,85 @@ class ListSnapshotPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets backupParam
     *
-    * @param string|null $backupParam 参数。
+    * @param string|null $backupParam **参数解释**： 备份参数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
     public function setBackupParam($backupParam)
     {
         $this->container['backupParam'] = $backupParam;
+        return $this;
+    }
+
+    /**
+    * Gets autoBackup
+    *  **参数解释**： 自动备份开关状态。 **取值范围**： true：已开启自动备份选项； false：已关闭自动备份选项；
+    *
+    * @return bool|null
+    */
+    public function getAutoBackup()
+    {
+        return $this->container['autoBackup'];
+    }
+
+    /**
+    * Sets autoBackup
+    *
+    * @param bool|null $autoBackup **参数解释**： 自动备份开关状态。 **取值范围**： true：已开启自动备份选项； false：已关闭自动备份选项；
+    *
+    * @return $this
+    */
+    public function setAutoBackup($autoBackup)
+    {
+        $this->container['autoBackup'] = $autoBackup;
+        return $this;
+    }
+
+    /**
+    * Gets backupStrategyClusterTypeLimitNum
+    *  **参数解释**： 此策略下集群级快照最大数量。 **取值范围**： 大于等于0。
+    *
+    * @return int|null
+    */
+    public function getBackupStrategyClusterTypeLimitNum()
+    {
+        return $this->container['backupStrategyClusterTypeLimitNum'];
+    }
+
+    /**
+    * Sets backupStrategyClusterTypeLimitNum
+    *
+    * @param int|null $backupStrategyClusterTypeLimitNum **参数解释**： 此策略下集群级快照最大数量。 **取值范围**： 大于等于0。
+    *
+    * @return $this
+    */
+    public function setBackupStrategyClusterTypeLimitNum($backupStrategyClusterTypeLimitNum)
+    {
+        $this->container['backupStrategyClusterTypeLimitNum'] = $backupStrategyClusterTypeLimitNum;
+        return $this;
+    }
+
+    /**
+    * Gets backupStrategySchemaTypeLimitNum
+    *  **参数解释**： 此策略下schema级快照最大数量。 **取值范围**： 大于等于0。
+    *
+    * @return int|null
+    */
+    public function getBackupStrategySchemaTypeLimitNum()
+    {
+        return $this->container['backupStrategySchemaTypeLimitNum'];
+    }
+
+    /**
+    * Sets backupStrategySchemaTypeLimitNum
+    *
+    * @param int|null $backupStrategySchemaTypeLimitNum **参数解释**： 此策略下schema级快照最大数量。 **取值范围**： 大于等于0。
+    *
+    * @return $this
+    */
+    public function setBackupStrategySchemaTypeLimitNum($backupStrategySchemaTypeLimitNum)
+    {
+        $this->container['backupStrategySchemaTypeLimitNum'] = $backupStrategySchemaTypeLimitNum;
         return $this;
     }
 

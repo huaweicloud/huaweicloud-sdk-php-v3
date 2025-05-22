@@ -20,9 +20,9 @@ class CompatibleFaultResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * message  信息
-    * created  创建者
-    * details  详细
+    * message  **参数解释**： 信息。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建者。 **取值范围**： 不涉及。
+    * details  **参数解释**： 详细内容。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CompatibleFaultResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * message  信息
-    * created  创建者
-    * details  详细
+    * message  **参数解释**： 信息。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建者。 **取值范围**： 不涉及。
+    * details  **参数解释**： 详细内容。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CompatibleFaultResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * message  信息
-    * created  创建者
-    * details  详细
+    * message  **参数解释**： 信息。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建者。 **取值范围**： 不涉及。
+    * details  **参数解释**： 详细内容。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CompatibleFaultResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * message  信息
-    * created  创建者
-    * details  详细
+    * message  **参数解释**： 信息。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建者。 **取值范围**： 不涉及。
+    * details  **参数解释**： 详细内容。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CompatibleFaultResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * message  信息
-    * created  创建者
-    * details  详细
+    * message  **参数解释**： 信息。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建者。 **取值范围**： 不涉及。
+    * details  **参数解释**： 详细内容。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class CompatibleFaultResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  信息
+    *  **参数解释**： 信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class CompatibleFaultResp implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 信息
+    * @param string|null $message **参数解释**： 信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class CompatibleFaultResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
-    *  创建者
+    *  **参数解释**： 创建者。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class CompatibleFaultResp implements ModelInterface, ArrayAccess
     /**
     * Sets created
     *
-    * @param string|null $created 创建者
+    * @param string|null $created **参数解释**： 创建者。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class CompatibleFaultResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets details
-    *  详细
+    *  **参数解释**： 详细内容。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class CompatibleFaultResp implements ModelInterface, ArrayAccess
     /**
     * Sets details
     *
-    * @param string|null $details 详细
+    * @param string|null $details **参数解释**： 详细内容。 **取值范围**： 不涉及。
     *
     * @return $this
     */

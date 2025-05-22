@@ -21,6 +21,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * adminStateUp  参数解释：后端服务器组的管理状态，只支持设置为true。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * azAffinity  azAffinity
     * description  参数解释：后端服务器组的描述信息。
     * lbAlgorithm  参数解释：后端服务器组的负载均衡算法。  约束限制： - 当该字段的取值为SOURCE_IP或QUIC_CID时，后端服务器组绑定的后端服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  取值范围： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。 [- 2_TUPLE_HASH：二元组hash算法，仅IP类型的pool支持。 - 3_TUPLE_HASH：三元组hash算法，仅IP类型的pool支持。 - 5_TUPLE_HASH：五元组hash算法，仅IP类型的pool支持。 - IP型pool不指定该字段时，默认设置为5_TUPLE_HASH。](tag:hws_eu)  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
     * listenerId  参数解释：后端服务器组关联的监听器的ID。  约束限制： - listener_id，loadbalancer_id，type至少指定一个。 [- 独享型实例的后端服务器组loadbalancer_id和listener_id可以都不指定，但共享型实例至少指定一个。。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -46,6 +47,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'adminStateUp' => 'bool',
+            'azAffinity' => '\HuaweiCloud\SDK\Elb\V3\Model\AzAffinity',
             'description' => 'string',
             'lbAlgorithm' => 'string',
             'listenerId' => 'string',
@@ -71,6 +73,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * adminStateUp  参数解释：后端服务器组的管理状态，只支持设置为true。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * azAffinity  azAffinity
     * description  参数解释：后端服务器组的描述信息。
     * lbAlgorithm  参数解释：后端服务器组的负载均衡算法。  约束限制： - 当该字段的取值为SOURCE_IP或QUIC_CID时，后端服务器组绑定的后端服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  取值范围： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。 [- 2_TUPLE_HASH：二元组hash算法，仅IP类型的pool支持。 - 3_TUPLE_HASH：三元组hash算法，仅IP类型的pool支持。 - 5_TUPLE_HASH：五元组hash算法，仅IP类型的pool支持。 - IP型pool不指定该字段时，默认设置为5_TUPLE_HASH。](tag:hws_eu)  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
     * listenerId  参数解释：后端服务器组关联的监听器的ID。  约束限制： - listener_id，loadbalancer_id，type至少指定一个。 [- 独享型实例的后端服务器组loadbalancer_id和listener_id可以都不指定，但共享型实例至少指定一个。。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -96,6 +99,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'adminStateUp' => null,
+        'azAffinity' => null,
         'description' => null,
         'lbAlgorithm' => null,
         'listenerId' => null,
@@ -142,6 +146,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * adminStateUp  参数解释：后端服务器组的管理状态，只支持设置为true。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * azAffinity  azAffinity
     * description  参数解释：后端服务器组的描述信息。
     * lbAlgorithm  参数解释：后端服务器组的负载均衡算法。  约束限制： - 当该字段的取值为SOURCE_IP或QUIC_CID时，后端服务器组绑定的后端服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  取值范围： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。 [- 2_TUPLE_HASH：二元组hash算法，仅IP类型的pool支持。 - 3_TUPLE_HASH：三元组hash算法，仅IP类型的pool支持。 - 5_TUPLE_HASH：五元组hash算法，仅IP类型的pool支持。 - IP型pool不指定该字段时，默认设置为5_TUPLE_HASH。](tag:hws_eu)  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
     * listenerId  参数解释：后端服务器组关联的监听器的ID。  约束限制： - listener_id，loadbalancer_id，type至少指定一个。 [- 独享型实例的后端服务器组loadbalancer_id和listener_id可以都不指定，但共享型实例至少指定一个。。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -167,6 +172,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'adminStateUp' => 'admin_state_up',
+            'azAffinity' => 'az_affinity',
             'description' => 'description',
             'lbAlgorithm' => 'lb_algorithm',
             'listenerId' => 'listener_id',
@@ -192,6 +198,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * adminStateUp  参数解释：后端服务器组的管理状态，只支持设置为true。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * azAffinity  azAffinity
     * description  参数解释：后端服务器组的描述信息。
     * lbAlgorithm  参数解释：后端服务器组的负载均衡算法。  约束限制： - 当该字段的取值为SOURCE_IP或QUIC_CID时，后端服务器组绑定的后端服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  取值范围： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。 [- 2_TUPLE_HASH：二元组hash算法，仅IP类型的pool支持。 - 3_TUPLE_HASH：三元组hash算法，仅IP类型的pool支持。 - 5_TUPLE_HASH：五元组hash算法，仅IP类型的pool支持。 - IP型pool不指定该字段时，默认设置为5_TUPLE_HASH。](tag:hws_eu)  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
     * listenerId  参数解释：后端服务器组关联的监听器的ID。  约束限制： - listener_id，loadbalancer_id，type至少指定一个。 [- 独享型实例的后端服务器组loadbalancer_id和listener_id可以都不指定，但共享型实例至少指定一个。。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -217,6 +224,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'adminStateUp' => 'setAdminStateUp',
+            'azAffinity' => 'setAzAffinity',
             'description' => 'setDescription',
             'lbAlgorithm' => 'setLbAlgorithm',
             'listenerId' => 'setListenerId',
@@ -242,6 +250,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * adminStateUp  参数解释：后端服务器组的管理状态，只支持设置为true。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * azAffinity  azAffinity
     * description  参数解释：后端服务器组的描述信息。
     * lbAlgorithm  参数解释：后端服务器组的负载均衡算法。  约束限制： - 当该字段的取值为SOURCE_IP或QUIC_CID时，后端服务器组绑定的后端服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  取值范围： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。 [- 2_TUPLE_HASH：二元组hash算法，仅IP类型的pool支持。 - 3_TUPLE_HASH：三元组hash算法，仅IP类型的pool支持。 - 5_TUPLE_HASH：五元组hash算法，仅IP类型的pool支持。 - IP型pool不指定该字段时，默认设置为5_TUPLE_HASH。](tag:hws_eu)  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
     * listenerId  参数解释：后端服务器组关联的监听器的ID。  约束限制： - listener_id，loadbalancer_id，type至少指定一个。 [- 独享型实例的后端服务器组loadbalancer_id和listener_id可以都不指定，但共享型实例至少指定一个。。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -267,6 +276,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'adminStateUp' => 'getAdminStateUp',
+            'azAffinity' => 'getAzAffinity',
             'description' => 'getDescription',
             'lbAlgorithm' => 'getLbAlgorithm',
             'listenerId' => 'getListenerId',
@@ -363,6 +373,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
+        $this->container['azAffinity'] = isset($data['azAffinity']) ? $data['azAffinity'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['lbAlgorithm'] = isset($data['lbAlgorithm']) ? $data['lbAlgorithm'] : null;
         $this->container['listenerId'] = isset($data['listenerId']) ? $data['listenerId'] : null;
@@ -505,6 +516,30 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     public function setAdminStateUp($adminStateUp)
     {
         $this->container['adminStateUp'] = $adminStateUp;
+        return $this;
+    }
+
+    /**
+    * Gets azAffinity
+    *  azAffinity
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\AzAffinity|null
+    */
+    public function getAzAffinity()
+    {
+        return $this->container['azAffinity'];
+    }
+
+    /**
+    * Sets azAffinity
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\AzAffinity|null $azAffinity azAffinity
+    *
+    * @return $this
+    */
+    public function setAzAffinity($azAffinity)
+    {
+        $this->container['azAffinity'] = $azAffinity;
         return $this;
     }
 

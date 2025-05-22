@@ -22,7 +22,7 @@ class ListProtectedIpRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * offset  开始查询的偏移量,默认值:0
     * limit  每页显示的条目数量,默认值:2000
-    * packageId  防护包id
+    * packageId  实例id
     * policyId  策略id
     * ip  防护ip
     * tag  本地标签
@@ -42,7 +42,7 @@ class ListProtectedIpRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * offset  开始查询的偏移量,默认值:0
     * limit  每页显示的条目数量,默认值:2000
-    * packageId  防护包id
+    * packageId  实例id
     * policyId  策略id
     * ip  防护ip
     * tag  本地标签
@@ -83,7 +83,7 @@ class ListProtectedIpRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * offset  开始查询的偏移量,默认值:0
     * limit  每页显示的条目数量,默认值:2000
-    * packageId  防护包id
+    * packageId  实例id
     * policyId  策略id
     * ip  防护ip
     * tag  本地标签
@@ -103,7 +103,7 @@ class ListProtectedIpRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * offset  开始查询的偏移量,默认值:0
     * limit  每页显示的条目数量,默认值:2000
-    * packageId  防护包id
+    * packageId  实例id
     * policyId  策略id
     * ip  防护ip
     * tag  本地标签
@@ -123,7 +123,7 @@ class ListProtectedIpRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * offset  开始查询的偏移量,默认值:0
     * limit  每页显示的条目数量,默认值:2000
-    * packageId  防护包id
+    * packageId  实例id
     * policyId  策略id
     * ip  防护ip
     * tag  本地标签
@@ -313,7 +313,7 @@ class ListProtectedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageId
-    *  防护包id
+    *  实例id
     *
     * @return string|null
     */
@@ -325,7 +325,7 @@ class ListProtectedIpRequest implements ModelInterface, ArrayAccess
     /**
     * Sets packageId
     *
-    * @param string|null $packageId 防护包id
+    * @param string|null $packageId 实例id
     *
     * @return $this
     */

@@ -25,8 +25,8 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     * severity  事件级别
     * sourceType  事件源类别
     * tag  事件标签
-    * offset  偏移量
-    * limit  限制条目数
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000
     *
     * @var string[]
     */
@@ -47,8 +47,8 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     * severity  事件级别
     * sourceType  事件源类别
     * tag  事件标签
-    * offset  偏移量
-    * limit  限制条目数
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     * severity  事件级别
     * sourceType  事件源类别
     * tag  事件标签
-    * offset  偏移量
-    * limit  限制条目数
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000
     *
     * @var string[]
     */
@@ -112,8 +112,8 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     * severity  事件级别
     * sourceType  事件源类别
     * tag  事件标签
-    * offset  偏移量
-    * limit  限制条目数
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000
     *
     * @var string[]
     */
@@ -134,8 +134,8 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     * severity  事件级别
     * sourceType  事件源类别
     * tag  事件标签
-    * offset  偏移量
-    * limit  限制条目数
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000
     *
     * @var string[]
     */
@@ -360,7 +360,7 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量
+    *  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 偏移量
+    * @param string|null $offset **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  限制条目数
+    *  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 限制条目数
+    * @param string|null $limit **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class RestorePoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * backRef  快照ID
-    * restoreTime  恢复时间
-    * clusterId  集群ID
+    * backRef  **参数解释**： 快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * restoreTime  **参数解释**： 恢复时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterId  **参数解释**： 原始集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class RestorePoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * backRef  快照ID
-    * restoreTime  恢复时间
-    * clusterId  集群ID
+    * backRef  **参数解释**： 快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * restoreTime  **参数解释**： 恢复时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterId  **参数解释**： 原始集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class RestorePoint implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * backRef  快照ID
-    * restoreTime  恢复时间
-    * clusterId  集群ID
+    * backRef  **参数解释**： 快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * restoreTime  **参数解释**： 恢复时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterId  **参数解释**： 原始集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class RestorePoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * backRef  快照ID
-    * restoreTime  恢复时间
-    * clusterId  集群ID
+    * backRef  **参数解释**： 快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * restoreTime  **参数解释**： 恢复时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterId  **参数解释**： 原始集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class RestorePoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * backRef  快照ID
-    * restoreTime  恢复时间
-    * clusterId  集群ID
+    * backRef  **参数解释**： 快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * restoreTime  **参数解释**： 恢复时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clusterId  **参数解释**： 原始集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class RestorePoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets backRef
-    *  快照ID
+    *  **参数解释**： 快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class RestorePoint implements ModelInterface, ArrayAccess
     /**
     * Sets backRef
     *
-    * @param string|null $backRef 快照ID
+    * @param string|null $backRef **参数解释**： 快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class RestorePoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets restoreTime
-    *  恢复时间
+    *  **参数解释**： 恢复时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class RestorePoint implements ModelInterface, ArrayAccess
     /**
     * Sets restoreTime
     *
-    * @param int|null $restoreTime 恢复时间
+    * @param int|null $restoreTime **参数解释**： 恢复时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class RestorePoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID
+    *  **参数解释**： 原始集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class RestorePoint implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID
+    * @param string|null $clusterId **参数解释**： 原始集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

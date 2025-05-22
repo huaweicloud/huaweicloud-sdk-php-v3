@@ -20,9 +20,9 @@ class Statistic implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  资源名称。 - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。
-    * value  资源数量值。
-    * unit  资源数量单位。
+    * name  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。  **默认取值**： 不涉及。
+    * value  **参数解释**： 资源数量值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * unit  **参数解释**： 资源数量单位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class Statistic implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  资源名称。 - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。
-    * value  资源数量值。
-    * unit  资源数量单位。
+    * name  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。  **默认取值**： 不涉及。
+    * value  **参数解释**： 资源数量值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * unit  **参数解释**： 资源数量单位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class Statistic implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  资源名称。 - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。
-    * value  资源数量值。
-    * unit  资源数量单位。
+    * name  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。  **默认取值**： 不涉及。
+    * value  **参数解释**： 资源数量值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * unit  **参数解释**： 资源数量单位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class Statistic implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  资源名称。 - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。
-    * value  资源数量值。
-    * unit  资源数量单位。
+    * name  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。  **默认取值**： 不涉及。
+    * value  **参数解释**： 资源数量值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * unit  **参数解释**： 资源数量单位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class Statistic implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  资源名称。 - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。
-    * value  资源数量值。
-    * unit  资源数量单位。
+    * name  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。  **默认取值**： 不涉及。
+    * value  **参数解释**： 资源数量值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * unit  **参数解释**： 资源数量单位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class Statistic implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源名称。 - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。
+    *  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。  **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class Statistic implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 资源名称。 - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。
+    * @param string $name **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class Statistic implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  资源数量值。
+    *  **参数解释**： 资源数量值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return double
     */
@@ -241,7 +241,7 @@ class Statistic implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param double $value 资源数量值。
+    * @param double $value **参数解释**： 资源数量值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class Statistic implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  资源数量单位。
+    *  **参数解释**： 资源数量单位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class Statistic implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string $unit 资源数量单位。
+    * @param string $unit **参数解释**： 资源数量单位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

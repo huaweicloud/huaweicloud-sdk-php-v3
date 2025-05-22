@@ -46,6 +46,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
     * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
     * availabilityZone  实例可用区。
+    * dualActiveInfo  dualActiveInfo
     *
     * @var string[]
     */
@@ -75,7 +76,8 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'actions' => 'string[]',
             'lbIpAddress' => 'string',
             'lbPort' => 'string',
-            'availabilityZone' => 'string'
+            'availabilityZone' => 'string',
+            'dualActiveInfo' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DualActiveInfo'
     ];
 
     /**
@@ -106,6 +108,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
     * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
     * availabilityZone  实例可用区。
+    * dualActiveInfo  dualActiveInfo
     *
     * @var string[]
     */
@@ -135,7 +138,8 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
         'actions' => null,
         'lbIpAddress' => null,
         'lbPort' => null,
-        'availabilityZone' => null
+        'availabilityZone' => null,
+        'dualActiveInfo' => null
     ];
 
     /**
@@ -187,6 +191,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
     * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
     * availabilityZone  实例可用区。
+    * dualActiveInfo  dualActiveInfo
     *
     * @var string[]
     */
@@ -216,7 +221,8 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'actions' => 'actions',
             'lbIpAddress' => 'lb_ip_address',
             'lbPort' => 'lb_port',
-            'availabilityZone' => 'availability_zone'
+            'availabilityZone' => 'availability_zone',
+            'dualActiveInfo' => 'dual_active_info'
     ];
 
     /**
@@ -247,6 +253,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
     * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
     * availabilityZone  实例可用区。
+    * dualActiveInfo  dualActiveInfo
     *
     * @var string[]
     */
@@ -276,7 +283,8 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'actions' => 'setActions',
             'lbIpAddress' => 'setLbIpAddress',
             'lbPort' => 'setLbPort',
-            'availabilityZone' => 'setAvailabilityZone'
+            'availabilityZone' => 'setAvailabilityZone',
+            'dualActiveInfo' => 'setDualActiveInfo'
     ];
 
     /**
@@ -307,6 +315,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
     * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
     * availabilityZone  实例可用区。
+    * dualActiveInfo  dualActiveInfo
     *
     * @var string[]
     */
@@ -336,7 +345,8 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'actions' => 'getActions',
             'lbIpAddress' => 'getLbIpAddress',
             'lbPort' => 'getLbPort',
-            'availabilityZone' => 'getAvailabilityZone'
+            'availabilityZone' => 'getAvailabilityZone',
+            'dualActiveInfo' => 'getDualActiveInfo'
     ];
 
     /**
@@ -423,6 +433,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
         $this->container['lbIpAddress'] = isset($data['lbIpAddress']) ? $data['lbIpAddress'] : null;
         $this->container['lbPort'] = isset($data['lbPort']) ? $data['lbPort'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
+        $this->container['dualActiveInfo'] = isset($data['dualActiveInfo']) ? $data['dualActiveInfo'] : null;
     }
 
     /**
@@ -1131,6 +1142,30 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     public function setAvailabilityZone($availabilityZone)
     {
         $this->container['availabilityZone'] = $availabilityZone;
+        return $this;
+    }
+
+    /**
+    * Gets dualActiveInfo
+    *  dualActiveInfo
+    *
+    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DualActiveInfo|null
+    */
+    public function getDualActiveInfo()
+    {
+        return $this->container['dualActiveInfo'];
+    }
+
+    /**
+    * Sets dualActiveInfo
+    *
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DualActiveInfo|null $dualActiveInfo dualActiveInfo
+    *
+    * @return $this
+    */
+    public function setDualActiveInfo($dualActiveInfo)
+    {
+        $this->container['dualActiveInfo'] = $dualActiveInfo;
         return $this;
     }
 

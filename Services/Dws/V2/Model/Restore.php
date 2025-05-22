@@ -27,7 +27,7 @@ class Restore implements ModelInterface, ArrayAccess
     * availabilityZone  指定集群可用区。默认值与原集群相同。
     * port  指定集群服务端口
     * publicIp  publicIp
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
@@ -53,7 +53,7 @@ class Restore implements ModelInterface, ArrayAccess
     * availabilityZone  指定集群可用区。默认值与原集群相同。
     * port  指定集群服务端口
     * publicIp  publicIp
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
@@ -100,7 +100,7 @@ class Restore implements ModelInterface, ArrayAccess
     * availabilityZone  指定集群可用区。默认值与原集群相同。
     * port  指定集群服务端口
     * publicIp  publicIp
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
@@ -126,7 +126,7 @@ class Restore implements ModelInterface, ArrayAccess
     * availabilityZone  指定集群可用区。默认值与原集群相同。
     * port  指定集群服务端口
     * publicIp  publicIp
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
@@ -152,7 +152,7 @@ class Restore implements ModelInterface, ArrayAccess
     * availabilityZone  指定集群可用区。默认值与原集群相同。
     * port  指定集群服务端口
     * publicIp  publicIp
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
     *
     * @var string[]
@@ -439,7 +439,7 @@ class Restore implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    *  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return string|null
     */
@@ -451,7 +451,7 @@ class Restore implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return $this
     */

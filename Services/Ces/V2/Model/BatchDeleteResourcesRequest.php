@@ -27,7 +27,7 @@ class BatchDeleteResourcesRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'groupId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourcesReq'
+            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\DelResourcesReq'
     ];
 
     /**
@@ -220,7 +220,7 @@ class BatchDeleteResourcesRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourcesReq|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\DelResourcesReq|null
     */
     public function getBody()
     {
@@ -230,7 +230,7 @@ class BatchDeleteResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourcesReq|null $body body
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\DelResourcesReq|null $body body
     *
     * @return $this
     */

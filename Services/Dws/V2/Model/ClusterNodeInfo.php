@@ -20,14 +20,14 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  节点ID
-    * name  节点名称
-    * status  节点状态
-    * subStatus  节点子状态
-    * spec  节点规格
-    * instCreateType  实例创建类型
-    * aliasName  节点别名
-    * azCode  可用区编码
+    * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： 不涉及。
+    * subStatus  **参数解释**： 节点子状态。 **取值范围**： 不涉及。
+    * spec  **参数解释**： 节点规格。 **取值范围**： 不涉及。
+    * instCreateType  **参数解释**： 实例创建类型。 **取值范围**： - INST：已使用 - NODE：空闲节点
+    * aliasName  **参数解释**： 节点别名。 **取值范围**： 不涉及。
+    * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  节点ID
-    * name  节点名称
-    * status  节点状态
-    * subStatus  节点子状态
-    * spec  节点规格
-    * instCreateType  实例创建类型
-    * aliasName  节点别名
-    * azCode  可用区编码
+    * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： 不涉及。
+    * subStatus  **参数解释**： 节点子状态。 **取值范围**： 不涉及。
+    * spec  **参数解释**： 节点规格。 **取值范围**： 不涉及。
+    * instCreateType  **参数解释**： 实例创建类型。 **取值范围**： - INST：已使用 - NODE：空闲节点
+    * aliasName  **参数解释**： 节点别名。 **取值范围**： 不涉及。
+    * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  节点ID
-    * name  节点名称
-    * status  节点状态
-    * subStatus  节点子状态
-    * spec  节点规格
-    * instCreateType  实例创建类型
-    * aliasName  节点别名
-    * azCode  可用区编码
+    * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： 不涉及。
+    * subStatus  **参数解释**： 节点子状态。 **取值范围**： 不涉及。
+    * spec  **参数解释**： 节点规格。 **取值范围**： 不涉及。
+    * instCreateType  **参数解释**： 实例创建类型。 **取值范围**： - INST：已使用 - NODE：空闲节点
+    * aliasName  **参数解释**： 节点别名。 **取值范围**： 不涉及。
+    * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  节点ID
-    * name  节点名称
-    * status  节点状态
-    * subStatus  节点子状态
-    * spec  节点规格
-    * instCreateType  实例创建类型
-    * aliasName  节点别名
-    * azCode  可用区编码
+    * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： 不涉及。
+    * subStatus  **参数解释**： 节点子状态。 **取值范围**： 不涉及。
+    * spec  **参数解释**： 节点规格。 **取值范围**： 不涉及。
+    * instCreateType  **参数解释**： 实例创建类型。 **取值范围**： - INST：已使用 - NODE：空闲节点
+    * aliasName  **参数解释**： 节点别名。 **取值范围**： 不涉及。
+    * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  节点ID
-    * name  节点名称
-    * status  节点状态
-    * subStatus  节点子状态
-    * spec  节点规格
-    * instCreateType  实例创建类型
-    * aliasName  节点别名
-    * azCode  可用区编码
+    * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： 不涉及。
+    * subStatus  **参数解释**： 节点子状态。 **取值范围**： 不涉及。
+    * spec  **参数解释**： 节点规格。 **取值范围**： 不涉及。
+    * instCreateType  **参数解释**： 实例创建类型。 **取值范围**： - INST：已使用 - NODE：空闲节点
+    * aliasName  **参数解释**： 节点别名。 **取值范围**： 不涉及。
+    * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  节点ID
+    *  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 节点ID
+    * @param string|null $id **参数解释**： 节点ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  节点名称
+    *  **参数解释**： 节点名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -287,7 +287,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 节点名称
+    * @param string|null $name **参数解释**： 节点名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  节点状态
+    *  **参数解释**： 节点状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 节点状态
+    * @param string|null $status **参数解释**： 节点状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets subStatus
-    *  节点子状态
+    *  **参数解释**： 节点子状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets subStatus
     *
-    * @param string|null $subStatus 节点子状态
+    * @param string|null $subStatus **参数解释**： 节点子状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets spec
-    *  节点规格
+    *  **参数解释**： 节点规格。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets spec
     *
-    * @param string|null $spec 节点规格
+    * @param string|null $spec **参数解释**： 节点规格。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instCreateType
-    *  实例创建类型
+    *  **参数解释**： 实例创建类型。 **取值范围**： - INST：已使用 - NODE：空闲节点
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instCreateType
     *
-    * @param string|null $instCreateType 实例创建类型
+    * @param string|null $instCreateType **参数解释**： 实例创建类型。 **取值范围**： - INST：已使用 - NODE：空闲节点
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets aliasName
-    *  节点别名
+    *  **参数解释**： 节点别名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets aliasName
     *
-    * @param string|null $aliasName 节点别名
+    * @param string|null $aliasName **参数解释**： 节点别名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets azCode
-    *  可用区编码
+    *  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets azCode
     *
-    * @param string|null $azCode 可用区编码
+    * @param string|null $azCode **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @return $this
     */

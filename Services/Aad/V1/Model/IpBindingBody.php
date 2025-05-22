@@ -20,7 +20,7 @@ class IpBindingBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * packageId  防护包id
+    * packageId  实例id
     * idList  防护ip的id列表
     *
     * @var string[]
@@ -32,7 +32,7 @@ class IpBindingBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * packageId  防护包id
+    * packageId  实例id
     * idList  防护ip的id列表
     *
     * @var string[]
@@ -65,7 +65,7 @@ class IpBindingBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * packageId  防护包id
+    * packageId  实例id
     * idList  防护ip的id列表
     *
     * @var string[]
@@ -77,7 +77,7 @@ class IpBindingBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * packageId  防护包id
+    * packageId  实例id
     * idList  防护ip的id列表
     *
     * @var string[]
@@ -89,7 +89,7 @@ class IpBindingBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * packageId  防护包id
+    * packageId  实例id
     * idList  防护ip的id列表
     *
     * @var string[]
@@ -197,7 +197,7 @@ class IpBindingBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageId
-    *  防护包id
+    *  实例id
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class IpBindingBody implements ModelInterface, ArrayAccess
     /**
     * Sets packageId
     *
-    * @param string $packageId 防护包id
+    * @param string $packageId 实例id
     *
     * @return $this
     */

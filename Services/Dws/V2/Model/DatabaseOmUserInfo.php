@@ -20,26 +20,26 @@ class DatabaseOmUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * omUserStatus  运维账户状态
-    * omUserExpiresTime  运维账户过期状态
+    * omUserStatus  **参数解释**： 运维账户状态。 **取值范围**： on、off
+    * omUserExpiresTime  **参数解释**： 运维账户过期状态。格式是有效的时间戳。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'omUserStatus' => 'string',
-            'omUserExpiresTime' => '\DateTime'
+            'omUserExpiresTime' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * omUserStatus  运维账户状态
-    * omUserExpiresTime  运维账户过期状态
+    * omUserStatus  **参数解释**： 运维账户状态。 **取值范围**： on、off
+    * omUserExpiresTime  **参数解释**： 运维账户过期状态。格式是有效的时间戳。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'omUserStatus' => null,
-        'omUserExpiresTime' => 'date'
+        'omUserExpiresTime' => 'int64'
     ];
 
     /**
@@ -65,8 +65,8 @@ class DatabaseOmUserInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * omUserStatus  运维账户状态
-    * omUserExpiresTime  运维账户过期状态
+    * omUserStatus  **参数解释**： 运维账户状态。 **取值范围**： on、off
+    * omUserExpiresTime  **参数解释**： 运维账户过期状态。格式是有效的时间戳。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DatabaseOmUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * omUserStatus  运维账户状态
-    * omUserExpiresTime  运维账户过期状态
+    * omUserStatus  **参数解释**： 运维账户状态。 **取值范围**： on、off
+    * omUserExpiresTime  **参数解释**： 运维账户过期状态。格式是有效的时间戳。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DatabaseOmUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * omUserStatus  运维账户状态
-    * omUserExpiresTime  运维账户过期状态
+    * omUserStatus  **参数解释**： 运维账户状态。 **取值范围**： on、off
+    * omUserExpiresTime  **参数解释**： 运维账户过期状态。格式是有效的时间戳。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class DatabaseOmUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets omUserStatus
-    *  运维账户状态
+    *  **参数解释**： 运维账户状态。 **取值范围**： on、off
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class DatabaseOmUserInfo implements ModelInterface, ArrayAccess
     /**
     * Sets omUserStatus
     *
-    * @param string|null $omUserStatus 运维账户状态
+    * @param string|null $omUserStatus **参数解释**： 运维账户状态。 **取值范围**： on、off
     *
     * @return $this
     */
@@ -209,9 +209,9 @@ class DatabaseOmUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets omUserExpiresTime
-    *  运维账户过期状态
+    *  **参数解释**： 运维账户过期状态。格式是有效的时间戳。 **取值范围**： 不涉及。
     *
-    * @return \DateTime|null
+    * @return int|null
     */
     public function getOmUserExpiresTime()
     {
@@ -221,7 +221,7 @@ class DatabaseOmUserInfo implements ModelInterface, ArrayAccess
     /**
     * Sets omUserExpiresTime
     *
-    * @param \DateTime|null $omUserExpiresTime 运维账户过期状态
+    * @param int|null $omUserExpiresTime **参数解释**： 运维账户过期状态。格式是有效的时间戳。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -51,7 +51,7 @@ class BatchCreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * wafFailureAction  WAF故障时的流量处理策略。discard:丢弃，forward: 转发到后端（默认）  使用说明：只有绑定了waf的LB实例，该字段才会生效。  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除<和>外通用Unicode字符集字符，最大255个字符。
-    * chargeMode  '创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。' 批量创建共享型实例时，该字段不允许指定。
+    * chargeMode  创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。 批量创建共享型实例时，该字段不允许指定。
     * ipv6VipAddress  双栈类型负载均衡器的IPv6地址。 当批量创建的number数量大于1时不支持传入该字段，返回400。 批量创建共享型实例的场景，该字段不允许指定。 [不支持IPv6，请勿使用。](tag:dt)
     *
     * @var string[]
@@ -125,7 +125,7 @@ class BatchCreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * wafFailureAction  WAF故障时的流量处理策略。discard:丢弃，forward: 转发到后端（默认）  使用说明：只有绑定了waf的LB实例，该字段才会生效。  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除<和>外通用Unicode字符集字符，最大255个字符。
-    * chargeMode  '创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。' 批量创建共享型实例时，该字段不允许指定。
+    * chargeMode  创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。 批量创建共享型实例时，该字段不允许指定。
     * ipv6VipAddress  双栈类型负载均衡器的IPv6地址。 当批量创建的number数量大于1时不支持传入该字段，返回400。 批量创建共享型实例的场景，该字段不允许指定。 [不支持IPv6，请勿使用。](tag:dt)
     *
     * @var string[]
@@ -220,7 +220,7 @@ class BatchCreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * wafFailureAction  WAF故障时的流量处理策略。discard:丢弃，forward: 转发到后端（默认）  使用说明：只有绑定了waf的LB实例，该字段才会生效。  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除<和>外通用Unicode字符集字符，最大255个字符。
-    * chargeMode  '创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。' 批量创建共享型实例时，该字段不允许指定。
+    * chargeMode  创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。 批量创建共享型实例时，该字段不允许指定。
     * ipv6VipAddress  双栈类型负载均衡器的IPv6地址。 当批量创建的number数量大于1时不支持传入该字段，返回400。 批量创建共享型实例的场景，该字段不允许指定。 [不支持IPv6，请勿使用。](tag:dt)
     *
     * @var string[]
@@ -294,7 +294,7 @@ class BatchCreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * wafFailureAction  WAF故障时的流量处理策略。discard:丢弃，forward: 转发到后端（默认）  使用说明：只有绑定了waf的LB实例，该字段才会生效。  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除<和>外通用Unicode字符集字符，最大255个字符。
-    * chargeMode  '创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。' 批量创建共享型实例时，该字段不允许指定。
+    * chargeMode  创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。 批量创建共享型实例时，该字段不允许指定。
     * ipv6VipAddress  双栈类型负载均衡器的IPv6地址。 当批量创建的number数量大于1时不支持传入该字段，返回400。 批量创建共享型实例的场景，该字段不允许指定。 [不支持IPv6，请勿使用。](tag:dt)
     *
     * @var string[]
@@ -368,7 +368,7 @@ class BatchCreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * wafFailureAction  WAF故障时的流量处理策略。discard:丢弃，forward: 转发到后端（默认）  使用说明：只有绑定了waf的LB实例，该字段才会生效。  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除<和>外通用Unicode字符集字符，最大255个字符。
-    * chargeMode  '创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。' 批量创建共享型实例时，该字段不允许指定。
+    * chargeMode  创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。 批量创建共享型实例时，该字段不允许指定。
     * ipv6VipAddress  双栈类型负载均衡器的IPv6地址。 当批量创建的number数量大于1时不支持传入该字段，返回400。 批量创建共享型实例的场景，该字段不允许指定。 [不支持IPv6，请勿使用。](tag:dt)
     *
     * @var string[]
@@ -1423,7 +1423,7 @@ class BatchCreateLoadBalancerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  '创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。' 批量创建共享型实例时，该字段不允许指定。
+    *  创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。 批量创建共享型实例时，该字段不允许指定。
     *
     * @return string|null
     */
@@ -1435,7 +1435,7 @@ class BatchCreateLoadBalancerOption implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode '创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。' 批量创建共享型实例时，该字段不允许指定。
+    * @param string|null $chargeMode 创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。 批量创建共享型实例时，该字段不允许指定。
     *
     * @return $this
     */

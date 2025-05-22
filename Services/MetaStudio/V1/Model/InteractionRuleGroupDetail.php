@@ -22,7 +22,7 @@ class InteractionRuleGroupDetail implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groupId  互动规则库ID
     * groupName  互动规则库名称
-    * interactionRules  互动规则列表
+    * interactionRules  互动规则列表。 > 查询互动规则库列表接口不再返回该内容。请使用查询互动规则库详情接口查具体某个库的规则列表。
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
@@ -40,7 +40,7 @@ class InteractionRuleGroupDetail implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * groupId  互动规则库ID
     * groupName  互动规则库名称
-    * interactionRules  互动规则列表
+    * interactionRules  互动规则列表。 > 查询互动规则库列表接口不再返回该内容。请使用查询互动规则库详情接口查具体某个库的规则列表。
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
@@ -79,7 +79,7 @@ class InteractionRuleGroupDetail implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groupId  互动规则库ID
     * groupName  互动规则库名称
-    * interactionRules  互动规则列表
+    * interactionRules  互动规则列表。 > 查询互动规则库列表接口不再返回该内容。请使用查询互动规则库详情接口查具体某个库的规则列表。
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
@@ -97,7 +97,7 @@ class InteractionRuleGroupDetail implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * groupId  互动规则库ID
     * groupName  互动规则库名称
-    * interactionRules  互动规则列表
+    * interactionRules  互动规则列表。 > 查询互动规则库列表接口不再返回该内容。请使用查询互动规则库详情接口查具体某个库的规则列表。
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
@@ -115,7 +115,7 @@ class InteractionRuleGroupDetail implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * groupId  互动规则库ID
     * groupName  互动规则库名称
-    * interactionRules  互动规则列表
+    * interactionRules  互动规则列表。 > 查询互动规则库列表接口不再返回该内容。请使用查询互动规则库详情接口查具体某个库的规则列表。
     * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
@@ -293,7 +293,7 @@ class InteractionRuleGroupDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets interactionRules
-    *  互动规则列表
+    *  互动规则列表。 > 查询互动规则库列表接口不再返回该内容。请使用查询互动规则库详情接口查具体某个库的规则列表。
     *
     * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\InteractionRuleDetailInfo[]|null
     */
@@ -305,7 +305,7 @@ class InteractionRuleGroupDetail implements ModelInterface, ArrayAccess
     /**
     * Sets interactionRules
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\InteractionRuleDetailInfo[]|null $interactionRules 互动规则列表
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\InteractionRuleDetailInfo[]|null $interactionRules 互动规则列表。 > 查询互动规则库列表接口不再返回该内容。请使用查询互动规则库详情接口查具体某个库的规则列表。
     *
     * @return $this
     */

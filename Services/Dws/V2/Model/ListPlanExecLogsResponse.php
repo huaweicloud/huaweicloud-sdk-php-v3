@@ -21,10 +21,10 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
-    * planLogs  资源池名称。
-    * count  总数量
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * planLogs  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
-    * planLogs  资源池名称。
-    * count  总数量
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * planLogs  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
-    * planLogs  资源池名称。
-    * count  总数量
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * planLogs  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
-    * planLogs  资源池名称。
-    * count  总数量
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * planLogs  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
-    * planLogs  资源池名称。
-    * count  总数量
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * planLogs  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadResCode
-    *  结果状态码。
+    *  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -220,7 +220,7 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workloadResCode
     *
-    * @param int|null $workloadResCode 结果状态码。
+    * @param int|null $workloadResCode **参数解释**： 结果状态码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadResStr
-    *  结果描述。
+    *  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workloadResStr
     *
-    * @param string|null $workloadResStr 结果描述。
+    * @param string|null $workloadResStr **参数解释**： 结果描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets planLogs
-    *  资源池名称。
+    *  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\PlanLog[]|null
     */
@@ -268,7 +268,7 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets planLogs
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\PlanLog[]|null $planLogs 资源池名称。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\PlanLog[]|null $planLogs **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  总数量
+    *  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -292,7 +292,7 @@ class ListPlanExecLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 总数量
+    * @param int|null $count **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */

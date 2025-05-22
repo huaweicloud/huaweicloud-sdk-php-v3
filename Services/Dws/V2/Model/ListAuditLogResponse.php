@@ -22,7 +22,7 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * records  审计日志列表。
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * count  总数。
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * records  审计日志列表。
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * count  总数。
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * records  审计日志列表。
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * count  总数。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * records  审计日志列表。
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * count  总数。
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * records  审计日志列表。
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * count  总数。
     *
     * @var string[]
@@ -221,7 +221,7 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID。
+    *  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID。
+    * @param string|null $clusterId **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return $this
     */

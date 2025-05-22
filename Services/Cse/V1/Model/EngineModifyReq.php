@@ -169,6 +169,9 @@ class EngineModifyReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['flavor'] === null) {
+            $invalidProperties[] = "'flavor' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +190,7 @@ class EngineModifyReq implements ModelInterface, ArrayAccess
     * Gets flavor
     *  变更的规格
     *
-    * @return string|null
+    * @return string
     */
     public function getFlavor()
     {
@@ -197,7 +200,7 @@ class EngineModifyReq implements ModelInterface, ArrayAccess
     /**
     * Sets flavor
     *
-    * @param string|null $flavor 变更的规格
+    * @param string $flavor 变更的规格
     *
     * @return $this
     */

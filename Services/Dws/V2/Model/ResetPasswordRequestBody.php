@@ -20,7 +20,7 @@ class ResetPasswordRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * newPassword  GaussDB(DWS) 集群管理员新密码。 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。
+    * newPassword  **参数解释**： GaussDB(DWS) 集群管理员新密码。 **约束限制**： 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ResetPasswordRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * newPassword  GaussDB(DWS) 集群管理员新密码。 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。
+    * newPassword  **参数解释**： GaussDB(DWS) 集群管理员新密码。 **约束限制**： 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ResetPasswordRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * newPassword  GaussDB(DWS) 集群管理员新密码。 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。
+    * newPassword  **参数解释**： GaussDB(DWS) 集群管理员新密码。 **约束限制**： 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ResetPasswordRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * newPassword  GaussDB(DWS) 集群管理员新密码。 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。
+    * newPassword  **参数解释**： GaussDB(DWS) 集群管理员新密码。 **约束限制**： 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ResetPasswordRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * newPassword  GaussDB(DWS) 集群管理员新密码。 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。
+    * newPassword  **参数解释**： GaussDB(DWS) 集群管理员新密码。 **约束限制**： 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ResetPasswordRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets newPassword
-    *  GaussDB(DWS) 集群管理员新密码。 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。
+    *  **参数解释**： GaussDB(DWS) 集群管理员新密码。 **约束限制**： 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ResetPasswordRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets newPassword
     *
-    * @param string $newPassword GaussDB(DWS) 集群管理员新密码。 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。
+    * @param string $newPassword **参数解释**： GaussDB(DWS) 集群管理员新密码。 **约束限制**： 新密码复杂度要求如下：  - 密码字符长度为12~32位。 - 不能与用户名或倒序的用户名相同。 - 至少包含以下4种类型的3种：    - 小写字母   - 大写字母   - 数字   - 特殊字符（~!?,.:;-_'\"(){}[]/<>@#%^&*+|\\=）。 - 不能与历史密码相同。 - 不能为弱密码。  **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

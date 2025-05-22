@@ -20,17 +20,17 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * specName  节点类型名称。
-    * detail  节点类型详细。
-    * id  节点类型ID。
-    * datastoreType  产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
-    * architecture  架构类型 - x86。 - arm。
-    * availableZones  支持的可用区及状态信息。
-    * ram  内存大小。
-    * vcpus  CPU数量。
-    * datastores  内核版本信息。
+    * specName  **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
+    * detail  **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
+    * id  **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
+    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+    * availableZones  **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
+    * ram  **参数解释**： 内存大小。单位：GB。 **取值范围**： 大于0的正整数。
+    * vcpus  **参数解释**： CPU数量。 **取值范围**： 大于0的正整数。
+    * datastores  **参数解释**： 内核版本信息。 **取值范围**： 不涉及。
     * volume  volume
-    * elasticVolumeSpecs  如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    * elasticVolumeSpecs  **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * specName  节点类型名称。
-    * detail  节点类型详细。
-    * id  节点类型ID。
-    * datastoreType  产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
-    * architecture  架构类型 - x86。 - arm。
-    * availableZones  支持的可用区及状态信息。
-    * ram  内存大小。
-    * vcpus  CPU数量。
-    * datastores  内核版本信息。
+    * specName  **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
+    * detail  **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
+    * id  **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
+    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+    * availableZones  **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
+    * ram  **参数解释**： 内存大小。单位：GB。 **取值范围**： 大于0的正整数。
+    * vcpus  **参数解释**： CPU数量。 **取值范围**： 大于0的正整数。
+    * datastores  **参数解释**： 内核版本信息。 **取值范围**： 不涉及。
     * volume  volume
-    * elasticVolumeSpecs  如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    * elasticVolumeSpecs  **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * specName  节点类型名称。
-    * detail  节点类型详细。
-    * id  节点类型ID。
-    * datastoreType  产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
-    * architecture  架构类型 - x86。 - arm。
-    * availableZones  支持的可用区及状态信息。
-    * ram  内存大小。
-    * vcpus  CPU数量。
-    * datastores  内核版本信息。
+    * specName  **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
+    * detail  **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
+    * id  **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
+    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+    * availableZones  **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
+    * ram  **参数解释**： 内存大小。单位：GB。 **取值范围**： 大于0的正整数。
+    * vcpus  **参数解释**： CPU数量。 **取值范围**： 大于0的正整数。
+    * datastores  **参数解释**： 内核版本信息。 **取值范围**： 不涉及。
     * volume  volume
-    * elasticVolumeSpecs  如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    * elasticVolumeSpecs  **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * specName  节点类型名称。
-    * detail  节点类型详细。
-    * id  节点类型ID。
-    * datastoreType  产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
-    * architecture  架构类型 - x86。 - arm。
-    * availableZones  支持的可用区及状态信息。
-    * ram  内存大小。
-    * vcpus  CPU数量。
-    * datastores  内核版本信息。
+    * specName  **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
+    * detail  **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
+    * id  **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
+    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+    * availableZones  **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
+    * ram  **参数解释**： 内存大小。单位：GB。 **取值范围**： 大于0的正整数。
+    * vcpus  **参数解释**： CPU数量。 **取值范围**： 大于0的正整数。
+    * datastores  **参数解释**： 内核版本信息。 **取值范围**： 不涉及。
     * volume  volume
-    * elasticVolumeSpecs  如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    * elasticVolumeSpecs  **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * specName  节点类型名称。
-    * detail  节点类型详细。
-    * id  节点类型ID。
-    * datastoreType  产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
-    * architecture  架构类型 - x86。 - arm。
-    * availableZones  支持的可用区及状态信息。
-    * ram  内存大小。
-    * vcpus  CPU数量。
-    * datastores  内核版本信息。
+    * specName  **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
+    * detail  **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
+    * id  **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
+    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+    * availableZones  **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
+    * ram  **参数解释**： 内存大小。单位：GB。 **取值范围**： 大于0的正整数。
+    * vcpus  **参数解释**： CPU数量。 **取值范围**： 大于0的正整数。
+    * datastores  **参数解释**： 内核版本信息。 **取值范围**： 不涉及。
     * volume  volume
-    * elasticVolumeSpecs  如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    * elasticVolumeSpecs  **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @var string[]
     */
@@ -317,7 +317,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets specName
-    *  节点类型名称。
+    *  **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
     *
     * @return string
     */
@@ -329,7 +329,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets specName
     *
-    * @param string $specName 节点类型名称。
+    * @param string $specName **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets detail
-    *  节点类型详细。
+    *  **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\Detail[]
     */
@@ -353,7 +353,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets detail
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\Detail[] $detail 节点类型详细。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\Detail[] $detail **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  节点类型ID。
+    *  **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
     *
     * @return string
     */
@@ -377,7 +377,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 节点类型ID。
+    * @param string $id **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreType
-    *  产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    *  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
     *
     * @return string
     */
@@ -401,7 +401,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreType
     *
-    * @param string $datastoreType 产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    * @param string $datastoreType **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets architecture
-    *  架构类型 - x86。 - arm。
+    *  **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
     *
     * @return string
     */
@@ -425,7 +425,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets architecture
     *
-    * @param string $architecture 架构类型 - x86。 - arm。
+    * @param string $architecture **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  支持的可用区及状态信息。
+    *  **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeAvailableZones[]
     */
@@ -449,7 +449,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeAvailableZones[] $availableZones 支持的可用区及状态信息。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeAvailableZones[] $availableZones **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -461,7 +461,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets ram
-    *  内存大小。
+    *  **参数解释**： 内存大小。单位：GB。 **取值范围**： 大于0的正整数。
     *
     * @return int
     */
@@ -473,7 +473,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets ram
     *
-    * @param int $ram 内存大小。
+    * @param int $ram **参数解释**： 内存大小。单位：GB。 **取值范围**： 大于0的正整数。
     *
     * @return $this
     */
@@ -485,7 +485,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets vcpus
-    *  CPU数量。
+    *  **参数解释**： CPU数量。 **取值范围**： 大于0的正整数。
     *
     * @return int
     */
@@ -497,7 +497,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets vcpus
     *
-    * @param int $vcpus CPU数量。
+    * @param int $vcpus **参数解释**： CPU数量。 **取值范围**： 大于0的正整数。
     *
     * @return $this
     */
@@ -509,7 +509,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastores
-    *  内核版本信息。
+    *  **参数解释**： 内核版本信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeDatastores[]
     */
@@ -521,7 +521,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets datastores
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeDatastores[] $datastores 内核版本信息。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeDatastores[] $datastores **参数解释**： 内核版本信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets elasticVolumeSpecs
-    *  如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    *  **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeElasticVolumeSpecs[]
     */
@@ -569,7 +569,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets elasticVolumeSpecs
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeElasticVolumeSpecs[] $elasticVolumeSpecs 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeElasticVolumeSpecs[] $elasticVolumeSpecs **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @return $this
     */

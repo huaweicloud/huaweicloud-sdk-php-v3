@@ -21,8 +21,8 @@ class ListTopoRingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterRings  集群拓扑环列表信息
-    * count  集群环数量
+    * clusterRings  **参数解释**： 集群拓扑环列表信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 集群环数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListTopoRingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterRings  集群拓扑环列表信息
-    * count  集群环数量
+    * clusterRings  **参数解释**： 集群拓扑环列表信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 集群环数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListTopoRingsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterRings  集群拓扑环列表信息
-    * count  集群环数量
+    * clusterRings  **参数解释**： 集群拓扑环列表信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 集群环数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListTopoRingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterRings  集群拓扑环列表信息
-    * count  集群环数量
+    * clusterRings  **参数解释**： 集群拓扑环列表信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 集群环数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListTopoRingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterRings  集群拓扑环列表信息
-    * count  集群环数量
+    * clusterRings  **参数解释**： 集群拓扑环列表信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 集群环数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListTopoRingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterRings
-    *  集群拓扑环列表信息
+    *  **参数解释**： 集群拓扑环列表信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\TopoRingInfo[]|null
     */
@@ -198,7 +198,7 @@ class ListTopoRingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets clusterRings
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\TopoRingInfo[]|null $clusterRings 集群拓扑环列表信息
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\TopoRingInfo[]|null $clusterRings **参数解释**： 集群拓扑环列表信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListTopoRingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  集群环数量
+    *  **参数解释**： 集群环数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListTopoRingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 集群环数量
+    * @param int|null $count **参数解释**： 集群环数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */

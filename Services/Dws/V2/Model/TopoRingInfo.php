@@ -20,7 +20,7 @@ class TopoRingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceInfoLists  集群实例列表信息
+    * instanceInfoLists  **参数解释**： 集群实例列表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class TopoRingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceInfoLists  集群实例列表信息
+    * instanceInfoLists  **参数解释**： 集群实例列表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class TopoRingInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceInfoLists  集群实例列表信息
+    * instanceInfoLists  **参数解释**： 集群实例列表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class TopoRingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceInfoLists  集群实例列表信息
+    * instanceInfoLists  **参数解释**： 集群实例列表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class TopoRingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceInfoLists  集群实例列表信息
+    * instanceInfoLists  **参数解释**： 集群实例列表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class TopoRingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceInfoLists
-    *  集群实例列表信息
+    *  **参数解释**： 集群实例列表信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\TopoInstanceInfo[]|null
     */
@@ -186,7 +186,7 @@ class TopoRingInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceInfoLists
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\TopoInstanceInfo[]|null $instanceInfoLists 集群实例列表信息
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\TopoInstanceInfo[]|null $instanceInfoLists **参数解释**： 集群实例列表信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

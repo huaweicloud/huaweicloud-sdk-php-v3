@@ -29,9 +29,9 @@ class QuotasResource implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'used' => 'string',
+            'used' => 'int',
             'quota' => 'int',
-            'unit' => 'int'
+            'unit' => 'string'
     ];
 
     /**
@@ -45,7 +45,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'used' => null,
+        'used' => 'int32',
         'quota' => null,
         'unit' => null
     ];
@@ -245,7 +245,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
     * Gets used
     *  已使用的资源数量。
     *
-    * @return string
+    * @return int
     */
     public function getUsed()
     {
@@ -255,7 +255,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
     /**
     * Sets used
     *
-    * @param string $used 已使用的资源数量。
+    * @param int $used 已使用的资源数量。
     *
     * @return $this
     */
@@ -293,7 +293,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
     * Gets unit
     *  资源计量单位。
     *
-    * @return int
+    * @return string
     */
     public function getUnit()
     {
@@ -303,7 +303,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param int $unit 资源计量单位。
+    * @param string $unit 资源计量单位。
     *
     * @return $this
     */

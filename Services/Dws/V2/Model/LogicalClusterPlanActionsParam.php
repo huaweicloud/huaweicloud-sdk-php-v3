@@ -20,8 +20,8 @@ class LogicalClusterPlanActionsParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  定时增删计划行为类型，取值范围为（create|delete）
-    * strategy  周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"
+    * type  **参数解释**： 定时增删计划行为类型，取值范围为（create|delete）。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
+    * strategy  **参数解释**： 周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class LogicalClusterPlanActionsParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  定时增删计划行为类型，取值范围为（create|delete）
-    * strategy  周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"
+    * type  **参数解释**： 定时增删计划行为类型，取值范围为（create|delete）。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
+    * strategy  **参数解释**： 周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class LogicalClusterPlanActionsParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  定时增删计划行为类型，取值范围为（create|delete）
-    * strategy  周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"
+    * type  **参数解释**： 定时增删计划行为类型，取值范围为（create|delete）。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
+    * strategy  **参数解释**： 周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class LogicalClusterPlanActionsParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  定时增删计划行为类型，取值范围为（create|delete）
-    * strategy  周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"
+    * type  **参数解释**： 定时增删计划行为类型，取值范围为（create|delete）。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
+    * strategy  **参数解释**： 周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class LogicalClusterPlanActionsParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  定时增删计划行为类型，取值范围为（create|delete）
-    * strategy  周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"
+    * type  **参数解释**： 定时增删计划行为类型，取值范围为（create|delete）。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
+    * strategy  **参数解释**： 周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class LogicalClusterPlanActionsParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  定时增删计划行为类型，取值范围为（create|delete）
+    *  **参数解释**： 定时增删计划行为类型，取值范围为（create|delete）。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class LogicalClusterPlanActionsParam implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 定时增删计划行为类型，取值范围为（create|delete）
+    * @param string $type **参数解释**： 定时增删计划行为类型，取值范围为（create|delete）。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class LogicalClusterPlanActionsParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets strategy
-    *  周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"
+    *  **参数解释**： 周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -224,7 +224,7 @@ class LogicalClusterPlanActionsParam implements ModelInterface, ArrayAccess
     /**
     * Sets strategy
     *
-    * @param string|null $strategy 周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"
+    * @param string|null $strategy **参数解释**： 周期性定时增删计划，Cron策略表达式：如\"0 0 0 ? * 3\"。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

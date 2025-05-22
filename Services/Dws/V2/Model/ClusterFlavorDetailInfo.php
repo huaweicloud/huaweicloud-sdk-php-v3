@@ -20,14 +20,14 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  规格ID
-    * specName  规格编码
-    * currentNode  当前节点数量
-    * minNode  最小节点阈值
-    * maxNode  最大节点阈值
-    * classify  规格类型
-    * datastoreVersion  数据仓库版本
-    * attribute  扩展信息
+    * id  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * specName  **参数解释**： 规格编码。 **取值范围**： 不涉及。
+    * currentNode  **参数解释**： 当前节点数量。 **取值范围**： 不涉及。
+    * minNode  **参数解释**： 最小节点阈值。 **取值范围**： 不涉及。
+    * maxNode  **参数解释**： 最大节点阈值。 **取值范围**： 不涉及。
+    * classify  **参数解释**： 规格类型。 **取值范围**： 不涉及。
+    * datastoreVersion  **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
+    * attribute  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     * volumeNode  volumeNode
     *
     * @var string[]
@@ -46,14 +46,14 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  规格ID
-    * specName  规格编码
-    * currentNode  当前节点数量
-    * minNode  最小节点阈值
-    * maxNode  最大节点阈值
-    * classify  规格类型
-    * datastoreVersion  数据仓库版本
-    * attribute  扩展信息
+    * id  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * specName  **参数解释**： 规格编码。 **取值范围**： 不涉及。
+    * currentNode  **参数解释**： 当前节点数量。 **取值范围**： 不涉及。
+    * minNode  **参数解释**： 最小节点阈值。 **取值范围**： 不涉及。
+    * maxNode  **参数解释**： 最大节点阈值。 **取值范围**： 不涉及。
+    * classify  **参数解释**： 规格类型。 **取值范围**： 不涉及。
+    * datastoreVersion  **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
+    * attribute  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     * volumeNode  volumeNode
     *
     * @var string[]
@@ -93,14 +93,14 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  规格ID
-    * specName  规格编码
-    * currentNode  当前节点数量
-    * minNode  最小节点阈值
-    * maxNode  最大节点阈值
-    * classify  规格类型
-    * datastoreVersion  数据仓库版本
-    * attribute  扩展信息
+    * id  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * specName  **参数解释**： 规格编码。 **取值范围**： 不涉及。
+    * currentNode  **参数解释**： 当前节点数量。 **取值范围**： 不涉及。
+    * minNode  **参数解释**： 最小节点阈值。 **取值范围**： 不涉及。
+    * maxNode  **参数解释**： 最大节点阈值。 **取值范围**： 不涉及。
+    * classify  **参数解释**： 规格类型。 **取值范围**： 不涉及。
+    * datastoreVersion  **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
+    * attribute  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     * volumeNode  volumeNode
     *
     * @var string[]
@@ -119,14 +119,14 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  规格ID
-    * specName  规格编码
-    * currentNode  当前节点数量
-    * minNode  最小节点阈值
-    * maxNode  最大节点阈值
-    * classify  规格类型
-    * datastoreVersion  数据仓库版本
-    * attribute  扩展信息
+    * id  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * specName  **参数解释**： 规格编码。 **取值范围**： 不涉及。
+    * currentNode  **参数解释**： 当前节点数量。 **取值范围**： 不涉及。
+    * minNode  **参数解释**： 最小节点阈值。 **取值范围**： 不涉及。
+    * maxNode  **参数解释**： 最大节点阈值。 **取值范围**： 不涉及。
+    * classify  **参数解释**： 规格类型。 **取值范围**： 不涉及。
+    * datastoreVersion  **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
+    * attribute  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     * volumeNode  volumeNode
     *
     * @var string[]
@@ -145,14 +145,14 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  规格ID
-    * specName  规格编码
-    * currentNode  当前节点数量
-    * minNode  最小节点阈值
-    * maxNode  最大节点阈值
-    * classify  规格类型
-    * datastoreVersion  数据仓库版本
-    * attribute  扩展信息
+    * id  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * specName  **参数解释**： 规格编码。 **取值范围**： 不涉及。
+    * currentNode  **参数解释**： 当前节点数量。 **取值范围**： 不涉及。
+    * minNode  **参数解释**： 最小节点阈值。 **取值范围**： 不涉及。
+    * maxNode  **参数解释**： 最大节点阈值。 **取值范围**： 不涉及。
+    * classify  **参数解释**： 规格类型。 **取值范围**： 不涉及。
+    * datastoreVersion  **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
+    * attribute  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     * volumeNode  volumeNode
     *
     * @var string[]
@@ -289,7 +289,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  规格ID
+    *  **参数解释**： 规格ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -301,7 +301,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 规格ID
+    * @param string $id **参数解释**： 规格ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets specName
-    *  规格编码
+    *  **参数解释**： 规格编码。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -325,7 +325,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets specName
     *
-    * @param string $specName 规格编码
+    * @param string $specName **参数解释**： 规格编码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentNode
-    *  当前节点数量
+    *  **参数解释**： 当前节点数量。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -349,7 +349,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets currentNode
     *
-    * @param int $currentNode 当前节点数量
+    * @param int $currentNode **参数解释**： 当前节点数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets minNode
-    *  最小节点阈值
+    *  **参数解释**： 最小节点阈值。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -373,7 +373,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets minNode
     *
-    * @param int $minNode 最小节点阈值
+    * @param int $minNode **参数解释**： 最小节点阈值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxNode
-    *  最大节点阈值
+    *  **参数解释**： 最大节点阈值。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -397,7 +397,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets maxNode
     *
-    * @param int $maxNode 最大节点阈值
+    * @param int $maxNode **参数解释**： 最大节点阈值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets classify
-    *  规格类型
+    *  **参数解释**： 规格类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -421,7 +421,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets classify
     *
-    * @param string $classify 规格类型
+    * @param string $classify **参数解释**： 规格类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -433,7 +433,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreVersion
-    *  数据仓库版本
+    *  **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -445,7 +445,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreVersion
     *
-    * @param string $datastoreVersion 数据仓库版本
+    * @param string $datastoreVersion **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets attribute
-    *  扩展信息
+    *  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\FlavorAttributeInfo[]
     */
@@ -469,7 +469,7 @@ class ClusterFlavorDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets attribute
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\FlavorAttributeInfo[] $attribute 扩展信息
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\FlavorAttributeInfo[] $attribute **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

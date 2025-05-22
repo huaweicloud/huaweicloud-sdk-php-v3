@@ -29,16 +29,19 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
     * roomId  对话ID。
     * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  对话封面图URL
+    * isPoolMode  是否是资源池模式
+    * chatResourceConfig  资源配置。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -58,10 +61,13 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'chatSubtitleConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatSubtitleConfig',
             'chatVideoType' => 'string',
+            'exitMuteThreshold' => 'int',
             'roomId' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string',
             'coverUrl' => 'string',
+            'isPoolMode' => 'bool',
+            'chatResourceConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatResourceConfigInfo[]',
             'xRequestId' => 'string'
     ];
 
@@ -75,16 +81,19 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
     * roomId  对话ID。
     * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  对话封面图URL
+    * isPoolMode  是否是资源池模式
+    * chatResourceConfig  资源配置。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -104,10 +113,13 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
         'reviewConfig' => null,
         'chatSubtitleConfig' => null,
         'chatVideoType' => null,
+        'exitMuteThreshold' => 'int32',
         'roomId' => null,
         'createTime' => null,
         'updateTime' => null,
         'coverUrl' => null,
+        'isPoolMode' => null,
+        'chatResourceConfig' => null,
         'xRequestId' => null
     ];
 
@@ -142,16 +154,19 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
     * roomId  对话ID。
     * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  对话封面图URL
+    * isPoolMode  是否是资源池模式
+    * chatResourceConfig  资源配置。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -171,10 +186,13 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
             'reviewConfig' => 'review_config',
             'chatSubtitleConfig' => 'chat_subtitle_config',
             'chatVideoType' => 'chat_video_type',
+            'exitMuteThreshold' => 'exit_mute_threshold',
             'roomId' => 'room_id',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
             'coverUrl' => 'cover_url',
+            'isPoolMode' => 'is_pool_mode',
+            'chatResourceConfig' => 'chat_resource_config',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -188,16 +206,19 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
     * roomId  对话ID。
     * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  对话封面图URL
+    * isPoolMode  是否是资源池模式
+    * chatResourceConfig  资源配置。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -217,10 +238,13 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
             'reviewConfig' => 'setReviewConfig',
             'chatSubtitleConfig' => 'setChatSubtitleConfig',
             'chatVideoType' => 'setChatVideoType',
+            'exitMuteThreshold' => 'setExitMuteThreshold',
             'roomId' => 'setRoomId',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
             'coverUrl' => 'setCoverUrl',
+            'isPoolMode' => 'setIsPoolMode',
+            'chatResourceConfig' => 'setChatResourceConfig',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -234,16 +258,19 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  **参数解释**： 并发路数。
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * exitMuteThreshold  **参数解释**： 静默退出时长。
     * roomId  对话ID。
     * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  对话封面图URL
+    * isPoolMode  是否是资源池模式
+    * chatResourceConfig  资源配置。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -263,10 +290,13 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
             'reviewConfig' => 'getReviewConfig',
             'chatSubtitleConfig' => 'getChatSubtitleConfig',
             'chatVideoType' => 'getChatVideoType',
+            'exitMuteThreshold' => 'getExitMuteThreshold',
             'roomId' => 'getRoomId',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
             'coverUrl' => 'getCoverUrl',
+            'isPoolMode' => 'getIsPoolMode',
+            'chatResourceConfig' => 'getChatResourceConfig',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -312,6 +342,10 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     }
     const DEFAULT_LANGUAGE_CN = 'CN';
     const DEFAULT_LANGUAGE_EN = 'EN';
+    const DEFAULT_LANGUAGE_ESP = 'ESP';
+    const DEFAULT_LANGUAGE_POR = 'por';
+    const DEFAULT_LANGUAGE_ARABIC = 'Arabic';
+    const DEFAULT_LANGUAGE_THAI = 'Thai';
     const CHAT_VIDEO_TYPE_COMPUTER = 'COMPUTER';
     const CHAT_VIDEO_TYPE_MOBILE = 'MOBILE';
     const CHAT_VIDEO_TYPE_HUB = 'HUB';
@@ -327,6 +361,10 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
         return [
             self::DEFAULT_LANGUAGE_CN,
             self::DEFAULT_LANGUAGE_EN,
+            self::DEFAULT_LANGUAGE_ESP,
+            self::DEFAULT_LANGUAGE_POR,
+            self::DEFAULT_LANGUAGE_ARABIC,
+            self::DEFAULT_LANGUAGE_THAI,
         ];
     }
 
@@ -374,10 +412,13 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['chatSubtitleConfig'] = isset($data['chatSubtitleConfig']) ? $data['chatSubtitleConfig'] : null;
         $this->container['chatVideoType'] = isset($data['chatVideoType']) ? $data['chatVideoType'] : null;
+        $this->container['exitMuteThreshold'] = isset($data['exitMuteThreshold']) ? $data['exitMuteThreshold'] : null;
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
+        $this->container['isPoolMode'] = isset($data['isPoolMode']) ? $data['isPoolMode'] : null;
+        $this->container['chatResourceConfig'] = isset($data['chatResourceConfig']) ? $data['chatResourceConfig'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -443,6 +484,12 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['chatVideoType']) && (mb_strlen($this->container['chatVideoType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'chatVideoType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['exitMuteThreshold']) && ($this->container['exitMuteThreshold'] > 1440)) {
+                $invalidProperties[] = "invalid value for 'exitMuteThreshold', must be smaller than or equal to 1440.";
+            }
+            if (!is_null($this->container['exitMuteThreshold']) && ($this->container['exitMuteThreshold'] < 0)) {
+                $invalidProperties[] = "invalid value for 'exitMuteThreshold', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'roomId', the character length must be smaller than or equal to 64.";
@@ -676,7 +723,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultLanguage
-    *  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    *  默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     *
     * @return string|null
     */
@@ -688,7 +735,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets defaultLanguage
     *
-    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     *
     * @return $this
     */
@@ -819,6 +866,30 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets exitMuteThreshold
+    *  **参数解释**： 静默退出时长。
+    *
+    * @return int|null
+    */
+    public function getExitMuteThreshold()
+    {
+        return $this->container['exitMuteThreshold'];
+    }
+
+    /**
+    * Sets exitMuteThreshold
+    *
+    * @param int|null $exitMuteThreshold **参数解释**： 静默退出时长。
+    *
+    * @return $this
+    */
+    public function setExitMuteThreshold($exitMuteThreshold)
+    {
+        $this->container['exitMuteThreshold'] = $exitMuteThreshold;
+        return $this;
+    }
+
+    /**
     * Gets roomId
     *  对话ID。
     *
@@ -911,6 +982,54 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     public function setCoverUrl($coverUrl)
     {
         $this->container['coverUrl'] = $coverUrl;
+        return $this;
+    }
+
+    /**
+    * Gets isPoolMode
+    *  是否是资源池模式
+    *
+    * @return bool|null
+    */
+    public function getIsPoolMode()
+    {
+        return $this->container['isPoolMode'];
+    }
+
+    /**
+    * Sets isPoolMode
+    *
+    * @param bool|null $isPoolMode 是否是资源池模式
+    *
+    * @return $this
+    */
+    public function setIsPoolMode($isPoolMode)
+    {
+        $this->container['isPoolMode'] = $isPoolMode;
+        return $this;
+    }
+
+    /**
+    * Gets chatResourceConfig
+    *  资源配置。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ChatResourceConfigInfo[]|null
+    */
+    public function getChatResourceConfig()
+    {
+        return $this->container['chatResourceConfig'];
+    }
+
+    /**
+    * Sets chatResourceConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ChatResourceConfigInfo[]|null $chatResourceConfig 资源配置。
+    *
+    * @return $this
+    */
+    public function setChatResourceConfig($chatResourceConfig)
+    {
+        $this->container['chatResourceConfig'] = $chatResourceConfig;
         return $this;
     }
 

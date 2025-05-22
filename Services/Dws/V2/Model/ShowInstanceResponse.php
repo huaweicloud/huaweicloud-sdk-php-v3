@@ -21,36 +21,36 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configurationStatus  配置状态
-    * paramsGroupId  参数组ID
-    * type  类型
-    * subnetId  子网ID
-    * role  角色
-    * internalSubnetId  内部子网ID
-    * group  组
-    * secureGroup  安全组
-    * vpc  VPC
-    * azcode  编码
-    * region  区域
-    * clusterId  集群ID
-    * created  被创建的
-    * updated  被更新的
-    * status  状态
-    * name  名称
-    * links  连接
-    * id  ID
+    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * paramsGroupId  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * role  **参数解释**： 角色。 **取值范围**： 不涉及。
+    * internalSubnetId  **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
+    * group  **参数解释**： 分组信息。 **取值范围**： 不涉及。
+    * secureGroup  **参数解释**： 安全组。 **取值范围**： 不涉及。
+    * vpc  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * azcode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
+    * region  **参数解释**： 局点编码。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
+    * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * flavor  flavor
     * volume  volume
     * datastore  datastore
     * fault  fault
     * configuration  configuration
-    * locality  地点
-    * replicas  备份
-    * dbUser  数据库用户
-    * storageEngine  存储引擎
-    * payModel  付款方式
-    * publicIp  公网IP
-    * trafficIp  流量IP
+    * locality  **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
+    * replicas  **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
+    * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
+    * storageEngine  **参数解释**： 存储引擎。 **取值范围**： 不涉及。
+    * payModel  **参数解释**： 付款方式。 **取值范围**： 不涉及。
+    * publicIp  **参数解释**： 公网IP。 **取值范围**： 不涉及。
+    * trafficIp  **参数解释**： 流量IP。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,36 +89,36 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configurationStatus  配置状态
-    * paramsGroupId  参数组ID
-    * type  类型
-    * subnetId  子网ID
-    * role  角色
-    * internalSubnetId  内部子网ID
-    * group  组
-    * secureGroup  安全组
-    * vpc  VPC
-    * azcode  编码
-    * region  区域
-    * clusterId  集群ID
-    * created  被创建的
-    * updated  被更新的
-    * status  状态
-    * name  名称
-    * links  连接
-    * id  ID
+    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * paramsGroupId  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * role  **参数解释**： 角色。 **取值范围**： 不涉及。
+    * internalSubnetId  **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
+    * group  **参数解释**： 分组信息。 **取值范围**： 不涉及。
+    * secureGroup  **参数解释**： 安全组。 **取值范围**： 不涉及。
+    * vpc  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * azcode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
+    * region  **参数解释**： 局点编码。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
+    * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * flavor  flavor
     * volume  volume
     * datastore  datastore
     * fault  fault
     * configuration  configuration
-    * locality  地点
-    * replicas  备份
-    * dbUser  数据库用户
-    * storageEngine  存储引擎
-    * payModel  付款方式
-    * publicIp  公网IP
-    * trafficIp  流量IP
+    * locality  **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
+    * replicas  **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
+    * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
+    * storageEngine  **参数解释**： 存储引擎。 **取值范围**： 不涉及。
+    * payModel  **参数解释**： 付款方式。 **取值范围**： 不涉及。
+    * publicIp  **参数解释**： 公网IP。 **取值范围**： 不涉及。
+    * trafficIp  **参数解释**： 流量IP。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -178,36 +178,36 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configurationStatus  配置状态
-    * paramsGroupId  参数组ID
-    * type  类型
-    * subnetId  子网ID
-    * role  角色
-    * internalSubnetId  内部子网ID
-    * group  组
-    * secureGroup  安全组
-    * vpc  VPC
-    * azcode  编码
-    * region  区域
-    * clusterId  集群ID
-    * created  被创建的
-    * updated  被更新的
-    * status  状态
-    * name  名称
-    * links  连接
-    * id  ID
+    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * paramsGroupId  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * role  **参数解释**： 角色。 **取值范围**： 不涉及。
+    * internalSubnetId  **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
+    * group  **参数解释**： 分组信息。 **取值范围**： 不涉及。
+    * secureGroup  **参数解释**： 安全组。 **取值范围**： 不涉及。
+    * vpc  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * azcode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
+    * region  **参数解释**： 局点编码。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
+    * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * flavor  flavor
     * volume  volume
     * datastore  datastore
     * fault  fault
     * configuration  configuration
-    * locality  地点
-    * replicas  备份
-    * dbUser  数据库用户
-    * storageEngine  存储引擎
-    * payModel  付款方式
-    * publicIp  公网IP
-    * trafficIp  流量IP
+    * locality  **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
+    * replicas  **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
+    * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
+    * storageEngine  **参数解释**： 存储引擎。 **取值范围**： 不涉及。
+    * payModel  **参数解释**： 付款方式。 **取值范围**： 不涉及。
+    * publicIp  **参数解释**： 公网IP。 **取值范围**： 不涉及。
+    * trafficIp  **参数解释**： 流量IP。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -246,36 +246,36 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configurationStatus  配置状态
-    * paramsGroupId  参数组ID
-    * type  类型
-    * subnetId  子网ID
-    * role  角色
-    * internalSubnetId  内部子网ID
-    * group  组
-    * secureGroup  安全组
-    * vpc  VPC
-    * azcode  编码
-    * region  区域
-    * clusterId  集群ID
-    * created  被创建的
-    * updated  被更新的
-    * status  状态
-    * name  名称
-    * links  连接
-    * id  ID
+    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * paramsGroupId  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * role  **参数解释**： 角色。 **取值范围**： 不涉及。
+    * internalSubnetId  **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
+    * group  **参数解释**： 分组信息。 **取值范围**： 不涉及。
+    * secureGroup  **参数解释**： 安全组。 **取值范围**： 不涉及。
+    * vpc  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * azcode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
+    * region  **参数解释**： 局点编码。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
+    * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * flavor  flavor
     * volume  volume
     * datastore  datastore
     * fault  fault
     * configuration  configuration
-    * locality  地点
-    * replicas  备份
-    * dbUser  数据库用户
-    * storageEngine  存储引擎
-    * payModel  付款方式
-    * publicIp  公网IP
-    * trafficIp  流量IP
+    * locality  **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
+    * replicas  **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
+    * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
+    * storageEngine  **参数解释**： 存储引擎。 **取值范围**： 不涉及。
+    * payModel  **参数解释**： 付款方式。 **取值范围**： 不涉及。
+    * publicIp  **参数解释**： 公网IP。 **取值范围**： 不涉及。
+    * trafficIp  **参数解释**： 流量IP。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -314,36 +314,36 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configurationStatus  配置状态
-    * paramsGroupId  参数组ID
-    * type  类型
-    * subnetId  子网ID
-    * role  角色
-    * internalSubnetId  内部子网ID
-    * group  组
-    * secureGroup  安全组
-    * vpc  VPC
-    * azcode  编码
-    * region  区域
-    * clusterId  集群ID
-    * created  被创建的
-    * updated  被更新的
-    * status  状态
-    * name  名称
-    * links  连接
-    * id  ID
+    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * paramsGroupId  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * role  **参数解释**： 角色。 **取值范围**： 不涉及。
+    * internalSubnetId  **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
+    * group  **参数解释**： 分组信息。 **取值范围**： 不涉及。
+    * secureGroup  **参数解释**： 安全组。 **取值范围**： 不涉及。
+    * vpc  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * azcode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
+    * region  **参数解释**： 局点编码。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
+    * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * flavor  flavor
     * volume  volume
     * datastore  datastore
     * fault  fault
     * configuration  configuration
-    * locality  地点
-    * replicas  备份
-    * dbUser  数据库用户
-    * storageEngine  存储引擎
-    * payModel  付款方式
-    * publicIp  公网IP
-    * trafficIp  流量IP
+    * locality  **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
+    * replicas  **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
+    * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
+    * storageEngine  **参数解释**： 存储引擎。 **取值范围**： 不涉及。
+    * payModel  **参数解释**： 付款方式。 **取值范围**： 不涉及。
+    * publicIp  **参数解释**： 公网IP。 **取值范围**： 不涉及。
+    * trafficIp  **参数解释**： 流量IP。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -494,7 +494,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets configurationStatus
-    *  配置状态
+    *  **参数解释**： 配置状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -506,7 +506,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets configurationStatus
     *
-    * @param string|null $configurationStatus 配置状态
+    * @param string|null $configurationStatus **参数解释**： 配置状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -518,7 +518,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets paramsGroupId
-    *  参数组ID
+    *  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -530,7 +530,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets paramsGroupId
     *
-    * @param string|null $paramsGroupId 参数组ID
+    * @param string|null $paramsGroupId **参数解释**： 参数组ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -542,7 +542,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -554,7 +554,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type **参数解释**： 类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -566,7 +566,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  子网ID
+    *  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -578,7 +578,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string|null $subnetId 子网ID
+    * @param string|null $subnetId **参数解释**： 子网ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -590,7 +590,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets role
-    *  角色
+    *  **参数解释**： 角色。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -602,7 +602,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets role
     *
-    * @param string|null $role 角色
+    * @param string|null $role **参数解释**： 角色。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -614,7 +614,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets internalSubnetId
-    *  内部子网ID
+    *  **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -626,7 +626,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets internalSubnetId
     *
-    * @param string|null $internalSubnetId 内部子网ID
+    * @param string|null $internalSubnetId **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -638,7 +638,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
-    *  组
+    *  **参数解释**： 分组信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -650,7 +650,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets group
     *
-    * @param string|null $group 组
+    * @param string|null $group **参数解释**： 分组信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -662,7 +662,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets secureGroup
-    *  安全组
+    *  **参数解释**： 安全组。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -674,7 +674,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets secureGroup
     *
-    * @param string|null $secureGroup 安全组
+    * @param string|null $secureGroup **参数解释**： 安全组。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -686,7 +686,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpc
-    *  VPC
+    *  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -698,7 +698,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets vpc
     *
-    * @param string|null $vpc VPC
+    * @param string|null $vpc **参数解释**： VPC ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -710,7 +710,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets azcode
-    *  编码
+    *  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -722,7 +722,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets azcode
     *
-    * @param string|null $azcode 编码
+    * @param string|null $azcode **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -734,7 +734,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  区域
+    *  **参数解释**： 局点编码。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -746,7 +746,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region 区域
+    * @param string|null $region **参数解释**： 局点编码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -758,7 +758,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID
+    *  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -770,7 +770,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID
+    * @param string|null $clusterId **参数解释**： 集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -782,7 +782,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
-    *  被创建的
+    *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -794,7 +794,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets created
     *
-    * @param string|null $created 被创建的
+    * @param string|null $created **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -806,7 +806,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  被更新的
+    *  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -818,7 +818,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string|null $updated 被更新的
+    * @param string|null $updated **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -830,7 +830,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -842,7 +842,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -854,7 +854,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**： 节点名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -866,7 +866,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释**： 节点名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -878,7 +878,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
-    *  连接
+    *  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\LinkResp[]|null
     */
@@ -890,7 +890,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets links
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\LinkResp[]|null $links 连接
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\LinkResp[]|null $links **参数解释**： 链接信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -902,7 +902,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -914,7 +914,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id **参数解释**： 节点ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1046,7 +1046,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets locality
-    *  地点
+    *  **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1058,7 +1058,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets locality
     *
-    * @param string|null $locality 地点
+    * @param string|null $locality **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1070,7 +1070,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets replicas
-    *  备份
+    *  **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\CompatibleReplicasResp[]|null
     */
@@ -1082,7 +1082,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets replicas
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\CompatibleReplicasResp[]|null $replicas 备份
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\CompatibleReplicasResp[]|null $replicas **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1094,7 +1094,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbUser
-    *  数据库用户
+    *  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1106,7 +1106,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dbUser
     *
-    * @param string|null $dbUser 数据库用户
+    * @param string|null $dbUser **参数解释**： 数据库用户。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1118,7 +1118,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageEngine
-    *  存储引擎
+    *  **参数解释**： 存储引擎。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1130,7 +1130,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets storageEngine
     *
-    * @param string|null $storageEngine 存储引擎
+    * @param string|null $storageEngine **参数解释**： 存储引擎。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1142,7 +1142,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets payModel
-    *  付款方式
+    *  **参数解释**： 付款方式。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1154,7 +1154,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets payModel
     *
-    * @param int|null $payModel 付款方式
+    * @param int|null $payModel **参数解释**： 付款方式。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1166,7 +1166,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  公网IP
+    *  **参数解释**： 公网IP。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1178,7 +1178,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 公网IP
+    * @param string|null $publicIp **参数解释**： 公网IP。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1190,7 +1190,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets trafficIp
-    *  流量IP
+    *  **参数解释**： 流量IP。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1202,7 +1202,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets trafficIp
     *
-    * @param string|null $trafficIp 流量IP
+    * @param string|null $trafficIp **参数解释**： 流量IP。 **取值范围**： 不涉及。
     *
     * @return $this
     */

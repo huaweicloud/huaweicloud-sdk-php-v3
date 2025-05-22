@@ -20,54 +20,54 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群ID
-    * deleted  是否被删除，true/false
-    * nodeIds  节点ID列表
-    * offset  分页查询，偏移
-    * limit  分页查询，每页显示的条目数量
-    * filterBy  过滤字段
-    * filter  过滤字段内容
-    * orderBy  排序字段
-    * order  排序：升序/降序
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * nodeIds  **参数解释**： 节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页查询，每页显示的条目数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 100
+    * filterBy  **参数解释**： 过滤字段。 **约束限制**： 不涉及。 **取值范围**： instCreateType：根据资源状态过滤 status：根据节点状态过滤 **默认取值**： null
+    * filter  **参数解释**： 过滤字段内容。 **约束限制**： 不涉及。 **取值范围**： 当根据资源状态过滤时，可选如下值： - ALL：全部 - INST：已使用 - NODE：空虚 当根据节点状态过滤时，可选如下值： - ALL：全部 - CREATING：创建中 - FREE：空闲 - ACTIVE：可用 - FAILED：不可用 - UNKNOWN：未知 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 **默认取值**： null
+    * orderBy  **参数解释**： 排序字段。默认无序返回。 **约束限制**： 不涉及。 **取值范围**： name：根据名称过滤 **默认取值**： null
+    * order  **参数解释**： 排序：升序/降序。 **约束限制**： 不涉及。 **取值范围**： asc：升序 desc：降序 **默认取值**： null
+    * deleted  **参数解释**： 是否被删除，字段已废弃。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
-            'deleted' => 'string',
             'nodeIds' => 'string[]',
             'offset' => 'int',
             'limit' => 'int',
             'filterBy' => 'string',
             'filter' => 'string',
             'orderBy' => 'string',
-            'order' => 'string'
+            'order' => 'string',
+            'deleted' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群ID
-    * deleted  是否被删除，true/false
-    * nodeIds  节点ID列表
-    * offset  分页查询，偏移
-    * limit  分页查询，每页显示的条目数量
-    * filterBy  过滤字段
-    * filter  过滤字段内容
-    * orderBy  排序字段
-    * order  排序：升序/降序
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * nodeIds  **参数解释**： 节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页查询，每页显示的条目数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 100
+    * filterBy  **参数解释**： 过滤字段。 **约束限制**： 不涉及。 **取值范围**： instCreateType：根据资源状态过滤 status：根据节点状态过滤 **默认取值**： null
+    * filter  **参数解释**： 过滤字段内容。 **约束限制**： 不涉及。 **取值范围**： 当根据资源状态过滤时，可选如下值： - ALL：全部 - INST：已使用 - NODE：空虚 当根据节点状态过滤时，可选如下值： - ALL：全部 - CREATING：创建中 - FREE：空闲 - ACTIVE：可用 - FAILED：不可用 - UNKNOWN：未知 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 **默认取值**： null
+    * orderBy  **参数解释**： 排序字段。默认无序返回。 **约束限制**： 不涉及。 **取值范围**： name：根据名称过滤 **默认取值**： null
+    * order  **参数解释**： 排序：升序/降序。 **约束限制**： 不涉及。 **取值范围**： asc：升序 desc：降序 **默认取值**： null
+    * deleted  **参数解释**： 是否被删除，字段已废弃。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
-        'deleted' => null,
         'nodeIds' => null,
         'offset' => 'int32',
         'limit' => 'int32',
         'filterBy' => null,
         'filter' => null,
         'orderBy' => null,
-        'order' => null
+        'order' => null,
+        'deleted' => null
     ];
 
     /**
@@ -93,80 +93,80 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群ID
-    * deleted  是否被删除，true/false
-    * nodeIds  节点ID列表
-    * offset  分页查询，偏移
-    * limit  分页查询，每页显示的条目数量
-    * filterBy  过滤字段
-    * filter  过滤字段内容
-    * orderBy  排序字段
-    * order  排序：升序/降序
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * nodeIds  **参数解释**： 节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页查询，每页显示的条目数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 100
+    * filterBy  **参数解释**： 过滤字段。 **约束限制**： 不涉及。 **取值范围**： instCreateType：根据资源状态过滤 status：根据节点状态过滤 **默认取值**： null
+    * filter  **参数解释**： 过滤字段内容。 **约束限制**： 不涉及。 **取值范围**： 当根据资源状态过滤时，可选如下值： - ALL：全部 - INST：已使用 - NODE：空虚 当根据节点状态过滤时，可选如下值： - ALL：全部 - CREATING：创建中 - FREE：空闲 - ACTIVE：可用 - FAILED：不可用 - UNKNOWN：未知 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 **默认取值**： null
+    * orderBy  **参数解释**： 排序字段。默认无序返回。 **约束限制**： 不涉及。 **取值范围**： name：根据名称过滤 **默认取值**： null
+    * order  **参数解释**： 排序：升序/降序。 **约束限制**： 不涉及。 **取值范围**： asc：升序 desc：降序 **默认取值**： null
+    * deleted  **参数解释**： 是否被删除，字段已废弃。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
-            'deleted' => 'deleted',
             'nodeIds' => 'node_ids',
             'offset' => 'offset',
             'limit' => 'limit',
             'filterBy' => 'filter_by',
             'filter' => 'filter',
             'orderBy' => 'order_by',
-            'order' => 'order'
+            'order' => 'order',
+            'deleted' => 'deleted'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群ID
-    * deleted  是否被删除，true/false
-    * nodeIds  节点ID列表
-    * offset  分页查询，偏移
-    * limit  分页查询，每页显示的条目数量
-    * filterBy  过滤字段
-    * filter  过滤字段内容
-    * orderBy  排序字段
-    * order  排序：升序/降序
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * nodeIds  **参数解释**： 节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页查询，每页显示的条目数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 100
+    * filterBy  **参数解释**： 过滤字段。 **约束限制**： 不涉及。 **取值范围**： instCreateType：根据资源状态过滤 status：根据节点状态过滤 **默认取值**： null
+    * filter  **参数解释**： 过滤字段内容。 **约束限制**： 不涉及。 **取值范围**： 当根据资源状态过滤时，可选如下值： - ALL：全部 - INST：已使用 - NODE：空虚 当根据节点状态过滤时，可选如下值： - ALL：全部 - CREATING：创建中 - FREE：空闲 - ACTIVE：可用 - FAILED：不可用 - UNKNOWN：未知 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 **默认取值**： null
+    * orderBy  **参数解释**： 排序字段。默认无序返回。 **约束限制**： 不涉及。 **取值范围**： name：根据名称过滤 **默认取值**： null
+    * order  **参数解释**： 排序：升序/降序。 **约束限制**： 不涉及。 **取值范围**： asc：升序 desc：降序 **默认取值**： null
+    * deleted  **参数解释**： 是否被删除，字段已废弃。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
-            'deleted' => 'setDeleted',
             'nodeIds' => 'setNodeIds',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'filterBy' => 'setFilterBy',
             'filter' => 'setFilter',
             'orderBy' => 'setOrderBy',
-            'order' => 'setOrder'
+            'order' => 'setOrder',
+            'deleted' => 'setDeleted'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群ID
-    * deleted  是否被删除，true/false
-    * nodeIds  节点ID列表
-    * offset  分页查询，偏移
-    * limit  分页查询，每页显示的条目数量
-    * filterBy  过滤字段
-    * filter  过滤字段内容
-    * orderBy  排序字段
-    * order  排序：升序/降序
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * nodeIds  **参数解释**： 节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页查询，每页显示的条目数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 100
+    * filterBy  **参数解释**： 过滤字段。 **约束限制**： 不涉及。 **取值范围**： instCreateType：根据资源状态过滤 status：根据节点状态过滤 **默认取值**： null
+    * filter  **参数解释**： 过滤字段内容。 **约束限制**： 不涉及。 **取值范围**： 当根据资源状态过滤时，可选如下值： - ALL：全部 - INST：已使用 - NODE：空虚 当根据节点状态过滤时，可选如下值： - ALL：全部 - CREATING：创建中 - FREE：空闲 - ACTIVE：可用 - FAILED：不可用 - UNKNOWN：未知 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 **默认取值**： null
+    * orderBy  **参数解释**： 排序字段。默认无序返回。 **约束限制**： 不涉及。 **取值范围**： name：根据名称过滤 **默认取值**： null
+    * order  **参数解释**： 排序：升序/降序。 **约束限制**： 不涉及。 **取值范围**： asc：升序 desc：降序 **默认取值**： null
+    * deleted  **参数解释**： 是否被删除，字段已废弃。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
-            'deleted' => 'getDeleted',
             'nodeIds' => 'getNodeIds',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'filterBy' => 'getFilterBy',
             'filter' => 'getFilter',
             'orderBy' => 'getOrderBy',
-            'order' => 'getOrder'
+            'order' => 'getOrder',
+            'deleted' => 'getDeleted'
     ];
 
     /**
@@ -228,7 +228,6 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
-        $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
         $this->container['nodeIds'] = isset($data['nodeIds']) ? $data['nodeIds'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
@@ -236,6 +235,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
         $this->container['orderBy'] = isset($data['orderBy']) ? $data['orderBy'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
+        $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
     }
 
     /**
@@ -265,7 +265,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID
+    *  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -277,7 +277,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 集群ID
+    * @param string $clusterId **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -288,32 +288,8 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets deleted
-    *  是否被删除，true/false
-    *
-    * @return string|null
-    */
-    public function getDeleted()
-    {
-        return $this->container['deleted'];
-    }
-
-    /**
-    * Sets deleted
-    *
-    * @param string|null $deleted 是否被删除，true/false
-    *
-    * @return $this
-    */
-    public function setDeleted($deleted)
-    {
-        $this->container['deleted'] = $deleted;
-        return $this;
-    }
-
-    /**
     * Gets nodeIds
-    *  节点ID列表
+    *  **参数解释**： 节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @return string[]|null
     */
@@ -325,7 +301,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nodeIds
     *
-    * @param string[]|null $nodeIds 节点ID列表
+    * @param string[]|null $nodeIds **参数解释**： 节点ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @return $this
     */
@@ -337,7 +313,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页查询，偏移
+    *  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return int|null
     */
@@ -349,7 +325,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页查询，偏移
+    * @param int|null $offset **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return $this
     */
@@ -361,7 +337,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  分页查询，每页显示的条目数量
+    *  **参数解释**： 分页查询，每页显示的条目数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 100
     *
     * @return int|null
     */
@@ -373,7 +349,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 分页查询，每页显示的条目数量
+    * @param int|null $limit **参数解释**： 分页查询，每页显示的条目数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 100
     *
     * @return $this
     */
@@ -385,7 +361,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets filterBy
-    *  过滤字段
+    *  **参数解释**： 过滤字段。 **约束限制**： 不涉及。 **取值范围**： instCreateType：根据资源状态过滤 status：根据节点状态过滤 **默认取值**： null
     *
     * @return string|null
     */
@@ -397,7 +373,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets filterBy
     *
-    * @param string|null $filterBy 过滤字段
+    * @param string|null $filterBy **参数解释**： 过滤字段。 **约束限制**： 不涉及。 **取值范围**： instCreateType：根据资源状态过滤 status：根据节点状态过滤 **默认取值**： null
     *
     * @return $this
     */
@@ -409,7 +385,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets filter
-    *  过滤字段内容
+    *  **参数解释**： 过滤字段内容。 **约束限制**： 不涉及。 **取值范围**： 当根据资源状态过滤时，可选如下值： - ALL：全部 - INST：已使用 - NODE：空虚 当根据节点状态过滤时，可选如下值： - ALL：全部 - CREATING：创建中 - FREE：空闲 - ACTIVE：可用 - FAILED：不可用 - UNKNOWN：未知 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 **默认取值**： null
     *
     * @return string|null
     */
@@ -421,7 +397,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets filter
     *
-    * @param string|null $filter 过滤字段内容
+    * @param string|null $filter **参数解释**： 过滤字段内容。 **约束限制**： 不涉及。 **取值范围**： 当根据资源状态过滤时，可选如下值： - ALL：全部 - INST：已使用 - NODE：空虚 当根据节点状态过滤时，可选如下值： - ALL：全部 - CREATING：创建中 - FREE：空闲 - ACTIVE：可用 - FAILED：不可用 - UNKNOWN：未知 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 **默认取值**： null
     *
     * @return $this
     */
@@ -433,7 +409,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderBy
-    *  排序字段
+    *  **参数解释**： 排序字段。默认无序返回。 **约束限制**： 不涉及。 **取值范围**： name：根据名称过滤 **默认取值**： null
     *
     * @return string|null
     */
@@ -445,7 +421,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderBy
     *
-    * @param string|null $orderBy 排序字段
+    * @param string|null $orderBy **参数解释**： 排序字段。默认无序返回。 **约束限制**： 不涉及。 **取值范围**： name：根据名称过滤 **默认取值**： null
     *
     * @return $this
     */
@@ -457,7 +433,7 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  排序：升序/降序
+    *  **参数解释**： 排序：升序/降序。 **约束限制**： 不涉及。 **取值范围**： asc：升序 desc：降序 **默认取值**： null
     *
     * @return string|null
     */
@@ -469,13 +445,37 @@ class ListClusterNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param string|null $order 排序：升序/降序
+    * @param string|null $order **参数解释**： 排序：升序/降序。 **约束限制**： 不涉及。 **取值范围**： asc：升序 desc：降序 **默认取值**： null
     *
     * @return $this
     */
     public function setOrder($order)
     {
         $this->container['order'] = $order;
+        return $this;
+    }
+
+    /**
+    * Gets deleted
+    *  **参数解释**： 是否被删除，字段已废弃。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    *
+    * @return string|null
+    */
+    public function getDeleted()
+    {
+        return $this->container['deleted'];
+    }
+
+    /**
+    * Sets deleted
+    *
+    * @param string|null $deleted **参数解释**： 是否被删除，字段已废弃。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    *
+    * @return $this
+    */
+    public function setDeleted($deleted)
+    {
+        $this->container['deleted'] = $deleted;
         return $this;
     }
 

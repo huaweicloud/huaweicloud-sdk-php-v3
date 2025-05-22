@@ -21,7 +21,7 @@ class BatchDeleteClusterCnResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  批量删除CN节点任务ID
+    * jobId  **参数解释**： 批量删除CN节点任务ID信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class BatchDeleteClusterCnResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  批量删除CN节点任务ID
+    * jobId  **参数解释**： 批量删除CN节点任务ID信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchDeleteClusterCnResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  批量删除CN节点任务ID
+    * jobId  **参数解释**： 批量删除CN节点任务ID信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchDeleteClusterCnResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  批量删除CN节点任务ID
+    * jobId  **参数解释**： 批量删除CN节点任务ID信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchDeleteClusterCnResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  批量删除CN节点任务ID
+    * jobId  **参数解释**： 批量删除CN节点任务ID信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class BatchDeleteClusterCnResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  批量删除CN节点任务ID
+    *  **参数解释**： 批量删除CN节点任务ID信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class BatchDeleteClusterCnResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 批量删除CN节点任务ID
+    * @param string|null $jobId **参数解释**： 批量删除CN节点任务ID信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

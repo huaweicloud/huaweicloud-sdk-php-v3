@@ -21,7 +21,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  弹性负载均衡ID
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * name  弹性负载均衡名称
     * description  弹性负载均衡描述
     * vipAddress  弹性负载均衡地址
@@ -51,7 +51,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  弹性负载均衡ID
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * name  弹性负载均衡名称
     * description  弹性负载均衡描述
     * vipAddress  弹性负载均衡地址
@@ -102,7 +102,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  弹性负载均衡ID
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * name  弹性负载均衡名称
     * description  弹性负载均衡描述
     * vipAddress  弹性负载均衡地址
@@ -132,7 +132,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  弹性负载均衡ID
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * name  弹性负载均衡名称
     * description  弹性负载均衡描述
     * vipAddress  弹性负载均衡地址
@@ -162,7 +162,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  弹性负载均衡ID
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * name  弹性负载均衡名称
     * description  弹性负载均衡描述
     * vipAddress  弹性负载均衡地址
@@ -308,7 +308,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID
+    *  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID
+    * @param string|null $clusterId **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return $this
     */

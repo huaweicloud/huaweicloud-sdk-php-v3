@@ -154,6 +154,68 @@ class CsmsClient extends Client
     }
 
     /**
+     * 检测传入凭据的凭据强度
+     *
+     * 检测传入的凭据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkSecrets($request)
+    {
+        return $this->checkSecretsWithHttpInfo($request);
+    }
+
+    public function checkSecretsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/secrets/checker/check';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\V1\Model\CheckSecretsResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\V1\Model\CheckSecretsRequest');
+    }
+
+    /**
      * 创建服务委托
      *
      * 创建服务委托。用于创建凭据管理服务相关委托和函数工作流相关委托。
@@ -2206,6 +2268,65 @@ class CsmsClient extends Client
     }
 
     /**
+     * 获取租户的凭据检测配置
+     *
+     * 获取租户的凭据检测配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSecretsConfig($request)
+    {
+        return $this->showSecretsConfigWithHttpInfo($request);
+    }
+
+    public function showSecretsConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/secrets/checker/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\V1\Model\ShowSecretsConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\V1\Model\ShowSecretsConfigRequest');
+    }
+
+    /**
      * 获取用户详情
      *
      * 根据用户id查询用户详情。
@@ -2528,6 +2649,68 @@ class CsmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Csms\V1\Model\UpdateSecretStageResponse',
             $requestType='\HuaweiCloud\SDK\Csms\V1\Model\UpdateSecretStageRequest');
+    }
+
+    /**
+     * 更改获取租户的凭据检测配置
+     *
+     * 更改获取租户的凭据检测配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSecretsConfig($request)
+    {
+        return $this->updateSecretsConfigWithHttpInfo($request);
+    }
+
+    public function updateSecretsConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/secrets/checker/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\V1\Model\UpdateSecretsConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\V1\Model\UpdateSecretsConfigRequest');
     }
 
     /**

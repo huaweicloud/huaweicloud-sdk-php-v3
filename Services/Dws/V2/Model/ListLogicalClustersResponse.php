@@ -21,9 +21,9 @@ class ListLogicalClustersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logicalClusters  逻辑集群列表信息
-    * count  逻辑集群总数量
-    * addEnable  作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群
+    * logicalClusters  **参数解释**： 逻辑集群列表信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 逻辑集群总数量。 **取值范围**： 不涉及。
+    * addEnable  **参数解释**： 作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListLogicalClustersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logicalClusters  逻辑集群列表信息
-    * count  逻辑集群总数量
-    * addEnable  作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群
+    * logicalClusters  **参数解释**： 逻辑集群列表信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 逻辑集群总数量。 **取值范围**： 不涉及。
+    * addEnable  **参数解释**： 作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListLogicalClustersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logicalClusters  逻辑集群列表信息
-    * count  逻辑集群总数量
-    * addEnable  作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群
+    * logicalClusters  **参数解释**： 逻辑集群列表信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 逻辑集群总数量。 **取值范围**： 不涉及。
+    * addEnable  **参数解释**： 作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListLogicalClustersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logicalClusters  逻辑集群列表信息
-    * count  逻辑集群总数量
-    * addEnable  作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群
+    * logicalClusters  **参数解释**： 逻辑集群列表信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 逻辑集群总数量。 **取值范围**： 不涉及。
+    * addEnable  **参数解释**： 作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListLogicalClustersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logicalClusters  逻辑集群列表信息
-    * count  逻辑集群总数量
-    * addEnable  作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群
+    * logicalClusters  **参数解释**： 逻辑集群列表信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 逻辑集群总数量。 **取值范围**： 不涉及。
+    * addEnable  **参数解释**： 作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListLogicalClustersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusters
-    *  逻辑集群列表信息
+    *  **参数解释**： 逻辑集群列表信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterInfo[]|null
     */
@@ -209,7 +209,7 @@ class ListLogicalClustersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusters
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterInfo[]|null $logicalClusters 逻辑集群列表信息
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterInfo[]|null $logicalClusters **参数解释**： 逻辑集群列表信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListLogicalClustersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  逻辑集群总数量
+    *  **参数解释**： 逻辑集群总数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ListLogicalClustersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 逻辑集群总数量
+    * @param int|null $count **参数解释**： 逻辑集群总数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListLogicalClustersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets addEnable
-    *  作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群
+    *  **参数解释**： 作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -257,7 +257,7 @@ class ListLogicalClustersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets addEnable
     *
-    * @param bool|null $addEnable 作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群
+    * @param bool|null $addEnable **参数解释**： 作为互斥结果，如果集群内有其他运维操作，该值为false，此时不能添加逻辑集群。 **取值范围**： 不涉及。
     *
     * @return $this
     */

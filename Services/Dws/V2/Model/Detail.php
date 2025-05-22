@@ -20,9 +20,9 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  属性类型。
-    * value  属性值。
-    * unit  属性单位。
+    * type  **参数解释**： 属性类型。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 属性单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  属性类型。
-    * value  属性值。
-    * unit  属性单位。
+    * type  **参数解释**： 属性类型。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 属性单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class Detail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  属性类型。
-    * value  属性值。
-    * unit  属性单位。
+    * type  **参数解释**： 属性类型。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 属性单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  属性类型。
-    * value  属性值。
-    * unit  属性单位。
+    * type  **参数解释**： 属性类型。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 属性单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  属性类型。
-    * value  属性值。
-    * unit  属性单位。
+    * type  **参数解释**： 属性类型。 **取值范围**： 不涉及。
+    * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 属性单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -183,9 +183,6 @@ class Detail implements ModelInterface, ArrayAccess
         if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
         }
-        if ($this->container['unit'] === null) {
-            $invalidProperties[] = "'unit' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -202,7 +199,7 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  属性类型。
+    *  **参数解释**： 属性类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -214,7 +211,7 @@ class Detail implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 属性类型。
+    * @param string|null $type **参数解释**： 属性类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -226,7 +223,7 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  属性值。
+    *  **参数解释**： 属性值。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -238,7 +235,7 @@ class Detail implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 属性值。
+    * @param string $value **参数解释**： 属性值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -250,9 +247,9 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  属性单位。
+    *  **参数解释**： 属性单位。 **取值范围**： 不涉及。
     *
-    * @return string
+    * @return string|null
     */
     public function getUnit()
     {
@@ -262,7 +259,7 @@ class Detail implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string $unit 属性单位。
+    * @param string|null $unit **参数解释**： 属性单位。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class LiveJobRunConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * allowResourceType  允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型
+    * allowResourceType  允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型 * ONE_TIME：一次性资源
     * singleJobInRoom  一个直播间是否仅允许一个正在直播的任务。 * true: 限制直播间仅允许一个任务运行。 * false: 不限制直播间任务运行数量。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class LiveJobRunConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * allowResourceType  允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型
+    * allowResourceType  允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型 * ONE_TIME：一次性资源
     * singleJobInRoom  一个直播间是否仅允许一个正在直播的任务。 * true: 限制直播间仅允许一个任务运行。 * false: 不限制直播间任务运行数量。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class LiveJobRunConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * allowResourceType  允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型
+    * allowResourceType  允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型 * ONE_TIME：一次性资源
     * singleJobInRoom  一个直播间是否仅允许一个正在直播的任务。 * true: 限制直播间仅允许一个任务运行。 * false: 不限制直播间任务运行数量。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class LiveJobRunConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * allowResourceType  允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型
+    * allowResourceType  允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型 * ONE_TIME：一次性资源
     * singleJobInRoom  一个直播间是否仅允许一个正在直播的任务。 * true: 限制直播间仅允许一个任务运行。 * false: 不限制直播间任务运行数量。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class LiveJobRunConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * allowResourceType  允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型
+    * allowResourceType  允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型 * ONE_TIME：一次性资源
     * singleJobInRoom  一个直播间是否仅允许一个正在直播的任务。 * true: 限制直播间仅允许一个任务运行。 * false: 不限制直播间任务运行数量。
     *
     * @var string[]
@@ -142,6 +142,7 @@ class LiveJobRunConfig implements ModelInterface, ArrayAccess
     const ALLOW_RESOURCE_TYPE_PERIOD = 'PERIOD';
     const ALLOW_RESOURCE_TYPE_ONDEMAND = 'ONDEMAND';
     const ALLOW_RESOURCE_TYPE_UNLIMITED = 'UNLIMITED';
+    const ALLOW_RESOURCE_TYPE_ONE_TIME = 'ONE_TIME';
     
 
     /**
@@ -155,6 +156,7 @@ class LiveJobRunConfig implements ModelInterface, ArrayAccess
             self::ALLOW_RESOURCE_TYPE_PERIOD,
             self::ALLOW_RESOURCE_TYPE_ONDEMAND,
             self::ALLOW_RESOURCE_TYPE_UNLIMITED,
+            self::ALLOW_RESOURCE_TYPE_ONE_TIME,
         ];
     }
 
@@ -216,7 +218,7 @@ class LiveJobRunConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowResourceType
-    *  允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型
+    *  允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型 * ONE_TIME：一次性资源
     *
     * @return string|null
     */
@@ -228,7 +230,7 @@ class LiveJobRunConfig implements ModelInterface, ArrayAccess
     /**
     * Sets allowResourceType
     *
-    * @param string|null $allowResourceType 允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型
+    * @param string|null $allowResourceType 允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型 * ONE_TIME：一次性资源
     *
     * @return $this
     */

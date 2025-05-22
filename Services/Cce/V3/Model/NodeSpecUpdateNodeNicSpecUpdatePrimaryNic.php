@@ -20,8 +20,8 @@ class NodeSpecUpdateNodeNicSpecUpdatePrimaryNic implements ModelInterface, Array
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
-    * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
+    * subnetId  **参数解释**： 网卡所在子网的网络ID。 **约束限制**： 主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * subnetList  **参数解释**： 网卡所在子网的网络ID列表，支持节点池配置多个子网。 **约束限制**： 最多支持配置20个子网。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class NodeSpecUpdateNodeNicSpecUpdatePrimaryNic implements ModelInterface, Array
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
-    * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
+    * subnetId  **参数解释**： 网卡所在子网的网络ID。 **约束限制**： 主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * subnetList  **参数解释**： 网卡所在子网的网络ID列表，支持节点池配置多个子网。 **约束限制**： 最多支持配置20个子网。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class NodeSpecUpdateNodeNicSpecUpdatePrimaryNic implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
-    * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
+    * subnetId  **参数解释**： 网卡所在子网的网络ID。 **约束限制**： 主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * subnetList  **参数解释**： 网卡所在子网的网络ID列表，支持节点池配置多个子网。 **约束限制**： 最多支持配置20个子网。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class NodeSpecUpdateNodeNicSpecUpdatePrimaryNic implements ModelInterface, Array
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
-    * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
+    * subnetId  **参数解释**： 网卡所在子网的网络ID。 **约束限制**： 主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * subnetList  **参数解释**： 网卡所在子网的网络ID列表，支持节点池配置多个子网。 **约束限制**： 最多支持配置20个子网。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class NodeSpecUpdateNodeNicSpecUpdatePrimaryNic implements ModelInterface, Array
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
-    * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
+    * subnetId  **参数解释**： 网卡所在子网的网络ID。 **约束限制**： 主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * subnetList  **参数解释**： 网卡所在子网的网络ID列表，支持节点池配置多个子网。 **约束限制**： 最多支持配置20个子网。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class NodeSpecUpdateNodeNicSpecUpdatePrimaryNic implements ModelInterface, Array
 
     /**
     * Gets subnetId
-    *  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
+    *  **参数解释**： 网卡所在子网的网络ID。 **约束限制**： 主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -200,7 +200,7 @@ class NodeSpecUpdateNodeNicSpecUpdatePrimaryNic implements ModelInterface, Array
     /**
     * Sets subnetId
     *
-    * @param string|null $subnetId 网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
+    * @param string|null $subnetId **参数解释**： 网卡所在子网的网络ID。 **约束限制**： 主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class NodeSpecUpdateNodeNicSpecUpdatePrimaryNic implements ModelInterface, Array
 
     /**
     * Gets subnetList
-    *  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
+    *  **参数解释**： 网卡所在子网的网络ID列表，支持节点池配置多个子网。 **约束限制**： 最多支持配置20个子网。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string[]|null
     */
@@ -224,7 +224,7 @@ class NodeSpecUpdateNodeNicSpecUpdatePrimaryNic implements ModelInterface, Array
     /**
     * Sets subnetList
     *
-    * @param string[]|null $subnetList 网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
+    * @param string[]|null $subnetList **参数解释**： 网卡所在子网的网络ID列表，支持节点池配置多个子网。 **约束限制**： 最多支持配置20个子网。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

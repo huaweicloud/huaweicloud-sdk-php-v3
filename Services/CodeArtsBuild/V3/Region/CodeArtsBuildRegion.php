@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class CodeArtsBuildRegion {
 
-    public static $REGION = array("https://cloudbuild-ext.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://cloudbuild-ext.cn-north-1.myhuaweicloud.com"=>"cn-north-1","https://cloudbuild-ext.cn-east-2.myhuaweicloud.com"=>"cn-east-2","https://cloudbuild-ext.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://cloudbuild-ext.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://cloudbuild-ext.cn-south-2.myhuaweicloud.com"=>"cn-south-2","https://cloudbuild-ext.cn-southwest-2.myhuaweicloud.com"=>"cn-southwest-2","https://cloudbuild-ext.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3","https://cloudbuild-ext.sa-brazil-1.myhuaweicloud.com"=>"sa-brazil-1","https://cloudbuild-ext.la-north-2.myhuaweicloud.com"=>"la-north-2",);
+    public static $REGION = array("https://cloudbuild-ext.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://cloudbuild-ext.cn-north-1.myhuaweicloud.com"=>"cn-north-1","https://cloudbuild-ext.cn-east-2.myhuaweicloud.com"=>"cn-east-2","https://cloudbuild-ext.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://cloudbuild-ext.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://cloudbuild-ext.cn-south-2.myhuaweicloud.com"=>"cn-south-2","https://cloudbuild-ext.cn-southwest-2.myhuaweicloud.com"=>"cn-southwest-2","https://cloudbuild-ext.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3","https://cloudbuild-ext.sa-brazil-1.myhuaweicloud.com"=>"sa-brazil-1","https://cloudbuild-ext.la-north-2.myhuaweicloud.com"=>"la-north-2","https://cloudbuild-ext.la-south-2.myhuaweicloud.com"=>"la-south-2","https://cloudbuild-ext.tr-west-1.myhuaweicloud.com"=>"tr-west-1",);
 
     public static function valueOf($regionId)
     {

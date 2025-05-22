@@ -28,8 +28,8 @@ class ProtectedIpResponse implements ModelInterface, ArrayAccess
     * statusDetail  statusDetail
     * policyName  策略名
     * region  所属region
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * tags  TMS标签
     * tag  本地标签
     * isResale  默认false，表示是否转售版的IP，不需要展示策略和报表
@@ -64,8 +64,8 @@ class ProtectedIpResponse implements ModelInterface, ArrayAccess
     * statusDetail  statusDetail
     * policyName  策略名
     * region  所属region
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * tags  TMS标签
     * tag  本地标签
     * isResale  默认false，表示是否转售版的IP，不需要展示策略和报表
@@ -121,8 +121,8 @@ class ProtectedIpResponse implements ModelInterface, ArrayAccess
     * statusDetail  statusDetail
     * policyName  策略名
     * region  所属region
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * tags  TMS标签
     * tag  本地标签
     * isResale  默认false，表示是否转售版的IP，不需要展示策略和报表
@@ -157,8 +157,8 @@ class ProtectedIpResponse implements ModelInterface, ArrayAccess
     * statusDetail  statusDetail
     * policyName  策略名
     * region  所属region
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * tags  TMS标签
     * tag  本地标签
     * isResale  默认false，表示是否转售版的IP，不需要展示策略和报表
@@ -193,8 +193,8 @@ class ProtectedIpResponse implements ModelInterface, ArrayAccess
     * statusDetail  statusDetail
     * policyName  策略名
     * region  所属region
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * tags  TMS标签
     * tag  本地标签
     * isResale  默认false，表示是否转售版的IP，不需要展示策略和报表
@@ -667,7 +667,7 @@ class ProtectedIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageId
-    *  防护包id
+    *  实例id
     *
     * @return string
     */
@@ -679,7 +679,7 @@ class ProtectedIpResponse implements ModelInterface, ArrayAccess
     /**
     * Sets packageId
     *
-    * @param string $packageId 防护包id
+    * @param string $packageId 实例id
     *
     * @return $this
     */
@@ -691,7 +691,7 @@ class ProtectedIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageName
-    *  防护包名
+    *  实例名
     *
     * @return string
     */
@@ -703,7 +703,7 @@ class ProtectedIpResponse implements ModelInterface, ArrayAccess
     /**
     * Sets packageName
     *
-    * @param string $packageName 防护包名
+    * @param string $packageName 实例名
     *
     * @return $this
     */

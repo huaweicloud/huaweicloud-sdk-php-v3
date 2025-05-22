@@ -28,6 +28,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     * to  结束时间(13位时间戳)，需要和from同时使用，不能和recent参数同时使用
     * attacks  攻击类型:   - vuln：其它攻击类型   - sqli： sql注入攻击   - lfi： 本地文件包含  - cmdi：命令注入攻击   - xss：XSS攻击   - robot：恶意爬虫   - rfi：远程文件包含   - custom_custom：精准防护   - cc: cc攻击   - webshell：网站木马   - custom_whiteblackip：黑白名单拦截   - custom_geoip：地理访问控制拦截   - antitamper：防篡改   - anticrawler：反爬虫    - leakage：网站信息防泄漏   - illegal：非法请求   - antiscan_high_freq_scan：高频扫描封禁   - antiscan_dir_traversal：目录遍历防护
     * hosts  域名id，从获取防护网站列表（ListHost）接口获取域名id
+    * sips  源ip，Web访问者的IP地址（攻击者IP地址）
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     *
@@ -42,6 +43,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
             'to' => 'int',
             'attacks' => 'string[]',
             'hosts' => 'string[]',
+            'sips' => 'string[]',
             'page' => 'int',
             'pagesize' => 'int'
     ];
@@ -56,6 +58,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     * to  结束时间(13位时间戳)，需要和from同时使用，不能和recent参数同时使用
     * attacks  攻击类型:   - vuln：其它攻击类型   - sqli： sql注入攻击   - lfi： 本地文件包含  - cmdi：命令注入攻击   - xss：XSS攻击   - robot：恶意爬虫   - rfi：远程文件包含   - custom_custom：精准防护   - cc: cc攻击   - webshell：网站木马   - custom_whiteblackip：黑白名单拦截   - custom_geoip：地理访问控制拦截   - antitamper：防篡改   - anticrawler：反爬虫    - leakage：网站信息防泄漏   - illegal：非法请求   - antiscan_high_freq_scan：高频扫描封禁   - antiscan_dir_traversal：目录遍历防护
     * hosts  域名id，从获取防护网站列表（ListHost）接口获取域名id
+    * sips  源ip，Web访问者的IP地址（攻击者IP地址）
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     *
@@ -70,6 +73,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
         'to' => 'int64',
         'attacks' => null,
         'hosts' => null,
+        'sips' => null,
         'page' => null,
         'pagesize' => null
     ];
@@ -105,6 +109,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     * to  结束时间(13位时间戳)，需要和from同时使用，不能和recent参数同时使用
     * attacks  攻击类型:   - vuln：其它攻击类型   - sqli： sql注入攻击   - lfi： 本地文件包含  - cmdi：命令注入攻击   - xss：XSS攻击   - robot：恶意爬虫   - rfi：远程文件包含   - custom_custom：精准防护   - cc: cc攻击   - webshell：网站木马   - custom_whiteblackip：黑白名单拦截   - custom_geoip：地理访问控制拦截   - antitamper：防篡改   - anticrawler：反爬虫    - leakage：网站信息防泄漏   - illegal：非法请求   - antiscan_high_freq_scan：高频扫描封禁   - antiscan_dir_traversal：目录遍历防护
     * hosts  域名id，从获取防护网站列表（ListHost）接口获取域名id
+    * sips  源ip，Web访问者的IP地址（攻击者IP地址）
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     *
@@ -119,6 +124,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
             'to' => 'to',
             'attacks' => 'attacks',
             'hosts' => 'hosts',
+            'sips' => 'sips',
             'page' => 'page',
             'pagesize' => 'pagesize'
     ];
@@ -133,6 +139,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     * to  结束时间(13位时间戳)，需要和from同时使用，不能和recent参数同时使用
     * attacks  攻击类型:   - vuln：其它攻击类型   - sqli： sql注入攻击   - lfi： 本地文件包含  - cmdi：命令注入攻击   - xss：XSS攻击   - robot：恶意爬虫   - rfi：远程文件包含   - custom_custom：精准防护   - cc: cc攻击   - webshell：网站木马   - custom_whiteblackip：黑白名单拦截   - custom_geoip：地理访问控制拦截   - antitamper：防篡改   - anticrawler：反爬虫    - leakage：网站信息防泄漏   - illegal：非法请求   - antiscan_high_freq_scan：高频扫描封禁   - antiscan_dir_traversal：目录遍历防护
     * hosts  域名id，从获取防护网站列表（ListHost）接口获取域名id
+    * sips  源ip，Web访问者的IP地址（攻击者IP地址）
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     *
@@ -147,6 +154,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
             'to' => 'setTo',
             'attacks' => 'setAttacks',
             'hosts' => 'setHosts',
+            'sips' => 'setSips',
             'page' => 'setPage',
             'pagesize' => 'setPagesize'
     ];
@@ -161,6 +169,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     * to  结束时间(13位时间戳)，需要和from同时使用，不能和recent参数同时使用
     * attacks  攻击类型:   - vuln：其它攻击类型   - sqli： sql注入攻击   - lfi： 本地文件包含  - cmdi：命令注入攻击   - xss：XSS攻击   - robot：恶意爬虫   - rfi：远程文件包含   - custom_custom：精准防护   - cc: cc攻击   - webshell：网站木马   - custom_whiteblackip：黑白名单拦截   - custom_geoip：地理访问控制拦截   - antitamper：防篡改   - anticrawler：反爬虫    - leakage：网站信息防泄漏   - illegal：非法请求   - antiscan_high_freq_scan：高频扫描封禁   - antiscan_dir_traversal：目录遍历防护
     * hosts  域名id，从获取防护网站列表（ListHost）接口获取域名id
+    * sips  源ip，Web访问者的IP地址（攻击者IP地址）
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     *
@@ -175,6 +184,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
             'to' => 'getTo',
             'attacks' => 'getAttacks',
             'hosts' => 'getHosts',
+            'sips' => 'getSips',
             'page' => 'getPage',
             'pagesize' => 'getPagesize'
     ];
@@ -266,6 +276,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
         $this->container['to'] = isset($data['to']) ? $data['to'] : null;
         $this->container['attacks'] = isset($data['attacks']) ? $data['attacks'] : null;
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
+        $this->container['sips'] = isset($data['sips']) ? $data['sips'] : null;
         $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['pagesize'] = isset($data['pagesize']) ? $data['pagesize'] : null;
     }
@@ -492,6 +503,30 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     public function setHosts($hosts)
     {
         $this->container['hosts'] = $hosts;
+        return $this;
+    }
+
+    /**
+    * Gets sips
+    *  源ip，Web访问者的IP地址（攻击者IP地址）
+    *
+    * @return string[]|null
+    */
+    public function getSips()
+    {
+        return $this->container['sips'];
+    }
+
+    /**
+    * Sets sips
+    *
+    * @param string[]|null $sips 源ip，Web访问者的IP地址（攻击者IP地址）
+    *
+    * @return $this
+    */
+    public function setSips($sips)
+    {
+        $this->container['sips'] = $sips;
         return $this;
     }
 

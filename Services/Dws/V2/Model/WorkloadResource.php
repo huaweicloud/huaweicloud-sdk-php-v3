@@ -20,8 +20,8 @@ class WorkloadResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceName  资源名称。
-    * resourceValue  资源属性值。
+    * resourceName  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * resourceValue  **参数解释**： 资源属性值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class WorkloadResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceName  资源名称。
-    * resourceValue  资源属性值。
+    * resourceName  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * resourceValue  **参数解释**： 资源属性值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class WorkloadResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceName  资源名称。
-    * resourceValue  资源属性值。
+    * resourceName  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * resourceValue  **参数解释**： 资源属性值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class WorkloadResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceName  资源名称。
-    * resourceValue  资源属性值。
+    * resourceName  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * resourceValue  **参数解释**： 资源属性值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class WorkloadResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceName  资源名称。
-    * resourceValue  资源属性值。
+    * resourceName  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * resourceValue  **参数解释**： 资源属性值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class WorkloadResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  资源名称。
+    *  **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class WorkloadResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string $resourceName 资源名称。
+    * @param string $resourceName **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class WorkloadResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceValue
-    *  资源属性值。
+    *  **参数解释**： 资源属性值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -227,7 +227,7 @@ class WorkloadResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceValue
     *
-    * @param int $resourceValue 资源属性值。
+    * @param int $resourceValue **参数解释**： 资源属性值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * volumeType  节点使用存储类型
-    * volumeNum  节点使用的磁盘数量
-    * capacity  节点去除副本后的有效容量
-    * volumeSize  节点存的单盘容量
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+    * volumeNum  **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。
+    * capacity  **参数解释**： 节点去除副本后的有效容量。 **取值范围**： 不涉及。
+    * volumeSize  **参数解释**： 节点存的单盘容量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * volumeType  节点使用存储类型
-    * volumeNum  节点使用的磁盘数量
-    * capacity  节点去除副本后的有效容量
-    * volumeSize  节点存的单盘容量
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+    * volumeNum  **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。
+    * capacity  **参数解释**： 节点去除副本后的有效容量。 **取值范围**： 不涉及。
+    * volumeSize  **参数解释**： 节点存的单盘容量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * volumeType  节点使用存储类型
-    * volumeNum  节点使用的磁盘数量
-    * capacity  节点去除副本后的有效容量
-    * volumeSize  节点存的单盘容量
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+    * volumeNum  **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。
+    * capacity  **参数解释**： 节点去除副本后的有效容量。 **取值范围**： 不涉及。
+    * volumeSize  **参数解释**： 节点存的单盘容量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * volumeType  节点使用存储类型
-    * volumeNum  节点使用的磁盘数量
-    * capacity  节点去除副本后的有效容量
-    * volumeSize  节点存的单盘容量
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+    * volumeNum  **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。
+    * capacity  **参数解释**： 节点去除副本后的有效容量。 **取值范围**： 不涉及。
+    * volumeSize  **参数解释**： 节点存的单盘容量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * volumeType  节点使用存储类型
-    * volumeNum  节点使用的磁盘数量
-    * capacity  节点去除副本后的有效容量
-    * volumeSize  节点存的单盘容量
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+    * volumeNum  **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。
+    * capacity  **参数解释**： 节点去除副本后的有效容量。 **取值范围**： 不涉及。
+    * volumeSize  **参数解释**： 节点存的单盘容量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
-    *  节点使用存储类型
+    *  **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets volumeType
     *
-    * @param string $volumeType 节点使用存储类型
+    * @param string $volumeType **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeNum
-    *  节点使用的磁盘数量
+    *  **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -255,7 +255,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets volumeNum
     *
-    * @param int $volumeNum 节点使用的磁盘数量
+    * @param int $volumeNum **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets capacity
-    *  节点去除副本后的有效容量
+    *  **参数解释**： 节点去除副本后的有效容量。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -279,7 +279,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets capacity
     *
-    * @param int $capacity 节点去除副本后的有效容量
+    * @param int $capacity **参数解释**： 节点去除副本后的有效容量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeSize
-    *  节点存的单盘容量
+    *  **参数解释**： 节点存的单盘容量。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -303,7 +303,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets volumeSize
     *
-    * @param int $volumeSize 节点存的单盘容量
+    * @param int $volumeSize **参数解释**： 节点存的单盘容量。 **取值范围**： 不涉及。
     *
     * @return $this
     */

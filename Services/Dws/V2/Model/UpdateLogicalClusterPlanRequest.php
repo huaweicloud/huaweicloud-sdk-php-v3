@@ -20,8 +20,8 @@ class UpdateLogicalClusterPlanRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  指定待编辑集群的ID
-    * planId  逻辑集群增删计划ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * planId  **参数解释**： 逻辑集群增删计划ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class UpdateLogicalClusterPlanRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  指定待编辑集群的ID
-    * planId  逻辑集群增删计划ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * planId  **参数解释**： 逻辑集群增删计划ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class UpdateLogicalClusterPlanRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  指定待编辑集群的ID
-    * planId  逻辑集群增删计划ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * planId  **参数解释**： 逻辑集群增删计划ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class UpdateLogicalClusterPlanRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  指定待编辑集群的ID
-    * planId  逻辑集群增删计划ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * planId  **参数解释**： 逻辑集群增删计划ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class UpdateLogicalClusterPlanRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  指定待编辑集群的ID
-    * planId  逻辑集群增删计划ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * planId  **参数解释**： 逻辑集群增删计划ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -202,7 +202,7 @@ class UpdateLogicalClusterPlanRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  指定待编辑集群的ID
+    *  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class UpdateLogicalClusterPlanRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 指定待编辑集群的ID
+    * @param string $clusterId **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class UpdateLogicalClusterPlanRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets planId
-    *  逻辑集群增删计划ID
+    *  **参数解释**： 逻辑集群增删计划ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class UpdateLogicalClusterPlanRequest implements ModelInterface, ArrayAccess
     /**
     * Sets planId
     *
-    * @param string $planId 逻辑集群增删计划ID
+    * @param string $planId **参数解释**： 逻辑集群增删计划ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

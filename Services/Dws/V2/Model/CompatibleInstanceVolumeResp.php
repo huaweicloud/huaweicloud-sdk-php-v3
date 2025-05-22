@@ -20,9 +20,9 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  类型
-    * used  连接
-    * size  大小
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * used  **参数解释**： 已使用空间。 **取值范围**： 不涉及。
+    * size  **参数解释**： 总大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  类型
-    * used  连接
-    * size  大小
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * used  **参数解释**： 已使用空间。 **取值范围**： 不涉及。
+    * size  **参数解释**： 总大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  类型
-    * used  连接
-    * size  大小
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * used  **参数解释**： 已使用空间。 **取值范围**： 不涉及。
+    * size  **参数解释**： 总大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  类型
-    * used  连接
-    * size  大小
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * used  **参数解释**： 已使用空间。 **取值范围**： 不涉及。
+    * size  **参数解释**： 总大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  类型
-    * used  连接
-    * size  大小
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * used  **参数解释**： 已使用空间。 **取值范围**： 不涉及。
+    * size  **参数解释**： 总大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type **参数解释**： 类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets used
-    *  连接
+    *  **参数解释**： 已使用空间。 **取值范围**： 不涉及。
     *
     * @return float|null
     */
@@ -232,7 +232,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
     /**
     * Sets used
     *
-    * @param float|null $used 连接
+    * @param float|null $used **参数解释**： 已使用空间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  大小
+    *  **参数解释**： 总大小。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 大小
+    * @param int|null $size **参数解释**： 总大小。 **取值范围**： 不涉及。
     *
     * @return $this
     */

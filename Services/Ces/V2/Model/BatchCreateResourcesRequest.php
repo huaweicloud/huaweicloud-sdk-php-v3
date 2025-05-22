@@ -27,7 +27,7 @@ class BatchCreateResourcesRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'groupId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourcesReq'
+            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\AddResourcesReq'
     ];
 
     /**
@@ -220,7 +220,7 @@ class BatchCreateResourcesRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourcesReq|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\AddResourcesReq|null
     */
     public function getBody()
     {
@@ -230,7 +230,7 @@ class BatchCreateResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourcesReq|null $body body
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\AddResourcesReq|null $body body
     *
     * @return $this
     */

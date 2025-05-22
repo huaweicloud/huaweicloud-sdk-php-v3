@@ -22,12 +22,12 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * redisInfo  redisInfo
-    * scheduleMode  调度模式
-    * pauseEnable  是否允许暂停
-    * recoverEnable  是否允许恢复
-    * retryEnable  是否允许重试
-    * updateEnable  是否允许更新
-    * controlEnable  是否允许控制
+    * scheduleMode  **参数解释**： 调度模式。 **取值范围**： false：非调度模式；true：调度模式。
+    * pauseEnable  **参数解释**： 是否允许暂停。 **取值范围**： false：不允许暂停；true：允许暂停。
+    * recoverEnable  **参数解释**： 是否允许恢复。 **取值范围**： false：不允许恢复；true：允许恢复。
+    * retryEnable  **参数解释**： 是否允许重试。 **取值范围**： false：不允许重试；true：允许重试。
+    * updateEnable  **参数解释**： 是否允许更新。 **取值范围**： false：不允许更新；true：允许更新，该参数仅仅适用于调度模式。
+    * controlEnable  **参数解释**： 是否允许控制。 **取值范围**： false：不允许控制；true：允许控制，该参数仅仅适用于调度模式。
     *
     * @var string[]
     */
@@ -44,12 +44,12 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * redisInfo  redisInfo
-    * scheduleMode  调度模式
-    * pauseEnable  是否允许暂停
-    * recoverEnable  是否允许恢复
-    * retryEnable  是否允许重试
-    * updateEnable  是否允许更新
-    * controlEnable  是否允许控制
+    * scheduleMode  **参数解释**： 调度模式。 **取值范围**： false：非调度模式；true：调度模式。
+    * pauseEnable  **参数解释**： 是否允许暂停。 **取值范围**： false：不允许暂停；true：允许暂停。
+    * recoverEnable  **参数解释**： 是否允许恢复。 **取值范围**： false：不允许恢复；true：允许恢复。
+    * retryEnable  **参数解释**： 是否允许重试。 **取值范围**： false：不允许重试；true：允许重试。
+    * updateEnable  **参数解释**： 是否允许更新。 **取值范围**： false：不允许更新；true：允许更新，该参数仅仅适用于调度模式。
+    * controlEnable  **参数解释**： 是否允许控制。 **取值范围**： false：不允许控制；true：允许控制，该参数仅仅适用于调度模式。
     *
     * @var string[]
     */
@@ -87,12 +87,12 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * redisInfo  redisInfo
-    * scheduleMode  调度模式
-    * pauseEnable  是否允许暂停
-    * recoverEnable  是否允许恢复
-    * retryEnable  是否允许重试
-    * updateEnable  是否允许更新
-    * controlEnable  是否允许控制
+    * scheduleMode  **参数解释**： 调度模式。 **取值范围**： false：非调度模式；true：调度模式。
+    * pauseEnable  **参数解释**： 是否允许暂停。 **取值范围**： false：不允许暂停；true：允许暂停。
+    * recoverEnable  **参数解释**： 是否允许恢复。 **取值范围**： false：不允许恢复；true：允许恢复。
+    * retryEnable  **参数解释**： 是否允许重试。 **取值范围**： false：不允许重试；true：允许重试。
+    * updateEnable  **参数解释**： 是否允许更新。 **取值范围**： false：不允许更新；true：允许更新，该参数仅仅适用于调度模式。
+    * controlEnable  **参数解释**： 是否允许控制。 **取值范围**： false：不允许控制；true：允许控制，该参数仅仅适用于调度模式。
     *
     * @var string[]
     */
@@ -109,12 +109,12 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * redisInfo  redisInfo
-    * scheduleMode  调度模式
-    * pauseEnable  是否允许暂停
-    * recoverEnable  是否允许恢复
-    * retryEnable  是否允许重试
-    * updateEnable  是否允许更新
-    * controlEnable  是否允许控制
+    * scheduleMode  **参数解释**： 调度模式。 **取值范围**： false：非调度模式；true：调度模式。
+    * pauseEnable  **参数解释**： 是否允许暂停。 **取值范围**： false：不允许暂停；true：允许暂停。
+    * recoverEnable  **参数解释**： 是否允许恢复。 **取值范围**： false：不允许恢复；true：允许恢复。
+    * retryEnable  **参数解释**： 是否允许重试。 **取值范围**： false：不允许重试；true：允许重试。
+    * updateEnable  **参数解释**： 是否允许更新。 **取值范围**： false：不允许更新；true：允许更新，该参数仅仅适用于调度模式。
+    * controlEnable  **参数解释**： 是否允许控制。 **取值范围**： false：不允许控制；true：允许控制，该参数仅仅适用于调度模式。
     *
     * @var string[]
     */
@@ -131,12 +131,12 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * redisInfo  redisInfo
-    * scheduleMode  调度模式
-    * pauseEnable  是否允许暂停
-    * recoverEnable  是否允许恢复
-    * retryEnable  是否允许重试
-    * updateEnable  是否允许更新
-    * controlEnable  是否允许控制
+    * scheduleMode  **参数解释**： 调度模式。 **取值范围**： false：非调度模式；true：调度模式。
+    * pauseEnable  **参数解释**： 是否允许暂停。 **取值范围**： false：不允许暂停；true：允许暂停。
+    * recoverEnable  **参数解释**： 是否允许恢复。 **取值范围**： false：不允许恢复；true：允许恢复。
+    * retryEnable  **参数解释**： 是否允许重试。 **取值范围**： false：不允许重试；true：允许重试。
+    * updateEnable  **参数解释**： 是否允许更新。 **取值范围**： false：不允许更新；true：允许更新，该参数仅仅适用于调度模式。
+    * controlEnable  **参数解释**： 是否允许控制。 **取值范围**： false：不允许控制；true：允许控制，该参数仅仅适用于调度模式。
     *
     * @var string[]
     */
@@ -265,7 +265,7 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets scheduleMode
-    *  调度模式
+    *  **参数解释**： 调度模式。 **取值范围**： false：非调度模式；true：调度模式。
     *
     * @return bool|null
     */
@@ -277,7 +277,7 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets scheduleMode
     *
-    * @param bool|null $scheduleMode 调度模式
+    * @param bool|null $scheduleMode **参数解释**： 调度模式。 **取值范围**： false：非调度模式；true：调度模式。
     *
     * @return $this
     */
@@ -289,7 +289,7 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pauseEnable
-    *  是否允许暂停
+    *  **参数解释**： 是否允许暂停。 **取值范围**： false：不允许暂停；true：允许暂停。
     *
     * @return bool|null
     */
@@ -301,7 +301,7 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pauseEnable
     *
-    * @param bool|null $pauseEnable 是否允许暂停
+    * @param bool|null $pauseEnable **参数解释**： 是否允许暂停。 **取值范围**： false：不允许暂停；true：允许暂停。
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets recoverEnable
-    *  是否允许恢复
+    *  **参数解释**： 是否允许恢复。 **取值范围**： false：不允许恢复；true：允许恢复。
     *
     * @return bool|null
     */
@@ -325,7 +325,7 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets recoverEnable
     *
-    * @param bool|null $recoverEnable 是否允许恢复
+    * @param bool|null $recoverEnable **参数解释**： 是否允许恢复。 **取值范围**： false：不允许恢复；true：允许恢复。
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets retryEnable
-    *  是否允许重试
+    *  **参数解释**： 是否允许重试。 **取值范围**： false：不允许重试；true：允许重试。
     *
     * @return bool|null
     */
@@ -349,7 +349,7 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets retryEnable
     *
-    * @param bool|null $retryEnable 是否允许重试
+    * @param bool|null $retryEnable **参数解释**： 是否允许重试。 **取值范围**： false：不允许重试；true：允许重试。
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateEnable
-    *  是否允许更新
+    *  **参数解释**： 是否允许更新。 **取值范围**： false：不允许更新；true：允许更新，该参数仅仅适用于调度模式。
     *
     * @return bool|null
     */
@@ -373,7 +373,7 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateEnable
     *
-    * @param bool|null $updateEnable 是否允许更新
+    * @param bool|null $updateEnable **参数解释**： 是否允许更新。 **取值范围**： false：不允许更新；true：允许更新，该参数仅仅适用于调度模式。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets controlEnable
-    *  是否允许控制
+    *  **参数解释**： 是否允许控制。 **取值范围**： false：不允许控制；true：允许控制，该参数仅仅适用于调度模式。
     *
     * @return bool|null
     */
@@ -397,7 +397,7 @@ class ShowClusterRedistributionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets controlEnable
     *
-    * @param bool|null $controlEnable 是否允许控制
+    * @param bool|null $controlEnable **参数解释**： 是否允许控制。 **取值范围**： false：不允许控制；true：允许控制，该参数仅仅适用于调度模式。
     *
     * @return $this
     */

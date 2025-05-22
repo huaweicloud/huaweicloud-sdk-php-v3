@@ -21,7 +21,7 @@ class UpdateSchemasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * retCode  响应编码。
+    * retCode  **参数解释**： 响应编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class UpdateSchemasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * retCode  响应编码。
+    * retCode  **参数解释**： 响应编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UpdateSchemasResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * retCode  响应编码。
+    * retCode  **参数解释**： 响应编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UpdateSchemasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * retCode  响应编码。
+    * retCode  **参数解释**： 响应编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpdateSchemasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * retCode  响应编码。
+    * retCode  **参数解释**： 响应编码。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class UpdateSchemasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets retCode
-    *  响应编码。
+    *  **参数解释**： 响应编码。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -187,7 +187,7 @@ class UpdateSchemasResponse implements ModelInterface, ArrayAccess
     /**
     * Sets retCode
     *
-    * @param int|null $retCode 响应编码。
+    * @param int|null $retCode **参数解释**： 响应编码。 **取值范围**： 不涉及。
     *
     * @return $this
     */

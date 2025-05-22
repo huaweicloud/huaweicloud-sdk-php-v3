@@ -23,13 +23,15 @@ class CommonQueueProperty implements ModelInterface, ArrayAccess
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * computeEngineSparkNativeEnabled  是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'computeEngineMaxInstance' => 'int',
             'jobMaxConcurrent' => 'int',
-            'computeEngineMaxPrefetchInstance' => 'int'
+            'computeEngineMaxPrefetchInstance' => 'int',
+            'computeEngineSparkNativeEnabled' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class CommonQueueProperty implements ModelInterface, ArrayAccess
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * computeEngineSparkNativeEnabled  是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'computeEngineMaxInstance' => 'int32',
         'jobMaxConcurrent' => 'int32',
-        'computeEngineMaxPrefetchInstance' => 'int32'
+        'computeEngineMaxPrefetchInstance' => 'int32',
+        'computeEngineSparkNativeEnabled' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class CommonQueueProperty implements ModelInterface, ArrayAccess
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * computeEngineSparkNativeEnabled  是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'computeEngineMaxInstance' => 'computeEngine.maxInstance',
             'jobMaxConcurrent' => 'job.maxConcurrent',
-            'computeEngineMaxPrefetchInstance' => 'computeEngine.maxPrefetchInstance'
+            'computeEngineMaxPrefetchInstance' => 'computeEngine.maxPrefetchInstance',
+            'computeEngineSparkNativeEnabled' => 'computeEngine.spark.nativeEnabled'
     ];
 
     /**
@@ -86,13 +92,15 @@ class CommonQueueProperty implements ModelInterface, ArrayAccess
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * computeEngineSparkNativeEnabled  是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
     *
     * @var string[]
     */
     protected static $setters = [
             'computeEngineMaxInstance' => 'setComputeEngineMaxInstance',
             'jobMaxConcurrent' => 'setJobMaxConcurrent',
-            'computeEngineMaxPrefetchInstance' => 'setComputeEngineMaxPrefetchInstance'
+            'computeEngineMaxPrefetchInstance' => 'setComputeEngineMaxPrefetchInstance',
+            'computeEngineSparkNativeEnabled' => 'setComputeEngineSparkNativeEnabled'
     ];
 
     /**
@@ -100,13 +108,15 @@ class CommonQueueProperty implements ModelInterface, ArrayAccess
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * computeEngineSparkNativeEnabled  是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
     *
     * @var string[]
     */
     protected static $getters = [
             'computeEngineMaxInstance' => 'getComputeEngineMaxInstance',
             'jobMaxConcurrent' => 'getJobMaxConcurrent',
-            'computeEngineMaxPrefetchInstance' => 'getComputeEngineMaxPrefetchInstance'
+            'computeEngineMaxPrefetchInstance' => 'getComputeEngineMaxPrefetchInstance',
+            'computeEngineSparkNativeEnabled' => 'getComputeEngineSparkNativeEnabled'
     ];
 
     /**
@@ -170,6 +180,7 @@ class CommonQueueProperty implements ModelInterface, ArrayAccess
         $this->container['computeEngineMaxInstance'] = isset($data['computeEngineMaxInstance']) ? $data['computeEngineMaxInstance'] : null;
         $this->container['jobMaxConcurrent'] = isset($data['jobMaxConcurrent']) ? $data['jobMaxConcurrent'] : null;
         $this->container['computeEngineMaxPrefetchInstance'] = isset($data['computeEngineMaxPrefetchInstance']) ? $data['computeEngineMaxPrefetchInstance'] : null;
+        $this->container['computeEngineSparkNativeEnabled'] = isset($data['computeEngineSparkNativeEnabled']) ? $data['computeEngineSparkNativeEnabled'] : null;
     }
 
     /**
@@ -269,6 +280,30 @@ class CommonQueueProperty implements ModelInterface, ArrayAccess
     public function setComputeEngineMaxPrefetchInstance($computeEngineMaxPrefetchInstance)
     {
         $this->container['computeEngineMaxPrefetchInstance'] = $computeEngineMaxPrefetchInstance;
+        return $this;
+    }
+
+    /**
+    * Gets computeEngineSparkNativeEnabled
+    *  是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
+    *
+    * @return string|null
+    */
+    public function getComputeEngineSparkNativeEnabled()
+    {
+        return $this->container['computeEngineSparkNativeEnabled'];
+    }
+
+    /**
+    * Sets computeEngineSparkNativeEnabled
+    *
+    * @param string|null $computeEngineSparkNativeEnabled 是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
+    *
+    * @return $this
+    */
+    public function setComputeEngineSparkNativeEnabled($computeEngineSparkNativeEnabled)
+    {
+        $this->container['computeEngineSparkNativeEnabled'] = $computeEngineSparkNativeEnabled;
         return $this;
     }
 

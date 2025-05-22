@@ -20,7 +20,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * destinationProjectId  目的项目ID
     * destinationRegion  目的区域
     * status  状态
@@ -38,7 +38,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * destinationProjectId  目的项目ID
     * destinationRegion  目的区域
     * status  状态
@@ -77,7 +77,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * destinationProjectId  目的项目ID
     * destinationRegion  目的区域
     * status  状态
@@ -95,7 +95,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * destinationProjectId  目的项目ID
     * destinationRegion  目的区域
     * status  状态
@@ -113,7 +113,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * destinationProjectId  目的项目ID
     * destinationRegion  目的区域
     * status  状态
@@ -233,7 +233,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets clusterId
-    *  集群ID
+    *  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 集群ID
+    * @param string $clusterId **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     *
     * @return $this
     */

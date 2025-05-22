@@ -3561,6 +3561,9 @@ class WafAsyncClient extends Client
         if ($localVarParams['hosts'] !== null) {
             $queryParams['hosts'] = $localVarParams['hosts'];
         }
+        if ($localVarParams['sips'] !== null) {
+            $queryParams['sips'] = $localVarParams['sips'];
+        }
         if ($localVarParams['page'] !== null) {
             $queryParams['page'] = $localVarParams['page'];
         }

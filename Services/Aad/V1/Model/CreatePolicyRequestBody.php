@@ -21,7 +21,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  策略名
-    * packageId  防护包id
+    * packageId  实例id
     * description  描述
     *
     * @var string[]
@@ -35,7 +35,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  策略名
-    * packageId  防护包id
+    * packageId  实例id
     * description  描述
     *
     * @var string[]
@@ -70,7 +70,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  策略名
-    * packageId  防护包id
+    * packageId  实例id
     * description  描述
     *
     * @var string[]
@@ -84,7 +84,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  策略名
-    * packageId  防护包id
+    * packageId  实例id
     * description  描述
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  策略名
-    * packageId  防护包id
+    * packageId  实例id
     * description  描述
     *
     * @var string[]
@@ -244,7 +244,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageId
-    *  防护包id
+    *  实例id
     *
     * @return string
     */
@@ -256,7 +256,7 @@ class CreatePolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets packageId
     *
-    * @param string $packageId 防护包id
+    * @param string $packageId 实例id
     *
     * @return $this
     */

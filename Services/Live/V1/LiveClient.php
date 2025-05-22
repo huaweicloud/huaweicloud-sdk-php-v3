@@ -5023,6 +5023,80 @@ class LiveClient extends Client
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\ModifyOttChannelInfoStatsRequest');
     }
 
+    /**
+     * 查询频道统计信息
+     *
+     * 查询频道的统计信息（入流scte35信号）
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showChannelStatistic($request)
+    {
+        return $this->showChannelStatisticWithHttpInfo($request);
+    }
+
+    public function showChannelStatisticWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ott/channels/statistic';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowChannelStatisticResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowChannelStatisticRequest');
+    }
+
     protected function callApi(
         $method,
         $resourcePath,

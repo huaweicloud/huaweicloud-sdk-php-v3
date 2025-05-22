@@ -27,6 +27,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
     * name  负载均衡器名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * description  负载均衡器的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
     * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
+    * includeRecycleBin  参数解释：查询结果是否包含回收站负载均衡器  取值范围： - true ：包含回收站elb。 - false：不包含回收站elb。
     * provisioningStatus  负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。  支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。
     * operatingStatus  负载均衡器的操作状态。  取值： - ONLINE：正常运行。 - FROZEN：已冻结。  支持多值查询，查询条件格式：*operating_status=xxx&operating_status=xxx*。
     * guaranteed  是否独享型LB。  取值： - false：共享型 - true：独享型  [仅支持独享型，固定为true。](tag:hws_eu,hcso_dt)
@@ -67,6 +68,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
             'name' => 'string[]',
             'description' => 'string[]',
             'adminStateUp' => 'bool',
+            'includeRecycleBin' => 'bool',
             'provisioningStatus' => 'string[]',
             'operatingStatus' => 'string[]',
             'guaranteed' => 'bool',
@@ -107,6 +109,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
     * name  负载均衡器名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * description  负载均衡器的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
     * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
+    * includeRecycleBin  参数解释：查询结果是否包含回收站负载均衡器  取值范围： - true ：包含回收站elb。 - false：不包含回收站elb。
     * provisioningStatus  负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。  支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。
     * operatingStatus  负载均衡器的操作状态。  取值： - ONLINE：正常运行。 - FROZEN：已冻结。  支持多值查询，查询条件格式：*operating_status=xxx&operating_status=xxx*。
     * guaranteed  是否独享型LB。  取值： - false：共享型 - true：独享型  [仅支持独享型，固定为true。](tag:hws_eu,hcso_dt)
@@ -147,6 +150,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'adminStateUp' => null,
+        'includeRecycleBin' => null,
         'provisioningStatus' => null,
         'operatingStatus' => null,
         'guaranteed' => null,
@@ -208,6 +212,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
     * name  负载均衡器名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * description  负载均衡器的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
     * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
+    * includeRecycleBin  参数解释：查询结果是否包含回收站负载均衡器  取值范围： - true ：包含回收站elb。 - false：不包含回收站elb。
     * provisioningStatus  负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。  支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。
     * operatingStatus  负载均衡器的操作状态。  取值： - ONLINE：正常运行。 - FROZEN：已冻结。  支持多值查询，查询条件格式：*operating_status=xxx&operating_status=xxx*。
     * guaranteed  是否独享型LB。  取值： - false：共享型 - true：独享型  [仅支持独享型，固定为true。](tag:hws_eu,hcso_dt)
@@ -248,6 +253,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'adminStateUp' => 'admin_state_up',
+            'includeRecycleBin' => 'include_recycle_bin',
             'provisioningStatus' => 'provisioning_status',
             'operatingStatus' => 'operating_status',
             'guaranteed' => 'guaranteed',
@@ -288,6 +294,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
     * name  负载均衡器名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * description  负载均衡器的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
     * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
+    * includeRecycleBin  参数解释：查询结果是否包含回收站负载均衡器  取值范围： - true ：包含回收站elb。 - false：不包含回收站elb。
     * provisioningStatus  负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。  支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。
     * operatingStatus  负载均衡器的操作状态。  取值： - ONLINE：正常运行。 - FROZEN：已冻结。  支持多值查询，查询条件格式：*operating_status=xxx&operating_status=xxx*。
     * guaranteed  是否独享型LB。  取值： - false：共享型 - true：独享型  [仅支持独享型，固定为true。](tag:hws_eu,hcso_dt)
@@ -328,6 +335,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'adminStateUp' => 'setAdminStateUp',
+            'includeRecycleBin' => 'setIncludeRecycleBin',
             'provisioningStatus' => 'setProvisioningStatus',
             'operatingStatus' => 'setOperatingStatus',
             'guaranteed' => 'setGuaranteed',
@@ -368,6 +376,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
     * name  负载均衡器名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * description  负载均衡器的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
     * adminStateUp  参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
+    * includeRecycleBin  参数解释：查询结果是否包含回收站负载均衡器  取值范围： - true ：包含回收站elb。 - false：不包含回收站elb。
     * provisioningStatus  负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。  支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。
     * operatingStatus  负载均衡器的操作状态。  取值： - ONLINE：正常运行。 - FROZEN：已冻结。  支持多值查询，查询条件格式：*operating_status=xxx&operating_status=xxx*。
     * guaranteed  是否独享型LB。  取值： - false：共享型 - true：独享型  [仅支持独享型，固定为true。](tag:hws_eu,hcso_dt)
@@ -408,6 +417,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'adminStateUp' => 'getAdminStateUp',
+            'includeRecycleBin' => 'getIncludeRecycleBin',
             'provisioningStatus' => 'getProvisioningStatus',
             'operatingStatus' => 'getOperatingStatus',
             'guaranteed' => 'getGuaranteed',
@@ -504,6 +514,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
+        $this->container['includeRecycleBin'] = isset($data['includeRecycleBin']) ? $data['includeRecycleBin'] : null;
         $this->container['provisioningStatus'] = isset($data['provisioningStatus']) ? $data['provisioningStatus'] : null;
         $this->container['operatingStatus'] = isset($data['operatingStatus']) ? $data['operatingStatus'] : null;
         $this->container['guaranteed'] = isset($data['guaranteed']) ? $data['guaranteed'] : null;
@@ -728,6 +739,30 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
     public function setAdminStateUp($adminStateUp)
     {
         $this->container['adminStateUp'] = $adminStateUp;
+        return $this;
+    }
+
+    /**
+    * Gets includeRecycleBin
+    *  参数解释：查询结果是否包含回收站负载均衡器  取值范围： - true ：包含回收站elb。 - false：不包含回收站elb。
+    *
+    * @return bool|null
+    */
+    public function getIncludeRecycleBin()
+    {
+        return $this->container['includeRecycleBin'];
+    }
+
+    /**
+    * Sets includeRecycleBin
+    *
+    * @param bool|null $includeRecycleBin 参数解释：查询结果是否包含回收站负载均衡器  取值范围： - true ：包含回收站elb。 - false：不包含回收站elb。
+    *
+    * @return $this
+    */
+    public function setIncludeRecycleBin($includeRecycleBin)
+    {
+        $this->container['includeRecycleBin'] = $includeRecycleBin;
         return $this;
     }
 

@@ -20,11 +20,11 @@ class PackageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * regionId  资源所属region
     * protectionType  防护类型
-    * instanceType  防护包类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
+    * instanceType  实例类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
     * resourceId  资源id
     * countDownCode  倒计时相关信息
     * countDownInfos  倒计时相关信息
@@ -40,7 +40,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
     * serviceBandwidth  业务带宽
     * cleanBandwidth  回源带宽
     * policyNum  策略模板数
-    * isOld  是否旧防护包（旧防护包不支持升级规格）,默认不传为否
+    * isOld  是否旧实例（旧实例不支持升级规格）,默认不传为否
     * newFlag  专业版铂金版合并之后购买的专业版和铂金版均标识为true
     * createTime  创建时间
     *
@@ -74,11 +74,11 @@ class PackageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * regionId  资源所属region
     * protectionType  防护类型
-    * instanceType  防护包类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
+    * instanceType  实例类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
     * resourceId  资源id
     * countDownCode  倒计时相关信息
     * countDownInfos  倒计时相关信息
@@ -94,7 +94,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
     * serviceBandwidth  业务带宽
     * cleanBandwidth  回源带宽
     * policyNum  策略模板数
-    * isOld  是否旧防护包（旧防护包不支持升级规格）,默认不传为否
+    * isOld  是否旧实例（旧实例不支持升级规格）,默认不传为否
     * newFlag  专业版铂金版合并之后购买的专业版和铂金版均标识为true
     * createTime  创建时间
     *
@@ -149,11 +149,11 @@ class PackageResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * regionId  资源所属region
     * protectionType  防护类型
-    * instanceType  防护包类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
+    * instanceType  实例类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
     * resourceId  资源id
     * countDownCode  倒计时相关信息
     * countDownInfos  倒计时相关信息
@@ -169,7 +169,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
     * serviceBandwidth  业务带宽
     * cleanBandwidth  回源带宽
     * policyNum  策略模板数
-    * isOld  是否旧防护包（旧防护包不支持升级规格）,默认不传为否
+    * isOld  是否旧实例（旧实例不支持升级规格）,默认不传为否
     * newFlag  专业版铂金版合并之后购买的专业版和铂金版均标识为true
     * createTime  创建时间
     *
@@ -203,11 +203,11 @@ class PackageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * regionId  资源所属region
     * protectionType  防护类型
-    * instanceType  防护包类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
+    * instanceType  实例类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
     * resourceId  资源id
     * countDownCode  倒计时相关信息
     * countDownInfos  倒计时相关信息
@@ -223,7 +223,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
     * serviceBandwidth  业务带宽
     * cleanBandwidth  回源带宽
     * policyNum  策略模板数
-    * isOld  是否旧防护包（旧防护包不支持升级规格）,默认不传为否
+    * isOld  是否旧实例（旧实例不支持升级规格）,默认不传为否
     * newFlag  专业版铂金版合并之后购买的专业版和铂金版均标识为true
     * createTime  创建时间
     *
@@ -257,11 +257,11 @@ class PackageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * regionId  资源所属region
     * protectionType  防护类型
-    * instanceType  防护包类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
+    * instanceType  实例类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
     * resourceId  资源id
     * countDownCode  倒计时相关信息
     * countDownInfos  倒计时相关信息
@@ -277,7 +277,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
     * serviceBandwidth  业务带宽
     * cleanBandwidth  回源带宽
     * policyNum  策略模板数
-    * isOld  是否旧防护包（旧防护包不支持升级规格）,默认不传为否
+    * isOld  是否旧实例（旧实例不支持升级规格）,默认不传为否
     * newFlag  专业版铂金版合并之后购买的专业版和铂金版均标识为true
     * createTime  创建时间
     *
@@ -591,7 +591,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageId
-    *  防护包id
+    *  实例id
     *
     * @return string
     */
@@ -603,7 +603,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets packageId
     *
-    * @param string $packageId 防护包id
+    * @param string $packageId 实例id
     *
     * @return $this
     */
@@ -615,7 +615,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageName
-    *  防护包名
+    *  实例名
     *
     * @return string
     */
@@ -627,7 +627,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets packageName
     *
-    * @param string $packageName 防护包名
+    * @param string $packageName 实例名
     *
     * @return $this
     */
@@ -687,7 +687,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceType
-    *  防护包类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
+    *  实例类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
     *
     * @return string
     */
@@ -699,7 +699,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instanceType
     *
-    * @param string $instanceType 防护包类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
+    * @param string $instanceType 实例类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
     *
     * @return $this
     */
@@ -1071,7 +1071,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isOld
-    *  是否旧防护包（旧防护包不支持升级规格）,默认不传为否
+    *  是否旧实例（旧实例不支持升级规格）,默认不传为否
     *
     * @return bool|null
     */
@@ -1083,7 +1083,7 @@ class PackageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isOld
     *
-    * @param bool|null $isOld 是否旧防护包（旧防护包不支持升级规格）,默认不传为否
+    * @param bool|null $isOld 是否旧实例（旧实例不支持升级规格）,默认不传为否
     *
     * @return $this
     */

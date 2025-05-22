@@ -20,8 +20,8 @@ class DeleteLogicalClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  指定待删除集群的ID
-    * logicalClusterId  指定待删除逻辑集群的ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * logicalClusterId  **参数解释**： 指定待删除逻辑集群的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DeleteLogicalClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  指定待删除集群的ID
-    * logicalClusterId  指定待删除逻辑集群的ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * logicalClusterId  **参数解释**： 指定待删除逻辑集群的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DeleteLogicalClusterRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  指定待删除集群的ID
-    * logicalClusterId  指定待删除逻辑集群的ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * logicalClusterId  **参数解释**： 指定待删除逻辑集群的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DeleteLogicalClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  指定待删除集群的ID
-    * logicalClusterId  指定待删除逻辑集群的ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * logicalClusterId  **参数解释**： 指定待删除逻辑集群的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DeleteLogicalClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  指定待删除集群的ID
-    * logicalClusterId  指定待删除逻辑集群的ID
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * logicalClusterId  **参数解释**： 指定待删除逻辑集群的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -175,6 +175,12 @@ class DeleteLogicalClusterRequest implements ModelInterface, ArrayAccess
         if ($this->container['logicalClusterId'] === null) {
             $invalidProperties[] = "'logicalClusterId' can't be null";
         }
+            if ((mb_strlen($this->container['logicalClusterId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'logicalClusterId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['logicalClusterId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'logicalClusterId', the character length must be bigger than or equal to 32.";
+            }
         return $invalidProperties;
     }
 
@@ -191,7 +197,7 @@ class DeleteLogicalClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  指定待删除集群的ID
+    *  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +209,7 @@ class DeleteLogicalClusterRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 指定待删除集群的ID
+    * @param string $clusterId **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +221,7 @@ class DeleteLogicalClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterId
-    *  指定待删除逻辑集群的ID
+    *  **参数解释**： 指定待删除逻辑集群的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -227,7 +233,7 @@ class DeleteLogicalClusterRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterId
     *
-    * @param string $logicalClusterId 指定待删除逻辑集群的ID
+    * @param string $logicalClusterId **参数解释**： 指定待删除逻辑集群的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

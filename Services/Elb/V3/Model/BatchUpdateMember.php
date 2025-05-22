@@ -36,6 +36,7 @@ class BatchUpdateMember implements ModelInterface, ArrayAccess
     * portId  IP地址对应的VPC port ID
     * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * availabilityZone  后端服务器所在的可用区。
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class BatchUpdateMember implements ModelInterface, ArrayAccess
             'instanceId' => 'string',
             'portId' => 'string',
             'createdAt' => 'string',
-            'updatedAt' => 'string'
+            'updatedAt' => 'string',
+            'availabilityZone' => 'string'
     ];
 
     /**
@@ -76,6 +78,7 @@ class BatchUpdateMember implements ModelInterface, ArrayAccess
     * portId  IP地址对应的VPC port ID
     * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * availabilityZone  后端服务器所在的可用区。
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class BatchUpdateMember implements ModelInterface, ArrayAccess
         'instanceId' => null,
         'portId' => null,
         'createdAt' => null,
-        'updatedAt' => null
+        'updatedAt' => null,
+        'availabilityZone' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class BatchUpdateMember implements ModelInterface, ArrayAccess
     * portId  IP地址对应的VPC port ID
     * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * availabilityZone  后端服务器所在的可用区。
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class BatchUpdateMember implements ModelInterface, ArrayAccess
             'instanceId' => 'instance_id',
             'portId' => 'port_id',
             'createdAt' => 'created_at',
-            'updatedAt' => 'updated_at'
+            'updatedAt' => 'updated_at',
+            'availabilityZone' => 'availability_zone'
     ];
 
     /**
@@ -177,6 +183,7 @@ class BatchUpdateMember implements ModelInterface, ArrayAccess
     * portId  IP地址对应的VPC port ID
     * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * availabilityZone  后端服务器所在的可用区。
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class BatchUpdateMember implements ModelInterface, ArrayAccess
             'instanceId' => 'setInstanceId',
             'portId' => 'setPortId',
             'createdAt' => 'setCreatedAt',
-            'updatedAt' => 'setUpdatedAt'
+            'updatedAt' => 'setUpdatedAt',
+            'availabilityZone' => 'setAvailabilityZone'
     ];
 
     /**
@@ -217,6 +225,7 @@ class BatchUpdateMember implements ModelInterface, ArrayAccess
     * portId  IP地址对应的VPC port ID
     * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+    * availabilityZone  后端服务器所在的可用区。
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class BatchUpdateMember implements ModelInterface, ArrayAccess
             'instanceId' => 'getInstanceId',
             'portId' => 'getPortId',
             'createdAt' => 'getCreatedAt',
-            'updatedAt' => 'getUpdatedAt'
+            'updatedAt' => 'getUpdatedAt',
+            'availabilityZone' => 'getAvailabilityZone'
     ];
 
     /**
@@ -313,6 +323,7 @@ class BatchUpdateMember implements ModelInterface, ArrayAccess
         $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
     }
 
     /**
@@ -757,6 +768,30 @@ class BatchUpdateMember implements ModelInterface, ArrayAccess
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZone
+    *  后端服务器所在的可用区。
+    *
+    * @return string|null
+    */
+    public function getAvailabilityZone()
+    {
+        return $this->container['availabilityZone'];
+    }
+
+    /**
+    * Sets availabilityZone
+    *
+    * @param string|null $availabilityZone 后端服务器所在的可用区。
+    *
+    * @return $this
+    */
+    public function setAvailabilityZone($availabilityZone)
+    {
+        $this->container['availabilityZone'] = $availabilityZone;
         return $this;
     }
 

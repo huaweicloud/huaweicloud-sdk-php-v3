@@ -21,28 +21,28 @@ class ExecuteDatabaseOmUserActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * errorCode  **参数解释**： 错误码。非0皆为异常场景。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     * omUserInfo  omUserInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'errorCode' => 'string',
+            'errorCode' => 'int',
             'errorMsg' => 'string',
             'omUserInfo' => '\HuaweiCloud\SDK\Dws\V2\Model\DatabaseOmUserInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * errorCode  **参数解释**： 错误码。非0皆为异常场景。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     * omUserInfo  omUserInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'errorCode' => null,
+        'errorCode' => 'int32',
         'errorMsg' => null,
         'omUserInfo' => null
     ];
@@ -70,8 +70,8 @@ class ExecuteDatabaseOmUserActionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * errorCode  **参数解释**： 错误码。非0皆为异常场景。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     * omUserInfo  omUserInfo
     *
     * @var string[]
@@ -84,8 +84,8 @@ class ExecuteDatabaseOmUserActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * errorCode  **参数解释**： 错误码。非0皆为异常场景。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     * omUserInfo  omUserInfo
     *
     * @var string[]
@@ -98,8 +98,8 @@ class ExecuteDatabaseOmUserActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * errorCode  **参数解释**： 错误码。非0皆为异常场景。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     * omUserInfo  omUserInfo
     *
     * @var string[]
@@ -197,9 +197,9 @@ class ExecuteDatabaseOmUserActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  错误码
+    *  **参数解释**： 错误码。非0皆为异常场景。 **取值范围**： 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getErrorCode()
     {
@@ -209,7 +209,7 @@ class ExecuteDatabaseOmUserActionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode 错误码
+    * @param int|null $errorCode **参数解释**： 错误码。非0皆为异常场景。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ExecuteDatabaseOmUserActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  错误信息
+    *  **参数解释**： 错误信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class ExecuteDatabaseOmUserActionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg 错误信息
+    * @param string|null $errorMsg **参数解释**： 错误信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

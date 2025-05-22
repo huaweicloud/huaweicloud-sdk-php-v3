@@ -21,6 +21,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * availabilityZone  后端服务器所在的可用区。
     * name  后端服务器名称。注意：该名称并非ECS名称。
     * projectId  后端服务器所在的项目ID。
     * poolId  所在后端服务器组ID。  不支持该字段，请勿使用。
@@ -46,6 +47,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'id' => 'string',
+            'availabilityZone' => 'string',
             'name' => 'string',
             'projectId' => 'string',
             'poolId' => 'string',
@@ -71,6 +73,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * availabilityZone  后端服务器所在的可用区。
     * name  后端服务器名称。注意：该名称并非ECS名称。
     * projectId  后端服务器所在的项目ID。
     * poolId  所在后端服务器组ID。  不支持该字段，请勿使用。
@@ -96,6 +99,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'id' => null,
+        'availabilityZone' => null,
         'name' => null,
         'projectId' => null,
         'poolId' => null,
@@ -142,6 +146,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * availabilityZone  后端服务器所在的可用区。
     * name  后端服务器名称。注意：该名称并非ECS名称。
     * projectId  后端服务器所在的项目ID。
     * poolId  所在后端服务器组ID。  不支持该字段，请勿使用。
@@ -167,6 +172,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'id' => 'id',
+            'availabilityZone' => 'availability_zone',
             'name' => 'name',
             'projectId' => 'project_id',
             'poolId' => 'pool_id',
@@ -192,6 +198,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * availabilityZone  后端服务器所在的可用区。
     * name  后端服务器名称。注意：该名称并非ECS名称。
     * projectId  后端服务器所在的项目ID。
     * poolId  所在后端服务器组ID。  不支持该字段，请勿使用。
@@ -217,6 +224,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'id' => 'setId',
+            'availabilityZone' => 'setAvailabilityZone',
             'name' => 'setName',
             'projectId' => 'setProjectId',
             'poolId' => 'setPoolId',
@@ -242,6 +250,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * availabilityZone  后端服务器所在的可用区。
     * name  后端服务器名称。注意：该名称并非ECS名称。
     * projectId  后端服务器所在的项目ID。
     * poolId  所在后端服务器组ID。  不支持该字段，请勿使用。
@@ -267,6 +276,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'id' => 'getId',
+            'availabilityZone' => 'getAvailabilityZone',
             'name' => 'getName',
             'projectId' => 'getProjectId',
             'poolId' => 'getPoolId',
@@ -348,6 +358,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['poolId'] = isset($data['poolId']) ? $data['poolId'] : null;
@@ -380,6 +391,9 @@ class MemberInfo implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['availabilityZone'] === null) {
+            $invalidProperties[] = "'availabilityZone' can't be null";
         }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
@@ -455,6 +469,30 @@ class MemberInfo implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZone
+    *  后端服务器所在的可用区。
+    *
+    * @return string
+    */
+    public function getAvailabilityZone()
+    {
+        return $this->container['availabilityZone'];
+    }
+
+    /**
+    * Sets availabilityZone
+    *
+    * @param string $availabilityZone 后端服务器所在的可用区。
+    *
+    * @return $this
+    */
+    public function setAvailabilityZone($availabilityZone)
+    {
+        $this->container['availabilityZone'] = $availabilityZone;
         return $this;
     }
 

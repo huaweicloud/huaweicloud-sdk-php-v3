@@ -47,6 +47,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     * publicBorderGroup  网络公共边界组
     * quicCidLen  查询相同QUIC CID策略配置的后端服务器组，仅用于查询条件，不作为响应参数字段。 支持多值查询，查询条件格式：*quic_cid_len=3&quic_cid_len=5*
     * quicCidOffset  查询相同QUIC CID策略配置的后端服务器组，仅用于查询条件，不作为响应参数字段。 支持多值查询，查询条件格式：*quic_cid_offset=1&quic_cid_offset=3*
+    * azAffinity  查询后端服务器组可用区亲和性策略是否开启。示例如下： \"az_affinity\": {             \"enable\": \"true\"         }  支持多值查询，查询条件格式：  *az_affinity=enable=true&az_affinity=enable=false*。
     *
     * @var string[]
     */
@@ -77,7 +78,8 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
             'anyPortEnable' => 'bool',
             'publicBorderGroup' => 'string',
             'quicCidLen' => 'int',
-            'quicCidOffset' => 'int'
+            'quicCidOffset' => 'int',
+            'azAffinity' => 'string[]'
     ];
 
     /**
@@ -109,6 +111,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     * publicBorderGroup  网络公共边界组
     * quicCidLen  查询相同QUIC CID策略配置的后端服务器组，仅用于查询条件，不作为响应参数字段。 支持多值查询，查询条件格式：*quic_cid_len=3&quic_cid_len=5*
     * quicCidOffset  查询相同QUIC CID策略配置的后端服务器组，仅用于查询条件，不作为响应参数字段。 支持多值查询，查询条件格式：*quic_cid_offset=1&quic_cid_offset=3*
+    * azAffinity  查询后端服务器组可用区亲和性策略是否开启。示例如下： \"az_affinity\": {             \"enable\": \"true\"         }  支持多值查询，查询条件格式：  *az_affinity=enable=true&az_affinity=enable=false*。
     *
     * @var string[]
     */
@@ -139,7 +142,8 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
         'anyPortEnable' => null,
         'publicBorderGroup' => null,
         'quicCidLen' => 'int32',
-        'quicCidOffset' => 'int32'
+        'quicCidOffset' => 'int32',
+        'azAffinity' => null
     ];
 
     /**
@@ -192,6 +196,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     * publicBorderGroup  网络公共边界组
     * quicCidLen  查询相同QUIC CID策略配置的后端服务器组，仅用于查询条件，不作为响应参数字段。 支持多值查询，查询条件格式：*quic_cid_len=3&quic_cid_len=5*
     * quicCidOffset  查询相同QUIC CID策略配置的后端服务器组，仅用于查询条件，不作为响应参数字段。 支持多值查询，查询条件格式：*quic_cid_offset=1&quic_cid_offset=3*
+    * azAffinity  查询后端服务器组可用区亲和性策略是否开启。示例如下： \"az_affinity\": {             \"enable\": \"true\"         }  支持多值查询，查询条件格式：  *az_affinity=enable=true&az_affinity=enable=false*。
     *
     * @var string[]
     */
@@ -222,7 +227,8 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
             'anyPortEnable' => 'any_port_enable',
             'publicBorderGroup' => 'public_border_group',
             'quicCidLen' => 'quic_cid_len',
-            'quicCidOffset' => 'quic_cid_offset'
+            'quicCidOffset' => 'quic_cid_offset',
+            'azAffinity' => 'az_affinity'
     ];
 
     /**
@@ -254,6 +260,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     * publicBorderGroup  网络公共边界组
     * quicCidLen  查询相同QUIC CID策略配置的后端服务器组，仅用于查询条件，不作为响应参数字段。 支持多值查询，查询条件格式：*quic_cid_len=3&quic_cid_len=5*
     * quicCidOffset  查询相同QUIC CID策略配置的后端服务器组，仅用于查询条件，不作为响应参数字段。 支持多值查询，查询条件格式：*quic_cid_offset=1&quic_cid_offset=3*
+    * azAffinity  查询后端服务器组可用区亲和性策略是否开启。示例如下： \"az_affinity\": {             \"enable\": \"true\"         }  支持多值查询，查询条件格式：  *az_affinity=enable=true&az_affinity=enable=false*。
     *
     * @var string[]
     */
@@ -284,7 +291,8 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
             'anyPortEnable' => 'setAnyPortEnable',
             'publicBorderGroup' => 'setPublicBorderGroup',
             'quicCidLen' => 'setQuicCidLen',
-            'quicCidOffset' => 'setQuicCidOffset'
+            'quicCidOffset' => 'setQuicCidOffset',
+            'azAffinity' => 'setAzAffinity'
     ];
 
     /**
@@ -316,6 +324,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     * publicBorderGroup  网络公共边界组
     * quicCidLen  查询相同QUIC CID策略配置的后端服务器组，仅用于查询条件，不作为响应参数字段。 支持多值查询，查询条件格式：*quic_cid_len=3&quic_cid_len=5*
     * quicCidOffset  查询相同QUIC CID策略配置的后端服务器组，仅用于查询条件，不作为响应参数字段。 支持多值查询，查询条件格式：*quic_cid_offset=1&quic_cid_offset=3*
+    * azAffinity  查询后端服务器组可用区亲和性策略是否开启。示例如下： \"az_affinity\": {             \"enable\": \"true\"         }  支持多值查询，查询条件格式：  *az_affinity=enable=true&az_affinity=enable=false*。
     *
     * @var string[]
     */
@@ -346,7 +355,8 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
             'anyPortEnable' => 'getAnyPortEnable',
             'publicBorderGroup' => 'getPublicBorderGroup',
             'quicCidLen' => 'getQuicCidLen',
-            'quicCidOffset' => 'getQuicCidOffset'
+            'quicCidOffset' => 'getQuicCidOffset',
+            'azAffinity' => 'getAzAffinity'
     ];
 
     /**
@@ -434,6 +444,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
         $this->container['quicCidLen'] = isset($data['quicCidLen']) ? $data['quicCidLen'] : null;
         $this->container['quicCidOffset'] = isset($data['quicCidOffset']) ? $data['quicCidOffset'] : null;
+        $this->container['azAffinity'] = isset($data['azAffinity']) ? $data['azAffinity'] : null;
     }
 
     /**
@@ -1109,6 +1120,30 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     public function setQuicCidOffset($quicCidOffset)
     {
         $this->container['quicCidOffset'] = $quicCidOffset;
+        return $this;
+    }
+
+    /**
+    * Gets azAffinity
+    *  查询后端服务器组可用区亲和性策略是否开启。示例如下： \"az_affinity\": {             \"enable\": \"true\"         }  支持多值查询，查询条件格式：  *az_affinity=enable=true&az_affinity=enable=false*。
+    *
+    * @return string[]|null
+    */
+    public function getAzAffinity()
+    {
+        return $this->container['azAffinity'];
+    }
+
+    /**
+    * Sets azAffinity
+    *
+    * @param string[]|null $azAffinity 查询后端服务器组可用区亲和性策略是否开启。示例如下： \"az_affinity\": {             \"enable\": \"true\"         }  支持多值查询，查询条件格式：  *az_affinity=enable=true&az_affinity=enable=false*。
+    *
+    * @return $this
+    */
+    public function setAzAffinity($azAffinity)
+    {
+        $this->container['azAffinity'] = $azAffinity;
         return $this;
     }
 

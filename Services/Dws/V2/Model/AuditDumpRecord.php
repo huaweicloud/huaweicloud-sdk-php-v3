@@ -20,8 +20,8 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群id。
-    * exectorTime  执行时间。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
+    * executorTime  执行时间。
     * beginTime  开始时间。
     * endTime  结束时间。
     * bucketName  桶名。
@@ -33,7 +33,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
-            'exectorTime' => 'string',
+            'executorTime' => 'string',
             'beginTime' => 'string',
             'endTime' => 'string',
             'bucketName' => 'string',
@@ -44,8 +44,8 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群id。
-    * exectorTime  执行时间。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
+    * executorTime  执行时间。
     * beginTime  开始时间。
     * endTime  结束时间。
     * bucketName  桶名。
@@ -57,7 +57,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
-        'exectorTime' => null,
+        'executorTime' => null,
         'beginTime' => null,
         'endTime' => null,
         'bucketName' => null,
@@ -89,8 +89,8 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群id。
-    * exectorTime  执行时间。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
+    * executorTime  执行时间。
     * beginTime  开始时间。
     * endTime  结束时间。
     * bucketName  桶名。
@@ -102,7 +102,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
-            'exectorTime' => 'exector_time',
+            'executorTime' => 'executor_time',
             'beginTime' => 'begin_time',
             'endTime' => 'end_time',
             'bucketName' => 'bucket_name',
@@ -113,8 +113,8 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群id。
-    * exectorTime  执行时间。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
+    * executorTime  执行时间。
     * beginTime  开始时间。
     * endTime  结束时间。
     * bucketName  桶名。
@@ -126,7 +126,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
-            'exectorTime' => 'setExectorTime',
+            'executorTime' => 'setExecutorTime',
             'beginTime' => 'setBeginTime',
             'endTime' => 'setEndTime',
             'bucketName' => 'setBucketName',
@@ -137,8 +137,8 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群id。
-    * exectorTime  执行时间。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
+    * executorTime  执行时间。
     * beginTime  开始时间。
     * endTime  结束时间。
     * bucketName  桶名。
@@ -150,7 +150,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
-            'exectorTime' => 'getExectorTime',
+            'executorTime' => 'getExecutorTime',
             'beginTime' => 'getBeginTime',
             'endTime' => 'getEndTime',
             'bucketName' => 'getBucketName',
@@ -218,7 +218,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
-        $this->container['exectorTime'] = isset($data['exectorTime']) ? $data['exectorTime'] : null;
+        $this->container['executorTime'] = isset($data['executorTime']) ? $data['executorTime'] : null;
         $this->container['beginTime'] = isset($data['beginTime']) ? $data['beginTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['bucketName'] = isset($data['bucketName']) ? $data['bucketName'] : null;
@@ -251,7 +251,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群id。
+    *  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群id。
+    * @param string|null $clusterId **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return $this
     */
@@ -274,26 +274,26 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets exectorTime
+    * Gets executorTime
     *  执行时间。
     *
     * @return string|null
     */
-    public function getExectorTime()
+    public function getExecutorTime()
     {
-        return $this->container['exectorTime'];
+        return $this->container['executorTime'];
     }
 
     /**
-    * Sets exectorTime
+    * Sets executorTime
     *
-    * @param string|null $exectorTime 执行时间。
+    * @param string|null $executorTime 执行时间。
     *
     * @return $this
     */
-    public function setExectorTime($exectorTime)
+    public function setExecutorTime($executorTime)
     {
-        $this->container['exectorTime'] = $exectorTime;
+        $this->container['executorTime'] = $executorTime;
         return $this;
     }
 

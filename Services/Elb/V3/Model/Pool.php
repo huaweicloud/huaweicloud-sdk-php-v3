@@ -21,6 +21,7 @@ class Pool implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * adminStateUp  参数解释：后端服务器组的管理状态。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * azAffinity  azAffinity
     * description  参数解释：后端服务器组的描述信息。
     * healthmonitorId  参数解释：后端服务器组关联的健康检查的ID。
     * id  参数解释：后端服务器组的ID。
@@ -43,7 +44,7 @@ class Pool implements ModelInterface, ArrayAccess
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * anyPortEnable  参数解释：后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  约束限制： - 仅QUIC,TCP,UDP的pool支持。  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     * connectionDrain  connectionDrain
-    * enterpriseProjectId  参数解释：后端服务器组所在的企业项目ID。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。
     * poolHealth  poolHealth
     * publicBorderGroup  参数解释：网络公共边界组，如：center。  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     * quicCidHashStrategy  quicCidHashStrategy
@@ -52,6 +53,7 @@ class Pool implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'adminStateUp' => 'bool',
+            'azAffinity' => '\HuaweiCloud\SDK\Elb\V3\Model\AzAffinity',
             'description' => 'string',
             'healthmonitorId' => 'string',
             'id' => 'string',
@@ -83,6 +85,7 @@ class Pool implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * adminStateUp  参数解释：后端服务器组的管理状态。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * azAffinity  azAffinity
     * description  参数解释：后端服务器组的描述信息。
     * healthmonitorId  参数解释：后端服务器组关联的健康检查的ID。
     * id  参数解释：后端服务器组的ID。
@@ -105,7 +108,7 @@ class Pool implements ModelInterface, ArrayAccess
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * anyPortEnable  参数解释：后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  约束限制： - 仅QUIC,TCP,UDP的pool支持。  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     * connectionDrain  connectionDrain
-    * enterpriseProjectId  参数解释：后端服务器组所在的企业项目ID。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。
     * poolHealth  poolHealth
     * publicBorderGroup  参数解释：网络公共边界组，如：center。  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     * quicCidHashStrategy  quicCidHashStrategy
@@ -114,6 +117,7 @@ class Pool implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'adminStateUp' => null,
+        'azAffinity' => null,
         'description' => null,
         'healthmonitorId' => null,
         'id' => null,
@@ -166,6 +170,7 @@ class Pool implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * adminStateUp  参数解释：后端服务器组的管理状态。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * azAffinity  azAffinity
     * description  参数解释：后端服务器组的描述信息。
     * healthmonitorId  参数解释：后端服务器组关联的健康检查的ID。
     * id  参数解释：后端服务器组的ID。
@@ -188,7 +193,7 @@ class Pool implements ModelInterface, ArrayAccess
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * anyPortEnable  参数解释：后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  约束限制： - 仅QUIC,TCP,UDP的pool支持。  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     * connectionDrain  connectionDrain
-    * enterpriseProjectId  参数解释：后端服务器组所在的企业项目ID。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。
     * poolHealth  poolHealth
     * publicBorderGroup  参数解释：网络公共边界组，如：center。  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     * quicCidHashStrategy  quicCidHashStrategy
@@ -197,6 +202,7 @@ class Pool implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'adminStateUp' => 'admin_state_up',
+            'azAffinity' => 'az_affinity',
             'description' => 'description',
             'healthmonitorId' => 'healthmonitor_id',
             'id' => 'id',
@@ -228,6 +234,7 @@ class Pool implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * adminStateUp  参数解释：后端服务器组的管理状态。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * azAffinity  azAffinity
     * description  参数解释：后端服务器组的描述信息。
     * healthmonitorId  参数解释：后端服务器组关联的健康检查的ID。
     * id  参数解释：后端服务器组的ID。
@@ -250,7 +257,7 @@ class Pool implements ModelInterface, ArrayAccess
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * anyPortEnable  参数解释：后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  约束限制： - 仅QUIC,TCP,UDP的pool支持。  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     * connectionDrain  connectionDrain
-    * enterpriseProjectId  参数解释：后端服务器组所在的企业项目ID。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。
     * poolHealth  poolHealth
     * publicBorderGroup  参数解释：网络公共边界组，如：center。  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     * quicCidHashStrategy  quicCidHashStrategy
@@ -259,6 +266,7 @@ class Pool implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'adminStateUp' => 'setAdminStateUp',
+            'azAffinity' => 'setAzAffinity',
             'description' => 'setDescription',
             'healthmonitorId' => 'setHealthmonitorId',
             'id' => 'setId',
@@ -290,6 +298,7 @@ class Pool implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * adminStateUp  参数解释：后端服务器组的管理状态。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    * azAffinity  azAffinity
     * description  参数解释：后端服务器组的描述信息。
     * healthmonitorId  参数解释：后端服务器组关联的健康检查的ID。
     * id  参数解释：后端服务器组的ID。
@@ -312,7 +321,7 @@ class Pool implements ModelInterface, ArrayAccess
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * anyPortEnable  参数解释：后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  约束限制： - 仅QUIC,TCP,UDP的pool支持。  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     * connectionDrain  connectionDrain
-    * enterpriseProjectId  参数解释：后端服务器组所在的企业项目ID。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。
     * poolHealth  poolHealth
     * publicBorderGroup  参数解释：网络公共边界组，如：center。  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     * quicCidHashStrategy  quicCidHashStrategy
@@ -321,6 +330,7 @@ class Pool implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'adminStateUp' => 'getAdminStateUp',
+            'azAffinity' => 'getAzAffinity',
             'description' => 'getDescription',
             'healthmonitorId' => 'getHealthmonitorId',
             'id' => 'getId',
@@ -423,6 +433,7 @@ class Pool implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
+        $this->container['azAffinity'] = isset($data['azAffinity']) ? $data['azAffinity'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['healthmonitorId'] = isset($data['healthmonitorId']) ? $data['healthmonitorId'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -559,6 +570,30 @@ class Pool implements ModelInterface, ArrayAccess
     public function setAdminStateUp($adminStateUp)
     {
         $this->container['adminStateUp'] = $adminStateUp;
+        return $this;
+    }
+
+    /**
+    * Gets azAffinity
+    *  azAffinity
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\AzAffinity|null
+    */
+    public function getAzAffinity()
+    {
+        return $this->container['azAffinity'];
+    }
+
+    /**
+    * Sets azAffinity
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\AzAffinity|null $azAffinity azAffinity
+    *
+    * @return $this
+    */
+    public function setAzAffinity($azAffinity)
+    {
+        $this->container['azAffinity'] = $azAffinity;
         return $this;
     }
 
@@ -1092,7 +1127,7 @@ class Pool implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  参数解释：后端服务器组所在的企业项目ID。
+    *  参数解释：IP地址组所在的企业项目ID。
     *
     * @return string|null
     */
@@ -1104,7 +1139,7 @@ class Pool implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 参数解释：后端服务器组所在的企业项目ID。
+    * @param string|null $enterpriseProjectId 参数解释：IP地址组所在的企业项目ID。
     *
     * @return $this
     */

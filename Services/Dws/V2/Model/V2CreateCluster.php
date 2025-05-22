@@ -20,27 +20,27 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
-    * flavor  集群规格名称。节点类型详情请参见数据仓库类型数据仓库类型。
-    * numCn  集群CN数量，取值范围为2~集群节点数，最大值为20，默认值为3。
-    * numNode  集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
-    * dbName  管理员用户名称。用户命名要求如下： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。用户名不能为DWS数据库的关键字。
-    * dbPassword  管理员用户密码。 12~32个字符 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。不能与用户名或倒序的用户名相同。
-    * dbPort  集群数据库端口，取值范围为8000~30000，默认值：8000。
-    * dssPoolId  专属存储池ID
-    * availabilityZones  可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
-    * tags  标签列表
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。
-    * subnetId  指定子网ID，用于集群网络配置。
-    * securityGroupId  指定安全组ID，用于集群网络配置。
+    * name  **参数解释**： 集群名称，要求唯一性。 **约束限制**： 不涉及。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **默认取值**： 不涉及。
+    * flavor  **参数解释**： 集群规格编码。 **约束限制**： 不涉及。 **取值范围**： 请参见集群规格接口返回的规格编码。 **默认取值**： 不涉及。
+    * numCn  **参数解释**： 集群CN数量。 **约束限制**： 不涉及。 **取值范围**： 取值范围为2~集群节点数，最大值为20，默认值为3。 **默认取值**： 不涉及。
+    * numNode  **参数解释**： 集群节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * dbName  **参数解释**： 管理员用户名称。 **约束限制**： 不涉及。 **取值范围**： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。 用户名不能为DWS数据库的关键字。 **默认取值**： 不涉及。
+    * dbPassword  **参数解释**： 管理员用户密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。 不能与用户名或倒序的用户名相同。 **默认取值**： 不涉及。
+    * dbPort  **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * dssPoolId  **参数解释**： 专属存储池ID，一般不需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 集群可用区选择详情请参见地区和终端节点地区和终端节点。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * datastoreVersion  集群版本
-    * masterKeyId  密钥ID
-    * masterKeyName  密钥名称
-    * cryptAlgorithm  加密算法
+    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cryptAlgorithm  **参数解释**： KMS加密算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * volume  volume
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
-    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。使用ipv6时必须所选择的子网也支持ipv6。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -70,27 +70,27 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
-    * flavor  集群规格名称。节点类型详情请参见数据仓库类型数据仓库类型。
-    * numCn  集群CN数量，取值范围为2~集群节点数，最大值为20，默认值为3。
-    * numNode  集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
-    * dbName  管理员用户名称。用户命名要求如下： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。用户名不能为DWS数据库的关键字。
-    * dbPassword  管理员用户密码。 12~32个字符 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。不能与用户名或倒序的用户名相同。
-    * dbPort  集群数据库端口，取值范围为8000~30000，默认值：8000。
-    * dssPoolId  专属存储池ID
-    * availabilityZones  可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
-    * tags  标签列表
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。
-    * subnetId  指定子网ID，用于集群网络配置。
-    * securityGroupId  指定安全组ID，用于集群网络配置。
+    * name  **参数解释**： 集群名称，要求唯一性。 **约束限制**： 不涉及。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **默认取值**： 不涉及。
+    * flavor  **参数解释**： 集群规格编码。 **约束限制**： 不涉及。 **取值范围**： 请参见集群规格接口返回的规格编码。 **默认取值**： 不涉及。
+    * numCn  **参数解释**： 集群CN数量。 **约束限制**： 不涉及。 **取值范围**： 取值范围为2~集群节点数，最大值为20，默认值为3。 **默认取值**： 不涉及。
+    * numNode  **参数解释**： 集群节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * dbName  **参数解释**： 管理员用户名称。 **约束限制**： 不涉及。 **取值范围**： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。 用户名不能为DWS数据库的关键字。 **默认取值**： 不涉及。
+    * dbPassword  **参数解释**： 管理员用户密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。 不能与用户名或倒序的用户名相同。 **默认取值**： 不涉及。
+    * dbPort  **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * dssPoolId  **参数解释**： 专属存储池ID，一般不需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 集群可用区选择详情请参见地区和终端节点地区和终端节点。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * datastoreVersion  集群版本
-    * masterKeyId  密钥ID
-    * masterKeyName  密钥名称
-    * cryptAlgorithm  加密算法
+    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cryptAlgorithm  **参数解释**： KMS加密算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * volume  volume
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
-    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。使用ipv6时必须所选择的子网也支持ipv6。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -141,27 +141,27 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
-    * flavor  集群规格名称。节点类型详情请参见数据仓库类型数据仓库类型。
-    * numCn  集群CN数量，取值范围为2~集群节点数，最大值为20，默认值为3。
-    * numNode  集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
-    * dbName  管理员用户名称。用户命名要求如下： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。用户名不能为DWS数据库的关键字。
-    * dbPassword  管理员用户密码。 12~32个字符 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。不能与用户名或倒序的用户名相同。
-    * dbPort  集群数据库端口，取值范围为8000~30000，默认值：8000。
-    * dssPoolId  专属存储池ID
-    * availabilityZones  可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
-    * tags  标签列表
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。
-    * subnetId  指定子网ID，用于集群网络配置。
-    * securityGroupId  指定安全组ID，用于集群网络配置。
+    * name  **参数解释**： 集群名称，要求唯一性。 **约束限制**： 不涉及。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **默认取值**： 不涉及。
+    * flavor  **参数解释**： 集群规格编码。 **约束限制**： 不涉及。 **取值范围**： 请参见集群规格接口返回的规格编码。 **默认取值**： 不涉及。
+    * numCn  **参数解释**： 集群CN数量。 **约束限制**： 不涉及。 **取值范围**： 取值范围为2~集群节点数，最大值为20，默认值为3。 **默认取值**： 不涉及。
+    * numNode  **参数解释**： 集群节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * dbName  **参数解释**： 管理员用户名称。 **约束限制**： 不涉及。 **取值范围**： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。 用户名不能为DWS数据库的关键字。 **默认取值**： 不涉及。
+    * dbPassword  **参数解释**： 管理员用户密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。 不能与用户名或倒序的用户名相同。 **默认取值**： 不涉及。
+    * dbPort  **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * dssPoolId  **参数解释**： 专属存储池ID，一般不需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 集群可用区选择详情请参见地区和终端节点地区和终端节点。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * datastoreVersion  集群版本
-    * masterKeyId  密钥ID
-    * masterKeyName  密钥名称
-    * cryptAlgorithm  加密算法
+    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cryptAlgorithm  **参数解释**： KMS加密算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * volume  volume
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
-    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。使用ipv6时必须所选择的子网也支持ipv6。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -191,27 +191,27 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
-    * flavor  集群规格名称。节点类型详情请参见数据仓库类型数据仓库类型。
-    * numCn  集群CN数量，取值范围为2~集群节点数，最大值为20，默认值为3。
-    * numNode  集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
-    * dbName  管理员用户名称。用户命名要求如下： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。用户名不能为DWS数据库的关键字。
-    * dbPassword  管理员用户密码。 12~32个字符 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。不能与用户名或倒序的用户名相同。
-    * dbPort  集群数据库端口，取值范围为8000~30000，默认值：8000。
-    * dssPoolId  专属存储池ID
-    * availabilityZones  可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
-    * tags  标签列表
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。
-    * subnetId  指定子网ID，用于集群网络配置。
-    * securityGroupId  指定安全组ID，用于集群网络配置。
+    * name  **参数解释**： 集群名称，要求唯一性。 **约束限制**： 不涉及。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **默认取值**： 不涉及。
+    * flavor  **参数解释**： 集群规格编码。 **约束限制**： 不涉及。 **取值范围**： 请参见集群规格接口返回的规格编码。 **默认取值**： 不涉及。
+    * numCn  **参数解释**： 集群CN数量。 **约束限制**： 不涉及。 **取值范围**： 取值范围为2~集群节点数，最大值为20，默认值为3。 **默认取值**： 不涉及。
+    * numNode  **参数解释**： 集群节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * dbName  **参数解释**： 管理员用户名称。 **约束限制**： 不涉及。 **取值范围**： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。 用户名不能为DWS数据库的关键字。 **默认取值**： 不涉及。
+    * dbPassword  **参数解释**： 管理员用户密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。 不能与用户名或倒序的用户名相同。 **默认取值**： 不涉及。
+    * dbPort  **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * dssPoolId  **参数解释**： 专属存储池ID，一般不需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 集群可用区选择详情请参见地区和终端节点地区和终端节点。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * datastoreVersion  集群版本
-    * masterKeyId  密钥ID
-    * masterKeyName  密钥名称
-    * cryptAlgorithm  加密算法
+    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cryptAlgorithm  **参数解释**： KMS加密算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * volume  volume
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
-    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。使用ipv6时必须所选择的子网也支持ipv6。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -241,27 +241,27 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
-    * flavor  集群规格名称。节点类型详情请参见数据仓库类型数据仓库类型。
-    * numCn  集群CN数量，取值范围为2~集群节点数，最大值为20，默认值为3。
-    * numNode  集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
-    * dbName  管理员用户名称。用户命名要求如下： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。用户名不能为DWS数据库的关键字。
-    * dbPassword  管理员用户密码。 12~32个字符 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。不能与用户名或倒序的用户名相同。
-    * dbPort  集群数据库端口，取值范围为8000~30000，默认值：8000。
-    * dssPoolId  专属存储池ID
-    * availabilityZones  可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
-    * tags  标签列表
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。
-    * subnetId  指定子网ID，用于集群网络配置。
-    * securityGroupId  指定安全组ID，用于集群网络配置。
+    * name  **参数解释**： 集群名称，要求唯一性。 **约束限制**： 不涉及。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **默认取值**： 不涉及。
+    * flavor  **参数解释**： 集群规格编码。 **约束限制**： 不涉及。 **取值范围**： 请参见集群规格接口返回的规格编码。 **默认取值**： 不涉及。
+    * numCn  **参数解释**： 集群CN数量。 **约束限制**： 不涉及。 **取值范围**： 取值范围为2~集群节点数，最大值为20，默认值为3。 **默认取值**： 不涉及。
+    * numNode  **参数解释**： 集群节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * dbName  **参数解释**： 管理员用户名称。 **约束限制**： 不涉及。 **取值范围**： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。 用户名不能为DWS数据库的关键字。 **默认取值**： 不涉及。
+    * dbPassword  **参数解释**： 管理员用户密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。 不能与用户名或倒序的用户名相同。 **默认取值**： 不涉及。
+    * dbPort  **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * dssPoolId  **参数解释**： 专属存储池ID，一般不需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 集群可用区选择详情请参见地区和终端节点地区和终端节点。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * datastoreVersion  集群版本
-    * masterKeyId  密钥ID
-    * masterKeyName  密钥名称
-    * cryptAlgorithm  加密算法
+    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * cryptAlgorithm  **参数解释**： KMS加密算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * volume  volume
-    * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
-    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。使用ipv6时必须所选择的子网也支持ipv6。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -384,9 +384,6 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
         if ($this->container['flavor'] === null) {
             $invalidProperties[] = "'flavor' can't be null";
         }
-        if ($this->container['numCn'] === null) {
-            $invalidProperties[] = "'numCn' can't be null";
-        }
         if ($this->container['numNode'] === null) {
             $invalidProperties[] = "'numNode' can't be null";
         }
@@ -430,7 +427,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
+    *  **参数解释**： 集群名称，要求唯一性。 **约束限制**： 不涉及。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -442,7 +439,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。
+    * @param string $name **参数解释**： 集群名称，要求唯一性。 **约束限制**： 不涉及。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +451,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavor
-    *  集群规格名称。节点类型详情请参见数据仓库类型数据仓库类型。
+    *  **参数解释**： 集群规格编码。 **约束限制**： 不涉及。 **取值范围**： 请参见集群规格接口返回的规格编码。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -466,7 +463,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets flavor
     *
-    * @param string $flavor 集群规格名称。节点类型详情请参见数据仓库类型数据仓库类型。
+    * @param string $flavor **参数解释**： 集群规格编码。 **约束限制**： 不涉及。 **取值范围**： 请参见集群规格接口返回的规格编码。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -478,9 +475,9 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets numCn
-    *  集群CN数量，取值范围为2~集群节点数，最大值为20，默认值为3。
+    *  **参数解释**： 集群CN数量。 **约束限制**： 不涉及。 **取值范围**： 取值范围为2~集群节点数，最大值为20，默认值为3。 **默认取值**： 不涉及。
     *
-    * @return int
+    * @return int|null
     */
     public function getNumCn()
     {
@@ -490,7 +487,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets numCn
     *
-    * @param int $numCn 集群CN数量，取值范围为2~集群节点数，最大值为20，默认值为3。
+    * @param int|null $numCn **参数解释**： 集群CN数量。 **约束限制**： 不涉及。 **取值范围**： 取值范围为2~集群节点数，最大值为20，默认值为3。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -502,7 +499,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets numNode
-    *  集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
+    *  **参数解释**： 集群节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -514,7 +511,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets numNode
     *
-    * @param int $numNode 集群节点数量，集群模式取值范围为3~256，实时数仓（单机模式）取值为1。
+    * @param int $numNode **参数解释**： 集群节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -526,7 +523,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbName
-    *  管理员用户名称。用户命名要求如下： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。用户名不能为DWS数据库的关键字。
+    *  **参数解释**： 管理员用户名称。 **约束限制**： 不涉及。 **取值范围**： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。 用户名不能为DWS数据库的关键字。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -538,7 +535,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets dbName
     *
-    * @param string $dbName 管理员用户名称。用户命名要求如下： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。用户名不能为DWS数据库的关键字。
+    * @param string $dbName **参数解释**： 管理员用户名称。 **约束限制**： 不涉及。 **取值范围**： 只能由小写字母、数字或下划线组成。 必须由小写字母或下划线开头。 长度为1~63个字符。 用户名不能为DWS数据库的关键字。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -550,7 +547,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbPassword
-    *  管理员用户密码。 12~32个字符 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。不能与用户名或倒序的用户名相同。
+    *  **参数解释**： 管理员用户密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。 不能与用户名或倒序的用户名相同。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -562,7 +559,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets dbPassword
     *
-    * @param string $dbPassword 管理员用户密码。 12~32个字符 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。不能与用户名或倒序的用户名相同。
+    * @param string $dbPassword **参数解释**： 管理员用户密码。 **约束限制**： 不涉及。 **取值范围**： 12~32个字符； 至少包含以下字符中的3种：大写字母、小写字母、数字和特殊字符（~!?,.:;-_(){}[]/<>@#%^&*+|\\=）。 不能与用户名或倒序的用户名相同。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -574,7 +571,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbPort
-    *  集群数据库端口，取值范围为8000~30000，默认值：8000。
+    *  **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
     *
     * @return int
     */
@@ -586,7 +583,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets dbPort
     *
-    * @param int $dbPort 集群数据库端口，取值范围为8000~30000，默认值：8000。
+    * @param int $dbPort **参数解释**： 集群数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
     *
     * @return $this
     */
@@ -598,7 +595,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets dssPoolId
-    *  专属存储池ID
+    *  **参数解释**： 专属存储池ID，一般不需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @return string|null
     */
@@ -610,7 +607,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets dssPoolId
     *
-    * @param string|null $dssPoolId 专属存储池ID
+    * @param string|null $dssPoolId **参数解释**： 专属存储池ID，一般不需要填写。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @return $this
     */
@@ -622,7 +619,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZones
-    *  可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
+    *  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 集群可用区选择详情请参见地区和终端节点地区和终端节点。 **默认取值**： 不涉及。
     *
     * @return string[]
     */
@@ -634,7 +631,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZones
     *
-    * @param string[] $availabilityZones 可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
+    * @param string[] $availabilityZones **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 集群可用区选择详情请参见地区和终端节点地区和终端节点。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -646,7 +643,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表
+    *  **参数解释**： 标签信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\Tags[]|null
     */
@@ -658,7 +655,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\Tags[]|null $tags 标签列表
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\Tags[]|null $tags **参数解释**： 标签信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -670,7 +667,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  指定虚拟私有云ID，用于集群网络配置。
+    *  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -682,7 +679,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId 指定虚拟私有云ID，用于集群网络配置。
+    * @param string $vpcId **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -694,7 +691,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  指定子网ID，用于集群网络配置。
+    *  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -706,7 +703,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId 指定子网ID，用于集群网络配置。
+    * @param string $subnetId **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -718,7 +715,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  指定安全组ID，用于集群网络配置。
+    *  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -730,7 +727,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string|null $securityGroupId 指定安全组ID，用于集群网络配置。
+    * @param string|null $securityGroupId **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -766,7 +763,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreVersion
-    *  集群版本
+    *  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -778,7 +775,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreVersion
     *
-    * @param string $datastoreVersion 集群版本
+    * @param string $datastoreVersion **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -790,7 +787,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets masterKeyId
-    *  密钥ID
+    *  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -802,7 +799,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets masterKeyId
     *
-    * @param string|null $masterKeyId 密钥ID
+    * @param string|null $masterKeyId **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -814,7 +811,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets masterKeyName
-    *  密钥名称
+    *  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -826,7 +823,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets masterKeyName
     *
-    * @param string|null $masterKeyName 密钥名称
+    * @param string|null $masterKeyName **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -838,7 +835,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets cryptAlgorithm
-    *  加密算法
+    *  **参数解释**： KMS加密算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -850,7 +847,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets cryptAlgorithm
     *
-    * @param string|null $cryptAlgorithm 加密算法
+    * @param string|null $cryptAlgorithm **参数解释**： KMS加密算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -886,7 +883,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    *  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return string|null
     */
@@ -898,7 +895,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return $this
     */
@@ -910,7 +907,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Enable
-    *  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    *  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。使用ipv6时必须所选择的子网也支持ipv6。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -922,7 +919,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Enable
     *
-    * @param bool|null $ipv6Enable 指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    * @param bool|null $ipv6Enable **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。使用ipv6时必须所选择的子网也支持ipv6。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

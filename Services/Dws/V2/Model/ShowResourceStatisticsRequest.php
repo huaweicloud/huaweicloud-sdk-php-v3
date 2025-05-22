@@ -20,7 +20,7 @@ class ShowResourceStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * namespace  命名空间
+    * namespace  **参数解释**： 命名空间。 **约束限制**： 不涉及。 **取值范围**： 固定值dws。 **默认取值**： dws。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowResourceStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * namespace  命名空间
+    * namespace  **参数解释**： 命名空间。 **约束限制**： 不涉及。 **取值范围**： 固定值dws。 **默认取值**： dws。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowResourceStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * namespace  命名空间
+    * namespace  **参数解释**： 命名空间。 **约束限制**： 不涉及。 **取值范围**： 固定值dws。 **默认取值**： dws。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowResourceStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * namespace  命名空间
+    * namespace  **参数解释**： 命名空间。 **约束限制**： 不涉及。 **取值范围**： 固定值dws。 **默认取值**： dws。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowResourceStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * namespace  命名空间
+    * namespace  **参数解释**： 命名空间。 **约束限制**： 不涉及。 **取值范围**： 固定值dws。 **默认取值**： dws。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ShowResourceStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  命名空间
+    *  **参数解释**： 命名空间。 **约束限制**： 不涉及。 **取值范围**： 固定值dws。 **默认取值**： dws。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class ShowResourceStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 命名空间
+    * @param string|null $namespace **参数解释**： 命名空间。 **约束限制**： 不涉及。 **取值范围**： 固定值dws。 **默认取值**： dws。
     *
     * @return $this
     */

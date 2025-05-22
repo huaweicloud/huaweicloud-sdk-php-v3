@@ -28,7 +28,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * size  快照大小，单位GB。
     * status  快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * type  快照创建类型。
-    * clusterId  快照对应的集群ID
+    * clusterId  快照对应的集群ID。
     * datastore  datastore
     * clusterName  快照对应的集群名称。
     * bakExpectedStartTime  快照预计开始时间。
@@ -92,7 +92,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * size  快照大小，单位GB。
     * status  快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * type  快照创建类型。
-    * clusterId  快照对应的集群ID
+    * clusterId  快照对应的集群ID。
     * datastore  datastore
     * clusterName  快照对应的集群名称。
     * bakExpectedStartTime  快照预计开始时间。
@@ -177,7 +177,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * size  快照大小，单位GB。
     * status  快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * type  快照创建类型。
-    * clusterId  快照对应的集群ID
+    * clusterId  快照对应的集群ID。
     * datastore  datastore
     * clusterName  快照对应的集群名称。
     * bakExpectedStartTime  快照预计开始时间。
@@ -241,7 +241,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * size  快照大小，单位GB。
     * status  快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * type  快照创建类型。
-    * clusterId  快照对应的集群ID
+    * clusterId  快照对应的集群ID。
     * datastore  datastore
     * clusterName  快照对应的集群名称。
     * bakExpectedStartTime  快照预计开始时间。
@@ -305,7 +305,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * size  快照大小，单位GB。
     * status  快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * type  快照创建类型。
-    * clusterId  快照对应的集群ID
+    * clusterId  快照对应的集群ID。
     * datastore  datastore
     * clusterName  快照对应的集群名称。
     * bakExpectedStartTime  快照预计开始时间。
@@ -690,7 +690,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  快照对应的集群ID
+    *  快照对应的集群ID。
     *
     * @return string
     */
@@ -702,7 +702,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 快照对应的集群ID
+    * @param string $clusterId 快照对应的集群ID。
     *
     * @return $this
     */

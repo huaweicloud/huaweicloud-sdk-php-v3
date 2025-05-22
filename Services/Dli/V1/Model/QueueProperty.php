@@ -20,7 +20,7 @@ class QueueProperty implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
+    * key  返回属性值对应的key值: computeEngine.maxInstances, 队列能启动的最大spark driver数量; computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量; job.maxConcurrent,单个spark driver能同时运行的最大任务数量; multipleSc.support,是否支持设置多个spark driver; job.saveJobResultToJobBucket, 是否使用作业桶保存SQL查询结果，true代表开启; computeEngine.spark.nativeEnabled, 是否使用DLI Native;
     * value  value
     *
     * @var string[]
@@ -32,7 +32,7 @@ class QueueProperty implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
+    * key  返回属性值对应的key值: computeEngine.maxInstances, 队列能启动的最大spark driver数量; computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量; job.maxConcurrent,单个spark driver能同时运行的最大任务数量; multipleSc.support,是否支持设置多个spark driver; job.saveJobResultToJobBucket, 是否使用作业桶保存SQL查询结果，true代表开启; computeEngine.spark.nativeEnabled, 是否使用DLI Native;
     * value  value
     *
     * @var string[]
@@ -65,7 +65,7 @@ class QueueProperty implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
+    * key  返回属性值对应的key值: computeEngine.maxInstances, 队列能启动的最大spark driver数量; computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量; job.maxConcurrent,单个spark driver能同时运行的最大任务数量; multipleSc.support,是否支持设置多个spark driver; job.saveJobResultToJobBucket, 是否使用作业桶保存SQL查询结果，true代表开启; computeEngine.spark.nativeEnabled, 是否使用DLI Native;
     * value  value
     *
     * @var string[]
@@ -77,7 +77,7 @@ class QueueProperty implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
+    * key  返回属性值对应的key值: computeEngine.maxInstances, 队列能启动的最大spark driver数量; computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量; job.maxConcurrent,单个spark driver能同时运行的最大任务数量; multipleSc.support,是否支持设置多个spark driver; job.saveJobResultToJobBucket, 是否使用作业桶保存SQL查询结果，true代表开启; computeEngine.spark.nativeEnabled, 是否使用DLI Native;
     * value  value
     *
     * @var string[]
@@ -89,7 +89,7 @@ class QueueProperty implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
+    * key  返回属性值对应的key值: computeEngine.maxInstances, 队列能启动的最大spark driver数量; computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量; job.maxConcurrent,单个spark driver能同时运行的最大任务数量; multipleSc.support,是否支持设置多个spark driver; job.saveJobResultToJobBucket, 是否使用作业桶保存SQL查询结果，true代表开启; computeEngine.spark.nativeEnabled, 是否使用DLI Native;
     * value  value
     *
     * @var string[]
@@ -143,6 +143,8 @@ class QueueProperty implements ModelInterface, ArrayAccess
     const KEY_COMPUTE_ENGINE_MAX_PREFETCH_INSTANCE = 'computeEngine.maxPrefetchInstance';
     const KEY_JOB_MAX_CONCURRENT = 'job.maxConcurrent';
     const KEY_MULTIPLE_SC_SUPPORT = 'multipleSc.support';
+    const KEY_JOB_SAVE_JOB_RESULT_TO_JOB_BUCKET = 'job.saveJobResultToJobBucket';
+    const KEY_COMPUTE_ENGINE_SPARK_NATIVE_ENABLED = 'computeEngine.spark.nativeEnabled';
     
 
     /**
@@ -157,6 +159,8 @@ class QueueProperty implements ModelInterface, ArrayAccess
             self::KEY_COMPUTE_ENGINE_MAX_PREFETCH_INSTANCE,
             self::KEY_JOB_MAX_CONCURRENT,
             self::KEY_MULTIPLE_SC_SUPPORT,
+            self::KEY_JOB_SAVE_JOB_RESULT_TO_JOB_BUCKET,
+            self::KEY_COMPUTE_ENGINE_SPARK_NATIVE_ENABLED,
         ];
     }
 
@@ -218,7 +222,7 @@ class QueueProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
+    *  返回属性值对应的key值: computeEngine.maxInstances, 队列能启动的最大spark driver数量; computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量; job.maxConcurrent,单个spark driver能同时运行的最大任务数量; multipleSc.support,是否支持设置多个spark driver; job.saveJobResultToJobBucket, 是否使用作业桶保存SQL查询结果，true代表开启; computeEngine.spark.nativeEnabled, 是否使用DLI Native;
     *
     * @return string
     */
@@ -230,7 +234,7 @@ class QueueProperty implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
+    * @param string $key 返回属性值对应的key值: computeEngine.maxInstances, 队列能启动的最大spark driver数量; computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量; job.maxConcurrent,单个spark driver能同时运行的最大任务数量; multipleSc.support,是否支持设置多个spark driver; job.saveJobResultToJobBucket, 是否使用作业桶保存SQL查询结果，true代表开启; computeEngine.spark.nativeEnabled, 是否使用DLI Native;
     *
     * @return $this
     */

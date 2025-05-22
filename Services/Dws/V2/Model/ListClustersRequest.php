@@ -20,7 +20,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID，查询所有绑定eps集群，值为all_granted_eps
+    * enterpriseProjectId  **参数解释**： 企业项目ID。查询所有绑定eps集群，则值为all_granted_eps。 **约束限制**： 不涉及。 **取值范围**： all_granted_eps、0等，0表示默认默认企业项目“default”的ID。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID，查询所有绑定eps集群，值为all_granted_eps
+    * enterpriseProjectId  **参数解释**： 企业项目ID。查询所有绑定eps集群，则值为all_granted_eps。 **约束限制**： 不涉及。 **取值范围**： all_granted_eps、0等，0表示默认默认企业项目“default”的ID。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业项目ID，查询所有绑定eps集群，值为all_granted_eps
+    * enterpriseProjectId  **参数解释**： 企业项目ID。查询所有绑定eps集群，则值为all_granted_eps。 **约束限制**： 不涉及。 **取值范围**： all_granted_eps、0等，0表示默认默认企业项目“default”的ID。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业项目ID，查询所有绑定eps集群，值为all_granted_eps
+    * enterpriseProjectId  **参数解释**： 企业项目ID。查询所有绑定eps集群，则值为all_granted_eps。 **约束限制**： 不涉及。 **取值范围**： all_granted_eps、0等，0表示默认默认企业项目“default”的ID。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业项目ID，查询所有绑定eps集群，值为all_granted_eps
+    * enterpriseProjectId  **参数解释**： 企业项目ID。查询所有绑定eps集群，则值为all_granted_eps。 **约束限制**： 不涉及。 **取值范围**： all_granted_eps、0等，0表示默认默认企业项目“default”的ID。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，查询所有绑定eps集群，值为all_granted_eps
+    *  **参数解释**： 企业项目ID。查询所有绑定eps集群，则值为all_granted_eps。 **约束限制**： 不涉及。 **取值范围**： all_granted_eps、0等，0表示默认默认企业项目“default”的ID。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，查询所有绑定eps集群，值为all_granted_eps
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。查询所有绑定eps集群，则值为all_granted_eps。 **约束限制**： 不涉及。 **取值范围**： all_granted_eps、0等，0表示默认默认企业项目“default”的ID。 **默认取值**： 不涉及。
     *
     * @return $this
     */

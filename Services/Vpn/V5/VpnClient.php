@@ -2249,6 +2249,68 @@ class VpnClient extends Client
     }
 
     /**
+     * 重置VPN连接
+     *
+     * 根据连接ID，重置指定VPN连接
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resetVpnConnection($request)
+    {
+        return $this->resetVpnConnectionWithHttpInfo($request);
+    }
+
+    public function resetVpnConnectionWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/vpn-connection/{vpn_connection_id}/reset';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnConnectionId'] !== null) {
+            $pathParams['vpn_connection_id'] = $localVarParams['vpnConnectionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ResetVpnConnectionResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ResetVpnConnectionRequest');
+    }
+
+    /**
      * 查询VPN连接
      *
      * 根据连接ID，查询指定的VPN连接的参数

@@ -20,34 +20,34 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  集群ID
-    * name  集群名称
-    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
-    * version  数据仓库版本
-    * updated  集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
-    * created  集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
-    * port  集群服务端口。
-    * endpoints  集群的内网连接信息。
-    * nodes  集群实例
-    * tags  集群标签
-    * userName  管理员用户名
-    * numberOfNode  节点数量
-    * recentEvent  事件数
-    * availabilityZone  可用区
-    * enterpriseProjectId  企业项目ID。值为0表示默认企业项目“default”。
-    * nodeType  节点类型
-    * vpcId  虚拟私有云ID
-    * subnetId  子网ID
+    * id  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 集群名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    * version  **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
+    * created  **参数解释**： 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
+    * port  **参数解释**： 集群服务端口。 **取值范围**： 8000~30000
+    * endpoints  **参数解释**： 集群的内网连接信息。 **取值范围**： 非空对象数组。
+    * nodes  **参数解释**： 集群实例。 **取值范围**： 非空对象数组。
+    * tags  **参数解释**： 集群标签。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 管理员用户名。 **取值范围**： 不涉及。
+    * numberOfNode  **参数解释**： 节点数量。 **取值范围**： 不涉及。
+    * recentEvent  **参数解释**： 事件数。 **取值范围**： 不涉及。
+    * availabilityZone  **参数解释**： 可用区。 **取值范围**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * publicIp  publicIp
-    * publicEndpoints  集群的公网连接信息，如果未指定，则默认不使用公网连接信息。
-    * actionProgress  任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。key值的有效值包括： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
-    * subStatus  “可用”集群状态的子状态，有效值包括：  - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
-    * taskStatus  集群管理任务，有效值包括： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
+    * publicEndpoints  **参数解释**： 公网IP地址，如果未指定，则默认不使用公网连接。 **取值范围**： 不涉及。
+    * actionProgress  **参数解释**： 任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。 **取值范围**： key值的有效值包括但不限于以下： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
+    * subStatus  **参数解释**： “可用”集群状态的子状态。 **取值范围**： 有效值包括： - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
+    * taskStatus  **参数解释**： 集群管理任务。 **取值范围**： 有效值包括但不限于以下： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
     * parameterGroup  parameterGroup
-    * nodeTypeId  节点类型ID
-    * securityGroupId  安全组ID
-    * orderId  订单ID，仅包周期场景返回。
-    * privateIp  内网IP地址列表
+    * nodeType  **参数解释**： 集群规格。 **取值范围**： 不涉及。
+    * nodeTypeId  **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，仅包周期场景返回。非空时可用于区分当前是包周期集群。 **取值范围**： 不涉及。
+    * privateIp  **参数解释**： 内网IP地址列表。 **取值范围**： 不涉及。
     * maintainWindow  maintainWindow
     * resizeInfo  resizeInfo
     * failedReasons  failedReasons
@@ -71,7 +71,6 @@ class ClusterDetail implements ModelInterface, ArrayAccess
             'recentEvent' => 'int',
             'availabilityZone' => 'string',
             'enterpriseProjectId' => 'string',
-            'nodeType' => 'string',
             'vpcId' => 'string',
             'subnetId' => 'string',
             'publicIp' => '\HuaweiCloud\SDK\Dws\V2\Model\PublicIp',
@@ -80,6 +79,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
             'subStatus' => 'string',
             'taskStatus' => 'string',
             'parameterGroup' => '\HuaweiCloud\SDK\Dws\V2\Model\ParameterGroup',
+            'nodeType' => 'string',
             'nodeTypeId' => 'string',
             'securityGroupId' => 'string',
             'orderId' => 'string',
@@ -92,34 +92,34 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  集群ID
-    * name  集群名称
-    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
-    * version  数据仓库版本
-    * updated  集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
-    * created  集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
-    * port  集群服务端口。
-    * endpoints  集群的内网连接信息。
-    * nodes  集群实例
-    * tags  集群标签
-    * userName  管理员用户名
-    * numberOfNode  节点数量
-    * recentEvent  事件数
-    * availabilityZone  可用区
-    * enterpriseProjectId  企业项目ID。值为0表示默认企业项目“default”。
-    * nodeType  节点类型
-    * vpcId  虚拟私有云ID
-    * subnetId  子网ID
+    * id  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 集群名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    * version  **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
+    * created  **参数解释**： 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
+    * port  **参数解释**： 集群服务端口。 **取值范围**： 8000~30000
+    * endpoints  **参数解释**： 集群的内网连接信息。 **取值范围**： 非空对象数组。
+    * nodes  **参数解释**： 集群实例。 **取值范围**： 非空对象数组。
+    * tags  **参数解释**： 集群标签。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 管理员用户名。 **取值范围**： 不涉及。
+    * numberOfNode  **参数解释**： 节点数量。 **取值范围**： 不涉及。
+    * recentEvent  **参数解释**： 事件数。 **取值范围**： 不涉及。
+    * availabilityZone  **参数解释**： 可用区。 **取值范围**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * publicIp  publicIp
-    * publicEndpoints  集群的公网连接信息，如果未指定，则默认不使用公网连接信息。
-    * actionProgress  任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。key值的有效值包括： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
-    * subStatus  “可用”集群状态的子状态，有效值包括：  - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
-    * taskStatus  集群管理任务，有效值包括： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
+    * publicEndpoints  **参数解释**： 公网IP地址，如果未指定，则默认不使用公网连接。 **取值范围**： 不涉及。
+    * actionProgress  **参数解释**： 任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。 **取值范围**： key值的有效值包括但不限于以下： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
+    * subStatus  **参数解释**： “可用”集群状态的子状态。 **取值范围**： 有效值包括： - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
+    * taskStatus  **参数解释**： 集群管理任务。 **取值范围**： 有效值包括但不限于以下： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
     * parameterGroup  parameterGroup
-    * nodeTypeId  节点类型ID
-    * securityGroupId  安全组ID
-    * orderId  订单ID，仅包周期场景返回。
-    * privateIp  内网IP地址列表
+    * nodeType  **参数解释**： 集群规格。 **取值范围**： 不涉及。
+    * nodeTypeId  **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，仅包周期场景返回。非空时可用于区分当前是包周期集群。 **取值范围**： 不涉及。
+    * privateIp  **参数解释**： 内网IP地址列表。 **取值范围**： 不涉及。
     * maintainWindow  maintainWindow
     * resizeInfo  resizeInfo
     * failedReasons  failedReasons
@@ -143,7 +143,6 @@ class ClusterDetail implements ModelInterface, ArrayAccess
         'recentEvent' => 'int32',
         'availabilityZone' => null,
         'enterpriseProjectId' => null,
-        'nodeType' => null,
         'vpcId' => null,
         'subnetId' => null,
         'publicIp' => null,
@@ -152,6 +151,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
         'subStatus' => null,
         'taskStatus' => null,
         'parameterGroup' => null,
+        'nodeType' => null,
         'nodeTypeId' => null,
         'securityGroupId' => null,
         'orderId' => null,
@@ -185,34 +185,34 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  集群ID
-    * name  集群名称
-    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
-    * version  数据仓库版本
-    * updated  集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
-    * created  集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
-    * port  集群服务端口。
-    * endpoints  集群的内网连接信息。
-    * nodes  集群实例
-    * tags  集群标签
-    * userName  管理员用户名
-    * numberOfNode  节点数量
-    * recentEvent  事件数
-    * availabilityZone  可用区
-    * enterpriseProjectId  企业项目ID。值为0表示默认企业项目“default”。
-    * nodeType  节点类型
-    * vpcId  虚拟私有云ID
-    * subnetId  子网ID
+    * id  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 集群名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    * version  **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
+    * created  **参数解释**： 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
+    * port  **参数解释**： 集群服务端口。 **取值范围**： 8000~30000
+    * endpoints  **参数解释**： 集群的内网连接信息。 **取值范围**： 非空对象数组。
+    * nodes  **参数解释**： 集群实例。 **取值范围**： 非空对象数组。
+    * tags  **参数解释**： 集群标签。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 管理员用户名。 **取值范围**： 不涉及。
+    * numberOfNode  **参数解释**： 节点数量。 **取值范围**： 不涉及。
+    * recentEvent  **参数解释**： 事件数。 **取值范围**： 不涉及。
+    * availabilityZone  **参数解释**： 可用区。 **取值范围**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * publicIp  publicIp
-    * publicEndpoints  集群的公网连接信息，如果未指定，则默认不使用公网连接信息。
-    * actionProgress  任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。key值的有效值包括： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
-    * subStatus  “可用”集群状态的子状态，有效值包括：  - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
-    * taskStatus  集群管理任务，有效值包括： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
+    * publicEndpoints  **参数解释**： 公网IP地址，如果未指定，则默认不使用公网连接。 **取值范围**： 不涉及。
+    * actionProgress  **参数解释**： 任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。 **取值范围**： key值的有效值包括但不限于以下： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
+    * subStatus  **参数解释**： “可用”集群状态的子状态。 **取值范围**： 有效值包括： - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
+    * taskStatus  **参数解释**： 集群管理任务。 **取值范围**： 有效值包括但不限于以下： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
     * parameterGroup  parameterGroup
-    * nodeTypeId  节点类型ID
-    * securityGroupId  安全组ID
-    * orderId  订单ID，仅包周期场景返回。
-    * privateIp  内网IP地址列表
+    * nodeType  **参数解释**： 集群规格。 **取值范围**： 不涉及。
+    * nodeTypeId  **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，仅包周期场景返回。非空时可用于区分当前是包周期集群。 **取值范围**： 不涉及。
+    * privateIp  **参数解释**： 内网IP地址列表。 **取值范围**： 不涉及。
     * maintainWindow  maintainWindow
     * resizeInfo  resizeInfo
     * failedReasons  failedReasons
@@ -236,7 +236,6 @@ class ClusterDetail implements ModelInterface, ArrayAccess
             'recentEvent' => 'recent_event',
             'availabilityZone' => 'availability_zone',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'nodeType' => 'node_type',
             'vpcId' => 'vpc_id',
             'subnetId' => 'subnet_id',
             'publicIp' => 'public_ip',
@@ -245,6 +244,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
             'subStatus' => 'sub_status',
             'taskStatus' => 'task_status',
             'parameterGroup' => 'parameter_group',
+            'nodeType' => 'node_type',
             'nodeTypeId' => 'node_type_id',
             'securityGroupId' => 'security_group_id',
             'orderId' => 'order_id',
@@ -257,34 +257,34 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  集群ID
-    * name  集群名称
-    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
-    * version  数据仓库版本
-    * updated  集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
-    * created  集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
-    * port  集群服务端口。
-    * endpoints  集群的内网连接信息。
-    * nodes  集群实例
-    * tags  集群标签
-    * userName  管理员用户名
-    * numberOfNode  节点数量
-    * recentEvent  事件数
-    * availabilityZone  可用区
-    * enterpriseProjectId  企业项目ID。值为0表示默认企业项目“default”。
-    * nodeType  节点类型
-    * vpcId  虚拟私有云ID
-    * subnetId  子网ID
+    * id  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 集群名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    * version  **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
+    * created  **参数解释**： 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
+    * port  **参数解释**： 集群服务端口。 **取值范围**： 8000~30000
+    * endpoints  **参数解释**： 集群的内网连接信息。 **取值范围**： 非空对象数组。
+    * nodes  **参数解释**： 集群实例。 **取值范围**： 非空对象数组。
+    * tags  **参数解释**： 集群标签。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 管理员用户名。 **取值范围**： 不涉及。
+    * numberOfNode  **参数解释**： 节点数量。 **取值范围**： 不涉及。
+    * recentEvent  **参数解释**： 事件数。 **取值范围**： 不涉及。
+    * availabilityZone  **参数解释**： 可用区。 **取值范围**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * publicIp  publicIp
-    * publicEndpoints  集群的公网连接信息，如果未指定，则默认不使用公网连接信息。
-    * actionProgress  任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。key值的有效值包括： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
-    * subStatus  “可用”集群状态的子状态，有效值包括：  - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
-    * taskStatus  集群管理任务，有效值包括： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
+    * publicEndpoints  **参数解释**： 公网IP地址，如果未指定，则默认不使用公网连接。 **取值范围**： 不涉及。
+    * actionProgress  **参数解释**： 任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。 **取值范围**： key值的有效值包括但不限于以下： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
+    * subStatus  **参数解释**： “可用”集群状态的子状态。 **取值范围**： 有效值包括： - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
+    * taskStatus  **参数解释**： 集群管理任务。 **取值范围**： 有效值包括但不限于以下： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
     * parameterGroup  parameterGroup
-    * nodeTypeId  节点类型ID
-    * securityGroupId  安全组ID
-    * orderId  订单ID，仅包周期场景返回。
-    * privateIp  内网IP地址列表
+    * nodeType  **参数解释**： 集群规格。 **取值范围**： 不涉及。
+    * nodeTypeId  **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，仅包周期场景返回。非空时可用于区分当前是包周期集群。 **取值范围**： 不涉及。
+    * privateIp  **参数解释**： 内网IP地址列表。 **取值范围**： 不涉及。
     * maintainWindow  maintainWindow
     * resizeInfo  resizeInfo
     * failedReasons  failedReasons
@@ -308,7 +308,6 @@ class ClusterDetail implements ModelInterface, ArrayAccess
             'recentEvent' => 'setRecentEvent',
             'availabilityZone' => 'setAvailabilityZone',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'nodeType' => 'setNodeType',
             'vpcId' => 'setVpcId',
             'subnetId' => 'setSubnetId',
             'publicIp' => 'setPublicIp',
@@ -317,6 +316,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
             'subStatus' => 'setSubStatus',
             'taskStatus' => 'setTaskStatus',
             'parameterGroup' => 'setParameterGroup',
+            'nodeType' => 'setNodeType',
             'nodeTypeId' => 'setNodeTypeId',
             'securityGroupId' => 'setSecurityGroupId',
             'orderId' => 'setOrderId',
@@ -329,34 +329,34 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  集群ID
-    * name  集群名称
-    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
-    * version  数据仓库版本
-    * updated  集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
-    * created  集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
-    * port  集群服务端口。
-    * endpoints  集群的内网连接信息。
-    * nodes  集群实例
-    * tags  集群标签
-    * userName  管理员用户名
-    * numberOfNode  节点数量
-    * recentEvent  事件数
-    * availabilityZone  可用区
-    * enterpriseProjectId  企业项目ID。值为0表示默认企业项目“default”。
-    * nodeType  节点类型
-    * vpcId  虚拟私有云ID
-    * subnetId  子网ID
+    * id  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 集群名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    * version  **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
+    * created  **参数解释**： 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
+    * port  **参数解释**： 集群服务端口。 **取值范围**： 8000~30000
+    * endpoints  **参数解释**： 集群的内网连接信息。 **取值范围**： 非空对象数组。
+    * nodes  **参数解释**： 集群实例。 **取值范围**： 非空对象数组。
+    * tags  **参数解释**： 集群标签。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 管理员用户名。 **取值范围**： 不涉及。
+    * numberOfNode  **参数解释**： 节点数量。 **取值范围**： 不涉及。
+    * recentEvent  **参数解释**： 事件数。 **取值范围**： 不涉及。
+    * availabilityZone  **参数解释**： 可用区。 **取值范围**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * publicIp  publicIp
-    * publicEndpoints  集群的公网连接信息，如果未指定，则默认不使用公网连接信息。
-    * actionProgress  任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。key值的有效值包括： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
-    * subStatus  “可用”集群状态的子状态，有效值包括：  - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
-    * taskStatus  集群管理任务，有效值包括： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
+    * publicEndpoints  **参数解释**： 公网IP地址，如果未指定，则默认不使用公网连接。 **取值范围**： 不涉及。
+    * actionProgress  **参数解释**： 任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。 **取值范围**： key值的有效值包括但不限于以下： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
+    * subStatus  **参数解释**： “可用”集群状态的子状态。 **取值范围**： 有效值包括： - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
+    * taskStatus  **参数解释**： 集群管理任务。 **取值范围**： 有效值包括但不限于以下： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
     * parameterGroup  parameterGroup
-    * nodeTypeId  节点类型ID
-    * securityGroupId  安全组ID
-    * orderId  订单ID，仅包周期场景返回。
-    * privateIp  内网IP地址列表
+    * nodeType  **参数解释**： 集群规格。 **取值范围**： 不涉及。
+    * nodeTypeId  **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，仅包周期场景返回。非空时可用于区分当前是包周期集群。 **取值范围**： 不涉及。
+    * privateIp  **参数解释**： 内网IP地址列表。 **取值范围**： 不涉及。
     * maintainWindow  maintainWindow
     * resizeInfo  resizeInfo
     * failedReasons  failedReasons
@@ -380,7 +380,6 @@ class ClusterDetail implements ModelInterface, ArrayAccess
             'recentEvent' => 'getRecentEvent',
             'availabilityZone' => 'getAvailabilityZone',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'nodeType' => 'getNodeType',
             'vpcId' => 'getVpcId',
             'subnetId' => 'getSubnetId',
             'publicIp' => 'getPublicIp',
@@ -389,6 +388,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
             'subStatus' => 'getSubStatus',
             'taskStatus' => 'getTaskStatus',
             'parameterGroup' => 'getParameterGroup',
+            'nodeType' => 'getNodeType',
             'nodeTypeId' => 'getNodeTypeId',
             'securityGroupId' => 'getSecurityGroupId',
             'orderId' => 'getOrderId',
@@ -472,7 +472,6 @@ class ClusterDetail implements ModelInterface, ArrayAccess
         $this->container['recentEvent'] = isset($data['recentEvent']) ? $data['recentEvent'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
@@ -481,6 +480,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
         $this->container['subStatus'] = isset($data['subStatus']) ? $data['subStatus'] : null;
         $this->container['taskStatus'] = isset($data['taskStatus']) ? $data['taskStatus'] : null;
         $this->container['parameterGroup'] = isset($data['parameterGroup']) ? $data['parameterGroup'] : null;
+        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : null;
         $this->container['nodeTypeId'] = isset($data['nodeTypeId']) ? $data['nodeTypeId'] : null;
         $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
@@ -544,9 +544,6 @@ class ClusterDetail implements ModelInterface, ArrayAccess
         if ($this->container['enterpriseProjectId'] === null) {
             $invalidProperties[] = "'enterpriseProjectId' can't be null";
         }
-        if ($this->container['nodeType'] === null) {
-            $invalidProperties[] = "'nodeType' can't be null";
-        }
         if ($this->container['vpcId'] === null) {
             $invalidProperties[] = "'vpcId' can't be null";
         }
@@ -568,6 +565,9 @@ class ClusterDetail implements ModelInterface, ArrayAccess
         if ($this->container['taskStatus'] === null) {
             $invalidProperties[] = "'taskStatus' can't be null";
         }
+        if ($this->container['nodeType'] === null) {
+            $invalidProperties[] = "'nodeType' can't be null";
+        }
         if ($this->container['nodeTypeId'] === null) {
             $invalidProperties[] = "'nodeTypeId' can't be null";
         }
@@ -576,9 +576,6 @@ class ClusterDetail implements ModelInterface, ArrayAccess
         }
         if ($this->container['privateIp'] === null) {
             $invalidProperties[] = "'privateIp' can't be null";
-        }
-        if ($this->container['maintainWindow'] === null) {
-            $invalidProperties[] = "'maintainWindow' can't be null";
         }
         return $invalidProperties;
     }
@@ -596,7 +593,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  集群ID
+    *  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -608,7 +605,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 集群ID
+    * @param string $id **参数解释**： 集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -620,7 +617,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  集群名称
+    *  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -632,7 +629,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 集群名称
+    * @param string $name **参数解释**： 集群名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -644,7 +641,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    *  **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     *
     * @return string
     */
@@ -656,7 +653,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    * @param string $status **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     *
     * @return $this
     */
@@ -668,7 +665,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  数据仓库版本
+    *  **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -680,7 +677,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 数据仓库版本
+    * @param string $version **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -692,7 +689,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
+    *  **参数解释**： 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -704,7 +701,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string $updated 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
+    * @param string $updated **参数解释**： 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -716,7 +713,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
-    *  集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
+    *  **参数解释**： 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -728,7 +725,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets created
     *
-    * @param string $created 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ
+    * @param string $created **参数解释**： 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -740,7 +737,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  集群服务端口。
+    *  **参数解释**： 集群服务端口。 **取值范围**： 8000~30000
     *
     * @return int
     */
@@ -752,7 +749,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int $port 集群服务端口。
+    * @param int $port **参数解释**： 集群服务端口。 **取值范围**： 8000~30000
     *
     * @return $this
     */
@@ -764,7 +761,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpoints
-    *  集群的内网连接信息。
+    *  **参数解释**： 集群的内网连接信息。 **取值范围**： 非空对象数组。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\Endpoints[]
     */
@@ -776,7 +773,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets endpoints
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\Endpoints[] $endpoints 集群的内网连接信息。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\Endpoints[] $endpoints **参数解释**： 集群的内网连接信息。 **取值范围**： 非空对象数组。
     *
     * @return $this
     */
@@ -788,7 +785,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodes
-    *  集群实例
+    *  **参数解释**： 集群实例。 **取值范围**： 非空对象数组。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\Nodes[]
     */
@@ -800,7 +797,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets nodes
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\Nodes[] $nodes 集群实例
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\Nodes[] $nodes **参数解释**： 集群实例。 **取值范围**： 非空对象数组。
     *
     * @return $this
     */
@@ -812,7 +809,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  集群标签
+    *  **参数解释**： 集群标签。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\Tags[]
     */
@@ -824,7 +821,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\Tags[] $tags 集群标签
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\Tags[] $tags **参数解释**： 集群标签。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -836,7 +833,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  管理员用户名
+    *  **参数解释**： 管理员用户名。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -848,7 +845,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string $userName 管理员用户名
+    * @param string $userName **参数解释**： 管理员用户名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -860,7 +857,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets numberOfNode
-    *  节点数量
+    *  **参数解释**： 节点数量。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -872,7 +869,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets numberOfNode
     *
-    * @param int $numberOfNode 节点数量
+    * @param int $numberOfNode **参数解释**： 节点数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -884,7 +881,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets recentEvent
-    *  事件数
+    *  **参数解释**： 事件数。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -896,7 +893,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets recentEvent
     *
-    * @param int $recentEvent 事件数
+    * @param int $recentEvent **参数解释**： 事件数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -908,7 +905,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  可用区
+    *  **参数解释**： 可用区。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -920,7 +917,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string $availabilityZone 可用区
+    * @param string $availabilityZone **参数解释**： 可用区。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -932,7 +929,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID。值为0表示默认企业项目“default”。
+    *  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return string
     */
@@ -944,7 +941,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string $enterpriseProjectId 企业项目ID。值为0表示默认企业项目“default”。
+    * @param string $enterpriseProjectId **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return $this
     */
@@ -955,32 +952,8 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets nodeType
-    *  节点类型
-    *
-    * @return string
-    */
-    public function getNodeType()
-    {
-        return $this->container['nodeType'];
-    }
-
-    /**
-    * Sets nodeType
-    *
-    * @param string $nodeType 节点类型
-    *
-    * @return $this
-    */
-    public function setNodeType($nodeType)
-    {
-        $this->container['nodeType'] = $nodeType;
-        return $this;
-    }
-
-    /**
     * Gets vpcId
-    *  虚拟私有云ID
+    *  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -992,7 +965,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId 虚拟私有云ID
+    * @param string $vpcId **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1004,7 +977,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  子网ID
+    *  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -1016,7 +989,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId 子网ID
+    * @param string $subnetId **参数解释**： 子网ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1052,7 +1025,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicEndpoints
-    *  集群的公网连接信息，如果未指定，则默认不使用公网连接信息。
+    *  **参数解释**： 公网IP地址，如果未指定，则默认不使用公网连接。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\PublicEndpoints[]
     */
@@ -1064,7 +1037,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets publicEndpoints
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\PublicEndpoints[] $publicEndpoints 集群的公网连接信息，如果未指定，则默认不使用公网连接信息。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\PublicEndpoints[] $publicEndpoints **参数解释**： 公网IP地址，如果未指定，则默认不使用公网连接。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1076,7 +1049,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionProgress
-    *  任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。key值的有效值包括： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
+    *  **参数解释**： 任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。 **取值范围**： key值的有效值包括但不限于以下： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
     *
     * @return map[string,string]
     */
@@ -1088,7 +1061,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets actionProgress
     *
-    * @param map[string,string] $actionProgress 任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。key值的有效值包括： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
+    * @param map[string,string] $actionProgress **参数解释**： 任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。 **取值范围**： key值的有效值包括但不限于以下： - CREATING：创建中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - REDISTRIBUTING：重分布中 - ELB_BINDING：弹性负载均衡绑定中 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_SWITCHING：弹性负载均衡切换中 - NETWORK_CONFIGURING：网络配置中 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BINDING：登录开通中 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中 - REPAIRING：修复中
     *
     * @return $this
     */
@@ -1100,7 +1073,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets subStatus
-    *  “可用”集群状态的子状态，有效值包括：  - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
+    *  **参数解释**： “可用”集群状态的子状态。 **取值范围**： 有效值包括： - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
     *
     * @return string
     */
@@ -1112,7 +1085,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets subStatus
     *
-    * @param string $subStatus “可用”集群状态的子状态，有效值包括：  - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
+    * @param string $subStatus **参数解释**： “可用”集群状态的子状态。 **取值范围**： 有效值包括： - NORMAL：正常 - READONLY：只读 - REDISTRIBUTING：重分布中 - REDISTRIBUTION-FAILURE：重分布失败 - UNBALANCED：非均衡 - UNBALANCED | READONLY：非均衡，只读 - DEGRADED：节点故障 - DEGRADED | READONLY：节点故障，只读 - DEGRADED | UNBALANCED：节点故障，非均衡 - UNBALANCED | REDISTRIBUTING：非均衡，重分布中 - UNBALANCED | REDISTRIBUTION-FAILURE：非均衡，重分布失败 - READONLY | REDISTRIBUTION-FAILURE：只读，重分布失败 - UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：非均衡，只读，重分布失败 - DEGRADED | REDISTRIBUTION-FAILURE：节点故障，重分布失败 - DEGRADED | UNBALANCED | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY | REDISTRIBUTION-FAILURE：节点故障，非均衡，只读，重分布失败 - DEGRADED | UNBALANCED | READONLY：节点故障，非均衡，只读
     *
     * @return $this
     */
@@ -1124,7 +1097,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskStatus
-    *  集群管理任务，有效值包括： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
+    *  **参数解释**： 集群管理任务。 **取值范围**： 有效值包括但不限于以下： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
     *
     * @return string
     */
@@ -1136,7 +1109,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets taskStatus
     *
-    * @param string $taskStatus 集群管理任务，有效值包括： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
+    * @param string $taskStatus **参数解释**： 集群管理任务。 **取值范围**： 有效值包括但不限于以下： - UNFREEZING：解冻中 - FREEZING：冻结中 - RESTORING：恢复中 - SNAPSHOTTING：快照中 - GROWING：扩容中 - REBOOTING：重启中 - SETTING_CONFIGURATION：安全设置配置中 - CONFIGURING_EXT_DATASOURCE：MRS连接配置中 - DELETING_EXT_DATASOURCE：删除MRS连接 - REBOOT_FAILURE：重启失败 - RESIZE_FAILURE：扩容失败 - ADD_CN_ING：增加CN中 - DEL_CN_ING：删除CN中 - CREATING_NODE：添加节点 - CREATE_NODE_FAILED：添加节点失败 - DELETING_NODE：删除节点 - DELETE_NODE_FAILED：删除节点失败 - REDISTRIBUTING：重分布中 - REDISTRIBUTE_FAILURE：重分布失败 - WAITING_REDISTRIBUTION：待重分布 - REDISTRIBUTION_PAUSED：重分布暂停 - ELB_BINDING：弹性负载均衡绑定中 - ELB_BIND_FAILED：弹性负载均衡绑定失败 - ELB_UNBINDING：弹性负载均衡解绑中 - ELB_UNBIND_FAILED：弹性负载均衡解绑失败 - ELB_SWITCHING：弹性负载均衡切换中 - ELB_SWITCHING_FAILED：弹性负载均衡切换失败 - NETWORK_CONFIGURING：网络配置中 - NETWORK_CONFIG_FAILED：网络配置失败 - DISK_EXPAND_FAILED：磁盘扩容失败 - DISK_EXPANDING：磁盘扩容中 - ACTIVE_STANDY_SWITCHOVER：主备恢复中 - ACTIVE_STANDY_SWITCHOVER_FAILURE：主备恢复失败 - CLUSTER_SHRINK_FAILED：缩容失败 - CLUSTER_SHRINKING：缩容中 - SHRINK_CHECK_FAILED：缩容检测失败 - SHRINK_CHECKING：缩容检测中 - FLAVOR_RESIZING_FAILED：规格变更失败 - FLAVOR_RESIZING：规格变更中 - MANAGE_IP_BIND_FAILED：登录开通失败 - MANAGE_IP_BINDING：登录开通中 - ORDER_PENDING：订单待支付 - FINE_GRAINED_RESTORING：细粒度恢复中 - DR_RECOVERING：容灾恢复中
     *
     * @return $this
     */
@@ -1171,8 +1144,32 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets nodeType
+    *  **参数解释**： 集群规格。 **取值范围**： 不涉及。
+    *
+    * @return string
+    */
+    public function getNodeType()
+    {
+        return $this->container['nodeType'];
+    }
+
+    /**
+    * Sets nodeType
+    *
+    * @param string $nodeType **参数解释**： 集群规格。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setNodeType($nodeType)
+    {
+        $this->container['nodeType'] = $nodeType;
+        return $this;
+    }
+
+    /**
     * Gets nodeTypeId
-    *  节点类型ID
+    *  **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -1184,7 +1181,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets nodeTypeId
     *
-    * @param string $nodeTypeId 节点类型ID
+    * @param string $nodeTypeId **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1196,7 +1193,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  安全组ID
+    *  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -1208,7 +1205,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string $securityGroupId 安全组ID
+    * @param string $securityGroupId **参数解释**： 安全组ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1220,7 +1217,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单ID，仅包周期场景返回。
+    *  **参数解释**： 订单ID，仅包周期场景返回。非空时可用于区分当前是包周期集群。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1232,7 +1229,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单ID，仅包周期场景返回。
+    * @param string|null $orderId **参数解释**： 订单ID，仅包周期场景返回。非空时可用于区分当前是包周期集群。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1244,7 +1241,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  内网IP地址列表
+    *  **参数解释**： 内网IP地址列表。 **取值范围**： 不涉及。
     *
     * @return string[]
     */
@@ -1256,7 +1253,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string[] $privateIp 内网IP地址列表
+    * @param string[] $privateIp **参数解释**： 内网IP地址列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1270,7 +1267,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     * Gets maintainWindow
     *  maintainWindow
     *
-    * @return \HuaweiCloud\SDK\Dws\V2\Model\MaintainWindow
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\MaintainWindow|null
     */
     public function getMaintainWindow()
     {
@@ -1280,7 +1277,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
     /**
     * Sets maintainWindow
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\MaintainWindow $maintainWindow maintainWindow
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\MaintainWindow|null $maintainWindow maintainWindow
     *
     * @return $this
     */

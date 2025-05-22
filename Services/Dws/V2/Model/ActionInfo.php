@@ -20,13 +20,13 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * actionName  操作名称。当前只允许Create,Expand,Restart,Delete,Shrink
-    * progress  操作进度，默认10
-    * completed  是否完成操作
-    * startTime  操作开始时间
-    * endTime  操作结束时间
-    * result  操作结果。success或者failed，默认空字符串
-    * logs  操作日志
+    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+    * progress  **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
+    * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
+    * result  **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+    * logs  **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * actionName  操作名称。当前只允许Create,Expand,Restart,Delete,Shrink
-    * progress  操作进度，默认10
-    * completed  是否完成操作
-    * startTime  操作开始时间
-    * endTime  操作结束时间
-    * result  操作结果。success或者failed，默认空字符串
-    * logs  操作日志
+    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+    * progress  **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
+    * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
+    * result  **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+    * logs  **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * actionName  操作名称。当前只允许Create,Expand,Restart,Delete,Shrink
-    * progress  操作进度，默认10
-    * completed  是否完成操作
-    * startTime  操作开始时间
-    * endTime  操作结束时间
-    * result  操作结果。success或者failed，默认空字符串
-    * logs  操作日志
+    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+    * progress  **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
+    * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
+    * result  **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+    * logs  **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * actionName  操作名称。当前只允许Create,Expand,Restart,Delete,Shrink
-    * progress  操作进度，默认10
-    * completed  是否完成操作
-    * startTime  操作开始时间
-    * endTime  操作结束时间
-    * result  操作结果。success或者failed，默认空字符串
-    * logs  操作日志
+    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+    * progress  **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
+    * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
+    * result  **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+    * logs  **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * actionName  操作名称。当前只允许Create,Expand,Restart,Delete,Shrink
-    * progress  操作进度，默认10
-    * completed  是否完成操作
-    * startTime  操作开始时间
-    * endTime  操作结束时间
-    * result  操作结果。success或者failed，默认空字符串
-    * logs  操作日志
+    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+    * progress  **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
+    * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
+    * result  **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+    * logs  **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionName
-    *  操作名称。当前只允许Create,Expand,Restart,Delete,Shrink
+    *  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets actionName
     *
-    * @param string|null $actionName 操作名称。当前只允许Create,Expand,Restart,Delete,Shrink
+    * @param string|null $actionName **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets progress
-    *  操作进度，默认10
+    *  **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
     *
     * @return int|null
     */
@@ -276,7 +276,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets progress
     *
-    * @param int|null $progress 操作进度，默认10
+    * @param int|null $progress **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets completed
-    *  是否完成操作
+    *  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -300,7 +300,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets completed
     *
-    * @param bool|null $completed 是否完成操作
+    * @param bool|null $completed **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  操作开始时间
+    *  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 操作开始时间
+    * @param string|null $startTime **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  操作结束时间
+    *  **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 操作结束时间
+    * @param string|null $endTime **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  操作结果。success或者failed，默认空字符串
+    *  **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 操作结果。success或者failed，默认空字符串
+    * @param string|null $result **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets logs
-    *  操作日志
+    *  **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets logs
     *
-    * @param string|null $logs 操作日志
+    * @param string|null $logs **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

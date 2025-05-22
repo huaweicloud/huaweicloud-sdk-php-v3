@@ -51,6 +51,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * roleId  角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
+    * appId  部署应用id
     * isDisable  当前应用是否被禁用
     * duration  部署时间
     * executionState  部署状态
@@ -91,6 +92,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
             'roleId' => 'int',
             'id' => 'string',
             'releaseId' => 'int',
+            'appId' => 'string',
             'isDisable' => 'bool',
             'duration' => 'string',
             'executionState' => 'string',
@@ -131,6 +133,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * roleId  角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
+    * appId  部署应用id
     * isDisable  当前应用是否被禁用
     * duration  部署时间
     * executionState  部署状态
@@ -171,6 +174,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
         'roleId' => 'int32',
         'id' => null,
         'releaseId' => 'int32',
+        'appId' => null,
         'isDisable' => null,
         'duration' => null,
         'executionState' => null,
@@ -232,6 +236,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * roleId  角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
+    * appId  部署应用id
     * isDisable  当前应用是否被禁用
     * duration  部署时间
     * executionState  部署状态
@@ -272,6 +277,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
             'roleId' => 'role_id',
             'id' => 'id',
             'releaseId' => 'release_id',
+            'appId' => 'app_id',
             'isDisable' => 'is_disable',
             'duration' => 'duration',
             'executionState' => 'execution_state',
@@ -312,6 +318,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * roleId  角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
+    * appId  部署应用id
     * isDisable  当前应用是否被禁用
     * duration  部署时间
     * executionState  部署状态
@@ -352,6 +359,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
             'roleId' => 'setRoleId',
             'id' => 'setId',
             'releaseId' => 'setReleaseId',
+            'appId' => 'setAppId',
             'isDisable' => 'setIsDisable',
             'duration' => 'setDuration',
             'executionState' => 'setExecutionState',
@@ -392,6 +400,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * roleId  角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
+    * appId  部署应用id
     * isDisable  当前应用是否被禁用
     * duration  部署时间
     * executionState  部署状态
@@ -432,6 +441,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
             'roleId' => 'getRoleId',
             'id' => 'getId',
             'releaseId' => 'getReleaseId',
+            'appId' => 'getAppId',
             'isDisable' => 'getIsDisable',
             'duration' => 'getDuration',
             'executionState' => 'getExecutionState',
@@ -543,6 +553,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
         $this->container['roleId'] = isset($data['roleId']) ? $data['roleId'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['releaseId'] = isset($data['releaseId']) ? $data['releaseId'] : null;
+        $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['isDisable'] = isset($data['isDisable']) ? $data['isDisable'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['executionState'] = isset($data['executionState']) ? $data['executionState'] : null;
@@ -644,6 +655,9 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['slaveClusterId']) && !preg_match("/^[A-Za-z0-9]{1,32}$/", $this->container['slaveClusterId'])) {
                 $invalidProperties[] = "invalid value for 'slaveClusterId', must be conform to the pattern /^[A-Za-z0-9]{1,32}$/.";
+            }
+            if (!is_null($this->container['appId']) && !preg_match("/^[A-Za-z0-9]{32}$/", $this->container['appId'])) {
+                $invalidProperties[] = "invalid value for 'appId', must be conform to the pattern /^[A-Za-z0-9]{32}$/.";
             }
         return $invalidProperties;
     }
@@ -1376,6 +1390,30 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     public function setReleaseId($releaseId)
     {
         $this->container['releaseId'] = $releaseId;
+        return $this;
+    }
+
+    /**
+    * Gets appId
+    *  部署应用id
+    *
+    * @return string|null
+    */
+    public function getAppId()
+    {
+        return $this->container['appId'];
+    }
+
+    /**
+    * Sets appId
+    *
+    * @param string|null $appId 部署应用id
+    *
+    * @return $this
+    */
+    public function setAppId($appId)
+    {
+        $this->container['appId'] = $appId;
         return $this;
     }
 

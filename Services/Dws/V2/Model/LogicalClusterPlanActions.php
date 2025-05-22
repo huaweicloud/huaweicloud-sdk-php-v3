@@ -20,13 +20,13 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nextFireTime  行动下一次触发时间
-    * failedReason  行动失败原因
-    * id  行动ID
-    * type  行动类型，取值范围为(create|delete)
-    * strategy  行动周期性Cron表达式：如\"0 0 0 ? * 3\"
+    * nextFireTime  **参数解释**： 下一次触发时间。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
+    * strategy  **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
     * status  行动状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
-    * preFireTime  计划上一次触发时间
+    * preFireTime  **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nextFireTime  行动下一次触发时间
-    * failedReason  行动失败原因
-    * id  行动ID
-    * type  行动类型，取值范围为(create|delete)
-    * strategy  行动周期性Cron表达式：如\"0 0 0 ? * 3\"
+    * nextFireTime  **参数解释**： 下一次触发时间。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
+    * strategy  **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
     * status  行动状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
-    * preFireTime  计划上一次触发时间
+    * preFireTime  **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nextFireTime  行动下一次触发时间
-    * failedReason  行动失败原因
-    * id  行动ID
-    * type  行动类型，取值范围为(create|delete)
-    * strategy  行动周期性Cron表达式：如\"0 0 0 ? * 3\"
+    * nextFireTime  **参数解释**： 下一次触发时间。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
+    * strategy  **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
     * status  行动状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
-    * preFireTime  计划上一次触发时间
+    * preFireTime  **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nextFireTime  行动下一次触发时间
-    * failedReason  行动失败原因
-    * id  行动ID
-    * type  行动类型，取值范围为(create|delete)
-    * strategy  行动周期性Cron表达式：如\"0 0 0 ? * 3\"
+    * nextFireTime  **参数解释**： 下一次触发时间。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
+    * strategy  **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
     * status  行动状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
-    * preFireTime  计划上一次触发时间
+    * preFireTime  **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nextFireTime  行动下一次触发时间
-    * failedReason  行动失败原因
-    * id  行动ID
-    * type  行动类型，取值范围为(create|delete)
-    * strategy  行动周期性Cron表达式：如\"0 0 0 ? * 3\"
+    * nextFireTime  **参数解释**： 下一次触发时间。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
+    * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
+    * strategy  **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
     * status  行动状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
-    * preFireTime  计划上一次触发时间
+    * preFireTime  **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextFireTime
-    *  行动下一次触发时间
+    *  **参数解释**： 下一次触发时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     /**
     * Sets nextFireTime
     *
-    * @param string|null $nextFireTime 行动下一次触发时间
+    * @param string|null $nextFireTime **参数解释**： 下一次触发时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedReason
-    *  行动失败原因
+    *  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     /**
     * Sets failedReason
     *
-    * @param string|null $failedReason 行动失败原因
+    * @param string|null $failedReason **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  行动ID
+    *  **参数解释**： 任务ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 行动ID
+    * @param string|null $id **参数解释**： 任务ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  行动类型，取值范围为(create|delete)
+    *  **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 行动类型，取值范围为(create|delete)
+    * @param string|null $type **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Gets strategy
-    *  行动周期性Cron表达式：如\"0 0 0 ? * 3\"
+    *  **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     /**
     * Sets strategy
     *
-    * @param string|null $strategy 行动周期性Cron表达式：如\"0 0 0 ? * 3\"
+    * @param string|null $strategy **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Gets preFireTime
-    *  计划上一次触发时间
+    *  **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。
     *
     * @return \DateTime|null
     */
@@ -396,7 +396,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     /**
     * Sets preFireTime
     *
-    * @param \DateTime|null $preFireTime 计划上一次触发时间
+    * @param \DateTime|null $preFireTime **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class UpdateHealthMonitorOption implements ModelInterface, ArrayAccess
     * adminStateUp  参数解释：健康检查的管理状态。  取值范围： - true：表示开启健康检查。 - false表示关闭健康检查。
     * delay  健康检查间隔。健康检查间隔。取值：1-50s。
     * domainName  发送健康检查请求的域名。  取值：以数字或字母开头，只能包含数字、字母、’-’、’.’。 不能传空，但可传null或不传，表示使用负载均衡器的vip作为http请求的目的地址。  使用说明：当type为HTTP/HTTPS时生效。
-    * expectedCodes  期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  仅支持HTTP/HTTPS/GRPC设置该字段，其他协议设置不会生效。
+    * expectedCodes  期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  该字段仅在HTTP/HTTPS/GRPC协议下有效，其他协议可以设置但不会生效。
     * httpMethod  HTTP请求方法。  取值：GET、HEAD、POST，默认GET。  使用说明：当type为HTTP/HTTPS时生效。
     * maxRetries  健康检查连续成功多少次后，将后端服务器的健康检查状态由OFFLINE判定为ONLINE。取值范围：1-10。
     * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
@@ -55,7 +55,7 @@ class UpdateHealthMonitorOption implements ModelInterface, ArrayAccess
     * adminStateUp  参数解释：健康检查的管理状态。  取值范围： - true：表示开启健康检查。 - false表示关闭健康检查。
     * delay  健康检查间隔。健康检查间隔。取值：1-50s。
     * domainName  发送健康检查请求的域名。  取值：以数字或字母开头，只能包含数字、字母、’-’、’.’。 不能传空，但可传null或不传，表示使用负载均衡器的vip作为http请求的目的地址。  使用说明：当type为HTTP/HTTPS时生效。
-    * expectedCodes  期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  仅支持HTTP/HTTPS/GRPC设置该字段，其他协议设置不会生效。
+    * expectedCodes  期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  该字段仅在HTTP/HTTPS/GRPC协议下有效，其他协议可以设置但不会生效。
     * httpMethod  HTTP请求方法。  取值：GET、HEAD、POST，默认GET。  使用说明：当type为HTTP/HTTPS时生效。
     * maxRetries  健康检查连续成功多少次后，将后端服务器的健康检查状态由OFFLINE判定为ONLINE。取值范围：1-10。
     * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
@@ -108,7 +108,7 @@ class UpdateHealthMonitorOption implements ModelInterface, ArrayAccess
     * adminStateUp  参数解释：健康检查的管理状态。  取值范围： - true：表示开启健康检查。 - false表示关闭健康检查。
     * delay  健康检查间隔。健康检查间隔。取值：1-50s。
     * domainName  发送健康检查请求的域名。  取值：以数字或字母开头，只能包含数字、字母、’-’、’.’。 不能传空，但可传null或不传，表示使用负载均衡器的vip作为http请求的目的地址。  使用说明：当type为HTTP/HTTPS时生效。
-    * expectedCodes  期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  仅支持HTTP/HTTPS/GRPC设置该字段，其他协议设置不会生效。
+    * expectedCodes  期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  该字段仅在HTTP/HTTPS/GRPC协议下有效，其他协议可以设置但不会生效。
     * httpMethod  HTTP请求方法。  取值：GET、HEAD、POST，默认GET。  使用说明：当type为HTTP/HTTPS时生效。
     * maxRetries  健康检查连续成功多少次后，将后端服务器的健康检查状态由OFFLINE判定为ONLINE。取值范围：1-10。
     * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
@@ -140,7 +140,7 @@ class UpdateHealthMonitorOption implements ModelInterface, ArrayAccess
     * adminStateUp  参数解释：健康检查的管理状态。  取值范围： - true：表示开启健康检查。 - false表示关闭健康检查。
     * delay  健康检查间隔。健康检查间隔。取值：1-50s。
     * domainName  发送健康检查请求的域名。  取值：以数字或字母开头，只能包含数字、字母、’-’、’.’。 不能传空，但可传null或不传，表示使用负载均衡器的vip作为http请求的目的地址。  使用说明：当type为HTTP/HTTPS时生效。
-    * expectedCodes  期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  仅支持HTTP/HTTPS/GRPC设置该字段，其他协议设置不会生效。
+    * expectedCodes  期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  该字段仅在HTTP/HTTPS/GRPC协议下有效，其他协议可以设置但不会生效。
     * httpMethod  HTTP请求方法。  取值：GET、HEAD、POST，默认GET。  使用说明：当type为HTTP/HTTPS时生效。
     * maxRetries  健康检查连续成功多少次后，将后端服务器的健康检查状态由OFFLINE判定为ONLINE。取值范围：1-10。
     * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
@@ -172,7 +172,7 @@ class UpdateHealthMonitorOption implements ModelInterface, ArrayAccess
     * adminStateUp  参数解释：健康检查的管理状态。  取值范围： - true：表示开启健康检查。 - false表示关闭健康检查。
     * delay  健康检查间隔。健康检查间隔。取值：1-50s。
     * domainName  发送健康检查请求的域名。  取值：以数字或字母开头，只能包含数字、字母、’-’、’.’。 不能传空，但可传null或不传，表示使用负载均衡器的vip作为http请求的目的地址。  使用说明：当type为HTTP/HTTPS时生效。
-    * expectedCodes  期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  仅支持HTTP/HTTPS/GRPC设置该字段，其他协议设置不会生效。
+    * expectedCodes  期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  该字段仅在HTTP/HTTPS/GRPC协议下有效，其他协议可以设置但不会生效。
     * httpMethod  HTTP请求方法。  取值：GET、HEAD、POST，默认GET。  使用说明：当type为HTTP/HTTPS时生效。
     * maxRetries  健康检查连续成功多少次后，将后端服务器的健康检查状态由OFFLINE判定为ONLINE。取值范围：1-10。
     * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
@@ -461,7 +461,7 @@ class UpdateHealthMonitorOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets expectedCodes
-    *  期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  仅支持HTTP/HTTPS/GRPC设置该字段，其他协议设置不会生效。
+    *  期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  该字段仅在HTTP/HTTPS/GRPC协议下有效，其他协议可以设置但不会生效。
     *
     * @return string|null
     */
@@ -473,7 +473,7 @@ class UpdateHealthMonitorOption implements ModelInterface, ArrayAccess
     /**
     * Sets expectedCodes
     *
-    * @param string|null $expectedCodes 期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  仅支持HTTP/HTTPS/GRPC设置该字段，其他协议设置不会生效。
+    * @param string|null $expectedCodes 期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  该字段仅在HTTP/HTTPS/GRPC协议下有效，其他协议可以设置但不会生效。
     *
     * @return $this
     */

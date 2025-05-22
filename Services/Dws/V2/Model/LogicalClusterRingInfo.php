@@ -20,7 +20,7 @@ class LogicalClusterRingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ringHosts  集群主机环信息
+    * ringHosts  **参数解释**： 集群实例环信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class LogicalClusterRingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ringHosts  集群主机环信息
+    * ringHosts  **参数解释**： 集群实例环信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class LogicalClusterRingInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ringHosts  集群主机环信息
+    * ringHosts  **参数解释**： 集群实例环信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class LogicalClusterRingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ringHosts  集群主机环信息
+    * ringHosts  **参数解释**： 集群实例环信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class LogicalClusterRingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ringHosts  集群主机环信息
+    * ringHosts  **参数解释**： 集群实例环信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class LogicalClusterRingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ringHosts
-    *  集群主机环信息
+    *  **参数解释**： 集群实例环信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\RingHost[]|null
     */
@@ -186,7 +186,7 @@ class LogicalClusterRingInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ringHosts
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\RingHost[]|null $ringHosts 集群主机环信息
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\RingHost[]|null $ringHosts **参数解释**： 集群实例环信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

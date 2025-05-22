@@ -21,8 +21,8 @@ class StartWorkloadPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workloadResCode  响应编码。
-    * workloadResStr  响应信息。
+    * workloadResCode  **参数解释**： 响应编码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class StartWorkloadPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workloadResCode  响应编码。
-    * workloadResStr  响应信息。
+    * workloadResCode  **参数解释**： 响应编码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class StartWorkloadPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workloadResCode  响应编码。
-    * workloadResStr  响应信息。
+    * workloadResCode  **参数解释**： 响应编码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class StartWorkloadPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workloadResCode  响应编码。
-    * workloadResStr  响应信息。
+    * workloadResCode  **参数解释**： 响应编码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class StartWorkloadPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workloadResCode  响应编码。
-    * workloadResStr  响应信息。
+    * workloadResCode  **参数解释**： 响应编码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class StartWorkloadPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadResCode
-    *  响应编码。
+    *  **参数解释**： 响应编码。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class StartWorkloadPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workloadResCode
     *
-    * @param int|null $workloadResCode 响应编码。
+    * @param int|null $workloadResCode **参数解释**： 响应编码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class StartWorkloadPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadResStr
-    *  响应信息。
+    *  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class StartWorkloadPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workloadResStr
     *
-    * @param string|null $workloadResStr 响应信息。
+    * @param string|null $workloadResStr **参数解释**： 响应信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class CreateLogicalClusterPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * planId  逻辑集群增删计划id
+    * planId  **参数解释**： 逻辑集群增删计划ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateLogicalClusterPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * planId  逻辑集群增删计划id
+    * planId  **参数解释**： 逻辑集群增删计划ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateLogicalClusterPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * planId  逻辑集群增删计划id
+    * planId  **参数解释**： 逻辑集群增删计划ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateLogicalClusterPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * planId  逻辑集群增删计划id
+    * planId  **参数解释**： 逻辑集群增删计划ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateLogicalClusterPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * planId  逻辑集群增删计划id
+    * planId  **参数解释**： 逻辑集群增删计划ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CreateLogicalClusterPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets planId
-    *  逻辑集群增删计划id
+    *  **参数解释**： 逻辑集群增删计划ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class CreateLogicalClusterPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Sets planId
     *
-    * @param string|null $planId 逻辑集群增删计划id
+    * @param string|null $planId **参数解释**： 逻辑集群增删计划ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

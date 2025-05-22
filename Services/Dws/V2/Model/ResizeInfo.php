@@ -20,10 +20,10 @@ class ResizeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * targetNodeNum  扩容后的节点数量
-    * originNodeNum  扩容前的节点数量
-    * resizeStatus  扩容状态，取值如下：  - GROWING：扩容中 - RESIZE_FAILURE：扩容失败
-    * startTime  扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss
+    * targetNodeNum  **参数解释**： 扩容后的节点数量。 **取值范围**： 不涉及。
+    * originNodeNum  **参数解释**： 扩容前的节点数量。 **取值范围**： 不涉及。
+    * resizeStatus  **参数解释**： 扩容状态。 **取值范围**： - GROWING：扩容中 - RESIZE_FAILURE：扩容失败。
+    * startTime  **参数解释**： 扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ResizeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * targetNodeNum  扩容后的节点数量
-    * originNodeNum  扩容前的节点数量
-    * resizeStatus  扩容状态，取值如下：  - GROWING：扩容中 - RESIZE_FAILURE：扩容失败
-    * startTime  扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss
+    * targetNodeNum  **参数解释**： 扩容后的节点数量。 **取值范围**： 不涉及。
+    * originNodeNum  **参数解释**： 扩容前的节点数量。 **取值范围**： 不涉及。
+    * resizeStatus  **参数解释**： 扩容状态。 **取值范围**： - GROWING：扩容中 - RESIZE_FAILURE：扩容失败。
+    * startTime  **参数解释**： 扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ResizeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * targetNodeNum  扩容后的节点数量
-    * originNodeNum  扩容前的节点数量
-    * resizeStatus  扩容状态，取值如下：  - GROWING：扩容中 - RESIZE_FAILURE：扩容失败
-    * startTime  扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss
+    * targetNodeNum  **参数解释**： 扩容后的节点数量。 **取值范围**： 不涉及。
+    * originNodeNum  **参数解释**： 扩容前的节点数量。 **取值范围**： 不涉及。
+    * resizeStatus  **参数解释**： 扩容状态。 **取值范围**： - GROWING：扩容中 - RESIZE_FAILURE：扩容失败。
+    * startTime  **参数解释**： 扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ResizeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * targetNodeNum  扩容后的节点数量
-    * originNodeNum  扩容前的节点数量
-    * resizeStatus  扩容状态，取值如下：  - GROWING：扩容中 - RESIZE_FAILURE：扩容失败
-    * startTime  扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss
+    * targetNodeNum  **参数解释**： 扩容后的节点数量。 **取值范围**： 不涉及。
+    * originNodeNum  **参数解释**： 扩容前的节点数量。 **取值范围**： 不涉及。
+    * resizeStatus  **参数解释**： 扩容状态。 **取值范围**： - GROWING：扩容中 - RESIZE_FAILURE：扩容失败。
+    * startTime  **参数解释**： 扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ResizeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * targetNodeNum  扩容后的节点数量
-    * originNodeNum  扩容前的节点数量
-    * resizeStatus  扩容状态，取值如下：  - GROWING：扩容中 - RESIZE_FAILURE：扩容失败
-    * startTime  扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss
+    * targetNodeNum  **参数解释**： 扩容后的节点数量。 **取值范围**： 不涉及。
+    * originNodeNum  **参数解释**： 扩容前的节点数量。 **取值范围**： 不涉及。
+    * resizeStatus  **参数解释**： 扩容状态。 **取值范围**： - GROWING：扩容中 - RESIZE_FAILURE：扩容失败。
+    * startTime  **参数解释**： 扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ResizeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetNodeNum
-    *  扩容后的节点数量
+    *  **参数解释**： 扩容后的节点数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -219,7 +219,7 @@ class ResizeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets targetNodeNum
     *
-    * @param int|null $targetNodeNum 扩容后的节点数量
+    * @param int|null $targetNodeNum **参数解释**： 扩容后的节点数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ResizeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets originNodeNum
-    *  扩容前的节点数量
+    *  **参数解释**： 扩容前的节点数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class ResizeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets originNodeNum
     *
-    * @param int|null $originNodeNum 扩容前的节点数量
+    * @param int|null $originNodeNum **参数解释**： 扩容前的节点数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ResizeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resizeStatus
-    *  扩容状态，取值如下：  - GROWING：扩容中 - RESIZE_FAILURE：扩容失败
+    *  **参数解释**： 扩容状态。 **取值范围**： - GROWING：扩容中 - RESIZE_FAILURE：扩容失败。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class ResizeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resizeStatus
     *
-    * @param string|null $resizeStatus 扩容状态，取值如下：  - GROWING：扩容中 - RESIZE_FAILURE：扩容失败
+    * @param string|null $resizeStatus **参数解释**： 扩容状态。 **取值范围**： - GROWING：扩容中 - RESIZE_FAILURE：扩容失败。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ResizeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss
+    *  **参数解释**： 扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class ResizeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss
+    * @param string|null $startTime **参数解释**： 扩容开始时间，格式为ISO8601：YYYY-MM-DDThh:mm:ss **取值范围**： 不涉及。
     *
     * @return $this
     */

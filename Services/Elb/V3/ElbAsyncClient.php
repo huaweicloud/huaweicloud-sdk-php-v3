@@ -1318,6 +1318,74 @@ class ElbAsyncClient extends Client
     }
 
     /**
+     * 创建后端服务器检测任务
+     *
+     * 创建后端服务器检测任务。包括后端服务器的配置、ACL规则和安全组规则检查。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createMemberHealthCheckJobAsync($request)
+    {
+        return $this->createMemberHealthCheckJobAsyncWithHttpInfo($request);
+    }
+    
+    public function createMemberHealthCheckJobAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/members/{member_id}/health-check';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['memberId'] !== null) {
+            $pathParams['member_id'] = $localVarParams['memberId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\CreateMemberHealthCheckJobResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\CreateMemberHealthCheckJobRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建后端服务器组
      *
      * 创建后端服务器组。
@@ -2372,6 +2440,71 @@ class ElbAsyncClient extends Client
     }
 
     /**
+     * 销毁回收站负载均衡器
+     *
+     * 销毁回收站负载均衡器。销毁后无法再还原。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteRecycleLoadBalancerAsync($request)
+    {
+        return $this->deleteRecycleLoadBalancerAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteRecycleLoadBalancerAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/recycle-bin/loadbalancers/{loadbalancer_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\DeleteRecycleLoadBalancerResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\DeleteRecycleLoadBalancerRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 删除自定义安全策略
      *
      * 删除自定义安全策略。[荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
@@ -2687,6 +2820,15 @@ class ElbAsyncClient extends Client
         }
         if ($localVarParams['fingerprint'] !== null) {
             $queryParams['fingerprint'] = $localVarParams['fingerprint'];
+        }
+        if ($localVarParams['source'] !== null) {
+            $queryParams['source'] = $localVarParams['source'];
+        }
+        if ($localVarParams['protectionStatus'] !== null) {
+            $queryParams['protection_status'] = $localVarParams['protectionStatus'];
+        }
+        if ($localVarParams['protectionReason'] !== null) {
+            $queryParams['protection_reason'] = $localVarParams['protectionReason'];
         }
 
         if ($multipart) {
@@ -3353,6 +3495,9 @@ class ElbAsyncClient extends Client
         if ($localVarParams['adminStateUp'] !== null) {
             $queryParams['admin_state_up'] = $localVarParams['adminStateUp'];
         }
+        if ($localVarParams['includeRecycleBin'] !== null) {
+            $queryParams['include_recycle_bin'] = $localVarParams['includeRecycleBin'];
+        }
         if ($localVarParams['connectionLimit'] !== null) {
             $queryParams['connection_limit'] = $localVarParams['connectionLimit'];
         }
@@ -3498,6 +3643,9 @@ class ElbAsyncClient extends Client
         }
         if ($localVarParams['adminStateUp'] !== null) {
             $queryParams['admin_state_up'] = $localVarParams['adminStateUp'];
+        }
+        if ($localVarParams['includeRecycleBin'] !== null) {
+            $queryParams['include_recycle_bin'] = $localVarParams['includeRecycleBin'];
         }
         if ($localVarParams['provisioningStatus'] !== null) {
             $queryParams['provisioning_status'] = $localVarParams['provisioningStatus'];
@@ -3963,6 +4111,9 @@ class ElbAsyncClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $queryParams['instance_id'] = $localVarParams['instanceId'];
         }
+        if ($localVarParams['availabilityZone'] !== null) {
+            $queryParams['availability_zone'] = $localVarParams['availabilityZone'];
+        }
         if ($localVarParams['poolId'] !== null) {
             $pathParams['pool_id'] = $localVarParams['poolId'];
         }
@@ -4109,6 +4260,9 @@ class ElbAsyncClient extends Client
         if ($localVarParams['quicCidOffset'] !== null) {
             $queryParams['quic_cid_offset'] = $localVarParams['quicCidOffset'];
         }
+        if ($localVarParams['azAffinity'] !== null) {
+            $queryParams['az_affinity'] = $localVarParams['azAffinity'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4202,6 +4356,167 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ListQuotaDetailsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ListQuotaDetailsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询回收站负载均衡器列表
+     *
+     * 查询回收站负载均衡器列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRecycleBinLoadBalancersAsync($request)
+    {
+        return $this->listRecycleBinLoadBalancersAsyncWithHttpInfo($request);
+    }
+    
+    public function listRecycleBinLoadBalancersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/recycle-bin/loadbalancers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['pageReverse'] !== null) {
+            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['description'] !== null) {
+            $queryParams['description'] = $localVarParams['description'];
+        }
+        if ($localVarParams['adminStateUp'] !== null) {
+            $queryParams['admin_state_up'] = $localVarParams['adminStateUp'];
+        }
+        if ($localVarParams['operatingStatus'] !== null) {
+            $queryParams['operating_status'] = $localVarParams['operatingStatus'];
+        }
+        if ($localVarParams['guaranteed'] !== null) {
+            $queryParams['guaranteed'] = $localVarParams['guaranteed'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($localVarParams['vipPortId'] !== null) {
+            $queryParams['vip_port_id'] = $localVarParams['vipPortId'];
+        }
+        if ($localVarParams['vipAddress'] !== null) {
+            $queryParams['vip_address'] = $localVarParams['vipAddress'];
+        }
+        if ($localVarParams['vipSubnetCidrId'] !== null) {
+            $queryParams['vip_subnet_cidr_id'] = $localVarParams['vipSubnetCidrId'];
+        }
+        if ($localVarParams['ipv6VipPortId'] !== null) {
+            $queryParams['ipv6_vip_port_id'] = $localVarParams['ipv6VipPortId'];
+        }
+        if ($localVarParams['ipv6VipAddress'] !== null) {
+            $queryParams['ipv6_vip_address'] = $localVarParams['ipv6VipAddress'];
+        }
+        if ($localVarParams['ipv6VipVirsubnetId'] !== null) {
+            $queryParams['ipv6_vip_virsubnet_id'] = $localVarParams['ipv6VipVirsubnetId'];
+        }
+        if ($localVarParams['eips'] !== null) {
+            $queryParams['eips'] = $localVarParams['eips'];
+        }
+        if ($localVarParams['publicips'] !== null) {
+            $queryParams['publicips'] = $localVarParams['publicips'];
+        }
+        if ($localVarParams['availabilityZoneList'] !== null) {
+            $queryParams['availability_zone_list'] = $localVarParams['availabilityZoneList'];
+        }
+        if ($localVarParams['l4FlavorId'] !== null) {
+            $queryParams['l4_flavor_id'] = $localVarParams['l4FlavorId'];
+        }
+        if ($localVarParams['l7FlavorId'] !== null) {
+            $queryParams['l7_flavor_id'] = $localVarParams['l7FlavorId'];
+        }
+        if ($localVarParams['billingInfo'] !== null) {
+            $queryParams['billing_info'] = $localVarParams['billingInfo'];
+        }
+        if ($localVarParams['memberDeviceId'] !== null) {
+            $queryParams['member_device_id'] = $localVarParams['memberDeviceId'];
+        }
+        if ($localVarParams['memberAddress'] !== null) {
+            $queryParams['member_address'] = $localVarParams['memberAddress'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['ipVersion'] !== null) {
+            $queryParams['ip_version'] = $localVarParams['ipVersion'];
+        }
+        if ($localVarParams['deletionProtectionEnable'] !== null) {
+            $queryParams['deletion_protection_enable'] = $localVarParams['deletionProtectionEnable'];
+        }
+        if ($localVarParams['elbVirsubnetType'] !== null) {
+            $queryParams['elb_virsubnet_type'] = $localVarParams['elbVirsubnetType'];
+        }
+        if ($localVarParams['autoscaling'] !== null) {
+            $queryParams['autoscaling'] = $localVarParams['autoscaling'];
+        }
+        if ($localVarParams['protectionStatus'] !== null) {
+            $queryParams['protection_status'] = $localVarParams['protectionStatus'];
+        }
+        if ($localVarParams['globalEips'] !== null) {
+            $queryParams['global_eips'] = $localVarParams['globalEips'];
+        }
+        if ($localVarParams['logTopicId'] !== null) {
+            $queryParams['log_topic_id'] = $localVarParams['logTopicId'];
+        }
+        if ($localVarParams['logGroupId'] !== null) {
+            $queryParams['log_group_id'] = $localVarParams['logGroupId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ListRecycleBinLoadBalancersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ListRecycleBinLoadBalancersRequest',
             $asyncRequest = true);
     }
 
@@ -4352,6 +4667,71 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ListSystemSecurityPoliciesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ListSystemSecurityPoliciesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 还原负载均衡器
+     *
+     * 从回收站中还原负载均衡器
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function restoreLoadbalancerAsync($request)
+    {
+        return $this->restoreLoadbalancerAsyncWithHttpInfo($request);
+    }
+    
+    public function restoreLoadbalancerAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/recycle-bin/loadbalancers/{loadbalancer_id}/recover';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\RestoreLoadbalancerResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\RestoreLoadbalancerRequest',
             $asyncRequest = true);
     }
 
@@ -5207,6 +5587,71 @@ class ElbAsyncClient extends Client
     }
 
     /**
+     * 查询后端服务器检测任务的结果
+     *
+     * 查询后端服务器检测任务的结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMemberHealthCheckJobAsync($request)
+    {
+        return $this->showMemberHealthCheckJobAsyncWithHttpInfo($request);
+    }
+    
+    public function showMemberHealthCheckJobAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/members/check/jobs/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ShowMemberHealthCheckJobResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ShowMemberHealthCheckJobRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询后端服务器组详情
      *
      * 后端服务器组详情。
@@ -5330,6 +5775,68 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ShowQuotaResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ShowQuotaRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询回收站的配置
+     *
+     * 查询回收站的配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRecycleBinAsync($request)
+    {
+        return $this->showRecycleBinAsyncWithHttpInfo($request);
+    }
+    
+    public function showRecycleBinAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/recycle-bin';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ShowRecycleBinResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ShowRecycleBinRequest',
             $asyncRequest = true);
     }
 
@@ -6013,6 +6520,136 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\UpdatePoolResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\UpdatePoolRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 开关回收站
+     *
+     * 开启或关闭回收站功能。开启后删除的LB可以进入回收站，否则将不进入回收站而是直接被删除无法恢复。关闭回收站前需要先将回收站中的实例还原或销毁。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateRecycleBinEnableAsync($request)
+    {
+        return $this->updateRecycleBinEnableAsyncWithHttpInfo($request);
+    }
+    
+    public function updateRecycleBinEnableAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/recycle-bin';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\UpdateRecycleBinEnableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\UpdateRecycleBinEnableRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新回收站的配置
+     *
+     * 更新回收站的配置。若回收站未开启，则更新会报错。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateRecycleBinPolicyAsync($request)
+    {
+        return $this->updateRecycleBinPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function updateRecycleBinPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/recycle-bin/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\UpdateRecycleBinPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\UpdateRecycleBinPolicyRequest',
             $asyncRequest = true);
     }
 

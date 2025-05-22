@@ -20,7 +20,7 @@ class ClusterDescriptionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * descriptionInfo  集群描述信息
+    * descriptionInfo  **参数解释**: 集群描述信息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ClusterDescriptionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * descriptionInfo  集群描述信息
+    * descriptionInfo  **参数解释**: 集群描述信息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ClusterDescriptionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * descriptionInfo  集群描述信息
+    * descriptionInfo  **参数解释**: 集群描述信息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ClusterDescriptionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * descriptionInfo  集群描述信息
+    * descriptionInfo  **参数解释**: 集群描述信息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ClusterDescriptionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * descriptionInfo  集群描述信息
+    * descriptionInfo  **参数解释**: 集群描述信息。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ClusterDescriptionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets descriptionInfo
-    *  集群描述信息
+    *  **参数解释**: 集群描述信息。 **取值范围**: 不涉及。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ClusterDescriptionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets descriptionInfo
     *
-    * @param string $descriptionInfo 集群描述信息
+    * @param string $descriptionInfo **参数解释**: 集群描述信息。 **取值范围**: 不涉及。
     *
     * @return $this
     */

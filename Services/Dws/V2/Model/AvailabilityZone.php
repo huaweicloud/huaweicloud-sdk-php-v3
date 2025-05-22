@@ -20,10 +20,10 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  可用区唯一编码。
-    * name  可用区名称。
-    * status  可用区状态。 - available：可用。 - unavailable：不可用。
-    * publicBorderGroup  可用区组，如：center。
+    * code  **参数解释**： 可用区唯一编码。 **取值范围**： 不涉及。
+    * name  **参数解释**： 可用区名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 可用区状态。 **取值范围**： available：可用。 unavailable：不可用。
+    * publicBorderGroup  **参数解释**： 可用区组，如：center。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  可用区唯一编码。
-    * name  可用区名称。
-    * status  可用区状态。 - available：可用。 - unavailable：不可用。
-    * publicBorderGroup  可用区组，如：center。
+    * code  **参数解释**： 可用区唯一编码。 **取值范围**： 不涉及。
+    * name  **参数解释**： 可用区名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 可用区状态。 **取值范围**： available：可用。 unavailable：不可用。
+    * publicBorderGroup  **参数解释**： 可用区组，如：center。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  可用区唯一编码。
-    * name  可用区名称。
-    * status  可用区状态。 - available：可用。 - unavailable：不可用。
-    * publicBorderGroup  可用区组，如：center。
+    * code  **参数解释**： 可用区唯一编码。 **取值范围**： 不涉及。
+    * name  **参数解释**： 可用区名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 可用区状态。 **取值范围**： available：可用。 unavailable：不可用。
+    * publicBorderGroup  **参数解释**： 可用区组，如：center。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  可用区唯一编码。
-    * name  可用区名称。
-    * status  可用区状态。 - available：可用。 - unavailable：不可用。
-    * publicBorderGroup  可用区组，如：center。
+    * code  **参数解释**： 可用区唯一编码。 **取值范围**： 不涉及。
+    * name  **参数解释**： 可用区名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 可用区状态。 **取值范围**： available：可用。 unavailable：不可用。
+    * publicBorderGroup  **参数解释**： 可用区组，如：center。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  可用区唯一编码。
-    * name  可用区名称。
-    * status  可用区状态。 - available：可用。 - unavailable：不可用。
-    * publicBorderGroup  可用区组，如：center。
+    * code  **参数解释**： 可用区唯一编码。 **取值范围**： 不涉及。
+    * name  **参数解释**： 可用区名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 可用区状态。 **取值范围**： available：可用。 unavailable：不可用。
+    * publicBorderGroup  **参数解释**： 可用区组，如：center。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  可用区唯一编码。
+    *  **参数解释**： 可用区唯一编码。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string $code 可用区唯一编码。
+    * @param string $code **参数解释**： 可用区唯一编码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  可用区名称。
+    *  **参数解释**： 可用区名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 可用区名称。
+    * @param string $name **参数解释**： 可用区名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  可用区状态。 - available：可用。 - unavailable：不可用。
+    *  **参数解释**： 可用区状态。 **取值范围**： available：可用。 unavailable：不可用。
     *
     * @return string
     */
@@ -279,7 +279,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 可用区状态。 - available：可用。 - unavailable：不可用。
+    * @param string $status **参数解释**： 可用区状态。 **取值范围**： available：可用。 unavailable：不可用。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  可用区组，如：center。
+    *  **参数解释**： 可用区组，如：center。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -303,7 +303,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string $publicBorderGroup 可用区组，如：center。
+    * @param string $publicBorderGroup **参数解释**： 可用区组，如：center。 **取值范围**： 不涉及。
     *
     * @return $this
     */

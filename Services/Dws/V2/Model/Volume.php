@@ -20,8 +20,8 @@ class Volume implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * volume  磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
-    * capacity  磁盘容量,单位：GB
+    * volume  **参数解释**： 磁盘名称。 **约束限制**： 不涉及。 **取值范围**： - SSD：超高IO - SAS：高IO - SATA：普通IO  **默认取值**： 不涉及。
+    * capacity  **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Volume implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * volume  磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
-    * capacity  磁盘容量,单位：GB
+    * volume  **参数解释**： 磁盘名称。 **约束限制**： 不涉及。 **取值范围**： - SSD：超高IO - SAS：高IO - SATA：普通IO  **默认取值**： 不涉及。
+    * capacity  **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Volume implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * volume  磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
-    * capacity  磁盘容量,单位：GB
+    * volume  **参数解释**： 磁盘名称。 **约束限制**： 不涉及。 **取值范围**： - SSD：超高IO - SAS：高IO - SATA：普通IO  **默认取值**： 不涉及。
+    * capacity  **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Volume implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * volume  磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
-    * capacity  磁盘容量,单位：GB
+    * volume  **参数解释**： 磁盘名称。 **约束限制**： 不涉及。 **取值范围**： - SSD：超高IO - SAS：高IO - SATA：普通IO  **默认取值**： 不涉及。
+    * capacity  **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Volume implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * volume  磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
-    * capacity  磁盘容量,单位：GB
+    * volume  **参数解释**： 磁盘名称。 **约束限制**： 不涉及。 **取值范围**： - SSD：超高IO - SAS：高IO - SATA：普通IO  **默认取值**： 不涉及。
+    * capacity  **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class Volume implements ModelInterface, ArrayAccess
 
     /**
     * Gets volume
-    *  磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
+    *  **参数解释**： 磁盘名称。 **约束限制**： 不涉及。 **取值范围**： - SSD：超高IO - SAS：高IO - SATA：普通IO  **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class Volume implements ModelInterface, ArrayAccess
     /**
     * Sets volume
     *
-    * @param string $volume 磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
+    * @param string $volume **参数解释**： 磁盘名称。 **约束限制**： 不涉及。 **取值范围**： - SSD：超高IO - SAS：高IO - SATA：普通IO  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class Volume implements ModelInterface, ArrayAccess
 
     /**
     * Gets capacity
-    *  磁盘容量,单位：GB
+    *  **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -224,7 +224,7 @@ class Volume implements ModelInterface, ArrayAccess
     /**
     * Sets capacity
     *
-    * @param int|null $capacity 磁盘容量,单位：GB
+    * @param int|null $capacity **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

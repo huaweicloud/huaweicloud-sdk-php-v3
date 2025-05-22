@@ -20,8 +20,8 @@ class NodeTypeAvailableZones implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  可用区ID。
-    * status  节点类型可用状态。 - normal：可用 - sellout：售罄 - abandon：不可用
+    * code  **参数解释**： 可用区ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 规格可用状态。 **取值范围**： - normal：可用 - sellout：售罄 - abandon：不可用
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class NodeTypeAvailableZones implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  可用区ID。
-    * status  节点类型可用状态。 - normal：可用 - sellout：售罄 - abandon：不可用
+    * code  **参数解释**： 可用区ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 规格可用状态。 **取值范围**： - normal：可用 - sellout：售罄 - abandon：不可用
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class NodeTypeAvailableZones implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  可用区ID。
-    * status  节点类型可用状态。 - normal：可用 - sellout：售罄 - abandon：不可用
+    * code  **参数解释**： 可用区ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 规格可用状态。 **取值范围**： - normal：可用 - sellout：售罄 - abandon：不可用
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class NodeTypeAvailableZones implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  可用区ID。
-    * status  节点类型可用状态。 - normal：可用 - sellout：售罄 - abandon：不可用
+    * code  **参数解释**： 可用区ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 规格可用状态。 **取值范围**： - normal：可用 - sellout：售罄 - abandon：不可用
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class NodeTypeAvailableZones implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  可用区ID。
-    * status  节点类型可用状态。 - normal：可用 - sellout：售罄 - abandon：不可用
+    * code  **参数解释**： 可用区ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 规格可用状态。 **取值范围**： - normal：可用 - sellout：售罄 - abandon：不可用
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class NodeTypeAvailableZones implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  可用区ID。
+    *  **参数解释**： 可用区ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class NodeTypeAvailableZones implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string $code 可用区ID。
+    * @param string $code **参数解释**： 可用区ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class NodeTypeAvailableZones implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  节点类型可用状态。 - normal：可用 - sellout：售罄 - abandon：不可用
+    *  **参数解释**： 规格可用状态。 **取值范围**： - normal：可用 - sellout：售罄 - abandon：不可用
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class NodeTypeAvailableZones implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 节点类型可用状态。 - normal：可用 - sellout：售罄 - abandon：不可用
+    * @param string $status **参数解释**： 规格可用状态。 **取值范围**： - normal：可用 - sellout：售罄 - abandon：不可用
     *
     * @return $this
     */

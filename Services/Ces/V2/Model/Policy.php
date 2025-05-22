@@ -351,8 +351,8 @@ class Policy implements ModelInterface, ArrayAccess
             if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 0)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) > 32)) {
-                $invalidProperties[] = "invalid value for 'dimensionName', the character length must be smaller than or equal to 32.";
+            if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'dimensionName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'dimensionName', the character length must be bigger than or equal to 0.";

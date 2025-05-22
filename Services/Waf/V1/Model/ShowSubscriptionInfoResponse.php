@@ -21,7 +21,7 @@ class ShowSubscriptionInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：铂金版   - 7:入门版   - 22：按需版本
+    * type  云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：企业版   - 7:入门版   - 22：按需版本
     * resources  资源列表
     * isNewUser  是否为新用户
     * premium  premium
@@ -37,7 +37,7 @@ class ShowSubscriptionInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：铂金版   - 7:入门版   - 22：按需版本
+    * type  云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：企业版   - 7:入门版   - 22：按需版本
     * resources  资源列表
     * isNewUser  是否为新用户
     * premium  premium
@@ -74,7 +74,7 @@ class ShowSubscriptionInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：铂金版   - 7:入门版   - 22：按需版本
+    * type  云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：企业版   - 7:入门版   - 22：按需版本
     * resources  资源列表
     * isNewUser  是否为新用户
     * premium  premium
@@ -90,7 +90,7 @@ class ShowSubscriptionInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：铂金版   - 7:入门版   - 22：按需版本
+    * type  云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：企业版   - 7:入门版   - 22：按需版本
     * resources  资源列表
     * isNewUser  是否为新用户
     * premium  premium
@@ -106,7 +106,7 @@ class ShowSubscriptionInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：铂金版   - 7:入门版   - 22：按需版本
+    * type  云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：企业版   - 7:入门版   - 22：按需版本
     * resources  资源列表
     * isNewUser  是否为新用户
     * premium  premium
@@ -208,7 +208,7 @@ class ShowSubscriptionInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：铂金版   - 7:入门版   - 22：按需版本
+    *  云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：企业版   - 7:入门版   - 22：按需版本
     *
     * @return int|null
     */
@@ -220,7 +220,7 @@ class ShowSubscriptionInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type 云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：铂金版   - 7:入门版   - 22：按需版本
+    * @param int|null $type 云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：企业版   - 7:入门版   - 22：按需版本
     *
     * @return $this
     */

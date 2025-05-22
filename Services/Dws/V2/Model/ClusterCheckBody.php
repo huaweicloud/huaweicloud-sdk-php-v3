@@ -20,26 +20,26 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID
-    * flavor  集群规格名称
-    * availabilityZones  可用区列表
-    * numNode  实例节点个数
-    * securityGroupId  集群安全组ID
-    * datastoreVersion  集群版本
-    * vpcId  集群虚拟私有云ID
-    * subnetId  集群子网ID
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * flavor  **参数解释**： 集群规格名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * numNode  **参数解释**： 实例节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 集群虚拟私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 集群子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * crossSpecRestore  跨规格恢复
+    * crossSpecRestore  **参数解释**： 跨规格恢复信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * volume  volume
-    * oldClusterHostname  旧主机名
+    * oldClusterHostname  **参数解释**： 旧主机名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * restorePoint  restorePoint
-    * tagList  标签列表
-    * dssPoolId  存储池ID
-    * dbPort  数据库端口
-    * dbPassword  管理员密码
-    * dbName  管理员用户
-    * numCn  cn节点数量
-    * name  集群名称
+    * tagList  **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * dssPoolId  **参数解释**： 存储池ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * dbPort  **参数解释**： 数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * dbPassword  **参数解释**： 管理员密码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * dbName  **参数解释**： 管理员用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： dbadmin
+    * numCn  **参数解释**： cn节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -68,26 +68,26 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目ID
-    * flavor  集群规格名称
-    * availabilityZones  可用区列表
-    * numNode  实例节点个数
-    * securityGroupId  集群安全组ID
-    * datastoreVersion  集群版本
-    * vpcId  集群虚拟私有云ID
-    * subnetId  集群子网ID
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * flavor  **参数解释**： 集群规格名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * numNode  **参数解释**： 实例节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 集群虚拟私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 集群子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * crossSpecRestore  跨规格恢复
+    * crossSpecRestore  **参数解释**： 跨规格恢复信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * volume  volume
-    * oldClusterHostname  旧主机名
+    * oldClusterHostname  **参数解释**： 旧主机名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * restorePoint  restorePoint
-    * tagList  标签列表
-    * dssPoolId  存储池ID
-    * dbPort  数据库端口
-    * dbPassword  管理员密码
-    * dbName  管理员用户
-    * numCn  cn节点数量
-    * name  集群名称
+    * tagList  **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * dssPoolId  **参数解释**： 存储池ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * dbPort  **参数解释**： 数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * dbPassword  **参数解释**： 管理员密码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * dbName  **参数解释**： 管理员用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： dbadmin
+    * numCn  **参数解释**： cn节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -137,26 +137,26 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业项目ID
-    * flavor  集群规格名称
-    * availabilityZones  可用区列表
-    * numNode  实例节点个数
-    * securityGroupId  集群安全组ID
-    * datastoreVersion  集群版本
-    * vpcId  集群虚拟私有云ID
-    * subnetId  集群子网ID
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * flavor  **参数解释**： 集群规格名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * numNode  **参数解释**： 实例节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 集群虚拟私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 集群子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * crossSpecRestore  跨规格恢复
+    * crossSpecRestore  **参数解释**： 跨规格恢复信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * volume  volume
-    * oldClusterHostname  旧主机名
+    * oldClusterHostname  **参数解释**： 旧主机名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * restorePoint  restorePoint
-    * tagList  标签列表
-    * dssPoolId  存储池ID
-    * dbPort  数据库端口
-    * dbPassword  管理员密码
-    * dbName  管理员用户
-    * numCn  cn节点数量
-    * name  集群名称
+    * tagList  **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * dssPoolId  **参数解释**： 存储池ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * dbPort  **参数解释**： 数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * dbPassword  **参数解释**： 管理员密码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * dbName  **参数解释**： 管理员用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： dbadmin
+    * numCn  **参数解释**： cn节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -185,26 +185,26 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业项目ID
-    * flavor  集群规格名称
-    * availabilityZones  可用区列表
-    * numNode  实例节点个数
-    * securityGroupId  集群安全组ID
-    * datastoreVersion  集群版本
-    * vpcId  集群虚拟私有云ID
-    * subnetId  集群子网ID
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * flavor  **参数解释**： 集群规格名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * numNode  **参数解释**： 实例节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 集群虚拟私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 集群子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * crossSpecRestore  跨规格恢复
+    * crossSpecRestore  **参数解释**： 跨规格恢复信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * volume  volume
-    * oldClusterHostname  旧主机名
+    * oldClusterHostname  **参数解释**： 旧主机名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * restorePoint  restorePoint
-    * tagList  标签列表
-    * dssPoolId  存储池ID
-    * dbPort  数据库端口
-    * dbPassword  管理员密码
-    * dbName  管理员用户
-    * numCn  cn节点数量
-    * name  集群名称
+    * tagList  **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * dssPoolId  **参数解释**： 存储池ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * dbPort  **参数解释**： 数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * dbPassword  **参数解释**： 管理员密码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * dbName  **参数解释**： 管理员用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： dbadmin
+    * numCn  **参数解释**： cn节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -233,26 +233,26 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业项目ID
-    * flavor  集群规格名称
-    * availabilityZones  可用区列表
-    * numNode  实例节点个数
-    * securityGroupId  集群安全组ID
-    * datastoreVersion  集群版本
-    * vpcId  集群虚拟私有云ID
-    * subnetId  集群子网ID
+    * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * flavor  **参数解释**： 集群规格名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * numNode  **参数解释**： 实例节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 集群虚拟私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 集群子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * crossSpecRestore  跨规格恢复
+    * crossSpecRestore  **参数解释**： 跨规格恢复信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * volume  volume
-    * oldClusterHostname  旧主机名
+    * oldClusterHostname  **参数解释**： 旧主机名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * restorePoint  restorePoint
-    * tagList  标签列表
-    * dssPoolId  存储池ID
-    * dbPort  数据库端口
-    * dbPassword  管理员密码
-    * dbName  管理员用户
-    * numCn  cn节点数量
-    * name  集群名称
+    * tagList  **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * dssPoolId  **参数解释**： 存储池ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
+    * dbPort  **参数解释**： 数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
+    * dbPassword  **参数解释**： 管理员密码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * dbName  **参数解释**： 管理员用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： dbadmin
+    * numCn  **参数解释**： cn节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -401,7 +401,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID
+    *  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return string|null
     */
@@ -413,7 +413,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return $this
     */
@@ -425,7 +425,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavor
-    *  集群规格名称
+    *  **参数解释**： 集群规格名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -437,7 +437,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets flavor
     *
-    * @param string $flavor 集群规格名称
+    * @param string $flavor **参数解释**： 集群规格名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -449,7 +449,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZones
-    *  可用区列表
+    *  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]
     */
@@ -461,7 +461,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZones
     *
-    * @param string[] $availabilityZones 可用区列表
+    * @param string[] $availabilityZones **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -473,7 +473,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets numNode
-    *  实例节点个数
+    *  **参数解释**： 实例节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -485,7 +485,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets numNode
     *
-    * @param int $numNode 实例节点个数
+    * @param int $numNode **参数解释**： 实例节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -497,7 +497,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  集群安全组ID
+    *  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -509,7 +509,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string|null $securityGroupId 集群安全组ID
+    * @param string|null $securityGroupId **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -521,7 +521,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreVersion
-    *  集群版本
+    *  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -533,7 +533,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreVersion
     *
-    * @param string $datastoreVersion 集群版本
+    * @param string $datastoreVersion **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -545,7 +545,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  集群虚拟私有云ID
+    *  **参数解释**： 集群虚拟私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -557,7 +557,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId 集群虚拟私有云ID
+    * @param string $vpcId **参数解释**： 集群虚拟私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -569,7 +569,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  集群子网ID
+    *  **参数解释**： 集群子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -581,7 +581,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId 集群子网ID
+    * @param string $subnetId **参数解释**： 集群子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -617,7 +617,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets crossSpecRestore
-    *  跨规格恢复
+    *  **参数解释**： 跨规格恢复信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @return string|null
     */
@@ -629,7 +629,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets crossSpecRestore
     *
-    * @param string|null $crossSpecRestore 跨规格恢复
+    * @param string|null $crossSpecRestore **参数解释**： 跨规格恢复信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @return $this
     */
@@ -665,7 +665,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets oldClusterHostname
-    *  旧主机名
+    *  **参数解释**： 旧主机名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @return string|null
     */
@@ -677,7 +677,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets oldClusterHostname
     *
-    * @param string|null $oldClusterHostname 旧主机名
+    * @param string|null $oldClusterHostname **参数解释**： 旧主机名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @return $this
     */
@@ -713,7 +713,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagList
-    *  标签列表
+    *  **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\Tag[]|null
     */
@@ -725,7 +725,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets tagList
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\Tag[]|null $tagList 标签列表
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\Tag[]|null $tagList **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @return $this
     */
@@ -737,7 +737,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dssPoolId
-    *  存储池ID
+    *  **参数解释**： 存储池ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @return string|null
     */
@@ -749,7 +749,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets dssPoolId
     *
-    * @param string|null $dssPoolId 存储池ID
+    * @param string|null $dssPoolId **参数解释**： 存储池ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     *
     * @return $this
     */
@@ -761,7 +761,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbPort
-    *  数据库端口
+    *  **参数解释**： 数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
     *
     * @return string|null
     */
@@ -773,7 +773,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets dbPort
     *
-    * @param string|null $dbPort 数据库端口
+    * @param string|null $dbPort **参数解释**： 数据库端口。 **约束限制**： 不涉及。 **取值范围**： 8000~30000 **默认取值**： 8000
     *
     * @return $this
     */
@@ -785,7 +785,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbPassword
-    *  管理员密码
+    *  **参数解释**： 管理员密码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -797,7 +797,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets dbPassword
     *
-    * @param string|null $dbPassword 管理员密码
+    * @param string|null $dbPassword **参数解释**： 管理员密码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -809,7 +809,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbName
-    *  管理员用户
+    *  **参数解释**： 管理员用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： dbadmin
     *
     * @return string|null
     */
@@ -821,7 +821,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets dbName
     *
-    * @param string|null $dbName 管理员用户
+    * @param string|null $dbName **参数解释**： 管理员用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： dbadmin
     *
     * @return $this
     */
@@ -833,7 +833,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets numCn
-    *  cn节点数量
+    *  **参数解释**： cn节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -845,7 +845,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets numCn
     *
-    * @param int|null $numCn cn节点数量
+    * @param int|null $numCn **参数解释**： cn节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -857,7 +857,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  集群名称
+    *  **参数解释**： 集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -869,7 +869,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 集群名称
+    * @param string|null $name **参数解释**： 集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

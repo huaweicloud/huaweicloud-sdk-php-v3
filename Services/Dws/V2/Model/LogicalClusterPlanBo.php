@@ -20,14 +20,14 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logicalClusterName  逻辑集群名字
-    * user  逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户
-    * nodeNum  逻辑集群节点的个数
-    * mainLogicalCluster  逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群
-    * planType  计划类型，取值范围为(once|periodicity)
-    * startTime  逻辑集群定时增删计划起始时间
-    * endTime  逻辑集群定时增删计划终止时间
-    * actions  逻辑集群定时增删计划细节
+    * logicalClusterName  **参数解释**： 逻辑集群名字。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * user  **参数解释**： 逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nodeNum  **参数解释**： 逻辑集群节点的个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mainLogicalCluster  **参数解释**： 逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * planType  **参数解释**： 计划类型，取值范围为(once|periodicity)。 **约束限制**： 不涉及。 **取值范围**： once：一次性计划 periodicity：周期性计划 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 逻辑集群定时增删计划起始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 逻辑集群定时增删计划终止时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * actions  **参数解释**： 逻辑集群定时增删计划细节。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logicalClusterName  逻辑集群名字
-    * user  逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户
-    * nodeNum  逻辑集群节点的个数
-    * mainLogicalCluster  逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群
-    * planType  计划类型，取值范围为(once|periodicity)
-    * startTime  逻辑集群定时增删计划起始时间
-    * endTime  逻辑集群定时增删计划终止时间
-    * actions  逻辑集群定时增删计划细节
+    * logicalClusterName  **参数解释**： 逻辑集群名字。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * user  **参数解释**： 逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nodeNum  **参数解释**： 逻辑集群节点的个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mainLogicalCluster  **参数解释**： 逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * planType  **参数解释**： 计划类型，取值范围为(once|periodicity)。 **约束限制**： 不涉及。 **取值范围**： once：一次性计划 periodicity：周期性计划 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 逻辑集群定时增删计划起始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 逻辑集群定时增删计划终止时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * actions  **参数解释**： 逻辑集群定时增删计划细节。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logicalClusterName  逻辑集群名字
-    * user  逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户
-    * nodeNum  逻辑集群节点的个数
-    * mainLogicalCluster  逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群
-    * planType  计划类型，取值范围为(once|periodicity)
-    * startTime  逻辑集群定时增删计划起始时间
-    * endTime  逻辑集群定时增删计划终止时间
-    * actions  逻辑集群定时增删计划细节
+    * logicalClusterName  **参数解释**： 逻辑集群名字。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * user  **参数解释**： 逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nodeNum  **参数解释**： 逻辑集群节点的个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mainLogicalCluster  **参数解释**： 逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * planType  **参数解释**： 计划类型，取值范围为(once|periodicity)。 **约束限制**： 不涉及。 **取值范围**： once：一次性计划 periodicity：周期性计划 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 逻辑集群定时增删计划起始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 逻辑集群定时增删计划终止时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * actions  **参数解释**： 逻辑集群定时增删计划细节。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logicalClusterName  逻辑集群名字
-    * user  逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户
-    * nodeNum  逻辑集群节点的个数
-    * mainLogicalCluster  逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群
-    * planType  计划类型，取值范围为(once|periodicity)
-    * startTime  逻辑集群定时增删计划起始时间
-    * endTime  逻辑集群定时增删计划终止时间
-    * actions  逻辑集群定时增删计划细节
+    * logicalClusterName  **参数解释**： 逻辑集群名字。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * user  **参数解释**： 逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nodeNum  **参数解释**： 逻辑集群节点的个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mainLogicalCluster  **参数解释**： 逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * planType  **参数解释**： 计划类型，取值范围为(once|periodicity)。 **约束限制**： 不涉及。 **取值范围**： once：一次性计划 periodicity：周期性计划 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 逻辑集群定时增删计划起始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 逻辑集群定时增删计划终止时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * actions  **参数解释**： 逻辑集群定时增删计划细节。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logicalClusterName  逻辑集群名字
-    * user  逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户
-    * nodeNum  逻辑集群节点的个数
-    * mainLogicalCluster  逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群
-    * planType  计划类型，取值范围为(once|periodicity)
-    * startTime  逻辑集群定时增删计划起始时间
-    * endTime  逻辑集群定时增删计划终止时间
-    * actions  逻辑集群定时增删计划细节
+    * logicalClusterName  **参数解释**： 逻辑集群名字。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * user  **参数解释**： 逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nodeNum  **参数解释**： 逻辑集群节点的个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * mainLogicalCluster  **参数解释**： 逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * planType  **参数解释**： 计划类型，取值范围为(once|periodicity)。 **约束限制**： 不涉及。 **取值范围**： once：一次性计划 periodicity：周期性计划 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 逻辑集群定时增删计划起始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 逻辑集群定时增删计划终止时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * actions  **参数解释**： 逻辑集群定时增删计划细节。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -257,7 +257,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterName
-    *  逻辑集群名字
+    *  **参数解释**： 逻辑集群名字。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -269,7 +269,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterName
     *
-    * @param string|null $logicalClusterName 逻辑集群名字
+    * @param string|null $logicalClusterName **参数解释**： 逻辑集群名字。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -281,7 +281,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
 
     /**
     * Gets user
-    *  逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户
+    *  **参数解释**： 逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -293,7 +293,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
     /**
     * Sets user
     *
-    * @param string|null $user 逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户
+    * @param string|null $user **参数解释**： 逻辑集群绑定的用户，若绑定了主逻辑集群，不能绑定用户。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeNum
-    *  逻辑集群节点的个数
+    *  **参数解释**： 逻辑集群节点的个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -317,7 +317,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
     /**
     * Sets nodeNum
     *
-    * @param int|null $nodeNum 逻辑集群节点的个数
+    * @param int|null $nodeNum **参数解释**： 逻辑集群节点的个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
 
     /**
     * Gets mainLogicalCluster
-    *  逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群
+    *  **参数解释**： 逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -341,7 +341,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
     /**
     * Sets mainLogicalCluster
     *
-    * @param string|null $mainLogicalCluster 逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群
+    * @param string|null $mainLogicalCluster **参数解释**： 逻辑集群的绑定的主逻辑集群，若绑定了用户，不能绑定主逻辑集群。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -353,7 +353,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
 
     /**
     * Gets planType
-    *  计划类型，取值范围为(once|periodicity)
+    *  **参数解释**： 计划类型，取值范围为(once|periodicity)。 **约束限制**： 不涉及。 **取值范围**： once：一次性计划 periodicity：周期性计划 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -365,7 +365,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
     /**
     * Sets planType
     *
-    * @param string $planType 计划类型，取值范围为(once|periodicity)
+    * @param string $planType **参数解释**： 计划类型，取值范围为(once|periodicity)。 **约束限制**： 不涉及。 **取值范围**： once：一次性计划 periodicity：周期性计划 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -377,7 +377,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  逻辑集群定时增删计划起始时间
+    *  **参数解释**： 逻辑集群定时增删计划起始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -389,7 +389,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 逻辑集群定时增删计划起始时间
+    * @param string|null $startTime **参数解释**： 逻辑集群定时增删计划起始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -401,7 +401,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  逻辑集群定时增删计划终止时间
+    *  **参数解释**： 逻辑集群定时增删计划终止时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -413,7 +413,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 逻辑集群定时增删计划终止时间
+    * @param string|null $endTime **参数解释**： 逻辑集群定时增删计划终止时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -425,7 +425,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
 
     /**
     * Gets actions
-    *  逻辑集群定时增删计划细节
+    *  **参数解释**： 逻辑集群定时增删计划细节。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterPlanActionsParam[]
     */
@@ -437,7 +437,7 @@ class LogicalClusterPlanBo implements ModelInterface, ArrayAccess
     /**
     * Sets actions
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterPlanActionsParam[] $actions 逻辑集群定时增删计划细节
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\LogicalClusterPlanActionsParam[] $actions **参数解释**： 逻辑集群定时增删计划细节。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

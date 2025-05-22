@@ -40,7 +40,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
-    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
-    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
     *
     * @var string[]
     */
@@ -161,7 +161,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
-    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
     *
     * @var string[]
     */
@@ -211,7 +211,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
-    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
     *
     * @var string[]
     */
@@ -261,7 +261,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * relationLivePlatformInfo  relationLivePlatformInfo
-    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+    * usedResourceType  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
     *
     * @var string[]
     */
@@ -336,6 +336,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     const STATE_BLOCKED = 'BLOCKED';
     const USED_RESOURCE_TYPE_PERIOD = 'PERIOD';
     const USED_RESOURCE_TYPE_ONDEMAND = 'ONDEMAND';
+    const USED_RESOURCE_TYPE_ONE_TIME = 'ONE_TIME';
     const USED_RESOURCE_TYPE_UNKNOW = 'UNKNOW';
     
 
@@ -365,6 +366,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
         return [
             self::USED_RESOURCE_TYPE_PERIOD,
             self::USED_RESOURCE_TYPE_ONDEMAND,
+            self::USED_RESOURCE_TYPE_ONE_TIME,
             self::USED_RESOURCE_TYPE_UNKNOW,
         ];
     }
@@ -1012,7 +1014,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedResourceType
-    *  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+    *  使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
     *
     * @return string|null
     */
@@ -1024,7 +1026,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     /**
     * Sets usedResourceType
     *
-    * @param string|null $usedResourceType 使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+    * @param string|null $usedResourceType 使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
     *
     * @return $this
     */

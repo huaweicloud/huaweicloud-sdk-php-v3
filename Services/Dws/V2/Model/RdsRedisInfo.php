@@ -20,11 +20,11 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * clusterId  集群ID
-    * startTime  开始时间
-    * endTime  结束时间
-    * status  状态
+    * id  **参数解释**： 重分布信息ID。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
     * redisConf  redisConf
     * redisProgress  redisProgress
     * redisTableDetail  redisTableDetail
@@ -44,11 +44,11 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * clusterId  集群ID
-    * startTime  开始时间
-    * endTime  结束时间
-    * status  状态
+    * id  **参数解释**： 重分布信息ID。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
     * redisConf  redisConf
     * redisProgress  redisProgress
     * redisTableDetail  redisTableDetail
@@ -89,11 +89,11 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * clusterId  集群ID
-    * startTime  开始时间
-    * endTime  结束时间
-    * status  状态
+    * id  **参数解释**： 重分布信息ID。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
     * redisConf  redisConf
     * redisProgress  redisProgress
     * redisTableDetail  redisTableDetail
@@ -113,11 +113,11 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * clusterId  集群ID
-    * startTime  开始时间
-    * endTime  结束时间
-    * status  状态
+    * id  **参数解释**： 重分布信息ID。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
     * redisConf  redisConf
     * redisProgress  redisProgress
     * redisTableDetail  redisTableDetail
@@ -137,11 +137,11 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * clusterId  集群ID
-    * startTime  开始时间
-    * endTime  结束时间
-    * status  状态
+    * id  **参数解释**： 重分布信息ID。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
     * redisConf  redisConf
     * redisProgress  redisProgress
     * redisTableDetail  redisTableDetail
@@ -251,7 +251,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  **参数解释**： 重分布信息ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id **参数解释**： 重分布信息ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID
+    *  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -287,7 +287,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID
+    * @param string|null $clusterId **参数解释**： 集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间
+    *  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 开始时间
+    * @param string|null $startTime **参数解释**： 开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 结束时间
+    * @param string|null $endTime **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
     *
     * @return $this
     */

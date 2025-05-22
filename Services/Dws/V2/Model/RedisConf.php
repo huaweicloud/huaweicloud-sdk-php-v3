@@ -20,10 +20,12 @@ class RedisConf implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * redisMode  重分布模式
+    * redisMode  **参数解释**： 重分布模式。 **取值范围**： online|offline。
     * scheduleConf  scheduleConf
-    * parallelJobs  并行作业数量
-    * parallelJob  并行作业数量
+    * parallelJobs  **参数解释**： 重分布并发数。 **取值范围**： 1~200。
+    * parallelJob  **参数解释**： 重分布并发数，已经废弃。 **取值范围**： 1~200。
+    * priorityPolicy  **参数解释**： 优先级策略,支持large优先对大表进行重分布，small优先对小表进行重分布，default默认顺序进行重分布。 **取值范围**： large|small|default。
+    * bucketSplitInfo  bucketSplitInfo
     *
     * @var string[]
     */
@@ -31,15 +33,19 @@ class RedisConf implements ModelInterface, ArrayAccess
             'redisMode' => 'string',
             'scheduleConf' => '\HuaweiCloud\SDK\Dws\V2\Model\ScheduleConf',
             'parallelJobs' => 'int',
-            'parallelJob' => 'int'
+            'parallelJob' => 'int',
+            'priorityPolicy' => 'string',
+            'bucketSplitInfo' => '\HuaweiCloud\SDK\Dws\V2\Model\BucketSplitInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * redisMode  重分布模式
+    * redisMode  **参数解释**： 重分布模式。 **取值范围**： online|offline。
     * scheduleConf  scheduleConf
-    * parallelJobs  并行作业数量
-    * parallelJob  并行作业数量
+    * parallelJobs  **参数解释**： 重分布并发数。 **取值范围**： 1~200。
+    * parallelJob  **参数解释**： 重分布并发数，已经废弃。 **取值范围**： 1~200。
+    * priorityPolicy  **参数解释**： 优先级策略,支持large优先对大表进行重分布，small优先对小表进行重分布，default默认顺序进行重分布。 **取值范围**： large|small|default。
+    * bucketSplitInfo  bucketSplitInfo
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class RedisConf implements ModelInterface, ArrayAccess
         'redisMode' => null,
         'scheduleConf' => null,
         'parallelJobs' => 'int32',
-        'parallelJob' => 'int32'
+        'parallelJob' => 'int32',
+        'priorityPolicy' => null,
+        'bucketSplitInfo' => null
     ];
 
     /**
@@ -73,10 +81,12 @@ class RedisConf implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * redisMode  重分布模式
+    * redisMode  **参数解释**： 重分布模式。 **取值范围**： online|offline。
     * scheduleConf  scheduleConf
-    * parallelJobs  并行作业数量
-    * parallelJob  并行作业数量
+    * parallelJobs  **参数解释**： 重分布并发数。 **取值范围**： 1~200。
+    * parallelJob  **参数解释**： 重分布并发数，已经废弃。 **取值范围**： 1~200。
+    * priorityPolicy  **参数解释**： 优先级策略,支持large优先对大表进行重分布，small优先对小表进行重分布，default默认顺序进行重分布。 **取值范围**： large|small|default。
+    * bucketSplitInfo  bucketSplitInfo
     *
     * @var string[]
     */
@@ -84,15 +94,19 @@ class RedisConf implements ModelInterface, ArrayAccess
             'redisMode' => 'redis_mode',
             'scheduleConf' => 'schedule_conf',
             'parallelJobs' => 'parallel_jobs',
-            'parallelJob' => 'parallel_job'
+            'parallelJob' => 'parallel_job',
+            'priorityPolicy' => 'priority_policy',
+            'bucketSplitInfo' => 'bucket_split_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * redisMode  重分布模式
+    * redisMode  **参数解释**： 重分布模式。 **取值范围**： online|offline。
     * scheduleConf  scheduleConf
-    * parallelJobs  并行作业数量
-    * parallelJob  并行作业数量
+    * parallelJobs  **参数解释**： 重分布并发数。 **取值范围**： 1~200。
+    * parallelJob  **参数解释**： 重分布并发数，已经废弃。 **取值范围**： 1~200。
+    * priorityPolicy  **参数解释**： 优先级策略,支持large优先对大表进行重分布，small优先对小表进行重分布，default默认顺序进行重分布。 **取值范围**： large|small|default。
+    * bucketSplitInfo  bucketSplitInfo
     *
     * @var string[]
     */
@@ -100,15 +114,19 @@ class RedisConf implements ModelInterface, ArrayAccess
             'redisMode' => 'setRedisMode',
             'scheduleConf' => 'setScheduleConf',
             'parallelJobs' => 'setParallelJobs',
-            'parallelJob' => 'setParallelJob'
+            'parallelJob' => 'setParallelJob',
+            'priorityPolicy' => 'setPriorityPolicy',
+            'bucketSplitInfo' => 'setBucketSplitInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * redisMode  重分布模式
+    * redisMode  **参数解释**： 重分布模式。 **取值范围**： online|offline。
     * scheduleConf  scheduleConf
-    * parallelJobs  并行作业数量
-    * parallelJob  并行作业数量
+    * parallelJobs  **参数解释**： 重分布并发数。 **取值范围**： 1~200。
+    * parallelJob  **参数解释**： 重分布并发数，已经废弃。 **取值范围**： 1~200。
+    * priorityPolicy  **参数解释**： 优先级策略,支持large优先对大表进行重分布，small优先对小表进行重分布，default默认顺序进行重分布。 **取值范围**： large|small|default。
+    * bucketSplitInfo  bucketSplitInfo
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class RedisConf implements ModelInterface, ArrayAccess
             'redisMode' => 'getRedisMode',
             'scheduleConf' => 'getScheduleConf',
             'parallelJobs' => 'getParallelJobs',
-            'parallelJob' => 'getParallelJob'
+            'parallelJob' => 'getParallelJob',
+            'priorityPolicy' => 'getPriorityPolicy',
+            'bucketSplitInfo' => 'getBucketSplitInfo'
     ];
 
     /**
@@ -181,6 +201,8 @@ class RedisConf implements ModelInterface, ArrayAccess
         $this->container['scheduleConf'] = isset($data['scheduleConf']) ? $data['scheduleConf'] : null;
         $this->container['parallelJobs'] = isset($data['parallelJobs']) ? $data['parallelJobs'] : null;
         $this->container['parallelJob'] = isset($data['parallelJob']) ? $data['parallelJob'] : null;
+        $this->container['priorityPolicy'] = isset($data['priorityPolicy']) ? $data['priorityPolicy'] : null;
+        $this->container['bucketSplitInfo'] = isset($data['bucketSplitInfo']) ? $data['bucketSplitInfo'] : null;
     }
 
     /**
@@ -216,7 +238,7 @@ class RedisConf implements ModelInterface, ArrayAccess
 
     /**
     * Gets redisMode
-    *  重分布模式
+    *  **参数解释**： 重分布模式。 **取值范围**： online|offline。
     *
     * @return string
     */
@@ -228,7 +250,7 @@ class RedisConf implements ModelInterface, ArrayAccess
     /**
     * Sets redisMode
     *
-    * @param string $redisMode 重分布模式
+    * @param string $redisMode **参数解释**： 重分布模式。 **取值范围**： online|offline。
     *
     * @return $this
     */
@@ -264,7 +286,7 @@ class RedisConf implements ModelInterface, ArrayAccess
 
     /**
     * Gets parallelJobs
-    *  并行作业数量
+    *  **参数解释**： 重分布并发数。 **取值范围**： 1~200。
     *
     * @return int
     */
@@ -276,7 +298,7 @@ class RedisConf implements ModelInterface, ArrayAccess
     /**
     * Sets parallelJobs
     *
-    * @param int $parallelJobs 并行作业数量
+    * @param int $parallelJobs **参数解释**： 重分布并发数。 **取值范围**： 1~200。
     *
     * @return $this
     */
@@ -288,7 +310,7 @@ class RedisConf implements ModelInterface, ArrayAccess
 
     /**
     * Gets parallelJob
-    *  并行作业数量
+    *  **参数解释**： 重分布并发数，已经废弃。 **取值范围**： 1~200。
     *
     * @return int
     */
@@ -300,13 +322,61 @@ class RedisConf implements ModelInterface, ArrayAccess
     /**
     * Sets parallelJob
     *
-    * @param int $parallelJob 并行作业数量
+    * @param int $parallelJob **参数解释**： 重分布并发数，已经废弃。 **取值范围**： 1~200。
     *
     * @return $this
     */
     public function setParallelJob($parallelJob)
     {
         $this->container['parallelJob'] = $parallelJob;
+        return $this;
+    }
+
+    /**
+    * Gets priorityPolicy
+    *  **参数解释**： 优先级策略,支持large优先对大表进行重分布，small优先对小表进行重分布，default默认顺序进行重分布。 **取值范围**： large|small|default。
+    *
+    * @return string|null
+    */
+    public function getPriorityPolicy()
+    {
+        return $this->container['priorityPolicy'];
+    }
+
+    /**
+    * Sets priorityPolicy
+    *
+    * @param string|null $priorityPolicy **参数解释**： 优先级策略,支持large优先对大表进行重分布，small优先对小表进行重分布，default默认顺序进行重分布。 **取值范围**： large|small|default。
+    *
+    * @return $this
+    */
+    public function setPriorityPolicy($priorityPolicy)
+    {
+        $this->container['priorityPolicy'] = $priorityPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets bucketSplitInfo
+    *  bucketSplitInfo
+    *
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\BucketSplitInfo|null
+    */
+    public function getBucketSplitInfo()
+    {
+        return $this->container['bucketSplitInfo'];
+    }
+
+    /**
+    * Sets bucketSplitInfo
+    *
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\BucketSplitInfo|null $bucketSplitInfo bucketSplitInfo
+    *
+    * @return $this
+    */
+    public function setBucketSplitInfo($bucketSplitInfo)
+    {
+        $this->container['bucketSplitInfo'] = $bucketSplitInfo;
         return $this;
     }
 

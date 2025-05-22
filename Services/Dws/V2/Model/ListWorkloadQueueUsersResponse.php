@@ -21,11 +21,11 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
-    * queueName  队列名称。
-    * userList  队列用户列表。
-    * count  总数量
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * queueName  **参数解释**： 队列名称。 **取值范围**： 不涉及。
+    * userList  **参数解释**： 队列用户列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -39,11 +39,11 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
-    * queueName  队列名称。
-    * userList  队列用户列表。
-    * count  总数量
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * queueName  **参数解释**： 队列名称。 **取值范围**： 不涉及。
+    * userList  **参数解释**： 队列用户列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,11 +78,11 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
-    * queueName  队列名称。
-    * userList  队列用户列表。
-    * count  总数量
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * queueName  **参数解释**： 队列名称。 **取值范围**： 不涉及。
+    * userList  **参数解释**： 队列用户列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -96,11 +96,11 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
-    * queueName  队列名称。
-    * userList  队列用户列表。
-    * count  总数量
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * queueName  **参数解释**： 队列名称。 **取值范围**： 不涉及。
+    * userList  **参数解释**： 队列用户列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -114,11 +114,11 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workloadResCode  结果状态码。
-    * workloadResStr  结果描述。
-    * queueName  队列名称。
-    * userList  队列用户列表。
-    * count  总数量
+    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * queueName  **参数解释**： 队列名称。 **取值范围**： 不涉及。
+    * userList  **参数解释**： 队列用户列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadResCode
-    *  结果状态码。
+    *  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -231,7 +231,7 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workloadResCode
     *
-    * @param int|null $workloadResCode 结果状态码。
+    * @param int|null $workloadResCode **参数解释**： 结果状态码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadResStr
-    *  结果描述。
+    *  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workloadResStr
     *
-    * @param string|null $workloadResStr 结果描述。
+    * @param string|null $workloadResStr **参数解释**： 结果描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
-    *  队列名称。
+    *  **参数解释**： 队列名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -279,7 +279,7 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets queueName
     *
-    * @param string|null $queueName 队列名称。
+    * @param string|null $queueName **参数解释**： 队列名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets userList
-    *  队列用户列表。
+    *  **参数解释**： 队列用户列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\WorkloadQueueUser[]|null
     */
@@ -303,7 +303,7 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets userList
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\WorkloadQueueUser[]|null $userList 队列用户列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\WorkloadQueueUser[]|null $userList **参数解释**： 队列用户列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  总数量
+    *  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -327,7 +327,7 @@ class ListWorkloadQueueUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 总数量
+    * @param int|null $count **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */

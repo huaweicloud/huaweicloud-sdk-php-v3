@@ -20,8 +20,8 @@ class ListSnapshotCrossRegionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * offset  分页偏移，默认0
-    * limit  分页大小，默认10
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListSnapshotCrossRegionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * offset  分页偏移，默认0
-    * limit  分页大小，默认10
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListSnapshotCrossRegionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * offset  分页偏移，默认0
-    * limit  分页大小，默认10
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListSnapshotCrossRegionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * offset  分页偏移，默认0
-    * limit  分页大小，默认10
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListSnapshotCrossRegionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * offset  分页偏移，默认0
-    * limit  分页大小，默认10
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ListSnapshotCrossRegionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页偏移，默认0
+    *  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return int|null
     */
@@ -197,7 +197,7 @@ class ListSnapshotCrossRegionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页偏移，默认0
+    * @param int|null $offset **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ListSnapshotCrossRegionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  分页大小，默认10
+    *  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class ListSnapshotCrossRegionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 分页大小，默认10
+    * @param int|null $limit **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10
     *
     * @return $this
     */

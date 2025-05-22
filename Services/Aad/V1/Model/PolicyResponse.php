@@ -21,8 +21,8 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  id
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * name  策略名
     * description  描述
     * region  所属region的id
@@ -45,8 +45,8 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  id
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * name  策略名
     * description  描述
     * region  所属region的id
@@ -90,8 +90,8 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  id
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * name  策略名
     * description  描述
     * region  所属region的id
@@ -114,8 +114,8 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  id
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * name  策略名
     * description  描述
     * region  所属region的id
@@ -138,8 +138,8 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  id
-    * packageId  防护包id
-    * packageName  防护包名
+    * packageId  实例id
+    * packageName  实例名
     * name  策略名
     * description  描述
     * region  所属region的id
@@ -347,7 +347,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageId
-    *  防护包id
+    *  实例id
     *
     * @return string
     */
@@ -359,7 +359,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets packageId
     *
-    * @param string $packageId 防护包id
+    * @param string $packageId 实例id
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageName
-    *  防护包名
+    *  实例名
     *
     * @return string
     */
@@ -383,7 +383,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets packageName
     *
-    * @param string $packageName 防护包名
+    * @param string $packageName 实例名
     *
     * @return $this
     */

@@ -20,32 +20,32 @@ class NodeTypeElasticVolumeSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  云盘存储类型。
-    * step  云盘容量调整步长。
-    * minSize  云盘支持的最小容量。
-    * maxSize  云盘支持的最大容量。
+    * type  **参数解释**： 云盘存储类型。 **取值范围**： 不涉及。
+    * step  **参数解释**： 云盘容量调整步长。 **取值范围**： 不涉及。
+    * minSize  **参数解释**： 云盘支持的最小容量。 **取值范围**： 不涉及。
+    * maxSize  **参数解释**： 云盘支持的最大容量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'step' => 'string',
+            'step' => 'int',
             'minSize' => 'int',
             'maxSize' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  云盘存储类型。
-    * step  云盘容量调整步长。
-    * minSize  云盘支持的最小容量。
-    * maxSize  云盘支持的最大容量。
+    * type  **参数解释**： 云盘存储类型。 **取值范围**： 不涉及。
+    * step  **参数解释**： 云盘容量调整步长。 **取值范围**： 不涉及。
+    * minSize  **参数解释**： 云盘支持的最小容量。 **取值范围**： 不涉及。
+    * maxSize  **参数解释**： 云盘支持的最大容量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'step' => null,
+        'step' => 'int32',
         'minSize' => null,
         'maxSize' => null
     ];
@@ -73,10 +73,10 @@ class NodeTypeElasticVolumeSpecs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  云盘存储类型。
-    * step  云盘容量调整步长。
-    * minSize  云盘支持的最小容量。
-    * maxSize  云盘支持的最大容量。
+    * type  **参数解释**： 云盘存储类型。 **取值范围**： 不涉及。
+    * step  **参数解释**： 云盘容量调整步长。 **取值范围**： 不涉及。
+    * minSize  **参数解释**： 云盘支持的最小容量。 **取值范围**： 不涉及。
+    * maxSize  **参数解释**： 云盘支持的最大容量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class NodeTypeElasticVolumeSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  云盘存储类型。
-    * step  云盘容量调整步长。
-    * minSize  云盘支持的最小容量。
-    * maxSize  云盘支持的最大容量。
+    * type  **参数解释**： 云盘存储类型。 **取值范围**： 不涉及。
+    * step  **参数解释**： 云盘容量调整步长。 **取值范围**： 不涉及。
+    * minSize  **参数解释**： 云盘支持的最小容量。 **取值范围**： 不涉及。
+    * maxSize  **参数解释**： 云盘支持的最大容量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class NodeTypeElasticVolumeSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  云盘存储类型。
-    * step  云盘容量调整步长。
-    * minSize  云盘支持的最小容量。
-    * maxSize  云盘支持的最大容量。
+    * type  **参数解释**： 云盘存储类型。 **取值范围**： 不涉及。
+    * step  **参数解释**： 云盘容量调整步长。 **取值范围**： 不涉及。
+    * minSize  **参数解释**： 云盘支持的最小容量。 **取值范围**： 不涉及。
+    * maxSize  **参数解释**： 云盘支持的最大容量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class NodeTypeElasticVolumeSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  云盘存储类型。
+    *  **参数解释**： 云盘存储类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class NodeTypeElasticVolumeSpecs implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 云盘存储类型。
+    * @param string $type **参数解释**： 云盘存储类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -243,9 +243,9 @@ class NodeTypeElasticVolumeSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Gets step
-    *  云盘容量调整步长。
+    *  **参数解释**： 云盘容量调整步长。 **取值范围**： 不涉及。
     *
-    * @return string
+    * @return int
     */
     public function getStep()
     {
@@ -255,7 +255,7 @@ class NodeTypeElasticVolumeSpecs implements ModelInterface, ArrayAccess
     /**
     * Sets step
     *
-    * @param string $step 云盘容量调整步长。
+    * @param int $step **参数解释**： 云盘容量调整步长。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class NodeTypeElasticVolumeSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Gets minSize
-    *  云盘支持的最小容量。
+    *  **参数解释**： 云盘支持的最小容量。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -279,7 +279,7 @@ class NodeTypeElasticVolumeSpecs implements ModelInterface, ArrayAccess
     /**
     * Sets minSize
     *
-    * @param int $minSize 云盘支持的最小容量。
+    * @param int $minSize **参数解释**： 云盘支持的最小容量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class NodeTypeElasticVolumeSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxSize
-    *  云盘支持的最大容量。
+    *  **参数解释**： 云盘支持的最大容量。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -303,7 +303,7 @@ class NodeTypeElasticVolumeSpecs implements ModelInterface, ArrayAccess
     /**
     * Sets maxSize
     *
-    * @param int $maxSize 云盘支持的最大容量。
+    * @param int $maxSize **参数解释**： 云盘支持的最大容量。 **取值范围**： 不涉及。
     *
     * @return $this
     */

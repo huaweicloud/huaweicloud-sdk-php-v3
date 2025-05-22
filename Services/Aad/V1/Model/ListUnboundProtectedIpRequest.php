@@ -20,7 +20,7 @@ class ListUnboundProtectedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * packageId  防护包id
+    * packageId  实例id
     * offset  开始查询的偏移量,默认值:0
     * limit  每页显示的条目数量,默认值:2000
     *
@@ -34,7 +34,7 @@ class ListUnboundProtectedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * packageId  防护包id
+    * packageId  实例id
     * offset  开始查询的偏移量,默认值:0
     * limit  每页显示的条目数量,默认值:2000
     *
@@ -69,7 +69,7 @@ class ListUnboundProtectedIpRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * packageId  防护包id
+    * packageId  实例id
     * offset  开始查询的偏移量,默认值:0
     * limit  每页显示的条目数量,默认值:2000
     *
@@ -83,7 +83,7 @@ class ListUnboundProtectedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * packageId  防护包id
+    * packageId  实例id
     * offset  开始查询的偏移量,默认值:0
     * limit  每页显示的条目数量,默认值:2000
     *
@@ -97,7 +97,7 @@ class ListUnboundProtectedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * packageId  防护包id
+    * packageId  实例id
     * offset  开始查询的偏移量,默认值:0
     * limit  每页显示的条目数量,默认值:2000
     *
@@ -217,7 +217,7 @@ class ListUnboundProtectedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets packageId
-    *  防护包id
+    *  实例id
     *
     * @return string
     */
@@ -229,7 +229,7 @@ class ListUnboundProtectedIpRequest implements ModelInterface, ArrayAccess
     /**
     * Sets packageId
     *
-    * @param string $packageId 防护包id
+    * @param string $packageId 实例id
     *
     * @return $this
     */

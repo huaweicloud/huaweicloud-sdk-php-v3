@@ -35,6 +35,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     * connectionDrain  connectionDrain
     * poolHealth  poolHealth
     * quicCidHashStrategy  quicCidHashStrategy
+    * azAffinity  azAffinity
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
             'anyPortEnable' => 'bool',
             'connectionDrain' => '\HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain',
             'poolHealth' => '\HuaweiCloud\SDK\Elb\V3\Model\PoolHealth',
-            'quicCidHashStrategy' => '\HuaweiCloud\SDK\Elb\V3\Model\QuicCidHashStrategy'
+            'quicCidHashStrategy' => '\HuaweiCloud\SDK\Elb\V3\Model\QuicCidHashStrategy',
+            'azAffinity' => '\HuaweiCloud\SDK\Elb\V3\Model\UpdateAzAffinity'
     ];
 
     /**
@@ -73,6 +75,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     * connectionDrain  connectionDrain
     * poolHealth  poolHealth
     * quicCidHashStrategy  quicCidHashStrategy
+    * azAffinity  azAffinity
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
         'anyPortEnable' => null,
         'connectionDrain' => null,
         'poolHealth' => null,
-        'quicCidHashStrategy' => null
+        'quicCidHashStrategy' => null,
+        'azAffinity' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     * connectionDrain  connectionDrain
     * poolHealth  poolHealth
     * quicCidHashStrategy  quicCidHashStrategy
+    * azAffinity  azAffinity
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
             'anyPortEnable' => 'any_port_enable',
             'connectionDrain' => 'connection_drain',
             'poolHealth' => 'pool_health',
-            'quicCidHashStrategy' => 'quic_cid_hash_strategy'
+            'quicCidHashStrategy' => 'quic_cid_hash_strategy',
+            'azAffinity' => 'az_affinity'
     ];
 
     /**
@@ -170,6 +176,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     * connectionDrain  connectionDrain
     * poolHealth  poolHealth
     * quicCidHashStrategy  quicCidHashStrategy
+    * azAffinity  azAffinity
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
             'anyPortEnable' => 'setAnyPortEnable',
             'connectionDrain' => 'setConnectionDrain',
             'poolHealth' => 'setPoolHealth',
-            'quicCidHashStrategy' => 'setQuicCidHashStrategy'
+            'quicCidHashStrategy' => 'setQuicCidHashStrategy',
+            'azAffinity' => 'setAzAffinity'
     ];
 
     /**
@@ -208,6 +216,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     * connectionDrain  connectionDrain
     * poolHealth  poolHealth
     * quicCidHashStrategy  quicCidHashStrategy
+    * azAffinity  azAffinity
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
             'anyPortEnable' => 'getAnyPortEnable',
             'connectionDrain' => 'getConnectionDrain',
             'poolHealth' => 'getPoolHealth',
-            'quicCidHashStrategy' => 'getQuicCidHashStrategy'
+            'quicCidHashStrategy' => 'getQuicCidHashStrategy',
+            'azAffinity' => 'getAzAffinity'
     ];
 
     /**
@@ -317,6 +327,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
         $this->container['connectionDrain'] = isset($data['connectionDrain']) ? $data['connectionDrain'] : null;
         $this->container['poolHealth'] = isset($data['poolHealth']) ? $data['poolHealth'] : null;
         $this->container['quicCidHashStrategy'] = isset($data['quicCidHashStrategy']) ? $data['quicCidHashStrategy'] : null;
+        $this->container['azAffinity'] = isset($data['azAffinity']) ? $data['azAffinity'] : null;
     }
 
     /**
@@ -730,6 +741,30 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     public function setQuicCidHashStrategy($quicCidHashStrategy)
     {
         $this->container['quicCidHashStrategy'] = $quicCidHashStrategy;
+        return $this;
+    }
+
+    /**
+    * Gets azAffinity
+    *  azAffinity
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\UpdateAzAffinity|null
+    */
+    public function getAzAffinity()
+    {
+        return $this->container['azAffinity'];
+    }
+
+    /**
+    * Sets azAffinity
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\UpdateAzAffinity|null $azAffinity azAffinity
+    *
+    * @return $this
+    */
+    public function setAzAffinity($azAffinity)
+    {
+        $this->container['azAffinity'] = $azAffinity;
         return $this;
     }
 

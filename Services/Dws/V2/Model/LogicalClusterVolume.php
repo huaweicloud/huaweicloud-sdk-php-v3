@@ -20,10 +20,10 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logicalClusterName  逻辑集群名称
-    * usage  磁盘使用量
-    * total  磁盘总量
-    * percent  磁盘使用比例
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * usage  **参数解释**： 磁盘使用量。 **取值范围**： 不涉及。
+    * total  **参数解释**： 磁盘总量。 **取值范围**： 不涉及。
+    * percent  **参数解释**： 磁盘使用比例。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logicalClusterName  逻辑集群名称
-    * usage  磁盘使用量
-    * total  磁盘总量
-    * percent  磁盘使用比例
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * usage  **参数解释**： 磁盘使用量。 **取值范围**： 不涉及。
+    * total  **参数解释**： 磁盘总量。 **取值范围**： 不涉及。
+    * percent  **参数解释**： 磁盘使用比例。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logicalClusterName  逻辑集群名称
-    * usage  磁盘使用量
-    * total  磁盘总量
-    * percent  磁盘使用比例
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * usage  **参数解释**： 磁盘使用量。 **取值范围**： 不涉及。
+    * total  **参数解释**： 磁盘总量。 **取值范围**： 不涉及。
+    * percent  **参数解释**： 磁盘使用比例。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logicalClusterName  逻辑集群名称
-    * usage  磁盘使用量
-    * total  磁盘总量
-    * percent  磁盘使用比例
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * usage  **参数解释**： 磁盘使用量。 **取值范围**： 不涉及。
+    * total  **参数解释**： 磁盘总量。 **取值范围**： 不涉及。
+    * percent  **参数解释**： 磁盘使用比例。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logicalClusterName  逻辑集群名称
-    * usage  磁盘使用量
-    * total  磁盘总量
-    * percent  磁盘使用比例
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * usage  **参数解释**： 磁盘使用量。 **取值范围**： 不涉及。
+    * total  **参数解释**： 磁盘总量。 **取值范围**： 不涉及。
+    * percent  **参数解释**： 磁盘使用比例。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterName
-    *  逻辑集群名称
+    *  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterName
     *
-    * @param string|null $logicalClusterName 逻辑集群名称
+    * @param string|null $logicalClusterName **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
 
     /**
     * Gets usage
-    *  磁盘使用量
+    *  **参数解释**： 磁盘使用量。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
     /**
     * Sets usage
     *
-    * @param string|null $usage 磁盘使用量
+    * @param string|null $usage **参数解释**： 磁盘使用量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  磁盘总量
+    *  **参数解释**： 磁盘总量。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param string|null $total 磁盘总量
+    * @param string|null $total **参数解释**： 磁盘总量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
 
     /**
     * Gets percent
-    *  磁盘使用比例
+    *  **参数解释**： 磁盘使用比例。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class LogicalClusterVolume implements ModelInterface, ArrayAccess
     /**
     * Sets percent
     *
-    * @param string|null $percent 磁盘使用比例
+    * @param string|null $percent **参数解释**： 磁盘使用比例。 **取值范围**： 不涉及。
     *
     * @return $this
     */

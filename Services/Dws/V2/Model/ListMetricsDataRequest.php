@@ -20,10 +20,10 @@ class ListMetricsDataRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * metricName  指标名称。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量，最大1000。
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0，最大1000。 **默认取值**： 不限制。
     * from  采集开始时间，13位时间戳。
     * to  采集结束时间，13位时间戳。开始时间到结束时间最多不超过一天。
     * orderBy  排序字段。固定取值。 ctime：采集时间。
@@ -44,10 +44,10 @@ class ListMetricsDataRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * metricName  指标名称。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量，最大1000。
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0，最大1000。 **默认取值**： 不限制。
     * from  采集开始时间，13位时间戳。
     * to  采集结束时间，13位时间戳。开始时间到结束时间最多不超过一天。
     * orderBy  排序字段。固定取值。 ctime：采集时间。
@@ -89,10 +89,10 @@ class ListMetricsDataRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * metricName  指标名称。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量，最大1000。
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0，最大1000。 **默认取值**： 不限制。
     * from  采集开始时间，13位时间戳。
     * to  采集结束时间，13位时间戳。开始时间到结束时间最多不超过一天。
     * orderBy  排序字段。固定取值。 ctime：采集时间。
@@ -113,10 +113,10 @@ class ListMetricsDataRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * metricName  指标名称。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量，最大1000。
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0，最大1000。 **默认取值**： 不限制。
     * from  采集开始时间，13位时间戳。
     * to  采集结束时间，13位时间戳。开始时间到结束时间最多不超过一天。
     * orderBy  排序字段。固定取值。 ctime：采集时间。
@@ -137,10 +137,10 @@ class ListMetricsDataRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群ID。
+    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * metricName  指标名称。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量，最大1000。
+    * offset  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+    * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0，最大1000。 **默认取值**： 不限制。
     * from  采集开始时间，13位时间戳。
     * to  采集结束时间，13位时间戳。开始时间到结束时间最多不超过一天。
     * orderBy  排序字段。固定取值。 ctime：采集时间。
@@ -269,7 +269,7 @@ class ListMetricsDataRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID。
+    *  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -281,7 +281,7 @@ class ListMetricsDataRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 集群ID。
+    * @param string $clusterId **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class ListMetricsDataRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询，offset>=0。
+    *  **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return int
     */
@@ -329,7 +329,7 @@ class ListMetricsDataRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int $offset 偏移量，表示从此偏移量开始查询，offset>=0。
+    * @param int $offset **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class ListMetricsDataRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示的条目数量，最大1000。
+    *  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0，最大1000。 **默认取值**： 不限制。
     *
     * @return int
     */
@@ -353,7 +353,7 @@ class ListMetricsDataRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit 每页显示的条目数量，最大1000。
+    * @param int $limit **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0，最大1000。 **默认取值**： 不限制。
     *
     * @return $this
     */

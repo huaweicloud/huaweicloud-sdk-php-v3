@@ -20,8 +20,8 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workloadSwitch  开关。
-    * maxConcurrencyNum  最大并发数。
+    * workloadSwitch  **参数解释**： 开关。 **约束限制**： 不涉及。 **取值范围**： on：开启 off：关闭 **默认取值**： 不涉及。
+    * maxConcurrencyNum  **参数解释**： 最大并发数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workloadSwitch  开关。
-    * maxConcurrencyNum  最大并发数。
+    * workloadSwitch  **参数解释**： 开关。 **约束限制**： 不涉及。 **取值范围**： on：开启 off：关闭 **默认取值**： 不涉及。
+    * maxConcurrencyNum  **参数解释**： 最大并发数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workloadSwitch  开关。
-    * maxConcurrencyNum  最大并发数。
+    * workloadSwitch  **参数解释**： 开关。 **约束限制**： 不涉及。 **取值范围**： on：开启 off：关闭 **默认取值**： 不涉及。
+    * maxConcurrencyNum  **参数解释**： 最大并发数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workloadSwitch  开关。
-    * maxConcurrencyNum  最大并发数。
+    * workloadSwitch  **参数解释**： 开关。 **约束限制**： 不涉及。 **取值范围**： on：开启 off：关闭 **默认取值**： 不涉及。
+    * maxConcurrencyNum  **参数解释**： 最大并发数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workloadSwitch  开关。
-    * maxConcurrencyNum  最大并发数。
+    * workloadSwitch  **参数解释**： 开关。 **约束限制**： 不涉及。 **取值范围**： on：开启 off：关闭 **默认取值**： 不涉及。
+    * maxConcurrencyNum  **参数解释**： 最大并发数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadSwitch
-    *  开关。
+    *  **参数解释**： 开关。 **约束限制**： 不涉及。 **取值范围**： on：开启 off：关闭 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
     /**
     * Sets workloadSwitch
     *
-    * @param string $workloadSwitch 开关。
+    * @param string $workloadSwitch **参数解释**： 开关。 **约束限制**： 不涉及。 **取值范围**： on：开启 off：关闭 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxConcurrencyNum
-    *  最大并发数。
+    *  **参数解释**： 最大并发数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -224,7 +224,7 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
     /**
     * Sets maxConcurrencyNum
     *
-    * @param string|null $maxConcurrencyNum 最大并发数。
+    * @param string|null $maxConcurrencyNum **参数解释**： 最大并发数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

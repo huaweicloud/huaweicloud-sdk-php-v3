@@ -32,6 +32,8 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
+    * namespace  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
     *
     * @var string[]
     */
@@ -47,7 +49,9 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
             'type' => 'string',
             'count' => 'int',
             'suppressDuration' => 'int',
-            'level' => 'int'
+            'level' => 'int',
+            'namespace' => 'string',
+            'dimensionName' => 'string'
     ];
 
     /**
@@ -64,6 +68,8 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
+    * namespace  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
     *
     * @var string[]
     */
@@ -79,7 +85,9 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
         'type' => null,
         'count' => 'int32',
         'suppressDuration' => null,
-        'level' => null
+        'level' => null,
+        'namespace' => null,
+        'dimensionName' => null
     ];
 
     /**
@@ -117,6 +125,8 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
+    * namespace  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
     *
     * @var string[]
     */
@@ -132,7 +142,9 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
             'type' => 'type',
             'count' => 'count',
             'suppressDuration' => 'suppress_duration',
-            'level' => 'level'
+            'level' => 'level',
+            'namespace' => 'namespace',
+            'dimensionName' => 'dimension_name'
     ];
 
     /**
@@ -149,6 +161,8 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
+    * namespace  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
     *
     * @var string[]
     */
@@ -164,7 +178,9 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'count' => 'setCount',
             'suppressDuration' => 'setSuppressDuration',
-            'level' => 'setLevel'
+            'level' => 'setLevel',
+            'namespace' => 'setNamespace',
+            'dimensionName' => 'setDimensionName'
     ];
 
     /**
@@ -181,6 +197,8 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
+    * namespace  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
     *
     * @var string[]
     */
@@ -196,7 +214,9 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'count' => 'getCount',
             'suppressDuration' => 'getSuppressDuration',
-            'level' => 'getLevel'
+            'level' => 'getLevel',
+            'namespace' => 'getNamespace',
+            'dimensionName' => 'getDimensionName'
     ];
 
     /**
@@ -269,6 +289,8 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['suppressDuration'] = isset($data['suppressDuration']) ? $data['suppressDuration'] : null;
         $this->container['level'] = isset($data['level']) ? $data['level'] : null;
+        $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
+        $this->container['dimensionName'] = isset($data['dimensionName']) ? $data['dimensionName'] : null;
     }
 
     /**
@@ -350,6 +372,18 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['level']) && ($this->container['level'] < 1)) {
                 $invalidProperties[] = "invalid value for 'level', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 0)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'dimensionName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'dimensionName', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -650,6 +684,54 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
     public function setLevel($level)
     {
         $this->container['level'] = $level;
+        return $this;
+    }
+
+    /**
+    * Gets namespace
+    *  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    *
+    * @return string|null
+    */
+    public function getNamespace()
+    {
+        return $this->container['namespace'];
+    }
+
+    /**
+    * Sets namespace
+    *
+    * @param string|null $namespace 产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    *
+    * @return $this
+    */
+    public function setNamespace($namespace)
+    {
+        $this->container['namespace'] = $namespace;
+        return $this;
+    }
+
+    /**
+    * Gets dimensionName
+    *  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
+    *
+    * @return string|null
+    */
+    public function getDimensionName()
+    {
+        return $this->container['dimensionName'];
+    }
+
+    /**
+    * Sets dimensionName
+    *
+    * @param string|null $dimensionName 产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
+    *
+    * @return $this
+    */
+    public function setDimensionName($dimensionName)
+    {
+        $this->container['dimensionName'] = $dimensionName;
         return $this;
     }
 

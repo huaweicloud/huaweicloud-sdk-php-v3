@@ -23,7 +23,16 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * name  策略名
     * threshold  清洗阈值
     * description  描述
-    * udp  udp协议封禁。block：封禁，unblock：不封禁
+    * udp  udp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * tcp  tcp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * icmp  icmp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * other  other协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * icmpTrafficLimiting  icmp自定义限速值，icmp取值limiting情况下，如果该值为空表示不限速
+    * udpTrafficLimiting  udp自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    * udpFragmentRateLimiting  udp分片自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    * otherTrafficLimiting  other自定义限速值，other取值limiting情况下，如果该值为空表示不限速
+    * tcpTrafficLimiting  tcp自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
+    * tcpFragmentRateLimiting  tcp分片自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
     *
     * @var string[]
     */
@@ -31,7 +40,16 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
             'name' => 'string',
             'threshold' => 'int',
             'description' => 'string',
-            'udp' => 'string'
+            'udp' => 'string',
+            'tcp' => 'string',
+            'icmp' => 'string',
+            'other' => 'string',
+            'icmpTrafficLimiting' => 'int',
+            'udpTrafficLimiting' => 'int',
+            'udpFragmentRateLimiting' => 'int',
+            'otherTrafficLimiting' => 'int',
+            'tcpTrafficLimiting' => 'int',
+            'tcpFragmentRateLimiting' => 'int'
     ];
 
     /**
@@ -39,7 +57,16 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * name  策略名
     * threshold  清洗阈值
     * description  描述
-    * udp  udp协议封禁。block：封禁，unblock：不封禁
+    * udp  udp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * tcp  tcp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * icmp  icmp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * other  other协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * icmpTrafficLimiting  icmp自定义限速值，icmp取值limiting情况下，如果该值为空表示不限速
+    * udpTrafficLimiting  udp自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    * udpFragmentRateLimiting  udp分片自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    * otherTrafficLimiting  other自定义限速值，other取值limiting情况下，如果该值为空表示不限速
+    * tcpTrafficLimiting  tcp自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
+    * tcpFragmentRateLimiting  tcp分片自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
     *
     * @var string[]
     */
@@ -47,7 +74,16 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
         'name' => null,
         'threshold' => 'int32',
         'description' => null,
-        'udp' => null
+        'udp' => null,
+        'tcp' => null,
+        'icmp' => null,
+        'other' => null,
+        'icmpTrafficLimiting' => 'int64',
+        'udpTrafficLimiting' => 'int64',
+        'udpFragmentRateLimiting' => 'int64',
+        'otherTrafficLimiting' => 'int64',
+        'tcpTrafficLimiting' => 'int64',
+        'tcpFragmentRateLimiting' => 'int64'
     ];
 
     /**
@@ -76,7 +112,16 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * name  策略名
     * threshold  清洗阈值
     * description  描述
-    * udp  udp协议封禁。block：封禁，unblock：不封禁
+    * udp  udp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * tcp  tcp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * icmp  icmp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * other  other协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * icmpTrafficLimiting  icmp自定义限速值，icmp取值limiting情况下，如果该值为空表示不限速
+    * udpTrafficLimiting  udp自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    * udpFragmentRateLimiting  udp分片自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    * otherTrafficLimiting  other自定义限速值，other取值limiting情况下，如果该值为空表示不限速
+    * tcpTrafficLimiting  tcp自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
+    * tcpFragmentRateLimiting  tcp分片自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
     *
     * @var string[]
     */
@@ -84,7 +129,16 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
             'name' => 'name',
             'threshold' => 'threshold',
             'description' => 'description',
-            'udp' => 'udp'
+            'udp' => 'udp',
+            'tcp' => 'tcp',
+            'icmp' => 'icmp',
+            'other' => 'other',
+            'icmpTrafficLimiting' => 'icmp_traffic_limiting',
+            'udpTrafficLimiting' => 'udp_traffic_limiting',
+            'udpFragmentRateLimiting' => 'udp_fragment_rate_limiting',
+            'otherTrafficLimiting' => 'other_traffic_limiting',
+            'tcpTrafficLimiting' => 'tcp_traffic_limiting',
+            'tcpFragmentRateLimiting' => 'tcp_fragment_rate_limiting'
     ];
 
     /**
@@ -92,7 +146,16 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * name  策略名
     * threshold  清洗阈值
     * description  描述
-    * udp  udp协议封禁。block：封禁，unblock：不封禁
+    * udp  udp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * tcp  tcp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * icmp  icmp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * other  other协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * icmpTrafficLimiting  icmp自定义限速值，icmp取值limiting情况下，如果该值为空表示不限速
+    * udpTrafficLimiting  udp自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    * udpFragmentRateLimiting  udp分片自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    * otherTrafficLimiting  other自定义限速值，other取值limiting情况下，如果该值为空表示不限速
+    * tcpTrafficLimiting  tcp自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
+    * tcpFragmentRateLimiting  tcp分片自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
     *
     * @var string[]
     */
@@ -100,7 +163,16 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'threshold' => 'setThreshold',
             'description' => 'setDescription',
-            'udp' => 'setUdp'
+            'udp' => 'setUdp',
+            'tcp' => 'setTcp',
+            'icmp' => 'setIcmp',
+            'other' => 'setOther',
+            'icmpTrafficLimiting' => 'setIcmpTrafficLimiting',
+            'udpTrafficLimiting' => 'setUdpTrafficLimiting',
+            'udpFragmentRateLimiting' => 'setUdpFragmentRateLimiting',
+            'otherTrafficLimiting' => 'setOtherTrafficLimiting',
+            'tcpTrafficLimiting' => 'setTcpTrafficLimiting',
+            'tcpFragmentRateLimiting' => 'setTcpFragmentRateLimiting'
     ];
 
     /**
@@ -108,7 +180,16 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * name  策略名
     * threshold  清洗阈值
     * description  描述
-    * udp  udp协议封禁。block：封禁，unblock：不封禁
+    * udp  udp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * tcp  tcp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * icmp  icmp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * other  other协议设置。block：封禁，unblock：不封禁，limiting：限速
+    * icmpTrafficLimiting  icmp自定义限速值，icmp取值limiting情况下，如果该值为空表示不限速
+    * udpTrafficLimiting  udp自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    * udpFragmentRateLimiting  udp分片自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    * otherTrafficLimiting  other自定义限速值，other取值limiting情况下，如果该值为空表示不限速
+    * tcpTrafficLimiting  tcp自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
+    * tcpFragmentRateLimiting  tcp分片自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
     *
     * @var string[]
     */
@@ -116,7 +197,16 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'threshold' => 'getThreshold',
             'description' => 'getDescription',
-            'udp' => 'getUdp'
+            'udp' => 'getUdp',
+            'tcp' => 'getTcp',
+            'icmp' => 'getIcmp',
+            'other' => 'getOther',
+            'icmpTrafficLimiting' => 'getIcmpTrafficLimiting',
+            'udpTrafficLimiting' => 'getUdpTrafficLimiting',
+            'udpFragmentRateLimiting' => 'getUdpFragmentRateLimiting',
+            'otherTrafficLimiting' => 'getOtherTrafficLimiting',
+            'tcpTrafficLimiting' => 'getTcpTrafficLimiting',
+            'tcpFragmentRateLimiting' => 'getTcpFragmentRateLimiting'
     ];
 
     /**
@@ -161,6 +251,16 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     }
     const UDP_BLOCK = 'block';
     const UDP_UNBLOCK = 'unblock';
+    const UDP_LIMITING = 'limiting';
+    const TCP_BLOCK = 'block';
+    const TCP_UNBLOCK = 'unblock';
+    const TCP_LIMITING = 'limiting';
+    const ICMP_BLOCK = 'block';
+    const ICMP_UNBLOCK = 'unblock';
+    const ICMP_LIMITING = 'limiting';
+    const OTHER_BLOCK = 'block';
+    const OTHER_UNBLOCK = 'unblock';
+    const OTHER_LIMITING = 'limiting';
     
 
     /**
@@ -173,6 +273,49 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
         return [
             self::UDP_BLOCK,
             self::UDP_UNBLOCK,
+            self::UDP_LIMITING,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTcpAllowableValues()
+    {
+        return [
+            self::TCP_BLOCK,
+            self::TCP_UNBLOCK,
+            self::TCP_LIMITING,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIcmpAllowableValues()
+    {
+        return [
+            self::ICMP_BLOCK,
+            self::ICMP_UNBLOCK,
+            self::ICMP_LIMITING,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getOtherAllowableValues()
+    {
+        return [
+            self::OTHER_BLOCK,
+            self::OTHER_UNBLOCK,
+            self::OTHER_LIMITING,
         ];
     }
 
@@ -196,6 +339,15 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
         $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['udp'] = isset($data['udp']) ? $data['udp'] : null;
+        $this->container['tcp'] = isset($data['tcp']) ? $data['tcp'] : null;
+        $this->container['icmp'] = isset($data['icmp']) ? $data['icmp'] : null;
+        $this->container['other'] = isset($data['other']) ? $data['other'] : null;
+        $this->container['icmpTrafficLimiting'] = isset($data['icmpTrafficLimiting']) ? $data['icmpTrafficLimiting'] : null;
+        $this->container['udpTrafficLimiting'] = isset($data['udpTrafficLimiting']) ? $data['udpTrafficLimiting'] : null;
+        $this->container['udpFragmentRateLimiting'] = isset($data['udpFragmentRateLimiting']) ? $data['udpFragmentRateLimiting'] : null;
+        $this->container['otherTrafficLimiting'] = isset($data['otherTrafficLimiting']) ? $data['otherTrafficLimiting'] : null;
+        $this->container['tcpTrafficLimiting'] = isset($data['tcpTrafficLimiting']) ? $data['tcpTrafficLimiting'] : null;
+        $this->container['tcpFragmentRateLimiting'] = isset($data['tcpFragmentRateLimiting']) ? $data['tcpFragmentRateLimiting'] : null;
     }
 
     /**
@@ -232,6 +384,66 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getTcpAllowableValues();
+                if (!is_null($this->container['tcp']) && !in_array($this->container['tcp'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'tcp', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getIcmpAllowableValues();
+                if (!is_null($this->container['icmp']) && !in_array($this->container['icmp'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'icmp', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getOtherAllowableValues();
+                if (!is_null($this->container['other']) && !in_array($this->container['other'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'other', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['icmpTrafficLimiting']) && ($this->container['icmpTrafficLimiting'] > 2000000)) {
+                $invalidProperties[] = "invalid value for 'icmpTrafficLimiting', must be smaller than or equal to 2000000.";
+            }
+            if (!is_null($this->container['icmpTrafficLimiting']) && ($this->container['icmpTrafficLimiting'] < 1)) {
+                $invalidProperties[] = "invalid value for 'icmpTrafficLimiting', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['udpTrafficLimiting']) && ($this->container['udpTrafficLimiting'] > 80000000)) {
+                $invalidProperties[] = "invalid value for 'udpTrafficLimiting', must be smaller than or equal to 80000000.";
+            }
+            if (!is_null($this->container['udpTrafficLimiting']) && ($this->container['udpTrafficLimiting'] < 1)) {
+                $invalidProperties[] = "invalid value for 'udpTrafficLimiting', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['udpFragmentRateLimiting']) && ($this->container['udpFragmentRateLimiting'] > 80000000)) {
+                $invalidProperties[] = "invalid value for 'udpFragmentRateLimiting', must be smaller than or equal to 80000000.";
+            }
+            if (!is_null($this->container['udpFragmentRateLimiting']) && ($this->container['udpFragmentRateLimiting'] < 1)) {
+                $invalidProperties[] = "invalid value for 'udpFragmentRateLimiting', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['otherTrafficLimiting']) && ($this->container['otherTrafficLimiting'] > 80000000)) {
+                $invalidProperties[] = "invalid value for 'otherTrafficLimiting', must be smaller than or equal to 80000000.";
+            }
+            if (!is_null($this->container['otherTrafficLimiting']) && ($this->container['otherTrafficLimiting'] < 1)) {
+                $invalidProperties[] = "invalid value for 'otherTrafficLimiting', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['tcpTrafficLimiting']) && ($this->container['tcpTrafficLimiting'] > 80000000)) {
+                $invalidProperties[] = "invalid value for 'tcpTrafficLimiting', must be smaller than or equal to 80000000.";
+            }
+            if (!is_null($this->container['tcpTrafficLimiting']) && ($this->container['tcpTrafficLimiting'] < 1)) {
+                $invalidProperties[] = "invalid value for 'tcpTrafficLimiting', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['tcpFragmentRateLimiting']) && ($this->container['tcpFragmentRateLimiting'] > 80000000)) {
+                $invalidProperties[] = "invalid value for 'tcpFragmentRateLimiting', must be smaller than or equal to 80000000.";
+            }
+            if (!is_null($this->container['tcpFragmentRateLimiting']) && ($this->container['tcpFragmentRateLimiting'] < 1)) {
+                $invalidProperties[] = "invalid value for 'tcpFragmentRateLimiting', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -320,7 +532,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets udp
-    *  udp协议封禁。block：封禁，unblock：不封禁
+    *  udp协议设置。block：封禁，unblock：不封禁，limiting：限速
     *
     * @return string|null
     */
@@ -332,13 +544,229 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets udp
     *
-    * @param string|null $udp udp协议封禁。block：封禁，unblock：不封禁
+    * @param string|null $udp udp协议设置。block：封禁，unblock：不封禁，limiting：限速
     *
     * @return $this
     */
     public function setUdp($udp)
     {
         $this->container['udp'] = $udp;
+        return $this;
+    }
+
+    /**
+    * Gets tcp
+    *  tcp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    *
+    * @return string|null
+    */
+    public function getTcp()
+    {
+        return $this->container['tcp'];
+    }
+
+    /**
+    * Sets tcp
+    *
+    * @param string|null $tcp tcp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    *
+    * @return $this
+    */
+    public function setTcp($tcp)
+    {
+        $this->container['tcp'] = $tcp;
+        return $this;
+    }
+
+    /**
+    * Gets icmp
+    *  icmp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    *
+    * @return string|null
+    */
+    public function getIcmp()
+    {
+        return $this->container['icmp'];
+    }
+
+    /**
+    * Sets icmp
+    *
+    * @param string|null $icmp icmp协议设置。block：封禁，unblock：不封禁，limiting：限速
+    *
+    * @return $this
+    */
+    public function setIcmp($icmp)
+    {
+        $this->container['icmp'] = $icmp;
+        return $this;
+    }
+
+    /**
+    * Gets other
+    *  other协议设置。block：封禁，unblock：不封禁，limiting：限速
+    *
+    * @return string|null
+    */
+    public function getOther()
+    {
+        return $this->container['other'];
+    }
+
+    /**
+    * Sets other
+    *
+    * @param string|null $other other协议设置。block：封禁，unblock：不封禁，limiting：限速
+    *
+    * @return $this
+    */
+    public function setOther($other)
+    {
+        $this->container['other'] = $other;
+        return $this;
+    }
+
+    /**
+    * Gets icmpTrafficLimiting
+    *  icmp自定义限速值，icmp取值limiting情况下，如果该值为空表示不限速
+    *
+    * @return int|null
+    */
+    public function getIcmpTrafficLimiting()
+    {
+        return $this->container['icmpTrafficLimiting'];
+    }
+
+    /**
+    * Sets icmpTrafficLimiting
+    *
+    * @param int|null $icmpTrafficLimiting icmp自定义限速值，icmp取值limiting情况下，如果该值为空表示不限速
+    *
+    * @return $this
+    */
+    public function setIcmpTrafficLimiting($icmpTrafficLimiting)
+    {
+        $this->container['icmpTrafficLimiting'] = $icmpTrafficLimiting;
+        return $this;
+    }
+
+    /**
+    * Gets udpTrafficLimiting
+    *  udp自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    *
+    * @return int|null
+    */
+    public function getUdpTrafficLimiting()
+    {
+        return $this->container['udpTrafficLimiting'];
+    }
+
+    /**
+    * Sets udpTrafficLimiting
+    *
+    * @param int|null $udpTrafficLimiting udp自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    *
+    * @return $this
+    */
+    public function setUdpTrafficLimiting($udpTrafficLimiting)
+    {
+        $this->container['udpTrafficLimiting'] = $udpTrafficLimiting;
+        return $this;
+    }
+
+    /**
+    * Gets udpFragmentRateLimiting
+    *  udp分片自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    *
+    * @return int|null
+    */
+    public function getUdpFragmentRateLimiting()
+    {
+        return $this->container['udpFragmentRateLimiting'];
+    }
+
+    /**
+    * Sets udpFragmentRateLimiting
+    *
+    * @param int|null $udpFragmentRateLimiting udp分片自定义限速值，udp取值limiting情况下，如果该值为空表示不限速
+    *
+    * @return $this
+    */
+    public function setUdpFragmentRateLimiting($udpFragmentRateLimiting)
+    {
+        $this->container['udpFragmentRateLimiting'] = $udpFragmentRateLimiting;
+        return $this;
+    }
+
+    /**
+    * Gets otherTrafficLimiting
+    *  other自定义限速值，other取值limiting情况下，如果该值为空表示不限速
+    *
+    * @return int|null
+    */
+    public function getOtherTrafficLimiting()
+    {
+        return $this->container['otherTrafficLimiting'];
+    }
+
+    /**
+    * Sets otherTrafficLimiting
+    *
+    * @param int|null $otherTrafficLimiting other自定义限速值，other取值limiting情况下，如果该值为空表示不限速
+    *
+    * @return $this
+    */
+    public function setOtherTrafficLimiting($otherTrafficLimiting)
+    {
+        $this->container['otherTrafficLimiting'] = $otherTrafficLimiting;
+        return $this;
+    }
+
+    /**
+    * Gets tcpTrafficLimiting
+    *  tcp自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
+    *
+    * @return int|null
+    */
+    public function getTcpTrafficLimiting()
+    {
+        return $this->container['tcpTrafficLimiting'];
+    }
+
+    /**
+    * Sets tcpTrafficLimiting
+    *
+    * @param int|null $tcpTrafficLimiting tcp自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
+    *
+    * @return $this
+    */
+    public function setTcpTrafficLimiting($tcpTrafficLimiting)
+    {
+        $this->container['tcpTrafficLimiting'] = $tcpTrafficLimiting;
+        return $this;
+    }
+
+    /**
+    * Gets tcpFragmentRateLimiting
+    *  tcp分片自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
+    *
+    * @return int|null
+    */
+    public function getTcpFragmentRateLimiting()
+    {
+        return $this->container['tcpFragmentRateLimiting'];
+    }
+
+    /**
+    * Sets tcpFragmentRateLimiting
+    *
+    * @param int|null $tcpFragmentRateLimiting tcp分片自定义限速值，tcp取值limiting情况下，如果该值为空表示不限速
+    *
+    * @return $this
+    */
+    public function setTcpFragmentRateLimiting($tcpFragmentRateLimiting)
+    {
+        $this->container['tcpFragmentRateLimiting'] = $tcpFragmentRateLimiting;
         return $this;
     }
 
