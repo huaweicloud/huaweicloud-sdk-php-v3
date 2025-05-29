@@ -20,7 +20,7 @@ class ListResourceUsageSummaryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  语言。en_US：英文；zh_CN：中文。默认：zh_CN：中文
+    * xLanguage  语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     * billCycle  账期，东八区时间，格式为yyyy-MM。
     * serviceTypeCode  云服务类型，当前仅支持：hws.service.type.cdn：内容分发网络,hws.service.type.obs：对象存储服务,hws.service.type.vpc：虚拟私有云,hws.service.type.iec：智能边缘云
     * resourceTypeCode  资源类型编码，当前仅支持：hws.resource.type.cdn：CDN,hws.resource.type.obs：云存储,hws.resource.type.bandwidth：固定带宽,hws.resource.type.edgebandwidth：边缘固定带宽.资源类型和云服务类型的对应关系可调用[根据云服务类型查询资源列表](https://support.huaweicloud.com/api-oce/qct_00003.html)接口获取。
@@ -42,7 +42,7 @@ class ListResourceUsageSummaryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  语言。en_US：英文；zh_CN：中文。默认：zh_CN：中文
+    * xLanguage  语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     * billCycle  账期，东八区时间，格式为yyyy-MM。
     * serviceTypeCode  云服务类型，当前仅支持：hws.service.type.cdn：内容分发网络,hws.service.type.obs：对象存储服务,hws.service.type.vpc：虚拟私有云,hws.service.type.iec：智能边缘云
     * resourceTypeCode  资源类型编码，当前仅支持：hws.resource.type.cdn：CDN,hws.resource.type.obs：云存储,hws.resource.type.bandwidth：固定带宽,hws.resource.type.edgebandwidth：边缘固定带宽.资源类型和云服务类型的对应关系可调用[根据云服务类型查询资源列表](https://support.huaweicloud.com/api-oce/qct_00003.html)接口获取。
@@ -85,7 +85,7 @@ class ListResourceUsageSummaryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  语言。en_US：英文；zh_CN：中文。默认：zh_CN：中文
+    * xLanguage  语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     * billCycle  账期，东八区时间，格式为yyyy-MM。
     * serviceTypeCode  云服务类型，当前仅支持：hws.service.type.cdn：内容分发网络,hws.service.type.obs：对象存储服务,hws.service.type.vpc：虚拟私有云,hws.service.type.iec：智能边缘云
     * resourceTypeCode  资源类型编码，当前仅支持：hws.resource.type.cdn：CDN,hws.resource.type.obs：云存储,hws.resource.type.bandwidth：固定带宽,hws.resource.type.edgebandwidth：边缘固定带宽.资源类型和云服务类型的对应关系可调用[根据云服务类型查询资源列表](https://support.huaweicloud.com/api-oce/qct_00003.html)接口获取。
@@ -107,7 +107,7 @@ class ListResourceUsageSummaryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  语言。en_US：英文；zh_CN：中文。默认：zh_CN：中文
+    * xLanguage  语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     * billCycle  账期，东八区时间，格式为yyyy-MM。
     * serviceTypeCode  云服务类型，当前仅支持：hws.service.type.cdn：内容分发网络,hws.service.type.obs：对象存储服务,hws.service.type.vpc：虚拟私有云,hws.service.type.iec：智能边缘云
     * resourceTypeCode  资源类型编码，当前仅支持：hws.resource.type.cdn：CDN,hws.resource.type.obs：云存储,hws.resource.type.bandwidth：固定带宽,hws.resource.type.edgebandwidth：边缘固定带宽.资源类型和云服务类型的对应关系可调用[根据云服务类型查询资源列表](https://support.huaweicloud.com/api-oce/qct_00003.html)接口获取。
@@ -129,7 +129,7 @@ class ListResourceUsageSummaryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  语言。en_US：英文；zh_CN：中文。默认：zh_CN：中文
+    * xLanguage  语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     * billCycle  账期，东八区时间，格式为yyyy-MM。
     * serviceTypeCode  云服务类型，当前仅支持：hws.service.type.cdn：内容分发网络,hws.service.type.obs：对象存储服务,hws.service.type.vpc：虚拟私有云,hws.service.type.iec：智能边缘云
     * resourceTypeCode  资源类型编码，当前仅支持：hws.resource.type.cdn：CDN,hws.resource.type.obs：云存储,hws.resource.type.bandwidth：固定带宽,hws.resource.type.edgebandwidth：边缘固定带宽.资源类型和云服务类型的对应关系可调用[根据云服务类型查询资源列表](https://support.huaweicloud.com/api-oce/qct_00003.html)接口获取。
@@ -264,7 +264,7 @@ class ListResourceUsageSummaryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  语言。en_US：英文；zh_CN：中文。默认：zh_CN：中文
+    *  语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class ListResourceUsageSummaryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 语言。en_US：英文；zh_CN：中文。默认：zh_CN：中文
+    * @param string|null $xLanguage 语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     *
     * @return $this
     */

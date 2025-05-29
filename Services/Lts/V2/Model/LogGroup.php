@@ -25,6 +25,7 @@ class LogGroup implements ModelInterface, ArrayAccess
     * logGroupId  日志组ID
     * ttlInDays  日志存储时间 天
     * tag  日志流所属标签
+    * logGroupNameAlias  日志组别名
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class LogGroup implements ModelInterface, ArrayAccess
             'logGroupName' => 'string',
             'logGroupId' => 'string',
             'ttlInDays' => 'int',
-            'tag' => 'map[string,string]'
+            'tag' => 'map[string,string]',
+            'logGroupNameAlias' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class LogGroup implements ModelInterface, ArrayAccess
     * logGroupId  日志组ID
     * ttlInDays  日志存储时间 天
     * tag  日志流所属标签
+    * logGroupNameAlias  日志组别名
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class LogGroup implements ModelInterface, ArrayAccess
         'logGroupName' => null,
         'logGroupId' => null,
         'ttlInDays' => 'int32',
-        'tag' => null
+        'tag' => null,
+        'logGroupNameAlias' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class LogGroup implements ModelInterface, ArrayAccess
     * logGroupId  日志组ID
     * ttlInDays  日志存储时间 天
     * tag  日志流所属标签
+    * logGroupNameAlias  日志组别名
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class LogGroup implements ModelInterface, ArrayAccess
             'logGroupName' => 'log_group_name',
             'logGroupId' => 'log_group_id',
             'ttlInDays' => 'ttl_in_days',
-            'tag' => 'tag'
+            'tag' => 'tag',
+            'logGroupNameAlias' => 'log_group_name_alias'
     ];
 
     /**
@@ -100,6 +106,7 @@ class LogGroup implements ModelInterface, ArrayAccess
     * logGroupId  日志组ID
     * ttlInDays  日志存储时间 天
     * tag  日志流所属标签
+    * logGroupNameAlias  日志组别名
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class LogGroup implements ModelInterface, ArrayAccess
             'logGroupName' => 'setLogGroupName',
             'logGroupId' => 'setLogGroupId',
             'ttlInDays' => 'setTtlInDays',
-            'tag' => 'setTag'
+            'tag' => 'setTag',
+            'logGroupNameAlias' => 'setLogGroupNameAlias'
     ];
 
     /**
@@ -118,6 +126,7 @@ class LogGroup implements ModelInterface, ArrayAccess
     * logGroupId  日志组ID
     * ttlInDays  日志存储时间 天
     * tag  日志流所属标签
+    * logGroupNameAlias  日志组别名
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class LogGroup implements ModelInterface, ArrayAccess
             'logGroupName' => 'getLogGroupName',
             'logGroupId' => 'getLogGroupId',
             'ttlInDays' => 'getTtlInDays',
-            'tag' => 'getTag'
+            'tag' => 'getTag',
+            'logGroupNameAlias' => 'getLogGroupNameAlias'
     ];
 
     /**
@@ -192,6 +202,7 @@ class LogGroup implements ModelInterface, ArrayAccess
         $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
         $this->container['ttlInDays'] = isset($data['ttlInDays']) ? $data['ttlInDays'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
+        $this->container['logGroupNameAlias'] = isset($data['logGroupNameAlias']) ? $data['logGroupNameAlias'] : null;
     }
 
     /**
@@ -369,6 +380,30 @@ class LogGroup implements ModelInterface, ArrayAccess
     public function setTag($tag)
     {
         $this->container['tag'] = $tag;
+        return $this;
+    }
+
+    /**
+    * Gets logGroupNameAlias
+    *  日志组别名
+    *
+    * @return string|null
+    */
+    public function getLogGroupNameAlias()
+    {
+        return $this->container['logGroupNameAlias'];
+    }
+
+    /**
+    * Sets logGroupNameAlias
+    *
+    * @param string|null $logGroupNameAlias 日志组别名
+    *
+    * @return $this
+    */
+    public function setLogGroupNameAlias($logGroupNameAlias)
+    {
+        $this->container['logGroupNameAlias'] = $logGroupNameAlias;
         return $this;
     }
 

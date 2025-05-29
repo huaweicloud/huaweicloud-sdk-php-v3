@@ -28,6 +28,7 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
     * eventAlarmSpec  eventAlarmSpec
     * metricAlarmSpec  metricAlarmSpec
     * promInstanceId  Prometheus实例id。
+    * alias  告警规则别名。最多可输入256个字符，只能包含中文、字母、数字、特殊字符（_-【】），开头、结尾不允许输入中划线、下划线。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
             'alarmRuleType' => 'string',
             'eventAlarmSpec' => '\HuaweiCloud\SDK\Aom\V2\Model\EventAlarmSpec',
             'metricAlarmSpec' => '\HuaweiCloud\SDK\Aom\V2\Model\MetricAlarmSpec',
-            'promInstanceId' => 'string'
+            'promInstanceId' => 'string',
+            'alias' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
     * eventAlarmSpec  eventAlarmSpec
     * metricAlarmSpec  metricAlarmSpec
     * promInstanceId  Prometheus实例id。
+    * alias  告警规则别名。最多可输入256个字符，只能包含中文、字母、数字、特殊字符（_-【】），开头、结尾不允许输入中划线、下划线。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
         'alarmRuleType' => null,
         'eventAlarmSpec' => null,
         'metricAlarmSpec' => null,
-        'promInstanceId' => null
+        'promInstanceId' => null,
+        'alias' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
     * eventAlarmSpec  eventAlarmSpec
     * metricAlarmSpec  metricAlarmSpec
     * promInstanceId  Prometheus实例id。
+    * alias  告警规则别名。最多可输入256个字符，只能包含中文、字母、数字、特殊字符（_-【】），开头、结尾不允许输入中划线、下划线。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
             'alarmRuleType' => 'alarm_rule_type',
             'eventAlarmSpec' => 'event_alarm_spec',
             'metricAlarmSpec' => 'metric_alarm_spec',
-            'promInstanceId' => 'prom_instance_id'
+            'promInstanceId' => 'prom_instance_id',
+            'alias' => 'alias'
     ];
 
     /**
@@ -121,6 +127,7 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
     * eventAlarmSpec  eventAlarmSpec
     * metricAlarmSpec  metricAlarmSpec
     * promInstanceId  Prometheus实例id。
+    * alias  告警规则别名。最多可输入256个字符，只能包含中文、字母、数字、特殊字符（_-【】），开头、结尾不允许输入中划线、下划线。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
             'alarmRuleType' => 'setAlarmRuleType',
             'eventAlarmSpec' => 'setEventAlarmSpec',
             'metricAlarmSpec' => 'setMetricAlarmSpec',
-            'promInstanceId' => 'setPromInstanceId'
+            'promInstanceId' => 'setPromInstanceId',
+            'alias' => 'setAlias'
     ];
 
     /**
@@ -145,6 +153,7 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
     * eventAlarmSpec  eventAlarmSpec
     * metricAlarmSpec  metricAlarmSpec
     * promInstanceId  Prometheus实例id。
+    * alias  告警规则别名。最多可输入256个字符，只能包含中文、字母、数字、特殊字符（_-【】），开头、结尾不允许输入中划线、下划线。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
             'alarmRuleType' => 'getAlarmRuleType',
             'eventAlarmSpec' => 'getEventAlarmSpec',
             'metricAlarmSpec' => 'getMetricAlarmSpec',
-            'promInstanceId' => 'getPromInstanceId'
+            'promInstanceId' => 'getPromInstanceId',
+            'alias' => 'getAlias'
     ];
 
     /**
@@ -240,6 +250,7 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
         $this->container['eventAlarmSpec'] = isset($data['eventAlarmSpec']) ? $data['eventAlarmSpec'] : null;
         $this->container['metricAlarmSpec'] = isset($data['metricAlarmSpec']) ? $data['metricAlarmSpec'] : null;
         $this->container['promInstanceId'] = isset($data['promInstanceId']) ? $data['promInstanceId'] : null;
+        $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
     }
 
     /**
@@ -467,6 +478,30 @@ class AddOrUpdateAlarmRuleV4RequestBody implements ModelInterface, ArrayAccess
     public function setPromInstanceId($promInstanceId)
     {
         $this->container['promInstanceId'] = $promInstanceId;
+        return $this;
+    }
+
+    /**
+    * Gets alias
+    *  告警规则别名。最多可输入256个字符，只能包含中文、字母、数字、特殊字符（_-【】），开头、结尾不允许输入中划线、下划线。
+    *
+    * @return string|null
+    */
+    public function getAlias()
+    {
+        return $this->container['alias'];
+    }
+
+    /**
+    * Sets alias
+    *
+    * @param string|null $alias 告警规则别名。最多可输入256个字符，只能包含中文、字母、数字、特殊字符（_-【】），开头、结尾不允许输入中划线、下划线。
+    *
+    * @return $this
+    */
+    public function setAlias($alias)
+    {
+        $this->container['alias'] = $alias;
         return $this;
     }
 

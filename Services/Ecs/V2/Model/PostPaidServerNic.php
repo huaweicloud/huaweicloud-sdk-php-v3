@@ -21,6 +21,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * subnetId  待创建云服务器所在的子网信息，需要指定vpcid对应VPC下的子网ID，UUID格式。  可以通过VPC服务 [查询子网](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListSubnets) 接口查询，该接口支持通过创建云服务器填写的vpcid进行过滤查询。
+    * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * ipAddress  待创建云服务器网卡的IP地址，IPv4格式。  约束：  - 不填或空字符串，默认在子网（subnet）中自动分配一个未使用的IP作网卡的IP地址。 - 若指定IP地址，该IP地址必须在子网（subnet）对应的网段内，且未被使用。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
@@ -30,6 +31,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'subnetId' => 'string',
+            'portId' => 'string',
             'ipAddress' => 'string',
             'ipv6Enable' => 'bool',
             'ipv6Bandwidth' => '\HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerIpv6Bandwidth',
@@ -39,6 +41,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * subnetId  待创建云服务器所在的子网信息，需要指定vpcid对应VPC下的子网ID，UUID格式。  可以通过VPC服务 [查询子网](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListSubnets) 接口查询，该接口支持通过创建云服务器填写的vpcid进行过滤查询。
+    * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * ipAddress  待创建云服务器网卡的IP地址，IPv4格式。  约束：  - 不填或空字符串，默认在子网（subnet）中自动分配一个未使用的IP作网卡的IP地址。 - 若指定IP地址，该IP地址必须在子网（subnet）对应的网段内，且未被使用。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
@@ -48,6 +51,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'subnetId' => null,
+        'portId' => null,
         'ipAddress' => null,
         'ipv6Enable' => null,
         'ipv6Bandwidth' => null,
@@ -78,6 +82,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * subnetId  待创建云服务器所在的子网信息，需要指定vpcid对应VPC下的子网ID，UUID格式。  可以通过VPC服务 [查询子网](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListSubnets) 接口查询，该接口支持通过创建云服务器填写的vpcid进行过滤查询。
+    * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * ipAddress  待创建云服务器网卡的IP地址，IPv4格式。  约束：  - 不填或空字符串，默认在子网（subnet）中自动分配一个未使用的IP作网卡的IP地址。 - 若指定IP地址，该IP地址必须在子网（subnet）对应的网段内，且未被使用。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
@@ -87,6 +92,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'subnetId' => 'subnet_id',
+            'portId' => 'port_id',
             'ipAddress' => 'ip_address',
             'ipv6Enable' => 'ipv6_enable',
             'ipv6Bandwidth' => 'ipv6_bandwidth',
@@ -96,6 +102,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * subnetId  待创建云服务器所在的子网信息，需要指定vpcid对应VPC下的子网ID，UUID格式。  可以通过VPC服务 [查询子网](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListSubnets) 接口查询，该接口支持通过创建云服务器填写的vpcid进行过滤查询。
+    * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * ipAddress  待创建云服务器网卡的IP地址，IPv4格式。  约束：  - 不填或空字符串，默认在子网（subnet）中自动分配一个未使用的IP作网卡的IP地址。 - 若指定IP地址，该IP地址必须在子网（subnet）对应的网段内，且未被使用。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
@@ -105,6 +112,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'subnetId' => 'setSubnetId',
+            'portId' => 'setPortId',
             'ipAddress' => 'setIpAddress',
             'ipv6Enable' => 'setIpv6Enable',
             'ipv6Bandwidth' => 'setIpv6Bandwidth',
@@ -114,6 +122,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * subnetId  待创建云服务器所在的子网信息，需要指定vpcid对应VPC下的子网ID，UUID格式。  可以通过VPC服务 [查询子网](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListSubnets) 接口查询，该接口支持通过创建云服务器填写的vpcid进行过滤查询。
+    * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * ipAddress  待创建云服务器网卡的IP地址，IPv4格式。  约束：  - 不填或空字符串，默认在子网（subnet）中自动分配一个未使用的IP作网卡的IP地址。 - 若指定IP地址，该IP地址必须在子网（subnet）对应的网段内，且未被使用。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
@@ -123,6 +132,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'subnetId' => 'getSubnetId',
+            'portId' => 'getPortId',
             'ipAddress' => 'getIpAddress',
             'ipv6Enable' => 'getIpv6Enable',
             'ipv6Bandwidth' => 'getIpv6Bandwidth',
@@ -188,6 +198,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
+        $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
         $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : null;
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
         $this->container['ipv6Bandwidth'] = isset($data['ipv6Bandwidth']) ? $data['ipv6Bandwidth'] : null;
@@ -202,9 +213,6 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['subnetId'] === null) {
-            $invalidProperties[] = "'subnetId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -223,7 +231,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     * Gets subnetId
     *  待创建云服务器所在的子网信息，需要指定vpcid对应VPC下的子网ID，UUID格式。  可以通过VPC服务 [查询子网](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListSubnets) 接口查询，该接口支持通过创建云服务器填写的vpcid进行过滤查询。
     *
-    * @return string
+    * @return string|null
     */
     public function getSubnetId()
     {
@@ -233,13 +241,37 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId 待创建云服务器所在的子网信息，需要指定vpcid对应VPC下的子网ID，UUID格式。  可以通过VPC服务 [查询子网](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListSubnets) 接口查询，该接口支持通过创建云服务器填写的vpcid进行过滤查询。
+    * @param string|null $subnetId 待创建云服务器所在的子网信息，需要指定vpcid对应VPC下的子网ID，UUID格式。  可以通过VPC服务 [查询子网](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListSubnets) 接口查询，该接口支持通过创建云服务器填写的vpcid进行过滤查询。
     *
     * @return $this
     */
     public function setSubnetId($subnetId)
     {
         $this->container['subnetId'] = $subnetId;
+        return $this;
+    }
+
+    /**
+    * Gets portId
+    *  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
+    *
+    * @return string|null
+    */
+    public function getPortId()
+    {
+        return $this->container['portId'];
+    }
+
+    /**
+    * Sets portId
+    *
+    * @param string|null $portId 网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
+    *
+    * @return $this
+    */
+    public function setPortId($portId)
+    {
+        $this->container['portId'] = $portId;
         return $this;
     }
 

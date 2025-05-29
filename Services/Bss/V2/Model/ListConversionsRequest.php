@@ -20,7 +20,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
+    * xLanguage  语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     * measureType  度量类型。1：货币2：时长3：流量4：数量6：长度7：容量9：行数10：周期11：频率12：个数15：容量*时长16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens82：帧98：缓存带宽x时长此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
+    * xLanguage  语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     * measureType  度量类型。1：货币2：时长3：流量4：数量6：长度7：容量9：行数10：周期11：频率12：个数15：容量*时长16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens82：帧98：缓存带宽x时长此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
+    * xLanguage  语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     * measureType  度量类型。1：货币2：时长3：流量4：数量6：长度7：容量9：行数10：周期11：频率12：个数15：容量*时长16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens82：帧98：缓存带宽x时长此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
+    * xLanguage  语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     * measureType  度量类型。1：货币2：时长3：流量4：数量6：长度7：容量9：行数10：周期11：频率12：个数15：容量*时长16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens82：帧98：缓存带宽x时长此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
+    * xLanguage  语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     * measureType  度量类型。1：货币2：时长3：流量4：数量6：长度7：容量9：行数10：周期11：频率12：个数15：容量*时长16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens82：帧98：缓存带宽x时长此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @var string[]
@@ -185,7 +185,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  语言。zh_CN：中文en_US：英文缺省为zh_CN。
+    *  语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 语言。zh_CN：中文en_US：英文缺省为zh_CN。
+    * @param string|null $xLanguage 语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
     *
     * @return $this
     */

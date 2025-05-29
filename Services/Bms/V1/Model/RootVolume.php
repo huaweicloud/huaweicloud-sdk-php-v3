@@ -24,6 +24,7 @@ class RootVolume implements ModelInterface, ArrayAccess
     * size  系统盘大小，容量单位为GB，输入大小范围为[40-1024]。约束：系统盘大小取值应不小于镜像中系统盘的最小值（min_disk属性）。
     * clusterId  裸金属服务器系统盘对应的存储池的ID。 说明：使用专属分布式存储时需要该字段。存储池ID可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
     * clusterType  裸金属服务器系统盘对应的磁盘存储类型。磁盘存储类型枚举值：DSS（专属分布式存储）。 说明：使用专属分布式存储时需要该字段。存储池类型可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class RootVolume implements ModelInterface, ArrayAccess
             'volumetype' => 'string',
             'size' => 'int',
             'clusterId' => 'string',
-            'clusterType' => 'string'
+            'clusterType' => 'string',
+            'metadata' => '\HuaweiCloud\SDK\Bms\V1\Model\RootVolumeMetadata'
     ];
 
     /**
@@ -40,6 +42,7 @@ class RootVolume implements ModelInterface, ArrayAccess
     * size  系统盘大小，容量单位为GB，输入大小范围为[40-1024]。约束：系统盘大小取值应不小于镜像中系统盘的最小值（min_disk属性）。
     * clusterId  裸金属服务器系统盘对应的存储池的ID。 说明：使用专属分布式存储时需要该字段。存储池ID可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
     * clusterType  裸金属服务器系统盘对应的磁盘存储类型。磁盘存储类型枚举值：DSS（专属分布式存储）。 说明：使用专属分布式存储时需要该字段。存储池类型可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class RootVolume implements ModelInterface, ArrayAccess
         'volumetype' => null,
         'size' => 'int32',
         'clusterId' => 'uuid',
-        'clusterType' => null
+        'clusterType' => null,
+        'metadata' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class RootVolume implements ModelInterface, ArrayAccess
     * size  系统盘大小，容量单位为GB，输入大小范围为[40-1024]。约束：系统盘大小取值应不小于镜像中系统盘的最小值（min_disk属性）。
     * clusterId  裸金属服务器系统盘对应的存储池的ID。 说明：使用专属分布式存储时需要该字段。存储池ID可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
     * clusterType  裸金属服务器系统盘对应的磁盘存储类型。磁盘存储类型枚举值：DSS（专属分布式存储）。 说明：使用专属分布式存储时需要该字段。存储池类型可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class RootVolume implements ModelInterface, ArrayAccess
             'volumetype' => 'volumetype',
             'size' => 'size',
             'clusterId' => 'cluster_id',
-            'clusterType' => 'cluster_type'
+            'clusterType' => 'cluster_type',
+            'metadata' => 'metadata'
     ];
 
     /**
@@ -93,6 +99,7 @@ class RootVolume implements ModelInterface, ArrayAccess
     * size  系统盘大小，容量单位为GB，输入大小范围为[40-1024]。约束：系统盘大小取值应不小于镜像中系统盘的最小值（min_disk属性）。
     * clusterId  裸金属服务器系统盘对应的存储池的ID。 说明：使用专属分布式存储时需要该字段。存储池ID可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
     * clusterType  裸金属服务器系统盘对应的磁盘存储类型。磁盘存储类型枚举值：DSS（专属分布式存储）。 说明：使用专属分布式存储时需要该字段。存储池类型可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class RootVolume implements ModelInterface, ArrayAccess
             'volumetype' => 'setVolumetype',
             'size' => 'setSize',
             'clusterId' => 'setClusterId',
-            'clusterType' => 'setClusterType'
+            'clusterType' => 'setClusterType',
+            'metadata' => 'setMetadata'
     ];
 
     /**
@@ -109,6 +117,7 @@ class RootVolume implements ModelInterface, ArrayAccess
     * size  系统盘大小，容量单位为GB，输入大小范围为[40-1024]。约束：系统盘大小取值应不小于镜像中系统盘的最小值（min_disk属性）。
     * clusterId  裸金属服务器系统盘对应的存储池的ID。 说明：使用专属分布式存储时需要该字段。存储池ID可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
     * clusterType  裸金属服务器系统盘对应的磁盘存储类型。磁盘存储类型枚举值：DSS（专属分布式存储）。 说明：使用专属分布式存储时需要该字段。存储池类型可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class RootVolume implements ModelInterface, ArrayAccess
             'volumetype' => 'getVolumetype',
             'size' => 'getSize',
             'clusterId' => 'getClusterId',
-            'clusterType' => 'getClusterType'
+            'clusterType' => 'getClusterType',
+            'metadata' => 'getMetadata'
     ];
 
     /**
@@ -213,6 +223,7 @@ class RootVolume implements ModelInterface, ArrayAccess
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
+        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
     }
 
     /**
@@ -352,6 +363,30 @@ class RootVolume implements ModelInterface, ArrayAccess
     public function setClusterType($clusterType)
     {
         $this->container['clusterType'] = $clusterType;
+        return $this;
+    }
+
+    /**
+    * Gets metadata
+    *  metadata
+    *
+    * @return \HuaweiCloud\SDK\Bms\V1\Model\RootVolumeMetadata|null
+    */
+    public function getMetadata()
+    {
+        return $this->container['metadata'];
+    }
+
+    /**
+    * Sets metadata
+    *
+    * @param \HuaweiCloud\SDK\Bms\V1\Model\RootVolumeMetadata|null $metadata metadata
+    *
+    * @return $this
+    */
+    public function setMetadata($metadata)
+    {
+        $this->container['metadata'] = $metadata;
         return $this;
     }
 

@@ -21,6 +21,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
+    * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * securityGroups  添加网卡的安全组信息
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
@@ -30,6 +31,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'subnetId' => 'string',
+            'portId' => 'string',
             'securityGroups' => '\HuaweiCloud\SDK\Ecs\V2\Model\ServerNicSecurityGroup[]',
             'ipAddress' => 'string',
             'ipv6Enable' => 'bool',
@@ -39,6 +41,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
+    * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * securityGroups  添加网卡的安全组信息
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
@@ -48,6 +51,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'subnetId' => null,
+        'portId' => null,
         'securityGroups' => null,
         'ipAddress' => null,
         'ipv6Enable' => null,
@@ -78,6 +82,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
+    * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * securityGroups  添加网卡的安全组信息
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
@@ -87,6 +92,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'subnetId' => 'subnet_id',
+            'portId' => 'port_id',
             'securityGroups' => 'security_groups',
             'ipAddress' => 'ip_address',
             'ipv6Enable' => 'ipv6_enable',
@@ -96,6 +102,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
+    * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * securityGroups  添加网卡的安全组信息
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
@@ -105,6 +112,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'subnetId' => 'setSubnetId',
+            'portId' => 'setPortId',
             'securityGroups' => 'setSecurityGroups',
             'ipAddress' => 'setIpAddress',
             'ipv6Enable' => 'setIpv6Enable',
@@ -114,6 +122,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
+    * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * securityGroups  添加网卡的安全组信息
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
@@ -123,6 +132,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'subnetId' => 'getSubnetId',
+            'portId' => 'getPortId',
             'securityGroups' => 'getSecurityGroups',
             'ipAddress' => 'getIpAddress',
             'ipv6Enable' => 'getIpv6Enable',
@@ -188,6 +198,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
+        $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
         $this->container['securityGroups'] = isset($data['securityGroups']) ? $data['securityGroups'] : null;
         $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : null;
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
@@ -202,9 +213,6 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['subnetId'] === null) {
-            $invalidProperties[] = "'subnetId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -223,7 +231,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     * Gets subnetId
     *  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
     *
-    * @return string
+    * @return string|null
     */
     public function getSubnetId()
     {
@@ -233,13 +241,37 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId 云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
+    * @param string|null $subnetId 云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
     *
     * @return $this
     */
     public function setSubnetId($subnetId)
     {
         $this->container['subnetId'] = $subnetId;
+        return $this;
+    }
+
+    /**
+    * Gets portId
+    *  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
+    *
+    * @return string|null
+    */
+    public function getPortId()
+    {
+        return $this->container['portId'];
+    }
+
+    /**
+    * Sets portId
+    *
+    * @param string|null $portId 网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
+    *
+    * @return $this
+    */
+    public function setPortId($portId)
+    {
+        $this->container['portId'] = $portId;
         return $this;
     }
 

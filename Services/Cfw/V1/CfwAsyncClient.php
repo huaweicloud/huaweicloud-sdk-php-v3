@@ -5160,6 +5160,74 @@ class CfwAsyncClient extends Client
     }
 
     /**
+     * 编辑对象组内成员的描述信息
+     *
+     * 编辑对象组内成员的描述信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateObjectConfigDescAsync($request)
+    {
+        return $this->updateObjectConfigDescAsyncWithHttpInfo($request);
+    }
+    
+    public function updateObjectConfigDescAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/config/object/description';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\UpdateObjectConfigDescResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\UpdateObjectConfigDescRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改服务组
      *
      * 更新服务组

@@ -25,6 +25,7 @@ class DataVolumes implements ModelInterface, ArrayAccess
     * shareable  是否为共享磁盘。true为共享盘，false为普通云硬盘
     * clusterId  裸金属服务器数据盘对应的存储池ID。 说明：使用专属分布式存储时需要该字段。存储池ID可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
     * clusterType  裸金属服务器数据盘对应的磁盘存储类型。磁盘存储类型枚举值：DSS（专属分布式存储）。 说明：使用专属分布式存储时需要该字段。存储池类型可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class DataVolumes implements ModelInterface, ArrayAccess
             'size' => 'int',
             'shareable' => 'bool',
             'clusterId' => 'string',
-            'clusterType' => 'string'
+            'clusterType' => 'string',
+            'metadata' => '\HuaweiCloud\SDK\Bms\V1\Model\DataVolumesMetadata'
     ];
 
     /**
@@ -43,6 +45,7 @@ class DataVolumes implements ModelInterface, ArrayAccess
     * shareable  是否为共享磁盘。true为共享盘，false为普通云硬盘
     * clusterId  裸金属服务器数据盘对应的存储池ID。 说明：使用专属分布式存储时需要该字段。存储池ID可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
     * clusterType  裸金属服务器数据盘对应的磁盘存储类型。磁盘存储类型枚举值：DSS（专属分布式存储）。 说明：使用专属分布式存储时需要该字段。存储池类型可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class DataVolumes implements ModelInterface, ArrayAccess
         'size' => 'int32',
         'shareable' => null,
         'clusterId' => 'uuid',
-        'clusterType' => null
+        'clusterType' => null,
+        'metadata' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class DataVolumes implements ModelInterface, ArrayAccess
     * shareable  是否为共享磁盘。true为共享盘，false为普通云硬盘
     * clusterId  裸金属服务器数据盘对应的存储池ID。 说明：使用专属分布式存储时需要该字段。存储池ID可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
     * clusterType  裸金属服务器数据盘对应的磁盘存储类型。磁盘存储类型枚举值：DSS（专属分布式存储）。 说明：使用专属分布式存储时需要该字段。存储池类型可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class DataVolumes implements ModelInterface, ArrayAccess
             'size' => 'size',
             'shareable' => 'shareable',
             'clusterId' => 'cluster_id',
-            'clusterType' => 'cluster_type'
+            'clusterType' => 'cluster_type',
+            'metadata' => 'metadata'
     ];
 
     /**
@@ -100,6 +106,7 @@ class DataVolumes implements ModelInterface, ArrayAccess
     * shareable  是否为共享磁盘。true为共享盘，false为普通云硬盘
     * clusterId  裸金属服务器数据盘对应的存储池ID。 说明：使用专属分布式存储时需要该字段。存储池ID可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
     * clusterType  裸金属服务器数据盘对应的磁盘存储类型。磁盘存储类型枚举值：DSS（专属分布式存储）。 说明：使用专属分布式存储时需要该字段。存储池类型可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class DataVolumes implements ModelInterface, ArrayAccess
             'size' => 'setSize',
             'shareable' => 'setShareable',
             'clusterId' => 'setClusterId',
-            'clusterType' => 'setClusterType'
+            'clusterType' => 'setClusterType',
+            'metadata' => 'setMetadata'
     ];
 
     /**
@@ -118,6 +126,7 @@ class DataVolumes implements ModelInterface, ArrayAccess
     * shareable  是否为共享磁盘。true为共享盘，false为普通云硬盘
     * clusterId  裸金属服务器数据盘对应的存储池ID。 说明：使用专属分布式存储时需要该字段。存储池ID可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
     * clusterType  裸金属服务器数据盘对应的磁盘存储类型。磁盘存储类型枚举值：DSS（专属分布式存储）。 说明：使用专属分布式存储时需要该字段。存储池类型可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class DataVolumes implements ModelInterface, ArrayAccess
             'size' => 'getSize',
             'shareable' => 'getShareable',
             'clusterId' => 'getClusterId',
-            'clusterType' => 'getClusterType'
+            'clusterType' => 'getClusterType',
+            'metadata' => 'getMetadata'
     ];
 
     /**
@@ -224,6 +234,7 @@ class DataVolumes implements ModelInterface, ArrayAccess
         $this->container['shareable'] = isset($data['shareable']) ? $data['shareable'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
+        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
     }
 
     /**
@@ -387,6 +398,30 @@ class DataVolumes implements ModelInterface, ArrayAccess
     public function setClusterType($clusterType)
     {
         $this->container['clusterType'] = $clusterType;
+        return $this;
+    }
+
+    /**
+    * Gets metadata
+    *  metadata
+    *
+    * @return \HuaweiCloud\SDK\Bms\V1\Model\DataVolumesMetadata|null
+    */
+    public function getMetadata()
+    {
+        return $this->container['metadata'];
+    }
+
+    /**
+    * Sets metadata
+    *
+    * @param \HuaweiCloud\SDK\Bms\V1\Model\DataVolumesMetadata|null $metadata metadata
+    *
+    * @return $this
+    */
+    public function setMetadata($metadata)
+    {
+        $this->container['metadata'] = $metadata;
         return $this;
     }
 

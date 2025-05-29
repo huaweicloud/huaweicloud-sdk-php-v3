@@ -21608,6 +21608,122 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 全局搜索
+     *
+     * 全局搜索
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFactoryFullTextAsync($request)
+    {
+        return $this->showFactoryFullTextAsyncWithHttpInfo($request);
+    }
+    
+    public function showFactoryFullTextAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/factory/search';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspaceId'] !== null) {
+            $queryParams['workspace_id'] = $localVarParams['workspaceId'];
+        }
+        if ($localVarParams['searchText'] !== null) {
+            $queryParams['search_text'] = $localVarParams['searchText'];
+        }
+        if ($localVarParams['jobType'] !== null) {
+            $queryParams['job_type'] = $localVarParams['jobType'];
+        }
+        if ($localVarParams['scriptType'] !== null) {
+            $queryParams['script_type'] = $localVarParams['scriptType'];
+        }
+        if ($localVarParams['nodeType'] !== null) {
+            $queryParams['node_type'] = $localVarParams['nodeType'];
+        }
+        if ($localVarParams['newSaveOrCommit'] !== null) {
+            $queryParams['new_save_or_commit'] = $localVarParams['newSaveOrCommit'];
+        }
+        if ($localVarParams['owners'] !== null) {
+            $queryParams['owners'] = $localVarParams['owners'];
+        }
+        if ($localVarParams['docTypes'] !== null) {
+            $queryParams['doc_types'] = $localVarParams['docTypes'];
+        }
+        if ($localVarParams['beginTime'] !== null) {
+            $queryParams['begin_time'] = $localVarParams['beginTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['ifQueryParameters'] !== null) {
+            $queryParams['if_query_parameters'] = $localVarParams['ifQueryParameters'];
+        }
+        if ($localVarParams['matchType'] !== null) {
+            $queryParams['match_type'] = $localVarParams['matchType'];
+        }
+        if ($localVarParams['scheduleState'] !== null) {
+            $queryParams['schedule_state'] = $localVarParams['scheduleState'];
+        }
+        if ($localVarParams['isExact'] !== null) {
+            $queryParams['is_exact'] = $localVarParams['isExact'];
+        }
+        if ($localVarParams['exactField'] !== null) {
+            $queryParams['exact_field'] = $localVarParams['exactField'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowFactoryFullTextResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowFactoryFullTextRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询指定发布包详情
      *
      * 查询指定发布包详情

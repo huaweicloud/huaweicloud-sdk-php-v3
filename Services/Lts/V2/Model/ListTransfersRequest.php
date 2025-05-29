@@ -23,17 +23,13 @@ class ListTransfersRequest implements ModelInterface, ArrayAccess
     * logTransferType  日志转储类型。OBS指OBS日志转储，DIS指DIS日志转储，DMS指DMS日志转储
     * logGroupName  日志组名称
     * logStreamName  日志流名称
-    * offset  查询游标，初始传入0，后续从上一次的返回值中获取
-    * limit  每页数据量，最大值为100
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'logTransferType' => 'string',
             'logGroupName' => 'string',
-            'logStreamName' => 'string',
-            'offset' => 'int',
-            'limit' => 'int'
+            'logStreamName' => 'string'
     ];
 
     /**
@@ -41,17 +37,13 @@ class ListTransfersRequest implements ModelInterface, ArrayAccess
     * logTransferType  日志转储类型。OBS指OBS日志转储，DIS指DIS日志转储，DMS指DMS日志转储
     * logGroupName  日志组名称
     * logStreamName  日志流名称
-    * offset  查询游标，初始传入0，后续从上一次的返回值中获取
-    * limit  每页数据量，最大值为100
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'logTransferType' => null,
         'logGroupName' => null,
-        'logStreamName' => null,
-        'offset' => 'int32',
-        'limit' => 'int32'
+        'logStreamName' => null
     ];
 
     /**
@@ -80,17 +72,13 @@ class ListTransfersRequest implements ModelInterface, ArrayAccess
     * logTransferType  日志转储类型。OBS指OBS日志转储，DIS指DIS日志转储，DMS指DMS日志转储
     * logGroupName  日志组名称
     * logStreamName  日志流名称
-    * offset  查询游标，初始传入0，后续从上一次的返回值中获取
-    * limit  每页数据量，最大值为100
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'logTransferType' => 'log_transfer_type',
             'logGroupName' => 'log_group_name',
-            'logStreamName' => 'log_stream_name',
-            'offset' => 'offset',
-            'limit' => 'limit'
+            'logStreamName' => 'log_stream_name'
     ];
 
     /**
@@ -98,17 +86,13 @@ class ListTransfersRequest implements ModelInterface, ArrayAccess
     * logTransferType  日志转储类型。OBS指OBS日志转储，DIS指DIS日志转储，DMS指DMS日志转储
     * logGroupName  日志组名称
     * logStreamName  日志流名称
-    * offset  查询游标，初始传入0，后续从上一次的返回值中获取
-    * limit  每页数据量，最大值为100
     *
     * @var string[]
     */
     protected static $setters = [
             'logTransferType' => 'setLogTransferType',
             'logGroupName' => 'setLogGroupName',
-            'logStreamName' => 'setLogStreamName',
-            'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'logStreamName' => 'setLogStreamName'
     ];
 
     /**
@@ -116,17 +100,13 @@ class ListTransfersRequest implements ModelInterface, ArrayAccess
     * logTransferType  日志转储类型。OBS指OBS日志转储，DIS指DIS日志转储，DMS指DMS日志转储
     * logGroupName  日志组名称
     * logStreamName  日志流名称
-    * offset  查询游标，初始传入0，后续从上一次的返回值中获取
-    * limit  每页数据量，最大值为100
     *
     * @var string[]
     */
     protected static $getters = [
             'logTransferType' => 'getLogTransferType',
             'logGroupName' => 'getLogGroupName',
-            'logStreamName' => 'getLogStreamName',
-            'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'logStreamName' => 'getLogStreamName'
     ];
 
     /**
@@ -207,8 +187,6 @@ class ListTransfersRequest implements ModelInterface, ArrayAccess
         $this->container['logTransferType'] = isset($data['logTransferType']) ? $data['logTransferType'] : null;
         $this->container['logGroupName'] = isset($data['logGroupName']) ? $data['logGroupName'] : null;
         $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -238,18 +216,6 @@ class ListTransfersRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['logStreamName']) && (mb_strlen($this->container['logStreamName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'logStreamName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 1024)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -334,54 +300,6 @@ class ListTransfersRequest implements ModelInterface, ArrayAccess
     public function setLogStreamName($logStreamName)
     {
         $this->container['logStreamName'] = $logStreamName;
-        return $this;
-    }
-
-    /**
-    * Gets offset
-    *  查询游标，初始传入0，后续从上一次的返回值中获取
-    *
-    * @return int|null
-    */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-    * Sets offset
-    *
-    * @param int|null $offset 查询游标，初始传入0，后续从上一次的返回值中获取
-    *
-    * @return $this
-    */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
-        return $this;
-    }
-
-    /**
-    * Gets limit
-    *  每页数据量，最大值为100
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit 每页数据量，最大值为100
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
         return $this;
     }
 

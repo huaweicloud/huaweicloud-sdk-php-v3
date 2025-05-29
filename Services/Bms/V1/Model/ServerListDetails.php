@@ -32,7 +32,7 @@ class ServerListDetails implements ModelInterface, ArrayAccess
     * vmState  扩展属性，裸金属服务器的稳定状态。例如：active：运行中shutoff：关机reboot：重启
     * availabilityZone  扩展属性，裸金属服务器所在可用分区名称。
     * fault  fault
-    * inRecycleIn  裸机是否在回收站中
+    * inRecycleBin  裸机是否在回收站中
     *
     * @var string[]
     */
@@ -49,7 +49,7 @@ class ServerListDetails implements ModelInterface, ArrayAccess
             'vmState' => 'string',
             'availabilityZone' => 'string',
             'fault' => '\HuaweiCloud\SDK\Bms\V1\Model\Fault',
-            'inRecycleIn' => 'bool'
+            'inRecycleBin' => 'bool'
     ];
 
     /**
@@ -66,7 +66,7 @@ class ServerListDetails implements ModelInterface, ArrayAccess
     * vmState  扩展属性，裸金属服务器的稳定状态。例如：active：运行中shutoff：关机reboot：重启
     * availabilityZone  扩展属性，裸金属服务器所在可用分区名称。
     * fault  fault
-    * inRecycleIn  裸机是否在回收站中
+    * inRecycleBin  裸机是否在回收站中
     *
     * @var string[]
     */
@@ -83,7 +83,7 @@ class ServerListDetails implements ModelInterface, ArrayAccess
         'vmState' => null,
         'availabilityZone' => null,
         'fault' => null,
-        'inRecycleIn' => null
+        'inRecycleBin' => null
     ];
 
     /**
@@ -121,7 +121,7 @@ class ServerListDetails implements ModelInterface, ArrayAccess
     * vmState  扩展属性，裸金属服务器的稳定状态。例如：active：运行中shutoff：关机reboot：重启
     * availabilityZone  扩展属性，裸金属服务器所在可用分区名称。
     * fault  fault
-    * inRecycleIn  裸机是否在回收站中
+    * inRecycleBin  裸机是否在回收站中
     *
     * @var string[]
     */
@@ -138,7 +138,7 @@ class ServerListDetails implements ModelInterface, ArrayAccess
             'vmState' => 'vm_state',
             'availabilityZone' => 'availability_zone',
             'fault' => 'fault',
-            'inRecycleIn' => 'in_recycle_in'
+            'inRecycleBin' => 'in_recycle_bin'
     ];
 
     /**
@@ -155,7 +155,7 @@ class ServerListDetails implements ModelInterface, ArrayAccess
     * vmState  扩展属性，裸金属服务器的稳定状态。例如：active：运行中shutoff：关机reboot：重启
     * availabilityZone  扩展属性，裸金属服务器所在可用分区名称。
     * fault  fault
-    * inRecycleIn  裸机是否在回收站中
+    * inRecycleBin  裸机是否在回收站中
     *
     * @var string[]
     */
@@ -172,7 +172,7 @@ class ServerListDetails implements ModelInterface, ArrayAccess
             'vmState' => 'setVmState',
             'availabilityZone' => 'setAvailabilityZone',
             'fault' => 'setFault',
-            'inRecycleIn' => 'setInRecycleIn'
+            'inRecycleBin' => 'setInRecycleBin'
     ];
 
     /**
@@ -189,7 +189,7 @@ class ServerListDetails implements ModelInterface, ArrayAccess
     * vmState  扩展属性，裸金属服务器的稳定状态。例如：active：运行中shutoff：关机reboot：重启
     * availabilityZone  扩展属性，裸金属服务器所在可用分区名称。
     * fault  fault
-    * inRecycleIn  裸机是否在回收站中
+    * inRecycleBin  裸机是否在回收站中
     *
     * @var string[]
     */
@@ -206,7 +206,7 @@ class ServerListDetails implements ModelInterface, ArrayAccess
             'vmState' => 'getVmState',
             'availabilityZone' => 'getAvailabilityZone',
             'fault' => 'getFault',
-            'inRecycleIn' => 'getInRecycleIn'
+            'inRecycleBin' => 'getInRecycleBin'
     ];
 
     /**
@@ -348,7 +348,7 @@ class ServerListDetails implements ModelInterface, ArrayAccess
         $this->container['vmState'] = isset($data['vmState']) ? $data['vmState'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['fault'] = isset($data['fault']) ? $data['fault'] : null;
-        $this->container['inRecycleIn'] = isset($data['inRecycleIn']) ? $data['inRecycleIn'] : null;
+        $this->container['inRecycleBin'] = isset($data['inRecycleBin']) ? $data['inRecycleBin'] : null;
     }
 
     /**
@@ -701,26 +701,26 @@ class ServerListDetails implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets inRecycleIn
+    * Gets inRecycleBin
     *  裸机是否在回收站中
     *
     * @return bool|null
     */
-    public function getInRecycleIn()
+    public function getInRecycleBin()
     {
-        return $this->container['inRecycleIn'];
+        return $this->container['inRecycleBin'];
     }
 
     /**
-    * Sets inRecycleIn
+    * Sets inRecycleBin
     *
-    * @param bool|null $inRecycleIn 裸机是否在回收站中
+    * @param bool|null $inRecycleBin 裸机是否在回收站中
     *
     * @return $this
     */
-    public function setInRecycleIn($inRecycleIn)
+    public function setInRecycleBin($inRecycleBin)
     {
-        $this->container['inRecycleIn'] = $inRecycleIn;
+        $this->container['inRecycleBin'] = $inRecycleBin;
         return $this;
     }
 

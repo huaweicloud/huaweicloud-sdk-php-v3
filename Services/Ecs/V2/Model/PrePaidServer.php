@@ -44,6 +44,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * serverTags  弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
     * cpuOptions  cpuOptions
+    * serialConsoleOptions  serialConsoleOptions
     *
     * @var string[]
     */
@@ -71,7 +72,8 @@ class PrePaidServer implements ModelInterface, ArrayAccess
             'tags' => 'string[]',
             'serverTags' => '\HuaweiCloud\SDK\Ecs\V2\Model\PrePaidServerTag[]',
             'description' => 'string',
-            'cpuOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions'
+            'cpuOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions',
+            'serialConsoleOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\SerialConsoleOptions'
     ];
 
     /**
@@ -100,6 +102,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * serverTags  弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
     * cpuOptions  cpuOptions
+    * serialConsoleOptions  serialConsoleOptions
     *
     * @var string[]
     */
@@ -127,7 +130,8 @@ class PrePaidServer implements ModelInterface, ArrayAccess
         'tags' => null,
         'serverTags' => null,
         'description' => null,
-        'cpuOptions' => null
+        'cpuOptions' => null,
+        'serialConsoleOptions' => null
     ];
 
     /**
@@ -177,6 +181,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * serverTags  弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
     * cpuOptions  cpuOptions
+    * serialConsoleOptions  serialConsoleOptions
     *
     * @var string[]
     */
@@ -204,7 +209,8 @@ class PrePaidServer implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'serverTags' => 'server_tags',
             'description' => 'description',
-            'cpuOptions' => 'cpu_options'
+            'cpuOptions' => 'cpu_options',
+            'serialConsoleOptions' => 'serial_console_options'
     ];
 
     /**
@@ -233,6 +239,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * serverTags  弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
     * cpuOptions  cpuOptions
+    * serialConsoleOptions  serialConsoleOptions
     *
     * @var string[]
     */
@@ -260,7 +267,8 @@ class PrePaidServer implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'serverTags' => 'setServerTags',
             'description' => 'setDescription',
-            'cpuOptions' => 'setCpuOptions'
+            'cpuOptions' => 'setCpuOptions',
+            'serialConsoleOptions' => 'setSerialConsoleOptions'
     ];
 
     /**
@@ -289,6 +297,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * serverTags  弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
     * cpuOptions  cpuOptions
+    * serialConsoleOptions  serialConsoleOptions
     *
     * @var string[]
     */
@@ -316,7 +325,8 @@ class PrePaidServer implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'serverTags' => 'getServerTags',
             'description' => 'getDescription',
-            'cpuOptions' => 'getCpuOptions'
+            'cpuOptions' => 'getCpuOptions',
+            'serialConsoleOptions' => 'getSerialConsoleOptions'
     ];
 
     /**
@@ -401,6 +411,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
         $this->container['serverTags'] = isset($data['serverTags']) ? $data['serverTags'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['cpuOptions'] = isset($data['cpuOptions']) ? $data['cpuOptions'] : null;
+        $this->container['serialConsoleOptions'] = isset($data['serialConsoleOptions']) ? $data['serialConsoleOptions'] : null;
     }
 
     /**
@@ -1046,6 +1057,30 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     public function setCpuOptions($cpuOptions)
     {
         $this->container['cpuOptions'] = $cpuOptions;
+        return $this;
+    }
+
+    /**
+    * Gets serialConsoleOptions
+    *  serialConsoleOptions
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\SerialConsoleOptions|null
+    */
+    public function getSerialConsoleOptions()
+    {
+        return $this->container['serialConsoleOptions'];
+    }
+
+    /**
+    * Sets serialConsoleOptions
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\SerialConsoleOptions|null $serialConsoleOptions serialConsoleOptions
+    *
+    * @return $this
+    */
+    public function setSerialConsoleOptions($serialConsoleOptions)
+    {
+        $this->container['serialConsoleOptions'] = $serialConsoleOptions;
         return $this;
     }
 

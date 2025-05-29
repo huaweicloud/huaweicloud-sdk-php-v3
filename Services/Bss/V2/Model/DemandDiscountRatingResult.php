@@ -21,7 +21,7 @@ class DemandDiscountRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * discountId  优惠标识ID。
-    * discountType  折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    * discountType  折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     * amount  折扣的金额。
     * measureId  度量单位标识。 1：元
     * discountName  折扣名称。
@@ -39,7 +39,7 @@ class DemandDiscountRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * discountId  优惠标识ID。
-    * discountType  折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    * discountType  折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     * amount  折扣的金额。
     * measureId  度量单位标识。 1：元
     * discountName  折扣名称。
@@ -78,7 +78,7 @@ class DemandDiscountRatingResult implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * discountId  优惠标识ID。
-    * discountType  折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    * discountType  折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     * amount  折扣的金额。
     * measureId  度量单位标识。 1：元
     * discountName  折扣名称。
@@ -96,7 +96,7 @@ class DemandDiscountRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * discountId  优惠标识ID。
-    * discountType  折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    * discountType  折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     * amount  折扣的金额。
     * measureId  度量单位标识。 1：元
     * discountName  折扣名称。
@@ -114,7 +114,7 @@ class DemandDiscountRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * discountId  优惠标识ID。
-    * discountType  折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    * discountType  折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     * amount  折扣的金额。
     * measureId  度量单位标识。 1：元
     * discountName  折扣名称。
@@ -254,7 +254,7 @@ class DemandDiscountRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountType
-    *  折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    *  折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     *
     * @return int|null
     */
@@ -266,7 +266,7 @@ class DemandDiscountRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets discountType
     *
-    * @param int|null $discountType 折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    * @param int|null $discountType 折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     *
     * @return $this
     */

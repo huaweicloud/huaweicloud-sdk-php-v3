@@ -22,24 +22,28 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
+    * whetherLogStorage  日志是否存储
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'ttlInDays' => 'int',
-            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]'
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]',
+            'whetherLogStorage' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
+    * whetherLogStorage  日志是否存储
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'ttlInDays' => 'int32',
-        'tags' => null
+        'tags' => null,
+        'whetherLogStorage' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     * and the value is the original name
     * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
+    * whetherLogStorage  日志是否存储
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'ttlInDays' => 'ttl_in_days',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'whetherLogStorage' => 'whether_log_storage'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
+    * whetherLogStorage  日志是否存储
     *
     * @var string[]
     */
     protected static $setters = [
             'ttlInDays' => 'setTtlInDays',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'whetherLogStorage' => 'setWhetherLogStorage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
+    * whetherLogStorage  日志是否存储
     *
     * @var string[]
     */
     protected static $getters = [
             'ttlInDays' => 'getTtlInDays',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'whetherLogStorage' => 'getWhetherLogStorage'
     ];
 
     /**
@@ -159,6 +169,7 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     {
         $this->container['ttlInDays'] = isset($data['ttlInDays']) ? $data['ttlInDays'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['whetherLogStorage'] = isset($data['whetherLogStorage']) ? $data['whetherLogStorage'] : null;
     }
 
     /**
@@ -237,6 +248,30 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets whetherLogStorage
+    *  日志是否存储
+    *
+    * @return bool|null
+    */
+    public function getWhetherLogStorage()
+    {
+        return $this->container['whetherLogStorage'];
+    }
+
+    /**
+    * Sets whetherLogStorage
+    *
+    * @param bool|null $whetherLogStorage 日志是否存储
+    *
+    * @return $this
+    */
+    public function setWhetherLogStorage($whetherLogStorage)
+    {
+        $this->container['whetherLogStorage'] = $whetherLogStorage;
         return $this;
     }
 

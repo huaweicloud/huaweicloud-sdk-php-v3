@@ -8055,6 +8055,9 @@ class DliAsyncClient extends Client
         if ($localVarParams['jobStatus'] !== null) {
             $queryParams['job_status'] = $localVarParams['jobStatus'];
         }
+        if ($localVarParams['jobId'] !== null) {
+            $queryParams['job_id'] = $localVarParams['jobId'];
+        }
         if ($localVarParams['jobType'] !== null) {
             $queryParams['job_type'] = $localVarParams['jobType'];
         }

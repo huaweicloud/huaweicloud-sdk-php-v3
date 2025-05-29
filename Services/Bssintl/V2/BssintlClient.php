@@ -706,7 +706,7 @@ class BssintlClient extends Client
     }
 
     /**
-     * 查询使用量单位进制
+     * 查询度量单位进制
      *
      * 功能描述：伙伴在伙伴销售平台上查询使用量单位的进制转换信息，用于不同度量单位之间的转换。
      * 
@@ -2781,6 +2781,68 @@ class BssintlClient extends Client
     }
 
     /**
+     * 设置包年/包月资源自动续费扣款日和续费后资源统一到期日
+     *
+     * 功能描述：客户的包年/包月资源可进行设置自动续费扣款日和续费后统一到期日
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setResourcesRenewConfig($request)
+    {
+        return $this->setResourcesRenewConfigWithHttpInfo($request);
+    }
+
+    public function setResourcesRenewConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/orders/subscriptions/resources/renew/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\SetResourcesRenewConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\SetResourcesRenewConfigRequest');
+    }
+
+    /**
      * 查询账户余额
      *
      * 功能描述：客户可以查询自身的账户余额。
@@ -2837,6 +2899,88 @@ class BssintlClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowCustomerAccountBalancesResponse',
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowCustomerAccountBalancesRequest');
+    }
+
+    /**
+     * 查询汇总账单
+     *
+     * 客户在自建平台查询自身的消费汇总账单，此账单按月汇总消费数据。
+     * 
+     * 客户登录费用中心查询自身的消费汇总账单请参见[这里](https://support.huaweicloud.com/intl/zh-cn/usermanual-billing/bills-topic_0000108.html)的“查看汇总”。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCustomerMonthlySum($request)
+    {
+        return $this->showCustomerMonthlySumWithHttpInfo($request);
+    }
+
+    public function showCustomerMonthlySumWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/bills/customer-bills/monthly-sum';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['billCycle'] !== null) {
+            $queryParams['bill_cycle'] = $localVarParams['billCycle'];
+        }
+        if ($localVarParams['serviceTypeCode'] !== null) {
+            $queryParams['service_type_code'] = $localVarParams['serviceTypeCode'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['method'] !== null) {
+            $queryParams['method'] = $localVarParams['method'];
+        }
+        if ($localVarParams['subCustomerId'] !== null) {
+            $queryParams['sub_customer_id'] = $localVarParams['subCustomerId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowCustomerMonthlySumResponse',
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowCustomerMonthlySumRequest');
     }
 
     /**

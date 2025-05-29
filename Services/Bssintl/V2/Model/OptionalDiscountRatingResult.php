@@ -25,7 +25,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
-    * discountType  折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    * discountType  折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     * discountName  折扣名称。
     * bestOffer  是否为最优折扣。 0：不是最优折扣，为缺省值。1：是最优折扣最优折扣：在商务折扣、伙伴折扣中选择（优惠金额最大的折扣为最优，优惠金额相等则按此顺序排优先级），促销折扣，折扣券不参与最优折扣的计算。
     * productRatingResults  产品询价结果，具体参见表5。
@@ -51,7 +51,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
-    * discountType  折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    * discountType  折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     * discountName  折扣名称。
     * bestOffer  是否为最优折扣。 0：不是最优折扣，为缺省值。1：是最优折扣最优折扣：在商务折扣、伙伴折扣中选择（优惠金额最大的折扣为最优，优惠金额相等则按此顺序排优先级），促销折扣，折扣券不参与最优折扣的计算。
     * productRatingResults  产品询价结果，具体参见表5。
@@ -98,7 +98,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
-    * discountType  折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    * discountType  折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     * discountName  折扣名称。
     * bestOffer  是否为最优折扣。 0：不是最优折扣，为缺省值。1：是最优折扣最优折扣：在商务折扣、伙伴折扣中选择（优惠金额最大的折扣为最优，优惠金额相等则按此顺序排优先级），促销折扣，折扣券不参与最优折扣的计算。
     * productRatingResults  产品询价结果，具体参见表5。
@@ -124,7 +124,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
-    * discountType  折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    * discountType  折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     * discountName  折扣名称。
     * bestOffer  是否为最优折扣。 0：不是最优折扣，为缺省值。1：是最优折扣最优折扣：在商务折扣、伙伴折扣中选择（优惠金额最大的折扣为最优，优惠金额相等则按此顺序排优先级），促销折扣，折扣券不参与最优折扣的计算。
     * productRatingResults  产品询价结果，具体参见表5。
@@ -150,7 +150,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
-    * discountType  折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    * discountType  折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     * discountName  折扣名称。
     * bestOffer  是否为最优折扣。 0：不是最优折扣，为缺省值。1：是最优折扣最优折扣：在商务折扣、伙伴折扣中选择（优惠金额最大的折扣为最优，优惠金额相等则按此顺序排优先级），促销折扣，折扣券不参与最优折扣的计算。
     * productRatingResults  产品询价结果，具体参见表5。
@@ -394,7 +394,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountType
-    *  折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    *  折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     *
     * @return int|null
     */
@@ -406,7 +406,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets discountType
     *
-    * @param int|null $discountType 折扣优惠类型。 合同商务折扣：605：华为云BE场景下的合同商务折扣606：分销商BE场景下的合同商务折扣 伙伴授予折扣：607：合作伙伴授予折扣-折扣率
+    * @param int|null $discountType 折扣优惠类型。商务授权折扣：605(华为云BE场景下的合同商务折扣)、伙伴授予折扣：606(分销商BE场景下的合同商务折扣)、伙伴设置折扣：607(合作伙伴设置折扣-折扣率)
     *
     * @return $this
     */

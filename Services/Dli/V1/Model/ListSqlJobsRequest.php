@@ -25,6 +25,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
     * engineType  engineType
     * jobStatus  jobStatus
+    * jobId  jobId
     * jobType  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
     * order  指定作业排序方式，默认为start_time_desc（作业提交时间降序），支持duration_desc（作业运行时长降序）、duration_asc（作业运行时长升序）、start_time_desc（作业提交时间降序）、start_time_asc（作业提交时间升序）四种排序方式。
     * owner  提交作业的用户名称
@@ -43,6 +44,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
             'end' => 'int',
             'engineType' => 'string',
             'jobStatus' => 'string',
+            'jobId' => 'string',
             'jobType' => 'string',
             'order' => 'string',
             'owner' => 'string',
@@ -61,6 +63,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
     * engineType  engineType
     * jobStatus  jobStatus
+    * jobId  jobId
     * jobType  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
     * order  指定作业排序方式，默认为start_time_desc（作业提交时间降序），支持duration_desc（作业运行时长降序）、duration_asc（作业运行时长升序）、start_time_desc（作业提交时间降序）、start_time_asc（作业提交时间升序）四种排序方式。
     * owner  提交作业的用户名称
@@ -79,6 +82,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
         'end' => 'int64',
         'engineType' => null,
         'jobStatus' => null,
+        'jobId' => null,
         'jobType' => null,
         'order' => null,
         'owner' => null,
@@ -118,6 +122,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
     * engineType  engineType
     * jobStatus  jobStatus
+    * jobId  jobId
     * jobType  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
     * order  指定作业排序方式，默认为start_time_desc（作业提交时间降序），支持duration_desc（作业运行时长降序）、duration_asc（作业运行时长升序）、start_time_desc（作业提交时间降序）、start_time_asc（作业提交时间升序）四种排序方式。
     * owner  提交作业的用户名称
@@ -136,6 +141,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
             'end' => 'end',
             'engineType' => 'engine-type',
             'jobStatus' => 'job-status',
+            'jobId' => 'job-id',
             'jobType' => 'job-type',
             'order' => 'order',
             'owner' => 'owner',
@@ -154,6 +160,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
     * engineType  engineType
     * jobStatus  jobStatus
+    * jobId  jobId
     * jobType  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
     * order  指定作业排序方式，默认为start_time_desc（作业提交时间降序），支持duration_desc（作业运行时长降序）、duration_asc（作业运行时长升序）、start_time_desc（作业提交时间降序）、start_time_asc（作业提交时间升序）四种排序方式。
     * owner  提交作业的用户名称
@@ -172,6 +179,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
             'end' => 'setEnd',
             'engineType' => 'setEngineType',
             'jobStatus' => 'setJobStatus',
+            'jobId' => 'setJobId',
             'jobType' => 'setJobType',
             'order' => 'setOrder',
             'owner' => 'setOwner',
@@ -190,6 +198,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
     * engineType  engineType
     * jobStatus  jobStatus
+    * jobId  jobId
     * jobType  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
     * order  指定作业排序方式，默认为start_time_desc（作业提交时间降序），支持duration_desc（作业运行时长降序）、duration_asc（作业运行时长升序）、start_time_desc（作业提交时间降序）、start_time_asc（作业提交时间升序）四种排序方式。
     * owner  提交作业的用户名称
@@ -208,6 +217,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
             'end' => 'getEnd',
             'engineType' => 'getEngineType',
             'jobStatus' => 'getJobStatus',
+            'jobId' => 'getJobId',
             'jobType' => 'getJobType',
             'order' => 'getOrder',
             'owner' => 'getOwner',
@@ -326,6 +336,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
         $this->container['end'] = isset($data['end']) ? $data['end'] : null;
         $this->container['engineType'] = isset($data['engineType']) ? $data['engineType'] : null;
         $this->container['jobStatus'] = isset($data['jobStatus']) ? $data['jobStatus'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
@@ -498,6 +509,30 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     public function setJobStatus($jobStatus)
     {
         $this->container['jobStatus'] = $jobStatus;
+        return $this;
+    }
+
+    /**
+    * Gets jobId
+    *  jobId
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId jobId
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 

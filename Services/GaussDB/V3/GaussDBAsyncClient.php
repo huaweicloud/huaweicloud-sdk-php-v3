@@ -8532,6 +8532,80 @@ class GaussDBAsyncClient extends Client
     }
 
     /**
+     * Proxy绑定解绑弹性公网IP
+     *
+     * Proxy绑定解绑弹性公网IP。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function switchGaussMySqlProxyEipAsync($request)
+    {
+        return $this->switchGaussMySqlProxyEipAsyncWithHttpInfo($request);
+    }
+    
+    public function switchGaussMySqlProxyEipAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/proxy/{proxy_id}/bind';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['proxyId'] !== null) {
+            $pathParams['proxy_id'] = $localVarParams['proxyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\SwitchGaussMySqlProxyEipResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\SwitchGaussMySqlProxyEipRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 开关数据库代理SSL
      *
      * 为数据库代理设置SSL数据加密。

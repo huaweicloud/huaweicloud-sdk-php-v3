@@ -3736,12 +3736,6 @@ class LtsAsyncClient extends Client
         if ($localVarParams['logStreamName'] !== null) {
             $queryParams['log_stream_name'] = $localVarParams['logStreamName'];
         }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

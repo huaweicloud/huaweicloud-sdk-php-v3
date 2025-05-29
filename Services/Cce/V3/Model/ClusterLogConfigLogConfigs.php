@@ -22,24 +22,28 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  日志类型
     * enable  是否采集
+    * type  组件类型
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'enable' => 'bool'
+            'enable' => 'bool',
+            'type' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  日志类型
     * enable  是否采集
+    * type  组件类型
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'enable' => null
+        'enable' => null,
+        'type' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  日志类型
     * enable  是否采集
+    * type  组件类型
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'enable' => 'enable'
+            'enable' => 'enable',
+            'type' => 'type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  日志类型
     * enable  是否采集
+    * type  组件类型
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'enable' => 'setEnable'
+            'enable' => 'setEnable',
+            'type' => 'setType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  日志类型
     * enable  是否采集
+    * type  组件类型
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'enable' => 'getEnable'
+            'enable' => 'getEnable',
+            'type' => 'getType'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['enable'] = isset($data['enable']) ? $data['enable'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class ClusterLogConfigLogConfigs implements ModelInterface, ArrayAccess
     public function setEnable($enable)
     {
         $this->container['enable'] = $enable;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  组件类型
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 组件类型
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

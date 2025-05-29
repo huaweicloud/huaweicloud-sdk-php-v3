@@ -44,6 +44,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * vpcid  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  可通过 [查询VPC列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListVpcs) 接口查询。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
     * cpuOptions  cpuOptions
+    * serialConsoleOptions  serialConsoleOptions
     *
     * @var string[]
     */
@@ -71,7 +72,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'userData' => 'string',
             'vpcid' => 'string',
             'description' => 'string',
-            'cpuOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions'
+            'cpuOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions',
+            'serialConsoleOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\SerialConsoleOptions'
     ];
 
     /**
@@ -100,6 +102,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * vpcid  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  可通过 [查询VPC列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListVpcs) 接口查询。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
     * cpuOptions  cpuOptions
+    * serialConsoleOptions  serialConsoleOptions
     *
     * @var string[]
     */
@@ -127,7 +130,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
         'userData' => null,
         'vpcid' => null,
         'description' => null,
-        'cpuOptions' => null
+        'cpuOptions' => null,
+        'serialConsoleOptions' => null
     ];
 
     /**
@@ -177,6 +181,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * vpcid  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  可通过 [查询VPC列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListVpcs) 接口查询。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
     * cpuOptions  cpuOptions
+    * serialConsoleOptions  serialConsoleOptions
     *
     * @var string[]
     */
@@ -204,7 +209,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'userData' => 'user_data',
             'vpcid' => 'vpcid',
             'description' => 'description',
-            'cpuOptions' => 'cpu_options'
+            'cpuOptions' => 'cpu_options',
+            'serialConsoleOptions' => 'serial_console_options'
     ];
 
     /**
@@ -233,6 +239,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * vpcid  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  可通过 [查询VPC列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListVpcs) 接口查询。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
     * cpuOptions  cpuOptions
+    * serialConsoleOptions  serialConsoleOptions
     *
     * @var string[]
     */
@@ -260,7 +267,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'userData' => 'setUserData',
             'vpcid' => 'setVpcid',
             'description' => 'setDescription',
-            'cpuOptions' => 'setCpuOptions'
+            'cpuOptions' => 'setCpuOptions',
+            'serialConsoleOptions' => 'setSerialConsoleOptions'
     ];
 
     /**
@@ -289,6 +297,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * vpcid  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  可通过 [查询VPC列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListVpcs) 接口查询。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
     * cpuOptions  cpuOptions
+    * serialConsoleOptions  serialConsoleOptions
     *
     * @var string[]
     */
@@ -316,7 +325,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'userData' => 'getUserData',
             'vpcid' => 'getVpcid',
             'description' => 'getDescription',
-            'cpuOptions' => 'getCpuOptions'
+            'cpuOptions' => 'getCpuOptions',
+            'serialConsoleOptions' => 'getSerialConsoleOptions'
     ];
 
     /**
@@ -401,6 +411,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
         $this->container['vpcid'] = isset($data['vpcid']) ? $data['vpcid'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['cpuOptions'] = isset($data['cpuOptions']) ? $data['cpuOptions'] : null;
+        $this->container['serialConsoleOptions'] = isset($data['serialConsoleOptions']) ? $data['serialConsoleOptions'] : null;
     }
 
     /**
@@ -1043,6 +1054,30 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     public function setCpuOptions($cpuOptions)
     {
         $this->container['cpuOptions'] = $cpuOptions;
+        return $this;
+    }
+
+    /**
+    * Gets serialConsoleOptions
+    *  serialConsoleOptions
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\SerialConsoleOptions|null
+    */
+    public function getSerialConsoleOptions()
+    {
+        return $this->container['serialConsoleOptions'];
+    }
+
+    /**
+    * Sets serialConsoleOptions
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\SerialConsoleOptions|null $serialConsoleOptions serialConsoleOptions
+    *
+    * @return $this
+    */
+    public function setSerialConsoleOptions($serialConsoleOptions)
+    {
+        $this->container['serialConsoleOptions'] = $serialConsoleOptions;
         return $this;
     }
 
