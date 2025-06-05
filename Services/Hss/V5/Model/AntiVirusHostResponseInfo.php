@@ -20,7 +20,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  主机ID
+    * hostId  服务器ID
     * hostName  服务器名称
     * publicIp  弹性公网IP地址
     * privateIp  服务器私有IP
@@ -42,7 +42,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  主机ID
+    * hostId  服务器ID
     * hostName  服务器名称
     * publicIp  弹性公网IP地址
     * privateIp  服务器私有IP
@@ -85,7 +85,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  主机ID
+    * hostId  服务器ID
     * hostName  服务器名称
     * publicIp  弹性公网IP地址
     * privateIp  服务器私有IP
@@ -107,7 +107,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  主机ID
+    * hostId  服务器ID
     * hostName  服务器名称
     * publicIp  弹性公网IP地址
     * privateIp  服务器私有IP
@@ -129,7 +129,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  主机ID
+    * hostId  服务器ID
     * hostName  服务器名称
     * publicIp  弹性公网IP地址
     * privateIp  服务器私有IP
@@ -227,14 +227,14 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['hostId']) && !preg_match("/^.*$/", $this->container['hostId'])) {
                 $invalidProperties[] = "invalid value for 'hostId', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
@@ -242,11 +242,17 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
                 $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
             }
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 128)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['publicIp']) && !preg_match("/^.*$/", $this->container['publicIp'])) {
                 $invalidProperties[] = "invalid value for 'publicIp', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 256)) {
-                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 128)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 1.";
@@ -285,7 +291,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机ID
+    *  服务器ID
     *
     * @return string|null
     */
@@ -297,7 +303,7 @@ class AntiVirusHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机ID
+    * @param string|null $hostId 服务器ID
     *
     * @return $this
     */

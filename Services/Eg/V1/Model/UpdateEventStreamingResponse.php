@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Hss\V5\Model;
+namespace HuaweiCloud\SDK\Eg\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class HostVulInfoCveList implements ModelInterface, ArrayAccess
+class UpdateEventStreamingResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,30 @@ class HostVulInfoCveList implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'HostVulInfo_cve_list';
+    protected static $openAPIModelName = 'UpdateEventStreamingResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * eventStreamingId  事件流ID
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'cveId' => 'string',
-            'cvss' => 'float'
+            'eventStreamingId' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * eventStreamingId  事件流ID
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'cveId' => null,
-        'cvss' => 'float'
+        'eventStreamingId' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -65,38 +66,38 @@ class HostVulInfoCveList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * eventStreamingId  事件流ID
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'cveId' => 'cve_id',
-            'cvss' => 'cvss'
+            'eventStreamingId' => 'eventStreamingID',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * eventStreamingId  事件流ID
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'cveId' => 'setCveId',
-            'cvss' => 'setCvss'
+            'eventStreamingId' => 'setEventStreamingId',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * eventStreamingId  事件流ID
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'cveId' => 'getCveId',
-            'cvss' => 'getCvss'
+            'eventStreamingId' => 'getEventStreamingId',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -157,8 +158,8 @@ class HostVulInfoCveList implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['cveId'] = isset($data['cveId']) ? $data['cveId'] : null;
-        $this->container['cvss'] = isset($data['cvss']) ? $data['cvss'] : null;
+        $this->container['eventStreamingId'] = isset($data['eventStreamingId']) ? $data['eventStreamingId'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -169,18 +170,6 @@ class HostVulInfoCveList implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['cveId']) && (mb_strlen($this->container['cveId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'cveId', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['cveId']) && (mb_strlen($this->container['cveId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'cveId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['cvss']) && ($this->container['cvss'] > 1E+1)) {
-                $invalidProperties[] = "invalid value for 'cvss', must be smaller than or equal to 1E+1.";
-            }
-            if (!is_null($this->container['cvss']) && ($this->container['cvss'] < 0)) {
-                $invalidProperties[] = "invalid value for 'cvss', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -196,50 +185,50 @@ class HostVulInfoCveList implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets cveId
-    *  CVE ID
+    * Gets eventStreamingId
+    *  事件流ID
     *
     * @return string|null
     */
-    public function getCveId()
+    public function getEventStreamingId()
     {
-        return $this->container['cveId'];
+        return $this->container['eventStreamingId'];
     }
 
     /**
-    * Sets cveId
+    * Sets eventStreamingId
     *
-    * @param string|null $cveId CVE ID
+    * @param string|null $eventStreamingId 事件流ID
     *
     * @return $this
     */
-    public function setCveId($cveId)
+    public function setEventStreamingId($eventStreamingId)
     {
-        $this->container['cveId'] = $cveId;
+        $this->container['eventStreamingId'] = $eventStreamingId;
         return $this;
     }
 
     /**
-    * Gets cvss
-    *  CVSS分值
+    * Gets xRequestId
+    *  xRequestId
     *
-    * @return float|null
+    * @return string|null
     */
-    public function getCvss()
+    public function getXRequestId()
     {
-        return $this->container['cvss'];
+        return $this->container['xRequestId'];
     }
 
     /**
-    * Sets cvss
+    * Sets xRequestId
     *
-    * @param float|null $cvss CVSS分值
+    * @param string|null $xRequestId xRequestId
     *
     * @return $this
     */
-    public function setCvss($cvss)
+    public function setXRequestId($xRequestId)
     {
-        $this->container['cvss'] = $cvss;
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

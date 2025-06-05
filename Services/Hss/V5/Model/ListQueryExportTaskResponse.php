@@ -22,7 +22,7 @@ class ListQueryExportTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * taskId  任务ID
-    * taskName  任务ID
+    * taskName  任务名称
     * taskStatus  导出任务状态，success:成功，failure:失败，running:运行中
     * fileId  文件ID
     * fileName  文件名
@@ -40,7 +40,7 @@ class ListQueryExportTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * taskId  任务ID
-    * taskName  任务ID
+    * taskName  任务名称
     * taskStatus  导出任务状态，success:成功，failure:失败，running:运行中
     * fileId  文件ID
     * fileName  文件名
@@ -79,7 +79,7 @@ class ListQueryExportTaskResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * taskId  任务ID
-    * taskName  任务ID
+    * taskName  任务名称
     * taskStatus  导出任务状态，success:成功，failure:失败，running:运行中
     * fileId  文件ID
     * fileName  文件名
@@ -97,7 +97,7 @@ class ListQueryExportTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * taskId  任务ID
-    * taskName  任务ID
+    * taskName  任务名称
     * taskStatus  导出任务状态，success:成功，failure:失败，running:运行中
     * fileId  文件ID
     * fileName  文件名
@@ -115,7 +115,7 @@ class ListQueryExportTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * taskId  任务ID
-    * taskName  任务ID
+    * taskName  任务名称
     * taskStatus  导出任务状态，success:成功，failure:失败，running:运行中
     * fileId  文件ID
     * fileName  文件名
@@ -273,7 +273,7 @@ class ListQueryExportTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskName
-    *  任务ID
+    *  任务名称
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class ListQueryExportTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string|null $taskName 任务ID
+    * @param string|null $taskName 任务名称
     *
     * @return $this
     */

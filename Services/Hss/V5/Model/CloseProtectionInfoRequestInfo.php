@@ -20,9 +20,9 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostIdList  需要关闭勒索防护的主机ID列表
-    * agentIdList  需要关闭勒索防护的agentID列表
-    * closeProtectionType  关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
+    * hostIdList  **参数解释**: 需要关闭勒索防护的主机ID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
+    * agentIdList  **参数解释**: 需要关闭勒索防护的agentID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
+    * closeProtectionType  **参数解释**: 关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostIdList  需要关闭勒索防护的主机ID列表
-    * agentIdList  需要关闭勒索防护的agentID列表
-    * closeProtectionType  关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
+    * hostIdList  **参数解释**: 需要关闭勒索防护的主机ID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
+    * agentIdList  **参数解释**: 需要关闭勒索防护的agentID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
+    * closeProtectionType  **参数解释**: 关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostIdList  需要关闭勒索防护的主机ID列表
-    * agentIdList  需要关闭勒索防护的agentID列表
-    * closeProtectionType  关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
+    * hostIdList  **参数解释**: 需要关闭勒索防护的主机ID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
+    * agentIdList  **参数解释**: 需要关闭勒索防护的agentID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
+    * closeProtectionType  **参数解释**: 关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostIdList  需要关闭勒索防护的主机ID列表
-    * agentIdList  需要关闭勒索防护的agentID列表
-    * closeProtectionType  关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
+    * hostIdList  **参数解释**: 需要关闭勒索防护的主机ID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
+    * agentIdList  **参数解释**: 需要关闭勒索防护的agentID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
+    * closeProtectionType  **参数解释**: 关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostIdList  需要关闭勒索防护的主机ID列表
-    * agentIdList  需要关闭勒索防护的agentID列表
-    * closeProtectionType  关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
+    * hostIdList  **参数解释**: 需要关闭勒索防护的主机ID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
+    * agentIdList  **参数解释**: 需要关闭勒索防护的agentID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
+    * closeProtectionType  **参数解释**: 关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -211,7 +211,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  需要关闭勒索防护的主机ID列表
+    *  **参数解释**: 需要关闭勒索防护的主机ID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
     *
     * @return string[]
     */
@@ -223,7 +223,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[] $hostIdList 需要关闭勒索防护的主机ID列表
+    * @param string[] $hostIdList **参数解释**: 需要关闭勒索防护的主机ID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -235,7 +235,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentIdList
-    *  需要关闭勒索防护的agentID列表
+    *  **参数解释**: 需要关闭勒索防护的agentID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
     *
     * @return string[]
     */
@@ -247,7 +247,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentIdList
     *
-    * @param string[] $agentIdList 需要关闭勒索防护的agentID列表
+    * @param string[] $agentIdList **参数解释**: 需要关闭勒索防护的agentID列表 **约束限制**: 不涉及 **取值范围**: 列表条数0-64 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -259,7 +259,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets closeProtectionType
-    *  关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
+    *  **参数解释**: 关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -271,7 +271,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets closeProtectionType
     *
-    * @param string $closeProtectionType 关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
+    * @param string $closeProtectionType **参数解释**: 关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -25,8 +25,8 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     * type  漏洞类型
     * hostId  服务器ID
     * hostName  服务器名称
-    * publicIp  服务器公网ip
-    * privateIp  服务器私网ip
+    * publicIp  服务器公网IP
+    * privateIp  服务器私网IP
     * handleTime  处置时间
     * status  处置状态
     * failedReason  失败原因
@@ -40,6 +40,8 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     * appVersion  软件版本
     * handleType  处置类型
     * clusterId  集群ID
+    * containerName  容器名称
+    * containerId  容器ID
     *
     * @var string[]
     */
@@ -63,7 +65,9 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
             'appPath' => 'string',
             'appVersion' => 'string',
             'handleType' => 'string',
-            'clusterId' => 'string'
+            'clusterId' => 'string',
+            'containerName' => 'string',
+            'containerId' => 'string'
     ];
 
     /**
@@ -73,8 +77,8 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     * type  漏洞类型
     * hostId  服务器ID
     * hostName  服务器名称
-    * publicIp  服务器公网ip
-    * privateIp  服务器私网ip
+    * publicIp  服务器公网IP
+    * privateIp  服务器私网IP
     * handleTime  处置时间
     * status  处置状态
     * failedReason  失败原因
@@ -88,6 +92,8 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     * appVersion  软件版本
     * handleType  处置类型
     * clusterId  集群ID
+    * containerName  容器名称
+    * containerId  容器ID
     *
     * @var string[]
     */
@@ -111,7 +117,9 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
         'appPath' => null,
         'appVersion' => null,
         'handleType' => null,
-        'clusterId' => null
+        'clusterId' => null,
+        'containerName' => null,
+        'containerId' => null
     ];
 
     /**
@@ -142,8 +150,8 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     * type  漏洞类型
     * hostId  服务器ID
     * hostName  服务器名称
-    * publicIp  服务器公网ip
-    * privateIp  服务器私网ip
+    * publicIp  服务器公网IP
+    * privateIp  服务器私网IP
     * handleTime  处置时间
     * status  处置状态
     * failedReason  失败原因
@@ -157,6 +165,8 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     * appVersion  软件版本
     * handleType  处置类型
     * clusterId  集群ID
+    * containerName  容器名称
+    * containerId  容器ID
     *
     * @var string[]
     */
@@ -180,7 +190,9 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
             'appPath' => 'app_path',
             'appVersion' => 'app_version',
             'handleType' => 'handle_type',
-            'clusterId' => 'cluster_id'
+            'clusterId' => 'cluster_id',
+            'containerName' => 'container_name',
+            'containerId' => 'container_id'
     ];
 
     /**
@@ -190,8 +202,8 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     * type  漏洞类型
     * hostId  服务器ID
     * hostName  服务器名称
-    * publicIp  服务器公网ip
-    * privateIp  服务器私网ip
+    * publicIp  服务器公网IP
+    * privateIp  服务器私网IP
     * handleTime  处置时间
     * status  处置状态
     * failedReason  失败原因
@@ -205,6 +217,8 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     * appVersion  软件版本
     * handleType  处置类型
     * clusterId  集群ID
+    * containerName  容器名称
+    * containerId  容器ID
     *
     * @var string[]
     */
@@ -228,7 +242,9 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
             'appPath' => 'setAppPath',
             'appVersion' => 'setAppVersion',
             'handleType' => 'setHandleType',
-            'clusterId' => 'setClusterId'
+            'clusterId' => 'setClusterId',
+            'containerName' => 'setContainerName',
+            'containerId' => 'setContainerId'
     ];
 
     /**
@@ -238,8 +254,8 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     * type  漏洞类型
     * hostId  服务器ID
     * hostName  服务器名称
-    * publicIp  服务器公网ip
-    * privateIp  服务器私网ip
+    * publicIp  服务器公网IP
+    * privateIp  服务器私网IP
     * handleTime  处置时间
     * status  处置状态
     * failedReason  失败原因
@@ -253,6 +269,8 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     * appVersion  软件版本
     * handleType  处置类型
     * clusterId  集群ID
+    * containerName  容器名称
+    * containerId  容器ID
     *
     * @var string[]
     */
@@ -276,7 +294,9 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
             'appPath' => 'getAppPath',
             'appVersion' => 'getAppVersion',
             'handleType' => 'getHandleType',
-            'clusterId' => 'getClusterId'
+            'clusterId' => 'getClusterId',
+            'containerName' => 'getContainerName',
+            'containerId' => 'getContainerId'
     ];
 
     /**
@@ -357,6 +377,8 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
         $this->container['appVersion'] = isset($data['appVersion']) ? $data['appVersion'] : null;
         $this->container['handleType'] = isset($data['handleType']) ? $data['handleType'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['containerName'] = isset($data['containerName']) ? $data['containerName'] : null;
+        $this->container['containerId'] = isset($data['containerId']) ? $data['containerId'] : null;
     }
 
     /**
@@ -367,6 +389,24 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['containerName']) && !preg_match("/^[A-Za-z0-9\\u4E00-\\u9FA5,\\.\\u3002\\uff0c_-]+$/", $this->container['containerName'])) {
+                $invalidProperties[] = "invalid value for 'containerName', must be conform to the pattern /^[A-Za-z0-9\\u4E00-\\u9FA5,\\.\\u3002\\uff0c_-]+$/.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['containerId']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['containerId'])) {
+                $invalidProperties[] = "invalid value for 'containerId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
+            }
         return $invalidProperties;
     }
 
@@ -503,7 +543,7 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
 
     /**
     * Gets publicIp
-    *  服务器公网ip
+    *  服务器公网IP
     *
     * @return string|null
     */
@@ -515,7 +555,7 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 服务器公网ip
+    * @param string|null $publicIp 服务器公网IP
     *
     * @return $this
     */
@@ -527,7 +567,7 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
 
     /**
     * Gets privateIp
-    *  服务器私网ip
+    *  服务器私网IP
     *
     * @return string|null
     */
@@ -539,7 +579,7 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 服务器私网ip
+    * @param string|null $privateIp 服务器私网IP
     *
     * @return $this
     */
@@ -858,6 +898,54 @@ class VulhandleHistoryResponseInfoDataList implements ModelInterface, ArrayAcces
     public function setClusterId($clusterId)
     {
         $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets containerName
+    *  容器名称
+    *
+    * @return string|null
+    */
+    public function getContainerName()
+    {
+        return $this->container['containerName'];
+    }
+
+    /**
+    * Sets containerName
+    *
+    * @param string|null $containerName 容器名称
+    *
+    * @return $this
+    */
+    public function setContainerName($containerName)
+    {
+        $this->container['containerName'] = $containerName;
+        return $this;
+    }
+
+    /**
+    * Gets containerId
+    *  容器ID
+    *
+    * @return string|null
+    */
+    public function getContainerId()
+    {
+        return $this->container['containerId'];
+    }
+
+    /**
+    * Sets containerId
+    *
+    * @param string|null $containerId 容器ID
+    *
+    * @return $this
+    */
+    public function setContainerId($containerId)
+    {
+        $this->container['containerId'] = $containerId;
         return $this;
     }
 

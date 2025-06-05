@@ -21,7 +21,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * templateIds  告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
     * notificationBeginTime  告警通知开启时间
@@ -47,7 +47,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * templateIds  告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
     * notificationBeginTime  告警通知开启时间
@@ -94,7 +94,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * templateIds  告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
     * notificationBeginTime  告警通知开启时间
@@ -120,7 +120,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * templateIds  告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
     * notificationBeginTime  告警通知开启时间
@@ -146,7 +146,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * templateIds  告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
     * notificationBeginTime  告警通知开启时间
@@ -338,7 +338,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEnabled
-    *  是否开启告警通知
+    *  是否开启告警通知。true:开启，false:关闭。
     *
     * @return bool
     */
@@ -350,7 +350,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEnabled
     *
-    * @param bool $notificationEnabled 是否开启告警通知
+    * @param bool $notificationEnabled 是否开启告警通知。true:开启，false:关闭。
     *
     * @return $this
     */

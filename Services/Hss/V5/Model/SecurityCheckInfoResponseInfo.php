@@ -24,6 +24,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * executableFilePath  配置检查（基线）的路径信息
     * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
     * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
     * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
@@ -37,6 +38,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
             'checkName' => 'string',
             'checkType' => 'string',
             'standard' => 'string',
+            'executableFilePath' => 'string',
             'checkRuleNum' => 'int',
             'failedRuleNum' => 'int',
             'hostNum' => 'int',
@@ -50,6 +52,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * executableFilePath  配置检查（基线）的路径信息
     * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
     * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
     * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
@@ -63,6 +66,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
         'checkName' => null,
         'checkType' => null,
         'standard' => null,
+        'executableFilePath' => null,
         'checkRuleNum' => 'int32',
         'failedRuleNum' => 'int32',
         'hostNum' => 'int32',
@@ -97,6 +101,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * executableFilePath  配置检查（基线）的路径信息
     * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
     * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
     * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
@@ -110,6 +115,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
             'checkName' => 'check_name',
             'checkType' => 'check_type',
             'standard' => 'standard',
+            'executableFilePath' => 'executable_file_path',
             'checkRuleNum' => 'check_rule_num',
             'failedRuleNum' => 'failed_rule_num',
             'hostNum' => 'host_num',
@@ -123,6 +129,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * executableFilePath  配置检查（基线）的路径信息
     * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
     * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
     * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
@@ -136,6 +143,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
             'checkName' => 'setCheckName',
             'checkType' => 'setCheckType',
             'standard' => 'setStandard',
+            'executableFilePath' => 'setExecutableFilePath',
             'checkRuleNum' => 'setCheckRuleNum',
             'failedRuleNum' => 'setFailedRuleNum',
             'hostNum' => 'setHostNum',
@@ -149,6 +157,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * executableFilePath  配置检查（基线）的路径信息
     * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
     * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
     * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
@@ -162,6 +171,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
             'checkName' => 'getCheckName',
             'checkType' => 'getCheckType',
             'standard' => 'getStandard',
+            'executableFilePath' => 'getExecutableFilePath',
             'checkRuleNum' => 'getCheckRuleNum',
             'failedRuleNum' => 'getFailedRuleNum',
             'hostNum' => 'getHostNum',
@@ -231,6 +241,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
         $this->container['checkName'] = isset($data['checkName']) ? $data['checkName'] : null;
         $this->container['checkType'] = isset($data['checkType']) ? $data['checkType'] : null;
         $this->container['standard'] = isset($data['standard']) ? $data['standard'] : null;
+        $this->container['executableFilePath'] = isset($data['executableFilePath']) ? $data['executableFilePath'] : null;
         $this->container['checkRuleNum'] = isset($data['checkRuleNum']) ? $data['checkRuleNum'] : null;
         $this->container['failedRuleNum'] = isset($data['failedRuleNum']) ? $data['failedRuleNum'] : null;
         $this->container['hostNum'] = isset($data['hostNum']) ? $data['hostNum'] : null;
@@ -269,6 +280,12 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['standard']) && (mb_strlen($this->container['standard']) < 1)) {
                 $invalidProperties[] = "invalid value for 'standard', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['executableFilePath']) && (mb_strlen($this->container['executableFilePath']) > 512)) {
+                $invalidProperties[] = "invalid value for 'executableFilePath', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['executableFilePath']) && (mb_strlen($this->container['executableFilePath']) < 0)) {
+                $invalidProperties[] = "invalid value for 'executableFilePath', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['checkRuleNum']) && ($this->container['checkRuleNum'] > 2097152)) {
                 $invalidProperties[] = "invalid value for 'checkRuleNum', must be smaller than or equal to 2097152.";
@@ -407,6 +424,30 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     public function setStandard($standard)
     {
         $this->container['standard'] = $standard;
+        return $this;
+    }
+
+    /**
+    * Gets executableFilePath
+    *  配置检查（基线）的路径信息
+    *
+    * @return string|null
+    */
+    public function getExecutableFilePath()
+    {
+        return $this->container['executableFilePath'];
+    }
+
+    /**
+    * Sets executableFilePath
+    *
+    * @param string|null $executableFilePath 配置检查（基线）的路径信息
+    *
+    * @return $this
+    */
+    public function setExecutableFilePath($executableFilePath)
+    {
+        $this->container['executableFilePath'] = $executableFilePath;
         return $this;
     }
 

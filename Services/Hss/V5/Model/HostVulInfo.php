@@ -62,7 +62,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'repairCmd' => 'string',
             'status' => 'string',
             'repairSuccessNum' => 'int',
-            'cveList' => '\HuaweiCloud\SDK\Hss\V5\Model\HostVulInfoCveList[]',
+            'cveList' => '\HuaweiCloud\SDK\Hss\V5\Model\GeneralImageVulsResponseInfoCveList[]',
             'isAffectBusiness' => 'bool',
             'firstScanTime' => 'int',
             'appName' => 'string',
@@ -873,7 +873,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * Gets cveList
     *  CVE列表
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\HostVulInfoCveList[]|null
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\GeneralImageVulsResponseInfoCveList[]|null
     */
     public function getCveList()
     {
@@ -883,7 +883,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cveList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\HostVulInfoCveList[]|null $cveList CVE列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\GeneralImageVulsResponseInfoCveList[]|null $cveList CVE列表
     *
     * @return $this
     */

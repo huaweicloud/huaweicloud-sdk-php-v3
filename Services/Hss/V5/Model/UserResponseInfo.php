@@ -31,6 +31,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * userHomeDir  用户目录
     * shell  用户启动shell
     * recentScanTime  最近扫描时间
+    * firstScanTime  首次扫描时间
     * containerId  容器id
     * containerName  容器名称
     *
@@ -48,6 +49,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             'userHomeDir' => 'string',
             'shell' => 'string',
             'recentScanTime' => 'int',
+            'firstScanTime' => 'int',
             'containerId' => 'string',
             'containerName' => 'string'
     ];
@@ -65,6 +67,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * userHomeDir  用户目录
     * shell  用户启动shell
     * recentScanTime  最近扫描时间
+    * firstScanTime  首次扫描时间
     * containerId  容器id
     * containerName  容器名称
     *
@@ -82,6 +85,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
         'userHomeDir' => null,
         'shell' => null,
         'recentScanTime' => 'int64',
+        'firstScanTime' => 'int64',
         'containerId' => null,
         'containerName' => null
     ];
@@ -120,6 +124,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * userHomeDir  用户目录
     * shell  用户启动shell
     * recentScanTime  最近扫描时间
+    * firstScanTime  首次扫描时间
     * containerId  容器id
     * containerName  容器名称
     *
@@ -137,6 +142,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             'userHomeDir' => 'user_home_dir',
             'shell' => 'shell',
             'recentScanTime' => 'recent_scan_time',
+            'firstScanTime' => 'first_scan_time',
             'containerId' => 'container_id',
             'containerName' => 'container_name'
     ];
@@ -154,6 +160,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * userHomeDir  用户目录
     * shell  用户启动shell
     * recentScanTime  最近扫描时间
+    * firstScanTime  首次扫描时间
     * containerId  容器id
     * containerName  容器名称
     *
@@ -171,6 +178,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             'userHomeDir' => 'setUserHomeDir',
             'shell' => 'setShell',
             'recentScanTime' => 'setRecentScanTime',
+            'firstScanTime' => 'setFirstScanTime',
             'containerId' => 'setContainerId',
             'containerName' => 'setContainerName'
     ];
@@ -188,6 +196,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * userHomeDir  用户目录
     * shell  用户启动shell
     * recentScanTime  最近扫描时间
+    * firstScanTime  首次扫描时间
     * containerId  容器id
     * containerName  容器名称
     *
@@ -205,6 +214,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             'userHomeDir' => 'getUserHomeDir',
             'shell' => 'getShell',
             'recentScanTime' => 'getRecentScanTime',
+            'firstScanTime' => 'getFirstScanTime',
             'containerId' => 'getContainerId',
             'containerName' => 'getContainerName'
     ];
@@ -278,6 +288,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
         $this->container['userHomeDir'] = isset($data['userHomeDir']) ? $data['userHomeDir'] : null;
         $this->container['shell'] = isset($data['shell']) ? $data['shell'] : null;
         $this->container['recentScanTime'] = isset($data['recentScanTime']) ? $data['recentScanTime'] : null;
+        $this->container['firstScanTime'] = isset($data['firstScanTime']) ? $data['firstScanTime'] : null;
         $this->container['containerId'] = isset($data['containerId']) ? $data['containerId'] : null;
         $this->container['containerName'] = isset($data['containerName']) ? $data['containerName'] : null;
     }
@@ -338,11 +349,17 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['shell']) && (mb_strlen($this->container['shell']) < 1)) {
                 $invalidProperties[] = "invalid value for 'shell', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['recentScanTime']) && ($this->container['recentScanTime'] > 4070880000000)) {
-                $invalidProperties[] = "invalid value for 'recentScanTime', must be smaller than or equal to 4070880000000.";
+            if (!is_null($this->container['recentScanTime']) && ($this->container['recentScanTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'recentScanTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['recentScanTime']) && ($this->container['recentScanTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'recentScanTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['firstScanTime']) && ($this->container['firstScanTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'firstScanTime', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['firstScanTime']) && ($this->container['firstScanTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'firstScanTime', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 128.";
@@ -631,6 +648,30 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     public function setRecentScanTime($recentScanTime)
     {
         $this->container['recentScanTime'] = $recentScanTime;
+        return $this;
+    }
+
+    /**
+    * Gets firstScanTime
+    *  首次扫描时间
+    *
+    * @return int|null
+    */
+    public function getFirstScanTime()
+    {
+        return $this->container['firstScanTime'];
+    }
+
+    /**
+    * Sets firstScanTime
+    *
+    * @param int|null $firstScanTime 首次扫描时间
+    *
+    * @return $this
+    */
+    public function setFirstScanTime($firstScanTime)
+    {
+        $this->container['firstScanTime'] = $firstScanTime;
         return $this;
     }
 

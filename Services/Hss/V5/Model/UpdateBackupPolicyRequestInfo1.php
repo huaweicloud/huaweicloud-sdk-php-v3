@@ -20,8 +20,8 @@ class UpdateBackupPolicyRequestInfo1 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enabled  策略是否启用，缺省值：true
-    * policyId  策略ID,若开启防护时开启备份防护，该字段必选
+    * enabled  **参数解释**: 策略是否启用，缺省值：true **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: true
+    * policyId  **参数解释**: 策略ID,若开启防护时开启备份防护，该字段必选 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -36,8 +36,8 @@ class UpdateBackupPolicyRequestInfo1 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enabled  策略是否启用，缺省值：true
-    * policyId  策略ID,若开启防护时开启备份防护，该字段必选
+    * enabled  **参数解释**: 策略是否启用，缺省值：true **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: true
+    * policyId  **参数解释**: 策略ID,若开启防护时开启备份防护，该字段必选 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -73,8 +73,8 @@ class UpdateBackupPolicyRequestInfo1 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enabled  策略是否启用，缺省值：true
-    * policyId  策略ID,若开启防护时开启备份防护，该字段必选
+    * enabled  **参数解释**: 策略是否启用，缺省值：true **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: true
+    * policyId  **参数解释**: 策略ID,若开启防护时开启备份防护，该字段必选 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -89,8 +89,8 @@ class UpdateBackupPolicyRequestInfo1 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enabled  策略是否启用，缺省值：true
-    * policyId  策略ID,若开启防护时开启备份防护，该字段必选
+    * enabled  **参数解释**: 策略是否启用，缺省值：true **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: true
+    * policyId  **参数解释**: 策略ID,若开启防护时开启备份防护，该字段必选 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -105,8 +105,8 @@ class UpdateBackupPolicyRequestInfo1 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enabled  策略是否启用，缺省值：true
-    * policyId  策略ID,若开启防护时开启备份防护，该字段必选
+    * enabled  **参数解释**: 策略是否启用，缺省值：true **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: true
+    * policyId  **参数解释**: 策略ID,若开启防护时开启备份防护，该字段必选 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -213,7 +213,7 @@ class UpdateBackupPolicyRequestInfo1 implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  策略是否启用，缺省值：true
+    *  **参数解释**: 策略是否启用，缺省值：true **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: true
     *
     * @return bool|null
     */
@@ -225,7 +225,7 @@ class UpdateBackupPolicyRequestInfo1 implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 策略是否启用，缺省值：true
+    * @param bool|null $enabled **参数解释**: 策略是否启用，缺省值：true **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: true
     *
     * @return $this
     */
@@ -237,7 +237,7 @@ class UpdateBackupPolicyRequestInfo1 implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyId
-    *  策略ID,若开启防护时开启备份防护，该字段必选
+    *  **参数解释**: 策略ID,若开启防护时开启备份防护，该字段必选 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -249,7 +249,7 @@ class UpdateBackupPolicyRequestInfo1 implements ModelInterface, ArrayAccess
     /**
     * Sets policyId
     *
-    * @param string|null $policyId 策略ID,若开启防护时开启备份防护，该字段必选
+    * @param string|null $policyId **参数解释**: 策略ID,若开启防护时开启备份防护，该字段必选 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -20,6 +20,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  ID
+    * regionId  区域
     * containerId  容器ID
     * containerName  容器名称
     * imageName  镜像名称
@@ -41,6 +43,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'id' => 'string',
+            'regionId' => 'string',
             'containerId' => 'string',
             'containerName' => 'string',
             'imageName' => 'string',
@@ -62,6 +66,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  ID
+    * regionId  区域
     * containerId  容器ID
     * containerName  容器名称
     * imageName  镜像名称
@@ -83,6 +89,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'id' => null,
+        'regionId' => null,
         'containerId' => null,
         'containerName' => null,
         'imageName' => null,
@@ -125,6 +133,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  ID
+    * regionId  区域
     * containerId  容器ID
     * containerName  容器名称
     * imageName  镜像名称
@@ -146,6 +156,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'id' => 'id',
+            'regionId' => 'region_id',
             'containerId' => 'container_id',
             'containerName' => 'container_name',
             'imageName' => 'image_name',
@@ -167,6 +179,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  ID
+    * regionId  区域
     * containerId  容器ID
     * containerName  容器名称
     * imageName  镜像名称
@@ -188,6 +202,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'id' => 'setId',
+            'regionId' => 'setRegionId',
             'containerId' => 'setContainerId',
             'containerName' => 'setContainerName',
             'imageName' => 'setImageName',
@@ -209,6 +225,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  ID
+    * regionId  区域
     * containerId  容器ID
     * containerName  容器名称
     * imageName  镜像名称
@@ -230,6 +248,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'id' => 'getId',
+            'regionId' => 'getRegionId',
             'containerId' => 'getContainerId',
             'containerName' => 'getContainerName',
             'imageName' => 'getImageName',
@@ -307,6 +327,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['containerId'] = isset($data['containerId']) ? $data['containerId'] : null;
         $this->container['containerName'] = isset($data['containerName']) ? $data['containerName'] : null;
         $this->container['imageName'] = isset($data['imageName']) ? $data['imageName'] : null;
@@ -334,6 +356,18 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 255)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) > 255)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 255.";
             }
@@ -358,8 +392,8 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 4071095999000)) {
-                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 4071095999000.";
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 0.";
@@ -442,6 +476,54 @@ class ContainerBaseInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets id
+    *  ID
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id ID
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets regionId
+    *  区域
+    *
+    * @return string|null
+    */
+    public function getRegionId()
+    {
+        return $this->container['regionId'];
+    }
+
+    /**
+    * Sets regionId
+    *
+    * @param string|null $regionId 区域
+    *
+    * @return $this
+    */
+    public function setRegionId($regionId)
+    {
+        $this->container['regionId'] = $regionId;
+        return $this;
     }
 
     /**

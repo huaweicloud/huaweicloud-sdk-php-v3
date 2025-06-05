@@ -20,9 +20,9 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  调度器id
-    * name  调度器名称
-    * type  调度器类型,目前只支持 time,定时调度。
+    * id  **参数解释**: 调度器id **取值范围**: 字符长度0-256
+    * name  **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
+    * type  **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
     * properties  properties
     *
     * @var string[]
@@ -36,9 +36,9 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  调度器id
-    * name  调度器名称
-    * type  调度器类型,目前只支持 time,定时调度。
+    * id  **参数解释**: 调度器id **取值范围**: 字符长度0-256
+    * name  **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
+    * type  **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
     * properties  properties
     *
     * @var string[]
@@ -73,9 +73,9 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  调度器id
-    * name  调度器名称
-    * type  调度器类型,目前只支持 time,定时调度。
+    * id  **参数解释**: 调度器id **取值范围**: 字符长度0-256
+    * name  **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
+    * type  **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
     * properties  properties
     *
     * @var string[]
@@ -89,9 +89,9 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  调度器id
-    * name  调度器名称
-    * type  调度器类型,目前只支持 time,定时调度。
+    * id  **参数解释**: 调度器id **取值范围**: 字符长度0-256
+    * name  **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
+    * type  **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
     * properties  properties
     *
     * @var string[]
@@ -105,9 +105,9 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  调度器id
-    * name  调度器名称
-    * type  调度器类型,目前只支持 time,定时调度。
+    * id  **参数解释**: 调度器id **取值范围**: 字符长度0-256
+    * name  **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
+    * type  **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
     * properties  properties
     *
     * @var string[]
@@ -225,7 +225,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  调度器id
+    *  **参数解释**: 调度器id **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -237,7 +237,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 调度器id
+    * @param string|null $id **参数解释**: 调度器id **取值范围**: 字符长度0-256
     *
     * @return $this
     */
@@ -249,7 +249,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  调度器名称
+    *  **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -261,7 +261,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 调度器名称
+    * @param string|null $name **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
     *
     * @return $this
     */
@@ -273,7 +273,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  调度器类型,目前只支持 time,定时调度。
+    *  **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class BackupTriggerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 调度器类型,目前只支持 time,定时调度。
+    * @param string|null $type **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
     *
     * @return $this
     */

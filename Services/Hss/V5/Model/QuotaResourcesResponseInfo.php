@@ -29,6 +29,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * tags  标签
     * expireTime  过期时间，-1表示没有到期时间
+    * createTime  创建时间
     * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
     * enterpriseProjectId  企业项目ID
     * enterpriseProjectName  所属企业项目名称
@@ -45,6 +46,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
             'chargingMode' => 'string',
             'tags' => '\HuaweiCloud\SDK\Hss\V5\Model\TagInfo[]',
             'expireTime' => 'int',
+            'createTime' => 'int',
             'sharedQuota' => 'string',
             'enterpriseProjectId' => 'string',
             'enterpriseProjectName' => 'string'
@@ -61,6 +63,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * tags  标签
     * expireTime  过期时间，-1表示没有到期时间
+    * createTime  创建时间
     * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
     * enterpriseProjectId  企业项目ID
     * enterpriseProjectName  所属企业项目名称
@@ -77,6 +80,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
         'chargingMode' => null,
         'tags' => null,
         'expireTime' => 'int64',
+        'createTime' => 'int64',
         'sharedQuota' => null,
         'enterpriseProjectId' => null,
         'enterpriseProjectName' => null
@@ -114,6 +118,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * tags  标签
     * expireTime  过期时间，-1表示没有到期时间
+    * createTime  创建时间
     * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
     * enterpriseProjectId  企业项目ID
     * enterpriseProjectName  所属企业项目名称
@@ -130,6 +135,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
             'chargingMode' => 'charging_mode',
             'tags' => 'tags',
             'expireTime' => 'expire_time',
+            'createTime' => 'create_time',
             'sharedQuota' => 'shared_quota',
             'enterpriseProjectId' => 'enterprise_project_id',
             'enterpriseProjectName' => 'enterprise_project_name'
@@ -146,6 +152,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * tags  标签
     * expireTime  过期时间，-1表示没有到期时间
+    * createTime  创建时间
     * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
     * enterpriseProjectId  企业项目ID
     * enterpriseProjectName  所属企业项目名称
@@ -162,6 +169,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
             'chargingMode' => 'setChargingMode',
             'tags' => 'setTags',
             'expireTime' => 'setExpireTime',
+            'createTime' => 'setCreateTime',
             'sharedQuota' => 'setSharedQuota',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'enterpriseProjectName' => 'setEnterpriseProjectName'
@@ -178,6 +186,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * tags  标签
     * expireTime  过期时间，-1表示没有到期时间
+    * createTime  创建时间
     * sharedQuota  是否共享配额   - shared：共享的   - unshared：非共享的
     * enterpriseProjectId  企业项目ID
     * enterpriseProjectName  所属企业项目名称
@@ -194,6 +203,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
             'chargingMode' => 'getChargingMode',
             'tags' => 'getTags',
             'expireTime' => 'getExpireTime',
+            'createTime' => 'getCreateTime',
             'sharedQuota' => 'getSharedQuota',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'enterpriseProjectName' => 'getEnterpriseProjectName'
@@ -266,6 +276,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['sharedQuota'] = isset($data['sharedQuota']) ? $data['sharedQuota'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enterpriseProjectName'] = isset($data['enterpriseProjectName']) ? $data['enterpriseProjectName'] : null;
@@ -321,11 +332,17 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['chargingMode']) && (mb_strlen($this->container['chargingMode']) < 1)) {
                 $invalidProperties[] = "invalid value for 'chargingMode', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'expireTime', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'expireTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['sharedQuota']) && (mb_strlen($this->container['sharedQuota']) > 64)) {
                 $invalidProperties[] = "invalid value for 'sharedQuota', the character length must be smaller than or equal to 64.";
@@ -572,6 +589,30 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     public function setExpireTime($expireTime)
     {
         $this->container['expireTime'] = $expireTime;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  创建时间
+    *
+    * @return int|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param int|null $createTime 创建时间
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
         return $this;
     }
 

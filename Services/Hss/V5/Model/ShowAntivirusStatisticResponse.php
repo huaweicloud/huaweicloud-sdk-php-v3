@@ -22,7 +22,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * totalMalwareNum  病毒总数
-    * malwareHostNum  关联服务器数
+    * malwareHostNum  影响主机数量
     * totalTaskNum  累计扫描任务数
     * scanningTaskNum  运行中任务数
     * latestScanTime  启动时间，毫秒
@@ -42,7 +42,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * totalMalwareNum  病毒总数
-    * malwareHostNum  关联服务器数
+    * malwareHostNum  影响主机数量
     * totalTaskNum  累计扫描任务数
     * scanningTaskNum  运行中任务数
     * latestScanTime  启动时间，毫秒
@@ -83,7 +83,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * totalMalwareNum  病毒总数
-    * malwareHostNum  关联服务器数
+    * malwareHostNum  影响主机数量
     * totalTaskNum  累计扫描任务数
     * scanningTaskNum  运行中任务数
     * latestScanTime  启动时间，毫秒
@@ -103,7 +103,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * totalMalwareNum  病毒总数
-    * malwareHostNum  关联服务器数
+    * malwareHostNum  影响主机数量
     * totalTaskNum  累计扫描任务数
     * scanningTaskNum  运行中任务数
     * latestScanTime  启动时间，毫秒
@@ -123,7 +123,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * totalMalwareNum  病毒总数
-    * malwareHostNum  关联服务器数
+    * malwareHostNum  影响主机数量
     * totalTaskNum  累计扫描任务数
     * scanningTaskNum  运行中任务数
     * latestScanTime  启动时间，毫秒
@@ -290,7 +290,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets malwareHostNum
-    *  关联服务器数
+    *  影响主机数量
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets malwareHostNum
     *
-    * @param int|null $malwareHostNum 关联服务器数
+    * @param int|null $malwareHostNum 影响主机数量
     *
     * @return $this
     */

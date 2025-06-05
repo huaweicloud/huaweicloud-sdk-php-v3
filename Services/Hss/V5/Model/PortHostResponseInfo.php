@@ -31,7 +31,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     * status  状态
     * type  端口类型：目前包括TCP，UDP两种
     * containerName  容器名称
-    * agentId  Agent ID
+    * agentId  agent id
     *
     * @var string[]
     */
@@ -63,7 +63,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     * status  状态
     * type  端口类型：目前包括TCP，UDP两种
     * containerName  容器名称
-    * agentId  Agent ID
+    * agentId  agent id
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     * status  状态
     * type  端口类型：目前包括TCP，UDP两种
     * containerName  容器名称
-    * agentId  Agent ID
+    * agentId  agent id
     *
     * @var string[]
     */
@@ -148,7 +148,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     * status  状态
     * type  端口类型：目前包括TCP，UDP两种
     * containerName  容器名称
-    * agentId  Agent ID
+    * agentId  agent id
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     * status  状态
     * type  端口类型：目前包括TCP，UDP两种
     * containerName  容器名称
-    * agentId  Agent ID
+    * agentId  agent id
     *
     * @var string[]
     */
@@ -631,7 +631,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  agent id
     *
     * @return string|null
     */
@@ -643,7 +643,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId agent id
     *
     * @return $this
     */

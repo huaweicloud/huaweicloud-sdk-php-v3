@@ -23,14 +23,14 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     * resultId  病毒查杀结果ID
     * malwareType  病毒类型
     * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
     * filePath  文件路径
     * hostName  服务器名称
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * occurTime  发生时间，毫秒
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
     * notes  备注信息
     * handleTime  处置时间
@@ -61,14 +61,14 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     * resultId  病毒查杀结果ID
     * malwareType  病毒类型
     * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
     * filePath  文件路径
     * hostName  服务器名称
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * occurTime  发生时间，毫秒
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
     * notes  备注信息
     * handleTime  处置时间
@@ -120,14 +120,14 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     * resultId  病毒查杀结果ID
     * malwareType  病毒类型
     * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
     * filePath  文件路径
     * hostName  服务器名称
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * occurTime  发生时间，毫秒
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
     * notes  备注信息
     * handleTime  处置时间
@@ -158,14 +158,14 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     * resultId  病毒查杀结果ID
     * malwareType  病毒类型
     * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
     * filePath  文件路径
     * hostName  服务器名称
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * occurTime  发生时间，毫秒
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
     * notes  备注信息
     * handleTime  处置时间
@@ -196,14 +196,14 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     * resultId  病毒查杀结果ID
     * malwareType  病毒类型
     * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    * severity  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
     * filePath  文件路径
     * hostName  服务器名称
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * occurTime  发生时间，毫秒
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
     * notes  备注信息
     * handleTime  处置时间
@@ -321,11 +321,17 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
             if (!is_null($this->container['malwareName']) && !preg_match("/^.*$/", $this->container['malwareName'])) {
                 $invalidProperties[] = "invalid value for 'malwareName', must be conform to the pattern /^.*$/.";
             }
+            if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) > 20)) {
+                $invalidProperties[] = "invalid value for 'severity', the character length must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) < 1)) {
+                $invalidProperties[] = "invalid value for 'severity', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['filePath']) && !preg_match("/^.*$/", $this->container['filePath'])) {
                 $invalidProperties[] = "invalid value for 'filePath', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
@@ -333,14 +339,20 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
                 $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 256)) {
-                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 128)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['privateIp']) && !preg_match("/^.*$/", $this->container['privateIp'])) {
                 $invalidProperties[] = "invalid value for 'privateIp', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 128)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['publicIp']) && !preg_match("/^.*$/", $this->container['publicIp'])) {
                 $invalidProperties[] = "invalid value for 'publicIp', must be conform to the pattern /^.*$/.";
@@ -460,7 +472,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    *  威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
     *
     * @return string|null
     */
@@ -472,7 +484,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    * @param string|null $severity 威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
     *
     * @return $this
     */
@@ -628,7 +640,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleStatus
-    *  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    *  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     *
     * @return string|null
     */
@@ -640,7 +652,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets handleStatus
     *
-    * @param string|null $handleStatus 处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * @param string|null $handleStatus 处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     *
     * @return $this
     */

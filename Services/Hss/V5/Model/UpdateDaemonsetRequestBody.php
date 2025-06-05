@@ -37,7 +37,7 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
             'clusterName' => 'string',
             'autoUpgrade' => 'bool',
             'runtimeInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\RuntimeRequestBody[]',
-            'scheduleInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\UpdateDaemonsetRequestBodyScheduleInfo',
+            'scheduleInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyScheduleInfo',
             'invokedService' => 'string',
             'chargingMode' => 'string',
             'cceProtectionType' => 'string',
@@ -433,7 +433,7 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     * Gets scheduleInfo
     *  scheduleInfo
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\UpdateDaemonsetRequestBodyScheduleInfo|null
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyScheduleInfo|null
     */
     public function getScheduleInfo()
     {
@@ -443,7 +443,7 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets scheduleInfo
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\UpdateDaemonsetRequestBodyScheduleInfo|null $scheduleInfo scheduleInfo
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyScheduleInfo|null $scheduleInfo scheduleInfo
     *
     * @return $this
     */

@@ -224,14 +224,20 @@ class PolicyListDataList implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) > 50)) {
-                $invalidProperties[] = "invalid value for 'policyName', the character length must be smaller than or equal to 50.";
+            if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'policyName', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'policyName', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'policyName', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['policyName']) && !preg_match("/^.*$/", $this->container['policyName'])) {
                 $invalidProperties[] = "invalid value for 'policyName', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['policyId']) && (mb_strlen($this->container['policyId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'policyId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['policyId']) && (mb_strlen($this->container['policyId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'policyId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['policyId']) && !preg_match("/^.*$/", $this->container['policyId'])) {
                 $invalidProperties[] = "invalid value for 'policyId', must be conform to the pattern /^.*$/.";

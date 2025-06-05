@@ -48,7 +48,7 @@ class ShowFactoryFullTextResponse implements ModelInterface, ArrayAccess
         'limit' => 'int32',
         'offset' => 'int32',
         'searchDetails' => null,
-        'totalHits' => 'int32'
+        'totalHits' => 'int64'
     ];
 
     /**

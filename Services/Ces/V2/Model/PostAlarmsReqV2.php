@@ -32,8 +32,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID
-    * enabled  告警开关
-    * notificationEnabled  是否开启告警通知
+    * enabled  是否开启告警规则。true:开启，false:关闭。
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     * tags  租户标签列表
     * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
@@ -76,8 +76,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID
-    * enabled  告警开关
-    * notificationEnabled  是否开启告警通知
+    * enabled  是否开启告警规则。true:开启，false:关闭。
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     * tags  租户标签列表
     * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
@@ -141,8 +141,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID
-    * enabled  告警开关
-    * notificationEnabled  是否开启告警通知
+    * enabled  是否开启告警规则。true:开启，false:关闭。
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     * tags  租户标签列表
     * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
@@ -185,8 +185,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID
-    * enabled  告警开关
-    * notificationEnabled  是否开启告警通知
+    * enabled  是否开启告警规则。true:开启，false:关闭。
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     * tags  租户标签列表
     * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
@@ -229,8 +229,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID
-    * enabled  告警开关
-    * notificationEnabled  是否开启告警通知
+    * enabled  是否开启告警规则。true:开启，false:关闭。
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     * tags  租户标签列表
     * productName  产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
@@ -753,7 +753,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  告警开关
+    *  是否开启告警规则。true:开启，false:关闭。
     *
     * @return bool
     */
@@ -765,7 +765,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool $enabled 告警开关
+    * @param bool $enabled 是否开启告警规则。true:开启，false:关闭。
     *
     * @return $this
     */
@@ -777,7 +777,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEnabled
-    *  是否开启告警通知
+    *  是否开启告警通知。true:开启，false:关闭。
     *
     * @return bool
     */
@@ -789,7 +789,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEnabled
     *
-    * @param bool $notificationEnabled 是否开启告警通知
+    * @param bool $notificationEnabled 是否开启告警通知。true:开启，false:关闭。
     *
     * @return $this
     */

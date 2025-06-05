@@ -225,11 +225,11 @@ class HoneypotPortPolicyContent implements ModelInterface, ArrayAccess
         if ($this->container['policyName'] === null) {
             $invalidProperties[] = "'policyName' can't be null";
         }
-            if ((mb_strlen($this->container['policyName']) > 50)) {
-                $invalidProperties[] = "invalid value for 'policyName', the character length must be smaller than or equal to 50.";
+            if ((mb_strlen($this->container['policyName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'policyName', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['policyName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'policyName', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['policyName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'policyName', the character length must be bigger than or equal to 1.";
             }
             if (!preg_match("/^.*$/", $this->container['policyName'])) {
                 $invalidProperties[] = "invalid value for 'policyName', must be conform to the pattern /^.*$/.";

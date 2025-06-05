@@ -21,28 +21,32 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * targetPolicyGroupId  部署的目标策略组ID
-    * operateAll  是否要对全量主机部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
-    * hostIdList  需要部署策略组的主机ID列表
+    * operateAll  是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
+    * deployType  策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
+    * hostIdList  需要部署策略组的主机/pod实例/负载/集群ID列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'targetPolicyGroupId' => 'string',
             'operateAll' => 'bool',
+            'deployType' => 'string',
             'hostIdList' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * targetPolicyGroupId  部署的目标策略组ID
-    * operateAll  是否要对全量主机部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
-    * hostIdList  需要部署策略组的主机ID列表
+    * operateAll  是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
+    * deployType  策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
+    * hostIdList  需要部署策略组的主机/pod实例/负载/集群ID列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'targetPolicyGroupId' => null,
         'operateAll' => null,
+        'deployType' => null,
         'hostIdList' => null
     ];
 
@@ -70,42 +74,48 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * targetPolicyGroupId  部署的目标策略组ID
-    * operateAll  是否要对全量主机部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
-    * hostIdList  需要部署策略组的主机ID列表
+    * operateAll  是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
+    * deployType  策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
+    * hostIdList  需要部署策略组的主机/pod实例/负载/集群ID列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'targetPolicyGroupId' => 'target_policy_group_id',
             'operateAll' => 'operate_all',
+            'deployType' => 'deploy_type',
             'hostIdList' => 'host_id_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * targetPolicyGroupId  部署的目标策略组ID
-    * operateAll  是否要对全量主机部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
-    * hostIdList  需要部署策略组的主机ID列表
+    * operateAll  是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
+    * deployType  策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
+    * hostIdList  需要部署策略组的主机/pod实例/负载/集群ID列表
     *
     * @var string[]
     */
     protected static $setters = [
             'targetPolicyGroupId' => 'setTargetPolicyGroupId',
             'operateAll' => 'setOperateAll',
+            'deployType' => 'setDeployType',
             'hostIdList' => 'setHostIdList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * targetPolicyGroupId  部署的目标策略组ID
-    * operateAll  是否要对全量主机部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
-    * hostIdList  需要部署策略组的主机ID列表
+    * operateAll  是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
+    * deployType  策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
+    * hostIdList  需要部署策略组的主机/pod实例/负载/集群ID列表
     *
     * @var string[]
     */
     protected static $getters = [
             'targetPolicyGroupId' => 'getTargetPolicyGroupId',
             'operateAll' => 'getOperateAll',
+            'deployType' => 'getDeployType',
             'hostIdList' => 'getHostIdList'
     ];
 
@@ -169,6 +179,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     {
         $this->container['targetPolicyGroupId'] = isset($data['targetPolicyGroupId']) ? $data['targetPolicyGroupId'] : null;
         $this->container['operateAll'] = isset($data['operateAll']) ? $data['operateAll'] : null;
+        $this->container['deployType'] = isset($data['deployType']) ? $data['deployType'] : null;
         $this->container['hostIdList'] = isset($data['hostIdList']) ? $data['hostIdList'] : null;
     }
 
@@ -191,6 +202,9 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^.*$/", $this->container['targetPolicyGroupId'])) {
                 $invalidProperties[] = "invalid value for 'targetPolicyGroupId', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['deployType']) && !preg_match("/^(host|pod|workload|cluster)$/", $this->container['deployType'])) {
+                $invalidProperties[] = "invalid value for 'deployType', must be conform to the pattern /^(host|pod|workload|cluster)$/.";
             }
         return $invalidProperties;
     }
@@ -232,7 +246,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets operateAll
-    *  是否要对全量主机部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
+    *  是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
     *
     * @return bool|null
     */
@@ -244,7 +258,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets operateAll
     *
-    * @param bool|null $operateAll 是否要对全量主机部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
+    * @param bool|null $operateAll 是否要对全量主机/pod实例/工作负载/集群部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
     *
     * @return $this
     */
@@ -255,8 +269,32 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets deployType
+    *  策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
+    *
+    * @return string|null
+    */
+    public function getDeployType()
+    {
+        return $this->container['deployType'];
+    }
+
+    /**
+    * Sets deployType
+    *
+    * @param string|null $deployType 策略部署类型: - host: 主机 - pod: pod实例 - workload: 工作负载 - cluster: 集群
+    *
+    * @return $this
+    */
+    public function setDeployType($deployType)
+    {
+        $this->container['deployType'] = $deployType;
+        return $this;
+    }
+
+    /**
     * Gets hostIdList
-    *  需要部署策略组的主机ID列表
+    *  需要部署策略组的主机/pod实例/负载/集群ID列表
     *
     * @return string[]|null
     */
@@ -268,7 +306,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList 需要部署策略组的主机ID列表
+    * @param string[]|null $hostIdList 需要部署策略组的主机/pod实例/负载/集群ID列表
     *
     * @return $this
     */

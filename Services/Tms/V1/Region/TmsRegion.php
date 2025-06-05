@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class TmsRegion {
 
-    public static $REGION = array("https://tms.myhuaweicloud.com"=>"cn-north-4","https://tms.ap-southeast-1.myhuaweicloud.com"=>"ap-southeast-1","https://tms.eu-west-101.myhuaweicloud.eu"=>"eu-west-101","https://tms.ru-moscow-1.myhuaweicloud.com"=>"ru-moscow-1",);
+    public static $REGION = array("https://tms.myhuaweicloud.com"=>"cn-north-4","https://tms-intl.myhuaweicloud.com"=>"ap-southeast-1","https://tms.eu-west-101.myhuaweicloud.eu"=>"eu-west-101","https://tms.ru-moscow-1.myhuaweicloud.com"=>"ru-moscow-1",);
 
     public static function valueOf($regionId)
     {

@@ -20,7 +20,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  Region Id
+    * region  Region ID
     * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostId  主机ID
@@ -54,7 +54,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  Region Id
+    * region  Region ID
     * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostId  主机ID
@@ -109,7 +109,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  Region Id
+    * region  Region ID
     * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostId  主机ID
@@ -143,7 +143,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  Region Id
+    * region  Region ID
     * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostId  主机ID
@@ -177,7 +177,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  Region Id
+    * region  Region ID
     * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
     * hostName  服务器名称
     * hostId  主机ID
@@ -290,13 +290,10 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['region'] === null) {
-            $invalidProperties[] = "'region' can't be null";
-        }
-            if ((mb_strlen($this->container['region']) > 32)) {
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 32)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['region']) < 0)) {
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 64)) {
@@ -387,9 +384,9 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  Region Id
+    *  Region ID
     *
-    * @return string
+    * @return string|null
     */
     public function getRegion()
     {
@@ -399,7 +396,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region Region Id
+    * @param string|null $region Region ID
     *
     * @return $this
     */

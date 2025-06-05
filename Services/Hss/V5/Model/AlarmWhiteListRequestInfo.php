@@ -28,7 +28,7 @@ class AlarmWhiteListRequestInfo implements ModelInterface, ArrayAccess
     * judgeType  通配符，包含如下: - \"equal\" # 相等 - \"not_equal\" #不相等 - \"contain\" # 包含 - \"not_contain\" # 不包含
     * fieldValue  加白字段值
     * fileHash  文件哈希
-    * filePath  文件路径,需要对特殊字符进行转义，包含/等
+    * filePath  文件路径
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class AlarmWhiteListRequestInfo implements ModelInterface, ArrayAccess
     * judgeType  通配符，包含如下: - \"equal\" # 相等 - \"not_equal\" #不相等 - \"contain\" # 包含 - \"not_contain\" # 不包含
     * fieldValue  加白字段值
     * fileHash  文件哈希
-    * filePath  文件路径,需要对特殊字符进行转义，包含/等
+    * filePath  文件路径
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class AlarmWhiteListRequestInfo implements ModelInterface, ArrayAccess
     * judgeType  通配符，包含如下: - \"equal\" # 相等 - \"not_equal\" #不相等 - \"contain\" # 包含 - \"not_contain\" # 不包含
     * fieldValue  加白字段值
     * fileHash  文件哈希
-    * filePath  文件路径,需要对特殊字符进行转义，包含/等
+    * filePath  文件路径
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class AlarmWhiteListRequestInfo implements ModelInterface, ArrayAccess
     * judgeType  通配符，包含如下: - \"equal\" # 相等 - \"not_equal\" #不相等 - \"contain\" # 包含 - \"not_contain\" # 不包含
     * fieldValue  加白字段值
     * fileHash  文件哈希
-    * filePath  文件路径,需要对特殊字符进行转义，包含/等
+    * filePath  文件路径
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class AlarmWhiteListRequestInfo implements ModelInterface, ArrayAccess
     * judgeType  通配符，包含如下: - \"equal\" # 相等 - \"not_equal\" #不相等 - \"contain\" # 包含 - \"not_contain\" # 不包含
     * fieldValue  加白字段值
     * fileHash  文件哈希
-    * filePath  文件路径,需要对特殊字符进行转义，包含/等
+    * filePath  文件路径
     *
     * @var string[]
     */
@@ -255,8 +255,8 @@ class AlarmWhiteListRequestInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hash']) && (mb_strlen($this->container['hash']) > 64)) {
                 $invalidProperties[] = "invalid value for 'hash', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['hash']) && (mb_strlen($this->container['hash']) < 64)) {
-                $invalidProperties[] = "invalid value for 'hash', the character length must be bigger than or equal to 64.";
+            if (!is_null($this->container['hash']) && (mb_strlen($this->container['hash']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hash', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['hash']) && !preg_match("/^.*$/", $this->container['hash'])) {
                 $invalidProperties[] = "invalid value for 'hash', must be conform to the pattern /^.*$/.";
@@ -478,7 +478,7 @@ class AlarmWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets filePath
-    *  文件路径,需要对特殊字符进行转义，包含/等
+    *  文件路径
     *
     * @return string|null
     */
@@ -490,7 +490,7 @@ class AlarmWhiteListRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets filePath
     *
-    * @param string|null $filePath 文件路径,需要对特殊字符进行转义，包含/等
+    * @param string|null $filePath 文件路径
     *
     * @return $this
     */

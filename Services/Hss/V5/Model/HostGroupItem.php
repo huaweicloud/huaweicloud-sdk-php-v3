@@ -22,10 +22,10 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groupId  服务器组ID
     * groupName  服务器组名称
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * riskHostNum  有风险服务器数
     * unprotectHostNum  未防护服务器数
-    * hostIdList  服务器ID列表
+    * hostIdList  主机id列表
     * isOutside  是否是线下数据中心服务器组
     *
     * @var string[]
@@ -44,10 +44,10 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * groupId  服务器组ID
     * groupName  服务器组名称
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * riskHostNum  有风险服务器数
     * unprotectHostNum  未防护服务器数
-    * hostIdList  服务器ID列表
+    * hostIdList  主机id列表
     * isOutside  是否是线下数据中心服务器组
     *
     * @var string[]
@@ -87,10 +87,10 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groupId  服务器组ID
     * groupName  服务器组名称
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * riskHostNum  有风险服务器数
     * unprotectHostNum  未防护服务器数
-    * hostIdList  服务器ID列表
+    * hostIdList  主机id列表
     * isOutside  是否是线下数据中心服务器组
     *
     * @var string[]
@@ -109,10 +109,10 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * groupId  服务器组ID
     * groupName  服务器组名称
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * riskHostNum  有风险服务器数
     * unprotectHostNum  未防护服务器数
-    * hostIdList  服务器ID列表
+    * hostIdList  主机id列表
     * isOutside  是否是线下数据中心服务器组
     *
     * @var string[]
@@ -131,10 +131,10 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * groupId  服务器组ID
     * groupName  服务器组名称
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * riskHostNum  有风险服务器数
     * unprotectHostNum  未防护服务器数
-    * hostIdList  服务器ID列表
+    * hostIdList  主机id列表
     * isOutside  是否是线下数据中心服务器组
     *
     * @var string[]
@@ -224,23 +224,20 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 36.";
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['groupId']) && !preg_match("/^.*$/", $this->container['groupId'])) {
                 $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['groupName']) && !preg_match("/^.*$/", $this->container['groupName'])) {
-                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['hostNum']) && ($this->container['hostNum'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'hostNum', must be smaller than or equal to 2147483647.";
@@ -324,7 +321,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  关联服务器数
+    *  影响主机数量
     *
     * @return int|null
     */
@@ -336,7 +333,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 关联服务器数
+    * @param int|null $hostNum 影响主机数量
     *
     * @return $this
     */
@@ -396,7 +393,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  服务器ID列表
+    *  主机id列表
     *
     * @return string[]|null
     */
@@ -408,7 +405,7 @@ class HostGroupItem implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList 服务器ID列表
+    * @param string[]|null $hostIdList 主机id列表
     *
     * @return $this
     */

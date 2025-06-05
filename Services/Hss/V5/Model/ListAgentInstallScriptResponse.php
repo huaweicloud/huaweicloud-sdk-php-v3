@@ -21,7 +21,7 @@ class ListAgentInstallScriptResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * installScriptList  agent安装脚本
+    * installScriptList  安装脚本列表
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListAgentInstallScriptResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * installScriptList  agent安装脚本
+    * installScriptList  安装脚本列表
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListAgentInstallScriptResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * installScriptList  agent安装脚本
+    * installScriptList  安装脚本列表
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListAgentInstallScriptResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * installScriptList  agent安装脚本
+    * installScriptList  安装脚本列表
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListAgentInstallScriptResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * installScriptList  agent安装脚本
+    * installScriptList  安装脚本列表
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListAgentInstallScriptResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets installScriptList
-    *  agent安装脚本
+    *  安装脚本列表
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\AgentInstallScriptResponseInfo[]|null
     */
@@ -187,7 +187,7 @@ class ListAgentInstallScriptResponse implements ModelInterface, ArrayAccess
     /**
     * Sets installScriptList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\AgentInstallScriptResponseInfo[]|null $installScriptList agent安装脚本
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\AgentInstallScriptResponseInfo[]|null $installScriptList 安装脚本列表
     *
     * @return $this
     */

@@ -24,7 +24,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostName  受影响主机名称
     * hostIp  受影响主机ip
-    * agentId  Agent ID
+    * agentId  主机对应的agent id
     * version  主机绑定的配额版本
     * cveNum  漏洞cve总数
     * cveIdList  漏洞对应的cve id列表
@@ -80,7 +80,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostName  受影响主机名称
     * hostIp  受影响主机ip
-    * agentId  Agent ID
+    * agentId  主机对应的agent id
     * version  主机绑定的配额版本
     * cveNum  漏洞cve总数
     * cveIdList  漏洞对应的cve id列表
@@ -157,7 +157,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostName  受影响主机名称
     * hostIp  受影响主机ip
-    * agentId  Agent ID
+    * agentId  主机对应的agent id
     * version  主机绑定的配额版本
     * cveNum  漏洞cve总数
     * cveIdList  漏洞对应的cve id列表
@@ -213,7 +213,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostName  受影响主机名称
     * hostIp  受影响主机ip
-    * agentId  Agent ID
+    * agentId  主机对应的agent id
     * version  主机绑定的配额版本
     * cveNum  漏洞cve总数
     * cveIdList  漏洞对应的cve id列表
@@ -269,7 +269,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostName  受影响主机名称
     * hostIp  受影响主机ip
-    * agentId  Agent ID
+    * agentId  主机对应的agent id
     * version  主机绑定的配额版本
     * cveNum  漏洞cve总数
     * cveIdList  漏洞对应的cve id列表
@@ -643,7 +643,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  主机对应的agent id
     *
     * @return string|null
     */
@@ -655,7 +655,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId 主机对应的agent id
     *
     * @return $this
     */

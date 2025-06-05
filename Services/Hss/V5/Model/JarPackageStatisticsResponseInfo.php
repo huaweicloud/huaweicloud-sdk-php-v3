@@ -20,8 +20,8 @@ class JarPackageStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fileName  Jar包名称
-    * num  Jar包统计信息总数
+    * fileName  **参数解释**: 中间件包名称 **取值范围**: 字符长度0-256
+    * num  **参数解释**: 中间件包统计信息总数 **取值范围**: 取值0-300000
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class JarPackageStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fileName  Jar包名称
-    * num  Jar包统计信息总数
+    * fileName  **参数解释**: 中间件包名称 **取值范围**: 字符长度0-256
+    * num  **参数解释**: 中间件包统计信息总数 **取值范围**: 取值0-300000
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class JarPackageStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fileName  Jar包名称
-    * num  Jar包统计信息总数
+    * fileName  **参数解释**: 中间件包名称 **取值范围**: 字符长度0-256
+    * num  **参数解释**: 中间件包统计信息总数 **取值范围**: 取值0-300000
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class JarPackageStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fileName  Jar包名称
-    * num  Jar包统计信息总数
+    * fileName  **参数解释**: 中间件包名称 **取值范围**: 字符长度0-256
+    * num  **参数解释**: 中间件包统计信息总数 **取值范围**: 取值0-300000
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class JarPackageStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fileName  Jar包名称
-    * num  Jar包统计信息总数
+    * fileName  **参数解释**: 中间件包名称 **取值范围**: 字符长度0-256
+    * num  **参数解释**: 中间件包统计信息总数 **取值范围**: 取值0-300000
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class JarPackageStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileName
-    *  Jar包名称
+    *  **参数解释**: 中间件包名称 **取值范围**: 字符长度0-256
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class JarPackageStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileName
     *
-    * @param string|null $fileName Jar包名称
+    * @param string|null $fileName **参数解释**: 中间件包名称 **取值范围**: 字符长度0-256
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class JarPackageStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets num
-    *  Jar包统计信息总数
+    *  **参数解释**: 中间件包统计信息总数 **取值范围**: 取值0-300000
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class JarPackageStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets num
     *
-    * @param int|null $num Jar包统计信息总数
+    * @param int|null $num **参数解释**: 中间件包统计信息总数 **取值范围**: 取值0-300000
     *
     * @return $this
     */

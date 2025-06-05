@@ -20,7 +20,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **约束限制**: 开通企业项目功能后才需要配置企业项目。 **取值范围**: 字符长度1-256位 **默认取值**: 0
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * malwareName  病毒名称
@@ -58,7 +58,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **约束限制**: 开通企业项目功能后才需要配置企业项目。 **取值范围**: 字符长度1-256位 **默认取值**: 0
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * malwareName  病毒名称
@@ -117,7 +117,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **约束限制**: 开通企业项目功能后才需要配置企业项目。 **取值范围**: 字符长度1-256位 **默认取值**: 0
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * malwareName  病毒名称
@@ -155,7 +155,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **约束限制**: 开通企业项目功能后才需要配置企业项目。 **取值范围**: 字符长度1-256位 **默认取值**: 0
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * malwareName  病毒名称
@@ -193,7 +193,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **约束限制**: 开通企业项目功能后才需要配置企业项目。 **取值范围**: 字符长度1-256位 **默认取值**: 0
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * malwareName  病毒名称
@@ -324,8 +324,8 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
         if ($this->container['offset'] === null) {
             $invalidProperties[] = "'offset' can't be null";
         }
-            if (($this->container['offset'] > 100000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 100000.";
+            if (($this->container['offset'] > 2000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
             }
             if (($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
@@ -348,8 +348,17 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['malwareName']) && !preg_match("/^.*$/", $this->container['malwareName'])) {
                 $invalidProperties[] = "invalid value for 'malwareName', must be conform to the pattern /^.*$/.";
             }
+            if (!is_null($this->container['filePath']) && (mb_strlen($this->container['filePath']) > 512)) {
+                $invalidProperties[] = "invalid value for 'filePath', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['filePath']) && (mb_strlen($this->container['filePath']) < 1)) {
+                $invalidProperties[] = "invalid value for 'filePath', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['filePath']) && !preg_match("/^.*$/", $this->container['filePath'])) {
                 $invalidProperties[] = "invalid value for 'filePath', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
@@ -390,6 +399,12 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['handleMethod']) && (mb_strlen($this->container['handleMethod']) < 0)) {
                 $invalidProperties[] = "invalid value for 'handleMethod', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'userName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'userName', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['userName']) && !preg_match("/^.*$/", $this->container['userName'])) {
                 $invalidProperties[] = "invalid value for 'userName', must be conform to the pattern /^.*$/.";
             }
@@ -427,7 +442,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **约束限制**: 开通企业项目功能后才需要配置企业项目。 **取值范围**: 字符长度1-256位 **默认取值**: 0
     *
     * @return string|null
     */
@@ -439,7 +454,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 主机所属的企业项目ID。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。 **约束限制**: 开通企业项目功能后才需要配置企业项目。 **取值范围**: 字符长度1-256位 **默认取值**: 0
     *
     * @return $this
     */

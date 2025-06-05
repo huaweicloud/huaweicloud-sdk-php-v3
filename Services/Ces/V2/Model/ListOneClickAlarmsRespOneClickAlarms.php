@@ -23,7 +23,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
     * oneClickAlarmId  一键告警ID
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * description  一键告警描述，长度范围[0,256]，该字段默认值为空字符串
-    * enabled  开关
+    * enabled  是否启用一键告警。true:开启，false：关闭。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
     * oneClickAlarmId  一键告警ID
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * description  一键告警描述，长度范围[0,256]，该字段默认值为空字符串
-    * enabled  开关
+    * enabled  是否启用一键告警。true:开启，false：关闭。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
     * oneClickAlarmId  一键告警ID
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * description  一键告警描述，长度范围[0,256]，该字段默认值为空字符串
-    * enabled  开关
+    * enabled  是否启用一键告警。true:开启，false：关闭。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
     * oneClickAlarmId  一键告警ID
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * description  一键告警描述，长度范围[0,256]，该字段默认值为空字符串
-    * enabled  开关
+    * enabled  是否启用一键告警。true:开启，false：关闭。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
     * oneClickAlarmId  一键告警ID
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * description  一键告警描述，长度范围[0,256]，该字段默认值为空字符串
-    * enabled  开关
+    * enabled  是否启用一键告警。true:开启，false：关闭。
     *
     * @var string[]
     */
@@ -315,7 +315,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
 
     /**
     * Gets enabled
-    *  开关
+    *  是否启用一键告警。true:开启，false：关闭。
     *
     * @return bool
     */
@@ -327,7 +327,7 @@ class ListOneClickAlarmsRespOneClickAlarms implements ModelInterface, ArrayAcces
     /**
     * Sets enabled
     *
-    * @param bool $enabled 开关
+    * @param bool $enabled 是否启用一键告警。true:开启，false：关闭。
     *
     * @return $this
     */

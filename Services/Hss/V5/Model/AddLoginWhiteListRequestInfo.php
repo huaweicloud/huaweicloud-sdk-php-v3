@@ -205,8 +205,8 @@ class AddLoginWhiteListRequestInfo implements ModelInterface, ArrayAccess
         if ($this->container['privateIp'] === null) {
             $invalidProperties[] = "'privateIp' can't be null";
         }
-            if ((mb_strlen($this->container['privateIp']) > 256)) {
-                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 256.";
+            if ((mb_strlen($this->container['privateIp']) > 128)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 128.";
             }
             if ((mb_strlen($this->container['privateIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 1.";

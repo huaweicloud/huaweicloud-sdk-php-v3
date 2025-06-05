@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Hss\V5\Model;
+namespace HuaweiCloud\SDK\Eg\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class VulInfoCveList implements ModelInterface, ArrayAccess
+class CreateAgenciesRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class VulInfoCveList implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'VulInfo_cve_list';
+    protected static $openAPIModelName = 'CreateAgenciesRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'cveId' => 'string',
-            'cvss' => 'float'
+            'body' => '\HuaweiCloud\SDK\Eg\V1\Model\AgencyCreateReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'cveId' => null,
-        'cvss' => 'float'
+        'body' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class VulInfoCveList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'cveId' => 'cve_id',
-            'cvss' => 'cvss'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'cveId' => 'setCveId',
-            'cvss' => 'setCvss'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cveId  CVE ID
-    * cvss  CVSS分值
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'cveId' => 'getCveId',
-            'cvss' => 'getCvss'
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +147,7 @@ class VulInfoCveList implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['cveId'] = isset($data['cveId']) ? $data['cveId'] : null;
-        $this->container['cvss'] = isset($data['cvss']) ? $data['cvss'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,18 +158,6 @@ class VulInfoCveList implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['cveId']) && (mb_strlen($this->container['cveId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'cveId', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['cveId']) && (mb_strlen($this->container['cveId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'cveId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['cvss']) && ($this->container['cvss'] > 1E+1)) {
-                $invalidProperties[] = "invalid value for 'cvss', must be smaller than or equal to 1E+1.";
-            }
-            if (!is_null($this->container['cvss']) && ($this->container['cvss'] < 0)) {
-                $invalidProperties[] = "invalid value for 'cvss', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -196,50 +173,26 @@ class VulInfoCveList implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets cveId
-    *  CVE ID
+    * Gets body
+    *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Eg\V1\Model\AgencyCreateReq|null
     */
-    public function getCveId()
+    public function getBody()
     {
-        return $this->container['cveId'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets cveId
+    * Sets body
     *
-    * @param string|null $cveId CVE ID
+    * @param \HuaweiCloud\SDK\Eg\V1\Model\AgencyCreateReq|null $body body
     *
     * @return $this
     */
-    public function setCveId($cveId)
+    public function setBody($body)
     {
-        $this->container['cveId'] = $cveId;
-        return $this;
-    }
-
-    /**
-    * Gets cvss
-    *  CVSS分值
-    *
-    * @return float|null
-    */
-    public function getCvss()
-    {
-        return $this->container['cvss'];
-    }
-
-    /**
-    * Sets cvss
-    *
-    * @param float|null $cvss CVSS分值
-    *
-    * @return $this
-    */
-    public function setCvss($cvss)
-    {
-        $this->container['cvss'] = $cvss;
+        $this->container['body'] = $body;
         return $this;
     }
 

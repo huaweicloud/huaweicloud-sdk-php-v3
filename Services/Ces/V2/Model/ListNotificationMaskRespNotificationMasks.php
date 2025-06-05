@@ -38,6 +38,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * startTime  屏蔽起始时间，HH:mm:ss。
     * endDate  屏蔽截止日期，yyyy-MM-dd。
     * endTime  屏蔽截止时间，HH:mm:ss。
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * policies  告警策略列表。
     *
     * @var string[]
@@ -61,6 +62,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
             'startTime' => 'string',
             'endDate' => '\DateTime',
             'endTime' => 'string',
+            'effectiveTimezone' => 'string',
             'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\PoliciesInListResp[]'
     ];
 
@@ -84,6 +86,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * startTime  屏蔽起始时间，HH:mm:ss。
     * endDate  屏蔽截止日期，yyyy-MM-dd。
     * endTime  屏蔽截止时间，HH:mm:ss。
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * policies  告警策略列表。
     *
     * @var string[]
@@ -107,6 +110,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
         'startTime' => null,
         'endDate' => 'date',
         'endTime' => null,
+        'effectiveTimezone' => null,
         'policies' => null
     ];
 
@@ -151,6 +155,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * startTime  屏蔽起始时间，HH:mm:ss。
     * endDate  屏蔽截止日期，yyyy-MM-dd。
     * endTime  屏蔽截止时间，HH:mm:ss。
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * policies  告警策略列表。
     *
     * @var string[]
@@ -174,6 +179,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
             'startTime' => 'start_time',
             'endDate' => 'end_date',
             'endTime' => 'end_time',
+            'effectiveTimezone' => 'effective_timezone',
             'policies' => 'policies'
     ];
 
@@ -197,6 +203,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * startTime  屏蔽起始时间，HH:mm:ss。
     * endDate  屏蔽截止日期，yyyy-MM-dd。
     * endTime  屏蔽截止时间，HH:mm:ss。
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * policies  告警策略列表。
     *
     * @var string[]
@@ -220,6 +227,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
             'startTime' => 'setStartTime',
             'endDate' => 'setEndDate',
             'endTime' => 'setEndTime',
+            'effectiveTimezone' => 'setEffectiveTimezone',
             'policies' => 'setPolicies'
     ];
 
@@ -243,6 +251,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     * startTime  屏蔽起始时间，HH:mm:ss。
     * endDate  屏蔽截止日期，yyyy-MM-dd。
     * endTime  屏蔽截止时间，HH:mm:ss。
+    * effectiveTimezone  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
     * policies  告警策略列表。
     *
     * @var string[]
@@ -266,6 +275,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
             'startTime' => 'getStartTime',
             'endDate' => 'getEndDate',
             'endTime' => 'getEndTime',
+            'effectiveTimezone' => 'getEffectiveTimezone',
             'policies' => 'getPolicies'
     ];
 
@@ -360,6 +370,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endDate'] = isset($data['endDate']) ? $data['endDate'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['effectiveTimezone'] = isset($data['effectiveTimezone']) ? $data['effectiveTimezone'] : null;
         $this->container['policies'] = isset($data['policies']) ? $data['policies'] : null;
     }
 
@@ -435,6 +446,15 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
             }
             if (!is_null($this->container['endTime']) && (mb_strlen($this->container['endTime']) < 8)) {
                 $invalidProperties[] = "invalid value for 'endTime', the character length must be bigger than or equal to 8.";
+            }
+            if (!is_null($this->container['effectiveTimezone']) && (mb_strlen($this->container['effectiveTimezone']) > 16)) {
+                $invalidProperties[] = "invalid value for 'effectiveTimezone', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['effectiveTimezone']) && (mb_strlen($this->container['effectiveTimezone']) < 1)) {
+                $invalidProperties[] = "invalid value for 'effectiveTimezone', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['effectiveTimezone']) && !preg_match("/^(GMT[+-](0|0[1-9]|1[0-2]):00)$/", $this->container['effectiveTimezone'])) {
+                $invalidProperties[] = "invalid value for 'effectiveTimezone', must be conform to the pattern /^(GMT[+-](0|0[1-9]|1[0-2]):00)$/.";
             }
         return $invalidProperties;
     }
@@ -879,6 +899,30 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets effectiveTimezone
+    *  时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    *
+    * @return string|null
+    */
+    public function getEffectiveTimezone()
+    {
+        return $this->container['effectiveTimezone'];
+    }
+
+    /**
+    * Sets effectiveTimezone
+    *
+    * @param string|null $effectiveTimezone 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+    *
+    * @return $this
+    */
+    public function setEffectiveTimezone($effectiveTimezone)
+    {
+        $this->container['effectiveTimezone'] = $effectiveTimezone;
         return $this;
     }
 

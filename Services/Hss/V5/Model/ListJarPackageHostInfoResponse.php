@@ -21,8 +21,8 @@ class ListJarPackageHostInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  总数
-    * dataList  服务器列表
+    * totalNum  **参数解释** 包含该中间件的服务器总数 **取值范围**: 字符长度0-10000位
+    * dataList  **参数解释** 服务器列表
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListJarPackageHostInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  总数
-    * dataList  服务器列表
+    * totalNum  **参数解释** 包含该中间件的服务器总数 **取值范围**: 字符长度0-10000位
+    * dataList  **参数解释** 服务器列表
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListJarPackageHostInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  总数
-    * dataList  服务器列表
+    * totalNum  **参数解释** 包含该中间件的服务器总数 **取值范围**: 字符长度0-10000位
+    * dataList  **参数解释** 服务器列表
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListJarPackageHostInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  总数
-    * dataList  服务器列表
+    * totalNum  **参数解释** 包含该中间件的服务器总数 **取值范围**: 字符长度0-10000位
+    * dataList  **参数解释** 服务器列表
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListJarPackageHostInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  总数
-    * dataList  服务器列表
+    * totalNum  **参数解释** 包含该中间件的服务器总数 **取值范围**: 字符长度0-10000位
+    * dataList  **参数解释** 服务器列表
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListJarPackageHostInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  总数
+    *  **参数解释** 包含该中间件的服务器总数 **取值范围**: 字符长度0-10000位
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListJarPackageHostInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 总数
+    * @param int|null $totalNum **参数解释** 包含该中间件的服务器总数 **取值范围**: 字符长度0-10000位
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListJarPackageHostInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  服务器列表
+    *  **参数解释** 服务器列表
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\JarPackageHostInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListJarPackageHostInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\JarPackageHostInfo[]|null $dataList 服务器列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\JarPackageHostInfo[]|null $dataList **参数解释** 服务器列表
     *
     * @return $this
     */

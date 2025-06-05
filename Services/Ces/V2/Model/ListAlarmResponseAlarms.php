@@ -27,8 +27,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
-    * enabled  告警开关
-    * notificationEnabled  是否开启告警通知
+    * enabled  是否开启告警规则。true:开启，false:关闭。
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -69,8 +69,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
-    * enabled  告警开关
-    * notificationEnabled  是否开启告警通知
+    * enabled  是否开启告警规则。true:开启，false:关闭。
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -132,8 +132,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
-    * enabled  告警开关
-    * notificationEnabled  是否开启告警通知
+    * enabled  是否开启告警规则。true:开启，false:关闭。
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -174,8 +174,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
-    * enabled  告警开关
-    * notificationEnabled  是否开启告警通知
+    * enabled  是否开启告警规则。true:开启，false:关闭。
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -216,8 +216,8 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
-    * enabled  告警开关
-    * notificationEnabled  是否开启告警通知
+    * enabled  是否开启告警规则。true:开启，false:关闭。
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -598,7 +598,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  告警开关
+    *  是否开启告警规则。true:开启，false:关闭。
     *
     * @return bool|null
     */
@@ -610,7 +610,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 告警开关
+    * @param bool|null $enabled 是否开启告警规则。true:开启，false:关闭。
     *
     * @return $this
     */
@@ -622,7 +622,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEnabled
-    *  是否开启告警通知
+    *  是否开启告警通知。true:开启，false:关闭。
     *
     * @return bool|null
     */
@@ -634,7 +634,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEnabled
     *
-    * @param bool|null $notificationEnabled 是否开启告警通知
+    * @param bool|null $notificationEnabled 是否开启告警通知。true:开启，false:关闭。
     *
     * @return $this
     */

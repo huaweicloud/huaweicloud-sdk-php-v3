@@ -27,6 +27,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     * idleNum  空闲配额数
     * normalNum  正常配额数
     * expiredNum  过期配额数
+    * createTime  创建时间
     * freezeNum  冻结配额数
     * quotaStatisticsList  配额统计列表
     * totalNum  配额总数
@@ -41,6 +42,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
             'idleNum' => 'int',
             'normalNum' => 'int',
             'expiredNum' => 'int',
+            'createTime' => 'int',
             'freezeNum' => 'int',
             'quotaStatisticsList' => '\HuaweiCloud\SDK\Hss\V5\Model\QuotaStatisticsResponseInfo[]',
             'totalNum' => 'int',
@@ -55,6 +57,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     * idleNum  空闲配额数
     * normalNum  正常配额数
     * expiredNum  过期配额数
+    * createTime  创建时间
     * freezeNum  冻结配额数
     * quotaStatisticsList  配额统计列表
     * totalNum  配额总数
@@ -69,6 +72,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
         'idleNum' => 'int32',
         'normalNum' => 'int32',
         'expiredNum' => 'int32',
+        'createTime' => 'int64',
         'freezeNum' => 'int32',
         'quotaStatisticsList' => null,
         'totalNum' => 'int32',
@@ -104,6 +108,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     * idleNum  空闲配额数
     * normalNum  正常配额数
     * expiredNum  过期配额数
+    * createTime  创建时间
     * freezeNum  冻结配额数
     * quotaStatisticsList  配额统计列表
     * totalNum  配额总数
@@ -118,6 +123,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
             'idleNum' => 'idle_num',
             'normalNum' => 'normal_num',
             'expiredNum' => 'expired_num',
+            'createTime' => 'create_time',
             'freezeNum' => 'freeze_num',
             'quotaStatisticsList' => 'quota_statistics_list',
             'totalNum' => 'total_num',
@@ -132,6 +138,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     * idleNum  空闲配额数
     * normalNum  正常配额数
     * expiredNum  过期配额数
+    * createTime  创建时间
     * freezeNum  冻结配额数
     * quotaStatisticsList  配额统计列表
     * totalNum  配额总数
@@ -146,6 +153,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
             'idleNum' => 'setIdleNum',
             'normalNum' => 'setNormalNum',
             'expiredNum' => 'setExpiredNum',
+            'createTime' => 'setCreateTime',
             'freezeNum' => 'setFreezeNum',
             'quotaStatisticsList' => 'setQuotaStatisticsList',
             'totalNum' => 'setTotalNum',
@@ -160,6 +168,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     * idleNum  空闲配额数
     * normalNum  正常配额数
     * expiredNum  过期配额数
+    * createTime  创建时间
     * freezeNum  冻结配额数
     * quotaStatisticsList  配额统计列表
     * totalNum  配额总数
@@ -174,6 +183,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
             'idleNum' => 'getIdleNum',
             'normalNum' => 'getNormalNum',
             'expiredNum' => 'getExpiredNum',
+            'createTime' => 'getCreateTime',
             'freezeNum' => 'getFreezeNum',
             'quotaStatisticsList' => 'getQuotaStatisticsList',
             'totalNum' => 'getTotalNum',
@@ -244,6 +254,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
         $this->container['idleNum'] = isset($data['idleNum']) ? $data['idleNum'] : null;
         $this->container['normalNum'] = isset($data['normalNum']) ? $data['normalNum'] : null;
         $this->container['expiredNum'] = isset($data['expiredNum']) ? $data['expiredNum'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['freezeNum'] = isset($data['freezeNum']) ? $data['freezeNum'] : null;
         $this->container['quotaStatisticsList'] = isset($data['quotaStatisticsList']) ? $data['quotaStatisticsList'] : null;
         $this->container['totalNum'] = isset($data['totalNum']) ? $data['totalNum'] : null;
@@ -293,6 +304,12 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['expiredNum']) && ($this->container['expiredNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'expiredNum', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['freezeNum']) && ($this->container['freezeNum'] > 10000000)) {
                 $invalidProperties[] = "invalid value for 'freezeNum', must be smaller than or equal to 10000000.";
@@ -461,6 +478,30 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     public function setExpiredNum($expiredNum)
     {
         $this->container['expiredNum'] = $expiredNum;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  创建时间
+    *
+    * @return int|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param int|null $createTime 创建时间
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
         return $this;
     }
 

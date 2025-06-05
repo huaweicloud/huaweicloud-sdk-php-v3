@@ -30,6 +30,8 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
     * client  客户端地址。
     * description  连接描述。
     * namespace  命名空间。
+    * db  正在操作的数据库名称。
+    * user  用户名称。仅支持4.2及以上版本,如果无法显示该字段，请升级内核版本。
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
             'host' => 'string',
             'client' => 'string',
             'description' => 'string',
-            'namespace' => 'string'
+            'namespace' => 'string',
+            'db' => 'string',
+            'user' => 'string'
     ];
 
     /**
@@ -58,6 +62,8 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
     * client  客户端地址。
     * description  连接描述。
     * namespace  命名空间。
+    * db  正在操作的数据库名称。
+    * user  用户名称。仅支持4.2及以上版本,如果无法显示该字段，请升级内核版本。
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
         'host' => null,
         'client' => null,
         'description' => null,
-        'namespace' => null
+        'namespace' => null,
+        'db' => null,
+        'user' => null
     ];
 
     /**
@@ -107,6 +115,8 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
     * client  客户端地址。
     * description  连接描述。
     * namespace  命名空间。
+    * db  正在操作的数据库名称。
+    * user  用户名称。仅支持4.2及以上版本,如果无法显示该字段，请升级内核版本。
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
             'host' => 'host',
             'client' => 'client',
             'description' => 'description',
-            'namespace' => 'namespace'
+            'namespace' => 'namespace',
+            'db' => 'db',
+            'user' => 'user'
     ];
 
     /**
@@ -135,6 +147,8 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
     * client  客户端地址。
     * description  连接描述。
     * namespace  命名空间。
+    * db  正在操作的数据库名称。
+    * user  用户名称。仅支持4.2及以上版本,如果无法显示该字段，请升级内核版本。
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
             'host' => 'setHost',
             'client' => 'setClient',
             'description' => 'setDescription',
-            'namespace' => 'setNamespace'
+            'namespace' => 'setNamespace',
+            'db' => 'setDb',
+            'user' => 'setUser'
     ];
 
     /**
@@ -163,6 +179,8 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
     * client  客户端地址。
     * description  连接描述。
     * namespace  命名空间。
+    * db  正在操作的数据库名称。
+    * user  用户名称。仅支持4.2及以上版本,如果无法显示该字段，请升级内核版本。
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
             'host' => 'getHost',
             'client' => 'getClient',
             'description' => 'getDescription',
-            'namespace' => 'getNamespace'
+            'namespace' => 'getNamespace',
+            'db' => 'getDb',
+            'user' => 'getUser'
     ];
 
     /**
@@ -247,6 +267,8 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
         $this->container['client'] = isset($data['client']) ? $data['client'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
+        $this->container['db'] = isset($data['db']) ? $data['db'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
     }
 
     /**
@@ -538,6 +560,54 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
     public function setNamespace($namespace)
     {
         $this->container['namespace'] = $namespace;
+        return $this;
+    }
+
+    /**
+    * Gets db
+    *  正在操作的数据库名称。
+    *
+    * @return string|null
+    */
+    public function getDb()
+    {
+        return $this->container['db'];
+    }
+
+    /**
+    * Sets db
+    *
+    * @param string|null $db 正在操作的数据库名称。
+    *
+    * @return $this
+    */
+    public function setDb($db)
+    {
+        $this->container['db'] = $db;
+        return $this;
+    }
+
+    /**
+    * Gets user
+    *  用户名称。仅支持4.2及以上版本,如果无法显示该字段，请升级内核版本。
+    *
+    * @return string|null
+    */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+    * Sets user
+    *
+    * @param string|null $user 用户名称。仅支持4.2及以上版本,如果无法显示该字段，请升级内核版本。
+    *
+    * @return $this
+    */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
         return $this;
     }
 

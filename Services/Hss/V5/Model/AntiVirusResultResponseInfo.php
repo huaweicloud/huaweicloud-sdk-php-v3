@@ -30,7 +30,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     * resourceInfo  resourceInfo
     * eventType  事件类型
     * occurTime  发生时间，毫秒
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
     * memo  备注信息
     * operateAcceptList  支持的处理操作
@@ -70,7 +70,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     * resourceInfo  resourceInfo
     * eventType  事件类型
     * occurTime  发生时间，毫秒
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
     * memo  备注信息
     * operateAcceptList  支持的处理操作
@@ -131,7 +131,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     * resourceInfo  resourceInfo
     * eventType  事件类型
     * occurTime  发生时间，毫秒
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
     * memo  备注信息
     * operateAcceptList  支持的处理操作
@@ -171,7 +171,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     * resourceInfo  resourceInfo
     * eventType  事件类型
     * occurTime  发生时间，毫秒
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
     * memo  备注信息
     * operateAcceptList  支持的处理操作
@@ -211,7 +211,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     * resourceInfo  resourceInfo
     * eventType  事件类型
     * occurTime  发生时间，毫秒
-    * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * handleStatus  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
     * memo  备注信息
     * operateAcceptList  支持的处理操作
@@ -618,7 +618,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleStatus
-    *  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    *  处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     *
     * @return string|null
     */
@@ -630,7 +630,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets handleStatus
     *
-    * @param string|null $handleStatus 处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+    * @param string|null $handleStatus 处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
     *
     * @return $this
     */

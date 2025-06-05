@@ -49,7 +49,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
             'feature' => 'string',
             'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]',
             'elasticResourcePoolName' => 'string',
-            'properties' => '\HuaweiCloud\SDK\Dli\V1\Model\CommonQueueProperty'
+            'properties' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateQueueRequestBodyProperties'
     ];
 
     /**
@@ -602,7 +602,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     * Gets properties
     *  properties
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CommonQueueProperty|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateQueueRequestBodyProperties|null
     */
     public function getProperties()
     {
@@ -612,7 +612,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets properties
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CommonQueueProperty|null $properties properties
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateQueueRequestBodyProperties|null $properties properties
     *
     * @return $this
     */

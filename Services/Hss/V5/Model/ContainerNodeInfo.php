@@ -462,20 +462,20 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['detectResult']) && (mb_strlen($this->container['detectResult']) < 1)) {
                 $invalidProperties[] = "invalid value for 'detectResult', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['asset']) && ($this->container['asset'] > 2097152)) {
-                $invalidProperties[] = "invalid value for 'asset', must be smaller than or equal to 2097152.";
+            if (!is_null($this->container['asset']) && ($this->container['asset'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'asset', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['asset']) && ($this->container['asset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'asset', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['vulnerability']) && ($this->container['vulnerability'] > 2097152)) {
-                $invalidProperties[] = "invalid value for 'vulnerability', must be smaller than or equal to 2097152.";
+            if (!is_null($this->container['vulnerability']) && ($this->container['vulnerability'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'vulnerability', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['vulnerability']) && ($this->container['vulnerability'] < 0)) {
                 $invalidProperties[] = "invalid value for 'vulnerability', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['intrusion']) && ($this->container['intrusion'] > 2097152)) {
-                $invalidProperties[] = "invalid value for 'intrusion', must be smaller than or equal to 2097152.";
+            if (!is_null($this->container['intrusion']) && ($this->container['intrusion'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'intrusion', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['intrusion']) && ($this->container['intrusion'] < 0)) {
                 $invalidProperties[] = "invalid value for 'intrusion', must be bigger than or equal to 0.";

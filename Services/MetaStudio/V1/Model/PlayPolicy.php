@@ -26,7 +26,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * randomPlayMode  **参数解释**： 随机播报模式。 **约束限制**： 从第二轮播报开始随机。 **取值范围**： * NONE：不启动随机播报。 * SCENE：按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM：场景和段落都随机播报。
     * needIndependentCaptureClient  **参数解释**： 是否需要独立采集端。用于客户端播放与命令分离场景。 **约束限制**： 不涉及。 **取值范围**： * true：分配CAPTURE、PLAYER两个RTC用户。 * false：仅分配PLAYER一个RTC用户。
     * liveExitConfig  liveExitConfig
-    * isRewriteDelay  **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：马上生效。 * fasle：下一轮生效。 **默认取值**： false
+    * isRewriteDelay  **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：下一轮生效。 * false：马上生效。 **默认取值**： false
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * randomPlayMode  **参数解释**： 随机播报模式。 **约束限制**： 从第二轮播报开始随机。 **取值范围**： * NONE：不启动随机播报。 * SCENE：按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM：场景和段落都随机播报。
     * needIndependentCaptureClient  **参数解释**： 是否需要独立采集端。用于客户端播放与命令分离场景。 **约束限制**： 不涉及。 **取值范围**： * true：分配CAPTURE、PLAYER两个RTC用户。 * false：仅分配PLAYER一个RTC用户。
     * liveExitConfig  liveExitConfig
-    * isRewriteDelay  **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：马上生效。 * fasle：下一轮生效。 **默认取值**： false
+    * isRewriteDelay  **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：下一轮生效。 * false：马上生效。 **默认取值**： false
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * randomPlayMode  **参数解释**： 随机播报模式。 **约束限制**： 从第二轮播报开始随机。 **取值范围**： * NONE：不启动随机播报。 * SCENE：按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM：场景和段落都随机播报。
     * needIndependentCaptureClient  **参数解释**： 是否需要独立采集端。用于客户端播放与命令分离场景。 **约束限制**： 不涉及。 **取值范围**： * true：分配CAPTURE、PLAYER两个RTC用户。 * false：仅分配PLAYER一个RTC用户。
     * liveExitConfig  liveExitConfig
-    * isRewriteDelay  **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：马上生效。 * fasle：下一轮生效。 **默认取值**： false
+    * isRewriteDelay  **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：下一轮生效。 * false：马上生效。 **默认取值**： false
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * randomPlayMode  **参数解释**： 随机播报模式。 **约束限制**： 从第二轮播报开始随机。 **取值范围**： * NONE：不启动随机播报。 * SCENE：按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM：场景和段落都随机播报。
     * needIndependentCaptureClient  **参数解释**： 是否需要独立采集端。用于客户端播放与命令分离场景。 **约束限制**： 不涉及。 **取值范围**： * true：分配CAPTURE、PLAYER两个RTC用户。 * false：仅分配PLAYER一个RTC用户。
     * liveExitConfig  liveExitConfig
-    * isRewriteDelay  **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：马上生效。 * fasle：下一轮生效。 **默认取值**： false
+    * isRewriteDelay  **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：下一轮生效。 * false：马上生效。 **默认取值**： false
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * randomPlayMode  **参数解释**： 随机播报模式。 **约束限制**： 从第二轮播报开始随机。 **取值范围**： * NONE：不启动随机播报。 * SCENE：按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM：场景和段落都随机播报。
     * needIndependentCaptureClient  **参数解释**： 是否需要独立采集端。用于客户端播放与命令分离场景。 **约束限制**： 不涉及。 **取值范围**： * true：分配CAPTURE、PLAYER两个RTC用户。 * false：仅分配PLAYER一个RTC用户。
     * liveExitConfig  liveExitConfig
-    * isRewriteDelay  **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：马上生效。 * fasle：下一轮生效。 **默认取值**： false
+    * isRewriteDelay  **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：下一轮生效。 * false：马上生效。 **默认取值**： false
     *
     * @var string[]
     */
@@ -454,7 +454,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets isRewriteDelay
-    *  **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：马上生效。 * fasle：下一轮生效。 **默认取值**： false
+    *  **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：下一轮生效。 * false：马上生效。 **默认取值**： false
     *
     * @return bool|null
     */
@@ -466,7 +466,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets isRewriteDelay
     *
-    * @param bool|null $isRewriteDelay **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：马上生效。 * fasle：下一轮生效。 **默认取值**： false
+    * @param bool|null $isRewriteDelay **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：下一轮生效。 * false：马上生效。 **默认取值**： false
     *
     * @return $this
     */

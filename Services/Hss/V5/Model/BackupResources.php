@@ -20,7 +20,7 @@ class BackupResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vaultId  选择需要绑定的存储库ID，不为空
+    * vaultId  **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     * resourceList  需要开启备份功能的主机情况列表
     *
     * @var string[]
@@ -32,7 +32,7 @@ class BackupResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vaultId  选择需要绑定的存储库ID，不为空
+    * vaultId  **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     * resourceList  需要开启备份功能的主机情况列表
     *
     * @var string[]
@@ -65,7 +65,7 @@ class BackupResources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vaultId  选择需要绑定的存储库ID，不为空
+    * vaultId  **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     * resourceList  需要开启备份功能的主机情况列表
     *
     * @var string[]
@@ -77,7 +77,7 @@ class BackupResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vaultId  选择需要绑定的存储库ID，不为空
+    * vaultId  **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     * resourceList  需要开启备份功能的主机情况列表
     *
     * @var string[]
@@ -89,7 +89,7 @@ class BackupResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vaultId  选择需要绑定的存储库ID，不为空
+    * vaultId  **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     * resourceList  需要开启备份功能的主机情况列表
     *
     * @var string[]
@@ -191,7 +191,7 @@ class BackupResources implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultId
-    *  选择需要绑定的存储库ID，不为空
+    *  **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -203,7 +203,7 @@ class BackupResources implements ModelInterface, ArrayAccess
     /**
     * Sets vaultId
     *
-    * @param string|null $vaultId 选择需要绑定的存储库ID，不为空
+    * @param string|null $vaultId **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -194,8 +194,8 @@ class ListBackupVaultsRequest implements ModelInterface, ArrayAccess
         if ($this->container['offset'] === null) {
             $invalidProperties[] = "'offset' can't be null";
         }
-            if (($this->container['offset'] > 100000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 100000.";
+            if (($this->container['offset'] > 2000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
             }
             if (($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";

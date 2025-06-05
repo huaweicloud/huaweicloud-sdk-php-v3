@@ -33,7 +33,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * ignoreDir  排除目录，多个用;分隔
     * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * hostInfoList  主机信息
     * whetherPaidTask  此次扫描任务是否付费
     * fileTypeList  文件类型集合型
@@ -75,7 +75,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * ignoreDir  排除目录，多个用;分隔
     * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * hostInfoList  主机信息
     * whetherPaidTask  此次扫描任务是否付费
     * fileTypeList  文件类型集合型
@@ -138,7 +138,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * ignoreDir  排除目录，多个用;分隔
     * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * hostInfoList  主机信息
     * whetherPaidTask  此次扫描任务是否付费
     * fileTypeList  文件类型集合型
@@ -180,7 +180,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * ignoreDir  排除目录，多个用;分隔
     * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * hostInfoList  主机信息
     * whetherPaidTask  此次扫描任务是否付费
     * fileTypeList  文件类型集合型
@@ -222,7 +222,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * ignoreDir  排除目录，多个用;分隔
     * action  处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * hostInfoList  主机信息
     * whetherPaidTask  此次扫描任务是否付费
     * fileTypeList  文件类型集合型
@@ -334,14 +334,20 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['policyId']) && (mb_strlen($this->container['policyId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'policyId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['policyId']) && (mb_strlen($this->container['policyId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'policyId', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['policyId']) && !preg_match("/^.*$/", $this->container['policyId'])) {
                 $invalidProperties[] = "invalid value for 'policyId', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) > 50)) {
-                $invalidProperties[] = "invalid value for 'policyName', the character length must be smaller than or equal to 50.";
+            if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'policyName', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'policyName', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'policyName', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['policyName']) && !preg_match("/^.*$/", $this->container['policyName'])) {
                 $invalidProperties[] = "invalid value for 'policyName', must be conform to the pattern /^.*$/.";
@@ -725,7 +731,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  关联服务器数
+    *  影响主机数量
     *
     * @return int|null
     */
@@ -737,7 +743,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 关联服务器数
+    * @param int|null $hostNum 影响主机数量
     *
     * @return $this
     */

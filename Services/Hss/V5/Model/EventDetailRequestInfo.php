@@ -21,7 +21,7 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * agentId  Agent ID
-    * processPid  进程id
+    * processPid  进程ID
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -53,7 +53,7 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * agentId  Agent ID
-    * processPid  进程id
+    * processPid  进程ID
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -106,7 +106,7 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * agentId  Agent ID
-    * processPid  进程id
+    * processPid  进程ID
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -138,7 +138,7 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * agentId  Agent ID
-    * processPid  进程id
+    * processPid  进程ID
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -170,7 +170,7 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * agentId  Agent ID
-    * processPid  进程id
+    * processPid  进程ID
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -303,8 +303,8 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hash']) && !preg_match("/^.*$/", $this->container['hash'])) {
                 $invalidProperties[] = "invalid value for 'hash', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 256)) {
-                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 128)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 1.";
@@ -321,8 +321,8 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) < 64)) {
-                $invalidProperties[] = "invalid value for 'containerId', the character length must be bigger than or equal to 64.";
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'containerName', the character length must be smaller than or equal to 128.";
@@ -370,7 +370,7 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processPid
-    *  进程id
+    *  进程ID
     *
     * @return int|null
     */
@@ -382,7 +382,7 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processPid
     *
-    * @param int|null $processPid 进程id
+    * @param int|null $processPid 进程ID
     *
     * @return $this
     */

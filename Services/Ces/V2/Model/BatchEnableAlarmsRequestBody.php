@@ -21,7 +21,7 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * alarmIds  需要批量启停的告警规则的ID列表
-    * alarmEnabled  告警开关
+    * alarmEnabled  是否开启告警规则。true:开启，false:关闭。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * alarmIds  需要批量启停的告警规则的ID列表
-    * alarmEnabled  告警开关
+    * alarmEnabled  是否开启告警规则。true:开启，false:关闭。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * alarmIds  需要批量启停的告警规则的ID列表
-    * alarmEnabled  告警开关
+    * alarmEnabled  是否开启告警规则。true:开启，false:关闭。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * alarmIds  需要批量启停的告警规则的ID列表
-    * alarmEnabled  告警开关
+    * alarmEnabled  是否开启告警规则。true:开启，false:关闭。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * alarmIds  需要批量启停的告警规则的ID列表
-    * alarmEnabled  告警开关
+    * alarmEnabled  是否开启告警规则。true:开启，false:关闭。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmEnabled
-    *  告警开关
+    *  是否开启告警规则。true:开启，false:关闭。
     *
     * @return bool
     */
@@ -227,7 +227,7 @@ class BatchEnableAlarmsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmEnabled
     *
-    * @param bool $alarmEnabled 告警开关
+    * @param bool $alarmEnabled 是否开启告警规则。true:开启，false:关闭。
     *
     * @return $this
     */

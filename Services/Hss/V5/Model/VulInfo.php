@@ -59,7 +59,7 @@ class VulInfo implements ModelInterface, ArrayAccess
             'description' => 'string',
             'type' => 'string',
             'hostIdList' => 'string[]',
-            'cveList' => '\HuaweiCloud\SDK\Hss\V5\Model\VulInfoCveList[]',
+            'cveList' => '\HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataResponseInfoCveList[]',
             'patchUrl' => 'string',
             'repairPriority' => 'string',
             'hostsNum' => '\HuaweiCloud\SDK\Hss\V5\Model\VulnerabilityHostNumberInfo',
@@ -821,7 +821,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     * Gets cveList
     *  CVE列表
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\VulInfoCveList[]|null
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataResponseInfoCveList[]|null
     */
     public function getCveList()
     {
@@ -831,7 +831,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cveList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulInfoCveList[]|null $cveList CVE列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataResponseInfoCveList[]|null $cveList CVE列表
     *
     * @return $this
     */

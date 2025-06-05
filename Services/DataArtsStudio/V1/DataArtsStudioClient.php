@@ -10461,6 +10461,71 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 空间资产目录树(邀测)
+     *
+     * 获取某空间下资产目录树。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCategoriesTree($request)
+    {
+        return $this->listCategoriesTreeWithHttpInfo($request);
+    }
+
+    public function listCategoriesTreeWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/datamap/categories/workspace/{workspace_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instance'] !== null) {
+            $headerParams[$arr['instance']] = $localVarParams['instance'];
+        }
+        if ($localVarParams['workspaceId'] !== null) {
+            $pathParams['workspace_id'] = $localVarParams['workspaceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListCategoriesTreeResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListCategoriesTreeRequest');
+    }
+
+    /**
      * 获取作业目录
      *
      * 获取作业目录
@@ -12035,6 +12100,71 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 批量获取资产信息(邀测)
+     *
+     * 批量获取资产信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listEntityDetails($request)
+    {
+        return $this->listEntityDetailsWithHttpInfo($request);
+    }
+
+    public function listEntityDetailsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/datamap/entities/guids';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instance'] !== null) {
+            $headerParams[$arr['instance']] = $localVarParams['instance'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListEntityDetailsResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListEntityDetailsRequest');
+    }
+
+    /**
      * 查找事实表
      *
      * 通过中英文名称、创建者、审核人、状态、修改时间分页查找事实表信息。
@@ -12820,6 +12950,71 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListInstancesResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListInstancesRequest');
+    }
+
+    /**
+     * 获取目录下逻辑实体(邀测)
+     *
+     * 获取主题目录下逻辑实体。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLogicEntities($request)
+    {
+        return $this->listLogicEntitiesWithHttpInfo($request);
+    }
+
+    public function listLogicEntitiesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/datamap/logicentitys/guid/{guid}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instance'] !== null) {
+            $headerParams[$arr['instance']] = $localVarParams['instance'];
+        }
+        if ($localVarParams['guid'] !== null) {
+            $pathParams['guid'] = $localVarParams['guid'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListLogicEntitiesResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListLogicEntitiesRequest');
     }
 
     /**

@@ -208,6 +208,12 @@ class OperateEventRequestInfo implements ModelInterface, ArrayAccess
         if ($this->container['eventId'] === null) {
             $invalidProperties[] = "'eventId' can't be null";
         }
+            if ((mb_strlen($this->container['eventId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'eventId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['eventId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'eventId', the character length must be bigger than or equal to 1.";
+            }
             if (!preg_match("/^.*$/", $this->container['eventId'])) {
                 $invalidProperties[] = "invalid value for 'eventId', must be conform to the pattern /^.*$/.";
             }

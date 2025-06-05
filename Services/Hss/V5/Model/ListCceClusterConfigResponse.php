@@ -22,7 +22,7 @@ class ListCceClusterConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * totalNum  配置总数
-    * dataList  data list
+    * dataList  配置信息列表
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListCceClusterConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * totalNum  配置总数
-    * dataList  data list
+    * dataList  配置信息列表
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListCceClusterConfigResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * totalNum  配置总数
-    * dataList  data list
+    * dataList  配置信息列表
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListCceClusterConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * totalNum  配置总数
-    * dataList  data list
+    * dataList  配置信息列表
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListCceClusterConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * totalNum  配置总数
-    * dataList  data list
+    * dataList  配置信息列表
     *
     * @var string[]
     */
@@ -216,7 +216,7 @@ class ListCceClusterConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  data list
+    *  配置信息列表
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\ClusterConfigResponseInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListCceClusterConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ClusterConfigResponseInfo[]|null $dataList data list
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ClusterConfigResponseInfo[]|null $dataList 配置信息列表
     *
     * @return $this
     */

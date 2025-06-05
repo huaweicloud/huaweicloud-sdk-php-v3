@@ -26,11 +26,13 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
     * filter  聚合方式, 支持的值为(average|min|max|sum)
     * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
     * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。](tag: dt,g42,dt_test,hk_g42,hk_sbc,hws,hws_hk,ocb,sbc,tm)
+    * hierarchicalValue  hierarchicalValue
     * unit  数据的单位。
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  suppressDuration
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
-    * enabled  开关
+    * enabled  是否启用告警策略。true:开启，false:关闭。
+    * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
     *
     * @var string[]
     */
@@ -41,11 +43,13 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
             'filter' => 'string',
             'comparisonOperator' => 'string',
             'value' => 'double',
+            'hierarchicalValue' => '\HuaweiCloud\SDK\Ces\V2\Model\HierarchicalValue',
             'unit' => 'string',
             'count' => 'int',
             'suppressDuration' => '\HuaweiCloud\SDK\Ces\V2\Model\SuppressDuration',
             'level' => 'int',
-            'enabled' => 'bool'
+            'enabled' => 'bool',
+            'selectedUnit' => 'string'
     ];
 
     /**
@@ -56,11 +60,13 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
     * filter  聚合方式, 支持的值为(average|min|max|sum)
     * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
     * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。](tag: dt,g42,dt_test,hk_g42,hk_sbc,hws,hws_hk,ocb,sbc,tm)
+    * hierarchicalValue  hierarchicalValue
     * unit  数据的单位。
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  suppressDuration
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
-    * enabled  开关
+    * enabled  是否启用告警策略。true:开启，false:关闭。
+    * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
     *
     * @var string[]
     */
@@ -71,11 +77,13 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
         'filter' => null,
         'comparisonOperator' => null,
         'value' => 'double',
+        'hierarchicalValue' => null,
         'unit' => null,
         'count' => 'int32',
         'suppressDuration' => null,
         'level' => null,
-        'enabled' => null
+        'enabled' => null,
+        'selectedUnit' => null
     ];
 
     /**
@@ -107,11 +115,13 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
     * filter  聚合方式, 支持的值为(average|min|max|sum)
     * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
     * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。](tag: dt,g42,dt_test,hk_g42,hk_sbc,hws,hws_hk,ocb,sbc,tm)
+    * hierarchicalValue  hierarchicalValue
     * unit  数据的单位。
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  suppressDuration
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
-    * enabled  开关
+    * enabled  是否启用告警策略。true:开启，false:关闭。
+    * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
     *
     * @var string[]
     */
@@ -122,11 +132,13 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
             'filter' => 'filter',
             'comparisonOperator' => 'comparison_operator',
             'value' => 'value',
+            'hierarchicalValue' => 'hierarchical_value',
             'unit' => 'unit',
             'count' => 'count',
             'suppressDuration' => 'suppress_duration',
             'level' => 'level',
-            'enabled' => 'enabled'
+            'enabled' => 'enabled',
+            'selectedUnit' => 'selected_unit'
     ];
 
     /**
@@ -137,11 +149,13 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
     * filter  聚合方式, 支持的值为(average|min|max|sum)
     * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
     * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。](tag: dt,g42,dt_test,hk_g42,hk_sbc,hws,hws_hk,ocb,sbc,tm)
+    * hierarchicalValue  hierarchicalValue
     * unit  数据的单位。
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  suppressDuration
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
-    * enabled  开关
+    * enabled  是否启用告警策略。true:开启，false:关闭。
+    * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
     *
     * @var string[]
     */
@@ -152,11 +166,13 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
             'filter' => 'setFilter',
             'comparisonOperator' => 'setComparisonOperator',
             'value' => 'setValue',
+            'hierarchicalValue' => 'setHierarchicalValue',
             'unit' => 'setUnit',
             'count' => 'setCount',
             'suppressDuration' => 'setSuppressDuration',
             'level' => 'setLevel',
-            'enabled' => 'setEnabled'
+            'enabled' => 'setEnabled',
+            'selectedUnit' => 'setSelectedUnit'
     ];
 
     /**
@@ -167,11 +183,13 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
     * filter  聚合方式, 支持的值为(average|min|max|sum)
     * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
     * value  告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。取值范围[0, Number.MAX_VALUE]，Number.MAX_VALUE值为1.7976931348623157e+108。具体阈值取值请参见附录中各服务监控指标中取值范围，如支持监控的服务列表中ECS的CPU使用率cpu_util取值范围可配置80。 [具体阈值取值请参见附录中各服务监控指标中取值范围，如[支持监控的服务列表](ces_03_0059.xml)中ECS的CPU使用率cpu_util取值范围可配置80。](tag: dt,g42,dt_test,hk_g42,hk_sbc,hws,hws_hk,ocb,sbc,tm)
+    * hierarchicalValue  hierarchicalValue
     * unit  数据的单位。
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  suppressDuration
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
-    * enabled  开关
+    * enabled  是否启用告警策略。true:开启，false:关闭。
+    * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
     *
     * @var string[]
     */
@@ -182,11 +200,13 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
             'filter' => 'getFilter',
             'comparisonOperator' => 'getComparisonOperator',
             'value' => 'getValue',
+            'hierarchicalValue' => 'getHierarchicalValue',
             'unit' => 'getUnit',
             'count' => 'getCount',
             'suppressDuration' => 'getSuppressDuration',
             'level' => 'getLevel',
-            'enabled' => 'getEnabled'
+            'enabled' => 'getEnabled',
+            'selectedUnit' => 'getSelectedUnit'
     ];
 
     /**
@@ -253,11 +273,13 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
         $this->container['comparisonOperator'] = isset($data['comparisonOperator']) ? $data['comparisonOperator'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['hierarchicalValue'] = isset($data['hierarchicalValue']) ? $data['hierarchicalValue'] : null;
         $this->container['unit'] = isset($data['unit']) ? $data['unit'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['suppressDuration'] = isset($data['suppressDuration']) ? $data['suppressDuration'] : null;
         $this->container['level'] = isset($data['level']) ? $data['level'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
+        $this->container['selectedUnit'] = isset($data['selectedUnit']) ? $data['selectedUnit'] : null;
     }
 
     /**
@@ -340,6 +362,12 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
         if ($this->container['enabled'] === null) {
             $invalidProperties[] = "'enabled' can't be null";
         }
+            if (!is_null($this->container['selectedUnit']) && (mb_strlen($this->container['selectedUnit']) > 64)) {
+                $invalidProperties[] = "invalid value for 'selectedUnit', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['selectedUnit']) && (mb_strlen($this->container['selectedUnit']) < 0)) {
+                $invalidProperties[] = "invalid value for 'selectedUnit', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -499,6 +527,30 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets hierarchicalValue
+    *  hierarchicalValue
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\HierarchicalValue|null
+    */
+    public function getHierarchicalValue()
+    {
+        return $this->container['hierarchicalValue'];
+    }
+
+    /**
+    * Sets hierarchicalValue
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\HierarchicalValue|null $hierarchicalValue hierarchicalValue
+    *
+    * @return $this
+    */
+    public function setHierarchicalValue($hierarchicalValue)
+    {
+        $this->container['hierarchicalValue'] = $hierarchicalValue;
+        return $this;
+    }
+
+    /**
     * Gets unit
     *  数据的单位。
     *
@@ -596,7 +648,7 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  开关
+    *  是否启用告警策略。true:开启，false:关闭。
     *
     * @return bool
     */
@@ -608,13 +660,37 @@ class OneClickAlarmPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool $enabled 开关
+    * @param bool $enabled 是否启用告警策略。true:开启，false:关闭。
     *
     * @return $this
     */
     public function setEnabled($enabled)
     {
         $this->container['enabled'] = $enabled;
+        return $this;
+    }
+
+    /**
+    * Gets selectedUnit
+    *  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
+    *
+    * @return string|null
+    */
+    public function getSelectedUnit()
+    {
+        return $this->container['selectedUnit'];
+    }
+
+    /**
+    * Sets selectedUnit
+    *
+    * @param string|null $selectedUnit 用户在页面中选择的指标单位， 用于后续指标数据回显和计算
+    *
+    * @return $this
+    */
+    public function setSelectedUnit($selectedUnit)
+    {
+        $this->container['selectedUnit'] = $selectedUnit;
         return $this;
     }
 

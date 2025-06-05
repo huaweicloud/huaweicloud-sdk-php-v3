@@ -21,7 +21,7 @@ class ListVulHandleHistoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dataList  列表
+    * dataList  详情
     * totalNum  总数
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListVulHandleHistoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dataList  列表
+    * dataList  详情
     * totalNum  总数
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListVulHandleHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dataList  列表
+    * dataList  详情
     * totalNum  总数
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListVulHandleHistoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dataList  列表
+    * dataList  详情
     * totalNum  总数
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListVulHandleHistoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dataList  列表
+    * dataList  详情
     * totalNum  总数
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListVulHandleHistoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  列表
+    *  详情
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\VulhandleHistoryResponseInfoDataList[]|null
     */
@@ -198,7 +198,7 @@ class ListVulHandleHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulhandleHistoryResponseInfoDataList[]|null $dataList 列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulhandleHistoryResponseInfoDataList[]|null $dataList 详情
     *
     * @return $this
     */

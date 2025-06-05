@@ -30,6 +30,12 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     * lowercaseLetter  小写字母的设置是否符合要求，符合为true，不符合为false
     * number  数字的设置是否符合要求，符合为true，不符合为false
     * specialCharacter  特殊字符的设置是否符合要求，符合为true，不符合为false
+    * minLengthNum  复杂口令策略中定义的口令最小长度
+    * minUppercaseLetter  复杂口令策略中定义的最少包含的大写字母数
+    * minLowercaseLetter  复杂口令策略中定义的最少包含的小写字母数
+    * minNumber  复杂口令策略中定义的最少包含的数字数
+    * minSpecialCharacter  复杂口令策略中定义的最少包含的特殊字母数
+    * updateTime  最近扫描时间
     * suggestion  修改建议
     *
     * @var string[]
@@ -45,6 +51,12 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
             'lowercaseLetter' => 'bool',
             'number' => 'bool',
             'specialCharacter' => 'bool',
+            'minLengthNum' => 'int',
+            'minUppercaseLetter' => 'int',
+            'minLowercaseLetter' => 'int',
+            'minNumber' => 'int',
+            'minSpecialCharacter' => 'int',
+            'updateTime' => 'int',
             'suggestion' => 'string'
     ];
 
@@ -60,6 +72,12 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     * lowercaseLetter  小写字母的设置是否符合要求，符合为true，不符合为false
     * number  数字的设置是否符合要求，符合为true，不符合为false
     * specialCharacter  特殊字符的设置是否符合要求，符合为true，不符合为false
+    * minLengthNum  复杂口令策略中定义的口令最小长度
+    * minUppercaseLetter  复杂口令策略中定义的最少包含的大写字母数
+    * minLowercaseLetter  复杂口令策略中定义的最少包含的小写字母数
+    * minNumber  复杂口令策略中定义的最少包含的数字数
+    * minSpecialCharacter  复杂口令策略中定义的最少包含的特殊字母数
+    * updateTime  最近扫描时间
     * suggestion  修改建议
     *
     * @var string[]
@@ -75,6 +93,12 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
         'lowercaseLetter' => null,
         'number' => null,
         'specialCharacter' => null,
+        'minLengthNum' => null,
+        'minUppercaseLetter' => null,
+        'minLowercaseLetter' => null,
+        'minNumber' => null,
+        'minSpecialCharacter' => null,
+        'updateTime' => 'int64',
         'suggestion' => null
     ];
 
@@ -111,6 +135,12 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     * lowercaseLetter  小写字母的设置是否符合要求，符合为true，不符合为false
     * number  数字的设置是否符合要求，符合为true，不符合为false
     * specialCharacter  特殊字符的设置是否符合要求，符合为true，不符合为false
+    * minLengthNum  复杂口令策略中定义的口令最小长度
+    * minUppercaseLetter  复杂口令策略中定义的最少包含的大写字母数
+    * minLowercaseLetter  复杂口令策略中定义的最少包含的小写字母数
+    * minNumber  复杂口令策略中定义的最少包含的数字数
+    * minSpecialCharacter  复杂口令策略中定义的最少包含的特殊字母数
+    * updateTime  最近扫描时间
     * suggestion  修改建议
     *
     * @var string[]
@@ -126,6 +156,12 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
             'lowercaseLetter' => 'lowercase_letter',
             'number' => 'number',
             'specialCharacter' => 'special_character',
+            'minLengthNum' => 'min_length_num',
+            'minUppercaseLetter' => 'min_uppercase_letter',
+            'minLowercaseLetter' => 'min_lowercase_letter',
+            'minNumber' => 'min_number',
+            'minSpecialCharacter' => 'min_special_character',
+            'updateTime' => 'update_time',
             'suggestion' => 'suggestion'
     ];
 
@@ -141,6 +177,12 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     * lowercaseLetter  小写字母的设置是否符合要求，符合为true，不符合为false
     * number  数字的设置是否符合要求，符合为true，不符合为false
     * specialCharacter  特殊字符的设置是否符合要求，符合为true，不符合为false
+    * minLengthNum  复杂口令策略中定义的口令最小长度
+    * minUppercaseLetter  复杂口令策略中定义的最少包含的大写字母数
+    * minLowercaseLetter  复杂口令策略中定义的最少包含的小写字母数
+    * minNumber  复杂口令策略中定义的最少包含的数字数
+    * minSpecialCharacter  复杂口令策略中定义的最少包含的特殊字母数
+    * updateTime  最近扫描时间
     * suggestion  修改建议
     *
     * @var string[]
@@ -156,6 +198,12 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
             'lowercaseLetter' => 'setLowercaseLetter',
             'number' => 'setNumber',
             'specialCharacter' => 'setSpecialCharacter',
+            'minLengthNum' => 'setMinLengthNum',
+            'minUppercaseLetter' => 'setMinUppercaseLetter',
+            'minLowercaseLetter' => 'setMinLowercaseLetter',
+            'minNumber' => 'setMinNumber',
+            'minSpecialCharacter' => 'setMinSpecialCharacter',
+            'updateTime' => 'setUpdateTime',
             'suggestion' => 'setSuggestion'
     ];
 
@@ -171,6 +219,12 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     * lowercaseLetter  小写字母的设置是否符合要求，符合为true，不符合为false
     * number  数字的设置是否符合要求，符合为true，不符合为false
     * specialCharacter  特殊字符的设置是否符合要求，符合为true，不符合为false
+    * minLengthNum  复杂口令策略中定义的口令最小长度
+    * minUppercaseLetter  复杂口令策略中定义的最少包含的大写字母数
+    * minLowercaseLetter  复杂口令策略中定义的最少包含的小写字母数
+    * minNumber  复杂口令策略中定义的最少包含的数字数
+    * minSpecialCharacter  复杂口令策略中定义的最少包含的特殊字母数
+    * updateTime  最近扫描时间
     * suggestion  修改建议
     *
     * @var string[]
@@ -186,6 +240,12 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
             'lowercaseLetter' => 'getLowercaseLetter',
             'number' => 'getNumber',
             'specialCharacter' => 'getSpecialCharacter',
+            'minLengthNum' => 'getMinLengthNum',
+            'minUppercaseLetter' => 'getMinUppercaseLetter',
+            'minLowercaseLetter' => 'getMinLowercaseLetter',
+            'minNumber' => 'getMinNumber',
+            'minSpecialCharacter' => 'getMinSpecialCharacter',
+            'updateTime' => 'getUpdateTime',
             'suggestion' => 'getSuggestion'
     ];
 
@@ -257,6 +317,12 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
         $this->container['lowercaseLetter'] = isset($data['lowercaseLetter']) ? $data['lowercaseLetter'] : null;
         $this->container['number'] = isset($data['number']) ? $data['number'] : null;
         $this->container['specialCharacter'] = isset($data['specialCharacter']) ? $data['specialCharacter'] : null;
+        $this->container['minLengthNum'] = isset($data['minLengthNum']) ? $data['minLengthNum'] : null;
+        $this->container['minUppercaseLetter'] = isset($data['minUppercaseLetter']) ? $data['minUppercaseLetter'] : null;
+        $this->container['minLowercaseLetter'] = isset($data['minLowercaseLetter']) ? $data['minLowercaseLetter'] : null;
+        $this->container['minNumber'] = isset($data['minNumber']) ? $data['minNumber'] : null;
+        $this->container['minSpecialCharacter'] = isset($data['minSpecialCharacter']) ? $data['minSpecialCharacter'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['suggestion'] = isset($data['suggestion']) ? $data['suggestion'] : null;
     }
 
@@ -297,6 +363,12 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 0)) {
                 $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['suggestion']) && (mb_strlen($this->container['suggestion']) > 65534)) {
                 $invalidProperties[] = "invalid value for 'suggestion', the character length must be smaller than or equal to 65534.";
@@ -555,6 +627,150 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     public function setSpecialCharacter($specialCharacter)
     {
         $this->container['specialCharacter'] = $specialCharacter;
+        return $this;
+    }
+
+    /**
+    * Gets minLengthNum
+    *  复杂口令策略中定义的口令最小长度
+    *
+    * @return int|null
+    */
+    public function getMinLengthNum()
+    {
+        return $this->container['minLengthNum'];
+    }
+
+    /**
+    * Sets minLengthNum
+    *
+    * @param int|null $minLengthNum 复杂口令策略中定义的口令最小长度
+    *
+    * @return $this
+    */
+    public function setMinLengthNum($minLengthNum)
+    {
+        $this->container['minLengthNum'] = $minLengthNum;
+        return $this;
+    }
+
+    /**
+    * Gets minUppercaseLetter
+    *  复杂口令策略中定义的最少包含的大写字母数
+    *
+    * @return int|null
+    */
+    public function getMinUppercaseLetter()
+    {
+        return $this->container['minUppercaseLetter'];
+    }
+
+    /**
+    * Sets minUppercaseLetter
+    *
+    * @param int|null $minUppercaseLetter 复杂口令策略中定义的最少包含的大写字母数
+    *
+    * @return $this
+    */
+    public function setMinUppercaseLetter($minUppercaseLetter)
+    {
+        $this->container['minUppercaseLetter'] = $minUppercaseLetter;
+        return $this;
+    }
+
+    /**
+    * Gets minLowercaseLetter
+    *  复杂口令策略中定义的最少包含的小写字母数
+    *
+    * @return int|null
+    */
+    public function getMinLowercaseLetter()
+    {
+        return $this->container['minLowercaseLetter'];
+    }
+
+    /**
+    * Sets minLowercaseLetter
+    *
+    * @param int|null $minLowercaseLetter 复杂口令策略中定义的最少包含的小写字母数
+    *
+    * @return $this
+    */
+    public function setMinLowercaseLetter($minLowercaseLetter)
+    {
+        $this->container['minLowercaseLetter'] = $minLowercaseLetter;
+        return $this;
+    }
+
+    /**
+    * Gets minNumber
+    *  复杂口令策略中定义的最少包含的数字数
+    *
+    * @return int|null
+    */
+    public function getMinNumber()
+    {
+        return $this->container['minNumber'];
+    }
+
+    /**
+    * Sets minNumber
+    *
+    * @param int|null $minNumber 复杂口令策略中定义的最少包含的数字数
+    *
+    * @return $this
+    */
+    public function setMinNumber($minNumber)
+    {
+        $this->container['minNumber'] = $minNumber;
+        return $this;
+    }
+
+    /**
+    * Gets minSpecialCharacter
+    *  复杂口令策略中定义的最少包含的特殊字母数
+    *
+    * @return int|null
+    */
+    public function getMinSpecialCharacter()
+    {
+        return $this->container['minSpecialCharacter'];
+    }
+
+    /**
+    * Sets minSpecialCharacter
+    *
+    * @param int|null $minSpecialCharacter 复杂口令策略中定义的最少包含的特殊字母数
+    *
+    * @return $this
+    */
+    public function setMinSpecialCharacter($minSpecialCharacter)
+    {
+        $this->container['minSpecialCharacter'] = $minSpecialCharacter;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  最近扫描时间
+    *
+    * @return int|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param int|null $updateTime 最近扫描时间
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
         return $this;
     }
 

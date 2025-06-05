@@ -20,7 +20,7 @@ class VulCveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cveId  cve id
+    * cveId  cve ID
     * cvss  cve评分
     * vulId  漏洞ID
     *
@@ -34,7 +34,7 @@ class VulCveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cveId  cve id
+    * cveId  cve ID
     * cvss  cve评分
     * vulId  漏洞ID
     *
@@ -69,7 +69,7 @@ class VulCveInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cveId  cve id
+    * cveId  cve ID
     * cvss  cve评分
     * vulId  漏洞ID
     *
@@ -83,7 +83,7 @@ class VulCveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cveId  cve id
+    * cveId  cve ID
     * cvss  cve评分
     * vulId  漏洞ID
     *
@@ -97,7 +97,7 @@ class VulCveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cveId  cve id
+    * cveId  cve ID
     * cvss  cve评分
     * vulId  漏洞ID
     *
@@ -214,7 +214,7 @@ class VulCveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cveId
-    *  cve id
+    *  cve ID
     *
     * @return string|null
     */
@@ -226,7 +226,7 @@ class VulCveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cveId
     *
-    * @param string|null $cveId cve id
+    * @param string|null $cveId cve ID
     *
     * @return $this
     */

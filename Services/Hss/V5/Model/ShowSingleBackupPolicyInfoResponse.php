@@ -21,10 +21,10 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enabled  策略是否启用
-    * id  策略ID
-    * name  策略名称
-    * operationType  备份类型。当前包含如下1种。   - backup ：备份
+    * enabled  **参数解释**: 策略是否启用 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * id  **参数解释**: 策略ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+    * name  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+    * operationType  **参数解释**: 备份类型。当前包含如下1种。   - backup ：备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -41,10 +41,10 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enabled  策略是否启用
-    * id  策略ID
-    * name  策略名称
-    * operationType  备份类型。当前包含如下1种。   - backup ：备份
+    * enabled  **参数解释**: 策略是否启用 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * id  **参数解释**: 策略ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+    * name  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+    * operationType  **参数解释**: 备份类型。当前包含如下1种。   - backup ：备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -82,10 +82,10 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enabled  策略是否启用
-    * id  策略ID
-    * name  策略名称
-    * operationType  备份类型。当前包含如下1种。   - backup ：备份
+    * enabled  **参数解释**: 策略是否启用 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * id  **参数解释**: 策略ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+    * name  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+    * operationType  **参数解释**: 备份类型。当前包含如下1种。   - backup ：备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -102,10 +102,10 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enabled  策略是否启用
-    * id  策略ID
-    * name  策略名称
-    * operationType  备份类型。当前包含如下1种。   - backup ：备份
+    * enabled  **参数解释**: 策略是否启用 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * id  **参数解释**: 策略ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+    * name  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+    * operationType  **参数解释**: 备份类型。当前包含如下1种。   - backup ：备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -122,10 +122,10 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enabled  策略是否启用
-    * id  策略ID
-    * name  策略名称
-    * operationType  备份类型。当前包含如下1种。   - backup ：备份
+    * enabled  **参数解释**: 策略是否启用 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+    * id  **参数解释**: 策略ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+    * name  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+    * operationType  **参数解释**: 备份类型。当前包含如下1种。   - backup ：备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -248,7 +248,7 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  策略是否启用
+    *  **参数解释**: 策略是否启用 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -260,7 +260,7 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 策略是否启用
+    * @param bool|null $enabled **参数解释**: 策略是否启用 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -272,7 +272,7 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  策略ID
+    *  **参数解释**: 策略ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 策略ID
+    * @param string|null $id **参数解释**: 策略ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  策略名称
+    *  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -308,7 +308,7 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 策略名称
+    * @param string|null $name **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationType
-    *  备份类型。当前包含如下1种。   - backup ：备份
+    *  **参数解释**: 备份类型。当前包含如下1种。   - backup ：备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -332,7 +332,7 @@ class ShowSingleBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets operationType
     *
-    * @param string|null $operationType 备份类型。当前包含如下1种。   - backup ：备份
+    * @param string|null $operationType **参数解释**: 备份类型。当前包含如下1种。   - backup ：备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     *
     * @return $this
     */

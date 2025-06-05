@@ -27,7 +27,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * type  端口类型：目前包括TCP，UDP两种
     * pid  进程ID
     * path  进程可执行文件路径
-    * agentId  Agent ID
+    * agentId  agent id
     * containerId  容器id
     *
     * @var string[]
@@ -53,7 +53,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * type  端口类型：目前包括TCP，UDP两种
     * pid  进程ID
     * path  进程可执行文件路径
-    * agentId  Agent ID
+    * agentId  agent id
     * containerId  容器id
     *
     * @var string[]
@@ -100,7 +100,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * type  端口类型：目前包括TCP，UDP两种
     * pid  进程ID
     * path  进程可执行文件路径
-    * agentId  Agent ID
+    * agentId  agent id
     * containerId  容器id
     *
     * @var string[]
@@ -126,7 +126,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * type  端口类型：目前包括TCP，UDP两种
     * pid  进程ID
     * path  进程可执行文件路径
-    * agentId  Agent ID
+    * agentId  agent id
     * containerId  容器id
     *
     * @var string[]
@@ -152,7 +152,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * type  端口类型：目前包括TCP，UDP两种
     * pid  进程ID
     * path  进程可执行文件路径
-    * agentId  Agent ID
+    * agentId  agent id
     * containerId  容器id
     *
     * @var string[]
@@ -484,7 +484,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  agent id
     *
     * @return string|null
     */
@@ -496,7 +496,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId agent id
     *
     * @return $this
     */

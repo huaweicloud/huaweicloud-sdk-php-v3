@@ -20,7 +20,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -42,7 +42,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -85,7 +85,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -107,7 +107,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -129,7 +129,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -292,7 +292,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
 
     /**
     * Gets notificationEnabled
-    *  是否开启告警通知
+    *  是否开启告警通知。true:开启，false:关闭。
     *
     * @return bool
     */
@@ -304,7 +304,7 @@ class UpdateOneClickAlarmNotificationsRequestBody implements ModelInterface, Arr
     /**
     * Sets notificationEnabled
     *
-    * @param bool $notificationEnabled 是否开启告警通知
+    * @param bool $notificationEnabled 是否开启告警通知。true:开启，false:关闭。
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * oneClickAlarmId  一键告警ID
     * dimensionNames  dimensionNames
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -52,7 +52,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * oneClickAlarmId  一键告警ID
     * dimensionNames  dimensionNames
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -103,7 +103,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * oneClickAlarmId  一键告警ID
     * dimensionNames  dimensionNames
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -133,7 +133,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * oneClickAlarmId  一键告警ID
     * dimensionNames  dimensionNames
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -163,7 +163,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * oneClickAlarmId  一键告警ID
     * dimensionNames  dimensionNames
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -399,7 +399,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEnabled
-    *  是否开启告警通知
+    *  是否开启告警通知。true:开启，false:关闭。
     *
     * @return bool
     */
@@ -411,7 +411,7 @@ class EnableOneClickAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEnabled
     *
-    * @param bool $notificationEnabled 是否开启告警通知
+    * @param bool $notificationEnabled 是否开启告警通知。true:开启，false:关闭。
     *
     * @return $this
     */

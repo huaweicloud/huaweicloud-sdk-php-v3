@@ -31,6 +31,7 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * authWebTracking  匿名写入开关
     * ttlInDays  存储时间
     * hotStorageDays  标准存储时间
+    * logGroupId  日志组ID
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
             'hotColdSeparation' => 'bool',
             'authWebTracking' => 'bool',
             'ttlInDays' => 'int',
-            'hotStorageDays' => 'int'
+            'hotStorageDays' => 'int',
+            'logGroupId' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * authWebTracking  匿名写入开关
     * ttlInDays  存储时间
     * hotStorageDays  标准存储时间
+    * logGroupId  日志组ID
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
         'hotColdSeparation' => null,
         'authWebTracking' => null,
         'ttlInDays' => 'int32',
-        'hotStorageDays' => 'int32'
+        'hotStorageDays' => 'int32',
+        'logGroupId' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * authWebTracking  匿名写入开关
     * ttlInDays  存储时间
     * hotStorageDays  标准存储时间
+    * logGroupId  日志组ID
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
             'hotColdSeparation' => 'hot_cold_separation',
             'authWebTracking' => 'auth_web_tracking',
             'ttlInDays' => 'ttl_in_days',
-            'hotStorageDays' => 'hot_storage_days'
+            'hotStorageDays' => 'hot_storage_days',
+            'logGroupId' => 'log_group_id'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * authWebTracking  匿名写入开关
     * ttlInDays  存储时间
     * hotStorageDays  标准存储时间
+    * logGroupId  日志组ID
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
             'hotColdSeparation' => 'setHotColdSeparation',
             'authWebTracking' => 'setAuthWebTracking',
             'ttlInDays' => 'setTtlInDays',
-            'hotStorageDays' => 'setHotStorageDays'
+            'hotStorageDays' => 'setHotStorageDays',
+            'logGroupId' => 'setLogGroupId'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * authWebTracking  匿名写入开关
     * ttlInDays  存储时间
     * hotStorageDays  标准存储时间
+    * logGroupId  日志组ID
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
             'hotColdSeparation' => 'getHotColdSeparation',
             'authWebTracking' => 'getAuthWebTracking',
             'ttlInDays' => 'getTtlInDays',
-            'hotStorageDays' => 'getHotStorageDays'
+            'hotStorageDays' => 'getHotStorageDays',
+            'logGroupId' => 'getLogGroupId'
     ];
 
     /**
@@ -258,6 +268,7 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
         $this->container['authWebTracking'] = isset($data['authWebTracking']) ? $data['authWebTracking'] : null;
         $this->container['ttlInDays'] = isset($data['ttlInDays']) ? $data['ttlInDays'] : null;
         $this->container['hotStorageDays'] = isset($data['hotStorageDays']) ? $data['hotStorageDays'] : null;
+        $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
     }
 
     /**
@@ -582,6 +593,30 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     public function setHotStorageDays($hotStorageDays)
     {
         $this->container['hotStorageDays'] = $hotStorageDays;
+        return $this;
+    }
+
+    /**
+    * Gets logGroupId
+    *  日志组ID
+    *
+    * @return string|null
+    */
+    public function getLogGroupId()
+    {
+        return $this->container['logGroupId'];
+    }
+
+    /**
+    * Sets logGroupId
+    *
+    * @param string|null $logGroupId 日志组ID
+    *
+    * @return $this
+    */
+    public function setLogGroupId($logGroupId)
+    {
+        $this->container['logGroupId'] = $logGroupId;
         return $this;
     }
 

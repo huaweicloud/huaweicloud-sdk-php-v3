@@ -57,6 +57,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * protectInterrupt  是否防护中断
     * incluster  是否集群内节点
     * protectDegradation  是否防护降级
+    * clusterId  集群ID
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -100,6 +101,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'protectInterrupt' => 'bool',
             'incluster' => 'bool',
             'protectDegradation' => 'bool',
+            'clusterId' => 'string',
             'limit' => 'int',
             'offset' => 'int'
     ];
@@ -143,6 +145,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * protectInterrupt  是否防护中断
     * incluster  是否集群内节点
     * protectDegradation  是否防护降级
+    * clusterId  集群ID
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -186,6 +189,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
         'protectInterrupt' => null,
         'incluster' => null,
         'protectDegradation' => null,
+        'clusterId' => null,
         'limit' => 'int32',
         'offset' => 'int32'
     ];
@@ -250,6 +254,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * protectInterrupt  是否防护中断
     * incluster  是否集群内节点
     * protectDegradation  是否防护降级
+    * clusterId  集群ID
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -293,6 +298,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'protectInterrupt' => 'protect_interrupt',
             'incluster' => 'incluster',
             'protectDegradation' => 'protect_degradation',
+            'clusterId' => 'cluster_id',
             'limit' => 'limit',
             'offset' => 'offset'
     ];
@@ -336,6 +342,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * protectInterrupt  是否防护中断
     * incluster  是否集群内节点
     * protectDegradation  是否防护降级
+    * clusterId  集群ID
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -379,6 +386,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'protectInterrupt' => 'setProtectInterrupt',
             'incluster' => 'setIncluster',
             'protectDegradation' => 'setProtectDegradation',
+            'clusterId' => 'setClusterId',
             'limit' => 'setLimit',
             'offset' => 'setOffset'
     ];
@@ -422,6 +430,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * protectInterrupt  是否防护中断
     * incluster  是否集群内节点
     * protectDegradation  是否防护降级
+    * clusterId  集群ID
     * limit  每页显示数量
     * offset  偏移量：指定返回记录的开始位置
     *
@@ -465,6 +474,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'protectInterrupt' => 'getProtectInterrupt',
             'incluster' => 'getIncluster',
             'protectDegradation' => 'getProtectDegradation',
+            'clusterId' => 'getClusterId',
             'limit' => 'getLimit',
             'offset' => 'getOffset'
     ];
@@ -564,6 +574,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
         $this->container['protectInterrupt'] = isset($data['protectInterrupt']) ? $data['protectInterrupt'] : null;
         $this->container['incluster'] = isset($data['incluster']) ? $data['incluster'] : null;
         $this->container['protectDegradation'] = isset($data['protectDegradation']) ? $data['protectDegradation'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
@@ -710,6 +721,15 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['serverGroup']) && (mb_strlen($this->container['serverGroup']) < 1)) {
                 $invalidProperties[] = "invalid value for 'serverGroup', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['clusterId']) && (mb_strlen($this->container['clusterId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'clusterId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['clusterId']) && (mb_strlen($this->container['clusterId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'clusterId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['clusterId']) && !preg_match("/^.*$/", $this->container['clusterId'])) {
+                $invalidProperties[] = "invalid value for 'clusterId', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
@@ -1622,6 +1642,30 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     public function setProtectDegradation($protectDegradation)
     {
         $this->container['protectDegradation'] = $protectDegradation;
+        return $this;
+    }
+
+    /**
+    * Gets clusterId
+    *  集群ID
+    *
+    * @return string|null
+    */
+    public function getClusterId()
+    {
+        return $this->container['clusterId'];
+    }
+
+    /**
+    * Sets clusterId
+    *
+    * @param string|null $clusterId 集群ID
+    *
+    * @return $this
+    */
+    public function setClusterId($clusterId)
+    {
+        $this->container['clusterId'] = $clusterId;
         return $this;
     }
 

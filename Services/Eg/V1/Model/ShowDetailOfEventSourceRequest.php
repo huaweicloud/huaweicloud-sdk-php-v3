@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Hss\V5\Model;
+namespace HuaweiCloud\SDK\Eg\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdateDaemonsetRequestBodyScheduleInfo implements ModelInterface, ArrayAccess
+class ShowDetailOfEventSourceRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class UpdateDaemonsetRequestBodyScheduleInfo implements ModelInterface, ArrayAcc
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdateDaemonsetRequestBody_schedule_info';
+    protected static $openAPIModelName = 'ShowDetailOfEventSourceRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodeSelector  节点选择器
-    * podTolerances  pod容忍度
+    * sourceId  指定查询的事件源ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'nodeSelector' => 'string[]',
-            'podTolerances' => 'string[]'
+            'sourceId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodeSelector  节点选择器
-    * podTolerances  pod容忍度
+    * sourceId  指定查询的事件源ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'nodeSelector' => null,
-        'podTolerances' => null
+        'sourceId' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class UpdateDaemonsetRequestBodyScheduleInfo implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodeSelector  节点选择器
-    * podTolerances  pod容忍度
+    * sourceId  指定查询的事件源ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'nodeSelector' => 'node_selector',
-            'podTolerances' => 'pod_tolerances'
+            'sourceId' => 'source_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodeSelector  节点选择器
-    * podTolerances  pod容忍度
+    * sourceId  指定查询的事件源ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'nodeSelector' => 'setNodeSelector',
-            'podTolerances' => 'setPodTolerances'
+            'sourceId' => 'setSourceId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodeSelector  节点选择器
-    * podTolerances  pod容忍度
+    * sourceId  指定查询的事件源ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'nodeSelector' => 'getNodeSelector',
-            'podTolerances' => 'getPodTolerances'
+            'sourceId' => 'getSourceId'
     ];
 
     /**
@@ -157,8 +147,7 @@ class UpdateDaemonsetRequestBodyScheduleInfo implements ModelInterface, ArrayAcc
     */
     public function __construct(array $data = null)
     {
-        $this->container['nodeSelector'] = isset($data['nodeSelector']) ? $data['nodeSelector'] : null;
-        $this->container['podTolerances'] = isset($data['podTolerances']) ? $data['podTolerances'] : null;
+        $this->container['sourceId'] = isset($data['sourceId']) ? $data['sourceId'] : null;
     }
 
     /**
@@ -169,6 +158,9 @@ class UpdateDaemonsetRequestBodyScheduleInfo implements ModelInterface, ArrayAcc
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['sourceId'] === null) {
+            $invalidProperties[] = "'sourceId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -184,50 +176,26 @@ class UpdateDaemonsetRequestBodyScheduleInfo implements ModelInterface, ArrayAcc
     }
 
     /**
-    * Gets nodeSelector
-    *  节点选择器
+    * Gets sourceId
+    *  指定查询的事件源ID
     *
-    * @return string[]|null
+    * @return string
     */
-    public function getNodeSelector()
+    public function getSourceId()
     {
-        return $this->container['nodeSelector'];
+        return $this->container['sourceId'];
     }
 
     /**
-    * Sets nodeSelector
+    * Sets sourceId
     *
-    * @param string[]|null $nodeSelector 节点选择器
+    * @param string $sourceId 指定查询的事件源ID
     *
     * @return $this
     */
-    public function setNodeSelector($nodeSelector)
+    public function setSourceId($sourceId)
     {
-        $this->container['nodeSelector'] = $nodeSelector;
-        return $this;
-    }
-
-    /**
-    * Gets podTolerances
-    *  pod容忍度
-    *
-    * @return string[]|null
-    */
-    public function getPodTolerances()
-    {
-        return $this->container['podTolerances'];
-    }
-
-    /**
-    * Sets podTolerances
-    *
-    * @param string[]|null $podTolerances pod容忍度
-    *
-    * @return $this
-    */
-    public function setPodTolerances($podTolerances)
-    {
-        $this->container['podTolerances'] = $podTolerances;
+        $this->container['sourceId'] = $sourceId;
         return $this;
     }
 

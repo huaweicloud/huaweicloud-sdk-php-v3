@@ -213,16 +213,13 @@ class ListAlarmWhiteListRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['region'] === null) {
-            $invalidProperties[] = "'region' can't be null";
-        }
-            if ((mb_strlen($this->container['region']) > 128)) {
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 128)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['region']) < 0)) {
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/^.*$/", $this->container['region'])) {
+            if (!is_null($this->container['region']) && !preg_match("/^.*$/", $this->container['region'])) {
                 $invalidProperties[] = "invalid value for 'region', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 64)) {
@@ -237,8 +234,8 @@ class ListAlarmWhiteListRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hash']) && (mb_strlen($this->container['hash']) > 64)) {
                 $invalidProperties[] = "invalid value for 'hash', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['hash']) && (mb_strlen($this->container['hash']) < 64)) {
-                $invalidProperties[] = "invalid value for 'hash', the character length must be bigger than or equal to 64.";
+            if (!is_null($this->container['hash']) && (mb_strlen($this->container['hash']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hash', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['hash']) && !preg_match("/^.*$/", $this->container['hash'])) {
                 $invalidProperties[] = "invalid value for 'hash', must be conform to the pattern /^.*$/.";
@@ -279,7 +276,7 @@ class ListAlarmWhiteListRequest implements ModelInterface, ArrayAccess
     * Gets region
     *  Region ID
     *
-    * @return string
+    * @return string|null
     */
     public function getRegion()
     {
@@ -289,7 +286,7 @@ class ListAlarmWhiteListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region Region ID
+    * @param string|null $region Region ID
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groupName  服务器组名称
     * groupId  服务器组ID
-    * hostIdList  服务器ID列表
+    * hostIdList  主机id列表
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * groupName  服务器组名称
     * groupId  服务器组ID
-    * hostIdList  服务器ID列表
+    * hostIdList  主机id列表
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groupName  服务器组名称
     * groupId  服务器组ID
-    * hostIdList  服务器ID列表
+    * hostIdList  主机id列表
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * groupName  服务器组名称
     * groupId  服务器组ID
-    * hostIdList  服务器ID列表
+    * hostIdList  主机id列表
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * groupName  服务器组名称
     * groupId  服务器组ID
-    * hostIdList  服务器ID列表
+    * hostIdList  主机id列表
     *
     * @var string[]
     */
@@ -180,23 +180,20 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['groupName']) && !preg_match("/^.*$/", $this->container['groupName'])) {
-                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^.*$/.";
+            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['groupId'] === null) {
             $invalidProperties[] = "'groupId' can't be null";
         }
-            if ((mb_strlen($this->container['groupId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['groupId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['groupId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['groupId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 0.";
             }
             if (!preg_match("/^.*$/", $this->container['groupId'])) {
                 $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^.*$/.";
@@ -265,7 +262,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  服务器ID列表
+    *  主机id列表
     *
     * @return string[]|null
     */
@@ -277,7 +274,7 @@ class ChangeHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList 服务器ID列表
+    * @param string[]|null $hostIdList 主机id列表
     *
     * @return $this
     */

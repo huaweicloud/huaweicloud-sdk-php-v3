@@ -20,28 +20,28 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * fileName  Jar包名称
-    * name  Jar包名称(不带后缀)
-    * catalogue  Jar包类型
-    * fileType  Jar包后缀
-    * version  Jar包版本
-    * path  Jar包路径
-    * hash  Jar包hash
-    * size  Jar包大小
-    * uid  uid
-    * gid  gid
-    * mode  文件权限
-    * pid  进程id
-    * procPath  进程可执行文件路径
-    * containerId  容器实例id
-    * containerName  容器名称
-    * packagePath  包路径
-    * isEmbedded  显示的是否是嵌套包
-    * recordTime  扫描时间
+    * agentId  **参数解释** agent_id **取值范围**: 字符长度1-64位
+    * hostId  **参数解释** 主机id **取值范围**: 字符长度0-128位
+    * hostName  **参数解释** 服务器名称 **取值范围**: 字符长度0-256位
+    * hostIp  **参数解释** 服务器ip **取值范围**: 字符长度0-128位
+    * fileName  **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+    * name  **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
+    * catalogue  **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
+    * fileType  **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+    * version  **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位
+    * path  **参数解释** 中间件包路径 **取值范围**: 字符长度0-512位
+    * hash  **参数解释** 中间件包hash **取值范围**: 字符长度0-512位
+    * size  **参数解释** 中间件包大小 **取值范围**: 取值0-2147483647
+    * uid  **参数解释** uid **取值范围**: 取值0-2147483647
+    * gid  **参数解释** gid **取值范围**: 取值0-2147483647
+    * mode  **参数解释** 文件权限 **取值范围**: 字符长度0-32位
+    * pid  **参数解释** 进程id **取值范围**: 取值0-2147483647
+    * procPath  **参数解释** 进程可执行文件路径 **取值范围**: 字符长度0-1024位
+    * containerId  **参数解释** 容器实例id **取值范围**: 字符长度0-128位
+    * containerName  **参数解释** 容器名称 **取值范围**: 字符长度0-256位
+    * packagePath  **参数解释** 包路径 **取值范围**: 字符长度0-1024位
+    * isEmbedded  **参数解释** 是否是嵌套包 **取值范围**: - 0: 不是嵌套包 - 1: 是嵌套包
+    * recordTime  **参数解释** 扫描时间 **取值范围**: 取值0-4070880000000
     *
     * @var string[]
     */
@@ -72,28 +72,28 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * fileName  Jar包名称
-    * name  Jar包名称(不带后缀)
-    * catalogue  Jar包类型
-    * fileType  Jar包后缀
-    * version  Jar包版本
-    * path  Jar包路径
-    * hash  Jar包hash
-    * size  Jar包大小
-    * uid  uid
-    * gid  gid
-    * mode  文件权限
-    * pid  进程id
-    * procPath  进程可执行文件路径
-    * containerId  容器实例id
-    * containerName  容器名称
-    * packagePath  包路径
-    * isEmbedded  显示的是否是嵌套包
-    * recordTime  扫描时间
+    * agentId  **参数解释** agent_id **取值范围**: 字符长度1-64位
+    * hostId  **参数解释** 主机id **取值范围**: 字符长度0-128位
+    * hostName  **参数解释** 服务器名称 **取值范围**: 字符长度0-256位
+    * hostIp  **参数解释** 服务器ip **取值范围**: 字符长度0-128位
+    * fileName  **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+    * name  **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
+    * catalogue  **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
+    * fileType  **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+    * version  **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位
+    * path  **参数解释** 中间件包路径 **取值范围**: 字符长度0-512位
+    * hash  **参数解释** 中间件包hash **取值范围**: 字符长度0-512位
+    * size  **参数解释** 中间件包大小 **取值范围**: 取值0-2147483647
+    * uid  **参数解释** uid **取值范围**: 取值0-2147483647
+    * gid  **参数解释** gid **取值范围**: 取值0-2147483647
+    * mode  **参数解释** 文件权限 **取值范围**: 字符长度0-32位
+    * pid  **参数解释** 进程id **取值范围**: 取值0-2147483647
+    * procPath  **参数解释** 进程可执行文件路径 **取值范围**: 字符长度0-1024位
+    * containerId  **参数解释** 容器实例id **取值范围**: 字符长度0-128位
+    * containerName  **参数解释** 容器名称 **取值范围**: 字符长度0-256位
+    * packagePath  **参数解释** 包路径 **取值范围**: 字符长度0-1024位
+    * isEmbedded  **参数解释** 是否是嵌套包 **取值范围**: - 0: 不是嵌套包 - 1: 是嵌套包
+    * recordTime  **参数解释** 扫描时间 **取值范围**: 取值0-4070880000000
     *
     * @var string[]
     */
@@ -145,28 +145,28 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * fileName  Jar包名称
-    * name  Jar包名称(不带后缀)
-    * catalogue  Jar包类型
-    * fileType  Jar包后缀
-    * version  Jar包版本
-    * path  Jar包路径
-    * hash  Jar包hash
-    * size  Jar包大小
-    * uid  uid
-    * gid  gid
-    * mode  文件权限
-    * pid  进程id
-    * procPath  进程可执行文件路径
-    * containerId  容器实例id
-    * containerName  容器名称
-    * packagePath  包路径
-    * isEmbedded  显示的是否是嵌套包
-    * recordTime  扫描时间
+    * agentId  **参数解释** agent_id **取值范围**: 字符长度1-64位
+    * hostId  **参数解释** 主机id **取值范围**: 字符长度0-128位
+    * hostName  **参数解释** 服务器名称 **取值范围**: 字符长度0-256位
+    * hostIp  **参数解释** 服务器ip **取值范围**: 字符长度0-128位
+    * fileName  **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+    * name  **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
+    * catalogue  **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
+    * fileType  **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+    * version  **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位
+    * path  **参数解释** 中间件包路径 **取值范围**: 字符长度0-512位
+    * hash  **参数解释** 中间件包hash **取值范围**: 字符长度0-512位
+    * size  **参数解释** 中间件包大小 **取值范围**: 取值0-2147483647
+    * uid  **参数解释** uid **取值范围**: 取值0-2147483647
+    * gid  **参数解释** gid **取值范围**: 取值0-2147483647
+    * mode  **参数解释** 文件权限 **取值范围**: 字符长度0-32位
+    * pid  **参数解释** 进程id **取值范围**: 取值0-2147483647
+    * procPath  **参数解释** 进程可执行文件路径 **取值范围**: 字符长度0-1024位
+    * containerId  **参数解释** 容器实例id **取值范围**: 字符长度0-128位
+    * containerName  **参数解释** 容器名称 **取值范围**: 字符长度0-256位
+    * packagePath  **参数解释** 包路径 **取值范围**: 字符长度0-1024位
+    * isEmbedded  **参数解释** 是否是嵌套包 **取值范围**: - 0: 不是嵌套包 - 1: 是嵌套包
+    * recordTime  **参数解释** 扫描时间 **取值范围**: 取值0-4070880000000
     *
     * @var string[]
     */
@@ -197,28 +197,28 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * fileName  Jar包名称
-    * name  Jar包名称(不带后缀)
-    * catalogue  Jar包类型
-    * fileType  Jar包后缀
-    * version  Jar包版本
-    * path  Jar包路径
-    * hash  Jar包hash
-    * size  Jar包大小
-    * uid  uid
-    * gid  gid
-    * mode  文件权限
-    * pid  进程id
-    * procPath  进程可执行文件路径
-    * containerId  容器实例id
-    * containerName  容器名称
-    * packagePath  包路径
-    * isEmbedded  显示的是否是嵌套包
-    * recordTime  扫描时间
+    * agentId  **参数解释** agent_id **取值范围**: 字符长度1-64位
+    * hostId  **参数解释** 主机id **取值范围**: 字符长度0-128位
+    * hostName  **参数解释** 服务器名称 **取值范围**: 字符长度0-256位
+    * hostIp  **参数解释** 服务器ip **取值范围**: 字符长度0-128位
+    * fileName  **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+    * name  **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
+    * catalogue  **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
+    * fileType  **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+    * version  **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位
+    * path  **参数解释** 中间件包路径 **取值范围**: 字符长度0-512位
+    * hash  **参数解释** 中间件包hash **取值范围**: 字符长度0-512位
+    * size  **参数解释** 中间件包大小 **取值范围**: 取值0-2147483647
+    * uid  **参数解释** uid **取值范围**: 取值0-2147483647
+    * gid  **参数解释** gid **取值范围**: 取值0-2147483647
+    * mode  **参数解释** 文件权限 **取值范围**: 字符长度0-32位
+    * pid  **参数解释** 进程id **取值范围**: 取值0-2147483647
+    * procPath  **参数解释** 进程可执行文件路径 **取值范围**: 字符长度0-1024位
+    * containerId  **参数解释** 容器实例id **取值范围**: 字符长度0-128位
+    * containerName  **参数解释** 容器名称 **取值范围**: 字符长度0-256位
+    * packagePath  **参数解释** 包路径 **取值范围**: 字符长度0-1024位
+    * isEmbedded  **参数解释** 是否是嵌套包 **取值范围**: - 0: 不是嵌套包 - 1: 是嵌套包
+    * recordTime  **参数解释** 扫描时间 **取值范围**: 取值0-4070880000000
     *
     * @var string[]
     */
@@ -249,28 +249,28 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  Agent ID
-    * hostId  主机id
-    * hostName  服务器名称
-    * hostIp  服务器ip
-    * fileName  Jar包名称
-    * name  Jar包名称(不带后缀)
-    * catalogue  Jar包类型
-    * fileType  Jar包后缀
-    * version  Jar包版本
-    * path  Jar包路径
-    * hash  Jar包hash
-    * size  Jar包大小
-    * uid  uid
-    * gid  gid
-    * mode  文件权限
-    * pid  进程id
-    * procPath  进程可执行文件路径
-    * containerId  容器实例id
-    * containerName  容器名称
-    * packagePath  包路径
-    * isEmbedded  显示的是否是嵌套包
-    * recordTime  扫描时间
+    * agentId  **参数解释** agent_id **取值范围**: 字符长度1-64位
+    * hostId  **参数解释** 主机id **取值范围**: 字符长度0-128位
+    * hostName  **参数解释** 服务器名称 **取值范围**: 字符长度0-256位
+    * hostIp  **参数解释** 服务器ip **取值范围**: 字符长度0-128位
+    * fileName  **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+    * name  **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
+    * catalogue  **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
+    * fileType  **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+    * version  **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位
+    * path  **参数解释** 中间件包路径 **取值范围**: 字符长度0-512位
+    * hash  **参数解释** 中间件包hash **取值范围**: 字符长度0-512位
+    * size  **参数解释** 中间件包大小 **取值范围**: 取值0-2147483647
+    * uid  **参数解释** uid **取值范围**: 取值0-2147483647
+    * gid  **参数解释** gid **取值范围**: 取值0-2147483647
+    * mode  **参数解释** 文件权限 **取值范围**: 字符长度0-32位
+    * pid  **参数解释** 进程id **取值范围**: 取值0-2147483647
+    * procPath  **参数解释** 进程可执行文件路径 **取值范围**: 字符长度0-1024位
+    * containerId  **参数解释** 容器实例id **取值范围**: 字符长度0-128位
+    * containerName  **参数解释** 容器名称 **取值范围**: 字符长度0-256位
+    * packagePath  **参数解释** 包路径 **取值范围**: 字符长度0-1024位
+    * isEmbedded  **参数解释** 是否是嵌套包 **取值范围**: - 0: 不是嵌套包 - 1: 是嵌套包
+    * recordTime  **参数解释** 扫描时间 **取值范围**: 取值0-4070880000000
     *
     * @var string[]
     */
@@ -537,7 +537,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  **参数解释** agent_id **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -549,7 +549,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId **参数解释** agent_id **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -561,7 +561,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机id
+    *  **参数解释** 主机id **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -573,7 +573,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机id
+    * @param string|null $hostId **参数解释** 主机id **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -585,7 +585,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释** 服务器名称 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -597,7 +597,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释** 服务器名称 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -609,7 +609,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器ip
+    *  **参数解释** 服务器ip **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -621,7 +621,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器ip
+    * @param string|null $hostIp **参数解释** 服务器ip **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -633,7 +633,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileName
-    *  Jar包名称
+    *  **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -645,7 +645,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileName
     *
-    * @param string|null $fileName Jar包名称
+    * @param string|null $fileName **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -657,7 +657,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  Jar包名称(不带后缀)
+    *  **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
     *
     * @return string|null
     */
@@ -669,7 +669,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name Jar包名称(不带后缀)
+    * @param string|null $name **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
     *
     * @return $this
     */
@@ -681,7 +681,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets catalogue
-    *  Jar包类型
+    *  **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
     *
     * @return string|null
     */
@@ -693,7 +693,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets catalogue
     *
-    * @param string|null $catalogue Jar包类型
+    * @param string|null $catalogue **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
     *
     * @return $this
     */
@@ -705,7 +705,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileType
-    *  Jar包后缀
+    *  **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
     *
     * @return string|null
     */
@@ -717,7 +717,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileType
     *
-    * @param string|null $fileType Jar包后缀
+    * @param string|null $fileType **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
     *
     * @return $this
     */
@@ -729,7 +729,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  Jar包版本
+    *  **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -741,7 +741,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version Jar包版本
+    * @param string|null $version **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位
     *
     * @return $this
     */
@@ -753,7 +753,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  Jar包路径
+    *  **参数解释** 中间件包路径 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -765,7 +765,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path Jar包路径
+    * @param string|null $path **参数解释** 中间件包路径 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -777,7 +777,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hash
-    *  Jar包hash
+    *  **参数解释** 中间件包hash **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -789,7 +789,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hash
     *
-    * @param string|null $hash Jar包hash
+    * @param string|null $hash **参数解释** 中间件包hash **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -801,7 +801,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  Jar包大小
+    *  **参数解释** 中间件包大小 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -813,7 +813,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size Jar包大小
+    * @param int|null $size **参数解释** 中间件包大小 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -825,7 +825,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  uid
+    *  **参数解释** uid **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -837,7 +837,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param int|null $uid uid
+    * @param int|null $uid **参数解释** uid **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -849,7 +849,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets gid
-    *  gid
+    *  **参数解释** gid **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -861,7 +861,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets gid
     *
-    * @param int|null $gid gid
+    * @param int|null $gid **参数解释** gid **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -873,7 +873,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  文件权限
+    *  **参数解释** 文件权限 **取值范围**: 字符长度0-32位
     *
     * @return string|null
     */
@@ -885,7 +885,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode 文件权限
+    * @param string|null $mode **参数解释** 文件权限 **取值范围**: 字符长度0-32位
     *
     * @return $this
     */
@@ -897,7 +897,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pid
-    *  进程id
+    *  **参数解释** 进程id **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -909,7 +909,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pid
     *
-    * @param int|null $pid 进程id
+    * @param int|null $pid **参数解释** 进程id **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -921,7 +921,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets procPath
-    *  进程可执行文件路径
+    *  **参数解释** 进程可执行文件路径 **取值范围**: 字符长度0-1024位
     *
     * @return string|null
     */
@@ -933,7 +933,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets procPath
     *
-    * @param string|null $procPath 进程可执行文件路径
+    * @param string|null $procPath **参数解释** 进程可执行文件路径 **取值范围**: 字符长度0-1024位
     *
     * @return $this
     */
@@ -945,7 +945,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerId
-    *  容器实例id
+    *  **参数解释** 容器实例id **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -957,7 +957,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerId
     *
-    * @param string|null $containerId 容器实例id
+    * @param string|null $containerId **参数解释** 容器实例id **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -969,7 +969,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerName
-    *  容器名称
+    *  **参数解释** 容器名称 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -981,7 +981,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerName
     *
-    * @param string|null $containerName 容器名称
+    * @param string|null $containerName **参数解释** 容器名称 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -993,7 +993,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets packagePath
-    *  包路径
+    *  **参数解释** 包路径 **取值范围**: 字符长度0-1024位
     *
     * @return string|null
     */
@@ -1005,7 +1005,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets packagePath
     *
-    * @param string|null $packagePath 包路径
+    * @param string|null $packagePath **参数解释** 包路径 **取值范围**: 字符长度0-1024位
     *
     * @return $this
     */
@@ -1017,7 +1017,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isEmbedded
-    *  显示的是否是嵌套包
+    *  **参数解释** 是否是嵌套包 **取值范围**: - 0: 不是嵌套包 - 1: 是嵌套包
     *
     * @return int|null
     */
@@ -1029,7 +1029,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isEmbedded
     *
-    * @param int|null $isEmbedded 显示的是否是嵌套包
+    * @param int|null $isEmbedded **参数解释** 是否是嵌套包 **取值范围**: - 0: 不是嵌套包 - 1: 是嵌套包
     *
     * @return $this
     */
@@ -1041,7 +1041,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordTime
-    *  扫描时间
+    *  **参数解释** 扫描时间 **取值范围**: 取值0-4070880000000
     *
     * @return int|null
     */
@@ -1053,7 +1053,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recordTime
     *
-    * @param int|null $recordTime 扫描时间
+    * @param int|null $recordTime **参数解释** 扫描时间 **取值范围**: 取值0-4070880000000
     *
     * @return $this
     */

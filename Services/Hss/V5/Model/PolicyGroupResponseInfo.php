@@ -24,7 +24,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * groupId  策略组ID
     * description  策略组的描述信息
     * deletable  是否允许删除该策略组
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * defaultGroup  是否是默认策略组
     * supportOs  支持的操作系统，包含如下:   - Linux ：支持Linux系统   - Windows : 支持Windows系统
     * supportVersion  支持的版本，包含如下:   - hss.version.basic ：基础版策略组   - hss.version.advanced : 专业版策略组   - hss.version.enterprise : 企业版策略组   - hss.version.premium : 旗舰版策略组   - hss.version.wtp : 网页防篡改版策略组   - hss.version.container.enterprise : 容器版策略组
@@ -48,7 +48,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * groupId  策略组ID
     * description  策略组的描述信息
     * deletable  是否允许删除该策略组
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * defaultGroup  是否是默认策略组
     * supportOs  支持的操作系统，包含如下:   - Linux ：支持Linux系统   - Windows : 支持Windows系统
     * supportVersion  支持的版本，包含如下:   - hss.version.basic ：基础版策略组   - hss.version.advanced : 专业版策略组   - hss.version.enterprise : 企业版策略组   - hss.version.premium : 旗舰版策略组   - hss.version.wtp : 网页防篡改版策略组   - hss.version.container.enterprise : 容器版策略组
@@ -93,7 +93,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * groupId  策略组ID
     * description  策略组的描述信息
     * deletable  是否允许删除该策略组
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * defaultGroup  是否是默认策略组
     * supportOs  支持的操作系统，包含如下:   - Linux ：支持Linux系统   - Windows : 支持Windows系统
     * supportVersion  支持的版本，包含如下:   - hss.version.basic ：基础版策略组   - hss.version.advanced : 专业版策略组   - hss.version.enterprise : 企业版策略组   - hss.version.premium : 旗舰版策略组   - hss.version.wtp : 网页防篡改版策略组   - hss.version.container.enterprise : 容器版策略组
@@ -117,7 +117,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * groupId  策略组ID
     * description  策略组的描述信息
     * deletable  是否允许删除该策略组
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * defaultGroup  是否是默认策略组
     * supportOs  支持的操作系统，包含如下:   - Linux ：支持Linux系统   - Windows : 支持Windows系统
     * supportVersion  支持的版本，包含如下:   - hss.version.basic ：基础版策略组   - hss.version.advanced : 专业版策略组   - hss.version.enterprise : 企业版策略组   - hss.version.premium : 旗舰版策略组   - hss.version.wtp : 网页防篡改版策略组   - hss.version.container.enterprise : 容器版策略组
@@ -141,7 +141,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * groupId  策略组ID
     * description  策略组的描述信息
     * deletable  是否允许删除该策略组
-    * hostNum  关联服务器数
+    * hostNum  影响主机数量
     * defaultGroup  是否是默认策略组
     * supportOs  支持的操作系统，包含如下:   - Linux ：支持Linux系统   - Windows : 支持Windows系统
     * supportVersion  支持的版本，包含如下:   - hss.version.basic ：基础版策略组   - hss.version.advanced : 专业版策略组   - hss.version.enterprise : 企业版策略组   - hss.version.premium : 旗舰版策略组   - hss.version.wtp : 网页防篡改版策略组   - hss.version.container.enterprise : 容器版策略组
@@ -380,7 +380,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  关联服务器数
+    *  影响主机数量
     *
     * @return int|null
     */
@@ -392,7 +392,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 关联服务器数
+    * @param int|null $hostNum 影响主机数量
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -39,7 +39,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -78,7 +78,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -96,7 +96,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -114,7 +114,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * notificationEnabled  是否开启告警通知
+    * notificationEnabled  是否开启告警通知。true:开启，false:关闭。
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
     * notificationBeginTime  告警通知开启时间
@@ -237,7 +237,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEnabled
-    *  是否开启告警通知
+    *  是否开启告警通知。true:开启，false:关闭。
     *
     * @return bool|null
     */
@@ -249,7 +249,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEnabled
     *
-    * @param bool|null $notificationEnabled 是否开启告警通知
+    * @param bool|null $notificationEnabled 是否开启告警通知。true:开启，false:关闭。
     *
     * @return $this
     */

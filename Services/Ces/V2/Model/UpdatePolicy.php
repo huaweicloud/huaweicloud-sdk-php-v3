@@ -39,7 +39,7 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'metricName' => 'string',
-            'extraInfo' => '\HuaweiCloud\SDK\Ces\V2\Model\MetricExtraInfo',
+            'extraInfo' => '\HuaweiCloud\SDK\Ces\V2\Model\ExtraInfo',
             'period' => 'int',
             'filter' => 'string',
             'comparisonOperator' => 'string',
@@ -427,7 +427,7 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
     * Gets extraInfo
     *  extraInfo
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\MetricExtraInfo|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ExtraInfo|null
     */
     public function getExtraInfo()
     {
@@ -437,7 +437,7 @@ class UpdatePolicy implements ModelInterface, ArrayAccess
     /**
     * Sets extraInfo
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\MetricExtraInfo|null $extraInfo extraInfo
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ExtraInfo|null $extraInfo extraInfo
     *
     * @return $this
     */
