@@ -22,7 +22,7 @@ class AlertSrcGeo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * latitude  纬度
     * longitude  经度
-    * cityCode  城市编码，Beijing | Shanghai
+    * cityCode  城市编码
     * countryCode  国家简码，参考ISO 3166-1 alpha-2，例如：CN | US | DE | IT | SG
     *
     * @var string[]
@@ -38,7 +38,7 @@ class AlertSrcGeo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * latitude  纬度
     * longitude  经度
-    * cityCode  城市编码，Beijing | Shanghai
+    * cityCode  城市编码
     * countryCode  国家简码，参考ISO 3166-1 alpha-2，例如：CN | US | DE | IT | SG
     *
     * @var string[]
@@ -75,7 +75,7 @@ class AlertSrcGeo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * latitude  纬度
     * longitude  经度
-    * cityCode  城市编码，Beijing | Shanghai
+    * cityCode  城市编码
     * countryCode  国家简码，参考ISO 3166-1 alpha-2，例如：CN | US | DE | IT | SG
     *
     * @var string[]
@@ -91,7 +91,7 @@ class AlertSrcGeo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * latitude  纬度
     * longitude  经度
-    * cityCode  城市编码，Beijing | Shanghai
+    * cityCode  城市编码
     * countryCode  国家简码，参考ISO 3166-1 alpha-2，例如：CN | US | DE | IT | SG
     *
     * @var string[]
@@ -107,7 +107,7 @@ class AlertSrcGeo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * latitude  纬度
     * longitude  经度
-    * cityCode  城市编码，Beijing | Shanghai
+    * cityCode  城市编码
     * countryCode  国家简码，参考ISO 3166-1 alpha-2，例如：CN | US | DE | IT | SG
     *
     * @var string[]
@@ -279,7 +279,7 @@ class AlertSrcGeo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cityCode
-    *  城市编码，Beijing | Shanghai
+    *  城市编码
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class AlertSrcGeo implements ModelInterface, ArrayAccess
     /**
     * Sets cityCode
     *
-    * @param string|null $cityCode 城市编码，Beijing | Shanghai
+    * @param string|null $cityCode 城市编码
     *
     * @return $this
     */

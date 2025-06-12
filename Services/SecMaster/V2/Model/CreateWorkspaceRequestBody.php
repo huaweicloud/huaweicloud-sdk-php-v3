@@ -28,7 +28,7 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     * name  工作空间名称
     * description  工作空间描述
     * projectName  项目名称
-    * tags  通过给账号下的资源添加标签，可以对资源进行自定义标记，实现资源的分类。可到标签管理服务使用可视化表格操作资源标签，并对标签进行批量编辑。
+    * tags  标签数组
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     * name  工作空间名称
     * description  工作空间描述
     * projectName  项目名称
-    * tags  通过给账号下的资源添加标签，可以对资源进行自定义标记，实现资源的分类。可到标签管理服务使用可视化表格操作资源标签，并对标签进行批量编辑。
+    * tags  标签数组
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     * name  工作空间名称
     * description  工作空间描述
     * projectName  项目名称
-    * tags  通过给账号下的资源添加标签，可以对资源进行自定义标记，实现资源的分类。可到标签管理服务使用可视化表格操作资源标签，并对标签进行批量编辑。
+    * tags  标签数组
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     * name  工作空间名称
     * description  工作空间描述
     * projectName  项目名称
-    * tags  通过给账号下的资源添加标签，可以对资源进行自定义标记，实现资源的分类。可到标签管理服务使用可视化表格操作资源标签，并对标签进行批量编辑。
+    * tags  标签数组
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     * name  工作空间名称
     * description  工作空间描述
     * projectName  项目名称
-    * tags  通过给账号下的资源添加标签，可以对资源进行自定义标记，实现资源的分类。可到标签管理服务使用可视化表格操作资源标签，并对标签进行批量编辑。
+    * tags  标签数组
     *
     * @var string[]
     */
@@ -258,8 +258,8 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
             if (!preg_match("/[\\da-zA-Z_-]{1,64}/", $this->container['regionId'])) {
                 $invalidProperties[] = "invalid value for 'regionId', must be conform to the pattern /[\\da-zA-Z_-]{1,64}/.";
             }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
@@ -309,14 +309,14 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['projectName'] === null) {
             $invalidProperties[] = "'projectName' can't be null";
         }
-            if ((mb_strlen($this->container['projectName']) > 512)) {
-                $invalidProperties[] = "invalid value for 'projectName', the character length must be smaller than or equal to 512.";
+            if ((mb_strlen($this->container['projectName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'projectName', the character length must be smaller than or equal to 64.";
             }
             if ((mb_strlen($this->container['projectName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'projectName', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/^.{0,512}$/", $this->container['projectName'])) {
-                $invalidProperties[] = "invalid value for 'projectName', must be conform to the pattern /^.{0,512}$/.";
+            if (!preg_match("/^.{0,64}$/", $this->container['projectName'])) {
+                $invalidProperties[] = "invalid value for 'projectName', must be conform to the pattern /^.{0,64}$/.";
             }
         return $invalidProperties;
     }
@@ -526,7 +526,7 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  通过给账号下的资源添加标签，可以对资源进行自定义标记，实现资源的分类。可到标签管理服务使用可视化表格操作资源标签，并对标签进行批量编辑。
+    *  标签数组
     *
     * @return \HuaweiCloud\SDK\SecMaster\V2\Model\TagsPojo[]|null
     */
@@ -538,7 +538,7 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\TagsPojo[]|null $tags 通过给账号下的资源添加标签，可以对资源进行自定义标记，实现资源的分类。可到标签管理服务使用可视化表格操作资源标签，并对标签进行批量编辑。
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\TagsPojo[]|null $tags 标签数组
     *
     * @return $this
     */

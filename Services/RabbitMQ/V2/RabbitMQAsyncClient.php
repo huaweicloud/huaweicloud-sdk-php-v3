@@ -430,9 +430,9 @@ class RabbitMQAsyncClient extends Client
     }
 
     /**
-     * 删除指定的实例
+     * 删除指定实例
      *
-     * 删除指定的实例，释放该实例的所有资源。
+     * 删除指定实例，释放该实例的所有资源。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

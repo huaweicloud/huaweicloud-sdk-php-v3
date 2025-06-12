@@ -23,13 +23,15 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     * instances  实例的ID列表。
     * action  对实例的操作：restart、delete
     * allFailure  参数值为kafka，表示删除租户所有创建失败的Kafka实例。
+    * forceDelete  是否强删除，强删除实例不进入收回站。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instances' => 'string[]',
             'action' => 'string',
-            'allFailure' => 'string'
+            'allFailure' => 'string',
+            'forceDelete' => 'bool'
     ];
 
     /**
@@ -37,13 +39,15 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     * instances  实例的ID列表。
     * action  对实例的操作：restart、delete
     * allFailure  参数值为kafka，表示删除租户所有创建失败的Kafka实例。
+    * forceDelete  是否强删除，强删除实例不进入收回站。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instances' => null,
         'action' => null,
-        'allFailure' => null
+        'allFailure' => null,
+        'forceDelete' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     * instances  实例的ID列表。
     * action  对实例的操作：restart、delete
     * allFailure  参数值为kafka，表示删除租户所有创建失败的Kafka实例。
+    * forceDelete  是否强删除，强删除实例不进入收回站。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instances' => 'instances',
             'action' => 'action',
-            'allFailure' => 'all_failure'
+            'allFailure' => 'all_failure',
+            'forceDelete' => 'force_delete'
     ];
 
     /**
@@ -86,13 +92,15 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     * instances  实例的ID列表。
     * action  对实例的操作：restart、delete
     * allFailure  参数值为kafka，表示删除租户所有创建失败的Kafka实例。
+    * forceDelete  是否强删除，强删除实例不进入收回站。
     *
     * @var string[]
     */
     protected static $setters = [
             'instances' => 'setInstances',
             'action' => 'setAction',
-            'allFailure' => 'setAllFailure'
+            'allFailure' => 'setAllFailure',
+            'forceDelete' => 'setForceDelete'
     ];
 
     /**
@@ -100,13 +108,15 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     * instances  实例的ID列表。
     * action  对实例的操作：restart、delete
     * allFailure  参数值为kafka，表示删除租户所有创建失败的Kafka实例。
+    * forceDelete  是否强删除，强删除实例不进入收回站。
     *
     * @var string[]
     */
     protected static $getters = [
             'instances' => 'getInstances',
             'action' => 'getAction',
-            'allFailure' => 'getAllFailure'
+            'allFailure' => 'getAllFailure',
+            'forceDelete' => 'getForceDelete'
     ];
 
     /**
@@ -198,6 +208,7 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
         $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['allFailure'] = isset($data['allFailure']) ? $data['allFailure'] : null;
+        $this->container['forceDelete'] = isset($data['forceDelete']) ? $data['forceDelete'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     public function setAllFailure($allFailure)
     {
         $this->container['allFailure'] = $allFailure;
+        return $this;
+    }
+
+    /**
+    * Gets forceDelete
+    *  是否强删除，强删除实例不进入收回站。
+    *
+    * @return bool|null
+    */
+    public function getForceDelete()
+    {
+        return $this->container['forceDelete'];
+    }
+
+    /**
+    * Sets forceDelete
+    *
+    * @param bool|null $forceDelete 是否强删除，强删除实例不进入收回站。
+    *
+    * @return $this
+    */
+    public function setForceDelete($forceDelete)
+    {
+        $this->container['forceDelete'] = $forceDelete;
         return $this;
     }
 

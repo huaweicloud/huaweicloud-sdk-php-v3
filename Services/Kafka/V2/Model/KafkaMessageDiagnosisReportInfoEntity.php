@@ -25,7 +25,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
     * beginTime  诊断任务开始时间
     * endTime  诊断任务结束时间
     * groupName  该次诊断任务诊断的消费组名称
-    * topicName  该次诊断任务诊断的topic名称
+    * topicName  该次诊断任务诊断的Topic名称
     * accumulatedPartitions  该次诊断任务发现的存在消息堆积的分区数
     *
     * @var string[]
@@ -47,7 +47,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
     * beginTime  诊断任务开始时间
     * endTime  诊断任务结束时间
     * groupName  该次诊断任务诊断的消费组名称
-    * topicName  该次诊断任务诊断的topic名称
+    * topicName  该次诊断任务诊断的Topic名称
     * accumulatedPartitions  该次诊断任务发现的存在消息堆积的分区数
     *
     * @var string[]
@@ -90,7 +90,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
     * beginTime  诊断任务开始时间
     * endTime  诊断任务结束时间
     * groupName  该次诊断任务诊断的消费组名称
-    * topicName  该次诊断任务诊断的topic名称
+    * topicName  该次诊断任务诊断的Topic名称
     * accumulatedPartitions  该次诊断任务发现的存在消息堆积的分区数
     *
     * @var string[]
@@ -112,7 +112,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
     * beginTime  诊断任务开始时间
     * endTime  诊断任务结束时间
     * groupName  该次诊断任务诊断的消费组名称
-    * topicName  该次诊断任务诊断的topic名称
+    * topicName  该次诊断任务诊断的Topic名称
     * accumulatedPartitions  该次诊断任务发现的存在消息堆积的分区数
     *
     * @var string[]
@@ -134,7 +134,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
     * beginTime  诊断任务开始时间
     * endTime  诊断任务结束时间
     * groupName  该次诊断任务诊断的消费组名称
-    * topicName  该次诊断任务诊断的topic名称
+    * topicName  该次诊断任务诊断的Topic名称
     * accumulatedPartitions  该次诊断任务发现的存在消息堆积的分区数
     *
     * @var string[]
@@ -409,7 +409,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
 
     /**
     * Gets topicName
-    *  该次诊断任务诊断的topic名称
+    *  该次诊断任务诊断的Topic名称
     *
     * @return string
     */
@@ -421,7 +421,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
     /**
     * Sets topicName
     *
-    * @param string $topicName 该次诊断任务诊断的topic名称
+    * @param string $topicName 该次诊断任务诊断的Topic名称
     *
     * @return $this
     */

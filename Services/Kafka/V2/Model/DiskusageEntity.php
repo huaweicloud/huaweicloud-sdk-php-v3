@@ -26,7 +26,7 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     * dataDiskFree  剩余可用的磁盘容量。
     * dataDiskUsePercentage  消息标签。
     * status  消息标签。
-    * topicList  topic磁盘容量使用列表。
+    * topicList  Topic磁盘容量使用列表。
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     * dataDiskFree  剩余可用的磁盘容量。
     * dataDiskUsePercentage  消息标签。
     * status  消息标签。
-    * topicList  topic磁盘容量使用列表。
+    * topicList  Topic磁盘容量使用列表。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     * dataDiskFree  剩余可用的磁盘容量。
     * dataDiskUsePercentage  消息标签。
     * status  消息标签。
-    * topicList  topic磁盘容量使用列表。
+    * topicList  Topic磁盘容量使用列表。
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     * dataDiskFree  剩余可用的磁盘容量。
     * dataDiskUsePercentage  消息标签。
     * status  消息标签。
-    * topicList  topic磁盘容量使用列表。
+    * topicList  Topic磁盘容量使用列表。
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     * dataDiskFree  剩余可用的磁盘容量。
     * dataDiskUsePercentage  消息标签。
     * status  消息标签。
-    * topicList  topic磁盘容量使用列表。
+    * topicList  Topic磁盘容量使用列表。
     *
     * @var string[]
     */
@@ -384,7 +384,7 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicList
-    *  topic磁盘容量使用列表。
+    *  Topic磁盘容量使用列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\DiskusageTopicEntity[]|null
     */
@@ -396,7 +396,7 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     /**
     * Sets topicList
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\DiskusageTopicEntity[]|null $topicList topic磁盘容量使用列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\DiskusageTopicEntity[]|null $topicList Topic磁盘容量使用列表。
     *
     * @return $this
     */

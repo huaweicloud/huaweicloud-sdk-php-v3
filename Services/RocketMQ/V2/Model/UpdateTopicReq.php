@@ -20,30 +20,38 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * readQueueNum  总读队列个数。
-    * writeQueueNum  总写队列个数。
-    * permission  权限。
+    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'readQueueNum' => 'float',
             'writeQueueNum' => 'float',
-            'permission' => 'string'
+            'permission' => 'string',
+            'queues' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\UpdateTopicQueueEntity[]',
+            'topicDesc' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * readQueueNum  总读队列个数。
-    * writeQueueNum  总写队列个数。
-    * permission  权限。
+    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'readQueueNum' => null,
         'writeQueueNum' => null,
-        'permission' => null
+        'permission' => null,
+        'queues' => null,
+        'topicDesc' => null
     ];
 
     /**
@@ -69,44 +77,56 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * readQueueNum  总读队列个数。
-    * writeQueueNum  总写队列个数。
-    * permission  权限。
+    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'readQueueNum' => 'read_queue_num',
             'writeQueueNum' => 'write_queue_num',
-            'permission' => 'permission'
+            'permission' => 'permission',
+            'queues' => 'queues',
+            'topicDesc' => 'topic_desc'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * readQueueNum  总读队列个数。
-    * writeQueueNum  总写队列个数。
-    * permission  权限。
+    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'readQueueNum' => 'setReadQueueNum',
             'writeQueueNum' => 'setWriteQueueNum',
-            'permission' => 'setPermission'
+            'permission' => 'setPermission',
+            'queues' => 'setQueues',
+            'topicDesc' => 'setTopicDesc'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * readQueueNum  总读队列个数。
-    * writeQueueNum  总写队列个数。
-    * permission  权限。
+    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'readQueueNum' => 'getReadQueueNum',
             'writeQueueNum' => 'getWriteQueueNum',
-            'permission' => 'getPermission'
+            'permission' => 'getPermission',
+            'queues' => 'getQueues',
+            'topicDesc' => 'getTopicDesc'
     ];
 
     /**
@@ -187,6 +207,8 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
         $this->container['readQueueNum'] = isset($data['readQueueNum']) ? $data['readQueueNum'] : null;
         $this->container['writeQueueNum'] = isset($data['writeQueueNum']) ? $data['writeQueueNum'] : null;
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
+        $this->container['queues'] = isset($data['queues']) ? $data['queues'] : null;
+        $this->container['topicDesc'] = isset($data['topicDesc']) ? $data['topicDesc'] : null;
     }
 
     /**
@@ -221,7 +243,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets readQueueNum
-    *  总读队列个数。
+    *  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -233,7 +255,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets readQueueNum
     *
-    * @param float|null $readQueueNum 总读队列个数。
+    * @param float|null $readQueueNum **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -245,7 +267,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets writeQueueNum
-    *  总写队列个数。
+    *  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -257,7 +279,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets writeQueueNum
     *
-    * @param float|null $writeQueueNum 总写队列个数。
+    * @param float|null $writeQueueNum **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -269,7 +291,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets permission
-    *  权限。
+    *  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -281,13 +303,61 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets permission
     *
-    * @param string|null $permission 权限。
+    * @param string|null $permission **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
     public function setPermission($permission)
     {
         $this->container['permission'] = $permission;
+        return $this;
+    }
+
+    /**
+    * Gets queues
+    *  **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\UpdateTopicQueueEntity[]|null
+    */
+    public function getQueues()
+    {
+        return $this->container['queues'];
+    }
+
+    /**
+    * Sets queues
+    *
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\UpdateTopicQueueEntity[]|null $queues **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setQueues($queues)
+    {
+        $this->container['queues'] = $queues;
+        return $this;
+    }
+
+    /**
+    * Gets topicDesc
+    *  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getTopicDesc()
+    {
+        return $this->container['topicDesc'];
+    }
+
+    /**
+    * Sets topicDesc
+    *
+    * @param string|null $topicDesc **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTopicDesc($topicDesc)
+    {
+        $this->container['topicDesc'] = $topicDesc;
         return $this;
     }
 

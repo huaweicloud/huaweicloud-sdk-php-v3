@@ -26,6 +26,8 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     * deploymentId  标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
     * filter  过滤条件       * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，如果有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
     * field  选择的属性名称  * 属性名仅支持包含大小写英文、数字和下划线 * 多个属性名称之间以逗号（,）分隔
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             'stackId' => 'string',
             'deploymentId' => 'string',
             'filter' => 'string',
-            'field' => 'string'
+            'field' => 'string',
+            'marker' => 'string',
+            'limit' => 'int'
     ];
 
     /**
@@ -46,6 +50,8 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     * deploymentId  标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
     * filter  过滤条件       * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，如果有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
     * field  选择的属性名称  * 属性名仅支持包含大小写英文、数字和下划线 * 多个属性名称之间以逗号（,）分隔
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
         'stackId' => null,
         'deploymentId' => null,
         'filter' => null,
-        'field' => null
+        'field' => null,
+        'marker' => null,
+        'limit' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     * deploymentId  标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
     * filter  过滤条件       * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，如果有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
     * field  选择的属性名称  * 属性名仅支持包含大小写英文、数字和下划线 * 多个属性名称之间以逗号（,）分隔
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             'stackId' => 'stack_id',
             'deploymentId' => 'deployment_id',
             'filter' => 'filter',
-            'field' => 'field'
+            'field' => 'field',
+            'marker' => 'marker',
+            'limit' => 'limit'
     ];
 
     /**
@@ -107,6 +119,8 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     * deploymentId  标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
     * filter  过滤条件       * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，如果有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
     * field  选择的属性名称  * 属性名仅支持包含大小写英文、数字和下划线 * 多个属性名称之间以逗号（,）分隔
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             'stackId' => 'setStackId',
             'deploymentId' => 'setDeploymentId',
             'filter' => 'setFilter',
-            'field' => 'setField'
+            'field' => 'setField',
+            'marker' => 'setMarker',
+            'limit' => 'setLimit'
     ];
 
     /**
@@ -127,6 +143,8 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     * deploymentId  标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
     * filter  过滤条件       * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，如果有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
     * field  选择的属性名称  * 属性名仅支持包含大小写英文、数字和下划线 * 多个属性名称之间以逗号（,）分隔
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             'stackId' => 'getStackId',
             'deploymentId' => 'getDeploymentId',
             'filter' => 'getFilter',
-            'field' => 'getField'
+            'field' => 'getField',
+            'marker' => 'getMarker',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -203,6 +223,8 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
         $this->container['deploymentId'] = isset($data['deploymentId']) ? $data['deploymentId'] : null;
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
         $this->container['field'] = isset($data['field']) ? $data['field'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -266,6 +288,18 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['field']) && (mb_strlen($this->container['field']) < 0)) {
                 $invalidProperties[] = "invalid value for 'field', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 512)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 1)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
             }
         return $invalidProperties;
     }
@@ -422,6 +456,54 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     public function setField($field)
     {
         $this->container['field'] = $field;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页返回的最多结果数量
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页返回的最多结果数量
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

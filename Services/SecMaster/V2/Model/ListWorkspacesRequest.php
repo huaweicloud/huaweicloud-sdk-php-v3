@@ -328,11 +328,11 @@ class ListWorkspacesRequest implements ModelInterface, ArrayAccess
             if (($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";

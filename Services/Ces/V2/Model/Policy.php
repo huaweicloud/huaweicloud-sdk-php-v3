@@ -30,8 +30,8 @@ class Policy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
-    * namespace  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimensionName  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
+    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  指标维度名称。各服务资源的指标维度名称可查看：“[指标维度名称](ces_03_0059.xml)”。 约束与限制：    资源层级为子维度的告警规则，修改告警策略时，指标维度名必须与告警规则监控资源的维度保持一致。    资源层级为云产品的告警规则，修改告警策略时，指标维度名中首层维度必须与告警规则监控资源的维度保持一致。 举例：    ECS服务的资源层级为子维度、维度为云服务器的告警规则，需要设置维度名为：instance_id；    ECS服务的资源层级为云产品的告警规则时，维度名可以为：instance_id,disk
     *
     * @var string[]
     */
@@ -62,8 +62,8 @@ class Policy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
-    * namespace  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimensionName  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
+    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  指标维度名称。各服务资源的指标维度名称可查看：“[指标维度名称](ces_03_0059.xml)”。 约束与限制：    资源层级为子维度的告警规则，修改告警策略时，指标维度名必须与告警规则监控资源的维度保持一致。    资源层级为云产品的告警规则，修改告警策略时，指标维度名中首层维度必须与告警规则监控资源的维度保持一致。 举例：    ECS服务的资源层级为子维度、维度为云服务器的告警规则，需要设置维度名为：instance_id；    ECS服务的资源层级为云产品的告警规则时，维度名可以为：instance_id,disk
     *
     * @var string[]
     */
@@ -115,8 +115,8 @@ class Policy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
-    * namespace  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimensionName  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
+    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  指标维度名称。各服务资源的指标维度名称可查看：“[指标维度名称](ces_03_0059.xml)”。 约束与限制：    资源层级为子维度的告警规则，修改告警策略时，指标维度名必须与告警规则监控资源的维度保持一致。    资源层级为云产品的告警规则，修改告警策略时，指标维度名中首层维度必须与告警规则监控资源的维度保持一致。 举例：    ECS服务的资源层级为子维度、维度为云服务器的告警规则，需要设置维度名为：instance_id；    ECS服务的资源层级为云产品的告警规则时，维度名可以为：instance_id,disk
     *
     * @var string[]
     */
@@ -147,8 +147,8 @@ class Policy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
-    * namespace  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimensionName  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
+    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  指标维度名称。各服务资源的指标维度名称可查看：“[指标维度名称](ces_03_0059.xml)”。 约束与限制：    资源层级为子维度的告警规则，修改告警策略时，指标维度名必须与告警规则监控资源的维度保持一致。    资源层级为云产品的告警规则，修改告警策略时，指标维度名中首层维度必须与告警规则监控资源的维度保持一致。 举例：    ECS服务的资源层级为子维度、维度为云服务器的告警规则，需要设置维度名为：instance_id；    ECS服务的资源层级为云产品的告警规则时，维度名可以为：instance_id,disk
     *
     * @var string[]
     */
@@ -179,8 +179,8 @@ class Policy implements ModelInterface, ArrayAccess
     * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
-    * namespace  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimensionName  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
+    * namespace  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * dimensionName  指标维度名称。各服务资源的指标维度名称可查看：“[指标维度名称](ces_03_0059.xml)”。 约束与限制：    资源层级为子维度的告警规则，修改告警策略时，指标维度名必须与告警规则监控资源的维度保持一致。    资源层级为云产品的告警规则，修改告警策略时，指标维度名中首层维度必须与告警规则监控资源的维度保持一致。 举例：    ECS服务的资源层级为子维度、维度为云服务器的告警规则，需要设置维度名为：instance_id；    ECS服务的资源层级为云产品的告警规则时，维度名可以为：instance_id,disk
     *
     * @var string[]
     */
@@ -348,8 +348,11 @@ class Policy implements ModelInterface, ArrayAccess
             if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 0)) {
-                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['namespace']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['namespace'])) {
+                $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/.";
             }
             if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'dimensionName', the character length must be smaller than or equal to 256.";
@@ -613,7 +616,7 @@ class Policy implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    *  服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return string|null
     */
@@ -625,7 +628,7 @@ class Policy implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * @param string|null $namespace 服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     *
     * @return $this
     */
@@ -637,7 +640,7 @@ class Policy implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionName
-    *  产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
+    *  指标维度名称。各服务资源的指标维度名称可查看：“[指标维度名称](ces_03_0059.xml)”。 约束与限制：    资源层级为子维度的告警规则，修改告警策略时，指标维度名必须与告警规则监控资源的维度保持一致。    资源层级为云产品的告警规则，修改告警策略时，指标维度名中首层维度必须与告警规则监控资源的维度保持一致。 举例：    ECS服务的资源层级为子维度、维度为云服务器的告警规则，需要设置维度名为：instance_id；    ECS服务的资源层级为云产品的告警规则时，维度名可以为：instance_id,disk
     *
     * @return string|null
     */
@@ -649,7 +652,7 @@ class Policy implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionName
     *
-    * @param string|null $dimensionName 产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
+    * @param string|null $dimensionName 指标维度名称。各服务资源的指标维度名称可查看：“[指标维度名称](ces_03_0059.xml)”。 约束与限制：    资源层级为子维度的告警规则，修改告警策略时，指标维度名必须与告警规则监控资源的维度保持一致。    资源层级为云产品的告警规则，修改告警策略时，指标维度名中首层维度必须与告警规则监控资源的维度保持一致。 举例：    ECS服务的资源层级为子维度、维度为云服务器的告警规则，需要设置维度名为：instance_id；    ECS服务的资源层级为云产品的告警规则时，维度名可以为：instance_id,disk
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class CreatePostPaidOrderRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  用户当前语言环境
+    * xLanguage  用户当前语言环境 zh-cn or en-us.
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreatePostPaidOrderRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  用户当前语言环境
+    * xLanguage  用户当前语言环境 zh-cn or en-us.
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreatePostPaidOrderRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  用户当前语言环境
+    * xLanguage  用户当前语言环境 zh-cn or en-us.
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreatePostPaidOrderRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  用户当前语言环境
+    * xLanguage  用户当前语言环境 zh-cn or en-us.
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreatePostPaidOrderRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  用户当前语言环境
+    * xLanguage  用户当前语言环境 zh-cn or en-us.
     * body  body
     *
     * @var string[]
@@ -217,7 +217,7 @@ class CreatePostPaidOrderRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  用户当前语言环境
+    *  用户当前语言环境 zh-cn or en-us.
     *
     * @return string
     */
@@ -229,7 +229,7 @@ class CreatePostPaidOrderRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string $xLanguage 用户当前语言环境
+    * @param string $xLanguage 用户当前语言环境 zh-cn or en-us.
     *
     * @return $this
     */

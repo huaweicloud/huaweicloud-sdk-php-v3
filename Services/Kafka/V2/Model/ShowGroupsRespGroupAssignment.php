@@ -20,7 +20,7 @@ class ShowGroupsRespGroupAssignment implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  topic名称。
+    * topic  Topic名称。
     * partitions  分区列表。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ShowGroupsRespGroupAssignment implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  topic名称。
+    * topic  Topic名称。
     * partitions  分区列表。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ShowGroupsRespGroupAssignment implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  topic名称。
+    * topic  Topic名称。
     * partitions  分区列表。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ShowGroupsRespGroupAssignment implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  topic名称。
+    * topic  Topic名称。
     * partitions  分区列表。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ShowGroupsRespGroupAssignment implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  topic名称。
+    * topic  Topic名称。
     * partitions  分区列表。
     *
     * @var string[]
@@ -185,7 +185,7 @@ class ShowGroupsRespGroupAssignment implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  topic名称。
+    *  Topic名称。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ShowGroupsRespGroupAssignment implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic topic名称。
+    * @param string|null $topic Topic名称。
     *
     * @return $this
     */

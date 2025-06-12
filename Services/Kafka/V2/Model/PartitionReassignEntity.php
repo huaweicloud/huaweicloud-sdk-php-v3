@@ -20,7 +20,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  topic名称
+    * topic  Topic名称
     * brokers  分区平衡到的broker列表，自动生成分配方案时需指定该参数。
     * replicationFactor  副本因子，自动生成分配方案时可指定。
     * assignment  手动指定的分配方案。brokers参数与该参数不能同时为空。
@@ -36,7 +36,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  topic名称
+    * topic  Topic名称
     * brokers  分区平衡到的broker列表，自动生成分配方案时需指定该参数。
     * replicationFactor  副本因子，自动生成分配方案时可指定。
     * assignment  手动指定的分配方案。brokers参数与该参数不能同时为空。
@@ -73,7 +73,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  topic名称
+    * topic  Topic名称
     * brokers  分区平衡到的broker列表，自动生成分配方案时需指定该参数。
     * replicationFactor  副本因子，自动生成分配方案时可指定。
     * assignment  手动指定的分配方案。brokers参数与该参数不能同时为空。
@@ -89,7 +89,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  topic名称
+    * topic  Topic名称
     * brokers  分区平衡到的broker列表，自动生成分配方案时需指定该参数。
     * replicationFactor  副本因子，自动生成分配方案时可指定。
     * assignment  手动指定的分配方案。brokers参数与该参数不能同时为空。
@@ -105,7 +105,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  topic名称
+    * topic  Topic名称
     * brokers  分区平衡到的broker列表，自动生成分配方案时需指定该参数。
     * replicationFactor  副本因子，自动生成分配方案时可指定。
     * assignment  手动指定的分配方案。brokers参数与该参数不能同时为空。
@@ -210,7 +210,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  topic名称
+    *  Topic名称
     *
     * @return string
     */
@@ -222,7 +222,7 @@ class PartitionReassignEntity implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string $topic topic名称
+    * @param string $topic Topic名称
     *
     * @return $this
     */

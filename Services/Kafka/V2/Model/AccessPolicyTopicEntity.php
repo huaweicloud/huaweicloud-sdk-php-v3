@@ -20,7 +20,7 @@ class AccessPolicyTopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  topic名称。
+    * name  Topic名称。
     * policies  权限列表。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AccessPolicyTopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  topic名称。
+    * name  Topic名称。
     * policies  权限列表。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AccessPolicyTopicEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  topic名称。
+    * name  Topic名称。
     * policies  权限列表。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AccessPolicyTopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  topic名称。
+    * name  Topic名称。
     * policies  权限列表。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AccessPolicyTopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  topic名称。
+    * name  Topic名称。
     * policies  权限列表。
     *
     * @var string[]
@@ -191,7 +191,7 @@ class AccessPolicyTopicEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  topic名称。
+    *  Topic名称。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class AccessPolicyTopicEntity implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name topic名称。
+    * @param string $name Topic名称。
     *
     * @return $this
     */

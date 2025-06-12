@@ -21,9 +21,9 @@ class AutoIdDocClassificationAlarmResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * detectBlurResult  证件图像模糊告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectGlareResult  证件图像反光告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectBlockingWithinBorderResult  证件图像框内遮挡告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectInsufficientLightingResult  证件图像过暗告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
+    * detectGlareResult  证件图像反光告警结果。 - true：表示证件图片存在反光。 - false：表示证件图片不存在反光。
+    * detectBlockingWithinBorderResult  证件图像框内遮挡告警结果。 - true：表示证件图片存在框内遮挡。 - false：表示证件图片不存在框内遮挡。
+    * detectInsufficientLightingResult  证件图像过暗告警结果。 - true：表示证件图片过暗。 - false：表示证件图片光线正常。
     * detectCopyResult  证件图像是否黑白复印件告警结果。 - true：表示证件是复印件。 - false：表示证件是原件。
     * detectBorderIntegrityResult  证件图像边框完整性告警结果。 - true：表示边框不完整。 - false：表示边框完整。
     * detectReproduceResult  证件图像是否翻拍告警结果。 - true：表示证件图片经过翻拍。 - false：表示证件图片未经过翻拍。
@@ -43,9 +43,9 @@ class AutoIdDocClassificationAlarmResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * detectBlurResult  证件图像模糊告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectGlareResult  证件图像反光告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectBlockingWithinBorderResult  证件图像框内遮挡告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectInsufficientLightingResult  证件图像过暗告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
+    * detectGlareResult  证件图像反光告警结果。 - true：表示证件图片存在反光。 - false：表示证件图片不存在反光。
+    * detectBlockingWithinBorderResult  证件图像框内遮挡告警结果。 - true：表示证件图片存在框内遮挡。 - false：表示证件图片不存在框内遮挡。
+    * detectInsufficientLightingResult  证件图像过暗告警结果。 - true：表示证件图片过暗。 - false：表示证件图片光线正常。
     * detectCopyResult  证件图像是否黑白复印件告警结果。 - true：表示证件是复印件。 - false：表示证件是原件。
     * detectBorderIntegrityResult  证件图像边框完整性告警结果。 - true：表示边框不完整。 - false：表示边框完整。
     * detectReproduceResult  证件图像是否翻拍告警结果。 - true：表示证件图片经过翻拍。 - false：表示证件图片未经过翻拍。
@@ -86,9 +86,9 @@ class AutoIdDocClassificationAlarmResult implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * detectBlurResult  证件图像模糊告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectGlareResult  证件图像反光告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectBlockingWithinBorderResult  证件图像框内遮挡告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectInsufficientLightingResult  证件图像过暗告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
+    * detectGlareResult  证件图像反光告警结果。 - true：表示证件图片存在反光。 - false：表示证件图片不存在反光。
+    * detectBlockingWithinBorderResult  证件图像框内遮挡告警结果。 - true：表示证件图片存在框内遮挡。 - false：表示证件图片不存在框内遮挡。
+    * detectInsufficientLightingResult  证件图像过暗告警结果。 - true：表示证件图片过暗。 - false：表示证件图片光线正常。
     * detectCopyResult  证件图像是否黑白复印件告警结果。 - true：表示证件是复印件。 - false：表示证件是原件。
     * detectBorderIntegrityResult  证件图像边框完整性告警结果。 - true：表示边框不完整。 - false：表示边框完整。
     * detectReproduceResult  证件图像是否翻拍告警结果。 - true：表示证件图片经过翻拍。 - false：表示证件图片未经过翻拍。
@@ -108,9 +108,9 @@ class AutoIdDocClassificationAlarmResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * detectBlurResult  证件图像模糊告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectGlareResult  证件图像反光告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectBlockingWithinBorderResult  证件图像框内遮挡告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectInsufficientLightingResult  证件图像过暗告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
+    * detectGlareResult  证件图像反光告警结果。 - true：表示证件图片存在反光。 - false：表示证件图片不存在反光。
+    * detectBlockingWithinBorderResult  证件图像框内遮挡告警结果。 - true：表示证件图片存在框内遮挡。 - false：表示证件图片不存在框内遮挡。
+    * detectInsufficientLightingResult  证件图像过暗告警结果。 - true：表示证件图片过暗。 - false：表示证件图片光线正常。
     * detectCopyResult  证件图像是否黑白复印件告警结果。 - true：表示证件是复印件。 - false：表示证件是原件。
     * detectBorderIntegrityResult  证件图像边框完整性告警结果。 - true：表示边框不完整。 - false：表示边框完整。
     * detectReproduceResult  证件图像是否翻拍告警结果。 - true：表示证件图片经过翻拍。 - false：表示证件图片未经过翻拍。
@@ -130,9 +130,9 @@ class AutoIdDocClassificationAlarmResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * detectBlurResult  证件图像模糊告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectGlareResult  证件图像反光告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectBlockingWithinBorderResult  证件图像框内遮挡告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
-    * detectInsufficientLightingResult  证件图像过暗告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
+    * detectGlareResult  证件图像反光告警结果。 - true：表示证件图片存在反光。 - false：表示证件图片不存在反光。
+    * detectBlockingWithinBorderResult  证件图像框内遮挡告警结果。 - true：表示证件图片存在框内遮挡。 - false：表示证件图片不存在框内遮挡。
+    * detectInsufficientLightingResult  证件图像过暗告警结果。 - true：表示证件图片过暗。 - false：表示证件图片光线正常。
     * detectCopyResult  证件图像是否黑白复印件告警结果。 - true：表示证件是复印件。 - false：表示证件是原件。
     * detectBorderIntegrityResult  证件图像边框完整性告警结果。 - true：表示边框不完整。 - false：表示边框完整。
     * detectReproduceResult  证件图像是否翻拍告警结果。 - true：表示证件图片经过翻拍。 - false：表示证件图片未经过翻拍。
@@ -264,7 +264,7 @@ class AutoIdDocClassificationAlarmResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets detectGlareResult
-    *  证件图像反光告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
+    *  证件图像反光告警结果。 - true：表示证件图片存在反光。 - false：表示证件图片不存在反光。
     *
     * @return bool|null
     */
@@ -276,7 +276,7 @@ class AutoIdDocClassificationAlarmResult implements ModelInterface, ArrayAccess
     /**
     * Sets detectGlareResult
     *
-    * @param bool|null $detectGlareResult 证件图像反光告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
+    * @param bool|null $detectGlareResult 证件图像反光告警结果。 - true：表示证件图片存在反光。 - false：表示证件图片不存在反光。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class AutoIdDocClassificationAlarmResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets detectBlockingWithinBorderResult
-    *  证件图像框内遮挡告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
+    *  证件图像框内遮挡告警结果。 - true：表示证件图片存在框内遮挡。 - false：表示证件图片不存在框内遮挡。
     *
     * @return bool|null
     */
@@ -300,7 +300,7 @@ class AutoIdDocClassificationAlarmResult implements ModelInterface, ArrayAccess
     /**
     * Sets detectBlockingWithinBorderResult
     *
-    * @param bool|null $detectBlockingWithinBorderResult 证件图像框内遮挡告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
+    * @param bool|null $detectBlockingWithinBorderResult 证件图像框内遮挡告警结果。 - true：表示证件图片存在框内遮挡。 - false：表示证件图片不存在框内遮挡。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class AutoIdDocClassificationAlarmResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets detectInsufficientLightingResult
-    *  证件图像过暗告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
+    *  证件图像过暗告警结果。 - true：表示证件图片过暗。 - false：表示证件图片光线正常。
     *
     * @return bool|null
     */
@@ -324,7 +324,7 @@ class AutoIdDocClassificationAlarmResult implements ModelInterface, ArrayAccess
     /**
     * Sets detectInsufficientLightingResult
     *
-    * @param bool|null $detectInsufficientLightingResult 证件图像过暗告警结果。 - true：表示证件图片较模糊。 - false：表示证件清晰。
+    * @param bool|null $detectInsufficientLightingResult 证件图像过暗告警结果。 - true：表示证件图片过暗。 - false：表示证件图片光线正常。
     *
     * @return $this
     */

@@ -22,21 +22,25 @@ class ListStackSetOperationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * stackSetOperations  资源栈集操作列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'stackSetOperations' => '\HuaweiCloud\SDK\Aos\V1\Model\StackSetOperation[]'
+            'stackSetOperations' => '\HuaweiCloud\SDK\Aos\V1\Model\StackSetOperation[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Aos\V1\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * stackSetOperations  资源栈集操作列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'stackSetOperations' => null
+        'stackSetOperations' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListStackSetOperationsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * stackSetOperations  资源栈集操作列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'stackSetOperations' => 'stack_set_operations'
+            'stackSetOperations' => 'stack_set_operations',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * stackSetOperations  资源栈集操作列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
-            'stackSetOperations' => 'setStackSetOperations'
+            'stackSetOperations' => 'setStackSetOperations',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * stackSetOperations  资源栈集操作列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
-            'stackSetOperations' => 'getStackSetOperations'
+            'stackSetOperations' => 'getStackSetOperations',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListStackSetOperationsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['stackSetOperations'] = isset($data['stackSetOperations']) ? $data['stackSetOperations'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListStackSetOperationsResponse implements ModelInterface, ArrayAccess
     public function setStackSetOperations($stackSetOperations)
     {
         $this->container['stackSetOperations'] = $stackSetOperations;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

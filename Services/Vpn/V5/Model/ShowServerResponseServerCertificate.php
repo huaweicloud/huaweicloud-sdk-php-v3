@@ -27,6 +27,7 @@ class ShowServerResponseServerCertificate implements ModelInterface, ArrayAccess
     * serialNumber  序列号
     * expirationTime  过期时间
     * signatureAlgorithm  证书签名算法
+    * source  证书来源
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ShowServerResponseServerCertificate implements ModelInterface, ArrayAccess
             'subject' => 'string',
             'serialNumber' => 'string',
             'expirationTime' => '\DateTime',
-            'signatureAlgorithm' => 'string'
+            'signatureAlgorithm' => 'string',
+            'source' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ShowServerResponseServerCertificate implements ModelInterface, ArrayAccess
     * serialNumber  序列号
     * expirationTime  过期时间
     * signatureAlgorithm  证书签名算法
+    * source  证书来源
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ShowServerResponseServerCertificate implements ModelInterface, ArrayAccess
         'subject' => null,
         'serialNumber' => null,
         'expirationTime' => 'date-time',
-        'signatureAlgorithm' => null
+        'signatureAlgorithm' => null,
+        'source' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ShowServerResponseServerCertificate implements ModelInterface, ArrayAccess
     * serialNumber  序列号
     * expirationTime  过期时间
     * signatureAlgorithm  证书签名算法
+    * source  证书来源
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ShowServerResponseServerCertificate implements ModelInterface, ArrayAccess
             'subject' => 'subject',
             'serialNumber' => 'serial_number',
             'expirationTime' => 'expiration_time',
-            'signatureAlgorithm' => 'signature_algorithm'
+            'signatureAlgorithm' => 'signature_algorithm',
+            'source' => 'source'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ShowServerResponseServerCertificate implements ModelInterface, ArrayAccess
     * serialNumber  序列号
     * expirationTime  过期时间
     * signatureAlgorithm  证书签名算法
+    * source  证书来源
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ShowServerResponseServerCertificate implements ModelInterface, ArrayAccess
             'subject' => 'setSubject',
             'serialNumber' => 'setSerialNumber',
             'expirationTime' => 'setExpirationTime',
-            'signatureAlgorithm' => 'setSignatureAlgorithm'
+            'signatureAlgorithm' => 'setSignatureAlgorithm',
+            'source' => 'setSource'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ShowServerResponseServerCertificate implements ModelInterface, ArrayAccess
     * serialNumber  序列号
     * expirationTime  过期时间
     * signatureAlgorithm  证书签名算法
+    * source  证书来源
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ShowServerResponseServerCertificate implements ModelInterface, ArrayAccess
             'subject' => 'getSubject',
             'serialNumber' => 'getSerialNumber',
             'expirationTime' => 'getExpirationTime',
-            'signatureAlgorithm' => 'getSignatureAlgorithm'
+            'signatureAlgorithm' => 'getSignatureAlgorithm',
+            'source' => 'getSource'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ShowServerResponseServerCertificate implements ModelInterface, ArrayAccess
         $this->container['serialNumber'] = isset($data['serialNumber']) ? $data['serialNumber'] : null;
         $this->container['expirationTime'] = isset($data['expirationTime']) ? $data['expirationTime'] : null;
         $this->container['signatureAlgorithm'] = isset($data['signatureAlgorithm']) ? $data['signatureAlgorithm'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class ShowServerResponseServerCertificate implements ModelInterface, ArrayAccess
     public function setSignatureAlgorithm($signatureAlgorithm)
     {
         $this->container['signatureAlgorithm'] = $signatureAlgorithm;
+        return $this;
+    }
+
+    /**
+    * Gets source
+    *  证书来源
+    *
+    * @return string|null
+    */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+    * Sets source
+    *
+    * @param string|null $source 证书来源
+    *
+    * @return $this
+    */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
         return $this;
     }
 

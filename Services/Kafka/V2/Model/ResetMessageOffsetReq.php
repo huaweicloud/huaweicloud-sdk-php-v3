@@ -20,7 +20,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  topic名称。
+    * topic  Topic名称。
     * partition  分区编号，默认值为-1，若传入值为-1，则重置所有分区。
     * messageOffset  重置消费进度到指定偏移量。 - 如果传入offset小于当前最小的offset，则重置到最小的offset。 - 如果大于最大的offset，则重置到最大的offset。  **message_offset、timestamp二者必选其一。**
     * timestamp  重置消费进度到指定时间，格式为unix时间戳，单位为毫秒。 - 如果传入timestamp早于当前最早的timestamp，则重置到最早的timestamp。 - 如果晚于最晚的timestamp，则重置到最晚的timestamp。  **message_offset、timestamp二者必选其一。**
@@ -36,7 +36,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  topic名称。
+    * topic  Topic名称。
     * partition  分区编号，默认值为-1，若传入值为-1，则重置所有分区。
     * messageOffset  重置消费进度到指定偏移量。 - 如果传入offset小于当前最小的offset，则重置到最小的offset。 - 如果大于最大的offset，则重置到最大的offset。  **message_offset、timestamp二者必选其一。**
     * timestamp  重置消费进度到指定时间，格式为unix时间戳，单位为毫秒。 - 如果传入timestamp早于当前最早的timestamp，则重置到最早的timestamp。 - 如果晚于最晚的timestamp，则重置到最晚的timestamp。  **message_offset、timestamp二者必选其一。**
@@ -73,7 +73,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  topic名称。
+    * topic  Topic名称。
     * partition  分区编号，默认值为-1，若传入值为-1，则重置所有分区。
     * messageOffset  重置消费进度到指定偏移量。 - 如果传入offset小于当前最小的offset，则重置到最小的offset。 - 如果大于最大的offset，则重置到最大的offset。  **message_offset、timestamp二者必选其一。**
     * timestamp  重置消费进度到指定时间，格式为unix时间戳，单位为毫秒。 - 如果传入timestamp早于当前最早的timestamp，则重置到最早的timestamp。 - 如果晚于最晚的timestamp，则重置到最晚的timestamp。  **message_offset、timestamp二者必选其一。**
@@ -89,7 +89,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  topic名称。
+    * topic  Topic名称。
     * partition  分区编号，默认值为-1，若传入值为-1，则重置所有分区。
     * messageOffset  重置消费进度到指定偏移量。 - 如果传入offset小于当前最小的offset，则重置到最小的offset。 - 如果大于最大的offset，则重置到最大的offset。  **message_offset、timestamp二者必选其一。**
     * timestamp  重置消费进度到指定时间，格式为unix时间戳，单位为毫秒。 - 如果传入timestamp早于当前最早的timestamp，则重置到最早的timestamp。 - 如果晚于最晚的timestamp，则重置到最晚的timestamp。  **message_offset、timestamp二者必选其一。**
@@ -105,7 +105,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  topic名称。
+    * topic  Topic名称。
     * partition  分区编号，默认值为-1，若传入值为-1，则重置所有分区。
     * messageOffset  重置消费进度到指定偏移量。 - 如果传入offset小于当前最小的offset，则重置到最小的offset。 - 如果大于最大的offset，则重置到最大的offset。  **message_offset、timestamp二者必选其一。**
     * timestamp  重置消费进度到指定时间，格式为unix时间戳，单位为毫秒。 - 如果传入timestamp早于当前最早的timestamp，则重置到最早的timestamp。 - 如果晚于最晚的timestamp，则重置到最晚的timestamp。  **message_offset、timestamp二者必选其一。**
@@ -210,7 +210,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  topic名称。
+    *  Topic名称。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic topic名称。
+    * @param string|null $topic Topic名称。
     *
     * @return $this
     */

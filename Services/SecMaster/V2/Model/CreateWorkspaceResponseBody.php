@@ -39,7 +39,7 @@ class CreateWorkspaceResponseBody implements ModelInterface, ArrayAccess
     * regionId  区域id
     * viewBindId  视图绑定的空间id
     * viewBindName  视图绑定的空间名称
-    * workspaceAgencyList  仅用于视图场景，列出了该视图纳管的空间列表
+    * workspaceAgencyList  纳管空间列表
     *
     * @var string[]
     */
@@ -87,7 +87,7 @@ class CreateWorkspaceResponseBody implements ModelInterface, ArrayAccess
     * regionId  区域id
     * viewBindId  视图绑定的空间id
     * viewBindName  视图绑定的空间名称
-    * workspaceAgencyList  仅用于视图场景，列出了该视图纳管的空间列表
+    * workspaceAgencyList  纳管空间列表
     *
     * @var string[]
     */
@@ -156,7 +156,7 @@ class CreateWorkspaceResponseBody implements ModelInterface, ArrayAccess
     * regionId  区域id
     * viewBindId  视图绑定的空间id
     * viewBindName  视图绑定的空间名称
-    * workspaceAgencyList  仅用于视图场景，列出了该视图纳管的空间列表
+    * workspaceAgencyList  纳管空间列表
     *
     * @var string[]
     */
@@ -204,7 +204,7 @@ class CreateWorkspaceResponseBody implements ModelInterface, ArrayAccess
     * regionId  区域id
     * viewBindId  视图绑定的空间id
     * viewBindName  视图绑定的空间名称
-    * workspaceAgencyList  仅用于视图场景，列出了该视图纳管的空间列表
+    * workspaceAgencyList  纳管空间列表
     *
     * @var string[]
     */
@@ -252,7 +252,7 @@ class CreateWorkspaceResponseBody implements ModelInterface, ArrayAccess
     * regionId  区域id
     * viewBindId  视图绑定的空间id
     * viewBindName  视图绑定的空间名称
-    * workspaceAgencyList  仅用于视图场景，列出了该视图纳管的空间列表
+    * workspaceAgencyList  纳管空间列表
     *
     * @var string[]
     */
@@ -370,20 +370,20 @@ class CreateWorkspaceResponseBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 32)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 64)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) < 0)) {
-                $invalidProperties[] = "invalid value for 'createTime', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) < 1)) {
+                $invalidProperties[] = "invalid value for 'createTime', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['updateTime']) && (mb_strlen($this->container['updateTime']) > 64)) {
                 $invalidProperties[] = "invalid value for 'updateTime', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['updateTime']) && (mb_strlen($this->container['updateTime']) < 0)) {
-                $invalidProperties[] = "invalid value for 'updateTime', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['updateTime']) && (mb_strlen($this->container['updateTime']) < 1)) {
+                $invalidProperties[] = "invalid value for 'updateTime', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
@@ -400,32 +400,32 @@ class CreateWorkspaceResponseBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['creatorId']) && (mb_strlen($this->container['creatorId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'creatorId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['creatorId']) && (mb_strlen($this->container['creatorId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'creatorId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['creatorId']) && (mb_strlen($this->container['creatorId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'creatorId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['creatorName']) && (mb_strlen($this->container['creatorName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'creatorName', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['creatorName']) && (mb_strlen($this->container['creatorName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'creatorName', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['creatorName']) && (mb_strlen($this->container['creatorName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'creatorName', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['modifierId']) && (mb_strlen($this->container['modifierId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'modifierId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['modifierId']) && (mb_strlen($this->container['modifierId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'modifierId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['modifierId']) && (mb_strlen($this->container['modifierId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'modifierId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['modifierName']) && (mb_strlen($this->container['modifierName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'modifierName', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['modifierName']) && (mb_strlen($this->container['modifierName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'modifierName', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['modifierName']) && (mb_strlen($this->container['modifierName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'modifierName', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['projectName']) && (mb_strlen($this->container['projectName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'projectName', the character length must be smaller than or equal to 64.";
@@ -436,8 +436,8 @@ class CreateWorkspaceResponseBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['domainName']) && (mb_strlen($this->container['domainName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'domainName', the character length must be smaller than or equal to 64.";
@@ -445,8 +445,8 @@ class CreateWorkspaceResponseBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['domainName']) && (mb_strlen($this->container['domainName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'domainName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
@@ -472,8 +472,8 @@ class CreateWorkspaceResponseBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['viewBindName']) && (mb_strlen($this->container['viewBindName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'viewBindName', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['viewBindName']) && (mb_strlen($this->container['viewBindName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'viewBindName', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['viewBindName']) && (mb_strlen($this->container['viewBindName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'viewBindName', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -947,7 +947,7 @@ class CreateWorkspaceResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspaceAgencyList
-    *  仅用于视图场景，列出了该视图纳管的空间列表
+    *  纳管空间列表
     *
     * @return \HuaweiCloud\SDK\SecMaster\V2\Model\CreateWorkspaceResponseBodyWorkspaceAgencyList[]|null
     */
@@ -959,7 +959,7 @@ class CreateWorkspaceResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets workspaceAgencyList
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\CreateWorkspaceResponseBodyWorkspaceAgencyList[]|null $workspaceAgencyList 仅用于视图场景，列出了该视图纳管的空间列表
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\CreateWorkspaceResponseBodyWorkspaceAgencyList[]|null $workspaceAgencyList 纳管空间列表
     *
     * @return $this
     */

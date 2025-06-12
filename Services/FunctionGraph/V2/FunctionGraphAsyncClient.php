@@ -3269,6 +3269,9 @@ class FunctionGraphAsyncClient extends Client
         if ($localVarParams['packageName'] !== null) {
             $queryParams['package_name'] = $localVarParams['packageName'];
         }
+        if ($localVarParams['funcName'] !== null) {
+            $queryParams['func_name'] = $localVarParams['funcName'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

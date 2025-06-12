@@ -23,6 +23,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎。
     * instanceId  实例ID。
     * topic  主题名称。
+    * queue  队列。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     * key  消息的key。
@@ -36,6 +37,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
             'engine' => 'string',
             'instanceId' => 'string',
             'topic' => 'string',
+            'queue' => 'string',
             'limit' => 'string',
             'offset' => 'string',
             'key' => 'string',
@@ -49,6 +51,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎。
     * instanceId  实例ID。
     * topic  主题名称。
+    * queue  队列。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     * key  消息的key。
@@ -62,6 +65,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
         'engine' => null,
         'instanceId' => null,
         'topic' => null,
+        'queue' => null,
         'limit' => null,
         'offset' => null,
         'key' => null,
@@ -96,6 +100,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎。
     * instanceId  实例ID。
     * topic  主题名称。
+    * queue  队列。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     * key  消息的key。
@@ -109,6 +114,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
             'engine' => 'engine',
             'instanceId' => 'instance_id',
             'topic' => 'topic',
+            'queue' => 'queue',
             'limit' => 'limit',
             'offset' => 'offset',
             'key' => 'key',
@@ -122,6 +128,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎。
     * instanceId  实例ID。
     * topic  主题名称。
+    * queue  队列。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     * key  消息的key。
@@ -135,6 +142,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
             'engine' => 'setEngine',
             'instanceId' => 'setInstanceId',
             'topic' => 'setTopic',
+            'queue' => 'setQueue',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
             'key' => 'setKey',
@@ -148,6 +156,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎。
     * instanceId  实例ID。
     * topic  主题名称。
+    * queue  队列。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     * key  消息的key。
@@ -161,6 +170,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
             'engine' => 'getEngine',
             'instanceId' => 'getInstanceId',
             'topic' => 'getTopic',
+            'queue' => 'getQueue',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
             'key' => 'getKey',
@@ -243,6 +253,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
         $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
+        $this->container['queue'] = isset($data['queue']) ? $data['queue'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
@@ -359,6 +370,30 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     public function setTopic($topic)
     {
         $this->container['topic'] = $topic;
+        return $this;
+    }
+
+    /**
+    * Gets queue
+    *  队列。
+    *
+    * @return string|null
+    */
+    public function getQueue()
+    {
+        return $this->container['queue'];
+    }
+
+    /**
+    * Sets queue
+    *
+    * @param string|null $queue 队列。
+    *
+    * @return $this
+    */
+    public function setQueue($queue)
+    {
+        $this->container['queue'] = $queue;
         return $this;
     }
 

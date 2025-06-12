@@ -21,10 +21,10 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tasks  Smart Connector任务详情。
-    * totalNumber  Smart Connector任务数。
-    * maxTasks  Smart Connector最大任务数。
-    * quotaTasks  Smart Connector任务配额。
+    * tasks  Smart Connect任务详情。
+    * totalNumber  Smart Connect任务数。
+    * maxTasks  Smart Connect最大任务数。
+    * quotaTasks  Smart Connect任务配额。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tasks  Smart Connector任务详情。
-    * totalNumber  Smart Connector任务数。
-    * maxTasks  Smart Connector最大任务数。
-    * quotaTasks  Smart Connector任务配额。
+    * tasks  Smart Connect任务详情。
+    * totalNumber  Smart Connect任务数。
+    * maxTasks  Smart Connect最大任务数。
+    * quotaTasks  Smart Connect任务配额。
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tasks  Smart Connector任务详情。
-    * totalNumber  Smart Connector任务数。
-    * maxTasks  Smart Connector最大任务数。
-    * quotaTasks  Smart Connector任务配额。
+    * tasks  Smart Connect任务详情。
+    * totalNumber  Smart Connect任务数。
+    * maxTasks  Smart Connect最大任务数。
+    * quotaTasks  Smart Connect任务配额。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tasks  Smart Connector任务详情。
-    * totalNumber  Smart Connector任务数。
-    * maxTasks  Smart Connector最大任务数。
-    * quotaTasks  Smart Connector任务配额。
+    * tasks  Smart Connect任务详情。
+    * totalNumber  Smart Connect任务数。
+    * maxTasks  Smart Connect最大任务数。
+    * quotaTasks  Smart Connect任务配额。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tasks  Smart Connector任务详情。
-    * totalNumber  Smart Connector任务数。
-    * maxTasks  Smart Connector最大任务数。
-    * quotaTasks  Smart Connector任务配额。
+    * tasks  Smart Connect任务详情。
+    * totalNumber  Smart Connect任务数。
+    * maxTasks  Smart Connect最大任务数。
+    * quotaTasks  Smart Connect任务配额。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tasks
-    *  Smart Connector任务详情。
+    *  Smart Connect任务详情。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\SmartConnectTaskEntity[]|null
     */
@@ -220,7 +220,7 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tasks
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\SmartConnectTaskEntity[]|null $tasks Smart Connector任务详情。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\SmartConnectTaskEntity[]|null $tasks Smart Connect任务详情。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNumber
-    *  Smart Connector任务数。
+    *  Smart Connect任务数。
     *
     * @return int|null
     */
@@ -244,7 +244,7 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNumber
     *
-    * @param int|null $totalNumber Smart Connector任务数。
+    * @param int|null $totalNumber Smart Connect任务数。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxTasks
-    *  Smart Connector最大任务数。
+    *  Smart Connect最大任务数。
     *
     * @return int|null
     */
@@ -268,7 +268,7 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets maxTasks
     *
-    * @param int|null $maxTasks Smart Connector最大任务数。
+    * @param int|null $maxTasks Smart Connect最大任务数。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaTasks
-    *  Smart Connector任务配额。
+    *  Smart Connect任务配额。
     *
     * @return int|null
     */
@@ -292,7 +292,7 @@ class ListConnectorTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets quotaTasks
     *
-    * @param int|null $quotaTasks Smart Connector任务配额。
+    * @param int|null $quotaTasks Smart Connect任务配额。
     *
     * @return $this
     */

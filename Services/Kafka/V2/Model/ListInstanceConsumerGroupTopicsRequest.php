@@ -24,10 +24,10 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     * instanceId  实例ID。
     * group  消费组ID。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  当次查询返回的最大topic个数，默认值为10，取值范围为1~50。
-    * sortKey  排序规则： - topic：按topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
+    * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
+    * sortKey  排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
     * sortDir  排序方式。 - asc：升序。 - desc：降序，默认方式。
-    * topic  topic名称。
+    * topic  Topic名称。
     *
     * @var string[]
     */
@@ -48,10 +48,10 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     * instanceId  实例ID。
     * group  消费组ID。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  当次查询返回的最大topic个数，默认值为10，取值范围为1~50。
-    * sortKey  排序规则： - topic：按topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
+    * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
+    * sortKey  排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
     * sortDir  排序方式。 - asc：升序。 - desc：降序，默认方式。
-    * topic  topic名称。
+    * topic  Topic名称。
     *
     * @var string[]
     */
@@ -93,10 +93,10 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     * instanceId  实例ID。
     * group  消费组ID。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  当次查询返回的最大topic个数，默认值为10，取值范围为1~50。
-    * sortKey  排序规则： - topic：按topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
+    * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
+    * sortKey  排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
     * sortDir  排序方式。 - asc：升序。 - desc：降序，默认方式。
-    * topic  topic名称。
+    * topic  Topic名称。
     *
     * @var string[]
     */
@@ -117,10 +117,10 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     * instanceId  实例ID。
     * group  消费组ID。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  当次查询返回的最大topic个数，默认值为10，取值范围为1~50。
-    * sortKey  排序规则： - topic：按topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
+    * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
+    * sortKey  排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
     * sortDir  排序方式。 - asc：升序。 - desc：降序，默认方式。
-    * topic  topic名称。
+    * topic  Topic名称。
     *
     * @var string[]
     */
@@ -141,10 +141,10 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     * instanceId  实例ID。
     * group  消费组ID。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  当次查询返回的最大topic个数，默认值为10，取值范围为1~50。
-    * sortKey  排序规则： - topic：按topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
+    * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
+    * sortKey  排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
     * sortDir  排序方式。 - asc：升序。 - desc：降序，默认方式。
-    * topic  topic名称。
+    * topic  Topic名称。
     *
     * @var string[]
     */
@@ -356,7 +356,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets limit
-    *  当次查询返回的最大topic个数，默认值为10，取值范围为1~50。
+    *  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
     *
     * @return int|null
     */
@@ -368,7 +368,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets limit
     *
-    * @param int|null $limit 当次查询返回的最大topic个数，默认值为10，取值范围为1~50。
+    * @param int|null $limit 当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets sortKey
-    *  排序规则： - topic：按topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
+    *  排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序规则： - topic：按topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
+    * @param string|null $sortKey 排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets topic
-    *  topic名称。
+    *  Topic名称。
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets topic
     *
-    * @param string|null $topic topic名称。
+    * @param string|null $topic Topic名称。
     *
     * @return $this
     */

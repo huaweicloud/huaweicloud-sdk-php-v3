@@ -1488,6 +1488,70 @@ class EcsAsyncClient extends Client
     }
 
     /**
+     * 删除回收站中虚拟机
+     *
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteRecycleBinServerAsync($request)
+    {
+        return $this->deleteRecycleBinServerAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteRecycleBinServerAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/recycle-bin/cloudservers/{server_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteRecycleBinServerResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteRecycleBinServerRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 删除云服务器组
      *
      * 删除云服务器组。
@@ -2245,6 +2309,97 @@ class EcsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListFlavorsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListFlavorsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询回收站中虚拟机列表
+     *
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRecycleBinServersAsync($request)
+    {
+        return $this->listRecycleBinServersAsyncWithHttpInfo($request);
+    }
+    
+    public function listRecycleBinServersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/recycle-bin/cloudservers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['allTenants'] !== null) {
+            $queryParams['all_tenants'] = $localVarParams['allTenants'];
+        }
+        if ($localVarParams['availabilityZone'] !== null) {
+            $queryParams['availability_zone'] = $localVarParams['availabilityZone'];
+        }
+        if ($localVarParams['expectFields'] !== null) {
+            $queryParams['expect_fields'] = $localVarParams['expectFields'];
+        }
+        if ($localVarParams['ipAddress'] !== null) {
+            $queryParams['ip_address'] = $localVarParams['ipAddress'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['tagsKey'] !== null) {
+            $queryParams['tags_key'] = $localVarParams['tagsKey'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListRecycleBinServersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListRecycleBinServersRequest',
             $asyncRequest = true);
     }
 
@@ -4520,6 +4675,197 @@ class EcsAsyncClient extends Client
     }
 
     /**
+     * 恢复回收站中虚拟机
+     *
+     * 回收站中的虚拟机从回收站中恢复
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function revertRecycleBinServerAsync($request)
+    {
+        return $this->revertRecycleBinServerAsyncWithHttpInfo($request);
+    }
+    
+    public function revertRecycleBinServerAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/recycle-bin/cloudservers/{server_id}/actions/revert';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\RevertRecycleBinServerResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\RevertRecycleBinServerRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询回收站配置
+     *
+     * 查询回收站配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRecycleBinAsync($request)
+    {
+        return $this->showRecycleBinAsyncWithHttpInfo($request);
+    }
+    
+    public function showRecycleBinAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/recycle-bin';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowRecycleBinResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowRecycleBinRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询回收站中指定云服务器
+     *
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRecycleBinServerAsync($request)
+    {
+        return $this->showRecycleBinServerAsyncWithHttpInfo($request);
+    }
+    
+    public function showRecycleBinServerAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/recycle-bin/cloudservers/{server_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowRecycleBinServerResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowRecycleBinServerRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询是否支持一键重置密码
      *
      * 查询弹性云服务器是否支持一键重置密码。
@@ -4849,6 +5195,71 @@ class EcsAsyncClient extends Client
     }
 
     /**
+     * 查询云服务器元数据配置
+     *
+     * 查询云服务器元数据配置，通过本接口，您可以查询指定云服务器的元数据配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showServerMetadataOptionsAsync($request)
+    {
+        return $this->showServerMetadataOptionsAsyncWithHttpInfo($request);
+    }
+    
+    public function showServerMetadataOptionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/metadata-options';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerMetadataOptionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerMetadataOptionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 云服务器获取密码(企业项目)
      *
      * 当通过支持Cloudbase-init功能的镜像创建Windows云服务器时，获取云服务器初始安装时系统生成的管理员帐户（Administrator帐户或Cloudbase-init设置的帐户）随机密码。
@@ -5045,6 +5456,136 @@ class EcsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerTagsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新回收站配置
+     *
+     * 更新回收站属性信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateRecycleBinAsync($request)
+    {
+        return $this->updateRecycleBinAsyncWithHttpInfo($request);
+    }
+    
+    public function updateRecycleBinAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/recycle-bin';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateRecycleBinResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateRecycleBinRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新回收站策略
+     *
+     * 更新回收站策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateRecycleBinPolicyAsync($request)
+    {
+        return $this->updateRecycleBinPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function updateRecycleBinPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/recycle-bin/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateRecycleBinPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateRecycleBinPolicyRequest',
             $asyncRequest = true);
     }
 
@@ -5399,6 +5940,74 @@ class EcsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerMetadataResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerMetadataRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新云服务器元数据配置
+     *
+     * 更新云服务器元数据配置，通过本接口，您可以选择启用或关闭IMDS服务，也可以选择IMDS服务的版本。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateServerMetadataOptionsAsync($request)
+    {
+        return $this->updateServerMetadataOptionsAsyncWithHttpInfo($request);
+    }
+    
+    public function updateServerMetadataOptionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/metadata-options';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerMetadataOptionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerMetadataOptionsRequest',
             $asyncRequest = true);
     }
 

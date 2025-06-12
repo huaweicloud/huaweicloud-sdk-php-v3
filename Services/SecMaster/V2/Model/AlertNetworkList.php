@@ -313,8 +313,8 @@ class AlertNetworkList implements ModelInterface, ArrayAccess
             if (!is_null($this->container['destIp']) && (mb_strlen($this->container['destIp']) > 64)) {
                 $invalidProperties[] = "invalid value for 'destIp', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['destIp']) && (mb_strlen($this->container['destIp']) < 32)) {
-                $invalidProperties[] = "invalid value for 'destIp', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['destIp']) && (mb_strlen($this->container['destIp']) < 0)) {
+                $invalidProperties[] = "invalid value for 'destIp', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['destPort']) && (mb_strlen($this->container['destPort']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'destPort', the character length must be smaller than or equal to 65535.";

@@ -25,6 +25,8 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
     * moduleId  私有模块（private-module）的唯一Id。  此Id由资源编排服务在生成模块的时候生成，为UUID。  由于私有模块名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的私有模块，删除，再重新创建一个同名私有模块。  对于团队并行开发，用户可能希望确保，当前我操作的私有模块就是我认为的那个，而不是其他队友删除后创建的同名私有模块。因此，使用Id就可以做到强匹配。  资源编排服务保证每次创建的私有模块所对应的Id都不相同，更新不会影响Id。如果给予的module_id和当前模块的Id不一致，则返回400
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
             'moduleName' => 'string',
             'moduleId' => 'string',
             'sortKey' => 'string[]',
-            'sortDir' => 'string[]'
+            'sortDir' => 'string[]',
+            'marker' => 'string',
+            'limit' => 'int'
     ];
 
     /**
@@ -43,6 +47,8 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
     * moduleId  私有模块（private-module）的唯一Id。  此Id由资源编排服务在生成模块的时候生成，为UUID。  由于私有模块名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的私有模块，删除，再重新创建一个同名私有模块。  对于团队并行开发，用户可能希望确保，当前我操作的私有模块就是我认为的那个，而不是其他队友删除后创建的同名私有模块。因此，使用Id就可以做到强匹配。  资源编排服务保证每次创建的私有模块所对应的Id都不相同，更新不会影响Id。如果给予的module_id和当前模块的Id不一致，则返回400
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
         'moduleName' => null,
         'moduleId' => null,
         'sortKey' => null,
-        'sortDir' => null
+        'sortDir' => null,
+        'marker' => null,
+        'limit' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
     * moduleId  私有模块（private-module）的唯一Id。  此Id由资源编排服务在生成模块的时候生成，为UUID。  由于私有模块名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的私有模块，删除，再重新创建一个同名私有模块。  对于团队并行开发，用户可能希望确保，当前我操作的私有模块就是我认为的那个，而不是其他队友删除后创建的同名私有模块。因此，使用Id就可以做到强匹配。  资源编排服务保证每次创建的私有模块所对应的Id都不相同，更新不会影响Id。如果给予的module_id和当前模块的Id不一致，则返回400
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
             'moduleName' => 'module_name',
             'moduleId' => 'module_id',
             'sortKey' => 'sort_key',
-            'sortDir' => 'sort_dir'
+            'sortDir' => 'sort_dir',
+            'marker' => 'marker',
+            'limit' => 'limit'
     ];
 
     /**
@@ -100,6 +112,8 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
     * moduleId  私有模块（private-module）的唯一Id。  此Id由资源编排服务在生成模块的时候生成，为UUID。  由于私有模块名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的私有模块，删除，再重新创建一个同名私有模块。  对于团队并行开发，用户可能希望确保，当前我操作的私有模块就是我认为的那个，而不是其他队友删除后创建的同名私有模块。因此，使用Id就可以做到强匹配。  资源编排服务保证每次创建的私有模块所对应的Id都不相同，更新不会影响Id。如果给予的module_id和当前模块的Id不一致，则返回400
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
             'moduleName' => 'setModuleName',
             'moduleId' => 'setModuleId',
             'sortKey' => 'setSortKey',
-            'sortDir' => 'setSortDir'
+            'sortDir' => 'setSortDir',
+            'marker' => 'setMarker',
+            'limit' => 'setLimit'
     ];
 
     /**
@@ -118,6 +134,8 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
     * moduleId  私有模块（private-module）的唯一Id。  此Id由资源编排服务在生成模块的时候生成，为UUID。  由于私有模块名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的私有模块，删除，再重新创建一个同名私有模块。  对于团队并行开发，用户可能希望确保，当前我操作的私有模块就是我认为的那个，而不是其他队友删除后创建的同名私有模块。因此，使用Id就可以做到强匹配。  资源编排服务保证每次创建的私有模块所对应的Id都不相同，更新不会影响Id。如果给予的module_id和当前模块的Id不一致，则返回400
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
             'moduleName' => 'getModuleName',
             'moduleId' => 'getModuleId',
             'sortKey' => 'getSortKey',
-            'sortDir' => 'getSortDir'
+            'sortDir' => 'getSortDir',
+            'marker' => 'getMarker',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -220,6 +240,8 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
         $this->container['moduleId'] = isset($data['moduleId']) ? $data['moduleId'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -262,6 +284,18 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['moduleId']) && !preg_match("/^[a-z0-9]+[a-z0-9-]*$/", $this->container['moduleId'])) {
                 $invalidProperties[] = "invalid value for 'moduleId', must be conform to the pattern /^[a-z0-9]+[a-z0-9-]*$/.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 512)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 1)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
             }
         return $invalidProperties;
     }
@@ -394,6 +428,54 @@ class ListPrivateModuleVersionsRequest implements ModelInterface, ArrayAccess
     public function setSortDir($sortDir)
     {
         $this->container['sortDir'] = $sortDir;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页返回的最多结果数量
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页返回的最多结果数量
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

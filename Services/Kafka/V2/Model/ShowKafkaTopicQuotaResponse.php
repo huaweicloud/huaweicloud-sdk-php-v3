@@ -21,22 +21,26 @@ class ShowKafkaTopicQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * partitions  topic流控配置
+    * quotas  Topic流控配置
+    * count  Topic流控数量
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'partitions' => '\HuaweiCloud\SDK\Kafka\V2\Model\KafkaTopicQuota[]'
+            'quotas' => '\HuaweiCloud\SDK\Kafka\V2\Model\KafkaTopicQuota[]',
+            'count' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * partitions  topic流控配置
+    * quotas  Topic流控配置
+    * count  Topic流控数量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'partitions' => null
+        'quotas' => null,
+        'count' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class ShowKafkaTopicQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * partitions  topic流控配置
+    * quotas  Topic流控配置
+    * count  Topic流控数量
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'partitions' => 'partitions'
+            'quotas' => 'quotas',
+            'count' => 'count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * partitions  topic流控配置
+    * quotas  Topic流控配置
+    * count  Topic流控数量
     *
     * @var string[]
     */
     protected static $setters = [
-            'partitions' => 'setPartitions'
+            'quotas' => 'setQuotas',
+            'count' => 'setCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * partitions  topic流控配置
+    * quotas  Topic流控配置
+    * count  Topic流控数量
     *
     * @var string[]
     */
     protected static $getters = [
-            'partitions' => 'getPartitions'
+            'quotas' => 'getQuotas',
+            'count' => 'getCount'
     ];
 
     /**
@@ -148,7 +158,8 @@ class ShowKafkaTopicQuotaResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['partitions'] = isset($data['partitions']) ? $data['partitions'] : null;
+        $this->container['quotas'] = isset($data['quotas']) ? $data['quotas'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
     }
 
     /**
@@ -174,26 +185,50 @@ class ShowKafkaTopicQuotaResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets partitions
-    *  topic流控配置
+    * Gets quotas
+    *  Topic流控配置
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\KafkaTopicQuota[]|null
     */
-    public function getPartitions()
+    public function getQuotas()
     {
-        return $this->container['partitions'];
+        return $this->container['quotas'];
     }
 
     /**
-    * Sets partitions
+    * Sets quotas
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\KafkaTopicQuota[]|null $partitions topic流控配置
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\KafkaTopicQuota[]|null $quotas Topic流控配置
     *
     * @return $this
     */
-    public function setPartitions($partitions)
+    public function setQuotas($quotas)
     {
-        $this->container['partitions'] = $partitions;
+        $this->container['quotas'] = $quotas;
+        return $this;
+    }
+
+    /**
+    * Gets count
+    *  Topic流控数量
+    *
+    * @return int|null
+    */
+    public function getCount()
+    {
+        return $this->container['count'];
+    }
+
+    /**
+    * Sets count
+    *
+    * @param int|null $count Topic流控数量
+    *
+    * @return $this
+    */
+    public function setCount($count)
+    {
+        $this->container['count'] = $count;
         return $this;
     }
 

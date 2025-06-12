@@ -20,7 +20,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
     * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
     * messageOffset  **参数解释**： 消息编号。 **取值范围**： 不涉及。
     * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及。
@@ -38,7 +38,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
     * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
     * messageOffset  **参数解释**： 消息编号。 **取值范围**： 不涉及。
     * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及。
@@ -77,7 +77,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
     * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
     * messageOffset  **参数解释**： 消息编号。 **取值范围**： 不涉及。
     * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及。
@@ -95,7 +95,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
     * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
     * messageOffset  **参数解释**： 消息编号。 **取值范围**： 不涉及。
     * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及。
@@ -113,7 +113,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  **参数解释**： topic名称。 **取值范围**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
     * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
     * messageOffset  **参数解释**： 消息编号。 **取值范围**： 不涉及。
     * size  **参数解释**： 消息大小，单位字节。 **取值范围**： 不涉及。
@@ -218,7 +218,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  **参数解释**： topic名称。 **取值范围**： 不涉及。
+    *  **参数解释**： Topic名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic **参数解释**： topic名称。 **取值范围**： 不涉及。
+    * @param string|null $topic **参数解释**： Topic名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */

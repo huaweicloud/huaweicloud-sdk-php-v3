@@ -160,6 +160,72 @@ class EvsClient extends Client
     }
 
     /**
+     * 批量扩容云硬盘
+     *
+     * 对按需或者包周期云硬盘进行批量扩容。
+     * [在批量扩容存在包周期云硬盘的场景下：](tag:hws)
+     * - [如果您需要查看订单可用的优惠券，请参考\&quot;[查询订单可用优惠券](https://support.huaweicloud.com/api-oce/zh-cn_topic_0092953630.html)\&quot;。](tag:hws)
+     * - [如果您需要支付订单，请参考\&quot;[支付包周期产品订单](https://support.huaweicloud.com/api-oce/api_order_00030.html)\&quot;。](tag:hws)
+     * - [如果您需要退订该包周期资源，请参考“[退订包周期资源](https://support.huaweicloud.com/api-oce/zh-cn_topic_0082522030.html)”。](tag:hws)
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchResizeVolumes($request)
+    {
+        return $this->batchResizeVolumesWithHttpInfo($request);
+    }
+
+    public function batchResizeVolumesWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/volumes/batch-extend';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\BatchResizeVolumesResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\BatchResizeVolumesRequest');
+    }
+
+    /**
      * 接受云硬盘过户
      *
      * 通过云硬盘过户记录ID以及身份认证密钥来接受云硬盘过户。

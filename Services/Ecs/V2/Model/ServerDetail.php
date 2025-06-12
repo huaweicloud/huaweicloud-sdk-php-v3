@@ -66,6 +66,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * enterpriseProjectId  弹性云服务器所属的企业项目ID。
     * sysTags  弹性云服务器系统标签。
     * cpuOptions  cpuOptions
+    * securityOptions  securityOptions
     * hypervisor  hypervisor
     *
     * @var string[]
@@ -117,6 +118,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'sysTags' => '\HuaweiCloud\SDK\Ecs\V2\Model\ServerSystemTag[]',
             'cpuOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions',
+            'securityOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\SecurityOptions',
             'hypervisor' => '\HuaweiCloud\SDK\Ecs\V2\Model\Hypervisor'
     ];
 
@@ -168,6 +170,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * enterpriseProjectId  弹性云服务器所属的企业项目ID。
     * sysTags  弹性云服务器系统标签。
     * cpuOptions  cpuOptions
+    * securityOptions  securityOptions
     * hypervisor  hypervisor
     *
     * @var string[]
@@ -219,6 +222,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'sysTags' => null,
         'cpuOptions' => null,
+        'securityOptions' => null,
         'hypervisor' => null
     ];
 
@@ -291,6 +295,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * enterpriseProjectId  弹性云服务器所属的企业项目ID。
     * sysTags  弹性云服务器系统标签。
     * cpuOptions  cpuOptions
+    * securityOptions  securityOptions
     * hypervisor  hypervisor
     *
     * @var string[]
@@ -342,6 +347,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'sysTags' => 'sys_tags',
             'cpuOptions' => 'cpu_options',
+            'securityOptions' => 'security_options',
             'hypervisor' => 'hypervisor'
     ];
 
@@ -393,6 +399,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * enterpriseProjectId  弹性云服务器所属的企业项目ID。
     * sysTags  弹性云服务器系统标签。
     * cpuOptions  cpuOptions
+    * securityOptions  securityOptions
     * hypervisor  hypervisor
     *
     * @var string[]
@@ -444,6 +451,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'sysTags' => 'setSysTags',
             'cpuOptions' => 'setCpuOptions',
+            'securityOptions' => 'setSecurityOptions',
             'hypervisor' => 'setHypervisor'
     ];
 
@@ -495,6 +503,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * enterpriseProjectId  弹性云服务器所属的企业项目ID。
     * sysTags  弹性云服务器系统标签。
     * cpuOptions  cpuOptions
+    * securityOptions  securityOptions
     * hypervisor  hypervisor
     *
     * @var string[]
@@ -546,6 +555,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'sysTags' => 'getSysTags',
             'cpuOptions' => 'getCpuOptions',
+            'securityOptions' => 'getSecurityOptions',
             'hypervisor' => 'getHypervisor'
     ];
 
@@ -653,6 +663,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
         $this->container['cpuOptions'] = isset($data['cpuOptions']) ? $data['cpuOptions'] : null;
+        $this->container['securityOptions'] = isset($data['securityOptions']) ? $data['securityOptions'] : null;
         $this->container['hypervisor'] = isset($data['hypervisor']) ? $data['hypervisor'] : null;
     }
 
@@ -1884,6 +1895,30 @@ class ServerDetail implements ModelInterface, ArrayAccess
     public function setCpuOptions($cpuOptions)
     {
         $this->container['cpuOptions'] = $cpuOptions;
+        return $this;
+    }
+
+    /**
+    * Gets securityOptions
+    *  securityOptions
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\SecurityOptions|null
+    */
+    public function getSecurityOptions()
+    {
+        return $this->container['securityOptions'];
+    }
+
+    /**
+    * Sets securityOptions
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\SecurityOptions|null $securityOptions securityOptions
+    *
+    * @return $this
+    */
+    public function setSecurityOptions($securityOptions)
+    {
+        $this->container['securityOptions'] = $securityOptions;
         return $this;
     }
 

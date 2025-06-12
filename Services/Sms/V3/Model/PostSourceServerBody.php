@@ -468,6 +468,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     const STATE_SYNCING = 'syncing';
     const STATE_STOPPING = 'stopping';
     const STATE_STOPPED = 'stopped';
+    const STATE_SKIPPING = 'skipping';
     const STATE_DELETING = 'deleting';
     const STATE_ERROR = 'error';
     const STATE_CLONING = 'cloning';
@@ -561,6 +562,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             self::STATE_SYNCING,
             self::STATE_STOPPING,
             self::STATE_STOPPED,
+            self::STATE_SKIPPING,
             self::STATE_DELETING,
             self::STATE_ERROR,
             self::STATE_CLONING,

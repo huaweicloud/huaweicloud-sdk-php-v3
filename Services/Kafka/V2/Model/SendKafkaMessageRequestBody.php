@@ -20,9 +20,9 @@ class SendKafkaMessageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  Kafka的topic
+    * topic  Kafka的Topic
     * body  消息内容
-    * propertyList  topic的分区信息等
+    * propertyList  Topic的分区信息等
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class SendKafkaMessageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  Kafka的topic
+    * topic  Kafka的Topic
     * body  消息内容
-    * propertyList  topic的分区信息等
+    * propertyList  Topic的分区信息等
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class SendKafkaMessageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  Kafka的topic
+    * topic  Kafka的Topic
     * body  消息内容
-    * propertyList  topic的分区信息等
+    * propertyList  Topic的分区信息等
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class SendKafkaMessageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  Kafka的topic
+    * topic  Kafka的Topic
     * body  消息内容
-    * propertyList  topic的分区信息等
+    * propertyList  Topic的分区信息等
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class SendKafkaMessageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  Kafka的topic
+    * topic  Kafka的Topic
     * body  消息内容
-    * propertyList  topic的分区信息等
+    * propertyList  Topic的分区信息等
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class SendKafkaMessageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  Kafka的topic
+    *  Kafka的Topic
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class SendKafkaMessageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string $topic Kafka的topic
+    * @param string $topic Kafka的Topic
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class SendKafkaMessageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets propertyList
-    *  topic的分区信息等
+    *  Topic的分区信息等
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\SendKafkaMessageRequestBodyPropertyList[]
     */
@@ -265,7 +265,7 @@ class SendKafkaMessageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets propertyList
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\SendKafkaMessageRequestBodyPropertyList[] $propertyList topic的分区信息等
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\SendKafkaMessageRequestBodyPropertyList[] $propertyList Topic的分区信息等
     *
     * @return $this
     */

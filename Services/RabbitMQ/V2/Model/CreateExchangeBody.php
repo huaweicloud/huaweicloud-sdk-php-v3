@@ -25,6 +25,7 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     * durable  是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
     * autoDelete  是否自动删除
     * internal  内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
+    * arguments  参数列表
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
             'type' => 'string',
             'durable' => 'bool',
             'autoDelete' => 'bool',
-            'internal' => 'bool'
+            'internal' => 'bool',
+            'arguments' => 'object'
     ];
 
     /**
@@ -43,6 +45,7 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     * durable  是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
     * autoDelete  是否自动删除
     * internal  内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
+    * arguments  参数列表
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
         'type' => null,
         'durable' => null,
         'autoDelete' => null,
-        'internal' => null
+        'internal' => null,
+        'arguments' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     * durable  是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
     * autoDelete  是否自动删除
     * internal  内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
+    * arguments  参数列表
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
             'type' => 'type',
             'durable' => 'durable',
             'autoDelete' => 'auto_delete',
-            'internal' => 'internal'
+            'internal' => 'internal',
+            'arguments' => 'arguments'
     ];
 
     /**
@@ -100,6 +106,7 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     * durable  是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
     * autoDelete  是否自动删除
     * internal  内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
+    * arguments  参数列表
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'durable' => 'setDurable',
             'autoDelete' => 'setAutoDelete',
-            'internal' => 'setInternal'
+            'internal' => 'setInternal',
+            'arguments' => 'setArguments'
     ];
 
     /**
@@ -118,6 +126,7 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     * durable  是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
     * autoDelete  是否自动删除
     * internal  内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
+    * arguments  参数列表
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'durable' => 'getDurable',
             'autoDelete' => 'getAutoDelete',
-            'internal' => 'getInternal'
+            'internal' => 'getInternal',
+            'arguments' => 'getArguments'
     ];
 
     /**
@@ -192,6 +202,7 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
         $this->container['durable'] = isset($data['durable']) ? $data['durable'] : null;
         $this->container['autoDelete'] = isset($data['autoDelete']) ? $data['autoDelete'] : null;
         $this->container['internal'] = isset($data['internal']) ? $data['internal'] : null;
+        $this->container['arguments'] = isset($data['arguments']) ? $data['arguments'] : null;
     }
 
     /**
@@ -342,6 +353,30 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     public function setInternal($internal)
     {
         $this->container['internal'] = $internal;
+        return $this;
+    }
+
+    /**
+    * Gets arguments
+    *  参数列表
+    *
+    * @return object|null
+    */
+    public function getArguments()
+    {
+        return $this->container['arguments'];
+    }
+
+    /**
+    * Sets arguments
+    *
+    * @param object|null $arguments 参数列表
+    *
+    * @return $this
+    */
+    public function setArguments($arguments)
+    {
+        $this->container['arguments'] = $arguments;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * brokers  关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
-    * queueNum  队列数，范围1~50。
+    * queueNum  总队列数，范围1~50。
     * queues  队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
     * permission  权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
     * messageType  消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
@@ -42,7 +42,7 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * brokers  关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
-    * queueNum  队列数，范围1~50。
+    * queueNum  总队列数，范围1~50。
     * queues  队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
     * permission  权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
     * messageType  消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
@@ -83,7 +83,7 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * brokers  关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
-    * queueNum  队列数，范围1~50。
+    * queueNum  总队列数，范围1~50。
     * queues  队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
     * permission  权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
     * messageType  消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
@@ -103,7 +103,7 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * brokers  关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
-    * queueNum  队列数，范围1~50。
+    * queueNum  总队列数，范围1~50。
     * queues  队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
     * permission  权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
     * messageType  消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
@@ -123,7 +123,7 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * brokers  关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
-    * queueNum  队列数，范围1~50。
+    * queueNum  总队列数，范围1~50。
     * queues  队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
     * permission  权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
     * messageType  消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
@@ -329,7 +329,7 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueNum
-    *  队列数，范围1~50。
+    *  总队列数，范围1~50。
     *
     * @return float|null
     */
@@ -341,7 +341,7 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets queueNum
     *
-    * @param float|null $queueNum 队列数，范围1~50。
+    * @param float|null $queueNum 总队列数，范围1~50。
     *
     * @return $this
     */

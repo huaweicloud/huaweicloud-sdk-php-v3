@@ -22,21 +22,25 @@ class ListStackSetsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * stackSets  资源栈集
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'stackSets' => '\HuaweiCloud\SDK\Aos\V1\Model\StackSet[]'
+            'stackSets' => '\HuaweiCloud\SDK\Aos\V1\Model\StackSet[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Aos\V1\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * stackSets  资源栈集
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'stackSets' => null
+        'stackSets' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListStackSetsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * stackSets  资源栈集
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'stackSets' => 'stack_sets'
+            'stackSets' => 'stack_sets',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * stackSets  资源栈集
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
-            'stackSets' => 'setStackSets'
+            'stackSets' => 'setStackSets',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * stackSets  资源栈集
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
-            'stackSets' => 'getStackSets'
+            'stackSets' => 'getStackSets',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListStackSetsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['stackSets'] = isset($data['stackSets']) ? $data['stackSets'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListStackSetsResponse implements ModelInterface, ArrayAccess
     public function setStackSets($stackSets)
     {
         $this->container['stackSets'] = $stackSets;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

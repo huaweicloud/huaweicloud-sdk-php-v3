@@ -20,22 +20,26 @@ class CreateServerRequestServerCertificate implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  服务端证书ID,为CCM服务中的证书ID
+    * id  服务端证书ID,为CCM服务中的证书ID。服务端证书类型为CCM时，必填
+    * source  证书来源
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string'
+            'id' => 'string',
+            'source' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  服务端证书ID,为CCM服务中的证书ID
+    * id  服务端证书ID,为CCM服务中的证书ID。服务端证书类型为CCM时，必填
+    * source  证书来源
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null
+        'id' => null,
+        'source' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class CreateServerRequestServerCertificate implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  服务端证书ID,为CCM服务中的证书ID
+    * id  服务端证书ID,为CCM服务中的证书ID。服务端证书类型为CCM时，必填
+    * source  证书来源
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id'
+            'id' => 'id',
+            'source' => 'source'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  服务端证书ID,为CCM服务中的证书ID
+    * id  服务端证书ID,为CCM服务中的证书ID。服务端证书类型为CCM时，必填
+    * source  证书来源
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId'
+            'id' => 'setId',
+            'source' => 'setSource'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  服务端证书ID,为CCM服务中的证书ID
+    * id  服务端证书ID,为CCM服务中的证书ID。服务端证书类型为CCM时，必填
+    * source  证书来源
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId'
+            'id' => 'getId',
+            'source' => 'getSource'
     ];
 
     /**
@@ -129,7 +139,22 @@ class CreateServerRequestServerCertificate implements ModelInterface, ArrayAcces
     {
         return self::$openAPIModelName;
     }
+    const SOURCE_CCM = 'CCM';
+    const SOURCE_SERVICE_SIGN = 'SERVICE_SIGN';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSourceAllowableValues()
+    {
+        return [
+            self::SOURCE_CCM,
+            self::SOURCE_SERVICE_SIGN,
+        ];
+    }
 
 
     /**
@@ -148,6 +173,7 @@ class CreateServerRequestServerCertificate implements ModelInterface, ArrayAcces
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
     }
 
     /**
@@ -158,15 +184,20 @@ class CreateServerRequestServerCertificate implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-            if ((mb_strlen($this->container['id']) > 36)) {
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['id']) < 16)) {
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 16)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 16.";
             }
+            $allowedValues = $this->getSourceAllowableValues();
+                if (!is_null($this->container['source']) && !in_array($this->container['source'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'source', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -183,9 +214,9 @@ class CreateServerRequestServerCertificate implements ModelInterface, ArrayAcces
 
     /**
     * Gets id
-    *  服务端证书ID,为CCM服务中的证书ID
+    *  服务端证书ID,为CCM服务中的证书ID。服务端证书类型为CCM时，必填
     *
-    * @return string
+    * @return string|null
     */
     public function getId()
     {
@@ -195,13 +226,37 @@ class CreateServerRequestServerCertificate implements ModelInterface, ArrayAcces
     /**
     * Sets id
     *
-    * @param string $id 服务端证书ID,为CCM服务中的证书ID
+    * @param string|null $id 服务端证书ID,为CCM服务中的证书ID。服务端证书类型为CCM时，必填
     *
     * @return $this
     */
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets source
+    *  证书来源
+    *
+    * @return string|null
+    */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+    * Sets source
+    *
+    * @param string|null $source 证书来源
+    *
+    * @return $this
+    */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
         return $this;
     }
 

@@ -24,7 +24,7 @@ class ProductPostPaid implements ModelInterface, ArrayAccess
     * productId  产品Id，通过向CBC询价获取该商品的标识
     * cloudServiceType  云服务类型，固定值为hws.service.type.sa
     * resourceType  用户购买云服务产品的资源类型，例如SecMaster中的典型场景配置，资源类型为hws.resource.type.secmaster.typical
-    * resourceSpecCode  用户购买云服务产品的资源规格，例如安全云脑中的的基础版，资源规格为secmaster.basic
+    * resourceSpecCode  用户购买云服务产品的资源规格，例如安全云脑中的基础版，资源规格为secmaster.basic
     * usageMeasureId  使用量单位标识，按需询价必填，例如按小时询价，使用量值为1，使用量单位为小时，枚举值如下： 4：小时 10：GB（带宽按流量询价使用） 11：MB（带宽按流量询价使用）
     * usageValue  使用量值，按需询价必填，例如按小时询价，使用量值为1，使用量单位为小时
     * resourceSize  配额个数
@@ -52,7 +52,7 @@ class ProductPostPaid implements ModelInterface, ArrayAccess
     * productId  产品Id，通过向CBC询价获取该商品的标识
     * cloudServiceType  云服务类型，固定值为hws.service.type.sa
     * resourceType  用户购买云服务产品的资源类型，例如SecMaster中的典型场景配置，资源类型为hws.resource.type.secmaster.typical
-    * resourceSpecCode  用户购买云服务产品的资源规格，例如安全云脑中的的基础版，资源规格为secmaster.basic
+    * resourceSpecCode  用户购买云服务产品的资源规格，例如安全云脑中的基础版，资源规格为secmaster.basic
     * usageMeasureId  使用量单位标识，按需询价必填，例如按小时询价，使用量值为1，使用量单位为小时，枚举值如下： 4：小时 10：GB（带宽按流量询价使用） 11：MB（带宽按流量询价使用）
     * usageValue  使用量值，按需询价必填，例如按小时询价，使用量值为1，使用量单位为小时
     * resourceSize  配额个数
@@ -101,7 +101,7 @@ class ProductPostPaid implements ModelInterface, ArrayAccess
     * productId  产品Id，通过向CBC询价获取该商品的标识
     * cloudServiceType  云服务类型，固定值为hws.service.type.sa
     * resourceType  用户购买云服务产品的资源类型，例如SecMaster中的典型场景配置，资源类型为hws.resource.type.secmaster.typical
-    * resourceSpecCode  用户购买云服务产品的资源规格，例如安全云脑中的的基础版，资源规格为secmaster.basic
+    * resourceSpecCode  用户购买云服务产品的资源规格，例如安全云脑中的基础版，资源规格为secmaster.basic
     * usageMeasureId  使用量单位标识，按需询价必填，例如按小时询价，使用量值为1，使用量单位为小时，枚举值如下： 4：小时 10：GB（带宽按流量询价使用） 11：MB（带宽按流量询价使用）
     * usageValue  使用量值，按需询价必填，例如按小时询价，使用量值为1，使用量单位为小时
     * resourceSize  配额个数
@@ -129,7 +129,7 @@ class ProductPostPaid implements ModelInterface, ArrayAccess
     * productId  产品Id，通过向CBC询价获取该商品的标识
     * cloudServiceType  云服务类型，固定值为hws.service.type.sa
     * resourceType  用户购买云服务产品的资源类型，例如SecMaster中的典型场景配置，资源类型为hws.resource.type.secmaster.typical
-    * resourceSpecCode  用户购买云服务产品的资源规格，例如安全云脑中的的基础版，资源规格为secmaster.basic
+    * resourceSpecCode  用户购买云服务产品的资源规格，例如安全云脑中的基础版，资源规格为secmaster.basic
     * usageMeasureId  使用量单位标识，按需询价必填，例如按小时询价，使用量值为1，使用量单位为小时，枚举值如下： 4：小时 10：GB（带宽按流量询价使用） 11：MB（带宽按流量询价使用）
     * usageValue  使用量值，按需询价必填，例如按小时询价，使用量值为1，使用量单位为小时
     * resourceSize  配额个数
@@ -157,7 +157,7 @@ class ProductPostPaid implements ModelInterface, ArrayAccess
     * productId  产品Id，通过向CBC询价获取该商品的标识
     * cloudServiceType  云服务类型，固定值为hws.service.type.sa
     * resourceType  用户购买云服务产品的资源类型，例如SecMaster中的典型场景配置，资源类型为hws.resource.type.secmaster.typical
-    * resourceSpecCode  用户购买云服务产品的资源规格，例如安全云脑中的的基础版，资源规格为secmaster.basic
+    * resourceSpecCode  用户购买云服务产品的资源规格，例如安全云脑中的基础版，资源规格为secmaster.basic
     * usageMeasureId  使用量单位标识，按需询价必填，例如按小时询价，使用量值为1，使用量单位为小时，枚举值如下： 4：小时 10：GB（带宽按流量询价使用） 11：MB（带宽按流量询价使用）
     * usageValue  使用量值，按需询价必填，例如按小时询价，使用量值为1，使用量单位为小时
     * resourceSize  配额个数
@@ -277,18 +277,48 @@ class ProductPostPaid implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
+            if ((mb_strlen($this->container['id']) > 64)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['id']) < 2)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 2.";
+            }
         if ($this->container['productId'] === null) {
             $invalidProperties[] = "'productId' can't be null";
         }
+            if ((mb_strlen($this->container['productId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'productId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['productId']) < 2)) {
+                $invalidProperties[] = "invalid value for 'productId', the character length must be bigger than or equal to 2.";
+            }
         if ($this->container['cloudServiceType'] === null) {
             $invalidProperties[] = "'cloudServiceType' can't be null";
         }
+            if ((mb_strlen($this->container['cloudServiceType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'cloudServiceType', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['cloudServiceType']) < 2)) {
+                $invalidProperties[] = "invalid value for 'cloudServiceType', the character length must be bigger than or equal to 2.";
+            }
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
+            if ((mb_strlen($this->container['resourceType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'resourceType', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['resourceType']) < 2)) {
+                $invalidProperties[] = "invalid value for 'resourceType', the character length must be bigger than or equal to 2.";
+            }
         if ($this->container['resourceSpecCode'] === null) {
             $invalidProperties[] = "'resourceSpecCode' can't be null";
         }
+            if ((mb_strlen($this->container['resourceSpecCode']) > 64)) {
+                $invalidProperties[] = "invalid value for 'resourceSpecCode', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['resourceSpecCode']) < 2)) {
+                $invalidProperties[] = "invalid value for 'resourceSpecCode', the character length must be bigger than or equal to 2.";
+            }
         if ($this->container['usageMeasureId'] === null) {
             $invalidProperties[] = "'usageMeasureId' can't be null";
         }
@@ -332,6 +362,12 @@ class ProductPostPaid implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['usageFactor']) < 4)) {
                 $invalidProperties[] = "invalid value for 'usageFactor', the character length must be bigger than or equal to 4.";
+            }
+            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) < 2)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 2.";
             }
         return $invalidProperties;
     }
@@ -445,7 +481,7 @@ class ProductPostPaid implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  用户购买云服务产品的资源规格，例如安全云脑中的的基础版，资源规格为secmaster.basic
+    *  用户购买云服务产品的资源规格，例如安全云脑中的基础版，资源规格为secmaster.basic
     *
     * @return string
     */
@@ -457,7 +493,7 @@ class ProductPostPaid implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string $resourceSpecCode 用户购买云服务产品的资源规格，例如安全云脑中的的基础版，资源规格为secmaster.basic
+    * @param string $resourceSpecCode 用户购买云服务产品的资源规格，例如安全云脑中的基础版，资源规格为secmaster.basic
     *
     * @return $this
     */

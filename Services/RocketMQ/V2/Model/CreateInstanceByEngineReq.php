@@ -35,9 +35,12 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * enableAcl  是否开启访问控制列表。
     * ipv6Enable  是否支持IPv6。   - true：支持   - false：不支持
+    * proxyEnable  是否开启Proxy功能。   - true：支持   - false：不支持
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
     * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
     * brokerNum  代理个数。
+    * archType  架构类型。
+    * tlsMode  实例使用的安全协议。
     * bssParam  bssParam
     *
     * @var string[]
@@ -58,9 +61,12 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'enableAcl' => 'bool',
             'ipv6Enable' => 'bool',
+            'proxyEnable' => 'bool',
             'enablePublicip' => 'bool',
             'publicipId' => 'string',
             'brokerNum' => 'int',
+            'archType' => 'string',
+            'tlsMode' => 'string',
             'bssParam' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\BssParam'
     ];
 
@@ -81,9 +87,12 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * enableAcl  是否开启访问控制列表。
     * ipv6Enable  是否支持IPv6。   - true：支持   - false：不支持
+    * proxyEnable  是否开启Proxy功能。   - true：支持   - false：不支持
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
     * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
     * brokerNum  代理个数。
+    * archType  架构类型。
+    * tlsMode  实例使用的安全协议。
     * bssParam  bssParam
     *
     * @var string[]
@@ -104,9 +113,12 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'enableAcl' => null,
         'ipv6Enable' => null,
+        'proxyEnable' => null,
         'enablePublicip' => null,
         'publicipId' => null,
         'brokerNum' => 'int32',
+        'archType' => null,
+        'tlsMode' => null,
         'bssParam' => null
     ];
 
@@ -148,9 +160,12 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * enableAcl  是否开启访问控制列表。
     * ipv6Enable  是否支持IPv6。   - true：支持   - false：不支持
+    * proxyEnable  是否开启Proxy功能。   - true：支持   - false：不支持
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
     * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
     * brokerNum  代理个数。
+    * archType  架构类型。
+    * tlsMode  实例使用的安全协议。
     * bssParam  bssParam
     *
     * @var string[]
@@ -171,9 +186,12 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'enableAcl' => 'enable_acl',
             'ipv6Enable' => 'ipv6_enable',
+            'proxyEnable' => 'proxy_enable',
             'enablePublicip' => 'enable_publicip',
             'publicipId' => 'publicip_id',
             'brokerNum' => 'broker_num',
+            'archType' => 'arch_type',
+            'tlsMode' => 'tls_mode',
             'bssParam' => 'bss_param'
     ];
 
@@ -194,9 +212,12 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * enableAcl  是否开启访问控制列表。
     * ipv6Enable  是否支持IPv6。   - true：支持   - false：不支持
+    * proxyEnable  是否开启Proxy功能。   - true：支持   - false：不支持
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
     * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
     * brokerNum  代理个数。
+    * archType  架构类型。
+    * tlsMode  实例使用的安全协议。
     * bssParam  bssParam
     *
     * @var string[]
@@ -217,9 +238,12 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'enableAcl' => 'setEnableAcl',
             'ipv6Enable' => 'setIpv6Enable',
+            'proxyEnable' => 'setProxyEnable',
             'enablePublicip' => 'setEnablePublicip',
             'publicipId' => 'setPublicipId',
             'brokerNum' => 'setBrokerNum',
+            'archType' => 'setArchType',
+            'tlsMode' => 'setTlsMode',
             'bssParam' => 'setBssParam'
     ];
 
@@ -240,9 +264,12 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * enableAcl  是否开启访问控制列表。
     * ipv6Enable  是否支持IPv6。   - true：支持   - false：不支持
+    * proxyEnable  是否开启Proxy功能。   - true：支持   - false：不支持
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
     * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
     * brokerNum  代理个数。
+    * archType  架构类型。
+    * tlsMode  实例使用的安全协议。
     * bssParam  bssParam
     *
     * @var string[]
@@ -263,9 +290,12 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'enableAcl' => 'getEnableAcl',
             'ipv6Enable' => 'getIpv6Enable',
+            'proxyEnable' => 'getProxyEnable',
             'enablePublicip' => 'getEnablePublicip',
             'publicipId' => 'getPublicipId',
             'brokerNum' => 'getBrokerNum',
+            'archType' => 'getArchType',
+            'tlsMode' => 'getTlsMode',
             'bssParam' => 'getBssParam'
     ];
 
@@ -418,9 +448,12 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enableAcl'] = isset($data['enableAcl']) ? $data['enableAcl'] : null;
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
+        $this->container['proxyEnable'] = isset($data['proxyEnable']) ? $data['proxyEnable'] : null;
         $this->container['enablePublicip'] = isset($data['enablePublicip']) ? $data['enablePublicip'] : null;
         $this->container['publicipId'] = isset($data['publicipId']) ? $data['publicipId'] : null;
         $this->container['brokerNum'] = isset($data['brokerNum']) ? $data['brokerNum'] : null;
+        $this->container['archType'] = isset($data['archType']) ? $data['archType'] : null;
+        $this->container['tlsMode'] = isset($data['tlsMode']) ? $data['tlsMode'] : null;
         $this->container['bssParam'] = isset($data['bssParam']) ? $data['bssParam'] : null;
     }
 
@@ -872,6 +905,30 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets proxyEnable
+    *  是否开启Proxy功能。   - true：支持   - false：不支持
+    *
+    * @return bool|null
+    */
+    public function getProxyEnable()
+    {
+        return $this->container['proxyEnable'];
+    }
+
+    /**
+    * Sets proxyEnable
+    *
+    * @param bool|null $proxyEnable 是否开启Proxy功能。   - true：支持   - false：不支持
+    *
+    * @return $this
+    */
+    public function setProxyEnable($proxyEnable)
+    {
+        $this->container['proxyEnable'] = $proxyEnable;
+        return $this;
+    }
+
+    /**
     * Gets enablePublicip
     *  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
     *
@@ -940,6 +997,54 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     public function setBrokerNum($brokerNum)
     {
         $this->container['brokerNum'] = $brokerNum;
+        return $this;
+    }
+
+    /**
+    * Gets archType
+    *  架构类型。
+    *
+    * @return string|null
+    */
+    public function getArchType()
+    {
+        return $this->container['archType'];
+    }
+
+    /**
+    * Sets archType
+    *
+    * @param string|null $archType 架构类型。
+    *
+    * @return $this
+    */
+    public function setArchType($archType)
+    {
+        $this->container['archType'] = $archType;
+        return $this;
+    }
+
+    /**
+    * Gets tlsMode
+    *  实例使用的安全协议。
+    *
+    * @return string|null
+    */
+    public function getTlsMode()
+    {
+        return $this->container['tlsMode'];
+    }
+
+    /**
+    * Sets tlsMode
+    *
+    * @param string|null $tlsMode 实例使用的安全协议。
+    *
+    * @return $this
+    */
+    public function setTlsMode($tlsMode)
+    {
+        $this->container['tlsMode'] = $tlsMode;
         return $this;
     }
 

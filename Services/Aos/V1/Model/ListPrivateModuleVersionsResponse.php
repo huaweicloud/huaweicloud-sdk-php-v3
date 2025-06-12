@@ -22,21 +22,25 @@ class ListPrivateModuleVersionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * versions  私有模块版本的列表。默认以创建时间升序排序。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'versions' => '\HuaweiCloud\SDK\Aos\V1\Model\PrivateModuleVersionSummary[]'
+            'versions' => '\HuaweiCloud\SDK\Aos\V1\Model\PrivateModuleVersionSummary[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Aos\V1\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * versions  私有模块版本的列表。默认以创建时间升序排序。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'versions' => null
+        'versions' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListPrivateModuleVersionsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * versions  私有模块版本的列表。默认以创建时间升序排序。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'versions' => 'versions'
+            'versions' => 'versions',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * versions  私有模块版本的列表。默认以创建时间升序排序。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
-            'versions' => 'setVersions'
+            'versions' => 'setVersions',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * versions  私有模块版本的列表。默认以创建时间升序排序。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
-            'versions' => 'getVersions'
+            'versions' => 'getVersions',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListPrivateModuleVersionsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['versions'] = isset($data['versions']) ? $data['versions'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListPrivateModuleVersionsResponse implements ModelInterface, ArrayAccess
     public function setVersions($versions)
     {
         $this->container['versions'] = $versions;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

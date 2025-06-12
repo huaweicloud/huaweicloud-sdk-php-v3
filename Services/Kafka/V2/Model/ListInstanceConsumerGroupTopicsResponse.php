@@ -21,7 +21,7 @@ class ListInstanceConsumerGroupTopicsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topics  消费组TOPIC
+    * topics  消费组Topic
     * total  统计数量
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListInstanceConsumerGroupTopicsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topics  消费组TOPIC
+    * topics  消费组Topic
     * total  统计数量
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListInstanceConsumerGroupTopicsResponse implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topics  消费组TOPIC
+    * topics  消费组Topic
     * total  统计数量
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListInstanceConsumerGroupTopicsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topics  消费组TOPIC
+    * topics  消费组Topic
     * total  统计数量
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListInstanceConsumerGroupTopicsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topics  消费组TOPIC
+    * topics  消费组Topic
     * total  统计数量
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListInstanceConsumerGroupTopicsResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets topics
-    *  消费组TOPIC
+    *  消费组Topic
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\GroupTopicEntity[]|null
     */
@@ -198,7 +198,7 @@ class ListInstanceConsumerGroupTopicsResponse implements ModelInterface, ArrayAc
     /**
     * Sets topics
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\GroupTopicEntity[]|null $topics 消费组TOPIC
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\GroupTopicEntity[]|null $topics 消费组Topic
     *
     * @return $this
     */

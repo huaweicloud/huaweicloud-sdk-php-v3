@@ -20,11 +20,11 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * type  查询类型，默认为topic。
-    * limit  每一页显示的流控数量。
-    * offset  页数。
-    * keyword  查询关键字。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 查询类型。 **约束限制**： 查询类型必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 默认为topic **默认取值**： topic
+    * limit  **参数解释**： 每一页显示的流控数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * keyword  **参数解释**： 查询关键字。 **约束限制**： 查询关键字必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * type  查询类型，默认为topic。
-    * limit  每一页显示的流控数量。
-    * offset  页数。
-    * keyword  查询关键字。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 查询类型。 **约束限制**： 查询类型必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 默认为topic **默认取值**： topic
+    * limit  **参数解释**： 每一页显示的流控数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * keyword  **参数解释**： 查询关键字。 **约束限制**： 查询关键字必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * type  查询类型，默认为topic。
-    * limit  每一页显示的流控数量。
-    * offset  页数。
-    * keyword  查询关键字。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 查询类型。 **约束限制**： 查询类型必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 默认为topic **默认取值**： topic
+    * limit  **参数解释**： 每一页显示的流控数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * keyword  **参数解释**： 查询关键字。 **约束限制**： 查询关键字必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * type  查询类型，默认为topic。
-    * limit  每一页显示的流控数量。
-    * offset  页数。
-    * keyword  查询关键字。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 查询类型。 **约束限制**： 查询类型必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 默认为topic **默认取值**： topic
+    * limit  **参数解释**： 每一页显示的流控数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * keyword  **参数解释**： 查询关键字。 **约束限制**： 查询关键字必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * type  查询类型，默认为topic。
-    * limit  每一页显示的流控数量。
-    * offset  页数。
-    * keyword  查询关键字。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 查询类型。 **约束限制**： 查询类型必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 默认为topic **默认取值**： topic
+    * limit  **参数解释**： 每一页显示的流控数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * keyword  **参数解释**： 查询关键字。 **约束限制**： 查询关键字必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -221,7 +221,7 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -233,7 +233,7 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：登录Kafka控制台，在Kafka实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  查询类型，默认为topic。
+    *  **参数解释**： 查询类型。 **约束限制**： 查询类型必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 默认为topic **默认取值**： topic
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 查询类型，默认为topic。
+    * @param string|null $type **参数解释**： 查询类型。 **约束限制**： 查询类型必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 默认为topic **默认取值**： topic
     *
     * @return $this
     */
@@ -269,7 +269,7 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每一页显示的流控数量。
+    *  **参数解释**： 每一页显示的流控数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -281,7 +281,7 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 每一页显示的流控数量。
+    * @param string|null $limit **参数解释**： 每一页显示的流控数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -293,7 +293,7 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  页数。
+    *  **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -305,7 +305,7 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 页数。
+    * @param string|null $offset **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyword
-    *  查询关键字。
+    *  **参数解释**： 查询关键字。 **约束限制**： 查询关键字必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -329,7 +329,7 @@ class ShowKafkaTopicQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Sets keyword
     *
-    * @param string|null $keyword 查询关键字。
+    * @param string|null $keyword **参数解释**： 查询关键字。 **约束限制**： 查询关键字必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

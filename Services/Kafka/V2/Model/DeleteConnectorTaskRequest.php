@@ -21,7 +21,7 @@ class DeleteConnectorTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * taskId  Smart Connector任务ID。
+    * taskId  Smart Connect任务ID。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class DeleteConnectorTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * taskId  Smart Connector任务ID。
+    * taskId  Smart Connect任务ID。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class DeleteConnectorTaskRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
-    * taskId  Smart Connector任务ID。
+    * taskId  Smart Connect任务ID。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class DeleteConnectorTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
-    * taskId  Smart Connector任务ID。
+    * taskId  Smart Connect任务ID。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class DeleteConnectorTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
-    * taskId  Smart Connector任务ID。
+    * taskId  Smart Connect任务ID。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class DeleteConnectorTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  Smart Connector任务ID。
+    *  Smart Connect任务ID。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class DeleteConnectorTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string $taskId Smart Connector任务ID。
+    * @param string $taskId Smart Connect任务ID。
     *
     * @return $this
     */

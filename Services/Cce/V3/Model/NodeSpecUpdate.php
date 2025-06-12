@@ -36,6 +36,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * serverEnterpriseProjectId  **参数解释**： 服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 **约束限制**： 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 **取值范围**： 不涉及 **默认取值**： 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * nodeNicSpecUpdate  nodeNicSpecUpdate
     * extendParam  extendParam
+    * publicIp  publicIp
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
             'initializedConditions' => 'string[]',
             'serverEnterpriseProjectId' => 'string',
             'nodeNicSpecUpdate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeSpecUpdateNodeNicSpecUpdate',
-            'extendParam' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolUpdateExtendParam'
+            'extendParam' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolUpdateExtendParam',
+            'publicIp' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeEIPSpec'
     ];
 
     /**
@@ -76,6 +78,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * serverEnterpriseProjectId  **参数解释**： 服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 **约束限制**： 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 **取值范围**： 不涉及 **默认取值**： 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * nodeNicSpecUpdate  nodeNicSpecUpdate
     * extendParam  extendParam
+    * publicIp  publicIp
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
         'initializedConditions' => null,
         'serverEnterpriseProjectId' => null,
         'nodeNicSpecUpdate' => null,
-        'extendParam' => null
+        'extendParam' => null,
+        'publicIp' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * serverEnterpriseProjectId  **参数解释**： 服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 **约束限制**： 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 **取值范围**： 不涉及 **默认取值**： 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * nodeNicSpecUpdate  nodeNicSpecUpdate
     * extendParam  extendParam
+    * publicIp  publicIp
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
             'initializedConditions' => 'initializedConditions',
             'serverEnterpriseProjectId' => 'serverEnterpriseProjectID',
             'nodeNicSpecUpdate' => 'nodeNicSpecUpdate',
-            'extendParam' => 'extendParam'
+            'extendParam' => 'extendParam',
+            'publicIp' => 'publicIP'
     ];
 
     /**
@@ -177,6 +183,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * serverEnterpriseProjectId  **参数解释**： 服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 **约束限制**： 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 **取值范围**： 不涉及 **默认取值**： 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * nodeNicSpecUpdate  nodeNicSpecUpdate
     * extendParam  extendParam
+    * publicIp  publicIp
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
             'initializedConditions' => 'setInitializedConditions',
             'serverEnterpriseProjectId' => 'setServerEnterpriseProjectId',
             'nodeNicSpecUpdate' => 'setNodeNicSpecUpdate',
-            'extendParam' => 'setExtendParam'
+            'extendParam' => 'setExtendParam',
+            'publicIp' => 'setPublicIp'
     ];
 
     /**
@@ -217,6 +225,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * serverEnterpriseProjectId  **参数解释**： 服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 **约束限制**： 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 **取值范围**： 不涉及 **默认取值**： 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * nodeNicSpecUpdate  nodeNicSpecUpdate
     * extendParam  extendParam
+    * publicIp  publicIp
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
             'initializedConditions' => 'getInitializedConditions',
             'serverEnterpriseProjectId' => 'getServerEnterpriseProjectId',
             'nodeNicSpecUpdate' => 'getNodeNicSpecUpdate',
-            'extendParam' => 'getExtendParam'
+            'extendParam' => 'getExtendParam',
+            'publicIp' => 'getPublicIp'
     ];
 
     /**
@@ -313,6 +323,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
         $this->container['serverEnterpriseProjectId'] = isset($data['serverEnterpriseProjectId']) ? $data['serverEnterpriseProjectId'] : null;
         $this->container['nodeNicSpecUpdate'] = isset($data['nodeNicSpecUpdate']) ? $data['nodeNicSpecUpdate'] : null;
         $this->container['extendParam'] = isset($data['extendParam']) ? $data['extendParam'] : null;
+        $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
     }
 
     /**
@@ -739,6 +750,30 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     public function setExtendParam($extendParam)
     {
         $this->container['extendParam'] = $extendParam;
+        return $this;
+    }
+
+    /**
+    * Gets publicIp
+    *  publicIp
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeEIPSpec|null
+    */
+    public function getPublicIp()
+    {
+        return $this->container['publicIp'];
+    }
+
+    /**
+    * Sets publicIp
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeEIPSpec|null $publicIp publicIp
+    *
+    * @return $this
+    */
+    public function setPublicIp($publicIp)
+    {
+        $this->container['publicIp'] = $publicIp;
         return $this;
     }
 

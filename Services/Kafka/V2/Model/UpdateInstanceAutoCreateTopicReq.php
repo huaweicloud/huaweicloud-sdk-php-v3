@@ -20,7 +20,7 @@ class UpdateInstanceAutoCreateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enableAutoTopic  是否开启自动创建topic功能。
+    * enableAutoTopic  是否开启自动创建Topic功能。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateInstanceAutoCreateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enableAutoTopic  是否开启自动创建topic功能。
+    * enableAutoTopic  是否开启自动创建Topic功能。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateInstanceAutoCreateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enableAutoTopic  是否开启自动创建topic功能。
+    * enableAutoTopic  是否开启自动创建Topic功能。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateInstanceAutoCreateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enableAutoTopic  是否开启自动创建topic功能。
+    * enableAutoTopic  是否开启自动创建Topic功能。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateInstanceAutoCreateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enableAutoTopic  是否开启自动创建topic功能。
+    * enableAutoTopic  是否开启自动创建Topic功能。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UpdateInstanceAutoCreateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableAutoTopic
-    *  是否开启自动创建topic功能。
+    *  是否开启自动创建Topic功能。
     *
     * @return bool
     */
@@ -189,7 +189,7 @@ class UpdateInstanceAutoCreateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets enableAutoTopic
     *
-    * @param bool $enableAutoTopic 是否开启自动创建topic功能。
+    * @param bool $enableAutoTopic 是否开启自动创建Topic功能。
     *
     * @return $this
     */

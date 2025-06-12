@@ -162,6 +162,77 @@ class DliAsyncClient extends Client
     }
 
     /**
+     * 批量添加资源标签
+     *
+     * 批量添加资源标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateResourceTagsAsync($request)
+    {
+        return $this->batchCreateResourceTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchCreateResourceTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/{resource_type}/{resource_id}/tags/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\BatchCreateResourceTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\BatchCreateResourceTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量删除队列定时扩缩容计划
      *
      * 该API用于批量删除队列定时扩缩容计划。
@@ -226,6 +297,145 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteQueuePlansResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteQueuePlansRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量删除资源标签
+     *
+     * 批量删除资源标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteResourceTagsAsync($request)
+    {
+        return $this->batchDeleteResourceTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchDeleteResourceTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/{resource_type}/{resource_id}/tags/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteResourceTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteResourceTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询资源实例数量
+     *
+     * 查询资源实例数量。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countResourcesByTagsAsync($request)
+    {
+        return $this->countResourcesByTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function countResourcesByTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/{resource_type}/resource-instances/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CountResourcesByTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CountResourcesByTagsRequest',
             $asyncRequest = true);
     }
 
@@ -3084,6 +3294,145 @@ class DliAsyncClient extends Client
     }
 
     /**
+     * 查询资源实例列表
+     *
+     * 查询资源实例列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listResourcesByTagsAsync($request)
+    {
+        return $this->listResourcesByTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function listResourcesByTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/{resource_type}/resource-instances/filter';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListResourcesByTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListResourcesByTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询指定资源类型的标签信息
+     *
+     * 查询指定资源类型的标签信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listResourcesTagsAsync($request)
+    {
+        return $this->listResourcesTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function listResourcesTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/{resource_type}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListResourcesTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListResourcesTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查看表的用户权限
      *
      * 该API用于查询指定用户在表上的权限。
@@ -4135,6 +4484,80 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowQuotaResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowQuotaRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询指定资源实例的标签信息
+     *
+     * 查询指定资源实例的标签信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showResourceTagsAsync($request)
+    {
+        return $this->showResourceTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function showResourceTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/{resource_type}/{resource_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowResourceTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowResourceTagsRequest',
             $asyncRequest = true);
     }
 

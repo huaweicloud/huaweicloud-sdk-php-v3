@@ -26,7 +26,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     * remainPartitions  **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
     * maxPartitions  **参数解释**： 分区总数。 **取值范围**： 不涉及。
     * topicMaxPartitions  **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
-    * topics  **参数解释**： topic列表。
+    * topics  **参数解释**： Topic列表。
     *
     * @var string[]
     */
@@ -46,7 +46,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     * remainPartitions  **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
     * maxPartitions  **参数解释**： 分区总数。 **取值范围**： 不涉及。
     * topicMaxPartitions  **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
-    * topics  **参数解释**： topic列表。
+    * topics  **参数解释**： Topic列表。
     *
     * @var string[]
     */
@@ -87,7 +87,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     * remainPartitions  **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
     * maxPartitions  **参数解释**： 分区总数。 **取值范围**： 不涉及。
     * topicMaxPartitions  **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
-    * topics  **参数解释**： topic列表。
+    * topics  **参数解释**： Topic列表。
     *
     * @var string[]
     */
@@ -107,7 +107,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     * remainPartitions  **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
     * maxPartitions  **参数解释**： 分区总数。 **取值范围**： 不涉及。
     * topicMaxPartitions  **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
-    * topics  **参数解释**： topic列表。
+    * topics  **参数解释**： Topic列表。
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     * remainPartitions  **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
     * maxPartitions  **参数解释**： 分区总数。 **取值范围**： 不涉及。
     * topicMaxPartitions  **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
-    * topics  **参数解释**： topic列表。
+    * topics  **参数解释**： Topic列表。
     *
     * @var string[]
     */
@@ -350,7 +350,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  **参数解释**： topic列表。
+    *  **参数解释**： Topic列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\TopicEntity[]|null
     */
@@ -362,7 +362,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\TopicEntity[]|null $topics **参数解释**： topic列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\TopicEntity[]|null $topics **参数解释**： Topic列表。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class IncidentEnvironment implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vendorType  环境供应商：HWCP/HWC/AWS/Azure/GCP
+    * vendorType  环境供应商
     * domainId  租户id
     * regionId  区域id，全局服务global
     * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
@@ -38,7 +38,7 @@ class IncidentEnvironment implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vendorType  环境供应商：HWCP/HWC/AWS/Azure/GCP
+    * vendorType  环境供应商
     * domainId  租户id
     * regionId  区域id，全局服务global
     * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
@@ -77,7 +77,7 @@ class IncidentEnvironment implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vendorType  环境供应商：HWCP/HWC/AWS/Azure/GCP
+    * vendorType  环境供应商
     * domainId  租户id
     * regionId  区域id，全局服务global
     * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
@@ -95,7 +95,7 @@ class IncidentEnvironment implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vendorType  环境供应商：HWCP/HWC/AWS/Azure/GCP
+    * vendorType  环境供应商
     * domainId  租户id
     * regionId  区域id，全局服务global
     * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
@@ -113,7 +113,7 @@ class IncidentEnvironment implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vendorType  环境供应商：HWCP/HWC/AWS/Azure/GCP
+    * vendorType  环境供应商
     * domainId  租户id
     * regionId  区域id，全局服务global
     * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
@@ -248,7 +248,7 @@ class IncidentEnvironment implements ModelInterface, ArrayAccess
 
     /**
     * Gets vendorType
-    *  环境供应商：HWCP/HWC/AWS/Azure/GCP
+    *  环境供应商
     *
     * @return string|null
     */
@@ -260,7 +260,7 @@ class IncidentEnvironment implements ModelInterface, ArrayAccess
     /**
     * Sets vendorType
     *
-    * @param string|null $vendorType 环境供应商：HWCP/HWC/AWS/Azure/GCP
+    * @param string|null $vendorType 环境供应商
     *
     * @return $this
     */

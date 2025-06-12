@@ -22,9 +22,9 @@ class AlertResourceList implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  云服务资源id
     * name  资源名称
-    * type  资源类型；引用华为云RMS type字段
-    * provider  云服务名称；引用华为云RMS provider字段
-    * regionId  区域；按照华为云regionId填写，如cn-north-1等
+    * type  资源类型；引用云RMS type字段
+    * provider  云服务名称；引用云RMS provider字段
+    * regionId  区域；按照云regionId填写
     * domainId  资源所属账号ID，UUID格式
     * projectId  资源所属项目ID，UUID格式
     * epId  企业项目id
@@ -50,9 +50,9 @@ class AlertResourceList implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  云服务资源id
     * name  资源名称
-    * type  资源类型；引用华为云RMS type字段
-    * provider  云服务名称；引用华为云RMS provider字段
-    * regionId  区域；按照华为云regionId填写，如cn-north-1等
+    * type  资源类型；引用云RMS type字段
+    * provider  云服务名称；引用云RMS provider字段
+    * regionId  区域；按照云regionId填写
     * domainId  资源所属账号ID，UUID格式
     * projectId  资源所属项目ID，UUID格式
     * epId  企业项目id
@@ -99,9 +99,9 @@ class AlertResourceList implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  云服务资源id
     * name  资源名称
-    * type  资源类型；引用华为云RMS type字段
-    * provider  云服务名称；引用华为云RMS provider字段
-    * regionId  区域；按照华为云regionId填写，如cn-north-1等
+    * type  资源类型；引用云RMS type字段
+    * provider  云服务名称；引用云RMS provider字段
+    * regionId  区域；按照云regionId填写
     * domainId  资源所属账号ID，UUID格式
     * projectId  资源所属项目ID，UUID格式
     * epId  企业项目id
@@ -127,9 +127,9 @@ class AlertResourceList implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  云服务资源id
     * name  资源名称
-    * type  资源类型；引用华为云RMS type字段
-    * provider  云服务名称；引用华为云RMS provider字段
-    * regionId  区域；按照华为云regionId填写，如cn-north-1等
+    * type  资源类型；引用云RMS type字段
+    * provider  云服务名称；引用云RMS provider字段
+    * regionId  区域；按照云regionId填写
     * domainId  资源所属账号ID，UUID格式
     * projectId  资源所属项目ID，UUID格式
     * epId  企业项目id
@@ -155,9 +155,9 @@ class AlertResourceList implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  云服务资源id
     * name  资源名称
-    * type  资源类型；引用华为云RMS type字段
-    * provider  云服务名称；引用华为云RMS provider字段
-    * regionId  区域；按照华为云regionId填写，如cn-north-1等
+    * type  资源类型；引用云RMS type字段
+    * provider  云服务名称；引用云RMS provider字段
+    * regionId  区域；按照云regionId填写
     * domainId  资源所属账号ID，UUID格式
     * projectId  资源所属项目ID，UUID格式
     * epId  企业项目id
@@ -381,7 +381,7 @@ class AlertResourceList implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资源类型；引用华为云RMS type字段
+    *  资源类型；引用云RMS type字段
     *
     * @return string|null
     */
@@ -393,7 +393,7 @@ class AlertResourceList implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 资源类型；引用华为云RMS type字段
+    * @param string|null $type 资源类型；引用云RMS type字段
     *
     * @return $this
     */
@@ -405,7 +405,7 @@ class AlertResourceList implements ModelInterface, ArrayAccess
 
     /**
     * Gets provider
-    *  云服务名称；引用华为云RMS provider字段
+    *  云服务名称；引用云RMS provider字段
     *
     * @return string|null
     */
@@ -417,7 +417,7 @@ class AlertResourceList implements ModelInterface, ArrayAccess
     /**
     * Sets provider
     *
-    * @param string|null $provider 云服务名称；引用华为云RMS provider字段
+    * @param string|null $provider 云服务名称；引用云RMS provider字段
     *
     * @return $this
     */
@@ -429,7 +429,7 @@ class AlertResourceList implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  区域；按照华为云regionId填写，如cn-north-1等
+    *  区域；按照云regionId填写
     *
     * @return string|null
     */
@@ -441,7 +441,7 @@ class AlertResourceList implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string|null $regionId 区域；按照华为云regionId填写，如cn-north-1等
+    * @param string|null $regionId 区域；按照云regionId填写
     *
     * @return $this
     */

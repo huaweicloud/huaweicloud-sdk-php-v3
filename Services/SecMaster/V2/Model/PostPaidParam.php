@@ -20,7 +20,7 @@ class PostPaidParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionId  区域ID，如cn-north-4
+    * regionId  区域ID
     * domainId  domainId
     * tagList  计费标签
     * productList  商品列表
@@ -38,7 +38,7 @@ class PostPaidParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionId  区域ID，如cn-north-4
+    * regionId  区域ID
     * domainId  domainId
     * tagList  计费标签
     * productList  商品列表
@@ -77,7 +77,7 @@ class PostPaidParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionId  区域ID，如cn-north-4
+    * regionId  区域ID
     * domainId  domainId
     * tagList  计费标签
     * productList  商品列表
@@ -95,7 +95,7 @@ class PostPaidParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionId  区域ID，如cn-north-4
+    * regionId  区域ID
     * domainId  domainId
     * tagList  计费标签
     * productList  商品列表
@@ -113,7 +113,7 @@ class PostPaidParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionId  区域ID，如cn-north-4
+    * regionId  区域ID
     * domainId  domainId
     * tagList  计费标签
     * productList  商品列表
@@ -265,7 +265,7 @@ class PostPaidParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  区域ID，如cn-north-4
+    *  区域ID
     *
     * @return string
     */
@@ -277,7 +277,7 @@ class PostPaidParam implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string $regionId 区域ID，如cn-north-4
+    * @param string $regionId 区域ID
     *
     * @return $this
     */

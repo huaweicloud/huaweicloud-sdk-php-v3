@@ -20,10 +20,10 @@ class AlertDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sourceType  数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * sourceType  数据源类型，取值范围如下： 1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     * domainId  数据源产品所属账号的id
     * projectId  数据源产品所属项目的id
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义，例如cn-north-1
+    * regionId  数据源产品所在区域，具体取值范围查看云地区和终端节点定义
     * companyName  数据源产品所属公司的名称
     * productName  数据源产品的名称
     * productFeature  产品功能特性名称，用来指明检测到当前事件的产品的功能特性
@@ -44,10 +44,10 @@ class AlertDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sourceType  数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * sourceType  数据源类型，取值范围如下： 1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     * domainId  数据源产品所属账号的id
     * projectId  数据源产品所属项目的id
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义，例如cn-north-1
+    * regionId  数据源产品所在区域，具体取值范围查看云地区和终端节点定义
     * companyName  数据源产品所属公司的名称
     * productName  数据源产品的名称
     * productFeature  产品功能特性名称，用来指明检测到当前事件的产品的功能特性
@@ -89,10 +89,10 @@ class AlertDataSource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sourceType  数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * sourceType  数据源类型，取值范围如下： 1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     * domainId  数据源产品所属账号的id
     * projectId  数据源产品所属项目的id
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义，例如cn-north-1
+    * regionId  数据源产品所在区域，具体取值范围查看云地区和终端节点定义
     * companyName  数据源产品所属公司的名称
     * productName  数据源产品的名称
     * productFeature  产品功能特性名称，用来指明检测到当前事件的产品的功能特性
@@ -113,10 +113,10 @@ class AlertDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sourceType  数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * sourceType  数据源类型，取值范围如下： 1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     * domainId  数据源产品所属账号的id
     * projectId  数据源产品所属项目的id
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义，例如cn-north-1
+    * regionId  数据源产品所在区域，具体取值范围查看云地区和终端节点定义
     * companyName  数据源产品所属公司的名称
     * productName  数据源产品的名称
     * productFeature  产品功能特性名称，用来指明检测到当前事件的产品的功能特性
@@ -137,10 +137,10 @@ class AlertDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sourceType  数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * sourceType  数据源类型，取值范围如下： 1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     * domainId  数据源产品所属账号的id
     * projectId  数据源产品所属项目的id
-    * regionId  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义，例如cn-north-1
+    * regionId  数据源产品所在区域，具体取值范围查看云地区和终端节点定义
     * companyName  数据源产品所属公司的名称
     * productName  数据源产品的名称
     * productFeature  产品功能特性名称，用来指明检测到当前事件的产品的功能特性
@@ -299,7 +299,7 @@ class AlertDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    *  数据源类型，取值范围如下： 1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     *
     * @return int|null
     */
@@ -311,7 +311,7 @@ class AlertDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param int|null $sourceType 数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * @param int|null $sourceType 数据源类型，取值范围如下： 1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class AlertDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义，例如cn-north-1
+    *  数据源产品所在区域，具体取值范围查看云地区和终端节点定义
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class AlertDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string|null $regionId 数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义，例如cn-north-1
+    * @param string|null $regionId 数据源产品所在区域，具体取值范围查看云地区和终端节点定义
     *
     * @return $this
     */

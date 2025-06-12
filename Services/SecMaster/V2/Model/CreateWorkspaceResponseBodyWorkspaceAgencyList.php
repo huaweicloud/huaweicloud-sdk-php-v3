@@ -25,7 +25,7 @@ class CreateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
     * name  空间委托名称
     * regionId  委托空间所属region id
     * workspaceAttribution  THIS_ACCOUNT:本账号空间,CROSS_ACCOUNT:跨账号空间
-    * agencyVersion  用户创建托管空间时使用的IAM委托版本，V3或者V5
+    * agencyVersion  委托版本
     * domainId  委托租户id
     * domainName  委托租户名称
     * iamAgencyId  iam委托id
@@ -57,7 +57,7 @@ class CreateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
     * name  空间委托名称
     * regionId  委托空间所属region id
     * workspaceAttribution  THIS_ACCOUNT:本账号空间,CROSS_ACCOUNT:跨账号空间
-    * agencyVersion  用户创建托管空间时使用的IAM委托版本，V3或者V5
+    * agencyVersion  委托版本
     * domainId  委托租户id
     * domainName  委托租户名称
     * iamAgencyId  iam委托id
@@ -110,7 +110,7 @@ class CreateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
     * name  空间委托名称
     * regionId  委托空间所属region id
     * workspaceAttribution  THIS_ACCOUNT:本账号空间,CROSS_ACCOUNT:跨账号空间
-    * agencyVersion  用户创建托管空间时使用的IAM委托版本，V3或者V5
+    * agencyVersion  委托版本
     * domainId  委托租户id
     * domainName  委托租户名称
     * iamAgencyId  iam委托id
@@ -142,7 +142,7 @@ class CreateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
     * name  空间委托名称
     * regionId  委托空间所属region id
     * workspaceAttribution  THIS_ACCOUNT:本账号空间,CROSS_ACCOUNT:跨账号空间
-    * agencyVersion  用户创建托管空间时使用的IAM委托版本，V3或者V5
+    * agencyVersion  委托版本
     * domainId  委托租户id
     * domainName  委托租户名称
     * iamAgencyId  iam委托id
@@ -174,7 +174,7 @@ class CreateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
     * name  空间委托名称
     * regionId  委托空间所属region id
     * workspaceAttribution  THIS_ACCOUNT:本账号空间,CROSS_ACCOUNT:跨账号空间
-    * agencyVersion  用户创建托管空间时使用的IAM委托版本，V3或者V5
+    * agencyVersion  委托版本
     * domainId  委托租户id
     * domainName  委托租户名称
     * iamAgencyId  iam委托id
@@ -297,14 +297,14 @@ class CreateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 32)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
@@ -335,8 +335,8 @@ class CreateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
             if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['domainName']) && (mb_strlen($this->container['domainName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'domainName', the character length must be smaller than or equal to 64.";
@@ -344,11 +344,11 @@ class CreateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
             if (!is_null($this->container['domainName']) && (mb_strlen($this->container['domainName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'domainName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['iamAgencyId']) && (mb_strlen($this->container['iamAgencyId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'iamAgencyId', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['iamAgencyId']) && (mb_strlen($this->container['iamAgencyId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'iamAgencyId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['iamAgencyId']) && (mb_strlen($this->container['iamAgencyId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'iamAgencyId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['iamAgencyId']) && (mb_strlen($this->container['iamAgencyId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'iamAgencyId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['iamAgencyName']) && (mb_strlen($this->container['iamAgencyName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'iamAgencyName', the character length must be smaller than or equal to 64.";
@@ -492,7 +492,7 @@ class CreateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
 
     /**
     * Gets agencyVersion
-    *  用户创建托管空间时使用的IAM委托版本，V3或者V5
+    *  委托版本
     *
     * @return string|null
     */
@@ -504,7 +504,7 @@ class CreateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
     /**
     * Sets agencyVersion
     *
-    * @param string|null $agencyVersion 用户创建托管空间时使用的IAM委托版本，V3或者V5
+    * @param string|null $agencyVersion 委托版本
     *
     * @return $this
     */

@@ -38,6 +38,7 @@ class CreateServers implements ModelInterface, ArrayAccess
     * extendparam  extendparam
     * schedulerHints  schedulerHints
     * serverTags  裸金属服务器的标签。详情请参见表 server_tags字段数据结构说明。 说明：创建裸金属服务器时，一台裸金属服务器最多可以添加10个标签。其中，__type_baremetal为系统内部标签，因此实际能添加的标签为9个。
+    * metadataOptions  metadataOptions
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class CreateServers implements ModelInterface, ArrayAccess
             'dataVolumes' => '\HuaweiCloud\SDK\Bms\V1\Model\DataVolumes[]',
             'extendparam' => '\HuaweiCloud\SDK\Bms\V1\Model\ExtendParam',
             'schedulerHints' => '\HuaweiCloud\SDK\Bms\V1\Model\CreateSchedulerHints',
-            'serverTags' => '\HuaweiCloud\SDK\Bms\V1\Model\SystemTags[]'
+            'serverTags' => '\HuaweiCloud\SDK\Bms\V1\Model\SystemTags[]',
+            'metadataOptions' => '\HuaweiCloud\SDK\Bms\V1\Model\UpdateBaremetalServerMetadataOptionsRequestBody'
     ];
 
     /**
@@ -82,6 +84,7 @@ class CreateServers implements ModelInterface, ArrayAccess
     * extendparam  extendparam
     * schedulerHints  schedulerHints
     * serverTags  裸金属服务器的标签。详情请参见表 server_tags字段数据结构说明。 说明：创建裸金属服务器时，一台裸金属服务器最多可以添加10个标签。其中，__type_baremetal为系统内部标签，因此实际能添加的标签为9个。
+    * metadataOptions  metadataOptions
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class CreateServers implements ModelInterface, ArrayAccess
         'dataVolumes' => null,
         'extendparam' => null,
         'schedulerHints' => null,
-        'serverTags' => null
+        'serverTags' => null,
+        'metadataOptions' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class CreateServers implements ModelInterface, ArrayAccess
     * extendparam  extendparam
     * schedulerHints  schedulerHints
     * serverTags  裸金属服务器的标签。详情请参见表 server_tags字段数据结构说明。 说明：创建裸金属服务器时，一台裸金属服务器最多可以添加10个标签。其中，__type_baremetal为系统内部标签，因此实际能添加的标签为9个。
+    * metadataOptions  metadataOptions
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class CreateServers implements ModelInterface, ArrayAccess
             'dataVolumes' => 'data_volumes',
             'extendparam' => 'extendparam',
             'schedulerHints' => 'schedulerHints',
-            'serverTags' => 'server_tags'
+            'serverTags' => 'server_tags',
+            'metadataOptions' => 'metadata_options'
     ];
 
     /**
@@ -191,6 +197,7 @@ class CreateServers implements ModelInterface, ArrayAccess
     * extendparam  extendparam
     * schedulerHints  schedulerHints
     * serverTags  裸金属服务器的标签。详情请参见表 server_tags字段数据结构说明。 说明：创建裸金属服务器时，一台裸金属服务器最多可以添加10个标签。其中，__type_baremetal为系统内部标签，因此实际能添加的标签为9个。
+    * metadataOptions  metadataOptions
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class CreateServers implements ModelInterface, ArrayAccess
             'dataVolumes' => 'setDataVolumes',
             'extendparam' => 'setExtendparam',
             'schedulerHints' => 'setSchedulerHints',
-            'serverTags' => 'setServerTags'
+            'serverTags' => 'setServerTags',
+            'metadataOptions' => 'setMetadataOptions'
     ];
 
     /**
@@ -235,6 +243,7 @@ class CreateServers implements ModelInterface, ArrayAccess
     * extendparam  extendparam
     * schedulerHints  schedulerHints
     * serverTags  裸金属服务器的标签。详情请参见表 server_tags字段数据结构说明。 说明：创建裸金属服务器时，一台裸金属服务器最多可以添加10个标签。其中，__type_baremetal为系统内部标签，因此实际能添加的标签为9个。
+    * metadataOptions  metadataOptions
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class CreateServers implements ModelInterface, ArrayAccess
             'dataVolumes' => 'getDataVolumes',
             'extendparam' => 'getExtendparam',
             'schedulerHints' => 'getSchedulerHints',
-            'serverTags' => 'getServerTags'
+            'serverTags' => 'getServerTags',
+            'metadataOptions' => 'getMetadataOptions'
     ];
 
     /**
@@ -335,6 +345,7 @@ class CreateServers implements ModelInterface, ArrayAccess
         $this->container['extendparam'] = isset($data['extendparam']) ? $data['extendparam'] : null;
         $this->container['schedulerHints'] = isset($data['schedulerHints']) ? $data['schedulerHints'] : null;
         $this->container['serverTags'] = isset($data['serverTags']) ? $data['serverTags'] : null;
+        $this->container['metadataOptions'] = isset($data['metadataOptions']) ? $data['metadataOptions'] : null;
     }
 
     /**
@@ -818,6 +829,30 @@ class CreateServers implements ModelInterface, ArrayAccess
     public function setServerTags($serverTags)
     {
         $this->container['serverTags'] = $serverTags;
+        return $this;
+    }
+
+    /**
+    * Gets metadataOptions
+    *  metadataOptions
+    *
+    * @return \HuaweiCloud\SDK\Bms\V1\Model\UpdateBaremetalServerMetadataOptionsRequestBody|null
+    */
+    public function getMetadataOptions()
+    {
+        return $this->container['metadataOptions'];
+    }
+
+    /**
+    * Sets metadataOptions
+    *
+    * @param \HuaweiCloud\SDK\Bms\V1\Model\UpdateBaremetalServerMetadataOptionsRequestBody|null $metadataOptions metadataOptions
+    *
+    * @return $this
+    */
+    public function setMetadataOptions($metadataOptions)
+    {
+        $this->container['metadataOptions'] = $metadataOptions;
         return $this;
     }
 

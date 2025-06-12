@@ -48,6 +48,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     * port  实例自定义端口。只有创建Redis4.0和Redis5.0实例才支持自定义端口，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示实例使用默认端口6379。如果自定义端口，端口范围为1~65535的任意数字。
     * renameCommands  支持自定义重命名高危命令。只有创建Redis4.0和Redis5.0实例才支持重命名高危命令，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示没有需要重命名的命令。当前支持重命名的高危命令有command、keys、flushdb、flushall和hgetall，其他命令暂不支持重命名。
     * templateId  参数模板ID
+    * specParam  specParam
     *
     * @var string[]
     */
@@ -79,7 +80,8 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
             'enablePublicip' => 'bool',
             'port' => 'int',
             'renameCommands' => 'object',
-            'templateId' => 'string'
+            'templateId' => 'string',
+            'specParam' => '\HuaweiCloud\SDK\Dcs\V2\Model\SpecParam'
     ];
 
     /**
@@ -112,6 +114,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     * port  实例自定义端口。只有创建Redis4.0和Redis5.0实例才支持自定义端口，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示实例使用默认端口6379。如果自定义端口，端口范围为1~65535的任意数字。
     * renameCommands  支持自定义重命名高危命令。只有创建Redis4.0和Redis5.0实例才支持重命名高危命令，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示没有需要重命名的命令。当前支持重命名的高危命令有command、keys、flushdb、flushall和hgetall，其他命令暂不支持重命名。
     * templateId  参数模板ID
+    * specParam  specParam
     *
     * @var string[]
     */
@@ -143,7 +146,8 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
         'enablePublicip' => null,
         'port' => null,
         'renameCommands' => null,
-        'templateId' => null
+        'templateId' => null,
+        'specParam' => null
     ];
 
     /**
@@ -197,6 +201,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     * port  实例自定义端口。只有创建Redis4.0和Redis5.0实例才支持自定义端口，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示实例使用默认端口6379。如果自定义端口，端口范围为1~65535的任意数字。
     * renameCommands  支持自定义重命名高危命令。只有创建Redis4.0和Redis5.0实例才支持重命名高危命令，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示没有需要重命名的命令。当前支持重命名的高危命令有command、keys、flushdb、flushall和hgetall，其他命令暂不支持重命名。
     * templateId  参数模板ID
+    * specParam  specParam
     *
     * @var string[]
     */
@@ -228,7 +233,8 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
             'enablePublicip' => 'enable_publicip',
             'port' => 'port',
             'renameCommands' => 'rename_commands',
-            'templateId' => 'template_id'
+            'templateId' => 'template_id',
+            'specParam' => 'spec_param'
     ];
 
     /**
@@ -261,6 +267,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     * port  实例自定义端口。只有创建Redis4.0和Redis5.0实例才支持自定义端口，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示实例使用默认端口6379。如果自定义端口，端口范围为1~65535的任意数字。
     * renameCommands  支持自定义重命名高危命令。只有创建Redis4.0和Redis5.0实例才支持重命名高危命令，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示没有需要重命名的命令。当前支持重命名的高危命令有command、keys、flushdb、flushall和hgetall，其他命令暂不支持重命名。
     * templateId  参数模板ID
+    * specParam  specParam
     *
     * @var string[]
     */
@@ -292,7 +299,8 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
             'enablePublicip' => 'setEnablePublicip',
             'port' => 'setPort',
             'renameCommands' => 'setRenameCommands',
-            'templateId' => 'setTemplateId'
+            'templateId' => 'setTemplateId',
+            'specParam' => 'setSpecParam'
     ];
 
     /**
@@ -325,6 +333,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     * port  实例自定义端口。只有创建Redis4.0和Redis5.0实例才支持自定义端口，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示实例使用默认端口6379。如果自定义端口，端口范围为1~65535的任意数字。
     * renameCommands  支持自定义重命名高危命令。只有创建Redis4.0和Redis5.0实例才支持重命名高危命令，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示没有需要重命名的命令。当前支持重命名的高危命令有command、keys、flushdb、flushall和hgetall，其他命令暂不支持重命名。
     * templateId  参数模板ID
+    * specParam  specParam
     *
     * @var string[]
     */
@@ -356,7 +365,8 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
             'enablePublicip' => 'getEnablePublicip',
             'port' => 'getPort',
             'renameCommands' => 'getRenameCommands',
-            'templateId' => 'getTemplateId'
+            'templateId' => 'getTemplateId',
+            'specParam' => 'getSpecParam'
     ];
 
     /**
@@ -445,6 +455,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['renameCommands'] = isset($data['renameCommands']) ? $data['renameCommands'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
+        $this->container['specParam'] = isset($data['specParam']) ? $data['specParam'] : null;
     }
 
     /**
@@ -1159,6 +1170,30 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     public function setTemplateId($templateId)
     {
         $this->container['templateId'] = $templateId;
+        return $this;
+    }
+
+    /**
+    * Gets specParam
+    *  specParam
+    *
+    * @return \HuaweiCloud\SDK\Dcs\V2\Model\SpecParam|null
+    */
+    public function getSpecParam()
+    {
+        return $this->container['specParam'];
+    }
+
+    /**
+    * Sets specParam
+    *
+    * @param \HuaweiCloud\SDK\Dcs\V2\Model\SpecParam|null $specParam specParam
+    *
+    * @return $this
+    */
+    public function setSpecParam($specParam)
+    {
+        $this->container['specParam'] = $specParam;
         return $this;
     }
 

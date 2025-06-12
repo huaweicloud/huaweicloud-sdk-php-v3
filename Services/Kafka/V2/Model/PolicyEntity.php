@@ -20,7 +20,7 @@ class PolicyEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * owner  是否为创建topic时所选择的用户。
+    * owner  是否为创建Topic时所选择的用户。
     * userName  用户名。
     * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
     *
@@ -34,7 +34,7 @@ class PolicyEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * owner  是否为创建topic时所选择的用户。
+    * owner  是否为创建Topic时所选择的用户。
     * userName  用户名。
     * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
     *
@@ -69,7 +69,7 @@ class PolicyEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * owner  是否为创建topic时所选择的用户。
+    * owner  是否为创建Topic时所选择的用户。
     * userName  用户名。
     * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
     *
@@ -83,7 +83,7 @@ class PolicyEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * owner  是否为创建topic时所选择的用户。
+    * owner  是否为创建Topic时所选择的用户。
     * userName  用户名。
     * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
     *
@@ -97,7 +97,7 @@ class PolicyEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * owner  是否为创建topic时所选择的用户。
+    * owner  是否为创建Topic时所选择的用户。
     * userName  用户名。
     * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
     *
@@ -221,7 +221,7 @@ class PolicyEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  是否为创建topic时所选择的用户。
+    *  是否为创建Topic时所选择的用户。
     *
     * @return bool|null
     */
@@ -233,7 +233,7 @@ class PolicyEntity implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param bool|null $owner 是否为创建topic时所选择的用户。
+    * @param bool|null $owner 是否为创建Topic时所选择的用户。
     *
     * @return $this
     */

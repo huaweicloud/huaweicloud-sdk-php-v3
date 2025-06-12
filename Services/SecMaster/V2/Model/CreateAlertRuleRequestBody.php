@@ -489,9 +489,39 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['pipeName'] === null) {
             $invalidProperties[] = "'pipeName' can't be null";
         }
+            if ((mb_strlen($this->container['pipeName']) > 63)) {
+                $invalidProperties[] = "invalid value for 'pipeName', the character length must be smaller than or equal to 63.";
+            }
+            if ((mb_strlen($this->container['pipeName']) < 5)) {
+                $invalidProperties[] = "invalid value for 'pipeName', the character length must be bigger than or equal to 5.";
+            }
         if ($this->container['alertName'] === null) {
             $invalidProperties[] = "'alertName' can't be null";
         }
+            if ((mb_strlen($this->container['alertName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'alertName', the character length must be smaller than or equal to 256.";
+            }
+            if ((mb_strlen($this->container['alertName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'alertName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['alertDescription']) && (mb_strlen($this->container['alertDescription']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'alertDescription', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['alertDescription']) && (mb_strlen($this->container['alertDescription']) < 0)) {
+                $invalidProperties[] = "invalid value for 'alertDescription', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['alertRemediation']) && (mb_strlen($this->container['alertRemediation']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'alertRemediation', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['alertRemediation']) && (mb_strlen($this->container['alertRemediation']) < 0)) {
+                $invalidProperties[] = "invalid value for 'alertRemediation', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['accumulatedTimes']) && ($this->container['accumulatedTimes'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'accumulatedTimes', must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['accumulatedTimes']) && ($this->container['accumulatedTimes'] < 0)) {
+                $invalidProperties[] = "invalid value for 'accumulatedTimes', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

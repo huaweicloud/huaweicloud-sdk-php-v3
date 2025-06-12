@@ -21,7 +21,7 @@ class ResizeInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * specCode  产品规格编码。具体查询方法如下：  - 方法一：查询产品介绍中的[实例规格](https://support.huaweicloud.com/productdesc-dcs/dcs-pd-0522002.html) - 方法二：登录分布式缓存的控制台界面，点击购买缓存实例，查找对应的实例规格名称 - 方法三：调用[查询产品规格](https://support.huaweicloud.com/api-dcs/ListFlavors.html)接口查询。
-    * newCapacity  新的缓存实例规格，单位：GB。 Redis4.0和Redis5.0：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
+    * newCapacity  新的缓存实例规格，单位：GB。 Redis4.0版本及以上：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
     * bssParam  bssParam
     * reservedIp  需要保留的节点ip。cluster集群缩容时需要填写，不填写时系统将随机删除多余的分片
     * changeType  变更类型，Redis 4.0或者5.0实例进行副本数变更时必选。 - createReplication: 添加副本 - deleteReplication: 删除副本 - addSharding: 添加分片 - instanceType: 实例类型变更[，目前仅支持Redis 4.0/5.0/6.0实例中的主备实例/读写分离实例变更为proxy集群实例、proxy集群实例变更为主备实例/读写分离实例](tag:hws,hws_hk,hws_eu,ctc,sbc,hk_sbc,g42,hk_g42,otc)。
@@ -45,7 +45,7 @@ class ResizeInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * specCode  产品规格编码。具体查询方法如下：  - 方法一：查询产品介绍中的[实例规格](https://support.huaweicloud.com/productdesc-dcs/dcs-pd-0522002.html) - 方法二：登录分布式缓存的控制台界面，点击购买缓存实例，查找对应的实例规格名称 - 方法三：调用[查询产品规格](https://support.huaweicloud.com/api-dcs/ListFlavors.html)接口查询。
-    * newCapacity  新的缓存实例规格，单位：GB。 Redis4.0和Redis5.0：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
+    * newCapacity  新的缓存实例规格，单位：GB。 Redis4.0版本及以上：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
     * bssParam  bssParam
     * reservedIp  需要保留的节点ip。cluster集群缩容时需要填写，不填写时系统将随机删除多余的分片
     * changeType  变更类型，Redis 4.0或者5.0实例进行副本数变更时必选。 - createReplication: 添加副本 - deleteReplication: 删除副本 - addSharding: 添加分片 - instanceType: 实例类型变更[，目前仅支持Redis 4.0/5.0/6.0实例中的主备实例/读写分离实例变更为proxy集群实例、proxy集群实例变更为主备实例/读写分离实例](tag:hws,hws_hk,hws_eu,ctc,sbc,hk_sbc,g42,hk_g42,otc)。
@@ -90,7 +90,7 @@ class ResizeInstanceBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * specCode  产品规格编码。具体查询方法如下：  - 方法一：查询产品介绍中的[实例规格](https://support.huaweicloud.com/productdesc-dcs/dcs-pd-0522002.html) - 方法二：登录分布式缓存的控制台界面，点击购买缓存实例，查找对应的实例规格名称 - 方法三：调用[查询产品规格](https://support.huaweicloud.com/api-dcs/ListFlavors.html)接口查询。
-    * newCapacity  新的缓存实例规格，单位：GB。 Redis4.0和Redis5.0：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
+    * newCapacity  新的缓存实例规格，单位：GB。 Redis4.0版本及以上：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
     * bssParam  bssParam
     * reservedIp  需要保留的节点ip。cluster集群缩容时需要填写，不填写时系统将随机删除多余的分片
     * changeType  变更类型，Redis 4.0或者5.0实例进行副本数变更时必选。 - createReplication: 添加副本 - deleteReplication: 删除副本 - addSharding: 添加分片 - instanceType: 实例类型变更[，目前仅支持Redis 4.0/5.0/6.0实例中的主备实例/读写分离实例变更为proxy集群实例、proxy集群实例变更为主备实例/读写分离实例](tag:hws,hws_hk,hws_eu,ctc,sbc,hk_sbc,g42,hk_g42,otc)。
@@ -114,7 +114,7 @@ class ResizeInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * specCode  产品规格编码。具体查询方法如下：  - 方法一：查询产品介绍中的[实例规格](https://support.huaweicloud.com/productdesc-dcs/dcs-pd-0522002.html) - 方法二：登录分布式缓存的控制台界面，点击购买缓存实例，查找对应的实例规格名称 - 方法三：调用[查询产品规格](https://support.huaweicloud.com/api-dcs/ListFlavors.html)接口查询。
-    * newCapacity  新的缓存实例规格，单位：GB。 Redis4.0和Redis5.0：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
+    * newCapacity  新的缓存实例规格，单位：GB。 Redis4.0版本及以上：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
     * bssParam  bssParam
     * reservedIp  需要保留的节点ip。cluster集群缩容时需要填写，不填写时系统将随机删除多余的分片
     * changeType  变更类型，Redis 4.0或者5.0实例进行副本数变更时必选。 - createReplication: 添加副本 - deleteReplication: 删除副本 - addSharding: 添加分片 - instanceType: 实例类型变更[，目前仅支持Redis 4.0/5.0/6.0实例中的主备实例/读写分离实例变更为proxy集群实例、proxy集群实例变更为主备实例/读写分离实例](tag:hws,hws_hk,hws_eu,ctc,sbc,hk_sbc,g42,hk_g42,otc)。
@@ -138,7 +138,7 @@ class ResizeInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * specCode  产品规格编码。具体查询方法如下：  - 方法一：查询产品介绍中的[实例规格](https://support.huaweicloud.com/productdesc-dcs/dcs-pd-0522002.html) - 方法二：登录分布式缓存的控制台界面，点击购买缓存实例，查找对应的实例规格名称 - 方法三：调用[查询产品规格](https://support.huaweicloud.com/api-dcs/ListFlavors.html)接口查询。
-    * newCapacity  新的缓存实例规格，单位：GB。 Redis4.0和Redis5.0：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
+    * newCapacity  新的缓存实例规格，单位：GB。 Redis4.0版本及以上：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
     * bssParam  bssParam
     * reservedIp  需要保留的节点ip。cluster集群缩容时需要填写，不填写时系统将随机删除多余的分片
     * changeType  变更类型，Redis 4.0或者5.0实例进行副本数变更时必选。 - createReplication: 添加副本 - deleteReplication: 删除副本 - addSharding: 添加分片 - instanceType: 实例类型变更[，目前仅支持Redis 4.0/5.0/6.0实例中的主备实例/读写分离实例变更为proxy集群实例、proxy集群实例变更为主备实例/读写分离实例](tag:hws,hws_hk,hws_eu,ctc,sbc,hk_sbc,g42,hk_g42,otc)。
@@ -308,7 +308,7 @@ class ResizeInstanceBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets newCapacity
-    *  新的缓存实例规格，单位：GB。 Redis4.0和Redis5.0：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
+    *  新的缓存实例规格，单位：GB。 Redis4.0版本及以上：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
     *
     * @return int
     */
@@ -320,7 +320,7 @@ class ResizeInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Sets newCapacity
     *
-    * @param int $newCapacity 新的缓存实例规格，单位：GB。 Redis4.0和Redis5.0：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
+    * @param int $newCapacity 新的缓存实例规格，单位：GB。 Redis4.0版本及以上：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
     *
     * @return $this
     */

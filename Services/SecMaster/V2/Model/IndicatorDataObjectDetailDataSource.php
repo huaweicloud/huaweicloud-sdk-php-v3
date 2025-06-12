@@ -20,7 +20,7 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sourceType  数据源类型，取值范围如下：1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * sourceType  数据源类型，取值范围如下：1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     * domainId  租户ID
     * projectId  项目ID
     * regionId  区域ID
@@ -36,7 +36,7 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sourceType  数据源类型，取值范围如下：1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * sourceType  数据源类型，取值范围如下：1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     * domainId  租户ID
     * projectId  项目ID
     * regionId  区域ID
@@ -73,7 +73,7 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sourceType  数据源类型，取值范围如下：1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * sourceType  数据源类型，取值范围如下：1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     * domainId  租户ID
     * projectId  项目ID
     * regionId  区域ID
@@ -89,7 +89,7 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sourceType  数据源类型，取值范围如下：1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * sourceType  数据源类型，取值范围如下：1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     * domainId  租户ID
     * projectId  项目ID
     * regionId  区域ID
@@ -105,7 +105,7 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sourceType  数据源类型，取值范围如下：1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * sourceType  数据源类型，取值范围如下：1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     * domainId  租户ID
     * projectId  项目ID
     * regionId  区域ID
@@ -231,7 +231,7 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  数据源类型，取值范围如下：1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    *  数据源类型，取值范围如下：1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param int|null $sourceType 数据源类型，取值范围如下：1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+    * @param int|null $sourceType 数据源类型，取值范围如下：1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
     *
     * @return $this
     */

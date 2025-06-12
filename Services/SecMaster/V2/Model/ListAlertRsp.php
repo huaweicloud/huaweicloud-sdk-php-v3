@@ -20,7 +20,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * version  告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     * id  事件唯一标识，UUID格式，最大36个字符
     * domainId  数据投递后，被委托用户的domain_id
     * regionId  数据投递后，被委托用户的region_id
@@ -48,20 +48,27 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * sla  约束闭环时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
-    * chopPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
-    * ppdrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
+    * chopPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
+    * ppdrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     * simulation  调试字段
     * actor  告警调查员
     * owner  责任人、服务责任人
     * creator  创建人
     * closeReason  关闭原因: 误检 - False detection 已解决 - Resolved 重复 - Repeated 其他 - Other
     * closeComment  关闭评论
+    * alertList  告警id列表，告警/事件/指标关联的告警列表
+    * incidentList  事件id列表，告警/事件/指标关联的告警列表
+    * indicatorList  指标列表，告警/事件关联的指标列表
     * malware  malware
     * systemInfo  系统信息
     * process  进程信息
     * userInfo  用户信息
     * fileInfo  文件信息
+    * originId  告警事件原始来源id，最大128个字符
+    * ttd  检测时间。单位：分钟
+    * ttr  响应时间。单位：分钟
+    * isAutoClosed  是否自动关闭，取值范围： AutoClosed - SOAR自动化关闭 Manual - 人工关闭
     * systemAlertTable  告警管理列表的布局字段
     *
     * @var string[]
@@ -104,17 +111,24 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'creator' => 'string',
             'closeReason' => 'string',
             'closeComment' => 'string',
+            'alertList' => 'string[]',
+            'incidentList' => 'string[]',
+            'indicatorList' => 'string[]',
             'malware' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspMalware',
             'systemInfo' => 'object',
             'process' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertProcess[]',
             'userInfo' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertUserInfo[]',
             'fileInfo' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertFileInfo[]',
+            'originId' => 'string',
+            'ttd' => 'int',
+            'ttr' => 'int',
+            'isAutoClosed' => 'string',
             'systemAlertTable' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * version  告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     * id  事件唯一标识，UUID格式，最大36个字符
     * domainId  数据投递后，被委托用户的domain_id
     * regionId  数据投递后，被委托用户的region_id
@@ -142,20 +156,27 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * sla  约束闭环时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
-    * chopPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
-    * ppdrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
+    * chopPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
+    * ppdrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     * simulation  调试字段
     * actor  告警调查员
     * owner  责任人、服务责任人
     * creator  创建人
     * closeReason  关闭原因: 误检 - False detection 已解决 - Resolved 重复 - Repeated 其他 - Other
     * closeComment  关闭评论
+    * alertList  告警id列表，告警/事件/指标关联的告警列表
+    * incidentList  事件id列表，告警/事件/指标关联的告警列表
+    * indicatorList  指标列表，告警/事件关联的指标列表
     * malware  malware
     * systemInfo  系统信息
     * process  进程信息
     * userInfo  用户信息
     * fileInfo  文件信息
+    * originId  告警事件原始来源id，最大128个字符
+    * ttd  检测时间。单位：分钟
+    * ttr  响应时间。单位：分钟
+    * isAutoClosed  是否自动关闭，取值范围： AutoClosed - SOAR自动化关闭 Manual - 人工关闭
     * systemAlertTable  告警管理列表的布局字段
     *
     * @var string[]
@@ -198,11 +219,18 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
         'creator' => null,
         'closeReason' => null,
         'closeComment' => null,
+        'alertList' => null,
+        'incidentList' => null,
+        'indicatorList' => null,
         'malware' => null,
         'systemInfo' => null,
         'process' => null,
         'userInfo' => null,
         'fileInfo' => null,
+        'originId' => null,
+        'ttd' => null,
+        'ttr' => null,
+        'isAutoClosed' => null,
         'systemAlertTable' => null
     ];
 
@@ -229,7 +257,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * version  告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     * id  事件唯一标识，UUID格式，最大36个字符
     * domainId  数据投递后，被委托用户的domain_id
     * regionId  数据投递后，被委托用户的region_id
@@ -257,20 +285,27 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * sla  约束闭环时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
-    * chopPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
-    * ppdrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
+    * chopPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
+    * ppdrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     * simulation  调试字段
     * actor  告警调查员
     * owner  责任人、服务责任人
     * creator  创建人
     * closeReason  关闭原因: 误检 - False detection 已解决 - Resolved 重复 - Repeated 其他 - Other
     * closeComment  关闭评论
+    * alertList  告警id列表，告警/事件/指标关联的告警列表
+    * incidentList  事件id列表，告警/事件/指标关联的告警列表
+    * indicatorList  指标列表，告警/事件关联的指标列表
     * malware  malware
     * systemInfo  系统信息
     * process  进程信息
     * userInfo  用户信息
     * fileInfo  文件信息
+    * originId  告警事件原始来源id，最大128个字符
+    * ttd  检测时间。单位：分钟
+    * ttr  响应时间。单位：分钟
+    * isAutoClosed  是否自动关闭，取值范围： AutoClosed - SOAR自动化关闭 Manual - 人工关闭
     * systemAlertTable  告警管理列表的布局字段
     *
     * @var string[]
@@ -313,17 +348,24 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'creator' => 'creator',
             'closeReason' => 'close_reason',
             'closeComment' => 'close_comment',
+            'alertList' => 'alert_list',
+            'incidentList' => 'incident_list',
+            'indicatorList' => 'indicator_list',
             'malware' => 'malware',
             'systemInfo' => 'system_info',
             'process' => 'process',
             'userInfo' => 'user_info',
             'fileInfo' => 'file_info',
+            'originId' => 'origin_id',
+            'ttd' => 'ttd',
+            'ttr' => 'ttr',
+            'isAutoClosed' => 'is_auto_closed',
             'systemAlertTable' => 'system_alert_table'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * version  告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     * id  事件唯一标识，UUID格式，最大36个字符
     * domainId  数据投递后，被委托用户的domain_id
     * regionId  数据投递后，被委托用户的region_id
@@ -351,20 +393,27 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * sla  约束闭环时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
-    * chopPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
-    * ppdrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
+    * chopPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
+    * ppdrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     * simulation  调试字段
     * actor  告警调查员
     * owner  责任人、服务责任人
     * creator  创建人
     * closeReason  关闭原因: 误检 - False detection 已解决 - Resolved 重复 - Repeated 其他 - Other
     * closeComment  关闭评论
+    * alertList  告警id列表，告警/事件/指标关联的告警列表
+    * incidentList  事件id列表，告警/事件/指标关联的告警列表
+    * indicatorList  指标列表，告警/事件关联的指标列表
     * malware  malware
     * systemInfo  系统信息
     * process  进程信息
     * userInfo  用户信息
     * fileInfo  文件信息
+    * originId  告警事件原始来源id，最大128个字符
+    * ttd  检测时间。单位：分钟
+    * ttr  响应时间。单位：分钟
+    * isAutoClosed  是否自动关闭，取值范围： AutoClosed - SOAR自动化关闭 Manual - 人工关闭
     * systemAlertTable  告警管理列表的布局字段
     *
     * @var string[]
@@ -407,17 +456,24 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'creator' => 'setCreator',
             'closeReason' => 'setCloseReason',
             'closeComment' => 'setCloseComment',
+            'alertList' => 'setAlertList',
+            'incidentList' => 'setIncidentList',
+            'indicatorList' => 'setIndicatorList',
             'malware' => 'setMalware',
             'systemInfo' => 'setSystemInfo',
             'process' => 'setProcess',
             'userInfo' => 'setUserInfo',
             'fileInfo' => 'setFileInfo',
+            'originId' => 'setOriginId',
+            'ttd' => 'setTtd',
+            'ttr' => 'setTtr',
+            'isAutoClosed' => 'setIsAutoClosed',
             'systemAlertTable' => 'setSystemAlertTable'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * version  告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     * id  事件唯一标识，UUID格式，最大36个字符
     * domainId  数据投递后，被委托用户的domain_id
     * regionId  数据投递后，被委托用户的region_id
@@ -445,20 +501,27 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * sla  约束闭环时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
-    * chopPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
-    * ppdrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
+    * chopPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
+    * ppdrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     * simulation  调试字段
     * actor  告警调查员
     * owner  责任人、服务责任人
     * creator  创建人
     * closeReason  关闭原因: 误检 - False detection 已解决 - Resolved 重复 - Repeated 其他 - Other
     * closeComment  关闭评论
+    * alertList  告警id列表，告警/事件/指标关联的告警列表
+    * incidentList  事件id列表，告警/事件/指标关联的告警列表
+    * indicatorList  指标列表，告警/事件关联的指标列表
     * malware  malware
     * systemInfo  系统信息
     * process  进程信息
     * userInfo  用户信息
     * fileInfo  文件信息
+    * originId  告警事件原始来源id，最大128个字符
+    * ttd  检测时间。单位：分钟
+    * ttr  响应时间。单位：分钟
+    * isAutoClosed  是否自动关闭，取值范围： AutoClosed - SOAR自动化关闭 Manual - 人工关闭
     * systemAlertTable  告警管理列表的布局字段
     *
     * @var string[]
@@ -501,11 +564,18 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'creator' => 'getCreator',
             'closeReason' => 'getCloseReason',
             'closeComment' => 'getCloseComment',
+            'alertList' => 'getAlertList',
+            'incidentList' => 'getIncidentList',
+            'indicatorList' => 'getIndicatorList',
             'malware' => 'getMalware',
             'systemInfo' => 'getSystemInfo',
             'process' => 'getProcess',
             'userInfo' => 'getUserInfo',
             'fileInfo' => 'getFileInfo',
+            'originId' => 'getOriginId',
+            'ttd' => 'getTtd',
+            'ttr' => 'getTtr',
+            'isAutoClosed' => 'getIsAutoClosed',
             'systemAlertTable' => 'getSystemAlertTable'
     ];
 
@@ -560,17 +630,17 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     const HANDLE_STATUS_OPEN = 'Open';
     const HANDLE_STATUS_BLOCK = 'Block';
     const HANDLE_STATUS_CLOSED = 'Closed';
-    const IPDRR_PHASE_PREPARTION = 'Prepartion';
+    const IPDRR_PHASE_PREPARATION = 'Preparation';
     const IPDRR_PHASE_DETECTION_AND_ANALYSIS = 'Detection and Analysis';
-    const IPDRR_PHASE_CONTAINMERADICATION_RECOVERY = 'Containm，Eradication& Recovery';
+    const IPDRR_PHASE_CONTAINERADICATION_RECOVERY = 'Contain，Eradication& Recovery';
     const IPDRR_PHASE_POST_INCIDENT_ACTIVITY = 'Post-Incident-Activity';
-    const CHOP_PHASE_PREPARTION = 'Prepartion';
+    const CHOP_PHASE_PREPARATION = 'Preparation';
     const CHOP_PHASE_DETECTION_AND_ANALYSIS = 'Detection and Analysis';
-    const CHOP_PHASE_CONTAINMERADICATION_RECOVERY = 'Containm，Eradication& Recovery';
+    const CHOP_PHASE_CONTAINERADICATION_RECOVERY = 'Contain，Eradication& Recovery';
     const CHOP_PHASE_POST_INCIDENT_ACTIVITY = 'Post-Incident-Activity';
-    const PPDR_PHASE_PREPARTION = 'Prepartion';
+    const PPDR_PHASE_PREPARATION = 'Preparation';
     const PPDR_PHASE_DETECTION_AND_ANALYSIS = 'Detection and Analysis';
-    const PPDR_PHASE_CONTAINMERADICATION_RECOVERY = 'Containm，Eradication& Recovery';
+    const PPDR_PHASE_CONTAINERADICATION_RECOVERY = 'Contain，Eradication& Recovery';
     const PPDR_PHASE_POST_INCIDENT_ACTIVITY = 'Post-Incident-Activity';
     const CLOSE_REASON_FALSE_DETECTION = 'False detection';
     const CLOSE_REASON_RESOLVED = 'Resolved';
@@ -630,9 +700,9 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     public function getIpdrrPhaseAllowableValues()
     {
         return [
-            self::IPDRR_PHASE_PREPARTION,
+            self::IPDRR_PHASE_PREPARATION,
             self::IPDRR_PHASE_DETECTION_AND_ANALYSIS,
-            self::IPDRR_PHASE_CONTAINMERADICATION_RECOVERY,
+            self::IPDRR_PHASE_CONTAINERADICATION_RECOVERY,
             self::IPDRR_PHASE_POST_INCIDENT_ACTIVITY,
         ];
     }
@@ -645,9 +715,9 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     public function getChopPhaseAllowableValues()
     {
         return [
-            self::CHOP_PHASE_PREPARTION,
+            self::CHOP_PHASE_PREPARATION,
             self::CHOP_PHASE_DETECTION_AND_ANALYSIS,
-            self::CHOP_PHASE_CONTAINMERADICATION_RECOVERY,
+            self::CHOP_PHASE_CONTAINERADICATION_RECOVERY,
             self::CHOP_PHASE_POST_INCIDENT_ACTIVITY,
         ];
     }
@@ -660,9 +730,9 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     public function getPpdrPhaseAllowableValues()
     {
         return [
-            self::PPDR_PHASE_PREPARTION,
+            self::PPDR_PHASE_PREPARATION,
             self::PPDR_PHASE_DETECTION_AND_ANALYSIS,
-            self::PPDR_PHASE_CONTAINMERADICATION_RECOVERY,
+            self::PPDR_PHASE_CONTAINERADICATION_RECOVERY,
             self::PPDR_PHASE_POST_INCIDENT_ACTIVITY,
         ];
     }
@@ -735,11 +805,18 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
         $this->container['creator'] = isset($data['creator']) ? $data['creator'] : null;
         $this->container['closeReason'] = isset($data['closeReason']) ? $data['closeReason'] : null;
         $this->container['closeComment'] = isset($data['closeComment']) ? $data['closeComment'] : null;
+        $this->container['alertList'] = isset($data['alertList']) ? $data['alertList'] : null;
+        $this->container['incidentList'] = isset($data['incidentList']) ? $data['incidentList'] : null;
+        $this->container['indicatorList'] = isset($data['indicatorList']) ? $data['indicatorList'] : null;
         $this->container['malware'] = isset($data['malware']) ? $data['malware'] : null;
         $this->container['systemInfo'] = isset($data['systemInfo']) ? $data['systemInfo'] : null;
         $this->container['process'] = isset($data['process']) ? $data['process'] : null;
         $this->container['userInfo'] = isset($data['userInfo']) ? $data['userInfo'] : null;
         $this->container['fileInfo'] = isset($data['fileInfo']) ? $data['fileInfo'] : null;
+        $this->container['originId'] = isset($data['originId']) ? $data['originId'] : null;
+        $this->container['ttd'] = isset($data['ttd']) ? $data['ttd'] : null;
+        $this->container['ttr'] = isset($data['ttr']) ? $data['ttr'] : null;
+        $this->container['isAutoClosed'] = isset($data['isAutoClosed']) ? $data['isAutoClosed'] : null;
         $this->container['systemAlertTable'] = isset($data['systemAlertTable']) ? $data['systemAlertTable'] : null;
     }
 
@@ -993,6 +1070,30 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['closeComment']) && (mb_strlen($this->container['closeComment']) < 0)) {
                 $invalidProperties[] = "invalid value for 'closeComment', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['originId']) && (mb_strlen($this->container['originId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'originId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['originId']) && (mb_strlen($this->container['originId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'originId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['ttd']) && ($this->container['ttd'] > 99999)) {
+                $invalidProperties[] = "invalid value for 'ttd', must be smaller than or equal to 99999.";
+            }
+            if (!is_null($this->container['ttd']) && ($this->container['ttd'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ttd', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['ttr']) && ($this->container['ttr'] > 99999)) {
+                $invalidProperties[] = "invalid value for 'ttr', must be smaller than or equal to 99999.";
+            }
+            if (!is_null($this->container['ttr']) && ($this->container['ttr'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ttr', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['isAutoClosed']) && (mb_strlen($this->container['isAutoClosed']) > 10)) {
+                $invalidProperties[] = "invalid value for 'isAutoClosed', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['isAutoClosed']) && (mb_strlen($this->container['isAutoClosed']) < 6)) {
+                $invalidProperties[] = "invalid value for 'isAutoClosed', the character length must be bigger than or equal to 6.";
+            }
         return $invalidProperties;
     }
 
@@ -1009,7 +1110,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    *  告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     *
     * @return string|null
     */
@@ -1021,7 +1122,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * @param string|null $version 告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     *
     * @return $this
     */
@@ -1681,7 +1782,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipdrrPhase
-    *  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    *  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     *
     * @return string|null
     */
@@ -1693,7 +1794,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets ipdrrPhase
     *
-    * @param string|null $ipdrrPhase 周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * @param string|null $ipdrrPhase 周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     *
     * @return $this
     */
@@ -1705,7 +1806,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets chopPhase
-    *  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    *  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     *
     * @return string|null
     */
@@ -1717,7 +1818,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets chopPhase
     *
-    * @param string|null $chopPhase 周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * @param string|null $chopPhase 周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     *
     * @return $this
     */
@@ -1729,7 +1830,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ppdrPhase
-    *  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    *  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     *
     * @return string|null
     */
@@ -1741,7 +1842,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets ppdrPhase
     *
-    * @param string|null $ppdrPhase 周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * @param string|null $ppdrPhase 周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     *
     * @return $this
     */
@@ -1896,6 +1997,78 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets alertList
+    *  告警id列表，告警/事件/指标关联的告警列表
+    *
+    * @return string[]|null
+    */
+    public function getAlertList()
+    {
+        return $this->container['alertList'];
+    }
+
+    /**
+    * Sets alertList
+    *
+    * @param string[]|null $alertList 告警id列表，告警/事件/指标关联的告警列表
+    *
+    * @return $this
+    */
+    public function setAlertList($alertList)
+    {
+        $this->container['alertList'] = $alertList;
+        return $this;
+    }
+
+    /**
+    * Gets incidentList
+    *  事件id列表，告警/事件/指标关联的告警列表
+    *
+    * @return string[]|null
+    */
+    public function getIncidentList()
+    {
+        return $this->container['incidentList'];
+    }
+
+    /**
+    * Sets incidentList
+    *
+    * @param string[]|null $incidentList 事件id列表，告警/事件/指标关联的告警列表
+    *
+    * @return $this
+    */
+    public function setIncidentList($incidentList)
+    {
+        $this->container['incidentList'] = $incidentList;
+        return $this;
+    }
+
+    /**
+    * Gets indicatorList
+    *  指标列表，告警/事件关联的指标列表
+    *
+    * @return string[]|null
+    */
+    public function getIndicatorList()
+    {
+        return $this->container['indicatorList'];
+    }
+
+    /**
+    * Sets indicatorList
+    *
+    * @param string[]|null $indicatorList 指标列表，告警/事件关联的指标列表
+    *
+    * @return $this
+    */
+    public function setIndicatorList($indicatorList)
+    {
+        $this->container['indicatorList'] = $indicatorList;
+        return $this;
+    }
+
+    /**
     * Gets malware
     *  malware
     *
@@ -2012,6 +2185,102 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     public function setFileInfo($fileInfo)
     {
         $this->container['fileInfo'] = $fileInfo;
+        return $this;
+    }
+
+    /**
+    * Gets originId
+    *  告警事件原始来源id，最大128个字符
+    *
+    * @return string|null
+    */
+    public function getOriginId()
+    {
+        return $this->container['originId'];
+    }
+
+    /**
+    * Sets originId
+    *
+    * @param string|null $originId 告警事件原始来源id，最大128个字符
+    *
+    * @return $this
+    */
+    public function setOriginId($originId)
+    {
+        $this->container['originId'] = $originId;
+        return $this;
+    }
+
+    /**
+    * Gets ttd
+    *  检测时间。单位：分钟
+    *
+    * @return int|null
+    */
+    public function getTtd()
+    {
+        return $this->container['ttd'];
+    }
+
+    /**
+    * Sets ttd
+    *
+    * @param int|null $ttd 检测时间。单位：分钟
+    *
+    * @return $this
+    */
+    public function setTtd($ttd)
+    {
+        $this->container['ttd'] = $ttd;
+        return $this;
+    }
+
+    /**
+    * Gets ttr
+    *  响应时间。单位：分钟
+    *
+    * @return int|null
+    */
+    public function getTtr()
+    {
+        return $this->container['ttr'];
+    }
+
+    /**
+    * Sets ttr
+    *
+    * @param int|null $ttr 响应时间。单位：分钟
+    *
+    * @return $this
+    */
+    public function setTtr($ttr)
+    {
+        $this->container['ttr'] = $ttr;
+        return $this;
+    }
+
+    /**
+    * Gets isAutoClosed
+    *  是否自动关闭，取值范围： AutoClosed - SOAR自动化关闭 Manual - 人工关闭
+    *
+    * @return string|null
+    */
+    public function getIsAutoClosed()
+    {
+        return $this->container['isAutoClosed'];
+    }
+
+    /**
+    * Sets isAutoClosed
+    *
+    * @param string|null $isAutoClosed 是否自动关闭，取值范围： AutoClosed - SOAR自动化关闭 Manual - 人工关闭
+    *
+    * @return $this
+    */
+    public function setIsAutoClosed($isAutoClosed)
+    {
+        $this->container['isAutoClosed'] = $isAutoClosed;
         return $this;
     }
 

@@ -29,6 +29,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * cidr  子网掩码。
     * gateway  网关。
     * securityGroups  安全组
+    * isSafety  是否开启安全访问。开启时，需要您自行配置VPCEP网络但可以提供更安全的VPC连接访问并打通内网域名。注意：开启后无法关闭。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
             'subnetId' => 'string',
             'cidr' => 'string',
             'gateway' => 'string',
-            'securityGroups' => 'string[]'
+            'securityGroups' => 'string[]',
+            'isSafety' => 'bool'
     ];
 
     /**
@@ -55,6 +57,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * cidr  子网掩码。
     * gateway  网关。
     * securityGroups  安全组
+    * isSafety  是否开启安全访问。开启时，需要您自行配置VPCEP网络但可以提供更安全的VPC连接访问并打通内网域名。注意：开启后无法关闭。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
         'subnetId' => null,
         'cidr' => null,
         'gateway' => null,
-        'securityGroups' => null
+        'securityGroups' => null,
+        'isSafety' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * cidr  子网掩码。
     * gateway  网关。
     * securityGroups  安全组
+    * isSafety  是否开启安全访问。开启时，需要您自行配置VPCEP网络但可以提供更安全的VPC连接访问并打通内网域名。注意：开启后无法关闭。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
             'subnetId' => 'subnet_id',
             'cidr' => 'cidr',
             'gateway' => 'gateway',
-            'securityGroups' => 'security_groups'
+            'securityGroups' => 'security_groups',
+            'isSafety' => 'is_safety'
     ];
 
     /**
@@ -128,6 +134,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * cidr  子网掩码。
     * gateway  网关。
     * securityGroups  安全组
+    * isSafety  是否开启安全访问。开启时，需要您自行配置VPCEP网络但可以提供更安全的VPC连接访问并打通内网域名。注意：开启后无法关闭。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
             'subnetId' => 'setSubnetId',
             'cidr' => 'setCidr',
             'gateway' => 'setGateway',
-            'securityGroups' => 'setSecurityGroups'
+            'securityGroups' => 'setSecurityGroups',
+            'isSafety' => 'setIsSafety'
     ];
 
     /**
@@ -154,6 +162,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * cidr  子网掩码。
     * gateway  网关。
     * securityGroups  安全组
+    * isSafety  是否开启安全访问。开启时，需要您自行配置VPCEP网络但可以提供更安全的VPC连接访问并打通内网域名。注意：开启后无法关闭。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
             'subnetId' => 'getSubnetId',
             'cidr' => 'getCidr',
             'gateway' => 'getGateway',
-            'securityGroups' => 'getSecurityGroups'
+            'securityGroups' => 'getSecurityGroups',
+            'isSafety' => 'getIsSafety'
     ];
 
     /**
@@ -236,6 +246,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
         $this->container['cidr'] = isset($data['cidr']) ? $data['cidr'] : null;
         $this->container['gateway'] = isset($data['gateway']) ? $data['gateway'] : null;
         $this->container['securityGroups'] = isset($data['securityGroups']) ? $data['securityGroups'] : null;
+        $this->container['isSafety'] = isset($data['isSafety']) ? $data['isSafety'] : null;
     }
 
     /**
@@ -479,6 +490,30 @@ class FuncVpc implements ModelInterface, ArrayAccess
     public function setSecurityGroups($securityGroups)
     {
         $this->container['securityGroups'] = $securityGroups;
+        return $this;
+    }
+
+    /**
+    * Gets isSafety
+    *  是否开启安全访问。开启时，需要您自行配置VPCEP网络但可以提供更安全的VPC连接访问并打通内网域名。注意：开启后无法关闭。
+    *
+    * @return bool|null
+    */
+    public function getIsSafety()
+    {
+        return $this->container['isSafety'];
+    }
+
+    /**
+    * Sets isSafety
+    *
+    * @param bool|null $isSafety 是否开启安全访问。开启时，需要您自行配置VPCEP网络但可以提供更安全的VPC连接访问并打通内网域名。注意：开启后无法关闭。
+    *
+    * @return $this
+    */
+    public function setIsSafety($isSafety)
+    {
+        $this->container['isSafety'] = $isSafety;
         return $this;
     }
 

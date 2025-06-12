@@ -58,7 +58,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。
     * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
     * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * enableAutoTopic  是否打开kafka自动创建topic功能。   - true：开启   - false：关闭
+    * enableAutoTopic  是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
     * type  实例类型：集群，cluster。
     * productId  产品标识。
     * securityGroupId  安全组ID。
@@ -238,7 +238,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。
     * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
     * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * enableAutoTopic  是否打开kafka自动创建topic功能。   - true：开启   - false：关闭
+    * enableAutoTopic  是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
     * type  实例类型：集群，cluster。
     * productId  产品标识。
     * securityGroupId  安全组ID。
@@ -439,7 +439,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。
     * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
     * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * enableAutoTopic  是否打开kafka自动创建topic功能。   - true：开启   - false：关闭
+    * enableAutoTopic  是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
     * type  实例类型：集群，cluster。
     * productId  产品标识。
     * securityGroupId  安全组ID。
@@ -619,7 +619,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。
     * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
     * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * enableAutoTopic  是否打开kafka自动创建topic功能。   - true：开启   - false：关闭
+    * enableAutoTopic  是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
     * type  实例类型：集群，cluster。
     * productId  产品标识。
     * securityGroupId  安全组ID。
@@ -799,7 +799,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。
     * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
     * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * enableAutoTopic  是否打开kafka自动创建topic功能。   - true：开启   - false：关闭
+    * enableAutoTopic  是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
     * type  实例类型：集群，cluster。
     * productId  产品标识。
     * securityGroupId  安全组ID。
@@ -2082,7 +2082,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableAutoTopic
-    *  是否打开kafka自动创建topic功能。   - true：开启   - false：关闭
+    *  是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
     *
     * @return bool|null
     */
@@ -2094,7 +2094,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets enableAutoTopic
     *
-    * @param bool|null $enableAutoTopic 是否打开kafka自动创建topic功能。   - true：开启   - false：关闭
+    * @param bool|null $enableAutoTopic 是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
     *
     * @return $this
     */

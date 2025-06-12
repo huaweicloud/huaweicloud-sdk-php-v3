@@ -191,6 +191,18 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['vhost'] === null) {
+            $invalidProperties[] = "'vhost' can't be null";
+        }
+        if ($this->container['conf'] === null) {
+            $invalidProperties[] = "'conf' can't be null";
+        }
+        if ($this->container['write'] === null) {
+            $invalidProperties[] = "'write' can't be null";
+        }
+        if ($this->container['read'] === null) {
+            $invalidProperties[] = "'read' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -209,7 +221,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     * Gets vhost
     *  需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。
     *
-    * @return string|null
+    * @return string
     */
     public function getVhost()
     {
@@ -219,7 +231,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     /**
     * Sets vhost
     *
-    * @param string|null $vhost 需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。
+    * @param string $vhost 需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。
     *
     * @return $this
     */
@@ -233,7 +245,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     * Gets conf
     *  使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。
     *
-    * @return string|null
+    * @return string
     */
     public function getConf()
     {
@@ -243,7 +255,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     /**
     * Sets conf
     *
-    * @param string|null $conf 使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。
+    * @param string $conf 使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。
     *
     * @return $this
     */
@@ -257,7 +269,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     * Gets write
     *  使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。
     *
-    * @return string|null
+    * @return string
     */
     public function getWrite()
     {
@@ -267,7 +279,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     /**
     * Sets write
     *
-    * @param string|null $write 使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。
+    * @param string $write 使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。
     *
     * @return $this
     */
@@ -281,7 +293,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     * Gets read
     *  使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。
     *
-    * @return string|null
+    * @return string
     */
     public function getRead()
     {
@@ -291,7 +303,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     /**
     * Sets read
     *
-    * @param string|null $read 使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。
+    * @param string $read 使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。
     *
     * @return $this
     */

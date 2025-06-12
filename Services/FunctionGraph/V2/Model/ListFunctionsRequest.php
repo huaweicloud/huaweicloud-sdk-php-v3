@@ -23,13 +23,15 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     * marker  上一次查询到的最后的记录位置。
     * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
     * packageName  自定义分组名称。
+    * funcName  函数名称。支持模糊查询
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'marker' => 'string',
             'maxitems' => 'string',
-            'packageName' => 'string'
+            'packageName' => 'string',
+            'funcName' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     * marker  上一次查询到的最后的记录位置。
     * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
     * packageName  自定义分组名称。
+    * funcName  函数名称。支持模糊查询
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'marker' => null,
         'maxitems' => null,
-        'packageName' => null
+        'packageName' => null,
+        'funcName' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     * marker  上一次查询到的最后的记录位置。
     * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
     * packageName  自定义分组名称。
+    * funcName  函数名称。支持模糊查询
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'marker' => 'marker',
             'maxitems' => 'maxitems',
-            'packageName' => 'package_name'
+            'packageName' => 'package_name',
+            'funcName' => 'func_name'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     * marker  上一次查询到的最后的记录位置。
     * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
     * packageName  自定义分组名称。
+    * funcName  函数名称。支持模糊查询
     *
     * @var string[]
     */
     protected static $setters = [
             'marker' => 'setMarker',
             'maxitems' => 'setMaxitems',
-            'packageName' => 'setPackageName'
+            'packageName' => 'setPackageName',
+            'funcName' => 'setFuncName'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     * marker  上一次查询到的最后的记录位置。
     * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
     * packageName  自定义分组名称。
+    * funcName  函数名称。支持模糊查询
     *
     * @var string[]
     */
     protected static $getters = [
             'marker' => 'getMarker',
             'maxitems' => 'getMaxitems',
-            'packageName' => 'getPackageName'
+            'packageName' => 'getPackageName',
+            'funcName' => 'getFuncName'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['maxitems'] = isset($data['maxitems']) ? $data['maxitems'] : null;
         $this->container['packageName'] = isset($data['packageName']) ? $data['packageName'] : null;
+        $this->container['funcName'] = isset($data['funcName']) ? $data['funcName'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     public function setPackageName($packageName)
     {
         $this->container['packageName'] = $packageName;
+        return $this;
+    }
+
+    /**
+    * Gets funcName
+    *  函数名称。支持模糊查询
+    *
+    * @return string|null
+    */
+    public function getFuncName()
+    {
+        return $this->container['funcName'];
+    }
+
+    /**
+    * Sets funcName
+    *
+    * @param string|null $funcName 函数名称。支持模糊查询
+    *
+    * @return $this
+    */
+    public function setFuncName($funcName)
+    {
+        $this->container['funcName'] = $funcName;
         return $this;
     }
 

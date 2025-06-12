@@ -20,7 +20,7 @@ class UpdateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topics  修改的topic列表。
+    * topics  修改的Topic列表。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topics  修改的topic列表。
+    * topics  修改的Topic列表。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topics  修改的topic列表。
+    * topics  修改的Topic列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topics  修改的topic列表。
+    * topics  修改的Topic列表。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topics  修改的topic列表。
+    * topics  修改的Topic列表。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class UpdateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  修改的topic列表。
+    *  修改的Topic列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceTopicReqTopics[]|null
     */
@@ -186,7 +186,7 @@ class UpdateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceTopicReqTopics[]|null $topics 修改的topic列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceTopicReqTopics[]|null $topics 修改的Topic列表。
     *
     * @return $this
     */

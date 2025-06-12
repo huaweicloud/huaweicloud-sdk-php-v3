@@ -22,7 +22,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     * Array of property to type mappings. Used for (de)serialization
     * partition  分区编号。
     * lag  剩余可消费消息数，即消息堆积数。
-    * topic  topic名称。
+    * topic  Topic名称。
     * messageCurrentOffset  当前消费进度。
     * messageLogEndOffset  最大消息位置（LEO）。
     *
@@ -40,7 +40,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     * Array of property to format mappings. Used for (de)serialization
     * partition  分区编号。
     * lag  剩余可消费消息数，即消息堆积数。
-    * topic  topic名称。
+    * topic  Topic名称。
     * messageCurrentOffset  当前消费进度。
     * messageLogEndOffset  最大消息位置（LEO）。
     *
@@ -79,7 +79,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     * and the value is the original name
     * partition  分区编号。
     * lag  剩余可消费消息数，即消息堆积数。
-    * topic  topic名称。
+    * topic  Topic名称。
     * messageCurrentOffset  当前消费进度。
     * messageLogEndOffset  最大消息位置（LEO）。
     *
@@ -97,7 +97,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     * Array of attributes to setter functions (for deserialization of responses)
     * partition  分区编号。
     * lag  剩余可消费消息数，即消息堆积数。
-    * topic  topic名称。
+    * topic  Topic名称。
     * messageCurrentOffset  当前消费进度。
     * messageLogEndOffset  最大消息位置（LEO）。
     *
@@ -115,7 +115,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     * Array of attributes to getter functions (for serialization of requests)
     * partition  分区编号。
     * lag  剩余可消费消息数，即消息堆积数。
-    * topic  topic名称。
+    * topic  Topic名称。
     * messageCurrentOffset  当前消费进度。
     * messageLogEndOffset  最大消息位置（LEO）。
     *
@@ -266,7 +266,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
 
     /**
     * Gets topic
-    *  topic名称。
+    *  Topic名称。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     /**
     * Sets topic
     *
-    * @param string|null $topic topic名称。
+    * @param string|null $topic Topic名称。
     *
     * @return $this
     */

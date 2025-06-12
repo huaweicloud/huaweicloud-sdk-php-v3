@@ -20,7 +20,7 @@ class IndicatorDataObjectDetailEnvironment implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vendorType  环境供应商（如HWC,AWS,Azure等）
+    * vendorType  环境供应商
     * domainId  租户ID
     * regionId  区域ID
     * projectId  项目ID
@@ -36,7 +36,7 @@ class IndicatorDataObjectDetailEnvironment implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vendorType  环境供应商（如HWC,AWS,Azure等）
+    * vendorType  环境供应商
     * domainId  租户ID
     * regionId  区域ID
     * projectId  项目ID
@@ -73,7 +73,7 @@ class IndicatorDataObjectDetailEnvironment implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vendorType  环境供应商（如HWC,AWS,Azure等）
+    * vendorType  环境供应商
     * domainId  租户ID
     * regionId  区域ID
     * projectId  项目ID
@@ -89,7 +89,7 @@ class IndicatorDataObjectDetailEnvironment implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vendorType  环境供应商（如HWC,AWS,Azure等）
+    * vendorType  环境供应商
     * domainId  租户ID
     * regionId  区域ID
     * projectId  项目ID
@@ -105,7 +105,7 @@ class IndicatorDataObjectDetailEnvironment implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vendorType  环境供应商（如HWC,AWS,Azure等）
+    * vendorType  环境供应商
     * domainId  租户ID
     * regionId  区域ID
     * projectId  项目ID
@@ -231,7 +231,7 @@ class IndicatorDataObjectDetailEnvironment implements ModelInterface, ArrayAcces
 
     /**
     * Gets vendorType
-    *  环境供应商（如HWC,AWS,Azure等）
+    *  环境供应商
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class IndicatorDataObjectDetailEnvironment implements ModelInterface, ArrayAcces
     /**
     * Sets vendorType
     *
-    * @param string|null $vendorType 环境供应商（如HWC,AWS,Azure等）
+    * @param string|null $vendorType 环境供应商
     *
     * @return $this
     */

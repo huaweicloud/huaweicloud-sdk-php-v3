@@ -21,7 +21,7 @@ class ListWorkspacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspaces  空间信息
+    * workspaces  list of informations of workspaces
     * count  数据总量
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListWorkspacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspaces  空间信息
+    * workspaces  list of informations of workspaces
     * count  数据总量
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListWorkspacesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspaces  空间信息
+    * workspaces  list of informations of workspaces
     * count  数据总量
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListWorkspacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspaces  空间信息
+    * workspaces  list of informations of workspaces
     * count  数据总量
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListWorkspacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspaces  空间信息
+    * workspaces  list of informations of workspaces
     * count  数据总量
     *
     * @var string[]
@@ -192,7 +192,7 @@ class ListWorkspacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspaces
-    *  空间信息
+    *  list of informations of workspaces
     *
     * @return \HuaweiCloud\SDK\SecMaster\V2\Model\CreateWorkspaceResponseBody[]|null
     */
@@ -204,7 +204,7 @@ class ListWorkspacesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workspaces
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\CreateWorkspaceResponseBody[]|null $workspaces 空间信息
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\CreateWorkspaceResponseBody[]|null $workspaces list of informations of workspaces
     *
     * @return $this
     */

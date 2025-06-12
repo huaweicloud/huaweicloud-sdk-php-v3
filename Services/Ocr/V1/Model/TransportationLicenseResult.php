@@ -35,6 +35,8 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * expiryDate  有效期。
     * reviewExpiryDate  审验有效期。
     * assessedTechnicalLevel  技术等级评定。
+    * imageLocation  道路运输证在原图中的坐标位置，输出左上、右上、右下、左下四个点坐标。仅在return_image_location设置为true时返回该字段。
+    * adjustedImage  道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -55,6 +57,8 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'expiryDate' => 'string',
             'reviewExpiryDate' => 'string',
             'assessedTechnicalLevel' => 'string',
+            'imageLocation' => 'int[][]',
+            'adjustedImage' => 'string',
             'confidence' => 'object'
     ];
 
@@ -75,6 +79,8 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * expiryDate  有效期。
     * reviewExpiryDate  审验有效期。
     * assessedTechnicalLevel  技术等级评定。
+    * imageLocation  道路运输证在原图中的坐标位置，输出左上、右上、右下、左下四个点坐标。仅在return_image_location设置为true时返回该字段。
+    * adjustedImage  道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -95,6 +101,8 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
         'expiryDate' => null,
         'reviewExpiryDate' => null,
         'assessedTechnicalLevel' => null,
+        'imageLocation' => 'int32',
+        'adjustedImage' => null,
         'confidence' => null
     ];
 
@@ -136,6 +144,8 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * expiryDate  有效期。
     * reviewExpiryDate  审验有效期。
     * assessedTechnicalLevel  技术等级评定。
+    * imageLocation  道路运输证在原图中的坐标位置，输出左上、右上、右下、左下四个点坐标。仅在return_image_location设置为true时返回该字段。
+    * adjustedImage  道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -156,6 +166,8 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'expiryDate' => 'expiry_date',
             'reviewExpiryDate' => 'review_expiry_date',
             'assessedTechnicalLevel' => 'assessed_technical_level',
+            'imageLocation' => 'image_location',
+            'adjustedImage' => 'adjusted_image',
             'confidence' => 'confidence'
     ];
 
@@ -176,6 +188,8 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * expiryDate  有效期。
     * reviewExpiryDate  审验有效期。
     * assessedTechnicalLevel  技术等级评定。
+    * imageLocation  道路运输证在原图中的坐标位置，输出左上、右上、右下、左下四个点坐标。仅在return_image_location设置为true时返回该字段。
+    * adjustedImage  道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -196,6 +210,8 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'expiryDate' => 'setExpiryDate',
             'reviewExpiryDate' => 'setReviewExpiryDate',
             'assessedTechnicalLevel' => 'setAssessedTechnicalLevel',
+            'imageLocation' => 'setImageLocation',
+            'adjustedImage' => 'setAdjustedImage',
             'confidence' => 'setConfidence'
     ];
 
@@ -216,6 +232,8 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * expiryDate  有效期。
     * reviewExpiryDate  审验有效期。
     * assessedTechnicalLevel  技术等级评定。
+    * imageLocation  道路运输证在原图中的坐标位置，输出左上、右上、右下、左下四个点坐标。仅在return_image_location设置为true时返回该字段。
+    * adjustedImage  道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -236,6 +254,8 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'expiryDate' => 'getExpiryDate',
             'reviewExpiryDate' => 'getReviewExpiryDate',
             'assessedTechnicalLevel' => 'getAssessedTechnicalLevel',
+            'imageLocation' => 'getImageLocation',
+            'adjustedImage' => 'getAdjustedImage',
             'confidence' => 'getConfidence'
     ];
 
@@ -312,6 +332,8 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
         $this->container['expiryDate'] = isset($data['expiryDate']) ? $data['expiryDate'] : null;
         $this->container['reviewExpiryDate'] = isset($data['reviewExpiryDate']) ? $data['reviewExpiryDate'] : null;
         $this->container['assessedTechnicalLevel'] = isset($data['assessedTechnicalLevel']) ? $data['assessedTechnicalLevel'] : null;
+        $this->container['imageLocation'] = isset($data['imageLocation']) ? $data['imageLocation'] : null;
+        $this->container['adjustedImage'] = isset($data['adjustedImage']) ? $data['adjustedImage'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
     }
 
@@ -694,6 +716,54 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     public function setAssessedTechnicalLevel($assessedTechnicalLevel)
     {
         $this->container['assessedTechnicalLevel'] = $assessedTechnicalLevel;
+        return $this;
+    }
+
+    /**
+    * Gets imageLocation
+    *  道路运输证在原图中的坐标位置，输出左上、右上、右下、左下四个点坐标。仅在return_image_location设置为true时返回该字段。
+    *
+    * @return int[][]|null
+    */
+    public function getImageLocation()
+    {
+        return $this->container['imageLocation'];
+    }
+
+    /**
+    * Sets imageLocation
+    *
+    * @param int[][]|null $imageLocation 道路运输证在原图中的坐标位置，输出左上、右上、右下、左下四个点坐标。仅在return_image_location设置为true时返回该字段。
+    *
+    * @return $this
+    */
+    public function setImageLocation($imageLocation)
+    {
+        $this->container['imageLocation'] = $imageLocation;
+        return $this;
+    }
+
+    /**
+    * Gets adjustedImage
+    *  道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
+    *
+    * @return string|null
+    */
+    public function getAdjustedImage()
+    {
+        return $this->container['adjustedImage'];
+    }
+
+    /**
+    * Sets adjustedImage
+    *
+    * @param string|null $adjustedImage 道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
+    *
+    * @return $this
+    */
+    public function setAdjustedImage($adjustedImage)
+    {
+        $this->container['adjustedImage'] = $adjustedImage;
         return $this;
     }
 

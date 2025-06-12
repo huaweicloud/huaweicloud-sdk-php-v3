@@ -20,14 +20,14 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  topic名称，不支持修改。
+    * id  Topic名称，不支持修改。
     * retentionTime  老化时间，单位小时。
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
     * newPartitionBrokers  增加分区时指定broker列表
-    * topicOtherConfigs  topic配置
-    * topicDesc  topic描述
+    * topicOtherConfigs  Topic配置
+    * topicDesc  Topic描述
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  topic名称，不支持修改。
+    * id  Topic名称，不支持修改。
     * retentionTime  老化时间，单位小时。
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
     * newPartitionBrokers  增加分区时指定broker列表
-    * topicOtherConfigs  topic配置
-    * topicDesc  topic描述
+    * topicOtherConfigs  Topic配置
+    * topicDesc  Topic描述
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  topic名称，不支持修改。
+    * id  Topic名称，不支持修改。
     * retentionTime  老化时间，单位小时。
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
     * newPartitionBrokers  增加分区时指定broker列表
-    * topicOtherConfigs  topic配置
-    * topicDesc  topic描述
+    * topicOtherConfigs  Topic配置
+    * topicDesc  Topic描述
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  topic名称，不支持修改。
+    * id  Topic名称，不支持修改。
     * retentionTime  老化时间，单位小时。
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
     * newPartitionBrokers  增加分区时指定broker列表
-    * topicOtherConfigs  topic配置
-    * topicDesc  topic描述
+    * topicOtherConfigs  Topic配置
+    * topicDesc  Topic描述
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  topic名称，不支持修改。
+    * id  Topic名称，不支持修改。
     * retentionTime  老化时间，单位小时。
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
     * newPartitionBrokers  增加分区时指定broker列表
-    * topicOtherConfigs  topic配置
-    * topicDesc  topic描述
+    * topicOtherConfigs  Topic配置
+    * topicDesc  Topic描述
     *
     * @var string[]
     */
@@ -254,7 +254,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  topic名称，不支持修改。
+    *  Topic名称，不支持修改。
     *
     * @return string
     */
@@ -266,7 +266,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id topic名称，不支持修改。
+    * @param string $id Topic名称，不支持修改。
     *
     * @return $this
     */
@@ -398,7 +398,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicOtherConfigs
-    *  topic配置
+    *  Topic配置
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]|null
     */
@@ -410,7 +410,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Sets topicOtherConfigs
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]|null $topicOtherConfigs topic配置
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]|null $topicOtherConfigs Topic配置
     *
     * @return $this
     */
@@ -422,7 +422,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicDesc
-    *  topic描述
+    *  Topic描述
     *
     * @return string|null
     */
@@ -434,7 +434,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Sets topicDesc
     *
-    * @param string|null $topicDesc topic描述
+    * @param string|null $topicDesc Topic描述
     *
     * @return $this
     */

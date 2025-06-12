@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\RocketMQ\V2\Model;
+namespace HuaweiCloud\SDK\IdentityCenterSCIM\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class RestartInstanceResponse implements ModelInterface, ArrayAccess
+class MemberItemDto implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,34 +16,34 @@ class RestartInstanceResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'RestartInstanceResponse';
+    protected static $openAPIModelName = 'MemberItemDto';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID
-    * nodes  node列表
-    * result  结果
+    * value  成员的全局唯一标识符（ID）
+    * ref  成员的引用信息
+    * type  成员类型 User：用户
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string',
-            'nodes' => 'string[]',
-            'result' => 'string'
+            'value' => 'string',
+            'ref' => 'string',
+            'type' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID
-    * nodes  node列表
-    * result  结果
+    * value  成员的全局唯一标识符（ID）
+    * ref  成员的引用信息
+    * type  成员类型 User：用户
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null,
-        'nodes' => null,
-        'result' => null
+        'value' => null,
+        'ref' => null,
+        'type' => null
     ];
 
     /**
@@ -70,44 +69,44 @@ class RestartInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID
-    * nodes  node列表
-    * result  结果
+    * value  成员的全局唯一标识符（ID）
+    * ref  成员的引用信息
+    * type  成员类型 User：用户
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'instance_id',
-            'nodes' => 'nodes',
-            'result' => 'result'
+            'value' => 'value',
+            'ref' => '$ref',
+            'type' => 'type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID
-    * nodes  node列表
-    * result  结果
+    * value  成员的全局唯一标识符（ID）
+    * ref  成员的引用信息
+    * type  成员类型 User：用户
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId',
-            'nodes' => 'setNodes',
-            'result' => 'setResult'
+            'value' => 'setValue',
+            'ref' => 'setRef',
+            'type' => 'setType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID
-    * nodes  node列表
-    * result  结果
+    * value  成员的全局唯一标识符（ID）
+    * ref  成员的引用信息
+    * type  成员类型 User：用户
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId',
-            'nodes' => 'getNodes',
-            'result' => 'getResult'
+            'value' => 'getValue',
+            'ref' => 'getRef',
+            'type' => 'getType'
     ];
 
     /**
@@ -168,9 +167,9 @@ class RestartInstanceResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['nodes'] = isset($data['nodes']) ? $data['nodes'] : null;
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['ref'] = isset($data['ref']) ? $data['ref'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -181,6 +180,9 @@ class RestartInstanceResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,74 +198,74 @@ class RestartInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instanceId
-    *  实例ID
+    * Gets value
+    *  成员的全局唯一标识符（ID）
     *
-    * @return string|null
+    * @return string
     */
-    public function getInstanceId()
+    public function getValue()
     {
-        return $this->container['instanceId'];
+        return $this->container['value'];
     }
 
     /**
-    * Sets instanceId
+    * Sets value
     *
-    * @param string|null $instanceId 实例ID
+    * @param string $value 成员的全局唯一标识符（ID）
     *
     * @return $this
     */
-    public function setInstanceId($instanceId)
+    public function setValue($value)
     {
-        $this->container['instanceId'] = $instanceId;
+        $this->container['value'] = $value;
         return $this;
     }
 
     /**
-    * Gets nodes
-    *  node列表
+    * Gets ref
+    *  成员的引用信息
     *
-    * @return string[]|null
+    * @return string|null
     */
-    public function getNodes()
+    public function getRef()
     {
-        return $this->container['nodes'];
+        return $this->container['ref'];
     }
 
     /**
-    * Sets nodes
+    * Sets ref
     *
-    * @param string[]|null $nodes node列表
+    * @param string|null $ref 成员的引用信息
     *
     * @return $this
     */
-    public function setNodes($nodes)
+    public function setRef($ref)
     {
-        $this->container['nodes'] = $nodes;
+        $this->container['ref'] = $ref;
         return $this;
     }
 
     /**
-    * Gets result
-    *  结果
+    * Gets type
+    *  成员类型 User：用户
     *
     * @return string|null
     */
-    public function getResult()
+    public function getType()
     {
-        return $this->container['result'];
+        return $this->container['type'];
     }
 
     /**
-    * Sets result
+    * Sets type
     *
-    * @param string|null $result 结果
+    * @param string|null $type 成员类型 User：用户
     *
     * @return $this
     */
-    public function setResult($result)
+    public function setType($type)
     {
-        $this->container['result'] = $result;
+        $this->container['type'] = $type;
         return $this;
     }
 

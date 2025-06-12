@@ -27,6 +27,8 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
     * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员账号中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
             'filter' => 'string',
             'sortKey' => 'string[]',
             'sortDir' => 'string[]',
-            'callIdentity' => 'string'
+            'callIdentity' => 'string',
+            'marker' => 'string',
+            'limit' => 'int'
     ];
 
     /**
@@ -49,6 +53,8 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
     * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员账号中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
         'filter' => null,
         'sortKey' => null,
         'sortDir' => null,
-        'callIdentity' => null
+        'callIdentity' => null,
+        'marker' => null,
+        'limit' => null
     ];
 
     /**
@@ -92,6 +100,8 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
     * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员账号中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
             'filter' => 'filter',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
-            'callIdentity' => 'call_identity'
+            'callIdentity' => 'call_identity',
+            'marker' => 'marker',
+            'limit' => 'limit'
     ];
 
     /**
@@ -114,6 +126,8 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
     * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员账号中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
             'filter' => 'setFilter',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
-            'callIdentity' => 'setCallIdentity'
+            'callIdentity' => 'setCallIdentity',
+            'marker' => 'setMarker',
+            'limit' => 'setLimit'
     ];
 
     /**
@@ -136,6 +152,8 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
     * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员账号中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    * marker  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    * limit  每页返回的最多结果数量
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
             'filter' => 'getFilter',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
-            'callIdentity' => 'getCallIdentity'
+            'callIdentity' => 'getCallIdentity',
+            'marker' => 'getMarker',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -257,6 +277,8 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['callIdentity'] = isset($data['callIdentity']) ? $data['callIdentity'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -314,6 +336,18 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 512)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 1)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
+            }
         return $invalidProperties;
     }
 
@@ -493,6 +527,54 @@ class ListStackInstancesRequest implements ModelInterface, ArrayAccess
     public function setCallIdentity($callIdentity)
     {
         $this->container['callIdentity'] = $callIdentity;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页标记。当一页无法返回所有结果，上一次的请求将返回next_marker以指引还有更多页数，用户可以将next_marker中的值放到此处以查询下一页的信息。此marker只能用于与上一请求指定的相同参数的请求。不指定时默认从第一页开始查询。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页返回的最多结果数量
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页返回的最多结果数量
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

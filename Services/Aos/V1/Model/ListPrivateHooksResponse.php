@@ -21,21 +21,25 @@ class ListPrivateHooksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * pageInfo  pageInfo
     * hooks  私有hook的列表。默认以创建时间降序排序。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'pageInfo' => '\HuaweiCloud\SDK\Aos\V1\Model\PageInfo',
             'hooks' => '\HuaweiCloud\SDK\Aos\V1\Model\PrivateHookSummary[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * pageInfo  pageInfo
     * hooks  私有hook的列表。默认以创建时间降序排序。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'pageInfo' => null,
         'hooks' => null
     ];
 
@@ -62,31 +66,37 @@ class ListPrivateHooksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * pageInfo  pageInfo
     * hooks  私有hook的列表。默认以创建时间降序排序。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'pageInfo' => 'page_info',
             'hooks' => 'hooks'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * pageInfo  pageInfo
     * hooks  私有hook的列表。默认以创建时间降序排序。
     *
     * @var string[]
     */
     protected static $setters = [
+            'pageInfo' => 'setPageInfo',
             'hooks' => 'setHooks'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * pageInfo  pageInfo
     * hooks  私有hook的列表。默认以创建时间降序排序。
     *
     * @var string[]
     */
     protected static $getters = [
+            'pageInfo' => 'getPageInfo',
             'hooks' => 'getHooks'
     ];
 
@@ -148,6 +158,7 @@ class ListPrivateHooksResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
         $this->container['hooks'] = isset($data['hooks']) ? $data['hooks'] : null;
     }
 
@@ -171,6 +182,30 @@ class ListPrivateHooksResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
+        return $this;
     }
 
     /**

@@ -20,7 +20,7 @@ class UpdateTopicAccessPolicyReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topics  topic列表。
+    * topics  Topic列表。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateTopicAccessPolicyReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topics  topic列表。
+    * topics  Topic列表。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateTopicAccessPolicyReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topics  topic列表。
+    * topics  Topic列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateTopicAccessPolicyReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topics  topic列表。
+    * topics  Topic列表。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateTopicAccessPolicyReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topics  topic列表。
+    * topics  Topic列表。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UpdateTopicAccessPolicyReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  topic列表。
+    *  Topic列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\AccessPolicyTopicEntity[]
     */
@@ -189,7 +189,7 @@ class UpdateTopicAccessPolicyReq implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\AccessPolicyTopicEntity[] $topics topic列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\AccessPolicyTopicEntity[] $topics Topic列表。
     *
     * @return $this
     */

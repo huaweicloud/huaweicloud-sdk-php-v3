@@ -22,21 +22,25 @@ class ListPrivateModulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * modules  私有模块的列表。默认以创建时间升序排序。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'modules' => '\HuaweiCloud\SDK\Aos\V1\Model\PrivateModuleSummary[]'
+            'modules' => '\HuaweiCloud\SDK\Aos\V1\Model\PrivateModuleSummary[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Aos\V1\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * modules  私有模块的列表。默认以创建时间升序排序。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'modules' => null
+        'modules' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListPrivateModulesResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * modules  私有模块的列表。默认以创建时间升序排序。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'modules' => 'modules'
+            'modules' => 'modules',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * modules  私有模块的列表。默认以创建时间升序排序。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
-            'modules' => 'setModules'
+            'modules' => 'setModules',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * modules  私有模块的列表。默认以创建时间升序排序。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
-            'modules' => 'getModules'
+            'modules' => 'getModules',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListPrivateModulesResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['modules'] = isset($data['modules']) ? $data['modules'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListPrivateModulesResponse implements ModelInterface, ArrayAccess
     public function setModules($modules)
     {
         $this->container['modules'] = $modules;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

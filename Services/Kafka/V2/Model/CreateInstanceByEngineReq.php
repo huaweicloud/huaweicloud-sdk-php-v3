@@ -23,7 +23,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
-    * engineVersion  消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
+    * engineVersion  消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
     * brokerNum  代理个数。
     * storageSpace  消息存储空间，单位GB。   [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)      [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs)   [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。   - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。   - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。   - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs)
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -32,7 +32,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * securityGroupId  指定实例所属的安全组。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     * subnetId  子网信息。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
     * availableZones  创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。  创建Kafka实例，支持节点部署在1个或3个及3个以上的可用区。在为节点指定可用区时，用逗号分隔开。
-    * productId  产品ID。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ocb,hws_ocb,dt,ctc,sbc,fcs,hcs,g42,hk_g42,tm,hk_tm,hws_eu)[产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:cmcc)
+    * productId  产品ID。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm。
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
@@ -47,11 +47,11 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * diskEncryptedEnable  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
-    * enableAutoTopic  是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
+    * enableAutoTopic  是否打开kafka自动创建Topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  [如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
     * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * tags  标签列表。
-    * archType  CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs)。  取值范围：   - X86   [- arm](tag:hcs,fcs)
+    * archType  CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs,ctc)。  取值范围：   - X86   [- arm](tag:hcs,fcs,ctc)
     * vpcClientPlain  VPC内网明文访问。
     * bssParam  bssParam
     *
@@ -99,7 +99,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
-    * engineVersion  消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
+    * engineVersion  消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
     * brokerNum  代理个数。
     * storageSpace  消息存储空间，单位GB。   [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)      [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs)   [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。   - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。   - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。   - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs)
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -108,7 +108,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * securityGroupId  指定实例所属的安全组。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     * subnetId  子网信息。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
     * availableZones  创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。  创建Kafka实例，支持节点部署在1个或3个及3个以上的可用区。在为节点指定可用区时，用逗号分隔开。
-    * productId  产品ID。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ocb,hws_ocb,dt,ctc,sbc,fcs,hcs,g42,hk_g42,tm,hk_tm,hws_eu)[产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:cmcc)
+    * productId  产品ID。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm。
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
@@ -123,11 +123,11 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * diskEncryptedEnable  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
-    * enableAutoTopic  是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
+    * enableAutoTopic  是否打开kafka自动创建Topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  [如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
     * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * tags  标签列表。
-    * archType  CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs)。  取值范围：   - X86   [- arm](tag:hcs,fcs)
+    * archType  CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs,ctc)。  取值范围：   - X86   [- arm](tag:hcs,fcs,ctc)
     * vpcClientPlain  VPC内网明文访问。
     * bssParam  bssParam
     *
@@ -196,7 +196,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
-    * engineVersion  消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
+    * engineVersion  消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
     * brokerNum  代理个数。
     * storageSpace  消息存储空间，单位GB。   [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)      [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs)   [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。   - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。   - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。   - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs)
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -205,7 +205,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * securityGroupId  指定实例所属的安全组。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     * subnetId  子网信息。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
     * availableZones  创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。  创建Kafka实例，支持节点部署在1个或3个及3个以上的可用区。在为节点指定可用区时，用逗号分隔开。
-    * productId  产品ID。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ocb,hws_ocb,dt,ctc,sbc,fcs,hcs,g42,hk_g42,tm,hk_tm,hws_eu)[产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:cmcc)
+    * productId  产品ID。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm。
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
@@ -220,11 +220,11 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * diskEncryptedEnable  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
-    * enableAutoTopic  是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
+    * enableAutoTopic  是否打开kafka自动创建Topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  [如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
     * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * tags  标签列表。
-    * archType  CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs)。  取值范围：   - X86   [- arm](tag:hcs,fcs)
+    * archType  CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs,ctc)。  取值范围：   - X86   [- arm](tag:hcs,fcs,ctc)
     * vpcClientPlain  VPC内网明文访问。
     * bssParam  bssParam
     *
@@ -272,7 +272,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
-    * engineVersion  消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
+    * engineVersion  消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
     * brokerNum  代理个数。
     * storageSpace  消息存储空间，单位GB。   [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)      [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs)   [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。   - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。   - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。   - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs)
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -281,7 +281,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * securityGroupId  指定实例所属的安全组。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     * subnetId  子网信息。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
     * availableZones  创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。  创建Kafka实例，支持节点部署在1个或3个及3个以上的可用区。在为节点指定可用区时，用逗号分隔开。
-    * productId  产品ID。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ocb,hws_ocb,dt,ctc,sbc,fcs,hcs,g42,hk_g42,tm,hk_tm,hws_eu)[产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:cmcc)
+    * productId  产品ID。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm。
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
@@ -296,11 +296,11 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * diskEncryptedEnable  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
-    * enableAutoTopic  是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
+    * enableAutoTopic  是否打开kafka自动创建Topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  [如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
     * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * tags  标签列表。
-    * archType  CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs)。  取值范围：   - X86   [- arm](tag:hcs,fcs)
+    * archType  CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs,ctc)。  取值范围：   - X86   [- arm](tag:hcs,fcs,ctc)
     * vpcClientPlain  VPC内网明文访问。
     * bssParam  bssParam
     *
@@ -348,7 +348,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
-    * engineVersion  消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
+    * engineVersion  消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
     * brokerNum  代理个数。
     * storageSpace  消息存储空间，单位GB。   [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)      [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs)   [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。   - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。   - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。   - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs)
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -357,7 +357,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * securityGroupId  指定实例所属的安全组。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     * subnetId  子网信息。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
     * availableZones  创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。  创建Kafka实例，支持节点部署在1个或3个及3个以上的可用区。在为节点指定可用区时，用逗号分隔开。
-    * productId  产品ID。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ocb,hws_ocb,dt,ctc,sbc,fcs,hcs,g42,hk_g42,tm,hk_tm,hws_eu)[产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:cmcc)
+    * productId  产品ID。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm。
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
@@ -372,11 +372,11 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * diskEncryptedEnable  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
-    * enableAutoTopic  是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
+    * enableAutoTopic  是否打开kafka自动创建Topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  [如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
     * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * tags  标签列表。
-    * archType  CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs)。  取值范围：   - X86   [- arm](tag:hcs,fcs)
+    * archType  CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs,ctc)。  取值范围：   - X86   [- arm](tag:hcs,fcs,ctc)
     * vpcClientPlain  VPC内网明文访问。
     * bssParam  bssParam
     *
@@ -724,7 +724,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineVersion
-    *  消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
+    *  消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
     *
     * @return string
     */
@@ -736,7 +736,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets engineVersion
     *
-    * @param string $engineVersion 消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
+    * @param string $engineVersion 消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
     *
     * @return $this
     */
@@ -940,7 +940,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  产品ID。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ocb,hws_ocb,dt,ctc,sbc,fcs,hcs,g42,hk_g42,tm,hk_tm,hws_eu)[产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:cmcc)
+    *  产品ID。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
     *
     * @return string
     */
@@ -952,7 +952,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string $productId 产品ID。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ocb,hws_ocb,dt,ctc,sbc,fcs,hcs,g42,hk_g42,tm,hk_tm,hws_eu)[产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:cmcc)
+    * @param string $productId 产品ID。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
     *
     * @return $this
     */
@@ -1300,7 +1300,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableAutoTopic
-    *  是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
+    *  是否打开kafka自动创建Topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
     *
     * @return bool|null
     */
@@ -1312,7 +1312,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets enableAutoTopic
     *
-    * @param bool|null $enableAutoTopic 是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
+    * @param bool|null $enableAutoTopic 是否打开kafka自动创建Topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
     *
     * @return $this
     */
@@ -1396,7 +1396,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets archType
-    *  CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs)。  取值范围：   - X86   [- arm](tag:hcs,fcs)
+    *  CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs,ctc)。  取值范围：   - X86   [- arm](tag:hcs,fcs,ctc)
     *
     * @return string|null
     */
@@ -1408,7 +1408,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets archType
     *
-    * @param string|null $archType CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs)。  取值范围：   - X86   [- arm](tag:hcs,fcs)
+    * @param string|null $archType CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs,ctc)。  取值范围：   - X86   [- arm](tag:hcs,fcs,ctc)
     *
     * @return $this
     */

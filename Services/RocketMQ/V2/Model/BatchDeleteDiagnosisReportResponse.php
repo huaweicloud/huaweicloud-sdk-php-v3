@@ -7,8 +7,9 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class RestartInstanceRequest implements ModelInterface, ArrayAccess
+class BatchDeleteDiagnosisReportResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,26 @@ class RestartInstanceRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'RestartInstanceRequest';
+    protected static $openAPIModelName = 'BatchDeleteDiagnosisReportResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  消息引擎类型。
-    * instanceId  实例ID。
+    * reportIdList  **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'engine' => 'string',
-            'instanceId' => 'string'
+            'reportIdList' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  消息引擎类型。
-    * instanceId  实例ID。
+    * reportIdList  **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'engine' => null,
-        'instanceId' => null
+        'reportIdList' => null
     ];
 
     /**
@@ -65,38 +62,32 @@ class RestartInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  消息引擎类型。
-    * instanceId  实例ID。
+    * reportIdList  **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'engine' => 'engine',
-            'instanceId' => 'instance_id'
+            'reportIdList' => 'report_id_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  消息引擎类型。
-    * instanceId  实例ID。
+    * reportIdList  **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'engine' => 'setEngine',
-            'instanceId' => 'setInstanceId'
+            'reportIdList' => 'setReportIdList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  消息引擎类型。
-    * instanceId  实例ID。
+    * reportIdList  **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'engine' => 'getEngine',
-            'instanceId' => 'getInstanceId'
+            'reportIdList' => 'getReportIdList'
     ];
 
     /**
@@ -157,8 +148,7 @@ class RestartInstanceRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['reportIdList'] = isset($data['reportIdList']) ? $data['reportIdList'] : null;
     }
 
     /**
@@ -169,12 +159,6 @@ class RestartInstanceRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['engine'] === null) {
-            $invalidProperties[] = "'engine' can't be null";
-        }
-        if ($this->container['instanceId'] === null) {
-            $invalidProperties[] = "'instanceId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -190,50 +174,26 @@ class RestartInstanceRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets engine
-    *  消息引擎类型。
+    * Gets reportIdList
+    *  **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
     *
-    * @return string
+    * @return string[]|null
     */
-    public function getEngine()
+    public function getReportIdList()
     {
-        return $this->container['engine'];
+        return $this->container['reportIdList'];
     }
 
     /**
-    * Sets engine
+    * Sets reportIdList
     *
-    * @param string $engine 消息引擎类型。
+    * @param string[]|null $reportIdList **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
-    public function setEngine($engine)
+    public function setReportIdList($reportIdList)
     {
-        $this->container['engine'] = $engine;
-        return $this;
-    }
-
-    /**
-    * Gets instanceId
-    *  实例ID。
-    *
-    * @return string
-    */
-    public function getInstanceId()
-    {
-        return $this->container['instanceId'];
-    }
-
-    /**
-    * Sets instanceId
-    *
-    * @param string $instanceId 实例ID。
-    *
-    * @return $this
-    */
-    public function setInstanceId($instanceId)
-    {
-        $this->container['instanceId'] = $instanceId;
+        $this->container['reportIdList'] = $reportIdList;
         return $this;
     }
 

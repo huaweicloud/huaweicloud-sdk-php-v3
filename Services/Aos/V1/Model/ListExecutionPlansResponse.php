@@ -22,21 +22,25 @@ class ListExecutionPlansResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * executionPlans  执行计划列表。默认按照生成时间降序排序，最新生成的在最前
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'executionPlans' => '\HuaweiCloud\SDK\Aos\V1\Model\ExecutionPlan[]'
+            'executionPlans' => '\HuaweiCloud\SDK\Aos\V1\Model\ExecutionPlan[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Aos\V1\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * executionPlans  执行计划列表。默认按照生成时间降序排序，最新生成的在最前
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'executionPlans' => null
+        'executionPlans' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListExecutionPlansResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * executionPlans  执行计划列表。默认按照生成时间降序排序，最新生成的在最前
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'executionPlans' => 'execution_plans'
+            'executionPlans' => 'execution_plans',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * executionPlans  执行计划列表。默认按照生成时间降序排序，最新生成的在最前
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
-            'executionPlans' => 'setExecutionPlans'
+            'executionPlans' => 'setExecutionPlans',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * executionPlans  执行计划列表。默认按照生成时间降序排序，最新生成的在最前
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
-            'executionPlans' => 'getExecutionPlans'
+            'executionPlans' => 'getExecutionPlans',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListExecutionPlansResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['executionPlans'] = isset($data['executionPlans']) ? $data['executionPlans'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListExecutionPlansResponse implements ModelInterface, ArrayAccess
     public function setExecutionPlans($executionPlans)
     {
         $this->container['executionPlans'] = $executionPlans;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

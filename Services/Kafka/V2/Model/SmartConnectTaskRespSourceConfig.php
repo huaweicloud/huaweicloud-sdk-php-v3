@@ -35,7 +35,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
     * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
-    * topicsMapping  topic映射。（仅源端类型为Kafka时会显示）
+    * topicsMapping  Topic映射。（仅源端类型为Kafka时会显示）
     *
     * @var string[]
     */
@@ -75,7 +75,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
     * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
-    * topicsMapping  topic映射。（仅源端类型为Kafka时会显示）
+    * topicsMapping  Topic映射。（仅源端类型为Kafka时会显示）
     *
     * @var string[]
     */
@@ -136,7 +136,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
     * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
-    * topicsMapping  topic映射。（仅源端类型为Kafka时会显示）
+    * topicsMapping  Topic映射。（仅源端类型为Kafka时会显示）
     *
     * @var string[]
     */
@@ -176,7 +176,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
     * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
-    * topicsMapping  topic映射。（仅源端类型为Kafka时会显示）
+    * topicsMapping  Topic映射。（仅源端类型为Kafka时会显示）
     *
     * @var string[]
     */
@@ -216,7 +216,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
     * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
-    * topicsMapping  topic映射。（仅源端类型为Kafka时会显示）
+    * topicsMapping  Topic映射。（仅源端类型为Kafka时会显示）
     *
     * @var string[]
     */
@@ -699,7 +699,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicsMapping
-    *  topic映射。（仅源端类型为Kafka时会显示）
+    *  Topic映射。（仅源端类型为Kafka时会显示）
     *
     * @return string|null
     */
@@ -711,7 +711,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets topicsMapping
     *
-    * @param string|null $topicsMapping topic映射。（仅源端类型为Kafka时会显示）
+    * @param string|null $topicsMapping Topic映射。（仅源端类型为Kafka时会显示）
     *
     * @return $this
     */

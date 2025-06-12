@@ -21,8 +21,8 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  topic名称。
-    * topicType  topic类型。
+    * name  Topic名称。
+    * topicType  Topic类型。
     * policies  权限列表。
     *
     * @var string[]
@@ -35,8 +35,8 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  topic名称。
-    * topicType  topic类型。
+    * name  Topic名称。
+    * topicType  Topic类型。
     * policies  权限列表。
     *
     * @var string[]
@@ -70,8 +70,8 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  topic名称。
-    * topicType  topic类型。
+    * name  Topic名称。
+    * topicType  Topic类型。
     * policies  权限列表。
     *
     * @var string[]
@@ -84,8 +84,8 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  topic名称。
-    * topicType  topic类型。
+    * name  Topic名称。
+    * topicType  Topic类型。
     * policies  权限列表。
     *
     * @var string[]
@@ -98,8 +98,8 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  topic名称。
-    * topicType  topic类型。
+    * name  Topic名称。
+    * topicType  Topic类型。
     * policies  权限列表。
     *
     * @var string[]
@@ -197,7 +197,7 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  topic名称。
+    *  Topic名称。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name topic名称。
+    * @param string|null $name Topic名称。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicType
-    *  topic类型。
+    *  Topic类型。
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topicType
     *
-    * @param int|null $topicType topic类型。
+    * @param int|null $topicType Topic类型。
     *
     * @return $this
     */

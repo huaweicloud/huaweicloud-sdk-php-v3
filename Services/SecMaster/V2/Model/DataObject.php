@@ -20,7 +20,7 @@ class DataObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * version  告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     * id  事件唯一标识，UUID格式，最大36个字符
     * domainId  数据投递后，被委托用户的domain_id
     * regionId  数据投递后，被委托用户的region_id
@@ -47,7 +47,7 @@ class DataObject implements ModelInterface, ArrayAccess
     * sla  约束闭环时间：设置风险接受持续时间。单位：小时
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     * simulation  调试字段
     * actor  告警调查员
     * owner  责任人、服务责任人
@@ -82,7 +82,7 @@ class DataObject implements ModelInterface, ArrayAccess
             'severity' => 'string',
             'criticality' => 'int',
             'alertType' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertAlertType',
-            'networkList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertNetworkList[]',
+            'networkList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\DataObjectNetworkList[]',
             'resourceList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertResourceList[]',
             'remediation' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRemediation',
             'verificationState' => 'string',
@@ -106,7 +106,7 @@ class DataObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * version  告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     * id  事件唯一标识，UUID格式，最大36个字符
     * domainId  数据投递后，被委托用户的domain_id
     * regionId  数据投递后，被委托用户的region_id
@@ -133,7 +133,7 @@ class DataObject implements ModelInterface, ArrayAccess
     * sla  约束闭环时间：设置风险接受持续时间。单位：小时
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     * simulation  调试字段
     * actor  告警调查员
     * owner  责任人、服务责任人
@@ -213,7 +213,7 @@ class DataObject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * version  告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     * id  事件唯一标识，UUID格式，最大36个字符
     * domainId  数据投递后，被委托用户的domain_id
     * regionId  数据投递后，被委托用户的region_id
@@ -240,7 +240,7 @@ class DataObject implements ModelInterface, ArrayAccess
     * sla  约束闭环时间：设置风险接受持续时间。单位：小时
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     * simulation  调试字段
     * actor  告警调查员
     * owner  责任人、服务责任人
@@ -299,7 +299,7 @@ class DataObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * version  告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     * id  事件唯一标识，UUID格式，最大36个字符
     * domainId  数据投递后，被委托用户的domain_id
     * regionId  数据投递后，被委托用户的region_id
@@ -326,7 +326,7 @@ class DataObject implements ModelInterface, ArrayAccess
     * sla  约束闭环时间：设置风险接受持续时间。单位：小时
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     * simulation  调试字段
     * actor  告警调查员
     * owner  责任人、服务责任人
@@ -385,7 +385,7 @@ class DataObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * version  告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     * id  事件唯一标识，UUID格式，最大36个字符
     * domainId  数据投递后，被委托用户的domain_id
     * regionId  数据投递后，被委托用户的region_id
@@ -412,7 +412,7 @@ class DataObject implements ModelInterface, ArrayAccess
     * sla  约束闭环时间：设置风险接受持续时间。单位：小时
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     * simulation  调试字段
     * actor  告警调查员
     * owner  责任人、服务责任人
@@ -520,9 +520,9 @@ class DataObject implements ModelInterface, ArrayAccess
     const HANDLE_STATUS_OPEN = 'Open';
     const HANDLE_STATUS_BLOCK = 'Block';
     const HANDLE_STATUS_CLOSED = 'Closed';
-    const IPDRR_PHASE_PREPARTION = 'Prepartion';
+    const IPDRR_PHASE_PREPARATION = 'Preparation';
     const IPDRR_PHASE_DETECTION_AND_ANALYSIS = 'Detection and Analysis';
-    const IPDRR_PHASE_CONTAINMERADICATION_RECOVERY = 'Containm，Eradication& Recovery';
+    const IPDRR_PHASE_CONTAINERADICATION_RECOVERY = 'Contain，Eradication& Recovery';
     const IPDRR_PHASE_POST_INCIDENT_ACTIVITY = 'Post-Incident-Activity';
     const CLOSE_REASON_FALSE_DETECTION = 'False detection';
     const CLOSE_REASON_RESOLVED = 'Resolved';
@@ -582,9 +582,9 @@ class DataObject implements ModelInterface, ArrayAccess
     public function getIpdrrPhaseAllowableValues()
     {
         return [
-            self::IPDRR_PHASE_PREPARTION,
+            self::IPDRR_PHASE_PREPARATION,
             self::IPDRR_PHASE_DETECTION_AND_ANALYSIS,
-            self::IPDRR_PHASE_CONTAINMERADICATION_RECOVERY,
+            self::IPDRR_PHASE_CONTAINERADICATION_RECOVERY,
             self::IPDRR_PHASE_POST_INCIDENT_ACTIVITY,
         ];
     }
@@ -893,7 +893,7 @@ class DataObject implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    *  告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     *
     * @return string|null
     */
@@ -905,7 +905,7 @@ class DataObject implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * @param string|null $version 告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
     *
     * @return $this
     */
@@ -1351,7 +1351,7 @@ class DataObject implements ModelInterface, ArrayAccess
     * Gets networkList
     *  网络信息
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertNetworkList[]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\DataObjectNetworkList[]|null
     */
     public function getNetworkList()
     {
@@ -1361,7 +1361,7 @@ class DataObject implements ModelInterface, ArrayAccess
     /**
     * Sets networkList
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertNetworkList[]|null $networkList 网络信息
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\DataObjectNetworkList[]|null $networkList 网络信息
     *
     * @return $this
     */
@@ -1541,7 +1541,7 @@ class DataObject implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipdrrPhase
-    *  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    *  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     *
     * @return string|null
     */
@@ -1553,7 +1553,7 @@ class DataObject implements ModelInterface, ArrayAccess
     /**
     * Sets ipdrrPhase
     *
-    * @param string|null $ipdrrPhase 周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * @param string|null $ipdrrPhase 周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
     *
     * @return $this
     */

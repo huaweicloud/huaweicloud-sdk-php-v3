@@ -22,6 +22,7 @@ class VpnAccessPolicy implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  访问策略ID
     * name  访问策略名称
+    * type  访问策略类型
     * userGroupId  关联用户组ID
     * userGroupName  关联用户组名称
     * description  访问策略描述
@@ -34,6 +35,7 @@ class VpnAccessPolicy implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
+            'type' => 'string',
             'userGroupId' => 'string',
             'userGroupName' => 'string',
             'description' => 'string',
@@ -46,6 +48,7 @@ class VpnAccessPolicy implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  访问策略ID
     * name  访问策略名称
+    * type  访问策略类型
     * userGroupId  关联用户组ID
     * userGroupName  关联用户组名称
     * description  访问策略描述
@@ -58,6 +61,7 @@ class VpnAccessPolicy implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
+        'type' => null,
         'userGroupId' => null,
         'userGroupName' => null,
         'description' => null,
@@ -91,6 +95,7 @@ class VpnAccessPolicy implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  访问策略ID
     * name  访问策略名称
+    * type  访问策略类型
     * userGroupId  关联用户组ID
     * userGroupName  关联用户组名称
     * description  访问策略描述
@@ -103,6 +108,7 @@ class VpnAccessPolicy implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
+            'type' => 'type',
             'userGroupId' => 'user_group_id',
             'userGroupName' => 'user_group_name',
             'description' => 'description',
@@ -115,6 +121,7 @@ class VpnAccessPolicy implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  访问策略ID
     * name  访问策略名称
+    * type  访问策略类型
     * userGroupId  关联用户组ID
     * userGroupName  关联用户组名称
     * description  访问策略描述
@@ -127,6 +134,7 @@ class VpnAccessPolicy implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
+            'type' => 'setType',
             'userGroupId' => 'setUserGroupId',
             'userGroupName' => 'setUserGroupName',
             'description' => 'setDescription',
@@ -139,6 +147,7 @@ class VpnAccessPolicy implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  访问策略ID
     * name  访问策略名称
+    * type  访问策略类型
     * userGroupId  关联用户组ID
     * userGroupName  关联用户组名称
     * description  访问策略描述
@@ -151,6 +160,7 @@ class VpnAccessPolicy implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
+            'type' => 'getType',
             'userGroupId' => 'getUserGroupId',
             'userGroupName' => 'getUserGroupName',
             'description' => 'getDescription',
@@ -219,6 +229,7 @@ class VpnAccessPolicy implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['userGroupId'] = isset($data['userGroupId']) ? $data['userGroupId'] : null;
         $this->container['userGroupName'] = isset($data['userGroupName']) ? $data['userGroupName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -294,6 +305,30 @@ class VpnAccessPolicy implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  访问策略类型
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 访问策略类型
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

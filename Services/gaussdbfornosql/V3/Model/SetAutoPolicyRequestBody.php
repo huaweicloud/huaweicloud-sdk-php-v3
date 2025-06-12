@@ -22,21 +22,21 @@ class SetAutoPolicyRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * instanceIds  设置磁盘自动扩容的实例组ID。
     * switchOption  自动扩容开关。  “on”，表示开启磁盘自动扩容策略。  “off”，表示关闭磁盘自动扩容策略。 默认值为“on”。
-    * policy  磁盘自动扩容策略
+    * policy  policy
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceIds' => 'string[]',
             'switchOption' => 'string',
-            'policy' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DiskAutoExpansionPolicy[]'
+            'policy' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DiskAutoExpansionPolicy'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceIds  设置磁盘自动扩容的实例组ID。
     * switchOption  自动扩容开关。  “on”，表示开启磁盘自动扩容策略。  “off”，表示关闭磁盘自动扩容策略。 默认值为“on”。
-    * policy  磁盘自动扩容策略
+    * policy  policy
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SetAutoPolicyRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * instanceIds  设置磁盘自动扩容的实例组ID。
     * switchOption  自动扩容开关。  “on”，表示开启磁盘自动扩容策略。  “off”，表示关闭磁盘自动扩容策略。 默认值为“on”。
-    * policy  磁盘自动扩容策略
+    * policy  policy
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class SetAutoPolicyRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceIds  设置磁盘自动扩容的实例组ID。
     * switchOption  自动扩容开关。  “on”，表示开启磁盘自动扩容策略。  “off”，表示关闭磁盘自动扩容策略。 默认值为“on”。
-    * policy  磁盘自动扩容策略
+    * policy  policy
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class SetAutoPolicyRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * instanceIds  设置磁盘自动扩容的实例组ID。
     * switchOption  自动扩容开关。  “on”，表示开启磁盘自动扩容策略。  “off”，表示关闭磁盘自动扩容策略。 默认值为“on”。
-    * policy  磁盘自动扩容策略
+    * policy  policy
     *
     * @var string[]
     */
@@ -247,9 +247,9 @@ class SetAutoPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policy
-    *  磁盘自动扩容策略
+    *  policy
     *
-    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DiskAutoExpansionPolicy[]|null
+    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DiskAutoExpansionPolicy|null
     */
     public function getPolicy()
     {
@@ -259,7 +259,7 @@ class SetAutoPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policy
     *
-    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DiskAutoExpansionPolicy[]|null $policy 磁盘自动扩容策略
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DiskAutoExpansionPolicy|null $policy policy
     *
     * @return $this
     */

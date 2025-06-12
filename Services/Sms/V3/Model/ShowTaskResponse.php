@@ -59,6 +59,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * agentMemUsage  Agent的内存使用值，单位是MB
     * totalDiskIo  主机的磁盘I/O值，单位是MB/s
     * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * needMigrationTest  是否开启迁移演练
     *
     * @var string[]
     */
@@ -100,7 +101,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'totalMemUsage' => 'double',
             'agentMemUsage' => 'double',
             'totalDiskIo' => 'double',
-            'agentDiskIo' => 'double'
+            'agentDiskIo' => 'double',
+            'needMigrationTest' => 'bool'
     ];
 
     /**
@@ -143,6 +145,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * agentMemUsage  Agent的内存使用值，单位是MB
     * totalDiskIo  主机的磁盘I/O值，单位是MB/s
     * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * needMigrationTest  是否开启迁移演练
     *
     * @var string[]
     */
@@ -184,7 +187,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         'totalMemUsage' => 'double',
         'agentMemUsage' => 'double',
         'totalDiskIo' => 'double',
-        'agentDiskIo' => 'double'
+        'agentDiskIo' => 'double',
+        'needMigrationTest' => null
     ];
 
     /**
@@ -248,6 +252,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * agentMemUsage  Agent的内存使用值，单位是MB
     * totalDiskIo  主机的磁盘I/O值，单位是MB/s
     * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * needMigrationTest  是否开启迁移演练
     *
     * @var string[]
     */
@@ -289,7 +294,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'totalMemUsage' => 'total_mem_usage',
             'agentMemUsage' => 'agent_mem_usage',
             'totalDiskIo' => 'total_disk_io',
-            'agentDiskIo' => 'agent_disk_io'
+            'agentDiskIo' => 'agent_disk_io',
+            'needMigrationTest' => 'need_migration_test'
     ];
 
     /**
@@ -332,6 +338,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * agentMemUsage  Agent的内存使用值，单位是MB
     * totalDiskIo  主机的磁盘I/O值，单位是MB/s
     * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * needMigrationTest  是否开启迁移演练
     *
     * @var string[]
     */
@@ -373,7 +380,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'totalMemUsage' => 'setTotalMemUsage',
             'agentMemUsage' => 'setAgentMemUsage',
             'totalDiskIo' => 'setTotalDiskIo',
-            'agentDiskIo' => 'setAgentDiskIo'
+            'agentDiskIo' => 'setAgentDiskIo',
+            'needMigrationTest' => 'setNeedMigrationTest'
     ];
 
     /**
@@ -416,6 +424,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * agentMemUsage  Agent的内存使用值，单位是MB
     * totalDiskIo  主机的磁盘I/O值，单位是MB/s
     * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * needMigrationTest  是否开启迁移演练
     *
     * @var string[]
     */
@@ -457,7 +466,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'totalMemUsage' => 'getTotalMemUsage',
             'agentMemUsage' => 'getAgentMemUsage',
             'totalDiskIo' => 'getTotalDiskIo',
-            'agentDiskIo' => 'getAgentDiskIo'
+            'agentDiskIo' => 'getAgentDiskIo',
+            'needMigrationTest' => 'getNeedMigrationTest'
     ];
 
     /**
@@ -603,6 +613,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         $this->container['agentMemUsage'] = isset($data['agentMemUsage']) ? $data['agentMemUsage'] : null;
         $this->container['totalDiskIo'] = isset($data['totalDiskIo']) ? $data['totalDiskIo'] : null;
         $this->container['agentDiskIo'] = isset($data['agentDiskIo']) ? $data['agentDiskIo'] : null;
+        $this->container['needMigrationTest'] = isset($data['needMigrationTest']) ? $data['needMigrationTest'] : null;
     }
 
     /**
@@ -1740,6 +1751,30 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     public function setAgentDiskIo($agentDiskIo)
     {
         $this->container['agentDiskIo'] = $agentDiskIo;
+        return $this;
+    }
+
+    /**
+    * Gets needMigrationTest
+    *  是否开启迁移演练
+    *
+    * @return bool|null
+    */
+    public function getNeedMigrationTest()
+    {
+        return $this->container['needMigrationTest'];
+    }
+
+    /**
+    * Sets needMigrationTest
+    *
+    * @param bool|null $needMigrationTest 是否开启迁移演练
+    *
+    * @return $this
+    */
+    public function setNeedMigrationTest($needMigrationTest)
+    {
+        $this->container['needMigrationTest'] = $needMigrationTest;
         return $this;
     }
 

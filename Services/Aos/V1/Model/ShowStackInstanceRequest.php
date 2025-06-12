@@ -247,8 +247,8 @@ class ShowStackInstanceRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['stackInstanceAddr']) < 1)) {
                 $invalidProperties[] = "invalid value for 'stackInstanceAddr', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^((((cn)|(la)|(af)|(eu)|(ap)|(tr)|(me))-(((north)|(south))((east)?|(west)?)|(west)|(east)))|(sa-brazil)|(na-mexico)|(my-kualalumpur))-[0-9]{1,3}\/+[A-Za-z0-9-]{1,64}$/", $this->container['stackInstanceAddr'])) {
-                $invalidProperties[] = "invalid value for 'stackInstanceAddr', must be conform to the pattern /^((((cn)|(la)|(af)|(eu)|(ap)|(tr)|(me))-(((north)|(south))((east)?|(west)?)|(west)|(east)))|(sa-brazil)|(na-mexico)|(my-kualalumpur))-[0-9]{1,3}\/+[A-Za-z0-9-]{1,64}$/.";
+            if (!preg_match("/^((((cn)|(la)|(af)|(eu)|(ap)|(tr)|(me))-(((north)|(south))((east)?|(west)?)|(west)|(east)|(sz)))|(sa-brazil)|(na-mexico)|(my-kualalumpur))-(aismartcity)?[0-9]{1,3}\/+[A-Za-z0-9-]{1,64}$/", $this->container['stackInstanceAddr'])) {
+                $invalidProperties[] = "invalid value for 'stackInstanceAddr', must be conform to the pattern /^((((cn)|(la)|(af)|(eu)|(ap)|(tr)|(me))-(((north)|(south))((east)?|(west)?)|(west)|(east)|(sz)))|(sa-brazil)|(na-mexico)|(my-kualalumpur))-(aismartcity)?[0-9]{1,3}\/+[A-Za-z0-9-]{1,64}$/.";
             }
             if (!is_null($this->container['stackSetId']) && (mb_strlen($this->container['stackSetId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'stackSetId', the character length must be smaller than or equal to 36.";

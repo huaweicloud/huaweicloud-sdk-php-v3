@@ -20,7 +20,7 @@ class DeleteConsumerGroupOffsetsRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topics  topic列表
+    * topics  Topic列表
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteConsumerGroupOffsetsRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topics  topic列表
+    * topics  Topic列表
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteConsumerGroupOffsetsRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topics  topic列表
+    * topics  Topic列表
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteConsumerGroupOffsetsRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topics  topic列表
+    * topics  Topic列表
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteConsumerGroupOffsetsRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topics  topic列表
+    * topics  Topic列表
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class DeleteConsumerGroupOffsetsRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Gets topics
-    *  topic列表
+    *  Topic列表
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class DeleteConsumerGroupOffsetsRequestBody implements ModelInterface, ArrayAcce
     /**
     * Sets topics
     *
-    * @param string[]|null $topics topic列表
+    * @param string[]|null $topics Topic列表
     *
     * @return $this
     */
