@@ -21,7 +21,7 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * syncTaskId  同步任务ID
-    * srcCloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud。默认值为Aliyun。
+    * srcCloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud、Google。默认值为Aliyun。
     * srcRegion  源端桶所处的区域
     * srcBucket  源端桶
     * createTime  同步任务创建时间（Unix时间戳，毫秒）
@@ -65,7 +65,7 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * syncTaskId  同步任务ID
-    * srcCloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud。默认值为Aliyun。
+    * srcCloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud、Google。默认值为Aliyun。
     * srcRegion  源端桶所处的区域
     * srcBucket  源端桶
     * createTime  同步任务创建时间（Unix时间戳，毫秒）
@@ -130,7 +130,7 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * syncTaskId  同步任务ID
-    * srcCloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud。默认值为Aliyun。
+    * srcCloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud、Google。默认值为Aliyun。
     * srcRegion  源端桶所处的区域
     * srcBucket  源端桶
     * createTime  同步任务创建时间（Unix时间戳，毫秒）
@@ -174,7 +174,7 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * syncTaskId  同步任务ID
-    * srcCloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud。默认值为Aliyun。
+    * srcCloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud、Google。默认值为Aliyun。
     * srcRegion  源端桶所处的区域
     * srcBucket  源端桶
     * createTime  同步任务创建时间（Unix时间戳，毫秒）
@@ -218,7 +218,7 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * syncTaskId  同步任务ID
-    * srcCloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud。默认值为Aliyun。
+    * srcCloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud、Google。默认值为Aliyun。
     * srcRegion  源端桶所处的区域
     * srcBucket  源端桶
     * createTime  同步任务创建时间（Unix时间戳，毫秒）
@@ -309,6 +309,7 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     const SRC_CLOUD_TYPE_BAIDU = 'Baidu';
     const SRC_CLOUD_TYPE_QINIU = 'Qiniu';
     const SRC_CLOUD_TYPE_U_CLOUD = 'UCloud';
+    const SRC_CLOUD_TYPE_GOOGLE = 'Google';
     const STATUS_SYNCHRONIZING = 'SYNCHRONIZING';
     const STATUS_STOPPED = 'STOPPED';
     const OBJECT_OVERWRITE_MODE_NO_OVERWRITE = 'NO_OVERWRITE';
@@ -343,6 +344,7 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
             self::SRC_CLOUD_TYPE_BAIDU,
             self::SRC_CLOUD_TYPE_QINIU,
             self::SRC_CLOUD_TYPE_U_CLOUD,
+            self::SRC_CLOUD_TYPE_GOOGLE,
         ];
     }
 
@@ -609,7 +611,7 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcCloudType
-    *  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud。默认值为Aliyun。
+    *  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud、Google。默认值为Aliyun。
     *
     * @return string|null
     */
@@ -621,7 +623,7 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Sets srcCloudType
     *
-    * @param string|null $srcCloudType 源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud。默认值为Aliyun。
+    * @param string|null $srcCloudType 源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud、Google。默认值为Aliyun。
     *
     * @return $this
     */

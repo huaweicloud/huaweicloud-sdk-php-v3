@@ -20,18 +20,18 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobType  作业类型
-    * limit  返回的数据条数。默认为10。
-    * name  作业名称。长度限制：0-57个字符。
-    * offset  作业偏移量。
-    * order  查询结果排序，升序asc和降序desc两种可选，默认降序。
-    * queueName  队列名称。
-    * rootJobId  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业。
-    * showDetail  是否返回作业详情信息。默认为false。
-    * status  作业状态。 作业的状态如下： job_init：草稿 job_submitting：提交中 job_submit_fail：提交失败 job_running：运行中（开始计费，提交作业后，返回正常结果） job_running_exception：运行异常（停止计费。作业发生运行时异常，停止运行作业） job_downloading：下载中 job_idle：空闲 job_canceling：停止中 job_cancel_success：已停止 job_cancel_fail：停止失败 job_savepointing：保存点创建中 job_arrearage_stopped：因欠费被停止（结束计费。用户账户欠费，作业停止） job_arrearage_recovering：欠费作业恢复中（用户账户欠费，账户充值，作业恢复中） job_finish：已完成
-    * sysEnterpriseProjectName  sysEnterpriseProjectName
-    * tags  tags
-    * userName  用户名，可作为筛选条件
+    * jobType  参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
+    * limit  参数解释:  返回的数据条数。默认为10 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 10
+    * name  参数解释:  作业名称 示例: myjob 约束限制:  长度在[0,57]的字符串 取值范围: 无 默认取值: 无
+    * offset  参数解释:  作业偏移量 示例: 10000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
+    * order  参数解释:  查询结果排序 示例: asc 约束限制:  无 取值范围: asc desc 默认取值: desc
+    * queueName  参数解释:  队列名称 示例: queue1 约束限制:  无 取值范围: 无 默认取值: 无
+    * rootJobId  参数解释:  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业 示例: 548483 约束限制:  无 取值范围: 无 默认取值: 无
+    * showDetail  参数解释:  是否返回作业详情信息 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * status  参数解释:  作业状态 示例: job_submitting 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
+    * sysEnterpriseProjectName  参数解释:  企业项目名称 示例: DLI 约束限制:  无 取值范围: 无 默认取值: 无
+    * tags  参数解释:  标签列表 示例: key_zy1=zy01,AA=aa 约束限制:  符合键值对格式(如“key=value”)的字符串 取值范围: 无 默认取值: 无
+    * userName  参数解释:  用户名，可作为筛选条件 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobType  作业类型
-    * limit  返回的数据条数。默认为10。
-    * name  作业名称。长度限制：0-57个字符。
-    * offset  作业偏移量。
-    * order  查询结果排序，升序asc和降序desc两种可选，默认降序。
-    * queueName  队列名称。
-    * rootJobId  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业。
-    * showDetail  是否返回作业详情信息。默认为false。
-    * status  作业状态。 作业的状态如下： job_init：草稿 job_submitting：提交中 job_submit_fail：提交失败 job_running：运行中（开始计费，提交作业后，返回正常结果） job_running_exception：运行异常（停止计费。作业发生运行时异常，停止运行作业） job_downloading：下载中 job_idle：空闲 job_canceling：停止中 job_cancel_success：已停止 job_cancel_fail：停止失败 job_savepointing：保存点创建中 job_arrearage_stopped：因欠费被停止（结束计费。用户账户欠费，作业停止） job_arrearage_recovering：欠费作业恢复中（用户账户欠费，账户充值，作业恢复中） job_finish：已完成
-    * sysEnterpriseProjectName  sysEnterpriseProjectName
-    * tags  tags
-    * userName  用户名，可作为筛选条件
+    * jobType  参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
+    * limit  参数解释:  返回的数据条数。默认为10 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 10
+    * name  参数解释:  作业名称 示例: myjob 约束限制:  长度在[0,57]的字符串 取值范围: 无 默认取值: 无
+    * offset  参数解释:  作业偏移量 示例: 10000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
+    * order  参数解释:  查询结果排序 示例: asc 约束限制:  无 取值范围: asc desc 默认取值: desc
+    * queueName  参数解释:  队列名称 示例: queue1 约束限制:  无 取值范围: 无 默认取值: 无
+    * rootJobId  参数解释:  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业 示例: 548483 约束限制:  无 取值范围: 无 默认取值: 无
+    * showDetail  参数解释:  是否返回作业详情信息 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * status  参数解释:  作业状态 示例: job_submitting 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
+    * sysEnterpriseProjectName  参数解释:  企业项目名称 示例: DLI 约束限制:  无 取值范围: 无 默认取值: 无
+    * tags  参数解释:  标签列表 示例: key_zy1=zy01,AA=aa 约束限制:  符合键值对格式(如“key=value”)的字符串 取值范围: 无 默认取值: 无
+    * userName  参数解释:  用户名，可作为筛选条件 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobType  作业类型
-    * limit  返回的数据条数。默认为10。
-    * name  作业名称。长度限制：0-57个字符。
-    * offset  作业偏移量。
-    * order  查询结果排序，升序asc和降序desc两种可选，默认降序。
-    * queueName  队列名称。
-    * rootJobId  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业。
-    * showDetail  是否返回作业详情信息。默认为false。
-    * status  作业状态。 作业的状态如下： job_init：草稿 job_submitting：提交中 job_submit_fail：提交失败 job_running：运行中（开始计费，提交作业后，返回正常结果） job_running_exception：运行异常（停止计费。作业发生运行时异常，停止运行作业） job_downloading：下载中 job_idle：空闲 job_canceling：停止中 job_cancel_success：已停止 job_cancel_fail：停止失败 job_savepointing：保存点创建中 job_arrearage_stopped：因欠费被停止（结束计费。用户账户欠费，作业停止） job_arrearage_recovering：欠费作业恢复中（用户账户欠费，账户充值，作业恢复中） job_finish：已完成
-    * sysEnterpriseProjectName  sysEnterpriseProjectName
-    * tags  tags
-    * userName  用户名，可作为筛选条件
+    * jobType  参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
+    * limit  参数解释:  返回的数据条数。默认为10 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 10
+    * name  参数解释:  作业名称 示例: myjob 约束限制:  长度在[0,57]的字符串 取值范围: 无 默认取值: 无
+    * offset  参数解释:  作业偏移量 示例: 10000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
+    * order  参数解释:  查询结果排序 示例: asc 约束限制:  无 取值范围: asc desc 默认取值: desc
+    * queueName  参数解释:  队列名称 示例: queue1 约束限制:  无 取值范围: 无 默认取值: 无
+    * rootJobId  参数解释:  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业 示例: 548483 约束限制:  无 取值范围: 无 默认取值: 无
+    * showDetail  参数解释:  是否返回作业详情信息 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * status  参数解释:  作业状态 示例: job_submitting 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
+    * sysEnterpriseProjectName  参数解释:  企业项目名称 示例: DLI 约束限制:  无 取值范围: 无 默认取值: 无
+    * tags  参数解释:  标签列表 示例: key_zy1=zy01,AA=aa 约束限制:  符合键值对格式(如“key=value”)的字符串 取值范围: 无 默认取值: 无
+    * userName  参数解释:  用户名，可作为筛选条件 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobType  作业类型
-    * limit  返回的数据条数。默认为10。
-    * name  作业名称。长度限制：0-57个字符。
-    * offset  作业偏移量。
-    * order  查询结果排序，升序asc和降序desc两种可选，默认降序。
-    * queueName  队列名称。
-    * rootJobId  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业。
-    * showDetail  是否返回作业详情信息。默认为false。
-    * status  作业状态。 作业的状态如下： job_init：草稿 job_submitting：提交中 job_submit_fail：提交失败 job_running：运行中（开始计费，提交作业后，返回正常结果） job_running_exception：运行异常（停止计费。作业发生运行时异常，停止运行作业） job_downloading：下载中 job_idle：空闲 job_canceling：停止中 job_cancel_success：已停止 job_cancel_fail：停止失败 job_savepointing：保存点创建中 job_arrearage_stopped：因欠费被停止（结束计费。用户账户欠费，作业停止） job_arrearage_recovering：欠费作业恢复中（用户账户欠费，账户充值，作业恢复中） job_finish：已完成
-    * sysEnterpriseProjectName  sysEnterpriseProjectName
-    * tags  tags
-    * userName  用户名，可作为筛选条件
+    * jobType  参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
+    * limit  参数解释:  返回的数据条数。默认为10 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 10
+    * name  参数解释:  作业名称 示例: myjob 约束限制:  长度在[0,57]的字符串 取值范围: 无 默认取值: 无
+    * offset  参数解释:  作业偏移量 示例: 10000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
+    * order  参数解释:  查询结果排序 示例: asc 约束限制:  无 取值范围: asc desc 默认取值: desc
+    * queueName  参数解释:  队列名称 示例: queue1 约束限制:  无 取值范围: 无 默认取值: 无
+    * rootJobId  参数解释:  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业 示例: 548483 约束限制:  无 取值范围: 无 默认取值: 无
+    * showDetail  参数解释:  是否返回作业详情信息 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * status  参数解释:  作业状态 示例: job_submitting 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
+    * sysEnterpriseProjectName  参数解释:  企业项目名称 示例: DLI 约束限制:  无 取值范围: 无 默认取值: 无
+    * tags  参数解释:  标签列表 示例: key_zy1=zy01,AA=aa 约束限制:  符合键值对格式(如“key=value”)的字符串 取值范围: 无 默认取值: 无
+    * userName  参数解释:  用户名，可作为筛选条件 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobType  作业类型
-    * limit  返回的数据条数。默认为10。
-    * name  作业名称。长度限制：0-57个字符。
-    * offset  作业偏移量。
-    * order  查询结果排序，升序asc和降序desc两种可选，默认降序。
-    * queueName  队列名称。
-    * rootJobId  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业。
-    * showDetail  是否返回作业详情信息。默认为false。
-    * status  作业状态。 作业的状态如下： job_init：草稿 job_submitting：提交中 job_submit_fail：提交失败 job_running：运行中（开始计费，提交作业后，返回正常结果） job_running_exception：运行异常（停止计费。作业发生运行时异常，停止运行作业） job_downloading：下载中 job_idle：空闲 job_canceling：停止中 job_cancel_success：已停止 job_cancel_fail：停止失败 job_savepointing：保存点创建中 job_arrearage_stopped：因欠费被停止（结束计费。用户账户欠费，作业停止） job_arrearage_recovering：欠费作业恢复中（用户账户欠费，账户充值，作业恢复中） job_finish：已完成
-    * sysEnterpriseProjectName  sysEnterpriseProjectName
-    * tags  tags
-    * userName  用户名，可作为筛选条件
+    * jobType  参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
+    * limit  参数解释:  返回的数据条数。默认为10 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 10
+    * name  参数解释:  作业名称 示例: myjob 约束限制:  长度在[0,57]的字符串 取值范围: 无 默认取值: 无
+    * offset  参数解释:  作业偏移量 示例: 10000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
+    * order  参数解释:  查询结果排序 示例: asc 约束限制:  无 取值范围: asc desc 默认取值: desc
+    * queueName  参数解释:  队列名称 示例: queue1 约束限制:  无 取值范围: 无 默认取值: 无
+    * rootJobId  参数解释:  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业 示例: 548483 约束限制:  无 取值范围: 无 默认取值: 无
+    * showDetail  参数解释:  是否返回作业详情信息 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * status  参数解释:  作业状态 示例: job_submitting 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
+    * sysEnterpriseProjectName  参数解释:  企业项目名称 示例: DLI 约束限制:  无 取值范围: 无 默认取值: 无
+    * tags  参数解释:  标签列表 示例: key_zy1=zy01,AA=aa 约束限制:  符合键值对格式(如“key=value”)的字符串 取值范围: 无 默认取值: 无
+    * userName  参数解释:  用户名，可作为筛选条件 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -239,7 +239,65 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const JOB_TYPE_FLINK_SQL_JOB = 'flink_sql_job';
+    const JOB_TYPE_FLINK_OPENSOURCE_SQL_JOB = 'flink_opensource_sql_job';
+    const JOB_TYPE_FLINK_SQL_EDGE_JOB = 'flink_sql_edge_job';
+    const JOB_TYPE_FLINK_JAR_JOB = 'flink_jar_job';
+    const STATUS_JOB_INIT = 'job_init';
+    const STATUS_JOB_SUBMITTING = 'job_submitting';
+    const STATUS_JOB_SUBMIT_FAIL = 'job_submit_fail';
+    const STATUS_JOB_RUNNING = 'job_running';
+    const STATUS_JOB_RUNNING_EXCEPTION = 'job_running_exception';
+    const STATUS_JOB_DOWNLOADING = 'job_downloading';
+    const STATUS_JOB_IDLE = 'job_idle';
+    const STATUS_JOB_CANCELING = 'job_canceling';
+    const STATUS_JOB_CANCEL_SUCCESS = 'job_cancel_success';
+    const STATUS_JOB_CANCEL_FAIL = 'job_cancel_fail';
+    const STATUS_JOB_SAVEPOINTING = 'job_savepointing';
+    const STATUS_JOB_ARREARAGE_STOPPED = 'job_arrearage_stopped';
+    const STATUS_JOB_ARREARAGE_RECOVERING = 'job_arrearage_recovering';
+    const STATUS_JOB_FINISH = 'job_finish';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getJobTypeAllowableValues()
+    {
+        return [
+            self::JOB_TYPE_FLINK_SQL_JOB,
+            self::JOB_TYPE_FLINK_OPENSOURCE_SQL_JOB,
+            self::JOB_TYPE_FLINK_SQL_EDGE_JOB,
+            self::JOB_TYPE_FLINK_JAR_JOB,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_JOB_INIT,
+            self::STATUS_JOB_SUBMITTING,
+            self::STATUS_JOB_SUBMIT_FAIL,
+            self::STATUS_JOB_RUNNING,
+            self::STATUS_JOB_RUNNING_EXCEPTION,
+            self::STATUS_JOB_DOWNLOADING,
+            self::STATUS_JOB_IDLE,
+            self::STATUS_JOB_CANCELING,
+            self::STATUS_JOB_CANCEL_SUCCESS,
+            self::STATUS_JOB_CANCEL_FAIL,
+            self::STATUS_JOB_SAVEPOINTING,
+            self::STATUS_JOB_ARREARAGE_STOPPED,
+            self::STATUS_JOB_ARREARAGE_RECOVERING,
+            self::STATUS_JOB_FINISH,
+        ];
+    }
 
 
     /**
@@ -279,12 +337,28 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getJobTypeAllowableValues();
+                if (!is_null($this->container['jobType']) && !in_array($this->container['jobType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'jobType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 57)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 57.";
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -301,7 +375,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
-    *  作业类型
+    *  参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
     *
     * @return string|null
     */
@@ -313,7 +387,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobType
     *
-    * @param string|null $jobType 作业类型
+    * @param string|null $jobType 参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
     *
     * @return $this
     */
@@ -325,7 +399,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  返回的数据条数。默认为10。
+    *  参数解释:  返回的数据条数。默认为10 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 10
     *
     * @return int|null
     */
@@ -337,7 +411,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 返回的数据条数。默认为10。
+    * @param int|null $limit 参数解释:  返回的数据条数。默认为10 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 10
     *
     * @return $this
     */
@@ -349,7 +423,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  作业名称。长度限制：0-57个字符。
+    *  参数解释:  作业名称 示例: myjob 约束限制:  长度在[0,57]的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -361,7 +435,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 作业名称。长度限制：0-57个字符。
+    * @param string|null $name 参数解释:  作业名称 示例: myjob 约束限制:  长度在[0,57]的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -373,7 +447,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  作业偏移量。
+    *  参数解释:  作业偏移量 示例: 10000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
     *
     * @return int|null
     */
@@ -385,7 +459,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 作业偏移量。
+    * @param int|null $offset 参数解释:  作业偏移量 示例: 10000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
     *
     * @return $this
     */
@@ -397,7 +471,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  查询结果排序，升序asc和降序desc两种可选，默认降序。
+    *  参数解释:  查询结果排序 示例: asc 约束限制:  无 取值范围: asc desc 默认取值: desc
     *
     * @return string|null
     */
@@ -409,7 +483,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param string|null $order 查询结果排序，升序asc和降序desc两种可选，默认降序。
+    * @param string|null $order 参数解释:  查询结果排序 示例: asc 约束限制:  无 取值范围: asc desc 默认取值: desc
     *
     * @return $this
     */
@@ -421,7 +495,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
-    *  队列名称。
+    *  参数解释:  队列名称 示例: queue1 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -433,7 +507,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets queueName
     *
-    * @param string|null $queueName 队列名称。
+    * @param string|null $queueName 参数解释:  队列名称 示例: queue1 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -445,7 +519,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets rootJobId
-    *  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业。
+    *  参数解释:  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业 示例: 548483 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return int|null
     */
@@ -457,7 +531,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets rootJobId
     *
-    * @param int|null $rootJobId 边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业。
+    * @param int|null $rootJobId 参数解释:  边缘父作业ID, 用于查询指定边缘作业的子作业。不带该参数时, 查询所有非边缘作业和边缘父作业, 不包括边缘子作业 示例: 548483 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -469,7 +543,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets showDetail
-    *  是否返回作业详情信息。默认为false。
+    *  参数解释:  是否返回作业详情信息 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     *
     * @return bool|null
     */
@@ -481,7 +555,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets showDetail
     *
-    * @param bool|null $showDetail 是否返回作业详情信息。默认为false。
+    * @param bool|null $showDetail 参数解释:  是否返回作业详情信息 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     *
     * @return $this
     */
@@ -493,7 +567,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  作业状态。 作业的状态如下： job_init：草稿 job_submitting：提交中 job_submit_fail：提交失败 job_running：运行中（开始计费，提交作业后，返回正常结果） job_running_exception：运行异常（停止计费。作业发生运行时异常，停止运行作业） job_downloading：下载中 job_idle：空闲 job_canceling：停止中 job_cancel_success：已停止 job_cancel_fail：停止失败 job_savepointing：保存点创建中 job_arrearage_stopped：因欠费被停止（结束计费。用户账户欠费，作业停止） job_arrearage_recovering：欠费作业恢复中（用户账户欠费，账户充值，作业恢复中） job_finish：已完成
+    *  参数解释:  作业状态 示例: job_submitting 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
     *
     * @return string|null
     */
@@ -505,7 +579,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 作业状态。 作业的状态如下： job_init：草稿 job_submitting：提交中 job_submit_fail：提交失败 job_running：运行中（开始计费，提交作业后，返回正常结果） job_running_exception：运行异常（停止计费。作业发生运行时异常，停止运行作业） job_downloading：下载中 job_idle：空闲 job_canceling：停止中 job_cancel_success：已停止 job_cancel_fail：停止失败 job_savepointing：保存点创建中 job_arrearage_stopped：因欠费被停止（结束计费。用户账户欠费，作业停止） job_arrearage_recovering：欠费作业恢复中（用户账户欠费，账户充值，作业恢复中） job_finish：已完成
+    * @param string|null $status 参数解释:  作业状态 示例: job_submitting 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
     *
     * @return $this
     */
@@ -517,7 +591,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sysEnterpriseProjectName
-    *  sysEnterpriseProjectName
+    *  参数解释:  企业项目名称 示例: DLI 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -529,7 +603,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sysEnterpriseProjectName
     *
-    * @param string|null $sysEnterpriseProjectName sysEnterpriseProjectName
+    * @param string|null $sysEnterpriseProjectName 参数解释:  企业项目名称 示例: DLI 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -541,7 +615,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  参数解释:  标签列表 示例: key_zy1=zy01,AA=aa 约束限制:  符合键值对格式(如“key=value”)的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -553,7 +627,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags tags
+    * @param string|null $tags 参数解释:  标签列表 示例: key_zy1=zy01,AA=aa 约束限制:  符合键值对格式(如“key=value”)的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -565,7 +639,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名，可作为筛选条件
+    *  参数解释:  用户名，可作为筛选条件 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -577,7 +651,7 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 用户名，可作为筛选条件
+    * @param string|null $userName 参数解释:  用户名，可作为筛选条件 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */

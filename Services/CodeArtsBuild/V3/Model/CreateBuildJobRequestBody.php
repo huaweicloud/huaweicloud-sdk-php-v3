@@ -26,10 +26,14 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
     * autoUpdateSubModule  是否自动更新子模块
     * flavor  执行机规格
     * parameters  构建执行参数列表
+    * groupId  任务分组id
+    * timeout  timeout
     * scms  构建执行SCM
     * steps  构建执行的步骤
     * hostType  host类型
     * buildConfigType  构建的配置类型
+    * buildIfCodeUpdated  提交代码触发构建开关
+    * triggers  定时任务触发器集合
     *
     * @var string[]
     */
@@ -40,10 +44,14 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
             'autoUpdateSubModule' => 'string',
             'flavor' => 'string',
             'parameters' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\CreateBuildJobParameter[]',
+            'groupId' => 'string',
+            'timeout' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\CreateBuildTimeout',
             'scms' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\CreateBuildJobScm[]',
             'steps' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\CreateBuildJobSteps[]',
             'hostType' => 'string',
-            'buildConfigType' => 'string'
+            'buildConfigType' => 'string',
+            'buildIfCodeUpdated' => 'bool',
+            'triggers' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\Trigger[]'
     ];
 
     /**
@@ -54,10 +62,14 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
     * autoUpdateSubModule  是否自动更新子模块
     * flavor  执行机规格
     * parameters  构建执行参数列表
+    * groupId  任务分组id
+    * timeout  timeout
     * scms  构建执行SCM
     * steps  构建执行的步骤
     * hostType  host类型
     * buildConfigType  构建的配置类型
+    * buildIfCodeUpdated  提交代码触发构建开关
+    * triggers  定时任务触发器集合
     *
     * @var string[]
     */
@@ -68,10 +80,14 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
         'autoUpdateSubModule' => null,
         'flavor' => null,
         'parameters' => null,
+        'groupId' => null,
+        'timeout' => null,
         'scms' => null,
         'steps' => null,
         'hostType' => null,
-        'buildConfigType' => null
+        'buildConfigType' => null,
+        'buildIfCodeUpdated' => null,
+        'triggers' => null
     ];
 
     /**
@@ -103,10 +119,14 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
     * autoUpdateSubModule  是否自动更新子模块
     * flavor  执行机规格
     * parameters  构建执行参数列表
+    * groupId  任务分组id
+    * timeout  timeout
     * scms  构建执行SCM
     * steps  构建执行的步骤
     * hostType  host类型
     * buildConfigType  构建的配置类型
+    * buildIfCodeUpdated  提交代码触发构建开关
+    * triggers  定时任务触发器集合
     *
     * @var string[]
     */
@@ -117,10 +137,14 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
             'autoUpdateSubModule' => 'auto_update_sub_module',
             'flavor' => 'flavor',
             'parameters' => 'parameters',
+            'groupId' => 'group_id',
+            'timeout' => 'timeout',
             'scms' => 'scms',
             'steps' => 'steps',
             'hostType' => 'host_type',
-            'buildConfigType' => 'build_config_type'
+            'buildConfigType' => 'build_config_type',
+            'buildIfCodeUpdated' => 'build_if_code_updated',
+            'triggers' => 'triggers'
     ];
 
     /**
@@ -131,10 +155,14 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
     * autoUpdateSubModule  是否自动更新子模块
     * flavor  执行机规格
     * parameters  构建执行参数列表
+    * groupId  任务分组id
+    * timeout  timeout
     * scms  构建执行SCM
     * steps  构建执行的步骤
     * hostType  host类型
     * buildConfigType  构建的配置类型
+    * buildIfCodeUpdated  提交代码触发构建开关
+    * triggers  定时任务触发器集合
     *
     * @var string[]
     */
@@ -145,10 +173,14 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
             'autoUpdateSubModule' => 'setAutoUpdateSubModule',
             'flavor' => 'setFlavor',
             'parameters' => 'setParameters',
+            'groupId' => 'setGroupId',
+            'timeout' => 'setTimeout',
             'scms' => 'setScms',
             'steps' => 'setSteps',
             'hostType' => 'setHostType',
-            'buildConfigType' => 'setBuildConfigType'
+            'buildConfigType' => 'setBuildConfigType',
+            'buildIfCodeUpdated' => 'setBuildIfCodeUpdated',
+            'triggers' => 'setTriggers'
     ];
 
     /**
@@ -159,10 +191,14 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
     * autoUpdateSubModule  是否自动更新子模块
     * flavor  执行机规格
     * parameters  构建执行参数列表
+    * groupId  任务分组id
+    * timeout  timeout
     * scms  构建执行SCM
     * steps  构建执行的步骤
     * hostType  host类型
     * buildConfigType  构建的配置类型
+    * buildIfCodeUpdated  提交代码触发构建开关
+    * triggers  定时任务触发器集合
     *
     * @var string[]
     */
@@ -173,10 +209,14 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
             'autoUpdateSubModule' => 'getAutoUpdateSubModule',
             'flavor' => 'getFlavor',
             'parameters' => 'getParameters',
+            'groupId' => 'getGroupId',
+            'timeout' => 'getTimeout',
             'scms' => 'getScms',
             'steps' => 'getSteps',
             'hostType' => 'getHostType',
-            'buildConfigType' => 'getBuildConfigType'
+            'buildConfigType' => 'getBuildConfigType',
+            'buildIfCodeUpdated' => 'getBuildIfCodeUpdated',
+            'triggers' => 'getTriggers'
     ];
 
     /**
@@ -243,10 +283,14 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['autoUpdateSubModule'] = isset($data['autoUpdateSubModule']) ? $data['autoUpdateSubModule'] : null;
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
         $this->container['parameters'] = isset($data['parameters']) ? $data['parameters'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['scms'] = isset($data['scms']) ? $data['scms'] : null;
         $this->container['steps'] = isset($data['steps']) ? $data['steps'] : null;
         $this->container['hostType'] = isset($data['hostType']) ? $data['hostType'] : null;
         $this->container['buildConfigType'] = isset($data['buildConfigType']) ? $data['buildConfigType'] : null;
+        $this->container['buildIfCodeUpdated'] = isset($data['buildIfCodeUpdated']) ? $data['buildIfCodeUpdated'] : null;
+        $this->container['triggers'] = isset($data['triggers']) ? $data['triggers'] : null;
     }
 
     /**
@@ -428,6 +472,54 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets groupId
+    *  任务分组id
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 任务分组id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets timeout
+    *  timeout
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\CreateBuildTimeout|null
+    */
+    public function getTimeout()
+    {
+        return $this->container['timeout'];
+    }
+
+    /**
+    * Sets timeout
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\CreateBuildTimeout|null $timeout timeout
+    *
+    * @return $this
+    */
+    public function setTimeout($timeout)
+    {
+        $this->container['timeout'] = $timeout;
+        return $this;
+    }
+
+    /**
     * Gets scms
     *  构建执行SCM
     *
@@ -520,6 +612,54 @@ class CreateBuildJobRequestBody implements ModelInterface, ArrayAccess
     public function setBuildConfigType($buildConfigType)
     {
         $this->container['buildConfigType'] = $buildConfigType;
+        return $this;
+    }
+
+    /**
+    * Gets buildIfCodeUpdated
+    *  提交代码触发构建开关
+    *
+    * @return bool|null
+    */
+    public function getBuildIfCodeUpdated()
+    {
+        return $this->container['buildIfCodeUpdated'];
+    }
+
+    /**
+    * Sets buildIfCodeUpdated
+    *
+    * @param bool|null $buildIfCodeUpdated 提交代码触发构建开关
+    *
+    * @return $this
+    */
+    public function setBuildIfCodeUpdated($buildIfCodeUpdated)
+    {
+        $this->container['buildIfCodeUpdated'] = $buildIfCodeUpdated;
+        return $this;
+    }
+
+    /**
+    * Gets triggers
+    *  定时任务触发器集合
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\Trigger[]|null
+    */
+    public function getTriggers()
+    {
+        return $this->container['triggers'];
+    }
+
+    /**
+    * Sets triggers
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\Trigger[]|null $triggers 定时任务触发器集合
+    *
+    * @return $this
+    */
+    public function setTriggers($triggers)
+    {
+        $this->container['triggers'] = $triggers;
         return $this;
     }
 

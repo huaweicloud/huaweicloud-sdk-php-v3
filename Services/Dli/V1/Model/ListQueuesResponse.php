@@ -21,8 +21,8 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isSuccess  请求执行是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * isSuccess  参数解释: 请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: 无 默认取值: 无
+    * message  参数解释: 系统提示信息，执行成功时，信息可能为空 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
     * queues  队列信息。
     *
     * @var string[]
@@ -35,8 +35,8 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isSuccess  请求执行是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * isSuccess  参数解释: 请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: 无 默认取值: 无
+    * message  参数解释: 系统提示信息，执行成功时，信息可能为空 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
     * queues  队列信息。
     *
     * @var string[]
@@ -70,8 +70,8 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isSuccess  请求执行是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * isSuccess  参数解释: 请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: 无 默认取值: 无
+    * message  参数解释: 系统提示信息，执行成功时，信息可能为空 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
     * queues  队列信息。
     *
     * @var string[]
@@ -84,8 +84,8 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isSuccess  请求执行是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * isSuccess  参数解释: 请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: 无 默认取值: 无
+    * message  参数解释: 系统提示信息，执行成功时，信息可能为空 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
     * queues  队列信息。
     *
     * @var string[]
@@ -98,8 +98,8 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isSuccess  请求执行是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * isSuccess  参数解释: 请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: 无 默认取值: 无
+    * message  参数解释: 系统提示信息，执行成功时，信息可能为空 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
     * queues  队列信息。
     *
     * @var string[]
@@ -197,7 +197,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSuccess
-    *  请求执行是否成功。“true”表示请求执行成功。
+    *  参数解释: 请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return bool|null
     */
@@ -209,7 +209,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSuccess
     *
-    * @param bool|null $isSuccess 请求执行是否成功。“true”表示请求执行成功。
+    * @param bool|null $isSuccess 参数解释: 请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  系统提示信息，执行成功时，信息可能为空。
+    *  参数解释: 系统提示信息，执行成功时，信息可能为空 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 系统提示信息，执行成功时，信息可能为空。
+    * @param string|null $message 参数解释: 系统提示信息，执行成功时，信息可能为空 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */

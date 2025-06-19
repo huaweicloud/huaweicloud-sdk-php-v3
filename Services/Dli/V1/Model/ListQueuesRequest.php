@@ -20,10 +20,10 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * queueType  队列的类型,。有如下三种类型： sql general all 如果不指定，默认为sql。
-    * tags  查询根据标签进行过滤
-    * withChargeInfo  是否返回收费信息
-    * withPriv  是否返回权限信息。
+    * queueType  参数解释:  队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: sql
+    * tags  参数解释: 查询根据标签进行过滤 示例: taga=tagb,owner=ph 约束限制:  符合“key1=value1,key2=value2”的字符串 取值范围: 无 默认取值: 无
+    * withChargeInfo  是否返回收费信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
+    * withPriv  是否返回权限信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * queueType  队列的类型,。有如下三种类型： sql general all 如果不指定，默认为sql。
-    * tags  查询根据标签进行过滤
-    * withChargeInfo  是否返回收费信息
-    * withPriv  是否返回权限信息。
+    * queueType  参数解释:  队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: sql
+    * tags  参数解释: 查询根据标签进行过滤 示例: taga=tagb,owner=ph 约束限制:  符合“key1=value1,key2=value2”的字符串 取值范围: 无 默认取值: 无
+    * withChargeInfo  是否返回收费信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
+    * withPriv  是否返回权限信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * queueType  队列的类型,。有如下三种类型： sql general all 如果不指定，默认为sql。
-    * tags  查询根据标签进行过滤
-    * withChargeInfo  是否返回收费信息
-    * withPriv  是否返回权限信息。
+    * queueType  参数解释:  队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: sql
+    * tags  参数解释: 查询根据标签进行过滤 示例: taga=tagb,owner=ph 约束限制:  符合“key1=value1,key2=value2”的字符串 取值范围: 无 默认取值: 无
+    * withChargeInfo  是否返回收费信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
+    * withPriv  是否返回权限信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * queueType  队列的类型,。有如下三种类型： sql general all 如果不指定，默认为sql。
-    * tags  查询根据标签进行过滤
-    * withChargeInfo  是否返回收费信息
-    * withPriv  是否返回权限信息。
+    * queueType  参数解释:  队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: sql
+    * tags  参数解释: 查询根据标签进行过滤 示例: taga=tagb,owner=ph 约束限制:  符合“key1=value1,key2=value2”的字符串 取值范围: 无 默认取值: 无
+    * withChargeInfo  是否返回收费信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
+    * withPriv  是否返回权限信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * queueType  队列的类型,。有如下三种类型： sql general all 如果不指定，默认为sql。
-    * tags  查询根据标签进行过滤
-    * withChargeInfo  是否返回收费信息
-    * withPriv  是否返回权限信息。
+    * queueType  参数解释:  队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: sql
+    * tags  参数解释: 查询根据标签进行过滤 示例: taga=tagb,owner=ph 约束限制:  符合“key1=value1,key2=value2”的字符串 取值范围: 无 默认取值: 无
+    * withChargeInfo  是否返回收费信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
+    * withPriv  是否返回权限信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueType
-    *  队列的类型,。有如下三种类型： sql general all 如果不指定，默认为sql。
+    *  参数解释:  队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: sql
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets queueType
     *
-    * @param string|null $queueType 队列的类型,。有如下三种类型： sql general all 如果不指定，默认为sql。
+    * @param string|null $queueType 参数解释:  队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: sql
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  查询根据标签进行过滤
+    *  参数解释: 查询根据标签进行过滤 示例: taga=tagb,owner=ph 约束限制:  符合“key1=value1,key2=value2”的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags 查询根据标签进行过滤
+    * @param string|null $tags 参数解释: 查询根据标签进行过滤 示例: taga=tagb,owner=ph 约束限制:  符合“key1=value1,key2=value2”的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets withChargeInfo
-    *  是否返回收费信息
+    *  是否返回收费信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
     *
     * @return bool|null
     */
@@ -267,7 +267,7 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets withChargeInfo
     *
-    * @param bool|null $withChargeInfo 是否返回收费信息
+    * @param bool|null $withChargeInfo 是否返回收费信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets withPriv
-    *  是否返回权限信息。
+    *  是否返回权限信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
     *
     * @return bool|null
     */
@@ -291,7 +291,7 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets withPriv
     *
-    * @param bool|null $withPriv 是否返回权限信息。
+    * @param bool|null $withPriv 是否返回权限信息 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
     *
     * @return $this
     */

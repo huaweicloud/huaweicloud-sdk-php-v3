@@ -20,22 +20,22 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * currentClusterName  当前Kafka实例别名。（仅源端类型为Kafka时会显示）
-    * clusterName  对端Kafka实例别名。（仅源端类型为Kafka时会显示）
-    * userName  对端Kafka用户名。（仅源端类型为Kafka时会显示）
-    * saslMechanism  对端Kafka认证机制。（仅源端类型为Kafka时会显示）
-    * instanceId  对端Kafka实例ID。（仅源端类型为Kafka时会显示）
-    * bootstrapServers  对端Kafka实例地址。（仅源端类型为Kafka时会显示）
-    * securityProtocol  对端Kafka认证方式。（仅源端类型为Kafka时会显示）
-    * direction  同步方向。（仅源端类型为Kafka时会显示）
-    * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时会显示）
-    * replicationFactor  副本数。（仅源端类型为Kafka时会显示）
-    * taskNum  任务数。（仅源端类型为Kafka时会显示）
-    * renameTopicEnabled  是否重命名Topic。（仅源端类型为Kafka时会显示）
-    * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
-    * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
-    * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
-    * topicsMapping  Topic映射。（仅源端类型为Kafka时会显示）
+    * currentClusterName  **参数解释**： 当前Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * clusterName  **参数解释**： 对端Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * userName  **参数解释**： 对端Kafka用户名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * saslMechanism  **参数解释**： 对端Kafka认证机制。（仅源端类型为Kafka时会显示） **取值范围**： - PLAIN - SCRAM-SHA-512
+    * instanceId  **参数解释**： 对端Kafka实例ID。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * bootstrapServers  **参数解释**： 对端Kafka实例地址。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * securityProtocol  **参数解释**： 对端Kafka认证方式。（仅源端类型为Kafka时会显示） **取值范围**： - PLAINTEXT：不开启SSL，明文传输。 - SASL_SSL：采用SASL方式进行认证，数据通过SSL证书进行加密传输，安全性更高。 - SASL_PLAINTEXT：采用SASL方式进行认证，数据通过明文传输，性能更好。
+    * direction  **参数解释**： 同步方向。（仅源端类型为Kafka时会显示） **取值范围**： - pull：拉取。 - push：推送。 - two-way：双向。
+    * syncConsumerOffsetsEnabled  **参数解释**： 是否同步消费进度。（仅源端类型为Kafka时会显示） **取值范围**： - true：同步消费进度 - false：不同步消费进度
+    * replicationFactor  **参数解释**： 副本数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * taskNum  **参数解释**： 任务数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * renameTopicEnabled  **参数解释**： 是否重命名Topic。（仅源端类型为Kafka时会显示） **取值范围**： - true：重命名Topic。 - false：不进行重命名Topic。
+    * provenanceHeaderEnabled  **参数解释**： 是否添加来源header。（仅源端类型为Kafka时会显示） **取值范围**： - true：添加来源header。 - false：不添加来源header。
+    * consumerStrategy  **参数解释**： 启动偏移量。（仅源端类型为Kafka时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
+    * compressionType  **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **取值范围**： - none - gzip - snappy - lz4 - zstd
+    * topicsMapping  **参数解释**： Topic映射。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -60,22 +60,22 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * currentClusterName  当前Kafka实例别名。（仅源端类型为Kafka时会显示）
-    * clusterName  对端Kafka实例别名。（仅源端类型为Kafka时会显示）
-    * userName  对端Kafka用户名。（仅源端类型为Kafka时会显示）
-    * saslMechanism  对端Kafka认证机制。（仅源端类型为Kafka时会显示）
-    * instanceId  对端Kafka实例ID。（仅源端类型为Kafka时会显示）
-    * bootstrapServers  对端Kafka实例地址。（仅源端类型为Kafka时会显示）
-    * securityProtocol  对端Kafka认证方式。（仅源端类型为Kafka时会显示）
-    * direction  同步方向。（仅源端类型为Kafka时会显示）
-    * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时会显示）
-    * replicationFactor  副本数。（仅源端类型为Kafka时会显示）
-    * taskNum  任务数。（仅源端类型为Kafka时会显示）
-    * renameTopicEnabled  是否重命名Topic。（仅源端类型为Kafka时会显示）
-    * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
-    * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
-    * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
-    * topicsMapping  Topic映射。（仅源端类型为Kafka时会显示）
+    * currentClusterName  **参数解释**： 当前Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * clusterName  **参数解释**： 对端Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * userName  **参数解释**： 对端Kafka用户名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * saslMechanism  **参数解释**： 对端Kafka认证机制。（仅源端类型为Kafka时会显示） **取值范围**： - PLAIN - SCRAM-SHA-512
+    * instanceId  **参数解释**： 对端Kafka实例ID。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * bootstrapServers  **参数解释**： 对端Kafka实例地址。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * securityProtocol  **参数解释**： 对端Kafka认证方式。（仅源端类型为Kafka时会显示） **取值范围**： - PLAINTEXT：不开启SSL，明文传输。 - SASL_SSL：采用SASL方式进行认证，数据通过SSL证书进行加密传输，安全性更高。 - SASL_PLAINTEXT：采用SASL方式进行认证，数据通过明文传输，性能更好。
+    * direction  **参数解释**： 同步方向。（仅源端类型为Kafka时会显示） **取值范围**： - pull：拉取。 - push：推送。 - two-way：双向。
+    * syncConsumerOffsetsEnabled  **参数解释**： 是否同步消费进度。（仅源端类型为Kafka时会显示） **取值范围**： - true：同步消费进度 - false：不同步消费进度
+    * replicationFactor  **参数解释**： 副本数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * taskNum  **参数解释**： 任务数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * renameTopicEnabled  **参数解释**： 是否重命名Topic。（仅源端类型为Kafka时会显示） **取值范围**： - true：重命名Topic。 - false：不进行重命名Topic。
+    * provenanceHeaderEnabled  **参数解释**： 是否添加来源header。（仅源端类型为Kafka时会显示） **取值范围**： - true：添加来源header。 - false：不添加来源header。
+    * consumerStrategy  **参数解释**： 启动偏移量。（仅源端类型为Kafka时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
+    * compressionType  **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **取值范围**： - none - gzip - snappy - lz4 - zstd
+    * topicsMapping  **参数解释**： Topic映射。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,22 +121,22 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * currentClusterName  当前Kafka实例别名。（仅源端类型为Kafka时会显示）
-    * clusterName  对端Kafka实例别名。（仅源端类型为Kafka时会显示）
-    * userName  对端Kafka用户名。（仅源端类型为Kafka时会显示）
-    * saslMechanism  对端Kafka认证机制。（仅源端类型为Kafka时会显示）
-    * instanceId  对端Kafka实例ID。（仅源端类型为Kafka时会显示）
-    * bootstrapServers  对端Kafka实例地址。（仅源端类型为Kafka时会显示）
-    * securityProtocol  对端Kafka认证方式。（仅源端类型为Kafka时会显示）
-    * direction  同步方向。（仅源端类型为Kafka时会显示）
-    * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时会显示）
-    * replicationFactor  副本数。（仅源端类型为Kafka时会显示）
-    * taskNum  任务数。（仅源端类型为Kafka时会显示）
-    * renameTopicEnabled  是否重命名Topic。（仅源端类型为Kafka时会显示）
-    * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
-    * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
-    * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
-    * topicsMapping  Topic映射。（仅源端类型为Kafka时会显示）
+    * currentClusterName  **参数解释**： 当前Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * clusterName  **参数解释**： 对端Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * userName  **参数解释**： 对端Kafka用户名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * saslMechanism  **参数解释**： 对端Kafka认证机制。（仅源端类型为Kafka时会显示） **取值范围**： - PLAIN - SCRAM-SHA-512
+    * instanceId  **参数解释**： 对端Kafka实例ID。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * bootstrapServers  **参数解释**： 对端Kafka实例地址。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * securityProtocol  **参数解释**： 对端Kafka认证方式。（仅源端类型为Kafka时会显示） **取值范围**： - PLAINTEXT：不开启SSL，明文传输。 - SASL_SSL：采用SASL方式进行认证，数据通过SSL证书进行加密传输，安全性更高。 - SASL_PLAINTEXT：采用SASL方式进行认证，数据通过明文传输，性能更好。
+    * direction  **参数解释**： 同步方向。（仅源端类型为Kafka时会显示） **取值范围**： - pull：拉取。 - push：推送。 - two-way：双向。
+    * syncConsumerOffsetsEnabled  **参数解释**： 是否同步消费进度。（仅源端类型为Kafka时会显示） **取值范围**： - true：同步消费进度 - false：不同步消费进度
+    * replicationFactor  **参数解释**： 副本数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * taskNum  **参数解释**： 任务数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * renameTopicEnabled  **参数解释**： 是否重命名Topic。（仅源端类型为Kafka时会显示） **取值范围**： - true：重命名Topic。 - false：不进行重命名Topic。
+    * provenanceHeaderEnabled  **参数解释**： 是否添加来源header。（仅源端类型为Kafka时会显示） **取值范围**： - true：添加来源header。 - false：不添加来源header。
+    * consumerStrategy  **参数解释**： 启动偏移量。（仅源端类型为Kafka时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
+    * compressionType  **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **取值范围**： - none - gzip - snappy - lz4 - zstd
+    * topicsMapping  **参数解释**： Topic映射。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -161,22 +161,22 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * currentClusterName  当前Kafka实例别名。（仅源端类型为Kafka时会显示）
-    * clusterName  对端Kafka实例别名。（仅源端类型为Kafka时会显示）
-    * userName  对端Kafka用户名。（仅源端类型为Kafka时会显示）
-    * saslMechanism  对端Kafka认证机制。（仅源端类型为Kafka时会显示）
-    * instanceId  对端Kafka实例ID。（仅源端类型为Kafka时会显示）
-    * bootstrapServers  对端Kafka实例地址。（仅源端类型为Kafka时会显示）
-    * securityProtocol  对端Kafka认证方式。（仅源端类型为Kafka时会显示）
-    * direction  同步方向。（仅源端类型为Kafka时会显示）
-    * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时会显示）
-    * replicationFactor  副本数。（仅源端类型为Kafka时会显示）
-    * taskNum  任务数。（仅源端类型为Kafka时会显示）
-    * renameTopicEnabled  是否重命名Topic。（仅源端类型为Kafka时会显示）
-    * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
-    * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
-    * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
-    * topicsMapping  Topic映射。（仅源端类型为Kafka时会显示）
+    * currentClusterName  **参数解释**： 当前Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * clusterName  **参数解释**： 对端Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * userName  **参数解释**： 对端Kafka用户名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * saslMechanism  **参数解释**： 对端Kafka认证机制。（仅源端类型为Kafka时会显示） **取值范围**： - PLAIN - SCRAM-SHA-512
+    * instanceId  **参数解释**： 对端Kafka实例ID。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * bootstrapServers  **参数解释**： 对端Kafka实例地址。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * securityProtocol  **参数解释**： 对端Kafka认证方式。（仅源端类型为Kafka时会显示） **取值范围**： - PLAINTEXT：不开启SSL，明文传输。 - SASL_SSL：采用SASL方式进行认证，数据通过SSL证书进行加密传输，安全性更高。 - SASL_PLAINTEXT：采用SASL方式进行认证，数据通过明文传输，性能更好。
+    * direction  **参数解释**： 同步方向。（仅源端类型为Kafka时会显示） **取值范围**： - pull：拉取。 - push：推送。 - two-way：双向。
+    * syncConsumerOffsetsEnabled  **参数解释**： 是否同步消费进度。（仅源端类型为Kafka时会显示） **取值范围**： - true：同步消费进度 - false：不同步消费进度
+    * replicationFactor  **参数解释**： 副本数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * taskNum  **参数解释**： 任务数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * renameTopicEnabled  **参数解释**： 是否重命名Topic。（仅源端类型为Kafka时会显示） **取值范围**： - true：重命名Topic。 - false：不进行重命名Topic。
+    * provenanceHeaderEnabled  **参数解释**： 是否添加来源header。（仅源端类型为Kafka时会显示） **取值范围**： - true：添加来源header。 - false：不添加来源header。
+    * consumerStrategy  **参数解释**： 启动偏移量。（仅源端类型为Kafka时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
+    * compressionType  **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **取值范围**： - none - gzip - snappy - lz4 - zstd
+    * topicsMapping  **参数解释**： Topic映射。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -201,22 +201,22 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * currentClusterName  当前Kafka实例别名。（仅源端类型为Kafka时会显示）
-    * clusterName  对端Kafka实例别名。（仅源端类型为Kafka时会显示）
-    * userName  对端Kafka用户名。（仅源端类型为Kafka时会显示）
-    * saslMechanism  对端Kafka认证机制。（仅源端类型为Kafka时会显示）
-    * instanceId  对端Kafka实例ID。（仅源端类型为Kafka时会显示）
-    * bootstrapServers  对端Kafka实例地址。（仅源端类型为Kafka时会显示）
-    * securityProtocol  对端Kafka认证方式。（仅源端类型为Kafka时会显示）
-    * direction  同步方向。（仅源端类型为Kafka时会显示）
-    * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时会显示）
-    * replicationFactor  副本数。（仅源端类型为Kafka时会显示）
-    * taskNum  任务数。（仅源端类型为Kafka时会显示）
-    * renameTopicEnabled  是否重命名Topic。（仅源端类型为Kafka时会显示）
-    * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
-    * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
-    * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
-    * topicsMapping  Topic映射。（仅源端类型为Kafka时会显示）
+    * currentClusterName  **参数解释**： 当前Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * clusterName  **参数解释**： 对端Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * userName  **参数解释**： 对端Kafka用户名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * saslMechanism  **参数解释**： 对端Kafka认证机制。（仅源端类型为Kafka时会显示） **取值范围**： - PLAIN - SCRAM-SHA-512
+    * instanceId  **参数解释**： 对端Kafka实例ID。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * bootstrapServers  **参数解释**： 对端Kafka实例地址。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * securityProtocol  **参数解释**： 对端Kafka认证方式。（仅源端类型为Kafka时会显示） **取值范围**： - PLAINTEXT：不开启SSL，明文传输。 - SASL_SSL：采用SASL方式进行认证，数据通过SSL证书进行加密传输，安全性更高。 - SASL_PLAINTEXT：采用SASL方式进行认证，数据通过明文传输，性能更好。
+    * direction  **参数解释**： 同步方向。（仅源端类型为Kafka时会显示） **取值范围**： - pull：拉取。 - push：推送。 - two-way：双向。
+    * syncConsumerOffsetsEnabled  **参数解释**： 是否同步消费进度。（仅源端类型为Kafka时会显示） **取值范围**： - true：同步消费进度 - false：不同步消费进度
+    * replicationFactor  **参数解释**： 副本数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * taskNum  **参数解释**： 任务数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
+    * renameTopicEnabled  **参数解释**： 是否重命名Topic。（仅源端类型为Kafka时会显示） **取值范围**： - true：重命名Topic。 - false：不进行重命名Topic。
+    * provenanceHeaderEnabled  **参数解释**： 是否添加来源header。（仅源端类型为Kafka时会显示） **取值范围**： - true：添加来源header。 - false：不添加来源header。
+    * consumerStrategy  **参数解释**： 启动偏移量。（仅源端类型为Kafka时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
+    * compressionType  **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **取值范围**： - none - gzip - snappy - lz4 - zstd
+    * topicsMapping  **参数解释**： Topic映射。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -339,7 +339,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentClusterName
-    *  当前Kafka实例别名。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 当前Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -351,7 +351,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets currentClusterName
     *
-    * @param string|null $currentClusterName 当前Kafka实例别名。（仅源端类型为Kafka时会显示）
+    * @param string|null $currentClusterName **参数解释**： 当前Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  对端Kafka实例别名。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 对端Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -375,7 +375,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 对端Kafka实例别名。（仅源端类型为Kafka时会显示）
+    * @param string|null $clusterName **参数解释**： 对端Kafka实例别名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  对端Kafka用户名。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 对端Kafka用户名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -399,7 +399,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 对端Kafka用户名。（仅源端类型为Kafka时会显示）
+    * @param string|null $userName **参数解释**： 对端Kafka用户名。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets saslMechanism
-    *  对端Kafka认证机制。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 对端Kafka认证机制。（仅源端类型为Kafka时会显示） **取值范围**： - PLAIN - SCRAM-SHA-512
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets saslMechanism
     *
-    * @param string|null $saslMechanism 对端Kafka认证机制。（仅源端类型为Kafka时会显示）
+    * @param string|null $saslMechanism **参数解释**： 对端Kafka认证机制。（仅源端类型为Kafka时会显示） **取值范围**： - PLAIN - SCRAM-SHA-512
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  对端Kafka实例ID。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 对端Kafka实例ID。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -447,7 +447,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 对端Kafka实例ID。（仅源端类型为Kafka时会显示）
+    * @param string|null $instanceId **参数解释**： 对端Kafka实例ID。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets bootstrapServers
-    *  对端Kafka实例地址。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 对端Kafka实例地址。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -471,7 +471,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets bootstrapServers
     *
-    * @param string|null $bootstrapServers 对端Kafka实例地址。（仅源端类型为Kafka时会显示）
+    * @param string|null $bootstrapServers **参数解释**： 对端Kafka实例地址。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityProtocol
-    *  对端Kafka认证方式。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 对端Kafka认证方式。（仅源端类型为Kafka时会显示） **取值范围**： - PLAINTEXT：不开启SSL，明文传输。 - SASL_SSL：采用SASL方式进行认证，数据通过SSL证书进行加密传输，安全性更高。 - SASL_PLAINTEXT：采用SASL方式进行认证，数据通过明文传输，性能更好。
     *
     * @return string|null
     */
@@ -495,7 +495,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets securityProtocol
     *
-    * @param string|null $securityProtocol 对端Kafka认证方式。（仅源端类型为Kafka时会显示）
+    * @param string|null $securityProtocol **参数解释**： 对端Kafka认证方式。（仅源端类型为Kafka时会显示） **取值范围**： - PLAINTEXT：不开启SSL，明文传输。 - SASL_SSL：采用SASL方式进行认证，数据通过SSL证书进行加密传输，安全性更高。 - SASL_PLAINTEXT：采用SASL方式进行认证，数据通过明文传输，性能更好。
     *
     * @return $this
     */
@@ -507,7 +507,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets direction
-    *  同步方向。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 同步方向。（仅源端类型为Kafka时会显示） **取值范围**： - pull：拉取。 - push：推送。 - two-way：双向。
     *
     * @return string|null
     */
@@ -519,7 +519,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets direction
     *
-    * @param string|null $direction 同步方向。（仅源端类型为Kafka时会显示）
+    * @param string|null $direction **参数解释**： 同步方向。（仅源端类型为Kafka时会显示） **取值范围**： - pull：拉取。 - push：推送。 - two-way：双向。
     *
     * @return $this
     */
@@ -531,7 +531,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets syncConsumerOffsetsEnabled
-    *  是否同步消费进度。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 是否同步消费进度。（仅源端类型为Kafka时会显示） **取值范围**： - true：同步消费进度 - false：不同步消费进度
     *
     * @return bool|null
     */
@@ -543,7 +543,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets syncConsumerOffsetsEnabled
     *
-    * @param bool|null $syncConsumerOffsetsEnabled 是否同步消费进度。（仅源端类型为Kafka时会显示）
+    * @param bool|null $syncConsumerOffsetsEnabled **参数解释**： 是否同步消费进度。（仅源端类型为Kafka时会显示） **取值范围**： - true：同步消费进度 - false：不同步消费进度
     *
     * @return $this
     */
@@ -555,7 +555,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets replicationFactor
-    *  副本数。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 副本数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -567,7 +567,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets replicationFactor
     *
-    * @param int|null $replicationFactor 副本数。（仅源端类型为Kafka时会显示）
+    * @param int|null $replicationFactor **参数解释**： 副本数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -579,7 +579,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskNum
-    *  任务数。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 任务数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -591,7 +591,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets taskNum
     *
-    * @param int|null $taskNum 任务数。（仅源端类型为Kafka时会显示）
+    * @param int|null $taskNum **参数解释**： 任务数。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -603,7 +603,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets renameTopicEnabled
-    *  是否重命名Topic。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 是否重命名Topic。（仅源端类型为Kafka时会显示） **取值范围**： - true：重命名Topic。 - false：不进行重命名Topic。
     *
     * @return bool|null
     */
@@ -615,7 +615,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets renameTopicEnabled
     *
-    * @param bool|null $renameTopicEnabled 是否重命名Topic。（仅源端类型为Kafka时会显示）
+    * @param bool|null $renameTopicEnabled **参数解释**： 是否重命名Topic。（仅源端类型为Kafka时会显示） **取值范围**： - true：重命名Topic。 - false：不进行重命名Topic。
     *
     * @return $this
     */
@@ -627,7 +627,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets provenanceHeaderEnabled
-    *  是否添加来源header。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 是否添加来源header。（仅源端类型为Kafka时会显示） **取值范围**： - true：添加来源header。 - false：不添加来源header。
     *
     * @return bool|null
     */
@@ -639,7 +639,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets provenanceHeaderEnabled
     *
-    * @param bool|null $provenanceHeaderEnabled 是否添加来源header。（仅源端类型为Kafka时会显示）
+    * @param bool|null $provenanceHeaderEnabled **参数解释**： 是否添加来源header。（仅源端类型为Kafka时会显示） **取值范围**： - true：添加来源header。 - false：不添加来源header。
     *
     * @return $this
     */
@@ -651,7 +651,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumerStrategy
-    *  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 启动偏移量。（仅源端类型为Kafka时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
     *
     * @return string|null
     */
@@ -663,7 +663,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets consumerStrategy
     *
-    * @param string|null $consumerStrategy 启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
+    * @param string|null $consumerStrategy **参数解释**： 启动偏移量。（仅源端类型为Kafka时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
     *
     * @return $this
     */
@@ -675,7 +675,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets compressionType
-    *  压缩算法。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **取值范围**： - none - gzip - snappy - lz4 - zstd
     *
     * @return string|null
     */
@@ -687,7 +687,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets compressionType
     *
-    * @param string|null $compressionType 压缩算法。（仅源端类型为Kafka时会显示）
+    * @param string|null $compressionType **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **取值范围**： - none - gzip - snappy - lz4 - zstd
     *
     * @return $this
     */
@@ -699,7 +699,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicsMapping
-    *  Topic映射。（仅源端类型为Kafka时会显示）
+    *  **参数解释**： Topic映射。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -711,7 +711,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets topicsMapping
     *
-    * @param string|null $topicsMapping Topic映射。（仅源端类型为Kafka时会显示）
+    * @param string|null $topicsMapping **参数解释**： Topic映射。（仅源端类型为Kafka时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */

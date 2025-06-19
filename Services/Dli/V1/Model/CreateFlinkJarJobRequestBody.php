@@ -45,6 +45,8 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
     * tags  标签
+    * resourceConfig  resourceConfig
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
     *
     * @var string[]
     */
@@ -73,7 +75,9 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'int',
             'checkpointPath' => 'string',
             'runtimeConfig' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]'
+            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]',
+            'resourceConfig' => '\HuaweiCloud\SDK\Dli\V1\Model\ResourceConfig',
+            'resourceConfigVersion' => 'string'
     ];
 
     /**
@@ -103,6 +107,8 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
     * tags  标签
+    * resourceConfig  resourceConfig
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
     *
     * @var string[]
     */
@@ -131,7 +137,9 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
         'resumeMaxNum' => 'int32',
         'checkpointPath' => null,
         'runtimeConfig' => null,
-        'tags' => null
+        'tags' => null,
+        'resourceConfig' => null,
+        'resourceConfigVersion' => null
     ];
 
     /**
@@ -182,6 +190,8 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
     * tags  标签
+    * resourceConfig  resourceConfig
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
     *
     * @var string[]
     */
@@ -210,7 +220,9 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'resume_max_num',
             'checkpointPath' => 'checkpoint_path',
             'runtimeConfig' => 'runtime_config',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'resourceConfig' => 'resource_config',
+            'resourceConfigVersion' => 'resource_config_version'
     ];
 
     /**
@@ -240,6 +252,8 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
     * tags  标签
+    * resourceConfig  resourceConfig
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
     *
     * @var string[]
     */
@@ -268,7 +282,9 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'setResumeMaxNum',
             'checkpointPath' => 'setCheckpointPath',
             'runtimeConfig' => 'setRuntimeConfig',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'resourceConfig' => 'setResourceConfig',
+            'resourceConfigVersion' => 'setResourceConfigVersion'
     ];
 
     /**
@@ -298,6 +314,8 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
     * tags  标签
+    * resourceConfig  resourceConfig
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
     *
     * @var string[]
     */
@@ -326,7 +344,9 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'getResumeMaxNum',
             'checkpointPath' => 'getCheckpointPath',
             'runtimeConfig' => 'getRuntimeConfig',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'resourceConfig' => 'getResourceConfig',
+            'resourceConfigVersion' => 'getResourceConfigVersion'
     ];
 
     /**
@@ -412,6 +432,8 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['checkpointPath'] = isset($data['checkpointPath']) ? $data['checkpointPath'] : null;
         $this->container['runtimeConfig'] = isset($data['runtimeConfig']) ? $data['runtimeConfig'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['resourceConfig'] = isset($data['resourceConfig']) ? $data['resourceConfig'] : null;
+        $this->container['resourceConfigVersion'] = isset($data['resourceConfigVersion']) ? $data['resourceConfigVersion'] : null;
     }
 
     /**
@@ -1054,6 +1076,54 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets resourceConfig
+    *  resourceConfig
+    *
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\ResourceConfig|null
+    */
+    public function getResourceConfig()
+    {
+        return $this->container['resourceConfig'];
+    }
+
+    /**
+    * Sets resourceConfig
+    *
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\ResourceConfig|null $resourceConfig resourceConfig
+    *
+    * @return $this
+    */
+    public function setResourceConfig($resourceConfig)
+    {
+        $this->container['resourceConfig'] = $resourceConfig;
+        return $this;
+    }
+
+    /**
+    * Gets resourceConfigVersion
+    *  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
+    *
+    * @return string|null
+    */
+    public function getResourceConfigVersion()
+    {
+        return $this->container['resourceConfigVersion'];
+    }
+
+    /**
+    * Sets resourceConfigVersion
+    *
+    * @param string|null $resourceConfigVersion 资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
+    *
+    * @return $this
+    */
+    public function setResourceConfigVersion($resourceConfigVersion)
+    {
+        $this->container['resourceConfigVersion'] = $resourceConfigVersion;
         return $this;
     }
 

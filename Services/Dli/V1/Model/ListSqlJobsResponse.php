@@ -21,9 +21,9 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isSuccess  请求发送是否成功。“true”表示请求发送成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobCount  作业总个数。
+    * isSuccess  参数解释:  请求发送是否成功。“true”表示请求发送成功 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
+    * message  参数解释:  系统提示信息，执行成功时，信息可能为空 示例: import data to table t2 started 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobCount  参数解释:  作业总个数 示例: 7 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * jobs  作业信息。
     *
     * @var string[]
@@ -37,9 +37,9 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isSuccess  请求发送是否成功。“true”表示请求发送成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobCount  作业总个数。
+    * isSuccess  参数解释:  请求发送是否成功。“true”表示请求发送成功 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
+    * message  参数解释:  系统提示信息，执行成功时，信息可能为空 示例: import data to table t2 started 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobCount  参数解释:  作业总个数 示例: 7 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * jobs  作业信息。
     *
     * @var string[]
@@ -74,9 +74,9 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isSuccess  请求发送是否成功。“true”表示请求发送成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobCount  作业总个数。
+    * isSuccess  参数解释:  请求发送是否成功。“true”表示请求发送成功 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
+    * message  参数解释:  系统提示信息，执行成功时，信息可能为空 示例: import data to table t2 started 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobCount  参数解释:  作业总个数 示例: 7 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * jobs  作业信息。
     *
     * @var string[]
@@ -90,9 +90,9 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isSuccess  请求发送是否成功。“true”表示请求发送成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobCount  作业总个数。
+    * isSuccess  参数解释:  请求发送是否成功。“true”表示请求发送成功 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
+    * message  参数解释:  系统提示信息，执行成功时，信息可能为空 示例: import data to table t2 started 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobCount  参数解释:  作业总个数 示例: 7 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * jobs  作业信息。
     *
     * @var string[]
@@ -106,9 +106,9 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isSuccess  请求发送是否成功。“true”表示请求发送成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobCount  作业总个数。
+    * isSuccess  参数解释:  请求发送是否成功。“true”表示请求发送成功 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
+    * message  参数解释:  系统提示信息，执行成功时，信息可能为空 示例: import data to table t2 started 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobCount  参数解释:  作业总个数 示例: 7 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * jobs  作业信息。
     *
     * @var string[]
@@ -208,7 +208,7 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSuccess
-    *  请求发送是否成功。“true”表示请求发送成功。
+    *  参数解释:  请求发送是否成功。“true”表示请求发送成功 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
     *
     * @return bool|null
     */
@@ -220,7 +220,7 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSuccess
     *
-    * @param bool|null $isSuccess 请求发送是否成功。“true”表示请求发送成功。
+    * @param bool|null $isSuccess 参数解释:  请求发送是否成功。“true”表示请求发送成功 示例: true 约束限制:  无 取值范围: true, false 默认取值: 无
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  系统提示信息，执行成功时，信息可能为空。
+    *  参数解释:  系统提示信息，执行成功时，信息可能为空 示例: import data to table t2 started 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 系统提示信息，执行成功时，信息可能为空。
+    * @param string|null $message 参数解释:  系统提示信息，执行成功时，信息可能为空 示例: import data to table t2 started 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobCount
-    *  作业总个数。
+    *  参数解释:  作业总个数 示例: 7 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -268,7 +268,7 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobCount
     *
-    * @param int|null $jobCount 作业总个数。
+    * @param int|null $jobCount 参数解释:  作业总个数 示例: 7 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */

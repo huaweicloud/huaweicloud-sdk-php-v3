@@ -22,7 +22,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
     * minSize  占用磁盘大小，默认值1G (1K，1M，1G)。
-    * top  占用磁盘大小，查询top N。
+    * top  **参数解释**： 占用磁盘大小，查询top N。 **约束限制**： 不涉及。 **取值范围**： 1~1000。 **默认取值**： 不涉及。
     * percentage  占用磁盘大小，查询大于占比的分区。
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
     * minSize  占用磁盘大小，默认值1G (1K，1M，1G)。
-    * top  占用磁盘大小，查询top N。
+    * top  **参数解释**： 占用磁盘大小，查询top N。 **约束限制**： 不涉及。 **取值范围**： 1~1000。 **默认取值**： 不涉及。
     * percentage  占用磁盘大小，查询大于占比的分区。
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
     * and the value is the original name
     * instanceId  实例ID。
     * minSize  占用磁盘大小，默认值1G (1K，1M，1G)。
-    * top  占用磁盘大小，查询top N。
+    * top  **参数解释**： 占用磁盘大小，查询top N。 **约束限制**： 不涉及。 **取值范围**： 1~1000。 **默认取值**： 不涉及。
     * percentage  占用磁盘大小，查询大于占比的分区。
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
     * minSize  占用磁盘大小，默认值1G (1K，1M，1G)。
-    * top  占用磁盘大小，查询top N。
+    * top  **参数解释**： 占用磁盘大小，查询top N。 **约束限制**： 不涉及。 **取值范围**： 1~1000。 **默认取值**： 不涉及。
     * percentage  占用磁盘大小，查询大于占比的分区。
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
     * minSize  占用磁盘大小，默认值1G (1K，1M，1G)。
-    * top  占用磁盘大小，查询top N。
+    * top  **参数解释**： 占用磁盘大小，查询top N。 **约束限制**： 不涉及。 **取值范围**： 1~1000。 **默认取值**： 不涉及。
     * percentage  占用磁盘大小，查询大于占比的分区。
     *
     * @var string[]
@@ -258,7 +258,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
 
     /**
     * Gets top
-    *  占用磁盘大小，查询top N。
+    *  **参数解释**： 占用磁盘大小，查询top N。 **约束限制**： 不涉及。 **取值范围**： 1~1000。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -270,7 +270,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
     /**
     * Sets top
     *
-    * @param string|null $top 占用磁盘大小，查询top N。
+    * @param string|null $top **参数解释**： 占用磁盘大小，查询top N。 **约束限制**： 不涉及。 **取值范围**： 1~1000。 **默认取值**： 不涉及。
     *
     * @return $this
     */

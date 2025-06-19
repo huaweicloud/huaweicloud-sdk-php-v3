@@ -21,16 +21,16 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskName  SmartConnect任务名称。
-    * topics  SmartConnect任务配置的Topic。
-    * topicsRegex  SmartConnect任务配置的Topic正则表达式。
-    * sourceType  SmartConnect任务的源端类型。
+    * taskName  **参数解释**： Smart Connect任务名称。 **取值范围**： 不涉及。
+    * topics  **参数解释**： Smart Connect任务配置的Topic。 **取值范围**： 不涉及。
+    * topicsRegex  **参数解释**： Smart Connect任务配置的Topic正则表达式。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： Smart Connect任务的源端类型。 **取值范围**： - NONE：不配置。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     * sourceTask  sourceTask
-    * sinkType  SmartConnect任务的目标端类型。
+    * sinkType  **参数解释**： Smart Connect任务的目标端类型。 **取值范围**： - NONE：不配置。 - OBS_SINK：转储。
     * sinkTask  sinkTask
-    * id  SmartConnect任务的id。
-    * status  SmartConnect任务的状态。
-    * createTime  SmartConnect任务的创建时间。
+    * id  **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
+    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -49,16 +49,16 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskName  SmartConnect任务名称。
-    * topics  SmartConnect任务配置的Topic。
-    * topicsRegex  SmartConnect任务配置的Topic正则表达式。
-    * sourceType  SmartConnect任务的源端类型。
+    * taskName  **参数解释**： Smart Connect任务名称。 **取值范围**： 不涉及。
+    * topics  **参数解释**： Smart Connect任务配置的Topic。 **取值范围**： 不涉及。
+    * topicsRegex  **参数解释**： Smart Connect任务配置的Topic正则表达式。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： Smart Connect任务的源端类型。 **取值范围**： - NONE：不配置。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     * sourceTask  sourceTask
-    * sinkType  SmartConnect任务的目标端类型。
+    * sinkType  **参数解释**： Smart Connect任务的目标端类型。 **取值范围**： - NONE：不配置。 - OBS_SINK：转储。
     * sinkTask  sinkTask
-    * id  SmartConnect任务的id。
-    * status  SmartConnect任务的状态。
-    * createTime  SmartConnect任务的创建时间。
+    * id  **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
+    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -98,16 +98,16 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskName  SmartConnect任务名称。
-    * topics  SmartConnect任务配置的Topic。
-    * topicsRegex  SmartConnect任务配置的Topic正则表达式。
-    * sourceType  SmartConnect任务的源端类型。
+    * taskName  **参数解释**： Smart Connect任务名称。 **取值范围**： 不涉及。
+    * topics  **参数解释**： Smart Connect任务配置的Topic。 **取值范围**： 不涉及。
+    * topicsRegex  **参数解释**： Smart Connect任务配置的Topic正则表达式。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： Smart Connect任务的源端类型。 **取值范围**： - NONE：不配置。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     * sourceTask  sourceTask
-    * sinkType  SmartConnect任务的目标端类型。
+    * sinkType  **参数解释**： Smart Connect任务的目标端类型。 **取值范围**： - NONE：不配置。 - OBS_SINK：转储。
     * sinkTask  sinkTask
-    * id  SmartConnect任务的id。
-    * status  SmartConnect任务的状态。
-    * createTime  SmartConnect任务的创建时间。
+    * id  **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
+    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -126,16 +126,16 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskName  SmartConnect任务名称。
-    * topics  SmartConnect任务配置的Topic。
-    * topicsRegex  SmartConnect任务配置的Topic正则表达式。
-    * sourceType  SmartConnect任务的源端类型。
+    * taskName  **参数解释**： Smart Connect任务名称。 **取值范围**： 不涉及。
+    * topics  **参数解释**： Smart Connect任务配置的Topic。 **取值范围**： 不涉及。
+    * topicsRegex  **参数解释**： Smart Connect任务配置的Topic正则表达式。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： Smart Connect任务的源端类型。 **取值范围**： - NONE：不配置。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     * sourceTask  sourceTask
-    * sinkType  SmartConnect任务的目标端类型。
+    * sinkType  **参数解释**： Smart Connect任务的目标端类型。 **取值范围**： - NONE：不配置。 - OBS_SINK：转储。
     * sinkTask  sinkTask
-    * id  SmartConnect任务的id。
-    * status  SmartConnect任务的状态。
-    * createTime  SmartConnect任务的创建时间。
+    * id  **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
+    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -154,16 +154,16 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskName  SmartConnect任务名称。
-    * topics  SmartConnect任务配置的Topic。
-    * topicsRegex  SmartConnect任务配置的Topic正则表达式。
-    * sourceType  SmartConnect任务的源端类型。
+    * taskName  **参数解释**： Smart Connect任务名称。 **取值范围**： 不涉及。
+    * topics  **参数解释**： Smart Connect任务配置的Topic。 **取值范围**： 不涉及。
+    * topicsRegex  **参数解释**： Smart Connect任务配置的Topic正则表达式。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： Smart Connect任务的源端类型。 **取值范围**： - NONE：不配置。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     * sourceTask  sourceTask
-    * sinkType  SmartConnect任务的目标端类型。
+    * sinkType  **参数解释**： Smart Connect任务的目标端类型。 **取值范围**： - NONE：不配置。 - OBS_SINK：转储。
     * sinkTask  sinkTask
-    * id  SmartConnect任务的id。
-    * status  SmartConnect任务的状态。
-    * createTime  SmartConnect任务的创建时间。
+    * id  **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
+    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -274,7 +274,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskName
-    *  SmartConnect任务名称。
+    *  **参数解释**： Smart Connect任务名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -286,7 +286,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string|null $taskName SmartConnect任务名称。
+    * @param string|null $taskName **参数解释**： Smart Connect任务名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -298,7 +298,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  SmartConnect任务配置的Topic。
+    *  **参数解释**： Smart Connect任务配置的Topic。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -310,7 +310,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param string|null $topics SmartConnect任务配置的Topic。
+    * @param string|null $topics **参数解释**： Smart Connect任务配置的Topic。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -322,7 +322,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicsRegex
-    *  SmartConnect任务配置的Topic正则表达式。
+    *  **参数解释**： Smart Connect任务配置的Topic正则表达式。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -334,7 +334,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topicsRegex
     *
-    * @param string|null $topicsRegex SmartConnect任务配置的Topic正则表达式。
+    * @param string|null $topicsRegex **参数解释**： Smart Connect任务配置的Topic正则表达式。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -346,7 +346,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  SmartConnect任务的源端类型。
+    *  **参数解释**： Smart Connect任务的源端类型。 **取值范围**： - NONE：不配置。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     *
     * @return string|null
     */
@@ -358,7 +358,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param string|null $sourceType SmartConnect任务的源端类型。
+    * @param string|null $sourceType **参数解释**： Smart Connect任务的源端类型。 **取值范围**： - NONE：不配置。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     *
     * @return $this
     */
@@ -394,7 +394,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sinkType
-    *  SmartConnect任务的目标端类型。
+    *  **参数解释**： Smart Connect任务的目标端类型。 **取值范围**： - NONE：不配置。 - OBS_SINK：转储。
     *
     * @return string|null
     */
@@ -406,7 +406,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sinkType
     *
-    * @param string|null $sinkType SmartConnect任务的目标端类型。
+    * @param string|null $sinkType **参数解释**： Smart Connect任务的目标端类型。 **取值范围**： - NONE：不配置。 - OBS_SINK：转储。
     *
     * @return $this
     */
@@ -442,7 +442,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  SmartConnect任务的id。
+    *  **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -454,7 +454,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id SmartConnect任务的id。
+    * @param string|null $id **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -466,7 +466,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  SmartConnect任务的状态。
+    *  **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -478,7 +478,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status SmartConnect任务的状态。
+    * @param string|null $status **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -490,7 +490,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  SmartConnect任务的创建时间。
+    *  **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -502,7 +502,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime SmartConnect任务的创建时间。
+    * @param int|null $createTime **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

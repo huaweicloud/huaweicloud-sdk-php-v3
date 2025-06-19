@@ -26,10 +26,13 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
     * webUrl  代码仓http地址
     * scmType  仓库类别，Repo、Github等
     * isAutoBuild  是否自动构建
+    * enableGitLfs  是否启用gitlfs
     * buildType  构建类别
     * depth  克隆深度
     * endPointId  endpointId
     * source  source
+    * groupName  仓库分组
+    * repoName  仓库名称
     *
     * @var string[]
     */
@@ -40,10 +43,13 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
             'webUrl' => 'string',
             'scmType' => 'string',
             'isAutoBuild' => 'bool',
+            'enableGitLfs' => 'bool',
             'buildType' => 'string',
             'depth' => 'string',
             'endPointId' => 'string',
-            'source' => 'string'
+            'source' => 'string',
+            'groupName' => 'string',
+            'repoName' => 'string'
     ];
 
     /**
@@ -54,10 +60,13 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
     * webUrl  代码仓http地址
     * scmType  仓库类别，Repo、Github等
     * isAutoBuild  是否自动构建
+    * enableGitLfs  是否启用gitlfs
     * buildType  构建类别
     * depth  克隆深度
     * endPointId  endpointId
     * source  source
+    * groupName  仓库分组
+    * repoName  仓库名称
     *
     * @var string[]
     */
@@ -68,10 +77,13 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
         'webUrl' => null,
         'scmType' => null,
         'isAutoBuild' => null,
+        'enableGitLfs' => null,
         'buildType' => null,
         'depth' => null,
         'endPointId' => null,
-        'source' => null
+        'source' => null,
+        'groupName' => null,
+        'repoName' => null
     ];
 
     /**
@@ -103,10 +115,13 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
     * webUrl  代码仓http地址
     * scmType  仓库类别，Repo、Github等
     * isAutoBuild  是否自动构建
+    * enableGitLfs  是否启用gitlfs
     * buildType  构建类别
     * depth  克隆深度
     * endPointId  endpointId
     * source  source
+    * groupName  仓库分组
+    * repoName  仓库名称
     *
     * @var string[]
     */
@@ -117,10 +132,13 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
             'webUrl' => 'web_url',
             'scmType' => 'scm_type',
             'isAutoBuild' => 'is_auto_build',
+            'enableGitLfs' => 'enable_git_lfs',
             'buildType' => 'build_type',
             'depth' => 'depth',
             'endPointId' => 'end_point_id',
-            'source' => 'source'
+            'source' => 'source',
+            'groupName' => 'group_name',
+            'repoName' => 'repo_name'
     ];
 
     /**
@@ -131,10 +149,13 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
     * webUrl  代码仓http地址
     * scmType  仓库类别，Repo、Github等
     * isAutoBuild  是否自动构建
+    * enableGitLfs  是否启用gitlfs
     * buildType  构建类别
     * depth  克隆深度
     * endPointId  endpointId
     * source  source
+    * groupName  仓库分组
+    * repoName  仓库名称
     *
     * @var string[]
     */
@@ -145,10 +166,13 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
             'webUrl' => 'setWebUrl',
             'scmType' => 'setScmType',
             'isAutoBuild' => 'setIsAutoBuild',
+            'enableGitLfs' => 'setEnableGitLfs',
             'buildType' => 'setBuildType',
             'depth' => 'setDepth',
             'endPointId' => 'setEndPointId',
-            'source' => 'setSource'
+            'source' => 'setSource',
+            'groupName' => 'setGroupName',
+            'repoName' => 'setRepoName'
     ];
 
     /**
@@ -159,10 +183,13 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
     * webUrl  代码仓http地址
     * scmType  仓库类别，Repo、Github等
     * isAutoBuild  是否自动构建
+    * enableGitLfs  是否启用gitlfs
     * buildType  构建类别
     * depth  克隆深度
     * endPointId  endpointId
     * source  source
+    * groupName  仓库分组
+    * repoName  仓库名称
     *
     * @var string[]
     */
@@ -173,10 +200,13 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
             'webUrl' => 'getWebUrl',
             'scmType' => 'getScmType',
             'isAutoBuild' => 'getIsAutoBuild',
+            'enableGitLfs' => 'getEnableGitLfs',
             'buildType' => 'getBuildType',
             'depth' => 'getDepth',
             'endPointId' => 'getEndPointId',
-            'source' => 'getSource'
+            'source' => 'getSource',
+            'groupName' => 'getGroupName',
+            'repoName' => 'getRepoName'
     ];
 
     /**
@@ -243,10 +273,13 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
         $this->container['webUrl'] = isset($data['webUrl']) ? $data['webUrl'] : null;
         $this->container['scmType'] = isset($data['scmType']) ? $data['scmType'] : null;
         $this->container['isAutoBuild'] = isset($data['isAutoBuild']) ? $data['isAutoBuild'] : null;
+        $this->container['enableGitLfs'] = isset($data['enableGitLfs']) ? $data['enableGitLfs'] : null;
         $this->container['buildType'] = isset($data['buildType']) ? $data['buildType'] : null;
         $this->container['depth'] = isset($data['depth']) ? $data['depth'] : null;
         $this->container['endPointId'] = isset($data['endPointId']) ? $data['endPointId'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
+        $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
+        $this->container['repoName'] = isset($data['repoName']) ? $data['repoName'] : null;
     }
 
     /**
@@ -422,6 +455,30 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets enableGitLfs
+    *  是否启用gitlfs
+    *
+    * @return bool|null
+    */
+    public function getEnableGitLfs()
+    {
+        return $this->container['enableGitLfs'];
+    }
+
+    /**
+    * Sets enableGitLfs
+    *
+    * @param bool|null $enableGitLfs 是否启用gitlfs
+    *
+    * @return $this
+    */
+    public function setEnableGitLfs($enableGitLfs)
+    {
+        $this->container['enableGitLfs'] = $enableGitLfs;
+        return $this;
+    }
+
+    /**
     * Gets buildType
     *  构建类别
     *
@@ -514,6 +571,54 @@ class CreateBuildJobScm implements ModelInterface, ArrayAccess
     public function setSource($source)
     {
         $this->container['source'] = $source;
+        return $this;
+    }
+
+    /**
+    * Gets groupName
+    *  仓库分组
+    *
+    * @return string|null
+    */
+    public function getGroupName()
+    {
+        return $this->container['groupName'];
+    }
+
+    /**
+    * Sets groupName
+    *
+    * @param string|null $groupName 仓库分组
+    *
+    * @return $this
+    */
+    public function setGroupName($groupName)
+    {
+        $this->container['groupName'] = $groupName;
+        return $this;
+    }
+
+    /**
+    * Gets repoName
+    *  仓库名称
+    *
+    * @return string|null
+    */
+    public function getRepoName()
+    {
+        return $this->container['repoName'];
+    }
+
+    /**
+    * Sets repoName
+    *
+    * @param string|null $repoName 仓库名称
+    *
+    * @return $this
+    */
+    public function setRepoName($repoName)
+    {
+        $this->container['repoName'] = $repoName;
         return $this;
     }
 

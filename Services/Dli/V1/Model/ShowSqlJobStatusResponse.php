@@ -21,28 +21,28 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  作业ID。
-    * jobType  作业类型。
-    * queueName  作业提交的队列。
-    * owner  提交作业的用户。
-    * startTime  作业开始的时间。是单位为“毫秒”的时间戳。
-    * duration  作业运行时长，单位毫秒。
-    * status  此作业的当前状态，包含提交（LAUNCHING）、运行中（RUNNING）、完成（FINISHED）、失败（FAILED）、取消（CANCELLED）。
-    * inputRowCount  Insert作业执行过程中扫描的记录条数。
-    * badRowCount  Insert作业执行过程中扫描到的错误记录数。
-    * inputSize  作业执行过程中扫描文件的大小。
-    * resultCount  当前作业返回的结果总条数或insert作业插入的总条数。
-    * databaseName  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
-    * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
-    * detail  SQL查询的相关列信息的Json字符串。
-    * userConf  SQL配置参数信息Json字符串。
-    * resultPath  查询结果OBS路径
-    * executionDetailsPath  查询作业执行计划OBS路径
-    * resultFormat  查询结果格式
-    * statement  作业执行的SQL语句。
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobMode  作业执行方式
+    * jobId  参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 任意字符串 默认取值: 无
+    * jobType  参数解释:  作业类型 示例: 指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * queueName  参数解释:  作业提交的队列 示例: dli_sql 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释:  提交作业的用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * startTime  参数解释:  作业开始的时间。是单位为“毫秒”的时间戳 示例: 1502349803729 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:  作业运行时长，单位毫秒 示例: 1000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * status  参数解释:  此作业的当前状态 示例: CANCELLED 约束限制:  无 取值范围: LAUNCHING（提交） RUNNING（运行中） FINISH（完成） FAILED（失败） CANCELLED（取消） 默认取值: 无
+    * inputRowCount  参数解释:  Insert作业执行过程中扫描的记录条数 示例: 66 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * badRowCount  参数解释:  Insert作业执行过程中扫描到的错误记录数 示例: 666 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * inputSize  参数解释:  作业执行过程中扫描文件的大小 示例: 5 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * resultCount  参数解释:  当前作业返回的结果总条数或insert作业插入的总条数 示例: 55 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * databaseName  参数解释:  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性 示例: db2 约束限制:  无 取值范围: 无 默认取值: 无
+    * tableName  参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: t2 约束限制:  无 取值范围: 无 默认取值: 无
+    * detail  参数解释:  SQL查询的相关列信息的Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
+    * userConf  参数解释:  SQL配置参数信息Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
+    * resultPath  参数解释:  查询结果OBS路径 示例: obs://bucketName/jobs/result/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
+    * executionDetailsPath  参数解释:  查询作业执行计划OBS路径 示例: obs://bucketName/jobs/execution_details/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
+    * resultFormat  参数解释:  查询结果格式 示例: csv 约束限制:  无 取值范围: csv 默认取值: 无
+    * statement  参数解释:  作业执行的SQL语句 示例: select * from t_json_002 约束限制:  符合SQL格式 取值范围: 无 默认取值: 无
+    * isSuccess  参数解释:  执行请求是否成功。true表示请求执行成功 示例: true 约束限制:  无 取值范围: true、false 默认取值: 无
+    * message  参数解释:  系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobMode  参数解释:  作业执行方式 示例: async 约束限制:  无 取值范围: async（同步） sync（异步） 默认取值: 无
     * tags  作业标签
     *
     * @var string[]
@@ -75,28 +75,28 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  作业ID。
-    * jobType  作业类型。
-    * queueName  作业提交的队列。
-    * owner  提交作业的用户。
-    * startTime  作业开始的时间。是单位为“毫秒”的时间戳。
-    * duration  作业运行时长，单位毫秒。
-    * status  此作业的当前状态，包含提交（LAUNCHING）、运行中（RUNNING）、完成（FINISHED）、失败（FAILED）、取消（CANCELLED）。
-    * inputRowCount  Insert作业执行过程中扫描的记录条数。
-    * badRowCount  Insert作业执行过程中扫描到的错误记录数。
-    * inputSize  作业执行过程中扫描文件的大小。
-    * resultCount  当前作业返回的结果总条数或insert作业插入的总条数。
-    * databaseName  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
-    * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
-    * detail  SQL查询的相关列信息的Json字符串。
-    * userConf  SQL配置参数信息Json字符串。
-    * resultPath  查询结果OBS路径
-    * executionDetailsPath  查询作业执行计划OBS路径
-    * resultFormat  查询结果格式
-    * statement  作业执行的SQL语句。
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobMode  作业执行方式
+    * jobId  参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 任意字符串 默认取值: 无
+    * jobType  参数解释:  作业类型 示例: 指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * queueName  参数解释:  作业提交的队列 示例: dli_sql 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释:  提交作业的用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * startTime  参数解释:  作业开始的时间。是单位为“毫秒”的时间戳 示例: 1502349803729 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:  作业运行时长，单位毫秒 示例: 1000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * status  参数解释:  此作业的当前状态 示例: CANCELLED 约束限制:  无 取值范围: LAUNCHING（提交） RUNNING（运行中） FINISH（完成） FAILED（失败） CANCELLED（取消） 默认取值: 无
+    * inputRowCount  参数解释:  Insert作业执行过程中扫描的记录条数 示例: 66 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * badRowCount  参数解释:  Insert作业执行过程中扫描到的错误记录数 示例: 666 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * inputSize  参数解释:  作业执行过程中扫描文件的大小 示例: 5 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * resultCount  参数解释:  当前作业返回的结果总条数或insert作业插入的总条数 示例: 55 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * databaseName  参数解释:  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性 示例: db2 约束限制:  无 取值范围: 无 默认取值: 无
+    * tableName  参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: t2 约束限制:  无 取值范围: 无 默认取值: 无
+    * detail  参数解释:  SQL查询的相关列信息的Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
+    * userConf  参数解释:  SQL配置参数信息Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
+    * resultPath  参数解释:  查询结果OBS路径 示例: obs://bucketName/jobs/result/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
+    * executionDetailsPath  参数解释:  查询作业执行计划OBS路径 示例: obs://bucketName/jobs/execution_details/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
+    * resultFormat  参数解释:  查询结果格式 示例: csv 约束限制:  无 取值范围: csv 默认取值: 无
+    * statement  参数解释:  作业执行的SQL语句 示例: select * from t_json_002 约束限制:  符合SQL格式 取值范围: 无 默认取值: 无
+    * isSuccess  参数解释:  执行请求是否成功。true表示请求执行成功 示例: true 约束限制:  无 取值范围: true、false 默认取值: 无
+    * message  参数解释:  系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobMode  参数解释:  作业执行方式 示例: async 约束限制:  无 取值范围: async（同步） sync（异步） 默认取值: 无
     * tags  作业标签
     *
     * @var string[]
@@ -150,28 +150,28 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  作业ID。
-    * jobType  作业类型。
-    * queueName  作业提交的队列。
-    * owner  提交作业的用户。
-    * startTime  作业开始的时间。是单位为“毫秒”的时间戳。
-    * duration  作业运行时长，单位毫秒。
-    * status  此作业的当前状态，包含提交（LAUNCHING）、运行中（RUNNING）、完成（FINISHED）、失败（FAILED）、取消（CANCELLED）。
-    * inputRowCount  Insert作业执行过程中扫描的记录条数。
-    * badRowCount  Insert作业执行过程中扫描到的错误记录数。
-    * inputSize  作业执行过程中扫描文件的大小。
-    * resultCount  当前作业返回的结果总条数或insert作业插入的总条数。
-    * databaseName  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
-    * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
-    * detail  SQL查询的相关列信息的Json字符串。
-    * userConf  SQL配置参数信息Json字符串。
-    * resultPath  查询结果OBS路径
-    * executionDetailsPath  查询作业执行计划OBS路径
-    * resultFormat  查询结果格式
-    * statement  作业执行的SQL语句。
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobMode  作业执行方式
+    * jobId  参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 任意字符串 默认取值: 无
+    * jobType  参数解释:  作业类型 示例: 指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * queueName  参数解释:  作业提交的队列 示例: dli_sql 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释:  提交作业的用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * startTime  参数解释:  作业开始的时间。是单位为“毫秒”的时间戳 示例: 1502349803729 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:  作业运行时长，单位毫秒 示例: 1000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * status  参数解释:  此作业的当前状态 示例: CANCELLED 约束限制:  无 取值范围: LAUNCHING（提交） RUNNING（运行中） FINISH（完成） FAILED（失败） CANCELLED（取消） 默认取值: 无
+    * inputRowCount  参数解释:  Insert作业执行过程中扫描的记录条数 示例: 66 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * badRowCount  参数解释:  Insert作业执行过程中扫描到的错误记录数 示例: 666 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * inputSize  参数解释:  作业执行过程中扫描文件的大小 示例: 5 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * resultCount  参数解释:  当前作业返回的结果总条数或insert作业插入的总条数 示例: 55 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * databaseName  参数解释:  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性 示例: db2 约束限制:  无 取值范围: 无 默认取值: 无
+    * tableName  参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: t2 约束限制:  无 取值范围: 无 默认取值: 无
+    * detail  参数解释:  SQL查询的相关列信息的Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
+    * userConf  参数解释:  SQL配置参数信息Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
+    * resultPath  参数解释:  查询结果OBS路径 示例: obs://bucketName/jobs/result/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
+    * executionDetailsPath  参数解释:  查询作业执行计划OBS路径 示例: obs://bucketName/jobs/execution_details/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
+    * resultFormat  参数解释:  查询结果格式 示例: csv 约束限制:  无 取值范围: csv 默认取值: 无
+    * statement  参数解释:  作业执行的SQL语句 示例: select * from t_json_002 约束限制:  符合SQL格式 取值范围: 无 默认取值: 无
+    * isSuccess  参数解释:  执行请求是否成功。true表示请求执行成功 示例: true 约束限制:  无 取值范围: true、false 默认取值: 无
+    * message  参数解释:  系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobMode  参数解释:  作业执行方式 示例: async 约束限制:  无 取值范围: async（同步） sync（异步） 默认取值: 无
     * tags  作业标签
     *
     * @var string[]
@@ -204,28 +204,28 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  作业ID。
-    * jobType  作业类型。
-    * queueName  作业提交的队列。
-    * owner  提交作业的用户。
-    * startTime  作业开始的时间。是单位为“毫秒”的时间戳。
-    * duration  作业运行时长，单位毫秒。
-    * status  此作业的当前状态，包含提交（LAUNCHING）、运行中（RUNNING）、完成（FINISHED）、失败（FAILED）、取消（CANCELLED）。
-    * inputRowCount  Insert作业执行过程中扫描的记录条数。
-    * badRowCount  Insert作业执行过程中扫描到的错误记录数。
-    * inputSize  作业执行过程中扫描文件的大小。
-    * resultCount  当前作业返回的结果总条数或insert作业插入的总条数。
-    * databaseName  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
-    * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
-    * detail  SQL查询的相关列信息的Json字符串。
-    * userConf  SQL配置参数信息Json字符串。
-    * resultPath  查询结果OBS路径
-    * executionDetailsPath  查询作业执行计划OBS路径
-    * resultFormat  查询结果格式
-    * statement  作业执行的SQL语句。
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobMode  作业执行方式
+    * jobId  参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 任意字符串 默认取值: 无
+    * jobType  参数解释:  作业类型 示例: 指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * queueName  参数解释:  作业提交的队列 示例: dli_sql 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释:  提交作业的用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * startTime  参数解释:  作业开始的时间。是单位为“毫秒”的时间戳 示例: 1502349803729 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:  作业运行时长，单位毫秒 示例: 1000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * status  参数解释:  此作业的当前状态 示例: CANCELLED 约束限制:  无 取值范围: LAUNCHING（提交） RUNNING（运行中） FINISH（完成） FAILED（失败） CANCELLED（取消） 默认取值: 无
+    * inputRowCount  参数解释:  Insert作业执行过程中扫描的记录条数 示例: 66 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * badRowCount  参数解释:  Insert作业执行过程中扫描到的错误记录数 示例: 666 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * inputSize  参数解释:  作业执行过程中扫描文件的大小 示例: 5 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * resultCount  参数解释:  当前作业返回的结果总条数或insert作业插入的总条数 示例: 55 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * databaseName  参数解释:  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性 示例: db2 约束限制:  无 取值范围: 无 默认取值: 无
+    * tableName  参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: t2 约束限制:  无 取值范围: 无 默认取值: 无
+    * detail  参数解释:  SQL查询的相关列信息的Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
+    * userConf  参数解释:  SQL配置参数信息Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
+    * resultPath  参数解释:  查询结果OBS路径 示例: obs://bucketName/jobs/result/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
+    * executionDetailsPath  参数解释:  查询作业执行计划OBS路径 示例: obs://bucketName/jobs/execution_details/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
+    * resultFormat  参数解释:  查询结果格式 示例: csv 约束限制:  无 取值范围: csv 默认取值: 无
+    * statement  参数解释:  作业执行的SQL语句 示例: select * from t_json_002 约束限制:  符合SQL格式 取值范围: 无 默认取值: 无
+    * isSuccess  参数解释:  执行请求是否成功。true表示请求执行成功 示例: true 约束限制:  无 取值范围: true、false 默认取值: 无
+    * message  参数解释:  系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobMode  参数解释:  作业执行方式 示例: async 约束限制:  无 取值范围: async（同步） sync（异步） 默认取值: 无
     * tags  作业标签
     *
     * @var string[]
@@ -258,28 +258,28 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  作业ID。
-    * jobType  作业类型。
-    * queueName  作业提交的队列。
-    * owner  提交作业的用户。
-    * startTime  作业开始的时间。是单位为“毫秒”的时间戳。
-    * duration  作业运行时长，单位毫秒。
-    * status  此作业的当前状态，包含提交（LAUNCHING）、运行中（RUNNING）、完成（FINISHED）、失败（FAILED）、取消（CANCELLED）。
-    * inputRowCount  Insert作业执行过程中扫描的记录条数。
-    * badRowCount  Insert作业执行过程中扫描到的错误记录数。
-    * inputSize  作业执行过程中扫描文件的大小。
-    * resultCount  当前作业返回的结果总条数或insert作业插入的总条数。
-    * databaseName  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
-    * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
-    * detail  SQL查询的相关列信息的Json字符串。
-    * userConf  SQL配置参数信息Json字符串。
-    * resultPath  查询结果OBS路径
-    * executionDetailsPath  查询作业执行计划OBS路径
-    * resultFormat  查询结果格式
-    * statement  作业执行的SQL语句。
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobMode  作业执行方式
+    * jobId  参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 任意字符串 默认取值: 无
+    * jobType  参数解释:  作业类型 示例: 指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * queueName  参数解释:  作业提交的队列 示例: dli_sql 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释:  提交作业的用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * startTime  参数解释:  作业开始的时间。是单位为“毫秒”的时间戳 示例: 1502349803729 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:  作业运行时长，单位毫秒 示例: 1000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * status  参数解释:  此作业的当前状态 示例: CANCELLED 约束限制:  无 取值范围: LAUNCHING（提交） RUNNING（运行中） FINISH（完成） FAILED（失败） CANCELLED（取消） 默认取值: 无
+    * inputRowCount  参数解释:  Insert作业执行过程中扫描的记录条数 示例: 66 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * badRowCount  参数解释:  Insert作业执行过程中扫描到的错误记录数 示例: 666 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * inputSize  参数解释:  作业执行过程中扫描文件的大小 示例: 5 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * resultCount  参数解释:  当前作业返回的结果总条数或insert作业插入的总条数 示例: 55 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * databaseName  参数解释:  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性 示例: db2 约束限制:  无 取值范围: 无 默认取值: 无
+    * tableName  参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: t2 约束限制:  无 取值范围: 无 默认取值: 无
+    * detail  参数解释:  SQL查询的相关列信息的Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
+    * userConf  参数解释:  SQL配置参数信息Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
+    * resultPath  参数解释:  查询结果OBS路径 示例: obs://bucketName/jobs/result/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
+    * executionDetailsPath  参数解释:  查询作业执行计划OBS路径 示例: obs://bucketName/jobs/execution_details/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
+    * resultFormat  参数解释:  查询结果格式 示例: csv 约束限制:  无 取值范围: csv 默认取值: 无
+    * statement  参数解释:  作业执行的SQL语句 示例: select * from t_json_002 约束限制:  符合SQL格式 取值范围: 无 默认取值: 无
+    * isSuccess  参数解释:  执行请求是否成功。true表示请求执行成功 示例: true 约束限制:  无 取值范围: true、false 默认取值: 无
+    * message  参数解释:  系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobMode  参数解释:  作业执行方式 示例: async 约束限制:  无 取值范围: async（同步） sync（异步） 默认取值: 无
     * tags  作业标签
     *
     * @var string[]
@@ -350,12 +350,45 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const JOB_TYPE_DDL = 'DDL';
+    const JOB_TYPE_DCL = 'DCL';
+    const JOB_TYPE_IMPORT = 'IMPORT';
+    const JOB_TYPE_EXPORT = 'EXPORT';
+    const JOB_TYPE_QUERY = 'QUERY';
+    const JOB_TYPE_INSERT = 'INSERT';
+    const JOB_TYPE_DATA_MIGRATION = 'DATA_MIGRATION';
+    const JOB_TYPE_UPDATE = 'UPDATE';
+    const JOB_TYPE_DELETE = 'DELETE';
+    const JOB_TYPE_RESTART_QUEUE = 'RESTART_QUEUE';
+    const JOB_TYPE_SCALE_QUEUE = 'SCALE_QUEUE';
     const STATUS_LAUNCHING = 'LAUNCHING';
     const STATUS_RUNNING = 'RUNNING';
     const STATUS_FINISHED = 'FINISHED';
     const STATUS_FAILED = 'FAILED';
     const STATUS_CANCELLED = 'CANCELLED';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getJobTypeAllowableValues()
+    {
+        return [
+            self::JOB_TYPE_DDL,
+            self::JOB_TYPE_DCL,
+            self::JOB_TYPE_IMPORT,
+            self::JOB_TYPE_EXPORT,
+            self::JOB_TYPE_QUERY,
+            self::JOB_TYPE_INSERT,
+            self::JOB_TYPE_DATA_MIGRATION,
+            self::JOB_TYPE_UPDATE,
+            self::JOB_TYPE_DELETE,
+            self::JOB_TYPE_RESTART_QUEUE,
+            self::JOB_TYPE_SCALE_QUEUE,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -422,6 +455,14 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getJobTypeAllowableValues();
+                if (!is_null($this->container['jobType']) && !in_array($this->container['jobType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'jobType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -446,7 +487,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  作业ID。
+    *  参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 任意字符串 默认取值: 无
     *
     * @return string|null
     */
@@ -458,7 +499,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 作业ID。
+    * @param string|null $jobId 参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 任意字符串 默认取值: 无
     *
     * @return $this
     */
@@ -470,7 +511,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
-    *  作业类型。
+    *  参数解释:  作业类型 示例: 指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
     *
     * @return string|null
     */
@@ -482,7 +523,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobType
     *
-    * @param string|null $jobType 作业类型。
+    * @param string|null $jobType 参数解释:  作业类型 示例: 指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
     *
     * @return $this
     */
@@ -494,7 +535,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
-    *  作业提交的队列。
+    *  参数解释:  作业提交的队列 示例: dli_sql 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -506,7 +547,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets queueName
     *
-    * @param string|null $queueName 作业提交的队列。
+    * @param string|null $queueName 参数解释:  作业提交的队列 示例: dli_sql 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -518,7 +559,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  提交作业的用户。
+    *  参数解释:  提交作业的用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -530,7 +571,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner 提交作业的用户。
+    * @param string|null $owner 参数解释:  提交作业的用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -542,7 +583,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  作业开始的时间。是单位为“毫秒”的时间戳。
+    *  参数解释:  作业开始的时间。是单位为“毫秒”的时间戳 示例: 1502349803729 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -554,7 +595,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 作业开始的时间。是单位为“毫秒”的时间戳。
+    * @param int|null $startTime 参数解释:  作业开始的时间。是单位为“毫秒”的时间戳 示例: 1502349803729 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -566,7 +607,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  作业运行时长，单位毫秒。
+    *  参数解释:  作业运行时长，单位毫秒 示例: 1000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -578,7 +619,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int|null $duration 作业运行时长，单位毫秒。
+    * @param int|null $duration 参数解释:  作业运行时长，单位毫秒 示例: 1000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -590,7 +631,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  此作业的当前状态，包含提交（LAUNCHING）、运行中（RUNNING）、完成（FINISHED）、失败（FAILED）、取消（CANCELLED）。
+    *  参数解释:  此作业的当前状态 示例: CANCELLED 约束限制:  无 取值范围: LAUNCHING（提交） RUNNING（运行中） FINISH（完成） FAILED（失败） CANCELLED（取消） 默认取值: 无
     *
     * @return string|null
     */
@@ -602,7 +643,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 此作业的当前状态，包含提交（LAUNCHING）、运行中（RUNNING）、完成（FINISHED）、失败（FAILED）、取消（CANCELLED）。
+    * @param string|null $status 参数解释:  此作业的当前状态 示例: CANCELLED 约束限制:  无 取值范围: LAUNCHING（提交） RUNNING（运行中） FINISH（完成） FAILED（失败） CANCELLED（取消） 默认取值: 无
     *
     * @return $this
     */
@@ -614,7 +655,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets inputRowCount
-    *  Insert作业执行过程中扫描的记录条数。
+    *  参数解释:  Insert作业执行过程中扫描的记录条数 示例: 66 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -626,7 +667,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets inputRowCount
     *
-    * @param int|null $inputRowCount Insert作业执行过程中扫描的记录条数。
+    * @param int|null $inputRowCount 参数解释:  Insert作业执行过程中扫描的记录条数 示例: 66 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -638,7 +679,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets badRowCount
-    *  Insert作业执行过程中扫描到的错误记录数。
+    *  参数解释:  Insert作业执行过程中扫描到的错误记录数 示例: 666 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -650,7 +691,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets badRowCount
     *
-    * @param int|null $badRowCount Insert作业执行过程中扫描到的错误记录数。
+    * @param int|null $badRowCount 参数解释:  Insert作业执行过程中扫描到的错误记录数 示例: 666 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -662,7 +703,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets inputSize
-    *  作业执行过程中扫描文件的大小。
+    *  参数解释:  作业执行过程中扫描文件的大小 示例: 5 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -674,7 +715,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets inputSize
     *
-    * @param int|null $inputSize 作业执行过程中扫描文件的大小。
+    * @param int|null $inputSize 参数解释:  作业执行过程中扫描文件的大小 示例: 5 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -686,7 +727,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resultCount
-    *  当前作业返回的结果总条数或insert作业插入的总条数。
+    *  参数解释:  当前作业返回的结果总条数或insert作业插入的总条数 示例: 55 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -698,7 +739,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resultCount
     *
-    * @param int|null $resultCount 当前作业返回的结果总条数或insert作业插入的总条数。
+    * @param int|null $resultCount 参数解释:  当前作业返回的结果总条数或insert作业插入的总条数 示例: 55 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -710,7 +751,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets databaseName
-    *  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
+    *  参数解释:  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性 示例: db2 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -722,7 +763,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets databaseName
     *
-    * @param string|null $databaseName 记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
+    * @param string|null $databaseName 参数解释:  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性 示例: db2 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -734,7 +775,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableName
-    *  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
+    *  参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: t2 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -746,7 +787,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tableName
     *
-    * @param string|null $tableName 记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
+    * @param string|null $tableName 参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: t2 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -758,7 +799,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets detail
-    *  SQL查询的相关列信息的Json字符串。
+    *  参数解释:  SQL查询的相关列信息的Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -770,7 +811,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets detail
     *
-    * @param string|null $detail SQL查询的相关列信息的Json字符串。
+    * @param string|null $detail 参数解释:  SQL查询的相关列信息的Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -782,7 +823,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets userConf
-    *  SQL配置参数信息Json字符串。
+    *  参数解释:  SQL配置参数信息Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -794,7 +835,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets userConf
     *
-    * @param string|null $userConf SQL配置参数信息Json字符串。
+    * @param string|null $userConf 参数解释:  SQL配置参数信息Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合JSON格式 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -806,7 +847,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resultPath
-    *  查询结果OBS路径
+    *  参数解释:  查询结果OBS路径 示例: obs://bucketName/jobs/result/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -818,7 +859,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resultPath
     *
-    * @param string|null $resultPath 查询结果OBS路径
+    * @param string|null $resultPath 参数解释:  查询结果OBS路径 示例: obs://bucketName/jobs/result/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -830,7 +871,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets executionDetailsPath
-    *  查询作业执行计划OBS路径
+    *  参数解释:  查询作业执行计划OBS路径 示例: obs://bucketName/jobs/execution_details/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -842,7 +883,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets executionDetailsPath
     *
-    * @param string|null $executionDetailsPath 查询作业执行计划OBS路径
+    * @param string|null $executionDetailsPath 参数解释:  查询作业执行计划OBS路径 示例: obs://bucketName/jobs/execution_details/011c99a26ae84a1bb963a75e7637d3fd/2023/11/10/229b23ad-5033-40ed-ad70-fda900f2f04e 约束限制:  符合OBS路径格式，obs://_* 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -854,7 +895,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resultFormat
-    *  查询结果格式
+    *  参数解释:  查询结果格式 示例: csv 约束限制:  无 取值范围: csv 默认取值: 无
     *
     * @return string|null
     */
@@ -866,7 +907,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resultFormat
     *
-    * @param string|null $resultFormat 查询结果格式
+    * @param string|null $resultFormat 参数解释:  查询结果格式 示例: csv 约束限制:  无 取值范围: csv 默认取值: 无
     *
     * @return $this
     */
@@ -878,7 +919,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets statement
-    *  作业执行的SQL语句。
+    *  参数解释:  作业执行的SQL语句 示例: select * from t_json_002 约束限制:  符合SQL格式 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -890,7 +931,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets statement
     *
-    * @param string|null $statement 作业执行的SQL语句。
+    * @param string|null $statement 参数解释:  作业执行的SQL语句 示例: select * from t_json_002 约束限制:  符合SQL格式 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -902,7 +943,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSuccess
-    *  执行请求是否成功。“true”表示请求执行成功。
+    *  参数解释:  执行请求是否成功。true表示请求执行成功 示例: true 约束限制:  无 取值范围: true、false 默认取值: 无
     *
     * @return bool|null
     */
@@ -914,7 +955,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSuccess
     *
-    * @param bool|null $isSuccess 执行请求是否成功。“true”表示请求执行成功。
+    * @param bool|null $isSuccess 参数解释:  执行请求是否成功。true表示请求执行成功 示例: true 约束限制:  无 取值范围: true、false 默认取值: 无
     *
     * @return $this
     */
@@ -926,7 +967,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  系统提示信息，执行成功时，信息可能为空。
+    *  参数解释:  系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -938,7 +979,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 系统提示信息，执行成功时，信息可能为空。
+    * @param string|null $message 参数解释:  系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -950,7 +991,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobMode
-    *  作业执行方式
+    *  参数解释:  作业执行方式 示例: async 约束限制:  无 取值范围: async（同步） sync（异步） 默认取值: 无
     *
     * @return string|null
     */
@@ -962,7 +1003,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobMode
     *
-    * @param string|null $jobMode 作业执行方式
+    * @param string|null $jobMode 参数解释:  作业执行方式 示例: async 约束限制:  无 取值范围: async（同步） sync（异步） 默认取值: 无
     *
     * @return $this
     */

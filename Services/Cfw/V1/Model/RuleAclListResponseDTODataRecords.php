@@ -24,6 +24,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * applications  应用列表
     * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
+    * orderId  排序id
     * direction  规则方向0：外到内1：内到外
     * actionType  动作0：permit，1：deny
     * status  规则下发状态 0：禁用，1：启用
@@ -48,6 +49,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'applications' => 'string[]',
             'addressType' => 'int',
             'name' => 'string',
+            'orderId' => 'int',
             'direction' => 'int',
             'actionType' => 'int',
             'status' => 'int',
@@ -72,6 +74,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * applications  应用列表
     * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
+    * orderId  排序id
     * direction  规则方向0：外到内1：内到外
     * actionType  动作0：permit，1：deny
     * status  规则下发状态 0：禁用，1：启用
@@ -96,6 +99,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
         'applications' => null,
         'addressType' => 'int32',
         'name' => null,
+        'orderId' => 'int32',
         'direction' => 'int32',
         'actionType' => null,
         'status' => null,
@@ -141,6 +145,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * applications  应用列表
     * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
+    * orderId  排序id
     * direction  规则方向0：外到内1：内到外
     * actionType  动作0：permit，1：deny
     * status  规则下发状态 0：禁用，1：启用
@@ -165,6 +170,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'applications' => 'applications',
             'addressType' => 'address_type',
             'name' => 'name',
+            'orderId' => 'order_id',
             'direction' => 'direction',
             'actionType' => 'action_type',
             'status' => 'status',
@@ -189,6 +195,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * applications  应用列表
     * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
+    * orderId  排序id
     * direction  规则方向0：外到内1：内到外
     * actionType  动作0：permit，1：deny
     * status  规则下发状态 0：禁用，1：启用
@@ -213,6 +220,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'applications' => 'setApplications',
             'addressType' => 'setAddressType',
             'name' => 'setName',
+            'orderId' => 'setOrderId',
             'direction' => 'setDirection',
             'actionType' => 'setActionType',
             'status' => 'setStatus',
@@ -237,6 +245,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * applications  应用列表
     * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
+    * orderId  排序id
     * direction  规则方向0：外到内1：内到外
     * actionType  动作0：permit，1：deny
     * status  规则下发状态 0：禁用，1：启用
@@ -261,6 +270,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'applications' => 'getApplications',
             'addressType' => 'getAddressType',
             'name' => 'getName',
+            'orderId' => 'getOrderId',
             'direction' => 'getDirection',
             'actionType' => 'getActionType',
             'status' => 'getStatus',
@@ -373,6 +383,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
         $this->container['applications'] = isset($data['applications']) ? $data['applications'] : null;
         $this->container['addressType'] = isset($data['addressType']) ? $data['addressType'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
         $this->container['actionType'] = isset($data['actionType']) ? $data['actionType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -525,6 +536,30 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets orderId
+    *  排序id
+    *
+    * @return int|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param int|null $orderId 排序id
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
         return $this;
     }
 

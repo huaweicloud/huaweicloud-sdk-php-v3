@@ -32,6 +32,7 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
     * destNetworkId  对应服务的子网网络标识。
     * createTime  创建连接的时间。为UTC的时间戳。
     * hosts  用户自定义主机信息。
+    * ipv6Enable  是否启用IPv6
     *
     * @var string[]
     */
@@ -46,7 +47,8 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
             'destVpcId' => 'string',
             'destNetworkId' => 'string',
             'createTime' => 'int',
-            'hosts' => '\HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionHost[]'
+            'hosts' => '\HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionHost[]',
+            'ipv6Enable' => 'bool'
     ];
 
     /**
@@ -62,6 +64,7 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
     * destNetworkId  对应服务的子网网络标识。
     * createTime  创建连接的时间。为UTC的时间戳。
     * hosts  用户自定义主机信息。
+    * ipv6Enable  是否启用IPv6
     *
     * @var string[]
     */
@@ -76,7 +79,8 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
         'destVpcId' => null,
         'destNetworkId' => null,
         'createTime' => 'int64',
-        'hosts' => null
+        'hosts' => null,
+        'ipv6Enable' => null
     ];
 
     /**
@@ -113,6 +117,7 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
     * destNetworkId  对应服务的子网网络标识。
     * createTime  创建连接的时间。为UTC的时间戳。
     * hosts  用户自定义主机信息。
+    * ipv6Enable  是否启用IPv6
     *
     * @var string[]
     */
@@ -127,7 +132,8 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
             'destVpcId' => 'dest_vpc_id',
             'destNetworkId' => 'dest_network_id',
             'createTime' => 'create_time',
-            'hosts' => 'hosts'
+            'hosts' => 'hosts',
+            'ipv6Enable' => 'ipv6_enable'
     ];
 
     /**
@@ -143,6 +149,7 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
     * destNetworkId  对应服务的子网网络标识。
     * createTime  创建连接的时间。为UTC的时间戳。
     * hosts  用户自定义主机信息。
+    * ipv6Enable  是否启用IPv6
     *
     * @var string[]
     */
@@ -157,7 +164,8 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
             'destVpcId' => 'setDestVpcId',
             'destNetworkId' => 'setDestNetworkId',
             'createTime' => 'setCreateTime',
-            'hosts' => 'setHosts'
+            'hosts' => 'setHosts',
+            'ipv6Enable' => 'setIpv6Enable'
     ];
 
     /**
@@ -173,6 +181,7 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
     * destNetworkId  对应服务的子网网络标识。
     * createTime  创建连接的时间。为UTC的时间戳。
     * hosts  用户自定义主机信息。
+    * ipv6Enable  是否启用IPv6
     *
     * @var string[]
     */
@@ -187,7 +196,8 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
             'destVpcId' => 'getDestVpcId',
             'destNetworkId' => 'getDestNetworkId',
             'createTime' => 'getCreateTime',
-            'hosts' => 'getHosts'
+            'hosts' => 'getHosts',
+            'ipv6Enable' => 'getIpv6Enable'
     ];
 
     /**
@@ -259,6 +269,7 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
         $this->container['destNetworkId'] = isset($data['destNetworkId']) ? $data['destNetworkId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
+        $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
     }
 
     /**
@@ -544,6 +555,30 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
     public function setHosts($hosts)
     {
         $this->container['hosts'] = $hosts;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6Enable
+    *  是否启用IPv6
+    *
+    * @return bool|null
+    */
+    public function getIpv6Enable()
+    {
+        return $this->container['ipv6Enable'];
+    }
+
+    /**
+    * Sets ipv6Enable
+    *
+    * @param bool|null $ipv6Enable 是否启用IPv6
+    *
+    * @return $this
+    */
+    public function setIpv6Enable($ipv6Enable)
+    {
+        $this->container['ipv6Enable'] = $ipv6Enable;
         return $this;
     }
 

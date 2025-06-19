@@ -2414,6 +2414,440 @@ class CodeArtsBuildClient extends Client
     }
 
     /**
+     * 检查webhook地址参数
+     *
+     * 检查webhook地址参数
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkWebhookUrl($request)
+    {
+        return $this->checkWebhookUrlWithHttpInfo($request);
+    }
+
+    public function checkWebhookUrlWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/job/check/webhook-url';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\CheckWebhookUrlResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\CheckWebhookUrlRequest');
+    }
+
+    /**
+     * 清空回收站中的任务
+     *
+     * 清空回收站中的任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function clearRecyclingJobs($request)
+    {
+        return $this->clearRecyclingJobsWithHttpInfo($request);
+    }
+
+    public function clearRecyclingJobsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/job/recycling-empty';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\ClearRecyclingJobsResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\ClearRecyclingJobsRequest');
+    }
+
+    /**
+     * 复制构建任务
+     *
+     * 复制构建任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function copyJob($request)
+    {
+        return $this->copyJobWithHttpInfo($request);
+    }
+
+    public function copyJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/job/copy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\CopyJobResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\CopyJobRequest');
+    }
+
+    /**
+     * 删除回收站中的任务
+     *
+     * 删除回收站中的任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteRecyclingJobs($request)
+    {
+        return $this->deleteRecyclingJobsWithHttpInfo($request);
+    }
+
+    public function deleteRecyclingJobsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/job/recycling-deletion';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteRecyclingJobsResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteRecyclingJobsRequest');
+    }
+
+    /**
+     * 删除任务
+     *
+     * 删除任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTheJob($request)
+    {
+        return $this->deleteTheJobWithHttpInfo($request);
+    }
+
+    public function deleteTheJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/job/{job_id}/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteTheJobResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteTheJobRequest');
+    }
+
+    /**
+     * 禁用任务
+     *
+     * 禁用任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disableTheJob($request)
+    {
+        return $this->disableTheJobWithHttpInfo($request);
+    }
+
+    public function disableTheJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/job/{job_id}/disable';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DisableTheJobResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DisableTheJobRequest');
+    }
+
+    /**
+     * 执行构建
+     *
+     * 执行构建任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function executeJob($request)
+    {
+        return $this->executeJobWithHttpInfo($request);
+    }
+
+    public function executeJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/job/execute';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\ExecuteJobResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\ExecuteJobRequest');
+    }
+
+    /**
      * 详情页获取构建参数
      *
      * 详情页获取构建参数
@@ -2760,6 +3194,130 @@ class CodeArtsBuildClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\ListUpdateJobHistoryResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\ListUpdateJobHistoryRequest');
+    }
+
+    /**
+     * 恢复回收站中的任务
+     *
+     * 恢复回收站中的任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function restoreRecyclingJobs($request)
+    {
+        return $this->restoreRecyclingJobsWithHttpInfo($request);
+    }
+
+    public function restoreRecyclingJobsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/job/recycling-restoration';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\RestoreRecyclingJobsResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\RestoreRecyclingJobsRequest');
+    }
+
+    /**
+     * 设置回收站中的任务保留时间
+     *
+     * 设置回收站中的任务保留时间,该接口需要租户账号才能访问，租户子账号无权限访问。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setKeepTime($request)
+    {
+        return $this->setKeepTimeWithHttpInfo($request);
+    }
+
+    public function setKeepTimeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/job/keep-time';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\SetKeepTimeResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\SetKeepTimeRequest');
     }
 
     /**
@@ -3575,6 +4133,192 @@ class CodeArtsBuildClient extends Client
     }
 
     /**
+     * 更新构建任务
+     *
+     * 更新构建任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateNewJob($request)
+    {
+        return $this->updateNewJobWithHttpInfo($request);
+    }
+
+    public function updateNewJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/job/update';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\UpdateNewJobResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\UpdateNewJobRequest');
+    }
+
+    /**
+     * 删除文件管理文件
+     *
+     * 删除文件管理文件
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteKeystore($request)
+    {
+        return $this->deleteKeystoreWithHttpInfo($request);
+    }
+
+    public function deleteKeystoreWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/keystore/{keystore_id}/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['keystoreId'] !== null) {
+            $pathParams['keystore_id'] = $localVarParams['keystoreId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteKeystoreResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteKeystoreRequest');
+    }
+
+    /**
+     * 文件管理删除权限
+     *
+     * 文件管理删除权限
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteKeystorePermission($request)
+    {
+        return $this->deleteKeystorePermissionWithHttpInfo($request);
+    }
+
+    public function deleteKeystorePermissionWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/keystore/permission/{permission_id}/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['permissionId'] !== null) {
+            $pathParams['permission_id'] = $localVarParams['permissionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteKeystorePermissionResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteKeystorePermissionRequest');
+    }
+
+    /**
      * 文件管理文件下载
      *
      * 文件管理文件下载
@@ -4086,6 +4830,71 @@ class CodeArtsBuildClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\StopJobResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\StopJobRequest');
+    }
+
+    /**
+     * 获取指定工程的简要构建信息
+     *
+     * 获取指定工程的简要构建信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBriefRecord($request)
+    {
+        return $this->listBriefRecordWithHttpInfo($request);
+    }
+
+    public function listBriefRecordWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/record/brief';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\ListBriefRecordResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\ListBriefRecordRequest');
     }
 
     /**
@@ -5162,6 +5971,68 @@ class CodeArtsBuildClient extends Client
     }
 
     /**
+     * 删除构建模板
+     *
+     * 删除构建模板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTemplate($request)
+    {
+        return $this->deleteTemplateWithHttpInfo($request);
+    }
+
+    public function deleteTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/template/{uuid}/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['uuid'] !== null) {
+            $pathParams['uuid'] = $localVarParams['uuid'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteTemplateRequest');
+    }
+
+    /**
      * 根据条件查询特定模板
      *
      * 根据条件查询特定模板
@@ -5301,6 +6172,68 @@ class CodeArtsBuildClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\ListOfficialTemplateResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\ListOfficialTemplateRequest');
+    }
+
+    /**
+     * 获取官方推荐模板
+     *
+     * 获取官方推荐模板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRecommendOfficialTemplate($request)
+    {
+        return $this->listRecommendOfficialTemplateWithHttpInfo($request);
+    }
+
+    public function listRecommendOfficialTemplateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/template/recommend';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\ListRecommendOfficialTemplateResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\ListRecommendOfficialTemplateRequest');
     }
 
     /**

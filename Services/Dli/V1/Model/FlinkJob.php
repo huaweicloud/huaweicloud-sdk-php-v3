@@ -20,31 +20,31 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  作业ID。
-    * name  作业名称。长度限制：0-57个字符。
-    * desc  作业描述。长度限制：0-2048个字符。
-    * userName  用户名，当“show_detail”为“false”时独有。
-    * jobType  作业类型。
-    * status  作业状态。
-    * statusDesc  作业状态描述。
-    * createTime  作业创建时间。
-    * startTime  作业开始时间。
-    * duration  作业运行时长, 单位ms，当“show_detail”为“false”时独有。
-    * rootId  父作业ID，“show_detail”为“false”时独有。
-    * userId  作业所属用户标识，“show_detail”为“true”时独有。
-    * projectId  作业所属项目标识，“show_detail”为“true”时独有。
-    * sqlBody  Stream SQL语句，“show_detail”为“false”时独有。
-    * runMode  作业运行模式： shared_cluster：共享。 exclusive_cluster：独享。 edge_node：边缘节点。 show_detail为true时独有.
-    * mainClass  jar包主类，“show_detail”为“false”时独有。
-    * entrypointArgs  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的。
-    * executionGraph  作业执行计划，“show_detail”为“false”时独有。
-    * updateTime  作业更新时间，“show_detail”为“false”时独有。
-    * graphEditorEnabled  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑。
-    * hasSavepoint  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点。
-    * queueName  队列名字。
-    * edgeGroupIds  边缘计算组ID列表。
-    * restartTimes  重启次数。
-    * savepointPath  保存点路径。
+    * jobId  参数解释:  作业ID 示例: 50320 约束限制:  无 取值范围: 无 默认取值: 无
+    * name  参数解释:  作业名称 示例: test 约束限制:  长度在[0,57]范围内的字符串 取值范围: 无 默认取值: 无
+    * desc  参数解释:  作业描述 示例: 作业描述 约束限制:  长度在[0,2048]范围内的字符串 取值范围: 无 默认取值: 无
+    * userName  参数解释:  用户名称 示例: testuser 约束限制:  长度在[1,128]范围内的字符串 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
+    * status  参数解释:  作业状态 示例: job_running 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
+    * statusDesc  参数解释:  用户名称 示例: 作业状态描述 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释:  作业创建时间 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * startTime  参数解释:  作业开始时间 示例: 1516952710740 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:  作业运行时长，单位ms，当“show_detail”为“false”时独有 示例: 30000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * rootId  参数解释:  父作业ID，“show_detail”为“false”时独有 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
+    * userId  参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: ac4eaa303639409c8ab099d55eb1538e 约束限制:  无 取值范围: 无 默认取值: 无
+    * projectId  参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
+    * sqlBody  参数解释:  Stream SQL语句，“show_detail”为“false”时独有 示例: select * from source_table 约束限制:  无 取值范围: 无 默认取值: 无
+    * runMode  参数解释:  作业运行模式，show_detail为true时独有 示例: shared_cluster 约束限制:  无 取值范围: shared_cluster（共享） exclusive_cluster（独享） edge_node（边缘节点） 默认取值: 无
+    * mainClass  参数解释:  jar包主类，“show_detail”为“false”时独有 示例: org.apache.spark.examples.streaming.JavaQueueStream 约束限制:  无 取值范围: 无 默认取值: 无
+    * entrypointArgs  参数解释:  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的 示例: custom.dir=/usr custom.prefix=dli 约束限制:  无 取值范围: 无 默认取值: 无
+    * executionGraph  参数解释:  作业执行计划，“show_detail”为“false”时独有 约束限制:  无 取值范围: 无 默认取值: 无
+    * updateTime  参数解释:  作业更新时间，“show_detail”为“false”时独有 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * graphEditorEnabled  参数解释:  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * hasSavepoint  参数解释:  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * queueName  参数解释:  队列名称 示例: flink_17_queue 约束限制:  无 取值范围: 无 默认取值: 无
+    * edgeGroupIds  参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
+    * restartTimes  参数解释:  重启次数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * savepointPath  参数解释:  保存点路径 示例: obs://cwk/savepoint/ 约束限制:  无 取值范围: 无 默认取值: 无
     * jobConfig  jobConfig
     *
     * @var string[]
@@ -80,31 +80,31 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  作业ID。
-    * name  作业名称。长度限制：0-57个字符。
-    * desc  作业描述。长度限制：0-2048个字符。
-    * userName  用户名，当“show_detail”为“false”时独有。
-    * jobType  作业类型。
-    * status  作业状态。
-    * statusDesc  作业状态描述。
-    * createTime  作业创建时间。
-    * startTime  作业开始时间。
-    * duration  作业运行时长, 单位ms，当“show_detail”为“false”时独有。
-    * rootId  父作业ID，“show_detail”为“false”时独有。
-    * userId  作业所属用户标识，“show_detail”为“true”时独有。
-    * projectId  作业所属项目标识，“show_detail”为“true”时独有。
-    * sqlBody  Stream SQL语句，“show_detail”为“false”时独有。
-    * runMode  作业运行模式： shared_cluster：共享。 exclusive_cluster：独享。 edge_node：边缘节点。 show_detail为true时独有.
-    * mainClass  jar包主类，“show_detail”为“false”时独有。
-    * entrypointArgs  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的。
-    * executionGraph  作业执行计划，“show_detail”为“false”时独有。
-    * updateTime  作业更新时间，“show_detail”为“false”时独有。
-    * graphEditorEnabled  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑。
-    * hasSavepoint  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点。
-    * queueName  队列名字。
-    * edgeGroupIds  边缘计算组ID列表。
-    * restartTimes  重启次数。
-    * savepointPath  保存点路径。
+    * jobId  参数解释:  作业ID 示例: 50320 约束限制:  无 取值范围: 无 默认取值: 无
+    * name  参数解释:  作业名称 示例: test 约束限制:  长度在[0,57]范围内的字符串 取值范围: 无 默认取值: 无
+    * desc  参数解释:  作业描述 示例: 作业描述 约束限制:  长度在[0,2048]范围内的字符串 取值范围: 无 默认取值: 无
+    * userName  参数解释:  用户名称 示例: testuser 约束限制:  长度在[1,128]范围内的字符串 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
+    * status  参数解释:  作业状态 示例: job_running 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
+    * statusDesc  参数解释:  用户名称 示例: 作业状态描述 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释:  作业创建时间 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * startTime  参数解释:  作业开始时间 示例: 1516952710740 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:  作业运行时长，单位ms，当“show_detail”为“false”时独有 示例: 30000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * rootId  参数解释:  父作业ID，“show_detail”为“false”时独有 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
+    * userId  参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: ac4eaa303639409c8ab099d55eb1538e 约束限制:  无 取值范围: 无 默认取值: 无
+    * projectId  参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
+    * sqlBody  参数解释:  Stream SQL语句，“show_detail”为“false”时独有 示例: select * from source_table 约束限制:  无 取值范围: 无 默认取值: 无
+    * runMode  参数解释:  作业运行模式，show_detail为true时独有 示例: shared_cluster 约束限制:  无 取值范围: shared_cluster（共享） exclusive_cluster（独享） edge_node（边缘节点） 默认取值: 无
+    * mainClass  参数解释:  jar包主类，“show_detail”为“false”时独有 示例: org.apache.spark.examples.streaming.JavaQueueStream 约束限制:  无 取值范围: 无 默认取值: 无
+    * entrypointArgs  参数解释:  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的 示例: custom.dir=/usr custom.prefix=dli 约束限制:  无 取值范围: 无 默认取值: 无
+    * executionGraph  参数解释:  作业执行计划，“show_detail”为“false”时独有 约束限制:  无 取值范围: 无 默认取值: 无
+    * updateTime  参数解释:  作业更新时间，“show_detail”为“false”时独有 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * graphEditorEnabled  参数解释:  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * hasSavepoint  参数解释:  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * queueName  参数解释:  队列名称 示例: flink_17_queue 约束限制:  无 取值范围: 无 默认取值: 无
+    * edgeGroupIds  参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
+    * restartTimes  参数解释:  重启次数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * savepointPath  参数解释:  保存点路径 示例: obs://cwk/savepoint/ 约束限制:  无 取值范围: 无 默认取值: 无
     * jobConfig  jobConfig
     *
     * @var string[]
@@ -161,31 +161,31 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  作业ID。
-    * name  作业名称。长度限制：0-57个字符。
-    * desc  作业描述。长度限制：0-2048个字符。
-    * userName  用户名，当“show_detail”为“false”时独有。
-    * jobType  作业类型。
-    * status  作业状态。
-    * statusDesc  作业状态描述。
-    * createTime  作业创建时间。
-    * startTime  作业开始时间。
-    * duration  作业运行时长, 单位ms，当“show_detail”为“false”时独有。
-    * rootId  父作业ID，“show_detail”为“false”时独有。
-    * userId  作业所属用户标识，“show_detail”为“true”时独有。
-    * projectId  作业所属项目标识，“show_detail”为“true”时独有。
-    * sqlBody  Stream SQL语句，“show_detail”为“false”时独有。
-    * runMode  作业运行模式： shared_cluster：共享。 exclusive_cluster：独享。 edge_node：边缘节点。 show_detail为true时独有.
-    * mainClass  jar包主类，“show_detail”为“false”时独有。
-    * entrypointArgs  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的。
-    * executionGraph  作业执行计划，“show_detail”为“false”时独有。
-    * updateTime  作业更新时间，“show_detail”为“false”时独有。
-    * graphEditorEnabled  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑。
-    * hasSavepoint  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点。
-    * queueName  队列名字。
-    * edgeGroupIds  边缘计算组ID列表。
-    * restartTimes  重启次数。
-    * savepointPath  保存点路径。
+    * jobId  参数解释:  作业ID 示例: 50320 约束限制:  无 取值范围: 无 默认取值: 无
+    * name  参数解释:  作业名称 示例: test 约束限制:  长度在[0,57]范围内的字符串 取值范围: 无 默认取值: 无
+    * desc  参数解释:  作业描述 示例: 作业描述 约束限制:  长度在[0,2048]范围内的字符串 取值范围: 无 默认取值: 无
+    * userName  参数解释:  用户名称 示例: testuser 约束限制:  长度在[1,128]范围内的字符串 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
+    * status  参数解释:  作业状态 示例: job_running 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
+    * statusDesc  参数解释:  用户名称 示例: 作业状态描述 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释:  作业创建时间 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * startTime  参数解释:  作业开始时间 示例: 1516952710740 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:  作业运行时长，单位ms，当“show_detail”为“false”时独有 示例: 30000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * rootId  参数解释:  父作业ID，“show_detail”为“false”时独有 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
+    * userId  参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: ac4eaa303639409c8ab099d55eb1538e 约束限制:  无 取值范围: 无 默认取值: 无
+    * projectId  参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
+    * sqlBody  参数解释:  Stream SQL语句，“show_detail”为“false”时独有 示例: select * from source_table 约束限制:  无 取值范围: 无 默认取值: 无
+    * runMode  参数解释:  作业运行模式，show_detail为true时独有 示例: shared_cluster 约束限制:  无 取值范围: shared_cluster（共享） exclusive_cluster（独享） edge_node（边缘节点） 默认取值: 无
+    * mainClass  参数解释:  jar包主类，“show_detail”为“false”时独有 示例: org.apache.spark.examples.streaming.JavaQueueStream 约束限制:  无 取值范围: 无 默认取值: 无
+    * entrypointArgs  参数解释:  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的 示例: custom.dir=/usr custom.prefix=dli 约束限制:  无 取值范围: 无 默认取值: 无
+    * executionGraph  参数解释:  作业执行计划，“show_detail”为“false”时独有 约束限制:  无 取值范围: 无 默认取值: 无
+    * updateTime  参数解释:  作业更新时间，“show_detail”为“false”时独有 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * graphEditorEnabled  参数解释:  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * hasSavepoint  参数解释:  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * queueName  参数解释:  队列名称 示例: flink_17_queue 约束限制:  无 取值范围: 无 默认取值: 无
+    * edgeGroupIds  参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
+    * restartTimes  参数解释:  重启次数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * savepointPath  参数解释:  保存点路径 示例: obs://cwk/savepoint/ 约束限制:  无 取值范围: 无 默认取值: 无
     * jobConfig  jobConfig
     *
     * @var string[]
@@ -221,31 +221,31 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  作业ID。
-    * name  作业名称。长度限制：0-57个字符。
-    * desc  作业描述。长度限制：0-2048个字符。
-    * userName  用户名，当“show_detail”为“false”时独有。
-    * jobType  作业类型。
-    * status  作业状态。
-    * statusDesc  作业状态描述。
-    * createTime  作业创建时间。
-    * startTime  作业开始时间。
-    * duration  作业运行时长, 单位ms，当“show_detail”为“false”时独有。
-    * rootId  父作业ID，“show_detail”为“false”时独有。
-    * userId  作业所属用户标识，“show_detail”为“true”时独有。
-    * projectId  作业所属项目标识，“show_detail”为“true”时独有。
-    * sqlBody  Stream SQL语句，“show_detail”为“false”时独有。
-    * runMode  作业运行模式： shared_cluster：共享。 exclusive_cluster：独享。 edge_node：边缘节点。 show_detail为true时独有.
-    * mainClass  jar包主类，“show_detail”为“false”时独有。
-    * entrypointArgs  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的。
-    * executionGraph  作业执行计划，“show_detail”为“false”时独有。
-    * updateTime  作业更新时间，“show_detail”为“false”时独有。
-    * graphEditorEnabled  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑。
-    * hasSavepoint  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点。
-    * queueName  队列名字。
-    * edgeGroupIds  边缘计算组ID列表。
-    * restartTimes  重启次数。
-    * savepointPath  保存点路径。
+    * jobId  参数解释:  作业ID 示例: 50320 约束限制:  无 取值范围: 无 默认取值: 无
+    * name  参数解释:  作业名称 示例: test 约束限制:  长度在[0,57]范围内的字符串 取值范围: 无 默认取值: 无
+    * desc  参数解释:  作业描述 示例: 作业描述 约束限制:  长度在[0,2048]范围内的字符串 取值范围: 无 默认取值: 无
+    * userName  参数解释:  用户名称 示例: testuser 约束限制:  长度在[1,128]范围内的字符串 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
+    * status  参数解释:  作业状态 示例: job_running 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
+    * statusDesc  参数解释:  用户名称 示例: 作业状态描述 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释:  作业创建时间 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * startTime  参数解释:  作业开始时间 示例: 1516952710740 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:  作业运行时长，单位ms，当“show_detail”为“false”时独有 示例: 30000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * rootId  参数解释:  父作业ID，“show_detail”为“false”时独有 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
+    * userId  参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: ac4eaa303639409c8ab099d55eb1538e 约束限制:  无 取值范围: 无 默认取值: 无
+    * projectId  参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
+    * sqlBody  参数解释:  Stream SQL语句，“show_detail”为“false”时独有 示例: select * from source_table 约束限制:  无 取值范围: 无 默认取值: 无
+    * runMode  参数解释:  作业运行模式，show_detail为true时独有 示例: shared_cluster 约束限制:  无 取值范围: shared_cluster（共享） exclusive_cluster（独享） edge_node（边缘节点） 默认取值: 无
+    * mainClass  参数解释:  jar包主类，“show_detail”为“false”时独有 示例: org.apache.spark.examples.streaming.JavaQueueStream 约束限制:  无 取值范围: 无 默认取值: 无
+    * entrypointArgs  参数解释:  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的 示例: custom.dir=/usr custom.prefix=dli 约束限制:  无 取值范围: 无 默认取值: 无
+    * executionGraph  参数解释:  作业执行计划，“show_detail”为“false”时独有 约束限制:  无 取值范围: 无 默认取值: 无
+    * updateTime  参数解释:  作业更新时间，“show_detail”为“false”时独有 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * graphEditorEnabled  参数解释:  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * hasSavepoint  参数解释:  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * queueName  参数解释:  队列名称 示例: flink_17_queue 约束限制:  无 取值范围: 无 默认取值: 无
+    * edgeGroupIds  参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
+    * restartTimes  参数解释:  重启次数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * savepointPath  参数解释:  保存点路径 示例: obs://cwk/savepoint/ 约束限制:  无 取值范围: 无 默认取值: 无
     * jobConfig  jobConfig
     *
     * @var string[]
@@ -281,31 +281,31 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  作业ID。
-    * name  作业名称。长度限制：0-57个字符。
-    * desc  作业描述。长度限制：0-2048个字符。
-    * userName  用户名，当“show_detail”为“false”时独有。
-    * jobType  作业类型。
-    * status  作业状态。
-    * statusDesc  作业状态描述。
-    * createTime  作业创建时间。
-    * startTime  作业开始时间。
-    * duration  作业运行时长, 单位ms，当“show_detail”为“false”时独有。
-    * rootId  父作业ID，“show_detail”为“false”时独有。
-    * userId  作业所属用户标识，“show_detail”为“true”时独有。
-    * projectId  作业所属项目标识，“show_detail”为“true”时独有。
-    * sqlBody  Stream SQL语句，“show_detail”为“false”时独有。
-    * runMode  作业运行模式： shared_cluster：共享。 exclusive_cluster：独享。 edge_node：边缘节点。 show_detail为true时独有.
-    * mainClass  jar包主类，“show_detail”为“false”时独有。
-    * entrypointArgs  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的。
-    * executionGraph  作业执行计划，“show_detail”为“false”时独有。
-    * updateTime  作业更新时间，“show_detail”为“false”时独有。
-    * graphEditorEnabled  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑。
-    * hasSavepoint  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点。
-    * queueName  队列名字。
-    * edgeGroupIds  边缘计算组ID列表。
-    * restartTimes  重启次数。
-    * savepointPath  保存点路径。
+    * jobId  参数解释:  作业ID 示例: 50320 约束限制:  无 取值范围: 无 默认取值: 无
+    * name  参数解释:  作业名称 示例: test 约束限制:  长度在[0,57]范围内的字符串 取值范围: 无 默认取值: 无
+    * desc  参数解释:  作业描述 示例: 作业描述 约束限制:  长度在[0,2048]范围内的字符串 取值范围: 无 默认取值: 无
+    * userName  参数解释:  用户名称 示例: testuser 约束限制:  长度在[1,128]范围内的字符串 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
+    * status  参数解释:  作业状态 示例: job_running 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
+    * statusDesc  参数解释:  用户名称 示例: 作业状态描述 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释:  作业创建时间 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * startTime  参数解释:  作业开始时间 示例: 1516952710740 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:  作业运行时长，单位ms，当“show_detail”为“false”时独有 示例: 30000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * rootId  参数解释:  父作业ID，“show_detail”为“false”时独有 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
+    * userId  参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: ac4eaa303639409c8ab099d55eb1538e 约束限制:  无 取值范围: 无 默认取值: 无
+    * projectId  参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
+    * sqlBody  参数解释:  Stream SQL语句，“show_detail”为“false”时独有 示例: select * from source_table 约束限制:  无 取值范围: 无 默认取值: 无
+    * runMode  参数解释:  作业运行模式，show_detail为true时独有 示例: shared_cluster 约束限制:  无 取值范围: shared_cluster（共享） exclusive_cluster（独享） edge_node（边缘节点） 默认取值: 无
+    * mainClass  参数解释:  jar包主类，“show_detail”为“false”时独有 示例: org.apache.spark.examples.streaming.JavaQueueStream 约束限制:  无 取值范围: 无 默认取值: 无
+    * entrypointArgs  参数解释:  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的 示例: custom.dir=/usr custom.prefix=dli 约束限制:  无 取值范围: 无 默认取值: 无
+    * executionGraph  参数解释:  作业执行计划，“show_detail”为“false”时独有 约束限制:  无 取值范围: 无 默认取值: 无
+    * updateTime  参数解释:  作业更新时间，“show_detail”为“false”时独有 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * graphEditorEnabled  参数解释:  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * hasSavepoint  参数解释:  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * queueName  参数解释:  队列名称 示例: flink_17_queue 约束限制:  无 取值范围: 无 默认取值: 无
+    * edgeGroupIds  参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
+    * restartTimes  参数解释:  重启次数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * savepointPath  参数解释:  保存点路径 示例: obs://cwk/savepoint/ 约束限制:  无 取值范围: 无 默认取值: 无
     * jobConfig  jobConfig
     *
     * @var string[]
@@ -379,7 +379,26 @@ class FlinkJob implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const JOB_TYPE_FLINK_SQL_JOB = 'flink_sql_job';
+    const JOB_TYPE_FLINK_OPENSOURCE_SQL_JOB = 'flink_opensource_sql_job';
+    const JOB_TYPE_FLINK_SQL_EDGE_JOB = 'flink_sql_edge_job';
+    const JOB_TYPE_FLINK_JAR_JOB = 'flink_jar_job';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getJobTypeAllowableValues()
+    {
+        return [
+            self::JOB_TYPE_FLINK_SQL_JOB,
+            self::JOB_TYPE_FLINK_OPENSOURCE_SQL_JOB,
+            self::JOB_TYPE_FLINK_SQL_EDGE_JOB,
+            self::JOB_TYPE_FLINK_JAR_JOB,
+        ];
+    }
 
 
     /**
@@ -454,6 +473,14 @@ class FlinkJob implements ModelInterface, ArrayAccess
             if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'userName', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getJobTypeAllowableValues();
+                if (!is_null($this->container['jobType']) && !in_array($this->container['jobType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'jobType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['createTime'] === null) {
             $invalidProperties[] = "'createTime' can't be null";
         }
@@ -473,7 +500,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  作业ID。
+    *  参数解释:  作业ID 示例: 50320 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return int
     */
@@ -485,7 +512,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param int $jobId 作业ID。
+    * @param int $jobId 参数解释:  作业ID 示例: 50320 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -497,7 +524,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  作业名称。长度限制：0-57个字符。
+    *  参数解释:  作业名称 示例: test 约束限制:  长度在[0,57]范围内的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -509,7 +536,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 作业名称。长度限制：0-57个字符。
+    * @param string|null $name 参数解释:  作业名称 示例: test 约束限制:  长度在[0,57]范围内的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -521,7 +548,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets desc
-    *  作业描述。长度限制：0-2048个字符。
+    *  参数解释:  作业描述 示例: 作业描述 约束限制:  长度在[0,2048]范围内的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -533,7 +560,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets desc
     *
-    * @param string|null $desc 作业描述。长度限制：0-2048个字符。
+    * @param string|null $desc 参数解释:  作业描述 示例: 作业描述 约束限制:  长度在[0,2048]范围内的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -545,7 +572,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名，当“show_detail”为“false”时独有。
+    *  参数解释:  用户名称 示例: testuser 约束限制:  长度在[1,128]范围内的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -557,7 +584,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 用户名，当“show_detail”为“false”时独有。
+    * @param string|null $userName 参数解释:  用户名称 示例: testuser 约束限制:  长度在[1,128]范围内的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -569,7 +596,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
-    *  作业类型。
+    *  参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
     *
     * @return string|null
     */
@@ -581,7 +608,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets jobType
     *
-    * @param string|null $jobType 作业类型。
+    * @param string|null $jobType 参数解释:  作业类型 示例: flink_jar_job 约束限制:  无 取值范围: flink_sql_job（flink sql作业） flink_opensource_sql_job（flink opensource sql作业） flink_sql_edge_job（flink sql边缘作业） flink_jar_job（flink自定义作业） 默认取值: 无
     *
     * @return $this
     */
@@ -593,7 +620,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  作业状态。
+    *  参数解释:  作业状态 示例: job_running 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
     *
     * @return string|null
     */
@@ -605,7 +632,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 作业状态。
+    * @param string|null $status 参数解释:  作业状态 示例: job_running 约束限制:  无 取值范围: job_init（草稿） job_submitting（提交中） job_submit_fail（提交失败） job_running（运行中） job_running_exception（运行异常） job_downloading（下载中） job_idle（空闲） job_canceling（停止中） job_cancel_success（已停止） job_cancel_fail（停止失败） job_savepointing（保存点创建中） job_arrearage_stopped（因欠费被停止） job_arrearage_recovering（欠费作业恢复中） job_finish（已完成） 默认取值: 无
     *
     * @return $this
     */
@@ -617,7 +644,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets statusDesc
-    *  作业状态描述。
+    *  参数解释:  用户名称 示例: 作业状态描述 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -629,7 +656,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets statusDesc
     *
-    * @param string|null $statusDesc 作业状态描述。
+    * @param string|null $statusDesc 参数解释:  用户名称 示例: 作业状态描述 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -641,7 +668,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  作业创建时间。
+    *  参数解释:  作业创建时间 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int
     */
@@ -653,7 +680,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int $createTime 作业创建时间。
+    * @param int $createTime 参数解释:  作业创建时间 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -665,7 +692,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  作业开始时间。
+    *  参数解释:  作业开始时间 示例: 1516952710740 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -677,7 +704,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 作业开始时间。
+    * @param int|null $startTime 参数解释:  作业开始时间 示例: 1516952710740 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -689,7 +716,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  作业运行时长, 单位ms，当“show_detail”为“false”时独有。
+    *  参数解释:  作业运行时长，单位ms，当“show_detail”为“false”时独有 示例: 30000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -701,7 +728,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int|null $duration 作业运行时长, 单位ms，当“show_detail”为“false”时独有。
+    * @param int|null $duration 参数解释:  作业运行时长，单位ms，当“show_detail”为“false”时独有 示例: 30000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -713,7 +740,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets rootId
-    *  父作业ID，“show_detail”为“false”时独有。
+    *  参数解释:  父作业ID，“show_detail”为“false”时独有 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return int|null
     */
@@ -725,7 +752,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets rootId
     *
-    * @param int|null $rootId 父作业ID，“show_detail”为“false”时独有。
+    * @param int|null $rootId 参数解释:  父作业ID，“show_detail”为“false”时独有 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -737,7 +764,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  作业所属用户标识，“show_detail”为“true”时独有。
+    *  参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: ac4eaa303639409c8ab099d55eb1538e 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -749,7 +776,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId 作业所属用户标识，“show_detail”为“true”时独有。
+    * @param string|null $userId 参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: ac4eaa303639409c8ab099d55eb1538e 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -761,7 +788,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  作业所属项目标识，“show_detail”为“true”时独有。
+    *  参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -773,7 +800,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 作业所属项目标识，“show_detail”为“true”时独有。
+    * @param string|null $projectId 参数解释:  作业所属用户标识，“show_detail”为“true”时独有 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -785,7 +812,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets sqlBody
-    *  Stream SQL语句，“show_detail”为“false”时独有。
+    *  参数解释:  Stream SQL语句，“show_detail”为“false”时独有 示例: select * from source_table 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -797,7 +824,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets sqlBody
     *
-    * @param string|null $sqlBody Stream SQL语句，“show_detail”为“false”时独有。
+    * @param string|null $sqlBody 参数解释:  Stream SQL语句，“show_detail”为“false”时独有 示例: select * from source_table 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -809,7 +836,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets runMode
-    *  作业运行模式： shared_cluster：共享。 exclusive_cluster：独享。 edge_node：边缘节点。 show_detail为true时独有.
+    *  参数解释:  作业运行模式，show_detail为true时独有 示例: shared_cluster 约束限制:  无 取值范围: shared_cluster（共享） exclusive_cluster（独享） edge_node（边缘节点） 默认取值: 无
     *
     * @return string|null
     */
@@ -821,7 +848,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets runMode
     *
-    * @param string|null $runMode 作业运行模式： shared_cluster：共享。 exclusive_cluster：独享。 edge_node：边缘节点。 show_detail为true时独有.
+    * @param string|null $runMode 参数解释:  作业运行模式，show_detail为true时独有 示例: shared_cluster 约束限制:  无 取值范围: shared_cluster（共享） exclusive_cluster（独享） edge_node（边缘节点） 默认取值: 无
     *
     * @return $this
     */
@@ -833,7 +860,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets mainClass
-    *  jar包主类，“show_detail”为“false”时独有。
+    *  参数解释:  jar包主类，“show_detail”为“false”时独有 示例: org.apache.spark.examples.streaming.JavaQueueStream 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -845,7 +872,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets mainClass
     *
-    * @param string|null $mainClass jar包主类，“show_detail”为“false”时独有。
+    * @param string|null $mainClass 参数解释:  jar包主类，“show_detail”为“false”时独有 示例: org.apache.spark.examples.streaming.JavaQueueStream 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -857,7 +884,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets entrypointArgs
-    *  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的。
+    *  参数解释:  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的 示例: custom.dir=/usr custom.prefix=dli 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -869,7 +896,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets entrypointArgs
     *
-    * @param string|null $entrypointArgs jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的。
+    * @param string|null $entrypointArgs 参数解释:  jar包作业运行参数，多个参数之间用空格分隔。show_detail为true时独有的 示例: custom.dir=/usr custom.prefix=dli 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -881,7 +908,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets executionGraph
-    *  作业执行计划，“show_detail”为“false”时独有。
+    *  参数解释:  作业执行计划，“show_detail”为“false”时独有 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -893,7 +920,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets executionGraph
     *
-    * @param string|null $executionGraph 作业执行计划，“show_detail”为“false”时独有。
+    * @param string|null $executionGraph 参数解释:  作业执行计划，“show_detail”为“false”时独有 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -905,7 +932,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  作业更新时间，“show_detail”为“false”时独有。
+    *  参数解释:  作业更新时间，“show_detail”为“false”时独有 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -917,7 +944,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 作业更新时间，“show_detail”为“false”时独有。
+    * @param int|null $updateTime 参数解释:  作业更新时间，“show_detail”为“false”时独有 示例: 1516952770835 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -929,7 +956,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets graphEditorEnabled
-    *  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑。
+    *  参数解释:  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
     *
     * @return bool|null
     */
@@ -941,7 +968,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets graphEditorEnabled
     *
-    * @param bool|null $graphEditorEnabled 作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑。
+    * @param bool|null $graphEditorEnabled 参数解释:  作业的流图是否可编辑。“true”表示作业的流图可以编辑，“false”表示作业的流图不可以编辑 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
     *
     * @return $this
     */
@@ -953,7 +980,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets hasSavepoint
-    *  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点。
+    *  参数解释:  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
     *
     * @return bool|null
     */
@@ -965,7 +992,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets hasSavepoint
     *
-    * @param bool|null $hasSavepoint 作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点。
+    * @param bool|null $hasSavepoint 参数解释:  作业是否有保存点。“true”表示作业有保存点，“false”表示作业没有保存点 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
     *
     * @return $this
     */
@@ -977,7 +1004,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
-    *  队列名字。
+    *  参数解释:  队列名称 示例: flink_17_queue 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -989,7 +1016,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets queueName
     *
-    * @param string|null $queueName 队列名字。
+    * @param string|null $queueName 参数解释:  队列名称 示例: flink_17_queue 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1001,7 +1028,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets edgeGroupIds
-    *  边缘计算组ID列表。
+    *  参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -1013,7 +1040,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets edgeGroupIds
     *
-    * @param string[]|null $edgeGroupIds 边缘计算组ID列表。
+    * @param string[]|null $edgeGroupIds 参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1025,7 +1052,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets restartTimes
-    *  重启次数。
+    *  参数解释:  重启次数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -1037,7 +1064,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets restartTimes
     *
-    * @param int|null $restartTimes 重启次数。
+    * @param int|null $restartTimes 参数解释:  重启次数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -1049,7 +1076,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets savepointPath
-    *  保存点路径。
+    *  参数解释:  保存点路径 示例: obs://cwk/savepoint/ 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1061,7 +1088,7 @@ class FlinkJob implements ModelInterface, ArrayAccess
     /**
     * Sets savepointPath
     *
-    * @param string|null $savepointPath 保存点路径。
+    * @param string|null $savepointPath 参数解释:  保存点路径 示例: obs://cwk/savepoint/ 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */

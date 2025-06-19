@@ -48,6 +48,9 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * runtimeConfig  Flink作业运行时自定义优化参数。
     * flinkVersion  Flink版本。当前只支持1.10和1.12。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。v2版本对比于v1模版不支持设置CU数量，支持直接设置Job Manager Memory和Task Manager Memory。v1：适用于Flink 1.12、Flink 1.13、Flink 1.15。v2：适用于Flink 1.13、Flink 1.15、Flink 1.17。优先推荐使用V2版本的参数设置。
+    * resourceConfig  resourceConfig
     *
     * @var string[]
     */
@@ -79,7 +82,10 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
             'resumeCheckpoint' => 'bool',
             'resumeMaxNum' => 'int',
             'runtimeConfig' => 'string',
-            'flinkVersion' => 'string'
+            'flinkVersion' => 'string',
+            'executionAgencyUrn' => 'string',
+            'resourceConfigVersion' => 'string',
+            'resourceConfig' => '\HuaweiCloud\SDK\Dli\V1\Model\ResourceConfig'
     ];
 
     /**
@@ -112,6 +118,9 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * runtimeConfig  Flink作业运行时自定义优化参数。
     * flinkVersion  Flink版本。当前只支持1.10和1.12。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。v2版本对比于v1模版不支持设置CU数量，支持直接设置Job Manager Memory和Task Manager Memory。v1：适用于Flink 1.12、Flink 1.13、Flink 1.15。v2：适用于Flink 1.13、Flink 1.15、Flink 1.17。优先推荐使用V2版本的参数设置。
+    * resourceConfig  resourceConfig
     *
     * @var string[]
     */
@@ -143,7 +152,10 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
         'resumeCheckpoint' => null,
         'resumeMaxNum' => 'int32',
         'runtimeConfig' => null,
-        'flinkVersion' => null
+        'flinkVersion' => null,
+        'executionAgencyUrn' => null,
+        'resourceConfigVersion' => null,
+        'resourceConfig' => null
     ];
 
     /**
@@ -197,6 +209,9 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * runtimeConfig  Flink作业运行时自定义优化参数。
     * flinkVersion  Flink版本。当前只支持1.10和1.12。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。v2版本对比于v1模版不支持设置CU数量，支持直接设置Job Manager Memory和Task Manager Memory。v1：适用于Flink 1.12、Flink 1.13、Flink 1.15。v2：适用于Flink 1.13、Flink 1.15、Flink 1.17。优先推荐使用V2版本的参数设置。
+    * resourceConfig  resourceConfig
     *
     * @var string[]
     */
@@ -228,7 +243,10 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
             'resumeCheckpoint' => 'resume_checkpoint',
             'resumeMaxNum' => 'resume_max_num',
             'runtimeConfig' => 'runtime_config',
-            'flinkVersion' => 'flink_version'
+            'flinkVersion' => 'flink_version',
+            'executionAgencyUrn' => 'execution_agency_urn',
+            'resourceConfigVersion' => 'resource_config_version',
+            'resourceConfig' => 'resource_config'
     ];
 
     /**
@@ -261,6 +279,9 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * runtimeConfig  Flink作业运行时自定义优化参数。
     * flinkVersion  Flink版本。当前只支持1.10和1.12。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。v2版本对比于v1模版不支持设置CU数量，支持直接设置Job Manager Memory和Task Manager Memory。v1：适用于Flink 1.12、Flink 1.13、Flink 1.15。v2：适用于Flink 1.13、Flink 1.15、Flink 1.17。优先推荐使用V2版本的参数设置。
+    * resourceConfig  resourceConfig
     *
     * @var string[]
     */
@@ -292,7 +313,10 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
             'resumeCheckpoint' => 'setResumeCheckpoint',
             'resumeMaxNum' => 'setResumeMaxNum',
             'runtimeConfig' => 'setRuntimeConfig',
-            'flinkVersion' => 'setFlinkVersion'
+            'flinkVersion' => 'setFlinkVersion',
+            'executionAgencyUrn' => 'setExecutionAgencyUrn',
+            'resourceConfigVersion' => 'setResourceConfigVersion',
+            'resourceConfig' => 'setResourceConfig'
     ];
 
     /**
@@ -325,6 +349,9 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * runtimeConfig  Flink作业运行时自定义优化参数。
     * flinkVersion  Flink版本。当前只支持1.10和1.12。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。v2版本对比于v1模版不支持设置CU数量，支持直接设置Job Manager Memory和Task Manager Memory。v1：适用于Flink 1.12、Flink 1.13、Flink 1.15。v2：适用于Flink 1.13、Flink 1.15、Flink 1.17。优先推荐使用V2版本的参数设置。
+    * resourceConfig  resourceConfig
     *
     * @var string[]
     */
@@ -356,7 +383,10 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
             'resumeCheckpoint' => 'getResumeCheckpoint',
             'resumeMaxNum' => 'getResumeMaxNum',
             'runtimeConfig' => 'getRuntimeConfig',
-            'flinkVersion' => 'getFlinkVersion'
+            'flinkVersion' => 'getFlinkVersion',
+            'executionAgencyUrn' => 'getExecutionAgencyUrn',
+            'resourceConfigVersion' => 'getResourceConfigVersion',
+            'resourceConfig' => 'getResourceConfig'
     ];
 
     /**
@@ -445,6 +475,9 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['resumeMaxNum'] = isset($data['resumeMaxNum']) ? $data['resumeMaxNum'] : null;
         $this->container['runtimeConfig'] = isset($data['runtimeConfig']) ? $data['runtimeConfig'] : null;
         $this->container['flinkVersion'] = isset($data['flinkVersion']) ? $data['flinkVersion'] : null;
+        $this->container['executionAgencyUrn'] = isset($data['executionAgencyUrn']) ? $data['executionAgencyUrn'] : null;
+        $this->container['resourceConfigVersion'] = isset($data['resourceConfigVersion']) ? $data['resourceConfigVersion'] : null;
+        $this->container['resourceConfig'] = isset($data['resourceConfig']) ? $data['resourceConfig'] : null;
     }
 
     /**
@@ -1159,6 +1192,78 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     public function setFlinkVersion($flinkVersion)
     {
         $this->container['flinkVersion'] = $flinkVersion;
+        return $this;
+    }
+
+    /**
+    * Gets executionAgencyUrn
+    *  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+    *
+    * @return string|null
+    */
+    public function getExecutionAgencyUrn()
+    {
+        return $this->container['executionAgencyUrn'];
+    }
+
+    /**
+    * Sets executionAgencyUrn
+    *
+    * @param string|null $executionAgencyUrn 授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+    *
+    * @return $this
+    */
+    public function setExecutionAgencyUrn($executionAgencyUrn)
+    {
+        $this->container['executionAgencyUrn'] = $executionAgencyUrn;
+        return $this;
+    }
+
+    /**
+    * Gets resourceConfigVersion
+    *  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。v2版本对比于v1模版不支持设置CU数量，支持直接设置Job Manager Memory和Task Manager Memory。v1：适用于Flink 1.12、Flink 1.13、Flink 1.15。v2：适用于Flink 1.13、Flink 1.15、Flink 1.17。优先推荐使用V2版本的参数设置。
+    *
+    * @return string|null
+    */
+    public function getResourceConfigVersion()
+    {
+        return $this->container['resourceConfigVersion'];
+    }
+
+    /**
+    * Sets resourceConfigVersion
+    *
+    * @param string|null $resourceConfigVersion 资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。v2版本对比于v1模版不支持设置CU数量，支持直接设置Job Manager Memory和Task Manager Memory。v1：适用于Flink 1.12、Flink 1.13、Flink 1.15。v2：适用于Flink 1.13、Flink 1.15、Flink 1.17。优先推荐使用V2版本的参数设置。
+    *
+    * @return $this
+    */
+    public function setResourceConfigVersion($resourceConfigVersion)
+    {
+        $this->container['resourceConfigVersion'] = $resourceConfigVersion;
+        return $this;
+    }
+
+    /**
+    * Gets resourceConfig
+    *  resourceConfig
+    *
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\ResourceConfig|null
+    */
+    public function getResourceConfig()
+    {
+        return $this->container['resourceConfig'];
+    }
+
+    /**
+    * Sets resourceConfig
+    *
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\ResourceConfig|null $resourceConfig resourceConfig
+    *
+    * @return $this
+    */
+    public function setResourceConfig($resourceConfig)
+    {
+        $this->container['resourceConfig'] = $resourceConfig;
         return $this;
     }
 

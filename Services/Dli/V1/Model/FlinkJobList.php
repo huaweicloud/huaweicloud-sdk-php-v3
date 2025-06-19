@@ -20,7 +20,7 @@ class FlinkJobList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  作业查询结果条数。
+    * totalCount  参数解释:  作业查询结果条数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * jobs  作业信息
     *
     * @var string[]
@@ -32,7 +32,7 @@ class FlinkJobList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  作业查询结果条数。
+    * totalCount  参数解释:  作业查询结果条数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * jobs  作业信息
     *
     * @var string[]
@@ -65,7 +65,7 @@ class FlinkJobList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  作业查询结果条数。
+    * totalCount  参数解释:  作业查询结果条数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * jobs  作业信息
     *
     * @var string[]
@@ -77,7 +77,7 @@ class FlinkJobList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  作业查询结果条数。
+    * totalCount  参数解释:  作业查询结果条数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * jobs  作业信息
     *
     * @var string[]
@@ -89,7 +89,7 @@ class FlinkJobList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  作业查询结果条数。
+    * totalCount  参数解释:  作业查询结果条数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * jobs  作业信息
     *
     * @var string[]
@@ -185,7 +185,7 @@ class FlinkJobList implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  作业查询结果条数。
+    *  参数解释:  作业查询结果条数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -197,7 +197,7 @@ class FlinkJobList implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount 作业查询结果条数。
+    * @param int|null $totalCount 参数解释:  作业查询结果条数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */

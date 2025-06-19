@@ -21,8 +21,8 @@ class ShowSparkJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  批处理作业的ID，采用UUID（通用唯一识别码）格式。
-    * state  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
+    * id  参数解释:  批处理作业的ID，采用UUID（通用唯一识别码）格式 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
+    * state  参数解释:  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowSparkJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  批处理作业的ID，采用UUID（通用唯一识别码）格式。
-    * state  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
+    * id  参数解释:  批处理作业的ID，采用UUID（通用唯一识别码）格式 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
+    * state  参数解释:  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowSparkJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  批处理作业的ID，采用UUID（通用唯一识别码）格式。
-    * state  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
+    * id  参数解释:  批处理作业的ID，采用UUID（通用唯一识别码）格式 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
+    * state  参数解释:  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowSparkJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  批处理作业的ID，采用UUID（通用唯一识别码）格式。
-    * state  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
+    * id  参数解释:  批处理作业的ID，采用UUID（通用唯一识别码）格式 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
+    * state  参数解释:  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowSparkJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  批处理作业的ID，采用UUID（通用唯一识别码）格式。
-    * state  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
+    * id  参数解释:  批处理作业的ID，采用UUID（通用唯一识别码）格式 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
+    * state  参数解释:  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @var string[]
     */
@@ -140,7 +140,28 @@ class ShowSparkJobStatusResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATE_STARTING = 'starting';
+    const STATE_RUNNING = 'running';
+    const STATE_DEAD = 'dead';
+    const STATE_SUCCESS = 'success';
+    const STATE_RECOVERING = 'recovering';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStateAllowableValues()
+    {
+        return [
+            self::STATE_STARTING,
+            self::STATE_RUNNING,
+            self::STATE_DEAD,
+            self::STATE_SUCCESS,
+            self::STATE_RECOVERING,
+        ];
+    }
 
 
     /**
@@ -170,6 +191,14 @@ class ShowSparkJobStatusResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getStateAllowableValues();
+                if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'state', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -186,7 +215,7 @@ class ShowSparkJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  批处理作业的ID，采用UUID（通用唯一识别码）格式。
+    *  参数解释:  批处理作业的ID，采用UUID（通用唯一识别码）格式 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -198,7 +227,7 @@ class ShowSparkJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 批处理作业的ID，采用UUID（通用唯一识别码）格式。
+    * @param string|null $id 参数解释:  批处理作业的ID，采用UUID（通用唯一识别码）格式 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -210,7 +239,7 @@ class ShowSparkJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
+    *  参数解释:  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @return string|null
     */
@@ -222,7 +251,7 @@ class ShowSparkJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
+    * @param string|null $state 参数解释:  批处理作业的状态。starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @return $this
     */

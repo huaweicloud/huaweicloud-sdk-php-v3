@@ -37,6 +37,15 @@ class Job implements ModelInterface, ArrayAccess
     * isCopy  是否有复制任务权限
     * isForbidden  是否有禁用任务权限
     * isView  是否有查看任务权限
+    * lastBuildUser  最后一次构建用户
+    * triggerType  触发类型
+    * buildTime  构建时间
+    * scmWebUrl  代码仓web地址
+    * scmType  代码仓类型
+    * repoId  代码仓ID
+    * buildProjectId  构建项目ID
+    * lastJobRunningStatus  最后一次构建时间
+    * lastBuildUserId  最后一次构建用户ID
     *
     * @var string[]
     */
@@ -57,7 +66,16 @@ class Job implements ModelInterface, ArrayAccess
             'isExecute' => 'bool',
             'isCopy' => 'bool',
             'isForbidden' => 'bool',
-            'isView' => 'bool'
+            'isView' => 'bool',
+            'lastBuildUser' => 'string',
+            'triggerType' => 'string',
+            'buildTime' => 'int',
+            'scmWebUrl' => 'string',
+            'scmType' => 'string',
+            'repoId' => 'string',
+            'buildProjectId' => 'string',
+            'lastJobRunningStatus' => 'string',
+            'lastBuildUserId' => 'string'
     ];
 
     /**
@@ -79,6 +97,15 @@ class Job implements ModelInterface, ArrayAccess
     * isCopy  是否有复制任务权限
     * isForbidden  是否有禁用任务权限
     * isView  是否有查看任务权限
+    * lastBuildUser  最后一次构建用户
+    * triggerType  触发类型
+    * buildTime  构建时间
+    * scmWebUrl  代码仓web地址
+    * scmType  代码仓类型
+    * repoId  代码仓ID
+    * buildProjectId  构建项目ID
+    * lastJobRunningStatus  最后一次构建时间
+    * lastBuildUserId  最后一次构建用户ID
     *
     * @var string[]
     */
@@ -99,7 +126,16 @@ class Job implements ModelInterface, ArrayAccess
         'isExecute' => null,
         'isCopy' => null,
         'isForbidden' => null,
-        'isView' => null
+        'isView' => null,
+        'lastBuildUser' => null,
+        'triggerType' => null,
+        'buildTime' => 'int64',
+        'scmWebUrl' => null,
+        'scmType' => null,
+        'repoId' => null,
+        'buildProjectId' => null,
+        'lastJobRunningStatus' => null,
+        'lastBuildUserId' => null
     ];
 
     /**
@@ -142,6 +178,15 @@ class Job implements ModelInterface, ArrayAccess
     * isCopy  是否有复制任务权限
     * isForbidden  是否有禁用任务权限
     * isView  是否有查看任务权限
+    * lastBuildUser  最后一次构建用户
+    * triggerType  触发类型
+    * buildTime  构建时间
+    * scmWebUrl  代码仓web地址
+    * scmType  代码仓类型
+    * repoId  代码仓ID
+    * buildProjectId  构建项目ID
+    * lastJobRunningStatus  最后一次构建时间
+    * lastBuildUserId  最后一次构建用户ID
     *
     * @var string[]
     */
@@ -162,7 +207,16 @@ class Job implements ModelInterface, ArrayAccess
             'isExecute' => 'is_execute',
             'isCopy' => 'is_copy',
             'isForbidden' => 'is_forbidden',
-            'isView' => 'is_view'
+            'isView' => 'is_view',
+            'lastBuildUser' => 'last_build_user',
+            'triggerType' => 'trigger_type',
+            'buildTime' => 'build_time',
+            'scmWebUrl' => 'scm_web_url',
+            'scmType' => 'scm_type',
+            'repoId' => 'repo_id',
+            'buildProjectId' => 'build_project_id',
+            'lastJobRunningStatus' => 'last_job_running_status',
+            'lastBuildUserId' => 'last_build_user_id'
     ];
 
     /**
@@ -184,6 +238,15 @@ class Job implements ModelInterface, ArrayAccess
     * isCopy  是否有复制任务权限
     * isForbidden  是否有禁用任务权限
     * isView  是否有查看任务权限
+    * lastBuildUser  最后一次构建用户
+    * triggerType  触发类型
+    * buildTime  构建时间
+    * scmWebUrl  代码仓web地址
+    * scmType  代码仓类型
+    * repoId  代码仓ID
+    * buildProjectId  构建项目ID
+    * lastJobRunningStatus  最后一次构建时间
+    * lastBuildUserId  最后一次构建用户ID
     *
     * @var string[]
     */
@@ -204,7 +267,16 @@ class Job implements ModelInterface, ArrayAccess
             'isExecute' => 'setIsExecute',
             'isCopy' => 'setIsCopy',
             'isForbidden' => 'setIsForbidden',
-            'isView' => 'setIsView'
+            'isView' => 'setIsView',
+            'lastBuildUser' => 'setLastBuildUser',
+            'triggerType' => 'setTriggerType',
+            'buildTime' => 'setBuildTime',
+            'scmWebUrl' => 'setScmWebUrl',
+            'scmType' => 'setScmType',
+            'repoId' => 'setRepoId',
+            'buildProjectId' => 'setBuildProjectId',
+            'lastJobRunningStatus' => 'setLastJobRunningStatus',
+            'lastBuildUserId' => 'setLastBuildUserId'
     ];
 
     /**
@@ -226,6 +298,15 @@ class Job implements ModelInterface, ArrayAccess
     * isCopy  是否有复制任务权限
     * isForbidden  是否有禁用任务权限
     * isView  是否有查看任务权限
+    * lastBuildUser  最后一次构建用户
+    * triggerType  触发类型
+    * buildTime  构建时间
+    * scmWebUrl  代码仓web地址
+    * scmType  代码仓类型
+    * repoId  代码仓ID
+    * buildProjectId  构建项目ID
+    * lastJobRunningStatus  最后一次构建时间
+    * lastBuildUserId  最后一次构建用户ID
     *
     * @var string[]
     */
@@ -246,7 +327,16 @@ class Job implements ModelInterface, ArrayAccess
             'isExecute' => 'getIsExecute',
             'isCopy' => 'getIsCopy',
             'isForbidden' => 'getIsForbidden',
-            'isView' => 'getIsView'
+            'isView' => 'getIsView',
+            'lastBuildUser' => 'getLastBuildUser',
+            'triggerType' => 'getTriggerType',
+            'buildTime' => 'getBuildTime',
+            'scmWebUrl' => 'getScmWebUrl',
+            'scmType' => 'getScmType',
+            'repoId' => 'getRepoId',
+            'buildProjectId' => 'getBuildProjectId',
+            'lastJobRunningStatus' => 'getLastJobRunningStatus',
+            'lastBuildUserId' => 'getLastBuildUserId'
     ];
 
     /**
@@ -324,6 +414,15 @@ class Job implements ModelInterface, ArrayAccess
         $this->container['isCopy'] = isset($data['isCopy']) ? $data['isCopy'] : null;
         $this->container['isForbidden'] = isset($data['isForbidden']) ? $data['isForbidden'] : null;
         $this->container['isView'] = isset($data['isView']) ? $data['isView'] : null;
+        $this->container['lastBuildUser'] = isset($data['lastBuildUser']) ? $data['lastBuildUser'] : null;
+        $this->container['triggerType'] = isset($data['triggerType']) ? $data['triggerType'] : null;
+        $this->container['buildTime'] = isset($data['buildTime']) ? $data['buildTime'] : null;
+        $this->container['scmWebUrl'] = isset($data['scmWebUrl']) ? $data['scmWebUrl'] : null;
+        $this->container['scmType'] = isset($data['scmType']) ? $data['scmType'] : null;
+        $this->container['repoId'] = isset($data['repoId']) ? $data['repoId'] : null;
+        $this->container['buildProjectId'] = isset($data['buildProjectId']) ? $data['buildProjectId'] : null;
+        $this->container['lastJobRunningStatus'] = isset($data['lastJobRunningStatus']) ? $data['lastJobRunningStatus'] : null;
+        $this->container['lastBuildUserId'] = isset($data['lastBuildUserId']) ? $data['lastBuildUserId'] : null;
     }
 
     /**
@@ -753,6 +852,222 @@ class Job implements ModelInterface, ArrayAccess
     public function setIsView($isView)
     {
         $this->container['isView'] = $isView;
+        return $this;
+    }
+
+    /**
+    * Gets lastBuildUser
+    *  最后一次构建用户
+    *
+    * @return string|null
+    */
+    public function getLastBuildUser()
+    {
+        return $this->container['lastBuildUser'];
+    }
+
+    /**
+    * Sets lastBuildUser
+    *
+    * @param string|null $lastBuildUser 最后一次构建用户
+    *
+    * @return $this
+    */
+    public function setLastBuildUser($lastBuildUser)
+    {
+        $this->container['lastBuildUser'] = $lastBuildUser;
+        return $this;
+    }
+
+    /**
+    * Gets triggerType
+    *  触发类型
+    *
+    * @return string|null
+    */
+    public function getTriggerType()
+    {
+        return $this->container['triggerType'];
+    }
+
+    /**
+    * Sets triggerType
+    *
+    * @param string|null $triggerType 触发类型
+    *
+    * @return $this
+    */
+    public function setTriggerType($triggerType)
+    {
+        $this->container['triggerType'] = $triggerType;
+        return $this;
+    }
+
+    /**
+    * Gets buildTime
+    *  构建时间
+    *
+    * @return int|null
+    */
+    public function getBuildTime()
+    {
+        return $this->container['buildTime'];
+    }
+
+    /**
+    * Sets buildTime
+    *
+    * @param int|null $buildTime 构建时间
+    *
+    * @return $this
+    */
+    public function setBuildTime($buildTime)
+    {
+        $this->container['buildTime'] = $buildTime;
+        return $this;
+    }
+
+    /**
+    * Gets scmWebUrl
+    *  代码仓web地址
+    *
+    * @return string|null
+    */
+    public function getScmWebUrl()
+    {
+        return $this->container['scmWebUrl'];
+    }
+
+    /**
+    * Sets scmWebUrl
+    *
+    * @param string|null $scmWebUrl 代码仓web地址
+    *
+    * @return $this
+    */
+    public function setScmWebUrl($scmWebUrl)
+    {
+        $this->container['scmWebUrl'] = $scmWebUrl;
+        return $this;
+    }
+
+    /**
+    * Gets scmType
+    *  代码仓类型
+    *
+    * @return string|null
+    */
+    public function getScmType()
+    {
+        return $this->container['scmType'];
+    }
+
+    /**
+    * Sets scmType
+    *
+    * @param string|null $scmType 代码仓类型
+    *
+    * @return $this
+    */
+    public function setScmType($scmType)
+    {
+        $this->container['scmType'] = $scmType;
+        return $this;
+    }
+
+    /**
+    * Gets repoId
+    *  代码仓ID
+    *
+    * @return string|null
+    */
+    public function getRepoId()
+    {
+        return $this->container['repoId'];
+    }
+
+    /**
+    * Sets repoId
+    *
+    * @param string|null $repoId 代码仓ID
+    *
+    * @return $this
+    */
+    public function setRepoId($repoId)
+    {
+        $this->container['repoId'] = $repoId;
+        return $this;
+    }
+
+    /**
+    * Gets buildProjectId
+    *  构建项目ID
+    *
+    * @return string|null
+    */
+    public function getBuildProjectId()
+    {
+        return $this->container['buildProjectId'];
+    }
+
+    /**
+    * Sets buildProjectId
+    *
+    * @param string|null $buildProjectId 构建项目ID
+    *
+    * @return $this
+    */
+    public function setBuildProjectId($buildProjectId)
+    {
+        $this->container['buildProjectId'] = $buildProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets lastJobRunningStatus
+    *  最后一次构建时间
+    *
+    * @return string|null
+    */
+    public function getLastJobRunningStatus()
+    {
+        return $this->container['lastJobRunningStatus'];
+    }
+
+    /**
+    * Sets lastJobRunningStatus
+    *
+    * @param string|null $lastJobRunningStatus 最后一次构建时间
+    *
+    * @return $this
+    */
+    public function setLastJobRunningStatus($lastJobRunningStatus)
+    {
+        $this->container['lastJobRunningStatus'] = $lastJobRunningStatus;
+        return $this;
+    }
+
+    /**
+    * Gets lastBuildUserId
+    *  最后一次构建用户ID
+    *
+    * @return string|null
+    */
+    public function getLastBuildUserId()
+    {
+        return $this->container['lastBuildUserId'];
+    }
+
+    /**
+    * Sets lastBuildUserId
+    *
+    * @param string|null $lastBuildUserId 最后一次构建用户ID
+    *
+    * @return $this
+    */
+    public function setLastBuildUserId($lastBuildUserId)
+    {
+        $this->container['lastBuildUserId'] = $lastBuildUserId;
         return $this;
     }
 

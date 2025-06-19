@@ -21,22 +21,26 @@ class CountResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * totalCount  总记录数。
+    * resources  资源列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'totalCount' => 'int',
+            'resources' => '\HuaweiCloud\SDK\Dli\V1\Model\Resource[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * totalCount  总记录数。
+    * resources  资源列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'totalCount' => null,
+        'resources' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class CountResourcesByTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * totalCount  总记录数。
+    * resources  资源列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'totalCount' => 'total_count',
+            'resources' => 'resources'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * totalCount  总记录数。
+    * resources  资源列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'totalCount' => 'setTotalCount',
+            'resources' => 'setResources'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * totalCount  总记录数。
+    * resources  资源列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'totalCount' => 'getTotalCount',
+            'resources' => 'getResources'
     ];
 
     /**
@@ -148,7 +158,8 @@ class CountResourcesByTagsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
     }
 
     /**
@@ -174,26 +185,50 @@ class CountResourcesByTagsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets totalCount
+    *  总记录数。
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getBody()
+    public function getTotalCount()
     {
-        return $this->container['body'];
+        return $this->container['totalCount'];
     }
 
     /**
-    * Sets body
+    * Sets totalCount
     *
-    * @param string|null $body body
+    * @param int|null $totalCount 总记录数。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setTotalCount($totalCount)
     {
-        $this->container['body'] = $body;
+        $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets resources
+    *  资源列表。
+    *
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\Resource[]|null
+    */
+    public function getResources()
+    {
+        return $this->container['resources'];
+    }
+
+    /**
+    * Sets resources
+    *
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\Resource[]|null $resources 资源列表。
+    *
+    * @return $this
+    */
+    public function setResources($resources)
+    {
+        $this->container['resources'] = $resources;
         return $this;
     }
 

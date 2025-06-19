@@ -23,8 +23,8 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * name  备份名称，4~64个字符，必须以英文字母开头，区分大小写，可以包含英文字母、数字、中划线或者下划线，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
-    * databases  只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
-    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer，默认为false
+    * databases  只支持Microsoft SQL Server和RDS for PostgreSQL，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer、RDS for PostgreSQL，默认为false
     *
     * @var string[]
     */
@@ -41,8 +41,8 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * name  备份名称，4~64个字符，必须以英文字母开头，区分大小写，可以包含英文字母、数字、中划线或者下划线，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
-    * databases  只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
-    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer，默认为false
+    * databases  只支持Microsoft SQL Server和RDS for PostgreSQL，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer、RDS for PostgreSQL，默认为false
     *
     * @var string[]
     */
@@ -80,8 +80,8 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * name  备份名称，4~64个字符，必须以英文字母开头，区分大小写，可以包含英文字母、数字、中划线或者下划线，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
-    * databases  只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
-    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer，默认为false
+    * databases  只支持Microsoft SQL Server和RDS for PostgreSQL，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer、RDS for PostgreSQL，默认为false
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * name  备份名称，4~64个字符，必须以英文字母开头，区分大小写，可以包含英文字母、数字、中划线或者下划线，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
-    * databases  只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
-    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer，默认为false
+    * databases  只支持Microsoft SQL Server和RDS for PostgreSQL，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer、RDS for PostgreSQL，默认为false
     *
     * @var string[]
     */
@@ -116,8 +116,8 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * name  备份名称，4~64个字符，必须以英文字母开头，区分大小写，可以包含英文字母、数字、中划线或者下划线，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
-    * databases  只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
-    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer，默认为false
+    * databases  只支持Microsoft SQL Server和RDS for PostgreSQL，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer、RDS for PostgreSQL，默认为false
     *
     * @var string[]
     */
@@ -305,7 +305,7 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets databases
-    *  只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+    *  只支持Microsoft SQL Server和RDS for PostgreSQL，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
     *
     * @return \HuaweiCloud\SDK\Rds\V3\Model\BackupDatabase[]|null
     */
@@ -317,7 +317,7 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets databases
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\BackupDatabase[]|null $databases 只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\BackupDatabase[]|null $databases 只支持Microsoft SQL Server和RDS for PostgreSQL，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupDatabaseIndividually
-    *  是否分库备份，只适用于SQLServer，默认为false
+    *  是否分库备份，只适用于SQLServer、RDS for PostgreSQL，默认为false
     *
     * @return bool|null
     */
@@ -341,7 +341,7 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets backupDatabaseIndividually
     *
-    * @param bool|null $backupDatabaseIndividually 是否分库备份，只适用于SQLServer，默认为false
+    * @param bool|null $backupDatabaseIndividually 是否分库备份，只适用于SQLServer、RDS for PostgreSQL，默认为false
     *
     * @return $this
     */

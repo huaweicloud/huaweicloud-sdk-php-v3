@@ -20,7 +20,7 @@ class ShowSparkJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * batchId  批处理作业的ID。
+    * batchId  参数解释:  批处理作业的ID 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowSparkJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * batchId  批处理作业的ID。
+    * batchId  参数解释:  批处理作业的ID 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowSparkJobRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * batchId  批处理作业的ID。
+    * batchId  参数解释:  批处理作业的ID 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowSparkJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * batchId  批处理作业的ID。
+    * batchId  参数解释:  批处理作业的ID 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowSparkJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * batchId  批处理作业的ID。
+    * batchId  参数解释:  批处理作业的ID 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -161,6 +161,9 @@ class ShowSparkJobRequest implements ModelInterface, ArrayAccess
         if ($this->container['batchId'] === null) {
             $invalidProperties[] = "'batchId' can't be null";
         }
+            if (!preg_match("/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/", $this->container['batchId'])) {
+                $invalidProperties[] = "invalid value for 'batchId', must be conform to the pattern /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.";
+            }
         return $invalidProperties;
     }
 
@@ -177,7 +180,7 @@ class ShowSparkJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets batchId
-    *  批处理作业的ID。
+    *  参数解释:  批处理作业的ID 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string
     */
@@ -189,7 +192,7 @@ class ShowSparkJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets batchId
     *
-    * @param string $batchId 批处理作业的ID。
+    * @param string $batchId 参数解释:  批处理作业的ID 示例: 0a324461-d9d9-45da-a52a-3b3c7a3d809e 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */

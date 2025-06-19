@@ -20,8 +20,8 @@ class JobResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  资源名称。
-    * type  资源类型。
+    * name  参数解释:   资源名称 示例: group.tesddws/gsjdbc3.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * type  参数解释:   资源类型 示例: jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class JobResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  资源名称。
-    * type  资源类型。
+    * name  参数解释:   资源名称 示例: group.tesddws/gsjdbc3.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * type  参数解释:   资源类型 示例: jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class JobResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  资源名称。
-    * type  资源类型。
+    * name  参数解释:   资源名称 示例: group.tesddws/gsjdbc3.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * type  参数解释:   资源类型 示例: jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class JobResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  资源名称。
-    * type  资源类型。
+    * name  参数解释:   资源名称 示例: group.tesddws/gsjdbc3.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * type  参数解释:   资源类型 示例: jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class JobResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  资源名称。
-    * type  资源类型。
+    * name  参数解释:   资源名称 示例: group.tesddws/gsjdbc3.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * type  参数解释:   资源类型 示例: jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class JobResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源名称。
+    *  参数解释:   资源名称 示例: group.tesddws/gsjdbc3.jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class JobResource implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 资源名称。
+    * @param string|null $name 参数解释:   资源名称 示例: group.tesddws/gsjdbc3.jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class JobResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资源类型。
+    *  参数解释:   资源类型 示例: jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class JobResource implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 资源类型。
+    * @param string|null $type 参数解释:   资源类型 示例: jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */

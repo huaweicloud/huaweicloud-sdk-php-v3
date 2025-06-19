@@ -26226,6 +26226,80 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 修改资产指定属性
+     *
+     * 修改资产指定属性。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateEntityAttributeAsync($request)
+    {
+        return $this->updateEntityAttributeAsyncWithHttpInfo($request);
+    }
+    
+    public function updateEntityAttributeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/asset/guid/{guid}/attribute';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['attrName'] !== null) {
+            $queryParams['attr_name'] = $localVarParams['attrName'];
+        }
+        if ($localVarParams['attrValue'] !== null) {
+            $queryParams['attr_value'] = $localVarParams['attrValue'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['guid'] !== null) {
+            $pathParams['guid'] = $localVarParams['guid'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateEntityAttributeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateEntityAttributeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改作业名称
      *
      * 修改作业名称

@@ -21,10 +21,10 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * from  起始批处理作业的索引号。
-    * total  返回批处理作业的总数。
+    * from  参数解释:   起始批处理作业的索引号 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
+    * total  参数解释:   返回批处理作业的总数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * sessions  批处理作业信息。
-    * createTime  批处理作业的创建时间。
+    * createTime  参数解释:   批处理作业的创建时间 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * from  起始批处理作业的索引号。
-    * total  返回批处理作业的总数。
+    * from  参数解释:   起始批处理作业的索引号 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
+    * total  参数解释:   返回批处理作业的总数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * sessions  批处理作业信息。
-    * createTime  批处理作业的创建时间。
+    * createTime  参数解释:   批处理作业的创建时间 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * from  起始批处理作业的索引号。
-    * total  返回批处理作业的总数。
+    * from  参数解释:   起始批处理作业的索引号 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
+    * total  参数解释:   返回批处理作业的总数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * sessions  批处理作业信息。
-    * createTime  批处理作业的创建时间。
+    * createTime  参数解释:   批处理作业的创建时间 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * from  起始批处理作业的索引号。
-    * total  返回批处理作业的总数。
+    * from  参数解释:   起始批处理作业的索引号 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
+    * total  参数解释:   返回批处理作业的总数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * sessions  批处理作业信息。
-    * createTime  批处理作业的创建时间。
+    * createTime  参数解释:   批处理作业的创建时间 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * from  起始批处理作业的索引号。
-    * total  返回批处理作业的总数。
+    * from  参数解释:   起始批处理作业的索引号 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
+    * total  参数解释:   返回批处理作业的总数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * sessions  批处理作业信息。
-    * createTime  批处理作业的创建时间。
+    * createTime  参数解释:   批处理作业的创建时间 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets from
-    *  起始批处理作业的索引号。
+    *  参数解释:   起始批处理作业的索引号 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return int|null
     */
@@ -220,7 +220,7 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets from
     *
-    * @param int|null $from 起始批处理作业的索引号。
+    * @param int|null $from 参数解释:   起始批处理作业的索引号 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  返回批处理作业的总数。
+    *  参数解释:   返回批处理作业的总数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -244,7 +244,7 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 返回批处理作业的总数。
+    * @param int|null $total 参数解释:   返回批处理作业的总数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  批处理作业的创建时间。
+    *  参数解释:   批处理作业的创建时间 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -292,7 +292,7 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 批处理作业的创建时间。
+    * @param int|null $createTime 参数解释:   批处理作业的创建时间 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */

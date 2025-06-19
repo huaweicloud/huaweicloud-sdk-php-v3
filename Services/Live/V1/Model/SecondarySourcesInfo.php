@@ -26,6 +26,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     * height  分辨率对应高的值，非必填项  取值范围：0 - 2160（4K）
     * bitrateFor3u8  是否使用bitrate来固定码率。默认值：false
     * passphrase  协议为SRT_PUSH时的加密信息
+    * pbkeylen  srt加密算法
     * backupUrls  备入流地址列表
     * streamId  频道为SRT_PULL类型时，拉流地址的Stream ID。
     * latency  频道为SRT_PULL类型时的拉流时延。
@@ -39,6 +40,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
             'height' => 'int',
             'bitrateFor3u8' => 'bool',
             'passphrase' => 'string',
+            'pbkeylen' => 'int',
             'backupUrls' => 'string[]',
             'streamId' => 'string',
             'latency' => 'int'
@@ -52,6 +54,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     * height  分辨率对应高的值，非必填项  取值范围：0 - 2160（4K）
     * bitrateFor3u8  是否使用bitrate来固定码率。默认值：false
     * passphrase  协议为SRT_PUSH时的加密信息
+    * pbkeylen  srt加密算法
     * backupUrls  备入流地址列表
     * streamId  频道为SRT_PULL类型时，拉流地址的Stream ID。
     * latency  频道为SRT_PULL类型时的拉流时延。
@@ -65,6 +68,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
         'height' => null,
         'bitrateFor3u8' => null,
         'passphrase' => null,
+        'pbkeylen' => null,
         'backupUrls' => null,
         'streamId' => null,
         'latency' => 'int32'
@@ -99,6 +103,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     * height  分辨率对应高的值，非必填项  取值范围：0 - 2160（4K）
     * bitrateFor3u8  是否使用bitrate来固定码率。默认值：false
     * passphrase  协议为SRT_PUSH时的加密信息
+    * pbkeylen  srt加密算法
     * backupUrls  备入流地址列表
     * streamId  频道为SRT_PULL类型时，拉流地址的Stream ID。
     * latency  频道为SRT_PULL类型时的拉流时延。
@@ -112,6 +117,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
             'height' => 'height',
             'bitrateFor3u8' => 'bitrate_for3u8',
             'passphrase' => 'passphrase',
+            'pbkeylen' => 'pbkeylen',
             'backupUrls' => 'backup_urls',
             'streamId' => 'stream_id',
             'latency' => 'latency'
@@ -125,6 +131,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     * height  分辨率对应高的值，非必填项  取值范围：0 - 2160（4K）
     * bitrateFor3u8  是否使用bitrate来固定码率。默认值：false
     * passphrase  协议为SRT_PUSH时的加密信息
+    * pbkeylen  srt加密算法
     * backupUrls  备入流地址列表
     * streamId  频道为SRT_PULL类型时，拉流地址的Stream ID。
     * latency  频道为SRT_PULL类型时的拉流时延。
@@ -138,6 +145,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
             'height' => 'setHeight',
             'bitrateFor3u8' => 'setBitrateFor3u8',
             'passphrase' => 'setPassphrase',
+            'pbkeylen' => 'setPbkeylen',
             'backupUrls' => 'setBackupUrls',
             'streamId' => 'setStreamId',
             'latency' => 'setLatency'
@@ -151,6 +159,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     * height  分辨率对应高的值，非必填项  取值范围：0 - 2160（4K）
     * bitrateFor3u8  是否使用bitrate来固定码率。默认值：false
     * passphrase  协议为SRT_PUSH时的加密信息
+    * pbkeylen  srt加密算法
     * backupUrls  备入流地址列表
     * streamId  频道为SRT_PULL类型时，拉流地址的Stream ID。
     * latency  频道为SRT_PULL类型时的拉流时延。
@@ -164,6 +173,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
             'height' => 'getHeight',
             'bitrateFor3u8' => 'getBitrateFor3u8',
             'passphrase' => 'getPassphrase',
+            'pbkeylen' => 'getPbkeylen',
             'backupUrls' => 'getBackupUrls',
             'streamId' => 'getStreamId',
             'latency' => 'getLatency'
@@ -233,6 +243,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['bitrateFor3u8'] = isset($data['bitrateFor3u8']) ? $data['bitrateFor3u8'] : null;
         $this->container['passphrase'] = isset($data['passphrase']) ? $data['passphrase'] : null;
+        $this->container['pbkeylen'] = isset($data['pbkeylen']) ? $data['pbkeylen'] : null;
         $this->container['backupUrls'] = isset($data['backupUrls']) ? $data['backupUrls'] : null;
         $this->container['streamId'] = isset($data['streamId']) ? $data['streamId'] : null;
         $this->container['latency'] = isset($data['latency']) ? $data['latency'] : null;
@@ -275,6 +286,12 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['passphrase']) && (mb_strlen($this->container['passphrase']) < 10)) {
                 $invalidProperties[] = "invalid value for 'passphrase', the character length must be bigger than or equal to 10.";
+            }
+            if (!is_null($this->container['pbkeylen']) && ($this->container['pbkeylen'] > 32)) {
+                $invalidProperties[] = "invalid value for 'pbkeylen', must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['pbkeylen']) && ($this->container['pbkeylen'] < 16)) {
+                $invalidProperties[] = "invalid value for 'pbkeylen', must be bigger than or equal to 16.";
             }
         return $invalidProperties;
     }
@@ -431,6 +448,30 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     public function setPassphrase($passphrase)
     {
         $this->container['passphrase'] = $passphrase;
+        return $this;
+    }
+
+    /**
+    * Gets pbkeylen
+    *  srt加密算法
+    *
+    * @return int|null
+    */
+    public function getPbkeylen()
+    {
+        return $this->container['pbkeylen'];
+    }
+
+    /**
+    * Sets pbkeylen
+    *
+    * @param int|null $pbkeylen srt加密算法
+    *
+    * @return $this
+    */
+    public function setPbkeylen($pbkeylen)
+    {
+        $this->container['pbkeylen'] = $pbkeylen;
         return $this;
     }
 

@@ -33,6 +33,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     * tags  标签
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
     * properties  properties
+    * engine  只有在queue_type是sql条件下才可配置，默认是spark。可以选择spark引擎或hetuEngin。
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
             'feature' => 'string',
             'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]',
             'elasticResourcePoolName' => 'string',
-            'properties' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateQueueRequestBodyProperties'
+            'properties' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateQueueRequestBodyProperties',
+            'engine' => 'string'
     ];
 
     /**
@@ -67,6 +69,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     * tags  标签
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
     * properties  properties
+    * engine  只有在queue_type是sql条件下才可配置，默认是spark。可以选择spark引擎或hetuEngin。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
         'feature' => null,
         'tags' => null,
         'elasticResourcePoolName' => null,
-        'properties' => null
+        'properties' => null,
+        'engine' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     * tags  标签
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
     * properties  properties
+    * engine  只有在queue_type是sql条件下才可配置，默认是spark。可以选择spark引擎或hetuEngin。
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
             'feature' => 'feature',
             'tags' => 'tags',
             'elasticResourcePoolName' => 'elastic_resource_pool_name',
-            'properties' => 'properties'
+            'properties' => 'properties',
+            'engine' => 'engine'
     ];
 
     /**
@@ -156,6 +162,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     * tags  标签
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
     * properties  properties
+    * engine  只有在queue_type是sql条件下才可配置，默认是spark。可以选择spark引擎或hetuEngin。
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
             'feature' => 'setFeature',
             'tags' => 'setTags',
             'elasticResourcePoolName' => 'setElasticResourcePoolName',
-            'properties' => 'setProperties'
+            'properties' => 'setProperties',
+            'engine' => 'setEngine'
     ];
 
     /**
@@ -190,6 +198,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     * tags  标签
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
     * properties  properties
+    * engine  只有在queue_type是sql条件下才可配置，默认是spark。可以选择spark引擎或hetuEngin。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
             'feature' => 'getFeature',
             'tags' => 'getTags',
             'elasticResourcePoolName' => 'getElasticResourcePoolName',
-            'properties' => 'getProperties'
+            'properties' => 'getProperties',
+            'engine' => 'getEngine'
     ];
 
     /**
@@ -280,6 +290,7 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['elasticResourcePoolName'] = isset($data['elasticResourcePoolName']) ? $data['elasticResourcePoolName'] : null;
         $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
     }
 
     /**
@@ -619,6 +630,30 @@ class CreateQueueRequestBody implements ModelInterface, ArrayAccess
     public function setProperties($properties)
     {
         $this->container['properties'] = $properties;
+        return $this;
+    }
+
+    /**
+    * Gets engine
+    *  只有在queue_type是sql条件下才可配置，默认是spark。可以选择spark引擎或hetuEngin。
+    *
+    * @return string|null
+    */
+    public function getEngine()
+    {
+        return $this->container['engine'];
+    }
+
+    /**
+    * Sets engine
+    *
+    * @param string|null $engine 只有在queue_type是sql条件下才可配置，默认是spark。可以选择spark引擎或hetuEngin。
+    *
+    * @return $this
+    */
+    public function setEngine($engine)
+    {
+        $this->container['engine'] = $engine;
         return $this;
     }
 

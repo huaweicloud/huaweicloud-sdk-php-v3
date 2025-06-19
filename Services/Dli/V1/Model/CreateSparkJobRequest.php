@@ -20,7 +20,7 @@ class CreateSparkJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userId  userId
+    * userId  参数解释:   用户ID 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateSparkJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userId  userId
+    * userId  参数解释:   用户ID 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateSparkJobRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userId  userId
+    * userId  参数解释:   用户ID 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateSparkJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userId  userId
+    * userId  参数解释:   用户ID 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateSparkJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userId  userId
+    * userId  参数解释:   用户ID 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
     * body  body
     *
     * @var string[]
@@ -185,7 +185,7 @@ class CreateSparkJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  userId
+    *  参数解释:   用户ID 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class CreateSparkJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId userId
+    * @param string|null $userId 参数解释:   用户ID 示例: 48cc2c48765f481480c7db940d6409d1 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */

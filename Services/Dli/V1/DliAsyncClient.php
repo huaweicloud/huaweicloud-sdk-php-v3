@@ -1034,6 +1034,71 @@ class DliAsyncClient extends Client
     }
 
     /**
+     * 包周期弹性资源池规格变更下单接口
+     *
+     * 包周期弹性资源池规格变更下单接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPeriodElasticResourcePoolSpecChangeOrderAsync($request)
+    {
+        return $this->createPeriodElasticResourcePoolSpecChangeOrderAsyncWithHttpInfo($request);
+    }
+    
+    public function createPeriodElasticResourcePoolSpecChangeOrderAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/orders/elastic-resource-pools/specification-change';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreatePeriodElasticResourcePoolSpecChangeOrderResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreatePeriodElasticResourcePoolSpecChangeOrderRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建队列
      *
      * 该API用于创建队列，该队列将会绑定用户指定的计算资源。
@@ -3397,6 +3462,12 @@ class DliAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['resourceType'] !== null) {
             $pathParams['resource_type'] = $localVarParams['resourceType'];
@@ -8235,6 +8306,71 @@ class DliAsyncClient extends Client
     }
 
     /**
+     * 创建SQL拦截规则
+     *
+     * 该API用于创建SQL拦截规则，拦截匹配规则的SQL。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSqlJobDefendRuleAsync($request)
+    {
+        return $this->createSqlJobDefendRuleAsyncWithHttpInfo($request);
+    }
+    
+    public function createSqlJobDefendRuleAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/sql-defend-rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateSqlJobDefendRuleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateSqlJobDefendRuleRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 存储指定SQL语句
      *
      * 该API用于存储指定的SQL语句，后续可以重复使用。
@@ -8296,6 +8432,71 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateSqlJobTemplateResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateSqlJobTemplateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除SQL拦截规则
+     *
+     * 该API用于删除SQL拦截规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteSqlJobDefendRuleAsync($request)
+    {
+        return $this->deleteSqlJobDefendRuleAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteSqlJobDefendRuleAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/sql-defend-rules/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteSqlJobDefendRuleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteSqlJobDefendRuleRequest',
             $asyncRequest = true);
     }
 
@@ -8364,6 +8565,142 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ExportSqlJobResultResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ExportSqlJobResultRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量获取SQL拦截规则
+     *
+     * 该API用于批量获取SQL拦截规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSqlJobDefendRulesAsync($request)
+    {
+        return $this->listSqlJobDefendRulesAsyncWithHttpInfo($request);
+    }
+    
+    public function listSqlJobDefendRulesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/sql-defend-rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['queueName'] !== null) {
+            $queryParams['queue_name'] = $localVarParams['queueName'];
+        }
+        if ($localVarParams['ruleName'] !== null) {
+            $queryParams['rule_name'] = $localVarParams['ruleName'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListSqlJobDefendRulesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListSqlJobDefendRulesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量获取系统预制SQL拦截规则
+     *
+     * 该API用于获取系统预制SQL拦截规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSqlJobSystemDefendRulesAsync($request)
+    {
+        return $this->listSqlJobSystemDefendRulesAsyncWithHttpInfo($request);
+    }
+    
+    public function listSqlJobSystemDefendRulesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/sql-defend-sys-rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListSqlJobSystemDefendRulesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListSqlJobSystemDefendRulesRequest',
             $asyncRequest = true);
     }
 
@@ -8508,6 +8845,9 @@ class DliAsyncClient extends Client
         if ($localVarParams['tags'] !== null) {
             $queryParams['tags'] = $localVarParams['tags'];
         }
+        if ($localVarParams['jobTypes'] !== null) {
+            $queryParams['job_types'] = $localVarParams['jobTypes'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -8605,6 +8945,71 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\PreviewSqlJobResultResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\PreviewSqlJobResultRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取SQL拦截规则
+     *
+     * 该API用于获取单个SQL拦截规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSqlJobDefendRuleAsync($request)
+    {
+        return $this->showSqlJobDefendRuleAsyncWithHttpInfo($request);
+    }
+    
+    public function showSqlJobDefendRuleAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/sql-defend-rules/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobDefendRuleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobDefendRuleRequest',
             $asyncRequest = true);
     }
 
@@ -8800,6 +9205,139 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobStatusResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取单个系统预制SQL拦截规则
+     *
+     * 该API用于获取系统预制SQL拦截规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSqlJobSystemDefendRuleAsync($request)
+    {
+        return $this->showSqlJobSystemDefendRuleAsyncWithHttpInfo($request);
+    }
+    
+    public function showSqlJobSystemDefendRuleAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/sql-defend-sys-rules/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobSystemDefendRuleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobSystemDefendRuleRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新SQL拦截规则
+     *
+     * 该API用于更新SQL拦截规则，拦截匹配规则的SQL。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSqlJobDefendRuleAsync($request)
+    {
+        return $this->updateSqlJobDefendRuleAsyncWithHttpInfo($request);
+    }
+    
+    public function updateSqlJobDefendRuleAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/sql-defend-rules/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateSqlJobDefendRuleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateSqlJobDefendRuleRequest',
             $asyncRequest = true);
     }
 

@@ -21,21 +21,29 @@ class ListResourcesTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceType  资源类型
+    * limit  查询记录数。
+    * offset  索引位置偏移量。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resourceType' => 'string'
+            'resourceType' => 'string',
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceType  资源类型
+    * limit  查询记录数。
+    * offset  索引位置偏移量。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resourceType' => null
+        'resourceType' => null,
+        'limit' => 'int32',
+        'offset' => 'int32'
     ];
 
     /**
@@ -62,31 +70,43 @@ class ListResourcesTagsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceType  资源类型
+    * limit  查询记录数。
+    * offset  索引位置偏移量。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resourceType' => 'resource_type'
+            'resourceType' => 'resource_type',
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceType  资源类型
+    * limit  查询记录数。
+    * offset  索引位置偏移量。
     *
     * @var string[]
     */
     protected static $setters = [
-            'resourceType' => 'setResourceType'
+            'resourceType' => 'setResourceType',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceType  资源类型
+    * limit  查询记录数。
+    * offset  索引位置偏移量。
     *
     * @var string[]
     */
     protected static $getters = [
-            'resourceType' => 'getResourceType'
+            'resourceType' => 'getResourceType',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -171,6 +191,8 @@ class ListResourcesTagsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -197,6 +219,15 @@ class ListResourcesTagsRequest implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['resourceType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'resourceType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -233,6 +264,54 @@ class ListResourcesTagsRequest implements ModelInterface, ArrayAccess
     public function setResourceType($resourceType)
     {
         $this->container['resourceType'] = $resourceType;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  查询记录数。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 查询记录数。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  索引位置偏移量。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 索引位置偏移量。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class JobResourcesGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  用户组名称。
+    * name  参数解释:   用户组名称 示例: group.tesddws 约束限制:  无 取值范围: 无 默认取值: 无
     * resources  用户组资源。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class JobResourcesGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  用户组名称。
+    * name  参数解释:   用户组名称 示例: group.tesddws 约束限制:  无 取值范围: 无 默认取值: 无
     * resources  用户组资源。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class JobResourcesGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  用户组名称。
+    * name  参数解释:   用户组名称 示例: group.tesddws 约束限制:  无 取值范围: 无 默认取值: 无
     * resources  用户组资源。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class JobResourcesGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  用户组名称。
+    * name  参数解释:   用户组名称 示例: group.tesddws 约束限制:  无 取值范围: 无 默认取值: 无
     * resources  用户组资源。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class JobResourcesGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  用户组名称。
+    * name  参数解释:   用户组名称 示例: group.tesddws 约束限制:  无 取值范围: 无 默认取值: 无
     * resources  用户组资源。
     *
     * @var string[]
@@ -185,7 +185,7 @@ class JobResourcesGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  用户组名称。
+    *  参数解释:   用户组名称 示例: group.tesddws 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class JobResourcesGroup implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 用户组名称。
+    * @param string|null $name 参数解释:   用户组名称 示例: group.tesddws 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */

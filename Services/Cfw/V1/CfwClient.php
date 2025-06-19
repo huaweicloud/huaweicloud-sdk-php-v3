@@ -1725,6 +1725,74 @@ class CfwClient extends Client
     }
 
     /**
+     * 删除已经导入的IP黑名单
+     *
+     * 删除流量过滤功能下已经导入的IP黑名单，指定生效范围进行删除。 标准版的墙只会存在生效范围为EIP的IP黑名单，专业版的墙会存在生效范围为EIP和NAT的IP黑名单。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteIpBlacklist($request)
+    {
+        return $this->deleteIpBlacklistWithHttpInfo($request);
+    }
+
+    public function deleteIpBlacklistWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ptf/ip-blacklist';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\DeleteIpBlacklistResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\DeleteIpBlacklistRequest');
+    }
+
+    /**
      * 删除服务成员
      *
      * 删除服务组成员
@@ -1932,6 +2000,213 @@ class CfwClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\DeleteTagResponse',
             $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\DeleteTagRequest');
+    }
+
+    /**
+     * 开启或者关闭流量过滤的IP黑名单功能
+     *
+     * 开启或者关闭流量过滤功能，当前流量过滤是通过导入IP黑名单实现的。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function enableIpBlacklist($request)
+    {
+        return $this->enableIpBlacklistWithHttpInfo($request);
+    }
+
+    public function enableIpBlacklistWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ptf/ip-blacklist/switch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\EnableIpBlacklistResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\EnableIpBlacklistRequest');
+    }
+
+    /**
+     * 导出用于流量过滤的IP黑名单
+     *
+     * 指定IP黑名单的名字进行导出，当前只有两种文件名，在EIP生效的文件名为ip-blacklist-eip.txt，在 NAT生效的文件名为ip-blacklist-nat.txt。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportIpBlacklist($request)
+    {
+        return $this->exportIpBlacklistWithHttpInfo($request);
+    }
+
+    public function exportIpBlacklistWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ptf/ip-blacklist/export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ExportIpBlacklistResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ExportIpBlacklistRequest');
+    }
+
+    /**
+     * 导入IP黑名单用于流量过滤
+     *
+     * 此接口用来导入IP黑名单，IP列表保存在request的body中，IP列表支持的格式如下：
+     * 单个IP地址，例如：100.1.1.10
+     * 连续的IP地址段，例如：80.1.1.3-80.1.1.30
+     * 掩码格式的网段，例如：6.6.6.0/24
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function importIpBlacklist($request)
+    {
+        return $this->importIpBlacklistWithHttpInfo($request);
+    }
+
+    public function importIpBlacklistWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ptf/ip-blacklist/import';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ImportIpBlacklistResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ImportIpBlacklistRequest');
     }
 
     /**
@@ -3457,6 +3732,142 @@ class CfwClient extends Client
     }
 
     /**
+     * 获取导入的IP黑名单列表信息
+     *
+     * 获取防火墙实例中已经导入的IP黑名单信息，标准版防火墙只会显示一条EIP的记录，专业版防火墙可能显示EIP、NAT或EIP和NAT的记录，根据导入的情况确定。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listIpBlacklist($request)
+    {
+        return $this->listIpBlacklistWithHttpInfo($request);
+    }
+
+    public function listIpBlacklistWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ptf/ip-blacklist';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ListIpBlacklistResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ListIpBlacklistRequest');
+    }
+
+    /**
+     * 获取流量过滤功能的开关信息
+     *
+     * 流量过滤功能可以打开或者关闭，通过此接口可以获取当前的开关信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listIpBlacklistSwitch($request)
+    {
+        return $this->listIpBlacklistSwitchWithHttpInfo($request);
+    }
+
+    public function listIpBlacklistSwitchWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ptf/ip-blacklist/switch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ListIpBlacklistSwitchResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ListIpBlacklistSwitchRequest');
+    }
+
+    /**
      * 获取CFW任务执行状态
      *
      * 获取CFW任务执行状态
@@ -4037,6 +4448,74 @@ class CfwClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ListServiceSetsResponse',
             $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ListServiceSetsRequest');
+    }
+
+    /**
+     * 用于流量过滤的IP黑名单导入失败后进行重新导入
+     *
+     * 用于流量过滤的IP黑名单导入失败后，调用此接口进行重试。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function retryIpBlacklist($request)
+    {
+        return $this->retryIpBlacklistWithHttpInfo($request);
+    }
+
+    public function retryIpBlacklistWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ptf/ip-blacklist/retry';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\RetryIpBlacklistResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\RetryIpBlacklistRequest');
     }
 
     /**

@@ -20,31 +20,31 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * file  用户已上传到DLI资源管理系统的类型为jar的资源包名。
-    * className  批处理作业的Java/Spark主类。
-    * clusterName  用于指定队列，填写已创建DLI的队列名。
-    * args  传入主类的参数。
-    * scType  计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 资源类型： A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。
-    * jars  用户已上传到DLI资源管理系统的类型为jar的资源包名。
-    * pyFiles  用户已上传到DLI资源管理系统的类型为pyFile的资源包名。
-    * files  用户已上传到DLI资源管理系统的类型为file的资源包名。
-    * modules  依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css
+    * file  参数解释:   用户已上传到DLI资源管理系统的类型为jar的资源包名 示例: batchTest/spark-examples_2.11-2.1.0.luxor.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * className  参数解释:   批处理作业的Java/Spark主类 示例: org.apache.spark.examples.SparkPi 约束限制:  无 取值范围: 无 默认取值: 无
+    * clusterName  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
+    * args  参数解释:   传入主类的参数 示例: -o result.txt 约束限制:  无 取值范围: 无 默认取值: 无
+    * scType  参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
+    * jars  参数解释:   用户已上传到DLI资源管理系统的类型为jar的程序包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/jars/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * pyFiles  参数解释:   用户已上传到DLI资源管理系统的类型为pyFile的资源包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/py/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * files  参数解释:   用户已上传到DLI资源管理系统的类型为file的资源包名 示例: [\"count.txt\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * modules  参数解释:   依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css 示例: [\"sys.datasource.hbase\",\"sys.datasource.rds\"] 约束限制:  无 取值范围: 无 默认取值: 无
     * resources  JSON对象列表，填写用户已上传到队列的类型为JSON的资源包名和类型。
     * groups  JSON对象列表，填写用户组类型资源，格式详见请求示例。resources中的name未进行type校验，只要此分组中存在这个名字的包即可。
-    * conf  batch配置项。
-    * name  创建时用户指定的批处理名称，不能超过128个字符。
-    * driverMemory  Spark应用的Driver内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
-    * driverCores  Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数。
-    * executorMemory  Spark应用的Executor内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
-    * executorCores  Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数。
-    * numExecutors  Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数。
-    * feature  作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数。
-    * sparkVersion  作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2。
-    * queue  用于指定队列，填写已创建DLI的队列名
-    * autoRecovery  是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试。默认值为“false”。
-    * maxRetryTimes  最大重试次数。最大值为“100”，默认值为“20”。
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
-    * obsBucket  保存Spark作业的obs桶，需要保存作业时配置该参数
+    * conf  参数解释:   batch配置项 约束限制:  无 取值范围: 无 默认取值: 无
+    * name  参数解释:   创建时用户指定的批处理名称 示例: TestDemo4 约束限制:  不超过128个字符的字符串 取值范围: 无 默认取值: 无
+    * driverMemory  参数解释:   Spark应用的Driver内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
+    * driverCores  参数解释:   Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executorMemory  参数解释:   Spark应用的Executor内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
+    * executorCores  参数解释:   Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * numExecutors  参数解释:   Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数 示例: 6 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * feature  参数解释:   作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型） custom（自定义型） 默认取值: 无
+    * sparkVersion  参数解释:   作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2 示例: 2.3.2 约束限制:  无 取值范围: 无 默认取值: 无
+    * queue  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
+    * autoRecovery  参数解释:   是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * maxRetryTimes  参数解释:   最大重试次数 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: false
+    * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》 示例: ceshi/spark_general-x86_64:3.3.1-2.3.7.1720240718867424736954752.tensorflow  约束限制:  无 取值范围: 无 默认取值: 无
+    * obsBucket  参数解释:   保存Spark作业的obs桶，需要保存作业时配置该参数 示例: rain3 约束限制:  无 取值范围: 无 默认取值: 无
     * catalogName  访问元数据时，需要将该参数配置为dli。
     *
     * @var string[]
@@ -80,31 +80,31 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * file  用户已上传到DLI资源管理系统的类型为jar的资源包名。
-    * className  批处理作业的Java/Spark主类。
-    * clusterName  用于指定队列，填写已创建DLI的队列名。
-    * args  传入主类的参数。
-    * scType  计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 资源类型： A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。
-    * jars  用户已上传到DLI资源管理系统的类型为jar的资源包名。
-    * pyFiles  用户已上传到DLI资源管理系统的类型为pyFile的资源包名。
-    * files  用户已上传到DLI资源管理系统的类型为file的资源包名。
-    * modules  依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css
+    * file  参数解释:   用户已上传到DLI资源管理系统的类型为jar的资源包名 示例: batchTest/spark-examples_2.11-2.1.0.luxor.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * className  参数解释:   批处理作业的Java/Spark主类 示例: org.apache.spark.examples.SparkPi 约束限制:  无 取值范围: 无 默认取值: 无
+    * clusterName  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
+    * args  参数解释:   传入主类的参数 示例: -o result.txt 约束限制:  无 取值范围: 无 默认取值: 无
+    * scType  参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
+    * jars  参数解释:   用户已上传到DLI资源管理系统的类型为jar的程序包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/jars/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * pyFiles  参数解释:   用户已上传到DLI资源管理系统的类型为pyFile的资源包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/py/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * files  参数解释:   用户已上传到DLI资源管理系统的类型为file的资源包名 示例: [\"count.txt\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * modules  参数解释:   依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css 示例: [\"sys.datasource.hbase\",\"sys.datasource.rds\"] 约束限制:  无 取值范围: 无 默认取值: 无
     * resources  JSON对象列表，填写用户已上传到队列的类型为JSON的资源包名和类型。
     * groups  JSON对象列表，填写用户组类型资源，格式详见请求示例。resources中的name未进行type校验，只要此分组中存在这个名字的包即可。
-    * conf  batch配置项。
-    * name  创建时用户指定的批处理名称，不能超过128个字符。
-    * driverMemory  Spark应用的Driver内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
-    * driverCores  Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数。
-    * executorMemory  Spark应用的Executor内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
-    * executorCores  Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数。
-    * numExecutors  Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数。
-    * feature  作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数。
-    * sparkVersion  作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2。
-    * queue  用于指定队列，填写已创建DLI的队列名
-    * autoRecovery  是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试。默认值为“false”。
-    * maxRetryTimes  最大重试次数。最大值为“100”，默认值为“20”。
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
-    * obsBucket  保存Spark作业的obs桶，需要保存作业时配置该参数
+    * conf  参数解释:   batch配置项 约束限制:  无 取值范围: 无 默认取值: 无
+    * name  参数解释:   创建时用户指定的批处理名称 示例: TestDemo4 约束限制:  不超过128个字符的字符串 取值范围: 无 默认取值: 无
+    * driverMemory  参数解释:   Spark应用的Driver内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
+    * driverCores  参数解释:   Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executorMemory  参数解释:   Spark应用的Executor内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
+    * executorCores  参数解释:   Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * numExecutors  参数解释:   Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数 示例: 6 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * feature  参数解释:   作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型） custom（自定义型） 默认取值: 无
+    * sparkVersion  参数解释:   作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2 示例: 2.3.2 约束限制:  无 取值范围: 无 默认取值: 无
+    * queue  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
+    * autoRecovery  参数解释:   是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * maxRetryTimes  参数解释:   最大重试次数 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: false
+    * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》 示例: ceshi/spark_general-x86_64:3.3.1-2.3.7.1720240718867424736954752.tensorflow  约束限制:  无 取值范围: 无 默认取值: 无
+    * obsBucket  参数解释:   保存Spark作业的obs桶，需要保存作业时配置该参数 示例: rain3 约束限制:  无 取值范围: 无 默认取值: 无
     * catalogName  访问元数据时，需要将该参数配置为dli。
     *
     * @var string[]
@@ -161,31 +161,31 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * file  用户已上传到DLI资源管理系统的类型为jar的资源包名。
-    * className  批处理作业的Java/Spark主类。
-    * clusterName  用于指定队列，填写已创建DLI的队列名。
-    * args  传入主类的参数。
-    * scType  计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 资源类型： A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。
-    * jars  用户已上传到DLI资源管理系统的类型为jar的资源包名。
-    * pyFiles  用户已上传到DLI资源管理系统的类型为pyFile的资源包名。
-    * files  用户已上传到DLI资源管理系统的类型为file的资源包名。
-    * modules  依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css
+    * file  参数解释:   用户已上传到DLI资源管理系统的类型为jar的资源包名 示例: batchTest/spark-examples_2.11-2.1.0.luxor.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * className  参数解释:   批处理作业的Java/Spark主类 示例: org.apache.spark.examples.SparkPi 约束限制:  无 取值范围: 无 默认取值: 无
+    * clusterName  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
+    * args  参数解释:   传入主类的参数 示例: -o result.txt 约束限制:  无 取值范围: 无 默认取值: 无
+    * scType  参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
+    * jars  参数解释:   用户已上传到DLI资源管理系统的类型为jar的程序包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/jars/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * pyFiles  参数解释:   用户已上传到DLI资源管理系统的类型为pyFile的资源包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/py/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * files  参数解释:   用户已上传到DLI资源管理系统的类型为file的资源包名 示例: [\"count.txt\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * modules  参数解释:   依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css 示例: [\"sys.datasource.hbase\",\"sys.datasource.rds\"] 约束限制:  无 取值范围: 无 默认取值: 无
     * resources  JSON对象列表，填写用户已上传到队列的类型为JSON的资源包名和类型。
     * groups  JSON对象列表，填写用户组类型资源，格式详见请求示例。resources中的name未进行type校验，只要此分组中存在这个名字的包即可。
-    * conf  batch配置项。
-    * name  创建时用户指定的批处理名称，不能超过128个字符。
-    * driverMemory  Spark应用的Driver内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
-    * driverCores  Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数。
-    * executorMemory  Spark应用的Executor内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
-    * executorCores  Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数。
-    * numExecutors  Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数。
-    * feature  作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数。
-    * sparkVersion  作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2。
-    * queue  用于指定队列，填写已创建DLI的队列名
-    * autoRecovery  是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试。默认值为“false”。
-    * maxRetryTimes  最大重试次数。最大值为“100”，默认值为“20”。
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
-    * obsBucket  保存Spark作业的obs桶，需要保存作业时配置该参数
+    * conf  参数解释:   batch配置项 约束限制:  无 取值范围: 无 默认取值: 无
+    * name  参数解释:   创建时用户指定的批处理名称 示例: TestDemo4 约束限制:  不超过128个字符的字符串 取值范围: 无 默认取值: 无
+    * driverMemory  参数解释:   Spark应用的Driver内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
+    * driverCores  参数解释:   Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executorMemory  参数解释:   Spark应用的Executor内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
+    * executorCores  参数解释:   Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * numExecutors  参数解释:   Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数 示例: 6 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * feature  参数解释:   作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型） custom（自定义型） 默认取值: 无
+    * sparkVersion  参数解释:   作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2 示例: 2.3.2 约束限制:  无 取值范围: 无 默认取值: 无
+    * queue  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
+    * autoRecovery  参数解释:   是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * maxRetryTimes  参数解释:   最大重试次数 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: false
+    * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》 示例: ceshi/spark_general-x86_64:3.3.1-2.3.7.1720240718867424736954752.tensorflow  约束限制:  无 取值范围: 无 默认取值: 无
+    * obsBucket  参数解释:   保存Spark作业的obs桶，需要保存作业时配置该参数 示例: rain3 约束限制:  无 取值范围: 无 默认取值: 无
     * catalogName  访问元数据时，需要将该参数配置为dli。
     *
     * @var string[]
@@ -221,31 +221,31 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * file  用户已上传到DLI资源管理系统的类型为jar的资源包名。
-    * className  批处理作业的Java/Spark主类。
-    * clusterName  用于指定队列，填写已创建DLI的队列名。
-    * args  传入主类的参数。
-    * scType  计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 资源类型： A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。
-    * jars  用户已上传到DLI资源管理系统的类型为jar的资源包名。
-    * pyFiles  用户已上传到DLI资源管理系统的类型为pyFile的资源包名。
-    * files  用户已上传到DLI资源管理系统的类型为file的资源包名。
-    * modules  依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css
+    * file  参数解释:   用户已上传到DLI资源管理系统的类型为jar的资源包名 示例: batchTest/spark-examples_2.11-2.1.0.luxor.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * className  参数解释:   批处理作业的Java/Spark主类 示例: org.apache.spark.examples.SparkPi 约束限制:  无 取值范围: 无 默认取值: 无
+    * clusterName  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
+    * args  参数解释:   传入主类的参数 示例: -o result.txt 约束限制:  无 取值范围: 无 默认取值: 无
+    * scType  参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
+    * jars  参数解释:   用户已上传到DLI资源管理系统的类型为jar的程序包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/jars/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * pyFiles  参数解释:   用户已上传到DLI资源管理系统的类型为pyFile的资源包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/py/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * files  参数解释:   用户已上传到DLI资源管理系统的类型为file的资源包名 示例: [\"count.txt\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * modules  参数解释:   依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css 示例: [\"sys.datasource.hbase\",\"sys.datasource.rds\"] 约束限制:  无 取值范围: 无 默认取值: 无
     * resources  JSON对象列表，填写用户已上传到队列的类型为JSON的资源包名和类型。
     * groups  JSON对象列表，填写用户组类型资源，格式详见请求示例。resources中的name未进行type校验，只要此分组中存在这个名字的包即可。
-    * conf  batch配置项。
-    * name  创建时用户指定的批处理名称，不能超过128个字符。
-    * driverMemory  Spark应用的Driver内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
-    * driverCores  Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数。
-    * executorMemory  Spark应用的Executor内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
-    * executorCores  Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数。
-    * numExecutors  Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数。
-    * feature  作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数。
-    * sparkVersion  作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2。
-    * queue  用于指定队列，填写已创建DLI的队列名
-    * autoRecovery  是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试。默认值为“false”。
-    * maxRetryTimes  最大重试次数。最大值为“100”，默认值为“20”。
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
-    * obsBucket  保存Spark作业的obs桶，需要保存作业时配置该参数
+    * conf  参数解释:   batch配置项 约束限制:  无 取值范围: 无 默认取值: 无
+    * name  参数解释:   创建时用户指定的批处理名称 示例: TestDemo4 约束限制:  不超过128个字符的字符串 取值范围: 无 默认取值: 无
+    * driverMemory  参数解释:   Spark应用的Driver内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
+    * driverCores  参数解释:   Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executorMemory  参数解释:   Spark应用的Executor内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
+    * executorCores  参数解释:   Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * numExecutors  参数解释:   Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数 示例: 6 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * feature  参数解释:   作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型） custom（自定义型） 默认取值: 无
+    * sparkVersion  参数解释:   作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2 示例: 2.3.2 约束限制:  无 取值范围: 无 默认取值: 无
+    * queue  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
+    * autoRecovery  参数解释:   是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * maxRetryTimes  参数解释:   最大重试次数 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: false
+    * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》 示例: ceshi/spark_general-x86_64:3.3.1-2.3.7.1720240718867424736954752.tensorflow  约束限制:  无 取值范围: 无 默认取值: 无
+    * obsBucket  参数解释:   保存Spark作业的obs桶，需要保存作业时配置该参数 示例: rain3 约束限制:  无 取值范围: 无 默认取值: 无
     * catalogName  访问元数据时，需要将该参数配置为dli。
     *
     * @var string[]
@@ -281,31 +281,31 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * file  用户已上传到DLI资源管理系统的类型为jar的资源包名。
-    * className  批处理作业的Java/Spark主类。
-    * clusterName  用于指定队列，填写已创建DLI的队列名。
-    * args  传入主类的参数。
-    * scType  计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 资源类型： A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。
-    * jars  用户已上传到DLI资源管理系统的类型为jar的资源包名。
-    * pyFiles  用户已上传到DLI资源管理系统的类型为pyFile的资源包名。
-    * files  用户已上传到DLI资源管理系统的类型为file的资源包名。
-    * modules  依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css
+    * file  参数解释:   用户已上传到DLI资源管理系统的类型为jar的资源包名 示例: batchTest/spark-examples_2.11-2.1.0.luxor.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * className  参数解释:   批处理作业的Java/Spark主类 示例: org.apache.spark.examples.SparkPi 约束限制:  无 取值范围: 无 默认取值: 无
+    * clusterName  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
+    * args  参数解释:   传入主类的参数 示例: -o result.txt 约束限制:  无 取值范围: 无 默认取值: 无
+    * scType  参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
+    * jars  参数解释:   用户已上传到DLI资源管理系统的类型为jar的程序包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/jars/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * pyFiles  参数解释:   用户已上传到DLI资源管理系统的类型为pyFile的资源包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/py/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * files  参数解释:   用户已上传到DLI资源管理系统的类型为file的资源包名 示例: [\"count.txt\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * modules  参数解释:   依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css 示例: [\"sys.datasource.hbase\",\"sys.datasource.rds\"] 约束限制:  无 取值范围: 无 默认取值: 无
     * resources  JSON对象列表，填写用户已上传到队列的类型为JSON的资源包名和类型。
     * groups  JSON对象列表，填写用户组类型资源，格式详见请求示例。resources中的name未进行type校验，只要此分组中存在这个名字的包即可。
-    * conf  batch配置项。
-    * name  创建时用户指定的批处理名称，不能超过128个字符。
-    * driverMemory  Spark应用的Driver内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
-    * driverCores  Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数。
-    * executorMemory  Spark应用的Executor内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
-    * executorCores  Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数。
-    * numExecutors  Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数。
-    * feature  作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数。
-    * sparkVersion  作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2。
-    * queue  用于指定队列，填写已创建DLI的队列名
-    * autoRecovery  是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试。默认值为“false”。
-    * maxRetryTimes  最大重试次数。最大值为“100”，默认值为“20”。
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
-    * obsBucket  保存Spark作业的obs桶，需要保存作业时配置该参数
+    * conf  参数解释:   batch配置项 约束限制:  无 取值范围: 无 默认取值: 无
+    * name  参数解释:   创建时用户指定的批处理名称 示例: TestDemo4 约束限制:  不超过128个字符的字符串 取值范围: 无 默认取值: 无
+    * driverMemory  参数解释:   Spark应用的Driver内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
+    * driverCores  参数解释:   Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executorMemory  参数解释:   Spark应用的Executor内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
+    * executorCores  参数解释:   Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * numExecutors  参数解释:   Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数 示例: 6 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * feature  参数解释:   作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型） custom（自定义型） 默认取值: 无
+    * sparkVersion  参数解释:   作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2 示例: 2.3.2 约束限制:  无 取值范围: 无 默认取值: 无
+    * queue  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
+    * autoRecovery  参数解释:   是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * maxRetryTimes  参数解释:   最大重试次数 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: false
+    * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》 示例: ceshi/spark_general-x86_64:3.3.1-2.3.7.1720240718867424736954752.tensorflow  约束限制:  无 取值范围: 无 默认取值: 无
+    * obsBucket  参数解释:   保存Spark作业的obs桶，需要保存作业时配置该参数 示例: rain3 约束限制:  无 取值范围: 无 默认取值: 无
     * catalogName  访问元数据时，需要将该参数配置为dli。
     *
     * @var string[]
@@ -456,6 +456,9 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['className'] === null) {
             $invalidProperties[] = "'className' can't be null";
         }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 128)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 128.";
+            }
             $allowedValues = $this->getFeatureAllowableValues();
                 if (!is_null($this->container['feature']) && !in_array($this->container['feature'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -480,7 +483,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets file
-    *  用户已上传到DLI资源管理系统的类型为jar的资源包名。
+    *  参数解释:   用户已上传到DLI资源管理系统的类型为jar的资源包名 示例: batchTest/spark-examples_2.11-2.1.0.luxor.jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string
     */
@@ -492,7 +495,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets file
     *
-    * @param string $file 用户已上传到DLI资源管理系统的类型为jar的资源包名。
+    * @param string $file 参数解释:   用户已上传到DLI资源管理系统的类型为jar的资源包名 示例: batchTest/spark-examples_2.11-2.1.0.luxor.jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -504,7 +507,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets className
-    *  批处理作业的Java/Spark主类。
+    *  参数解释:   批处理作业的Java/Spark主类 示例: org.apache.spark.examples.SparkPi 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string
     */
@@ -516,7 +519,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets className
     *
-    * @param string $className 批处理作业的Java/Spark主类。
+    * @param string $className 参数解释:   批处理作业的Java/Spark主类 示例: org.apache.spark.examples.SparkPi 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -528,7 +531,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  用于指定队列，填写已创建DLI的队列名。
+    *  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -540,7 +543,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 用于指定队列，填写已创建DLI的队列名。
+    * @param string|null $clusterName 参数解释:   用于指定队列，填写已创建DLI的队列名 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -552,7 +555,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets args
-    *  传入主类的参数。
+    *  参数解释:   传入主类的参数 示例: -o result.txt 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -564,7 +567,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets args
     *
-    * @param string[]|null $args 传入主类的参数。
+    * @param string[]|null $args 参数解释:   传入主类的参数 示例: -o result.txt 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -576,7 +579,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets scType
-    *  计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 资源类型： A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。
+    *  参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
     *
     * @return string|null
     */
@@ -588,7 +591,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets scType
     *
-    * @param string|null $scType 计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 资源类型： A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。
+    * @param string|null $scType 参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
     *
     * @return $this
     */
@@ -600,7 +603,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets jars
-    *  用户已上传到DLI资源管理系统的类型为jar的资源包名。
+    *  参数解释:   用户已上传到DLI资源管理系统的类型为jar的程序包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/jars/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -612,7 +615,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets jars
     *
-    * @param string[]|null $jars 用户已上传到DLI资源管理系统的类型为jar的资源包名。
+    * @param string[]|null $jars 参数解释:   用户已上传到DLI资源管理系统的类型为jar的程序包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/jars/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -624,7 +627,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets pyFiles
-    *  用户已上传到DLI资源管理系统的类型为pyFile的资源包名。
+    *  参数解释:   用户已上传到DLI资源管理系统的类型为pyFile的资源包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/py/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -636,7 +639,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets pyFiles
     *
-    * @param string[]|null $pyFiles 用户已上传到DLI资源管理系统的类型为pyFile的资源包名。
+    * @param string[]|null $pyFiles 参数解释:   用户已上传到DLI资源管理系统的类型为pyFile的资源包名。也支持指定OBS路径，例如：obs://桶名/包名 示例: obs://cwk/py/com/example/demo 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -648,7 +651,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets files
-    *  用户已上传到DLI资源管理系统的类型为file的资源包名。
+    *  参数解释:   用户已上传到DLI资源管理系统的类型为file的资源包名 示例: [\"count.txt\"] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -660,7 +663,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets files
     *
-    * @param string[]|null $files 用户已上传到DLI资源管理系统的类型为file的资源包名。
+    * @param string[]|null $files 参数解释:   用户已上传到DLI资源管理系统的类型为file的资源包名 示例: [\"count.txt\"] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -672,7 +675,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets modules
-    *  依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css
+    *  参数解释:   依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css 示例: [\"sys.datasource.hbase\",\"sys.datasource.rds\"] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -684,7 +687,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets modules
     *
-    * @param string[]|null $modules 依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css
+    * @param string[]|null $modules 参数解释:   依赖的系统资源模块名，具体模块名可通过查询所有资源包接口查看。 DLI系统提供了用于执行跨源作业的依赖模块，各个不同的服务对应的模块列表如下： CloudTable/MRS HBase: sys.datasource.hbase CloudTable/MRS OpenTSDB: sys.datasource.opentsdb RDS MySQL: sys.datasource.rds RDS PostGre: 不需要选 DWS: 不需要选 CSS: sys.datasource.css 示例: [\"sys.datasource.hbase\",\"sys.datasource.rds\"] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -744,7 +747,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets conf
-    *  batch配置项。
+    *  参数解释:   batch配置项 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return map[string,object]|null
     */
@@ -756,7 +759,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets conf
     *
-    * @param map[string,object]|null $conf batch配置项。
+    * @param map[string,object]|null $conf 参数解释:   batch配置项 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -768,7 +771,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  创建时用户指定的批处理名称，不能超过128个字符。
+    *  参数解释:   创建时用户指定的批处理名称 示例: TestDemo4 约束限制:  不超过128个字符的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -780,7 +783,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 创建时用户指定的批处理名称，不能超过128个字符。
+    * @param string|null $name 参数解释:   创建时用户指定的批处理名称 示例: TestDemo4 约束限制:  不超过128个字符的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -792,7 +795,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets driverMemory
-    *  Spark应用的Driver内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
+    *  参数解释:   Spark应用的Driver内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -804,7 +807,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets driverMemory
     *
-    * @param string|null $driverMemory Spark应用的Driver内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
+    * @param string|null $driverMemory 参数解释:   Spark应用的Driver内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -816,7 +819,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets driverCores
-    *  Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数。
+    *  参数解释:   Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -828,7 +831,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets driverCores
     *
-    * @param int|null $driverCores Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数。
+    * @param int|null $driverCores 参数解释:   Spark应用Driver的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -840,7 +843,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorMemory
-    *  Spark应用的Executor内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
+    *  参数解释:   Spark应用的Executor内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -852,7 +855,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets executorMemory
     *
-    * @param string|null $executorMemory Spark应用的Executor内存, 参数配置例如2G, 2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。
+    * @param string|null $executorMemory 参数解释:   Spark应用的Executor内存, 参数配置例如2G,2048M。该配置项会替换“sc_type”中对应的默认参数，使用时必需带单位，否则会启动失败。 示例: 2G 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -864,7 +867,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorCores
-    *  Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数。
+    *  参数解释:   Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -876,7 +879,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets executorCores
     *
-    * @param int|null $executorCores Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数。
+    * @param int|null $executorCores 参数解释:   Spark应用每个Executor的CPU核数。该配置项会替换sc_type中对应的默认参数 示例: 8 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -888,7 +891,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets numExecutors
-    *  Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数。
+    *  参数解释:   Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数 示例: 6 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -900,7 +903,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets numExecutors
     *
-    * @param int|null $numExecutors Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数。
+    * @param int|null $numExecutors 参数解释:   Spark应用Executor的个数。该配置项会替换sc_type中对应的默认参数 示例: 6 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -912,7 +915,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets feature
-    *  作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数。
+    *  参数解释:   作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型） custom（自定义型） 默认取值: 无
     *
     * @return string|null
     */
@@ -924,7 +927,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets feature
     *
-    * @param string|null $feature 作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数。
+    * @param string|null $feature 参数解释:   作业特性，作业运行在vm队列上支持basic，在container队列上支持basic、ai、custom，其中填写custom时需要同时填写image参数 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型） custom（自定义型） 默认取值: 无
     *
     * @return $this
     */
@@ -936,7 +939,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets sparkVersion
-    *  作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2。
+    *  参数解释:   作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2 示例: 2.3.2 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -948,7 +951,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets sparkVersion
     *
-    * @param string|null $sparkVersion 作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2。
+    * @param string|null $sparkVersion 参数解释:   作业使用spark组件的版本号，在feature为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2 示例: 2.3.2 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -960,7 +963,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets queue
-    *  用于指定队列，填写已创建DLI的队列名
+    *  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -972,7 +975,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets queue
     *
-    * @param string|null $queue 用于指定队列，填写已创建DLI的队列名
+    * @param string|null $queue 参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -984,7 +987,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoRecovery
-    *  是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试。默认值为“false”。
+    *  参数解释:   是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     *
     * @return bool|null
     */
@@ -996,7 +999,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets autoRecovery
     *
-    * @param bool|null $autoRecovery 是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试。默认值为“false”。
+    * @param bool|null $autoRecovery 参数解释:   是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     *
     * @return $this
     */
@@ -1008,7 +1011,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxRetryTimes
-    *  最大重试次数。最大值为“100”，默认值为“20”。
+    *  参数解释:   最大重试次数 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: false
     *
     * @return int|null
     */
@@ -1020,7 +1023,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets maxRetryTimes
     *
-    * @param int|null $maxRetryTimes 最大重试次数。最大值为“100”，默认值为“20”。
+    * @param int|null $maxRetryTimes 参数解释:   最大重试次数 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: false
     *
     * @return $this
     */
@@ -1032,7 +1035,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets image
-    *  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
+    *  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》 示例: ceshi/spark_general-x86_64:3.3.1-2.3.7.1720240718867424736954752.tensorflow  约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1044,7 +1047,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets image
     *
-    * @param string|null $image 自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
+    * @param string|null $image 参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》 示例: ceshi/spark_general-x86_64:3.3.1-2.3.7.1720240718867424736954752.tensorflow  约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1056,7 +1059,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsBucket
-    *  保存Spark作业的obs桶，需要保存作业时配置该参数
+    *  参数解释:   保存Spark作业的obs桶，需要保存作业时配置该参数 示例: rain3 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1068,7 +1071,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets obsBucket
     *
-    * @param string|null $obsBucket 保存Spark作业的obs桶，需要保存作业时配置该参数
+    * @param string|null $obsBucket 参数解释:   保存Spark作业的obs桶，需要保存作业时配置该参数 示例: rain3 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */

@@ -20,22 +20,22 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
-    * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示）
-    * deliverTimeInterval  记数据转储周期（秒）。（仅目标端类型为OBS时会显示）
-    * obsBucketName  转储地址。（仅目标端类型为OBS时会显示）
-    * obsPath  转储目录。（仅目标端类型为OBS时会显示）
-    * partitionFormat  时间目录格式。（仅目标端类型为OBS时会显示）
-    * recordDelimiter  记录分行符。（仅目标端类型为OBS时会显示）
-    * storeKeys  存储Key。（仅目标端类型为OBS时会显示）
-    * obsPartSize  每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示）
-    * flushSize  flush_size。（仅目标端类型为OBS时会显示）
-    * timezone  时区。（仅目标端类型为OBS时会显示）
-    * schemaGeneratorClass  schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示）
-    * partitionerClass  partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示）
-    * valueConverter  value_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
-    * keyConverter  key_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
-    * kvDelimiter  kv_delimiter，默认为\":\"。（仅目标端类型为OBS时会显示）
+    * consumerStrategy  **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * deliverTimeInterval  **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsBucketName  **参数解释**： 转储地址。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsPath  **参数解释**： 转储目录。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * partitionFormat  **参数解释**： 时间目录格式。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * recordDelimiter  **参数解释**： 记录分行符。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * storeKeys  **参数解释**： 存储Key。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsPartSize  **参数解释**： 每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * flushSize  **参数解释**： 刷写数量。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * timezone  **参数解释**： 时区。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * schemaGeneratorClass  **参数解释**： schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * partitionerClass  **参数解释**： partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * valueConverter  **参数解释**： 值转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * keyConverter  **参数解释**： 键转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * kvDelimiter  **参数解释**： 键值分隔符，默认为\":\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -60,22 +60,22 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
-    * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示）
-    * deliverTimeInterval  记数据转储周期（秒）。（仅目标端类型为OBS时会显示）
-    * obsBucketName  转储地址。（仅目标端类型为OBS时会显示）
-    * obsPath  转储目录。（仅目标端类型为OBS时会显示）
-    * partitionFormat  时间目录格式。（仅目标端类型为OBS时会显示）
-    * recordDelimiter  记录分行符。（仅目标端类型为OBS时会显示）
-    * storeKeys  存储Key。（仅目标端类型为OBS时会显示）
-    * obsPartSize  每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示）
-    * flushSize  flush_size。（仅目标端类型为OBS时会显示）
-    * timezone  时区。（仅目标端类型为OBS时会显示）
-    * schemaGeneratorClass  schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示）
-    * partitionerClass  partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示）
-    * valueConverter  value_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
-    * keyConverter  key_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
-    * kvDelimiter  kv_delimiter，默认为\":\"。（仅目标端类型为OBS时会显示）
+    * consumerStrategy  **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * deliverTimeInterval  **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsBucketName  **参数解释**： 转储地址。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsPath  **参数解释**： 转储目录。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * partitionFormat  **参数解释**： 时间目录格式。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * recordDelimiter  **参数解释**： 记录分行符。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * storeKeys  **参数解释**： 存储Key。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsPartSize  **参数解释**： 每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * flushSize  **参数解释**： 刷写数量。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * timezone  **参数解释**： 时区。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * schemaGeneratorClass  **参数解释**： schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * partitionerClass  **参数解释**： partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * valueConverter  **参数解释**： 值转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * keyConverter  **参数解释**： 键转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * kvDelimiter  **参数解释**： 键值分隔符，默认为\":\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,22 +121,22 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
-    * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示）
-    * deliverTimeInterval  记数据转储周期（秒）。（仅目标端类型为OBS时会显示）
-    * obsBucketName  转储地址。（仅目标端类型为OBS时会显示）
-    * obsPath  转储目录。（仅目标端类型为OBS时会显示）
-    * partitionFormat  时间目录格式。（仅目标端类型为OBS时会显示）
-    * recordDelimiter  记录分行符。（仅目标端类型为OBS时会显示）
-    * storeKeys  存储Key。（仅目标端类型为OBS时会显示）
-    * obsPartSize  每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示）
-    * flushSize  flush_size。（仅目标端类型为OBS时会显示）
-    * timezone  时区。（仅目标端类型为OBS时会显示）
-    * schemaGeneratorClass  schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示）
-    * partitionerClass  partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示）
-    * valueConverter  value_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
-    * keyConverter  key_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
-    * kvDelimiter  kv_delimiter，默认为\":\"。（仅目标端类型为OBS时会显示）
+    * consumerStrategy  **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * deliverTimeInterval  **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsBucketName  **参数解释**： 转储地址。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsPath  **参数解释**： 转储目录。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * partitionFormat  **参数解释**： 时间目录格式。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * recordDelimiter  **参数解释**： 记录分行符。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * storeKeys  **参数解释**： 存储Key。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsPartSize  **参数解释**： 每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * flushSize  **参数解释**： 刷写数量。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * timezone  **参数解释**： 时区。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * schemaGeneratorClass  **参数解释**： schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * partitionerClass  **参数解释**： partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * valueConverter  **参数解释**： 值转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * keyConverter  **参数解释**： 键转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * kvDelimiter  **参数解释**： 键值分隔符，默认为\":\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -161,22 +161,22 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
-    * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示）
-    * deliverTimeInterval  记数据转储周期（秒）。（仅目标端类型为OBS时会显示）
-    * obsBucketName  转储地址。（仅目标端类型为OBS时会显示）
-    * obsPath  转储目录。（仅目标端类型为OBS时会显示）
-    * partitionFormat  时间目录格式。（仅目标端类型为OBS时会显示）
-    * recordDelimiter  记录分行符。（仅目标端类型为OBS时会显示）
-    * storeKeys  存储Key。（仅目标端类型为OBS时会显示）
-    * obsPartSize  每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示）
-    * flushSize  flush_size。（仅目标端类型为OBS时会显示）
-    * timezone  时区。（仅目标端类型为OBS时会显示）
-    * schemaGeneratorClass  schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示）
-    * partitionerClass  partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示）
-    * valueConverter  value_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
-    * keyConverter  key_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
-    * kvDelimiter  kv_delimiter，默认为\":\"。（仅目标端类型为OBS时会显示）
+    * consumerStrategy  **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * deliverTimeInterval  **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsBucketName  **参数解释**： 转储地址。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsPath  **参数解释**： 转储目录。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * partitionFormat  **参数解释**： 时间目录格式。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * recordDelimiter  **参数解释**： 记录分行符。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * storeKeys  **参数解释**： 存储Key。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsPartSize  **参数解释**： 每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * flushSize  **参数解释**： 刷写数量。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * timezone  **参数解释**： 时区。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * schemaGeneratorClass  **参数解释**： schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * partitionerClass  **参数解释**： partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * valueConverter  **参数解释**： 值转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * keyConverter  **参数解释**： 键转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * kvDelimiter  **参数解释**： 键值分隔符，默认为\":\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -201,22 +201,22 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
-    * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示）
-    * deliverTimeInterval  记数据转储周期（秒）。（仅目标端类型为OBS时会显示）
-    * obsBucketName  转储地址。（仅目标端类型为OBS时会显示）
-    * obsPath  转储目录。（仅目标端类型为OBS时会显示）
-    * partitionFormat  时间目录格式。（仅目标端类型为OBS时会显示）
-    * recordDelimiter  记录分行符。（仅目标端类型为OBS时会显示）
-    * storeKeys  存储Key。（仅目标端类型为OBS时会显示）
-    * obsPartSize  每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示）
-    * flushSize  flush_size。（仅目标端类型为OBS时会显示）
-    * timezone  时区。（仅目标端类型为OBS时会显示）
-    * schemaGeneratorClass  schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示）
-    * partitionerClass  partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示）
-    * valueConverter  value_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
-    * keyConverter  key_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
-    * kvDelimiter  kv_delimiter，默认为\":\"。（仅目标端类型为OBS时会显示）
+    * consumerStrategy  **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * deliverTimeInterval  **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsBucketName  **参数解释**： 转储地址。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsPath  **参数解释**： 转储目录。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * partitionFormat  **参数解释**： 时间目录格式。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * recordDelimiter  **参数解释**： 记录分行符。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * storeKeys  **参数解释**： 存储Key。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * obsPartSize  **参数解释**： 每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * flushSize  **参数解释**： 刷写数量。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * timezone  **参数解释**： 时区。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * schemaGeneratorClass  **参数解释**： schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * partitionerClass  **参数解释**： partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * valueConverter  **参数解释**： 值转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * keyConverter  **参数解释**： 键转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * kvDelimiter  **参数解释**： 键值分隔符，默认为\":\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -339,7 +339,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumerStrategy
-    *  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
     *
     * @return string|null
     */
@@ -351,7 +351,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets consumerStrategy
     *
-    * @param string|null $consumerStrategy 转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
+    * @param string|null $consumerStrategy **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationFileType
-    *  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -375,7 +375,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets destinationFileType
     *
-    * @param string|null $destinationFileType 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示）
+    * @param string|null $destinationFileType **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets deliverTimeInterval
-    *  记数据转储周期（秒）。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -399,7 +399,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets deliverTimeInterval
     *
-    * @param int|null $deliverTimeInterval 记数据转储周期（秒）。（仅目标端类型为OBS时会显示）
+    * @param int|null $deliverTimeInterval **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsBucketName
-    *  转储地址。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 转储地址。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets obsBucketName
     *
-    * @param string|null $obsBucketName 转储地址。（仅目标端类型为OBS时会显示）
+    * @param string|null $obsBucketName **参数解释**： 转储地址。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsPath
-    *  转储目录。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 转储目录。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -447,7 +447,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets obsPath
     *
-    * @param string|null $obsPath 转储目录。（仅目标端类型为OBS时会显示）
+    * @param string|null $obsPath **参数解释**： 转储目录。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets partitionFormat
-    *  时间目录格式。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 时间目录格式。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -471,7 +471,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets partitionFormat
     *
-    * @param string|null $partitionFormat 时间目录格式。（仅目标端类型为OBS时会显示）
+    * @param string|null $partitionFormat **参数解释**： 时间目录格式。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordDelimiter
-    *  记录分行符。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 记录分行符。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -495,7 +495,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets recordDelimiter
     *
-    * @param string|null $recordDelimiter 记录分行符。（仅目标端类型为OBS时会显示）
+    * @param string|null $recordDelimiter **参数解释**： 记录分行符。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -507,7 +507,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets storeKeys
-    *  存储Key。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 存储Key。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -519,7 +519,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets storeKeys
     *
-    * @param bool|null $storeKeys 存储Key。（仅目标端类型为OBS时会显示）
+    * @param bool|null $storeKeys **参数解释**： 存储Key。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -531,7 +531,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsPartSize
-    *  每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -543,7 +543,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets obsPartSize
     *
-    * @param int|null $obsPartSize 每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示）
+    * @param int|null $obsPartSize **参数解释**： 每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -555,7 +555,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets flushSize
-    *  flush_size。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 刷写数量。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -567,7 +567,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets flushSize
     *
-    * @param int|null $flushSize flush_size。（仅目标端类型为OBS时会显示）
+    * @param int|null $flushSize **参数解释**： 刷写数量。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -579,7 +579,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets timezone
-    *  时区。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 时区。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -591,7 +591,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets timezone
     *
-    * @param string|null $timezone 时区。（仅目标端类型为OBS时会显示）
+    * @param string|null $timezone **参数解释**： 时区。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -603,7 +603,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets schemaGeneratorClass
-    *  schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -615,7 +615,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets schemaGeneratorClass
     *
-    * @param string|null $schemaGeneratorClass schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示）
+    * @param string|null $schemaGeneratorClass **参数解释**： schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -627,7 +627,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets partitionerClass
-    *  partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -639,7 +639,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets partitionerClass
     *
-    * @param string|null $partitionerClass partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示）
+    * @param string|null $partitionerClass **参数解释**： partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -651,7 +651,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets valueConverter
-    *  value_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 值转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -663,7 +663,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets valueConverter
     *
-    * @param string|null $valueConverter value_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
+    * @param string|null $valueConverter **参数解释**： 值转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -675,7 +675,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyConverter
-    *  key_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 键转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -687,7 +687,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets keyConverter
     *
-    * @param string|null $keyConverter key_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
+    * @param string|null $keyConverter **参数解释**： 键转换器，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -699,7 +699,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets kvDelimiter
-    *  kv_delimiter，默认为\":\"。（仅目标端类型为OBS时会显示）
+    *  **参数解释**： 键值分隔符，默认为\":\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -711,7 +711,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets kvDelimiter
     *
-    * @param string|null $kvDelimiter kv_delimiter，默认为\":\"。（仅目标端类型为OBS时会显示）
+    * @param string|null $kvDelimiter **参数解释**： 键值分隔符，默认为\":\"。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     *
     * @return $this
     */

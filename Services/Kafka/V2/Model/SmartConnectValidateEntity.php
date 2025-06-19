@@ -21,7 +21,7 @@ class SmartConnectValidateEntity implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * task  task
-    * type  SmartConnect任务类型。
+    * type  **参数解释**： Smart Connect任务类型。 **取值范围**： - OBS_SINK：转储。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class SmartConnectValidateEntity implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * task  task
-    * type  SmartConnect任务类型。
+    * type  **参数解释**： Smart Connect任务类型。 **取值范围**： - OBS_SINK：转储。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class SmartConnectValidateEntity implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * task  task
-    * type  SmartConnect任务类型。
+    * type  **参数解释**： Smart Connect任务类型。 **取值范围**： - OBS_SINK：转储。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class SmartConnectValidateEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * task  task
-    * type  SmartConnect任务类型。
+    * type  **参数解释**： Smart Connect任务类型。 **取值范围**： - OBS_SINK：转储。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class SmartConnectValidateEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * task  task
-    * type  SmartConnect任务类型。
+    * type  **参数解释**： Smart Connect任务类型。 **取值范围**： - OBS_SINK：转储。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class SmartConnectValidateEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  SmartConnect任务类型。
+    *  **参数解释**： Smart Connect任务类型。 **取值范围**： - OBS_SINK：转储。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class SmartConnectValidateEntity implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type SmartConnect任务类型。
+    * @param string|null $type **参数解释**： Smart Connect任务类型。 **取值范围**： - OBS_SINK：转储。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     *
     * @return $this
     */

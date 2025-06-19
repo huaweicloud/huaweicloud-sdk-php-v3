@@ -27,7 +27,7 @@ class DeleteBuildJobResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'result' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteBuildJobResponseBodyResult',
+            'result' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteTheJobResponseBodyResult',
             'status' => 'string'
     ];
 
@@ -188,7 +188,7 @@ class DeleteBuildJobResponse implements ModelInterface, ArrayAccess
     * Gets result
     *  result
     *
-    * @return \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteBuildJobResponseBodyResult|null
+    * @return \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteTheJobResponseBodyResult|null
     */
     public function getResult()
     {
@@ -198,7 +198,7 @@ class DeleteBuildJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteBuildJobResponseBodyResult|null $result result
+    * @param \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\DeleteTheJobResponseBodyResult|null $result result
     *
     * @return $this
     */

@@ -29,6 +29,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * enterpriseProjectId  企业ID，不填默认为“0”
     * tags  标签
     * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+    * ipv6Enable  是否启用IPv6。开启IPv6后，将自动为资源池分配IPv6网段，暂不支持自定义IPv6网段。该功能一旦开启，将不能关闭。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
             'minCu' => 'int',
             'enterpriseProjectId' => 'string',
             'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]',
-            'label' => 'map[string,string]'
+            'label' => 'map[string,string]',
+            'ipv6Enable' => 'bool'
     ];
 
     /**
@@ -55,6 +57,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * enterpriseProjectId  企业ID，不填默认为“0”
     * tags  标签
     * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+    * ipv6Enable  是否启用IPv6。开启IPv6后，将自动为资源池分配IPv6网段，暂不支持自定义IPv6网段。该功能一旦开启，将不能关闭。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
         'minCu' => 'int32',
         'enterpriseProjectId' => null,
         'tags' => null,
-        'label' => null
+        'label' => null,
+        'ipv6Enable' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * enterpriseProjectId  企业ID，不填默认为“0”
     * tags  标签
     * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+    * ipv6Enable  是否启用IPv6。开启IPv6后，将自动为资源池分配IPv6网段，暂不支持自定义IPv6网段。该功能一旦开启，将不能关闭。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
             'minCu' => 'min_cu',
             'enterpriseProjectId' => 'enterprise_project_id',
             'tags' => 'tags',
-            'label' => 'label'
+            'label' => 'label',
+            'ipv6Enable' => 'ipv6_enable'
     ];
 
     /**
@@ -128,6 +134,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * enterpriseProjectId  企业ID，不填默认为“0”
     * tags  标签
     * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+    * ipv6Enable  是否启用IPv6。开启IPv6后，将自动为资源池分配IPv6网段，暂不支持自定义IPv6网段。该功能一旦开启，将不能关闭。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
             'minCu' => 'setMinCu',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'tags' => 'setTags',
-            'label' => 'setLabel'
+            'label' => 'setLabel',
+            'ipv6Enable' => 'setIpv6Enable'
     ];
 
     /**
@@ -154,6 +162,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * enterpriseProjectId  企业ID，不填默认为“0”
     * tags  标签
     * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+    * ipv6Enable  是否启用IPv6。开启IPv6后，将自动为资源池分配IPv6网段，暂不支持自定义IPv6网段。该功能一旦开启，将不能关闭。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
             'minCu' => 'getMinCu',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'tags' => 'getTags',
-            'label' => 'getLabel'
+            'label' => 'getLabel',
+            'ipv6Enable' => 'getIpv6Enable'
     ];
 
     /**
@@ -236,6 +246,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
     }
 
     /**
@@ -521,6 +532,30 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     public function setLabel($label)
     {
         $this->container['label'] = $label;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6Enable
+    *  是否启用IPv6。开启IPv6后，将自动为资源池分配IPv6网段，暂不支持自定义IPv6网段。该功能一旦开启，将不能关闭。
+    *
+    * @return bool|null
+    */
+    public function getIpv6Enable()
+    {
+        return $this->container['ipv6Enable'];
+    }
+
+    /**
+    * Sets ipv6Enable
+    *
+    * @param bool|null $ipv6Enable 是否启用IPv6。开启IPv6后，将自动为资源池分配IPv6网段，暂不支持自定义IPv6网段。该功能一旦开启，将不能关闭。
+    *
+    * @return $this
+    */
+    public function setIpv6Enable($ipv6Enable)
+    {
+        $this->container['ipv6Enable'] = $ipv6Enable;
         return $this;
     }
 

@@ -38,7 +38,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
             'syncMessageFlush' => 'bool',
             'newPartitionNumbers' => 'int',
             'newPartitionBrokers' => 'int[]',
-            'topicOtherConfigs' => '\HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]',
+            'topicOtherConfigs' => '\HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceTopicReqTopicOtherConfigs[]',
             'topicDesc' => 'string'
     ];
 
@@ -400,7 +400,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     * Gets topicOtherConfigs
     *  Topic配置
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]|null
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceTopicReqTopicOtherConfigs[]|null
     */
     public function getTopicOtherConfigs()
     {
@@ -410,7 +410,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Sets topicOtherConfigs
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]|null $topicOtherConfigs Topic配置
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceTopicReqTopicOtherConfigs[]|null $topicOtherConfigs Topic配置
     *
     * @return $this
     */

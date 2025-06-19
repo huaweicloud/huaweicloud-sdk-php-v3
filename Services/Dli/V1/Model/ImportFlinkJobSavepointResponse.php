@@ -27,7 +27,7 @@ class ImportFlinkJobSavepointResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'isSuccess' => 'string',
+            'isSuccess' => 'bool',
             'message' => 'string'
     ];
 
@@ -188,7 +188,7 @@ class ImportFlinkJobSavepointResponse implements ModelInterface, ArrayAccess
     * Gets isSuccess
     *  执行请求是否成功。“true”表示请求执行成功。
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getIsSuccess()
     {
@@ -198,7 +198,7 @@ class ImportFlinkJobSavepointResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSuccess
     *
-    * @param string|null $isSuccess 执行请求是否成功。“true”表示请求执行成功。
+    * @param bool|null $isSuccess 执行请求是否成功。“true”表示请求执行成功。
     *
     * @return $this
     */

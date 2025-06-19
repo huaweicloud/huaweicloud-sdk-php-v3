@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\CodeArtsBuild\V3\Model;
+namespace HuaweiCloud\SDK\Cloudtest\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DeleteBuildJobResponseBodyResult implements ModelInterface, ArrayAccess
+class UploadStepImgRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class DeleteBuildJobResponseBodyResult implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DeleteBuildJobResponseBody_result';
+    protected static $openAPIModelName = 'UploadStepImgRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  构建任务ID
-    * projectId  构建任务所在项目的ID
+    * file  上传的对象的内容。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobId' => 'string',
-            'projectId' => 'string'
+            'file' => '\SplFileObject'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  构建任务ID
-    * projectId  构建任务所在项目的ID
+    * file  上传的对象的内容。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'jobId' => null,
-        'projectId' => null
+        'file' => 'binary'
     ];
 
     /**
@@ -65,38 +61,32 @@ class DeleteBuildJobResponseBodyResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  构建任务ID
-    * projectId  构建任务所在项目的ID
+    * file  上传的对象的内容。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobId' => 'job_id',
-            'projectId' => 'project_id'
+            'file' => 'file'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  构建任务ID
-    * projectId  构建任务所在项目的ID
+    * file  上传的对象的内容。
     *
     * @var string[]
     */
     protected static $setters = [
-            'jobId' => 'setJobId',
-            'projectId' => 'setProjectId'
+            'file' => 'setFile'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  构建任务ID
-    * projectId  构建任务所在项目的ID
+    * file  上传的对象的内容。
     *
     * @var string[]
     */
     protected static $getters = [
-            'jobId' => 'getJobId',
-            'projectId' => 'getProjectId'
+            'file' => 'getFile'
     ];
 
     /**
@@ -157,8 +147,7 @@ class DeleteBuildJobResponseBodyResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['file'] = isset($data['file']) ? $data['file'] : null;
     }
 
     /**
@@ -169,6 +158,9 @@ class DeleteBuildJobResponseBodyResult implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['file'] === null) {
+            $invalidProperties[] = "'file' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -184,50 +176,26 @@ class DeleteBuildJobResponseBodyResult implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets jobId
-    *  构建任务ID
+    * Gets file
+    *  上传的对象的内容。
     *
-    * @return string|null
+    * @return \SplFileObject
     */
-    public function getJobId()
+    public function getFile()
     {
-        return $this->container['jobId'];
+        return $this->container['file'];
     }
 
     /**
-    * Sets jobId
+    * Sets file
     *
-    * @param string|null $jobId 构建任务ID
+    * @param \SplFileObject $file 上传的对象的内容。
     *
     * @return $this
     */
-    public function setJobId($jobId)
+    public function setFile($file)
     {
-        $this->container['jobId'] = $jobId;
-        return $this;
-    }
-
-    /**
-    * Gets projectId
-    *  构建任务所在项目的ID
-    *
-    * @return string|null
-    */
-    public function getProjectId()
-    {
-        return $this->container['projectId'];
-    }
-
-    /**
-    * Sets projectId
-    *
-    * @param string|null $projectId 构建任务所在项目的ID
-    *
-    * @return $this
-    */
-    public function setProjectId($projectId)
-    {
-        $this->container['projectId'] = $projectId;
+        $this->container['file'] = $file;
         return $this;
     }
 

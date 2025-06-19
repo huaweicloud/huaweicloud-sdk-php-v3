@@ -20,16 +20,16 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterName  DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用)。
-    * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
-    * from  起始批处理作业的索引号，默认从0开始。
-    * jobName  批处理作业的名称。
-    * jobId  jobId
-    * order  指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。
-    * queueName  queueName
-    * size  查询批处理作业的数量。
-    * start  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
-    * state  state
+    * clusterName  参数解释:   DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用) 示例: cluster1 约束限制:  匹配正则表达式'^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$'的字符串 取值范围: 无 默认取值: 无
+    * end  参数解释:   用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * from  参数解释:   起始批处理作业的索引号，默认从0开始 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * jobName  参数解释:   批处理作业的名称 示例: dli_test 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobId  参数解释:   批处理作业的ID 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
+    * order  参数解释:   指定作业排序方式 示例: DURATION_DESC 约束限制:  无 取值范围: DURATION_DESC（作业运行时长降序） DURATION_ASC（作业运行时长升序） CREATE_TIME_DESC（作业提交时间降序） CREATE_TIME_ASC（作业提交时间升序） 默认取值: 无
+    * queueName  参数解释:   队列名称 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
+    * size  参数解释:   查询批处理作业的数量 示例: 1 约束限制:  无 取值范围: 无 默认取值: 100
+    * start  参数解释:   用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * state  参数解释:   批处理作业的状态 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterName  DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用)。
-    * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
-    * from  起始批处理作业的索引号，默认从0开始。
-    * jobName  批处理作业的名称。
-    * jobId  jobId
-    * order  指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。
-    * queueName  queueName
-    * size  查询批处理作业的数量。
-    * start  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
-    * state  state
+    * clusterName  参数解释:   DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用) 示例: cluster1 约束限制:  匹配正则表达式'^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$'的字符串 取值范围: 无 默认取值: 无
+    * end  参数解释:   用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * from  参数解释:   起始批处理作业的索引号，默认从0开始 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * jobName  参数解释:   批处理作业的名称 示例: dli_test 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobId  参数解释:   批处理作业的ID 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
+    * order  参数解释:   指定作业排序方式 示例: DURATION_DESC 约束限制:  无 取值范围: DURATION_DESC（作业运行时长降序） DURATION_ASC（作业运行时长升序） CREATE_TIME_DESC（作业提交时间降序） CREATE_TIME_ASC（作业提交时间升序） 默认取值: 无
+    * queueName  参数解释:   队列名称 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
+    * size  参数解释:   查询批处理作业的数量 示例: 1 约束限制:  无 取值范围: 无 默认取值: 100
+    * start  参数解释:   用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * state  参数解释:   批处理作业的状态 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterName  DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用)。
-    * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
-    * from  起始批处理作业的索引号，默认从0开始。
-    * jobName  批处理作业的名称。
-    * jobId  jobId
-    * order  指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。
-    * queueName  queueName
-    * size  查询批处理作业的数量。
-    * start  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
-    * state  state
+    * clusterName  参数解释:   DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用) 示例: cluster1 约束限制:  匹配正则表达式'^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$'的字符串 取值范围: 无 默认取值: 无
+    * end  参数解释:   用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * from  参数解释:   起始批处理作业的索引号，默认从0开始 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * jobName  参数解释:   批处理作业的名称 示例: dli_test 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobId  参数解释:   批处理作业的ID 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
+    * order  参数解释:   指定作业排序方式 示例: DURATION_DESC 约束限制:  无 取值范围: DURATION_DESC（作业运行时长降序） DURATION_ASC（作业运行时长升序） CREATE_TIME_DESC（作业提交时间降序） CREATE_TIME_ASC（作业提交时间升序） 默认取值: 无
+    * queueName  参数解释:   队列名称 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
+    * size  参数解释:   查询批处理作业的数量 示例: 1 约束限制:  无 取值范围: 无 默认取值: 100
+    * start  参数解释:   用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * state  参数解释:   批处理作业的状态 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterName  DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用)。
-    * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
-    * from  起始批处理作业的索引号，默认从0开始。
-    * jobName  批处理作业的名称。
-    * jobId  jobId
-    * order  指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。
-    * queueName  queueName
-    * size  查询批处理作业的数量。
-    * start  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
-    * state  state
+    * clusterName  参数解释:   DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用) 示例: cluster1 约束限制:  匹配正则表达式'^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$'的字符串 取值范围: 无 默认取值: 无
+    * end  参数解释:   用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * from  参数解释:   起始批处理作业的索引号，默认从0开始 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * jobName  参数解释:   批处理作业的名称 示例: dli_test 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobId  参数解释:   批处理作业的ID 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
+    * order  参数解释:   指定作业排序方式 示例: DURATION_DESC 约束限制:  无 取值范围: DURATION_DESC（作业运行时长降序） DURATION_ASC（作业运行时长升序） CREATE_TIME_DESC（作业提交时间降序） CREATE_TIME_ASC（作业提交时间升序） 默认取值: 无
+    * queueName  参数解释:   队列名称 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
+    * size  参数解释:   查询批处理作业的数量 示例: 1 约束限制:  无 取值范围: 无 默认取值: 100
+    * start  参数解释:   用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * state  参数解释:   批处理作业的状态 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterName  DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用)。
-    * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
-    * from  起始批处理作业的索引号，默认从0开始。
-    * jobName  批处理作业的名称。
-    * jobId  jobId
-    * order  指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。
-    * queueName  queueName
-    * size  查询批处理作业的数量。
-    * start  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
-    * state  state
+    * clusterName  参数解释:   DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用) 示例: cluster1 约束限制:  匹配正则表达式'^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$'的字符串 取值范围: 无 默认取值: 无
+    * end  参数解释:   用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * from  参数解释:   起始批处理作业的索引号，默认从0开始 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * jobName  参数解释:   批处理作业的名称 示例: dli_test 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobId  参数解释:   批处理作业的ID 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
+    * order  参数解释:   指定作业排序方式 示例: DURATION_DESC 约束限制:  无 取值范围: DURATION_DESC（作业运行时长降序） DURATION_ASC（作业运行时长升序） CREATE_TIME_DESC（作业提交时间降序） CREATE_TIME_ASC（作业提交时间升序） 默认取值: 无
+    * queueName  参数解释:   队列名称 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
+    * size  参数解释:   查询批处理作业的数量 示例: 1 约束限制:  无 取值范围: 无 默认取值: 100
+    * start  参数解释:   用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * state  参数解释:   批处理作业的状态 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @var string[]
     */
@@ -219,7 +219,28 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATE_STARTING = 'starting';
+    const STATE_RUNNING = 'running';
+    const STATE_DEAD = 'dead';
+    const STATE_SUCCESS = 'success';
+    const STATE_RECOVERING = 'recovering';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStateAllowableValues()
+    {
+        return [
+            self::STATE_STARTING,
+            self::STATE_RUNNING,
+            self::STATE_DEAD,
+            self::STATE_SUCCESS,
+            self::STATE_RECOVERING,
+        ];
+    }
 
 
     /**
@@ -257,6 +278,23 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['clusterName']) && !preg_match("/^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$/", $this->container['clusterName'])) {
+                $invalidProperties[] = "invalid value for 'clusterName', must be conform to the pattern /^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$/.";
+            }
+            if (!is_null($this->container['jobId']) && !preg_match("/^[A-Fa-f0-9_-]*$/", $this->container['jobId'])) {
+                $invalidProperties[] = "invalid value for 'jobId', must be conform to the pattern /^[A-Fa-f0-9_-]*$/.";
+            }
+            if (!is_null($this->container['queueName']) && !preg_match("/^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$/", $this->container['queueName'])) {
+                $invalidProperties[] = "invalid value for 'queueName', must be conform to the pattern /^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$/.";
+            }
+            $allowedValues = $this->getStateAllowableValues();
+                if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'state', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -273,7 +311,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用)。
+    *  参数解释:   DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用) 示例: cluster1 约束限制:  匹配正则表达式'^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$'的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -285,7 +323,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用)。
+    * @param string|null $clusterName 参数解释:   DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用) 示例: cluster1 约束限制:  匹配正则表达式'^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$'的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -297,7 +335,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets end
-    *  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
+    *  参数解释:   用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -309,7 +347,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets end
     *
-    * @param int|null $end 用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
+    * @param int|null $end 参数解释:   用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -321,7 +359,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets from
-    *  起始批处理作业的索引号，默认从0开始。
+    *  参数解释:   起始批处理作业的索引号，默认从0开始 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -333,7 +371,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets from
     *
-    * @param int|null $from 起始批处理作业的索引号，默认从0开始。
+    * @param int|null $from 参数解释:   起始批处理作业的索引号，默认从0开始 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -345,7 +383,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobName
-    *  批处理作业的名称。
+    *  参数解释:   批处理作业的名称 示例: dli_test 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -357,7 +395,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobName
     *
-    * @param string|null $jobName 批处理作业的名称。
+    * @param string|null $jobName 参数解释:   批处理作业的名称 示例: dli_test 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -369,7 +407,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  jobId
+    *  参数解释:   批处理作业的ID 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -381,7 +419,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId jobId
+    * @param string|null $jobId 参数解释:   批处理作业的ID 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -393,7 +431,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。
+    *  参数解释:   指定作业排序方式 示例: DURATION_DESC 约束限制:  无 取值范围: DURATION_DESC（作业运行时长降序） DURATION_ASC（作业运行时长升序） CREATE_TIME_DESC（作业提交时间降序） CREATE_TIME_ASC（作业提交时间升序） 默认取值: 无
     *
     * @return string|null
     */
@@ -405,7 +443,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param string|null $order 指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。
+    * @param string|null $order 参数解释:   指定作业排序方式 示例: DURATION_DESC 约束限制:  无 取值范围: DURATION_DESC（作业运行时长降序） DURATION_ASC（作业运行时长升序） CREATE_TIME_DESC（作业提交时间降序） CREATE_TIME_ASC（作业提交时间升序） 默认取值: 无
     *
     * @return $this
     */
@@ -417,7 +455,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
-    *  queueName
+    *  参数解释:   队列名称 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -429,7 +467,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets queueName
     *
-    * @param string|null $queueName queueName
+    * @param string|null $queueName 参数解释:   队列名称 示例: 03923a72-5ace-466a-a573-e8c7b08b8cf3 约束限制:  匹配正则表达式'^[A-Fa-f0-9_-]*$'的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -441,7 +479,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  查询批处理作业的数量。
+    *  参数解释:   查询批处理作业的数量 示例: 1 约束限制:  无 取值范围: 无 默认取值: 100
     *
     * @return int|null
     */
@@ -453,7 +491,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 查询批处理作业的数量。
+    * @param int|null $size 参数解释:   查询批处理作业的数量 示例: 1 约束限制:  无 取值范围: 无 默认取值: 100
     *
     * @return $this
     */
@@ -465,7 +503,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets start
-    *  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
+    *  参数解释:   用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -477,7 +515,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param int|null $start 用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
+    * @param int|null $start 参数解释:   用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -489,7 +527,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  state
+    *  参数解释:   批处理作业的状态 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @return string|null
     */
@@ -501,7 +539,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state state
+    * @param string|null $state 参数解释:   批处理作业的状态 示例: success 约束限制:  无 取值范围: starting（批处理作业正在启动） running（批处理作业正在执行任务） dead（批处理作业已退出） success（批处理作业执行成功） recovering（批处理作业正在恢复） 默认取值: 无
     *
     * @return $this
     */

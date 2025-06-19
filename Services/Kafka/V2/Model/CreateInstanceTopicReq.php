@@ -20,14 +20,14 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  Topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
-    * replication  副本数，配置数据的可靠性。 取值范围：1-3。
-    * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * partition  Topic分区数，设置消费的并发数。 取值范围：1-200。
-    * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * retentionTime  消息老化时间。默认值为72。 取值范围1-720，单位小时。
-    * topicOtherConfigs  Topic配置
-    * topicDesc  Topic描述
+    * id  **参数解释**： Topic名称。 **约束限制**： 长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * replication  **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * syncMessageFlush  **参数解释**： 是否使用同步落盘，同步落盘会导致性能降低。 **约束限制**： 不涉及。 **取值范围**： - true：同步落盘。 - false：不使用同步落盘。 **默认取值**： false
+    * partition  **参数解释**： Topic分区数，设置消费的并发数。 **约束限制**： 不涉及。 **取值范围**： 1-200。 **默认取值**： 不涉及。
+    * syncReplication  **参数解释**： 是否开启同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启。开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：不开启。 **默认取值**： false。
+    * retentionTime  **参数解释**： 消息老化时间。 **约束限制**： 不涉及。 **取值范围**： 1-720 **默认取值**： 72
+    * topicOtherConfigs  **参数解释**： Topic配置
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 0-200个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  Topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
-    * replication  副本数，配置数据的可靠性。 取值范围：1-3。
-    * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * partition  Topic分区数，设置消费的并发数。 取值范围：1-200。
-    * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * retentionTime  消息老化时间。默认值为72。 取值范围1-720，单位小时。
-    * topicOtherConfigs  Topic配置
-    * topicDesc  Topic描述
+    * id  **参数解释**： Topic名称。 **约束限制**： 长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * replication  **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * syncMessageFlush  **参数解释**： 是否使用同步落盘，同步落盘会导致性能降低。 **约束限制**： 不涉及。 **取值范围**： - true：同步落盘。 - false：不使用同步落盘。 **默认取值**： false
+    * partition  **参数解释**： Topic分区数，设置消费的并发数。 **约束限制**： 不涉及。 **取值范围**： 1-200。 **默认取值**： 不涉及。
+    * syncReplication  **参数解释**： 是否开启同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启。开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：不开启。 **默认取值**： false。
+    * retentionTime  **参数解释**： 消息老化时间。 **约束限制**： 不涉及。 **取值范围**： 1-720 **默认取值**： 72
+    * topicOtherConfigs  **参数解释**： Topic配置
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 0-200个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  Topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
-    * replication  副本数，配置数据的可靠性。 取值范围：1-3。
-    * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * partition  Topic分区数，设置消费的并发数。 取值范围：1-200。
-    * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * retentionTime  消息老化时间。默认值为72。 取值范围1-720，单位小时。
-    * topicOtherConfigs  Topic配置
-    * topicDesc  Topic描述
+    * id  **参数解释**： Topic名称。 **约束限制**： 长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * replication  **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * syncMessageFlush  **参数解释**： 是否使用同步落盘，同步落盘会导致性能降低。 **约束限制**： 不涉及。 **取值范围**： - true：同步落盘。 - false：不使用同步落盘。 **默认取值**： false
+    * partition  **参数解释**： Topic分区数，设置消费的并发数。 **约束限制**： 不涉及。 **取值范围**： 1-200。 **默认取值**： 不涉及。
+    * syncReplication  **参数解释**： 是否开启同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启。开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：不开启。 **默认取值**： false。
+    * retentionTime  **参数解释**： 消息老化时间。 **约束限制**： 不涉及。 **取值范围**： 1-720 **默认取值**： 72
+    * topicOtherConfigs  **参数解释**： Topic配置
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 0-200个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  Topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
-    * replication  副本数，配置数据的可靠性。 取值范围：1-3。
-    * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * partition  Topic分区数，设置消费的并发数。 取值范围：1-200。
-    * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * retentionTime  消息老化时间。默认值为72。 取值范围1-720，单位小时。
-    * topicOtherConfigs  Topic配置
-    * topicDesc  Topic描述
+    * id  **参数解释**： Topic名称。 **约束限制**： 长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * replication  **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * syncMessageFlush  **参数解释**： 是否使用同步落盘，同步落盘会导致性能降低。 **约束限制**： 不涉及。 **取值范围**： - true：同步落盘。 - false：不使用同步落盘。 **默认取值**： false
+    * partition  **参数解释**： Topic分区数，设置消费的并发数。 **约束限制**： 不涉及。 **取值范围**： 1-200。 **默认取值**： 不涉及。
+    * syncReplication  **参数解释**： 是否开启同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启。开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：不开启。 **默认取值**： false。
+    * retentionTime  **参数解释**： 消息老化时间。 **约束限制**： 不涉及。 **取值范围**： 1-720 **默认取值**： 72
+    * topicOtherConfigs  **参数解释**： Topic配置
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 0-200个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  Topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
-    * replication  副本数，配置数据的可靠性。 取值范围：1-3。
-    * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-    * partition  Topic分区数，设置消费的并发数。 取值范围：1-200。
-    * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-    * retentionTime  消息老化时间。默认值为72。 取值范围1-720，单位小时。
-    * topicOtherConfigs  Topic配置
-    * topicDesc  Topic描述
+    * id  **参数解释**： Topic名称。 **约束限制**： 长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * replication  **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * syncMessageFlush  **参数解释**： 是否使用同步落盘，同步落盘会导致性能降低。 **约束限制**： 不涉及。 **取值范围**： - true：同步落盘。 - false：不使用同步落盘。 **默认取值**： false
+    * partition  **参数解释**： Topic分区数，设置消费的并发数。 **约束限制**： 不涉及。 **取值范围**： 1-200。 **默认取值**： 不涉及。
+    * syncReplication  **参数解释**： 是否开启同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启。开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：不开启。 **默认取值**： false。
+    * retentionTime  **参数解释**： 消息老化时间。 **约束限制**： 不涉及。 **取值范围**： 1-720 **默认取值**： 72
+    * topicOtherConfigs  **参数解释**： Topic配置
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 0-200个字符。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -272,7 +272,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  Topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
+    *  **参数解释**： Topic名称。 **约束限制**： 长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。 **取值范围**： 不涉及 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -284,7 +284,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id Topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
+    * @param string $id **参数解释**： Topic名称。 **约束限制**： 长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。 **取值范围**： 不涉及 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets replication
-    *  副本数，配置数据的可靠性。 取值范围：1-3。
+    *  **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -308,7 +308,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets replication
     *
-    * @param int|null $replication 副本数，配置数据的可靠性。 取值范围：1-3。
+    * @param int|null $replication **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets syncMessageFlush
-    *  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
+    *  **参数解释**： 是否使用同步落盘，同步落盘会导致性能降低。 **约束限制**： 不涉及。 **取值范围**： - true：同步落盘。 - false：不使用同步落盘。 **默认取值**： false
     *
     * @return bool|null
     */
@@ -332,7 +332,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets syncMessageFlush
     *
-    * @param bool|null $syncMessageFlush 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
+    * @param bool|null $syncMessageFlush **参数解释**： 是否使用同步落盘，同步落盘会导致性能降低。 **约束限制**： 不涉及。 **取值范围**： - true：同步落盘。 - false：不使用同步落盘。 **默认取值**： false
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets partition
-    *  Topic分区数，设置消费的并发数。 取值范围：1-200。
+    *  **参数解释**： Topic分区数，设置消费的并发数。 **约束限制**： 不涉及。 **取值范围**： 1-200。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -356,7 +356,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets partition
     *
-    * @param int|null $partition Topic分区数，设置消费的并发数。 取值范围：1-200。
+    * @param int|null $partition **参数解释**： Topic分区数，设置消费的并发数。 **约束限制**： 不涉及。 **取值范围**： 1-200。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -368,7 +368,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets syncReplication
-    *  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
+    *  **参数解释**： 是否开启同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启。开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：不开启。 **默认取值**： false。
     *
     * @return bool|null
     */
@@ -380,7 +380,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets syncReplication
     *
-    * @param bool|null $syncReplication 是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
+    * @param bool|null $syncReplication **参数解释**： 是否开启同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启。开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：不开启。 **默认取值**： false。
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets retentionTime
-    *  消息老化时间。默认值为72。 取值范围1-720，单位小时。
+    *  **参数解释**： 消息老化时间。 **约束限制**： 不涉及。 **取值范围**： 1-720 **默认取值**： 72
     *
     * @return int|null
     */
@@ -404,7 +404,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets retentionTime
     *
-    * @param int|null $retentionTime 消息老化时间。默认值为72。 取值范围1-720，单位小时。
+    * @param int|null $retentionTime **参数解释**： 消息老化时间。 **约束限制**： 不涉及。 **取值范围**： 1-720 **默认取值**： 72
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicOtherConfigs
-    *  Topic配置
+    *  **参数解释**： Topic配置
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]|null
     */
@@ -428,7 +428,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets topicOtherConfigs
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]|null $topicOtherConfigs Topic配置
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]|null $topicOtherConfigs **参数解释**： Topic配置
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicDesc
-    *  Topic描述
+    *  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 0-200个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -452,7 +452,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets topicDesc
     *
-    * @param string|null $topicDesc Topic描述
+    * @param string|null $topicDesc **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 0-200个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */

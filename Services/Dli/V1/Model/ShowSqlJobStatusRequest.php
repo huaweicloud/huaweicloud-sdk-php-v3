@@ -20,7 +20,7 @@ class ShowSqlJobStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  作业ID。
+    * jobId  参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowSqlJobStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  作业ID。
+    * jobId  参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowSqlJobStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  作业ID。
+    * jobId  参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowSqlJobStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  作业ID。
+    * jobId  参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowSqlJobStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  作业ID。
+    * jobId  参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ShowSqlJobStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  作业ID。
+    *  参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ShowSqlJobStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string $jobId 作业ID。
+    * @param string $jobId 参数解释:  作业ID 示例: 6d2146a0-c2d5-41bd-8ca0-ca9694ada992 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */

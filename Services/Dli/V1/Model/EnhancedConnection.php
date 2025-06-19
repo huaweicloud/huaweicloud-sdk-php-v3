@@ -30,6 +30,7 @@ class EnhancedConnection implements ModelInterface, ArrayAccess
     * createTime  创建连接的时间。为UTC的时间戳。
     * hosts  用户自定义主机信息
     * isPrivis  该增强跨源连接如果做过项目赋权，则该字段是\"false\"，否则为\"true\"。
+    * ipv6Enable  是否启用IPv6。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class EnhancedConnection implements ModelInterface, ArrayAccess
             'destNetworkId' => 'string',
             'createTime' => 'int',
             'hosts' => '\HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionHost[]',
-            'isPrivis' => 'bool'
+            'isPrivis' => 'bool',
+            'ipv6Enable' => 'bool'
     ];
 
     /**
@@ -58,6 +60,7 @@ class EnhancedConnection implements ModelInterface, ArrayAccess
     * createTime  创建连接的时间。为UTC的时间戳。
     * hosts  用户自定义主机信息
     * isPrivis  该增强跨源连接如果做过项目赋权，则该字段是\"false\"，否则为\"true\"。
+    * ipv6Enable  是否启用IPv6。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class EnhancedConnection implements ModelInterface, ArrayAccess
         'destNetworkId' => null,
         'createTime' => 'int64',
         'hosts' => null,
-        'isPrivis' => null
+        'isPrivis' => null,
+        'ipv6Enable' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class EnhancedConnection implements ModelInterface, ArrayAccess
     * createTime  创建连接的时间。为UTC的时间戳。
     * hosts  用户自定义主机信息
     * isPrivis  该增强跨源连接如果做过项目赋权，则该字段是\"false\"，否则为\"true\"。
+    * ipv6Enable  是否启用IPv6。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class EnhancedConnection implements ModelInterface, ArrayAccess
             'destNetworkId' => 'dest_network_id',
             'createTime' => 'create_time',
             'hosts' => 'hosts',
-            'isPrivis' => 'isPrivis'
+            'isPrivis' => 'isPrivis',
+            'ipv6Enable' => 'ipv6_enable'
     ];
 
     /**
@@ -135,6 +141,7 @@ class EnhancedConnection implements ModelInterface, ArrayAccess
     * createTime  创建连接的时间。为UTC的时间戳。
     * hosts  用户自定义主机信息
     * isPrivis  该增强跨源连接如果做过项目赋权，则该字段是\"false\"，否则为\"true\"。
+    * ipv6Enable  是否启用IPv6。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class EnhancedConnection implements ModelInterface, ArrayAccess
             'destNetworkId' => 'setDestNetworkId',
             'createTime' => 'setCreateTime',
             'hosts' => 'setHosts',
-            'isPrivis' => 'setIsPrivis'
+            'isPrivis' => 'setIsPrivis',
+            'ipv6Enable' => 'setIpv6Enable'
     ];
 
     /**
@@ -163,6 +171,7 @@ class EnhancedConnection implements ModelInterface, ArrayAccess
     * createTime  创建连接的时间。为UTC的时间戳。
     * hosts  用户自定义主机信息
     * isPrivis  该增强跨源连接如果做过项目赋权，则该字段是\"false\"，否则为\"true\"。
+    * ipv6Enable  是否启用IPv6。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class EnhancedConnection implements ModelInterface, ArrayAccess
             'destNetworkId' => 'getDestNetworkId',
             'createTime' => 'getCreateTime',
             'hosts' => 'getHosts',
-            'isPrivis' => 'getIsPrivis'
+            'isPrivis' => 'getIsPrivis',
+            'ipv6Enable' => 'getIpv6Enable'
     ];
 
     /**
@@ -247,6 +257,7 @@ class EnhancedConnection implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
         $this->container['isPrivis'] = isset($data['isPrivis']) ? $data['isPrivis'] : null;
+        $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
     }
 
     /**
@@ -508,6 +519,30 @@ class EnhancedConnection implements ModelInterface, ArrayAccess
     public function setIsPrivis($isPrivis)
     {
         $this->container['isPrivis'] = $isPrivis;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6Enable
+    *  是否启用IPv6。
+    *
+    * @return bool|null
+    */
+    public function getIpv6Enable()
+    {
+        return $this->container['ipv6Enable'];
+    }
+
+    /**
+    * Sets ipv6Enable
+    *
+    * @param bool|null $ipv6Enable 是否启用IPv6。
+    *
+    * @return $this
+    */
+    public function setIpv6Enable($ipv6Enable)
+    {
+        $this->container['ipv6Enable'] = $ipv6Enable;
         return $this;
     }
 

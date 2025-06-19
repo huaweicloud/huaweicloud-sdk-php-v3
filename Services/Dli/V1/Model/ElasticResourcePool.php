@@ -40,6 +40,8 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
     * chargingMode  计费类型
     * manager  弹性资源池类型
     * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+    * ipv6Enable  是否启用IPv6
+    * ipv6CidrInSubnet  IPv6子网网段
     *
     * @var string[]
     */
@@ -63,7 +65,9 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
             'prepayCu' => 'int',
             'chargingMode' => 'int',
             'manager' => 'string',
-            'label' => 'map[string,string]'
+            'label' => 'map[string,string]',
+            'ipv6Enable' => 'bool',
+            'ipv6CidrInSubnet' => 'string'
     ];
 
     /**
@@ -88,6 +92,8 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
     * chargingMode  计费类型
     * manager  弹性资源池类型
     * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+    * ipv6Enable  是否启用IPv6
+    * ipv6CidrInSubnet  IPv6子网网段
     *
     * @var string[]
     */
@@ -111,7 +117,9 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
         'prepayCu' => 'int32',
         'chargingMode' => 'int32',
         'manager' => null,
-        'label' => null
+        'label' => null,
+        'ipv6Enable' => null,
+        'ipv6CidrInSubnet' => null
     ];
 
     /**
@@ -157,6 +165,8 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
     * chargingMode  计费类型
     * manager  弹性资源池类型
     * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+    * ipv6Enable  是否启用IPv6
+    * ipv6CidrInSubnet  IPv6子网网段
     *
     * @var string[]
     */
@@ -180,7 +190,9 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
             'prepayCu' => 'prepay_cu',
             'chargingMode' => 'charging_mode',
             'manager' => 'manager',
-            'label' => 'label'
+            'label' => 'label',
+            'ipv6Enable' => 'ipv6_enable',
+            'ipv6CidrInSubnet' => 'ipv6_cidr_in_subnet'
     ];
 
     /**
@@ -205,6 +217,8 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
     * chargingMode  计费类型
     * manager  弹性资源池类型
     * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+    * ipv6Enable  是否启用IPv6
+    * ipv6CidrInSubnet  IPv6子网网段
     *
     * @var string[]
     */
@@ -228,7 +242,9 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
             'prepayCu' => 'setPrepayCu',
             'chargingMode' => 'setChargingMode',
             'manager' => 'setManager',
-            'label' => 'setLabel'
+            'label' => 'setLabel',
+            'ipv6Enable' => 'setIpv6Enable',
+            'ipv6CidrInSubnet' => 'setIpv6CidrInSubnet'
     ];
 
     /**
@@ -253,6 +269,8 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
     * chargingMode  计费类型
     * manager  弹性资源池类型
     * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+    * ipv6Enable  是否启用IPv6
+    * ipv6CidrInSubnet  IPv6子网网段
     *
     * @var string[]
     */
@@ -276,7 +294,9 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
             'prepayCu' => 'getPrepayCu',
             'chargingMode' => 'getChargingMode',
             'manager' => 'getManager',
-            'label' => 'getLabel'
+            'label' => 'getLabel',
+            'ipv6Enable' => 'getIpv6Enable',
+            'ipv6CidrInSubnet' => 'getIpv6CidrInSubnet'
     ];
 
     /**
@@ -357,6 +377,8 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['manager'] = isset($data['manager']) ? $data['manager'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
+        $this->container['ipv6CidrInSubnet'] = isset($data['ipv6CidrInSubnet']) ? $data['ipv6CidrInSubnet'] : null;
     }
 
     /**
@@ -858,6 +880,54 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
     public function setLabel($label)
     {
         $this->container['label'] = $label;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6Enable
+    *  是否启用IPv6
+    *
+    * @return bool|null
+    */
+    public function getIpv6Enable()
+    {
+        return $this->container['ipv6Enable'];
+    }
+
+    /**
+    * Sets ipv6Enable
+    *
+    * @param bool|null $ipv6Enable 是否启用IPv6
+    *
+    * @return $this
+    */
+    public function setIpv6Enable($ipv6Enable)
+    {
+        $this->container['ipv6Enable'] = $ipv6Enable;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6CidrInSubnet
+    *  IPv6子网网段
+    *
+    * @return string|null
+    */
+    public function getIpv6CidrInSubnet()
+    {
+        return $this->container['ipv6CidrInSubnet'];
+    }
+
+    /**
+    * Sets ipv6CidrInSubnet
+    *
+    * @param string|null $ipv6CidrInSubnet IPv6子网网段
+    *
+    * @return $this
+    */
+    public function setIpv6CidrInSubnet($ipv6CidrInSubnet)
+    {
+        $this->container['ipv6CidrInSubnet'] = $ipv6CidrInSubnet;
         return $this;
     }
 

@@ -20,37 +20,37 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * queueId  队列ID。
-    * queueName  队列名称。
-    * description  队列描述信息。
-    * owner  创建队列的用户。
-    * createTime  创建队列的时间。是单位为“毫秒”的时间戳。
-    * queueType  队列的类型。： sql general all 如果不指定，默认为“sql”。
-    * cuCount  队列的实际CU。
-    * chargingMode  队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。
-    * resourceId  队列的资源ID。
-    * enterpriseProjectId  企业项目ID。0”表示default，即默认的企业项目。 说明： 开通了企业管理服务的用户可设置该参数绑定指定的项目。
-    * cidrInVpc  队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28。
-    * cidrInMgntsubnet  管理子网的网段。
-    * cidrInSubnet  子网网段。
-    * resourceMode  队列类型。 0：共享队列 1：专属队列
-    * platform  队列计算资源的cpu架构。
-    * isRestarting  是否在重启状态。默认值为“false”。
-    * labels  队列的标签信息，目前只支持设置跨az配置，multi_az=2
-    * feature  队列特性。支持以下两种类型：basic：基础型ai：AI增强型（仅SQL的x86_64专属队列支持选择）默认值为“basic”。
-    * resourceType  队列所属资源类型, vm或container。
-    * cuSpec  队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值。
-    * cuScaleOutLimit  当前队列弹性扩缩容的CU值上限。
-    * cuScaleInLimit  当前队列弹性扩缩容的CU值下限。
-    * elasticResourcePoolName  弹性资源池名称。
-    * supportSparkVersions  队列支持的Spark版本。
-    * defaultSparkVersion  队列默认的Spark版本。
-    * supportHetuEngineVersions  队列支持的HetuEngine版本。
-    * defaultHetuEngineVersion  队列默认的HetuEngine版本。
-    * supportFlinkSqlVersions  队列支持的Flink SQL版本。
-    * defaultFlinkSqlVersion  队列默认的Flink SQL版本。
-    * supportFlinkJarVersions  队列支持的Flink JAR版本。
-    * defaultFlinkJarVersion  队列默认的Flink JAR版本。
+    * queueId  参数解释: 队列ID 示例: 10 约束限制:  无 取值范围: 无 默认取值: 无
+    * queueName  参数解释: 队列名称 示例: datasource_connection 约束限制:  无 取值范围: 无 默认取值: 无
+    * description  参数解释: 队列描述信息 示例: des 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * queueType  参数解释: 队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: all
+    * cuCount  参数解释: 与该队列绑定的计算单元数，即当前队列的CU数 示例: 16 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * chargingMode  参数解释: 队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。 示例: 16 约束限制:  无 取值范围: 1, 2 默认取值: 无
+    * resourceId  参数解释: 队列的资源ID 示例: 26afb850-d3c9-42c1-81c0-583d1163e80f 约束限制:  无 取值范围: 无 默认取值: 无
+    * enterpriseProjectId  参数解释: 企业项目ID。0”表示default，即默认的企业项目。说明：开通了企业管理服务的用户可设置该参数绑定指定的项目。 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
+    * cidrInVpc  参数解释: 队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28 示例: 10.0.0.0/8 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * cidrInMgntsubnet  参数解释: 管理子网的网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * cidrInSubnet  参数解释: 子网网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * resourceMode  参数解释: 队列类型。0：共享队列,1：专属队列 示例: 0 约束限制:  无 取值范围: 0,1 默认取值: 无
+    * platform  参数解释: 队列计算资源的cpu架构 示例: 0 约束限制:  符合cpu架构格式的字符串 取值范围: 无 默认取值: 无
+    * isRestarting  参数解释: 是否在重启状态。默认值为“false” 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * labels  参数解释: 队列的标签信息，目前只支持设置跨az配置，multi_az=2 示例: {\\\"multi_az\\\":\\\"2\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * feature  参数解释: 队列特性 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型，仅SQL的x86_64专属队列支持选择） 默认取值: basic
+    * resourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
+    * cuSpec  参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuScaleOutLimit  参数解释: 当前队列弹性扩缩容的CU值上限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuScaleInLimit  参数解释: 当前队列弹性扩缩容的CU值下限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * elasticResourcePoolName  参数解释: 弹性资源池名称 示例: dli_pool_0509 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportSparkVersions  参数解释: 队列支持的Spark版本 示例: [2.4.5] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultSparkVersion  参数解释: 队列默认的Spark版本 示例: 2.4.5 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportHetuEngineVersions  参数解释: 队列支持的HetuEngine版本 示例: [2.1.0] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultHetuEngineVersion  参数解释: 队列默认的HetuEngine版本 示例: 2.1.0 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportFlinkSqlVersions  参数解释: 队列支持的Flink SQL版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultFlinkSqlVersion  参数解释: 队列默认的Flink SQL版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportFlinkJarVersions  参数解释: 队列支持的Flink JAR版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultFlinkJarVersion  参数解释: 队列默认的Flink JAR版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -90,37 +90,37 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * queueId  队列ID。
-    * queueName  队列名称。
-    * description  队列描述信息。
-    * owner  创建队列的用户。
-    * createTime  创建队列的时间。是单位为“毫秒”的时间戳。
-    * queueType  队列的类型。： sql general all 如果不指定，默认为“sql”。
-    * cuCount  队列的实际CU。
-    * chargingMode  队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。
-    * resourceId  队列的资源ID。
-    * enterpriseProjectId  企业项目ID。0”表示default，即默认的企业项目。 说明： 开通了企业管理服务的用户可设置该参数绑定指定的项目。
-    * cidrInVpc  队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28。
-    * cidrInMgntsubnet  管理子网的网段。
-    * cidrInSubnet  子网网段。
-    * resourceMode  队列类型。 0：共享队列 1：专属队列
-    * platform  队列计算资源的cpu架构。
-    * isRestarting  是否在重启状态。默认值为“false”。
-    * labels  队列的标签信息，目前只支持设置跨az配置，multi_az=2
-    * feature  队列特性。支持以下两种类型：basic：基础型ai：AI增强型（仅SQL的x86_64专属队列支持选择）默认值为“basic”。
-    * resourceType  队列所属资源类型, vm或container。
-    * cuSpec  队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值。
-    * cuScaleOutLimit  当前队列弹性扩缩容的CU值上限。
-    * cuScaleInLimit  当前队列弹性扩缩容的CU值下限。
-    * elasticResourcePoolName  弹性资源池名称。
-    * supportSparkVersions  队列支持的Spark版本。
-    * defaultSparkVersion  队列默认的Spark版本。
-    * supportHetuEngineVersions  队列支持的HetuEngine版本。
-    * defaultHetuEngineVersion  队列默认的HetuEngine版本。
-    * supportFlinkSqlVersions  队列支持的Flink SQL版本。
-    * defaultFlinkSqlVersion  队列默认的Flink SQL版本。
-    * supportFlinkJarVersions  队列支持的Flink JAR版本。
-    * defaultFlinkJarVersion  队列默认的Flink JAR版本。
+    * queueId  参数解释: 队列ID 示例: 10 约束限制:  无 取值范围: 无 默认取值: 无
+    * queueName  参数解释: 队列名称 示例: datasource_connection 约束限制:  无 取值范围: 无 默认取值: 无
+    * description  参数解释: 队列描述信息 示例: des 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * queueType  参数解释: 队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: all
+    * cuCount  参数解释: 与该队列绑定的计算单元数，即当前队列的CU数 示例: 16 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * chargingMode  参数解释: 队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。 示例: 16 约束限制:  无 取值范围: 1, 2 默认取值: 无
+    * resourceId  参数解释: 队列的资源ID 示例: 26afb850-d3c9-42c1-81c0-583d1163e80f 约束限制:  无 取值范围: 无 默认取值: 无
+    * enterpriseProjectId  参数解释: 企业项目ID。0”表示default，即默认的企业项目。说明：开通了企业管理服务的用户可设置该参数绑定指定的项目。 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
+    * cidrInVpc  参数解释: 队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28 示例: 10.0.0.0/8 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * cidrInMgntsubnet  参数解释: 管理子网的网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * cidrInSubnet  参数解释: 子网网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * resourceMode  参数解释: 队列类型。0：共享队列,1：专属队列 示例: 0 约束限制:  无 取值范围: 0,1 默认取值: 无
+    * platform  参数解释: 队列计算资源的cpu架构 示例: 0 约束限制:  符合cpu架构格式的字符串 取值范围: 无 默认取值: 无
+    * isRestarting  参数解释: 是否在重启状态。默认值为“false” 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * labels  参数解释: 队列的标签信息，目前只支持设置跨az配置，multi_az=2 示例: {\\\"multi_az\\\":\\\"2\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * feature  参数解释: 队列特性 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型，仅SQL的x86_64专属队列支持选择） 默认取值: basic
+    * resourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
+    * cuSpec  参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuScaleOutLimit  参数解释: 当前队列弹性扩缩容的CU值上限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuScaleInLimit  参数解释: 当前队列弹性扩缩容的CU值下限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * elasticResourcePoolName  参数解释: 弹性资源池名称 示例: dli_pool_0509 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportSparkVersions  参数解释: 队列支持的Spark版本 示例: [2.4.5] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultSparkVersion  参数解释: 队列默认的Spark版本 示例: 2.4.5 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportHetuEngineVersions  参数解释: 队列支持的HetuEngine版本 示例: [2.1.0] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultHetuEngineVersion  参数解释: 队列默认的HetuEngine版本 示例: 2.1.0 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportFlinkSqlVersions  参数解释: 队列支持的Flink SQL版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultFlinkSqlVersion  参数解释: 队列默认的Flink SQL版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportFlinkJarVersions  参数解释: 队列支持的Flink JAR版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultFlinkJarVersion  参数解释: 队列默认的Flink JAR版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -181,37 +181,37 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * queueId  队列ID。
-    * queueName  队列名称。
-    * description  队列描述信息。
-    * owner  创建队列的用户。
-    * createTime  创建队列的时间。是单位为“毫秒”的时间戳。
-    * queueType  队列的类型。： sql general all 如果不指定，默认为“sql”。
-    * cuCount  队列的实际CU。
-    * chargingMode  队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。
-    * resourceId  队列的资源ID。
-    * enterpriseProjectId  企业项目ID。0”表示default，即默认的企业项目。 说明： 开通了企业管理服务的用户可设置该参数绑定指定的项目。
-    * cidrInVpc  队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28。
-    * cidrInMgntsubnet  管理子网的网段。
-    * cidrInSubnet  子网网段。
-    * resourceMode  队列类型。 0：共享队列 1：专属队列
-    * platform  队列计算资源的cpu架构。
-    * isRestarting  是否在重启状态。默认值为“false”。
-    * labels  队列的标签信息，目前只支持设置跨az配置，multi_az=2
-    * feature  队列特性。支持以下两种类型：basic：基础型ai：AI增强型（仅SQL的x86_64专属队列支持选择）默认值为“basic”。
-    * resourceType  队列所属资源类型, vm或container。
-    * cuSpec  队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值。
-    * cuScaleOutLimit  当前队列弹性扩缩容的CU值上限。
-    * cuScaleInLimit  当前队列弹性扩缩容的CU值下限。
-    * elasticResourcePoolName  弹性资源池名称。
-    * supportSparkVersions  队列支持的Spark版本。
-    * defaultSparkVersion  队列默认的Spark版本。
-    * supportHetuEngineVersions  队列支持的HetuEngine版本。
-    * defaultHetuEngineVersion  队列默认的HetuEngine版本。
-    * supportFlinkSqlVersions  队列支持的Flink SQL版本。
-    * defaultFlinkSqlVersion  队列默认的Flink SQL版本。
-    * supportFlinkJarVersions  队列支持的Flink JAR版本。
-    * defaultFlinkJarVersion  队列默认的Flink JAR版本。
+    * queueId  参数解释: 队列ID 示例: 10 约束限制:  无 取值范围: 无 默认取值: 无
+    * queueName  参数解释: 队列名称 示例: datasource_connection 约束限制:  无 取值范围: 无 默认取值: 无
+    * description  参数解释: 队列描述信息 示例: des 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * queueType  参数解释: 队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: all
+    * cuCount  参数解释: 与该队列绑定的计算单元数，即当前队列的CU数 示例: 16 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * chargingMode  参数解释: 队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。 示例: 16 约束限制:  无 取值范围: 1, 2 默认取值: 无
+    * resourceId  参数解释: 队列的资源ID 示例: 26afb850-d3c9-42c1-81c0-583d1163e80f 约束限制:  无 取值范围: 无 默认取值: 无
+    * enterpriseProjectId  参数解释: 企业项目ID。0”表示default，即默认的企业项目。说明：开通了企业管理服务的用户可设置该参数绑定指定的项目。 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
+    * cidrInVpc  参数解释: 队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28 示例: 10.0.0.0/8 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * cidrInMgntsubnet  参数解释: 管理子网的网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * cidrInSubnet  参数解释: 子网网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * resourceMode  参数解释: 队列类型。0：共享队列,1：专属队列 示例: 0 约束限制:  无 取值范围: 0,1 默认取值: 无
+    * platform  参数解释: 队列计算资源的cpu架构 示例: 0 约束限制:  符合cpu架构格式的字符串 取值范围: 无 默认取值: 无
+    * isRestarting  参数解释: 是否在重启状态。默认值为“false” 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * labels  参数解释: 队列的标签信息，目前只支持设置跨az配置，multi_az=2 示例: {\\\"multi_az\\\":\\\"2\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * feature  参数解释: 队列特性 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型，仅SQL的x86_64专属队列支持选择） 默认取值: basic
+    * resourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
+    * cuSpec  参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuScaleOutLimit  参数解释: 当前队列弹性扩缩容的CU值上限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuScaleInLimit  参数解释: 当前队列弹性扩缩容的CU值下限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * elasticResourcePoolName  参数解释: 弹性资源池名称 示例: dli_pool_0509 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportSparkVersions  参数解释: 队列支持的Spark版本 示例: [2.4.5] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultSparkVersion  参数解释: 队列默认的Spark版本 示例: 2.4.5 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportHetuEngineVersions  参数解释: 队列支持的HetuEngine版本 示例: [2.1.0] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultHetuEngineVersion  参数解释: 队列默认的HetuEngine版本 示例: 2.1.0 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportFlinkSqlVersions  参数解释: 队列支持的Flink SQL版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultFlinkSqlVersion  参数解释: 队列默认的Flink SQL版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportFlinkJarVersions  参数解释: 队列支持的Flink JAR版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultFlinkJarVersion  参数解释: 队列默认的Flink JAR版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -251,37 +251,37 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * queueId  队列ID。
-    * queueName  队列名称。
-    * description  队列描述信息。
-    * owner  创建队列的用户。
-    * createTime  创建队列的时间。是单位为“毫秒”的时间戳。
-    * queueType  队列的类型。： sql general all 如果不指定，默认为“sql”。
-    * cuCount  队列的实际CU。
-    * chargingMode  队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。
-    * resourceId  队列的资源ID。
-    * enterpriseProjectId  企业项目ID。0”表示default，即默认的企业项目。 说明： 开通了企业管理服务的用户可设置该参数绑定指定的项目。
-    * cidrInVpc  队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28。
-    * cidrInMgntsubnet  管理子网的网段。
-    * cidrInSubnet  子网网段。
-    * resourceMode  队列类型。 0：共享队列 1：专属队列
-    * platform  队列计算资源的cpu架构。
-    * isRestarting  是否在重启状态。默认值为“false”。
-    * labels  队列的标签信息，目前只支持设置跨az配置，multi_az=2
-    * feature  队列特性。支持以下两种类型：basic：基础型ai：AI增强型（仅SQL的x86_64专属队列支持选择）默认值为“basic”。
-    * resourceType  队列所属资源类型, vm或container。
-    * cuSpec  队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值。
-    * cuScaleOutLimit  当前队列弹性扩缩容的CU值上限。
-    * cuScaleInLimit  当前队列弹性扩缩容的CU值下限。
-    * elasticResourcePoolName  弹性资源池名称。
-    * supportSparkVersions  队列支持的Spark版本。
-    * defaultSparkVersion  队列默认的Spark版本。
-    * supportHetuEngineVersions  队列支持的HetuEngine版本。
-    * defaultHetuEngineVersion  队列默认的HetuEngine版本。
-    * supportFlinkSqlVersions  队列支持的Flink SQL版本。
-    * defaultFlinkSqlVersion  队列默认的Flink SQL版本。
-    * supportFlinkJarVersions  队列支持的Flink JAR版本。
-    * defaultFlinkJarVersion  队列默认的Flink JAR版本。
+    * queueId  参数解释: 队列ID 示例: 10 约束限制:  无 取值范围: 无 默认取值: 无
+    * queueName  参数解释: 队列名称 示例: datasource_connection 约束限制:  无 取值范围: 无 默认取值: 无
+    * description  参数解释: 队列描述信息 示例: des 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * queueType  参数解释: 队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: all
+    * cuCount  参数解释: 与该队列绑定的计算单元数，即当前队列的CU数 示例: 16 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * chargingMode  参数解释: 队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。 示例: 16 约束限制:  无 取值范围: 1, 2 默认取值: 无
+    * resourceId  参数解释: 队列的资源ID 示例: 26afb850-d3c9-42c1-81c0-583d1163e80f 约束限制:  无 取值范围: 无 默认取值: 无
+    * enterpriseProjectId  参数解释: 企业项目ID。0”表示default，即默认的企业项目。说明：开通了企业管理服务的用户可设置该参数绑定指定的项目。 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
+    * cidrInVpc  参数解释: 队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28 示例: 10.0.0.0/8 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * cidrInMgntsubnet  参数解释: 管理子网的网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * cidrInSubnet  参数解释: 子网网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * resourceMode  参数解释: 队列类型。0：共享队列,1：专属队列 示例: 0 约束限制:  无 取值范围: 0,1 默认取值: 无
+    * platform  参数解释: 队列计算资源的cpu架构 示例: 0 约束限制:  符合cpu架构格式的字符串 取值范围: 无 默认取值: 无
+    * isRestarting  参数解释: 是否在重启状态。默认值为“false” 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * labels  参数解释: 队列的标签信息，目前只支持设置跨az配置，multi_az=2 示例: {\\\"multi_az\\\":\\\"2\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * feature  参数解释: 队列特性 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型，仅SQL的x86_64专属队列支持选择） 默认取值: basic
+    * resourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
+    * cuSpec  参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuScaleOutLimit  参数解释: 当前队列弹性扩缩容的CU值上限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuScaleInLimit  参数解释: 当前队列弹性扩缩容的CU值下限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * elasticResourcePoolName  参数解释: 弹性资源池名称 示例: dli_pool_0509 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportSparkVersions  参数解释: 队列支持的Spark版本 示例: [2.4.5] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultSparkVersion  参数解释: 队列默认的Spark版本 示例: 2.4.5 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportHetuEngineVersions  参数解释: 队列支持的HetuEngine版本 示例: [2.1.0] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultHetuEngineVersion  参数解释: 队列默认的HetuEngine版本 示例: 2.1.0 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportFlinkSqlVersions  参数解释: 队列支持的Flink SQL版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultFlinkSqlVersion  参数解释: 队列默认的Flink SQL版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportFlinkJarVersions  参数解释: 队列支持的Flink JAR版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultFlinkJarVersion  参数解释: 队列默认的Flink JAR版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -321,37 +321,37 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * queueId  队列ID。
-    * queueName  队列名称。
-    * description  队列描述信息。
-    * owner  创建队列的用户。
-    * createTime  创建队列的时间。是单位为“毫秒”的时间戳。
-    * queueType  队列的类型。： sql general all 如果不指定，默认为“sql”。
-    * cuCount  队列的实际CU。
-    * chargingMode  队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。
-    * resourceId  队列的资源ID。
-    * enterpriseProjectId  企业项目ID。0”表示default，即默认的企业项目。 说明： 开通了企业管理服务的用户可设置该参数绑定指定的项目。
-    * cidrInVpc  队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28。
-    * cidrInMgntsubnet  管理子网的网段。
-    * cidrInSubnet  子网网段。
-    * resourceMode  队列类型。 0：共享队列 1：专属队列
-    * platform  队列计算资源的cpu架构。
-    * isRestarting  是否在重启状态。默认值为“false”。
-    * labels  队列的标签信息，目前只支持设置跨az配置，multi_az=2
-    * feature  队列特性。支持以下两种类型：basic：基础型ai：AI增强型（仅SQL的x86_64专属队列支持选择）默认值为“basic”。
-    * resourceType  队列所属资源类型, vm或container。
-    * cuSpec  队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值。
-    * cuScaleOutLimit  当前队列弹性扩缩容的CU值上限。
-    * cuScaleInLimit  当前队列弹性扩缩容的CU值下限。
-    * elasticResourcePoolName  弹性资源池名称。
-    * supportSparkVersions  队列支持的Spark版本。
-    * defaultSparkVersion  队列默认的Spark版本。
-    * supportHetuEngineVersions  队列支持的HetuEngine版本。
-    * defaultHetuEngineVersion  队列默认的HetuEngine版本。
-    * supportFlinkSqlVersions  队列支持的Flink SQL版本。
-    * defaultFlinkSqlVersion  队列默认的Flink SQL版本。
-    * supportFlinkJarVersions  队列支持的Flink JAR版本。
-    * defaultFlinkJarVersion  队列默认的Flink JAR版本。
+    * queueId  参数解释: 队列ID 示例: 10 约束限制:  无 取值范围: 无 默认取值: 无
+    * queueName  参数解释: 队列名称 示例: datasource_connection 约束限制:  无 取值范围: 无 默认取值: 无
+    * description  参数解释: 队列描述信息 示例: des 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * queueType  参数解释: 队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: all
+    * cuCount  参数解释: 与该队列绑定的计算单元数，即当前队列的CU数 示例: 16 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * chargingMode  参数解释: 队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。 示例: 16 约束限制:  无 取值范围: 1, 2 默认取值: 无
+    * resourceId  参数解释: 队列的资源ID 示例: 26afb850-d3c9-42c1-81c0-583d1163e80f 约束限制:  无 取值范围: 无 默认取值: 无
+    * enterpriseProjectId  参数解释: 企业项目ID。0”表示default，即默认的企业项目。说明：开通了企业管理服务的用户可设置该参数绑定指定的项目。 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
+    * cidrInVpc  参数解释: 队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28 示例: 10.0.0.0/8 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * cidrInMgntsubnet  参数解释: 管理子网的网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * cidrInSubnet  参数解释: 子网网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
+    * resourceMode  参数解释: 队列类型。0：共享队列,1：专属队列 示例: 0 约束限制:  无 取值范围: 0,1 默认取值: 无
+    * platform  参数解释: 队列计算资源的cpu架构 示例: 0 约束限制:  符合cpu架构格式的字符串 取值范围: 无 默认取值: 无
+    * isRestarting  参数解释: 是否在重启状态。默认值为“false” 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * labels  参数解释: 队列的标签信息，目前只支持设置跨az配置，multi_az=2 示例: {\\\"multi_az\\\":\\\"2\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * feature  参数解释: 队列特性 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型，仅SQL的x86_64专属队列支持选择） 默认取值: basic
+    * resourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
+    * cuSpec  参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuScaleOutLimit  参数解释: 当前队列弹性扩缩容的CU值上限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuScaleInLimit  参数解释: 当前队列弹性扩缩容的CU值下限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * elasticResourcePoolName  参数解释: 弹性资源池名称 示例: dli_pool_0509 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportSparkVersions  参数解释: 队列支持的Spark版本 示例: [2.4.5] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultSparkVersion  参数解释: 队列默认的Spark版本 示例: 2.4.5 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportHetuEngineVersions  参数解释: 队列支持的HetuEngine版本 示例: [2.1.0] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultHetuEngineVersion  参数解释: 队列默认的HetuEngine版本 示例: 2.1.0 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportFlinkSqlVersions  参数解释: 队列支持的Flink SQL版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultFlinkSqlVersion  参数解释: 队列默认的Flink SQL版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
+    * supportFlinkJarVersions  参数解释: 队列支持的Flink JAR版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
+    * defaultFlinkJarVersion  参数解释: 队列默认的Flink JAR版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -429,7 +429,24 @@ class Queue implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const QUEUE_TYPE_SQL = 'sql';
+    const QUEUE_TYPE_GENERAL = 'general';
+    const QUEUE_TYPE_ALL = 'all';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getQueueTypeAllowableValues()
+    {
+        return [
+            self::QUEUE_TYPE_SQL,
+            self::QUEUE_TYPE_GENERAL,
+            self::QUEUE_TYPE_ALL,
+        ];
+    }
 
 
     /**
@@ -488,6 +505,14 @@ class Queue implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getQueueTypeAllowableValues();
+                if (!is_null($this->container['queueType']) && !in_array($this->container['queueType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'queueType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -504,7 +529,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueId
-    *  队列ID。
+    *  参数解释: 队列ID 示例: 10 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return int|null
     */
@@ -516,7 +541,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets queueId
     *
-    * @param int|null $queueId 队列ID。
+    * @param int|null $queueId 参数解释: 队列ID 示例: 10 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -528,7 +553,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
-    *  队列名称。
+    *  参数解释: 队列名称 示例: datasource_connection 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -540,7 +565,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets queueName
     *
-    * @param string|null $queueName 队列名称。
+    * @param string|null $queueName 参数解释: 队列名称 示例: datasource_connection 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -552,7 +577,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  队列描述信息。
+    *  参数解释: 队列描述信息 示例: des 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -564,7 +589,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 队列描述信息。
+    * @param string|null $description 参数解释: 队列描述信息 示例: des 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -576,7 +601,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  创建队列的用户。
+    *  参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -588,7 +613,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner 创建队列的用户。
+    * @param string|null $owner 参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -600,7 +625,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建队列的时间。是单位为“毫秒”的时间戳。
+    *  参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -612,7 +637,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建队列的时间。是单位为“毫秒”的时间戳。
+    * @param int|null $createTime 参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -624,7 +649,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueType
-    *  队列的类型。： sql general all 如果不指定，默认为“sql”。
+    *  参数解释: 队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: all
     *
     * @return string|null
     */
@@ -636,7 +661,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets queueType
     *
-    * @param string|null $queueType 队列的类型。： sql general all 如果不指定，默认为“sql”。
+    * @param string|null $queueType 参数解释: 队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: all
     *
     * @return $this
     */
@@ -648,7 +673,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets cuCount
-    *  队列的实际CU。
+    *  参数解释: 与该队列绑定的计算单元数，即当前队列的CU数 示例: 16 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -660,7 +685,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets cuCount
     *
-    * @param int|null $cuCount 队列的实际CU。
+    * @param int|null $cuCount 参数解释: 与该队列绑定的计算单元数，即当前队列的CU数 示例: 16 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -672,7 +697,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。
+    *  参数解释: 队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。 示例: 16 约束限制:  无 取值范围: 1, 2 默认取值: 无
     *
     * @return int|null
     */
@@ -684,7 +709,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param int|null $chargingMode 队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。
+    * @param int|null $chargingMode 参数解释: 队列的收费模式。 “1”表示按照CU时收费。 “2”表示按照包年包月收费。 示例: 16 约束限制:  无 取值范围: 1, 2 默认取值: 无
     *
     * @return $this
     */
@@ -696,7 +721,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  队列的资源ID。
+    *  参数解释: 队列的资源ID 示例: 26afb850-d3c9-42c1-81c0-583d1163e80f 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -708,7 +733,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 队列的资源ID。
+    * @param string|null $resourceId 参数解释: 队列的资源ID 示例: 26afb850-d3c9-42c1-81c0-583d1163e80f 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -720,7 +745,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID。0”表示default，即默认的企业项目。 说明： 开通了企业管理服务的用户可设置该参数绑定指定的项目。
+    *  参数解释: 企业项目ID。0”表示default，即默认的企业项目。说明：开通了企业管理服务的用户可设置该参数绑定指定的项目。 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -732,7 +757,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID。0”表示default，即默认的企业项目。 说明： 开通了企业管理服务的用户可设置该参数绑定指定的项目。
+    * @param string|null $enterpriseProjectId 参数解释: 企业项目ID。0”表示default，即默认的企业项目。说明：开通了企业管理服务的用户可设置该参数绑定指定的项目。 示例: 0 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -744,7 +769,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidrInVpc
-    *  队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28。
+    *  参数解释: 队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28 示例: 10.0.0.0/8 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -756,7 +781,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets cidrInVpc
     *
-    * @param string|null $cidrInVpc 队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28。
+    * @param string|null $cidrInVpc 参数解释: 队列的虚拟私有云（VPC）的网段。建议使用网段：10.0.0.0/8~28，172.16.0.0/12~28，192.168.0.0/16~28 示例: 10.0.0.0/8 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -768,7 +793,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidrInMgntsubnet
-    *  管理子网的网段。
+    *  参数解释: 管理子网的网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -780,7 +805,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets cidrInMgntsubnet
     *
-    * @param string|null $cidrInMgntsubnet 管理子网的网段。
+    * @param string|null $cidrInMgntsubnet 参数解释: 管理子网的网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -792,7 +817,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidrInSubnet
-    *  子网网段。
+    *  参数解释: 子网网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -804,7 +829,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets cidrInSubnet
     *
-    * @param string|null $cidrInSubnet 子网网段。
+    * @param string|null $cidrInSubnet 参数解释: 子网网段 示例: 10.23.128.0/24 约束限制:  符合网段格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -816,7 +841,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceMode
-    *  队列类型。 0：共享队列 1：专属队列
+    *  参数解释: 队列类型。0：共享队列,1：专属队列 示例: 0 约束限制:  无 取值范围: 0,1 默认取值: 无
     *
     * @return int|null
     */
@@ -828,7 +853,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets resourceMode
     *
-    * @param int|null $resourceMode 队列类型。 0：共享队列 1：专属队列
+    * @param int|null $resourceMode 参数解释: 队列类型。0：共享队列,1：专属队列 示例: 0 约束限制:  无 取值范围: 0,1 默认取值: 无
     *
     * @return $this
     */
@@ -840,7 +865,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets platform
-    *  队列计算资源的cpu架构。
+    *  参数解释: 队列计算资源的cpu架构 示例: 0 约束限制:  符合cpu架构格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -852,7 +877,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets platform
     *
-    * @param string|null $platform 队列计算资源的cpu架构。
+    * @param string|null $platform 参数解释: 队列计算资源的cpu架构 示例: 0 约束限制:  符合cpu架构格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -864,7 +889,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets isRestarting
-    *  是否在重启状态。默认值为“false”。
+    *  参数解释: 是否在重启状态。默认值为“false” 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     *
     * @return bool|null
     */
@@ -876,7 +901,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets isRestarting
     *
-    * @param bool|null $isRestarting 是否在重启状态。默认值为“false”。
+    * @param bool|null $isRestarting 参数解释: 是否在重启状态。默认值为“false” 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     *
     * @return $this
     */
@@ -888,7 +913,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets labels
-    *  队列的标签信息，目前只支持设置跨az配置，multi_az=2
+    *  参数解释: 队列的标签信息，目前只支持设置跨az配置，multi_az=2 示例: {\\\"multi_az\\\":\\\"2\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -900,7 +925,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets labels
     *
-    * @param string|null $labels 队列的标签信息，目前只支持设置跨az配置，multi_az=2
+    * @param string|null $labels 参数解释: 队列的标签信息，目前只支持设置跨az配置，multi_az=2 示例: {\\\"multi_az\\\":\\\"2\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -912,7 +937,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets feature
-    *  队列特性。支持以下两种类型：basic：基础型ai：AI增强型（仅SQL的x86_64专属队列支持选择）默认值为“basic”。
+    *  参数解释: 队列特性 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型，仅SQL的x86_64专属队列支持选择） 默认取值: basic
     *
     * @return string|null
     */
@@ -924,7 +949,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets feature
     *
-    * @param string|null $feature 队列特性。支持以下两种类型：basic：基础型ai：AI增强型（仅SQL的x86_64专属队列支持选择）默认值为“basic”。
+    * @param string|null $feature 参数解释: 队列特性 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型，仅SQL的x86_64专属队列支持选择） 默认取值: basic
     *
     * @return $this
     */
@@ -936,7 +961,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  队列所属资源类型, vm或container。
+    *  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
     *
     * @return string|null
     */
@@ -948,7 +973,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 队列所属资源类型, vm或container。
+    * @param string|null $resourceType 参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
     *
     * @return $this
     */
@@ -960,7 +985,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets cuSpec
-    *  队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值。
+    *  参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -972,7 +997,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets cuSpec
     *
-    * @param int|null $cuSpec 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值。
+    * @param int|null $cuSpec 参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -984,7 +1009,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets cuScaleOutLimit
-    *  当前队列弹性扩缩容的CU值上限。
+    *  参数解释: 当前队列弹性扩缩容的CU值上限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -996,7 +1021,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets cuScaleOutLimit
     *
-    * @param int|null $cuScaleOutLimit 当前队列弹性扩缩容的CU值上限。
+    * @param int|null $cuScaleOutLimit 参数解释: 当前队列弹性扩缩容的CU值上限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -1008,7 +1033,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets cuScaleInLimit
-    *  当前队列弹性扩缩容的CU值下限。
+    *  参数解释: 当前队列弹性扩缩容的CU值下限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -1020,7 +1045,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets cuScaleInLimit
     *
-    * @param int|null $cuScaleInLimit 当前队列弹性扩缩容的CU值下限。
+    * @param int|null $cuScaleInLimit 参数解释: 当前队列弹性扩缩容的CU值下限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -1032,7 +1057,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets elasticResourcePoolName
-    *  弹性资源池名称。
+    *  参数解释: 弹性资源池名称 示例: dli_pool_0509 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1044,7 +1069,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets elasticResourcePoolName
     *
-    * @param string|null $elasticResourcePoolName 弹性资源池名称。
+    * @param string|null $elasticResourcePoolName 参数解释: 弹性资源池名称 示例: dli_pool_0509 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1056,7 +1081,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportSparkVersions
-    *  队列支持的Spark版本。
+    *  参数解释: 队列支持的Spark版本 示例: [2.4.5] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -1068,7 +1093,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets supportSparkVersions
     *
-    * @param string[]|null $supportSparkVersions 队列支持的Spark版本。
+    * @param string[]|null $supportSparkVersions 参数解释: 队列支持的Spark版本 示例: [2.4.5] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1080,7 +1105,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultSparkVersion
-    *  队列默认的Spark版本。
+    *  参数解释: 队列默认的Spark版本 示例: 2.4.5 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1092,7 +1117,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets defaultSparkVersion
     *
-    * @param string|null $defaultSparkVersion 队列默认的Spark版本。
+    * @param string|null $defaultSparkVersion 参数解释: 队列默认的Spark版本 示例: 2.4.5 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1104,7 +1129,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportHetuEngineVersions
-    *  队列支持的HetuEngine版本。
+    *  参数解释: 队列支持的HetuEngine版本 示例: [2.1.0] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -1116,7 +1141,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets supportHetuEngineVersions
     *
-    * @param string[]|null $supportHetuEngineVersions 队列支持的HetuEngine版本。
+    * @param string[]|null $supportHetuEngineVersions 参数解释: 队列支持的HetuEngine版本 示例: [2.1.0] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1128,7 +1153,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultHetuEngineVersion
-    *  队列默认的HetuEngine版本。
+    *  参数解释: 队列默认的HetuEngine版本 示例: 2.1.0 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1140,7 +1165,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets defaultHetuEngineVersion
     *
-    * @param string|null $defaultHetuEngineVersion 队列默认的HetuEngine版本。
+    * @param string|null $defaultHetuEngineVersion 参数解释: 队列默认的HetuEngine版本 示例: 2.1.0 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1152,7 +1177,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportFlinkSqlVersions
-    *  队列支持的Flink SQL版本。
+    *  参数解释: 队列支持的Flink SQL版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -1164,7 +1189,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets supportFlinkSqlVersions
     *
-    * @param string[]|null $supportFlinkSqlVersions 队列支持的Flink SQL版本。
+    * @param string[]|null $supportFlinkSqlVersions 参数解释: 队列支持的Flink SQL版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1176,7 +1201,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultFlinkSqlVersion
-    *  队列默认的Flink SQL版本。
+    *  参数解释: 队列默认的Flink SQL版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1188,7 +1213,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets defaultFlinkSqlVersion
     *
-    * @param string|null $defaultFlinkSqlVersion 队列默认的Flink SQL版本。
+    * @param string|null $defaultFlinkSqlVersion 参数解释: 队列默认的Flink SQL版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1200,7 +1225,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportFlinkJarVersions
-    *  队列支持的Flink JAR版本。
+    *  参数解释: 队列支持的Flink JAR版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -1212,7 +1237,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets supportFlinkJarVersions
     *
-    * @param string[]|null $supportFlinkJarVersions 队列支持的Flink JAR版本。
+    * @param string[]|null $supportFlinkJarVersions 参数解释: 队列支持的Flink JAR版本 示例: [1.17] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1224,7 +1249,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultFlinkJarVersion
-    *  队列默认的Flink JAR版本。
+    *  参数解释: 队列默认的Flink JAR版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1236,7 +1261,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets defaultFlinkJarVersion
     *
-    * @param string|null $defaultFlinkJarVersion 队列默认的Flink JAR版本。
+    * @param string|null $defaultFlinkJarVersion 参数解释: 队列默认的Flink JAR版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */

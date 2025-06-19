@@ -20,22 +20,26 @@ class BatchCreateResourceTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  标签列表
+    * tags  标签列表。
+    * count  标签数量。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]'
+            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\TagWithValues[]',
+            'count' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  标签列表
+    * tags  标签列表。
+    * count  标签数量。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'tags' => null
+        'tags' => null,
+        'count' => 'int64'
     ];
 
     /**
@@ -61,32 +65,38 @@ class BatchCreateResourceTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  标签列表
+    * tags  标签列表。
+    * count  标签数量。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'count' => 'count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  标签列表
+    * tags  标签列表。
+    * count  标签数量。
     *
     * @var string[]
     */
     protected static $setters = [
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'count' => 'setCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  标签列表
+    * tags  标签列表。
+    * count  标签数量。
     *
     * @var string[]
     */
     protected static $getters = [
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'count' => 'getCount'
     ];
 
     /**
@@ -148,6 +158,7 @@ class BatchCreateResourceTagsRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
     }
 
     /**
@@ -158,6 +169,9 @@ class BatchCreateResourceTagsRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -174,9 +188,9 @@ class BatchCreateResourceTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表
+    *  标签列表。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\Tag[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\TagWithValues[]
     */
     public function getTags()
     {
@@ -186,13 +200,37 @@ class BatchCreateResourceTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\Tag[]|null $tags 标签列表
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\TagWithValues[] $tags 标签列表。
     *
     * @return $this
     */
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets count
+    *  标签数量。
+    *
+    * @return int|null
+    */
+    public function getCount()
+    {
+        return $this->container['count'];
+    }
+
+    /**
+    * Sets count
+    *
+    * @param int|null $count 标签数量。
+    *
+    * @return $this
+    */
+    public function setCount($count)
+    {
+        $this->container['count'] = $count;
         return $this;
     }
 

@@ -20,41 +20,41 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * checkpointEnabled  是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false。
-    * checkpointMode  快照模式： exactly_once：数据只被消费一次。 at_least_once：数据至少被消费一次。 默认值为exactly_once。
-    * checkpointInterval  快照时间间隔, 单位为秒，默认值为10。
-    * logEnabled  是否启用日志存储。默认为false。
-    * obsBucket  OBS桶名。
-    * smnTopic  当作业异常时，向该SMN主题推送告警信息。
-    * edgeGroupIds  边缘计算组ID列表。
-    * rootId  父作业ID。
-    * managerCuNumber  管理单元CU数。默认为1。
-    * cuNumber  用户为作业选择的CU数量, “show_detail”。默认为2。
-    * parallelNumber  用户设置的作业并行数， “show_detail”为“true”时独有。默认值为1。 最小值：1，最大值：2000。
-    * restartWhenException  是否开启异常重启功能。
-    * idleStateRetention  空闲状态过期周期。
-    * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
-    * dirtyDataStrategy  作业脏数据策略。 “2:obs-wan-wulan3/jobs”：保存 “1”：抛出异常 “0”：忽略
-    * entrypoint  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包.
-    * dependencyJars  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包
-    * dependencyFiles  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件.
-    * executorNumber  作业使用计算节点个数
-    * executorCuNumber  计算节点cu数
-    * resumeCheckpoint  异常自动重启时，是否从最新checkpoint恢复，默认false
-    * runtimeConfig  Flink作业运行时自定义优化参数。
-    * graphEditorEnabled  流图编辑开关。默认为“false。
-    * graphEditorData  流图编辑数据。默认为null。
-    * resumeMaxNum  异常重试最大次数。-1代表无限。
-    * checkpointPath  检查点保存路径。
-    * configUrl  用户上传的config包OBS路径。
-    * tmCus  单TM所占CU数。
-    * tmSlotNum  单TM Slot数。
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
-    * feature  自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
-    * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
-    * operatorConfig  各算子并行度参数，以json的形式展示各算子id和并行度。
-    * staticEstimatorConfig  静态流图资源预估参数，以json的形式展示。
-    * realCuNumber  realCuNumber
+    * checkpointEnabled  参数解释:  是否开启作业自动快照功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * checkpointMode  参数解释:  快照模式 示例: exactly_once 约束限制:  无 取值范围: exactly_once（数据只被消费一次） at_least_once（数据至少被消费一次） 默认取值: 无
+    * checkpointInterval  参数解释:  快照时间间隔, 单位为秒 示例: 10 约束限制:  无 取值范围: 无 默认取值: 10
+    * logEnabled  参数解释:  是否启用日志存储 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * obsBucket  参数解释:  OBS桶名 示例: obs-demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * smnTopic  参数解释:  当作业异常时，向该SMN主题推送告警信息 示例: cs_job_exception 约束限制:  无 取值范围: 无 默认取值: 无
+    * edgeGroupIds  参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
+    * rootId  参数解释:  父作业ID 示例: 11 约束限制:  无 取值范围: 无 默认取值: 无
+    * managerCuNumber  参数解释:  管理单元CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuNumber  参数解释:  用户为作业选择的CU数量 示例: 2 约束限制:  无 取值范围: [2,400] 默认取值: 2
+    * parallelNumber  参数解释:  用户设置的作业并行数， “show_detail”为“true”时独有 示例: 1 约束限制:  无 取值范围: [1,2000] 默认取值: 1
+    * restartWhenException  参数解释:  是否开启异常重启功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * idleStateRetention  参数解释:  空闲状态过期周期 示例: 3600 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * udfJarUrl  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入 示例: obs://cs-append/jar/udf/flink-1.13-demo-1.0-udf.jar obs://onlyci-7/flink/udx.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * dirtyDataStrategy  参数解释:  作业脏数据策略 示例: 0 约束限制:  无 取值范围: 0（忽略） 1（抛出异常） 2:obsDir（保存，obsDir表示脏数据存储路径） 默认取值: 无
+    * entrypoint  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包 示例: obs://test/demo/WindowJoin.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * dependencyJars  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * dependencyFiles  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * executorNumber  参数解释:  作业使用计算节点个数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executorCuNumber  参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
+    * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
+    * graphEditorData  参数解释: 流图编辑数据 约束限制:  无 取值范围: 无 默认取值: 无
+    * resumeMaxNum  参数解释: 异常重试最大次数。-1代表无限 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
+    * checkpointPath  参数解释: 检查点保存路径 示例: obs://cwk/checkpoint/ 约束限制:  无 取值范围: 无 默认取值: 无
+    * configUrl  参数解释: 用户上传的config包OBS路径。 示例: obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks,obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks 约束限制:  无 取值范围: 无 默认取值: 无
+    * tmCus  参数解释: 单TM所占CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * tmSlotNum  参数解释: 单TM Slot数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * image  参数解释: 自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像 示例: dli/spark:2.4.8 约束限制:  无 取值范围: 无 默认取值: 无
+    * feature  参数解释: 自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像 示例: basic 约束限制:  无 取值范围: basic：表示使用DLI提供的基础Flink镜像 custom：表示使用用户自定义的Flink镜像 默认取值: 无
+    * flinkVersion  参数解释: Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
+    * operatorConfig  参数解释: 各算子并行度参数，以json的形式展示各算子id和并行度 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * staticEstimatorConfig  参数解释: 静态流图资源预估参数，以json的形式展示 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * realCuNumber  参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
     *
     * @var string[]
     */
@@ -98,41 +98,41 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * checkpointEnabled  是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false。
-    * checkpointMode  快照模式： exactly_once：数据只被消费一次。 at_least_once：数据至少被消费一次。 默认值为exactly_once。
-    * checkpointInterval  快照时间间隔, 单位为秒，默认值为10。
-    * logEnabled  是否启用日志存储。默认为false。
-    * obsBucket  OBS桶名。
-    * smnTopic  当作业异常时，向该SMN主题推送告警信息。
-    * edgeGroupIds  边缘计算组ID列表。
-    * rootId  父作业ID。
-    * managerCuNumber  管理单元CU数。默认为1。
-    * cuNumber  用户为作业选择的CU数量, “show_detail”。默认为2。
-    * parallelNumber  用户设置的作业并行数， “show_detail”为“true”时独有。默认值为1。 最小值：1，最大值：2000。
-    * restartWhenException  是否开启异常重启功能。
-    * idleStateRetention  空闲状态过期周期。
-    * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
-    * dirtyDataStrategy  作业脏数据策略。 “2:obs-wan-wulan3/jobs”：保存 “1”：抛出异常 “0”：忽略
-    * entrypoint  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包.
-    * dependencyJars  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包
-    * dependencyFiles  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件.
-    * executorNumber  作业使用计算节点个数
-    * executorCuNumber  计算节点cu数
-    * resumeCheckpoint  异常自动重启时，是否从最新checkpoint恢复，默认false
-    * runtimeConfig  Flink作业运行时自定义优化参数。
-    * graphEditorEnabled  流图编辑开关。默认为“false。
-    * graphEditorData  流图编辑数据。默认为null。
-    * resumeMaxNum  异常重试最大次数。-1代表无限。
-    * checkpointPath  检查点保存路径。
-    * configUrl  用户上传的config包OBS路径。
-    * tmCus  单TM所占CU数。
-    * tmSlotNum  单TM Slot数。
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
-    * feature  自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
-    * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
-    * operatorConfig  各算子并行度参数，以json的形式展示各算子id和并行度。
-    * staticEstimatorConfig  静态流图资源预估参数，以json的形式展示。
-    * realCuNumber  realCuNumber
+    * checkpointEnabled  参数解释:  是否开启作业自动快照功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * checkpointMode  参数解释:  快照模式 示例: exactly_once 约束限制:  无 取值范围: exactly_once（数据只被消费一次） at_least_once（数据至少被消费一次） 默认取值: 无
+    * checkpointInterval  参数解释:  快照时间间隔, 单位为秒 示例: 10 约束限制:  无 取值范围: 无 默认取值: 10
+    * logEnabled  参数解释:  是否启用日志存储 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * obsBucket  参数解释:  OBS桶名 示例: obs-demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * smnTopic  参数解释:  当作业异常时，向该SMN主题推送告警信息 示例: cs_job_exception 约束限制:  无 取值范围: 无 默认取值: 无
+    * edgeGroupIds  参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
+    * rootId  参数解释:  父作业ID 示例: 11 约束限制:  无 取值范围: 无 默认取值: 无
+    * managerCuNumber  参数解释:  管理单元CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuNumber  参数解释:  用户为作业选择的CU数量 示例: 2 约束限制:  无 取值范围: [2,400] 默认取值: 2
+    * parallelNumber  参数解释:  用户设置的作业并行数， “show_detail”为“true”时独有 示例: 1 约束限制:  无 取值范围: [1,2000] 默认取值: 1
+    * restartWhenException  参数解释:  是否开启异常重启功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * idleStateRetention  参数解释:  空闲状态过期周期 示例: 3600 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * udfJarUrl  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入 示例: obs://cs-append/jar/udf/flink-1.13-demo-1.0-udf.jar obs://onlyci-7/flink/udx.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * dirtyDataStrategy  参数解释:  作业脏数据策略 示例: 0 约束限制:  无 取值范围: 0（忽略） 1（抛出异常） 2:obsDir（保存，obsDir表示脏数据存储路径） 默认取值: 无
+    * entrypoint  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包 示例: obs://test/demo/WindowJoin.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * dependencyJars  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * dependencyFiles  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * executorNumber  参数解释:  作业使用计算节点个数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executorCuNumber  参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
+    * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
+    * graphEditorData  参数解释: 流图编辑数据 约束限制:  无 取值范围: 无 默认取值: 无
+    * resumeMaxNum  参数解释: 异常重试最大次数。-1代表无限 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
+    * checkpointPath  参数解释: 检查点保存路径 示例: obs://cwk/checkpoint/ 约束限制:  无 取值范围: 无 默认取值: 无
+    * configUrl  参数解释: 用户上传的config包OBS路径。 示例: obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks,obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks 约束限制:  无 取值范围: 无 默认取值: 无
+    * tmCus  参数解释: 单TM所占CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * tmSlotNum  参数解释: 单TM Slot数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * image  参数解释: 自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像 示例: dli/spark:2.4.8 约束限制:  无 取值范围: 无 默认取值: 无
+    * feature  参数解释: 自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像 示例: basic 约束限制:  无 取值范围: basic：表示使用DLI提供的基础Flink镜像 custom：表示使用用户自定义的Flink镜像 默认取值: 无
+    * flinkVersion  参数解释: Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
+    * operatorConfig  参数解释: 各算子并行度参数，以json的形式展示各算子id和并行度 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * staticEstimatorConfig  参数解释: 静态流图资源预估参数，以json的形式展示 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * realCuNumber  参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
     *
     * @var string[]
     */
@@ -197,41 +197,41 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * checkpointEnabled  是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false。
-    * checkpointMode  快照模式： exactly_once：数据只被消费一次。 at_least_once：数据至少被消费一次。 默认值为exactly_once。
-    * checkpointInterval  快照时间间隔, 单位为秒，默认值为10。
-    * logEnabled  是否启用日志存储。默认为false。
-    * obsBucket  OBS桶名。
-    * smnTopic  当作业异常时，向该SMN主题推送告警信息。
-    * edgeGroupIds  边缘计算组ID列表。
-    * rootId  父作业ID。
-    * managerCuNumber  管理单元CU数。默认为1。
-    * cuNumber  用户为作业选择的CU数量, “show_detail”。默认为2。
-    * parallelNumber  用户设置的作业并行数， “show_detail”为“true”时独有。默认值为1。 最小值：1，最大值：2000。
-    * restartWhenException  是否开启异常重启功能。
-    * idleStateRetention  空闲状态过期周期。
-    * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
-    * dirtyDataStrategy  作业脏数据策略。 “2:obs-wan-wulan3/jobs”：保存 “1”：抛出异常 “0”：忽略
-    * entrypoint  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包.
-    * dependencyJars  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包
-    * dependencyFiles  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件.
-    * executorNumber  作业使用计算节点个数
-    * executorCuNumber  计算节点cu数
-    * resumeCheckpoint  异常自动重启时，是否从最新checkpoint恢复，默认false
-    * runtimeConfig  Flink作业运行时自定义优化参数。
-    * graphEditorEnabled  流图编辑开关。默认为“false。
-    * graphEditorData  流图编辑数据。默认为null。
-    * resumeMaxNum  异常重试最大次数。-1代表无限。
-    * checkpointPath  检查点保存路径。
-    * configUrl  用户上传的config包OBS路径。
-    * tmCus  单TM所占CU数。
-    * tmSlotNum  单TM Slot数。
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
-    * feature  自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
-    * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
-    * operatorConfig  各算子并行度参数，以json的形式展示各算子id和并行度。
-    * staticEstimatorConfig  静态流图资源预估参数，以json的形式展示。
-    * realCuNumber  realCuNumber
+    * checkpointEnabled  参数解释:  是否开启作业自动快照功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * checkpointMode  参数解释:  快照模式 示例: exactly_once 约束限制:  无 取值范围: exactly_once（数据只被消费一次） at_least_once（数据至少被消费一次） 默认取值: 无
+    * checkpointInterval  参数解释:  快照时间间隔, 单位为秒 示例: 10 约束限制:  无 取值范围: 无 默认取值: 10
+    * logEnabled  参数解释:  是否启用日志存储 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * obsBucket  参数解释:  OBS桶名 示例: obs-demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * smnTopic  参数解释:  当作业异常时，向该SMN主题推送告警信息 示例: cs_job_exception 约束限制:  无 取值范围: 无 默认取值: 无
+    * edgeGroupIds  参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
+    * rootId  参数解释:  父作业ID 示例: 11 约束限制:  无 取值范围: 无 默认取值: 无
+    * managerCuNumber  参数解释:  管理单元CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuNumber  参数解释:  用户为作业选择的CU数量 示例: 2 约束限制:  无 取值范围: [2,400] 默认取值: 2
+    * parallelNumber  参数解释:  用户设置的作业并行数， “show_detail”为“true”时独有 示例: 1 约束限制:  无 取值范围: [1,2000] 默认取值: 1
+    * restartWhenException  参数解释:  是否开启异常重启功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * idleStateRetention  参数解释:  空闲状态过期周期 示例: 3600 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * udfJarUrl  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入 示例: obs://cs-append/jar/udf/flink-1.13-demo-1.0-udf.jar obs://onlyci-7/flink/udx.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * dirtyDataStrategy  参数解释:  作业脏数据策略 示例: 0 约束限制:  无 取值范围: 0（忽略） 1（抛出异常） 2:obsDir（保存，obsDir表示脏数据存储路径） 默认取值: 无
+    * entrypoint  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包 示例: obs://test/demo/WindowJoin.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * dependencyJars  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * dependencyFiles  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * executorNumber  参数解释:  作业使用计算节点个数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executorCuNumber  参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
+    * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
+    * graphEditorData  参数解释: 流图编辑数据 约束限制:  无 取值范围: 无 默认取值: 无
+    * resumeMaxNum  参数解释: 异常重试最大次数。-1代表无限 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
+    * checkpointPath  参数解释: 检查点保存路径 示例: obs://cwk/checkpoint/ 约束限制:  无 取值范围: 无 默认取值: 无
+    * configUrl  参数解释: 用户上传的config包OBS路径。 示例: obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks,obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks 约束限制:  无 取值范围: 无 默认取值: 无
+    * tmCus  参数解释: 单TM所占CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * tmSlotNum  参数解释: 单TM Slot数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * image  参数解释: 自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像 示例: dli/spark:2.4.8 约束限制:  无 取值范围: 无 默认取值: 无
+    * feature  参数解释: 自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像 示例: basic 约束限制:  无 取值范围: basic：表示使用DLI提供的基础Flink镜像 custom：表示使用用户自定义的Flink镜像 默认取值: 无
+    * flinkVersion  参数解释: Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
+    * operatorConfig  参数解释: 各算子并行度参数，以json的形式展示各算子id和并行度 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * staticEstimatorConfig  参数解释: 静态流图资源预估参数，以json的形式展示 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * realCuNumber  参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
     *
     * @var string[]
     */
@@ -275,41 +275,41 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * checkpointEnabled  是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false。
-    * checkpointMode  快照模式： exactly_once：数据只被消费一次。 at_least_once：数据至少被消费一次。 默认值为exactly_once。
-    * checkpointInterval  快照时间间隔, 单位为秒，默认值为10。
-    * logEnabled  是否启用日志存储。默认为false。
-    * obsBucket  OBS桶名。
-    * smnTopic  当作业异常时，向该SMN主题推送告警信息。
-    * edgeGroupIds  边缘计算组ID列表。
-    * rootId  父作业ID。
-    * managerCuNumber  管理单元CU数。默认为1。
-    * cuNumber  用户为作业选择的CU数量, “show_detail”。默认为2。
-    * parallelNumber  用户设置的作业并行数， “show_detail”为“true”时独有。默认值为1。 最小值：1，最大值：2000。
-    * restartWhenException  是否开启异常重启功能。
-    * idleStateRetention  空闲状态过期周期。
-    * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
-    * dirtyDataStrategy  作业脏数据策略。 “2:obs-wan-wulan3/jobs”：保存 “1”：抛出异常 “0”：忽略
-    * entrypoint  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包.
-    * dependencyJars  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包
-    * dependencyFiles  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件.
-    * executorNumber  作业使用计算节点个数
-    * executorCuNumber  计算节点cu数
-    * resumeCheckpoint  异常自动重启时，是否从最新checkpoint恢复，默认false
-    * runtimeConfig  Flink作业运行时自定义优化参数。
-    * graphEditorEnabled  流图编辑开关。默认为“false。
-    * graphEditorData  流图编辑数据。默认为null。
-    * resumeMaxNum  异常重试最大次数。-1代表无限。
-    * checkpointPath  检查点保存路径。
-    * configUrl  用户上传的config包OBS路径。
-    * tmCus  单TM所占CU数。
-    * tmSlotNum  单TM Slot数。
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
-    * feature  自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
-    * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
-    * operatorConfig  各算子并行度参数，以json的形式展示各算子id和并行度。
-    * staticEstimatorConfig  静态流图资源预估参数，以json的形式展示。
-    * realCuNumber  realCuNumber
+    * checkpointEnabled  参数解释:  是否开启作业自动快照功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * checkpointMode  参数解释:  快照模式 示例: exactly_once 约束限制:  无 取值范围: exactly_once（数据只被消费一次） at_least_once（数据至少被消费一次） 默认取值: 无
+    * checkpointInterval  参数解释:  快照时间间隔, 单位为秒 示例: 10 约束限制:  无 取值范围: 无 默认取值: 10
+    * logEnabled  参数解释:  是否启用日志存储 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * obsBucket  参数解释:  OBS桶名 示例: obs-demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * smnTopic  参数解释:  当作业异常时，向该SMN主题推送告警信息 示例: cs_job_exception 约束限制:  无 取值范围: 无 默认取值: 无
+    * edgeGroupIds  参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
+    * rootId  参数解释:  父作业ID 示例: 11 约束限制:  无 取值范围: 无 默认取值: 无
+    * managerCuNumber  参数解释:  管理单元CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuNumber  参数解释:  用户为作业选择的CU数量 示例: 2 约束限制:  无 取值范围: [2,400] 默认取值: 2
+    * parallelNumber  参数解释:  用户设置的作业并行数， “show_detail”为“true”时独有 示例: 1 约束限制:  无 取值范围: [1,2000] 默认取值: 1
+    * restartWhenException  参数解释:  是否开启异常重启功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * idleStateRetention  参数解释:  空闲状态过期周期 示例: 3600 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * udfJarUrl  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入 示例: obs://cs-append/jar/udf/flink-1.13-demo-1.0-udf.jar obs://onlyci-7/flink/udx.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * dirtyDataStrategy  参数解释:  作业脏数据策略 示例: 0 约束限制:  无 取值范围: 0（忽略） 1（抛出异常） 2:obsDir（保存，obsDir表示脏数据存储路径） 默认取值: 无
+    * entrypoint  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包 示例: obs://test/demo/WindowJoin.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * dependencyJars  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * dependencyFiles  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * executorNumber  参数解释:  作业使用计算节点个数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executorCuNumber  参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
+    * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
+    * graphEditorData  参数解释: 流图编辑数据 约束限制:  无 取值范围: 无 默认取值: 无
+    * resumeMaxNum  参数解释: 异常重试最大次数。-1代表无限 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
+    * checkpointPath  参数解释: 检查点保存路径 示例: obs://cwk/checkpoint/ 约束限制:  无 取值范围: 无 默认取值: 无
+    * configUrl  参数解释: 用户上传的config包OBS路径。 示例: obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks,obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks 约束限制:  无 取值范围: 无 默认取值: 无
+    * tmCus  参数解释: 单TM所占CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * tmSlotNum  参数解释: 单TM Slot数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * image  参数解释: 自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像 示例: dli/spark:2.4.8 约束限制:  无 取值范围: 无 默认取值: 无
+    * feature  参数解释: 自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像 示例: basic 约束限制:  无 取值范围: basic：表示使用DLI提供的基础Flink镜像 custom：表示使用用户自定义的Flink镜像 默认取值: 无
+    * flinkVersion  参数解释: Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
+    * operatorConfig  参数解释: 各算子并行度参数，以json的形式展示各算子id和并行度 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * staticEstimatorConfig  参数解释: 静态流图资源预估参数，以json的形式展示 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * realCuNumber  参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
     *
     * @var string[]
     */
@@ -353,41 +353,41 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * checkpointEnabled  是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false。
-    * checkpointMode  快照模式： exactly_once：数据只被消费一次。 at_least_once：数据至少被消费一次。 默认值为exactly_once。
-    * checkpointInterval  快照时间间隔, 单位为秒，默认值为10。
-    * logEnabled  是否启用日志存储。默认为false。
-    * obsBucket  OBS桶名。
-    * smnTopic  当作业异常时，向该SMN主题推送告警信息。
-    * edgeGroupIds  边缘计算组ID列表。
-    * rootId  父作业ID。
-    * managerCuNumber  管理单元CU数。默认为1。
-    * cuNumber  用户为作业选择的CU数量, “show_detail”。默认为2。
-    * parallelNumber  用户设置的作业并行数， “show_detail”为“true”时独有。默认值为1。 最小值：1，最大值：2000。
-    * restartWhenException  是否开启异常重启功能。
-    * idleStateRetention  空闲状态过期周期。
-    * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
-    * dirtyDataStrategy  作业脏数据策略。 “2:obs-wan-wulan3/jobs”：保存 “1”：抛出异常 “0”：忽略
-    * entrypoint  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包.
-    * dependencyJars  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包
-    * dependencyFiles  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件.
-    * executorNumber  作业使用计算节点个数
-    * executorCuNumber  计算节点cu数
-    * resumeCheckpoint  异常自动重启时，是否从最新checkpoint恢复，默认false
-    * runtimeConfig  Flink作业运行时自定义优化参数。
-    * graphEditorEnabled  流图编辑开关。默认为“false。
-    * graphEditorData  流图编辑数据。默认为null。
-    * resumeMaxNum  异常重试最大次数。-1代表无限。
-    * checkpointPath  检查点保存路径。
-    * configUrl  用户上传的config包OBS路径。
-    * tmCus  单TM所占CU数。
-    * tmSlotNum  单TM Slot数。
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
-    * feature  自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
-    * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
-    * operatorConfig  各算子并行度参数，以json的形式展示各算子id和并行度。
-    * staticEstimatorConfig  静态流图资源预估参数，以json的形式展示。
-    * realCuNumber  realCuNumber
+    * checkpointEnabled  参数解释:  是否开启作业自动快照功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * checkpointMode  参数解释:  快照模式 示例: exactly_once 约束限制:  无 取值范围: exactly_once（数据只被消费一次） at_least_once（数据至少被消费一次） 默认取值: 无
+    * checkpointInterval  参数解释:  快照时间间隔, 单位为秒 示例: 10 约束限制:  无 取值范围: 无 默认取值: 10
+    * logEnabled  参数解释:  是否启用日志存储 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
+    * obsBucket  参数解释:  OBS桶名 示例: obs-demo 约束限制:  无 取值范围: 无 默认取值: 无
+    * smnTopic  参数解释:  当作业异常时，向该SMN主题推送告警信息 示例: cs_job_exception 约束限制:  无 取值范围: 无 默认取值: 无
+    * edgeGroupIds  参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
+    * rootId  参数解释:  父作业ID 示例: 11 约束限制:  无 取值范围: 无 默认取值: 无
+    * managerCuNumber  参数解释:  管理单元CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * cuNumber  参数解释:  用户为作业选择的CU数量 示例: 2 约束限制:  无 取值范围: [2,400] 默认取值: 2
+    * parallelNumber  参数解释:  用户设置的作业并行数， “show_detail”为“true”时独有 示例: 1 约束限制:  无 取值范围: [1,2000] 默认取值: 1
+    * restartWhenException  参数解释:  是否开启异常重启功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
+    * idleStateRetention  参数解释:  空闲状态过期周期 示例: 3600 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * udfJarUrl  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入 示例: obs://cs-append/jar/udf/flink-1.13-demo-1.0-udf.jar obs://onlyci-7/flink/udx.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * dirtyDataStrategy  参数解释:  作业脏数据策略 示例: 0 约束限制:  无 取值范围: 0（忽略） 1（抛出异常） 2:obsDir（保存，obsDir表示脏数据存储路径） 默认取值: 无
+    * entrypoint  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包 示例: obs://test/demo/WindowJoin.jar 约束限制:  无 取值范围: 无 默认取值: 无
+    * dependencyJars  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * dependencyFiles  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
+    * executorNumber  参数解释:  作业使用计算节点个数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executorCuNumber  参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
+    * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
+    * graphEditorData  参数解释: 流图编辑数据 约束限制:  无 取值范围: 无 默认取值: 无
+    * resumeMaxNum  参数解释: 异常重试最大次数。-1代表无限 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
+    * checkpointPath  参数解释: 检查点保存路径 示例: obs://cwk/checkpoint/ 约束限制:  无 取值范围: 无 默认取值: 无
+    * configUrl  参数解释: 用户上传的config包OBS路径。 示例: obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks,obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks 约束限制:  无 取值范围: 无 默认取值: 无
+    * tmCus  参数解释: 单TM所占CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * tmSlotNum  参数解释: 单TM Slot数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * image  参数解释: 自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像 示例: dli/spark:2.4.8 约束限制:  无 取值范围: 无 默认取值: 无
+    * feature  参数解释: 自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像 示例: basic 约束限制:  无 取值范围: basic：表示使用DLI提供的基础Flink镜像 custom：表示使用用户自定义的Flink镜像 默认取值: 无
+    * flinkVersion  参数解释: Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
+    * operatorConfig  参数解释: 各算子并行度参数，以json的形式展示各算子id和并行度 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * staticEstimatorConfig  参数解释: 静态流图资源预估参数，以json的形式展示 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * realCuNumber  参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
     *
     * @var string[]
     */
@@ -469,7 +469,22 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CHECKPOINT_MODE_EXACTLY_ONCE = 'exactly_once';
+    const CHECKPOINT_MODE_AT_LEAST_ONCE = 'at_least_once';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCheckpointModeAllowableValues()
+    {
+        return [
+            self::CHECKPOINT_MODE_EXACTLY_ONCE,
+            self::CHECKPOINT_MODE_AT_LEAST_ONCE,
+        ];
+    }
 
 
     /**
@@ -532,6 +547,14 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getCheckpointModeAllowableValues();
+                if (!is_null($this->container['checkpointMode']) && !in_array($this->container['checkpointMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'checkpointMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['cuNumber']) && ($this->container['cuNumber'] > 400)) {
                 $invalidProperties[] = "invalid value for 'cuNumber', must be smaller than or equal to 400.";
             }
@@ -560,7 +583,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkpointEnabled
-    *  是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false。
+    *  参数解释:  是否开启作业自动快照功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     *
     * @return bool|null
     */
@@ -572,7 +595,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets checkpointEnabled
     *
-    * @param bool|null $checkpointEnabled 是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false。
+    * @param bool|null $checkpointEnabled 参数解释:  是否开启作业自动快照功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     *
     * @return $this
     */
@@ -584,7 +607,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkpointMode
-    *  快照模式： exactly_once：数据只被消费一次。 at_least_once：数据至少被消费一次。 默认值为exactly_once。
+    *  参数解释:  快照模式 示例: exactly_once 约束限制:  无 取值范围: exactly_once（数据只被消费一次） at_least_once（数据至少被消费一次） 默认取值: 无
     *
     * @return string|null
     */
@@ -596,7 +619,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets checkpointMode
     *
-    * @param string|null $checkpointMode 快照模式： exactly_once：数据只被消费一次。 at_least_once：数据至少被消费一次。 默认值为exactly_once。
+    * @param string|null $checkpointMode 参数解释:  快照模式 示例: exactly_once 约束限制:  无 取值范围: exactly_once（数据只被消费一次） at_least_once（数据至少被消费一次） 默认取值: 无
     *
     * @return $this
     */
@@ -608,7 +631,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkpointInterval
-    *  快照时间间隔, 单位为秒，默认值为10。
+    *  参数解释:  快照时间间隔, 单位为秒 示例: 10 约束限制:  无 取值范围: 无 默认取值: 10
     *
     * @return int|null
     */
@@ -620,7 +643,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets checkpointInterval
     *
-    * @param int|null $checkpointInterval 快照时间间隔, 单位为秒，默认值为10。
+    * @param int|null $checkpointInterval 参数解释:  快照时间间隔, 单位为秒 示例: 10 约束限制:  无 取值范围: 无 默认取值: 10
     *
     * @return $this
     */
@@ -632,7 +655,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets logEnabled
-    *  是否启用日志存储。默认为false。
+    *  参数解释:  是否启用日志存储 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     *
     * @return bool|null
     */
@@ -644,7 +667,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets logEnabled
     *
-    * @param bool|null $logEnabled 是否启用日志存储。默认为false。
+    * @param bool|null $logEnabled 参数解释:  是否启用日志存储 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     *
     * @return $this
     */
@@ -656,7 +679,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsBucket
-    *  OBS桶名。
+    *  参数解释:  OBS桶名 示例: obs-demo 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -668,7 +691,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets obsBucket
     *
-    * @param string|null $obsBucket OBS桶名。
+    * @param string|null $obsBucket 参数解释:  OBS桶名 示例: obs-demo 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -680,7 +703,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets smnTopic
-    *  当作业异常时，向该SMN主题推送告警信息。
+    *  参数解释:  当作业异常时，向该SMN主题推送告警信息 示例: cs_job_exception 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -692,7 +715,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets smnTopic
     *
-    * @param string|null $smnTopic 当作业异常时，向该SMN主题推送告警信息。
+    * @param string|null $smnTopic 参数解释:  当作业异常时，向该SMN主题推送告警信息 示例: cs_job_exception 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -704,7 +727,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets edgeGroupIds
-    *  边缘计算组ID列表。
+    *  参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -716,7 +739,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets edgeGroupIds
     *
-    * @param string[]|null $edgeGroupIds 边缘计算组ID列表。
+    * @param string[]|null $edgeGroupIds 参数解释:  边缘计算组ID列表 示例: 62de1e1c-066e-48a8-a79d-f461a31b2ee1,2eb00f85-99f2-4144-bcb7-d39ff47f9002 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -728,7 +751,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets rootId
-    *  父作业ID。
+    *  参数解释:  父作业ID 示例: 11 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return int|null
     */
@@ -740,7 +763,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets rootId
     *
-    * @param int|null $rootId 父作业ID。
+    * @param int|null $rootId 参数解释:  父作业ID 示例: 11 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -752,7 +775,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets managerCuNumber
-    *  管理单元CU数。默认为1。
+    *  参数解释:  管理单元CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -764,7 +787,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets managerCuNumber
     *
-    * @param int|null $managerCuNumber 管理单元CU数。默认为1。
+    * @param int|null $managerCuNumber 参数解释:  管理单元CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -776,7 +799,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets cuNumber
-    *  用户为作业选择的CU数量, “show_detail”。默认为2。
+    *  参数解释:  用户为作业选择的CU数量 示例: 2 约束限制:  无 取值范围: [2,400] 默认取值: 2
     *
     * @return int|null
     */
@@ -788,7 +811,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets cuNumber
     *
-    * @param int|null $cuNumber 用户为作业选择的CU数量, “show_detail”。默认为2。
+    * @param int|null $cuNumber 参数解释:  用户为作业选择的CU数量 示例: 2 约束限制:  无 取值范围: [2,400] 默认取值: 2
     *
     * @return $this
     */
@@ -800,7 +823,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets parallelNumber
-    *  用户设置的作业并行数， “show_detail”为“true”时独有。默认值为1。 最小值：1，最大值：2000。
+    *  参数解释:  用户设置的作业并行数， “show_detail”为“true”时独有 示例: 1 约束限制:  无 取值范围: [1,2000] 默认取值: 1
     *
     * @return int|null
     */
@@ -812,7 +835,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets parallelNumber
     *
-    * @param int|null $parallelNumber 用户设置的作业并行数， “show_detail”为“true”时独有。默认值为1。 最小值：1，最大值：2000。
+    * @param int|null $parallelNumber 参数解释:  用户设置的作业并行数， “show_detail”为“true”时独有 示例: 1 约束限制:  无 取值范围: [1,2000] 默认取值: 1
     *
     * @return $this
     */
@@ -824,7 +847,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets restartWhenException
-    *  是否开启异常重启功能。
+    *  参数解释:  是否开启异常重启功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
     *
     * @return bool|null
     */
@@ -836,7 +859,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets restartWhenException
     *
-    * @param bool|null $restartWhenException 是否开启异常重启功能。
+    * @param bool|null $restartWhenException 参数解释:  是否开启异常重启功能 示例: false 约束限制:  无 取值范围: true,false 默认取值: 无
     *
     * @return $this
     */
@@ -848,7 +871,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets idleStateRetention
-    *  空闲状态过期周期。
+    *  参数解释:  空闲状态过期周期 示例: 3600 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -860,7 +883,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets idleStateRetention
     *
-    * @param int|null $idleStateRetention 空闲状态过期周期。
+    * @param int|null $idleStateRetention 参数解释:  空闲状态过期周期 示例: 3600 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -872,7 +895,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets udfJarUrl
-    *  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
+    *  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入 示例: obs://cs-append/jar/udf/flink-1.13-demo-1.0-udf.jar obs://onlyci-7/flink/udx.jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -884,7 +907,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets udfJarUrl
     *
-    * @param string|null $udfJarUrl 用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
+    * @param string|null $udfJarUrl 参数解释:  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入 示例: obs://cs-append/jar/udf/flink-1.13-demo-1.0-udf.jar obs://onlyci-7/flink/udx.jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -896,7 +919,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets dirtyDataStrategy
-    *  作业脏数据策略。 “2:obs-wan-wulan3/jobs”：保存 “1”：抛出异常 “0”：忽略
+    *  参数解释:  作业脏数据策略 示例: 0 约束限制:  无 取值范围: 0（忽略） 1（抛出异常） 2:obsDir（保存，obsDir表示脏数据存储路径） 默认取值: 无
     *
     * @return string|null
     */
@@ -908,7 +931,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets dirtyDataStrategy
     *
-    * @param string|null $dirtyDataStrategy 作业脏数据策略。 “2:obs-wan-wulan3/jobs”：保存 “1”：抛出异常 “0”：忽略
+    * @param string|null $dirtyDataStrategy 参数解释:  作业脏数据策略 示例: 0 约束限制:  无 取值范围: 0（忽略） 1（抛出异常） 2:obsDir（保存，obsDir表示脏数据存储路径） 默认取值: 无
     *
     * @return $this
     */
@@ -920,7 +943,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets entrypoint
-    *  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包.
+    *  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包 示例: obs://test/demo/WindowJoin.jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -932,7 +955,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets entrypoint
     *
-    * @param string|null $entrypoint 用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包.
+    * @param string|null $entrypoint 参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业主类所在的jar包 示例: obs://test/demo/WindowJoin.jar 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -944,7 +967,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets dependencyJars
-    *  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包
+    *  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -956,7 +979,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets dependencyJars
     *
-    * @param string[]|null $dependencyJars 用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包
+    * @param string[]|null $dependencyJars 参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的其他依赖包 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -968,7 +991,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets dependencyFiles
-    *  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件.
+    *  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -980,7 +1003,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets dependencyFiles
     *
-    * @param string[]|null $dependencyFiles 用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件.
+    * @param string[]|null $dependencyFiles 参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -992,7 +1015,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorNumber
-    *  作业使用计算节点个数
+    *  参数解释:  作业使用计算节点个数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -1004,7 +1027,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets executorNumber
     *
-    * @param int|null $executorNumber 作业使用计算节点个数
+    * @param int|null $executorNumber 参数解释:  作业使用计算节点个数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -1016,7 +1039,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorCuNumber
-    *  计算节点cu数
+    *  参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -1028,7 +1051,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets executorCuNumber
     *
-    * @param int|null $executorCuNumber 计算节点cu数
+    * @param int|null $executorCuNumber 参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -1040,7 +1063,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets resumeCheckpoint
-    *  异常自动重启时，是否从最新checkpoint恢复，默认false
+    *  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
     *
     * @return bool|null
     */
@@ -1052,7 +1075,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets resumeCheckpoint
     *
-    * @param bool|null $resumeCheckpoint 异常自动重启时，是否从最新checkpoint恢复，默认false
+    * @param bool|null $resumeCheckpoint 参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
     *
     * @return $this
     */
@@ -1064,7 +1087,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets runtimeConfig
-    *  Flink作业运行时自定义优化参数。
+    *  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1076,7 +1099,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets runtimeConfig
     *
-    * @param string|null $runtimeConfig Flink作业运行时自定义优化参数。
+    * @param string|null $runtimeConfig 参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1088,7 +1111,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets graphEditorEnabled
-    *  流图编辑开关。默认为“false。
+    *  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
     *
     * @return bool|null
     */
@@ -1100,7 +1123,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets graphEditorEnabled
     *
-    * @param bool|null $graphEditorEnabled 流图编辑开关。默认为“false。
+    * @param bool|null $graphEditorEnabled 参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
     *
     * @return $this
     */
@@ -1112,7 +1135,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets graphEditorData
-    *  流图编辑数据。默认为null。
+    *  参数解释: 流图编辑数据 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1124,7 +1147,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets graphEditorData
     *
-    * @param string|null $graphEditorData 流图编辑数据。默认为null。
+    * @param string|null $graphEditorData 参数解释: 流图编辑数据 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1136,7 +1159,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets resumeMaxNum
-    *  异常重试最大次数。-1代表无限。
+    *  参数解释: 异常重试最大次数。-1代表无限 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return int|null
     */
@@ -1148,7 +1171,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets resumeMaxNum
     *
-    * @param int|null $resumeMaxNum 异常重试最大次数。-1代表无限。
+    * @param int|null $resumeMaxNum 参数解释: 异常重试最大次数。-1代表无限 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1160,7 +1183,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkpointPath
-    *  检查点保存路径。
+    *  参数解释: 检查点保存路径 示例: obs://cwk/checkpoint/ 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1172,7 +1195,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets checkpointPath
     *
-    * @param string|null $checkpointPath 检查点保存路径。
+    * @param string|null $checkpointPath 参数解释: 检查点保存路径 示例: obs://cwk/checkpoint/ 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1184,7 +1207,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets configUrl
-    *  用户上传的config包OBS路径。
+    *  参数解释: 用户上传的config包OBS路径。 示例: obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks,obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1196,7 +1219,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets configUrl
     *
-    * @param string|null $configUrl 用户上传的config包OBS路径。
+    * @param string|null $configUrl 参数解释: 用户上传的config包OBS路径。 示例: obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks,obs://bucket-62099355b894428e8916573ae635f1f9/di-flink/lib/client.jks 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1208,7 +1231,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets tmCus
-    *  单TM所占CU数。
+    *  参数解释: 单TM所占CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -1220,7 +1243,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets tmCus
     *
-    * @param int|null $tmCus 单TM所占CU数。
+    * @param int|null $tmCus 参数解释: 单TM所占CU数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -1232,7 +1255,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets tmSlotNum
-    *  单TM Slot数。
+    *  参数解释: 单TM Slot数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -1244,7 +1267,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets tmSlotNum
     *
-    * @param int|null $tmSlotNum 单TM Slot数。
+    * @param int|null $tmSlotNum 参数解释: 单TM Slot数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -1256,7 +1279,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets image
-    *  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
+    *  参数解释: 自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像 示例: dli/spark:2.4.8 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1268,7 +1291,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets image
     *
-    * @param string|null $image 自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
+    * @param string|null $image 参数解释: 自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像 示例: dli/spark:2.4.8 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1280,7 +1303,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets feature
-    *  自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
+    *  参数解释: 自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像 示例: basic 约束限制:  无 取值范围: basic：表示使用DLI提供的基础Flink镜像 custom：表示使用用户自定义的Flink镜像 默认取值: 无
     *
     * @return string|null
     */
@@ -1292,7 +1315,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets feature
     *
-    * @param string|null $feature 自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
+    * @param string|null $feature 参数解释: 自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像 示例: basic 约束限制:  无 取值范围: basic：表示使用DLI提供的基础Flink镜像 custom：表示使用用户自定义的Flink镜像 默认取值: 无
     *
     * @return $this
     */
@@ -1304,7 +1327,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets flinkVersion
-    *  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    *  参数解释: Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1316,7 +1339,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets flinkVersion
     *
-    * @param string|null $flinkVersion Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    * @param string|null $flinkVersion 参数解释: Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本 示例: 1.17 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1328,7 +1351,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets operatorConfig
-    *  各算子并行度参数，以json的形式展示各算子id和并行度。
+    *  参数解释: 各算子并行度参数，以json的形式展示各算子id和并行度 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1340,7 +1363,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets operatorConfig
     *
-    * @param string|null $operatorConfig 各算子并行度参数，以json的形式展示各算子id和并行度。
+    * @param string|null $operatorConfig 参数解释: 各算子并行度参数，以json的形式展示各算子id和并行度 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1352,7 +1375,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets staticEstimatorConfig
-    *  静态流图资源预估参数，以json的形式展示。
+    *  参数解释: 静态流图资源预估参数，以json的形式展示 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -1364,7 +1387,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets staticEstimatorConfig
     *
-    * @param string|null $staticEstimatorConfig 静态流图资源预估参数，以json的形式展示。
+    * @param string|null $staticEstimatorConfig 参数解释: 静态流图资源预估参数，以json的形式展示 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -1376,7 +1399,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets realCuNumber
-    *  realCuNumber
+    *  参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
     *
     * @return int|null
     */
@@ -1388,7 +1411,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     /**
     * Sets realCuNumber
     *
-    * @param int|null $realCuNumber realCuNumber
+    * @param int|null $realCuNumber 参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
     *
     * @return $this
     */

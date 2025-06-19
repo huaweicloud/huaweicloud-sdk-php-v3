@@ -24,6 +24,7 @@ class ModifyOttChannelInputReq implements ModelInterface, ArrayAccess
     * appName  组名或应用名
     * id  频道ID。频道唯一标识，为必填项
     * input  input
+    * encoderSettingsExpand  encoderSettingsExpand
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ModifyOttChannelInputReq implements ModelInterface, ArrayAccess
             'domain' => 'string',
             'appName' => 'string',
             'id' => 'string',
-            'input' => '\HuaweiCloud\SDK\Live\V1\Model\InputStreamInfo'
+            'input' => '\HuaweiCloud\SDK\Live\V1\Model\InputStreamInfo',
+            'encoderSettingsExpand' => '\HuaweiCloud\SDK\Live\V1\Model\EncoderSettingsExpand'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ModifyOttChannelInputReq implements ModelInterface, ArrayAccess
     * appName  组名或应用名
     * id  频道ID。频道唯一标识，为必填项
     * input  input
+    * encoderSettingsExpand  encoderSettingsExpand
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ModifyOttChannelInputReq implements ModelInterface, ArrayAccess
         'domain' => null,
         'appName' => null,
         'id' => null,
-        'input' => null
+        'input' => null,
+        'encoderSettingsExpand' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ModifyOttChannelInputReq implements ModelInterface, ArrayAccess
     * appName  组名或应用名
     * id  频道ID。频道唯一标识，为必填项
     * input  input
+    * encoderSettingsExpand  encoderSettingsExpand
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ModifyOttChannelInputReq implements ModelInterface, ArrayAccess
             'domain' => 'domain',
             'appName' => 'app_name',
             'id' => 'id',
-            'input' => 'input'
+            'input' => 'input',
+            'encoderSettingsExpand' => 'encoder_settings_expand'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ModifyOttChannelInputReq implements ModelInterface, ArrayAccess
     * appName  组名或应用名
     * id  频道ID。频道唯一标识，为必填项
     * input  input
+    * encoderSettingsExpand  encoderSettingsExpand
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ModifyOttChannelInputReq implements ModelInterface, ArrayAccess
             'domain' => 'setDomain',
             'appName' => 'setAppName',
             'id' => 'setId',
-            'input' => 'setInput'
+            'input' => 'setInput',
+            'encoderSettingsExpand' => 'setEncoderSettingsExpand'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ModifyOttChannelInputReq implements ModelInterface, ArrayAccess
     * appName  组名或应用名
     * id  频道ID。频道唯一标识，为必填项
     * input  input
+    * encoderSettingsExpand  encoderSettingsExpand
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ModifyOttChannelInputReq implements ModelInterface, ArrayAccess
             'domain' => 'getDomain',
             'appName' => 'getAppName',
             'id' => 'getId',
-            'input' => 'getInput'
+            'input' => 'getInput',
+            'encoderSettingsExpand' => 'getEncoderSettingsExpand'
     ];
 
     /**
@@ -181,6 +191,7 @@ class ModifyOttChannelInputReq implements ModelInterface, ArrayAccess
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['input'] = isset($data['input']) ? $data['input'] : null;
+        $this->container['encoderSettingsExpand'] = isset($data['encoderSettingsExpand']) ? $data['encoderSettingsExpand'] : null;
     }
 
     /**
@@ -325,6 +336,30 @@ class ModifyOttChannelInputReq implements ModelInterface, ArrayAccess
     public function setInput($input)
     {
         $this->container['input'] = $input;
+        return $this;
+    }
+
+    /**
+    * Gets encoderSettingsExpand
+    *  encoderSettingsExpand
+    *
+    * @return \HuaweiCloud\SDK\Live\V1\Model\EncoderSettingsExpand|null
+    */
+    public function getEncoderSettingsExpand()
+    {
+        return $this->container['encoderSettingsExpand'];
+    }
+
+    /**
+    * Sets encoderSettingsExpand
+    *
+    * @param \HuaweiCloud\SDK\Live\V1\Model\EncoderSettingsExpand|null $encoderSettingsExpand encoderSettingsExpand
+    *
+    * @return $this
+    */
+    public function setEncoderSettingsExpand($encoderSettingsExpand)
+    {
+        $this->container['encoderSettingsExpand'] = $encoderSettingsExpand;
         return $this;
     }
 

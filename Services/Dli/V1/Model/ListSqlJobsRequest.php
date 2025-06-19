@@ -20,21 +20,22 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * currentPage  当前页码，默认为第一页。
-    * dbName  dbName
-    * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
-    * engineType  engineType
-    * jobStatus  jobStatus
-    * jobId  jobId
-    * jobType  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
-    * order  指定作业排序方式，默认为start_time_desc（作业提交时间降序），支持duration_desc（作业运行时长降序）、duration_asc（作业运行时长升序）、start_time_desc（作业提交时间降序）、start_time_asc（作业提交时间升序）四种排序方式。
-    * owner  提交作业的用户名称
-    * pageSize  每页显示的最大作业个数，范围: [1, 100]。默认值：50。
-    * queueName  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业。
-    * sqlPattern  指定sql片段作为作业过滤条件，不区分大小写。
-    * start  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
-    * tableName  tableName
-    * tags  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值。
+    * currentPage  参数解释:  当前页码，默认为第一页 示例: 55 约束限制:  无 取值范围: 大于1的整数 默认取值: 1
+    * dbName  参数解释:  数据库名称 示例: UQuery 约束限制:  长度小于等于16 取值范围: 无 默认取值: 无
+    * end  参数解释:  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * engineType  参数解释:  引擎类型。支持配置spark引擎或hetuEngine引擎 示例: spark 约束限制:  无 取值范围: spark、hetuEngine 默认取值: 无
+    * jobStatus  参数解释:  指定查询的作业状态 示例: FINISHED 约束限制:  长度小于等于16 取值范围: LAUNCHING RUNNING FAILED CANCELLED COMPUTED SUSPENDED ACTIVE DELETED CREATING FINISHED SCALING 默认取值: 无
+    * jobId  参数解释:  作业id 示例: bac76d9b-2891-4c50-a920-b98d8634fd0f 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * order  参数解释:  指定作业排序方式 示例: duration_desc 约束限制:  无 取值范围: start_time_desc（作业提交时间降序） start_time_asc（作业提交时间升序） duration_desc（作业运行时长降序） duration_asc（作业运行时长升序） 默认取值: start_time_desc
+    * owner  参数解释:  提交作业的用户名称 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * pageSize  参数解释:  每页显示的最大作业个数 示例: 5 约束限制:  无 取值范围: [1, 100] 默认取值: 50
+    * queueName  参数解释:  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业 示例: q1 约束限制:  匹配正则表达式^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$且长度在[1, 128]范围内的字符串 取值范围: 无 默认取值: 无
+    * sqlPattern  参数解释:  指定sql片段作为作业过滤条件，不区分大小写 示例: .*? 约束限制:  长度在[0, 1024]范围内的字符串 取值范围: 无 默认取值: 无
+    * start  参数解释:  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于1的整数 默认取值: 无
+    * tableName  参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: CS_JOB 约束限制:  无 取值范围: 无 默认取值: 无
+    * tags  参数解释:  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值 示例: key=value 约束限制:  格式为“key=value”的字符串 取值范围: 无 默认取值: 无
+    * jobTypes  参数解释:  指定查询的作业类型列表，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
     *
     * @var string[]
     */
@@ -53,26 +54,28 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
             'sqlPattern' => 'string',
             'start' => 'int',
             'tableName' => 'string',
-            'tags' => 'string'
+            'tags' => 'string',
+            'jobTypes' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * currentPage  当前页码，默认为第一页。
-    * dbName  dbName
-    * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
-    * engineType  engineType
-    * jobStatus  jobStatus
-    * jobId  jobId
-    * jobType  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
-    * order  指定作业排序方式，默认为start_time_desc（作业提交时间降序），支持duration_desc（作业运行时长降序）、duration_asc（作业运行时长升序）、start_time_desc（作业提交时间降序）、start_time_asc（作业提交时间升序）四种排序方式。
-    * owner  提交作业的用户名称
-    * pageSize  每页显示的最大作业个数，范围: [1, 100]。默认值：50。
-    * queueName  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业。
-    * sqlPattern  指定sql片段作为作业过滤条件，不区分大小写。
-    * start  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
-    * tableName  tableName
-    * tags  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值。
+    * currentPage  参数解释:  当前页码，默认为第一页 示例: 55 约束限制:  无 取值范围: 大于1的整数 默认取值: 1
+    * dbName  参数解释:  数据库名称 示例: UQuery 约束限制:  长度小于等于16 取值范围: 无 默认取值: 无
+    * end  参数解释:  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * engineType  参数解释:  引擎类型。支持配置spark引擎或hetuEngine引擎 示例: spark 约束限制:  无 取值范围: spark、hetuEngine 默认取值: 无
+    * jobStatus  参数解释:  指定查询的作业状态 示例: FINISHED 约束限制:  长度小于等于16 取值范围: LAUNCHING RUNNING FAILED CANCELLED COMPUTED SUSPENDED ACTIVE DELETED CREATING FINISHED SCALING 默认取值: 无
+    * jobId  参数解释:  作业id 示例: bac76d9b-2891-4c50-a920-b98d8634fd0f 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * order  参数解释:  指定作业排序方式 示例: duration_desc 约束限制:  无 取值范围: start_time_desc（作业提交时间降序） start_time_asc（作业提交时间升序） duration_desc（作业运行时长降序） duration_asc（作业运行时长升序） 默认取值: start_time_desc
+    * owner  参数解释:  提交作业的用户名称 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * pageSize  参数解释:  每页显示的最大作业个数 示例: 5 约束限制:  无 取值范围: [1, 100] 默认取值: 50
+    * queueName  参数解释:  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业 示例: q1 约束限制:  匹配正则表达式^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$且长度在[1, 128]范围内的字符串 取值范围: 无 默认取值: 无
+    * sqlPattern  参数解释:  指定sql片段作为作业过滤条件，不区分大小写 示例: .*? 约束限制:  长度在[0, 1024]范围内的字符串 取值范围: 无 默认取值: 无
+    * start  参数解释:  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于1的整数 默认取值: 无
+    * tableName  参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: CS_JOB 约束限制:  无 取值范围: 无 默认取值: 无
+    * tags  参数解释:  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值 示例: key=value 约束限制:  格式为“key=value”的字符串 取值范围: 无 默认取值: 无
+    * jobTypes  参数解释:  指定查询的作业类型列表，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
         'sqlPattern' => null,
         'start' => 'int64',
         'tableName' => null,
-        'tags' => null
+        'tags' => null,
+        'jobTypes' => null
     ];
 
     /**
@@ -117,21 +121,22 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * currentPage  当前页码，默认为第一页。
-    * dbName  dbName
-    * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
-    * engineType  engineType
-    * jobStatus  jobStatus
-    * jobId  jobId
-    * jobType  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
-    * order  指定作业排序方式，默认为start_time_desc（作业提交时间降序），支持duration_desc（作业运行时长降序）、duration_asc（作业运行时长升序）、start_time_desc（作业提交时间降序）、start_time_asc（作业提交时间升序）四种排序方式。
-    * owner  提交作业的用户名称
-    * pageSize  每页显示的最大作业个数，范围: [1, 100]。默认值：50。
-    * queueName  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业。
-    * sqlPattern  指定sql片段作为作业过滤条件，不区分大小写。
-    * start  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
-    * tableName  tableName
-    * tags  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值。
+    * currentPage  参数解释:  当前页码，默认为第一页 示例: 55 约束限制:  无 取值范围: 大于1的整数 默认取值: 1
+    * dbName  参数解释:  数据库名称 示例: UQuery 约束限制:  长度小于等于16 取值范围: 无 默认取值: 无
+    * end  参数解释:  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * engineType  参数解释:  引擎类型。支持配置spark引擎或hetuEngine引擎 示例: spark 约束限制:  无 取值范围: spark、hetuEngine 默认取值: 无
+    * jobStatus  参数解释:  指定查询的作业状态 示例: FINISHED 约束限制:  长度小于等于16 取值范围: LAUNCHING RUNNING FAILED CANCELLED COMPUTED SUSPENDED ACTIVE DELETED CREATING FINISHED SCALING 默认取值: 无
+    * jobId  参数解释:  作业id 示例: bac76d9b-2891-4c50-a920-b98d8634fd0f 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * order  参数解释:  指定作业排序方式 示例: duration_desc 约束限制:  无 取值范围: start_time_desc（作业提交时间降序） start_time_asc（作业提交时间升序） duration_desc（作业运行时长降序） duration_asc（作业运行时长升序） 默认取值: start_time_desc
+    * owner  参数解释:  提交作业的用户名称 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * pageSize  参数解释:  每页显示的最大作业个数 示例: 5 约束限制:  无 取值范围: [1, 100] 默认取值: 50
+    * queueName  参数解释:  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业 示例: q1 约束限制:  匹配正则表达式^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$且长度在[1, 128]范围内的字符串 取值范围: 无 默认取值: 无
+    * sqlPattern  参数解释:  指定sql片段作为作业过滤条件，不区分大小写 示例: .*? 约束限制:  长度在[0, 1024]范围内的字符串 取值范围: 无 默认取值: 无
+    * start  参数解释:  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于1的整数 默认取值: 无
+    * tableName  参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: CS_JOB 约束限制:  无 取值范围: 无 默认取值: 无
+    * tags  参数解释:  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值 示例: key=value 约束限制:  格式为“key=value”的字符串 取值范围: 无 默认取值: 无
+    * jobTypes  参数解释:  指定查询的作业类型列表，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
     *
     * @var string[]
     */
@@ -150,26 +155,28 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
             'sqlPattern' => 'sql_pattern',
             'start' => 'start',
             'tableName' => 'table_name',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'jobTypes' => 'job_types'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * currentPage  当前页码，默认为第一页。
-    * dbName  dbName
-    * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
-    * engineType  engineType
-    * jobStatus  jobStatus
-    * jobId  jobId
-    * jobType  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
-    * order  指定作业排序方式，默认为start_time_desc（作业提交时间降序），支持duration_desc（作业运行时长降序）、duration_asc（作业运行时长升序）、start_time_desc（作业提交时间降序）、start_time_asc（作业提交时间升序）四种排序方式。
-    * owner  提交作业的用户名称
-    * pageSize  每页显示的最大作业个数，范围: [1, 100]。默认值：50。
-    * queueName  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业。
-    * sqlPattern  指定sql片段作为作业过滤条件，不区分大小写。
-    * start  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
-    * tableName  tableName
-    * tags  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值。
+    * currentPage  参数解释:  当前页码，默认为第一页 示例: 55 约束限制:  无 取值范围: 大于1的整数 默认取值: 1
+    * dbName  参数解释:  数据库名称 示例: UQuery 约束限制:  长度小于等于16 取值范围: 无 默认取值: 无
+    * end  参数解释:  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * engineType  参数解释:  引擎类型。支持配置spark引擎或hetuEngine引擎 示例: spark 约束限制:  无 取值范围: spark、hetuEngine 默认取值: 无
+    * jobStatus  参数解释:  指定查询的作业状态 示例: FINISHED 约束限制:  长度小于等于16 取值范围: LAUNCHING RUNNING FAILED CANCELLED COMPUTED SUSPENDED ACTIVE DELETED CREATING FINISHED SCALING 默认取值: 无
+    * jobId  参数解释:  作业id 示例: bac76d9b-2891-4c50-a920-b98d8634fd0f 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * order  参数解释:  指定作业排序方式 示例: duration_desc 约束限制:  无 取值范围: start_time_desc（作业提交时间降序） start_time_asc（作业提交时间升序） duration_desc（作业运行时长降序） duration_asc（作业运行时长升序） 默认取值: start_time_desc
+    * owner  参数解释:  提交作业的用户名称 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * pageSize  参数解释:  每页显示的最大作业个数 示例: 5 约束限制:  无 取值范围: [1, 100] 默认取值: 50
+    * queueName  参数解释:  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业 示例: q1 约束限制:  匹配正则表达式^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$且长度在[1, 128]范围内的字符串 取值范围: 无 默认取值: 无
+    * sqlPattern  参数解释:  指定sql片段作为作业过滤条件，不区分大小写 示例: .*? 约束限制:  长度在[0, 1024]范围内的字符串 取值范围: 无 默认取值: 无
+    * start  参数解释:  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于1的整数 默认取值: 无
+    * tableName  参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: CS_JOB 约束限制:  无 取值范围: 无 默认取值: 无
+    * tags  参数解释:  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值 示例: key=value 约束限制:  格式为“key=value”的字符串 取值范围: 无 默认取值: 无
+    * jobTypes  参数解释:  指定查询的作业类型列表，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
     *
     * @var string[]
     */
@@ -188,26 +195,28 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
             'sqlPattern' => 'setSqlPattern',
             'start' => 'setStart',
             'tableName' => 'setTableName',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'jobTypes' => 'setJobTypes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * currentPage  当前页码，默认为第一页。
-    * dbName  dbName
-    * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
-    * engineType  engineType
-    * jobStatus  jobStatus
-    * jobId  jobId
-    * jobType  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
-    * order  指定作业排序方式，默认为start_time_desc（作业提交时间降序），支持duration_desc（作业运行时长降序）、duration_asc（作业运行时长升序）、start_time_desc（作业提交时间降序）、start_time_asc（作业提交时间升序）四种排序方式。
-    * owner  提交作业的用户名称
-    * pageSize  每页显示的最大作业个数，范围: [1, 100]。默认值：50。
-    * queueName  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业。
-    * sqlPattern  指定sql片段作为作业过滤条件，不区分大小写。
-    * start  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
-    * tableName  tableName
-    * tags  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值。
+    * currentPage  参数解释:  当前页码，默认为第一页 示例: 55 约束限制:  无 取值范围: 大于1的整数 默认取值: 1
+    * dbName  参数解释:  数据库名称 示例: UQuery 约束限制:  长度小于等于16 取值范围: 无 默认取值: 无
+    * end  参数解释:  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * engineType  参数解释:  引擎类型。支持配置spark引擎或hetuEngine引擎 示例: spark 约束限制:  无 取值范围: spark、hetuEngine 默认取值: 无
+    * jobStatus  参数解释:  指定查询的作业状态 示例: FINISHED 约束限制:  长度小于等于16 取值范围: LAUNCHING RUNNING FAILED CANCELLED COMPUTED SUSPENDED ACTIVE DELETED CREATING FINISHED SCALING 默认取值: 无
+    * jobId  参数解释:  作业id 示例: bac76d9b-2891-4c50-a920-b98d8634fd0f 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * order  参数解释:  指定作业排序方式 示例: duration_desc 约束限制:  无 取值范围: start_time_desc（作业提交时间降序） start_time_asc（作业提交时间升序） duration_desc（作业运行时长降序） duration_asc（作业运行时长升序） 默认取值: start_time_desc
+    * owner  参数解释:  提交作业的用户名称 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * pageSize  参数解释:  每页显示的最大作业个数 示例: 5 约束限制:  无 取值范围: [1, 100] 默认取值: 50
+    * queueName  参数解释:  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业 示例: q1 约束限制:  匹配正则表达式^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$且长度在[1, 128]范围内的字符串 取值范围: 无 默认取值: 无
+    * sqlPattern  参数解释:  指定sql片段作为作业过滤条件，不区分大小写 示例: .*? 约束限制:  长度在[0, 1024]范围内的字符串 取值范围: 无 默认取值: 无
+    * start  参数解释:  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于1的整数 默认取值: 无
+    * tableName  参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: CS_JOB 约束限制:  无 取值范围: 无 默认取值: 无
+    * tags  参数解释:  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值 示例: key=value 约束限制:  格式为“key=value”的字符串 取值范围: 无 默认取值: 无
+    * jobTypes  参数解释:  指定查询的作业类型列表，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
             'sqlPattern' => 'getSqlPattern',
             'start' => 'getStart',
             'tableName' => 'getTableName',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'jobTypes' => 'getJobTypes'
     ];
 
     /**
@@ -269,18 +279,79 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const JOB_TYPE_ALL = 'ALL';
+    const ENGINE_TYPE_SPARK = 'spark';
+    const ENGINE_TYPE_HETU_ENGINE = 'hetuEngine';
+    const JOB_STATUS_LAUNCHING = 'LAUNCHING';
+    const JOB_STATUS_RUNNING = 'RUNNING';
+    const JOB_STATUS_FAILED = 'FAILED';
+    const JOB_STATUS_CANCELLED = 'CANCELLED';
+    const JOB_STATUS_COMPUTED = 'COMPUTED';
+    const JOB_STATUS_SUSPENDED = 'SUSPENDED';
+    const JOB_STATUS_ACTIVE = 'ACTIVE';
+    const JOB_STATUS_DELETED = 'DELETED';
+    const JOB_STATUS_CREATING = 'CREATING';
+    const JOB_STATUS_FINISHED = 'FINISHED';
+    const JOB_STATUS_SCALING = 'SCALING';
     const JOB_TYPE_DDL = 'DDL';
     const JOB_TYPE_DCL = 'DCL';
     const JOB_TYPE_IMPORT = 'IMPORT';
     const JOB_TYPE_EXPORT = 'EXPORT';
     const JOB_TYPE_QUERY = 'QUERY';
     const JOB_TYPE_INSERT = 'INSERT';
+    const JOB_TYPE_DATA_MIGRATION = 'DATA_MIGRATION';
+    const JOB_TYPE_UPDATE = 'UPDATE';
+    const JOB_TYPE_DELETE = 'DELETE';
+    const JOB_TYPE_RESTART_QUEUE = 'RESTART_QUEUE';
+    const JOB_TYPE_SCALE_QUEUE = 'SCALE_QUEUE';
+    const JOB_TYPE_ALL = 'ALL';
     const ORDER_DURATION_DESC = 'duration_desc';
     const ORDER_DURATION_ASC = 'duration_asc';
     const ORDER_START_TIME_DESC = 'start_time_desc';
     const ORDER_START_TIME_ASC = 'start_time_asc';
+    const JOB_TYPES_DDL = 'DDL';
+    const JOB_TYPES_DCL = 'DCL';
+    const JOB_TYPES_IMPORT = 'IMPORT';
+    const JOB_TYPES_EXPORT = 'EXPORT';
+    const JOB_TYPES_QUERY = 'QUERY';
+    const JOB_TYPES_INSERT = 'INSERT';
+    const JOB_TYPES_UPDATE = 'UPDATE';
+    const JOB_TYPES_DELETE = 'DELETE';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEngineTypeAllowableValues()
+    {
+        return [
+            self::ENGINE_TYPE_SPARK,
+            self::ENGINE_TYPE_HETU_ENGINE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getJobStatusAllowableValues()
+    {
+        return [
+            self::JOB_STATUS_LAUNCHING,
+            self::JOB_STATUS_RUNNING,
+            self::JOB_STATUS_FAILED,
+            self::JOB_STATUS_CANCELLED,
+            self::JOB_STATUS_COMPUTED,
+            self::JOB_STATUS_SUSPENDED,
+            self::JOB_STATUS_ACTIVE,
+            self::JOB_STATUS_DELETED,
+            self::JOB_STATUS_CREATING,
+            self::JOB_STATUS_FINISHED,
+            self::JOB_STATUS_SCALING,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -290,13 +361,18 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     public function getJobTypeAllowableValues()
     {
         return [
-            self::JOB_TYPE_ALL,
             self::JOB_TYPE_DDL,
             self::JOB_TYPE_DCL,
             self::JOB_TYPE_IMPORT,
             self::JOB_TYPE_EXPORT,
             self::JOB_TYPE_QUERY,
             self::JOB_TYPE_INSERT,
+            self::JOB_TYPE_DATA_MIGRATION,
+            self::JOB_TYPE_UPDATE,
+            self::JOB_TYPE_DELETE,
+            self::JOB_TYPE_RESTART_QUEUE,
+            self::JOB_TYPE_SCALE_QUEUE,
+            self::JOB_TYPE_ALL,
         ];
     }
 
@@ -312,6 +388,25 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
             self::ORDER_DURATION_ASC,
             self::ORDER_START_TIME_DESC,
             self::ORDER_START_TIME_ASC,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getJobTypesAllowableValues()
+    {
+        return [
+            self::JOB_TYPES_DDL,
+            self::JOB_TYPES_DCL,
+            self::JOB_TYPES_IMPORT,
+            self::JOB_TYPES_EXPORT,
+            self::JOB_TYPES_QUERY,
+            self::JOB_TYPES_INSERT,
+            self::JOB_TYPES_UPDATE,
+            self::JOB_TYPES_DELETE,
         ];
     }
 
@@ -346,6 +441,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
         $this->container['start'] = isset($data['start']) ? $data['start'] : null;
         $this->container['tableName'] = isset($data['tableName']) ? $data['tableName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['jobTypes'] = isset($data['jobTypes']) ? $data['jobTypes'] : null;
     }
 
     /**
@@ -356,6 +452,31 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['currentPage']) && ($this->container['currentPage'] < 1)) {
+                $invalidProperties[] = "invalid value for 'currentPage', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['dbName']) && (mb_strlen($this->container['dbName']) > 16)) {
+                $invalidProperties[] = "invalid value for 'dbName', the character length must be smaller than or equal to 16.";
+            }
+            $allowedValues = $this->getEngineTypeAllowableValues();
+                if (!is_null($this->container['engineType']) && !in_array($this->container['engineType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'engineType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getJobStatusAllowableValues();
+                if (!is_null($this->container['jobStatus']) && !in_array($this->container['jobStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'jobStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['jobStatus']) && (mb_strlen($this->container['jobStatus']) > 16)) {
+                $invalidProperties[] = "invalid value for 'jobStatus', the character length must be smaller than or equal to 16.";
+            }
             $allowedValues = $this->getJobTypeAllowableValues();
                 if (!is_null($this->container['jobType']) && !in_array($this->container['jobType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -364,6 +485,9 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) > 16)) {
+                $invalidProperties[] = "invalid value for 'jobType', the character length must be smaller than or equal to 16.";
+            }
             $allowedValues = $this->getOrderAllowableValues();
                 if (!is_null($this->container['order']) && !in_array($this->container['order'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -377,6 +501,21 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['pageSize']) && ($this->container['pageSize'] < 1)) {
                 $invalidProperties[] = "invalid value for 'pageSize', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['queueName']) && (mb_strlen($this->container['queueName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'queueName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['queueName']) && (mb_strlen($this->container['queueName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'queueName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['queueName']) && !preg_match("/^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$/", $this->container['queueName'])) {
+                $invalidProperties[] = "invalid value for 'queueName', must be conform to the pattern /^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$/.";
+            }
+            if (!is_null($this->container['sqlPattern']) && (mb_strlen($this->container['sqlPattern']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'sqlPattern', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['start']) && ($this->container['start'] < 1)) {
+                $invalidProperties[] = "invalid value for 'start', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -394,7 +533,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentPage
-    *  当前页码，默认为第一页。
+    *  参数解释:  当前页码，默认为第一页 示例: 55 约束限制:  无 取值范围: 大于1的整数 默认取值: 1
     *
     * @return int|null
     */
@@ -406,7 +545,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets currentPage
     *
-    * @param int|null $currentPage 当前页码，默认为第一页。
+    * @param int|null $currentPage 参数解释:  当前页码，默认为第一页 示例: 55 约束限制:  无 取值范围: 大于1的整数 默认取值: 1
     *
     * @return $this
     */
@@ -418,7 +557,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbName
-    *  dbName
+    *  参数解释:  数据库名称 示例: UQuery 约束限制:  长度小于等于16 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -430,7 +569,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dbName
     *
-    * @param string|null $dbName dbName
+    * @param string|null $dbName 参数解释:  数据库名称 示例: UQuery 约束限制:  长度小于等于16 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -442,7 +581,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets end
-    *  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
+    *  参数解释:  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -454,7 +593,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets end
     *
-    * @param int|null $end 用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
+    * @param int|null $end 参数解释:  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒 示例: 156789546456 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -466,7 +605,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineType
-    *  engineType
+    *  参数解释:  引擎类型。支持配置spark引擎或hetuEngine引擎 示例: spark 约束限制:  无 取值范围: spark、hetuEngine 默认取值: 无
     *
     * @return string|null
     */
@@ -478,7 +617,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engineType
     *
-    * @param string|null $engineType engineType
+    * @param string|null $engineType 参数解释:  引擎类型。支持配置spark引擎或hetuEngine引擎 示例: spark 约束限制:  无 取值范围: spark、hetuEngine 默认取值: 无
     *
     * @return $this
     */
@@ -490,7 +629,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobStatus
-    *  jobStatus
+    *  参数解释:  指定查询的作业状态 示例: FINISHED 约束限制:  长度小于等于16 取值范围: LAUNCHING RUNNING FAILED CANCELLED COMPUTED SUSPENDED ACTIVE DELETED CREATING FINISHED SCALING 默认取值: 无
     *
     * @return string|null
     */
@@ -502,7 +641,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobStatus
     *
-    * @param string|null $jobStatus jobStatus
+    * @param string|null $jobStatus 参数解释:  指定查询的作业状态 示例: FINISHED 约束限制:  长度小于等于16 取值范围: LAUNCHING RUNNING FAILED CANCELLED COMPUTED SUSPENDED ACTIVE DELETED CREATING FINISHED SCALING 默认取值: 无
     *
     * @return $this
     */
@@ -514,7 +653,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  jobId
+    *  参数解释:  作业id 示例: bac76d9b-2891-4c50-a920-b98d8634fd0f 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -526,7 +665,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId jobId
+    * @param string|null $jobId 参数解释:  作业id 示例: bac76d9b-2891-4c50-a920-b98d8634fd0f 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -538,7 +677,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
-    *  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
+    *  参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
     *
     * @return string|null
     */
@@ -550,7 +689,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobType
     *
-    * @param string|null $jobType 指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
+    * @param string|null $jobType 参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
     *
     * @return $this
     */
@@ -562,7 +701,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  指定作业排序方式，默认为start_time_desc（作业提交时间降序），支持duration_desc（作业运行时长降序）、duration_asc（作业运行时长升序）、start_time_desc（作业提交时间降序）、start_time_asc（作业提交时间升序）四种排序方式。
+    *  参数解释:  指定作业排序方式 示例: duration_desc 约束限制:  无 取值范围: start_time_desc（作业提交时间降序） start_time_asc（作业提交时间升序） duration_desc（作业运行时长降序） duration_asc（作业运行时长升序） 默认取值: start_time_desc
     *
     * @return string|null
     */
@@ -574,7 +713,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param string|null $order 指定作业排序方式，默认为start_time_desc（作业提交时间降序），支持duration_desc（作业运行时长降序）、duration_asc（作业运行时长升序）、start_time_desc（作业提交时间降序）、start_time_asc（作业提交时间升序）四种排序方式。
+    * @param string|null $order 参数解释:  指定作业排序方式 示例: duration_desc 约束限制:  无 取值范围: start_time_desc（作业提交时间降序） start_time_asc（作业提交时间升序） duration_desc（作业运行时长降序） duration_asc（作业运行时长升序） 默认取值: start_time_desc
     *
     * @return $this
     */
@@ -586,7 +725,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  提交作业的用户名称
+    *  参数解释:  提交作业的用户名称 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -598,7 +737,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner 提交作业的用户名称
+    * @param string|null $owner 参数解释:  提交作业的用户名称 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -610,7 +749,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageSize
-    *  每页显示的最大作业个数，范围: [1, 100]。默认值：50。
+    *  参数解释:  每页显示的最大作业个数 示例: 5 约束限制:  无 取值范围: [1, 100] 默认取值: 50
     *
     * @return int|null
     */
@@ -622,7 +761,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pageSize
     *
-    * @param int|null $pageSize 每页显示的最大作业个数，范围: [1, 100]。默认值：50。
+    * @param int|null $pageSize 参数解释:  每页显示的最大作业个数 示例: 5 约束限制:  无 取值范围: [1, 100] 默认取值: 50
     *
     * @return $this
     */
@@ -634,7 +773,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
-    *  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业。
+    *  参数解释:  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业 示例: q1 约束限制:  匹配正则表达式^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$且长度在[1, 128]范围内的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -646,7 +785,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets queueName
     *
-    * @param string|null $queueName 指定queue_name作为作业过滤条件，查询在指定queue上运行的作业。
+    * @param string|null $queueName 参数解释:  指定queue_name作为作业过滤条件，查询在指定queue上运行的作业 示例: q1 约束限制:  匹配正则表达式^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$且长度在[1, 128]范围内的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -658,7 +797,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sqlPattern
-    *  指定sql片段作为作业过滤条件，不区分大小写。
+    *  参数解释:  指定sql片段作为作业过滤条件，不区分大小写 示例: .*? 约束限制:  长度在[0, 1024]范围内的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -670,7 +809,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sqlPattern
     *
-    * @param string|null $sqlPattern 指定sql片段作为作业过滤条件，不区分大小写。
+    * @param string|null $sqlPattern 参数解释:  指定sql片段作为作业过滤条件，不区分大小写 示例: .*? 约束限制:  长度在[0, 1024]范围内的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -682,7 +821,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets start
-    *  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
+    *  参数解释:  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于1的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -694,7 +833,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param int|null $start 用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒。
+    * @param int|null $start 参数解释:  用于查询开始时间在该时间点之后的作业。时间格式为unix时间戳，单位：毫秒 示例: 156456784655 约束限制:  无 取值范围: 大于等于1的整数 默认取值: 无
     *
     * @return $this
     */
@@ -706,7 +845,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableName
-    *  tableName
+    *  参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: CS_JOB 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -718,7 +857,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tableName
     *
-    * @param string|null $tableName tableName
+    * @param string|null $tableName 参数解释:  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性 示例: CS_JOB 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -730,7 +869,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值。
+    *  参数解释:  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值 示例: key=value 约束限制:  格式为“key=value”的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -742,13 +881,37 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags 指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值。
+    * @param string|null $tags 参数解释:  指定作业标签作为过滤条件，支持多标签过滤。格式为“key=value”，如：GET /v1.0/{project_id}/jobs?tags=k1%3Dv1，“=”需要转义为“%3D”，“k1”为标签键，“v1”为标签值 示例: key=value 约束限制:  格式为“key=value”的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets jobTypes
+    *  参数解释:  指定查询的作业类型列表，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    *
+    * @return string[]|null
+    */
+    public function getJobTypes()
+    {
+        return $this->container['jobTypes'];
+    }
+
+    /**
+    * Sets jobTypes
+    *
+    * @param string[]|null $jobTypes 参数解释:  指定查询的作业类型列表，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    *
+    * @return $this
+    */
+    public function setJobTypes($jobTypes)
+    {
+        $this->container['jobTypes'] = $jobTypes;
         return $this;
     }
 

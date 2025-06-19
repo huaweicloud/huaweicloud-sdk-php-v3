@@ -21,13 +21,13 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isSuccess  当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobId  此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果。
-    * jobType  作业类型。  DDL DCL IMPORT EXPORT QUERY INSERT
-    * schema  当语句类型为DDL时，返回其结果的列名称及类型。
-    * rows  当语句类型为DDL时，直接返回其执行结果。
-    * jobMode  表示作业执行方式，是同步还是异步的
+    * isSuccess  参数解释: 当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: true,false 默认取值: 无
+    * message  参数解释: 系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobId  参数解释: 此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果 示例: 8ecb0777-9c70-4529-9935-29ea0946039c 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * schema  参数解释:  当语句类型为DDL时，返回其结果的列名称及类型 示例: [{\"col_name\": \"string\"},{\"data_type\": \"string\"},{\"comment\": \"string\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * rows  参数解释:  当语句类型为DDL时，直接返回其执行结果 示例: [[\"c1\",\"int\",null],[\"c2\",\"string\",null]] 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobMode  参数解释:  表示作业执行方式，是同步还是异步的 示例: async 约束限制:  无 取值范围: async（异步） sync（同步） 默认取值: 无
     *
     * @var string[]
     */
@@ -43,13 +43,13 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isSuccess  当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobId  此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果。
-    * jobType  作业类型。  DDL DCL IMPORT EXPORT QUERY INSERT
-    * schema  当语句类型为DDL时，返回其结果的列名称及类型。
-    * rows  当语句类型为DDL时，直接返回其执行结果。
-    * jobMode  表示作业执行方式，是同步还是异步的
+    * isSuccess  参数解释: 当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: true,false 默认取值: 无
+    * message  参数解释: 系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobId  参数解释: 此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果 示例: 8ecb0777-9c70-4529-9935-29ea0946039c 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * schema  参数解释:  当语句类型为DDL时，返回其结果的列名称及类型 示例: [{\"col_name\": \"string\"},{\"data_type\": \"string\"},{\"comment\": \"string\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * rows  参数解释:  当语句类型为DDL时，直接返回其执行结果 示例: [[\"c1\",\"int\",null],[\"c2\",\"string\",null]] 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobMode  参数解释:  表示作业执行方式，是同步还是异步的 示例: async 约束限制:  无 取值范围: async（异步） sync（同步） 默认取值: 无
     *
     * @var string[]
     */
@@ -86,13 +86,13 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isSuccess  当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobId  此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果。
-    * jobType  作业类型。  DDL DCL IMPORT EXPORT QUERY INSERT
-    * schema  当语句类型为DDL时，返回其结果的列名称及类型。
-    * rows  当语句类型为DDL时，直接返回其执行结果。
-    * jobMode  表示作业执行方式，是同步还是异步的
+    * isSuccess  参数解释: 当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: true,false 默认取值: 无
+    * message  参数解释: 系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobId  参数解释: 此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果 示例: 8ecb0777-9c70-4529-9935-29ea0946039c 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * schema  参数解释:  当语句类型为DDL时，返回其结果的列名称及类型 示例: [{\"col_name\": \"string\"},{\"data_type\": \"string\"},{\"comment\": \"string\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * rows  参数解释:  当语句类型为DDL时，直接返回其执行结果 示例: [[\"c1\",\"int\",null],[\"c2\",\"string\",null]] 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobMode  参数解释:  表示作业执行方式，是同步还是异步的 示例: async 约束限制:  无 取值范围: async（异步） sync（同步） 默认取值: 无
     *
     * @var string[]
     */
@@ -108,13 +108,13 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isSuccess  当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobId  此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果。
-    * jobType  作业类型。  DDL DCL IMPORT EXPORT QUERY INSERT
-    * schema  当语句类型为DDL时，返回其结果的列名称及类型。
-    * rows  当语句类型为DDL时，直接返回其执行结果。
-    * jobMode  表示作业执行方式，是同步还是异步的
+    * isSuccess  参数解释: 当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: true,false 默认取值: 无
+    * message  参数解释: 系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobId  参数解释: 此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果 示例: 8ecb0777-9c70-4529-9935-29ea0946039c 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * schema  参数解释:  当语句类型为DDL时，返回其结果的列名称及类型 示例: [{\"col_name\": \"string\"},{\"data_type\": \"string\"},{\"comment\": \"string\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * rows  参数解释:  当语句类型为DDL时，直接返回其执行结果 示例: [[\"c1\",\"int\",null],[\"c2\",\"string\",null]] 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobMode  参数解释:  表示作业执行方式，是同步还是异步的 示例: async 约束限制:  无 取值范围: async（异步） sync（同步） 默认取值: 无
     *
     * @var string[]
     */
@@ -130,13 +130,13 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isSuccess  当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
-    * jobId  此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果。
-    * jobType  作业类型。  DDL DCL IMPORT EXPORT QUERY INSERT
-    * schema  当语句类型为DDL时，返回其结果的列名称及类型。
-    * rows  当语句类型为DDL时，直接返回其执行结果。
-    * jobMode  表示作业执行方式，是同步还是异步的
+    * isSuccess  参数解释: 当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: true,false 默认取值: 无
+    * message  参数解释: 系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobId  参数解释: 此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果 示例: 8ecb0777-9c70-4529-9935-29ea0946039c 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobType  参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
+    * schema  参数解释:  当语句类型为DDL时，返回其结果的列名称及类型 示例: [{\"col_name\": \"string\"},{\"data_type\": \"string\"},{\"comment\": \"string\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * rows  参数解释:  当语句类型为DDL时，直接返回其执行结果 示例: [[\"c1\",\"int\",null],[\"c2\",\"string\",null]] 约束限制:  无 取值范围: 无 默认取值: 无
+    * jobMode  参数解释:  表示作业执行方式，是同步还是异步的 示例: async 约束限制:  无 取值范围: async（异步） sync（同步） 默认取值: 无
     *
     * @var string[]
     */
@@ -196,6 +196,14 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
     const JOB_TYPE_EXPORT = 'EXPORT';
     const JOB_TYPE_QUERY = 'QUERY';
     const JOB_TYPE_INSERT = 'INSERT';
+    const JOB_TYPE_DATA_MIGRATION = 'DATA_MIGRATION';
+    const JOB_TYPE_UPDATE = 'UPDATE';
+    const JOB_TYPE_DELETE = 'DELETE';
+    const JOB_TYPE_RESTART_QUEUE = 'RESTART_QUEUE';
+    const JOB_TYPE_SCALE_QUEUE = 'SCALE_QUEUE';
+    const JOB_TYPE_ALL = 'ALL';
+    const JOB_MODE_ASYNC = 'async';
+    const JOB_MODE_SYNC = 'sync';
     
 
     /**
@@ -212,6 +220,25 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
             self::JOB_TYPE_EXPORT,
             self::JOB_TYPE_QUERY,
             self::JOB_TYPE_INSERT,
+            self::JOB_TYPE_DATA_MIGRATION,
+            self::JOB_TYPE_UPDATE,
+            self::JOB_TYPE_DELETE,
+            self::JOB_TYPE_RESTART_QUEUE,
+            self::JOB_TYPE_SCALE_QUEUE,
+            self::JOB_TYPE_ALL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getJobModeAllowableValues()
+    {
+        return [
+            self::JOB_MODE_ASYNC,
+            self::JOB_MODE_SYNC,
         ];
     }
 
@@ -256,6 +283,14 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getJobModeAllowableValues();
+                if (!is_null($this->container['jobMode']) && !in_array($this->container['jobMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'jobMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -272,7 +307,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSuccess
-    *  当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功。
+    *  参数解释: 当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: true,false 默认取值: 无
     *
     * @return bool|null
     */
@@ -284,7 +319,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSuccess
     *
-    * @param bool|null $isSuccess 当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功。
+    * @param bool|null $isSuccess 参数解释: 当“job_type”为“DCL”时，为请求执行是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: true,false 默认取值: 无
     *
     * @return $this
     */
@@ -296,7 +331,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  系统提示信息，执行成功时，信息可能为空。
+    *  参数解释: 系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -308,7 +343,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 系统提示信息，执行成功时，信息可能为空。
+    * @param string|null $message 参数解释: 系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -320,7 +355,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果。
+    *  参数解释: 此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果 示例: 8ecb0777-9c70-4529-9935-29ea0946039c 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -332,7 +367,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果。
+    * @param string|null $jobId 参数解释: 此SQL语句将生成并提交一个新作业，返回此作业的ID，可用于获取作业状态和作业结果 示例: 8ecb0777-9c70-4529-9935-29ea0946039c 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -344,7 +379,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
-    *  作业类型。  DDL DCL IMPORT EXPORT QUERY INSERT
+    *  参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
     *
     * @return string|null
     */
@@ -356,7 +391,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobType
     *
-    * @param string|null $jobType 作业类型。  DDL DCL IMPORT EXPORT QUERY INSERT
+    * @param string|null $jobType 参数解释:  指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE，若要查询所有类型的作业，则传入ALL。 示例: QUERY 约束限制:  无 取值范围: DDL、DCL、IMPORT、EXPORT、QUERY、INSERT、DATA_MIGRATION、UPDATE、DELETE、RESTART_QUEUE、SCALE_QUEUE、ALL 默认取值: 无
     *
     * @return $this
     */
@@ -368,7 +403,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets schema
-    *  当语句类型为DDL时，返回其结果的列名称及类型。
+    *  参数解释:  当语句类型为DDL时，返回其结果的列名称及类型 示例: [{\"col_name\": \"string\"},{\"data_type\": \"string\"},{\"comment\": \"string\"}] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return object[]|null
     */
@@ -380,7 +415,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets schema
     *
-    * @param object[]|null $schema 当语句类型为DDL时，返回其结果的列名称及类型。
+    * @param object[]|null $schema 参数解释:  当语句类型为DDL时，返回其结果的列名称及类型 示例: [{\"col_name\": \"string\"},{\"data_type\": \"string\"},{\"comment\": \"string\"}] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -392,7 +427,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets rows
-    *  当语句类型为DDL时，直接返回其执行结果。
+    *  参数解释:  当语句类型为DDL时，直接返回其执行结果 示例: [[\"c1\",\"int\",null],[\"c2\",\"string\",null]] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return object[][]|null
     */
@@ -404,7 +439,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets rows
     *
-    * @param object[][]|null $rows 当语句类型为DDL时，直接返回其执行结果。
+    * @param object[][]|null $rows 参数解释:  当语句类型为DDL时，直接返回其执行结果 示例: [[\"c1\",\"int\",null],[\"c2\",\"string\",null]] 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -416,7 +451,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobMode
-    *  表示作业执行方式，是同步还是异步的
+    *  参数解释:  表示作业执行方式，是同步还是异步的 示例: async 约束限制:  无 取值范围: async（异步） sync（同步） 默认取值: 无
     *
     * @return string|null
     */
@@ -428,7 +463,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobMode
     *
-    * @param string|null $jobMode 表示作业执行方式，是同步还是异步的
+    * @param string|null $jobMode 参数解释:  表示作业执行方式，是同步还是异步的 示例: async 约束限制:  无 取值范围: async（异步） sync（同步） 默认取值: 无
     *
     * @return $this
     */

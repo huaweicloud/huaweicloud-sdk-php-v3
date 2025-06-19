@@ -20,8 +20,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键
-    * value  值
+    * key  参数解释:  键 示例: key 约束限制:  长度大于等于1且小于等于128 取值范围: 无 默认取值: 无
+    * value  参数解释:  值 示例: value 约束限制:  长度大于等于1且小于等于255 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键
-    * value  值
+    * key  参数解释:  键 示例: key 约束限制:  长度大于等于1且小于等于128 取值范围: 无 默认取值: 无
+    * value  参数解释:  值 示例: value 约束限制:  长度大于等于1且小于等于255 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键
-    * value  值
+    * key  参数解释:  键 示例: key 约束限制:  长度大于等于1且小于等于128 取值范围: 无 默认取值: 无
+    * value  参数解释:  值 示例: value 约束限制:  长度大于等于1且小于等于255 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键
-    * value  值
+    * key  参数解释:  键 示例: key 约束限制:  长度大于等于1且小于等于128 取值范围: 无 默认取值: 无
+    * value  参数解释:  值 示例: value 约束限制:  长度大于等于1且小于等于255 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键
-    * value  值
+    * key  参数解释:  键 示例: key 约束限制:  长度大于等于1且小于等于128 取值范围: 无 默认取值: 无
+    * value  参数解释:  值 示例: value 约束限制:  长度大于等于1且小于等于255 取值范围: 无 默认取值: 无
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键
+    *  参数解释:  键 示例: key 约束限制:  长度大于等于1且小于等于128 取值范围: 无 默认取值: 无
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 键
+    * @param string $key 参数解释:  键 示例: key 约束限制:  长度大于等于1且小于等于128 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值
+    *  参数解释:  值 示例: value 约束限制:  长度大于等于1且小于等于255 取值范围: 无 默认取值: 无
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 值
+    * @param string $value 参数解释:  值 示例: value 约束限制:  长度大于等于1且小于等于255 取值范围: 无 默认取值: 无
     *
     * @return $this
     */

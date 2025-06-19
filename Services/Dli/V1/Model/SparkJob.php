@@ -20,22 +20,22 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  Batch作业的id。
-    * state  Batch作业的状态。包括： starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
-    * appId  批处理作业的后台app id。
-    * log  显示当前Batch作业的最后10条记录。
-    * scType  计算资源类型。用户自定义时返回CUSTOMIZED。
-    * clusterName  会话所在队列。
-    * createTime  Batch的创建时间。是单位为“毫秒”的时间戳。
-    * name  创建时用户指定的批处理名称，不能超过128个字符。
-    * owner  批处理作业所属用户
-    * proxyUser  批处理作业所属代理用户（资源租户）。
-    * kind  批处理作业类型，只支持spark类型参数。
-    * queue  用于指定队列，填写已创建DLI的队列名
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
-    * reqBody  请求参数详情
-    * updateTime  更新时间
-    * duration  作业运行时长，单位毫秒。
+    * id  参数解释:  Batch作业的id。 示例: 80ceaaff-3cfc-4162-a56f-70031ea4fa91 约束限制:  无 取值范围: 无 默认取值: 无
+    * state  参数解释:  Batch作业的状态 示例: starting 约束限制:  无 取值范围: starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 默认取值: 无
+    * appId  参数解释:  批处理作业的后台app id 示例: batch-session-1f49b734-757a-419c-9519-7754520cb03c:31309 约束限制:  无 取值范围: 无 默认取值: 无
+    * log  参数解释:  显示当前Batch作业的最后10条记录 约束限制:  无 取值范围: 无 默认取值: 无
+    * scType  参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
+    * clusterName  参数解释:  会话所在队列 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释:  Batch的创建时间。是单位为“毫秒”的时间戳 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * name  参数解释:  创建时用户指定的批处理名称，不能超过128个字符 示例: test_pyFiles 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释:  批处理作业所属用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * proxyUser  参数解释:  批处理作业所属代理用户（资源租户） 示例: tenant1 约束限制:  无 取值范围: 无 默认取值: 无
+    * kind  参数解释:   批处理作业类型，只支持spark类型参数 示例: spark 约束限制:  无 取值范围: spark 默认取值: 无
+    * queue  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
+    * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本 示例: ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000 约束限制:  格式为: 组织名/镜像名:镜像版本的字符串 取值范围: 无 默认取值: 无
+    * reqBody  参数解释:   请求参数详情 示例: {\\\"jars\\\":[\\\"spark-examples_2.11-2.4.5-h0.cbu.dli.300.20240725.r1.jar\\\"],\\\"pyFiles\\\":[],\\\"files\\\":[],\\\"modelFiles\\\":[],\\\"resources\\\":[],\\\"modules\\\":[],\\\"groups\\\":[],\\\"archives\\\":[],\\\"queue\\\":\\\"gen0218\\\",\\\"name\\\":\\\"\\\",\\\"conf\\\":{},\\\"execution_agency_urn\\\":\\\"agency\\\",\\\"file\\\":\\\"obs://dli-wzy/package/job/spark/longrunning.py\\\",\\\"args\\\":[],\\\"className\\\":\\\"\\\",\\\"autoRecovery\\\":false,\\\"minRecoveryDelayTime\\\":10000,\\\"maxRetryTimes\\\":20,\\\"obs_bucket\\\":\\\"rain3\\\",\\\"image\\\":\\\"ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000\\\",\\\"feature\\\":\\\"custom\\\",\\\"spark_version\\\":\\\"3.3.1\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * updateTime  参数解释:   更新时间 示例: 1739867996988 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:   作业运行时长，单位毫秒 示例: 141079 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @var string[]
     */
@@ -60,22 +60,22 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  Batch作业的id。
-    * state  Batch作业的状态。包括： starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
-    * appId  批处理作业的后台app id。
-    * log  显示当前Batch作业的最后10条记录。
-    * scType  计算资源类型。用户自定义时返回CUSTOMIZED。
-    * clusterName  会话所在队列。
-    * createTime  Batch的创建时间。是单位为“毫秒”的时间戳。
-    * name  创建时用户指定的批处理名称，不能超过128个字符。
-    * owner  批处理作业所属用户
-    * proxyUser  批处理作业所属代理用户（资源租户）。
-    * kind  批处理作业类型，只支持spark类型参数。
-    * queue  用于指定队列，填写已创建DLI的队列名
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
-    * reqBody  请求参数详情
-    * updateTime  更新时间
-    * duration  作业运行时长，单位毫秒。
+    * id  参数解释:  Batch作业的id。 示例: 80ceaaff-3cfc-4162-a56f-70031ea4fa91 约束限制:  无 取值范围: 无 默认取值: 无
+    * state  参数解释:  Batch作业的状态 示例: starting 约束限制:  无 取值范围: starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 默认取值: 无
+    * appId  参数解释:  批处理作业的后台app id 示例: batch-session-1f49b734-757a-419c-9519-7754520cb03c:31309 约束限制:  无 取值范围: 无 默认取值: 无
+    * log  参数解释:  显示当前Batch作业的最后10条记录 约束限制:  无 取值范围: 无 默认取值: 无
+    * scType  参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
+    * clusterName  参数解释:  会话所在队列 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释:  Batch的创建时间。是单位为“毫秒”的时间戳 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * name  参数解释:  创建时用户指定的批处理名称，不能超过128个字符 示例: test_pyFiles 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释:  批处理作业所属用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * proxyUser  参数解释:  批处理作业所属代理用户（资源租户） 示例: tenant1 约束限制:  无 取值范围: 无 默认取值: 无
+    * kind  参数解释:   批处理作业类型，只支持spark类型参数 示例: spark 约束限制:  无 取值范围: spark 默认取值: 无
+    * queue  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
+    * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本 示例: ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000 约束限制:  格式为: 组织名/镜像名:镜像版本的字符串 取值范围: 无 默认取值: 无
+    * reqBody  参数解释:   请求参数详情 示例: {\\\"jars\\\":[\\\"spark-examples_2.11-2.4.5-h0.cbu.dli.300.20240725.r1.jar\\\"],\\\"pyFiles\\\":[],\\\"files\\\":[],\\\"modelFiles\\\":[],\\\"resources\\\":[],\\\"modules\\\":[],\\\"groups\\\":[],\\\"archives\\\":[],\\\"queue\\\":\\\"gen0218\\\",\\\"name\\\":\\\"\\\",\\\"conf\\\":{},\\\"execution_agency_urn\\\":\\\"agency\\\",\\\"file\\\":\\\"obs://dli-wzy/package/job/spark/longrunning.py\\\",\\\"args\\\":[],\\\"className\\\":\\\"\\\",\\\"autoRecovery\\\":false,\\\"minRecoveryDelayTime\\\":10000,\\\"maxRetryTimes\\\":20,\\\"obs_bucket\\\":\\\"rain3\\\",\\\"image\\\":\\\"ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000\\\",\\\"feature\\\":\\\"custom\\\",\\\"spark_version\\\":\\\"3.3.1\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * updateTime  参数解释:   更新时间 示例: 1739867996988 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:   作业运行时长，单位毫秒 示例: 141079 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @var string[]
     */
@@ -121,22 +121,22 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  Batch作业的id。
-    * state  Batch作业的状态。包括： starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
-    * appId  批处理作业的后台app id。
-    * log  显示当前Batch作业的最后10条记录。
-    * scType  计算资源类型。用户自定义时返回CUSTOMIZED。
-    * clusterName  会话所在队列。
-    * createTime  Batch的创建时间。是单位为“毫秒”的时间戳。
-    * name  创建时用户指定的批处理名称，不能超过128个字符。
-    * owner  批处理作业所属用户
-    * proxyUser  批处理作业所属代理用户（资源租户）。
-    * kind  批处理作业类型，只支持spark类型参数。
-    * queue  用于指定队列，填写已创建DLI的队列名
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
-    * reqBody  请求参数详情
-    * updateTime  更新时间
-    * duration  作业运行时长，单位毫秒。
+    * id  参数解释:  Batch作业的id。 示例: 80ceaaff-3cfc-4162-a56f-70031ea4fa91 约束限制:  无 取值范围: 无 默认取值: 无
+    * state  参数解释:  Batch作业的状态 示例: starting 约束限制:  无 取值范围: starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 默认取值: 无
+    * appId  参数解释:  批处理作业的后台app id 示例: batch-session-1f49b734-757a-419c-9519-7754520cb03c:31309 约束限制:  无 取值范围: 无 默认取值: 无
+    * log  参数解释:  显示当前Batch作业的最后10条记录 约束限制:  无 取值范围: 无 默认取值: 无
+    * scType  参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
+    * clusterName  参数解释:  会话所在队列 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释:  Batch的创建时间。是单位为“毫秒”的时间戳 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * name  参数解释:  创建时用户指定的批处理名称，不能超过128个字符 示例: test_pyFiles 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释:  批处理作业所属用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * proxyUser  参数解释:  批处理作业所属代理用户（资源租户） 示例: tenant1 约束限制:  无 取值范围: 无 默认取值: 无
+    * kind  参数解释:   批处理作业类型，只支持spark类型参数 示例: spark 约束限制:  无 取值范围: spark 默认取值: 无
+    * queue  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
+    * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本 示例: ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000 约束限制:  格式为: 组织名/镜像名:镜像版本的字符串 取值范围: 无 默认取值: 无
+    * reqBody  参数解释:   请求参数详情 示例: {\\\"jars\\\":[\\\"spark-examples_2.11-2.4.5-h0.cbu.dli.300.20240725.r1.jar\\\"],\\\"pyFiles\\\":[],\\\"files\\\":[],\\\"modelFiles\\\":[],\\\"resources\\\":[],\\\"modules\\\":[],\\\"groups\\\":[],\\\"archives\\\":[],\\\"queue\\\":\\\"gen0218\\\",\\\"name\\\":\\\"\\\",\\\"conf\\\":{},\\\"execution_agency_urn\\\":\\\"agency\\\",\\\"file\\\":\\\"obs://dli-wzy/package/job/spark/longrunning.py\\\",\\\"args\\\":[],\\\"className\\\":\\\"\\\",\\\"autoRecovery\\\":false,\\\"minRecoveryDelayTime\\\":10000,\\\"maxRetryTimes\\\":20,\\\"obs_bucket\\\":\\\"rain3\\\",\\\"image\\\":\\\"ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000\\\",\\\"feature\\\":\\\"custom\\\",\\\"spark_version\\\":\\\"3.3.1\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * updateTime  参数解释:   更新时间 示例: 1739867996988 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:   作业运行时长，单位毫秒 示例: 141079 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @var string[]
     */
@@ -161,22 +161,22 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  Batch作业的id。
-    * state  Batch作业的状态。包括： starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
-    * appId  批处理作业的后台app id。
-    * log  显示当前Batch作业的最后10条记录。
-    * scType  计算资源类型。用户自定义时返回CUSTOMIZED。
-    * clusterName  会话所在队列。
-    * createTime  Batch的创建时间。是单位为“毫秒”的时间戳。
-    * name  创建时用户指定的批处理名称，不能超过128个字符。
-    * owner  批处理作业所属用户
-    * proxyUser  批处理作业所属代理用户（资源租户）。
-    * kind  批处理作业类型，只支持spark类型参数。
-    * queue  用于指定队列，填写已创建DLI的队列名
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
-    * reqBody  请求参数详情
-    * updateTime  更新时间
-    * duration  作业运行时长，单位毫秒。
+    * id  参数解释:  Batch作业的id。 示例: 80ceaaff-3cfc-4162-a56f-70031ea4fa91 约束限制:  无 取值范围: 无 默认取值: 无
+    * state  参数解释:  Batch作业的状态 示例: starting 约束限制:  无 取值范围: starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 默认取值: 无
+    * appId  参数解释:  批处理作业的后台app id 示例: batch-session-1f49b734-757a-419c-9519-7754520cb03c:31309 约束限制:  无 取值范围: 无 默认取值: 无
+    * log  参数解释:  显示当前Batch作业的最后10条记录 约束限制:  无 取值范围: 无 默认取值: 无
+    * scType  参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
+    * clusterName  参数解释:  会话所在队列 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释:  Batch的创建时间。是单位为“毫秒”的时间戳 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * name  参数解释:  创建时用户指定的批处理名称，不能超过128个字符 示例: test_pyFiles 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释:  批处理作业所属用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * proxyUser  参数解释:  批处理作业所属代理用户（资源租户） 示例: tenant1 约束限制:  无 取值范围: 无 默认取值: 无
+    * kind  参数解释:   批处理作业类型，只支持spark类型参数 示例: spark 约束限制:  无 取值范围: spark 默认取值: 无
+    * queue  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
+    * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本 示例: ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000 约束限制:  格式为: 组织名/镜像名:镜像版本的字符串 取值范围: 无 默认取值: 无
+    * reqBody  参数解释:   请求参数详情 示例: {\\\"jars\\\":[\\\"spark-examples_2.11-2.4.5-h0.cbu.dli.300.20240725.r1.jar\\\"],\\\"pyFiles\\\":[],\\\"files\\\":[],\\\"modelFiles\\\":[],\\\"resources\\\":[],\\\"modules\\\":[],\\\"groups\\\":[],\\\"archives\\\":[],\\\"queue\\\":\\\"gen0218\\\",\\\"name\\\":\\\"\\\",\\\"conf\\\":{},\\\"execution_agency_urn\\\":\\\"agency\\\",\\\"file\\\":\\\"obs://dli-wzy/package/job/spark/longrunning.py\\\",\\\"args\\\":[],\\\"className\\\":\\\"\\\",\\\"autoRecovery\\\":false,\\\"minRecoveryDelayTime\\\":10000,\\\"maxRetryTimes\\\":20,\\\"obs_bucket\\\":\\\"rain3\\\",\\\"image\\\":\\\"ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000\\\",\\\"feature\\\":\\\"custom\\\",\\\"spark_version\\\":\\\"3.3.1\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * updateTime  参数解释:   更新时间 示例: 1739867996988 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:   作业运行时长，单位毫秒 示例: 141079 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @var string[]
     */
@@ -201,22 +201,22 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  Batch作业的id。
-    * state  Batch作业的状态。包括： starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
-    * appId  批处理作业的后台app id。
-    * log  显示当前Batch作业的最后10条记录。
-    * scType  计算资源类型。用户自定义时返回CUSTOMIZED。
-    * clusterName  会话所在队列。
-    * createTime  Batch的创建时间。是单位为“毫秒”的时间戳。
-    * name  创建时用户指定的批处理名称，不能超过128个字符。
-    * owner  批处理作业所属用户
-    * proxyUser  批处理作业所属代理用户（资源租户）。
-    * kind  批处理作业类型，只支持spark类型参数。
-    * queue  用于指定队列，填写已创建DLI的队列名
-    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
-    * reqBody  请求参数详情
-    * updateTime  更新时间
-    * duration  作业运行时长，单位毫秒。
+    * id  参数解释:  Batch作业的id。 示例: 80ceaaff-3cfc-4162-a56f-70031ea4fa91 约束限制:  无 取值范围: 无 默认取值: 无
+    * state  参数解释:  Batch作业的状态 示例: starting 约束限制:  无 取值范围: starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 默认取值: 无
+    * appId  参数解释:  批处理作业的后台app id 示例: batch-session-1f49b734-757a-419c-9519-7754520cb03c:31309 约束限制:  无 取值范围: 无 默认取值: 无
+    * log  参数解释:  显示当前Batch作业的最后10条记录 约束限制:  无 取值范围: 无 默认取值: 无
+    * scType  参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
+    * clusterName  参数解释:  会话所在队列 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
+    * createTime  参数解释:  Batch的创建时间。是单位为“毫秒”的时间戳 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * name  参数解释:  创建时用户指定的批处理名称，不能超过128个字符 示例: test_pyFiles 约束限制:  无 取值范围: 无 默认取值: 无
+    * owner  参数解释:  批处理作业所属用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
+    * proxyUser  参数解释:  批处理作业所属代理用户（资源租户） 示例: tenant1 约束限制:  无 取值范围: 无 默认取值: 无
+    * kind  参数解释:   批处理作业类型，只支持spark类型参数 示例: spark 约束限制:  无 取值范围: spark 默认取值: 无
+    * queue  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
+    * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本 示例: ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000 约束限制:  格式为: 组织名/镜像名:镜像版本的字符串 取值范围: 无 默认取值: 无
+    * reqBody  参数解释:   请求参数详情 示例: {\\\"jars\\\":[\\\"spark-examples_2.11-2.4.5-h0.cbu.dli.300.20240725.r1.jar\\\"],\\\"pyFiles\\\":[],\\\"files\\\":[],\\\"modelFiles\\\":[],\\\"resources\\\":[],\\\"modules\\\":[],\\\"groups\\\":[],\\\"archives\\\":[],\\\"queue\\\":\\\"gen0218\\\",\\\"name\\\":\\\"\\\",\\\"conf\\\":{},\\\"execution_agency_urn\\\":\\\"agency\\\",\\\"file\\\":\\\"obs://dli-wzy/package/job/spark/longrunning.py\\\",\\\"args\\\":[],\\\"className\\\":\\\"\\\",\\\"autoRecovery\\\":false,\\\"minRecoveryDelayTime\\\":10000,\\\"maxRetryTimes\\\":20,\\\"obs_bucket\\\":\\\"rain3\\\",\\\"image\\\":\\\"ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000\\\",\\\"feature\\\":\\\"custom\\\",\\\"spark_version\\\":\\\"3.3.1\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
+    * updateTime  参数解释:   更新时间 示例: 1739867996988 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * duration  参数解释:   作业运行时长，单位毫秒 示例: 141079 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @var string[]
     */
@@ -339,7 +339,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  Batch作业的id。
+    *  参数解释:  Batch作业的id。 示例: 80ceaaff-3cfc-4162-a56f-70031ea4fa91 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -351,7 +351,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id Batch作业的id。
+    * @param string|null $id 参数解释:  Batch作业的id。 示例: 80ceaaff-3cfc-4162-a56f-70031ea4fa91 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  Batch作业的状态。包括： starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
+    *  参数解释:  Batch作业的状态 示例: starting 约束限制:  无 取值范围: starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 默认取值: 无
     *
     * @return string|null
     */
@@ -375,7 +375,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state Batch作业的状态。包括： starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复。
+    * @param string|null $state 参数解释:  Batch作业的状态 示例: starting 约束限制:  无 取值范围: starting：正在启动；running：正在执行任务；dead：session已退出；success：session停止成功；recovering：正在恢复 默认取值: 无
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  批处理作业的后台app id。
+    *  参数解释:  批处理作业的后台app id 示例: batch-session-1f49b734-757a-419c-9519-7754520cb03c:31309 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -399,7 +399,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 批处理作业的后台app id。
+    * @param string|null $appId 参数解释:  批处理作业的后台app id 示例: batch-session-1f49b734-757a-419c-9519-7754520cb03c:31309 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets log
-    *  显示当前Batch作业的最后10条记录。
+    *  参数解释:  显示当前Batch作业的最后10条记录 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string[]|null
     */
@@ -423,7 +423,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets log
     *
-    * @param string[]|null $log 显示当前Batch作业的最后10条记录。
+    * @param string[]|null $log 参数解释:  显示当前Batch作业的最后10条记录 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets scType
-    *  计算资源类型。用户自定义时返回CUSTOMIZED。
+    *  参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
     *
     * @return string|null
     */
@@ -447,7 +447,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets scType
     *
-    * @param string|null $scType 计算资源类型。用户自定义时返回CUSTOMIZED。
+    * @param string|null $scType 参数解释:   计算资源类型，目前可接受参数A, B, C。如果不指定，则按最小类型创建。 示例: A 约束限制:  无 取值范围: A：物理资源：8核32G内存，driverCores：2；executorCores：1；driverMemory：7G；executorMemory：4G；numExecutor：6。 B：16核64G内存,2,2,7G,8G,7。 C：32核128G内存,4,2,15G,8G,14。 默认取值: 无
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  会话所在队列。
+    *  参数解释:  会话所在队列 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -471,7 +471,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 会话所在队列。
+    * @param string|null $clusterName 参数解释:  会话所在队列 示例: test 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  Batch的创建时间。是单位为“毫秒”的时间戳。
+    *  参数解释:  Batch的创建时间。是单位为“毫秒”的时间戳 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -495,7 +495,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime Batch的创建时间。是单位为“毫秒”的时间戳。
+    * @param int|null $createTime 参数解释:  Batch的创建时间。是单位为“毫秒”的时间戳 示例: 1747169165821 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -507,7 +507,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  创建时用户指定的批处理名称，不能超过128个字符。
+    *  参数解释:  创建时用户指定的批处理名称，不能超过128个字符 示例: test_pyFiles 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -519,7 +519,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 创建时用户指定的批处理名称，不能超过128个字符。
+    * @param string|null $name 参数解释:  创建时用户指定的批处理名称，不能超过128个字符 示例: test_pyFiles 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -531,7 +531,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  批处理作业所属用户
+    *  参数解释:  批处理作业所属用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -543,7 +543,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner 批处理作业所属用户
+    * @param string|null $owner 参数解释:  批处理作业所属用户 示例: ei_dlics_d00352431 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -555,7 +555,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyUser
-    *  批处理作业所属代理用户（资源租户）。
+    *  参数解释:  批处理作业所属代理用户（资源租户） 示例: tenant1 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -567,7 +567,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets proxyUser
     *
-    * @param string|null $proxyUser 批处理作业所属代理用户（资源租户）。
+    * @param string|null $proxyUser 参数解释:  批处理作业所属代理用户（资源租户） 示例: tenant1 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -579,7 +579,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  批处理作业类型，只支持spark类型参数。
+    *  参数解释:   批处理作业类型，只支持spark类型参数 示例: spark 约束限制:  无 取值范围: spark 默认取值: 无
     *
     * @return string|null
     */
@@ -591,7 +591,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string|null $kind 批处理作业类型，只支持spark类型参数。
+    * @param string|null $kind 参数解释:   批处理作业类型，只支持spark类型参数 示例: spark 约束限制:  无 取值范围: spark 默认取值: 无
     *
     * @return $this
     */
@@ -603,7 +603,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets queue
-    *  用于指定队列，填写已创建DLI的队列名
+    *  参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -615,7 +615,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets queue
     *
-    * @param string|null $queue 用于指定队列，填写已创建DLI的队列名
+    * @param string|null $queue 参数解释:   用于指定队列，填写已创建DLI的队列名 示例: gen_native 约束限制:  无 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -627,7 +627,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets image
-    *  自定义镜像。格式为：组织名/镜像名:镜像版本。
+    *  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本 示例: ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000 约束限制:  格式为: 组织名/镜像名:镜像版本的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -639,7 +639,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets image
     *
-    * @param string|null $image 自定义镜像。格式为：组织名/镜像名:镜像版本。
+    * @param string|null $image 参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本 示例: ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000 约束限制:  格式为: 组织名/镜像名:镜像版本的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -651,7 +651,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqBody
-    *  请求参数详情
+    *  参数解释:   请求参数详情 示例: {\\\"jars\\\":[\\\"spark-examples_2.11-2.4.5-h0.cbu.dli.300.20240725.r1.jar\\\"],\\\"pyFiles\\\":[],\\\"files\\\":[],\\\"modelFiles\\\":[],\\\"resources\\\":[],\\\"modules\\\":[],\\\"groups\\\":[],\\\"archives\\\":[],\\\"queue\\\":\\\"gen0218\\\",\\\"name\\\":\\\"\\\",\\\"conf\\\":{},\\\"execution_agency_urn\\\":\\\"agency\\\",\\\"file\\\":\\\"obs://dli-wzy/package/job/spark/longrunning.py\\\",\\\"args\\\":[],\\\"className\\\":\\\"\\\",\\\"autoRecovery\\\":false,\\\"minRecoveryDelayTime\\\":10000,\\\"maxRetryTimes\\\":20,\\\"obs_bucket\\\":\\\"rain3\\\",\\\"image\\\":\\\"ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000\\\",\\\"feature\\\":\\\"custom\\\",\\\"spark_version\\\":\\\"3.3.1\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return string|null
     */
@@ -663,7 +663,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets reqBody
     *
-    * @param string|null $reqBody 请求参数详情
+    * @param string|null $reqBody 参数解释:   请求参数详情 示例: {\\\"jars\\\":[\\\"spark-examples_2.11-2.4.5-h0.cbu.dli.300.20240725.r1.jar\\\"],\\\"pyFiles\\\":[],\\\"files\\\":[],\\\"modelFiles\\\":[],\\\"resources\\\":[],\\\"modules\\\":[],\\\"groups\\\":[],\\\"archives\\\":[],\\\"queue\\\":\\\"gen0218\\\",\\\"name\\\":\\\"\\\",\\\"conf\\\":{},\\\"execution_agency_urn\\\":\\\"agency\\\",\\\"file\\\":\\\"obs://dli-wzy/package/job/spark/longrunning.py\\\",\\\"args\\\":[],\\\"className\\\":\\\"\\\",\\\"autoRecovery\\\":false,\\\"minRecoveryDelayTime\\\":10000,\\\"maxRetryTimes\\\":20,\\\"obs_bucket\\\":\\\"rain3\\\",\\\"image\\\":\\\"ceshi/spark_general-x86_64:3.3.1-2.3.8.1020240906885119450448000\\\",\\\"feature\\\":\\\"custom\\\",\\\"spark_version\\\":\\\"3.3.1\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     *
     * @return $this
     */
@@ -675,7 +675,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  参数解释:   更新时间 示例: 1739867996988 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -687,7 +687,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 更新时间
+    * @param int|null $updateTime 参数解释:   更新时间 示例: 1739867996988 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
@@ -699,7 +699,7 @@ class SparkJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  作业运行时长，单位毫秒。
+    *  参数解释:   作业运行时长，单位毫秒 示例: 141079 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return int|null
     */
@@ -711,7 +711,7 @@ class SparkJob implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int|null $duration 作业运行时长，单位毫秒。
+    * @param int|null $duration 参数解释:   作业运行时长，单位毫秒 示例: 141079 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     *
     * @return $this
     */
