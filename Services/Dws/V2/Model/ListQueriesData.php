@@ -20,7 +20,7 @@ class ListQueriesData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * queries  查询数据列表。
+    * queries  **参数解释**： 查询数据列表。 **取值范围**： 不涉及。
     * status  status
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ListQueriesData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * queries  查询数据列表。
+    * queries  **参数解释**： 查询数据列表。 **取值范围**： 不涉及。
     * status  status
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ListQueriesData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * queries  查询数据列表。
+    * queries  **参数解释**： 查询数据列表。 **取值范围**： 不涉及。
     * status  status
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ListQueriesData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * queries  查询数据列表。
+    * queries  **参数解释**： 查询数据列表。 **取值范围**： 不涉及。
     * status  status
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ListQueriesData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * queries  查询数据列表。
+    * queries  **参数解释**： 查询数据列表。 **取值范围**： 不涉及。
     * status  status
     *
     * @var string[]
@@ -185,7 +185,7 @@ class ListQueriesData implements ModelInterface, ArrayAccess
 
     /**
     * Gets queries
-    *  查询数据列表。
+    *  **参数解释**： 查询数据列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ListQueriesDto[]|null
     */
@@ -197,7 +197,7 @@ class ListQueriesData implements ModelInterface, ArrayAccess
     /**
     * Sets queries
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ListQueriesDto[]|null $queries 查询数据列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ListQueriesDto[]|null $queries **参数解释**： 查询数据列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

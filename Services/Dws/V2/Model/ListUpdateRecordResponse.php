@@ -21,8 +21,8 @@ class ListUpdateRecordResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  集群升级记录总数
-    * records  集群升级记录列表
+    * count  **参数解释**： 集群升级记录总数。 **取值范围**： 不涉及。
+    * records  **参数解释**： 集群升级记录列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListUpdateRecordResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  集群升级记录总数
-    * records  集群升级记录列表
+    * count  **参数解释**： 集群升级记录总数。 **取值范围**： 不涉及。
+    * records  **参数解释**： 集群升级记录列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListUpdateRecordResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  集群升级记录总数
-    * records  集群升级记录列表
+    * count  **参数解释**： 集群升级记录总数。 **取值范围**： 不涉及。
+    * records  **参数解释**： 集群升级记录列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListUpdateRecordResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  集群升级记录总数
-    * records  集群升级记录列表
+    * count  **参数解释**： 集群升级记录总数。 **取值范围**： 不涉及。
+    * records  **参数解释**： 集群升级记录列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListUpdateRecordResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  集群升级记录总数
-    * records  集群升级记录列表
+    * count  **参数解释**： 集群升级记录总数。 **取值范围**： 不涉及。
+    * records  **参数解释**： 集群升级记录列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListUpdateRecordResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  集群升级记录总数
+    *  **参数解释**： 集群升级记录总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListUpdateRecordResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 集群升级记录总数
+    * @param int|null $count **参数解释**： 集群升级记录总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListUpdateRecordResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets records
-    *  集群升级记录列表
+    *  **参数解释**： 集群升级记录列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterUpdateRecordResp[]|null
     */
@@ -222,7 +222,7 @@ class ListUpdateRecordResponse implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterUpdateRecordResp[]|null $records 集群升级记录列表
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterUpdateRecordResp[]|null $records **参数解释**： 集群升级记录列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

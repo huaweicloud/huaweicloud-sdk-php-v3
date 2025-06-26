@@ -24,6 +24,7 @@ class Catalog implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * parameters  属性中包含type和externalCatalog
     * description  描述
+    * status  catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class Catalog implements ModelInterface, ArrayAccess
             'name' => 'string',
             'createTime' => 'int',
             'parameters' => 'map[string,string]',
-            'description' => 'string'
+            'description' => 'string',
+            'status' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class Catalog implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * parameters  属性中包含type和externalCatalog
     * description  描述
+    * status  catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class Catalog implements ModelInterface, ArrayAccess
         'name' => null,
         'createTime' => 'int64',
         'parameters' => null,
-        'description' => null
+        'description' => null,
+        'status' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class Catalog implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * parameters  属性中包含type和externalCatalog
     * description  描述
+    * status  catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class Catalog implements ModelInterface, ArrayAccess
             'name' => 'name',
             'createTime' => 'create_time',
             'parameters' => 'parameters',
-            'description' => 'description'
+            'description' => 'description',
+            'status' => 'status'
     ];
 
     /**
@@ -93,6 +99,7 @@ class Catalog implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * parameters  属性中包含type和externalCatalog
     * description  描述
+    * status  catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class Catalog implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'createTime' => 'setCreateTime',
             'parameters' => 'setParameters',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'status' => 'setStatus'
     ];
 
     /**
@@ -109,6 +117,7 @@ class Catalog implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * parameters  属性中包含type和externalCatalog
     * description  描述
+    * status  catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class Catalog implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'createTime' => 'getCreateTime',
             'parameters' => 'getParameters',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -181,6 +191,7 @@ class Catalog implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['parameters'] = isset($data['parameters']) ? $data['parameters'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -298,6 +309,30 @@ class Catalog implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

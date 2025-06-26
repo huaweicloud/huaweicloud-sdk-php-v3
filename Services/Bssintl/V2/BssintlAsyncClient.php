@@ -2477,6 +2477,86 @@ class BssintlAsyncClient extends Client
     }
 
     /**
+     * 查询客户预算调整记录
+     *
+     * 功能描述：查询客户预算调整记录
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSubCustomerBudgetRecordsAsync($request)
+    {
+        return $this->listSubCustomerBudgetRecordsAsyncWithHttpInfo($request);
+    }
+    
+    public function listSubCustomerBudgetRecordsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/partners/sub-customers/budget/records';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['customerId'] !== null) {
+            $queryParams['customer_id'] = $localVarParams['customerId'];
+        }
+        if ($localVarParams['indirectPartnerId'] !== null) {
+            $queryParams['indirect_partner_id'] = $localVarParams['indirectPartnerId'];
+        }
+        if ($localVarParams['operationType'] !== null) {
+            $queryParams['operation_type'] = $localVarParams['operationType'];
+        }
+        if ($localVarParams['budgetType'] !== null) {
+            $queryParams['budget_type'] = $localVarParams['budgetType'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListSubCustomerBudgetRecordsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListSubCustomerBudgetRecordsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询优惠券列表
      *
      * 功能描述：伙伴/客户可以查询自身的优惠券信息。

@@ -123,7 +123,7 @@ class ShowSqlJobDefendRuleResponse implements ModelInterface, ArrayAccess
             'ruleId' => 'rule_id',
             'category' => 'category',
             'engineRules' => 'engine_rules',
-            'queueNames' => 'queueNames',
+            'queueNames' => 'queue_names',
             'desc' => 'desc',
             'sysDesc' => 'sys_desc',
             'createTime' => 'create_time',

@@ -21,32 +21,24 @@ class CreatePeriodElasticResourcePoolSpecChangeOrderRequestBody implements Model
     /**
     * Array of property to type mappings. Used for (de)serialization
     * elasticResourcePoolName  弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
-    * cloudServiceConsoleUrl  CBC订单跳转DLI console链接
-    * promotionInfo  优惠信息
     * targetCu  包周期目标CU大小
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'elasticResourcePoolName' => 'string',
-            'cloudServiceConsoleUrl' => 'string',
-            'promotionInfo' => 'string',
             'targetCu' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * elasticResourcePoolName  弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
-    * cloudServiceConsoleUrl  CBC订单跳转DLI console链接
-    * promotionInfo  优惠信息
     * targetCu  包周期目标CU大小
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'elasticResourcePoolName' => null,
-        'cloudServiceConsoleUrl' => null,
-        'promotionInfo' => null,
         'targetCu' => 'int32'
     ];
 
@@ -74,48 +66,36 @@ class CreatePeriodElasticResourcePoolSpecChangeOrderRequestBody implements Model
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * elasticResourcePoolName  弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
-    * cloudServiceConsoleUrl  CBC订单跳转DLI console链接
-    * promotionInfo  优惠信息
     * targetCu  包周期目标CU大小
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'elasticResourcePoolName' => 'elastic_resource_pool_name',
-            'cloudServiceConsoleUrl' => 'cloud_service_console_url',
-            'promotionInfo' => 'promotion_info',
             'targetCu' => 'target_cu'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * elasticResourcePoolName  弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
-    * cloudServiceConsoleUrl  CBC订单跳转DLI console链接
-    * promotionInfo  优惠信息
     * targetCu  包周期目标CU大小
     *
     * @var string[]
     */
     protected static $setters = [
             'elasticResourcePoolName' => 'setElasticResourcePoolName',
-            'cloudServiceConsoleUrl' => 'setCloudServiceConsoleUrl',
-            'promotionInfo' => 'setPromotionInfo',
             'targetCu' => 'setTargetCu'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * elasticResourcePoolName  弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
-    * cloudServiceConsoleUrl  CBC订单跳转DLI console链接
-    * promotionInfo  优惠信息
     * targetCu  包周期目标CU大小
     *
     * @var string[]
     */
     protected static $getters = [
             'elasticResourcePoolName' => 'getElasticResourcePoolName',
-            'cloudServiceConsoleUrl' => 'getCloudServiceConsoleUrl',
-            'promotionInfo' => 'getPromotionInfo',
             'targetCu' => 'getTargetCu'
     ];
 
@@ -178,8 +158,6 @@ class CreatePeriodElasticResourcePoolSpecChangeOrderRequestBody implements Model
     public function __construct(array $data = null)
     {
         $this->container['elasticResourcePoolName'] = isset($data['elasticResourcePoolName']) ? $data['elasticResourcePoolName'] : null;
-        $this->container['cloudServiceConsoleUrl'] = isset($data['cloudServiceConsoleUrl']) ? $data['cloudServiceConsoleUrl'] : null;
-        $this->container['promotionInfo'] = isset($data['promotionInfo']) ? $data['promotionInfo'] : null;
         $this->container['targetCu'] = isset($data['targetCu']) ? $data['targetCu'] : null;
     }
 
@@ -232,54 +210,6 @@ class CreatePeriodElasticResourcePoolSpecChangeOrderRequestBody implements Model
     public function setElasticResourcePoolName($elasticResourcePoolName)
     {
         $this->container['elasticResourcePoolName'] = $elasticResourcePoolName;
-        return $this;
-    }
-
-    /**
-    * Gets cloudServiceConsoleUrl
-    *  CBC订单跳转DLI console链接
-    *
-    * @return string|null
-    */
-    public function getCloudServiceConsoleUrl()
-    {
-        return $this->container['cloudServiceConsoleUrl'];
-    }
-
-    /**
-    * Sets cloudServiceConsoleUrl
-    *
-    * @param string|null $cloudServiceConsoleUrl CBC订单跳转DLI console链接
-    *
-    * @return $this
-    */
-    public function setCloudServiceConsoleUrl($cloudServiceConsoleUrl)
-    {
-        $this->container['cloudServiceConsoleUrl'] = $cloudServiceConsoleUrl;
-        return $this;
-    }
-
-    /**
-    * Gets promotionInfo
-    *  优惠信息
-    *
-    * @return string|null
-    */
-    public function getPromotionInfo()
-    {
-        return $this->container['promotionInfo'];
-    }
-
-    /**
-    * Sets promotionInfo
-    *
-    * @param string|null $promotionInfo 优惠信息
-    *
-    * @return $this
-    */
-    public function setPromotionInfo($promotionInfo)
-    {
-        $this->container['promotionInfo'] = $promotionInfo;
         return $this;
     }
 

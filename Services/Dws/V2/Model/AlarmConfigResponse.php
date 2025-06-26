@@ -20,15 +20,15 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  告警配置ID
-    * alarmId  告警ID
-    * alarmName  告警名称
-    * nameSpace  所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
-    * alarmLevel  告警级别
-    * isUserVisible  用户是否可见
-    * isConverge  是否覆盖
-    * convergeTime  覆盖时间
-    * isMaintainVisible  运维是否可见
+    * id  **参数解释**： 告警配置ID。 **取值范围**： 不涉及。
+    * alarmId  **参数解释**： 告警ID。 **取值范围**： 不涉及。
+    * alarmName  **参数解释**： 告警名称。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * isUserVisible  **参数解释**： 用户是否可见。 **取值范围**： 不涉及。
+    * isConverge  **参数解释**： 是否覆盖。 **取值范围**： 不涉及。
+    * convergeTime  **参数解释**： 覆盖时间。 **取值范围**： 不涉及。
+    * isMaintainVisible  **参数解释**： 运维是否可见。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  告警配置ID
-    * alarmId  告警ID
-    * alarmName  告警名称
-    * nameSpace  所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
-    * alarmLevel  告警级别
-    * isUserVisible  用户是否可见
-    * isConverge  是否覆盖
-    * convergeTime  覆盖时间
-    * isMaintainVisible  运维是否可见
+    * id  **参数解释**： 告警配置ID。 **取值范围**： 不涉及。
+    * alarmId  **参数解释**： 告警ID。 **取值范围**： 不涉及。
+    * alarmName  **参数解释**： 告警名称。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * isUserVisible  **参数解释**： 用户是否可见。 **取值范围**： 不涉及。
+    * isConverge  **参数解释**： 是否覆盖。 **取值范围**： 不涉及。
+    * convergeTime  **参数解释**： 覆盖时间。 **取值范围**： 不涉及。
+    * isMaintainVisible  **参数解释**： 运维是否可见。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  告警配置ID
-    * alarmId  告警ID
-    * alarmName  告警名称
-    * nameSpace  所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
-    * alarmLevel  告警级别
-    * isUserVisible  用户是否可见
-    * isConverge  是否覆盖
-    * convergeTime  覆盖时间
-    * isMaintainVisible  运维是否可见
+    * id  **参数解释**： 告警配置ID。 **取值范围**： 不涉及。
+    * alarmId  **参数解释**： 告警ID。 **取值范围**： 不涉及。
+    * alarmName  **参数解释**： 告警名称。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * isUserVisible  **参数解释**： 用户是否可见。 **取值范围**： 不涉及。
+    * isConverge  **参数解释**： 是否覆盖。 **取值范围**： 不涉及。
+    * convergeTime  **参数解释**： 覆盖时间。 **取值范围**： 不涉及。
+    * isMaintainVisible  **参数解释**： 运维是否可见。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  告警配置ID
-    * alarmId  告警ID
-    * alarmName  告警名称
-    * nameSpace  所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
-    * alarmLevel  告警级别
-    * isUserVisible  用户是否可见
-    * isConverge  是否覆盖
-    * convergeTime  覆盖时间
-    * isMaintainVisible  运维是否可见
+    * id  **参数解释**： 告警配置ID。 **取值范围**： 不涉及。
+    * alarmId  **参数解释**： 告警ID。 **取值范围**： 不涉及。
+    * alarmName  **参数解释**： 告警名称。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * isUserVisible  **参数解释**： 用户是否可见。 **取值范围**： 不涉及。
+    * isConverge  **参数解释**： 是否覆盖。 **取值范围**： 不涉及。
+    * convergeTime  **参数解释**： 覆盖时间。 **取值范围**： 不涉及。
+    * isMaintainVisible  **参数解释**： 运维是否可见。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  告警配置ID
-    * alarmId  告警ID
-    * alarmName  告警名称
-    * nameSpace  所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
-    * alarmLevel  告警级别
-    * isUserVisible  用户是否可见
-    * isConverge  是否覆盖
-    * convergeTime  覆盖时间
-    * isMaintainVisible  运维是否可见
+    * id  **参数解释**： 告警配置ID。 **取值范围**： 不涉及。
+    * alarmId  **参数解释**： 告警ID。 **取值范围**： 不涉及。
+    * alarmName  **参数解释**： 告警名称。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * isUserVisible  **参数解释**： 用户是否可见。 **取值范围**： 不涉及。
+    * isConverge  **参数解释**： 是否覆盖。 **取值范围**： 不涉及。
+    * convergeTime  **参数解释**： 覆盖时间。 **取值范围**： 不涉及。
+    * isMaintainVisible  **参数解释**： 运维是否可见。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  告警配置ID
+    *  **参数解释**： 告警配置ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 告警配置ID
+    * @param string|null $id **参数解释**： 告警配置ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  告警ID
+    *  **参数解释**： 告警ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string|null $alarmId 告警ID
+    * @param string|null $alarmId **参数解释**： 告警ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmName
-    *  告警名称
+    *  **参数解释**： 告警名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmName
     *
-    * @param string|null $alarmName 告警名称
+    * @param string|null $alarmName **参数解释**： 告警名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameSpace
-    *  所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
+    *  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nameSpace
     *
-    * @param string|null $nameSpace 所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
+    * @param string|null $nameSpace **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmLevel
-    *  告警级别
+    *  **参数解释**： 告警级别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmLevel
     *
-    * @param string|null $alarmLevel 告警级别
+    * @param string|null $alarmLevel **参数解释**： 告警级别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isUserVisible
-    *  用户是否可见
+    *  **参数解释**： 用户是否可见。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isUserVisible
     *
-    * @param string|null $isUserVisible 用户是否可见
+    * @param string|null $isUserVisible **参数解释**： 用户是否可见。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isConverge
-    *  是否覆盖
+    *  **参数解释**： 是否覆盖。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -418,7 +418,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isConverge
     *
-    * @param string|null $isConverge 是否覆盖
+    * @param string|null $isConverge **参数解释**： 是否覆盖。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets convergeTime
-    *  覆盖时间
+    *  **参数解释**： 覆盖时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -442,7 +442,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets convergeTime
     *
-    * @param int|null $convergeTime 覆盖时间
+    * @param int|null $convergeTime **参数解释**： 覆盖时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isMaintainVisible
-    *  运维是否可见
+    *  **参数解释**： 运维是否可见。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class AlarmConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isMaintainVisible
     *
-    * @param string|null $isMaintainVisible 运维是否可见
+    * @param string|null $isMaintainVisible **参数解释**： 运维是否可见。 **取值范围**： 不涉及。
     *
     * @return $this
     */

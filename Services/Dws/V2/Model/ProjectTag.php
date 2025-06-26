@@ -20,8 +20,8 @@ class ProjectTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。
-    * values  值。
+    * key  **参数解释**： 键。 **取值范围**： 不涉及。
+    * values  **参数解释**： 值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ProjectTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。
-    * values  值。
+    * key  **参数解释**： 键。 **取值范围**： 不涉及。
+    * values  **参数解释**： 值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ProjectTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。
-    * values  值。
+    * key  **参数解释**： 键。 **取值范围**： 不涉及。
+    * values  **参数解释**： 值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ProjectTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。
-    * values  值。
+    * key  **参数解释**： 键。 **取值范围**： 不涉及。
+    * values  **参数解释**： 值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ProjectTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。
-    * values  值。
+    * key  **参数解释**： 键。 **取值范围**： 不涉及。
+    * values  **参数解释**： 值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ProjectTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。
+    *  **参数解释**： 键。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ProjectTag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 键。
+    * @param string $key **参数解释**： 键。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ProjectTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  值。
+    *  **参数解释**： 值。 **取值范围**： 不涉及。
     *
     * @return string[]
     */
@@ -227,7 +227,7 @@ class ProjectTag implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[] $values 值。
+    * @param string[] $values **参数解释**： 值。 **取值范围**： 不涉及。
     *
     * @return $this
     */

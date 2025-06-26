@@ -20,10 +20,10 @@ class OccupyResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceName  资源项名称
-    * resourceValue  资源属性数值
-    * valueUnit  资源属性单位
-    * resourceDescription  资源附加描述
+    * resourceName  **参数解释**： 资源项名称。 **取值范围**： 不涉及。
+    * resourceValue  **参数解释**： 资源属性数值。 **取值范围**： 不涉及。
+    * valueUnit  **参数解释**： 资源属性单位。 **取值范围**： 不涉及。
+    * resourceDescription  **参数解释**： 资源附加描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class OccupyResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceName  资源项名称
-    * resourceValue  资源属性数值
-    * valueUnit  资源属性单位
-    * resourceDescription  资源附加描述
+    * resourceName  **参数解释**： 资源项名称。 **取值范围**： 不涉及。
+    * resourceValue  **参数解释**： 资源属性数值。 **取值范围**： 不涉及。
+    * valueUnit  **参数解释**： 资源属性单位。 **取值范围**： 不涉及。
+    * resourceDescription  **参数解释**： 资源附加描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class OccupyResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceName  资源项名称
-    * resourceValue  资源属性数值
-    * valueUnit  资源属性单位
-    * resourceDescription  资源附加描述
+    * resourceName  **参数解释**： 资源项名称。 **取值范围**： 不涉及。
+    * resourceValue  **参数解释**： 资源属性数值。 **取值范围**： 不涉及。
+    * valueUnit  **参数解释**： 资源属性单位。 **取值范围**： 不涉及。
+    * resourceDescription  **参数解释**： 资源附加描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class OccupyResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceName  资源项名称
-    * resourceValue  资源属性数值
-    * valueUnit  资源属性单位
-    * resourceDescription  资源附加描述
+    * resourceName  **参数解释**： 资源项名称。 **取值范围**： 不涉及。
+    * resourceValue  **参数解释**： 资源属性数值。 **取值范围**： 不涉及。
+    * valueUnit  **参数解释**： 资源属性单位。 **取值范围**： 不涉及。
+    * resourceDescription  **参数解释**： 资源附加描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class OccupyResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceName  资源项名称
-    * resourceValue  资源属性数值
-    * valueUnit  资源属性单位
-    * resourceDescription  资源附加描述
+    * resourceName  **参数解释**： 资源项名称。 **取值范围**： 不涉及。
+    * resourceValue  **参数解释**： 资源属性数值。 **取值范围**： 不涉及。
+    * valueUnit  **参数解释**： 资源属性单位。 **取值范围**： 不涉及。
+    * resourceDescription  **参数解释**： 资源附加描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class OccupyResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  资源项名称
+    *  **参数解释**： 资源项名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class OccupyResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName 资源项名称
+    * @param string|null $resourceName **参数解释**： 资源项名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class OccupyResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceValue
-    *  资源属性数值
+    *  **参数解释**： 资源属性数值。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class OccupyResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceValue
     *
-    * @param int|null $resourceValue 资源属性数值
+    * @param int|null $resourceValue **参数解释**： 资源属性数值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class OccupyResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets valueUnit
-    *  资源属性单位
+    *  **参数解释**： 资源属性单位。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class OccupyResource implements ModelInterface, ArrayAccess
     /**
     * Sets valueUnit
     *
-    * @param string|null $valueUnit 资源属性单位
+    * @param string|null $valueUnit **参数解释**： 资源属性单位。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class OccupyResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceDescription
-    *  资源附加描述
+    *  **参数解释**： 资源附加描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class OccupyResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceDescription
     *
-    * @param string|null $resourceDescription 资源附加描述
+    * @param string|null $resourceDescription **参数解释**： 资源附加描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ListAvailableDisasterClustersResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * disasterRecoveryClusters  容灾可用集群列表
+    * disasterRecoveryClusters  **参数解释**： 容灾可用集群列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListAvailableDisasterClustersResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * disasterRecoveryClusters  容灾可用集群列表
+    * disasterRecoveryClusters  **参数解释**： 容灾可用集群列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListAvailableDisasterClustersResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * disasterRecoveryClusters  容灾可用集群列表
+    * disasterRecoveryClusters  **参数解释**： 容灾可用集群列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListAvailableDisasterClustersResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * disasterRecoveryClusters  容灾可用集群列表
+    * disasterRecoveryClusters  **参数解释**： 容灾可用集群列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListAvailableDisasterClustersResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * disasterRecoveryClusters  容灾可用集群列表
+    * disasterRecoveryClusters  **参数解释**： 容灾可用集群列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListAvailableDisasterClustersResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets disasterRecoveryClusters
-    *  容灾可用集群列表
+    *  **参数解释**： 容灾可用集群列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\DisasterRecoveryClusterVo[]|null
     */
@@ -187,7 +187,7 @@ class ListAvailableDisasterClustersResponse implements ModelInterface, ArrayAcce
     /**
     * Sets disasterRecoveryClusters
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\DisasterRecoveryClusterVo[]|null $disasterRecoveryClusters 容灾可用集群列表
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\DisasterRecoveryClusterVo[]|null $disasterRecoveryClusters **参数解释**： 容灾可用集群列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

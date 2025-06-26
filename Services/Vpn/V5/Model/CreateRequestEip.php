@@ -25,6 +25,7 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
     * chargeMode  功能说明：按流量计费还是按带宽计费  取值范围：  bandwidth：按带宽计费  traffic：按流量计费  95peak_plus：按增强型95计费
     * bandwidthSize  带宽大小Mbit/s。flavor为Basic时，取值不能大于100；flavor为Professional1时，取值不能大于300；flavor为Professional2时，取值不能大于1000
     * bandwidthName  带宽名称
+    * bandwidthId  功能说明：带宽ID，创建弹性IP弹性公网IP时可以指定已有的共享带宽  取值范围：共享（WHOLE类型）带宽ID  约束：指定带宽ID时，带宽的其他字段会被忽略；不指定ID时，size/name/charge_mode/share_type必选，用于创建绑定公网IP的独享带宽
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
             'type' => 'string',
             'chargeMode' => 'string',
             'bandwidthSize' => 'int',
-            'bandwidthName' => 'string'
+            'bandwidthName' => 'string',
+            'bandwidthId' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
     * chargeMode  功能说明：按流量计费还是按带宽计费  取值范围：  bandwidth：按带宽计费  traffic：按流量计费  95peak_plus：按增强型95计费
     * bandwidthSize  带宽大小Mbit/s。flavor为Basic时，取值不能大于100；flavor为Professional1时，取值不能大于300；flavor为Professional2时，取值不能大于1000
     * bandwidthName  带宽名称
+    * bandwidthId  功能说明：带宽ID，创建弹性IP弹性公网IP时可以指定已有的共享带宽  取值范围：共享（WHOLE类型）带宽ID  约束：指定带宽ID时，带宽的其他字段会被忽略；不指定ID时，size/name/charge_mode/share_type必选，用于创建绑定公网IP的独享带宽
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
         'type' => null,
         'chargeMode' => null,
         'bandwidthSize' => 'int32',
-        'bandwidthName' => null
+        'bandwidthName' => null,
+        'bandwidthId' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
     * chargeMode  功能说明：按流量计费还是按带宽计费  取值范围：  bandwidth：按带宽计费  traffic：按流量计费  95peak_plus：按增强型95计费
     * bandwidthSize  带宽大小Mbit/s。flavor为Basic时，取值不能大于100；flavor为Professional1时，取值不能大于300；flavor为Professional2时，取值不能大于1000
     * bandwidthName  带宽名称
+    * bandwidthId  功能说明：带宽ID，创建弹性IP弹性公网IP时可以指定已有的共享带宽  取值范围：共享（WHOLE类型）带宽ID  约束：指定带宽ID时，带宽的其他字段会被忽略；不指定ID时，size/name/charge_mode/share_type必选，用于创建绑定公网IP的独享带宽
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
             'type' => 'type',
             'chargeMode' => 'charge_mode',
             'bandwidthSize' => 'bandwidth_size',
-            'bandwidthName' => 'bandwidth_name'
+            'bandwidthName' => 'bandwidth_name',
+            'bandwidthId' => 'bandwidth_id'
     ];
 
     /**
@@ -100,6 +106,7 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
     * chargeMode  功能说明：按流量计费还是按带宽计费  取值范围：  bandwidth：按带宽计费  traffic：按流量计费  95peak_plus：按增强型95计费
     * bandwidthSize  带宽大小Mbit/s。flavor为Basic时，取值不能大于100；flavor为Professional1时，取值不能大于300；flavor为Professional2时，取值不能大于1000
     * bandwidthName  带宽名称
+    * bandwidthId  功能说明：带宽ID，创建弹性IP弹性公网IP时可以指定已有的共享带宽  取值范围：共享（WHOLE类型）带宽ID  约束：指定带宽ID时，带宽的其他字段会被忽略；不指定ID时，size/name/charge_mode/share_type必选，用于创建绑定公网IP的独享带宽
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'chargeMode' => 'setChargeMode',
             'bandwidthSize' => 'setBandwidthSize',
-            'bandwidthName' => 'setBandwidthName'
+            'bandwidthName' => 'setBandwidthName',
+            'bandwidthId' => 'setBandwidthId'
     ];
 
     /**
@@ -118,6 +126,7 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
     * chargeMode  功能说明：按流量计费还是按带宽计费  取值范围：  bandwidth：按带宽计费  traffic：按流量计费  95peak_plus：按增强型95计费
     * bandwidthSize  带宽大小Mbit/s。flavor为Basic时，取值不能大于100；flavor为Professional1时，取值不能大于300；flavor为Professional2时，取值不能大于1000
     * bandwidthName  带宽名称
+    * bandwidthId  功能说明：带宽ID，创建弹性IP弹性公网IP时可以指定已有的共享带宽  取值范围：共享（WHOLE类型）带宽ID  约束：指定带宽ID时，带宽的其他字段会被忽略；不指定ID时，size/name/charge_mode/share_type必选，用于创建绑定公网IP的独享带宽
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'chargeMode' => 'getChargeMode',
             'bandwidthSize' => 'getBandwidthSize',
-            'bandwidthName' => 'getBandwidthName'
+            'bandwidthName' => 'getBandwidthName',
+            'bandwidthId' => 'getBandwidthId'
     ];
 
     /**
@@ -207,6 +217,7 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
         $this->container['bandwidthSize'] = isset($data['bandwidthSize']) ? $data['bandwidthSize'] : null;
         $this->container['bandwidthName'] = isset($data['bandwidthName']) ? $data['bandwidthName'] : null;
+        $this->container['bandwidthId'] = isset($data['bandwidthId']) ? $data['bandwidthId'] : null;
     }
 
     /**
@@ -248,6 +259,15 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['bandwidthName']) && !preg_match("/[一-龥A-Za-z0-9_.-]+/", $this->container['bandwidthName'])) {
                 $invalidProperties[] = "invalid value for 'bandwidthName', must be conform to the pattern /[一-龥A-Za-z0-9_.-]+/.";
+            }
+            if (!is_null($this->container['bandwidthId']) && (mb_strlen($this->container['bandwidthId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'bandwidthId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['bandwidthId']) && (mb_strlen($this->container['bandwidthId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'bandwidthId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['bandwidthId']) && !preg_match("/[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/", $this->container['bandwidthId'])) {
+                $invalidProperties[] = "invalid value for 'bandwidthId', must be conform to the pattern /[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/.";
             }
         return $invalidProperties;
     }
@@ -380,6 +400,30 @@ class CreateRequestEip implements ModelInterface, ArrayAccess
     public function setBandwidthName($bandwidthName)
     {
         $this->container['bandwidthName'] = $bandwidthName;
+        return $this;
+    }
+
+    /**
+    * Gets bandwidthId
+    *  功能说明：带宽ID，创建弹性IP弹性公网IP时可以指定已有的共享带宽  取值范围：共享（WHOLE类型）带宽ID  约束：指定带宽ID时，带宽的其他字段会被忽略；不指定ID时，size/name/charge_mode/share_type必选，用于创建绑定公网IP的独享带宽
+    *
+    * @return string|null
+    */
+    public function getBandwidthId()
+    {
+        return $this->container['bandwidthId'];
+    }
+
+    /**
+    * Sets bandwidthId
+    *
+    * @param string|null $bandwidthId 功能说明：带宽ID，创建弹性IP弹性公网IP时可以指定已有的共享带宽  取值范围：共享（WHOLE类型）带宽ID  约束：指定带宽ID时，带宽的其他字段会被忽略；不指定ID时，size/name/charge_mode/share_type必选，用于创建绑定公网IP的独享带宽
+    *
+    * @return $this
+    */
+    public function setBandwidthId($bandwidthId)
+    {
+        $this->container['bandwidthId'] = $bandwidthId;
         return $this;
     }
 

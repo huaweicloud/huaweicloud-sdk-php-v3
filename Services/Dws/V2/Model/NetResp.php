@@ -20,20 +20,20 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * virtualClusterId  虚拟集群ID。
-    * ctime  查询时间。
-    * hostId  主机ID。
-    * hostName  主机名称。
-    * instanceName  实例名称。
-    * up  网卡状态（true代表up/false代表down）。
-    * speed  网卡速度(Mbps)。
-    * recvPackets  接收包数(个)。
-    * sendPackets  发送包数(个)。
-    * recvDrop  接收丢包数(个)。
-    * recvRate  接收速率(KB/s)。
-    * sendRate  发送速率(KB/s)。
-    * ioRate  网络速率(KB/s)。
-    * interfaceName  网卡名称。
+    * virtualClusterId  **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
+    * ctime  **参数解释**： 查询时间。 **取值范围**： 不涉及。
+    * hostId  **参数解释**： 主机ID。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * up  **参数解释**： 网卡状态。 **取值范围**： true：代表up。 false：代表down。
+    * speed  **参数解释**： 网卡速度(Mbps)。 **取值范围**： 不涉及。
+    * recvPackets  **参数解释**： 接收包数(个)。 **取值范围**： 不涉及。
+    * sendPackets  **参数解释**： 发送包数(个)。 **取值范围**： 不涉及。
+    * recvDrop  **参数解释**： 接收丢包数(个)。 **取值范围**： 不涉及。
+    * recvRate  **参数解释**： 接收速率(KB/s)。 **取值范围**： 不涉及。
+    * sendRate  **参数解释**： 发送速率(KB/s)。 **取值范围**： 不涉及。
+    * ioRate  **参数解释**： 网络速率(KB/s)。 **取值范围**： 不涉及。
+    * interfaceName  **参数解释**： 网卡名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * virtualClusterId  虚拟集群ID。
-    * ctime  查询时间。
-    * hostId  主机ID。
-    * hostName  主机名称。
-    * instanceName  实例名称。
-    * up  网卡状态（true代表up/false代表down）。
-    * speed  网卡速度(Mbps)。
-    * recvPackets  接收包数(个)。
-    * sendPackets  发送包数(个)。
-    * recvDrop  接收丢包数(个)。
-    * recvRate  接收速率(KB/s)。
-    * sendRate  发送速率(KB/s)。
-    * ioRate  网络速率(KB/s)。
-    * interfaceName  网卡名称。
+    * virtualClusterId  **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
+    * ctime  **参数解释**： 查询时间。 **取值范围**： 不涉及。
+    * hostId  **参数解释**： 主机ID。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * up  **参数解释**： 网卡状态。 **取值范围**： true：代表up。 false：代表down。
+    * speed  **参数解释**： 网卡速度(Mbps)。 **取值范围**： 不涉及。
+    * recvPackets  **参数解释**： 接收包数(个)。 **取值范围**： 不涉及。
+    * sendPackets  **参数解释**： 发送包数(个)。 **取值范围**： 不涉及。
+    * recvDrop  **参数解释**： 接收丢包数(个)。 **取值范围**： 不涉及。
+    * recvRate  **参数解释**： 接收速率(KB/s)。 **取值范围**： 不涉及。
+    * sendRate  **参数解释**： 发送速率(KB/s)。 **取值范围**： 不涉及。
+    * ioRate  **参数解释**： 网络速率(KB/s)。 **取值范围**： 不涉及。
+    * interfaceName  **参数解释**： 网卡名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * virtualClusterId  虚拟集群ID。
-    * ctime  查询时间。
-    * hostId  主机ID。
-    * hostName  主机名称。
-    * instanceName  实例名称。
-    * up  网卡状态（true代表up/false代表down）。
-    * speed  网卡速度(Mbps)。
-    * recvPackets  接收包数(个)。
-    * sendPackets  发送包数(个)。
-    * recvDrop  接收丢包数(个)。
-    * recvRate  接收速率(KB/s)。
-    * sendRate  发送速率(KB/s)。
-    * ioRate  网络速率(KB/s)。
-    * interfaceName  网卡名称。
+    * virtualClusterId  **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
+    * ctime  **参数解释**： 查询时间。 **取值范围**： 不涉及。
+    * hostId  **参数解释**： 主机ID。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * up  **参数解释**： 网卡状态。 **取值范围**： true：代表up。 false：代表down。
+    * speed  **参数解释**： 网卡速度(Mbps)。 **取值范围**： 不涉及。
+    * recvPackets  **参数解释**： 接收包数(个)。 **取值范围**： 不涉及。
+    * sendPackets  **参数解释**： 发送包数(个)。 **取值范围**： 不涉及。
+    * recvDrop  **参数解释**： 接收丢包数(个)。 **取值范围**： 不涉及。
+    * recvRate  **参数解释**： 接收速率(KB/s)。 **取值范围**： 不涉及。
+    * sendRate  **参数解释**： 发送速率(KB/s)。 **取值范围**： 不涉及。
+    * ioRate  **参数解释**： 网络速率(KB/s)。 **取值范围**： 不涉及。
+    * interfaceName  **参数解释**： 网卡名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * virtualClusterId  虚拟集群ID。
-    * ctime  查询时间。
-    * hostId  主机ID。
-    * hostName  主机名称。
-    * instanceName  实例名称。
-    * up  网卡状态（true代表up/false代表down）。
-    * speed  网卡速度(Mbps)。
-    * recvPackets  接收包数(个)。
-    * sendPackets  发送包数(个)。
-    * recvDrop  接收丢包数(个)。
-    * recvRate  接收速率(KB/s)。
-    * sendRate  发送速率(KB/s)。
-    * ioRate  网络速率(KB/s)。
-    * interfaceName  网卡名称。
+    * virtualClusterId  **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
+    * ctime  **参数解释**： 查询时间。 **取值范围**： 不涉及。
+    * hostId  **参数解释**： 主机ID。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * up  **参数解释**： 网卡状态。 **取值范围**： true：代表up。 false：代表down。
+    * speed  **参数解释**： 网卡速度(Mbps)。 **取值范围**： 不涉及。
+    * recvPackets  **参数解释**： 接收包数(个)。 **取值范围**： 不涉及。
+    * sendPackets  **参数解释**： 发送包数(个)。 **取值范围**： 不涉及。
+    * recvDrop  **参数解释**： 接收丢包数(个)。 **取值范围**： 不涉及。
+    * recvRate  **参数解释**： 接收速率(KB/s)。 **取值范围**： 不涉及。
+    * sendRate  **参数解释**： 发送速率(KB/s)。 **取值范围**： 不涉及。
+    * ioRate  **参数解释**： 网络速率(KB/s)。 **取值范围**： 不涉及。
+    * interfaceName  **参数解释**： 网卡名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * virtualClusterId  虚拟集群ID。
-    * ctime  查询时间。
-    * hostId  主机ID。
-    * hostName  主机名称。
-    * instanceName  实例名称。
-    * up  网卡状态（true代表up/false代表down）。
-    * speed  网卡速度(Mbps)。
-    * recvPackets  接收包数(个)。
-    * sendPackets  发送包数(个)。
-    * recvDrop  接收丢包数(个)。
-    * recvRate  接收速率(KB/s)。
-    * sendRate  发送速率(KB/s)。
-    * ioRate  网络速率(KB/s)。
-    * interfaceName  网卡名称。
+    * virtualClusterId  **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
+    * ctime  **参数解释**： 查询时间。 **取值范围**： 不涉及。
+    * hostId  **参数解释**： 主机ID。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * up  **参数解释**： 网卡状态。 **取值范围**： true：代表up。 false：代表down。
+    * speed  **参数解释**： 网卡速度(Mbps)。 **取值范围**： 不涉及。
+    * recvPackets  **参数解释**： 接收包数(个)。 **取值范围**： 不涉及。
+    * sendPackets  **参数解释**： 发送包数(个)。 **取值范围**： 不涉及。
+    * recvDrop  **参数解释**： 接收丢包数(个)。 **取值范围**： 不涉及。
+    * recvRate  **参数解释**： 接收速率(KB/s)。 **取值范围**： 不涉及。
+    * sendRate  **参数解释**： 发送速率(KB/s)。 **取值范围**： 不涉及。
+    * ioRate  **参数解释**： 网络速率(KB/s)。 **取值范围**： 不涉及。
+    * interfaceName  **参数解释**： 网卡名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -317,7 +317,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets virtualClusterId
-    *  虚拟集群ID。
+    *  **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -329,7 +329,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets virtualClusterId
     *
-    * @param int|null $virtualClusterId 虚拟集群ID。
+    * @param int|null $virtualClusterId **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ctime
-    *  查询时间。
+    *  **参数解释**： 查询时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -353,7 +353,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets ctime
     *
-    * @param int|null $ctime 查询时间。
+    * @param int|null $ctime **参数解释**： 查询时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机ID。
+    *  **参数解释**： 主机ID。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -377,7 +377,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param int|null $hostId 主机ID。
+    * @param int|null $hostId **参数解释**： 主机ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  主机名称。
+    *  **参数解释**： 主机名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -401,7 +401,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 主机名称。
+    * @param string|null $hostName **参数解释**： 主机名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceName
-    *  实例名称。
+    *  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -425,7 +425,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets instanceName
     *
-    * @param string|null $instanceName 实例名称。
+    * @param string|null $instanceName **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets up
-    *  网卡状态（true代表up/false代表down）。
+    *  **参数解释**： 网卡状态。 **取值范围**： true：代表up。 false：代表down。
     *
     * @return bool|null
     */
@@ -449,7 +449,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets up
     *
-    * @param bool|null $up 网卡状态（true代表up/false代表down）。
+    * @param bool|null $up **参数解释**： 网卡状态。 **取值范围**： true：代表up。 false：代表down。
     *
     * @return $this
     */
@@ -461,7 +461,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets speed
-    *  网卡速度(Mbps)。
+    *  **参数解释**： 网卡速度(Mbps)。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -473,7 +473,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets speed
     *
-    * @param int|null $speed 网卡速度(Mbps)。
+    * @param int|null $speed **参数解释**： 网卡速度(Mbps)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -485,7 +485,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets recvPackets
-    *  接收包数(个)。
+    *  **参数解释**： 接收包数(个)。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -497,7 +497,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets recvPackets
     *
-    * @param int|null $recvPackets 接收包数(个)。
+    * @param int|null $recvPackets **参数解释**： 接收包数(个)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -509,7 +509,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets sendPackets
-    *  发送包数(个)。
+    *  **参数解释**： 发送包数(个)。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -521,7 +521,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets sendPackets
     *
-    * @param int|null $sendPackets 发送包数(个)。
+    * @param int|null $sendPackets **参数解释**： 发送包数(个)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -533,7 +533,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets recvDrop
-    *  接收丢包数(个)。
+    *  **参数解释**： 接收丢包数(个)。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -545,7 +545,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets recvDrop
     *
-    * @param int|null $recvDrop 接收丢包数(个)。
+    * @param int|null $recvDrop **参数解释**： 接收丢包数(个)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets recvRate
-    *  接收速率(KB/s)。
+    *  **参数解释**： 接收速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -569,7 +569,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets recvRate
     *
-    * @param double|null $recvRate 接收速率(KB/s)。
+    * @param double|null $recvRate **参数解释**： 接收速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -581,7 +581,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets sendRate
-    *  发送速率(KB/s)。
+    *  **参数解释**： 发送速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -593,7 +593,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets sendRate
     *
-    * @param double|null $sendRate 发送速率(KB/s)。
+    * @param double|null $sendRate **参数解释**： 发送速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -605,7 +605,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ioRate
-    *  网络速率(KB/s)。
+    *  **参数解释**： 网络速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -617,7 +617,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets ioRate
     *
-    * @param double|null $ioRate 网络速率(KB/s)。
+    * @param double|null $ioRate **参数解释**： 网络速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -629,7 +629,7 @@ class NetResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets interfaceName
-    *  网卡名称。
+    *  **参数解释**： 网卡名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -641,7 +641,7 @@ class NetResp implements ModelInterface, ArrayAccess
     /**
     * Sets interfaceName
     *
-    * @param string|null $interfaceName 网卡名称。
+    * @param string|null $interfaceName **参数解释**： 网卡名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -23,14 +23,14 @@ class NodeTypes implements ModelInterface, ArrayAccess
     * specName  **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
     * detail  **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
     * id  **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
-    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
-    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。
+    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86。 - arm。
     * availableZones  **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
     * ram  **参数解释**： 内存大小。单位：GB。 **取值范围**： 大于0的正整数。
     * vcpus  **参数解释**： CPU数量。 **取值范围**： 大于0的正整数。
     * datastores  **参数解释**： 内核版本信息。 **取值范围**： 不涉及。
     * volume  volume
-    * elasticVolumeSpecs  **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    * elasticVolumeSpecs  **参数解释**： 弹性容量规格的规格容量信息。 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @var string[]
     */
@@ -53,14 +53,14 @@ class NodeTypes implements ModelInterface, ArrayAccess
     * specName  **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
     * detail  **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
     * id  **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
-    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
-    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。
+    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86。 - arm。
     * availableZones  **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
     * ram  **参数解释**： 内存大小。单位：GB。 **取值范围**： 大于0的正整数。
     * vcpus  **参数解释**： CPU数量。 **取值范围**： 大于0的正整数。
     * datastores  **参数解释**： 内核版本信息。 **取值范围**： 不涉及。
     * volume  volume
-    * elasticVolumeSpecs  **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    * elasticVolumeSpecs  **参数解释**： 弹性容量规格的规格容量信息。 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @var string[]
     */
@@ -104,14 +104,14 @@ class NodeTypes implements ModelInterface, ArrayAccess
     * specName  **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
     * detail  **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
     * id  **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
-    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
-    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。
+    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86。 - arm。
     * availableZones  **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
     * ram  **参数解释**： 内存大小。单位：GB。 **取值范围**： 大于0的正整数。
     * vcpus  **参数解释**： CPU数量。 **取值范围**： 大于0的正整数。
     * datastores  **参数解释**： 内核版本信息。 **取值范围**： 不涉及。
     * volume  volume
-    * elasticVolumeSpecs  **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    * elasticVolumeSpecs  **参数解释**： 弹性容量规格的规格容量信息。 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @var string[]
     */
@@ -134,14 +134,14 @@ class NodeTypes implements ModelInterface, ArrayAccess
     * specName  **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
     * detail  **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
     * id  **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
-    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
-    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。
+    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86。 - arm。
     * availableZones  **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
     * ram  **参数解释**： 内存大小。单位：GB。 **取值范围**： 大于0的正整数。
     * vcpus  **参数解释**： CPU数量。 **取值范围**： 大于0的正整数。
     * datastores  **参数解释**： 内核版本信息。 **取值范围**： 不涉及。
     * volume  volume
-    * elasticVolumeSpecs  **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    * elasticVolumeSpecs  **参数解释**： 弹性容量规格的规格容量信息。 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @var string[]
     */
@@ -164,14 +164,14 @@ class NodeTypes implements ModelInterface, ArrayAccess
     * specName  **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
     * detail  **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
     * id  **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
-    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
-    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+    * datastoreType  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。
+    * architecture  **参数解释**： 架构类型。 **取值范围**： - x86。 - arm。
     * availableZones  **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
     * ram  **参数解释**： 内存大小。单位：GB。 **取值范围**： 大于0的正整数。
     * vcpus  **参数解释**： CPU数量。 **取值范围**： 大于0的正整数。
     * datastores  **参数解释**： 内核版本信息。 **取值范围**： 不涉及。
     * volume  volume
-    * elasticVolumeSpecs  **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    * elasticVolumeSpecs  **参数解释**： 弹性容量规格的规格容量信息。 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @var string[]
     */
@@ -389,7 +389,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreType
-    *  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    *  **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。
     *
     * @return string
     */
@@ -401,7 +401,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreType
     *
-    * @param string $datastoreType **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+    * @param string $datastoreType **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets architecture
-    *  **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+    *  **参数解释**： 架构类型。 **取值范围**： - x86。 - arm。
     *
     * @return string
     */
@@ -425,7 +425,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets architecture
     *
-    * @param string $architecture **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+    * @param string $architecture **参数解释**： 架构类型。 **取值范围**： - x86。 - arm。
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets elasticVolumeSpecs
-    *  **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    *  **参数解释**： 弹性容量规格的规格容量信息。 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeElasticVolumeSpecs[]
     */
@@ -569,7 +569,7 @@ class NodeTypes implements ModelInterface, ArrayAccess
     /**
     * Sets elasticVolumeSpecs
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeElasticVolumeSpecs[] $elasticVolumeSpecs **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeTypeElasticVolumeSpecs[] $elasticVolumeSpecs **参数解释**： 弹性容量规格的规格容量信息。 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
     *
     * @return $this
     */

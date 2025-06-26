@@ -20,14 +20,14 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  计划状态。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * planId  计划ID。
-    * planName  计划名称。
-    * currentStage  当前计划阶段。
-    * logicalClusterName  逻辑集群名称。
-    * stageList  计划阶段列表。
+    * status  **参数解释**： 计划状态。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
+    * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
+    * planName  **参数解释**： 计划名称。 **取值范围**： 不涉及。
+    * currentStage  **参数解释**： 当前计划阶段。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * stageList  **参数解释**： 计划阶段列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  计划状态。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * planId  计划ID。
-    * planName  计划名称。
-    * currentStage  当前计划阶段。
-    * logicalClusterName  逻辑集群名称。
-    * stageList  计划阶段列表。
+    * status  **参数解释**： 计划状态。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
+    * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
+    * planName  **参数解释**： 计划名称。 **取值范围**： 不涉及。
+    * currentStage  **参数解释**： 当前计划阶段。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * stageList  **参数解释**： 计划阶段列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  计划状态。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * planId  计划ID。
-    * planName  计划名称。
-    * currentStage  当前计划阶段。
-    * logicalClusterName  逻辑集群名称。
-    * stageList  计划阶段列表。
+    * status  **参数解释**： 计划状态。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
+    * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
+    * planName  **参数解释**： 计划名称。 **取值范围**： 不涉及。
+    * currentStage  **参数解释**： 当前计划阶段。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * stageList  **参数解释**： 计划阶段列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  计划状态。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * planId  计划ID。
-    * planName  计划名称。
-    * currentStage  当前计划阶段。
-    * logicalClusterName  逻辑集群名称。
-    * stageList  计划阶段列表。
+    * status  **参数解释**： 计划状态。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
+    * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
+    * planName  **参数解释**： 计划名称。 **取值范围**： 不涉及。
+    * currentStage  **参数解释**： 当前计划阶段。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * stageList  **参数解释**： 计划阶段列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  计划状态。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * planId  计划ID。
-    * planName  计划名称。
-    * currentStage  当前计划阶段。
-    * logicalClusterName  逻辑集群名称。
-    * stageList  计划阶段列表。
+    * status  **参数解释**： 计划状态。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
+    * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
+    * planName  **参数解释**： 计划名称。 **取值范围**： 不涉及。
+    * currentStage  **参数解释**： 当前计划阶段。 **取值范围**： 不涉及。
+    * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
+    * stageList  **参数解释**： 计划阶段列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -263,7 +263,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  计划状态。
+    *  **参数解释**： 计划状态。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -275,7 +275,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 计划状态。
+    * @param int|null $status **参数解释**： 计划状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -287,7 +287,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -299,7 +299,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string $projectId **参数解释**： 项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -311,7 +311,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    *  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return string
     */
@@ -323,7 +323,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * @param string $clusterId **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     *
     * @return $this
     */
@@ -335,7 +335,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets planId
-    *  计划ID。
+    *  **参数解释**： 计划ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -347,7 +347,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     /**
     * Sets planId
     *
-    * @param string $planId 计划ID。
+    * @param string $planId **参数解释**： 计划ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -359,7 +359,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets planName
-    *  计划名称。
+    *  **参数解释**： 计划名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -371,7 +371,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     /**
     * Sets planName
     *
-    * @param string $planName 计划名称。
+    * @param string $planName **参数解释**： 计划名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -383,7 +383,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentStage
-    *  当前计划阶段。
+    *  **参数解释**： 当前计划阶段。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -395,7 +395,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     /**
     * Sets currentStage
     *
-    * @param string|null $currentStage 当前计划阶段。
+    * @param string|null $currentStage **参数解释**： 当前计划阶段。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterName
-    *  逻辑集群名称。
+    *  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterName
     *
-    * @param string|null $logicalClusterName 逻辑集群名称。
+    * @param string|null $logicalClusterName **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -431,7 +431,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets stageList
-    *  计划阶段列表。
+    *  **参数解释**： 计划阶段列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\PlanStage[]|null
     */
@@ -443,7 +443,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     /**
     * Sets stageList
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\PlanStage[]|null $stageList 计划阶段列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\PlanStage[]|null $stageList **参数解释**： 计划阶段列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -21,21 +21,21 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  订阅ID
-    * name  订阅名称
-    * sourceType  事件源类型
-    * sourceId  事件源ID
-    * category  事件类别
-    * severity  事件级别
-    * tag  事件标签
-    * enable  是否开启订阅 1为开启，0为关闭
-    * projectId  租户凭证ID
-    * nameSpace  所属服务
-    * notificationTarget  消息通知主题地址
-    * notificationTargetName  消息通知主题名称
-    * notificationTargetType  消息通知类型
-    * language  语言
-    * timeZone  时区
+    * id  **参数解释**： 订阅ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 订阅名称。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * notificationTarget  **参数解释**： 消息通知主题地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息通知主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -59,21 +59,21 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  订阅ID
-    * name  订阅名称
-    * sourceType  事件源类型
-    * sourceId  事件源ID
-    * category  事件类别
-    * severity  事件级别
-    * tag  事件标签
-    * enable  是否开启订阅 1为开启，0为关闭
-    * projectId  租户凭证ID
-    * nameSpace  所属服务
-    * notificationTarget  消息通知主题地址
-    * notificationTargetName  消息通知主题名称
-    * notificationTargetType  消息通知类型
-    * language  语言
-    * timeZone  时区
+    * id  **参数解释**： 订阅ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 订阅名称。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * notificationTarget  **参数解释**： 消息通知主题地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息通知主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -118,21 +118,21 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  订阅ID
-    * name  订阅名称
-    * sourceType  事件源类型
-    * sourceId  事件源ID
-    * category  事件类别
-    * severity  事件级别
-    * tag  事件标签
-    * enable  是否开启订阅 1为开启，0为关闭
-    * projectId  租户凭证ID
-    * nameSpace  所属服务
-    * notificationTarget  消息通知主题地址
-    * notificationTargetName  消息通知主题名称
-    * notificationTargetType  消息通知类型
-    * language  语言
-    * timeZone  时区
+    * id  **参数解释**： 订阅ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 订阅名称。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * notificationTarget  **参数解释**： 消息通知主题地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息通知主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -156,21 +156,21 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  订阅ID
-    * name  订阅名称
-    * sourceType  事件源类型
-    * sourceId  事件源ID
-    * category  事件类别
-    * severity  事件级别
-    * tag  事件标签
-    * enable  是否开启订阅 1为开启，0为关闭
-    * projectId  租户凭证ID
-    * nameSpace  所属服务
-    * notificationTarget  消息通知主题地址
-    * notificationTargetName  消息通知主题名称
-    * notificationTargetType  消息通知类型
-    * language  语言
-    * timeZone  时区
+    * id  **参数解释**： 订阅ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 订阅名称。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * notificationTarget  **参数解释**： 消息通知主题地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息通知主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -194,21 +194,21 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  订阅ID
-    * name  订阅名称
-    * sourceType  事件源类型
-    * sourceId  事件源ID
-    * category  事件类别
-    * severity  事件级别
-    * tag  事件标签
-    * enable  是否开启订阅 1为开启，0为关闭
-    * projectId  租户凭证ID
-    * nameSpace  所属服务
-    * notificationTarget  消息通知主题地址
-    * notificationTargetName  消息通知主题名称
-    * notificationTargetType  消息通知类型
-    * language  语言
-    * timeZone  时区
+    * id  **参数解释**： 订阅ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 订阅名称。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * notificationTarget  **参数解释**： 消息通知主题地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息通知主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -329,7 +329,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  订阅ID
+    *  **参数解释**： 订阅ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -341,7 +341,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 订阅ID
+    * @param string|null $id **参数解释**： 订阅ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -353,7 +353,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  订阅名称
+    *  **参数解释**： 订阅名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -365,7 +365,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 订阅名称
+    * @param string|null $name **参数解释**： 订阅名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -377,7 +377,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  事件源类型
+    *  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -389,7 +389,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param string|null $sourceType 事件源类型
+    * @param string|null $sourceType **参数解释**： 事件源类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -401,7 +401,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceId
-    *  事件源ID
+    *  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -413,7 +413,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceId
     *
-    * @param string|null $sourceId 事件源ID
+    * @param string|null $sourceId **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -425,7 +425,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  事件类别
+    *  **参数解释**： 事件类别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -437,7 +437,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 事件类别
+    * @param string|null $category **参数解释**： 事件类别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -449,7 +449,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  事件级别
+    *  **参数解释**： 事件级别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -461,7 +461,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 事件级别
+    * @param string|null $severity **参数解释**： 事件级别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -473,7 +473,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tag
-    *  事件标签
+    *  **参数解释**： 事件标签。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -485,7 +485,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param string|null $tag 事件标签
+    * @param string|null $tag **参数解释**： 事件标签。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -497,7 +497,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  是否开启订阅 1为开启，0为关闭
+    *  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     *
     * @return int|null
     */
@@ -509,7 +509,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param int|null $enable 是否开启订阅 1为开启，0为关闭
+    * @param int|null $enable **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     *
     * @return $this
     */
@@ -521,7 +521,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  租户凭证ID
+    *  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -533,7 +533,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 租户凭证ID
+    * @param string|null $projectId **参数解释**： 项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -545,7 +545,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameSpace
-    *  所属服务
+    *  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -557,7 +557,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nameSpace
     *
-    * @param string|null $nameSpace 所属服务
+    * @param string|null $nameSpace **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -569,7 +569,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTarget
-    *  消息通知主题地址
+    *  **参数解释**： 消息通知主题地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -581,7 +581,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTarget
     *
-    * @param string|null $notificationTarget 消息通知主题地址
+    * @param string|null $notificationTarget **参数解释**： 消息通知主题地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -593,7 +593,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTargetName
-    *  消息通知主题名称
+    *  **参数解释**： 消息通知主题名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -605,7 +605,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTargetName
     *
-    * @param string|null $notificationTargetName 消息通知主题名称
+    * @param string|null $notificationTargetName **参数解释**： 消息通知主题名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -617,7 +617,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTargetType
-    *  消息通知类型
+    *  **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -629,7 +629,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTargetType
     *
-    * @param string|null $notificationTargetType 消息通知类型
+    * @param string|null $notificationTargetType **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -641,7 +641,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  语言
+    *  **参数解释**： 语言。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -653,7 +653,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 语言
+    * @param string|null $language **参数解释**： 语言。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -665,7 +665,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeZone
-    *  时区
+    *  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -677,7 +677,7 @@ class UpdateEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets timeZone
     *
-    * @param string|null $timeZone 时区
+    * @param string|null $timeZone **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @return $this
     */

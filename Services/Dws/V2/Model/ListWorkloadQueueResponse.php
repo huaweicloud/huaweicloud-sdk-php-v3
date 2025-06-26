@@ -21,7 +21,7 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workloadQueueNameList  **参数解释**： 工作负载队列名称。 **取值范围**： 不涉及。
+    * workloadQueueNameList  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
     * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     *
@@ -35,7 +35,7 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workloadQueueNameList  **参数解释**： 工作负载队列名称。 **取值范围**： 不涉及。
+    * workloadQueueNameList  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
     * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     *
@@ -70,7 +70,7 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workloadQueueNameList  **参数解释**： 工作负载队列名称。 **取值范围**： 不涉及。
+    * workloadQueueNameList  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
     * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     *
@@ -84,7 +84,7 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workloadQueueNameList  **参数解释**： 工作负载队列名称。 **取值范围**： 不涉及。
+    * workloadQueueNameList  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
     * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     *
@@ -98,7 +98,7 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workloadQueueNameList  **参数解释**： 工作负载队列名称。 **取值范围**： 不涉及。
+    * workloadQueueNameList  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
     * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
     *
@@ -197,7 +197,7 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadQueueNameList
-    *  **参数解释**： 工作负载队列名称。 **取值范围**： 不涉及。
+    *  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -209,7 +209,7 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workloadQueueNameList
     *
-    * @param string[]|null $workloadQueueNameList **参数解释**： 工作负载队列名称。 **取值范围**： 不涉及。
+    * @param string[]|null $workloadQueueNameList **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */

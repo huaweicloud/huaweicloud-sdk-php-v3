@@ -20,11 +20,11 @@ class LtslogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  配置状态
-    * id  日志ID
-    * logType  日志类型
-    * logDesc  日志描述
-    * accessUrl  LTS日志访问URL
+    * status  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
+    * logType  **参数解释**： 日志类型。 **取值范围**： 不涉及。
+    * logDesc  **参数解释**： 日志描述。 **取值范围**： 不涉及。
+    * accessUrl  **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class LtslogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  配置状态
-    * id  日志ID
-    * logType  日志类型
-    * logDesc  日志描述
-    * accessUrl  LTS日志访问URL
+    * status  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
+    * logType  **参数解释**： 日志类型。 **取值范围**： 不涉及。
+    * logDesc  **参数解释**： 日志描述。 **取值范围**： 不涉及。
+    * accessUrl  **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class LtslogInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  配置状态
-    * id  日志ID
-    * logType  日志类型
-    * logDesc  日志描述
-    * accessUrl  LTS日志访问URL
+    * status  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
+    * logType  **参数解释**： 日志类型。 **取值范围**： 不涉及。
+    * logDesc  **参数解释**： 日志描述。 **取值范围**： 不涉及。
+    * accessUrl  **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class LtslogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  配置状态
-    * id  日志ID
-    * logType  日志类型
-    * logDesc  日志描述
-    * accessUrl  LTS日志访问URL
+    * status  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
+    * logType  **参数解释**： 日志类型。 **取值范围**： 不涉及。
+    * logDesc  **参数解释**： 日志描述。 **取值范围**： 不涉及。
+    * accessUrl  **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class LtslogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  配置状态
-    * id  日志ID
-    * logType  日志类型
-    * logDesc  日志描述
-    * accessUrl  LTS日志访问URL
+    * status  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
+    * logType  **参数解释**： 日志类型。 **取值范围**： 不涉及。
+    * logDesc  **参数解释**： 日志描述。 **取值范围**： 不涉及。
+    * accessUrl  **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -233,7 +233,7 @@ class LtslogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  配置状态
+    *  **参数解释**： 配置状态。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class LtslogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 配置状态
+    * @param string $status **参数解释**： 配置状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -257,7 +257,7 @@ class LtslogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  日志ID
+    *  **参数解释**： 日志ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -269,7 +269,7 @@ class LtslogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 日志ID
+    * @param string $id **参数解释**： 日志ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -281,7 +281,7 @@ class LtslogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets logType
-    *  日志类型
+    *  **参数解释**： 日志类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -293,7 +293,7 @@ class LtslogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets logType
     *
-    * @param string $logType 日志类型
+    * @param string $logType **参数解释**： 日志类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class LtslogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets logDesc
-    *  日志描述
+    *  **参数解释**： 日志描述。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -317,7 +317,7 @@ class LtslogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets logDesc
     *
-    * @param string $logDesc 日志描述
+    * @param string $logDesc **参数解释**： 日志描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class LtslogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessUrl
-    *  LTS日志访问URL
+    *  **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -341,7 +341,7 @@ class LtslogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets accessUrl
     *
-    * @param string $accessUrl LTS日志访问URL
+    * @param string $accessUrl **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
     *
     * @return $this
     */

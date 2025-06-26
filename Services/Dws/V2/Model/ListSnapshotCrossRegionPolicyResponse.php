@@ -21,8 +21,8 @@ class ListSnapshotCrossRegionPolicyResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * crossRegionConfigs  跨区域配置信息
-    * count  总数
+    * crossRegionConfigs  **参数解释**： 跨区域配置信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListSnapshotCrossRegionPolicyResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * crossRegionConfigs  跨区域配置信息
-    * count  总数
+    * crossRegionConfigs  **参数解释**： 跨区域配置信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListSnapshotCrossRegionPolicyResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * crossRegionConfigs  跨区域配置信息
-    * count  总数
+    * crossRegionConfigs  **参数解释**： 跨区域配置信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListSnapshotCrossRegionPolicyResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * crossRegionConfigs  跨区域配置信息
-    * count  总数
+    * crossRegionConfigs  **参数解释**： 跨区域配置信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListSnapshotCrossRegionPolicyResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * crossRegionConfigs  跨区域配置信息
-    * count  总数
+    * crossRegionConfigs  **参数解释**： 跨区域配置信息。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListSnapshotCrossRegionPolicyResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets crossRegionConfigs
-    *  跨区域配置信息
+    *  **参数解释**： 跨区域配置信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\CrossRegionSnapshotConfig[]|null
     */
@@ -198,7 +198,7 @@ class ListSnapshotCrossRegionPolicyResponse implements ModelInterface, ArrayAcce
     /**
     * Sets crossRegionConfigs
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\CrossRegionSnapshotConfig[]|null $crossRegionConfigs 跨区域配置信息
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\CrossRegionSnapshotConfig[]|null $crossRegionConfigs **参数解释**： 跨区域配置信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListSnapshotCrossRegionPolicyResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets count
-    *  总数
+    *  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListSnapshotCrossRegionPolicyResponse implements ModelInterface, ArrayAcce
     /**
     * Sets count
     *
-    * @param int|null $count 总数
+    * @param int|null $count **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

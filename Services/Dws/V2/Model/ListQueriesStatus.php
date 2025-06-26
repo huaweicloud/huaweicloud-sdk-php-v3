@@ -20,11 +20,11 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * averageQueryWaitingTime  平均查询等待时间。
-    * averageTimeConsumptionOfQueries  平均查询耗时。
-    * averageTimeConsumptionOfSessions  平均会话耗时。
-    * queriesCount  查询数量。
-    * sessionCount  会话数量。
+    * averageQueryWaitingTime  **参数解释**： 平均查询等待时间。 **取值范围**： 不涉及。
+    * averageTimeConsumptionOfQueries  **参数解释**： 平均查询耗时。 **取值范围**： 不涉及。
+    * averageTimeConsumptionOfSessions  **参数解释**： 平均会话耗时。 **取值范围**： 不涉及。
+    * queriesCount  **参数解释**： 查询数量。 **取值范围**： 不涉及。
+    * sessionCount  **参数解释**： 会话数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * averageQueryWaitingTime  平均查询等待时间。
-    * averageTimeConsumptionOfQueries  平均查询耗时。
-    * averageTimeConsumptionOfSessions  平均会话耗时。
-    * queriesCount  查询数量。
-    * sessionCount  会话数量。
+    * averageQueryWaitingTime  **参数解释**： 平均查询等待时间。 **取值范围**： 不涉及。
+    * averageTimeConsumptionOfQueries  **参数解释**： 平均查询耗时。 **取值范围**： 不涉及。
+    * averageTimeConsumptionOfSessions  **参数解释**： 平均会话耗时。 **取值范围**： 不涉及。
+    * queriesCount  **参数解释**： 查询数量。 **取值范围**： 不涉及。
+    * sessionCount  **参数解释**： 会话数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * averageQueryWaitingTime  平均查询等待时间。
-    * averageTimeConsumptionOfQueries  平均查询耗时。
-    * averageTimeConsumptionOfSessions  平均会话耗时。
-    * queriesCount  查询数量。
-    * sessionCount  会话数量。
+    * averageQueryWaitingTime  **参数解释**： 平均查询等待时间。 **取值范围**： 不涉及。
+    * averageTimeConsumptionOfQueries  **参数解释**： 平均查询耗时。 **取值范围**： 不涉及。
+    * averageTimeConsumptionOfSessions  **参数解释**： 平均会话耗时。 **取值范围**： 不涉及。
+    * queriesCount  **参数解释**： 查询数量。 **取值范围**： 不涉及。
+    * sessionCount  **参数解释**： 会话数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * averageQueryWaitingTime  平均查询等待时间。
-    * averageTimeConsumptionOfQueries  平均查询耗时。
-    * averageTimeConsumptionOfSessions  平均会话耗时。
-    * queriesCount  查询数量。
-    * sessionCount  会话数量。
+    * averageQueryWaitingTime  **参数解释**： 平均查询等待时间。 **取值范围**： 不涉及。
+    * averageTimeConsumptionOfQueries  **参数解释**： 平均查询耗时。 **取值范围**： 不涉及。
+    * averageTimeConsumptionOfSessions  **参数解释**： 平均会话耗时。 **取值范围**： 不涉及。
+    * queriesCount  **参数解释**： 查询数量。 **取值范围**： 不涉及。
+    * sessionCount  **参数解释**： 会话数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * averageQueryWaitingTime  平均查询等待时间。
-    * averageTimeConsumptionOfQueries  平均查询耗时。
-    * averageTimeConsumptionOfSessions  平均会话耗时。
-    * queriesCount  查询数量。
-    * sessionCount  会话数量。
+    * averageQueryWaitingTime  **参数解释**： 平均查询等待时间。 **取值范围**： 不涉及。
+    * averageTimeConsumptionOfQueries  **参数解释**： 平均查询耗时。 **取值范围**： 不涉及。
+    * averageTimeConsumptionOfSessions  **参数解释**： 平均会话耗时。 **取值范围**： 不涉及。
+    * queriesCount  **参数解释**： 查询数量。 **取值范围**： 不涉及。
+    * sessionCount  **参数解释**： 会话数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets averageQueryWaitingTime
-    *  平均查询等待时间。
+    *  **参数解释**： 平均查询等待时间。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -230,7 +230,7 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
     /**
     * Sets averageQueryWaitingTime
     *
-    * @param double|null $averageQueryWaitingTime 平均查询等待时间。
+    * @param double|null $averageQueryWaitingTime **参数解释**： 平均查询等待时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets averageTimeConsumptionOfQueries
-    *  平均查询耗时。
+    *  **参数解释**： 平均查询耗时。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -254,7 +254,7 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
     /**
     * Sets averageTimeConsumptionOfQueries
     *
-    * @param double|null $averageTimeConsumptionOfQueries 平均查询耗时。
+    * @param double|null $averageTimeConsumptionOfQueries **参数解释**： 平均查询耗时。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets averageTimeConsumptionOfSessions
-    *  平均会话耗时。
+    *  **参数解释**： 平均会话耗时。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -278,7 +278,7 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
     /**
     * Sets averageTimeConsumptionOfSessions
     *
-    * @param double|null $averageTimeConsumptionOfSessions 平均会话耗时。
+    * @param double|null $averageTimeConsumptionOfSessions **参数解释**： 平均会话耗时。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets queriesCount
-    *  查询数量。
+    *  **参数解释**： 查询数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
     /**
     * Sets queriesCount
     *
-    * @param int|null $queriesCount 查询数量。
+    * @param int|null $queriesCount **参数解释**： 查询数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets sessionCount
-    *  会话数量。
+    *  **参数解释**： 会话数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class ListQueriesStatus implements ModelInterface, ArrayAccess
     /**
     * Sets sessionCount
     *
-    * @param int|null $sessionCount 会话数量。
+    * @param int|null $sessionCount **参数解释**： 会话数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class FineGrainedSnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * database  数据库。
-    * schemaList  模式列表。
-    * tableList  表集合。
+    * database  **参数解释**： 数据库。 **取值范围**： 不涉及。
+    * schemaList  **参数解释**： 模式列表。 **取值范围**： 不涉及。
+    * tableList  **参数解释**： 表集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class FineGrainedSnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * database  数据库。
-    * schemaList  模式列表。
-    * tableList  表集合。
+    * database  **参数解释**： 数据库。 **取值范围**： 不涉及。
+    * schemaList  **参数解释**： 模式列表。 **取值范围**： 不涉及。
+    * tableList  **参数解释**： 表集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class FineGrainedSnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * database  数据库。
-    * schemaList  模式列表。
-    * tableList  表集合。
+    * database  **参数解释**： 数据库。 **取值范围**： 不涉及。
+    * schemaList  **参数解释**： 模式列表。 **取值范围**： 不涉及。
+    * tableList  **参数解释**： 表集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class FineGrainedSnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * database  数据库。
-    * schemaList  模式列表。
-    * tableList  表集合。
+    * database  **参数解释**： 数据库。 **取值范围**： 不涉及。
+    * schemaList  **参数解释**： 模式列表。 **取值范围**： 不涉及。
+    * tableList  **参数解释**： 表集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class FineGrainedSnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * database  数据库。
-    * schemaList  模式列表。
-    * tableList  表集合。
+    * database  **参数解释**： 数据库。 **取值范围**： 不涉及。
+    * schemaList  **参数解释**： 模式列表。 **取值范围**： 不涉及。
+    * tableList  **参数解释**： 表集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class FineGrainedSnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets database
-    *  数据库。
+    *  **参数解释**： 数据库。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class FineGrainedSnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Sets database
     *
-    * @param string|null $database 数据库。
+    * @param string|null $database **参数解释**： 数据库。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class FineGrainedSnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets schemaList
-    *  模式列表。
+    *  **参数解释**： 模式列表。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -232,7 +232,7 @@ class FineGrainedSnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Sets schemaList
     *
-    * @param string[]|null $schemaList 模式列表。
+    * @param string[]|null $schemaList **参数解释**： 模式列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class FineGrainedSnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableList
-    *  表集合。
+    *  **参数解释**： 表集合。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -256,7 +256,7 @@ class FineGrainedSnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Sets tableList
     *
-    * @param string[]|null $tableList 表集合。
+    * @param string[]|null $tableList **参数解释**： 表集合。 **取值范围**： 不涉及。
     *
     * @return $this
     */

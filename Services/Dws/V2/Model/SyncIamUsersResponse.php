@@ -21,7 +21,7 @@ class SyncIamUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * syncUser  创建成功用户列表
+    * syncUser  **参数解释**： 创建成功用户列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class SyncIamUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * syncUser  创建成功用户列表
+    * syncUser  **参数解释**： 创建成功用户列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class SyncIamUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * syncUser  创建成功用户列表
+    * syncUser  **参数解释**： 创建成功用户列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class SyncIamUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * syncUser  创建成功用户列表
+    * syncUser  **参数解释**： 创建成功用户列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class SyncIamUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * syncUser  创建成功用户列表
+    * syncUser  **参数解释**： 创建成功用户列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class SyncIamUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets syncUser
-    *  创建成功用户列表
+    *  **参数解释**： 创建成功用户列表。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -187,7 +187,7 @@ class SyncIamUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets syncUser
     *
-    * @param string[]|null $syncUser 创建成功用户列表
+    * @param string[]|null $syncUser **参数解释**： 创建成功用户列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

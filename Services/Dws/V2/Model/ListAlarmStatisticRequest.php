@@ -20,7 +20,7 @@ class ListAlarmStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * timeZone  时区
+    * timeZone  **参数解释**： 时区信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： GMT+08:00
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListAlarmStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * timeZone  时区
+    * timeZone  **参数解释**： 时区信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： GMT+08:00
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListAlarmStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * timeZone  时区
+    * timeZone  **参数解释**： 时区信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： GMT+08:00
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListAlarmStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * timeZone  时区
+    * timeZone  **参数解释**： 时区信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： GMT+08:00
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListAlarmStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * timeZone  时区
+    * timeZone  **参数解释**： 时区信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： GMT+08:00
     *
     * @var string[]
     */
@@ -158,9 +158,6 @@ class ListAlarmStatisticRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['timeZone'] === null) {
-            $invalidProperties[] = "'timeZone' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -177,9 +174,9 @@ class ListAlarmStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeZone
-    *  时区
+    *  **参数解释**： 时区信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： GMT+08:00
     *
-    * @return string
+    * @return string|null
     */
     public function getTimeZone()
     {
@@ -189,7 +186,7 @@ class ListAlarmStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Sets timeZone
     *
-    * @param string $timeZone 时区
+    * @param string|null $timeZone **参数解释**： 时区信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： GMT+08:00
     *
     * @return $this
     */

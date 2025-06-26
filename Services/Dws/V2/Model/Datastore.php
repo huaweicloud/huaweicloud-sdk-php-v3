@@ -20,8 +20,8 @@ class Datastore implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  集群类型。
-    * version  集群版本。
+    * type  **参数解释**： 集群类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 集群版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Datastore implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  集群类型。
-    * version  集群版本。
+    * type  **参数解释**： 集群类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 集群版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Datastore implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  集群类型。
-    * version  集群版本。
+    * type  **参数解释**： 集群类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 集群版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Datastore implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  集群类型。
-    * version  集群版本。
+    * type  **参数解释**： 集群类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 集群版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Datastore implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  集群类型。
-    * version  集群版本。
+    * type  **参数解释**： 集群类型。 **取值范围**： 不涉及。
+    * version  **参数解释**： 集群版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class Datastore implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  集群类型。
+    *  **参数解释**： 集群类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class Datastore implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 集群类型。
+    * @param string|null $type **参数解释**： 集群类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class Datastore implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  集群版本。
+    *  **参数解释**： 集群版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class Datastore implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 集群版本。
+    * @param string|null $version **参数解释**： 集群版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */

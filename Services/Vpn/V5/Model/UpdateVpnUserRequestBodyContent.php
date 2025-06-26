@@ -22,24 +22,28 @@ class UpdateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * description  用户描述
     * userGroupId  所属用户组ID
+    * staticIp  静态客户端IP地址，disable表示随机分配客户端IP
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'description' => 'string',
-            'userGroupId' => 'string'
+            'userGroupId' => 'string',
+            'staticIp' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * description  用户描述
     * userGroupId  所属用户组ID
+    * staticIp  静态客户端IP地址，disable表示随机分配客户端IP
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'description' => null,
-        'userGroupId' => null
+        'userGroupId' => null,
+        'staticIp' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class UpdateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
     * and the value is the original name
     * description  用户描述
     * userGroupId  所属用户组ID
+    * staticIp  静态客户端IP地址，disable表示随机分配客户端IP
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'description' => 'description',
-            'userGroupId' => 'user_group_id'
+            'userGroupId' => 'user_group_id',
+            'staticIp' => 'static_ip'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * description  用户描述
     * userGroupId  所属用户组ID
+    * staticIp  静态客户端IP地址，disable表示随机分配客户端IP
     *
     * @var string[]
     */
     protected static $setters = [
             'description' => 'setDescription',
-            'userGroupId' => 'setUserGroupId'
+            'userGroupId' => 'setUserGroupId',
+            'staticIp' => 'setStaticIp'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * description  用户描述
     * userGroupId  所属用户组ID
+    * staticIp  静态客户端IP地址，disable表示随机分配客户端IP
     *
     * @var string[]
     */
     protected static $getters = [
             'description' => 'getDescription',
-            'userGroupId' => 'getUserGroupId'
+            'userGroupId' => 'getUserGroupId',
+            'staticIp' => 'getStaticIp'
     ];
 
     /**
@@ -159,6 +169,7 @@ class UpdateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
     {
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['userGroupId'] = isset($data['userGroupId']) ? $data['userGroupId'] : null;
+        $this->container['staticIp'] = isset($data['staticIp']) ? $data['staticIp'] : null;
     }
 
     /**
@@ -186,6 +197,15 @@ class UpdateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['userGroupId']) && !preg_match("/[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/", $this->container['userGroupId'])) {
                 $invalidProperties[] = "invalid value for 'userGroupId', must be conform to the pattern /[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/.";
+            }
+            if (!is_null($this->container['staticIp']) && (mb_strlen($this->container['staticIp']) > 18)) {
+                $invalidProperties[] = "invalid value for 'staticIp', the character length must be smaller than or equal to 18.";
+            }
+            if (!is_null($this->container['staticIp']) && (mb_strlen($this->container['staticIp']) < 7)) {
+                $invalidProperties[] = "invalid value for 'staticIp', the character length must be bigger than or equal to 7.";
+            }
+            if (!is_null($this->container['staticIp']) && !preg_match("/^(((25[0-5]|(2[0-4]|1\\d|[1-9]|)\\d)\\.?\\b){4}|disable)$/", $this->container['staticIp'])) {
+                $invalidProperties[] = "invalid value for 'staticIp', must be conform to the pattern /^(((25[0-5]|(2[0-4]|1\\d|[1-9]|)\\d)\\.?\\b){4}|disable)$/.";
             }
         return $invalidProperties;
     }
@@ -246,6 +266,30 @@ class UpdateVpnUserRequestBodyContent implements ModelInterface, ArrayAccess
     public function setUserGroupId($userGroupId)
     {
         $this->container['userGroupId'] = $userGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets staticIp
+    *  静态客户端IP地址，disable表示随机分配客户端IP
+    *
+    * @return string|null
+    */
+    public function getStaticIp()
+    {
+        return $this->container['staticIp'];
+    }
+
+    /**
+    * Sets staticIp
+    *
+    * @param string|null $staticIp 静态客户端IP地址，disable表示随机分配客户端IP
+    *
+    * @return $this
+    */
+    public function setStaticIp($staticIp)
+    {
+        $this->container['staticIp'] = $staticIp;
         return $this;
     }
 

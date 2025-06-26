@@ -21,7 +21,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * name  集群名称
+    * name  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * name  集群名称
+    * name  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * name  集群名称
+    * name  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * name  集群名称
+    * name  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * name  集群名称
+    * name  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  集群名称
+    *  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class DisasterRecoveryClusterVo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 集群名称
+    * @param string|null $name **参数解释**： 集群名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */

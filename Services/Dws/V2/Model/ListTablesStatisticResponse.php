@@ -21,9 +21,9 @@ class ListTablesStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * collectTime  数据采集时间毫秒级时间戳。
-    * data  表倾斜率或脏页率列表。
-    * count  总列表大小。
+    * collectTime  **参数解释**： 数据采集时间毫秒级时间戳。 **取值范围**： 不涉及。
+    * data  **参数解释**： 表倾斜率或脏页率列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListTablesStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * collectTime  数据采集时间毫秒级时间戳。
-    * data  表倾斜率或脏页率列表。
-    * count  总列表大小。
+    * collectTime  **参数解释**： 数据采集时间毫秒级时间戳。 **取值范围**： 不涉及。
+    * data  **参数解释**： 表倾斜率或脏页率列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListTablesStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * collectTime  数据采集时间毫秒级时间戳。
-    * data  表倾斜率或脏页率列表。
-    * count  总列表大小。
+    * collectTime  **参数解释**： 数据采集时间毫秒级时间戳。 **取值范围**： 不涉及。
+    * data  **参数解释**： 表倾斜率或脏页率列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListTablesStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * collectTime  数据采集时间毫秒级时间戳。
-    * data  表倾斜率或脏页率列表。
-    * count  总列表大小。
+    * collectTime  **参数解释**： 数据采集时间毫秒级时间戳。 **取值范围**： 不涉及。
+    * data  **参数解释**： 表倾斜率或脏页率列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListTablesStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * collectTime  数据采集时间毫秒级时间戳。
-    * data  表倾斜率或脏页率列表。
-    * count  总列表大小。
+    * collectTime  **参数解释**： 数据采集时间毫秒级时间戳。 **取值范围**： 不涉及。
+    * data  **参数解释**： 表倾斜率或脏页率列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListTablesStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets collectTime
-    *  数据采集时间毫秒级时间戳。
+    *  **参数解释**： 数据采集时间毫秒级时间戳。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -209,7 +209,7 @@ class ListTablesStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets collectTime
     *
-    * @param int|null $collectTime 数据采集时间毫秒级时间戳。
+    * @param int|null $collectTime **参数解释**： 数据采集时间毫秒级时间戳。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListTablesStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  表倾斜率或脏页率列表。
+    *  **参数解释**： 表倾斜率或脏页率列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ListTablesStatisticDto[]|null
     */
@@ -233,7 +233,7 @@ class ListTablesStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ListTablesStatisticDto[]|null $data 表倾斜率或脏页率列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ListTablesStatisticDto[]|null $data **参数解释**： 表倾斜率或脏页率列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListTablesStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  总列表大小。
+    *  **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -257,7 +257,7 @@ class ListTablesStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 总列表大小。
+    * @param int|null $count **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @return $this
     */

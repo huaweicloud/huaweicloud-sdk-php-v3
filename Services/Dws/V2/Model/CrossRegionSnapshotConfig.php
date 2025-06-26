@@ -21,14 +21,14 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * clusterName  集群名称
-    * sourceRegion  源区域
-    * sourceProjectId  源项目ID
-    * destinationRegion  目的区域
-    * destinationProjectId  目的项目ID
-    * status  状态
-    * backKeepDay  保存时间
-    * totalSize  总大小
+    * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
+    * sourceRegion  **参数解释**： 源区域。 **取值范围**： 不涉及。
+    * sourceProjectId  **参数解释**： 源项目ID。 **取值范围**： 不涉及。
+    * destinationRegion  **参数解释**： 目的区域。 **取值范围**： 不涉及。
+    * destinationProjectId  **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * backKeepDay  **参数解释**： 保存时间。 **取值范围**： 不涉及。
+    * totalSize  **参数解释**： 总大小。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -47,14 +47,14 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * clusterName  集群名称
-    * sourceRegion  源区域
-    * sourceProjectId  源项目ID
-    * destinationRegion  目的区域
-    * destinationProjectId  目的项目ID
-    * status  状态
-    * backKeepDay  保存时间
-    * totalSize  总大小
+    * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
+    * sourceRegion  **参数解释**： 源区域。 **取值范围**： 不涉及。
+    * sourceProjectId  **参数解释**： 源项目ID。 **取值范围**： 不涉及。
+    * destinationRegion  **参数解释**： 目的区域。 **取值范围**： 不涉及。
+    * destinationProjectId  **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * backKeepDay  **参数解释**： 保存时间。 **取值范围**： 不涉及。
+    * totalSize  **参数解释**： 总大小。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -94,14 +94,14 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * clusterName  集群名称
-    * sourceRegion  源区域
-    * sourceProjectId  源项目ID
-    * destinationRegion  目的区域
-    * destinationProjectId  目的项目ID
-    * status  状态
-    * backKeepDay  保存时间
-    * totalSize  总大小
+    * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
+    * sourceRegion  **参数解释**： 源区域。 **取值范围**： 不涉及。
+    * sourceProjectId  **参数解释**： 源项目ID。 **取值范围**： 不涉及。
+    * destinationRegion  **参数解释**： 目的区域。 **取值范围**： 不涉及。
+    * destinationProjectId  **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * backKeepDay  **参数解释**： 保存时间。 **取值范围**： 不涉及。
+    * totalSize  **参数解释**： 总大小。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -120,14 +120,14 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * clusterName  集群名称
-    * sourceRegion  源区域
-    * sourceProjectId  源项目ID
-    * destinationRegion  目的区域
-    * destinationProjectId  目的项目ID
-    * status  状态
-    * backKeepDay  保存时间
-    * totalSize  总大小
+    * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
+    * sourceRegion  **参数解释**： 源区域。 **取值范围**： 不涉及。
+    * sourceProjectId  **参数解释**： 源项目ID。 **取值范围**： 不涉及。
+    * destinationRegion  **参数解释**： 目的区域。 **取值范围**： 不涉及。
+    * destinationProjectId  **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * backKeepDay  **参数解释**： 保存时间。 **取值范围**： 不涉及。
+    * totalSize  **参数解释**： 总大小。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -146,14 +146,14 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * clusterName  集群名称
-    * sourceRegion  源区域
-    * sourceProjectId  源项目ID
-    * destinationRegion  目的区域
-    * destinationProjectId  目的项目ID
-    * status  状态
-    * backKeepDay  保存时间
-    * totalSize  总大小
+    * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
+    * sourceRegion  **参数解释**： 源区域。 **取值范围**： 不涉及。
+    * sourceProjectId  **参数解释**： 源项目ID。 **取值范围**： 不涉及。
+    * destinationRegion  **参数解释**： 目的区域。 **取值范围**： 不涉及。
+    * destinationProjectId  **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * backKeepDay  **参数解释**： 保存时间。 **取值范围**： 不涉及。
+    * totalSize  **参数解释**： 总大小。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -286,7 +286,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  集群名称
+    *  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 集群名称
+    * @param string|null $clusterName **参数解释**： 集群名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceRegion
-    *  源区域
+    *  **参数解释**： 源区域。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Sets sourceRegion
     *
-    * @param string|null $sourceRegion 源区域
+    * @param string|null $sourceRegion **参数解释**： 源区域。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceProjectId
-    *  源项目ID
+    *  **参数解释**： 源项目ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Sets sourceProjectId
     *
-    * @param string|null $sourceProjectId 源项目ID
+    * @param string|null $sourceProjectId **参数解释**： 源项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationRegion
-    *  目的区域
+    *  **参数解释**： 目的区域。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Sets destinationRegion
     *
-    * @param string|null $destinationRegion 目的区域
+    * @param string|null $destinationRegion **参数解释**： 目的区域。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationProjectId
-    *  目的项目ID
+    *  **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Sets destinationProjectId
     *
-    * @param string|null $destinationProjectId 目的项目ID
+    * @param string|null $destinationProjectId **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -418,7 +418,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param bool|null $status 状态
+    * @param bool|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets backKeepDay
-    *  保存时间
+    *  **参数解释**： 保存时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -442,7 +442,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Sets backKeepDay
     *
-    * @param int|null $backKeepDay 保存时间
+    * @param int|null $backKeepDay **参数解释**： 保存时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalSize
-    *  总大小
+    *  **参数解释**： 总大小。 **取值范围**： 大于等于0。
     *
     * @return int|null
     */
@@ -466,7 +466,7 @@ class CrossRegionSnapshotConfig implements ModelInterface, ArrayAccess
     /**
     * Sets totalSize
     *
-    * @param int|null $totalSize 总大小
+    * @param int|null $totalSize **参数解释**： 总大小。 **取值范围**： 大于等于0。
     *
     * @return $this
     */

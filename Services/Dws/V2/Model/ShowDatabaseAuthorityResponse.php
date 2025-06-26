@@ -21,7 +21,7 @@ class ShowDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * authorities  对象权限集合
+    * authorities  **参数解释**： 对象权限集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * authorities  对象权限集合
+    * authorities  **参数解释**： 对象权限集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * authorities  对象权限集合
+    * authorities  **参数解释**： 对象权限集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * authorities  对象权限集合
+    * authorities  **参数解释**： 对象权限集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * authorities  对象权限集合
+    * authorities  **参数解释**： 对象权限集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets authorities
-    *  对象权限集合
+    *  **参数解释**： 对象权限集合。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ObjectAuthority[]|null
     */
@@ -187,7 +187,7 @@ class ShowDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets authorities
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ObjectAuthority[]|null $authorities 对象权限集合
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ObjectAuthority[]|null $authorities **参数解释**： 对象权限集合。 **取值范围**： 不涉及。
     *
     * @return $this
     */

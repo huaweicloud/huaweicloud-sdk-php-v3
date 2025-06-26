@@ -1817,6 +1817,9 @@ class MetaStudioAsyncClient extends Client
         if ($localVarParams['appUserId'] !== null) {
             $queryParams['app_user_id'] = $localVarParams['appUserId'];
         }
+        if ($localVarParams['projectGroupId'] !== null) {
+            $queryParams['project_group_id'] = $localVarParams['projectGroupId'];
+        }
         if ($localVarParams['authorization'] !== null) {
             $headerParams['authorization'] = $localVarParams['authorization'];
         }

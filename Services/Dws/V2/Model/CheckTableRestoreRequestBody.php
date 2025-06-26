@@ -20,10 +20,10 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * caseSensitive  名称是否区分大小写
-    * database  数据库名称
-    * restoreTableList  源表信息
-    * targetTableList  目的表信息
+    * caseSensitive  **参数解释**： 名称是否区分大小写。 **取值范围**： 不涉及。
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * restoreTableList  **参数解释**： 源表信息。 **取值范围**： 不涉及。
+    * targetTableList  **参数解释**： 目的表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * caseSensitive  名称是否区分大小写
-    * database  数据库名称
-    * restoreTableList  源表信息
-    * targetTableList  目的表信息
+    * caseSensitive  **参数解释**： 名称是否区分大小写。 **取值范围**： 不涉及。
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * restoreTableList  **参数解释**： 源表信息。 **取值范围**： 不涉及。
+    * targetTableList  **参数解释**： 目的表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * caseSensitive  名称是否区分大小写
-    * database  数据库名称
-    * restoreTableList  源表信息
-    * targetTableList  目的表信息
+    * caseSensitive  **参数解释**： 名称是否区分大小写。 **取值范围**： 不涉及。
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * restoreTableList  **参数解释**： 源表信息。 **取值范围**： 不涉及。
+    * targetTableList  **参数解释**： 目的表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * caseSensitive  名称是否区分大小写
-    * database  数据库名称
-    * restoreTableList  源表信息
-    * targetTableList  目的表信息
+    * caseSensitive  **参数解释**： 名称是否区分大小写。 **取值范围**： 不涉及。
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * restoreTableList  **参数解释**： 源表信息。 **取值范围**： 不涉及。
+    * targetTableList  **参数解释**： 目的表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * caseSensitive  名称是否区分大小写
-    * database  数据库名称
-    * restoreTableList  源表信息
-    * targetTableList  目的表信息
+    * caseSensitive  **参数解释**： 名称是否区分大小写。 **取值范围**： 不涉及。
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * restoreTableList  **参数解释**： 源表信息。 **取值范围**： 不涉及。
+    * targetTableList  **参数解释**： 目的表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets caseSensitive
-    *  名称是否区分大小写
+    *  **参数解释**： 名称是否区分大小写。 **取值范围**： 不涉及。
     *
     * @return bool
     */
@@ -231,7 +231,7 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets caseSensitive
     *
-    * @param bool $caseSensitive 名称是否区分大小写
+    * @param bool $caseSensitive **参数解释**： 名称是否区分大小写。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets database
-    *  数据库名称
+    *  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets database
     *
-    * @param string $database 数据库名称
+    * @param string $database **参数解释**： 数据库名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets restoreTableList
-    *  源表信息
+    *  **参数解释**： 源表信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\TableDetail[]
     */
@@ -279,7 +279,7 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets restoreTableList
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\TableDetail[] $restoreTableList 源表信息
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\TableDetail[] $restoreTableList **参数解释**： 源表信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetTableList
-    *  目的表信息
+    *  **参数解释**： 目的表信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\TableDetail[]
     */
@@ -303,7 +303,7 @@ class CheckTableRestoreRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets targetTableList
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\TableDetail[] $targetTableList 目的表信息
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\TableDetail[] $targetTableList **参数解释**： 目的表信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

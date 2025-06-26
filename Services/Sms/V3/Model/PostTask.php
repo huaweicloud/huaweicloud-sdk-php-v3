@@ -42,6 +42,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * speedLimit  迁移速率限制值
     * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
     * isNeedConsistencyCheck  是否进行一致性校验
+    * needMigrationTest  是否开启迁移演练
     *
     * @var string[]
     */
@@ -67,7 +68,8 @@ class PostTask implements ModelInterface, ArrayAccess
             'startNetworkCheck' => 'bool',
             'speedLimit' => 'int',
             'overSpeedThreshold' => 'double',
-            'isNeedConsistencyCheck' => 'bool'
+            'isNeedConsistencyCheck' => 'bool',
+            'needMigrationTest' => 'bool'
     ];
 
     /**
@@ -94,6 +96,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * speedLimit  迁移速率限制值
     * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
     * isNeedConsistencyCheck  是否进行一致性校验
+    * needMigrationTest  是否开启迁移演练
     *
     * @var string[]
     */
@@ -119,7 +122,8 @@ class PostTask implements ModelInterface, ArrayAccess
         'startNetworkCheck' => null,
         'speedLimit' => 'int32',
         'overSpeedThreshold' => 'double',
-        'isNeedConsistencyCheck' => null
+        'isNeedConsistencyCheck' => null,
+        'needMigrationTest' => null
     ];
 
     /**
@@ -167,6 +171,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * speedLimit  迁移速率限制值
     * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
     * isNeedConsistencyCheck  是否进行一致性校验
+    * needMigrationTest  是否开启迁移演练
     *
     * @var string[]
     */
@@ -192,7 +197,8 @@ class PostTask implements ModelInterface, ArrayAccess
             'startNetworkCheck' => 'start_network_check',
             'speedLimit' => 'speed_limit',
             'overSpeedThreshold' => 'over_speed_threshold',
-            'isNeedConsistencyCheck' => 'is_need_consistency_check'
+            'isNeedConsistencyCheck' => 'is_need_consistency_check',
+            'needMigrationTest' => 'need_migration_test'
     ];
 
     /**
@@ -219,6 +225,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * speedLimit  迁移速率限制值
     * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
     * isNeedConsistencyCheck  是否进行一致性校验
+    * needMigrationTest  是否开启迁移演练
     *
     * @var string[]
     */
@@ -244,7 +251,8 @@ class PostTask implements ModelInterface, ArrayAccess
             'startNetworkCheck' => 'setStartNetworkCheck',
             'speedLimit' => 'setSpeedLimit',
             'overSpeedThreshold' => 'setOverSpeedThreshold',
-            'isNeedConsistencyCheck' => 'setIsNeedConsistencyCheck'
+            'isNeedConsistencyCheck' => 'setIsNeedConsistencyCheck',
+            'needMigrationTest' => 'setNeedMigrationTest'
     ];
 
     /**
@@ -271,6 +279,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * speedLimit  迁移速率限制值
     * overSpeedThreshold  停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
     * isNeedConsistencyCheck  是否进行一致性校验
+    * needMigrationTest  是否开启迁移演练
     *
     * @var string[]
     */
@@ -296,7 +305,8 @@ class PostTask implements ModelInterface, ArrayAccess
             'startNetworkCheck' => 'getStartNetworkCheck',
             'speedLimit' => 'getSpeedLimit',
             'overSpeedThreshold' => 'getOverSpeedThreshold',
-            'isNeedConsistencyCheck' => 'getIsNeedConsistencyCheck'
+            'isNeedConsistencyCheck' => 'getIsNeedConsistencyCheck',
+            'needMigrationTest' => 'getNeedMigrationTest'
     ];
 
     /**
@@ -394,6 +404,7 @@ class PostTask implements ModelInterface, ArrayAccess
         $this->container['speedLimit'] = isset($data['speedLimit']) ? $data['speedLimit'] : null;
         $this->container['overSpeedThreshold'] = isset($data['overSpeedThreshold']) ? $data['overSpeedThreshold'] : null;
         $this->container['isNeedConsistencyCheck'] = isset($data['isNeedConsistencyCheck']) ? $data['isNeedConsistencyCheck'] : null;
+        $this->container['needMigrationTest'] = isset($data['needMigrationTest']) ? $data['needMigrationTest'] : null;
     }
 
     /**
@@ -1044,6 +1055,30 @@ class PostTask implements ModelInterface, ArrayAccess
     public function setIsNeedConsistencyCheck($isNeedConsistencyCheck)
     {
         $this->container['isNeedConsistencyCheck'] = $isNeedConsistencyCheck;
+        return $this;
+    }
+
+    /**
+    * Gets needMigrationTest
+    *  是否开启迁移演练
+    *
+    * @return bool|null
+    */
+    public function getNeedMigrationTest()
+    {
+        return $this->container['needMigrationTest'];
+    }
+
+    /**
+    * Sets needMigrationTest
+    *
+    * @param bool|null $needMigrationTest 是否开启迁移演练
+    *
+    * @return $this
+    */
+    public function setNeedMigrationTest($needMigrationTest)
+    {
+        $this->container['needMigrationTest'] = $needMigrationTest;
         return $this;
     }
 

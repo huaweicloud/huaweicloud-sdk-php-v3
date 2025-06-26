@@ -20,8 +20,8 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * columnName  指标表对应字段名称。
-    * columnType  指标表对应字段类型。
+    * columnName  **参数解释**： 指标表对应字段名称。 **取值范围**： 不涉及。
+    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * columnName  指标表对应字段名称。
-    * columnType  指标表对应字段类型。
+    * columnName  **参数解释**： 指标表对应字段名称。 **取值范围**： 不涉及。
+    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * columnName  指标表对应字段名称。
-    * columnType  指标表对应字段类型。
+    * columnName  **参数解释**： 指标表对应字段名称。 **取值范围**： 不涉及。
+    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * columnName  指标表对应字段名称。
-    * columnType  指标表对应字段类型。
+    * columnName  **参数解释**： 指标表对应字段名称。 **取值范围**： 不涉及。
+    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * columnName  指标表对应字段名称。
-    * columnType  指标表对应字段类型。
+    * columnName  **参数解释**： 指标表对应字段名称。 **取值范围**： 不涉及。
+    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets columnName
-    *  指标表对应字段名称。
+    *  **参数解释**： 指标表对应字段名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
     /**
     * Sets columnName
     *
-    * @param string|null $columnName 指标表对应字段名称。
+    * @param string|null $columnName **参数解释**： 指标表对应字段名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets columnType
-    *  指标表对应字段类型。
+    *  **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
     /**
     * Sets columnType
     *
-    * @param string|null $columnType 指标表对应字段类型。
+    * @param string|null $columnType **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */

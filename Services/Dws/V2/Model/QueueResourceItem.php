@@ -20,8 +20,8 @@ class QueueResourceItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * queueName  资源池名称。
-    * queueResources  资源配置队列。
+    * queueName  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
+    * queueResources  **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class QueueResourceItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * queueName  资源池名称。
-    * queueResources  资源配置队列。
+    * queueName  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
+    * queueResources  **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class QueueResourceItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * queueName  资源池名称。
-    * queueResources  资源配置队列。
+    * queueName  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
+    * queueResources  **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class QueueResourceItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * queueName  资源池名称。
-    * queueResources  资源配置队列。
+    * queueName  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
+    * queueResources  **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class QueueResourceItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * queueName  资源池名称。
-    * queueResources  资源配置队列。
+    * queueName  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
+    * queueResources  **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class QueueResourceItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
-    *  资源池名称。
+    *  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class QueueResourceItem implements ModelInterface, ArrayAccess
     /**
     * Sets queueName
     *
-    * @param string $queueName 资源池名称。
+    * @param string $queueName **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class QueueResourceItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueResources
-    *  资源配置队列。
+    *  **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\WorkloadResourceItem[]
     */
@@ -227,7 +227,7 @@ class QueueResourceItem implements ModelInterface, ArrayAccess
     /**
     * Sets queueResources
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\WorkloadResourceItem[] $queueResources 资源配置队列。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\WorkloadResourceItem[] $queueResources **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
     *
     * @return $this
     */

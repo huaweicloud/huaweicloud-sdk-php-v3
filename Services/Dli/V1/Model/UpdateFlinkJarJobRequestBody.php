@@ -39,6 +39,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * tmSlotNum  每个taskmanager的slot数，默认值为“(parallel_number*tm_cus)/(cu_number-manager_cu_number)”。
     * feature  作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
     * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
     * resumeCheckpoint  异常重启是否从checkpoint恢复。
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
@@ -70,6 +71,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'tmSlotNum' => 'int',
             'feature' => 'string',
             'flinkVersion' => 'string',
+            'executionAgencyUrn' => 'string',
             'image' => 'string',
             'resumeCheckpoint' => 'bool',
             'resumeMaxNum' => 'int',
@@ -101,6 +103,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * tmSlotNum  每个taskmanager的slot数，默认值为“(parallel_number*tm_cus)/(cu_number-manager_cu_number)”。
     * feature  作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
     * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
     * resumeCheckpoint  异常重启是否从checkpoint恢复。
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
@@ -132,6 +135,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
         'tmSlotNum' => 'int32',
         'feature' => null,
         'flinkVersion' => null,
+        'executionAgencyUrn' => null,
         'image' => null,
         'resumeCheckpoint' => null,
         'resumeMaxNum' => 'int32',
@@ -184,6 +188,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * tmSlotNum  每个taskmanager的slot数，默认值为“(parallel_number*tm_cus)/(cu_number-manager_cu_number)”。
     * feature  作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
     * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
     * resumeCheckpoint  异常重启是否从checkpoint恢复。
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
@@ -215,6 +220,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'tmSlotNum' => 'tm_slot_num',
             'feature' => 'feature',
             'flinkVersion' => 'flink_version',
+            'executionAgencyUrn' => 'execution_agency_urn',
             'image' => 'image',
             'resumeCheckpoint' => 'resume_checkpoint',
             'resumeMaxNum' => 'resume_max_num',
@@ -246,6 +252,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * tmSlotNum  每个taskmanager的slot数，默认值为“(parallel_number*tm_cus)/(cu_number-manager_cu_number)”。
     * feature  作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
     * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
     * resumeCheckpoint  异常重启是否从checkpoint恢复。
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
@@ -277,6 +284,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'tmSlotNum' => 'setTmSlotNum',
             'feature' => 'setFeature',
             'flinkVersion' => 'setFlinkVersion',
+            'executionAgencyUrn' => 'setExecutionAgencyUrn',
             'image' => 'setImage',
             'resumeCheckpoint' => 'setResumeCheckpoint',
             'resumeMaxNum' => 'setResumeMaxNum',
@@ -308,6 +316,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * tmSlotNum  每个taskmanager的slot数，默认值为“(parallel_number*tm_cus)/(cu_number-manager_cu_number)”。
     * feature  作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
     * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
     * resumeCheckpoint  异常重启是否从checkpoint恢复。
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
@@ -339,6 +348,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'tmSlotNum' => 'getTmSlotNum',
             'feature' => 'getFeature',
             'flinkVersion' => 'getFlinkVersion',
+            'executionAgencyUrn' => 'getExecutionAgencyUrn',
             'image' => 'getImage',
             'resumeCheckpoint' => 'getResumeCheckpoint',
             'resumeMaxNum' => 'getResumeMaxNum',
@@ -426,6 +436,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['tmSlotNum'] = isset($data['tmSlotNum']) ? $data['tmSlotNum'] : null;
         $this->container['feature'] = isset($data['feature']) ? $data['feature'] : null;
         $this->container['flinkVersion'] = isset($data['flinkVersion']) ? $data['flinkVersion'] : null;
+        $this->container['executionAgencyUrn'] = isset($data['executionAgencyUrn']) ? $data['executionAgencyUrn'] : null;
         $this->container['image'] = isset($data['image']) ? $data['image'] : null;
         $this->container['resumeCheckpoint'] = isset($data['resumeCheckpoint']) ? $data['resumeCheckpoint'] : null;
         $this->container['resumeMaxNum'] = isset($data['resumeMaxNum']) ? $data['resumeMaxNum'] : null;
@@ -929,6 +940,30 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     public function setFlinkVersion($flinkVersion)
     {
         $this->container['flinkVersion'] = $flinkVersion;
+        return $this;
+    }
+
+    /**
+    * Gets executionAgencyUrn
+    *  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+    *
+    * @return string|null
+    */
+    public function getExecutionAgencyUrn()
+    {
+        return $this->container['executionAgencyUrn'];
+    }
+
+    /**
+    * Sets executionAgencyUrn
+    *
+    * @param string|null $executionAgencyUrn 授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+    *
+    * @return $this
+    */
+    public function setExecutionAgencyUrn($executionAgencyUrn)
+    {
+        $this->container['executionAgencyUrn'] = $executionAgencyUrn;
         return $this;
     }
 

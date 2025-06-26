@@ -25,6 +25,8 @@ class ShowCatalogResponse implements ModelInterface, ArrayAccess
     * name  DLI侧catalog映射名称。
     * createTime  创建时间
     * parameters  parameters
+    * description  描述
+    * status  catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
     *
     * @var string[]
     */
@@ -32,7 +34,9 @@ class ShowCatalogResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'bool',
             'name' => 'string',
             'createTime' => 'int',
-            'parameters' => 'map[string,string]'
+            'parameters' => 'map[string,string]',
+            'description' => 'string',
+            'status' => 'string'
     ];
 
     /**
@@ -41,6 +45,8 @@ class ShowCatalogResponse implements ModelInterface, ArrayAccess
     * name  DLI侧catalog映射名称。
     * createTime  创建时间
     * parameters  parameters
+    * description  描述
+    * status  catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
     *
     * @var string[]
     */
@@ -48,7 +54,9 @@ class ShowCatalogResponse implements ModelInterface, ArrayAccess
         'isSuccess' => null,
         'name' => null,
         'createTime' => 'int64',
-        'parameters' => null
+        'parameters' => null,
+        'description' => null,
+        'status' => null
     ];
 
     /**
@@ -78,6 +86,8 @@ class ShowCatalogResponse implements ModelInterface, ArrayAccess
     * name  DLI侧catalog映射名称。
     * createTime  创建时间
     * parameters  parameters
+    * description  描述
+    * status  catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
     *
     * @var string[]
     */
@@ -85,7 +95,9 @@ class ShowCatalogResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'is_success',
             'name' => 'name',
             'createTime' => 'create_time',
-            'parameters' => 'parameters'
+            'parameters' => 'parameters',
+            'description' => 'description',
+            'status' => 'status'
     ];
 
     /**
@@ -94,6 +106,8 @@ class ShowCatalogResponse implements ModelInterface, ArrayAccess
     * name  DLI侧catalog映射名称。
     * createTime  创建时间
     * parameters  parameters
+    * description  描述
+    * status  catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
     *
     * @var string[]
     */
@@ -101,7 +115,9 @@ class ShowCatalogResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'setIsSuccess',
             'name' => 'setName',
             'createTime' => 'setCreateTime',
-            'parameters' => 'setParameters'
+            'parameters' => 'setParameters',
+            'description' => 'setDescription',
+            'status' => 'setStatus'
     ];
 
     /**
@@ -110,6 +126,8 @@ class ShowCatalogResponse implements ModelInterface, ArrayAccess
     * name  DLI侧catalog映射名称。
     * createTime  创建时间
     * parameters  parameters
+    * description  描述
+    * status  catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
     *
     * @var string[]
     */
@@ -117,7 +135,9 @@ class ShowCatalogResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'getIsSuccess',
             'name' => 'getName',
             'createTime' => 'getCreateTime',
-            'parameters' => 'getParameters'
+            'parameters' => 'getParameters',
+            'description' => 'getDescription',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -182,6 +202,8 @@ class ShowCatalogResponse implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['parameters'] = isset($data['parameters']) ? $data['parameters'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -299,6 +321,54 @@ class ShowCatalogResponse implements ModelInterface, ArrayAccess
     public function setParameters($parameters)
     {
         $this->container['parameters'] = $parameters;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  描述
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

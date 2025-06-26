@@ -20,17 +20,17 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN | FUNCTION| SEQUENCE | NODEGROUP | ROLE]
-    * isGrant  是否授权操作
-    * grantList  授权列表 is_grant为true时必填
-    * revokeList  撤销权限列表 is_grant为false时必填
-    * roleList  被授权角色列表
-    * objectList  权限所属对象列表
-    * allObject  schema下所有数据库对象权限，默认false
-    * cascade  撤销权限是否级联撤销 默认 true
-    * database  数据库名称
-    * schema  模式名称
-    * table  表名
+    * type  **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
+    * isGrant  **参数解释**： 是否授权操作。 **取值范围**： 不涉及。
+    * grantList  **参数解释**： 授权列表。is_grant为true时必填。 **取值范围**： 不涉及。
+    * revokeList  **参数解释**： 撤销权限列表。is_grant为false时必填。 **取值范围**： 不涉及。
+    * roleList  **参数解释**： 被授权角色列表。 **取值范围**： 不涉及。
+    * objectList  **参数解释**： 权限所属对象列表。 **取值范围**： 不涉及。
+    * allObject  **参数解释**： schema下所有数据库对象权限，默认false。 **取值范围**： 不涉及。
+    * cascade  **参数解释**： 撤销权限是否级联撤销，默认true。 **取值范围**： 不涉及。
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * schema  **参数解释**： 模式名称。 **取值范围**： 不涉及。
+    * table  **参数解释**： 表名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,7 +40,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
             'grantList' => '\HuaweiCloud\SDK\Dws\V2\Model\Grant[]',
             'revokeList' => '\HuaweiCloud\SDK\Dws\V2\Model\Revoke[]',
             'roleList' => 'string[]',
-            'objectList' => 'object',
+            'objectList' => 'string[]',
             'allObject' => 'bool',
             'cascade' => 'bool',
             'database' => 'string',
@@ -50,17 +50,17 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN | FUNCTION| SEQUENCE | NODEGROUP | ROLE]
-    * isGrant  是否授权操作
-    * grantList  授权列表 is_grant为true时必填
-    * revokeList  撤销权限列表 is_grant为false时必填
-    * roleList  被授权角色列表
-    * objectList  权限所属对象列表
-    * allObject  schema下所有数据库对象权限，默认false
-    * cascade  撤销权限是否级联撤销 默认 true
-    * database  数据库名称
-    * schema  模式名称
-    * table  表名
+    * type  **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
+    * isGrant  **参数解释**： 是否授权操作。 **取值范围**： 不涉及。
+    * grantList  **参数解释**： 授权列表。is_grant为true时必填。 **取值范围**： 不涉及。
+    * revokeList  **参数解释**： 撤销权限列表。is_grant为false时必填。 **取值范围**： 不涉及。
+    * roleList  **参数解释**： 被授权角色列表。 **取值范围**： 不涉及。
+    * objectList  **参数解释**： 权限所属对象列表。 **取值范围**： 不涉及。
+    * allObject  **参数解释**： schema下所有数据库对象权限，默认false。 **取值范围**： 不涉及。
+    * cascade  **参数解释**： 撤销权限是否级联撤销，默认true。 **取值范围**： 不涉及。
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * schema  **参数解释**： 模式名称。 **取值范围**： 不涉及。
+    * table  **参数解释**： 表名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN | FUNCTION| SEQUENCE | NODEGROUP | ROLE]
-    * isGrant  是否授权操作
-    * grantList  授权列表 is_grant为true时必填
-    * revokeList  撤销权限列表 is_grant为false时必填
-    * roleList  被授权角色列表
-    * objectList  权限所属对象列表
-    * allObject  schema下所有数据库对象权限，默认false
-    * cascade  撤销权限是否级联撤销 默认 true
-    * database  数据库名称
-    * schema  模式名称
-    * table  表名
+    * type  **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
+    * isGrant  **参数解释**： 是否授权操作。 **取值范围**： 不涉及。
+    * grantList  **参数解释**： 授权列表。is_grant为true时必填。 **取值范围**： 不涉及。
+    * revokeList  **参数解释**： 撤销权限列表。is_grant为false时必填。 **取值范围**： 不涉及。
+    * roleList  **参数解释**： 被授权角色列表。 **取值范围**： 不涉及。
+    * objectList  **参数解释**： 权限所属对象列表。 **取值范围**： 不涉及。
+    * allObject  **参数解释**： schema下所有数据库对象权限，默认false。 **取值范围**： 不涉及。
+    * cascade  **参数解释**： 撤销权限是否级联撤销，默认true。 **取值范围**： 不涉及。
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * schema  **参数解释**： 模式名称。 **取值范围**： 不涉及。
+    * table  **参数解释**： 表名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN | FUNCTION| SEQUENCE | NODEGROUP | ROLE]
-    * isGrant  是否授权操作
-    * grantList  授权列表 is_grant为true时必填
-    * revokeList  撤销权限列表 is_grant为false时必填
-    * roleList  被授权角色列表
-    * objectList  权限所属对象列表
-    * allObject  schema下所有数据库对象权限，默认false
-    * cascade  撤销权限是否级联撤销 默认 true
-    * database  数据库名称
-    * schema  模式名称
-    * table  表名
+    * type  **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
+    * isGrant  **参数解释**： 是否授权操作。 **取值范围**： 不涉及。
+    * grantList  **参数解释**： 授权列表。is_grant为true时必填。 **取值范围**： 不涉及。
+    * revokeList  **参数解释**： 撤销权限列表。is_grant为false时必填。 **取值范围**： 不涉及。
+    * roleList  **参数解释**： 被授权角色列表。 **取值范围**： 不涉及。
+    * objectList  **参数解释**： 权限所属对象列表。 **取值范围**： 不涉及。
+    * allObject  **参数解释**： schema下所有数据库对象权限，默认false。 **取值范围**： 不涉及。
+    * cascade  **参数解释**： 撤销权限是否级联撤销，默认true。 **取值范围**： 不涉及。
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * schema  **参数解释**： 模式名称。 **取值范围**： 不涉及。
+    * table  **参数解释**： 表名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN | FUNCTION| SEQUENCE | NODEGROUP | ROLE]
-    * isGrant  是否授权操作
-    * grantList  授权列表 is_grant为true时必填
-    * revokeList  撤销权限列表 is_grant为false时必填
-    * roleList  被授权角色列表
-    * objectList  权限所属对象列表
-    * allObject  schema下所有数据库对象权限，默认false
-    * cascade  撤销权限是否级联撤销 默认 true
-    * database  数据库名称
-    * schema  模式名称
-    * table  表名
+    * type  **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
+    * isGrant  **参数解释**： 是否授权操作。 **取值范围**： 不涉及。
+    * grantList  **参数解释**： 授权列表。is_grant为true时必填。 **取值范围**： 不涉及。
+    * revokeList  **参数解释**： 撤销权限列表。is_grant为false时必填。 **取值范围**： 不涉及。
+    * roleList  **参数解释**： 被授权角色列表。 **取值范围**： 不涉及。
+    * objectList  **参数解释**： 权限所属对象列表。 **取值范围**： 不涉及。
+    * allObject  **参数解释**： schema下所有数据库对象权限，默认false。 **取值范围**： 不涉及。
+    * cascade  **参数解释**： 撤销权限是否级联撤销，默认true。 **取值范围**： 不涉及。
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * schema  **参数解释**： 模式名称。 **取值范围**： 不涉及。
+    * table  **参数解释**： 表名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -299,7 +299,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN | FUNCTION| SEQUENCE | NODEGROUP | ROLE]
+    *  **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
     *
     * @return string
     */
@@ -311,7 +311,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN | FUNCTION| SEQUENCE | NODEGROUP | ROLE]
+    * @param string $type **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets isGrant
-    *  是否授权操作
+    *  **参数解释**： 是否授权操作。 **取值范围**： 不涉及。
     *
     * @return bool
     */
@@ -335,7 +335,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Sets isGrant
     *
-    * @param bool $isGrant 是否授权操作
+    * @param bool $isGrant **参数解释**： 是否授权操作。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets grantList
-    *  授权列表 is_grant为true时必填
+    *  **参数解释**： 授权列表。is_grant为true时必填。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\Grant[]|null
     */
@@ -359,7 +359,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Sets grantList
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\Grant[]|null $grantList 授权列表 is_grant为true时必填
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\Grant[]|null $grantList **参数解释**： 授权列表。is_grant为true时必填。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets revokeList
-    *  撤销权限列表 is_grant为false时必填
+    *  **参数解释**： 撤销权限列表。is_grant为false时必填。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\Revoke[]|null
     */
@@ -383,7 +383,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Sets revokeList
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\Revoke[]|null $revokeList 撤销权限列表 is_grant为false时必填
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\Revoke[]|null $revokeList **参数解释**： 撤销权限列表。is_grant为false时必填。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets roleList
-    *  被授权角色列表
+    *  **参数解释**： 被授权角色列表。 **取值范围**： 不涉及。
     *
     * @return string[]
     */
@@ -407,7 +407,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Sets roleList
     *
-    * @param string[] $roleList 被授权角色列表
+    * @param string[] $roleList **参数解释**： 被授权角色列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -419,9 +419,9 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectList
-    *  权限所属对象列表
+    *  **参数解释**： 权限所属对象列表。 **取值范围**： 不涉及。
     *
-    * @return object
+    * @return string[]
     */
     public function getObjectList()
     {
@@ -431,7 +431,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Sets objectList
     *
-    * @param object $objectList 权限所属对象列表
+    * @param string[] $objectList **参数解释**： 权限所属对象列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -443,7 +443,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets allObject
-    *  schema下所有数据库对象权限，默认false
+    *  **参数解释**： schema下所有数据库对象权限，默认false。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -455,7 +455,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Sets allObject
     *
-    * @param bool|null $allObject schema下所有数据库对象权限，默认false
+    * @param bool|null $allObject **参数解释**： schema下所有数据库对象权限，默认false。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -467,7 +467,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets cascade
-    *  撤销权限是否级联撤销 默认 true
+    *  **参数解释**： 撤销权限是否级联撤销，默认true。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -479,7 +479,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Sets cascade
     *
-    * @param bool|null $cascade 撤销权限是否级联撤销 默认 true
+    * @param bool|null $cascade **参数解释**： 撤销权限是否级联撤销，默认true。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -491,7 +491,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets database
-    *  数据库名称
+    *  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -503,7 +503,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Sets database
     *
-    * @param string $database 数据库名称
+    * @param string $database **参数解释**： 数据库名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -515,7 +515,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets schema
-    *  模式名称
+    *  **参数解释**： 模式名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -527,7 +527,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Sets schema
     *
-    * @param string|null $schema 模式名称
+    * @param string|null $schema **参数解释**： 模式名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -539,7 +539,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets table
-    *  表名
+    *  **参数解释**： 表名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -551,7 +551,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Sets table
     *
-    * @param string|null $table 表名
+    * @param string|null $table **参数解释**： 表名。 **取值范围**： 不涉及。
     *
     * @return $this
     */

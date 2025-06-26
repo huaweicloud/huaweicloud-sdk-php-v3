@@ -21,8 +21,8 @@ class ListSchemasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * schemas  集群模式空间信息列表。
-    * count  总数量
+    * schemas  **参数解释**： 集群模式空间信息列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListSchemasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * schemas  集群模式空间信息列表。
-    * count  总数量
+    * schemas  **参数解释**： 集群模式空间信息列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListSchemasResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * schemas  集群模式空间信息列表。
-    * count  总数量
+    * schemas  **参数解释**： 集群模式空间信息列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListSchemasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * schemas  集群模式空间信息列表。
-    * count  总数量
+    * schemas  **参数解释**： 集群模式空间信息列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListSchemasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * schemas  集群模式空间信息列表。
-    * count  总数量
+    * schemas  **参数解释**： 集群模式空间信息列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListSchemasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets schemas
-    *  集群模式空间信息列表。
+    *  **参数解释**： 集群模式空间信息列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\SchemaInfo[]|null
     */
@@ -198,7 +198,7 @@ class ListSchemasResponse implements ModelInterface, ArrayAccess
     /**
     * Sets schemas
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\SchemaInfo[]|null $schemas 集群模式空间信息列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\SchemaInfo[]|null $schemas **参数解释**： 集群模式空间信息列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListSchemasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  总数量
+    *  **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListSchemasResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 总数量
+    * @param int|null $count **参数解释**： 总数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */

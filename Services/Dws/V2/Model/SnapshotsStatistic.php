@@ -20,9 +20,9 @@ class SnapshotsStatistic implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  资源统计信息名称。 - storage.free：免费容量。 - storage.paid：付费容量。 - storage.used：已用容量。
-    * value  资源统计信息值。
-    * unit  资源统计信息单位。
+    * name  **参数解释**： 资源统计信息名称。 **取值范围**： storage.free：免费容量。 storage.paid：付费容量。 storage.used：已用容量。
+    * value  **参数解释**： 资源统计信息值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 资源统计信息单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class SnapshotsStatistic implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  资源统计信息名称。 - storage.free：免费容量。 - storage.paid：付费容量。 - storage.used：已用容量。
-    * value  资源统计信息值。
-    * unit  资源统计信息单位。
+    * name  **参数解释**： 资源统计信息名称。 **取值范围**： storage.free：免费容量。 storage.paid：付费容量。 storage.used：已用容量。
+    * value  **参数解释**： 资源统计信息值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 资源统计信息单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class SnapshotsStatistic implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  资源统计信息名称。 - storage.free：免费容量。 - storage.paid：付费容量。 - storage.used：已用容量。
-    * value  资源统计信息值。
-    * unit  资源统计信息单位。
+    * name  **参数解释**： 资源统计信息名称。 **取值范围**： storage.free：免费容量。 storage.paid：付费容量。 storage.used：已用容量。
+    * value  **参数解释**： 资源统计信息值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 资源统计信息单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class SnapshotsStatistic implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  资源统计信息名称。 - storage.free：免费容量。 - storage.paid：付费容量。 - storage.used：已用容量。
-    * value  资源统计信息值。
-    * unit  资源统计信息单位。
+    * name  **参数解释**： 资源统计信息名称。 **取值范围**： storage.free：免费容量。 storage.paid：付费容量。 storage.used：已用容量。
+    * value  **参数解释**： 资源统计信息值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 资源统计信息单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class SnapshotsStatistic implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  资源统计信息名称。 - storage.free：免费容量。 - storage.paid：付费容量。 - storage.used：已用容量。
-    * value  资源统计信息值。
-    * unit  资源统计信息单位。
+    * name  **参数解释**： 资源统计信息名称。 **取值范围**： storage.free：免费容量。 storage.paid：付费容量。 storage.used：已用容量。
+    * value  **参数解释**： 资源统计信息值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 资源统计信息单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class SnapshotsStatistic implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源统计信息名称。 - storage.free：免费容量。 - storage.paid：付费容量。 - storage.used：已用容量。
+    *  **参数解释**： 资源统计信息名称。 **取值范围**： storage.free：免费容量。 storage.paid：付费容量。 storage.used：已用容量。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class SnapshotsStatistic implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 资源统计信息名称。 - storage.free：免费容量。 - storage.paid：付费容量。 - storage.used：已用容量。
+    * @param string $name **参数解释**： 资源统计信息名称。 **取值范围**： storage.free：免费容量。 storage.paid：付费容量。 storage.used：已用容量。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class SnapshotsStatistic implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  资源统计信息值。
+    *  **参数解释**： 资源统计信息值。 **取值范围**： 不涉及。
     *
     * @return float
     */
@@ -241,7 +241,7 @@ class SnapshotsStatistic implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param float $value 资源统计信息值。
+    * @param float $value **参数解释**： 资源统计信息值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class SnapshotsStatistic implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  资源统计信息单位。
+    *  **参数解释**： 资源统计信息单位。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class SnapshotsStatistic implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string $unit 资源统计信息单位。
+    * @param string $unit **参数解释**： 资源统计信息单位。 **取值范围**： 不涉及。
     *
     * @return $this
     */

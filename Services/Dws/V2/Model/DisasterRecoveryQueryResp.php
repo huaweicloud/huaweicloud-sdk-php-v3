@@ -20,15 +20,15 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  容灾ID
-    * name  容灾名称
-    * drType  容灾类型
-    * status  容灾状态
+    * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 容灾名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     * primaryCluster  primaryCluster
     * standbyCluster  standbyCluster
-    * drSyncPeriod  容灾同步周期
-    * startTime  容灾启动时间
-    * createTime  容灾创建时间
+    * drSyncPeriod  **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 容灾启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 容灾创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  容灾ID
-    * name  容灾名称
-    * drType  容灾类型
-    * status  容灾状态
+    * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 容灾名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     * primaryCluster  primaryCluster
     * standbyCluster  standbyCluster
-    * drSyncPeriod  容灾同步周期
-    * startTime  容灾启动时间
-    * createTime  容灾创建时间
+    * drSyncPeriod  **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 容灾启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 容灾创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  容灾ID
-    * name  容灾名称
-    * drType  容灾类型
-    * status  容灾状态
+    * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 容灾名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     * primaryCluster  primaryCluster
     * standbyCluster  standbyCluster
-    * drSyncPeriod  容灾同步周期
-    * startTime  容灾启动时间
-    * createTime  容灾创建时间
+    * drSyncPeriod  **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 容灾启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 容灾创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  容灾ID
-    * name  容灾名称
-    * drType  容灾类型
-    * status  容灾状态
+    * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 容灾名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     * primaryCluster  primaryCluster
     * standbyCluster  standbyCluster
-    * drSyncPeriod  容灾同步周期
-    * startTime  容灾启动时间
-    * createTime  容灾创建时间
+    * drSyncPeriod  **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 容灾启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 容灾创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  容灾ID
-    * name  容灾名称
-    * drType  容灾类型
-    * status  容灾状态
+    * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 容灾名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     * primaryCluster  primaryCluster
     * standbyCluster  standbyCluster
-    * drSyncPeriod  容灾同步周期
-    * startTime  容灾启动时间
-    * createTime  容灾创建时间
+    * drSyncPeriod  **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 容灾启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 容灾创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  容灾ID
+    *  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 容灾ID
+    * @param string|null $id **参数解释**： 容灾ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  容灾名称
+    *  **参数解释**： 容灾名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 容灾名称
+    * @param string|null $name **参数解释**： 容灾名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets drType
-    *  容灾类型
+    *  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
     /**
     * Sets drType
     *
-    * @param string|null $drType 容灾类型
+    * @param string|null $drType **参数解释**： 容灾类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  容灾状态
+    *  **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 容灾状态
+    * @param string|null $status **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets drSyncPeriod
-    *  容灾同步周期
+    *  **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -418,7 +418,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
     /**
     * Sets drSyncPeriod
     *
-    * @param string|null $drSyncPeriod 容灾同步周期
+    * @param string|null $drSyncPeriod **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  容灾启动时间
+    *  **参数解释**： 容灾启动时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 容灾启动时间
+    * @param string|null $startTime **参数解释**： 容灾启动时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  容灾创建时间
+    *  **参数解释**： 容灾创建时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class DisasterRecoveryQueryResp implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 容灾创建时间
+    * @param string|null $createTime **参数解释**： 容灾创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

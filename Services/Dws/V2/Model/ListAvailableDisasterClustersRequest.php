@@ -20,25 +20,25 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * primaryClusterId  主集群ID
-    * primarySpecId  主集群规格ID
-    * primaryClusterDnNum  主集群DN数量
-    * standbyRegion  备集群所在region
-    * standbyProjectId  备集群项目ID
-    * standbyAzCode  备集群所在AZ
-    * drType  容灾类型
-    * datastoreType  数仓类型
-    * datastoreVersion  数仓版本
+    * primaryClusterId  **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyAzCode  **参数解释**： 备集群所在AZ。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * primarySpecId  **参数解释**： 主集群规格ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * primaryClusterDnNum  **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyRegion  **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyProjectId  **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'primaryClusterId' => 'string',
+            'standbyAzCode' => 'string',
             'primarySpecId' => 'string',
             'primaryClusterDnNum' => 'string',
             'standbyRegion' => 'string',
             'standbyProjectId' => 'string',
-            'standbyAzCode' => 'string',
             'drType' => 'string',
             'datastoreType' => 'string',
             'datastoreVersion' => 'string'
@@ -46,25 +46,25 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * primaryClusterId  主集群ID
-    * primarySpecId  主集群规格ID
-    * primaryClusterDnNum  主集群DN数量
-    * standbyRegion  备集群所在region
-    * standbyProjectId  备集群项目ID
-    * standbyAzCode  备集群所在AZ
-    * drType  容灾类型
-    * datastoreType  数仓类型
-    * datastoreVersion  数仓版本
+    * primaryClusterId  **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyAzCode  **参数解释**： 备集群所在AZ。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * primarySpecId  **参数解释**： 主集群规格ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * primaryClusterDnNum  **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyRegion  **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyProjectId  **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'primaryClusterId' => null,
+        'standbyAzCode' => null,
         'primarySpecId' => null,
         'primaryClusterDnNum' => null,
         'standbyRegion' => null,
         'standbyProjectId' => null,
-        'standbyAzCode' => null,
         'drType' => null,
         'datastoreType' => null,
         'datastoreVersion' => null
@@ -93,25 +93,25 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * primaryClusterId  主集群ID
-    * primarySpecId  主集群规格ID
-    * primaryClusterDnNum  主集群DN数量
-    * standbyRegion  备集群所在region
-    * standbyProjectId  备集群项目ID
-    * standbyAzCode  备集群所在AZ
-    * drType  容灾类型
-    * datastoreType  数仓类型
-    * datastoreVersion  数仓版本
+    * primaryClusterId  **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyAzCode  **参数解释**： 备集群所在AZ。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * primarySpecId  **参数解释**： 主集群规格ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * primaryClusterDnNum  **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyRegion  **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyProjectId  **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'primaryClusterId' => 'primary_cluster_id',
+            'standbyAzCode' => 'standby_az_code',
             'primarySpecId' => 'primary_spec_id',
             'primaryClusterDnNum' => 'primary_cluster_dn_num',
             'standbyRegion' => 'standby_region',
             'standbyProjectId' => 'standby_project_id',
-            'standbyAzCode' => 'standby_az_code',
             'drType' => 'dr_type',
             'datastoreType' => 'datastore_type',
             'datastoreVersion' => 'datastore_version'
@@ -119,25 +119,25 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * primaryClusterId  主集群ID
-    * primarySpecId  主集群规格ID
-    * primaryClusterDnNum  主集群DN数量
-    * standbyRegion  备集群所在region
-    * standbyProjectId  备集群项目ID
-    * standbyAzCode  备集群所在AZ
-    * drType  容灾类型
-    * datastoreType  数仓类型
-    * datastoreVersion  数仓版本
+    * primaryClusterId  **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyAzCode  **参数解释**： 备集群所在AZ。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * primarySpecId  **参数解释**： 主集群规格ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * primaryClusterDnNum  **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyRegion  **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyProjectId  **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'primaryClusterId' => 'setPrimaryClusterId',
+            'standbyAzCode' => 'setStandbyAzCode',
             'primarySpecId' => 'setPrimarySpecId',
             'primaryClusterDnNum' => 'setPrimaryClusterDnNum',
             'standbyRegion' => 'setStandbyRegion',
             'standbyProjectId' => 'setStandbyProjectId',
-            'standbyAzCode' => 'setStandbyAzCode',
             'drType' => 'setDrType',
             'datastoreType' => 'setDatastoreType',
             'datastoreVersion' => 'setDatastoreVersion'
@@ -145,25 +145,25 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * primaryClusterId  主集群ID
-    * primarySpecId  主集群规格ID
-    * primaryClusterDnNum  主集群DN数量
-    * standbyRegion  备集群所在region
-    * standbyProjectId  备集群项目ID
-    * standbyAzCode  备集群所在AZ
-    * drType  容灾类型
-    * datastoreType  数仓类型
-    * datastoreVersion  数仓版本
+    * primaryClusterId  **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyAzCode  **参数解释**： 备集群所在AZ。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * primarySpecId  **参数解释**： 主集群规格ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * primaryClusterDnNum  **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyRegion  **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * standbyProjectId  **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'primaryClusterId' => 'getPrimaryClusterId',
+            'standbyAzCode' => 'getStandbyAzCode',
             'primarySpecId' => 'getPrimarySpecId',
             'primaryClusterDnNum' => 'getPrimaryClusterDnNum',
             'standbyRegion' => 'getStandbyRegion',
             'standbyProjectId' => 'getStandbyProjectId',
-            'standbyAzCode' => 'getStandbyAzCode',
             'drType' => 'getDrType',
             'datastoreType' => 'getDatastoreType',
             'datastoreVersion' => 'getDatastoreVersion'
@@ -228,11 +228,11 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     public function __construct(array $data = null)
     {
         $this->container['primaryClusterId'] = isset($data['primaryClusterId']) ? $data['primaryClusterId'] : null;
+        $this->container['standbyAzCode'] = isset($data['standbyAzCode']) ? $data['standbyAzCode'] : null;
         $this->container['primarySpecId'] = isset($data['primarySpecId']) ? $data['primarySpecId'] : null;
         $this->container['primaryClusterDnNum'] = isset($data['primaryClusterDnNum']) ? $data['primaryClusterDnNum'] : null;
         $this->container['standbyRegion'] = isset($data['standbyRegion']) ? $data['standbyRegion'] : null;
         $this->container['standbyProjectId'] = isset($data['standbyProjectId']) ? $data['standbyProjectId'] : null;
-        $this->container['standbyAzCode'] = isset($data['standbyAzCode']) ? $data['standbyAzCode'] : null;
         $this->container['drType'] = isset($data['drType']) ? $data['drType'] : null;
         $this->container['datastoreType'] = isset($data['datastoreType']) ? $data['datastoreType'] : null;
         $this->container['datastoreVersion'] = isset($data['datastoreVersion']) ? $data['datastoreVersion'] : null;
@@ -268,7 +268,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets primaryClusterId
-    *  主集群ID
+    *  **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -280,7 +280,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     /**
     * Sets primaryClusterId
     *
-    * @param string $primaryClusterId 主集群ID
+    * @param string $primaryClusterId **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -291,104 +291,8 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets primarySpecId
-    *  主集群规格ID
-    *
-    * @return string|null
-    */
-    public function getPrimarySpecId()
-    {
-        return $this->container['primarySpecId'];
-    }
-
-    /**
-    * Sets primarySpecId
-    *
-    * @param string|null $primarySpecId 主集群规格ID
-    *
-    * @return $this
-    */
-    public function setPrimarySpecId($primarySpecId)
-    {
-        $this->container['primarySpecId'] = $primarySpecId;
-        return $this;
-    }
-
-    /**
-    * Gets primaryClusterDnNum
-    *  主集群DN数量
-    *
-    * @return string|null
-    */
-    public function getPrimaryClusterDnNum()
-    {
-        return $this->container['primaryClusterDnNum'];
-    }
-
-    /**
-    * Sets primaryClusterDnNum
-    *
-    * @param string|null $primaryClusterDnNum 主集群DN数量
-    *
-    * @return $this
-    */
-    public function setPrimaryClusterDnNum($primaryClusterDnNum)
-    {
-        $this->container['primaryClusterDnNum'] = $primaryClusterDnNum;
-        return $this;
-    }
-
-    /**
-    * Gets standbyRegion
-    *  备集群所在region
-    *
-    * @return string|null
-    */
-    public function getStandbyRegion()
-    {
-        return $this->container['standbyRegion'];
-    }
-
-    /**
-    * Sets standbyRegion
-    *
-    * @param string|null $standbyRegion 备集群所在region
-    *
-    * @return $this
-    */
-    public function setStandbyRegion($standbyRegion)
-    {
-        $this->container['standbyRegion'] = $standbyRegion;
-        return $this;
-    }
-
-    /**
-    * Gets standbyProjectId
-    *  备集群项目ID
-    *
-    * @return string|null
-    */
-    public function getStandbyProjectId()
-    {
-        return $this->container['standbyProjectId'];
-    }
-
-    /**
-    * Sets standbyProjectId
-    *
-    * @param string|null $standbyProjectId 备集群项目ID
-    *
-    * @return $this
-    */
-    public function setStandbyProjectId($standbyProjectId)
-    {
-        $this->container['standbyProjectId'] = $standbyProjectId;
-        return $this;
-    }
-
-    /**
     * Gets standbyAzCode
-    *  备集群所在AZ
+    *  **参数解释**： 备集群所在AZ。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -400,7 +304,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     /**
     * Sets standbyAzCode
     *
-    * @param string $standbyAzCode 备集群所在AZ
+    * @param string $standbyAzCode **参数解释**： 备集群所在AZ。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -411,8 +315,104 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     }
 
     /**
+    * Gets primarySpecId
+    *  **参数解释**： 主集群规格ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPrimarySpecId()
+    {
+        return $this->container['primarySpecId'];
+    }
+
+    /**
+    * Sets primarySpecId
+    *
+    * @param string|null $primarySpecId **参数解释**： 主集群规格ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setPrimarySpecId($primarySpecId)
+    {
+        $this->container['primarySpecId'] = $primarySpecId;
+        return $this;
+    }
+
+    /**
+    * Gets primaryClusterDnNum
+    *  **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPrimaryClusterDnNum()
+    {
+        return $this->container['primaryClusterDnNum'];
+    }
+
+    /**
+    * Sets primaryClusterDnNum
+    *
+    * @param string|null $primaryClusterDnNum **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setPrimaryClusterDnNum($primaryClusterDnNum)
+    {
+        $this->container['primaryClusterDnNum'] = $primaryClusterDnNum;
+        return $this;
+    }
+
+    /**
+    * Gets standbyRegion
+    *  **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getStandbyRegion()
+    {
+        return $this->container['standbyRegion'];
+    }
+
+    /**
+    * Sets standbyRegion
+    *
+    * @param string|null $standbyRegion **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setStandbyRegion($standbyRegion)
+    {
+        $this->container['standbyRegion'] = $standbyRegion;
+        return $this;
+    }
+
+    /**
+    * Gets standbyProjectId
+    *  **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getStandbyProjectId()
+    {
+        return $this->container['standbyProjectId'];
+    }
+
+    /**
+    * Sets standbyProjectId
+    *
+    * @param string|null $standbyProjectId **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setStandbyProjectId($standbyProjectId)
+    {
+        $this->container['standbyProjectId'] = $standbyProjectId;
+        return $this;
+    }
+
+    /**
     * Gets drType
-    *  容灾类型
+    *  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -424,7 +424,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     /**
     * Sets drType
     *
-    * @param string|null $drType 容灾类型
+    * @param string|null $drType **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -436,7 +436,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets datastoreType
-    *  数仓类型
+    *  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -448,7 +448,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     /**
     * Sets datastoreType
     *
-    * @param string|null $datastoreType 数仓类型
+    * @param string|null $datastoreType **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets datastoreVersion
-    *  数仓版本
+    *  **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -472,7 +472,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     /**
     * Sets datastoreVersion
     *
-    * @param string|null $datastoreVersion 数仓版本
+    * @param string|null $datastoreVersion **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

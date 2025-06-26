@@ -27,77 +27,6 @@ class SmsClient extends Client
 
 
     /**
-     * 检查网卡安全组端口是否符合要求
-     *
-     * 检查网卡安全组。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function checkNetAcl($request)
-    {
-        return $this->checkNetAclWithHttpInfo($request);
-    }
-
-    public function checkNetAclWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/tasks/{t_project_id}/networkacl/{t_network_id}/check';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['regionId'] !== null) {
-            $queryParams['region_id'] = $localVarParams['regionId'];
-        }
-        if ($localVarParams['osType'] !== null) {
-            $queryParams['os_type'] = $localVarParams['osType'];
-        }
-        if ($localVarParams['tProjectId'] !== null) {
-            $pathParams['t_project_id'] = $localVarParams['tProjectId'];
-        }
-        if ($localVarParams['tNetworkId'] !== null) {
-            $pathParams['t_network_id'] = $localVarParams['tNetworkId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\CheckNetAclResponse',
-            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\CheckNetAclRequest');
-    }
-
-    /**
      * 上传迁移任务的日志
      *
      * 上传迁移任务的日志。
@@ -505,11 +434,11 @@ class SmsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 []
             );
         }
@@ -567,11 +496,11 @@ class SmsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -839,6 +768,71 @@ class SmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteTemplatesResponse',
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteTemplatesRequest');
+    }
+
+    /**
+     * 批量获取一致性校验结果
+     *
+     * 使用该接口批量导出一致性校验结果
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportConsistencyResults($request)
+    {
+        return $this->exportConsistencyResultsWithHttpInfo($request);
+    }
+
+    public function exportConsistencyResultsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/tasks/consistency-results/export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ExportConsistencyResultsResponse',
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ExportConsistencyResultsRequest');
     }
 
     /**
@@ -1844,68 +1838,6 @@ class SmsClient extends Client
     }
 
     /**
-     * 计算sha256
-     *
-     * 计算sha256，加密字段值为uuid。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showSha256($request)
-    {
-        return $this->showSha256WithHttpInfo($request);
-    }
-
-    public function showSha256WithHttpInfo($request)
-    {
-        $resourcePath = '/v3/sha256/{key}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['key'] !== null) {
-            $pathParams['key'] = $localVarParams['key'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowSha256Response',
-            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowSha256Request');
-    }
-
-    /**
      * 查询指定ID的模板中的目的端服务器的密码
      *
      * 查询指定ID的模板中的目的端服务器的密码。
@@ -2151,68 +2083,6 @@ class SmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowsSpeedLimitsResponse',
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowsSpeedLimitsRequest');
-    }
-
-    /**
-     * 解锁指定任务的目的端服务器
-     *
-     * 解锁指定任务的目的端服务器。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function unlockTargetEcs($request)
-    {
-        return $this->unlockTargetEcsWithHttpInfo($request);
-    }
-
-    public function unlockTargetEcsWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/tasks/{task_id}/unlock';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['taskId'] !== null) {
-            $pathParams['task_id'] = $localVarParams['taskId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UnlockTargetEcsResponse',
-            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UnlockTargetEcsRequest');
     }
 
     /**
@@ -2511,11 +2381,11 @@ class SmsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -2706,11 +2576,11 @@ class SmsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -3183,6 +3053,77 @@ class SmsClient extends Client
     }
 
     /**
+     * 检查网卡安全组端口是否符合要求
+     *
+     * 检查网卡安全组。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkNetAcl($request)
+    {
+        return $this->checkNetAclWithHttpInfo($request);
+    }
+
+    public function checkNetAclWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/tasks/{t_project_id}/networkacl/{t_network_id}/check';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['osType'] !== null) {
+            $queryParams['os_type'] = $localVarParams['osType'];
+        }
+        if ($localVarParams['tProjectId'] !== null) {
+            $pathParams['t_project_id'] = $localVarParams['tProjectId'];
+        }
+        if ($localVarParams['tNetworkId'] !== null) {
+            $pathParams['t_network_id'] = $localVarParams['tNetworkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\CheckNetAclResponse',
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\CheckNetAclRequest');
+    }
+
+    /**
      * 查询主机迁移服务的API版本信息
      *
      * 查询主机迁移服务的API版本信息。
@@ -3301,6 +3242,130 @@ class SmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowApiVersionResponse',
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowApiVersionRequest');
+    }
+
+    /**
+     * 计算sha256
+     *
+     * 计算sha256，加密字段值为uuid。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSha256($request)
+    {
+        return $this->showSha256WithHttpInfo($request);
+    }
+
+    public function showSha256WithHttpInfo($request)
+    {
+        $resourcePath = '/v3/sha256/{key}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['key'] !== null) {
+            $pathParams['key'] = $localVarParams['key'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowSha256Response',
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowSha256Request');
+    }
+
+    /**
+     * 解锁指定任务的目的端服务器
+     *
+     * 解锁指定任务的目的端服务器。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function unlockTargetEcs($request)
+    {
+        return $this->unlockTargetEcsWithHttpInfo($request);
+    }
+
+    public function unlockTargetEcsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/tasks/{task_id}/unlock';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UnlockTargetEcsResponse',
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UnlockTargetEcsRequest');
     }
 
     protected function callApi(

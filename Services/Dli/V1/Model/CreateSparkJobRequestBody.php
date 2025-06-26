@@ -44,6 +44,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     * autoRecovery  参数解释:   是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     * maxRetryTimes  参数解释:   最大重试次数 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: false
     * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》 示例: ceshi/spark_general-x86_64:3.3.1-2.3.7.1720240718867424736954752.tensorflow  约束限制:  无 取值范围: 无 默认取值: 无
+    * executionAgencyUrn  参数解释:   授权给DLI的委托名。Spark3.3.1版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * obsBucket  参数解释:   保存Spark作业的obs桶，需要保存作业时配置该参数 示例: rain3 约束限制:  无 取值范围: 无 默认取值: 无
     * catalogName  访问元数据时，需要将该参数配置为dli。
     *
@@ -74,6 +75,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
             'autoRecovery' => 'bool',
             'maxRetryTimes' => 'int',
             'image' => 'string',
+            'executionAgencyUrn' => 'string',
             'obsBucket' => 'string',
             'catalogName' => 'string'
     ];
@@ -104,6 +106,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     * autoRecovery  参数解释:   是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     * maxRetryTimes  参数解释:   最大重试次数 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: false
     * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》 示例: ceshi/spark_general-x86_64:3.3.1-2.3.7.1720240718867424736954752.tensorflow  约束限制:  无 取值范围: 无 默认取值: 无
+    * executionAgencyUrn  参数解释:   授权给DLI的委托名。Spark3.3.1版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * obsBucket  参数解释:   保存Spark作业的obs桶，需要保存作业时配置该参数 示例: rain3 约束限制:  无 取值范围: 无 默认取值: 无
     * catalogName  访问元数据时，需要将该参数配置为dli。
     *
@@ -134,6 +137,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
         'autoRecovery' => null,
         'maxRetryTimes' => 'int32',
         'image' => null,
+        'executionAgencyUrn' => null,
         'obsBucket' => null,
         'catalogName' => null
     ];
@@ -185,6 +189,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     * autoRecovery  参数解释:   是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     * maxRetryTimes  参数解释:   最大重试次数 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: false
     * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》 示例: ceshi/spark_general-x86_64:3.3.1-2.3.7.1720240718867424736954752.tensorflow  约束限制:  无 取值范围: 无 默认取值: 无
+    * executionAgencyUrn  参数解释:   授权给DLI的委托名。Spark3.3.1版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * obsBucket  参数解释:   保存Spark作业的obs桶，需要保存作业时配置该参数 示例: rain3 约束限制:  无 取值范围: 无 默认取值: 无
     * catalogName  访问元数据时，需要将该参数配置为dli。
     *
@@ -215,6 +220,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
             'autoRecovery' => 'auto_recovery',
             'maxRetryTimes' => 'max_retry_times',
             'image' => 'image',
+            'executionAgencyUrn' => 'execution_agency_urn',
             'obsBucket' => 'obs_bucket',
             'catalogName' => 'catalog_name'
     ];
@@ -245,6 +251,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     * autoRecovery  参数解释:   是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     * maxRetryTimes  参数解释:   最大重试次数 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: false
     * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》 示例: ceshi/spark_general-x86_64:3.3.1-2.3.7.1720240718867424736954752.tensorflow  约束限制:  无 取值范围: 无 默认取值: 无
+    * executionAgencyUrn  参数解释:   授权给DLI的委托名。Spark3.3.1版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * obsBucket  参数解释:   保存Spark作业的obs桶，需要保存作业时配置该参数 示例: rain3 约束限制:  无 取值范围: 无 默认取值: 无
     * catalogName  访问元数据时，需要将该参数配置为dli。
     *
@@ -275,6 +282,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
             'autoRecovery' => 'setAutoRecovery',
             'maxRetryTimes' => 'setMaxRetryTimes',
             'image' => 'setImage',
+            'executionAgencyUrn' => 'setExecutionAgencyUrn',
             'obsBucket' => 'setObsBucket',
             'catalogName' => 'setCatalogName'
     ];
@@ -305,6 +313,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     * autoRecovery  参数解释:   是否开启重试功能，如果开启，可在Spark作业异常失败后自动重试 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     * maxRetryTimes  参数解释:   最大重试次数 示例: 100 约束限制:  无 取值范围: 大于等于0的整数 默认取值: false
     * image  参数解释:   自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Spark镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》 示例: ceshi/spark_general-x86_64:3.3.1-2.3.7.1720240718867424736954752.tensorflow  约束限制:  无 取值范围: 无 默认取值: 无
+    * executionAgencyUrn  参数解释:   授权给DLI的委托名。Spark3.3.1版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * obsBucket  参数解释:   保存Spark作业的obs桶，需要保存作业时配置该参数 示例: rain3 约束限制:  无 取值范围: 无 默认取值: 无
     * catalogName  访问元数据时，需要将该参数配置为dli。
     *
@@ -335,6 +344,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
             'autoRecovery' => 'getAutoRecovery',
             'maxRetryTimes' => 'getMaxRetryTimes',
             'image' => 'getImage',
+            'executionAgencyUrn' => 'getExecutionAgencyUrn',
             'obsBucket' => 'getObsBucket',
             'catalogName' => 'getCatalogName'
     ];
@@ -438,6 +448,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['autoRecovery'] = isset($data['autoRecovery']) ? $data['autoRecovery'] : null;
         $this->container['maxRetryTimes'] = isset($data['maxRetryTimes']) ? $data['maxRetryTimes'] : null;
         $this->container['image'] = isset($data['image']) ? $data['image'] : null;
+        $this->container['executionAgencyUrn'] = isset($data['executionAgencyUrn']) ? $data['executionAgencyUrn'] : null;
         $this->container['obsBucket'] = isset($data['obsBucket']) ? $data['obsBucket'] : null;
         $this->container['catalogName'] = isset($data['catalogName']) ? $data['catalogName'] : null;
     }
@@ -1054,6 +1065,30 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     public function setImage($image)
     {
         $this->container['image'] = $image;
+        return $this;
+    }
+
+    /**
+    * Gets executionAgencyUrn
+    *  参数解释:   授权给DLI的委托名。Spark3.3.1版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
+    *
+    * @return string|null
+    */
+    public function getExecutionAgencyUrn()
+    {
+        return $this->container['executionAgencyUrn'];
+    }
+
+    /**
+    * Sets executionAgencyUrn
+    *
+    * @param string|null $executionAgencyUrn 参数解释:   授权给DLI的委托名。Spark3.3.1版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
+    *
+    * @return $this
+    */
+    public function setExecutionAgencyUrn($executionAgencyUrn)
+    {
+        $this->container['executionAgencyUrn'] = $executionAgencyUrn;
         return $this;
     }
 

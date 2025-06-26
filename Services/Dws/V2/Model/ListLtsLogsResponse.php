@@ -21,9 +21,9 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessStatus  日志开启状态。
-    * ltsAccessList  LTS日志列表。
-    * count  总数量
+    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+    * ltsAccessList  **参数解释**： LTS日志列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessStatus  日志开启状态。
-    * ltsAccessList  LTS日志列表。
-    * count  总数量
+    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+    * ltsAccessList  **参数解释**： LTS日志列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessStatus  日志开启状态。
-    * ltsAccessList  LTS日志列表。
-    * count  总数量
+    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+    * ltsAccessList  **参数解释**： LTS日志列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessStatus  日志开启状态。
-    * ltsAccessList  LTS日志列表。
-    * count  总数量
+    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+    * ltsAccessList  **参数解释**： LTS日志列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessStatus  日志开启状态。
-    * ltsAccessList  LTS日志列表。
-    * count  总数量
+    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+    * ltsAccessList  **参数解释**： LTS日志列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数量。 **取值范围**： 大于等于0。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessStatus
-    *  日志开启状态。
+    *  **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accessStatus
     *
-    * @param string|null $accessStatus 日志开启状态。
+    * @param string|null $accessStatus **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsAccessList
-    *  LTS日志列表。
+    *  **参数解释**： LTS日志列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\LtslogInfo[]|null
     */
@@ -233,7 +233,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ltsAccessList
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\LtslogInfo[]|null $ltsAccessList LTS日志列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\LtslogInfo[]|null $ltsAccessList **参数解释**： LTS日志列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  总数量
+    *  **参数解释**： 总数量。 **取值范围**： 大于等于0。
     *
     * @return int|null
     */
@@ -257,7 +257,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 总数量
+    * @param int|null $count **参数解释**： 总数量。 **取值范围**： 大于等于0。
     *
     * @return $this
     */

@@ -20,12 +20,12 @@ class ClusterMetric implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scope  指标名称。
-    * fields  指标表相关字段信息。
-    * metricName  作用域。
-    * collectRate  采集速率。
-    * collectRange  采集时间范围。
-    * createTime  创建时间。
+    * scope  **参数解释**： 指标名称。 **取值范围**： 不涉及。
+    * fields  **参数解释**： 指标表相关字段信息。 **取值范围**： 不涉及。
+    * metricName  **参数解释**： 作用域。 **取值范围**： 不涉及。
+    * collectRate  **参数解释**： 采集速率。 **取值范围**： 不涉及。
+    * collectRange  **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class ClusterMetric implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scope  指标名称。
-    * fields  指标表相关字段信息。
-    * metricName  作用域。
-    * collectRate  采集速率。
-    * collectRange  采集时间范围。
-    * createTime  创建时间。
+    * scope  **参数解释**： 指标名称。 **取值范围**： 不涉及。
+    * fields  **参数解释**： 指标表相关字段信息。 **取值范围**： 不涉及。
+    * metricName  **参数解释**： 作用域。 **取值范围**： 不涉及。
+    * collectRate  **参数解释**： 采集速率。 **取值范围**： 不涉及。
+    * collectRange  **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scope  指标名称。
-    * fields  指标表相关字段信息。
-    * metricName  作用域。
-    * collectRate  采集速率。
-    * collectRange  采集时间范围。
-    * createTime  创建时间。
+    * scope  **参数解释**： 指标名称。 **取值范围**： 不涉及。
+    * fields  **参数解释**： 指标表相关字段信息。 **取值范围**： 不涉及。
+    * metricName  **参数解释**： 作用域。 **取值范围**： 不涉及。
+    * collectRate  **参数解释**： 采集速率。 **取值范围**： 不涉及。
+    * collectRange  **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ClusterMetric implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scope  指标名称。
-    * fields  指标表相关字段信息。
-    * metricName  作用域。
-    * collectRate  采集速率。
-    * collectRange  采集时间范围。
-    * createTime  创建时间。
+    * scope  **参数解释**： 指标名称。 **取值范围**： 不涉及。
+    * fields  **参数解释**： 指标表相关字段信息。 **取值范围**： 不涉及。
+    * metricName  **参数解释**： 作用域。 **取值范围**： 不涉及。
+    * collectRate  **参数解释**： 采集速率。 **取值范围**： 不涉及。
+    * collectRange  **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ClusterMetric implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scope  指标名称。
-    * fields  指标表相关字段信息。
-    * metricName  作用域。
-    * collectRate  采集速率。
-    * collectRange  采集时间范围。
-    * createTime  创建时间。
+    * scope  **参数解释**： 指标名称。 **取值范围**： 不涉及。
+    * fields  **参数解释**： 指标表相关字段信息。 **取值范围**： 不涉及。
+    * metricName  **参数解释**： 作用域。 **取值范围**： 不涉及。
+    * collectRate  **参数解释**： 采集速率。 **取值范围**： 不涉及。
+    * collectRange  **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets scope
-    *  指标名称。
+    *  **参数解释**： 指标名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     /**
     * Sets scope
     *
-    * @param string|null $scope 指标名称。
+    * @param string|null $scope **参数解释**： 指标名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  指标表相关字段信息。
+    *  **参数解释**： 指标表相关字段信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\SimpleFieldDto[]|null
     */
@@ -265,7 +265,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\SimpleFieldDto[]|null $fields 指标表相关字段信息。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\SimpleFieldDto[]|null $fields **参数解释**： 指标表相关字段信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricName
-    *  作用域。
+    *  **参数解释**： 作用域。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     /**
     * Sets metricName
     *
-    * @param string|null $metricName 作用域。
+    * @param string|null $metricName **参数解释**： 作用域。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets collectRate
-    *  采集速率。
+    *  **参数解释**： 采集速率。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -313,7 +313,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     /**
     * Sets collectRate
     *
-    * @param int|null $collectRate 采集速率。
+    * @param int|null $collectRate **参数解释**： 采集速率。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets collectRange
-    *  采集时间范围。
+    *  **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -337,7 +337,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     /**
     * Sets collectRange
     *
-    * @param string[]|null $collectRange 采集时间范围。
+    * @param string[]|null $collectRange **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间。
+    *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 创建时间。
+    * @param string|null $createTime **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

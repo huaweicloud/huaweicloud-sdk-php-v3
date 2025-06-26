@@ -20,9 +20,9 @@ class ModifyClusterDns implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  待修改的域名。
-    * type  域名类型。 - public：公网域名。 - private：内网域名。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 - 取值范围：300~2147483647。 - 默认值为300s。
+    * name  **参数解释**： 待修改的域名。 **取值范围**： 不涉及。
+    * type  **参数解释**： 域名类型。 **取值范围**： public：公网域名。 private：内网域名。
+    * ttl  **参数解释**： 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。默认值为300s。 **取值范围**： 300~2147483647。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ModifyClusterDns implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  待修改的域名。
-    * type  域名类型。 - public：公网域名。 - private：内网域名。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 - 取值范围：300~2147483647。 - 默认值为300s。
+    * name  **参数解释**： 待修改的域名。 **取值范围**： 不涉及。
+    * type  **参数解释**： 域名类型。 **取值范围**： public：公网域名。 private：内网域名。
+    * ttl  **参数解释**： 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。默认值为300s。 **取值范围**： 300~2147483647。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ModifyClusterDns implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  待修改的域名。
-    * type  域名类型。 - public：公网域名。 - private：内网域名。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 - 取值范围：300~2147483647。 - 默认值为300s。
+    * name  **参数解释**： 待修改的域名。 **取值范围**： 不涉及。
+    * type  **参数解释**： 域名类型。 **取值范围**： public：公网域名。 private：内网域名。
+    * ttl  **参数解释**： 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。默认值为300s。 **取值范围**： 300~2147483647。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ModifyClusterDns implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  待修改的域名。
-    * type  域名类型。 - public：公网域名。 - private：内网域名。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 - 取值范围：300~2147483647。 - 默认值为300s。
+    * name  **参数解释**： 待修改的域名。 **取值范围**： 不涉及。
+    * type  **参数解释**： 域名类型。 **取值范围**： public：公网域名。 private：内网域名。
+    * ttl  **参数解释**： 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。默认值为300s。 **取值范围**： 300~2147483647。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ModifyClusterDns implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  待修改的域名。
-    * type  域名类型。 - public：公网域名。 - private：内网域名。
-    * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 - 取值范围：300~2147483647。 - 默认值为300s。
+    * name  **参数解释**： 待修改的域名。 **取值范围**： 不涉及。
+    * type  **参数解释**： 域名类型。 **取值范围**： public：公网域名。 private：内网域名。
+    * ttl  **参数解释**： 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。默认值为300s。 **取值范围**： 300~2147483647。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class ModifyClusterDns implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  待修改的域名。
+    *  **参数解释**： 待修改的域名。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class ModifyClusterDns implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 待修改的域名。
+    * @param string $name **参数解释**： 待修改的域名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class ModifyClusterDns implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  域名类型。 - public：公网域名。 - private：内网域名。
+    *  **参数解释**： 域名类型。 **取值范围**： public：公网域名。 private：内网域名。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class ModifyClusterDns implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 域名类型。 - public：公网域名。 - private：内网域名。
+    * @param string $type **参数解释**： 域名类型。 **取值范围**： public：公网域名。 private：内网域名。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class ModifyClusterDns implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttl
-    *  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 - 取值范围：300~2147483647。 - 默认值为300s。
+    *  **参数解释**： 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。默认值为300s。 **取值范围**： 300~2147483647。
     *
     * @return int
     */
@@ -265,7 +265,7 @@ class ModifyClusterDns implements ModelInterface, ArrayAccess
     /**
     * Sets ttl
     *
-    * @param int $ttl 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。 - 取值范围：300~2147483647。 - 默认值为300s。
+    * @param int $ttl **参数解释**： 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。默认值为300s。 **取值范围**： 300~2147483647。
     *
     * @return $this
     */

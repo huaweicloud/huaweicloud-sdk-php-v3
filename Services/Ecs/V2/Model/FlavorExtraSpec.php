@@ -60,6 +60,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * securityenclaveSupported  该规格是否支持QingTian Enclave。
     * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
     * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
+    * infofeatures  规格特性
     *
     * @var string[]
     */
@@ -103,7 +104,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'networkInterfacetrafficMirroringSupported' => 'string',
             'securityenclaveSupported' => 'string',
             'infogpus' => 'string',
-            'infoasicAccelerators' => 'string'
+            'infoasicAccelerators' => 'string',
+            'infofeatures' => 'string'
     ];
 
     /**
@@ -148,6 +150,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * securityenclaveSupported  该规格是否支持QingTian Enclave。
     * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
     * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
+    * infofeatures  规格特性
     *
     * @var string[]
     */
@@ -191,7 +194,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         'networkInterfacetrafficMirroringSupported' => null,
         'securityenclaveSupported' => null,
         'infogpus' => null,
-        'infoasicAccelerators' => null
+        'infoasicAccelerators' => null,
+        'infofeatures' => null
     ];
 
     /**
@@ -257,6 +261,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * securityenclaveSupported  该规格是否支持QingTian Enclave。
     * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
     * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
+    * infofeatures  规格特性
     *
     * @var string[]
     */
@@ -300,7 +305,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'networkInterfacetrafficMirroringSupported' => 'network_interface:traffic_mirroring_supported',
             'securityenclaveSupported' => 'security:enclave_supported',
             'infogpus' => 'info:gpus',
-            'infoasicAccelerators' => 'info:asic_accelerators'
+            'infoasicAccelerators' => 'info:asic_accelerators',
+            'infofeatures' => 'info:features'
     ];
 
     /**
@@ -345,6 +351,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * securityenclaveSupported  该规格是否支持QingTian Enclave。
     * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
     * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
+    * infofeatures  规格特性
     *
     * @var string[]
     */
@@ -388,7 +395,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'networkInterfacetrafficMirroringSupported' => 'setNetworkInterfacetrafficMirroringSupported',
             'securityenclaveSupported' => 'setSecurityenclaveSupported',
             'infogpus' => 'setInfogpus',
-            'infoasicAccelerators' => 'setInfoasicAccelerators'
+            'infoasicAccelerators' => 'setInfoasicAccelerators',
+            'infofeatures' => 'setInfofeatures'
     ];
 
     /**
@@ -433,6 +441,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * securityenclaveSupported  该规格是否支持QingTian Enclave。
     * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
     * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
+    * infofeatures  规格特性
     *
     * @var string[]
     */
@@ -476,7 +485,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'networkInterfacetrafficMirroringSupported' => 'getNetworkInterfacetrafficMirroringSupported',
             'securityenclaveSupported' => 'getSecurityenclaveSupported',
             'infogpus' => 'getInfogpus',
-            'infoasicAccelerators' => 'getInfoasicAccelerators'
+            'infoasicAccelerators' => 'getInfoasicAccelerators',
+            'infofeatures' => 'getInfofeatures'
     ];
 
     /**
@@ -577,6 +587,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         $this->container['securityenclaveSupported'] = isset($data['securityenclaveSupported']) ? $data['securityenclaveSupported'] : null;
         $this->container['infogpus'] = isset($data['infogpus']) ? $data['infogpus'] : null;
         $this->container['infoasicAccelerators'] = isset($data['infoasicAccelerators']) ? $data['infoasicAccelerators'] : null;
+        $this->container['infofeatures'] = isset($data['infofeatures']) ? $data['infofeatures'] : null;
     }
 
     /**
@@ -1558,6 +1569,30 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     public function setInfoasicAccelerators($infoasicAccelerators)
     {
         $this->container['infoasicAccelerators'] = $infoasicAccelerators;
+        return $this;
+    }
+
+    /**
+    * Gets infofeatures
+    *  规格特性
+    *
+    * @return string|null
+    */
+    public function getInfofeatures()
+    {
+        return $this->container['infofeatures'];
+    }
+
+    /**
+    * Sets infofeatures
+    *
+    * @param string|null $infofeatures 规格特性
+    *
+    * @return $this
+    */
+    public function setInfofeatures($infofeatures)
+    {
+        $this->container['infofeatures'] = $infofeatures;
         return $this;
     }
 

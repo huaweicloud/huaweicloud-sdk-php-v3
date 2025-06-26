@@ -20,15 +20,15 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  升级项ID
-    * from  起始版本
-    * to  目标版本
-    * status  升级路径状态
-    * process  升级进度
-    * startTime  起始时间
-    * endTime  结束时间
-    * jobId  升级任务ID
-    * failedReason  失败原因
+    * id  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
+    * from  **参数解释**： 起始版本。 **取值范围**： 不涉及。
+    * to  **参数解释**： 目标版本。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
+    * process  **参数解释**： 升级进度。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 起始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  升级项ID
-    * from  起始版本
-    * to  目标版本
-    * status  升级路径状态
-    * process  升级进度
-    * startTime  起始时间
-    * endTime  结束时间
-    * jobId  升级任务ID
-    * failedReason  失败原因
+    * id  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
+    * from  **参数解释**： 起始版本。 **取值范围**： 不涉及。
+    * to  **参数解释**： 目标版本。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
+    * process  **参数解释**： 升级进度。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 起始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  升级项ID
-    * from  起始版本
-    * to  目标版本
-    * status  升级路径状态
-    * process  升级进度
-    * startTime  起始时间
-    * endTime  结束时间
-    * jobId  升级任务ID
-    * failedReason  失败原因
+    * id  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
+    * from  **参数解释**： 起始版本。 **取值范围**： 不涉及。
+    * to  **参数解释**： 目标版本。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
+    * process  **参数解释**： 升级进度。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 起始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  升级项ID
-    * from  起始版本
-    * to  目标版本
-    * status  升级路径状态
-    * process  升级进度
-    * startTime  起始时间
-    * endTime  结束时间
-    * jobId  升级任务ID
-    * failedReason  失败原因
+    * id  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
+    * from  **参数解释**： 起始版本。 **取值范围**： 不涉及。
+    * to  **参数解释**： 目标版本。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
+    * process  **参数解释**： 升级进度。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 起始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  升级项ID
-    * from  起始版本
-    * to  目标版本
-    * status  升级路径状态
-    * process  升级进度
-    * startTime  起始时间
-    * endTime  结束时间
-    * jobId  升级任务ID
-    * failedReason  失败原因
+    * id  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
+    * from  **参数解释**： 起始版本。 **取值范围**： 不涉及。
+    * to  **参数解释**： 目标版本。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
+    * process  **参数解释**： 升级进度。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 起始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  升级项ID
+    *  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 升级项ID
+    * @param string|null $id **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets from
-    *  起始版本
+    *  **参数解释**： 起始版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     /**
     * Sets from
     *
-    * @param string|null $from 起始版本
+    * @param string|null $from **参数解释**： 起始版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets to
-    *  目标版本
+    *  **参数解释**： 目标版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     /**
     * Sets to
     *
-    * @param string|null $to 目标版本
+    * @param string|null $to **参数解释**： 目标版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  升级路径状态
+    *  **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 升级路径状态
+    * @param string|null $status **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets process
-    *  升级进度
+    *  **参数解释**： 升级进度。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     /**
     * Sets process
     *
-    * @param string|null $process 升级进度
+    * @param string|null $process **参数解释**： 升级进度。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  起始时间
+    *  **参数解释**： 起始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 起始时间
+    * @param string|null $startTime **参数解释**： 起始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -418,7 +418,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 结束时间
+    * @param string|null $endTime **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  升级任务ID
+    *  **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 升级任务ID
+    * @param string|null $jobId **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedReason
-    *  失败原因
+    *  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     /**
     * Sets failedReason
     *
-    * @param string|null $failedReason 失败原因
+    * @param string|null $failedReason **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @return $this
     */

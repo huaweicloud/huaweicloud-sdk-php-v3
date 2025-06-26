@@ -20,11 +20,11 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * date  日期
-    * urgent  紧急
-    * important  重要
-    * minor  次要
-    * prompt  提示
+    * date  **参数解释**： 日期。 **取值范围**： 不涉及。
+    * urgent  **参数解释**： 紧急。 **取值范围**： 不涉及。
+    * important  **参数解释**： 重要。 **取值范围**： 不涉及。
+    * minor  **参数解释**： 次要。 **取值范围**： 不涉及。
+    * prompt  **参数解释**： 提示。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * date  日期
-    * urgent  紧急
-    * important  重要
-    * minor  次要
-    * prompt  提示
+    * date  **参数解释**： 日期。 **取值范围**： 不涉及。
+    * urgent  **参数解释**： 紧急。 **取值范围**： 不涉及。
+    * important  **参数解释**： 重要。 **取值范围**： 不涉及。
+    * minor  **参数解释**： 次要。 **取值范围**： 不涉及。
+    * prompt  **参数解释**： 提示。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * date  日期
-    * urgent  紧急
-    * important  重要
-    * minor  次要
-    * prompt  提示
+    * date  **参数解释**： 日期。 **取值范围**： 不涉及。
+    * urgent  **参数解释**： 紧急。 **取值范围**： 不涉及。
+    * important  **参数解释**： 重要。 **取值范围**： 不涉及。
+    * minor  **参数解释**： 次要。 **取值范围**： 不涉及。
+    * prompt  **参数解释**： 提示。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * date  日期
-    * urgent  紧急
-    * important  重要
-    * minor  次要
-    * prompt  提示
+    * date  **参数解释**： 日期。 **取值范围**： 不涉及。
+    * urgent  **参数解释**： 紧急。 **取值范围**： 不涉及。
+    * important  **参数解释**： 重要。 **取值范围**： 不涉及。
+    * minor  **参数解释**： 次要。 **取值范围**： 不涉及。
+    * prompt  **参数解释**： 提示。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * date  日期
-    * urgent  紧急
-    * important  重要
-    * minor  次要
-    * prompt  提示
+    * date  **参数解释**： 日期。 **取值范围**： 不涉及。
+    * urgent  **参数解释**： 紧急。 **取值范围**： 不涉及。
+    * important  **参数解释**： 重要。 **取值范围**： 不涉及。
+    * minor  **参数解释**： 次要。 **取值范围**： 不涉及。
+    * prompt  **参数解释**： 提示。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets date
-    *  日期
+    *  **参数解释**： 日期。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets date
     *
-    * @param string|null $date 日期
+    * @param string|null $date **参数解释**： 日期。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets urgent
-    *  紧急
+    *  **参数解释**： 紧急。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets urgent
     *
-    * @param string|null $urgent 紧急
+    * @param string|null $urgent **参数解释**： 紧急。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets important
-    *  重要
+    *  **参数解释**： 重要。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets important
     *
-    * @param string|null $important 重要
+    * @param string|null $important **参数解释**： 重要。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets minor
-    *  次要
+    *  **参数解释**： 次要。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets minor
     *
-    * @param string|null $minor 次要
+    * @param string|null $minor **参数解释**： 次要。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets prompt
-    *  提示
+    *  **参数解释**： 提示。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class AlarmStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets prompt
     *
-    * @param string|null $prompt 提示
+    * @param string|null $prompt **参数解释**： 提示。 **取值范围**： 不涉及。
     *
     * @return $this
     */

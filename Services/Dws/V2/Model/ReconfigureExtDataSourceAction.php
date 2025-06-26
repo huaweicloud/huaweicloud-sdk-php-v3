@@ -20,8 +20,8 @@ class ReconfigureExtDataSourceAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * reboot  重启。
-    * agency  委托。
+    * reboot  **参数解释**： 重启。 **取值范围**： 不涉及。
+    * agency  **参数解释**： 委托。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ReconfigureExtDataSourceAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * reboot  重启。
-    * agency  委托。
+    * reboot  **参数解释**： 重启。 **取值范围**： 不涉及。
+    * agency  **参数解释**： 委托。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ReconfigureExtDataSourceAction implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * reboot  重启。
-    * agency  委托。
+    * reboot  **参数解释**： 重启。 **取值范围**： 不涉及。
+    * agency  **参数解释**： 委托。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ReconfigureExtDataSourceAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * reboot  重启。
-    * agency  委托。
+    * reboot  **参数解释**： 重启。 **取值范围**： 不涉及。
+    * agency  **参数解释**： 委托。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ReconfigureExtDataSourceAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * reboot  重启。
-    * agency  委托。
+    * reboot  **参数解释**： 重启。 **取值范围**： 不涉及。
+    * agency  **参数解释**： 委托。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ReconfigureExtDataSourceAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets reboot
-    *  重启。
+    *  **参数解释**： 重启。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -197,7 +197,7 @@ class ReconfigureExtDataSourceAction implements ModelInterface, ArrayAccess
     /**
     * Sets reboot
     *
-    * @param bool|null $reboot 重启。
+    * @param bool|null $reboot **参数解释**： 重启。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ReconfigureExtDataSourceAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets agency
-    *  委托。
+    *  **参数解释**： 委托。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class ReconfigureExtDataSourceAction implements ModelInterface, ArrayAccess
     /**
     * Sets agency
     *
-    * @param string|null $agency 委托。
+    * @param string|null $agency **参数解释**： 委托。 **取值范围**： 不涉及。
     *
     * @return $this
     */

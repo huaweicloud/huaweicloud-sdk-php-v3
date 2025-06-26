@@ -43,6 +43,7 @@ class ResponseVpnConnection implements ModelInterface, ArrayAccess
     * tags  标签
     * peerSubnetsV6  使能ipv6的对端子网
     * policyRulesV6  策略模式的ipv6策略规则组
+    * bgpPeer  bgpPeer
     *
     * @var string[]
     */
@@ -69,7 +70,8 @@ class ResponseVpnConnection implements ModelInterface, ArrayAccess
             'haRole' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpn\V5\Model\VpnResourceTag[]',
             'peerSubnetsV6' => 'string[]',
-            'policyRulesV6' => '\HuaweiCloud\SDK\Vpn\V5\Model\PolicyRule[]'
+            'policyRulesV6' => '\HuaweiCloud\SDK\Vpn\V5\Model\PolicyRule[]',
+            'bgpPeer' => '\HuaweiCloud\SDK\Vpn\V5\Model\BgpPeer'
     ];
 
     /**
@@ -97,6 +99,7 @@ class ResponseVpnConnection implements ModelInterface, ArrayAccess
     * tags  标签
     * peerSubnetsV6  使能ipv6的对端子网
     * policyRulesV6  策略模式的ipv6策略规则组
+    * bgpPeer  bgpPeer
     *
     * @var string[]
     */
@@ -123,7 +126,8 @@ class ResponseVpnConnection implements ModelInterface, ArrayAccess
         'haRole' => null,
         'tags' => null,
         'peerSubnetsV6' => null,
-        'policyRulesV6' => null
+        'policyRulesV6' => null,
+        'bgpPeer' => null
     ];
 
     /**
@@ -172,6 +176,7 @@ class ResponseVpnConnection implements ModelInterface, ArrayAccess
     * tags  标签
     * peerSubnetsV6  使能ipv6的对端子网
     * policyRulesV6  策略模式的ipv6策略规则组
+    * bgpPeer  bgpPeer
     *
     * @var string[]
     */
@@ -198,7 +203,8 @@ class ResponseVpnConnection implements ModelInterface, ArrayAccess
             'haRole' => 'ha_role',
             'tags' => 'tags',
             'peerSubnetsV6' => 'peer_subnets_v6',
-            'policyRulesV6' => 'policy_rules_v6'
+            'policyRulesV6' => 'policy_rules_v6',
+            'bgpPeer' => 'bgp_peer'
     ];
 
     /**
@@ -226,6 +232,7 @@ class ResponseVpnConnection implements ModelInterface, ArrayAccess
     * tags  标签
     * peerSubnetsV6  使能ipv6的对端子网
     * policyRulesV6  策略模式的ipv6策略规则组
+    * bgpPeer  bgpPeer
     *
     * @var string[]
     */
@@ -252,7 +259,8 @@ class ResponseVpnConnection implements ModelInterface, ArrayAccess
             'haRole' => 'setHaRole',
             'tags' => 'setTags',
             'peerSubnetsV6' => 'setPeerSubnetsV6',
-            'policyRulesV6' => 'setPolicyRulesV6'
+            'policyRulesV6' => 'setPolicyRulesV6',
+            'bgpPeer' => 'setBgpPeer'
     ];
 
     /**
@@ -280,6 +288,7 @@ class ResponseVpnConnection implements ModelInterface, ArrayAccess
     * tags  标签
     * peerSubnetsV6  使能ipv6的对端子网
     * policyRulesV6  策略模式的ipv6策略规则组
+    * bgpPeer  bgpPeer
     *
     * @var string[]
     */
@@ -306,7 +315,8 @@ class ResponseVpnConnection implements ModelInterface, ArrayAccess
             'haRole' => 'getHaRole',
             'tags' => 'getTags',
             'peerSubnetsV6' => 'getPeerSubnetsV6',
-            'policyRulesV6' => 'getPolicyRulesV6'
+            'policyRulesV6' => 'getPolicyRulesV6',
+            'bgpPeer' => 'getBgpPeer'
     ];
 
     /**
@@ -407,6 +417,7 @@ class ResponseVpnConnection implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['peerSubnetsV6'] = isset($data['peerSubnetsV6']) ? $data['peerSubnetsV6'] : null;
         $this->container['policyRulesV6'] = isset($data['policyRulesV6']) ? $data['policyRulesV6'] : null;
+        $this->container['bgpPeer'] = isset($data['bgpPeer']) ? $data['bgpPeer'] : null;
     }
 
     /**
@@ -1012,6 +1023,30 @@ class ResponseVpnConnection implements ModelInterface, ArrayAccess
     public function setPolicyRulesV6($policyRulesV6)
     {
         $this->container['policyRulesV6'] = $policyRulesV6;
+        return $this;
+    }
+
+    /**
+    * Gets bgpPeer
+    *  bgpPeer
+    *
+    * @return \HuaweiCloud\SDK\Vpn\V5\Model\BgpPeer|null
+    */
+    public function getBgpPeer()
+    {
+        return $this->container['bgpPeer'];
+    }
+
+    /**
+    * Sets bgpPeer
+    *
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\BgpPeer|null $bgpPeer bgpPeer
+    *
+    * @return $this
+    */
+    public function setBgpPeer($bgpPeer)
+    {
+        $this->container['bgpPeer'] = $bgpPeer;
         return $this;
     }
 

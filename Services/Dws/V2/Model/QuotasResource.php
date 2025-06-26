@@ -20,10 +20,10 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  项目资源类型。
-    * used  已使用的资源数量。
-    * quota  项目资源配额。
-    * unit  资源计量单位。
+    * type  **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+    * used  **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
+    * quota  **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  项目资源类型。
-    * used  已使用的资源数量。
-    * quota  项目资源配额。
-    * unit  资源计量单位。
+    * type  **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+    * used  **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
+    * quota  **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class QuotasResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  项目资源类型。
-    * used  已使用的资源数量。
-    * quota  项目资源配额。
-    * unit  资源计量单位。
+    * type  **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+    * used  **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
+    * quota  **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  项目资源类型。
-    * used  已使用的资源数量。
-    * quota  项目资源配额。
-    * unit  资源计量单位。
+    * type  **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+    * used  **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
+    * quota  **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  项目资源类型。
-    * used  已使用的资源数量。
-    * quota  项目资源配额。
-    * unit  资源计量单位。
+    * type  **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+    * used  **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
+    * quota  **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  项目资源类型。
+    *  **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 项目资源类型。
+    * @param string $type **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets used
-    *  已使用的资源数量。
+    *  **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -255,7 +255,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
     /**
     * Sets used
     *
-    * @param int $used 已使用的资源数量。
+    * @param int $used **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets quota
-    *  项目资源配额。
+    *  **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -279,7 +279,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
     /**
     * Sets quota
     *
-    * @param int $quota 项目资源配额。
+    * @param int $quota **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  资源计量单位。
+    *  **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -303,7 +303,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string $unit 资源计量单位。
+    * @param string $unit **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
     *
     * @return $this
     */

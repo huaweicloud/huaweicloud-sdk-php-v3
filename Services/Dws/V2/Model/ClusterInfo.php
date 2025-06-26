@@ -22,7 +22,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 集群名称。 **取值范围**： 同一个账号ID下唯一。
-    * status  **参数解释**： 集群状态,字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    * status  **参数解释**： 集群状态，字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     * version  **参数解释**： 数据仓库集群版本。 **取值范围**： 小数点分割的3~4段字符串，如9.1.0.200，每一段数字越大版本越新。
     * updated  **参数解释**： 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 大于等于集群创建时间的ISO8601格式时间。
     * created  **参数解释**： 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： ISO8601格式的时间。
@@ -80,7 +80,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 集群名称。 **取值范围**： 同一个账号ID下唯一。
-    * status  **参数解释**： 集群状态,字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    * status  **参数解释**： 集群状态，字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     * version  **参数解释**： 数据仓库集群版本。 **取值范围**： 小数点分割的3~4段字符串，如9.1.0.200，每一段数字越大版本越新。
     * updated  **参数解释**： 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 大于等于集群创建时间的ISO8601格式时间。
     * created  **参数解释**： 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： ISO8601格式的时间。
@@ -159,7 +159,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 集群名称。 **取值范围**： 同一个账号ID下唯一。
-    * status  **参数解释**： 集群状态,字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    * status  **参数解释**： 集群状态，字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     * version  **参数解释**： 数据仓库集群版本。 **取值范围**： 小数点分割的3~4段字符串，如9.1.0.200，每一段数字越大版本越新。
     * updated  **参数解释**： 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 大于等于集群创建时间的ISO8601格式时间。
     * created  **参数解释**： 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： ISO8601格式的时间。
@@ -217,7 +217,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 集群名称。 **取值范围**： 同一个账号ID下唯一。
-    * status  **参数解释**： 集群状态,字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    * status  **参数解释**： 集群状态，字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     * version  **参数解释**： 数据仓库集群版本。 **取值范围**： 小数点分割的3~4段字符串，如9.1.0.200，每一段数字越大版本越新。
     * updated  **参数解释**： 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 大于等于集群创建时间的ISO8601格式时间。
     * created  **参数解释**： 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： ISO8601格式的时间。
@@ -275,7 +275,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 集群名称。 **取值范围**： 同一个账号ID下唯一。
-    * status  **参数解释**： 集群状态,字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    * status  **参数解释**： 集群状态，字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     * version  **参数解释**： 数据仓库集群版本。 **取值范围**： 小数点分割的3~4段字符串，如9.1.0.200，每一段数字越大版本越新。
     * updated  **参数解释**： 集群上次修改时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： 大于等于集群创建时间的ISO8601格式时间。
     * created  **参数解释**： 集群创建时间，格式为ISO8601：YYYY-MM-DDThh:mm:ssZ **取值范围**： ISO8601格式的时间。
@@ -558,7 +558,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 集群状态,字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    *  **参数解释**： 集群状态，字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     *
     * @return string
     */
@@ -570,7 +570,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status **参数解释**： 集群状态,字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+    * @param string $status **参数解释**： 集群状态，字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     *
     * @return $this
     */

@@ -20,12 +20,12 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * keepDay  保留天数。输入值必须在1-31之间。
-    * backupStrategies  策略列表信息。当需要添加策略时该参数为必选。
-    * deviceName  备份设备。支持OBS、NBU和NFS。
-    * serverPort  NBU备份介质端口。备份介质为NBU时该字段必填。
-    * backupParam  NBU备份参数。备份介质为NBU时该字段必选。
-    * serverIps  备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。
+    * keepDay  **参数解释**： 保留天数。 **取值范围**： 输入值必须在1-31之间。
+    * backupStrategies  **参数解释**： 策略列表信息。当需要添加策略时该参数为必选。 **取值范围**： 不涉及。
+    * deviceName  **参数解释**： 备份设备。支持OBS、NBU和NFS。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： NBU备份介质端口。备份介质为NBU时该字段必填。 **取值范围**： 不涉及。
+    * backupParam  **参数解释**： NBU备份参数。备份介质为NBU时该字段必选。 **取值范围**： 不涉及。
+    * serverIps  **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * keepDay  保留天数。输入值必须在1-31之间。
-    * backupStrategies  策略列表信息。当需要添加策略时该参数为必选。
-    * deviceName  备份设备。支持OBS、NBU和NFS。
-    * serverPort  NBU备份介质端口。备份介质为NBU时该字段必填。
-    * backupParam  NBU备份参数。备份介质为NBU时该字段必选。
-    * serverIps  备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。
+    * keepDay  **参数解释**： 保留天数。 **取值范围**： 输入值必须在1-31之间。
+    * backupStrategies  **参数解释**： 策略列表信息。当需要添加策略时该参数为必选。 **取值范围**： 不涉及。
+    * deviceName  **参数解释**： 备份设备。支持OBS、NBU和NFS。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： NBU备份介质端口。备份介质为NBU时该字段必填。 **取值范围**： 不涉及。
+    * backupParam  **参数解释**： NBU备份参数。备份介质为NBU时该字段必选。 **取值范围**： 不涉及。
+    * serverIps  **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * keepDay  保留天数。输入值必须在1-31之间。
-    * backupStrategies  策略列表信息。当需要添加策略时该参数为必选。
-    * deviceName  备份设备。支持OBS、NBU和NFS。
-    * serverPort  NBU备份介质端口。备份介质为NBU时该字段必填。
-    * backupParam  NBU备份参数。备份介质为NBU时该字段必选。
-    * serverIps  备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。
+    * keepDay  **参数解释**： 保留天数。 **取值范围**： 输入值必须在1-31之间。
+    * backupStrategies  **参数解释**： 策略列表信息。当需要添加策略时该参数为必选。 **取值范围**： 不涉及。
+    * deviceName  **参数解释**： 备份设备。支持OBS、NBU和NFS。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： NBU备份介质端口。备份介质为NBU时该字段必填。 **取值范围**： 不涉及。
+    * backupParam  **参数解释**： NBU备份参数。备份介质为NBU时该字段必选。 **取值范围**： 不涉及。
+    * serverIps  **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * keepDay  保留天数。输入值必须在1-31之间。
-    * backupStrategies  策略列表信息。当需要添加策略时该参数为必选。
-    * deviceName  备份设备。支持OBS、NBU和NFS。
-    * serverPort  NBU备份介质端口。备份介质为NBU时该字段必填。
-    * backupParam  NBU备份参数。备份介质为NBU时该字段必选。
-    * serverIps  备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。
+    * keepDay  **参数解释**： 保留天数。 **取值范围**： 输入值必须在1-31之间。
+    * backupStrategies  **参数解释**： 策略列表信息。当需要添加策略时该参数为必选。 **取值范围**： 不涉及。
+    * deviceName  **参数解释**： 备份设备。支持OBS、NBU和NFS。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： NBU备份介质端口。备份介质为NBU时该字段必填。 **取值范围**： 不涉及。
+    * backupParam  **参数解释**： NBU备份参数。备份介质为NBU时该字段必选。 **取值范围**： 不涉及。
+    * serverIps  **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * keepDay  保留天数。输入值必须在1-31之间。
-    * backupStrategies  策略列表信息。当需要添加策略时该参数为必选。
-    * deviceName  备份设备。支持OBS、NBU和NFS。
-    * serverPort  NBU备份介质端口。备份介质为NBU时该字段必填。
-    * backupParam  NBU备份参数。备份介质为NBU时该字段必选。
-    * serverIps  备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。
+    * keepDay  **参数解释**： 保留天数。 **取值范围**： 输入值必须在1-31之间。
+    * backupStrategies  **参数解释**： 策略列表信息。当需要添加策略时该参数为必选。 **取值范围**： 不涉及。
+    * deviceName  **参数解释**： 备份设备。支持OBS、NBU和NFS。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： NBU备份介质端口。备份介质为NBU时该字段必填。 **取值范围**： 不涉及。
+    * backupParam  **参数解释**： NBU备份参数。备份介质为NBU时该字段必选。 **取值范围**： 不涉及。
+    * serverIps  **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets keepDay
-    *  保留天数。输入值必须在1-31之间。
+    *  **参数解释**： 保留天数。 **取值范围**： 输入值必须在1-31之间。
     *
     * @return int|null
     */
@@ -241,7 +241,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets keepDay
     *
-    * @param int|null $keepDay 保留天数。输入值必须在1-31之间。
+    * @param int|null $keepDay **参数解释**： 保留天数。 **取值范围**： 输入值必须在1-31之间。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupStrategies
-    *  策略列表信息。当需要添加策略时该参数为必选。
+    *  **参数解释**： 策略列表信息。当需要添加策略时该参数为必选。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\BackupStrategyRequest[]|null
     */
@@ -265,7 +265,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets backupStrategies
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\BackupStrategyRequest[]|null $backupStrategies 策略列表信息。当需要添加策略时该参数为必选。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\BackupStrategyRequest[]|null $backupStrategies **参数解释**： 策略列表信息。当需要添加策略时该参数为必选。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceName
-    *  备份设备。支持OBS、NBU和NFS。
+    *  **参数解释**： 备份设备。支持OBS、NBU和NFS。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets deviceName
     *
-    * @param string|null $deviceName 备份设备。支持OBS、NBU和NFS。
+    * @param string|null $deviceName **参数解释**： 备份设备。支持OBS、NBU和NFS。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverPort
-    *  NBU备份介质端口。备份介质为NBU时该字段必填。
+    *  **参数解释**： NBU备份介质端口。备份介质为NBU时该字段必填。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets serverPort
     *
-    * @param string|null $serverPort NBU备份介质端口。备份介质为NBU时该字段必填。
+    * @param string|null $serverPort **参数解释**： NBU备份介质端口。备份介质为NBU时该字段必填。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupParam
-    *  NBU备份参数。备份介质为NBU时该字段必选。
+    *  **参数解释**： NBU备份参数。备份介质为NBU时该字段必选。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets backupParam
     *
-    * @param string|null $backupParam NBU备份参数。备份介质为NBU时该字段必选。
+    * @param string|null $backupParam **参数解释**： NBU备份参数。备份介质为NBU时该字段必选。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverIps
-    *  备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。
+    *  **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -361,7 +361,7 @@ class CreateSnapshotPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets serverIps
     *
-    * @param string[]|null $serverIps 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。
+    * @param string[]|null $serverIps **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */

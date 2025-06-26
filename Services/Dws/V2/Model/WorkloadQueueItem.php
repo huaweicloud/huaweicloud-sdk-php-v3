@@ -22,8 +22,8 @@ class WorkloadQueueItem implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * queueName  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
-    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **取值范围**： 不涉及。
-    * shortQueryConcurrencyNum  **参数解释**： 工作负载队列短查询并发数。 **取值范围**： 不涉及。
+    * shortQueryOptimize  **参数解释**： 资源池短查询加速开关。 **取值范围**： 不涉及。
+    * shortQueryConcurrencyNum  **参数解释**： 资源池短查询并发数。 **取值范围**： 不涉及。
     * resourceItemList  **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -40,8 +40,8 @@ class WorkloadQueueItem implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * queueName  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
-    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **取值范围**： 不涉及。
-    * shortQueryConcurrencyNum  **参数解释**： 工作负载队列短查询并发数。 **取值范围**： 不涉及。
+    * shortQueryOptimize  **参数解释**： 资源池短查询加速开关。 **取值范围**： 不涉及。
+    * shortQueryConcurrencyNum  **参数解释**： 资源池短查询并发数。 **取值范围**： 不涉及。
     * resourceItemList  **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -79,8 +79,8 @@ class WorkloadQueueItem implements ModelInterface, ArrayAccess
     * and the value is the original name
     * queueName  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
-    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **取值范围**： 不涉及。
-    * shortQueryConcurrencyNum  **参数解释**： 工作负载队列短查询并发数。 **取值范围**： 不涉及。
+    * shortQueryOptimize  **参数解释**： 资源池短查询加速开关。 **取值范围**： 不涉及。
+    * shortQueryConcurrencyNum  **参数解释**： 资源池短查询并发数。 **取值范围**： 不涉及。
     * resourceItemList  **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class WorkloadQueueItem implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * queueName  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
-    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **取值范围**： 不涉及。
-    * shortQueryConcurrencyNum  **参数解释**： 工作负载队列短查询并发数。 **取值范围**： 不涉及。
+    * shortQueryOptimize  **参数解释**： 资源池短查询加速开关。 **取值范围**： 不涉及。
+    * shortQueryConcurrencyNum  **参数解释**： 资源池短查询并发数。 **取值范围**： 不涉及。
     * resourceItemList  **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -115,8 +115,8 @@ class WorkloadQueueItem implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * queueName  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
     * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
-    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **取值范围**： 不涉及。
-    * shortQueryConcurrencyNum  **参数解释**： 工作负载队列短查询并发数。 **取值范围**： 不涉及。
+    * shortQueryOptimize  **参数解释**： 资源池短查询加速开关。 **取值范围**： 不涉及。
+    * shortQueryConcurrencyNum  **参数解释**： 资源池短查询并发数。 **取值范围**： 不涉及。
     * resourceItemList  **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -272,7 +272,7 @@ class WorkloadQueueItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets shortQueryOptimize
-    *  **参数解释**： 工作负载队列短查询加速开关。 **取值范围**： 不涉及。
+    *  **参数解释**： 资源池短查询加速开关。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class WorkloadQueueItem implements ModelInterface, ArrayAccess
     /**
     * Sets shortQueryOptimize
     *
-    * @param string|null $shortQueryOptimize **参数解释**： 工作负载队列短查询加速开关。 **取值范围**： 不涉及。
+    * @param string|null $shortQueryOptimize **参数解释**： 资源池短查询加速开关。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class WorkloadQueueItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets shortQueryConcurrencyNum
-    *  **参数解释**： 工作负载队列短查询并发数。 **取值范围**： 不涉及。
+    *  **参数解释**： 资源池短查询并发数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -308,7 +308,7 @@ class WorkloadQueueItem implements ModelInterface, ArrayAccess
     /**
     * Sets shortQueryConcurrencyNum
     *
-    * @param int|null $shortQueryConcurrencyNum **参数解释**： 工作负载队列短查询并发数。 **取值范围**： 不涉及。
+    * @param int|null $shortQueryConcurrencyNum **参数解释**： 资源池短查询并发数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -21,22 +21,22 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  用户名称
-    * login  是否可以登陆
-    * createrole  创建角色权限
-    * createdb  创建数据库权限
-    * systemadmin  系统管理员
-    * auditadmin  审计管理员
-    * inherit  继承所在组权限
-    * useft  访问外表权限
-    * connLimit  连接数限制
-    * replication  是否允许流复制
-    * validBegin  角色生效时间
-    * validUntil  角色过期时间
-    * lock  是否锁定
-    * desc  描述
-    * userType  用户类型
-    * logicalCluster  所属逻辑集群
+    * name  **参数解释**： 用户名称。 **取值范围**： 不涉及。
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * createrole  **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
+    * createdb  **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
+    * systemadmin  **参数解释**： 系统管理员。 **取值范围**： 不涉及。
+    * auditadmin  **参数解释**： 审计管理员。 **取值范围**： 不涉及。
+    * inherit  **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
+    * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
+    * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
+    * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
+    * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
+    * desc  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： 不涉及。
+    * logicalCluster  **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -61,22 +61,22 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  用户名称
-    * login  是否可以登陆
-    * createrole  创建角色权限
-    * createdb  创建数据库权限
-    * systemadmin  系统管理员
-    * auditadmin  审计管理员
-    * inherit  继承所在组权限
-    * useft  访问外表权限
-    * connLimit  连接数限制
-    * replication  是否允许流复制
-    * validBegin  角色生效时间
-    * validUntil  角色过期时间
-    * lock  是否锁定
-    * desc  描述
-    * userType  用户类型
-    * logicalCluster  所属逻辑集群
+    * name  **参数解释**： 用户名称。 **取值范围**： 不涉及。
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * createrole  **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
+    * createdb  **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
+    * systemadmin  **参数解释**： 系统管理员。 **取值范围**： 不涉及。
+    * auditadmin  **参数解释**： 审计管理员。 **取值范围**： 不涉及。
+    * inherit  **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
+    * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
+    * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
+    * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
+    * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
+    * desc  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： 不涉及。
+    * logicalCluster  **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -122,22 +122,22 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  用户名称
-    * login  是否可以登陆
-    * createrole  创建角色权限
-    * createdb  创建数据库权限
-    * systemadmin  系统管理员
-    * auditadmin  审计管理员
-    * inherit  继承所在组权限
-    * useft  访问外表权限
-    * connLimit  连接数限制
-    * replication  是否允许流复制
-    * validBegin  角色生效时间
-    * validUntil  角色过期时间
-    * lock  是否锁定
-    * desc  描述
-    * userType  用户类型
-    * logicalCluster  所属逻辑集群
+    * name  **参数解释**： 用户名称。 **取值范围**： 不涉及。
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * createrole  **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
+    * createdb  **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
+    * systemadmin  **参数解释**： 系统管理员。 **取值范围**： 不涉及。
+    * auditadmin  **参数解释**： 审计管理员。 **取值范围**： 不涉及。
+    * inherit  **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
+    * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
+    * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
+    * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
+    * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
+    * desc  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： 不涉及。
+    * logicalCluster  **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -162,22 +162,22 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  用户名称
-    * login  是否可以登陆
-    * createrole  创建角色权限
-    * createdb  创建数据库权限
-    * systemadmin  系统管理员
-    * auditadmin  审计管理员
-    * inherit  继承所在组权限
-    * useft  访问外表权限
-    * connLimit  连接数限制
-    * replication  是否允许流复制
-    * validBegin  角色生效时间
-    * validUntil  角色过期时间
-    * lock  是否锁定
-    * desc  描述
-    * userType  用户类型
-    * logicalCluster  所属逻辑集群
+    * name  **参数解释**： 用户名称。 **取值范围**： 不涉及。
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * createrole  **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
+    * createdb  **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
+    * systemadmin  **参数解释**： 系统管理员。 **取值范围**： 不涉及。
+    * auditadmin  **参数解释**： 审计管理员。 **取值范围**： 不涉及。
+    * inherit  **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
+    * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
+    * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
+    * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
+    * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
+    * desc  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： 不涉及。
+    * logicalCluster  **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -202,22 +202,22 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  用户名称
-    * login  是否可以登陆
-    * createrole  创建角色权限
-    * createdb  创建数据库权限
-    * systemadmin  系统管理员
-    * auditadmin  审计管理员
-    * inherit  继承所在组权限
-    * useft  访问外表权限
-    * connLimit  连接数限制
-    * replication  是否允许流复制
-    * validBegin  角色生效时间
-    * validUntil  角色过期时间
-    * lock  是否锁定
-    * desc  描述
-    * userType  用户类型
-    * logicalCluster  所属逻辑集群
+    * name  **参数解释**： 用户名称。 **取值范围**： 不涉及。
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * createrole  **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
+    * createdb  **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
+    * systemadmin  **参数解释**： 系统管理员。 **取值范围**： 不涉及。
+    * auditadmin  **参数解释**： 审计管理员。 **取值范围**： 不涉及。
+    * inherit  **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
+    * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
+    * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
+    * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
+    * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
+    * desc  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： 不涉及。
+    * logicalCluster  **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -340,7 +340,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  用户名称
+    *  **参数解释**： 用户名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -352,7 +352,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 用户名称
+    * @param string|null $name **参数解释**： 用户名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -364,7 +364,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets login
-    *  是否可以登陆
+    *  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -376,7 +376,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets login
     *
-    * @param bool|null $login 是否可以登陆
+    * @param bool|null $login **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -388,7 +388,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createrole
-    *  创建角色权限
+    *  **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -400,7 +400,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createrole
     *
-    * @param bool|null $createrole 创建角色权限
+    * @param bool|null $createrole **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdb
-    *  创建数据库权限
+    *  **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -424,7 +424,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createdb
     *
-    * @param bool|null $createdb 创建数据库权限
+    * @param bool|null $createdb **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -436,7 +436,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets systemadmin
-    *  系统管理员
+    *  **参数解释**： 系统管理员。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -448,7 +448,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets systemadmin
     *
-    * @param bool|null $systemadmin 系统管理员
+    * @param bool|null $systemadmin **参数解释**： 系统管理员。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets auditadmin
-    *  审计管理员
+    *  **参数解释**： 审计管理员。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -472,7 +472,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets auditadmin
     *
-    * @param bool|null $auditadmin 审计管理员
+    * @param bool|null $auditadmin **参数解释**： 审计管理员。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -484,7 +484,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets inherit
-    *  继承所在组权限
+    *  **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -496,7 +496,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets inherit
     *
-    * @param bool|null $inherit 继承所在组权限
+    * @param bool|null $inherit **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -508,7 +508,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets useft
-    *  访问外表权限
+    *  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -520,7 +520,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets useft
     *
-    * @param bool|null $useft 访问外表权限
+    * @param bool|null $useft **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -532,7 +532,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets connLimit
-    *  连接数限制
+    *  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -544,7 +544,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets connLimit
     *
-    * @param int|null $connLimit 连接数限制
+    * @param int|null $connLimit **参数解释**： 连接数限制。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -556,7 +556,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets replication
-    *  是否允许流复制
+    *  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -568,7 +568,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets replication
     *
-    * @param bool|null $replication 是否允许流复制
+    * @param bool|null $replication **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -580,7 +580,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets validBegin
-    *  角色生效时间
+    *  **参数解释**： 角色生效时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -592,7 +592,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets validBegin
     *
-    * @param int|null $validBegin 角色生效时间
+    * @param int|null $validBegin **参数解释**： 角色生效时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -604,7 +604,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets validUntil
-    *  角色过期时间
+    *  **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -616,7 +616,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets validUntil
     *
-    * @param int|null $validUntil 角色过期时间
+    * @param int|null $validUntil **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -628,7 +628,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lock
-    *  是否锁定
+    *  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -640,7 +640,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lock
     *
-    * @param bool|null $lock 是否锁定
+    * @param bool|null $lock **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -652,7 +652,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets desc
-    *  描述
+    *  **参数解释**： 描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -664,7 +664,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets desc
     *
-    * @param string|null $desc 描述
+    * @param string|null $desc **参数解释**： 描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -676,7 +676,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets userType
-    *  用户类型
+    *  **参数解释**： 用户类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -688,7 +688,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets userType
     *
-    * @param string|null $userType 用户类型
+    * @param string|null $userType **参数解释**： 用户类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -700,7 +700,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalCluster
-    *  所属逻辑集群
+    *  **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -712,7 +712,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets logicalCluster
     *
-    * @param string|null $logicalCluster 所属逻辑集群
+    * @param string|null $logicalCluster **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
     *
     * @return $this
     */

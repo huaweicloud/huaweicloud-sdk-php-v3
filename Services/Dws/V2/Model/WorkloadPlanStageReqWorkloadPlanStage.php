@@ -20,12 +20,12 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * day  日期
-    * month  月份
-    * stageName  计划阶段
-    * startTime  开始时间
-    * endTime  结束时间
-    * queueList  资源队列
+    * day  **参数解释**： 日期。 **取值范围**： 不涉及。
+    * month  **参数解释**： 月份。 **取值范围**： 不涉及。
+    * stageName  **参数解释**： 计划阶段。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * queueList  **参数解释**： 资源队列。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * day  日期
-    * month  月份
-    * stageName  计划阶段
-    * startTime  开始时间
-    * endTime  结束时间
-    * queueList  资源队列
+    * day  **参数解释**： 日期。 **取值范围**： 不涉及。
+    * month  **参数解释**： 月份。 **取值范围**： 不涉及。
+    * stageName  **参数解释**： 计划阶段。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * queueList  **参数解释**： 资源队列。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * day  日期
-    * month  月份
-    * stageName  计划阶段
-    * startTime  开始时间
-    * endTime  结束时间
-    * queueList  资源队列
+    * day  **参数解释**： 日期。 **取值范围**： 不涉及。
+    * month  **参数解释**： 月份。 **取值范围**： 不涉及。
+    * stageName  **参数解释**： 计划阶段。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * queueList  **参数解释**： 资源队列。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * day  日期
-    * month  月份
-    * stageName  计划阶段
-    * startTime  开始时间
-    * endTime  结束时间
-    * queueList  资源队列
+    * day  **参数解释**： 日期。 **取值范围**： 不涉及。
+    * month  **参数解释**： 月份。 **取值范围**： 不涉及。
+    * stageName  **参数解释**： 计划阶段。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * queueList  **参数解释**： 资源队列。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * day  日期
-    * month  月份
-    * stageName  计划阶段
-    * startTime  开始时间
-    * endTime  结束时间
-    * queueList  资源队列
+    * day  **参数解释**： 日期。 **取值范围**： 不涉及。
+    * month  **参数解释**： 月份。 **取值范围**： 不涉及。
+    * stageName  **参数解释**： 计划阶段。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * queueList  **参数解释**： 资源队列。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
 
     /**
     * Gets day
-    *  日期
+    *  **参数解释**： 日期。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
     /**
     * Sets day
     *
-    * @param string|null $day 日期
+    * @param string|null $day **参数解释**： 日期。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
 
     /**
     * Gets month
-    *  月份
+    *  **参数解释**： 月份。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
     /**
     * Sets month
     *
-    * @param string|null $month 月份
+    * @param string|null $month **参数解释**： 月份。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
 
     /**
     * Gets stageName
-    *  计划阶段
+    *  **参数解释**： 计划阶段。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
     /**
     * Sets stageName
     *
-    * @param string|null $stageName 计划阶段
+    * @param string|null $stageName **参数解释**： 计划阶段。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
 
     /**
     * Gets startTime
-    *  开始时间
+    *  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 开始时间
+    * @param string|null $startTime **参数解释**： 开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
 
     /**
     * Gets endTime
-    *  结束时间
+    *  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 结束时间
+    * @param string|null $endTime **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
 
     /**
     * Gets queueList
-    *  资源队列
+    *  **参数解释**： 资源队列。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\QueueResourceItem[]|null
     */
@@ -361,7 +361,7 @@ class WorkloadPlanStageReqWorkloadPlanStage implements ModelInterface, ArrayAcce
     /**
     * Sets queueList
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\QueueResourceItem[]|null $queueList 资源队列
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\QueueResourceItem[]|null $queueList **参数解释**： 资源队列。 **取值范围**： 不涉及。
     *
     * @return $this
     */

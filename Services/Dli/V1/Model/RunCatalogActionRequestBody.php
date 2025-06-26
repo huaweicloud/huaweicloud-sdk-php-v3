@@ -23,13 +23,15 @@ class RunCatalogActionRequestBody implements ModelInterface, ArrayAccess
     * action  catalog操作:bind或者unbind。
     * name  DLI侧catalog映射名称.
     * parameters  parameters
+    * description  Catalog的描述信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'action' => 'string',
             'name' => 'string',
-            'parameters' => 'map[string,string]'
+            'parameters' => 'map[string,string]',
+            'description' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class RunCatalogActionRequestBody implements ModelInterface, ArrayAccess
     * action  catalog操作:bind或者unbind。
     * name  DLI侧catalog映射名称.
     * parameters  parameters
+    * description  Catalog的描述信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'action' => null,
         'name' => null,
-        'parameters' => null
+        'parameters' => null,
+        'description' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class RunCatalogActionRequestBody implements ModelInterface, ArrayAccess
     * action  catalog操作:bind或者unbind。
     * name  DLI侧catalog映射名称.
     * parameters  parameters
+    * description  Catalog的描述信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'action' => 'action',
             'name' => 'name',
-            'parameters' => 'parameters'
+            'parameters' => 'parameters',
+            'description' => 'description'
     ];
 
     /**
@@ -86,13 +92,15 @@ class RunCatalogActionRequestBody implements ModelInterface, ArrayAccess
     * action  catalog操作:bind或者unbind。
     * name  DLI侧catalog映射名称.
     * parameters  parameters
+    * description  Catalog的描述信息。
     *
     * @var string[]
     */
     protected static $setters = [
             'action' => 'setAction',
             'name' => 'setName',
-            'parameters' => 'setParameters'
+            'parameters' => 'setParameters',
+            'description' => 'setDescription'
     ];
 
     /**
@@ -100,13 +108,15 @@ class RunCatalogActionRequestBody implements ModelInterface, ArrayAccess
     * action  catalog操作:bind或者unbind。
     * name  DLI侧catalog映射名称.
     * parameters  parameters
+    * description  Catalog的描述信息。
     *
     * @var string[]
     */
     protected static $getters = [
             'action' => 'getAction',
             'name' => 'getName',
-            'parameters' => 'getParameters'
+            'parameters' => 'getParameters',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -185,6 +195,7 @@ class RunCatalogActionRequestBody implements ModelInterface, ArrayAccess
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['parameters'] = isset($data['parameters']) ? $data['parameters'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -301,6 +312,30 @@ class RunCatalogActionRequestBody implements ModelInterface, ArrayAccess
     public function setParameters($parameters)
     {
         $this->container['parameters'] = $parameters;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  Catalog的描述信息。
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description Catalog的描述信息。
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

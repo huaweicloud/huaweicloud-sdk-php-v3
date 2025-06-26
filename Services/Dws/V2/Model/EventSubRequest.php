@@ -20,17 +20,17 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  事件订阅名称
-    * sourceType  事件源类型支持cluster，backup，disaster-recovery
-    * sourceId  事件源ID
-    * category  事件类别支持management，monitor，security，system alarm
-    * severity  事件级别支持normal，warning
-    * tag  事件标签
-    * enable  是否开启订阅 1为开启，0为关闭
-    * notificationTarget  消息通知地址
-    * notificationTargetName  消息主题名称
-    * notificationTargetType  消息通知类型只支持SMN
-    * timeZone  时区
+    * name  **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+    * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
+    * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  事件订阅名称
-    * sourceType  事件源类型支持cluster，backup，disaster-recovery
-    * sourceId  事件源ID
-    * category  事件类别支持management，monitor，security，system alarm
-    * severity  事件级别支持normal，warning
-    * tag  事件标签
-    * enable  是否开启订阅 1为开启，0为关闭
-    * notificationTarget  消息通知地址
-    * notificationTargetName  消息主题名称
-    * notificationTargetType  消息通知类型只支持SMN
-    * timeZone  时区
+    * name  **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+    * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
+    * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  事件订阅名称
-    * sourceType  事件源类型支持cluster，backup，disaster-recovery
-    * sourceId  事件源ID
-    * category  事件类别支持management，monitor，security，system alarm
-    * severity  事件级别支持normal，warning
-    * tag  事件标签
-    * enable  是否开启订阅 1为开启，0为关闭
-    * notificationTarget  消息通知地址
-    * notificationTargetName  消息主题名称
-    * notificationTargetType  消息通知类型只支持SMN
-    * timeZone  时区
+    * name  **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+    * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
+    * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  事件订阅名称
-    * sourceType  事件源类型支持cluster，backup，disaster-recovery
-    * sourceId  事件源ID
-    * category  事件类别支持management，monitor，security，system alarm
-    * severity  事件级别支持normal，warning
-    * tag  事件标签
-    * enable  是否开启订阅 1为开启，0为关闭
-    * notificationTarget  消息通知地址
-    * notificationTargetName  消息主题名称
-    * notificationTargetType  消息通知类型只支持SMN
-    * timeZone  时区
+    * name  **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+    * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
+    * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  事件订阅名称
-    * sourceType  事件源类型支持cluster，backup，disaster-recovery
-    * sourceId  事件源ID
-    * category  事件类别支持management，monitor，security，system alarm
-    * severity  事件级别支持normal，warning
-    * tag  事件标签
-    * enable  是否开启订阅 1为开启，0为关闭
-    * notificationTarget  消息通知地址
-    * notificationTargetName  消息主题名称
-    * notificationTargetType  消息通知类型只支持SMN
-    * timeZone  时区
+    * name  **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+    * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
+    * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -296,7 +296,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  事件订阅名称
+    *  **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -308,7 +308,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 事件订阅名称
+    * @param string $name **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  事件源类型支持cluster，backup，disaster-recovery
+    *  **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
     *
     * @return string|null
     */
@@ -332,7 +332,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param string|null $sourceType 事件源类型支持cluster，backup，disaster-recovery
+    * @param string|null $sourceType **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceId
-    *  事件源ID
+    *  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -356,7 +356,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sourceId
     *
-    * @param string|null $sourceId 事件源ID
+    * @param string|null $sourceId **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -368,7 +368,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  事件类别支持management，monitor，security，system alarm
+    *  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
     *
     * @return string|null
     */
@@ -380,7 +380,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 事件类别支持management，monitor，security，system alarm
+    * @param string|null $category **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  事件级别支持normal，warning
+    *  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
     *
     * @return string|null
     */
@@ -404,7 +404,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 事件级别支持normal，warning
+    * @param string|null $severity **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tag
-    *  事件标签
+    *  **参数解释**： 事件标签。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -428,7 +428,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param string|null $tag 事件标签
+    * @param string|null $tag **参数解释**： 事件标签。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  是否开启订阅 1为开启，0为关闭
+    *  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     *
     * @return int|null
     */
@@ -452,7 +452,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param int|null $enable 是否开启订阅 1为开启，0为关闭
+    * @param int|null $enable **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTarget
-    *  消息通知地址
+    *  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -476,7 +476,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTarget
     *
-    * @param string $notificationTarget 消息通知地址
+    * @param string $notificationTarget **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTargetName
-    *  消息主题名称
+    *  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -500,7 +500,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTargetName
     *
-    * @param string $notificationTargetName 消息主题名称
+    * @param string $notificationTargetName **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -512,7 +512,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTargetType
-    *  消息通知类型只支持SMN
+    *  **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -524,7 +524,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTargetType
     *
-    * @param string $notificationTargetType 消息通知类型只支持SMN
+    * @param string $notificationTargetType **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeZone
-    *  时区
+    *  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -548,7 +548,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets timeZone
     *
-    * @param string|null $timeZone 时区
+    * @param string|null $timeZone **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @return $this
     */

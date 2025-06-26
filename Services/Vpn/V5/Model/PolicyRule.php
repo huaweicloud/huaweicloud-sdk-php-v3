@@ -20,24 +20,28 @@ class PolicyRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * ruleIndex  规则ID
     * source  源地址网段
     * destination  目的地址网段
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'ruleIndex' => 'int',
             'source' => 'string',
             'destination' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * ruleIndex  规则ID
     * source  源地址网段
     * destination  目的地址网段
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'ruleIndex' => null,
         'source' => null,
         'destination' => null
     ];
@@ -65,36 +69,42 @@ class PolicyRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * ruleIndex  规则ID
     * source  源地址网段
     * destination  目的地址网段
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'ruleIndex' => 'rule_index',
             'source' => 'source',
             'destination' => 'destination'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * ruleIndex  规则ID
     * source  源地址网段
     * destination  目的地址网段
     *
     * @var string[]
     */
     protected static $setters = [
+            'ruleIndex' => 'setRuleIndex',
             'source' => 'setSource',
             'destination' => 'setDestination'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * ruleIndex  规则ID
     * source  源地址网段
     * destination  目的地址网段
     *
     * @var string[]
     */
     protected static $getters = [
+            'ruleIndex' => 'getRuleIndex',
             'source' => 'getSource',
             'destination' => 'getDestination'
     ];
@@ -157,6 +167,7 @@ class PolicyRule implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['ruleIndex'] = isset($data['ruleIndex']) ? $data['ruleIndex'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
     }
@@ -181,6 +192,30 @@ class PolicyRule implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets ruleIndex
+    *  规则ID
+    *
+    * @return int|null
+    */
+    public function getRuleIndex()
+    {
+        return $this->container['ruleIndex'];
+    }
+
+    /**
+    * Sets ruleIndex
+    *
+    * @param int|null $ruleIndex 规则ID
+    *
+    * @return $this
+    */
+    public function setRuleIndex($ruleIndex)
+    {
+        $this->container['ruleIndex'] = $ruleIndex;
+        return $this;
     }
 
     /**

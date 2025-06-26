@@ -21,22 +21,22 @@ class RunCatalogActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * message  系统提示信息，执行成功时，信息可能为空。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'message' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * message  系统提示信息，执行成功时，信息可能为空。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'message' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class RunCatalogActionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * message  系统提示信息，执行成功时，信息可能为空。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'message' => 'message'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * message  系统提示信息，执行成功时，信息可能为空。
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'message' => 'setMessage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * message  系统提示信息，执行成功时，信息可能为空。
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'message' => 'getMessage'
     ];
 
     /**
@@ -148,7 +148,7 @@ class RunCatalogActionResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class RunCatalogActionResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets message
+    *  系统提示信息，执行成功时，信息可能为空。
     *
     * @return string|null
     */
-    public function getBody()
+    public function getMessage()
     {
-        return $this->container['body'];
+        return $this->container['message'];
     }
 
     /**
-    * Sets body
+    * Sets message
     *
-    * @param string|null $body body
+    * @param string|null $message 系统提示信息，执行成功时，信息可能为空。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setMessage($message)
     {
-        $this->container['body'] = $body;
+        $this->container['message'] = $message;
         return $this;
     }
 

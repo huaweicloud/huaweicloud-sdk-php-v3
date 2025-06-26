@@ -21,10 +21,10 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  响应码
-    * msg  响应信息
-    * data  指标列表。
-    * count  总列表大小。
+    * code  **参数解释**： 响应码。 **取值范围**： 不涉及。
+    * msg  **参数解释**： 响应信息。 **取值范围**： 不涉及。
+    * data  **参数解释**： 指标列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  响应码
-    * msg  响应信息
-    * data  指标列表。
-    * count  总列表大小。
+    * code  **参数解释**： 响应码。 **取值范围**： 不涉及。
+    * msg  **参数解释**： 响应信息。 **取值范围**： 不涉及。
+    * data  **参数解释**： 指标列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  响应码
-    * msg  响应信息
-    * data  指标列表。
-    * count  总列表大小。
+    * code  **参数解释**： 响应码。 **取值范围**： 不涉及。
+    * msg  **参数解释**： 响应信息。 **取值范围**： 不涉及。
+    * data  **参数解释**： 指标列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  响应码
-    * msg  响应信息
-    * data  指标列表。
-    * count  总列表大小。
+    * code  **参数解释**： 响应码。 **取值范围**： 不涉及。
+    * msg  **参数解释**： 响应信息。 **取值范围**： 不涉及。
+    * data  **参数解释**： 指标列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  响应码
-    * msg  响应信息
-    * data  指标列表。
-    * count  总列表大小。
+    * code  **参数解释**： 响应码。 **取值范围**： 不涉及。
+    * msg  **参数解释**： 响应信息。 **取值范围**： 不涉及。
+    * data  **参数解释**： 指标列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  响应码
+    *  **参数解释**： 响应码。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -220,7 +220,7 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param int|null $code 响应码
+    * @param int|null $code **参数解释**： 响应码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets msg
-    *  响应信息
+    *  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets msg
     *
-    * @param string|null $msg 响应信息
+    * @param string|null $msg **参数解释**： 响应信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  指标列表。
+    *  **参数解释**： 指标列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterMetric[]|null
     */
@@ -268,7 +268,7 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterMetric[]|null $data 指标列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterMetric[]|null $data **参数解释**： 指标列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  总列表大小。
+    *  **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -292,7 +292,7 @@ class ListMetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 总列表大小。
+    * @param int|null $count **参数解释**： 总列表大小。 **取值范围**： 不涉及。
     *
     * @return $this
     */

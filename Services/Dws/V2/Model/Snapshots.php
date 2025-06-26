@@ -20,15 +20,15 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  快照ID。
-    * name  快照名称。
-    * description  快照描述。
-    * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * finished  快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * size  快照大小，单位 GB。
-    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * type  快照创建类型
-    * clusterId  快照对应的集群ID
+    * id  **参数解释**： 快照ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
+    * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  快照ID。
-    * name  快照名称。
-    * description  快照描述。
-    * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * finished  快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * size  快照大小，单位 GB。
-    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * type  快照创建类型
-    * clusterId  快照对应的集群ID
+    * id  **参数解释**： 快照ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
+    * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  快照ID。
-    * name  快照名称。
-    * description  快照描述。
-    * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * finished  快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * size  快照大小，单位 GB。
-    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * type  快照创建类型
-    * clusterId  快照对应的集群ID
+    * id  **参数解释**： 快照ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
+    * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  快照ID。
-    * name  快照名称。
-    * description  快照描述。
-    * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * finished  快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * size  快照大小，单位 GB。
-    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * type  快照创建类型
-    * clusterId  快照对应的集群ID
+    * id  **参数解释**： 快照ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
+    * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  快照ID。
-    * name  快照名称。
-    * description  快照描述。
-    * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * finished  快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * size  快照大小，单位 GB。
-    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * type  快照创建类型
-    * clusterId  快照对应的集群ID
+    * id  **参数解释**： 快照ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
+    * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -289,7 +289,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  快照ID。
+    *  **参数解释**： 快照ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -301,7 +301,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 快照ID。
+    * @param string $id **参数解释**： 快照ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  快照名称。
+    *  **参数解释**： 快照名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -325,7 +325,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 快照名称。
+    * @param string $name **参数解释**： 快照名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  快照描述。
+    *  **参数解释**： 快照描述。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -349,7 +349,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 快照描述。
+    * @param string $description **参数解释**： 快照描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets started
-    *  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
+    *  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -373,7 +373,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets started
     *
-    * @param string $started 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
+    * @param string $started **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets finished
-    *  快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
+    *  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -397,7 +397,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets finished
     *
-    * @param string $finished 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
+    * @param string $finished **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  快照大小，单位 GB。
+    *  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     *
     * @return double
     */
@@ -421,7 +421,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param double $size 快照大小，单位 GB。
+    * @param double $size **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -433,7 +433,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
+    *  **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     *
     * @return string
     */
@@ -445,7 +445,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
+    * @param string $status **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  快照创建类型
+    *  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -469,7 +469,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 快照创建类型
+    * @param string $type **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  快照对应的集群ID
+    *  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -493,7 +493,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 快照对应的集群ID
+    * @param string $clusterId **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

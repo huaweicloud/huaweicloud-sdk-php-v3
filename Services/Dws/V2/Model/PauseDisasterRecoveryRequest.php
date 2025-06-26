@@ -20,7 +20,7 @@ class PauseDisasterRecoveryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * disasterRecoveryId  容灾ID
+    * disasterRecoveryId  **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class PauseDisasterRecoveryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * disasterRecoveryId  容灾ID
+    * disasterRecoveryId  **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class PauseDisasterRecoveryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * disasterRecoveryId  容灾ID
+    * disasterRecoveryId  **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class PauseDisasterRecoveryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * disasterRecoveryId  容灾ID
+    * disasterRecoveryId  **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class PauseDisasterRecoveryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * disasterRecoveryId  容灾ID
+    * disasterRecoveryId  **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class PauseDisasterRecoveryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets disasterRecoveryId
-    *  容灾ID
+    *  **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class PauseDisasterRecoveryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets disasterRecoveryId
     *
-    * @param string $disasterRecoveryId 容灾ID
+    * @param string $disasterRecoveryId **参数解释**： 容灾ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class ShowQueryDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  响应码。
-    * msg  响应信息。
+    * code  **参数解释**： 响应码。 **取值范围**： 不涉及。
+    * msg  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     * data  data
     *
     * @var string[]
@@ -35,8 +35,8 @@ class ShowQueryDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  响应码。
-    * msg  响应信息。
+    * code  **参数解释**： 响应码。 **取值范围**： 不涉及。
+    * msg  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     * data  data
     *
     * @var string[]
@@ -70,8 +70,8 @@ class ShowQueryDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  响应码。
-    * msg  响应信息。
+    * code  **参数解释**： 响应码。 **取值范围**： 不涉及。
+    * msg  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     * data  data
     *
     * @var string[]
@@ -84,8 +84,8 @@ class ShowQueryDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  响应码。
-    * msg  响应信息。
+    * code  **参数解释**： 响应码。 **取值范围**： 不涉及。
+    * msg  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     * data  data
     *
     * @var string[]
@@ -98,8 +98,8 @@ class ShowQueryDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  响应码。
-    * msg  响应信息。
+    * code  **参数解释**： 响应码。 **取值范围**： 不涉及。
+    * msg  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     * data  data
     *
     * @var string[]
@@ -197,7 +197,7 @@ class ShowQueryDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  响应码。
+    *  **参数解释**： 响应码。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -209,7 +209,7 @@ class ShowQueryDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param int|null $code 响应码。
+    * @param int|null $code **参数解释**： 响应码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ShowQueryDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets msg
-    *  响应信息。
+    *  **参数解释**： 响应信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class ShowQueryDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets msg
     *
-    * @param string|null $msg 响应信息。
+    * @param string|null $msg **参数解释**： 响应信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

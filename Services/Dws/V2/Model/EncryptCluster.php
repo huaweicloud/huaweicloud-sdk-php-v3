@@ -22,7 +22,7 @@ class EncryptCluster implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * cryptAlgorithm  **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： - generalCipher：AES-CBC算法加密 - SMcompatible：sm4算法加密  **默认取值**： 不涉及。
+    * cryptAlgorithm  **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： generalCipher：AES-CBC算法加密。 SMcompatible：sm4算法加密。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class EncryptCluster implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * cryptAlgorithm  **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： - generalCipher：AES-CBC算法加密 - SMcompatible：sm4算法加密  **默认取值**： 不涉及。
+    * cryptAlgorithm  **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： generalCipher：AES-CBC算法加密。 SMcompatible：sm4算法加密。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class EncryptCluster implements ModelInterface, ArrayAccess
     * and the value is the original name
     * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * cryptAlgorithm  **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： - generalCipher：AES-CBC算法加密 - SMcompatible：sm4算法加密  **默认取值**： 不涉及。
+    * cryptAlgorithm  **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： generalCipher：AES-CBC算法加密。 SMcompatible：sm4算法加密。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class EncryptCluster implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * cryptAlgorithm  **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： - generalCipher：AES-CBC算法加密 - SMcompatible：sm4算法加密  **默认取值**： 不涉及。
+    * cryptAlgorithm  **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： generalCipher：AES-CBC算法加密。 SMcompatible：sm4算法加密。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class EncryptCluster implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * cryptAlgorithm  **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： - generalCipher：AES-CBC算法加密 - SMcompatible：sm4算法加密  **默认取值**： 不涉及。
+    * cryptAlgorithm  **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： generalCipher：AES-CBC算法加密。 SMcompatible：sm4算法加密。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -250,7 +250,7 @@ class EncryptCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets cryptAlgorithm
-    *  **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： - generalCipher：AES-CBC算法加密 - SMcompatible：sm4算法加密  **默认取值**： 不涉及。
+    *  **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： generalCipher：AES-CBC算法加密。 SMcompatible：sm4算法加密。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -262,7 +262,7 @@ class EncryptCluster implements ModelInterface, ArrayAccess
     /**
     * Sets cryptAlgorithm
     *
-    * @param string $cryptAlgorithm **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： - generalCipher：AES-CBC算法加密 - SMcompatible：sm4算法加密  **默认取值**： 不涉及。
+    * @param string $cryptAlgorithm **参数解释**： 加密类型。国密、国际加密。 **约束限制**： 不涉及。 **取值范围**： generalCipher：AES-CBC算法加密。 SMcompatible：sm4算法加密。 **默认取值**： 不涉及。
     *
     * @return $this
     */

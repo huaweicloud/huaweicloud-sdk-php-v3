@@ -20,20 +20,20 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceName  实例名称
-    * instanceId  实例ID
-    * hostName  主机名称
-    * diskName  磁盘名称
-    * diskType  磁盘类型(系统盘、数据盘、日志盘)。
-    * total  磁盘总容量(GB)。
-    * used  磁盘已使用容量(GB)。
-    * available  磁盘可用容量(GB)。
-    * usedPercentage  磁盘使用率(%)。
-    * await  IO等待时间(ms)。
-    * svctm  IO服务时间(ms)。
-    * util  IO使用率(%)。
-    * readRate  磁盘读速率(KB/s)。
-    * writeRate  磁盘写速率(KB/s)。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * diskName  **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
+    * diskType  **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+    * total  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
+    * used  **参数解释**： 磁盘已使用容量(GB)。 **取值范围**： 不涉及。
+    * available  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
+    * usedPercentage  **参数解释**： 磁盘使用率(%)。 **取值范围**： 不涉及。
+    * await  **参数解释**： IO等待时间(ms)。 **取值范围**： 不涉及。
+    * svctm  **参数解释**： IO服务时间(ms)。 **取值范围**： 不涉及。
+    * util  **参数解释**： IO使用率(%)。 **取值范围**： 不涉及。
+    * readRate  **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
+    * writeRate  **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceName  实例名称
-    * instanceId  实例ID
-    * hostName  主机名称
-    * diskName  磁盘名称
-    * diskType  磁盘类型(系统盘、数据盘、日志盘)。
-    * total  磁盘总容量(GB)。
-    * used  磁盘已使用容量(GB)。
-    * available  磁盘可用容量(GB)。
-    * usedPercentage  磁盘使用率(%)。
-    * await  IO等待时间(ms)。
-    * svctm  IO服务时间(ms)。
-    * util  IO使用率(%)。
-    * readRate  磁盘读速率(KB/s)。
-    * writeRate  磁盘写速率(KB/s)。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * diskName  **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
+    * diskType  **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+    * total  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
+    * used  **参数解释**： 磁盘已使用容量(GB)。 **取值范围**： 不涉及。
+    * available  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
+    * usedPercentage  **参数解释**： 磁盘使用率(%)。 **取值范围**： 不涉及。
+    * await  **参数解释**： IO等待时间(ms)。 **取值范围**： 不涉及。
+    * svctm  **参数解释**： IO服务时间(ms)。 **取值范围**： 不涉及。
+    * util  **参数解释**： IO使用率(%)。 **取值范围**： 不涉及。
+    * readRate  **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
+    * writeRate  **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceName  实例名称
-    * instanceId  实例ID
-    * hostName  主机名称
-    * diskName  磁盘名称
-    * diskType  磁盘类型(系统盘、数据盘、日志盘)。
-    * total  磁盘总容量(GB)。
-    * used  磁盘已使用容量(GB)。
-    * available  磁盘可用容量(GB)。
-    * usedPercentage  磁盘使用率(%)。
-    * await  IO等待时间(ms)。
-    * svctm  IO服务时间(ms)。
-    * util  IO使用率(%)。
-    * readRate  磁盘读速率(KB/s)。
-    * writeRate  磁盘写速率(KB/s)。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * diskName  **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
+    * diskType  **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+    * total  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
+    * used  **参数解释**： 磁盘已使用容量(GB)。 **取值范围**： 不涉及。
+    * available  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
+    * usedPercentage  **参数解释**： 磁盘使用率(%)。 **取值范围**： 不涉及。
+    * await  **参数解释**： IO等待时间(ms)。 **取值范围**： 不涉及。
+    * svctm  **参数解释**： IO服务时间(ms)。 **取值范围**： 不涉及。
+    * util  **参数解释**： IO使用率(%)。 **取值范围**： 不涉及。
+    * readRate  **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
+    * writeRate  **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceName  实例名称
-    * instanceId  实例ID
-    * hostName  主机名称
-    * diskName  磁盘名称
-    * diskType  磁盘类型(系统盘、数据盘、日志盘)。
-    * total  磁盘总容量(GB)。
-    * used  磁盘已使用容量(GB)。
-    * available  磁盘可用容量(GB)。
-    * usedPercentage  磁盘使用率(%)。
-    * await  IO等待时间(ms)。
-    * svctm  IO服务时间(ms)。
-    * util  IO使用率(%)。
-    * readRate  磁盘读速率(KB/s)。
-    * writeRate  磁盘写速率(KB/s)。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * diskName  **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
+    * diskType  **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+    * total  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
+    * used  **参数解释**： 磁盘已使用容量(GB)。 **取值范围**： 不涉及。
+    * available  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
+    * usedPercentage  **参数解释**： 磁盘使用率(%)。 **取值范围**： 不涉及。
+    * await  **参数解释**： IO等待时间(ms)。 **取值范围**： 不涉及。
+    * svctm  **参数解释**： IO服务时间(ms)。 **取值范围**： 不涉及。
+    * util  **参数解释**： IO使用率(%)。 **取值范围**： 不涉及。
+    * readRate  **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
+    * writeRate  **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceName  实例名称
-    * instanceId  实例ID
-    * hostName  主机名称
-    * diskName  磁盘名称
-    * diskType  磁盘类型(系统盘、数据盘、日志盘)。
-    * total  磁盘总容量(GB)。
-    * used  磁盘已使用容量(GB)。
-    * available  磁盘可用容量(GB)。
-    * usedPercentage  磁盘使用率(%)。
-    * await  IO等待时间(ms)。
-    * svctm  IO服务时间(ms)。
-    * util  IO使用率(%)。
-    * readRate  磁盘读速率(KB/s)。
-    * writeRate  磁盘写速率(KB/s)。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * diskName  **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
+    * diskType  **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+    * total  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
+    * used  **参数解释**： 磁盘已使用容量(GB)。 **取值范围**： 不涉及。
+    * available  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
+    * usedPercentage  **参数解释**： 磁盘使用率(%)。 **取值范围**： 不涉及。
+    * await  **参数解释**： IO等待时间(ms)。 **取值范围**： 不涉及。
+    * svctm  **参数解释**： IO服务时间(ms)。 **取值范围**： 不涉及。
+    * util  **参数解释**： IO使用率(%)。 **取值范围**： 不涉及。
+    * readRate  **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
+    * writeRate  **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -317,7 +317,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceName
-    *  实例名称
+    *  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -329,7 +329,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets instanceName
     *
-    * @param string|null $instanceName 实例名称
+    * @param string|null $instanceName **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID
+    *  **参数解释**： 实例ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -353,7 +353,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID
+    * @param string|null $instanceId **参数解释**： 实例ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  主机名称
+    *  **参数解释**： 主机名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -377,7 +377,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 主机名称
+    * @param string|null $hostName **参数解释**： 主机名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskName
-    *  磁盘名称
+    *  **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -401,7 +401,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets diskName
     *
-    * @param string|null $diskName 磁盘名称
+    * @param string|null $diskName **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskType
-    *  磁盘类型(系统盘、数据盘、日志盘)。
+    *  **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -425,7 +425,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets diskType
     *
-    * @param string|null $diskType 磁盘类型(系统盘、数据盘、日志盘)。
+    * @param string|null $diskType **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  磁盘总容量(GB)。
+    *  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -449,7 +449,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param double|null $total 磁盘总容量(GB)。
+    * @param double|null $total **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -461,7 +461,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets used
-    *  磁盘已使用容量(GB)。
+    *  **参数解释**： 磁盘已使用容量(GB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -473,7 +473,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets used
     *
-    * @param double|null $used 磁盘已使用容量(GB)。
+    * @param double|null $used **参数解释**： 磁盘已使用容量(GB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -485,7 +485,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets available
-    *  磁盘可用容量(GB)。
+    *  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -497,7 +497,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets available
     *
-    * @param double|null $available 磁盘可用容量(GB)。
+    * @param double|null $available **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -509,7 +509,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedPercentage
-    *  磁盘使用率(%)。
+    *  **参数解释**： 磁盘使用率(%)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -521,7 +521,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets usedPercentage
     *
-    * @param double|null $usedPercentage 磁盘使用率(%)。
+    * @param double|null $usedPercentage **参数解释**： 磁盘使用率(%)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -533,7 +533,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets await
-    *  IO等待时间(ms)。
+    *  **参数解释**： IO等待时间(ms)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -545,7 +545,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets await
     *
-    * @param double|null $await IO等待时间(ms)。
+    * @param double|null $await **参数解释**： IO等待时间(ms)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets svctm
-    *  IO服务时间(ms)。
+    *  **参数解释**： IO服务时间(ms)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -569,7 +569,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets svctm
     *
-    * @param double|null $svctm IO服务时间(ms)。
+    * @param double|null $svctm **参数解释**： IO服务时间(ms)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -581,7 +581,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets util
-    *  IO使用率(%)。
+    *  **参数解释**： IO使用率(%)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -593,7 +593,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets util
     *
-    * @param double|null $util IO使用率(%)。
+    * @param double|null $util **参数解释**： IO使用率(%)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -605,7 +605,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets readRate
-    *  磁盘读速率(KB/s)。
+    *  **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -617,7 +617,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets readRate
     *
-    * @param double|null $readRate 磁盘读速率(KB/s)。
+    * @param double|null $readRate **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -629,7 +629,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets writeRate
-    *  磁盘写速率(KB/s)。
+    *  **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -641,7 +641,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets writeRate
     *
-    * @param double|null $writeRate 磁盘写速率(KB/s)。
+    * @param double|null $writeRate **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return $this
     */

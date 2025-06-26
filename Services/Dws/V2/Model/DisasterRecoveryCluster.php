@@ -20,15 +20,15 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  容灾集群信息ID
-    * name  容灾集群名称
-    * clusterAz  容灾集群所在AZ
-    * role  容灾集群角色
-    * region  容灾集群所在region
-    * status  容灾集群状态
-    * progress  容灾进度
-    * lastSuccessTime  上一次容灾时间
-    * obsBucketName  OBS桶名称
+    * id  **参数解释**： 容灾集群信息ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 容灾集群名称。 **取值范围**： 不涉及。
+    * clusterAz  **参数解释**： 容灾集群所在可用区。 **取值范围**： 不涉及。
+    * role  **参数解释**： 容灾集群角色。 **取值范围**： 不涉及。
+    * region  **参数解释**： 容灾集群所在region。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
+    * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
+    * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  容灾集群信息ID
-    * name  容灾集群名称
-    * clusterAz  容灾集群所在AZ
-    * role  容灾集群角色
-    * region  容灾集群所在region
-    * status  容灾集群状态
-    * progress  容灾进度
-    * lastSuccessTime  上一次容灾时间
-    * obsBucketName  OBS桶名称
+    * id  **参数解释**： 容灾集群信息ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 容灾集群名称。 **取值范围**： 不涉及。
+    * clusterAz  **参数解释**： 容灾集群所在可用区。 **取值范围**： 不涉及。
+    * role  **参数解释**： 容灾集群角色。 **取值范围**： 不涉及。
+    * region  **参数解释**： 容灾集群所在region。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
+    * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
+    * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  容灾集群信息ID
-    * name  容灾集群名称
-    * clusterAz  容灾集群所在AZ
-    * role  容灾集群角色
-    * region  容灾集群所在region
-    * status  容灾集群状态
-    * progress  容灾进度
-    * lastSuccessTime  上一次容灾时间
-    * obsBucketName  OBS桶名称
+    * id  **参数解释**： 容灾集群信息ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 容灾集群名称。 **取值范围**： 不涉及。
+    * clusterAz  **参数解释**： 容灾集群所在可用区。 **取值范围**： 不涉及。
+    * role  **参数解释**： 容灾集群角色。 **取值范围**： 不涉及。
+    * region  **参数解释**： 容灾集群所在region。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
+    * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
+    * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  容灾集群信息ID
-    * name  容灾集群名称
-    * clusterAz  容灾集群所在AZ
-    * role  容灾集群角色
-    * region  容灾集群所在region
-    * status  容灾集群状态
-    * progress  容灾进度
-    * lastSuccessTime  上一次容灾时间
-    * obsBucketName  OBS桶名称
+    * id  **参数解释**： 容灾集群信息ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 容灾集群名称。 **取值范围**： 不涉及。
+    * clusterAz  **参数解释**： 容灾集群所在可用区。 **取值范围**： 不涉及。
+    * role  **参数解释**： 容灾集群角色。 **取值范围**： 不涉及。
+    * region  **参数解释**： 容灾集群所在region。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
+    * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
+    * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  容灾集群信息ID
-    * name  容灾集群名称
-    * clusterAz  容灾集群所在AZ
-    * role  容灾集群角色
-    * region  容灾集群所在region
-    * status  容灾集群状态
-    * progress  容灾进度
-    * lastSuccessTime  上一次容灾时间
-    * obsBucketName  OBS桶名称
+    * id  **参数解释**： 容灾集群信息ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 容灾集群名称。 **取值范围**： 不涉及。
+    * clusterAz  **参数解释**： 容灾集群所在可用区。 **取值范围**： 不涉及。
+    * role  **参数解释**： 容灾集群角色。 **取值范围**： 不涉及。
+    * region  **参数解释**： 容灾集群所在region。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
+    * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
+    * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  容灾集群信息ID
+    *  **参数解释**： 容灾集群信息ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 容灾集群信息ID
+    * @param string|null $id **参数解释**： 容灾集群信息ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  容灾集群名称
+    *  **参数解释**： 容灾集群名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 容灾集群名称
+    * @param string|null $name **参数解释**： 容灾集群名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterAz
-    *  容灾集群所在AZ
+    *  **参数解释**： 容灾集群所在可用区。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     /**
     * Sets clusterAz
     *
-    * @param string|null $clusterAz 容灾集群所在AZ
+    * @param string|null $clusterAz **参数解释**： 容灾集群所在可用区。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets role
-    *  容灾集群角色
+    *  **参数解释**： 容灾集群角色。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     /**
     * Sets role
     *
-    * @param string|null $role 容灾集群角色
+    * @param string|null $role **参数解释**： 容灾集群角色。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  容灾集群所在region
+    *  **参数解释**： 容灾集群所在region。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region 容灾集群所在region
+    * @param string|null $region **参数解释**： 容灾集群所在region。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  容灾集群状态
+    *  **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 容灾集群状态
+    * @param string|null $status **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets progress
-    *  容灾进度
+    *  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -418,7 +418,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     /**
     * Sets progress
     *
-    * @param string|null $progress 容灾进度
+    * @param string|null $progress **参数解释**： 容灾进度。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastSuccessTime
-    *  上一次容灾时间
+    *  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     /**
     * Sets lastSuccessTime
     *
-    * @param string|null $lastSuccessTime 上一次容灾时间
+    * @param string|null $lastSuccessTime **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsBucketName
-    *  OBS桶名称
+    *  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     /**
     * Sets obsBucketName
     *
-    * @param string|null $obsBucketName OBS桶名称
+    * @param string|null $obsBucketName **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */

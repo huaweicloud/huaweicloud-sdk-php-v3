@@ -25,7 +25,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
-    * result  **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+    * result  **参数解释**： 操作结果。默认为空字符串。 **取值范围**： success：成功。 failed：失败。
     * logs  **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
-    * result  **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+    * result  **参数解释**： 操作结果。默认为空字符串。 **取值范围**： success：成功。 failed：失败。
     * logs  **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
-    * result  **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+    * result  **参数解释**： 操作结果。默认为空字符串。 **取值范围**： success：成功。 failed：失败。
     * logs  **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -112,7 +112,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
-    * result  **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+    * result  **参数解释**： 操作结果。默认为空字符串。 **取值范围**： success：成功。 failed：失败。
     * logs  **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -134,7 +134,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
-    * result  **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+    * result  **参数解释**： 操作结果。默认为空字符串。 **取值范围**： success：成功。 failed：失败。
     * logs  **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -360,7 +360,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+    *  **参数解释**： 操作结果。默认为空字符串。 **取值范围**： success：成功。 failed：失败。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+    * @param string|null $result **参数解释**： 操作结果。默认为空字符串。 **取值范围**： success：成功。 failed：失败。
     *
     * @return $this
     */

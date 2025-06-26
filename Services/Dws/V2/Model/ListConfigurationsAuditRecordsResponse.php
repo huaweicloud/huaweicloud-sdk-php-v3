@@ -21,8 +21,8 @@ class ListConfigurationsAuditRecordsResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * records  记录
-    * count  总数
+    * records  **参数解释**： 记录。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListConfigurationsAuditRecordsResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * records  记录
-    * count  总数
+    * records  **参数解释**： 记录。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListConfigurationsAuditRecordsResponse implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * records  记录
-    * count  总数
+    * records  **参数解释**： 记录。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListConfigurationsAuditRecordsResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * records  记录
-    * count  总数
+    * records  **参数解释**： 记录。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListConfigurationsAuditRecordsResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * records  记录
-    * count  总数
+    * records  **参数解释**： 记录。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListConfigurationsAuditRecordsResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets records
-    *  记录
+    *  **参数解释**： 记录。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ConfigurationRecordResp[]|null
     */
@@ -198,7 +198,7 @@ class ListConfigurationsAuditRecordsResponse implements ModelInterface, ArrayAcc
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ConfigurationRecordResp[]|null $records 记录
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ConfigurationRecordResp[]|null $records **参数解释**： 记录。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListConfigurationsAuditRecordsResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets count
-    *  总数
+    *  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListConfigurationsAuditRecordsResponse implements ModelInterface, ArrayAcc
     /**
     * Sets count
     *
-    * @param int|null $count 总数
+    * @param int|null $count **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

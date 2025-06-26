@@ -21,22 +21,22 @@ class UpdateNetworkCheckInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  更新网络检测结果成功。
+    * taskId  任务ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'taskId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  更新网络检测结果成功。
+    * taskId  任务ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'taskId' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class UpdateNetworkCheckInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  更新网络检测结果成功。
+    * taskId  任务ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'taskId' => 'task_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  更新网络检测结果成功。
+    * taskId  任务ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'taskId' => 'setTaskId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  更新网络检测结果成功。
+    * taskId  任务ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'taskId' => 'getTaskId'
     ];
 
     /**
@@ -148,7 +148,7 @@ class UpdateNetworkCheckInfoResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
     }
 
     /**
@@ -159,6 +159,12 @@ class UpdateNetworkCheckInfoResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['taskId']) && (mb_strlen($this->container['taskId']) > 255)) {
+                $invalidProperties[] = "invalid value for 'taskId', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['taskId']) && (mb_strlen($this->container['taskId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'taskId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -174,26 +180,26 @@ class UpdateNetworkCheckInfoResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  更新网络检测结果成功。
+    * Gets taskId
+    *  任务ID
     *
     * @return string|null
     */
-    public function getBody()
+    public function getTaskId()
     {
-        return $this->container['body'];
+        return $this->container['taskId'];
     }
 
     /**
-    * Sets body
+    * Sets taskId
     *
-    * @param string|null $body 更新网络检测结果成功。
+    * @param string|null $taskId 任务ID
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setTaskId($taskId)
     {
-        $this->container['body'] = $body;
+        $this->container['taskId'] = $taskId;
         return $this;
     }
 

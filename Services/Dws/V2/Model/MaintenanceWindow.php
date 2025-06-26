@@ -20,9 +20,9 @@ class MaintenanceWindow implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * day  日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。
-    * startTime  开始时间，UTC时间，格式为HH:mm，例如：22:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
-    * endTime  结束时间，UTC时间，格式为HH:mm，例如：02:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
+    * day  **参数解释**： 日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class MaintenanceWindow implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * day  日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。
-    * startTime  开始时间，UTC时间，格式为HH:mm，例如：22:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
-    * endTime  结束时间，UTC时间，格式为HH:mm，例如：02:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
+    * day  **参数解释**： 日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class MaintenanceWindow implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * day  日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。
-    * startTime  开始时间，UTC时间，格式为HH:mm，例如：22:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
-    * endTime  结束时间，UTC时间，格式为HH:mm，例如：02:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
+    * day  **参数解释**： 日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class MaintenanceWindow implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * day  日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。
-    * startTime  开始时间，UTC时间，格式为HH:mm，例如：22:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
-    * endTime  结束时间，UTC时间，格式为HH:mm，例如：02:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
+    * day  **参数解释**： 日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class MaintenanceWindow implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * day  日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。
-    * startTime  开始时间，UTC时间，格式为HH:mm，例如：22:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
-    * endTime  结束时间，UTC时间，格式为HH:mm，例如：02:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
+    * day  **参数解释**： 日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class MaintenanceWindow implements ModelInterface, ArrayAccess
 
     /**
     * Gets day
-    *  日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。
+    *  **参数解释**： 日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class MaintenanceWindow implements ModelInterface, ArrayAccess
     /**
     * Sets day
     *
-    * @param string $day 日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。
+    * @param string $day **参数解释**： 日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class MaintenanceWindow implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间，UTC时间，格式为HH:mm，例如：22:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
+    *  **参数解释**： 开始时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class MaintenanceWindow implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string $startTime 开始时间，UTC时间，格式为HH:mm，例如：22:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
+    * @param string $startTime **参数解释**： 开始时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class MaintenanceWindow implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间，UTC时间，格式为HH:mm，例如：02:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
+    *  **参数解释**： 结束时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class MaintenanceWindow implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string $endTime 结束时间，UTC时间，格式为HH:mm，例如：02:00。 - 时间必须是整点。 - 开始时间和结束时间必须间隔4小时。
+    * @param string $endTime **参数解释**： 结束时间，UTC时间，格式为HH:mm，例如：22:00。 时间必须是整点，且开始时间和结束时间必须间隔4小时。 **取值范围**： 不涉及。
     *
     * @return $this
     */

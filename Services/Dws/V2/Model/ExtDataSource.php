@@ -20,21 +20,21 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  id。
-    * name  数据源名称。
-    * type  类型。
-    * connectInfo  数据库。
-    * userName  用户名。
-    * version  版本。
-    * configureStatus  配置状态。
-    * status  状态。
-    * dataSourceId  数据源id。
-    * created  创建时间。
-    * updated  更新时间。
-    * dataSourceUpdated  数据源更新时间。
-    * extendProperties  扩展信息。
-    * description  描述。
-    * failReason  失败原因。
+    * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 数据源名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * connectInfo  **参数解释**： 数据库。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * version  **参数解释**： 版本。 **取值范围**： 不涉及。
+    * configureStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * dataSourceId  **参数解释**： 外部数据源ID。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * dataSourceUpdated  **参数解释**： 数据源更新时间。 **取值范围**： 不涉及。
+    * extendProperties  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * failReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -58,21 +58,21 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  id。
-    * name  数据源名称。
-    * type  类型。
-    * connectInfo  数据库。
-    * userName  用户名。
-    * version  版本。
-    * configureStatus  配置状态。
-    * status  状态。
-    * dataSourceId  数据源id。
-    * created  创建时间。
-    * updated  更新时间。
-    * dataSourceUpdated  数据源更新时间。
-    * extendProperties  扩展信息。
-    * description  描述。
-    * failReason  失败原因。
+    * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 数据源名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * connectInfo  **参数解释**： 数据库。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * version  **参数解释**： 版本。 **取值范围**： 不涉及。
+    * configureStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * dataSourceId  **参数解释**： 外部数据源ID。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * dataSourceUpdated  **参数解释**： 数据源更新时间。 **取值范围**： 不涉及。
+    * extendProperties  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * failReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -117,21 +117,21 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  id。
-    * name  数据源名称。
-    * type  类型。
-    * connectInfo  数据库。
-    * userName  用户名。
-    * version  版本。
-    * configureStatus  配置状态。
-    * status  状态。
-    * dataSourceId  数据源id。
-    * created  创建时间。
-    * updated  更新时间。
-    * dataSourceUpdated  数据源更新时间。
-    * extendProperties  扩展信息。
-    * description  描述。
-    * failReason  失败原因。
+    * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 数据源名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * connectInfo  **参数解释**： 数据库。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * version  **参数解释**： 版本。 **取值范围**： 不涉及。
+    * configureStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * dataSourceId  **参数解释**： 外部数据源ID。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * dataSourceUpdated  **参数解释**： 数据源更新时间。 **取值范围**： 不涉及。
+    * extendProperties  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * failReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -155,21 +155,21 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  id。
-    * name  数据源名称。
-    * type  类型。
-    * connectInfo  数据库。
-    * userName  用户名。
-    * version  版本。
-    * configureStatus  配置状态。
-    * status  状态。
-    * dataSourceId  数据源id。
-    * created  创建时间。
-    * updated  更新时间。
-    * dataSourceUpdated  数据源更新时间。
-    * extendProperties  扩展信息。
-    * description  描述。
-    * failReason  失败原因。
+    * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 数据源名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * connectInfo  **参数解释**： 数据库。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * version  **参数解释**： 版本。 **取值范围**： 不涉及。
+    * configureStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * dataSourceId  **参数解释**： 外部数据源ID。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * dataSourceUpdated  **参数解释**： 数据源更新时间。 **取值范围**： 不涉及。
+    * extendProperties  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * failReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -193,21 +193,21 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  id。
-    * name  数据源名称。
-    * type  类型。
-    * connectInfo  数据库。
-    * userName  用户名。
-    * version  版本。
-    * configureStatus  配置状态。
-    * status  状态。
-    * dataSourceId  数据源id。
-    * created  创建时间。
-    * updated  更新时间。
-    * dataSourceUpdated  数据源更新时间。
-    * extendProperties  扩展信息。
-    * description  描述。
-    * failReason  失败原因。
+    * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 数据源名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * connectInfo  **参数解释**： 数据库。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * version  **参数解释**： 版本。 **取值范围**： 不涉及。
+    * configureStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * dataSourceId  **参数解释**： 外部数据源ID。 **取值范围**： 不涉及。
+    * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * dataSourceUpdated  **参数解释**： 数据源更新时间。 **取值范围**： 不涉及。
+    * extendProperties  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 不涉及。
+    * failReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -328,7 +328,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  id。
+    *  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id。
+    * @param string|null $id **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  数据源名称。
+    *  **参数解释**： 数据源名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -364,7 +364,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 数据源名称。
+    * @param string|null $name **参数解释**： 数据源名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -376,7 +376,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型。
+    *  **参数解释**： 类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -388,7 +388,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型。
+    * @param string|null $type **参数解释**： 类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -400,7 +400,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectInfo
-    *  数据库。
+    *  **参数解释**： 数据库。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -412,7 +412,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets connectInfo
     *
-    * @param string|null $connectInfo 数据库。
+    * @param string|null $connectInfo **参数解释**： 数据库。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -424,7 +424,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名。
+    *  **参数解释**： 用户名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -436,7 +436,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 用户名。
+    * @param string|null $userName **参数解释**： 用户名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -448,7 +448,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本。
+    *  **参数解释**： 版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -460,7 +460,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本。
+    * @param string|null $version **参数解释**： 版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -472,7 +472,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets configureStatus
-    *  配置状态。
+    *  **参数解释**： 配置状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -484,7 +484,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets configureStatus
     *
-    * @param string|null $configureStatus 配置状态。
+    * @param string|null $configureStatus **参数解释**： 配置状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -496,7 +496,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态。
+    *  **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -508,7 +508,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态。
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataSourceId
-    *  数据源id。
+    *  **参数解释**： 外部数据源ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -532,7 +532,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets dataSourceId
     *
-    * @param string|null $dataSourceId 数据源id。
+    * @param string|null $dataSourceId **参数解释**： 外部数据源ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
-    *  创建时间。
+    *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -556,7 +556,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets created
     *
-    * @param string|null $created 创建时间。
+    * @param string|null $created **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  更新时间。
+    *  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -580,7 +580,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string|null $updated 更新时间。
+    * @param string|null $updated **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataSourceUpdated
-    *  数据源更新时间。
+    *  **参数解释**： 数据源更新时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -604,7 +604,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets dataSourceUpdated
     *
-    * @param string|null $dataSourceUpdated 数据源更新时间。
+    * @param string|null $dataSourceUpdated **参数解释**： 数据源更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendProperties
-    *  扩展信息。
+    *  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     *
     * @return object|null
     */
@@ -628,7 +628,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets extendProperties
     *
-    * @param object|null $extendProperties 扩展信息。
+    * @param object|null $extendProperties **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -640,7 +640,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述。
+    *  **参数解释**： 描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -652,7 +652,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述。
+    * @param string|null $description **参数解释**： 描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets failReason
-    *  失败原因。
+    *  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets failReason
     *
-    * @param string|null $failReason 失败原因。
+    * @param string|null $failReason **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @return $this
     */

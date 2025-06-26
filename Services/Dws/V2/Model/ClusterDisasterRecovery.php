@@ -22,10 +22,10 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * primaryCluster  primaryCluster
     * standbyCluster  standbyCluster
-    * latestBarrierTime  latest_barrier_time
-    * lastRecoverySpend  last_recovery_spend
-    * recoveryPointObject  recovery_point_object
-    * recoveryTimeObject  recovery_time_object
+    * latestBarrierTime  **参数解释**： 故障发生时间。 **取值范围**： 不涉及。
+    * lastRecoverySpend  **参数解释**： 上一个备份集恢复消耗时间，单位：秒（s）。 **取值范围**： 不涉及。
+    * recoveryPointObject  **参数解释**： 数据恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
+    * recoveryTimeObject  **参数解释**： 服务恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -42,10 +42,10 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * primaryCluster  primaryCluster
     * standbyCluster  standbyCluster
-    * latestBarrierTime  latest_barrier_time
-    * lastRecoverySpend  last_recovery_spend
-    * recoveryPointObject  recovery_point_object
-    * recoveryTimeObject  recovery_time_object
+    * latestBarrierTime  **参数解释**： 故障发生时间。 **取值范围**： 不涉及。
+    * lastRecoverySpend  **参数解释**： 上一个备份集恢复消耗时间，单位：秒（s）。 **取值范围**： 不涉及。
+    * recoveryPointObject  **参数解释**： 数据恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
+    * recoveryTimeObject  **参数解释**： 服务恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,10 +83,10 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
     * and the value is the original name
     * primaryCluster  primaryCluster
     * standbyCluster  standbyCluster
-    * latestBarrierTime  latest_barrier_time
-    * lastRecoverySpend  last_recovery_spend
-    * recoveryPointObject  recovery_point_object
-    * recoveryTimeObject  recovery_time_object
+    * latestBarrierTime  **参数解释**： 故障发生时间。 **取值范围**： 不涉及。
+    * lastRecoverySpend  **参数解释**： 上一个备份集恢复消耗时间，单位：秒（s）。 **取值范围**： 不涉及。
+    * recoveryPointObject  **参数解释**： 数据恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
+    * recoveryTimeObject  **参数解释**： 服务恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -103,10 +103,10 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * primaryCluster  primaryCluster
     * standbyCluster  standbyCluster
-    * latestBarrierTime  latest_barrier_time
-    * lastRecoverySpend  last_recovery_spend
-    * recoveryPointObject  recovery_point_object
-    * recoveryTimeObject  recovery_time_object
+    * latestBarrierTime  **参数解释**： 故障发生时间。 **取值范围**： 不涉及。
+    * lastRecoverySpend  **参数解释**： 上一个备份集恢复消耗时间，单位：秒（s）。 **取值范围**： 不涉及。
+    * recoveryPointObject  **参数解释**： 数据恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
+    * recoveryTimeObject  **参数解释**： 服务恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -123,10 +123,10 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * primaryCluster  primaryCluster
     * standbyCluster  standbyCluster
-    * latestBarrierTime  latest_barrier_time
-    * lastRecoverySpend  last_recovery_spend
-    * recoveryPointObject  recovery_point_object
-    * recoveryTimeObject  recovery_time_object
+    * latestBarrierTime  **参数解释**： 故障发生时间。 **取值范围**： 不涉及。
+    * lastRecoverySpend  **参数解释**： 上一个备份集恢复消耗时间，单位：秒（s）。 **取值范围**： 不涉及。
+    * recoveryPointObject  **参数解释**： 数据恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
+    * recoveryTimeObject  **参数解释**： 服务恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -277,7 +277,7 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestBarrierTime
-    *  latest_barrier_time
+    *  **参数解释**： 故障发生时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets latestBarrierTime
     *
-    * @param string|null $latestBarrierTime latest_barrier_time
+    * @param string|null $latestBarrierTime **参数解释**： 故障发生时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastRecoverySpend
-    *  last_recovery_spend
+    *  **参数解释**： 上一个备份集恢复消耗时间，单位：秒（s）。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -313,7 +313,7 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets lastRecoverySpend
     *
-    * @param int|null $lastRecoverySpend last_recovery_spend
+    * @param int|null $lastRecoverySpend **参数解释**： 上一个备份集恢复消耗时间，单位：秒（s）。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets recoveryPointObject
-    *  recovery_point_object
+    *  **参数解释**： 数据恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -337,7 +337,7 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets recoveryPointObject
     *
-    * @param int|null $recoveryPointObject recovery_point_object
+    * @param int|null $recoveryPointObject **参数解释**： 数据恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets recoveryTimeObject
-    *  recovery_time_object
+    *  **参数解释**： 服务恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -361,7 +361,7 @@ class ClusterDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets recoveryTimeObject
     *
-    * @param int|null $recoveryTimeObject recovery_time_object
+    * @param int|null $recoveryTimeObject **参数解释**： 服务恢复目标时间，单位：秒（s）。 **取值范围**： 不涉及。
     *
     * @return $this
     */

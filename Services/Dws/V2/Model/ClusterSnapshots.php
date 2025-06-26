@@ -20,34 +20,34 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  快照ID。
-    * name  快照名称。
-    * description  快照描述。
-    * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * size  快照大小，单位 GB。
-    * status  快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * clusterId  快照对应的集群ID
+    * id  **参数解释**： 快照ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
+    * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态。 **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 RESTORING：恢复中。 FROZEN： 普通冻结。 POLICE_FROZEN： 公安冻结。
+    * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
-    * clusterName  快照对应的集群名称。
-    * updated  快照更新时间。
-    * type  快照类型： - MANUAL :手动快照， - AUTO :自动快照。
-    * bakExpectedStartTime  快照预计开始时间。
-    * bakKeepDay  快照保留天数。
-    * bakPeriod  快照策略。
-    * dbUser  数据库用户。
-    * progress  快照进度。
-    * backupKey  快照BakcupKey。
-    * priorBackupKey  增量快照，使用的前一个快照BakcupKey。
-    * baseBackupKey  对应全量快照BakcupKey。
-    * backupDevice  备份介质。
-    * totalBackupSize  累计快照大小。
-    * baseBackupName  对应全量快照名称。
-    * supportInplaceRestore  是否支持就地恢复。
-    * fineGrainedBackup  是否是细粒度备份。
-    * backupLevel  备份级别。
+    * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
+    * type  **参数解释**： 快照类型。 **取值范围**： MANUAL：手动快照。 AUTO：自动快照。
+    * bakExpectedStartTime  **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
+    * bakKeepDay  **参数解释**： 快照保留天数。 **取值范围**： 不涉及。
+    * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
+    * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 快照进度。 **取值范围**： 不涉及。
+    * backupKey  **参数解释**： 快照备份key。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照备份key。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照备份key。 **取值范围**： 不涉及。
+    * backupDevice  **参数解释**： 备份介质。 **取值范围**： 不涉及。
+    * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
+    * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
+    * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
+    * fineGrainedBackup  **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
     * fineGrainedBackupDetail  fineGrainedBackupDetail
-    * guestAgentVersion  guestAgent版本。
-    * clusterStatus  集群状态。
+    * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
+    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -84,34 +84,34 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  快照ID。
-    * name  快照名称。
-    * description  快照描述。
-    * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * size  快照大小，单位 GB。
-    * status  快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * clusterId  快照对应的集群ID
+    * id  **参数解释**： 快照ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
+    * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态。 **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 RESTORING：恢复中。 FROZEN： 普通冻结。 POLICE_FROZEN： 公安冻结。
+    * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
-    * clusterName  快照对应的集群名称。
-    * updated  快照更新时间。
-    * type  快照类型： - MANUAL :手动快照， - AUTO :自动快照。
-    * bakExpectedStartTime  快照预计开始时间。
-    * bakKeepDay  快照保留天数。
-    * bakPeriod  快照策略。
-    * dbUser  数据库用户。
-    * progress  快照进度。
-    * backupKey  快照BakcupKey。
-    * priorBackupKey  增量快照，使用的前一个快照BakcupKey。
-    * baseBackupKey  对应全量快照BakcupKey。
-    * backupDevice  备份介质。
-    * totalBackupSize  累计快照大小。
-    * baseBackupName  对应全量快照名称。
-    * supportInplaceRestore  是否支持就地恢复。
-    * fineGrainedBackup  是否是细粒度备份。
-    * backupLevel  备份级别。
+    * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
+    * type  **参数解释**： 快照类型。 **取值范围**： MANUAL：手动快照。 AUTO：自动快照。
+    * bakExpectedStartTime  **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
+    * bakKeepDay  **参数解释**： 快照保留天数。 **取值范围**： 不涉及。
+    * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
+    * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 快照进度。 **取值范围**： 不涉及。
+    * backupKey  **参数解释**： 快照备份key。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照备份key。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照备份key。 **取值范围**： 不涉及。
+    * backupDevice  **参数解释**： 备份介质。 **取值范围**： 不涉及。
+    * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
+    * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
+    * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
+    * fineGrainedBackup  **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
     * fineGrainedBackupDetail  fineGrainedBackupDetail
-    * guestAgentVersion  guestAgent版本。
-    * clusterStatus  集群状态。
+    * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
+    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -169,34 +169,34 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  快照ID。
-    * name  快照名称。
-    * description  快照描述。
-    * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * size  快照大小，单位 GB。
-    * status  快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * clusterId  快照对应的集群ID
+    * id  **参数解释**： 快照ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
+    * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态。 **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 RESTORING：恢复中。 FROZEN： 普通冻结。 POLICE_FROZEN： 公安冻结。
+    * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
-    * clusterName  快照对应的集群名称。
-    * updated  快照更新时间。
-    * type  快照类型： - MANUAL :手动快照， - AUTO :自动快照。
-    * bakExpectedStartTime  快照预计开始时间。
-    * bakKeepDay  快照保留天数。
-    * bakPeriod  快照策略。
-    * dbUser  数据库用户。
-    * progress  快照进度。
-    * backupKey  快照BakcupKey。
-    * priorBackupKey  增量快照，使用的前一个快照BakcupKey。
-    * baseBackupKey  对应全量快照BakcupKey。
-    * backupDevice  备份介质。
-    * totalBackupSize  累计快照大小。
-    * baseBackupName  对应全量快照名称。
-    * supportInplaceRestore  是否支持就地恢复。
-    * fineGrainedBackup  是否是细粒度备份。
-    * backupLevel  备份级别。
+    * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
+    * type  **参数解释**： 快照类型。 **取值范围**： MANUAL：手动快照。 AUTO：自动快照。
+    * bakExpectedStartTime  **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
+    * bakKeepDay  **参数解释**： 快照保留天数。 **取值范围**： 不涉及。
+    * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
+    * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 快照进度。 **取值范围**： 不涉及。
+    * backupKey  **参数解释**： 快照备份key。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照备份key。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照备份key。 **取值范围**： 不涉及。
+    * backupDevice  **参数解释**： 备份介质。 **取值范围**： 不涉及。
+    * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
+    * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
+    * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
+    * fineGrainedBackup  **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
     * fineGrainedBackupDetail  fineGrainedBackupDetail
-    * guestAgentVersion  guestAgent版本。
-    * clusterStatus  集群状态。
+    * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
+    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -233,34 +233,34 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  快照ID。
-    * name  快照名称。
-    * description  快照描述。
-    * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * size  快照大小，单位 GB。
-    * status  快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * clusterId  快照对应的集群ID
+    * id  **参数解释**： 快照ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
+    * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态。 **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 RESTORING：恢复中。 FROZEN： 普通冻结。 POLICE_FROZEN： 公安冻结。
+    * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
-    * clusterName  快照对应的集群名称。
-    * updated  快照更新时间。
-    * type  快照类型： - MANUAL :手动快照， - AUTO :自动快照。
-    * bakExpectedStartTime  快照预计开始时间。
-    * bakKeepDay  快照保留天数。
-    * bakPeriod  快照策略。
-    * dbUser  数据库用户。
-    * progress  快照进度。
-    * backupKey  快照BakcupKey。
-    * priorBackupKey  增量快照，使用的前一个快照BakcupKey。
-    * baseBackupKey  对应全量快照BakcupKey。
-    * backupDevice  备份介质。
-    * totalBackupSize  累计快照大小。
-    * baseBackupName  对应全量快照名称。
-    * supportInplaceRestore  是否支持就地恢复。
-    * fineGrainedBackup  是否是细粒度备份。
-    * backupLevel  备份级别。
+    * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
+    * type  **参数解释**： 快照类型。 **取值范围**： MANUAL：手动快照。 AUTO：自动快照。
+    * bakExpectedStartTime  **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
+    * bakKeepDay  **参数解释**： 快照保留天数。 **取值范围**： 不涉及。
+    * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
+    * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 快照进度。 **取值范围**： 不涉及。
+    * backupKey  **参数解释**： 快照备份key。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照备份key。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照备份key。 **取值范围**： 不涉及。
+    * backupDevice  **参数解释**： 备份介质。 **取值范围**： 不涉及。
+    * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
+    * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
+    * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
+    * fineGrainedBackup  **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
     * fineGrainedBackupDetail  fineGrainedBackupDetail
-    * guestAgentVersion  guestAgent版本。
-    * clusterStatus  集群状态。
+    * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
+    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -297,34 +297,34 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  快照ID。
-    * name  快照名称。
-    * description  快照描述。
-    * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-    * size  快照大小，单位 GB。
-    * status  快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * clusterId  快照对应的集群ID
+    * id  **参数解释**： 快照ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述。 **取值范围**： 不涉及。
+    * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+    * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态。 **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 RESTORING：恢复中。 FROZEN： 普通冻结。 POLICE_FROZEN： 公安冻结。
+    * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
-    * clusterName  快照对应的集群名称。
-    * updated  快照更新时间。
-    * type  快照类型： - MANUAL :手动快照， - AUTO :自动快照。
-    * bakExpectedStartTime  快照预计开始时间。
-    * bakKeepDay  快照保留天数。
-    * bakPeriod  快照策略。
-    * dbUser  数据库用户。
-    * progress  快照进度。
-    * backupKey  快照BakcupKey。
-    * priorBackupKey  增量快照，使用的前一个快照BakcupKey。
-    * baseBackupKey  对应全量快照BakcupKey。
-    * backupDevice  备份介质。
-    * totalBackupSize  累计快照大小。
-    * baseBackupName  对应全量快照名称。
-    * supportInplaceRestore  是否支持就地恢复。
-    * fineGrainedBackup  是否是细粒度备份。
-    * backupLevel  备份级别。
+    * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
+    * updated  **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
+    * type  **参数解释**： 快照类型。 **取值范围**： MANUAL：手动快照。 AUTO：自动快照。
+    * bakExpectedStartTime  **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
+    * bakKeepDay  **参数解释**： 快照保留天数。 **取值范围**： 不涉及。
+    * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
+    * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 快照进度。 **取值范围**： 不涉及。
+    * backupKey  **参数解释**： 快照备份key。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照备份key。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照备份key。 **取值范围**： 不涉及。
+    * backupDevice  **参数解释**： 备份介质。 **取值范围**： 不涉及。
+    * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
+    * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
+    * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
+    * fineGrainedBackup  **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
     * fineGrainedBackupDetail  fineGrainedBackupDetail
-    * guestAgentVersion  guestAgent版本。
-    * clusterStatus  集群状态。
+    * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
+    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -471,7 +471,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  快照ID。
+    *  **参数解释**： 快照ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -483,7 +483,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 快照ID。
+    * @param string|null $id **参数解释**： 快照ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -495,7 +495,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  快照名称。
+    *  **参数解释**： 快照名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -507,7 +507,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 快照名称。
+    * @param string|null $name **参数解释**： 快照名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -519,7 +519,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  快照描述。
+    *  **参数解释**： 快照描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -531,7 +531,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 快照描述。
+    * @param string|null $description **参数解释**： 快照描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -543,7 +543,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets started
-    *  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
+    *  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -555,7 +555,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets started
     *
-    * @param string|null $started 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
+    * @param string|null $started **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -567,7 +567,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  快照大小，单位 GB。
+    *  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -579,7 +579,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param double|null $size 快照大小，单位 GB。
+    * @param double|null $size **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -591,7 +591,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
+    *  **参数解释**： 快照状态。 **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 RESTORING：恢复中。 FROZEN： 普通冻结。 POLICE_FROZEN： 公安冻结。
     *
     * @return string|null
     */
@@ -603,7 +603,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
+    * @param string|null $status **参数解释**： 快照状态。 **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 RESTORING：恢复中。 FROZEN： 普通冻结。 POLICE_FROZEN： 公安冻结。
     *
     * @return $this
     */
@@ -615,7 +615,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  快照对应的集群ID
+    *  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -627,7 +627,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 快照对应的集群ID
+    * @param string|null $clusterId **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -663,7 +663,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  快照对应的集群名称。
+    *  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -675,7 +675,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 快照对应的集群名称。
+    * @param string|null $clusterName **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -687,7 +687,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  快照更新时间。
+    *  **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -699,7 +699,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string|null $updated 快照更新时间。
+    * @param string|null $updated **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -711,7 +711,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  快照类型： - MANUAL :手动快照， - AUTO :自动快照。
+    *  **参数解释**： 快照类型。 **取值范围**： MANUAL：手动快照。 AUTO：自动快照。
     *
     * @return string|null
     */
@@ -723,7 +723,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 快照类型： - MANUAL :手动快照， - AUTO :自动快照。
+    * @param string|null $type **参数解释**： 快照类型。 **取值范围**： MANUAL：手动快照。 AUTO：自动快照。
     *
     * @return $this
     */
@@ -735,7 +735,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets bakExpectedStartTime
-    *  快照预计开始时间。
+    *  **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -747,7 +747,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets bakExpectedStartTime
     *
-    * @param string|null $bakExpectedStartTime 快照预计开始时间。
+    * @param string|null $bakExpectedStartTime **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -759,7 +759,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets bakKeepDay
-    *  快照保留天数。
+    *  **参数解释**： 快照保留天数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -771,7 +771,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets bakKeepDay
     *
-    * @param int|null $bakKeepDay 快照保留天数。
+    * @param int|null $bakKeepDay **参数解释**： 快照保留天数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -783,7 +783,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets bakPeriod
-    *  快照策略。
+    *  **参数解释**： 快照策略。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -795,7 +795,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets bakPeriod
     *
-    * @param string|null $bakPeriod 快照策略。
+    * @param string|null $bakPeriod **参数解释**： 快照策略。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -807,7 +807,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbUser
-    *  数据库用户。
+    *  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -819,7 +819,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets dbUser
     *
-    * @param string|null $dbUser 数据库用户。
+    * @param string|null $dbUser **参数解释**： 数据库用户。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -831,7 +831,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets progress
-    *  快照进度。
+    *  **参数解释**： 快照进度。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -843,7 +843,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets progress
     *
-    * @param string|null $progress 快照进度。
+    * @param string|null $progress **参数解释**： 快照进度。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -855,7 +855,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupKey
-    *  快照BakcupKey。
+    *  **参数解释**： 快照备份key。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -867,7 +867,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets backupKey
     *
-    * @param string|null $backupKey 快照BakcupKey。
+    * @param string|null $backupKey **参数解释**： 快照备份key。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -879,7 +879,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets priorBackupKey
-    *  增量快照，使用的前一个快照BakcupKey。
+    *  **参数解释**： 增量快照，使用的前一个快照备份key。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -891,7 +891,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets priorBackupKey
     *
-    * @param string|null $priorBackupKey 增量快照，使用的前一个快照BakcupKey。
+    * @param string|null $priorBackupKey **参数解释**： 增量快照，使用的前一个快照备份key。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -903,7 +903,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets baseBackupKey
-    *  对应全量快照BakcupKey。
+    *  **参数解释**： 对应全量快照备份key。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -915,7 +915,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets baseBackupKey
     *
-    * @param string|null $baseBackupKey 对应全量快照BakcupKey。
+    * @param string|null $baseBackupKey **参数解释**： 对应全量快照备份key。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -927,7 +927,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupDevice
-    *  备份介质。
+    *  **参数解释**： 备份介质。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -939,7 +939,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets backupDevice
     *
-    * @param string|null $backupDevice 备份介质。
+    * @param string|null $backupDevice **参数解释**： 备份介质。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -951,7 +951,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalBackupSize
-    *  累计快照大小。
+    *  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -963,7 +963,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets totalBackupSize
     *
-    * @param int|null $totalBackupSize 累计快照大小。
+    * @param int|null $totalBackupSize **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -975,7 +975,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets baseBackupName
-    *  对应全量快照名称。
+    *  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -987,7 +987,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets baseBackupName
     *
-    * @param string|null $baseBackupName 对应全量快照名称。
+    * @param string|null $baseBackupName **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -999,7 +999,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportInplaceRestore
-    *  是否支持就地恢复。
+    *  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -1011,7 +1011,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets supportInplaceRestore
     *
-    * @param bool|null $supportInplaceRestore 是否支持就地恢复。
+    * @param bool|null $supportInplaceRestore **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1023,7 +1023,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets fineGrainedBackup
-    *  是否是细粒度备份。
+    *  **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -1035,7 +1035,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets fineGrainedBackup
     *
-    * @param bool|null $fineGrainedBackup 是否是细粒度备份。
+    * @param bool|null $fineGrainedBackup **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1047,7 +1047,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupLevel
-    *  备份级别。
+    *  **参数解释**： 备份级别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1059,7 +1059,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets backupLevel
     *
-    * @param string|null $backupLevel 备份级别。
+    * @param string|null $backupLevel **参数解释**： 备份级别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1095,7 +1095,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets guestAgentVersion
-    *  guestAgent版本。
+    *  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1107,7 +1107,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets guestAgentVersion
     *
-    * @param string|null $guestAgentVersion guestAgent版本。
+    * @param string|null $guestAgentVersion **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1119,7 +1119,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterStatus
-    *  集群状态。
+    *  **参数解释**： 集群状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1131,7 +1131,7 @@ class ClusterSnapshots implements ModelInterface, ArrayAccess
     /**
     * Sets clusterStatus
     *
-    * @param string|null $clusterStatus 集群状态。
+    * @param string|null $clusterStatus **参数解释**： 集群状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */

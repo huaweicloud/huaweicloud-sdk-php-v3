@@ -405,8 +405,8 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['createSince']) && (mb_strlen($this->container['createSince']) < 0)) {
                 $invalidProperties[] = "invalid value for 'createSince', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 128)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 1024.";
             }
             if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";

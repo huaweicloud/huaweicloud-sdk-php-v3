@@ -44,6 +44,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * tags  标签
     * resourceConfig  resourceConfig
     * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
@@ -75,6 +76,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'int',
             'checkpointPath' => 'string',
             'runtimeConfig' => 'string',
+            'executionAgencyUrn' => 'string',
             'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]',
             'resourceConfig' => '\HuaweiCloud\SDK\Dli\V1\Model\ResourceConfig',
             'resourceConfigVersion' => 'string'
@@ -106,6 +108,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * tags  标签
     * resourceConfig  resourceConfig
     * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
@@ -137,6 +140,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
         'resumeMaxNum' => 'int32',
         'checkpointPath' => null,
         'runtimeConfig' => null,
+        'executionAgencyUrn' => null,
         'tags' => null,
         'resourceConfig' => null,
         'resourceConfigVersion' => null
@@ -189,6 +193,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * tags  标签
     * resourceConfig  resourceConfig
     * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
@@ -220,6 +225,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'resume_max_num',
             'checkpointPath' => 'checkpoint_path',
             'runtimeConfig' => 'runtime_config',
+            'executionAgencyUrn' => 'execution_agency_urn',
             'tags' => 'tags',
             'resourceConfig' => 'resource_config',
             'resourceConfigVersion' => 'resource_config_version'
@@ -251,6 +257,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * tags  标签
     * resourceConfig  resourceConfig
     * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
@@ -282,6 +289,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'setResumeMaxNum',
             'checkpointPath' => 'setCheckpointPath',
             'runtimeConfig' => 'setRuntimeConfig',
+            'executionAgencyUrn' => 'setExecutionAgencyUrn',
             'tags' => 'setTags',
             'resourceConfig' => 'setResourceConfig',
             'resourceConfigVersion' => 'setResourceConfigVersion'
@@ -313,6 +321,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * tags  标签
     * resourceConfig  resourceConfig
     * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
@@ -344,6 +353,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'getResumeMaxNum',
             'checkpointPath' => 'getCheckpointPath',
             'runtimeConfig' => 'getRuntimeConfig',
+            'executionAgencyUrn' => 'getExecutionAgencyUrn',
             'tags' => 'getTags',
             'resourceConfig' => 'getResourceConfig',
             'resourceConfigVersion' => 'getResourceConfigVersion'
@@ -431,6 +441,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['resumeMaxNum'] = isset($data['resumeMaxNum']) ? $data['resumeMaxNum'] : null;
         $this->container['checkpointPath'] = isset($data['checkpointPath']) ? $data['checkpointPath'] : null;
         $this->container['runtimeConfig'] = isset($data['runtimeConfig']) ? $data['runtimeConfig'] : null;
+        $this->container['executionAgencyUrn'] = isset($data['executionAgencyUrn']) ? $data['executionAgencyUrn'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['resourceConfig'] = isset($data['resourceConfig']) ? $data['resourceConfig'] : null;
         $this->container['resourceConfigVersion'] = isset($data['resourceConfigVersion']) ? $data['resourceConfigVersion'] : null;
@@ -1052,6 +1063,30 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     public function setRuntimeConfig($runtimeConfig)
     {
         $this->container['runtimeConfig'] = $runtimeConfig;
+        return $this;
+    }
+
+    /**
+    * Gets executionAgencyUrn
+    *  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+    *
+    * @return string|null
+    */
+    public function getExecutionAgencyUrn()
+    {
+        return $this->container['executionAgencyUrn'];
+    }
+
+    /**
+    * Sets executionAgencyUrn
+    *
+    * @param string|null $executionAgencyUrn 授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+    *
+    * @return $this
+    */
+    public function setExecutionAgencyUrn($executionAgencyUrn)
+    {
+        $this->container['executionAgencyUrn'] = $executionAgencyUrn;
         return $this;
     }
 

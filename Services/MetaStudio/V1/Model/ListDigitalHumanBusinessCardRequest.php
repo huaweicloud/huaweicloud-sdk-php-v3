@@ -315,8 +315,8 @@ class ListDigitalHumanBusinessCardRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 128)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 1024.";
             }
             if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";

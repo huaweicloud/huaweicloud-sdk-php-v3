@@ -40,6 +40,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * dependencyFiles  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
     * executorNumber  参数解释:  作业使用计算节点个数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * executorCuNumber  参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executionAgencyUrn  参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
     * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
     * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
@@ -79,6 +80,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'dependencyFiles' => 'string[]',
             'executorNumber' => 'int',
             'executorCuNumber' => 'int',
+            'executionAgencyUrn' => 'string',
             'resumeCheckpoint' => 'bool',
             'runtimeConfig' => 'string',
             'graphEditorEnabled' => 'bool',
@@ -118,6 +120,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * dependencyFiles  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
     * executorNumber  参数解释:  作业使用计算节点个数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * executorCuNumber  参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executionAgencyUrn  参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
     * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
     * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
@@ -157,6 +160,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
         'dependencyFiles' => null,
         'executorNumber' => 'int32',
         'executorCuNumber' => 'int32',
+        'executionAgencyUrn' => null,
         'resumeCheckpoint' => null,
         'runtimeConfig' => null,
         'graphEditorEnabled' => null,
@@ -217,6 +221,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * dependencyFiles  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
     * executorNumber  参数解释:  作业使用计算节点个数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * executorCuNumber  参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executionAgencyUrn  参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
     * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
     * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
@@ -256,6 +261,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'dependencyFiles' => 'dependency_files',
             'executorNumber' => 'executor_number',
             'executorCuNumber' => 'executor_cu_number',
+            'executionAgencyUrn' => 'execution_agency_urn',
             'resumeCheckpoint' => 'resume_checkpoint',
             'runtimeConfig' => 'runtime_config',
             'graphEditorEnabled' => 'graph_editor_enabled',
@@ -295,6 +301,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * dependencyFiles  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
     * executorNumber  参数解释:  作业使用计算节点个数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * executorCuNumber  参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executionAgencyUrn  参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
     * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
     * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
@@ -334,6 +341,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'dependencyFiles' => 'setDependencyFiles',
             'executorNumber' => 'setExecutorNumber',
             'executorCuNumber' => 'setExecutorCuNumber',
+            'executionAgencyUrn' => 'setExecutionAgencyUrn',
             'resumeCheckpoint' => 'setResumeCheckpoint',
             'runtimeConfig' => 'setRuntimeConfig',
             'graphEditorEnabled' => 'setGraphEditorEnabled',
@@ -373,6 +381,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * dependencyFiles  参数解释:  用户已上传到DLI资源管理系统的资源包名，用户自定义作业的依赖文件 示例: [\"zsdas/wordcount.jar\",\"ygj/flink-dis-to-kafka-v5.jar\"] 约束限制:  无 取值范围: 无 默认取值: 无
     * executorNumber  参数解释:  作业使用计算节点个数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * executorCuNumber  参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
+    * executionAgencyUrn  参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
     * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
     * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
@@ -412,6 +421,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'dependencyFiles' => 'getDependencyFiles',
             'executorNumber' => 'getExecutorNumber',
             'executorCuNumber' => 'getExecutorCuNumber',
+            'executionAgencyUrn' => 'getExecutionAgencyUrn',
             'resumeCheckpoint' => 'getResumeCheckpoint',
             'runtimeConfig' => 'getRuntimeConfig',
             'graphEditorEnabled' => 'getGraphEditorEnabled',
@@ -522,6 +532,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
         $this->container['dependencyFiles'] = isset($data['dependencyFiles']) ? $data['dependencyFiles'] : null;
         $this->container['executorNumber'] = isset($data['executorNumber']) ? $data['executorNumber'] : null;
         $this->container['executorCuNumber'] = isset($data['executorCuNumber']) ? $data['executorCuNumber'] : null;
+        $this->container['executionAgencyUrn'] = isset($data['executionAgencyUrn']) ? $data['executionAgencyUrn'] : null;
         $this->container['resumeCheckpoint'] = isset($data['resumeCheckpoint']) ? $data['resumeCheckpoint'] : null;
         $this->container['runtimeConfig'] = isset($data['runtimeConfig']) ? $data['runtimeConfig'] : null;
         $this->container['graphEditorEnabled'] = isset($data['graphEditorEnabled']) ? $data['graphEditorEnabled'] : null;
@@ -1058,6 +1069,30 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     public function setExecutorCuNumber($executorCuNumber)
     {
         $this->container['executorCuNumber'] = $executorCuNumber;
+        return $this;
+    }
+
+    /**
+    * Gets executionAgencyUrn
+    *  参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
+    *
+    * @return string|null
+    */
+    public function getExecutionAgencyUrn()
+    {
+        return $this->container['executionAgencyUrn'];
+    }
+
+    /**
+    * Sets executionAgencyUrn
+    *
+    * @param string|null $executionAgencyUrn 参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
+    *
+    * @return $this
+    */
+    public function setExecutionAgencyUrn($executionAgencyUrn)
+    {
+        $this->container['executionAgencyUrn'] = $executionAgencyUrn;
         return $this;
     }
 

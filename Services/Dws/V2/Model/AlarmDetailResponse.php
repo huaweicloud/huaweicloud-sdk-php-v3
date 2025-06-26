@@ -20,16 +20,16 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmId  告警定义ID
-    * alarmName  告警名称
-    * alarmLevel  告警级别
-    * alarmSource  告警服务
-    * alarmMessage  告警消息
-    * alarmLocation  告警定位信息
-    * resourceId  告警源ID
-    * resourceIdName  告警源名称
-    * alarmGenerateDate  告警日期
-    * alarmStatus  告警状态
+    * alarmId  **参数解释**： 告警定义ID。 **取值范围**： 不涉及。
+    * alarmName  **参数解释**： 告警名称。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * alarmSource  **参数解释**： 告警服务。 **取值范围**： 不涉及。
+    * alarmMessage  **参数解释**： 告警消息。 **取值范围**： 不涉及。
+    * alarmLocation  **参数解释**： 告警定位信息。 **取值范围**： 不涉及。
+    * resourceId  **参数解释**： 告警源ID。 **取值范围**： 不涉及。
+    * resourceIdName  **参数解释**： 告警源名称。 **取值范围**： 不涉及。
+    * alarmGenerateDate  **参数解释**： 告警日期。 **取值范围**： 不涉及。
+    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmId  告警定义ID
-    * alarmName  告警名称
-    * alarmLevel  告警级别
-    * alarmSource  告警服务
-    * alarmMessage  告警消息
-    * alarmLocation  告警定位信息
-    * resourceId  告警源ID
-    * resourceIdName  告警源名称
-    * alarmGenerateDate  告警日期
-    * alarmStatus  告警状态
+    * alarmId  **参数解释**： 告警定义ID。 **取值范围**： 不涉及。
+    * alarmName  **参数解释**： 告警名称。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * alarmSource  **参数解释**： 告警服务。 **取值范围**： 不涉及。
+    * alarmMessage  **参数解释**： 告警消息。 **取值范围**： 不涉及。
+    * alarmLocation  **参数解释**： 告警定位信息。 **取值范围**： 不涉及。
+    * resourceId  **参数解释**： 告警源ID。 **取值范围**： 不涉及。
+    * resourceIdName  **参数解释**： 告警源名称。 **取值范围**： 不涉及。
+    * alarmGenerateDate  **参数解释**： 告警日期。 **取值范围**： 不涉及。
+    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmId  告警定义ID
-    * alarmName  告警名称
-    * alarmLevel  告警级别
-    * alarmSource  告警服务
-    * alarmMessage  告警消息
-    * alarmLocation  告警定位信息
-    * resourceId  告警源ID
-    * resourceIdName  告警源名称
-    * alarmGenerateDate  告警日期
-    * alarmStatus  告警状态
+    * alarmId  **参数解释**： 告警定义ID。 **取值范围**： 不涉及。
+    * alarmName  **参数解释**： 告警名称。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * alarmSource  **参数解释**： 告警服务。 **取值范围**： 不涉及。
+    * alarmMessage  **参数解释**： 告警消息。 **取值范围**： 不涉及。
+    * alarmLocation  **参数解释**： 告警定位信息。 **取值范围**： 不涉及。
+    * resourceId  **参数解释**： 告警源ID。 **取值范围**： 不涉及。
+    * resourceIdName  **参数解释**： 告警源名称。 **取值范围**： 不涉及。
+    * alarmGenerateDate  **参数解释**： 告警日期。 **取值范围**： 不涉及。
+    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmId  告警定义ID
-    * alarmName  告警名称
-    * alarmLevel  告警级别
-    * alarmSource  告警服务
-    * alarmMessage  告警消息
-    * alarmLocation  告警定位信息
-    * resourceId  告警源ID
-    * resourceIdName  告警源名称
-    * alarmGenerateDate  告警日期
-    * alarmStatus  告警状态
+    * alarmId  **参数解释**： 告警定义ID。 **取值范围**： 不涉及。
+    * alarmName  **参数解释**： 告警名称。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * alarmSource  **参数解释**： 告警服务。 **取值范围**： 不涉及。
+    * alarmMessage  **参数解释**： 告警消息。 **取值范围**： 不涉及。
+    * alarmLocation  **参数解释**： 告警定位信息。 **取值范围**： 不涉及。
+    * resourceId  **参数解释**： 告警源ID。 **取值范围**： 不涉及。
+    * resourceIdName  **参数解释**： 告警源名称。 **取值范围**： 不涉及。
+    * alarmGenerateDate  **参数解释**： 告警日期。 **取值范围**： 不涉及。
+    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmId  告警定义ID
-    * alarmName  告警名称
-    * alarmLevel  告警级别
-    * alarmSource  告警服务
-    * alarmMessage  告警消息
-    * alarmLocation  告警定位信息
-    * resourceId  告警源ID
-    * resourceIdName  告警源名称
-    * alarmGenerateDate  告警日期
-    * alarmStatus  告警状态
+    * alarmId  **参数解释**： 告警定义ID。 **取值范围**： 不涉及。
+    * alarmName  **参数解释**： 告警名称。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * alarmSource  **参数解释**： 告警服务。 **取值范围**： 不涉及。
+    * alarmMessage  **参数解释**： 告警消息。 **取值范围**： 不涉及。
+    * alarmLocation  **参数解释**： 告警定位信息。 **取值范围**： 不涉及。
+    * resourceId  **参数解释**： 告警源ID。 **取值范围**： 不涉及。
+    * resourceIdName  **参数解释**： 告警源名称。 **取值范围**： 不涉及。
+    * alarmGenerateDate  **参数解释**： 告警日期。 **取值范围**： 不涉及。
+    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -273,7 +273,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  告警定义ID
+    *  **参数解释**： 告警定义ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string|null $alarmId 告警定义ID
+    * @param string|null $alarmId **参数解释**： 告警定义ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmName
-    *  告警名称
+    *  **参数解释**： 告警名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmName
     *
-    * @param string|null $alarmName 告警名称
+    * @param string|null $alarmName **参数解释**： 告警名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmLevel
-    *  告警级别
+    *  **参数解释**： 告警级别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmLevel
     *
-    * @param string|null $alarmLevel 告警级别
+    * @param string|null $alarmLevel **参数解释**： 告警级别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmSource
-    *  告警服务
+    *  **参数解释**： 告警服务。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmSource
     *
-    * @param string|null $alarmSource 告警服务
+    * @param string|null $alarmSource **参数解释**： 告警服务。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmMessage
-    *  告警消息
+    *  **参数解释**： 告警消息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -381,7 +381,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmMessage
     *
-    * @param string|null $alarmMessage 告警消息
+    * @param string|null $alarmMessage **参数解释**： 告警消息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmLocation
-    *  告警定位信息
+    *  **参数解释**： 告警定位信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmLocation
     *
-    * @param string|null $alarmLocation 告警定位信息
+    * @param string|null $alarmLocation **参数解释**： 告警定位信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  告警源ID
+    *  **参数解释**： 告警源ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -429,7 +429,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 告警源ID
+    * @param string|null $resourceId **参数解释**： 告警源ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceIdName
-    *  告警源名称
+    *  **参数解释**： 告警源名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -453,7 +453,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceIdName
     *
-    * @param string|null $resourceIdName 告警源名称
+    * @param string|null $resourceIdName **参数解释**： 告警源名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmGenerateDate
-    *  告警日期
+    *  **参数解释**： 告警日期。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -477,7 +477,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmGenerateDate
     *
-    * @param string|null $alarmGenerateDate 告警日期
+    * @param string|null $alarmGenerateDate **参数解释**： 告警日期。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmStatus
-    *  告警状态
+    *  **参数解释**： 告警状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -501,7 +501,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmStatus
     *
-    * @param string|null $alarmStatus 告警状态
+    * @param string|null $alarmStatus **参数解释**： 告警状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */

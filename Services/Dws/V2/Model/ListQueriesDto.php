@@ -20,66 +20,66 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * virtualClusterId  虚拟集群ID
-    * ctime  采集时间
-    * pid  会话id。
-    * instName  实例名称。
-    * waiting  如果后台当前正等待锁则为true。
-    * enqueue  工作负载管理资源状态。
-    * warning  主要显示如下几类告警信息以及sql自诊断调优相关告警。
-    * query  查询语句。
-    * lane  快慢车道 (fast or slow)。
-    * dbName  数据库名称。
-    * priority  job在资源池中的优先级，取值：1,2,4,8（rush、high、medium、low）。
-    * queryId  语句执行使用的内部query_id。
-    * queryBand  用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。
-    * jobName  这个值是从query_band的字段中取出来的，位置0。
-    * jobInst  这个值是从query_band的字段中取出来的，位置1。
-    * userName  连接到后端的用户名。
-    * applicationName  连接到后端的应用名。
-    * clientAddress  连接到后端的客户端的ip地址。
-    * clientHostname  客户端的主机名。
-    * clientPort  客户端用于与后端通讯的tcp端口号。
-    * startTime  语句执行的开始时间。
-    * blockTime  语句执行前的阻塞时间 （单位ms）。
-    * duration  语句已经执行的时间 （单位ms）。
-    * estimateTotalTime  语句执行预估总时间 （单位ms）。
-    * estimateLeftTime  语句执行预估剩余时间 （单位ms）。
-    * resourcePool  用户使用的资源池。
-    * controlGroup  语句所使用的cgroup。
-    * minPeakMemory  语句在所有dn上的最小内存峰值 （单位mb）。
-    * maxPeakMemory  语句在所有dn上的最大内存峰值 （单位mb）。
-    * averagePeakMemory  语句执行过程中的内存使用平均值 （单位mb）。
-    * memorySkewPercent  语句在各dn间的内存使用倾斜率。
-    * estimateMemory  语句预估使用内存 （单位mb）。
-    * spillInfo  语句在所有dn上的下盘信息。
-    * minSpillSize  若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。
-    * maxSpillSize  若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。
-    * averageSpillSize  若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。
-    * spillSkewPercent  若发生下盘，dn间下盘倾斜率。
-    * minDnTime  语句在所有dn上的最小执行时间 (单位ms)。
-    * maxDnTime  语句在所有dn上的最大执行时间 (单位ms)。
-    * averageDnTime  语句在所有dn上的平均执行时间 (单位ms)。
-    * dntimeSkewPercent  语句在各dn间的执行时间倾斜率。
-    * minCpuTime  语句在所有dn上的最小cpu时间 (单位ms)。
-    * maxCpuTime  语句在所有dn上的最大cpu时间 (单位ms)。
-    * totalCpuTime  语句在所有dn上的cpu总时间 (单位ms)。
-    * cpuSkewPercent  语句在各dn间的cpu时间倾斜率。
-    * averagePeakIops  语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。
-    * iopsSkewPercent  语句在dn间的io倾斜率。
-    * maxPeakIops  语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。
-    * minPeakIops  语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。
-    * queryPlan  查询计划。
-    * queryStatus  当前查询语句的实时运行状态 (active, idle, idle in transaction, idle in transaction(aborted), fastpath function call, disabled)。
-    * wlmStatus  当前查询语句在资源池上的运行状态 (pending, running, finished, aborted, active, unknown)。
-    * wlmAttrib  语句的属性 (ordinary, simple, complicated, internal)
-    * systemQuery  是否系统查询。
-    * backendStart  该过程开始的时间，即当客户端连接服务器时。
-    * elapsedTime  到目前为止的执行时间。
-    * currXactStart  启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。
-    * stateChange  上次状态改变的时间。
-    * queryStart  语句执行的开始时间。
-    * queryElapsedTime  语句当前为止的实际执行时间，(单位：s)。
+    * virtualClusterId  **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
+    * ctime  **参数解释**： 采集时间。 **取值范围**： 不涉及。
+    * pid  **参数解释**： 会话ID。 **取值范围**： 不涉及。
+    * instName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * waiting  **参数解释**： 如果后台当前正等待锁则为true。 **取值范围**： 不涉及。
+    * enqueue  **参数解释**： 资源状态。 **取值范围**： 不涉及。
+    * warning  **参数解释**： 主要显示如下几类告警信息以及sql自诊断调优相关告警。 **取值范围**： 不涉及。
+    * query  **参数解释**： 查询语句。 **取值范围**： 不涉及。
+    * lane  **参数解释**： 快慢车道。 **取值范围**： fast：快车道。 slow：慢车道。
+    * dbName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * priority  **参数解释**： 任务在资源池中的优先级。 **取值范围**： 1：最高。 2：高。 4：中。 8：低。
+    * queryId  **参数解释**： 语句执行使用的内部查询ID。 **取值范围**： 不涉及。
+    * queryBand  **参数解释**： 用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。 **取值范围**： 不涉及。
+    * jobName  **参数解释**： 该值是从query_band的字段中取出来的，位置0。 **取值范围**： 不涉及。
+    * jobInst  **参数解释**： 该值是从query_band的字段中取出来的，位置1。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 连接到后端的用户名。 **取值范围**： 不涉及。
+    * applicationName  **参数解释**： 连接到后端的应用名。 **取值范围**： 不涉及。
+    * clientAddress  **参数解释**： 连接到后端的客户端的IP地址。 **取值范围**： 不涉及。
+    * clientHostname  **参数解释**： 客户端的主机名。 **取值范围**： 不涉及。
+    * clientPort  **参数解释**： 客户端用于与后端通讯的tcp端口号。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
+    * blockTime  **参数解释**： 语句执行前的阻塞时间，单位ms。 **取值范围**： 不涉及。
+    * duration  **参数解释**： 语句已经执行的时间，单位ms。 **取值范围**： 不涉及。
+    * estimateTotalTime  **参数解释**： 语句执行预估总时间，单位ms。 **取值范围**： 不涉及。
+    * estimateLeftTime  **参数解释**： 语句执行预估剩余时间，单位ms。 **取值范围**： 不涉及。
+    * resourcePool  **参数解释**： 用户使用的资源池。 **取值范围**： 不涉及。
+    * controlGroup  **参数解释**： 语句所使用的cgroup。 **取值范围**： 不涉及。
+    * minPeakMemory  **参数解释**： 语句在所有dn上的最小内存峰值，单位mb。 **取值范围**： 不涉及。
+    * maxPeakMemory  **参数解释**： 语句在所有dn上的最大内存峰值，单位mb。 **取值范围**： 不涉及。
+    * averagePeakMemory  **参数解释**： 语句执行过程中的内存使用平均值，单位mb。 **取值范围**： 不涉及。
+    * memorySkewPercent  **参数解释**： 语句在各dn间的内存使用倾斜率。 **取值范围**： 不涉及。
+    * estimateMemory  **参数解释**： 语句预估使用内存，单位mb。 **取值范围**： 不涉及。
+    * spillInfo  **参数解释**： 语句在所有dn上的下盘信息。 **取值范围**： 不涉及。
+    * minSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * maxSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * averageSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * spillSkewPercent  **参数解释**： 若发生下盘，dn间下盘倾斜率。 **取值范围**： 不涉及。
+    * minDnTime  **参数解释**： 语句在所有dn上的最小执行时间，单位ms。 **取值范围**： 不涉及。
+    * maxDnTime  **参数解释**： 语句在所有dn上的最大执行时间，单位ms。 **取值范围**： 不涉及。
+    * averageDnTime  **参数解释**： 语句在所有dn上的平均执行时间，单位ms。 **取值范围**： 不涉及。
+    * dntimeSkewPercent  **参数解释**： 语句在各dn间的执行时间倾斜率。 **取值范围**： 不涉及。
+    * minCpuTime  **参数解释**： 语句在所有dn上的最小cpu时间，单位ms。 **取值范围**： 不涉及。
+    * maxCpuTime  **参数解释**： 语句在所有dn上的最大cpu时间，单位ms。 **取值范围**： 不涉及。
+    * totalCpuTime  **参数解释**： 语句在所有dn上的cpu总时间，单位ms。 **取值范围**： 不涉及。
+    * cpuSkewPercent  **参数解释**： 语句在各dn间的cpu时间倾斜率。 **取值范围**： 不涉及。
+    * averagePeakIops  **参数解释**： 语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * iopsSkewPercent  **参数解释**： 语句在dn间的io倾斜率。 **取值范围**： 不涉及。
+    * maxPeakIops  **参数解释**： 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * minPeakIops  **参数解释**： 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * queryPlan  **参数解释**： 查询计划。 **取值范围**： 不涉及。
+    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
+    * wlmStatus  **参数解释**： 当前查询语句在资源池上的运行状态。 **取值范围**： pending：待生效。 running：运行中。 finished：结束。 aborted：终止。 active：正常。 unknown：未知。
+    * wlmAttrib  **参数解释**： 语句的属性。 **取值范围**： ordinary：普通。 simple：简单。 complicated：复杂。 internal：内部。
+    * systemQuery  **参数解释**： 是否系统查询。 **取值范围**： 不涉及。
+    * backendStart  **参数解释**： 该过程开始的时间，即当客户端连接服务器时。 **取值范围**： 不涉及。
+    * elapsedTime  **参数解释**： 到目前为止的执行时间。 **取值范围**： 不涉及。
+    * currXactStart  **参数解释**： 启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。 **取值范围**： 不涉及。
+    * stateChange  **参数解释**： 上次状态改变的时间。 **取值范围**： 不涉及。
+    * queryStart  **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
+    * queryElapsedTime  **参数解释**： 语句当前为止的实际执行时间。单位：秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -148,66 +148,66 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * virtualClusterId  虚拟集群ID
-    * ctime  采集时间
-    * pid  会话id。
-    * instName  实例名称。
-    * waiting  如果后台当前正等待锁则为true。
-    * enqueue  工作负载管理资源状态。
-    * warning  主要显示如下几类告警信息以及sql自诊断调优相关告警。
-    * query  查询语句。
-    * lane  快慢车道 (fast or slow)。
-    * dbName  数据库名称。
-    * priority  job在资源池中的优先级，取值：1,2,4,8（rush、high、medium、low）。
-    * queryId  语句执行使用的内部query_id。
-    * queryBand  用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。
-    * jobName  这个值是从query_band的字段中取出来的，位置0。
-    * jobInst  这个值是从query_band的字段中取出来的，位置1。
-    * userName  连接到后端的用户名。
-    * applicationName  连接到后端的应用名。
-    * clientAddress  连接到后端的客户端的ip地址。
-    * clientHostname  客户端的主机名。
-    * clientPort  客户端用于与后端通讯的tcp端口号。
-    * startTime  语句执行的开始时间。
-    * blockTime  语句执行前的阻塞时间 （单位ms）。
-    * duration  语句已经执行的时间 （单位ms）。
-    * estimateTotalTime  语句执行预估总时间 （单位ms）。
-    * estimateLeftTime  语句执行预估剩余时间 （单位ms）。
-    * resourcePool  用户使用的资源池。
-    * controlGroup  语句所使用的cgroup。
-    * minPeakMemory  语句在所有dn上的最小内存峰值 （单位mb）。
-    * maxPeakMemory  语句在所有dn上的最大内存峰值 （单位mb）。
-    * averagePeakMemory  语句执行过程中的内存使用平均值 （单位mb）。
-    * memorySkewPercent  语句在各dn间的内存使用倾斜率。
-    * estimateMemory  语句预估使用内存 （单位mb）。
-    * spillInfo  语句在所有dn上的下盘信息。
-    * minSpillSize  若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。
-    * maxSpillSize  若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。
-    * averageSpillSize  若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。
-    * spillSkewPercent  若发生下盘，dn间下盘倾斜率。
-    * minDnTime  语句在所有dn上的最小执行时间 (单位ms)。
-    * maxDnTime  语句在所有dn上的最大执行时间 (单位ms)。
-    * averageDnTime  语句在所有dn上的平均执行时间 (单位ms)。
-    * dntimeSkewPercent  语句在各dn间的执行时间倾斜率。
-    * minCpuTime  语句在所有dn上的最小cpu时间 (单位ms)。
-    * maxCpuTime  语句在所有dn上的最大cpu时间 (单位ms)。
-    * totalCpuTime  语句在所有dn上的cpu总时间 (单位ms)。
-    * cpuSkewPercent  语句在各dn间的cpu时间倾斜率。
-    * averagePeakIops  语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。
-    * iopsSkewPercent  语句在dn间的io倾斜率。
-    * maxPeakIops  语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。
-    * minPeakIops  语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。
-    * queryPlan  查询计划。
-    * queryStatus  当前查询语句的实时运行状态 (active, idle, idle in transaction, idle in transaction(aborted), fastpath function call, disabled)。
-    * wlmStatus  当前查询语句在资源池上的运行状态 (pending, running, finished, aborted, active, unknown)。
-    * wlmAttrib  语句的属性 (ordinary, simple, complicated, internal)
-    * systemQuery  是否系统查询。
-    * backendStart  该过程开始的时间，即当客户端连接服务器时。
-    * elapsedTime  到目前为止的执行时间。
-    * currXactStart  启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。
-    * stateChange  上次状态改变的时间。
-    * queryStart  语句执行的开始时间。
-    * queryElapsedTime  语句当前为止的实际执行时间，(单位：s)。
+    * virtualClusterId  **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
+    * ctime  **参数解释**： 采集时间。 **取值范围**： 不涉及。
+    * pid  **参数解释**： 会话ID。 **取值范围**： 不涉及。
+    * instName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * waiting  **参数解释**： 如果后台当前正等待锁则为true。 **取值范围**： 不涉及。
+    * enqueue  **参数解释**： 资源状态。 **取值范围**： 不涉及。
+    * warning  **参数解释**： 主要显示如下几类告警信息以及sql自诊断调优相关告警。 **取值范围**： 不涉及。
+    * query  **参数解释**： 查询语句。 **取值范围**： 不涉及。
+    * lane  **参数解释**： 快慢车道。 **取值范围**： fast：快车道。 slow：慢车道。
+    * dbName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * priority  **参数解释**： 任务在资源池中的优先级。 **取值范围**： 1：最高。 2：高。 4：中。 8：低。
+    * queryId  **参数解释**： 语句执行使用的内部查询ID。 **取值范围**： 不涉及。
+    * queryBand  **参数解释**： 用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。 **取值范围**： 不涉及。
+    * jobName  **参数解释**： 该值是从query_band的字段中取出来的，位置0。 **取值范围**： 不涉及。
+    * jobInst  **参数解释**： 该值是从query_band的字段中取出来的，位置1。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 连接到后端的用户名。 **取值范围**： 不涉及。
+    * applicationName  **参数解释**： 连接到后端的应用名。 **取值范围**： 不涉及。
+    * clientAddress  **参数解释**： 连接到后端的客户端的IP地址。 **取值范围**： 不涉及。
+    * clientHostname  **参数解释**： 客户端的主机名。 **取值范围**： 不涉及。
+    * clientPort  **参数解释**： 客户端用于与后端通讯的tcp端口号。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
+    * blockTime  **参数解释**： 语句执行前的阻塞时间，单位ms。 **取值范围**： 不涉及。
+    * duration  **参数解释**： 语句已经执行的时间，单位ms。 **取值范围**： 不涉及。
+    * estimateTotalTime  **参数解释**： 语句执行预估总时间，单位ms。 **取值范围**： 不涉及。
+    * estimateLeftTime  **参数解释**： 语句执行预估剩余时间，单位ms。 **取值范围**： 不涉及。
+    * resourcePool  **参数解释**： 用户使用的资源池。 **取值范围**： 不涉及。
+    * controlGroup  **参数解释**： 语句所使用的cgroup。 **取值范围**： 不涉及。
+    * minPeakMemory  **参数解释**： 语句在所有dn上的最小内存峰值，单位mb。 **取值范围**： 不涉及。
+    * maxPeakMemory  **参数解释**： 语句在所有dn上的最大内存峰值，单位mb。 **取值范围**： 不涉及。
+    * averagePeakMemory  **参数解释**： 语句执行过程中的内存使用平均值，单位mb。 **取值范围**： 不涉及。
+    * memorySkewPercent  **参数解释**： 语句在各dn间的内存使用倾斜率。 **取值范围**： 不涉及。
+    * estimateMemory  **参数解释**： 语句预估使用内存，单位mb。 **取值范围**： 不涉及。
+    * spillInfo  **参数解释**： 语句在所有dn上的下盘信息。 **取值范围**： 不涉及。
+    * minSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * maxSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * averageSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * spillSkewPercent  **参数解释**： 若发生下盘，dn间下盘倾斜率。 **取值范围**： 不涉及。
+    * minDnTime  **参数解释**： 语句在所有dn上的最小执行时间，单位ms。 **取值范围**： 不涉及。
+    * maxDnTime  **参数解释**： 语句在所有dn上的最大执行时间，单位ms。 **取值范围**： 不涉及。
+    * averageDnTime  **参数解释**： 语句在所有dn上的平均执行时间，单位ms。 **取值范围**： 不涉及。
+    * dntimeSkewPercent  **参数解释**： 语句在各dn间的执行时间倾斜率。 **取值范围**： 不涉及。
+    * minCpuTime  **参数解释**： 语句在所有dn上的最小cpu时间，单位ms。 **取值范围**： 不涉及。
+    * maxCpuTime  **参数解释**： 语句在所有dn上的最大cpu时间，单位ms。 **取值范围**： 不涉及。
+    * totalCpuTime  **参数解释**： 语句在所有dn上的cpu总时间，单位ms。 **取值范围**： 不涉及。
+    * cpuSkewPercent  **参数解释**： 语句在各dn间的cpu时间倾斜率。 **取值范围**： 不涉及。
+    * averagePeakIops  **参数解释**： 语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * iopsSkewPercent  **参数解释**： 语句在dn间的io倾斜率。 **取值范围**： 不涉及。
+    * maxPeakIops  **参数解释**： 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * minPeakIops  **参数解释**： 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * queryPlan  **参数解释**： 查询计划。 **取值范围**： 不涉及。
+    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
+    * wlmStatus  **参数解释**： 当前查询语句在资源池上的运行状态。 **取值范围**： pending：待生效。 running：运行中。 finished：结束。 aborted：终止。 active：正常。 unknown：未知。
+    * wlmAttrib  **参数解释**： 语句的属性。 **取值范围**： ordinary：普通。 simple：简单。 complicated：复杂。 internal：内部。
+    * systemQuery  **参数解释**： 是否系统查询。 **取值范围**： 不涉及。
+    * backendStart  **参数解释**： 该过程开始的时间，即当客户端连接服务器时。 **取值范围**： 不涉及。
+    * elapsedTime  **参数解释**： 到目前为止的执行时间。 **取值范围**： 不涉及。
+    * currXactStart  **参数解释**： 启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。 **取值范围**： 不涉及。
+    * stateChange  **参数解释**： 上次状态改变的时间。 **取值范围**： 不涉及。
+    * queryStart  **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
+    * queryElapsedTime  **参数解释**： 语句当前为止的实际执行时间。单位：秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -297,66 +297,66 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * virtualClusterId  虚拟集群ID
-    * ctime  采集时间
-    * pid  会话id。
-    * instName  实例名称。
-    * waiting  如果后台当前正等待锁则为true。
-    * enqueue  工作负载管理资源状态。
-    * warning  主要显示如下几类告警信息以及sql自诊断调优相关告警。
-    * query  查询语句。
-    * lane  快慢车道 (fast or slow)。
-    * dbName  数据库名称。
-    * priority  job在资源池中的优先级，取值：1,2,4,8（rush、high、medium、low）。
-    * queryId  语句执行使用的内部query_id。
-    * queryBand  用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。
-    * jobName  这个值是从query_band的字段中取出来的，位置0。
-    * jobInst  这个值是从query_band的字段中取出来的，位置1。
-    * userName  连接到后端的用户名。
-    * applicationName  连接到后端的应用名。
-    * clientAddress  连接到后端的客户端的ip地址。
-    * clientHostname  客户端的主机名。
-    * clientPort  客户端用于与后端通讯的tcp端口号。
-    * startTime  语句执行的开始时间。
-    * blockTime  语句执行前的阻塞时间 （单位ms）。
-    * duration  语句已经执行的时间 （单位ms）。
-    * estimateTotalTime  语句执行预估总时间 （单位ms）。
-    * estimateLeftTime  语句执行预估剩余时间 （单位ms）。
-    * resourcePool  用户使用的资源池。
-    * controlGroup  语句所使用的cgroup。
-    * minPeakMemory  语句在所有dn上的最小内存峰值 （单位mb）。
-    * maxPeakMemory  语句在所有dn上的最大内存峰值 （单位mb）。
-    * averagePeakMemory  语句执行过程中的内存使用平均值 （单位mb）。
-    * memorySkewPercent  语句在各dn间的内存使用倾斜率。
-    * estimateMemory  语句预估使用内存 （单位mb）。
-    * spillInfo  语句在所有dn上的下盘信息。
-    * minSpillSize  若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。
-    * maxSpillSize  若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。
-    * averageSpillSize  若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。
-    * spillSkewPercent  若发生下盘，dn间下盘倾斜率。
-    * minDnTime  语句在所有dn上的最小执行时间 (单位ms)。
-    * maxDnTime  语句在所有dn上的最大执行时间 (单位ms)。
-    * averageDnTime  语句在所有dn上的平均执行时间 (单位ms)。
-    * dntimeSkewPercent  语句在各dn间的执行时间倾斜率。
-    * minCpuTime  语句在所有dn上的最小cpu时间 (单位ms)。
-    * maxCpuTime  语句在所有dn上的最大cpu时间 (单位ms)。
-    * totalCpuTime  语句在所有dn上的cpu总时间 (单位ms)。
-    * cpuSkewPercent  语句在各dn间的cpu时间倾斜率。
-    * averagePeakIops  语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。
-    * iopsSkewPercent  语句在dn间的io倾斜率。
-    * maxPeakIops  语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。
-    * minPeakIops  语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。
-    * queryPlan  查询计划。
-    * queryStatus  当前查询语句的实时运行状态 (active, idle, idle in transaction, idle in transaction(aborted), fastpath function call, disabled)。
-    * wlmStatus  当前查询语句在资源池上的运行状态 (pending, running, finished, aborted, active, unknown)。
-    * wlmAttrib  语句的属性 (ordinary, simple, complicated, internal)
-    * systemQuery  是否系统查询。
-    * backendStart  该过程开始的时间，即当客户端连接服务器时。
-    * elapsedTime  到目前为止的执行时间。
-    * currXactStart  启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。
-    * stateChange  上次状态改变的时间。
-    * queryStart  语句执行的开始时间。
-    * queryElapsedTime  语句当前为止的实际执行时间，(单位：s)。
+    * virtualClusterId  **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
+    * ctime  **参数解释**： 采集时间。 **取值范围**： 不涉及。
+    * pid  **参数解释**： 会话ID。 **取值范围**： 不涉及。
+    * instName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * waiting  **参数解释**： 如果后台当前正等待锁则为true。 **取值范围**： 不涉及。
+    * enqueue  **参数解释**： 资源状态。 **取值范围**： 不涉及。
+    * warning  **参数解释**： 主要显示如下几类告警信息以及sql自诊断调优相关告警。 **取值范围**： 不涉及。
+    * query  **参数解释**： 查询语句。 **取值范围**： 不涉及。
+    * lane  **参数解释**： 快慢车道。 **取值范围**： fast：快车道。 slow：慢车道。
+    * dbName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * priority  **参数解释**： 任务在资源池中的优先级。 **取值范围**： 1：最高。 2：高。 4：中。 8：低。
+    * queryId  **参数解释**： 语句执行使用的内部查询ID。 **取值范围**： 不涉及。
+    * queryBand  **参数解释**： 用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。 **取值范围**： 不涉及。
+    * jobName  **参数解释**： 该值是从query_band的字段中取出来的，位置0。 **取值范围**： 不涉及。
+    * jobInst  **参数解释**： 该值是从query_band的字段中取出来的，位置1。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 连接到后端的用户名。 **取值范围**： 不涉及。
+    * applicationName  **参数解释**： 连接到后端的应用名。 **取值范围**： 不涉及。
+    * clientAddress  **参数解释**： 连接到后端的客户端的IP地址。 **取值范围**： 不涉及。
+    * clientHostname  **参数解释**： 客户端的主机名。 **取值范围**： 不涉及。
+    * clientPort  **参数解释**： 客户端用于与后端通讯的tcp端口号。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
+    * blockTime  **参数解释**： 语句执行前的阻塞时间，单位ms。 **取值范围**： 不涉及。
+    * duration  **参数解释**： 语句已经执行的时间，单位ms。 **取值范围**： 不涉及。
+    * estimateTotalTime  **参数解释**： 语句执行预估总时间，单位ms。 **取值范围**： 不涉及。
+    * estimateLeftTime  **参数解释**： 语句执行预估剩余时间，单位ms。 **取值范围**： 不涉及。
+    * resourcePool  **参数解释**： 用户使用的资源池。 **取值范围**： 不涉及。
+    * controlGroup  **参数解释**： 语句所使用的cgroup。 **取值范围**： 不涉及。
+    * minPeakMemory  **参数解释**： 语句在所有dn上的最小内存峰值，单位mb。 **取值范围**： 不涉及。
+    * maxPeakMemory  **参数解释**： 语句在所有dn上的最大内存峰值，单位mb。 **取值范围**： 不涉及。
+    * averagePeakMemory  **参数解释**： 语句执行过程中的内存使用平均值，单位mb。 **取值范围**： 不涉及。
+    * memorySkewPercent  **参数解释**： 语句在各dn间的内存使用倾斜率。 **取值范围**： 不涉及。
+    * estimateMemory  **参数解释**： 语句预估使用内存，单位mb。 **取值范围**： 不涉及。
+    * spillInfo  **参数解释**： 语句在所有dn上的下盘信息。 **取值范围**： 不涉及。
+    * minSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * maxSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * averageSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * spillSkewPercent  **参数解释**： 若发生下盘，dn间下盘倾斜率。 **取值范围**： 不涉及。
+    * minDnTime  **参数解释**： 语句在所有dn上的最小执行时间，单位ms。 **取值范围**： 不涉及。
+    * maxDnTime  **参数解释**： 语句在所有dn上的最大执行时间，单位ms。 **取值范围**： 不涉及。
+    * averageDnTime  **参数解释**： 语句在所有dn上的平均执行时间，单位ms。 **取值范围**： 不涉及。
+    * dntimeSkewPercent  **参数解释**： 语句在各dn间的执行时间倾斜率。 **取值范围**： 不涉及。
+    * minCpuTime  **参数解释**： 语句在所有dn上的最小cpu时间，单位ms。 **取值范围**： 不涉及。
+    * maxCpuTime  **参数解释**： 语句在所有dn上的最大cpu时间，单位ms。 **取值范围**： 不涉及。
+    * totalCpuTime  **参数解释**： 语句在所有dn上的cpu总时间，单位ms。 **取值范围**： 不涉及。
+    * cpuSkewPercent  **参数解释**： 语句在各dn间的cpu时间倾斜率。 **取值范围**： 不涉及。
+    * averagePeakIops  **参数解释**： 语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * iopsSkewPercent  **参数解释**： 语句在dn间的io倾斜率。 **取值范围**： 不涉及。
+    * maxPeakIops  **参数解释**： 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * minPeakIops  **参数解释**： 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * queryPlan  **参数解释**： 查询计划。 **取值范围**： 不涉及。
+    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
+    * wlmStatus  **参数解释**： 当前查询语句在资源池上的运行状态。 **取值范围**： pending：待生效。 running：运行中。 finished：结束。 aborted：终止。 active：正常。 unknown：未知。
+    * wlmAttrib  **参数解释**： 语句的属性。 **取值范围**： ordinary：普通。 simple：简单。 complicated：复杂。 internal：内部。
+    * systemQuery  **参数解释**： 是否系统查询。 **取值范围**： 不涉及。
+    * backendStart  **参数解释**： 该过程开始的时间，即当客户端连接服务器时。 **取值范围**： 不涉及。
+    * elapsedTime  **参数解释**： 到目前为止的执行时间。 **取值范围**： 不涉及。
+    * currXactStart  **参数解释**： 启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。 **取值范围**： 不涉及。
+    * stateChange  **参数解释**： 上次状态改变的时间。 **取值范围**： 不涉及。
+    * queryStart  **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
+    * queryElapsedTime  **参数解释**： 语句当前为止的实际执行时间。单位：秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -425,66 +425,66 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * virtualClusterId  虚拟集群ID
-    * ctime  采集时间
-    * pid  会话id。
-    * instName  实例名称。
-    * waiting  如果后台当前正等待锁则为true。
-    * enqueue  工作负载管理资源状态。
-    * warning  主要显示如下几类告警信息以及sql自诊断调优相关告警。
-    * query  查询语句。
-    * lane  快慢车道 (fast or slow)。
-    * dbName  数据库名称。
-    * priority  job在资源池中的优先级，取值：1,2,4,8（rush、high、medium、low）。
-    * queryId  语句执行使用的内部query_id。
-    * queryBand  用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。
-    * jobName  这个值是从query_band的字段中取出来的，位置0。
-    * jobInst  这个值是从query_band的字段中取出来的，位置1。
-    * userName  连接到后端的用户名。
-    * applicationName  连接到后端的应用名。
-    * clientAddress  连接到后端的客户端的ip地址。
-    * clientHostname  客户端的主机名。
-    * clientPort  客户端用于与后端通讯的tcp端口号。
-    * startTime  语句执行的开始时间。
-    * blockTime  语句执行前的阻塞时间 （单位ms）。
-    * duration  语句已经执行的时间 （单位ms）。
-    * estimateTotalTime  语句执行预估总时间 （单位ms）。
-    * estimateLeftTime  语句执行预估剩余时间 （单位ms）。
-    * resourcePool  用户使用的资源池。
-    * controlGroup  语句所使用的cgroup。
-    * minPeakMemory  语句在所有dn上的最小内存峰值 （单位mb）。
-    * maxPeakMemory  语句在所有dn上的最大内存峰值 （单位mb）。
-    * averagePeakMemory  语句执行过程中的内存使用平均值 （单位mb）。
-    * memorySkewPercent  语句在各dn间的内存使用倾斜率。
-    * estimateMemory  语句预估使用内存 （单位mb）。
-    * spillInfo  语句在所有dn上的下盘信息。
-    * minSpillSize  若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。
-    * maxSpillSize  若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。
-    * averageSpillSize  若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。
-    * spillSkewPercent  若发生下盘，dn间下盘倾斜率。
-    * minDnTime  语句在所有dn上的最小执行时间 (单位ms)。
-    * maxDnTime  语句在所有dn上的最大执行时间 (单位ms)。
-    * averageDnTime  语句在所有dn上的平均执行时间 (单位ms)。
-    * dntimeSkewPercent  语句在各dn间的执行时间倾斜率。
-    * minCpuTime  语句在所有dn上的最小cpu时间 (单位ms)。
-    * maxCpuTime  语句在所有dn上的最大cpu时间 (单位ms)。
-    * totalCpuTime  语句在所有dn上的cpu总时间 (单位ms)。
-    * cpuSkewPercent  语句在各dn间的cpu时间倾斜率。
-    * averagePeakIops  语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。
-    * iopsSkewPercent  语句在dn间的io倾斜率。
-    * maxPeakIops  语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。
-    * minPeakIops  语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。
-    * queryPlan  查询计划。
-    * queryStatus  当前查询语句的实时运行状态 (active, idle, idle in transaction, idle in transaction(aborted), fastpath function call, disabled)。
-    * wlmStatus  当前查询语句在资源池上的运行状态 (pending, running, finished, aborted, active, unknown)。
-    * wlmAttrib  语句的属性 (ordinary, simple, complicated, internal)
-    * systemQuery  是否系统查询。
-    * backendStart  该过程开始的时间，即当客户端连接服务器时。
-    * elapsedTime  到目前为止的执行时间。
-    * currXactStart  启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。
-    * stateChange  上次状态改变的时间。
-    * queryStart  语句执行的开始时间。
-    * queryElapsedTime  语句当前为止的实际执行时间，(单位：s)。
+    * virtualClusterId  **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
+    * ctime  **参数解释**： 采集时间。 **取值范围**： 不涉及。
+    * pid  **参数解释**： 会话ID。 **取值范围**： 不涉及。
+    * instName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * waiting  **参数解释**： 如果后台当前正等待锁则为true。 **取值范围**： 不涉及。
+    * enqueue  **参数解释**： 资源状态。 **取值范围**： 不涉及。
+    * warning  **参数解释**： 主要显示如下几类告警信息以及sql自诊断调优相关告警。 **取值范围**： 不涉及。
+    * query  **参数解释**： 查询语句。 **取值范围**： 不涉及。
+    * lane  **参数解释**： 快慢车道。 **取值范围**： fast：快车道。 slow：慢车道。
+    * dbName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * priority  **参数解释**： 任务在资源池中的优先级。 **取值范围**： 1：最高。 2：高。 4：中。 8：低。
+    * queryId  **参数解释**： 语句执行使用的内部查询ID。 **取值范围**： 不涉及。
+    * queryBand  **参数解释**： 用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。 **取值范围**： 不涉及。
+    * jobName  **参数解释**： 该值是从query_band的字段中取出来的，位置0。 **取值范围**： 不涉及。
+    * jobInst  **参数解释**： 该值是从query_band的字段中取出来的，位置1。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 连接到后端的用户名。 **取值范围**： 不涉及。
+    * applicationName  **参数解释**： 连接到后端的应用名。 **取值范围**： 不涉及。
+    * clientAddress  **参数解释**： 连接到后端的客户端的IP地址。 **取值范围**： 不涉及。
+    * clientHostname  **参数解释**： 客户端的主机名。 **取值范围**： 不涉及。
+    * clientPort  **参数解释**： 客户端用于与后端通讯的tcp端口号。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
+    * blockTime  **参数解释**： 语句执行前的阻塞时间，单位ms。 **取值范围**： 不涉及。
+    * duration  **参数解释**： 语句已经执行的时间，单位ms。 **取值范围**： 不涉及。
+    * estimateTotalTime  **参数解释**： 语句执行预估总时间，单位ms。 **取值范围**： 不涉及。
+    * estimateLeftTime  **参数解释**： 语句执行预估剩余时间，单位ms。 **取值范围**： 不涉及。
+    * resourcePool  **参数解释**： 用户使用的资源池。 **取值范围**： 不涉及。
+    * controlGroup  **参数解释**： 语句所使用的cgroup。 **取值范围**： 不涉及。
+    * minPeakMemory  **参数解释**： 语句在所有dn上的最小内存峰值，单位mb。 **取值范围**： 不涉及。
+    * maxPeakMemory  **参数解释**： 语句在所有dn上的最大内存峰值，单位mb。 **取值范围**： 不涉及。
+    * averagePeakMemory  **参数解释**： 语句执行过程中的内存使用平均值，单位mb。 **取值范围**： 不涉及。
+    * memorySkewPercent  **参数解释**： 语句在各dn间的内存使用倾斜率。 **取值范围**： 不涉及。
+    * estimateMemory  **参数解释**： 语句预估使用内存，单位mb。 **取值范围**： 不涉及。
+    * spillInfo  **参数解释**： 语句在所有dn上的下盘信息。 **取值范围**： 不涉及。
+    * minSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * maxSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * averageSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * spillSkewPercent  **参数解释**： 若发生下盘，dn间下盘倾斜率。 **取值范围**： 不涉及。
+    * minDnTime  **参数解释**： 语句在所有dn上的最小执行时间，单位ms。 **取值范围**： 不涉及。
+    * maxDnTime  **参数解释**： 语句在所有dn上的最大执行时间，单位ms。 **取值范围**： 不涉及。
+    * averageDnTime  **参数解释**： 语句在所有dn上的平均执行时间，单位ms。 **取值范围**： 不涉及。
+    * dntimeSkewPercent  **参数解释**： 语句在各dn间的执行时间倾斜率。 **取值范围**： 不涉及。
+    * minCpuTime  **参数解释**： 语句在所有dn上的最小cpu时间，单位ms。 **取值范围**： 不涉及。
+    * maxCpuTime  **参数解释**： 语句在所有dn上的最大cpu时间，单位ms。 **取值范围**： 不涉及。
+    * totalCpuTime  **参数解释**： 语句在所有dn上的cpu总时间，单位ms。 **取值范围**： 不涉及。
+    * cpuSkewPercent  **参数解释**： 语句在各dn间的cpu时间倾斜率。 **取值范围**： 不涉及。
+    * averagePeakIops  **参数解释**： 语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * iopsSkewPercent  **参数解释**： 语句在dn间的io倾斜率。 **取值范围**： 不涉及。
+    * maxPeakIops  **参数解释**： 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * minPeakIops  **参数解释**： 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * queryPlan  **参数解释**： 查询计划。 **取值范围**： 不涉及。
+    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
+    * wlmStatus  **参数解释**： 当前查询语句在资源池上的运行状态。 **取值范围**： pending：待生效。 running：运行中。 finished：结束。 aborted：终止。 active：正常。 unknown：未知。
+    * wlmAttrib  **参数解释**： 语句的属性。 **取值范围**： ordinary：普通。 simple：简单。 complicated：复杂。 internal：内部。
+    * systemQuery  **参数解释**： 是否系统查询。 **取值范围**： 不涉及。
+    * backendStart  **参数解释**： 该过程开始的时间，即当客户端连接服务器时。 **取值范围**： 不涉及。
+    * elapsedTime  **参数解释**： 到目前为止的执行时间。 **取值范围**： 不涉及。
+    * currXactStart  **参数解释**： 启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。 **取值范围**： 不涉及。
+    * stateChange  **参数解释**： 上次状态改变的时间。 **取值范围**： 不涉及。
+    * queryStart  **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
+    * queryElapsedTime  **参数解释**： 语句当前为止的实际执行时间。单位：秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -553,66 +553,66 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * virtualClusterId  虚拟集群ID
-    * ctime  采集时间
-    * pid  会话id。
-    * instName  实例名称。
-    * waiting  如果后台当前正等待锁则为true。
-    * enqueue  工作负载管理资源状态。
-    * warning  主要显示如下几类告警信息以及sql自诊断调优相关告警。
-    * query  查询语句。
-    * lane  快慢车道 (fast or slow)。
-    * dbName  数据库名称。
-    * priority  job在资源池中的优先级，取值：1,2,4,8（rush、high、medium、low）。
-    * queryId  语句执行使用的内部query_id。
-    * queryBand  用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。
-    * jobName  这个值是从query_band的字段中取出来的，位置0。
-    * jobInst  这个值是从query_band的字段中取出来的，位置1。
-    * userName  连接到后端的用户名。
-    * applicationName  连接到后端的应用名。
-    * clientAddress  连接到后端的客户端的ip地址。
-    * clientHostname  客户端的主机名。
-    * clientPort  客户端用于与后端通讯的tcp端口号。
-    * startTime  语句执行的开始时间。
-    * blockTime  语句执行前的阻塞时间 （单位ms）。
-    * duration  语句已经执行的时间 （单位ms）。
-    * estimateTotalTime  语句执行预估总时间 （单位ms）。
-    * estimateLeftTime  语句执行预估剩余时间 （单位ms）。
-    * resourcePool  用户使用的资源池。
-    * controlGroup  语句所使用的cgroup。
-    * minPeakMemory  语句在所有dn上的最小内存峰值 （单位mb）。
-    * maxPeakMemory  语句在所有dn上的最大内存峰值 （单位mb）。
-    * averagePeakMemory  语句执行过程中的内存使用平均值 （单位mb）。
-    * memorySkewPercent  语句在各dn间的内存使用倾斜率。
-    * estimateMemory  语句预估使用内存 （单位mb）。
-    * spillInfo  语句在所有dn上的下盘信息。
-    * minSpillSize  若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。
-    * maxSpillSize  若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。
-    * averageSpillSize  若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。
-    * spillSkewPercent  若发生下盘，dn间下盘倾斜率。
-    * minDnTime  语句在所有dn上的最小执行时间 (单位ms)。
-    * maxDnTime  语句在所有dn上的最大执行时间 (单位ms)。
-    * averageDnTime  语句在所有dn上的平均执行时间 (单位ms)。
-    * dntimeSkewPercent  语句在各dn间的执行时间倾斜率。
-    * minCpuTime  语句在所有dn上的最小cpu时间 (单位ms)。
-    * maxCpuTime  语句在所有dn上的最大cpu时间 (单位ms)。
-    * totalCpuTime  语句在所有dn上的cpu总时间 (单位ms)。
-    * cpuSkewPercent  语句在各dn间的cpu时间倾斜率。
-    * averagePeakIops  语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。
-    * iopsSkewPercent  语句在dn间的io倾斜率。
-    * maxPeakIops  语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。
-    * minPeakIops  语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。
-    * queryPlan  查询计划。
-    * queryStatus  当前查询语句的实时运行状态 (active, idle, idle in transaction, idle in transaction(aborted), fastpath function call, disabled)。
-    * wlmStatus  当前查询语句在资源池上的运行状态 (pending, running, finished, aborted, active, unknown)。
-    * wlmAttrib  语句的属性 (ordinary, simple, complicated, internal)
-    * systemQuery  是否系统查询。
-    * backendStart  该过程开始的时间，即当客户端连接服务器时。
-    * elapsedTime  到目前为止的执行时间。
-    * currXactStart  启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。
-    * stateChange  上次状态改变的时间。
-    * queryStart  语句执行的开始时间。
-    * queryElapsedTime  语句当前为止的实际执行时间，(单位：s)。
+    * virtualClusterId  **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
+    * ctime  **参数解释**： 采集时间。 **取值范围**： 不涉及。
+    * pid  **参数解释**： 会话ID。 **取值范围**： 不涉及。
+    * instName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * waiting  **参数解释**： 如果后台当前正等待锁则为true。 **取值范围**： 不涉及。
+    * enqueue  **参数解释**： 资源状态。 **取值范围**： 不涉及。
+    * warning  **参数解释**： 主要显示如下几类告警信息以及sql自诊断调优相关告警。 **取值范围**： 不涉及。
+    * query  **参数解释**： 查询语句。 **取值范围**： 不涉及。
+    * lane  **参数解释**： 快慢车道。 **取值范围**： fast：快车道。 slow：慢车道。
+    * dbName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * priority  **参数解释**： 任务在资源池中的优先级。 **取值范围**： 1：最高。 2：高。 4：中。 8：低。
+    * queryId  **参数解释**： 语句执行使用的内部查询ID。 **取值范围**： 不涉及。
+    * queryBand  **参数解释**： 用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。 **取值范围**： 不涉及。
+    * jobName  **参数解释**： 该值是从query_band的字段中取出来的，位置0。 **取值范围**： 不涉及。
+    * jobInst  **参数解释**： 该值是从query_band的字段中取出来的，位置1。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 连接到后端的用户名。 **取值范围**： 不涉及。
+    * applicationName  **参数解释**： 连接到后端的应用名。 **取值范围**： 不涉及。
+    * clientAddress  **参数解释**： 连接到后端的客户端的IP地址。 **取值范围**： 不涉及。
+    * clientHostname  **参数解释**： 客户端的主机名。 **取值范围**： 不涉及。
+    * clientPort  **参数解释**： 客户端用于与后端通讯的tcp端口号。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
+    * blockTime  **参数解释**： 语句执行前的阻塞时间，单位ms。 **取值范围**： 不涉及。
+    * duration  **参数解释**： 语句已经执行的时间，单位ms。 **取值范围**： 不涉及。
+    * estimateTotalTime  **参数解释**： 语句执行预估总时间，单位ms。 **取值范围**： 不涉及。
+    * estimateLeftTime  **参数解释**： 语句执行预估剩余时间，单位ms。 **取值范围**： 不涉及。
+    * resourcePool  **参数解释**： 用户使用的资源池。 **取值范围**： 不涉及。
+    * controlGroup  **参数解释**： 语句所使用的cgroup。 **取值范围**： 不涉及。
+    * minPeakMemory  **参数解释**： 语句在所有dn上的最小内存峰值，单位mb。 **取值范围**： 不涉及。
+    * maxPeakMemory  **参数解释**： 语句在所有dn上的最大内存峰值，单位mb。 **取值范围**： 不涉及。
+    * averagePeakMemory  **参数解释**： 语句执行过程中的内存使用平均值，单位mb。 **取值范围**： 不涉及。
+    * memorySkewPercent  **参数解释**： 语句在各dn间的内存使用倾斜率。 **取值范围**： 不涉及。
+    * estimateMemory  **参数解释**： 语句预估使用内存，单位mb。 **取值范围**： 不涉及。
+    * spillInfo  **参数解释**： 语句在所有dn上的下盘信息。 **取值范围**： 不涉及。
+    * minSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * maxSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * averageSpillSize  **参数解释**： 若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
+    * spillSkewPercent  **参数解释**： 若发生下盘，dn间下盘倾斜率。 **取值范围**： 不涉及。
+    * minDnTime  **参数解释**： 语句在所有dn上的最小执行时间，单位ms。 **取值范围**： 不涉及。
+    * maxDnTime  **参数解释**： 语句在所有dn上的最大执行时间，单位ms。 **取值范围**： 不涉及。
+    * averageDnTime  **参数解释**： 语句在所有dn上的平均执行时间，单位ms。 **取值范围**： 不涉及。
+    * dntimeSkewPercent  **参数解释**： 语句在各dn间的执行时间倾斜率。 **取值范围**： 不涉及。
+    * minCpuTime  **参数解释**： 语句在所有dn上的最小cpu时间，单位ms。 **取值范围**： 不涉及。
+    * maxCpuTime  **参数解释**： 语句在所有dn上的最大cpu时间，单位ms。 **取值范围**： 不涉及。
+    * totalCpuTime  **参数解释**： 语句在所有dn上的cpu总时间，单位ms。 **取值范围**： 不涉及。
+    * cpuSkewPercent  **参数解释**： 语句在各dn间的cpu时间倾斜率。 **取值范围**： 不涉及。
+    * averagePeakIops  **参数解释**： 语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * iopsSkewPercent  **参数解释**： 语句在dn间的io倾斜率。 **取值范围**： 不涉及。
+    * maxPeakIops  **参数解释**： 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * minPeakIops  **参数解释**： 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
+    * queryPlan  **参数解释**： 查询计划。 **取值范围**： 不涉及。
+    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
+    * wlmStatus  **参数解释**： 当前查询语句在资源池上的运行状态。 **取值范围**： pending：待生效。 running：运行中。 finished：结束。 aborted：终止。 active：正常。 unknown：未知。
+    * wlmAttrib  **参数解释**： 语句的属性。 **取值范围**： ordinary：普通。 simple：简单。 complicated：复杂。 internal：内部。
+    * systemQuery  **参数解释**： 是否系统查询。 **取值范围**： 不涉及。
+    * backendStart  **参数解释**： 该过程开始的时间，即当客户端连接服务器时。 **取值范围**： 不涉及。
+    * elapsedTime  **参数解释**： 到目前为止的执行时间。 **取值范围**： 不涉及。
+    * currXactStart  **参数解释**： 启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。 **取值范围**： 不涉及。
+    * stateChange  **参数解释**： 上次状态改变的时间。 **取值范围**： 不涉及。
+    * queryStart  **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
+    * queryElapsedTime  **参数解释**： 语句当前为止的实际执行时间。单位：秒。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -823,7 +823,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets virtualClusterId
-    *  虚拟集群ID
+    *  **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -835,7 +835,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets virtualClusterId
     *
-    * @param int|null $virtualClusterId 虚拟集群ID
+    * @param int|null $virtualClusterId **参数解释**： 虚拟集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -847,7 +847,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ctime
-    *  采集时间
+    *  **参数解释**： 采集时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -859,7 +859,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets ctime
     *
-    * @param int|null $ctime 采集时间
+    * @param int|null $ctime **参数解释**： 采集时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -871,7 +871,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets pid
-    *  会话id。
+    *  **参数解释**： 会话ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -883,7 +883,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets pid
     *
-    * @param string|null $pid 会话id。
+    * @param string|null $pid **参数解释**： 会话ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -895,7 +895,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets instName
-    *  实例名称。
+    *  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -907,7 +907,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets instName
     *
-    * @param string|null $instName 实例名称。
+    * @param string|null $instName **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -919,7 +919,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets waiting
-    *  如果后台当前正等待锁则为true。
+    *  **参数解释**： 如果后台当前正等待锁则为true。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -931,7 +931,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets waiting
     *
-    * @param bool|null $waiting 如果后台当前正等待锁则为true。
+    * @param bool|null $waiting **参数解释**： 如果后台当前正等待锁则为true。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -943,7 +943,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets enqueue
-    *  工作负载管理资源状态。
+    *  **参数解释**： 资源状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -955,7 +955,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets enqueue
     *
-    * @param string|null $enqueue 工作负载管理资源状态。
+    * @param string|null $enqueue **参数解释**： 资源状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -967,7 +967,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets warning
-    *  主要显示如下几类告警信息以及sql自诊断调优相关告警。
+    *  **参数解释**： 主要显示如下几类告警信息以及sql自诊断调优相关告警。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -979,7 +979,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets warning
     *
-    * @param string|null $warning 主要显示如下几类告警信息以及sql自诊断调优相关告警。
+    * @param string|null $warning **参数解释**： 主要显示如下几类告警信息以及sql自诊断调优相关告警。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -991,7 +991,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets query
-    *  查询语句。
+    *  **参数解释**： 查询语句。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1003,7 +1003,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets query
     *
-    * @param string|null $query 查询语句。
+    * @param string|null $query **参数解释**： 查询语句。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1015,7 +1015,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets lane
-    *  快慢车道 (fast or slow)。
+    *  **参数解释**： 快慢车道。 **取值范围**： fast：快车道。 slow：慢车道。
     *
     * @return string|null
     */
@@ -1027,7 +1027,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets lane
     *
-    * @param string|null $lane 快慢车道 (fast or slow)。
+    * @param string|null $lane **参数解释**： 快慢车道。 **取值范围**： fast：快车道。 slow：慢车道。
     *
     * @return $this
     */
@@ -1039,7 +1039,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbName
-    *  数据库名称。
+    *  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1051,7 +1051,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets dbName
     *
-    * @param string|null $dbName 数据库名称。
+    * @param string|null $dbName **参数解释**： 数据库名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1063,7 +1063,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  job在资源池中的优先级，取值：1,2,4,8（rush、high、medium、low）。
+    *  **参数解释**： 任务在资源池中的优先级。 **取值范围**： 1：最高。 2：高。 4：中。 8：低。
     *
     * @return string|null
     */
@@ -1075,7 +1075,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param string|null $priority job在资源池中的优先级，取值：1,2,4,8（rush、high、medium、low）。
+    * @param string|null $priority **参数解释**： 任务在资源池中的优先级。 **取值范围**： 1：最高。 2：高。 4：中。 8：低。
     *
     * @return $this
     */
@@ -1087,7 +1087,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryId
-    *  语句执行使用的内部query_id。
+    *  **参数解释**： 语句执行使用的内部查询ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1099,7 +1099,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets queryId
     *
-    * @param string|null $queryId 语句执行使用的内部query_id。
+    * @param string|null $queryId **参数解释**： 语句执行使用的内部查询ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1111,7 +1111,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryBand
-    *  用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。
+    *  **参数解释**： 用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1123,7 +1123,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets queryBand
     *
-    * @param string|null $queryBand 用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。
+    * @param string|null $queryBand **参数解释**： 用于标示作业类型，可通过guc参数query_band进行设置，默认为空字符串。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1135,7 +1135,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobName
-    *  这个值是从query_band的字段中取出来的，位置0。
+    *  **参数解释**： 该值是从query_band的字段中取出来的，位置0。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1147,7 +1147,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets jobName
     *
-    * @param string|null $jobName 这个值是从query_band的字段中取出来的，位置0。
+    * @param string|null $jobName **参数解释**： 该值是从query_band的字段中取出来的，位置0。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1159,7 +1159,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobInst
-    *  这个值是从query_band的字段中取出来的，位置1。
+    *  **参数解释**： 该值是从query_band的字段中取出来的，位置1。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1171,7 +1171,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets jobInst
     *
-    * @param string|null $jobInst 这个值是从query_band的字段中取出来的，位置1。
+    * @param string|null $jobInst **参数解释**： 该值是从query_band的字段中取出来的，位置1。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1183,7 +1183,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  连接到后端的用户名。
+    *  **参数解释**： 连接到后端的用户名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1195,7 +1195,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 连接到后端的用户名。
+    * @param string|null $userName **参数解释**： 连接到后端的用户名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1207,7 +1207,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets applicationName
-    *  连接到后端的应用名。
+    *  **参数解释**： 连接到后端的应用名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1219,7 +1219,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets applicationName
     *
-    * @param string|null $applicationName 连接到后端的应用名。
+    * @param string|null $applicationName **参数解释**： 连接到后端的应用名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1231,7 +1231,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientAddress
-    *  连接到后端的客户端的ip地址。
+    *  **参数解释**： 连接到后端的客户端的IP地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1243,7 +1243,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets clientAddress
     *
-    * @param string|null $clientAddress 连接到后端的客户端的ip地址。
+    * @param string|null $clientAddress **参数解释**： 连接到后端的客户端的IP地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1255,7 +1255,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientHostname
-    *  客户端的主机名。
+    *  **参数解释**： 客户端的主机名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1267,7 +1267,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets clientHostname
     *
-    * @param string|null $clientHostname 客户端的主机名。
+    * @param string|null $clientHostname **参数解释**： 客户端的主机名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1279,7 +1279,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientPort
-    *  客户端用于与后端通讯的tcp端口号。
+    *  **参数解释**： 客户端用于与后端通讯的tcp端口号。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1291,7 +1291,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets clientPort
     *
-    * @param string|null $clientPort 客户端用于与后端通讯的tcp端口号。
+    * @param string|null $clientPort **参数解释**： 客户端用于与后端通讯的tcp端口号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1303,7 +1303,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  语句执行的开始时间。
+    *  **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1315,7 +1315,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 语句执行的开始时间。
+    * @param int|null $startTime **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1327,7 +1327,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets blockTime
-    *  语句执行前的阻塞时间 （单位ms）。
+    *  **参数解释**： 语句执行前的阻塞时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1339,7 +1339,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets blockTime
     *
-    * @param int|null $blockTime 语句执行前的阻塞时间 （单位ms）。
+    * @param int|null $blockTime **参数解释**： 语句执行前的阻塞时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1351,7 +1351,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  语句已经执行的时间 （单位ms）。
+    *  **参数解释**： 语句已经执行的时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1363,7 +1363,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int|null $duration 语句已经执行的时间 （单位ms）。
+    * @param int|null $duration **参数解释**： 语句已经执行的时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1375,7 +1375,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets estimateTotalTime
-    *  语句执行预估总时间 （单位ms）。
+    *  **参数解释**： 语句执行预估总时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1387,7 +1387,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets estimateTotalTime
     *
-    * @param int|null $estimateTotalTime 语句执行预估总时间 （单位ms）。
+    * @param int|null $estimateTotalTime **参数解释**： 语句执行预估总时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1399,7 +1399,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets estimateLeftTime
-    *  语句执行预估剩余时间 （单位ms）。
+    *  **参数解释**： 语句执行预估剩余时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1411,7 +1411,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets estimateLeftTime
     *
-    * @param int|null $estimateLeftTime 语句执行预估剩余时间 （单位ms）。
+    * @param int|null $estimateLeftTime **参数解释**： 语句执行预估剩余时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1423,7 +1423,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourcePool
-    *  用户使用的资源池。
+    *  **参数解释**： 用户使用的资源池。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1435,7 +1435,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets resourcePool
     *
-    * @param string|null $resourcePool 用户使用的资源池。
+    * @param string|null $resourcePool **参数解释**： 用户使用的资源池。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1447,7 +1447,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets controlGroup
-    *  语句所使用的cgroup。
+    *  **参数解释**： 语句所使用的cgroup。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1459,7 +1459,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets controlGroup
     *
-    * @param string|null $controlGroup 语句所使用的cgroup。
+    * @param string|null $controlGroup **参数解释**： 语句所使用的cgroup。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1471,7 +1471,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets minPeakMemory
-    *  语句在所有dn上的最小内存峰值 （单位mb）。
+    *  **参数解释**： 语句在所有dn上的最小内存峰值，单位mb。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1483,7 +1483,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets minPeakMemory
     *
-    * @param int|null $minPeakMemory 语句在所有dn上的最小内存峰值 （单位mb）。
+    * @param int|null $minPeakMemory **参数解释**： 语句在所有dn上的最小内存峰值，单位mb。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1495,7 +1495,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxPeakMemory
-    *  语句在所有dn上的最大内存峰值 （单位mb）。
+    *  **参数解释**： 语句在所有dn上的最大内存峰值，单位mb。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1507,7 +1507,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets maxPeakMemory
     *
-    * @param int|null $maxPeakMemory 语句在所有dn上的最大内存峰值 （单位mb）。
+    * @param int|null $maxPeakMemory **参数解释**： 语句在所有dn上的最大内存峰值，单位mb。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1519,7 +1519,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets averagePeakMemory
-    *  语句执行过程中的内存使用平均值 （单位mb）。
+    *  **参数解释**： 语句执行过程中的内存使用平均值，单位mb。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1531,7 +1531,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets averagePeakMemory
     *
-    * @param int|null $averagePeakMemory 语句执行过程中的内存使用平均值 （单位mb）。
+    * @param int|null $averagePeakMemory **参数解释**： 语句执行过程中的内存使用平均值，单位mb。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1543,7 +1543,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets memorySkewPercent
-    *  语句在各dn间的内存使用倾斜率。
+    *  **参数解释**： 语句在各dn间的内存使用倾斜率。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1555,7 +1555,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets memorySkewPercent
     *
-    * @param int|null $memorySkewPercent 语句在各dn间的内存使用倾斜率。
+    * @param int|null $memorySkewPercent **参数解释**： 语句在各dn间的内存使用倾斜率。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1567,7 +1567,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets estimateMemory
-    *  语句预估使用内存 （单位mb）。
+    *  **参数解释**： 语句预估使用内存，单位mb。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1579,7 +1579,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets estimateMemory
     *
-    * @param int|null $estimateMemory 语句预估使用内存 （单位mb）。
+    * @param int|null $estimateMemory **参数解释**： 语句预估使用内存，单位mb。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1591,7 +1591,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets spillInfo
-    *  语句在所有dn上的下盘信息。
+    *  **参数解释**： 语句在所有dn上的下盘信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1603,7 +1603,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets spillInfo
     *
-    * @param string|null $spillInfo 语句在所有dn上的下盘信息。
+    * @param string|null $spillInfo **参数解释**： 语句在所有dn上的下盘信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1615,7 +1615,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets minSpillSize
-    *  若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。
+    *  **参数解释**： 若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1627,7 +1627,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets minSpillSize
     *
-    * @param int|null $minSpillSize 若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。
+    * @param int|null $minSpillSize **参数解释**： 若发生下盘，所有dn上下盘的最小数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1639,7 +1639,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxSpillSize
-    *  若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。
+    *  **参数解释**： 若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1651,7 +1651,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets maxSpillSize
     *
-    * @param int|null $maxSpillSize 若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。
+    * @param int|null $maxSpillSize **参数解释**： 若发生下盘，所有dn上下盘的最大数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1663,7 +1663,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets averageSpillSize
-    *  若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。
+    *  **参数解释**： 若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1675,7 +1675,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets averageSpillSize
     *
-    * @param int|null $averageSpillSize 若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。
+    * @param int|null $averageSpillSize **参数解释**： 若发生下盘，所有dn上下盘的平均数据量 (单位mb) 默认为0。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1687,7 +1687,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets spillSkewPercent
-    *  若发生下盘，dn间下盘倾斜率。
+    *  **参数解释**： 若发生下盘，dn间下盘倾斜率。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1699,7 +1699,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets spillSkewPercent
     *
-    * @param int|null $spillSkewPercent 若发生下盘，dn间下盘倾斜率。
+    * @param int|null $spillSkewPercent **参数解释**： 若发生下盘，dn间下盘倾斜率。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1711,7 +1711,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets minDnTime
-    *  语句在所有dn上的最小执行时间 (单位ms)。
+    *  **参数解释**： 语句在所有dn上的最小执行时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1723,7 +1723,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets minDnTime
     *
-    * @param int|null $minDnTime 语句在所有dn上的最小执行时间 (单位ms)。
+    * @param int|null $minDnTime **参数解释**： 语句在所有dn上的最小执行时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1735,7 +1735,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxDnTime
-    *  语句在所有dn上的最大执行时间 (单位ms)。
+    *  **参数解释**： 语句在所有dn上的最大执行时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1747,7 +1747,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets maxDnTime
     *
-    * @param int|null $maxDnTime 语句在所有dn上的最大执行时间 (单位ms)。
+    * @param int|null $maxDnTime **参数解释**： 语句在所有dn上的最大执行时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1759,7 +1759,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets averageDnTime
-    *  语句在所有dn上的平均执行时间 (单位ms)。
+    *  **参数解释**： 语句在所有dn上的平均执行时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1771,7 +1771,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets averageDnTime
     *
-    * @param int|null $averageDnTime 语句在所有dn上的平均执行时间 (单位ms)。
+    * @param int|null $averageDnTime **参数解释**： 语句在所有dn上的平均执行时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1783,7 +1783,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets dntimeSkewPercent
-    *  语句在各dn间的执行时间倾斜率。
+    *  **参数解释**： 语句在各dn间的执行时间倾斜率。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1795,7 +1795,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets dntimeSkewPercent
     *
-    * @param int|null $dntimeSkewPercent 语句在各dn间的执行时间倾斜率。
+    * @param int|null $dntimeSkewPercent **参数解释**： 语句在各dn间的执行时间倾斜率。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1807,7 +1807,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets minCpuTime
-    *  语句在所有dn上的最小cpu时间 (单位ms)。
+    *  **参数解释**： 语句在所有dn上的最小cpu时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1819,7 +1819,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets minCpuTime
     *
-    * @param int|null $minCpuTime 语句在所有dn上的最小cpu时间 (单位ms)。
+    * @param int|null $minCpuTime **参数解释**： 语句在所有dn上的最小cpu时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1831,7 +1831,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxCpuTime
-    *  语句在所有dn上的最大cpu时间 (单位ms)。
+    *  **参数解释**： 语句在所有dn上的最大cpu时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1843,7 +1843,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets maxCpuTime
     *
-    * @param int|null $maxCpuTime 语句在所有dn上的最大cpu时间 (单位ms)。
+    * @param int|null $maxCpuTime **参数解释**： 语句在所有dn上的最大cpu时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1855,7 +1855,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCpuTime
-    *  语句在所有dn上的cpu总时间 (单位ms)。
+    *  **参数解释**： 语句在所有dn上的cpu总时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1867,7 +1867,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets totalCpuTime
     *
-    * @param int|null $totalCpuTime 语句在所有dn上的cpu总时间 (单位ms)。
+    * @param int|null $totalCpuTime **参数解释**： 语句在所有dn上的cpu总时间，单位ms。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1879,7 +1879,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpuSkewPercent
-    *  语句在各dn间的cpu时间倾斜率。
+    *  **参数解释**： 语句在各dn间的cpu时间倾斜率。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1891,7 +1891,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets cpuSkewPercent
     *
-    * @param int|null $cpuSkewPercent 语句在各dn间的cpu时间倾斜率。
+    * @param int|null $cpuSkewPercent **参数解释**： 语句在各dn间的cpu时间倾斜率。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1903,7 +1903,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets averagePeakIops
-    *  语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。
+    *  **参数解释**： 语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1915,7 +1915,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets averagePeakIops
     *
-    * @param int|null $averagePeakIops 语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。
+    * @param int|null $averagePeakIops **参数解释**： 语句在所有dn上的每秒平均io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1927,7 +1927,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets iopsSkewPercent
-    *  语句在dn间的io倾斜率。
+    *  **参数解释**： 语句在dn间的io倾斜率。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1939,7 +1939,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets iopsSkewPercent
     *
-    * @param int|null $iopsSkewPercent 语句在dn间的io倾斜率。
+    * @param int|null $iopsSkewPercent **参数解释**： 语句在dn间的io倾斜率。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1951,7 +1951,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxPeakIops
-    *  语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。
+    *  **参数解释**： 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1963,7 +1963,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets maxPeakIops
     *
-    * @param int|null $maxPeakIops 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。
+    * @param int|null $maxPeakIops **参数解释**： 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1975,7 +1975,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets minPeakIops
-    *  语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。
+    *  **参数解释**： 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1987,7 +1987,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets minPeakIops
     *
-    * @param int|null $minPeakIops 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。
+    * @param int|null $minPeakIops **参数解释**： 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1999,7 +1999,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryPlan
-    *  查询计划。
+    *  **参数解释**： 查询计划。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2011,7 +2011,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets queryPlan
     *
-    * @param string|null $queryPlan 查询计划。
+    * @param string|null $queryPlan **参数解释**： 查询计划。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2023,7 +2023,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryStatus
-    *  当前查询语句的实时运行状态 (active, idle, idle in transaction, idle in transaction(aborted), fastpath function call, disabled)。
+    *  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
     *
     * @return string|null
     */
@@ -2035,7 +2035,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets queryStatus
     *
-    * @param string|null $queryStatus 当前查询语句的实时运行状态 (active, idle, idle in transaction, idle in transaction(aborted), fastpath function call, disabled)。
+    * @param string|null $queryStatus **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
     *
     * @return $this
     */
@@ -2047,7 +2047,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets wlmStatus
-    *  当前查询语句在资源池上的运行状态 (pending, running, finished, aborted, active, unknown)。
+    *  **参数解释**： 当前查询语句在资源池上的运行状态。 **取值范围**： pending：待生效。 running：运行中。 finished：结束。 aborted：终止。 active：正常。 unknown：未知。
     *
     * @return string|null
     */
@@ -2059,7 +2059,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets wlmStatus
     *
-    * @param string|null $wlmStatus 当前查询语句在资源池上的运行状态 (pending, running, finished, aborted, active, unknown)。
+    * @param string|null $wlmStatus **参数解释**： 当前查询语句在资源池上的运行状态。 **取值范围**： pending：待生效。 running：运行中。 finished：结束。 aborted：终止。 active：正常。 unknown：未知。
     *
     * @return $this
     */
@@ -2071,7 +2071,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets wlmAttrib
-    *  语句的属性 (ordinary, simple, complicated, internal)
+    *  **参数解释**： 语句的属性。 **取值范围**： ordinary：普通。 simple：简单。 complicated：复杂。 internal：内部。
     *
     * @return string|null
     */
@@ -2083,7 +2083,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets wlmAttrib
     *
-    * @param string|null $wlmAttrib 语句的属性 (ordinary, simple, complicated, internal)
+    * @param string|null $wlmAttrib **参数解释**： 语句的属性。 **取值范围**： ordinary：普通。 simple：简单。 complicated：复杂。 internal：内部。
     *
     * @return $this
     */
@@ -2095,7 +2095,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets systemQuery
-    *  是否系统查询。
+    *  **参数解释**： 是否系统查询。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -2107,7 +2107,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets systemQuery
     *
-    * @param bool|null $systemQuery 是否系统查询。
+    * @param bool|null $systemQuery **参数解释**： 是否系统查询。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2119,7 +2119,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets backendStart
-    *  该过程开始的时间，即当客户端连接服务器时。
+    *  **参数解释**： 该过程开始的时间，即当客户端连接服务器时。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -2131,7 +2131,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets backendStart
     *
-    * @param int|null $backendStart 该过程开始的时间，即当客户端连接服务器时。
+    * @param int|null $backendStart **参数解释**： 该过程开始的时间，即当客户端连接服务器时。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2143,7 +2143,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets elapsedTime
-    *  到目前为止的执行时间。
+    *  **参数解释**： 到目前为止的执行时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -2155,7 +2155,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets elapsedTime
     *
-    * @param int|null $elapsedTime 到目前为止的执行时间。
+    * @param int|null $elapsedTime **参数解释**： 到目前为止的执行时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2167,7 +2167,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets currXactStart
-    *  启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。
+    *  **参数解释**： 启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -2179,7 +2179,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets currXactStart
     *
-    * @param int|null $currXactStart 启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。
+    * @param int|null $currXactStart **参数解释**： 启动当前事务的时间，如果没有事务是活跃的，则为null。如果当前查询是首个事务，则这列等同于query_start列。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2191,7 +2191,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets stateChange
-    *  上次状态改变的时间。
+    *  **参数解释**： 上次状态改变的时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -2203,7 +2203,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets stateChange
     *
-    * @param int|null $stateChange 上次状态改变的时间。
+    * @param int|null $stateChange **参数解释**： 上次状态改变的时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2215,7 +2215,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryStart
-    *  语句执行的开始时间。
+    *  **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -2227,7 +2227,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets queryStart
     *
-    * @param int|null $queryStart 语句执行的开始时间。
+    * @param int|null $queryStart **参数解释**： 语句执行的开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2239,7 +2239,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryElapsedTime
-    *  语句当前为止的实际执行时间，(单位：s)。
+    *  **参数解释**： 语句当前为止的实际执行时间。单位：秒。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -2251,7 +2251,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets queryElapsedTime
     *
-    * @param int|null $queryElapsedTime 语句当前为止的实际执行时间，(单位：s)。
+    * @param int|null $queryElapsedTime **参数解释**： 语句当前为止的实际执行时间。单位：秒。 **取值范围**： 不涉及。
     *
     * @return $this
     */

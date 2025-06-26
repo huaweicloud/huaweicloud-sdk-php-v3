@@ -20,8 +20,8 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  当前集群要做的操作
-    * itemId  升级项ID
+    * action  **参数解释**： 当前集群要做的操作。 **取值范围**： 不涉及。
+    * itemId  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  当前集群要做的操作
-    * itemId  升级项ID
+    * action  **参数解释**： 当前集群要做的操作。 **取值范围**： 不涉及。
+    * itemId  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  当前集群要做的操作
-    * itemId  升级项ID
+    * action  **参数解释**： 当前集群要做的操作。 **取值范围**： 不涉及。
+    * itemId  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  当前集群要做的操作
-    * itemId  升级项ID
+    * action  **参数解释**： 当前集群要做的操作。 **取值范围**： 不涉及。
+    * itemId  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  当前集群要做的操作
-    * itemId  升级项ID
+    * action  **参数解释**： 当前集群要做的操作。 **取值范围**： 不涉及。
+    * itemId  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Gets action
-    *  当前集群要做的操作
+    *  **参数解释**： 当前集群要做的操作。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets action
     *
-    * @param string $action 当前集群要做的操作
+    * @param string $action **参数解释**： 当前集群要做的操作。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Gets itemId
-    *  升级项ID
+    *  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets itemId
     *
-    * @param string $itemId 升级项ID
+    * @param string $itemId **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

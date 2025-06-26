@@ -27,7 +27,7 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'workloadSwitch' => 'string',
-            'maxConcurrencyNum' => 'string'
+            'maxConcurrencyNum' => 'int'
     ];
 
     /**
@@ -39,7 +39,7 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'workloadSwitch' => null,
-        'maxConcurrencyNum' => null
+        'maxConcurrencyNum' => 'int32'
     ];
 
     /**
@@ -214,7 +214,7 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
     * Gets maxConcurrencyNum
     *  **参数解释**： 最大并发数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getMaxConcurrencyNum()
     {
@@ -224,7 +224,7 @@ class WorkloadStatus implements ModelInterface, ArrayAccess
     /**
     * Sets maxConcurrencyNum
     *
-    * @param string|null $maxConcurrencyNum **参数解释**： 最大并发数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param int|null $maxConcurrencyNum **参数解释**： 最大并发数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

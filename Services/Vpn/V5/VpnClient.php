@@ -2045,6 +2045,68 @@ class VpnClient extends Client
     }
 
     /**
+     * 批量创建VPN连接
+     *
+     * 同时创建1-2条VPN连接
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateVpnConnection($request)
+    {
+        return $this->batchCreateVpnConnectionWithHttpInfo($request);
+    }
+
+    public function batchCreateVpnConnectionWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/vpn-connections/batch-create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\BatchCreateVpnConnectionResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\BatchCreateVpnConnectionRequest');
+    }
+
+    /**
      * 创建VPN连接
      *
      * 创建VPN连接，连接VPN网关与对端网关

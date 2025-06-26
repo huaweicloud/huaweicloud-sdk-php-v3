@@ -20,13 +20,13 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  名称
-    * drType  容灾类型
-    * primaryClusterId  主集群ID
-    * standbyClusterId  备集群ID
-    * drSyncPeriod  同步周期
-    * primaryObsBucket  主集群OBS桶
-    * standbyObsBucket  备集群obs桶
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
+    * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
+    * primaryObsBucket  **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
+    * standbyObsBucket  **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  名称
-    * drType  容灾类型
-    * primaryClusterId  主集群ID
-    * standbyClusterId  备集群ID
-    * drSyncPeriod  同步周期
-    * primaryObsBucket  主集群OBS桶
-    * standbyObsBucket  备集群obs桶
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
+    * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
+    * primaryObsBucket  **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
+    * standbyObsBucket  **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  名称
-    * drType  容灾类型
-    * primaryClusterId  主集群ID
-    * standbyClusterId  备集群ID
-    * drSyncPeriod  同步周期
-    * primaryObsBucket  主集群OBS桶
-    * standbyObsBucket  备集群obs桶
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
+    * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
+    * primaryObsBucket  **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
+    * standbyObsBucket  **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  名称
-    * drType  容灾类型
-    * primaryClusterId  主集群ID
-    * standbyClusterId  备集群ID
-    * drSyncPeriod  同步周期
-    * primaryObsBucket  主集群OBS桶
-    * standbyObsBucket  备集群obs桶
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
+    * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
+    * primaryObsBucket  **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
+    * standbyObsBucket  **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  名称
-    * drType  容灾类型
-    * primaryClusterId  主集群ID
-    * standbyClusterId  备集群ID
-    * drSyncPeriod  同步周期
-    * primaryObsBucket  主集群OBS桶
-    * standbyObsBucket  备集群obs桶
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
+    * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
+    * primaryObsBucket  **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
+    * standbyObsBucket  **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -255,7 +255,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**： 名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -267,7 +267,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 名称
+    * @param string $name **参数解释**： 名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets drType
-    *  容灾类型
+    *  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -291,7 +291,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets drType
     *
-    * @param string $drType 容灾类型
+    * @param string $drType **参数解释**： 容灾类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryClusterId
-    *  主集群ID
+    *  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -315,7 +315,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets primaryClusterId
     *
-    * @param string $primaryClusterId 主集群ID
+    * @param string $primaryClusterId **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -327,7 +327,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets standbyClusterId
-    *  备集群ID
+    *  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -339,7 +339,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets standbyClusterId
     *
-    * @param string $standbyClusterId 备集群ID
+    * @param string $standbyClusterId **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -351,7 +351,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets drSyncPeriod
-    *  同步周期
+    *  **参数解释**： 同步周期。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -363,7 +363,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets drSyncPeriod
     *
-    * @param string $drSyncPeriod 同步周期
+    * @param string $drSyncPeriod **参数解释**： 同步周期。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -375,7 +375,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryObsBucket
-    *  主集群OBS桶
+    *  **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -387,7 +387,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets primaryObsBucket
     *
-    * @param string|null $primaryObsBucket 主集群OBS桶
+    * @param string|null $primaryObsBucket **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -399,7 +399,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets standbyObsBucket
-    *  备集群obs桶
+    *  **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -411,7 +411,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets standbyObsBucket
     *
-    * @param string|null $standbyObsBucket 备集群obs桶
+    * @param string|null $standbyObsBucket **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class RoleAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * role  角色名称
-    * rightList  权限列表
+    * role  **参数解释**： 角色名称。 **取值范围**： 不涉及。
+    * rightList  **参数解释**： 权限列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class RoleAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * role  角色名称
-    * rightList  权限列表
+    * role  **参数解释**： 角色名称。 **取值范围**： 不涉及。
+    * rightList  **参数解释**： 权限列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RoleAuthority implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * role  角色名称
-    * rightList  权限列表
+    * role  **参数解释**： 角色名称。 **取值范围**： 不涉及。
+    * rightList  **参数解释**： 权限列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RoleAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * role  角色名称
-    * rightList  权限列表
+    * role  **参数解释**： 角色名称。 **取值范围**： 不涉及。
+    * rightList  **参数解释**： 权限列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RoleAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * role  角色名称
-    * rightList  权限列表
+    * role  **参数解释**： 角色名称。 **取值范围**： 不涉及。
+    * rightList  **参数解释**： 权限列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class RoleAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Gets role
-    *  角色名称
+    *  **参数解释**： 角色名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class RoleAuthority implements ModelInterface, ArrayAccess
     /**
     * Sets role
     *
-    * @param string|null $role 角色名称
+    * @param string|null $role **参数解释**： 角色名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class RoleAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Gets rightList
-    *  权限列表
+    *  **参数解释**： 权限列表。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -221,7 +221,7 @@ class RoleAuthority implements ModelInterface, ArrayAccess
     /**
     * Sets rightList
     *
-    * @param string[]|null $rightList 权限列表
+    * @param string[]|null $rightList **参数解释**： 权限列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

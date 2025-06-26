@@ -22,7 +22,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
-    * flavors  **参数解释**： 规格详情列表。 **取值范围**： 不涉及。
+    * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
-    * flavors  **参数解释**： 规格详情列表。 **取值范围**： 不涉及。
+    * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
-    * flavors  **参数解释**： 规格详情列表。 **取值范围**： 不涉及。
+    * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
-    * flavors  **参数解释**： 规格详情列表。 **取值范围**： 不涉及。
+    * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
-    * flavors  **参数解释**： 规格详情列表。 **取值范围**： 不涉及。
+    * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavors
-    *  **参数解释**： 规格详情列表。 **取值范围**： 不涉及。
+    *  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\FlavorInfoResponse[]|null
     */
@@ -222,7 +222,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets flavors
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\FlavorInfoResponse[]|null $flavors **参数解释**： 规格详情列表。 **取值范围**： 不涉及。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\FlavorInfoResponse[]|null $flavors **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
     *
     * @return $this
     */

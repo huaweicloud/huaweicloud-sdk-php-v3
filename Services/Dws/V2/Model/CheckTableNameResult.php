@@ -20,9 +20,9 @@ class CheckTableNameResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * database  数据库名称
-    * restoreTableList  恢复源表信息
-    * targetTableList  恢复目的表信息
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * restoreTableList  **参数解释**： 恢复源表信息。 **取值范围**： 不涉及。
+    * targetTableList  **参数解释**： 恢复目的表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CheckTableNameResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * database  数据库名称
-    * restoreTableList  恢复源表信息
-    * targetTableList  恢复目的表信息
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * restoreTableList  **参数解释**： 恢复源表信息。 **取值范围**： 不涉及。
+    * targetTableList  **参数解释**： 恢复目的表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CheckTableNameResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * database  数据库名称
-    * restoreTableList  恢复源表信息
-    * targetTableList  恢复目的表信息
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * restoreTableList  **参数解释**： 恢复源表信息。 **取值范围**： 不涉及。
+    * targetTableList  **参数解释**： 恢复目的表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CheckTableNameResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * database  数据库名称
-    * restoreTableList  恢复源表信息
-    * targetTableList  恢复目的表信息
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * restoreTableList  **参数解释**： 恢复源表信息。 **取值范围**： 不涉及。
+    * targetTableList  **参数解释**： 恢复目的表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CheckTableNameResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * database  数据库名称
-    * restoreTableList  恢复源表信息
-    * targetTableList  恢复目的表信息
+    * database  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * restoreTableList  **参数解释**： 恢复源表信息。 **取值范围**： 不涉及。
+    * targetTableList  **参数解释**： 恢复目的表信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class CheckTableNameResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets database
-    *  数据库名称
+    *  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class CheckTableNameResult implements ModelInterface, ArrayAccess
     /**
     * Sets database
     *
-    * @param string|null $database 数据库名称
+    * @param string|null $database **参数解释**： 数据库名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class CheckTableNameResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets restoreTableList
-    *  恢复源表信息
+    *  **参数解释**： 恢复源表信息。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -232,7 +232,7 @@ class CheckTableNameResult implements ModelInterface, ArrayAccess
     /**
     * Sets restoreTableList
     *
-    * @param string[]|null $restoreTableList 恢复源表信息
+    * @param string[]|null $restoreTableList **参数解释**： 恢复源表信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class CheckTableNameResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetTableList
-    *  恢复目的表信息
+    *  **参数解释**： 恢复目的表信息。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -256,7 +256,7 @@ class CheckTableNameResult implements ModelInterface, ArrayAccess
     /**
     * Sets targetTableList
     *
-    * @param string[]|null $targetTableList 恢复目的表信息
+    * @param string[]|null $targetTableList **参数解释**： 恢复目的表信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

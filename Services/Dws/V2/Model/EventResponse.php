@@ -20,21 +20,21 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * category  事件类别
-    * description  事件描述
-    * eventId  事件ID
-    * name  事件定义名称
-    * displayName  事件显示名称
-    * nameSpace  所属服务
-    * severity  事件级别
-    * sourceType  事件源类别
-    * occurTime  时间
-    * projectId  租户凭证ID
-    * sourceId  事件源ID
-    * sourceName  事件源名称
-    * status  状态
-    * subject  事件主题
-    * context  事件信息
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * description  **参数解释**： 事件描述。 **取值范围**： 不涉及。
+    * eventId  **参数解释**： 事件ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 事件定义名称。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 事件显示名称。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类别。 **取值范围**： 不涉及。
+    * occurTime  **参数解释**： 时间。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 租户凭证ID。 **取值范围**： 不涉及。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * sourceName  **参数解释**： 事件源名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
+    * context  **参数解释**： 事件信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -58,21 +58,21 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * category  事件类别
-    * description  事件描述
-    * eventId  事件ID
-    * name  事件定义名称
-    * displayName  事件显示名称
-    * nameSpace  所属服务
-    * severity  事件级别
-    * sourceType  事件源类别
-    * occurTime  时间
-    * projectId  租户凭证ID
-    * sourceId  事件源ID
-    * sourceName  事件源名称
-    * status  状态
-    * subject  事件主题
-    * context  事件信息
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * description  **参数解释**： 事件描述。 **取值范围**： 不涉及。
+    * eventId  **参数解释**： 事件ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 事件定义名称。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 事件显示名称。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类别。 **取值范围**： 不涉及。
+    * occurTime  **参数解释**： 时间。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 租户凭证ID。 **取值范围**： 不涉及。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * sourceName  **参数解释**： 事件源名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
+    * context  **参数解释**： 事件信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -117,21 +117,21 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * category  事件类别
-    * description  事件描述
-    * eventId  事件ID
-    * name  事件定义名称
-    * displayName  事件显示名称
-    * nameSpace  所属服务
-    * severity  事件级别
-    * sourceType  事件源类别
-    * occurTime  时间
-    * projectId  租户凭证ID
-    * sourceId  事件源ID
-    * sourceName  事件源名称
-    * status  状态
-    * subject  事件主题
-    * context  事件信息
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * description  **参数解释**： 事件描述。 **取值范围**： 不涉及。
+    * eventId  **参数解释**： 事件ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 事件定义名称。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 事件显示名称。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类别。 **取值范围**： 不涉及。
+    * occurTime  **参数解释**： 时间。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 租户凭证ID。 **取值范围**： 不涉及。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * sourceName  **参数解释**： 事件源名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
+    * context  **参数解释**： 事件信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -155,21 +155,21 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * category  事件类别
-    * description  事件描述
-    * eventId  事件ID
-    * name  事件定义名称
-    * displayName  事件显示名称
-    * nameSpace  所属服务
-    * severity  事件级别
-    * sourceType  事件源类别
-    * occurTime  时间
-    * projectId  租户凭证ID
-    * sourceId  事件源ID
-    * sourceName  事件源名称
-    * status  状态
-    * subject  事件主题
-    * context  事件信息
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * description  **参数解释**： 事件描述。 **取值范围**： 不涉及。
+    * eventId  **参数解释**： 事件ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 事件定义名称。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 事件显示名称。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类别。 **取值范围**： 不涉及。
+    * occurTime  **参数解释**： 时间。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 租户凭证ID。 **取值范围**： 不涉及。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * sourceName  **参数解释**： 事件源名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
+    * context  **参数解释**： 事件信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -193,21 +193,21 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * category  事件类别
-    * description  事件描述
-    * eventId  事件ID
-    * name  事件定义名称
-    * displayName  事件显示名称
-    * nameSpace  所属服务
-    * severity  事件级别
-    * sourceType  事件源类别
-    * occurTime  时间
-    * projectId  租户凭证ID
-    * sourceId  事件源ID
-    * sourceName  事件源名称
-    * status  状态
-    * subject  事件主题
-    * context  事件信息
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * description  **参数解释**： 事件描述。 **取值范围**： 不涉及。
+    * eventId  **参数解释**： 事件ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 事件定义名称。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 事件显示名称。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类别。 **取值范围**： 不涉及。
+    * occurTime  **参数解释**： 时间。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 租户凭证ID。 **取值范围**： 不涉及。
+    * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
+    * sourceName  **参数解释**： 事件源名称。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
+    * context  **参数解释**： 事件信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -328,7 +328,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  事件类别
+    *  **参数解释**： 事件类别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 事件类别
+    * @param string|null $category **参数解释**： 事件类别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  事件描述
+    *  **参数解释**： 事件描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -364,7 +364,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 事件描述
+    * @param string|null $description **参数解释**： 事件描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -376,7 +376,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventId
-    *  事件ID
+    *  **参数解释**： 事件ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -388,7 +388,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets eventId
     *
-    * @param string|null $eventId 事件ID
+    * @param string|null $eventId **参数解释**： 事件ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -400,7 +400,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  事件定义名称
+    *  **参数解释**： 事件定义名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -412,7 +412,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 事件定义名称
+    * @param string|null $name **参数解释**： 事件定义名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -424,7 +424,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
-    *  事件显示名称
+    *  **参数解释**： 事件显示名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -436,7 +436,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 事件显示名称
+    * @param string|null $displayName **参数解释**： 事件显示名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -448,7 +448,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameSpace
-    *  所属服务
+    *  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -460,7 +460,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nameSpace
     *
-    * @param string|null $nameSpace 所属服务
+    * @param string|null $nameSpace **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -472,7 +472,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  事件级别
+    *  **参数解释**： 事件级别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -484,7 +484,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 事件级别
+    * @param string|null $severity **参数解释**： 事件级别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -496,7 +496,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  事件源类别
+    *  **参数解释**： 事件源类别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -508,7 +508,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param string|null $sourceType 事件源类别
+    * @param string|null $sourceType **参数解释**： 事件源类别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets occurTime
-    *  时间
+    *  **参数解释**： 时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -532,7 +532,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets occurTime
     *
-    * @param int|null $occurTime 时间
+    * @param int|null $occurTime **参数解释**： 时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  租户凭证ID
+    *  **参数解释**： 租户凭证ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -556,7 +556,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 租户凭证ID
+    * @param string|null $projectId **参数解释**： 租户凭证ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceId
-    *  事件源ID
+    *  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -580,7 +580,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceId
     *
-    * @param string|null $sourceId 事件源ID
+    * @param string|null $sourceId **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceName
-    *  事件源名称
+    *  **参数解释**： 事件源名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -604,7 +604,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceName
     *
-    * @param string|null $sourceName 事件源名称
+    * @param string|null $sourceName **参数解释**： 事件源名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -628,7 +628,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 状态
+    * @param int|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -640,7 +640,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subject
-    *  事件主题
+    *  **参数解释**： 事件主题。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -652,7 +652,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subject
     *
-    * @param string|null $subject 事件主题
+    * @param string|null $subject **参数解释**： 事件主题。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class EventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets context
-    *  事件信息
+    *  **参数解释**： 事件信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class EventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets context
     *
-    * @param string|null $context 事件信息
+    * @param string|null $context **参数解释**： 事件信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

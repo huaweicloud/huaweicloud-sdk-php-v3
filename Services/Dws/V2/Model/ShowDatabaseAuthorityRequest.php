@@ -20,12 +20,12 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  cluster_id
-    * type  对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN| FUNCTION|| SEQUENCE| NODEGROUP]
-    * name  对象名称
-    * database  数据库名
-    * schema  模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选
-    * table  表名，对象类型为COLUMN时必选
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 对象类型。 **约束限制**： 不涉及。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP **默认取值**： 不涉及。
+    * name  **参数解释**： 对象名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * database  **参数解释**： 数据库名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * schema  **参数解释**： 模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * table  **参数解释**： 表名，对象类型为COLUMN时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  cluster_id
-    * type  对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN| FUNCTION|| SEQUENCE| NODEGROUP]
-    * name  对象名称
-    * database  数据库名
-    * schema  模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选
-    * table  表名，对象类型为COLUMN时必选
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 对象类型。 **约束限制**： 不涉及。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP **默认取值**： 不涉及。
+    * name  **参数解释**： 对象名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * database  **参数解释**： 数据库名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * schema  **参数解释**： 模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * table  **参数解释**： 表名，对象类型为COLUMN时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  cluster_id
-    * type  对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN| FUNCTION|| SEQUENCE| NODEGROUP]
-    * name  对象名称
-    * database  数据库名
-    * schema  模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选
-    * table  表名，对象类型为COLUMN时必选
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 对象类型。 **约束限制**： 不涉及。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP **默认取值**： 不涉及。
+    * name  **参数解释**： 对象名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * database  **参数解释**： 数据库名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * schema  **参数解释**： 模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * table  **参数解释**： 表名，对象类型为COLUMN时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  cluster_id
-    * type  对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN| FUNCTION|| SEQUENCE| NODEGROUP]
-    * name  对象名称
-    * database  数据库名
-    * schema  模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选
-    * table  表名，对象类型为COLUMN时必选
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 对象类型。 **约束限制**： 不涉及。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP **默认取值**： 不涉及。
+    * name  **参数解释**： 对象名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * database  **参数解释**： 数据库名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * schema  **参数解释**： 模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * table  **参数解释**： 表名，对象类型为COLUMN时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  cluster_id
-    * type  对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN| FUNCTION|| SEQUENCE| NODEGROUP]
-    * name  对象名称
-    * database  数据库名
-    * schema  模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选
-    * table  表名，对象类型为COLUMN时必选
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 对象类型。 **约束限制**： 不涉及。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP **默认取值**： 不涉及。
+    * name  **参数解释**： 对象名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * database  **参数解释**： 数据库名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * schema  **参数解释**： 模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * table  **参数解释**： 表名，对象类型为COLUMN时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -241,7 +241,7 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  cluster_id
+    *  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -253,7 +253,7 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId cluster_id
+    * @param string $clusterId **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -265,7 +265,7 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN| FUNCTION|| SEQUENCE| NODEGROUP]
+    *  **参数解释**： 对象类型。 **约束限制**： 不涉及。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -277,7 +277,7 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN| FUNCTION|| SEQUENCE| NODEGROUP]
+    * @param string $type **参数解释**： 对象类型。 **约束限制**： 不涉及。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -289,7 +289,7 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  对象名称
+    *  **参数解释**： 对象名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]
     */
@@ -301,7 +301,7 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string[] $name 对象名称
+    * @param string[] $name **参数解释**： 对象名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets database
-    *  数据库名
+    *  **参数解释**： 数据库名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -325,7 +325,7 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
     /**
     * Sets database
     *
-    * @param string $database 数据库名
+    * @param string $database **参数解释**： 数据库名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets schema
-    *  模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选
+    *  **参数解释**： 模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -349,7 +349,7 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
     /**
     * Sets schema
     *
-    * @param string|null $schema 模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选
+    * @param string|null $schema **参数解释**： 模式名，对象类型为TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets table
-    *  表名，对象类型为COLUMN时必选
+    *  **参数解释**： 表名，对象类型为COLUMN时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -373,7 +373,7 @@ class ShowDatabaseAuthorityRequest implements ModelInterface, ArrayAccess
     /**
     * Sets table
     *
-    * @param string|null $table 表名，对象类型为COLUMN时必选
+    * @param string|null $table **参数解释**： 表名，对象类型为COLUMN时必选。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

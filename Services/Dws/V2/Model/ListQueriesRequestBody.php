@@ -20,13 +20,13 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量。
-    * conditions  查询条件数组
-    * orderBy  排序字段
-    * target  固定值db_queries
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询，一般为页数减1。 **取值范围**： 大于等于0。
+    * limit  **参数解释**： 每页显示的条目数量。 **取值范围**： 大于0。
+    * conditions  **参数解释**： 查询条件数组。 **取值范围**： 不涉及。
+    * orderBy  **参数解释**： 排序字段。 **取值范围**： 不涉及。
+    * target  **参数解释**： 固定值db_queries。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量。
-    * conditions  查询条件数组
-    * orderBy  排序字段
-    * target  固定值db_queries
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询，一般为页数减1。 **取值范围**： 大于等于0。
+    * limit  **参数解释**： 每页显示的条目数量。 **取值范围**： 大于0。
+    * conditions  **参数解释**： 查询条件数组。 **取值范围**： 不涉及。
+    * orderBy  **参数解释**： 排序字段。 **取值范围**： 不涉及。
+    * target  **参数解释**： 固定值db_queries。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量。
-    * conditions  查询条件数组
-    * orderBy  排序字段
-    * target  固定值db_queries
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询，一般为页数减1。 **取值范围**： 大于等于0。
+    * limit  **参数解释**： 每页显示的条目数量。 **取值范围**： 大于0。
+    * conditions  **参数解释**： 查询条件数组。 **取值范围**： 不涉及。
+    * orderBy  **参数解释**： 排序字段。 **取值范围**： 不涉及。
+    * target  **参数解释**： 固定值db_queries。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量。
-    * conditions  查询条件数组
-    * orderBy  排序字段
-    * target  固定值db_queries
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询，一般为页数减1。 **取值范围**： 大于等于0。
+    * limit  **参数解释**： 每页显示的条目数量。 **取值范围**： 大于0。
+    * conditions  **参数解释**： 查询条件数组。 **取值范围**： 不涉及。
+    * orderBy  **参数解释**： 排序字段。 **取值范围**： 不涉及。
+    * target  **参数解释**： 固定值db_queries。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * offset  偏移量，表示从此偏移量开始查询，offset>=0。
-    * limit  每页显示的条目数量。
-    * conditions  查询条件数组
-    * orderBy  排序字段
-    * target  固定值db_queries
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询，一般为页数减1。 **取值范围**： 大于等于0。
+    * limit  **参数解释**： 每页显示的条目数量。 **取值范围**： 大于0。
+    * conditions  **参数解释**： 查询条件数组。 **取值范围**： 不涉及。
+    * orderBy  **参数解释**： 排序字段。 **取值范围**： 不涉及。
+    * target  **参数解释**： 固定值db_queries。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -258,7 +258,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    *  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -270,7 +270,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * @param string $clusterId **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -282,7 +282,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -294,7 +294,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string $projectId **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -306,7 +306,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询，offset>=0。
+    *  **参数解释**： 偏移量，表示从此偏移量开始查询，一般为页数减1。 **取值范围**： 大于等于0。
     *
     * @return string
     */
@@ -318,7 +318,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string $offset 偏移量，表示从此偏移量开始查询，offset>=0。
+    * @param string $offset **参数解释**： 偏移量，表示从此偏移量开始查询，一般为页数减1。 **取值范围**： 大于等于0。
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示的条目数量。
+    *  **参数解释**： 每页显示的条目数量。 **取值范围**： 大于0。
     *
     * @return string
     */
@@ -342,7 +342,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string $limit 每页显示的条目数量。
+    * @param string $limit **参数解释**： 每页显示的条目数量。 **取值范围**： 大于0。
     *
     * @return $this
     */
@@ -354,7 +354,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets conditions
-    *  查询条件数组
+    *  **参数解释**： 查询条件数组。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ListQueriesCondition[]
     */
@@ -366,7 +366,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets conditions
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ListQueriesCondition[] $conditions 查询条件数组
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ListQueriesCondition[] $conditions **参数解释**： 查询条件数组。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderBy
-    *  排序字段
+    *  **参数解释**： 排序字段。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets orderBy
     *
-    * @param string|null $orderBy 排序字段
+    * @param string|null $orderBy **参数解释**： 排序字段。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets target
-    *  固定值db_queries
+    *  **参数解释**： 固定值db_queries。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -414,7 +414,7 @@ class ListQueriesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets target
     *
-    * @param string $target 固定值db_queries
+    * @param string $target **参数解释**： 固定值db_queries。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class UpdateDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * viewSql  sql列表
+    * viewSql  **参数解释**： sql列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class UpdateDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * viewSql  sql列表
+    * viewSql  **参数解释**： sql列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UpdateDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * viewSql  sql列表
+    * viewSql  **参数解释**： sql列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UpdateDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * viewSql  sql列表
+    * viewSql  **参数解释**： sql列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpdateDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * viewSql  sql列表
+    * viewSql  **参数解释**： sql列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class UpdateDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets viewSql
-    *  sql列表
+    *  **参数解释**： sql列表。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -187,7 +187,7 @@ class UpdateDatabaseAuthorityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets viewSql
     *
-    * @param string[]|null $viewSql sql列表
+    * @param string[]|null $viewSql **参数解释**： sql列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ListSnapshotStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * statistics  快照统计信息。
+    * statistics  **参数解释**： 快照统计信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListSnapshotStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * statistics  快照统计信息。
+    * statistics  **参数解释**： 快照统计信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListSnapshotStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * statistics  快照统计信息。
+    * statistics  **参数解释**： 快照统计信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListSnapshotStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * statistics  快照统计信息。
+    * statistics  **参数解释**： 快照统计信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListSnapshotStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * statistics  快照统计信息。
+    * statistics  **参数解释**： 快照统计信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListSnapshotStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets statistics
-    *  快照统计信息。
+    *  **参数解释**： 快照统计信息。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\SnapshotsStatistic[]|null
     */
@@ -187,7 +187,7 @@ class ListSnapshotStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets statistics
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\SnapshotsStatistic[]|null $statistics 快照统计信息。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\SnapshotsStatistic[]|null $statistics **参数解释**： 快照统计信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

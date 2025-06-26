@@ -21,8 +21,8 @@ class ListAlarmConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  告警配置总数
-    * alarmConfigs  告警配置列表
+    * count  **参数解释**： 告警配置总数。 **取值范围**： 不涉及。
+    * alarmConfigs  **参数解释**： 告警配置列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListAlarmConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  告警配置总数
-    * alarmConfigs  告警配置列表
+    * count  **参数解释**： 告警配置总数。 **取值范围**： 不涉及。
+    * alarmConfigs  **参数解释**： 告警配置列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAlarmConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  告警配置总数
-    * alarmConfigs  告警配置列表
+    * count  **参数解释**： 告警配置总数。 **取值范围**： 不涉及。
+    * alarmConfigs  **参数解释**： 告警配置列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAlarmConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  告警配置总数
-    * alarmConfigs  告警配置列表
+    * count  **参数解释**： 告警配置总数。 **取值范围**： 不涉及。
+    * alarmConfigs  **参数解释**： 告警配置列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAlarmConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  告警配置总数
-    * alarmConfigs  告警配置列表
+    * count  **参数解释**： 告警配置总数。 **取值范围**： 不涉及。
+    * alarmConfigs  **参数解释**： 告警配置列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListAlarmConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  告警配置总数
+    *  **参数解释**： 告警配置总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListAlarmConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 告警配置总数
+    * @param int|null $count **参数解释**： 告警配置总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListAlarmConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmConfigs
-    *  告警配置列表
+    *  **参数解释**： 告警配置列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\AlarmConfigResponse[]|null
     */
@@ -222,7 +222,7 @@ class ListAlarmConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmConfigs
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\AlarmConfigResponse[]|null $alarmConfigs 告警配置列表
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\AlarmConfigResponse[]|null $alarmConfigs **参数解释**： 告警配置列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

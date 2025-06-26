@@ -20,7 +20,7 @@ class Notification implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
+    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
     * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空；当type为autoscaling时，列表必须为[]。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class Notification implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
+    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
     * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空；当type为autoscaling时，列表必须为[]。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class Notification implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
+    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
     * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空；当type为autoscaling时，列表必须为[]。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class Notification implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
+    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
     * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空；当type为autoscaling时，列表必须为[]。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class Notification implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
+    * type  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
     * notificationList  告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。当type为notification时，notification_list列表不能为空；当type为autoscaling时，列表必须为[]。 说明：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notification_list值保持一致。
     *
     * @var string[]
@@ -224,7 +224,7 @@ class Notification implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
+    *  通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
     *
     * @return string
     */
@@ -236,7 +236,7 @@ class Notification implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。
+    * @param string $type 通知类型。notification为SMN通知，contact为云账号联系人，contactGroup为通知组，autoscaling为AS通知。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
     *
     * @return $this
     */

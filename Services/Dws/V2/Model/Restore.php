@@ -20,15 +20,15 @@ class Restore implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
-    * subnetId  指定子网ID，用于集群网络配置。默认值与原集群相同。
-    * securityGroupId  指定安全组ID，用于集群网络配置。默认值与原集群相同。
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。
-    * availabilityZone  指定集群可用区。默认值与原集群相同。
-    * port  指定集群服务端口
+    * name  **参数解释**： 集群名称。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **取值范围**： 默认值与原集群相同。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
+    * availabilityZone  **参数解释**： 指定集群可用区。默认值与原集群相同。 **取值范围**： 不涉及。
+    * port  **参数解释**： 指定集群服务端口。 **取值范围**： 不涉及。
     * publicIp  publicIp
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class Restore implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
-    * subnetId  指定子网ID，用于集群网络配置。默认值与原集群相同。
-    * securityGroupId  指定安全组ID，用于集群网络配置。默认值与原集群相同。
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。
-    * availabilityZone  指定集群可用区。默认值与原集群相同。
-    * port  指定集群服务端口
+    * name  **参数解释**： 集群名称。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **取值范围**： 默认值与原集群相同。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
+    * availabilityZone  **参数解释**： 指定集群可用区。默认值与原集群相同。 **取值范围**： 不涉及。
+    * port  **参数解释**： 指定集群服务端口。 **取值范围**： 不涉及。
     * publicIp  publicIp
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class Restore implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
-    * subnetId  指定子网ID，用于集群网络配置。默认值与原集群相同。
-    * securityGroupId  指定安全组ID，用于集群网络配置。默认值与原集群相同。
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。
-    * availabilityZone  指定集群可用区。默认值与原集群相同。
-    * port  指定集群服务端口
+    * name  **参数解释**： 集群名称。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **取值范围**： 默认值与原集群相同。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
+    * availabilityZone  **参数解释**： 指定集群可用区。默认值与原集群相同。 **取值范围**： 不涉及。
+    * port  **参数解释**： 指定集群服务端口。 **取值范围**： 不涉及。
     * publicIp  publicIp
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class Restore implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
-    * subnetId  指定子网ID，用于集群网络配置。默认值与原集群相同。
-    * securityGroupId  指定安全组ID，用于集群网络配置。默认值与原集群相同。
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。
-    * availabilityZone  指定集群可用区。默认值与原集群相同。
-    * port  指定集群服务端口
+    * name  **参数解释**： 集群名称。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **取值范围**： 默认值与原集群相同。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
+    * availabilityZone  **参数解释**： 指定集群可用区。默认值与原集群相同。 **取值范围**： 不涉及。
+    * port  **参数解释**： 指定集群服务端口。 **取值范围**： 不涉及。
     * publicIp  publicIp
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class Restore implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
-    * subnetId  指定子网ID，用于集群网络配置。默认值与原集群相同。
-    * securityGroupId  指定安全组ID，用于集群网络配置。默认值与原集群相同。
-    * vpcId  指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。
-    * availabilityZone  指定集群可用区。默认值与原集群相同。
-    * port  指定集群服务端口
+    * name  **参数解释**： 集群名称。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
+    * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **取值范围**： 默认值与原集群相同。
+    * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
+    * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
+    * availabilityZone  **参数解释**： 指定集群可用区。默认值与原集群相同。 **取值范围**： 不涉及。
+    * port  **参数解释**： 指定集群服务端口。 **取值范围**： 不涉及。
     * publicIp  publicIp
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * ipv6Enable  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    * ipv6Enable  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -271,7 +271,7 @@ class Restore implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
+    *  **参数解释**： 集群名称。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
     *
     * @return string
     */
@@ -283,7 +283,7 @@ class Restore implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
+    * @param string $name **参数解释**： 集群名称。 **取值范围**： 要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。
     *
     * @return $this
     */
@@ -295,7 +295,7 @@ class Restore implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  指定子网ID，用于集群网络配置。默认值与原集群相同。
+    *  **参数解释**： 指定子网ID，用于集群网络配置。 **取值范围**： 默认值与原集群相同。
     *
     * @return string|null
     */
@@ -307,7 +307,7 @@ class Restore implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string|null $subnetId 指定子网ID，用于集群网络配置。默认值与原集群相同。
+    * @param string|null $subnetId **参数解释**： 指定子网ID，用于集群网络配置。 **取值范围**： 默认值与原集群相同。
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class Restore implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  指定安全组ID，用于集群网络配置。默认值与原集群相同。
+    *  **参数解释**： 指定安全组ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -331,7 +331,7 @@ class Restore implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string|null $securityGroupId 指定安全组ID，用于集群网络配置。默认值与原集群相同。
+    * @param string|null $securityGroupId **参数解释**： 指定安全组ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class Restore implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。
+    *  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -355,7 +355,7 @@ class Restore implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId 指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。
+    * @param string|null $vpcId **参数解释**： 指定虚拟私有云ID，用于集群网络配置。默认值与原集群相同。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class Restore implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  指定集群可用区。默认值与原集群相同。
+    *  **参数解释**： 指定集群可用区。默认值与原集群相同。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -379,7 +379,7 @@ class Restore implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string|null $availabilityZone 指定集群可用区。默认值与原集群相同。
+    * @param string|null $availabilityZone **参数解释**： 指定集群可用区。默认值与原集群相同。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class Restore implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  指定集群服务端口
+    *  **参数解释**： 指定集群服务端口。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -403,7 +403,7 @@ class Restore implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int|null $port 指定集群服务端口
+    * @param int|null $port **参数解释**： 指定集群服务端口。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class Restore implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Enable
-    *  指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    *  **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -475,7 +475,7 @@ class Restore implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Enable
     *
-    * @param bool|null $ipv6Enable 指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+    * @param bool|null $ipv6Enable **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
     *
     * @return $this
     */

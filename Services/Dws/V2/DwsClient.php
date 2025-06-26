@@ -27,9 +27,9 @@ class DwsClient extends Client
 
 
     /**
-     * 添加工作负载队列的绑定用户
+     * 添加资源池的绑定用户
      *
-     * 添加工作负载队列的绑定用户。
+     * 添加资源池的绑定用户。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -157,9 +157,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 添加工作负载计划阶段
+     * 添加资源管理计划阶段
      *
-     * 添加工作负载计划阶段。
+     * 添加资源管理计划阶段。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -225,9 +225,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 添加工作负载队列
+     * 添加资源池
      *
-     * 添加工作负载队列。
+     * 添加资源池。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -323,6 +323,9 @@ class DwsClient extends Client
         if ($localVarParams['clusterId'] !== null) {
             $pathParams['cluster_id'] = $localVarParams['clusterId'];
         }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=UTF-8', 'application/json']
@@ -330,7 +333,7 @@ class DwsClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json;charset=UTF-8', 'application/json'],
-                []
+                ['application/json;charset=UTF-8']
             );
         }
         $headers = array_merge(
@@ -750,7 +753,9 @@ class DwsClient extends Client
     /**
      * 解除只读
      *
-     * 当集群进入只读状态时，无法进行数据库相关操作，用户可以在管理控制台解除集群的只读状态。触发只读状态可能是由于磁盘使用率过高，因此需要对集群数据进行清理或扩容。 - 解除只读支持1.7.2及以上版本。
+     * 当集群进入只读状态时，无法进行数据库相关操作，用户可以在管理控制台解除集群的只读状态。触发只读状态可能是由于磁盘使用率过高，因此需要对集群数据进行清理或扩容。
+     * **约束限制**：
+     * 解除只读支持1.7.2及以上版本。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -783,11 +788,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -910,11 +915,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1078,7 +1083,7 @@ class DwsClient extends Client
     /**
      * 集群扩容前检查
      *
-     * 此接口用于集群扩容前检查，提前识别子网不足、权限不足等问题导致的扩容失败。
+     * 集群扩容前检查，提前识别子网不足、权限不足等问题导致的扩容失败。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1823,11 +1828,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1979,7 +1984,7 @@ class DwsClient extends Client
     /**
      * 添加逻辑集群定时增删计划
      *
-     * 此接口用于添加逻辑集群定时增删计划。
+     * 添加逻辑集群定时增删计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2169,9 +2174,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 添加工作负载计划
+     * 添加资源管理计划
      *
-     * 添加工作负载计划。
+     * 添加资源管理计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2298,7 +2303,7 @@ class DwsClient extends Client
     /**
      * 删除集群
      *
-     * 此接口用于删除集群。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
+     * 删除集群。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2334,11 +2339,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2428,7 +2433,7 @@ class DwsClient extends Client
     /**
      * 删除空闲节点
      *
-     * 此接口用于删除空闲节点。
+     * 删除空闲节点。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2529,11 +2534,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -2691,7 +2696,7 @@ class DwsClient extends Client
     /**
      * 删除集群V2
      *
-     * 此接口用于删除集群。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
+     * 删除集群。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2821,7 +2826,7 @@ class DwsClient extends Client
     /**
      * 删除逻辑集群
      *
-     * 此接口用于删除逻辑集群。
+     * 删除逻辑集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2857,11 +2862,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -2886,7 +2891,7 @@ class DwsClient extends Client
     /**
      * 删除逻辑集群定时增删计划
      *
-     * 此接口用于删除逻辑集群定时增删计划。
+     * 删除逻辑集群定时增删计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2949,9 +2954,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 删除工作负载队列的绑定用户
+     * 删除资源池的绑定用户
      *
-     * 删除工作负载队列的绑定用户。
+     * 删除资源池的绑定用户。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3206,9 +3211,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 删除工作负载计划
+     * 删除资源管理计划
      *
-     * 删除工作负载计划。
+     * 删除资源管理计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3271,9 +3276,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 删除工作负载计划阶段
+     * 删除资源管理计划阶段
      *
-     * 删除工作负载计划删除工作负载计划阶段。
+     * 删除资源管理计划阶段。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3404,6 +3409,71 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\DeleteWorkloadQueueResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\DeleteWorkloadQueueRequest');
+    }
+
+    /**
+     * 删除异常规则
+     *
+     * 删除异常规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteWorkloadRule($request)
+    {
+        return $this->deleteWorkloadRuleWithHttpInfo($request);
+    }
+
+    public function deleteWorkloadRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/workload/rules/{rule_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['ruleName'] !== null) {
+            $pathParams['rule_name'] = $localVarParams['ruleName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\DeleteWorkloadRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\DeleteWorkloadRuleRequest');
     }
 
     /**
@@ -3666,7 +3736,8 @@ class DwsClient extends Client
     /**
      * 切换逻辑集群开关
      *
-     * 此接口用于切换逻辑集群开关，仅用于控制逻辑集群相关功能模块是否在页面展示。在集群已经是逻辑集群的场景下，修改该接口无任何作用及影响。
+     * 切换逻辑集群开关，仅用于控制逻辑集群相关功能模块是否在页面展示。
+     * 在集群已经是逻辑集群的场景下，修改该接口无任何作用及影响。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4194,8 +4265,9 @@ class DwsClient extends Client
      * 磁盘扩容
      *
      * 随着客户业务的发展，磁盘空间往往最先出现资源瓶颈，在其他资源尚且充足的情况下，通过磁盘扩容可快速缓解存储资源瓶颈现象，操作过程中无需暂停业务，并且不会造成CPU、内存等资源浪费。
-     * - 磁盘扩容功能仅8.1.1.203及以上版本支持，并且创建集群规格需要为云数仓SSD云盘或实时数仓类型。
-     * - 按需+折扣套餐包消费模式下，存储扩容后超出折扣套餐包部分将按需收费。
+     * **约束限制**：
+     * 磁盘扩容功能仅8.1.1.203及以上版本支持，并且创建集群规格需要为云数仓SSD云盘或实时数仓类型。
+     * 按需+折扣套餐包消费模式下，存储扩容后超出折扣套餐包部分将按需收费。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4231,11 +4303,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -4302,11 +4374,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/octet-stream']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/octet-stream'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -4373,11 +4445,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/octet-stream']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/octet-stream'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -4814,6 +4886,9 @@ class DwsClient extends Client
         if ($localVarParams['primaryClusterId'] !== null) {
             $queryParams['primary_cluster_id'] = $localVarParams['primaryClusterId'];
         }
+        if ($localVarParams['standbyAzCode'] !== null) {
+            $queryParams['standby_az_code'] = $localVarParams['standbyAzCode'];
+        }
         if ($localVarParams['primarySpecId'] !== null) {
             $queryParams['primary_spec_id'] = $localVarParams['primarySpecId'];
         }
@@ -4825,9 +4900,6 @@ class DwsClient extends Client
         }
         if ($localVarParams['standbyProjectId'] !== null) {
             $queryParams['standby_project_id'] = $localVarParams['standbyProjectId'];
-        }
-        if ($localVarParams['standbyAzCode'] !== null) {
-            $queryParams['standby_az_code'] = $localVarParams['standbyAzCode'];
         }
         if ($localVarParams['drType'] !== null) {
             $queryParams['dr_type'] = $localVarParams['drType'];
@@ -5123,7 +5195,7 @@ class DwsClient extends Client
     /**
      * 查询集群详情
      *
-     * 该接口用于查询集群详情。
+     * 查询集群详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5440,11 +5512,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -5529,9 +5601,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 查询资源管理
+     * 查询资源管理开关状态
      *
-     * 查询资管管理开关。
+     * 查询资源管理开关状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5564,11 +5636,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -5593,7 +5665,7 @@ class DwsClient extends Client
     /**
      * 查询集群列表
      *
-     * 该接口用于查询并显示集群列表。
+     * 查询集群列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5792,6 +5864,94 @@ class DwsClient extends Client
     }
 
     /**
+     * 查询数据库对象
+     *
+     * 查询数据库对象。
+     * **约束限制**：
+     * 集群guestAgent插件大于等于8.2.1.1开始支持。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDatabaseObjects($request)
+    {
+        return $this->listDatabaseObjectsWithHttpInfo($request);
+    }
+
+    public function listDatabaseObjectsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/objects';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['database'] !== null) {
+            $queryParams['database'] = $localVarParams['database'];
+        }
+        if ($localVarParams['schema'] !== null) {
+            $queryParams['schema'] = $localVarParams['schema'];
+        }
+        if ($localVarParams['table'] !== null) {
+            $queryParams['table'] = $localVarParams['table'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['isFineGrainedDisaster'] !== null) {
+            $queryParams['is_fine_grained_disaster'] = $localVarParams['isFineGrainedDisaster'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListDatabaseObjectsResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListDatabaseObjectsRequest');
+    }
+
+    /**
      * 查询用户/角色拥有权限
      *
      * 查询用户/角色拥有权限。
@@ -5892,6 +6052,18 @@ class DwsClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['userType'] !== null) {
+            $queryParams['user_type'] = $localVarParams['userType'];
         }
         if ($localVarParams['clusterId'] !== null) {
             $pathParams['cluster_id'] = $localVarParams['clusterId'];
@@ -6046,7 +6218,7 @@ class DwsClient extends Client
     /**
      * 获取集群可绑定的ELB列表
      *
-     * 查询集群可以关联的Elb列表。
+     * 查询集群可以关联的ELB列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6316,9 +6488,9 @@ class DwsClient extends Client
     }
 
     /**
-     * openApi查询磁盘信息
+     * 查询磁盘信息
      *
-     * openApi查询磁盘信息。
+     * 查询磁盘信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6390,9 +6562,9 @@ class DwsClient extends Client
     }
 
     /**
-     * openapi获取网卡状态
+     * 获取网卡状态
      *
-     * openapi获取网卡状态。
+     * 获取网卡状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6461,9 +6633,9 @@ class DwsClient extends Client
     }
 
     /**
-     * openApi查询主机概览
+     * 查询主机概览
      *
-     * openApi查询主机概览。
+     * 查询主机概览。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6596,7 +6768,7 @@ class DwsClient extends Client
     /**
      * 查询逻辑集群定时增删计划
      *
-     * 此接口用于查询逻辑集群定时增删计划。
+     * 查询逻辑集群定时增删计划。定时增删计划业务支持最多保存20条数据，接口最大返回20条数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6656,9 +6828,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 查询逻辑集群可用ring环节点信息
+     * 查询逻辑集群可用环节点信息
      *
-     * 查询逻辑集群可用ring环节点信息。
+     * 查询逻辑集群可用环节点信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7165,9 +7337,9 @@ class DwsClient extends Client
     }
 
     /**
-     * openApi查询历史监控数据
+     * 查询历史监控数据
      *
-     * openApi查询历史监控数据。
+     * 查询历史监控数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7907,6 +8079,77 @@ class DwsClient extends Client
     }
 
     /**
+     * 根据快照ID查询规格信息
+     *
+     * 根据快照ID查询规格信息。支持用来查询某个快照的规格信息，或者快照可恢复到的目标规格信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSnapshotFlavorInfo($request)
+    {
+        return $this->listSnapshotFlavorInfoWithHttpInfo($request);
+    }
+
+    public function listSnapshotFlavorInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/snapshots/{snapshot_id}/flavors';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['azCode'] !== null) {
+            $queryParams['az_code'] = $localVarParams['azCode'];
+        }
+        if ($localVarParams['fineGrainedRestore'] !== null) {
+            $queryParams['fine_grained_restore'] = $localVarParams['fineGrainedRestore'];
+        }
+        if ($localVarParams['snapshotId'] !== null) {
+            $pathParams['snapshot_id'] = $localVarParams['snapshotId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListSnapshotFlavorInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListSnapshotFlavorInfoRequest');
+    }
+
+    /**
      * 查询快照策略
      *
      * 查询快照策略。
@@ -8431,7 +8674,7 @@ class DwsClient extends Client
     /**
      * 查询支持变更的目标规格列表
      *
-     * 查询支持变更的目标规格列表。
+     * 查询支持变更的目标规格列表。接口返回的规格列表最多为20条。
      * **约束限制**：
      * 无cluster_id时：可查询所有支持转换的目标规格，但是由于配额等原因，部分规格可能存在售罄无法使用。
      * 存在cluster_id时：会自动关联此集群所在可用区下的配额充足的目标规格。
@@ -8775,9 +9018,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 查询工作负载队列
+     * 查询资源池
      *
-     * 查询工作负载队列。
+     * 查询资源池。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8840,9 +9083,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 获得工作负载队列的绑定用户列表
+     * 获得资源池的绑定用户列表
      *
-     * 获得工作负载队列的绑定用户列表。
+     * 获得资源池的绑定用户列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9157,11 +9400,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -9186,7 +9429,7 @@ class DwsClient extends Client
     /**
      * 重置密码
      *
-     * 此接口用于重置集群管理员密码。
+     * 重置集群管理员密码。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9251,7 +9494,7 @@ class DwsClient extends Client
     /**
      * 扩容集群
      *
-     * 此接口用于扩容集群，亦可用于添加空闲节点。默认情况下：表示执行扩容操作。
+     * 扩容集群，亦可用于添加空闲节点。默认情况下：表示执行扩容操作。
      * 通过create_node_only字段用以区分当前是**扩容**、**添加空闲节点**：
      * - true：仅添加空闲节点
      * - false：表示执行扩容操作
@@ -9319,7 +9562,7 @@ class DwsClient extends Client
     /**
      * 从空闲节点扩容
      *
-     * 此接口用于从空闲节点扩容。
+     * 从空闲节点扩容。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9384,7 +9627,7 @@ class DwsClient extends Client
     /**
      * 重启集群
      *
-     * 此接口用于重启集群。
+     * 重启集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9449,7 +9692,7 @@ class DwsClient extends Client
     /**
      * 重启逻辑集群
      *
-     * 此接口用于重启逻辑集群。
+     * 重启逻辑集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9615,11 +9858,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -9644,7 +9887,7 @@ class DwsClient extends Client
     /**
      * 恢复重分布
      *
-     * 此接口用于恢复暂停状态下的重分布操作，仅支持DWS2.0集群。
+     * 恢复暂停状态下的重分布操作，仅支持DWS2.0集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9677,11 +9920,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -10178,9 +10421,9 @@ class DwsClient extends Client
      * 查询磁盘扩容范围
      *
      * 此接口可用于查看磁盘扩容操作时支持的扩容范围。
-     * 
-     * - 磁盘扩容功能仅8.1.1.203及以上版本支持，并且创建集群规格需要为云数仓SSD云盘或实时数仓类型。
-     * - 按需+折扣套餐包消费模式下，存储扩容后超出折扣套餐包部分将按需收费。
+     * **约束限制**：
+     * 磁盘扩容功能仅8.1.1.203及以上版本支持，并且创建集群规格需要为云数仓SSD云盘或实时数仓类型。
+     * 按需+折扣套餐包消费模式下，存储扩容后超出折扣套餐包部分将按需收费。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10627,7 +10870,7 @@ class DwsClient extends Client
     }
 
     /**
-     * 容灾-查询容灾进度详情
+     * 查询容灾进度详情
      *
      * 该接口用于查询容灾进度详情信息操作。
      * 
@@ -10691,7 +10934,7 @@ class DwsClient extends Client
     /**
      * 查询单个实例
      *
-     * 查询单个实例。
+     * 查询单个实例信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10881,9 +11124,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 查询某个工作负载计划详细信息
+     * 查询某个资源管理计划详细信息
      *
-     * 查询某个工作负载计划详细信息。
+     * 查询某个资源管理计划详细信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10946,9 +11189,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 查询工作负载计划阶段详细信息
+     * 查询资源管理计划阶段详细信息
      *
-     * 查询工作负载计划阶段详细信息。
+     * 查询资源管理计划阶段详细信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11014,9 +11257,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 获得工作负载队列详细信息
+     * 获得资源池详细信息
      *
-     * 获得工作负载队列详细信息。
+     * 获得资源池详细信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11316,11 +11559,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -11343,9 +11586,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 启动工作负载计划
+     * 启动资源管理计划
      *
-     * 启动工作负载计划。
+     * 启动资源管理计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11533,9 +11776,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 停止工作负载计划
+     * 停止资源管理计划
      *
-     * 停止工作负载计划。
+     * 停止资源管理计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11666,9 +11909,10 @@ class DwsClient extends Client
     /**
      * 主备恢复
      *
-     * 当集群状态为“非均衡”时会出现某些节点主实例增多，从而负载压力较大。这种情况下集群状态是正常的，但整体性能要低于均衡状态。可进行集群主备恢复操作将集群状态切换为“可用“状态。
-     * - 集群主备恢复仅8.1.1.202及以上版本支持。
-     * - 集群主备恢复将会短暂中断业务，中断时间根据用户自身业务量所决定，建议用户在业务低峰期执行此操作。
+     * 当集群状态为“非均衡”时会出现某些节点主实例增多，从而负载压力较大。这种情况下集群状态是正常的，但整体性能要低于均衡状态。可进行集群主备恢复操作将集群状态切换为“可用”状态。
+     * **约束限制**：
+     * 集群主备恢复仅8.1.1.202及以上版本支持。
+     * 集群主备恢复将会短暂中断业务，中断时间根据用户自身业务量所决定，建议用户在业务低峰期执行此操作。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11701,11 +11945,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -11728,9 +11972,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 切换工作负载计划阶段
+     * 切换资源管理计划阶段
      *
-     * 切换工作负载计划阶段。
+     * 切换资源管理计划阶段。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11838,11 +12082,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -12166,11 +12410,11 @@ class DwsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -12460,7 +12704,9 @@ class DwsClient extends Client
     /**
      * 编辑逻辑集群
      *
-     * 此接口用于编辑修改逻辑集群。
+     * 编辑修改逻辑集群。接口根据提交的请求体判断当前操作是逻辑集群缩容或者扩容。
+     * 场景一：原始的逻辑集群有6个节点（两个环），提交请求时的请求体只有1个环，此时为逻辑集群缩容。
+     * 场景二：原始的逻辑集群有6个节点（两个环），提交请求时的请求体中有3个环，此时为逻辑集群扩容。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12528,7 +12774,7 @@ class DwsClient extends Client
     /**
      * 编辑逻辑集群增删计划
      *
-     * 此接口用于编辑修改编辑逻辑集群增删计划。
+     * 编辑逻辑集群增删计划。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12659,9 +12905,9 @@ class DwsClient extends Client
     }
 
     /**
-     * 更新工作负载队列资源配置信息
+     * 更新资源池资源配置信息
      *
-     * 更新工作负载队列资源配置信息。
+     * 更新资源池资源配置信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12928,6 +13174,74 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateWorkloadPlanStageResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateWorkloadPlanStageRequest');
+    }
+
+    /**
+     * 更新异常规则
+     *
+     * 更新异常规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateWorkloadRule($request)
+    {
+        return $this->updateWorkloadRuleWithHttpInfo($request);
+    }
+
+    public function updateWorkloadRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/workload/rules/{rule_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['ruleName'] !== null) {
+            $pathParams['rule_name'] = $localVarParams['ruleName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateWorkloadRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateWorkloadRuleRequest');
     }
 
     protected function callApi(

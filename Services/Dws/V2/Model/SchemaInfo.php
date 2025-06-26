@@ -20,16 +20,16 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * schemaName  Schema名称。
-    * databaseName  数据库名称。
-    * totalValue  集群schema使用空间总值。
-    * permSpace  Schema空间阈值。
-    * skewPercent  倾斜率。
-    * minValue  最小值。
-    * maxValue  最大值。
-    * minDn  最小dn节点。
-    * maxDn  最大cn节点。
-    * dnNum  dn节点数量。
+    * schemaName  **参数解释**： 集群模式名称。 **取值范围**： 不涉及。
+    * databaseName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * totalValue  **参数解释**： 集群模式使用空间总值。 **取值范围**： 不涉及。
+    * permSpace  **参数解释**： 集群模式空间阈值。 **取值范围**： 不涉及。
+    * skewPercent  **参数解释**： 倾斜率。 **取值范围**： 不涉及。
+    * minValue  **参数解释**： 最小值。 **取值范围**： 不涉及。
+    * maxValue  **参数解释**： 最大值。 **取值范围**： 不涉及。
+    * minDn  **参数解释**： 最小dn节点。 **取值范围**： 不涉及。
+    * maxDn  **参数解释**： 最大cn节点。 **取值范围**： 不涉及。
+    * dnNum  **参数解释**： dn节点数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * schemaName  Schema名称。
-    * databaseName  数据库名称。
-    * totalValue  集群schema使用空间总值。
-    * permSpace  Schema空间阈值。
-    * skewPercent  倾斜率。
-    * minValue  最小值。
-    * maxValue  最大值。
-    * minDn  最小dn节点。
-    * maxDn  最大cn节点。
-    * dnNum  dn节点数量。
+    * schemaName  **参数解释**： 集群模式名称。 **取值范围**： 不涉及。
+    * databaseName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * totalValue  **参数解释**： 集群模式使用空间总值。 **取值范围**： 不涉及。
+    * permSpace  **参数解释**： 集群模式空间阈值。 **取值范围**： 不涉及。
+    * skewPercent  **参数解释**： 倾斜率。 **取值范围**： 不涉及。
+    * minValue  **参数解释**： 最小值。 **取值范围**： 不涉及。
+    * maxValue  **参数解释**： 最大值。 **取值范围**： 不涉及。
+    * minDn  **参数解释**： 最小dn节点。 **取值范围**： 不涉及。
+    * maxDn  **参数解释**： 最大cn节点。 **取值范围**： 不涉及。
+    * dnNum  **参数解释**： dn节点数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class SchemaInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * schemaName  Schema名称。
-    * databaseName  数据库名称。
-    * totalValue  集群schema使用空间总值。
-    * permSpace  Schema空间阈值。
-    * skewPercent  倾斜率。
-    * minValue  最小值。
-    * maxValue  最大值。
-    * minDn  最小dn节点。
-    * maxDn  最大cn节点。
-    * dnNum  dn节点数量。
+    * schemaName  **参数解释**： 集群模式名称。 **取值范围**： 不涉及。
+    * databaseName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * totalValue  **参数解释**： 集群模式使用空间总值。 **取值范围**： 不涉及。
+    * permSpace  **参数解释**： 集群模式空间阈值。 **取值范围**： 不涉及。
+    * skewPercent  **参数解释**： 倾斜率。 **取值范围**： 不涉及。
+    * minValue  **参数解释**： 最小值。 **取值范围**： 不涉及。
+    * maxValue  **参数解释**： 最大值。 **取值范围**： 不涉及。
+    * minDn  **参数解释**： 最小dn节点。 **取值范围**： 不涉及。
+    * maxDn  **参数解释**： 最大cn节点。 **取值范围**： 不涉及。
+    * dnNum  **参数解释**： dn节点数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * schemaName  Schema名称。
-    * databaseName  数据库名称。
-    * totalValue  集群schema使用空间总值。
-    * permSpace  Schema空间阈值。
-    * skewPercent  倾斜率。
-    * minValue  最小值。
-    * maxValue  最大值。
-    * minDn  最小dn节点。
-    * maxDn  最大cn节点。
-    * dnNum  dn节点数量。
+    * schemaName  **参数解释**： 集群模式名称。 **取值范围**： 不涉及。
+    * databaseName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * totalValue  **参数解释**： 集群模式使用空间总值。 **取值范围**： 不涉及。
+    * permSpace  **参数解释**： 集群模式空间阈值。 **取值范围**： 不涉及。
+    * skewPercent  **参数解释**： 倾斜率。 **取值范围**： 不涉及。
+    * minValue  **参数解释**： 最小值。 **取值范围**： 不涉及。
+    * maxValue  **参数解释**： 最大值。 **取值范围**： 不涉及。
+    * minDn  **参数解释**： 最小dn节点。 **取值范围**： 不涉及。
+    * maxDn  **参数解释**： 最大cn节点。 **取值范围**： 不涉及。
+    * dnNum  **参数解释**： dn节点数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * schemaName  Schema名称。
-    * databaseName  数据库名称。
-    * totalValue  集群schema使用空间总值。
-    * permSpace  Schema空间阈值。
-    * skewPercent  倾斜率。
-    * minValue  最小值。
-    * maxValue  最大值。
-    * minDn  最小dn节点。
-    * maxDn  最大cn节点。
-    * dnNum  dn节点数量。
+    * schemaName  **参数解释**： 集群模式名称。 **取值范围**： 不涉及。
+    * databaseName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * totalValue  **参数解释**： 集群模式使用空间总值。 **取值范围**： 不涉及。
+    * permSpace  **参数解释**： 集群模式空间阈值。 **取值范围**： 不涉及。
+    * skewPercent  **参数解释**： 倾斜率。 **取值范围**： 不涉及。
+    * minValue  **参数解释**： 最小值。 **取值范围**： 不涉及。
+    * maxValue  **参数解释**： 最大值。 **取值范围**： 不涉及。
+    * minDn  **参数解释**： 最小dn节点。 **取值范围**： 不涉及。
+    * maxDn  **参数解释**： 最大cn节点。 **取值范围**： 不涉及。
+    * dnNum  **参数解释**： dn节点数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -303,7 +303,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets schemaName
-    *  Schema名称。
+    *  **参数解释**： 集群模式名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -315,7 +315,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets schemaName
     *
-    * @param string $schemaName Schema名称。
+    * @param string $schemaName **参数解释**： 集群模式名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -327,7 +327,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets databaseName
-    *  数据库名称。
+    *  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -339,7 +339,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets databaseName
     *
-    * @param string $databaseName 数据库名称。
+    * @param string $databaseName **参数解释**： 数据库名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -351,7 +351,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalValue
-    *  集群schema使用空间总值。
+    *  **参数解释**： 集群模式使用空间总值。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -363,7 +363,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets totalValue
     *
-    * @param int $totalValue 集群schema使用空间总值。
+    * @param int $totalValue **参数解释**： 集群模式使用空间总值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -375,7 +375,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets permSpace
-    *  Schema空间阈值。
+    *  **参数解释**： 集群模式空间阈值。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -387,7 +387,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets permSpace
     *
-    * @param int $permSpace Schema空间阈值。
+    * @param int $permSpace **参数解释**： 集群模式空间阈值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -399,7 +399,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets skewPercent
-    *  倾斜率。
+    *  **参数解释**： 倾斜率。 **取值范围**： 不涉及。
     *
     * @return double
     */
@@ -411,7 +411,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets skewPercent
     *
-    * @param double $skewPercent 倾斜率。
+    * @param double $skewPercent **参数解释**： 倾斜率。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -423,7 +423,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets minValue
-    *  最小值。
+    *  **参数解释**： 最小值。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -435,7 +435,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets minValue
     *
-    * @param int $minValue 最小值。
+    * @param int $minValue **参数解释**： 最小值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -447,7 +447,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxValue
-    *  最大值。
+    *  **参数解释**： 最大值。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -459,7 +459,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets maxValue
     *
-    * @param int $maxValue 最大值。
+    * @param int $maxValue **参数解释**： 最大值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -471,7 +471,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets minDn
-    *  最小dn节点。
+    *  **参数解释**： 最小dn节点。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -483,7 +483,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets minDn
     *
-    * @param string $minDn 最小dn节点。
+    * @param string $minDn **参数解释**： 最小dn节点。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -495,7 +495,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxDn
-    *  最大cn节点。
+    *  **参数解释**： 最大cn节点。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -507,7 +507,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets maxDn
     *
-    * @param string $maxDn 最大cn节点。
+    * @param string $maxDn **参数解释**： 最大cn节点。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -519,7 +519,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnNum
-    *  dn节点数量。
+    *  **参数解释**： dn节点数量。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -531,7 +531,7 @@ class SchemaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dnNum
     *
-    * @param int $dnNum dn节点数量。
+    * @param int $dnNum **参数解释**： dn节点数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */

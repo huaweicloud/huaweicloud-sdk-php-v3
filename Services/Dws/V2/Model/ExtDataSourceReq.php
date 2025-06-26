@@ -20,14 +20,14 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dataSourceId  数据源id
-    * type  类型
-    * dataSourceName  数据源名称
-    * userName  用户名
-    * userPwd  密码
-    * description  描述
-    * reboot  重启
-    * connectInfo  数据库
+    * dataSourceId  **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * dataSourceName  **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
+    * userName  **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
+    * userPwd  **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 除!<>'=&等特殊字符外的字符。长度256个字符以内。
+    * reboot  **参数解释**： 是否重启集群。 **取值范围**： 不涉及。
+    * connectInfo  **参数解释**： 连接的数据库。当数据源为OBS时为必选字段。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dataSourceId  数据源id
-    * type  类型
-    * dataSourceName  数据源名称
-    * userName  用户名
-    * userPwd  密码
-    * description  描述
-    * reboot  重启
-    * connectInfo  数据库
+    * dataSourceId  **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * dataSourceName  **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
+    * userName  **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
+    * userPwd  **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 除!<>'=&等特殊字符外的字符。长度256个字符以内。
+    * reboot  **参数解释**： 是否重启集群。 **取值范围**： 不涉及。
+    * connectInfo  **参数解释**： 连接的数据库。当数据源为OBS时为必选字段。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dataSourceId  数据源id
-    * type  类型
-    * dataSourceName  数据源名称
-    * userName  用户名
-    * userPwd  密码
-    * description  描述
-    * reboot  重启
-    * connectInfo  数据库
+    * dataSourceId  **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * dataSourceName  **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
+    * userName  **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
+    * userPwd  **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 除!<>'=&等特殊字符外的字符。长度256个字符以内。
+    * reboot  **参数解释**： 是否重启集群。 **取值范围**： 不涉及。
+    * connectInfo  **参数解释**： 连接的数据库。当数据源为OBS时为必选字段。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dataSourceId  数据源id
-    * type  类型
-    * dataSourceName  数据源名称
-    * userName  用户名
-    * userPwd  密码
-    * description  描述
-    * reboot  重启
-    * connectInfo  数据库
+    * dataSourceId  **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * dataSourceName  **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
+    * userName  **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
+    * userPwd  **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 除!<>'=&等特殊字符外的字符。长度256个字符以内。
+    * reboot  **参数解释**： 是否重启集群。 **取值范围**： 不涉及。
+    * connectInfo  **参数解释**： 连接的数据库。当数据源为OBS时为必选字段。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dataSourceId  数据源id
-    * type  类型
-    * dataSourceName  数据源名称
-    * userName  用户名
-    * userPwd  密码
-    * description  描述
-    * reboot  重启
-    * connectInfo  数据库
+    * dataSourceId  **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * dataSourceName  **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
+    * userName  **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
+    * userPwd  **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述。 **取值范围**： 除!<>'=&等特殊字符外的字符。长度256个字符以内。
+    * reboot  **参数解释**： 是否重启集群。 **取值范围**： 不涉及。
+    * connectInfo  **参数解释**： 连接的数据库。当数据源为OBS时为必选字段。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -260,7 +260,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataSourceId
-    *  数据源id
+    *  **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -272,7 +272,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Sets dataSourceId
     *
-    * @param string|null $dataSourceId 数据源id
+    * @param string|null $dataSourceId **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -284,7 +284,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -296,7 +296,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 类型
+    * @param string $type **参数解释**： 数据源类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataSourceName
-    *  数据源名称
+    *  **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
     *
     * @return string
     */
@@ -320,7 +320,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Sets dataSourceName
     *
-    * @param string $dataSourceName 数据源名称
+    * @param string $dataSourceName **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名
+    *  **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
     *
     * @return string
     */
@@ -344,7 +344,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string $userName 用户名
+    * @param string $userName **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets userPwd
-    *  密码
+    *  **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Sets userPwd
     *
-    * @param string|null $userPwd 密码
+    * @param string|null $userPwd **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 描述。 **取值范围**： 除!<>'=&等特殊字符外的字符。长度256个字符以内。
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 描述。 **取值范围**： 除!<>'=&等特殊字符外的字符。长度256个字符以内。
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets reboot
-    *  重启
+    *  **参数解释**： 是否重启集群。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -416,7 +416,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Sets reboot
     *
-    * @param bool|null $reboot 重启
+    * @param bool|null $reboot **参数解释**： 是否重启集群。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectInfo
-    *  数据库
+    *  **参数解释**： 连接的数据库。当数据源为OBS时为必选字段。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Sets connectInfo
     *
-    * @param string|null $connectInfo 数据库
+    * @param string|null $connectInfo **参数解释**： 连接的数据库。当数据源为OBS时为必选字段。 **取值范围**： 不涉及。
     *
     * @return $this
     */

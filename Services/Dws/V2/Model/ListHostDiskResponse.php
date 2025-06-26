@@ -21,7 +21,7 @@ class ListHostDiskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * body  **参数解释**： 磁盘信息响应体。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListHostDiskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * body  **参数解释**： 磁盘信息响应体。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListHostDiskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * body  **参数解释**： 磁盘信息响应体。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListHostDiskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * body  **参数解释**： 磁盘信息响应体。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListHostDiskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * body  **参数解释**： 磁盘信息响应体。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListHostDiskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  body
+    *  **参数解释**： 磁盘信息响应体。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\DiskResp[]|null
     */
@@ -187,7 +187,7 @@ class ListHostDiskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\DiskResp[]|null $body body
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\DiskResp[]|null $body **参数解释**： 磁盘信息响应体。 **取值范围**： 不涉及。
     *
     * @return $this
     */

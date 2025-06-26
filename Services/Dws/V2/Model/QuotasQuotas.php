@@ -20,7 +20,7 @@ class QuotasQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resources  资源列表对象。
+    * resources  **参数解释**： 资源列表对象。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class QuotasQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resources  资源列表对象。
+    * resources  **参数解释**： 资源列表对象。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class QuotasQuotas implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resources  资源列表对象。
+    * resources  **参数解释**： 资源列表对象。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class QuotasQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resources  资源列表对象。
+    * resources  **参数解释**： 资源列表对象。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class QuotasQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resources  资源列表对象。
+    * resources  **参数解释**： 资源列表对象。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class QuotasQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  资源列表对象。
+    *  **参数解释**： 资源列表对象。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\QuotasResource[]|null
     */
@@ -186,7 +186,7 @@ class QuotasQuotas implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\QuotasResource[]|null $resources 资源列表对象。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\QuotasResource[]|null $resources **参数解释**： 资源列表对象。 **取值范围**： 不涉及。
     *
     * @return $this
     */

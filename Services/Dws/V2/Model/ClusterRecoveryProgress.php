@@ -20,11 +20,11 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  key
-    * actionType  action_type
-    * unrestoreKeys  unrestore_keys
-    * actionStartTime  action_start_time
-    * actionEndTime  action_end_time
+    * key  **参数解释**： 本次备份恢复ID。 **取值范围**： 不涉及。
+    * actionType  **参数解释**： 动作类型。 **取值范围**： 不涉及。
+    * unrestoreKeys  **参数解释**： 待恢复的备份集ID。 **取值范围**： 不涉及。
+    * actionStartTime  **参数解释**： 当前动作开始时间。 **取值范围**： 不涉及。
+    * actionEndTime  **参数解释**： 当前动作结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  key
-    * actionType  action_type
-    * unrestoreKeys  unrestore_keys
-    * actionStartTime  action_start_time
-    * actionEndTime  action_end_time
+    * key  **参数解释**： 本次备份恢复ID。 **取值范围**： 不涉及。
+    * actionType  **参数解释**： 动作类型。 **取值范围**： 不涉及。
+    * unrestoreKeys  **参数解释**： 待恢复的备份集ID。 **取值范围**： 不涉及。
+    * actionStartTime  **参数解释**： 当前动作开始时间。 **取值范围**： 不涉及。
+    * actionEndTime  **参数解释**： 当前动作结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  key
-    * actionType  action_type
-    * unrestoreKeys  unrestore_keys
-    * actionStartTime  action_start_time
-    * actionEndTime  action_end_time
+    * key  **参数解释**： 本次备份恢复ID。 **取值范围**： 不涉及。
+    * actionType  **参数解释**： 动作类型。 **取值范围**： 不涉及。
+    * unrestoreKeys  **参数解释**： 待恢复的备份集ID。 **取值范围**： 不涉及。
+    * actionStartTime  **参数解释**： 当前动作开始时间。 **取值范围**： 不涉及。
+    * actionEndTime  **参数解释**： 当前动作结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  key
-    * actionType  action_type
-    * unrestoreKeys  unrestore_keys
-    * actionStartTime  action_start_time
-    * actionEndTime  action_end_time
+    * key  **参数解释**： 本次备份恢复ID。 **取值范围**： 不涉及。
+    * actionType  **参数解释**： 动作类型。 **取值范围**： 不涉及。
+    * unrestoreKeys  **参数解释**： 待恢复的备份集ID。 **取值范围**： 不涉及。
+    * actionStartTime  **参数解释**： 当前动作开始时间。 **取值范围**： 不涉及。
+    * actionEndTime  **参数解释**： 当前动作结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  key
-    * actionType  action_type
-    * unrestoreKeys  unrestore_keys
-    * actionStartTime  action_start_time
-    * actionEndTime  action_end_time
+    * key  **参数解释**： 本次备份恢复ID。 **取值范围**： 不涉及。
+    * actionType  **参数解释**： 动作类型。 **取值范围**： 不涉及。
+    * unrestoreKeys  **参数解释**： 待恢复的备份集ID。 **取值范围**： 不涉及。
+    * actionStartTime  **参数解释**： 当前动作开始时间。 **取值范围**： 不涉及。
+    * actionEndTime  **参数解释**： 当前动作结束时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  key
+    *  **参数解释**： 本次备份恢复ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key key
+    * @param string|null $key **参数解释**： 本次备份恢复ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionType
-    *  action_type
+    *  **参数解释**： 动作类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
     /**
     * Sets actionType
     *
-    * @param string|null $actionType action_type
+    * @param string|null $actionType **参数解释**： 动作类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets unrestoreKeys
-    *  unrestore_keys
+    *  **参数解释**： 待恢复的备份集ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
     /**
     * Sets unrestoreKeys
     *
-    * @param string|null $unrestoreKeys unrestore_keys
+    * @param string|null $unrestoreKeys **参数解释**： 待恢复的备份集ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionStartTime
-    *  action_start_time
+    *  **参数解释**： 当前动作开始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
     /**
     * Sets actionStartTime
     *
-    * @param string|null $actionStartTime action_start_time
+    * @param string|null $actionStartTime **参数解释**： 当前动作开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionEndTime
-    *  action_end_time
+    *  **参数解释**： 当前动作结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class ClusterRecoveryProgress implements ModelInterface, ArrayAccess
     /**
     * Sets actionEndTime
     *
-    * @param string|null $actionEndTime action_end_time
+    * @param string|null $actionEndTime **参数解释**： 当前动作结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

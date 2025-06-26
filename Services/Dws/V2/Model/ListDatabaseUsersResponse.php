@@ -21,7 +21,7 @@ class ListDatabaseUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * users  user list
+    * users  **参数解释**： 用户/角色列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListDatabaseUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * users  user list
+    * users  **参数解释**： 用户/角色列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListDatabaseUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * users  user list
+    * users  **参数解释**： 用户/角色列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListDatabaseUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * users  user list
+    * users  **参数解释**： 用户/角色列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListDatabaseUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * users  user list
+    * users  **参数解释**： 用户/角色列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListDatabaseUsersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets users
-    *  user list
+    *  **参数解释**： 用户/角色列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\DatabaseUser[]|null
     */
@@ -187,7 +187,7 @@ class ListDatabaseUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets users
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\DatabaseUser[]|null $users user list
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\DatabaseUser[]|null $users **参数解释**： 用户/角色列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

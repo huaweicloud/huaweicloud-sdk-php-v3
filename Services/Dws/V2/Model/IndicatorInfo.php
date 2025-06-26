@@ -20,10 +20,10 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * indicatorName  监控指标名称。
-    * pluginName  采集模块名称。
-    * defaultCollectRate  默认采集频率。
-    * supportDatastoreVersion  支持的集群版本。
+    * indicatorName  **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 采集模块名称。 **取值范围**： 不涉及。
+    * defaultCollectRate  **参数解释**： 默认采集频率。 **取值范围**： 不涉及。
+    * supportDatastoreVersion  **参数解释**： 支持的集群版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * indicatorName  监控指标名称。
-    * pluginName  采集模块名称。
-    * defaultCollectRate  默认采集频率。
-    * supportDatastoreVersion  支持的集群版本。
+    * indicatorName  **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 采集模块名称。 **取值范围**： 不涉及。
+    * defaultCollectRate  **参数解释**： 默认采集频率。 **取值范围**： 不涉及。
+    * supportDatastoreVersion  **参数解释**： 支持的集群版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * indicatorName  监控指标名称。
-    * pluginName  采集模块名称。
-    * defaultCollectRate  默认采集频率。
-    * supportDatastoreVersion  支持的集群版本。
+    * indicatorName  **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 采集模块名称。 **取值范围**： 不涉及。
+    * defaultCollectRate  **参数解释**： 默认采集频率。 **取值范围**： 不涉及。
+    * supportDatastoreVersion  **参数解释**： 支持的集群版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * indicatorName  监控指标名称。
-    * pluginName  采集模块名称。
-    * defaultCollectRate  默认采集频率。
-    * supportDatastoreVersion  支持的集群版本。
+    * indicatorName  **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 采集模块名称。 **取值范围**： 不涉及。
+    * defaultCollectRate  **参数解释**： 默认采集频率。 **取值范围**： 不涉及。
+    * supportDatastoreVersion  **参数解释**： 支持的集群版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * indicatorName  监控指标名称。
-    * pluginName  采集模块名称。
-    * defaultCollectRate  默认采集频率。
-    * supportDatastoreVersion  支持的集群版本。
+    * indicatorName  **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
+    * pluginName  **参数解释**： 采集模块名称。 **取值范围**： 不涉及。
+    * defaultCollectRate  **参数解释**： 默认采集频率。 **取值范围**： 不涉及。
+    * supportDatastoreVersion  **参数解释**： 支持的集群版本。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets indicatorName
-    *  监控指标名称。
+    *  **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets indicatorName
     *
-    * @param string|null $indicatorName 监控指标名称。
+    * @param string|null $indicatorName **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  采集模块名称。
+    *  **参数解释**： 采集模块名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 采集模块名称。
+    * @param string|null $pluginName **参数解释**： 采集模块名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultCollectRate
-    *  默认采集频率。
+    *  **参数解释**： 默认采集频率。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets defaultCollectRate
     *
-    * @param string|null $defaultCollectRate 默认采集频率。
+    * @param string|null $defaultCollectRate **参数解释**： 默认采集频率。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportDatastoreVersion
-    *  支持的集群版本。
+    *  **参数解释**： 支持的集群版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class IndicatorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets supportDatastoreVersion
     *
-    * @param string|null $supportDatastoreVersion 支持的集群版本。
+    * @param string|null $supportDatastoreVersion **参数解释**： 支持的集群版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */

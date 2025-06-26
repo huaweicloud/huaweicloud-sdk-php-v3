@@ -20,31 +20,31 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceName  实例名称
-    * hostName  主机名称
-    * hostStat  主机状态
-    * workIp  IP地址
-    * memFree  系统中未使用的内存(GB)。
-    * memTotal  总内存(GB)。
-    * memUsage  内存使用率(GB)。
-    * memCached  缓存内存(GB)。
-    * memBuffer  缓冲内存(MB)。
-    * swapFree  ram暂存在swap中的大小(GB)。
-    * swapTotal  交换空间总和(GB)。
-    * cpuUsage  CPU使用率(%)。
-    * cpuUsageSys  系统CPU占用率(%)。
-    * cpuUsageUsr  用户CPU占用率(%)。
-    * cpuIdle  空闲CPU占用率(%)。
-    * cpuIowait  IO等待(%)。
-    * diskUsageAvg  磁盘平均使用率(%)。
-    * diskTotal  磁盘总容量(GB)。
-    * diskUsed  磁盘使用容量(GB)。
-    * diskAvailable  磁盘可用容量(GB)。
-    * diskIo  磁盘IO(KB/s)。
-    * diskIoRead  磁盘读速率(KB/s)。
-    * diskIoWrite  磁盘写速率(KB/s)。
-    * tcpResendRate  TCP协议栈重传率(%)。
-    * netIo  网络IO(KB/s)。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * hostStat  **参数解释**： 主机状态。 **取值范围**： 不涉及。
+    * workIp  **参数解释**： IP地址。 **取值范围**： 不涉及。
+    * memFree  **参数解释**： 系统中未使用的内存(GB)。 **取值范围**： 不涉及。
+    * memTotal  **参数解释**： 总内存(GB)。 **取值范围**： 不涉及。
+    * memUsage  **参数解释**： 内存使用率(GB)。 **取值范围**： 不涉及。
+    * memCached  **参数解释**： 缓存内存(GB)。 **取值范围**： 不涉及。
+    * memBuffer  **参数解释**： 缓冲内存(MB)。 **取值范围**： 不涉及。
+    * swapFree  **参数解释**： ram暂存在swap中的大小(GB)。 **取值范围**： 不涉及。
+    * swapTotal  **参数解释**： 交换空间总和(GB)。 **取值范围**： 不涉及。
+    * cpuUsage  **参数解释**： CPU使用率(%)。 **取值范围**： 不涉及。
+    * cpuUsageSys  **参数解释**： 系统CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuUsageUsr  **参数解释**： 用户CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuIdle  **参数解释**： 空闲CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuIowait  **参数解释**： IO等待(%)。 **取值范围**： 不涉及。
+    * diskUsageAvg  **参数解释**： 磁盘平均使用率(%)。 **取值范围**： 不涉及。
+    * diskTotal  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
+    * diskUsed  **参数解释**： 磁盘使用容量(GB)。 **取值范围**： 不涉及。
+    * diskAvailable  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
+    * diskIo  **参数解释**： 磁盘IO(KB/s)。 **取值范围**： 不涉及。
+    * diskIoRead  **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
+    * diskIoWrite  **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
+    * tcpResendRate  **参数解释**： TCP协议栈重传率(%)。 **取值范围**： 不涉及。
+    * netIo  **参数解释**： 网络IO(KB/s)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,31 +78,31 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceName  实例名称
-    * hostName  主机名称
-    * hostStat  主机状态
-    * workIp  IP地址
-    * memFree  系统中未使用的内存(GB)。
-    * memTotal  总内存(GB)。
-    * memUsage  内存使用率(GB)。
-    * memCached  缓存内存(GB)。
-    * memBuffer  缓冲内存(MB)。
-    * swapFree  ram暂存在swap中的大小(GB)。
-    * swapTotal  交换空间总和(GB)。
-    * cpuUsage  CPU使用率(%)。
-    * cpuUsageSys  系统CPU占用率(%)。
-    * cpuUsageUsr  用户CPU占用率(%)。
-    * cpuIdle  空闲CPU占用率(%)。
-    * cpuIowait  IO等待(%)。
-    * diskUsageAvg  磁盘平均使用率(%)。
-    * diskTotal  磁盘总容量(GB)。
-    * diskUsed  磁盘使用容量(GB)。
-    * diskAvailable  磁盘可用容量(GB)。
-    * diskIo  磁盘IO(KB/s)。
-    * diskIoRead  磁盘读速率(KB/s)。
-    * diskIoWrite  磁盘写速率(KB/s)。
-    * tcpResendRate  TCP协议栈重传率(%)。
-    * netIo  网络IO(KB/s)。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * hostStat  **参数解释**： 主机状态。 **取值范围**： 不涉及。
+    * workIp  **参数解释**： IP地址。 **取值范围**： 不涉及。
+    * memFree  **参数解释**： 系统中未使用的内存(GB)。 **取值范围**： 不涉及。
+    * memTotal  **参数解释**： 总内存(GB)。 **取值范围**： 不涉及。
+    * memUsage  **参数解释**： 内存使用率(GB)。 **取值范围**： 不涉及。
+    * memCached  **参数解释**： 缓存内存(GB)。 **取值范围**： 不涉及。
+    * memBuffer  **参数解释**： 缓冲内存(MB)。 **取值范围**： 不涉及。
+    * swapFree  **参数解释**： ram暂存在swap中的大小(GB)。 **取值范围**： 不涉及。
+    * swapTotal  **参数解释**： 交换空间总和(GB)。 **取值范围**： 不涉及。
+    * cpuUsage  **参数解释**： CPU使用率(%)。 **取值范围**： 不涉及。
+    * cpuUsageSys  **参数解释**： 系统CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuUsageUsr  **参数解释**： 用户CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuIdle  **参数解释**： 空闲CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuIowait  **参数解释**： IO等待(%)。 **取值范围**： 不涉及。
+    * diskUsageAvg  **参数解释**： 磁盘平均使用率(%)。 **取值范围**： 不涉及。
+    * diskTotal  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
+    * diskUsed  **参数解释**： 磁盘使用容量(GB)。 **取值范围**： 不涉及。
+    * diskAvailable  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
+    * diskIo  **参数解释**： 磁盘IO(KB/s)。 **取值范围**： 不涉及。
+    * diskIoRead  **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
+    * diskIoWrite  **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
+    * tcpResendRate  **参数解释**： TCP协议栈重传率(%)。 **取值范围**： 不涉及。
+    * netIo  **参数解释**： 网络IO(KB/s)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -157,31 +157,31 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceName  实例名称
-    * hostName  主机名称
-    * hostStat  主机状态
-    * workIp  IP地址
-    * memFree  系统中未使用的内存(GB)。
-    * memTotal  总内存(GB)。
-    * memUsage  内存使用率(GB)。
-    * memCached  缓存内存(GB)。
-    * memBuffer  缓冲内存(MB)。
-    * swapFree  ram暂存在swap中的大小(GB)。
-    * swapTotal  交换空间总和(GB)。
-    * cpuUsage  CPU使用率(%)。
-    * cpuUsageSys  系统CPU占用率(%)。
-    * cpuUsageUsr  用户CPU占用率(%)。
-    * cpuIdle  空闲CPU占用率(%)。
-    * cpuIowait  IO等待(%)。
-    * diskUsageAvg  磁盘平均使用率(%)。
-    * diskTotal  磁盘总容量(GB)。
-    * diskUsed  磁盘使用容量(GB)。
-    * diskAvailable  磁盘可用容量(GB)。
-    * diskIo  磁盘IO(KB/s)。
-    * diskIoRead  磁盘读速率(KB/s)。
-    * diskIoWrite  磁盘写速率(KB/s)。
-    * tcpResendRate  TCP协议栈重传率(%)。
-    * netIo  网络IO(KB/s)。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * hostStat  **参数解释**： 主机状态。 **取值范围**： 不涉及。
+    * workIp  **参数解释**： IP地址。 **取值范围**： 不涉及。
+    * memFree  **参数解释**： 系统中未使用的内存(GB)。 **取值范围**： 不涉及。
+    * memTotal  **参数解释**： 总内存(GB)。 **取值范围**： 不涉及。
+    * memUsage  **参数解释**： 内存使用率(GB)。 **取值范围**： 不涉及。
+    * memCached  **参数解释**： 缓存内存(GB)。 **取值范围**： 不涉及。
+    * memBuffer  **参数解释**： 缓冲内存(MB)。 **取值范围**： 不涉及。
+    * swapFree  **参数解释**： ram暂存在swap中的大小(GB)。 **取值范围**： 不涉及。
+    * swapTotal  **参数解释**： 交换空间总和(GB)。 **取值范围**： 不涉及。
+    * cpuUsage  **参数解释**： CPU使用率(%)。 **取值范围**： 不涉及。
+    * cpuUsageSys  **参数解释**： 系统CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuUsageUsr  **参数解释**： 用户CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuIdle  **参数解释**： 空闲CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuIowait  **参数解释**： IO等待(%)。 **取值范围**： 不涉及。
+    * diskUsageAvg  **参数解释**： 磁盘平均使用率(%)。 **取值范围**： 不涉及。
+    * diskTotal  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
+    * diskUsed  **参数解释**： 磁盘使用容量(GB)。 **取值范围**： 不涉及。
+    * diskAvailable  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
+    * diskIo  **参数解释**： 磁盘IO(KB/s)。 **取值范围**： 不涉及。
+    * diskIoRead  **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
+    * diskIoWrite  **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
+    * tcpResendRate  **参数解释**： TCP协议栈重传率(%)。 **取值范围**： 不涉及。
+    * netIo  **参数解释**： 网络IO(KB/s)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -215,31 +215,31 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceName  实例名称
-    * hostName  主机名称
-    * hostStat  主机状态
-    * workIp  IP地址
-    * memFree  系统中未使用的内存(GB)。
-    * memTotal  总内存(GB)。
-    * memUsage  内存使用率(GB)。
-    * memCached  缓存内存(GB)。
-    * memBuffer  缓冲内存(MB)。
-    * swapFree  ram暂存在swap中的大小(GB)。
-    * swapTotal  交换空间总和(GB)。
-    * cpuUsage  CPU使用率(%)。
-    * cpuUsageSys  系统CPU占用率(%)。
-    * cpuUsageUsr  用户CPU占用率(%)。
-    * cpuIdle  空闲CPU占用率(%)。
-    * cpuIowait  IO等待(%)。
-    * diskUsageAvg  磁盘平均使用率(%)。
-    * diskTotal  磁盘总容量(GB)。
-    * diskUsed  磁盘使用容量(GB)。
-    * diskAvailable  磁盘可用容量(GB)。
-    * diskIo  磁盘IO(KB/s)。
-    * diskIoRead  磁盘读速率(KB/s)。
-    * diskIoWrite  磁盘写速率(KB/s)。
-    * tcpResendRate  TCP协议栈重传率(%)。
-    * netIo  网络IO(KB/s)。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * hostStat  **参数解释**： 主机状态。 **取值范围**： 不涉及。
+    * workIp  **参数解释**： IP地址。 **取值范围**： 不涉及。
+    * memFree  **参数解释**： 系统中未使用的内存(GB)。 **取值范围**： 不涉及。
+    * memTotal  **参数解释**： 总内存(GB)。 **取值范围**： 不涉及。
+    * memUsage  **参数解释**： 内存使用率(GB)。 **取值范围**： 不涉及。
+    * memCached  **参数解释**： 缓存内存(GB)。 **取值范围**： 不涉及。
+    * memBuffer  **参数解释**： 缓冲内存(MB)。 **取值范围**： 不涉及。
+    * swapFree  **参数解释**： ram暂存在swap中的大小(GB)。 **取值范围**： 不涉及。
+    * swapTotal  **参数解释**： 交换空间总和(GB)。 **取值范围**： 不涉及。
+    * cpuUsage  **参数解释**： CPU使用率(%)。 **取值范围**： 不涉及。
+    * cpuUsageSys  **参数解释**： 系统CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuUsageUsr  **参数解释**： 用户CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuIdle  **参数解释**： 空闲CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuIowait  **参数解释**： IO等待(%)。 **取值范围**： 不涉及。
+    * diskUsageAvg  **参数解释**： 磁盘平均使用率(%)。 **取值范围**： 不涉及。
+    * diskTotal  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
+    * diskUsed  **参数解释**： 磁盘使用容量(GB)。 **取值范围**： 不涉及。
+    * diskAvailable  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
+    * diskIo  **参数解释**： 磁盘IO(KB/s)。 **取值范围**： 不涉及。
+    * diskIoRead  **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
+    * diskIoWrite  **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
+    * tcpResendRate  **参数解释**： TCP协议栈重传率(%)。 **取值范围**： 不涉及。
+    * netIo  **参数解释**： 网络IO(KB/s)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -273,31 +273,31 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceName  实例名称
-    * hostName  主机名称
-    * hostStat  主机状态
-    * workIp  IP地址
-    * memFree  系统中未使用的内存(GB)。
-    * memTotal  总内存(GB)。
-    * memUsage  内存使用率(GB)。
-    * memCached  缓存内存(GB)。
-    * memBuffer  缓冲内存(MB)。
-    * swapFree  ram暂存在swap中的大小(GB)。
-    * swapTotal  交换空间总和(GB)。
-    * cpuUsage  CPU使用率(%)。
-    * cpuUsageSys  系统CPU占用率(%)。
-    * cpuUsageUsr  用户CPU占用率(%)。
-    * cpuIdle  空闲CPU占用率(%)。
-    * cpuIowait  IO等待(%)。
-    * diskUsageAvg  磁盘平均使用率(%)。
-    * diskTotal  磁盘总容量(GB)。
-    * diskUsed  磁盘使用容量(GB)。
-    * diskAvailable  磁盘可用容量(GB)。
-    * diskIo  磁盘IO(KB/s)。
-    * diskIoRead  磁盘读速率(KB/s)。
-    * diskIoWrite  磁盘写速率(KB/s)。
-    * tcpResendRate  TCP协议栈重传率(%)。
-    * netIo  网络IO(KB/s)。
+    * instanceName  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
+    * hostStat  **参数解释**： 主机状态。 **取值范围**： 不涉及。
+    * workIp  **参数解释**： IP地址。 **取值范围**： 不涉及。
+    * memFree  **参数解释**： 系统中未使用的内存(GB)。 **取值范围**： 不涉及。
+    * memTotal  **参数解释**： 总内存(GB)。 **取值范围**： 不涉及。
+    * memUsage  **参数解释**： 内存使用率(GB)。 **取值范围**： 不涉及。
+    * memCached  **参数解释**： 缓存内存(GB)。 **取值范围**： 不涉及。
+    * memBuffer  **参数解释**： 缓冲内存(MB)。 **取值范围**： 不涉及。
+    * swapFree  **参数解释**： ram暂存在swap中的大小(GB)。 **取值范围**： 不涉及。
+    * swapTotal  **参数解释**： 交换空间总和(GB)。 **取值范围**： 不涉及。
+    * cpuUsage  **参数解释**： CPU使用率(%)。 **取值范围**： 不涉及。
+    * cpuUsageSys  **参数解释**： 系统CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuUsageUsr  **参数解释**： 用户CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuIdle  **参数解释**： 空闲CPU占用率(%)。 **取值范围**： 不涉及。
+    * cpuIowait  **参数解释**： IO等待(%)。 **取值范围**： 不涉及。
+    * diskUsageAvg  **参数解释**： 磁盘平均使用率(%)。 **取值范围**： 不涉及。
+    * diskTotal  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
+    * diskUsed  **参数解释**： 磁盘使用容量(GB)。 **取值范围**： 不涉及。
+    * diskAvailable  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
+    * diskIo  **参数解释**： 磁盘IO(KB/s)。 **取值范围**： 不涉及。
+    * diskIoRead  **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
+    * diskIoWrite  **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
+    * tcpResendRate  **参数解释**： TCP协议栈重传率(%)。 **取值范围**： 不涉及。
+    * netIo  **参数解释**： 网络IO(KB/s)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -438,7 +438,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceName
-    *  实例名称
+    *  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -450,7 +450,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instanceName
     *
-    * @param string|null $instanceName 实例名称
+    * @param string|null $instanceName **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -462,7 +462,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  主机名称
+    *  **参数解释**： 主机名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -474,7 +474,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 主机名称
+    * @param string|null $hostName **参数解释**： 主机名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -486,7 +486,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostStat
-    *  主机状态
+    *  **参数解释**： 主机状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -498,7 +498,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets hostStat
     *
-    * @param string|null $hostStat 主机状态
+    * @param string|null $hostStat **参数解释**： 主机状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -510,7 +510,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workIp
-    *  IP地址
+    *  **参数解释**： IP地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -522,7 +522,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workIp
     *
-    * @param string|null $workIp IP地址
+    * @param string|null $workIp **参数解释**： IP地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -534,7 +534,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets memFree
-    *  系统中未使用的内存(GB)。
+    *  **参数解释**： 系统中未使用的内存(GB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -546,7 +546,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets memFree
     *
-    * @param double|null $memFree 系统中未使用的内存(GB)。
+    * @param double|null $memFree **参数解释**： 系统中未使用的内存(GB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -558,7 +558,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets memTotal
-    *  总内存(GB)。
+    *  **参数解释**： 总内存(GB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -570,7 +570,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets memTotal
     *
-    * @param double|null $memTotal 总内存(GB)。
+    * @param double|null $memTotal **参数解释**： 总内存(GB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -582,7 +582,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets memUsage
-    *  内存使用率(GB)。
+    *  **参数解释**： 内存使用率(GB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -594,7 +594,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets memUsage
     *
-    * @param double|null $memUsage 内存使用率(GB)。
+    * @param double|null $memUsage **参数解释**： 内存使用率(GB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -606,7 +606,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets memCached
-    *  缓存内存(GB)。
+    *  **参数解释**： 缓存内存(GB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -618,7 +618,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets memCached
     *
-    * @param double|null $memCached 缓存内存(GB)。
+    * @param double|null $memCached **参数解释**： 缓存内存(GB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -630,7 +630,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets memBuffer
-    *  缓冲内存(MB)。
+    *  **参数解释**： 缓冲内存(MB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -642,7 +642,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets memBuffer
     *
-    * @param double|null $memBuffer 缓冲内存(MB)。
+    * @param double|null $memBuffer **参数解释**： 缓冲内存(MB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -654,7 +654,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets swapFree
-    *  ram暂存在swap中的大小(GB)。
+    *  **参数解释**： ram暂存在swap中的大小(GB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -666,7 +666,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets swapFree
     *
-    * @param double|null $swapFree ram暂存在swap中的大小(GB)。
+    * @param double|null $swapFree **参数解释**： ram暂存在swap中的大小(GB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -678,7 +678,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets swapTotal
-    *  交换空间总和(GB)。
+    *  **参数解释**： 交换空间总和(GB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -690,7 +690,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets swapTotal
     *
-    * @param double|null $swapTotal 交换空间总和(GB)。
+    * @param double|null $swapTotal **参数解释**： 交换空间总和(GB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -702,7 +702,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpuUsage
-    *  CPU使用率(%)。
+    *  **参数解释**： CPU使用率(%)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -714,7 +714,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cpuUsage
     *
-    * @param double|null $cpuUsage CPU使用率(%)。
+    * @param double|null $cpuUsage **参数解释**： CPU使用率(%)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -726,7 +726,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpuUsageSys
-    *  系统CPU占用率(%)。
+    *  **参数解释**： 系统CPU占用率(%)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -738,7 +738,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cpuUsageSys
     *
-    * @param double|null $cpuUsageSys 系统CPU占用率(%)。
+    * @param double|null $cpuUsageSys **参数解释**： 系统CPU占用率(%)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -750,7 +750,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpuUsageUsr
-    *  用户CPU占用率(%)。
+    *  **参数解释**： 用户CPU占用率(%)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -762,7 +762,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cpuUsageUsr
     *
-    * @param double|null $cpuUsageUsr 用户CPU占用率(%)。
+    * @param double|null $cpuUsageUsr **参数解释**： 用户CPU占用率(%)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -774,7 +774,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpuIdle
-    *  空闲CPU占用率(%)。
+    *  **参数解释**： 空闲CPU占用率(%)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -786,7 +786,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cpuIdle
     *
-    * @param double|null $cpuIdle 空闲CPU占用率(%)。
+    * @param double|null $cpuIdle **参数解释**： 空闲CPU占用率(%)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -798,7 +798,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpuIowait
-    *  IO等待(%)。
+    *  **参数解释**： IO等待(%)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -810,7 +810,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cpuIowait
     *
-    * @param double|null $cpuIowait IO等待(%)。
+    * @param double|null $cpuIowait **参数解释**： IO等待(%)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -822,7 +822,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskUsageAvg
-    *  磁盘平均使用率(%)。
+    *  **参数解释**： 磁盘平均使用率(%)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -834,7 +834,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets diskUsageAvg
     *
-    * @param double|null $diskUsageAvg 磁盘平均使用率(%)。
+    * @param double|null $diskUsageAvg **参数解释**： 磁盘平均使用率(%)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -846,7 +846,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskTotal
-    *  磁盘总容量(GB)。
+    *  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -858,7 +858,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets diskTotal
     *
-    * @param double|null $diskTotal 磁盘总容量(GB)。
+    * @param double|null $diskTotal **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -870,7 +870,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskUsed
-    *  磁盘使用容量(GB)。
+    *  **参数解释**： 磁盘使用容量(GB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -882,7 +882,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets diskUsed
     *
-    * @param double|null $diskUsed 磁盘使用容量(GB)。
+    * @param double|null $diskUsed **参数解释**： 磁盘使用容量(GB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -894,7 +894,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskAvailable
-    *  磁盘可用容量(GB)。
+    *  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -906,7 +906,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets diskAvailable
     *
-    * @param double|null $diskAvailable 磁盘可用容量(GB)。
+    * @param double|null $diskAvailable **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -918,7 +918,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskIo
-    *  磁盘IO(KB/s)。
+    *  **参数解释**： 磁盘IO(KB/s)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -930,7 +930,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets diskIo
     *
-    * @param double|null $diskIo 磁盘IO(KB/s)。
+    * @param double|null $diskIo **参数解释**： 磁盘IO(KB/s)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -942,7 +942,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskIoRead
-    *  磁盘读速率(KB/s)。
+    *  **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -954,7 +954,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets diskIoRead
     *
-    * @param double|null $diskIoRead 磁盘读速率(KB/s)。
+    * @param double|null $diskIoRead **参数解释**： 磁盘读速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -966,7 +966,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskIoWrite
-    *  磁盘写速率(KB/s)。
+    *  **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -978,7 +978,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets diskIoWrite
     *
-    * @param double|null $diskIoWrite 磁盘写速率(KB/s)。
+    * @param double|null $diskIoWrite **参数解释**： 磁盘写速率(KB/s)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -990,7 +990,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tcpResendRate
-    *  TCP协议栈重传率(%)。
+    *  **参数解释**： TCP协议栈重传率(%)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -1002,7 +1002,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tcpResendRate
     *
-    * @param double|null $tcpResendRate TCP协议栈重传率(%)。
+    * @param double|null $tcpResendRate **参数解释**： TCP协议栈重传率(%)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1014,7 +1014,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets netIo
-    *  网络IO(KB/s)。
+    *  **参数解释**： 网络IO(KB/s)。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -1026,7 +1026,7 @@ class HostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets netIo
     *
-    * @param double|null $netIo 网络IO(KB/s)。
+    * @param double|null $netIo **参数解释**： 网络IO(KB/s)。 **取值范围**： 不涉及。
     *
     * @return $this
     */

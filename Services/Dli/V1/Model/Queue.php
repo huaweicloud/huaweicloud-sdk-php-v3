@@ -24,6 +24,9 @@ class Queue implements ModelInterface, ArrayAccess
     * queueName  参数解释: 队列名称 示例: datasource_connection 约束限制:  无 取值范围: 无 默认取值: 无
     * description  参数解释: 队列描述信息 示例: des 约束限制:  无 取值范围: 无 默认取值: 无
     * owner  参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
+    * engine  参数解释: 引擎 示例: spark 约束限制:  无 取值范围: spark, hetuEngine 默认取值: 无
+    * usedCu  参数解释: 队列已使用的cu 示例: 6.0 约束限制:  无 取值范围: 大于等于0 默认取值: 无
+    * supportOpensourceFlinkVersions  参数解释: 支持的flink版本列表 示例: [1.12, 1.15] 约束限制:  无 取值范围: 无 默认取值: 无
     * createTime  参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * queueType  参数解释: 队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: all
     * cuCount  参数解释: 与该队列绑定的计算单元数，即当前队列的CU数 示例: 16 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
@@ -38,7 +41,7 @@ class Queue implements ModelInterface, ArrayAccess
     * isRestarting  参数解释: 是否在重启状态。默认值为“false” 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     * labels  参数解释: 队列的标签信息，目前只支持设置跨az配置，multi_az=2 示例: {\\\"multi_az\\\":\\\"2\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * feature  参数解释: 队列特性 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型，仅SQL的x86_64专属队列支持选择） 默认取值: basic
-    * resourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
+    * queueResourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
     * cuSpec  参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * cuScaleOutLimit  参数解释: 当前队列弹性扩缩容的CU值上限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * cuScaleInLimit  参数解释: 当前队列弹性扩缩容的CU值下限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
@@ -59,6 +62,9 @@ class Queue implements ModelInterface, ArrayAccess
             'queueName' => 'string',
             'description' => 'string',
             'owner' => 'string',
+            'engine' => 'string',
+            'usedCu' => 'float',
+            'supportOpensourceFlinkVersions' => 'string[]',
             'createTime' => 'int',
             'queueType' => 'string',
             'cuCount' => 'int',
@@ -73,7 +79,7 @@ class Queue implements ModelInterface, ArrayAccess
             'isRestarting' => 'bool',
             'labels' => 'string',
             'feature' => 'string',
-            'resourceType' => 'string',
+            'queueResourceType' => 'string',
             'cuSpec' => 'int',
             'cuScaleOutLimit' => 'int',
             'cuScaleInLimit' => 'int',
@@ -94,6 +100,9 @@ class Queue implements ModelInterface, ArrayAccess
     * queueName  参数解释: 队列名称 示例: datasource_connection 约束限制:  无 取值范围: 无 默认取值: 无
     * description  参数解释: 队列描述信息 示例: des 约束限制:  无 取值范围: 无 默认取值: 无
     * owner  参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
+    * engine  参数解释: 引擎 示例: spark 约束限制:  无 取值范围: spark, hetuEngine 默认取值: 无
+    * usedCu  参数解释: 队列已使用的cu 示例: 6.0 约束限制:  无 取值范围: 大于等于0 默认取值: 无
+    * supportOpensourceFlinkVersions  参数解释: 支持的flink版本列表 示例: [1.12, 1.15] 约束限制:  无 取值范围: 无 默认取值: 无
     * createTime  参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * queueType  参数解释: 队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: all
     * cuCount  参数解释: 与该队列绑定的计算单元数，即当前队列的CU数 示例: 16 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
@@ -108,7 +117,7 @@ class Queue implements ModelInterface, ArrayAccess
     * isRestarting  参数解释: 是否在重启状态。默认值为“false” 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     * labels  参数解释: 队列的标签信息，目前只支持设置跨az配置，multi_az=2 示例: {\\\"multi_az\\\":\\\"2\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * feature  参数解释: 队列特性 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型，仅SQL的x86_64专属队列支持选择） 默认取值: basic
-    * resourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
+    * queueResourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
     * cuSpec  参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * cuScaleOutLimit  参数解释: 当前队列弹性扩缩容的CU值上限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * cuScaleInLimit  参数解释: 当前队列弹性扩缩容的CU值下限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
@@ -129,6 +138,9 @@ class Queue implements ModelInterface, ArrayAccess
         'queueName' => null,
         'description' => null,
         'owner' => null,
+        'engine' => null,
+        'usedCu' => 'float',
+        'supportOpensourceFlinkVersions' => null,
         'createTime' => 'int64',
         'queueType' => null,
         'cuCount' => 'int32',
@@ -143,7 +155,7 @@ class Queue implements ModelInterface, ArrayAccess
         'isRestarting' => null,
         'labels' => null,
         'feature' => null,
-        'resourceType' => null,
+        'queueResourceType' => null,
         'cuSpec' => 'int32',
         'cuScaleOutLimit' => 'int32',
         'cuScaleInLimit' => 'int32',
@@ -185,6 +197,9 @@ class Queue implements ModelInterface, ArrayAccess
     * queueName  参数解释: 队列名称 示例: datasource_connection 约束限制:  无 取值范围: 无 默认取值: 无
     * description  参数解释: 队列描述信息 示例: des 约束限制:  无 取值范围: 无 默认取值: 无
     * owner  参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
+    * engine  参数解释: 引擎 示例: spark 约束限制:  无 取值范围: spark, hetuEngine 默认取值: 无
+    * usedCu  参数解释: 队列已使用的cu 示例: 6.0 约束限制:  无 取值范围: 大于等于0 默认取值: 无
+    * supportOpensourceFlinkVersions  参数解释: 支持的flink版本列表 示例: [1.12, 1.15] 约束限制:  无 取值范围: 无 默认取值: 无
     * createTime  参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * queueType  参数解释: 队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: all
     * cuCount  参数解释: 与该队列绑定的计算单元数，即当前队列的CU数 示例: 16 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
@@ -199,7 +214,7 @@ class Queue implements ModelInterface, ArrayAccess
     * isRestarting  参数解释: 是否在重启状态。默认值为“false” 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     * labels  参数解释: 队列的标签信息，目前只支持设置跨az配置，multi_az=2 示例: {\\\"multi_az\\\":\\\"2\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * feature  参数解释: 队列特性 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型，仅SQL的x86_64专属队列支持选择） 默认取值: basic
-    * resourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
+    * queueResourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
     * cuSpec  参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * cuScaleOutLimit  参数解释: 当前队列弹性扩缩容的CU值上限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * cuScaleInLimit  参数解释: 当前队列弹性扩缩容的CU值下限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
@@ -220,6 +235,9 @@ class Queue implements ModelInterface, ArrayAccess
             'queueName' => 'queue_name',
             'description' => 'description',
             'owner' => 'owner',
+            'engine' => 'engine',
+            'usedCu' => 'used_cu',
+            'supportOpensourceFlinkVersions' => 'support_opensource_flink_versions',
             'createTime' => 'create_time',
             'queueType' => 'queue_type',
             'cuCount' => 'cu_count',
@@ -234,7 +252,7 @@ class Queue implements ModelInterface, ArrayAccess
             'isRestarting' => 'is_restarting',
             'labels' => 'labels',
             'feature' => 'feature',
-            'resourceType' => 'resource_type',
+            'queueResourceType' => 'queue_resource_type',
             'cuSpec' => 'cu_spec',
             'cuScaleOutLimit' => 'cu_scale_out_limit',
             'cuScaleInLimit' => 'cu_scale_in_limit',
@@ -255,6 +273,9 @@ class Queue implements ModelInterface, ArrayAccess
     * queueName  参数解释: 队列名称 示例: datasource_connection 约束限制:  无 取值范围: 无 默认取值: 无
     * description  参数解释: 队列描述信息 示例: des 约束限制:  无 取值范围: 无 默认取值: 无
     * owner  参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
+    * engine  参数解释: 引擎 示例: spark 约束限制:  无 取值范围: spark, hetuEngine 默认取值: 无
+    * usedCu  参数解释: 队列已使用的cu 示例: 6.0 约束限制:  无 取值范围: 大于等于0 默认取值: 无
+    * supportOpensourceFlinkVersions  参数解释: 支持的flink版本列表 示例: [1.12, 1.15] 约束限制:  无 取值范围: 无 默认取值: 无
     * createTime  参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * queueType  参数解释: 队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: all
     * cuCount  参数解释: 与该队列绑定的计算单元数，即当前队列的CU数 示例: 16 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
@@ -269,7 +290,7 @@ class Queue implements ModelInterface, ArrayAccess
     * isRestarting  参数解释: 是否在重启状态。默认值为“false” 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     * labels  参数解释: 队列的标签信息，目前只支持设置跨az配置，multi_az=2 示例: {\\\"multi_az\\\":\\\"2\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * feature  参数解释: 队列特性 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型，仅SQL的x86_64专属队列支持选择） 默认取值: basic
-    * resourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
+    * queueResourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
     * cuSpec  参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * cuScaleOutLimit  参数解释: 当前队列弹性扩缩容的CU值上限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * cuScaleInLimit  参数解释: 当前队列弹性扩缩容的CU值下限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
@@ -290,6 +311,9 @@ class Queue implements ModelInterface, ArrayAccess
             'queueName' => 'setQueueName',
             'description' => 'setDescription',
             'owner' => 'setOwner',
+            'engine' => 'setEngine',
+            'usedCu' => 'setUsedCu',
+            'supportOpensourceFlinkVersions' => 'setSupportOpensourceFlinkVersions',
             'createTime' => 'setCreateTime',
             'queueType' => 'setQueueType',
             'cuCount' => 'setCuCount',
@@ -304,7 +328,7 @@ class Queue implements ModelInterface, ArrayAccess
             'isRestarting' => 'setIsRestarting',
             'labels' => 'setLabels',
             'feature' => 'setFeature',
-            'resourceType' => 'setResourceType',
+            'queueResourceType' => 'setQueueResourceType',
             'cuSpec' => 'setCuSpec',
             'cuScaleOutLimit' => 'setCuScaleOutLimit',
             'cuScaleInLimit' => 'setCuScaleInLimit',
@@ -325,6 +349,9 @@ class Queue implements ModelInterface, ArrayAccess
     * queueName  参数解释: 队列名称 示例: datasource_connection 约束限制:  无 取值范围: 无 默认取值: 无
     * description  参数解释: 队列描述信息 示例: des 约束限制:  无 取值范围: 无 默认取值: 无
     * owner  参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
+    * engine  参数解释: 引擎 示例: spark 约束限制:  无 取值范围: spark, hetuEngine 默认取值: 无
+    * usedCu  参数解释: 队列已使用的cu 示例: 6.0 约束限制:  无 取值范围: 大于等于0 默认取值: 无
+    * supportOpensourceFlinkVersions  参数解释: 支持的flink版本列表 示例: [1.12, 1.15] 约束限制:  无 取值范围: 无 默认取值: 无
     * createTime  参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * queueType  参数解释: 队列的类型 示例: sql 约束限制:  无 取值范围: sql, general, all 默认取值: all
     * cuCount  参数解释: 与该队列绑定的计算单元数，即当前队列的CU数 示例: 16 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
@@ -339,7 +366,7 @@ class Queue implements ModelInterface, ArrayAccess
     * isRestarting  参数解释: 是否在重启状态。默认值为“false” 示例: false 约束限制:  无 取值范围: true,false 默认取值: false
     * labels  参数解释: 队列的标签信息，目前只支持设置跨az配置，multi_az=2 示例: {\\\"multi_az\\\":\\\"2\\\"} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * feature  参数解释: 队列特性 示例: basic 约束限制:  无 取值范围: basic（基础型） ai（AI增强型，仅SQL的x86_64专属队列支持选择） 默认取值: basic
-    * resourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
+    * queueResourceType  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
     * cuSpec  参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * cuScaleOutLimit  参数解释: 当前队列弹性扩缩容的CU值上限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
     * cuScaleInLimit  参数解释: 当前队列弹性扩缩容的CU值下限 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
@@ -360,6 +387,9 @@ class Queue implements ModelInterface, ArrayAccess
             'queueName' => 'getQueueName',
             'description' => 'getDescription',
             'owner' => 'getOwner',
+            'engine' => 'getEngine',
+            'usedCu' => 'getUsedCu',
+            'supportOpensourceFlinkVersions' => 'getSupportOpensourceFlinkVersions',
             'createTime' => 'getCreateTime',
             'queueType' => 'getQueueType',
             'cuCount' => 'getCuCount',
@@ -374,7 +404,7 @@ class Queue implements ModelInterface, ArrayAccess
             'isRestarting' => 'getIsRestarting',
             'labels' => 'getLabels',
             'feature' => 'getFeature',
-            'resourceType' => 'getResourceType',
+            'queueResourceType' => 'getQueueResourceType',
             'cuSpec' => 'getCuSpec',
             'cuScaleOutLimit' => 'getCuScaleOutLimit',
             'cuScaleInLimit' => 'getCuScaleInLimit',
@@ -429,10 +459,25 @@ class Queue implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ENGINE_SPARK = 'spark';
+    const ENGINE_HETU_ENGINE = 'hetuEngine';
     const QUEUE_TYPE_SQL = 'sql';
     const QUEUE_TYPE_GENERAL = 'general';
     const QUEUE_TYPE_ALL = 'all';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEngineAllowableValues()
+    {
+        return [
+            self::ENGINE_SPARK,
+            self::ENGINE_HETU_ENGINE,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -468,6 +513,9 @@ class Queue implements ModelInterface, ArrayAccess
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
+        $this->container['usedCu'] = isset($data['usedCu']) ? $data['usedCu'] : null;
+        $this->container['supportOpensourceFlinkVersions'] = isset($data['supportOpensourceFlinkVersions']) ? $data['supportOpensourceFlinkVersions'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['queueType'] = isset($data['queueType']) ? $data['queueType'] : null;
         $this->container['cuCount'] = isset($data['cuCount']) ? $data['cuCount'] : null;
@@ -482,7 +530,7 @@ class Queue implements ModelInterface, ArrayAccess
         $this->container['isRestarting'] = isset($data['isRestarting']) ? $data['isRestarting'] : null;
         $this->container['labels'] = isset($data['labels']) ? $data['labels'] : null;
         $this->container['feature'] = isset($data['feature']) ? $data['feature'] : null;
-        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
+        $this->container['queueResourceType'] = isset($data['queueResourceType']) ? $data['queueResourceType'] : null;
         $this->container['cuSpec'] = isset($data['cuSpec']) ? $data['cuSpec'] : null;
         $this->container['cuScaleOutLimit'] = isset($data['cuScaleOutLimit']) ? $data['cuScaleOutLimit'] : null;
         $this->container['cuScaleInLimit'] = isset($data['cuScaleInLimit']) ? $data['cuScaleInLimit'] : null;
@@ -505,6 +553,14 @@ class Queue implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getEngineAllowableValues();
+                if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'engine', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getQueueTypeAllowableValues();
                 if (!is_null($this->container['queueType']) && !in_array($this->container['queueType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -620,6 +676,78 @@ class Queue implements ModelInterface, ArrayAccess
     public function setOwner($owner)
     {
         $this->container['owner'] = $owner;
+        return $this;
+    }
+
+    /**
+    * Gets engine
+    *  参数解释: 引擎 示例: spark 约束限制:  无 取值范围: spark, hetuEngine 默认取值: 无
+    *
+    * @return string|null
+    */
+    public function getEngine()
+    {
+        return $this->container['engine'];
+    }
+
+    /**
+    * Sets engine
+    *
+    * @param string|null $engine 参数解释: 引擎 示例: spark 约束限制:  无 取值范围: spark, hetuEngine 默认取值: 无
+    *
+    * @return $this
+    */
+    public function setEngine($engine)
+    {
+        $this->container['engine'] = $engine;
+        return $this;
+    }
+
+    /**
+    * Gets usedCu
+    *  参数解释: 队列已使用的cu 示例: 6.0 约束限制:  无 取值范围: 大于等于0 默认取值: 无
+    *
+    * @return float|null
+    */
+    public function getUsedCu()
+    {
+        return $this->container['usedCu'];
+    }
+
+    /**
+    * Sets usedCu
+    *
+    * @param float|null $usedCu 参数解释: 队列已使用的cu 示例: 6.0 约束限制:  无 取值范围: 大于等于0 默认取值: 无
+    *
+    * @return $this
+    */
+    public function setUsedCu($usedCu)
+    {
+        $this->container['usedCu'] = $usedCu;
+        return $this;
+    }
+
+    /**
+    * Gets supportOpensourceFlinkVersions
+    *  参数解释: 支持的flink版本列表 示例: [1.12, 1.15] 约束限制:  无 取值范围: 无 默认取值: 无
+    *
+    * @return string[]|null
+    */
+    public function getSupportOpensourceFlinkVersions()
+    {
+        return $this->container['supportOpensourceFlinkVersions'];
+    }
+
+    /**
+    * Sets supportOpensourceFlinkVersions
+    *
+    * @param string[]|null $supportOpensourceFlinkVersions 参数解释: 支持的flink版本列表 示例: [1.12, 1.15] 约束限制:  无 取值范围: 无 默认取值: 无
+    *
+    * @return $this
+    */
+    public function setSupportOpensourceFlinkVersions($supportOpensourceFlinkVersions)
+    {
+        $this->container['supportOpensourceFlinkVersions'] = $supportOpensourceFlinkVersions;
         return $this;
     }
 
@@ -960,26 +1088,26 @@ class Queue implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resourceType
+    * Gets queueResourceType
     *  参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
     *
     * @return string|null
     */
-    public function getResourceType()
+    public function getQueueResourceType()
     {
-        return $this->container['resourceType'];
+        return $this->container['queueResourceType'];
     }
 
     /**
-    * Sets resourceType
+    * Sets queueResourceType
     *
-    * @param string|null $resourceType 参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
+    * @param string|null $queueResourceType 参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
     *
     * @return $this
     */
-    public function setResourceType($resourceType)
+    public function setQueueResourceType($queueResourceType)
     {
-        $this->container['resourceType'] = $resourceType;
+        $this->container['queueResourceType'] = $queueResourceType;
         return $this;
     }
 

@@ -20,10 +20,10 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userName  用户名
-    * occupyResourceList  执行计划阶段
-    * execResult  执行结果。
-    * execLog  执行日志。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * occupyResourceList  **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
+    * execResult  **参数解释**： 执行结果。 **取值范围**： 不涉及。
+    * execLog  **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userName  用户名
-    * occupyResourceList  执行计划阶段
-    * execResult  执行结果。
-    * execLog  执行日志。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * occupyResourceList  **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
+    * execResult  **参数解释**： 执行结果。 **取值范围**： 不涉及。
+    * execLog  **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userName  用户名
-    * occupyResourceList  执行计划阶段
-    * execResult  执行结果。
-    * execLog  执行日志。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * occupyResourceList  **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
+    * execResult  **参数解释**： 执行结果。 **取值范围**： 不涉及。
+    * execLog  **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userName  用户名
-    * occupyResourceList  执行计划阶段
-    * execResult  执行结果。
-    * execLog  执行日志。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * occupyResourceList  **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
+    * execResult  **参数解释**： 执行结果。 **取值范围**： 不涉及。
+    * execLog  **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userName  用户名
-    * occupyResourceList  执行计划阶段
-    * execResult  执行结果。
-    * execLog  执行日志。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * occupyResourceList  **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
+    * execResult  **参数解释**： 执行结果。 **取值范围**： 不涉及。
+    * execLog  **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -213,7 +213,7 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名
+    *  **参数解释**： 用户名。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -225,7 +225,7 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string $userName 用户名
+    * @param string $userName **参数解释**： 用户名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -237,7 +237,7 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets occupyResourceList
-    *  执行计划阶段
+    *  **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\OccupyResource[]
     */
@@ -249,7 +249,7 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
     /**
     * Sets occupyResourceList
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\OccupyResource[] $occupyResourceList 执行计划阶段
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\OccupyResource[] $occupyResourceList **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -261,7 +261,7 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets execResult
-    *  执行结果。
+    *  **参数解释**： 执行结果。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -273,7 +273,7 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
     /**
     * Sets execResult
     *
-    * @param int|null $execResult 执行结果。
+    * @param int|null $execResult **参数解释**： 执行结果。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets execLog
-    *  执行日志。
+    *  **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -297,7 +297,7 @@ class WorkloadQueueUser implements ModelInterface, ArrayAccess
     /**
     * Sets execLog
     *
-    * @param string|null $execLog 执行日志。
+    * @param string|null $execLog **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @return $this
     */

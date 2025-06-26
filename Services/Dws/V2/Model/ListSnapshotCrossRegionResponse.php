@@ -21,8 +21,8 @@ class ListSnapshotCrossRegionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regions  区域列表
-    * count  总数
+    * regions  **参数解释**： 区域列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListSnapshotCrossRegionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regions  区域列表
-    * count  总数
+    * regions  **参数解释**： 区域列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListSnapshotCrossRegionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regions  区域列表
-    * count  总数
+    * regions  **参数解释**： 区域列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListSnapshotCrossRegionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regions  区域列表
-    * count  总数
+    * regions  **参数解释**： 区域列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListSnapshotCrossRegionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regions  区域列表
-    * count  总数
+    * regions  **参数解释**： 区域列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListSnapshotCrossRegionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets regions
-    *  区域列表
+    *  **参数解释**： 区域列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\SnapshotRegion[]|null
     */
@@ -198,7 +198,7 @@ class ListSnapshotCrossRegionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets regions
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\SnapshotRegion[]|null $regions 区域列表
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\SnapshotRegion[]|null $regions **参数解释**： 区域列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListSnapshotCrossRegionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  总数
+    *  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListSnapshotCrossRegionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 总数
+    * @param int|null $count **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

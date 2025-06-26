@@ -21,22 +21,22 @@ class UpdateTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  更新指定ID的迁移任务
+    * id  任务ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  更新指定ID的迁移任务
+    * id  任务ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'id' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class UpdateTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  更新指定ID的迁移任务
+    * id  任务ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  更新指定ID的迁移任务
+    * id  任务ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  更新指定ID的迁移任务
+    * id  任务ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'id' => 'getId'
     ];
 
     /**
@@ -148,7 +148,7 @@ class UpdateTaskResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -159,6 +159,12 @@ class UpdateTaskResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 255)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -174,26 +180,26 @@ class UpdateTaskResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  更新指定ID的迁移任务
+    * Gets id
+    *  任务ID
     *
     * @return string|null
     */
-    public function getBody()
+    public function getId()
     {
-        return $this->container['body'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets body
+    * Sets id
     *
-    * @param string|null $body 更新指定ID的迁移任务
+    * @param string|null $id 任务ID
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setId($id)
     {
-        $this->container['body'] = $body;
+        $this->container['id'] = $id;
         return $this;
     }
 

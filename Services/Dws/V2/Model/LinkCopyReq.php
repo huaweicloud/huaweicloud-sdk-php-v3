@@ -20,8 +20,8 @@ class LinkCopyReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * backupName  快照名称
-    * description  描述
+    * backupName  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class LinkCopyReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * backupName  快照名称
-    * description  描述
+    * backupName  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class LinkCopyReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * backupName  快照名称
-    * description  描述
+    * backupName  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class LinkCopyReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * backupName  快照名称
-    * description  描述
+    * backupName  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class LinkCopyReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * backupName  快照名称
-    * description  描述
+    * backupName  **参数解释**： 快照名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 描述信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class LinkCopyReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupName
-    *  快照名称
+    *  **参数解释**： 快照名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class LinkCopyReq implements ModelInterface, ArrayAccess
     /**
     * Sets backupName
     *
-    * @param string $backupName 快照名称
+    * @param string $backupName **参数解释**： 快照名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class LinkCopyReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 描述信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -224,7 +224,7 @@ class LinkCopyReq implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 描述信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

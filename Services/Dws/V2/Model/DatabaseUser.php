@@ -20,26 +20,30 @@ class DatabaseUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  用户名
-    * login  是否可以登陆
+    * name  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： COMMON：表示普通数据库用户。 IAM：表示IAM同步的数据库用户。 OneAccess: 表示OneAccess用户。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'login' => 'bool'
+            'login' => 'bool',
+            'userType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  用户名
-    * login  是否可以登陆
+    * name  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： COMMON：表示普通数据库用户。 IAM：表示IAM同步的数据库用户。 OneAccess: 表示OneAccess用户。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'login' => null
+        'login' => null,
+        'userType' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class DatabaseUser implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  用户名
-    * login  是否可以登陆
+    * name  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： COMMON：表示普通数据库用户。 IAM：表示IAM同步的数据库用户。 OneAccess: 表示OneAccess用户。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'login' => 'login'
+            'login' => 'login',
+            'userType' => 'user_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  用户名
-    * login  是否可以登陆
+    * name  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： COMMON：表示普通数据库用户。 IAM：表示IAM同步的数据库用户。 OneAccess: 表示OneAccess用户。
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'login' => 'setLogin'
+            'login' => 'setLogin',
+            'userType' => 'setUserType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  用户名
-    * login  是否可以登陆
+    * name  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： COMMON：表示普通数据库用户。 IAM：表示IAM同步的数据库用户。 OneAccess: 表示OneAccess用户。
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'login' => 'getLogin'
+            'login' => 'getLogin',
+            'userType' => 'getUserType'
     ];
 
     /**
@@ -159,6 +169,7 @@ class DatabaseUser implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['login'] = isset($data['login']) ? $data['login'] : null;
+        $this->container['userType'] = isset($data['userType']) ? $data['userType'] : null;
     }
 
     /**
@@ -185,7 +196,7 @@ class DatabaseUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  用户名
+    *  **参数解释**： 用户名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +208,7 @@ class DatabaseUser implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 用户名
+    * @param string|null $name **参数解释**： 用户名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +220,7 @@ class DatabaseUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets login
-    *  是否可以登陆
+    *  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -221,13 +232,37 @@ class DatabaseUser implements ModelInterface, ArrayAccess
     /**
     * Sets login
     *
-    * @param bool|null $login 是否可以登陆
+    * @param bool|null $login **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
     *
     * @return $this
     */
     public function setLogin($login)
     {
         $this->container['login'] = $login;
+        return $this;
+    }
+
+    /**
+    * Gets userType
+    *  **参数解释**： 用户类型。 **取值范围**： COMMON：表示普通数据库用户。 IAM：表示IAM同步的数据库用户。 OneAccess: 表示OneAccess用户。
+    *
+    * @return string|null
+    */
+    public function getUserType()
+    {
+        return $this->container['userType'];
+    }
+
+    /**
+    * Sets userType
+    *
+    * @param string|null $userType **参数解释**： 用户类型。 **取值范围**： COMMON：表示普通数据库用户。 IAM：表示IAM同步的数据库用户。 OneAccess: 表示OneAccess用户。
+    *
+    * @return $this
+    */
+    public function setUserType($userType)
+    {
+        $this->container['userType'] = $userType;
         return $this;
     }
 

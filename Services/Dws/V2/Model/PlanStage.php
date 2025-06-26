@@ -20,15 +20,15 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * month  计划月份。
-    * day  计划日期。
-    * planId  计划ID。
-    * stageId  计划阶段ID。
-    * stageName  计划阶段名称。
-    * startTime  计划开始时间。
-    * endTime  计划结束时间
-    * nextValidTime  下次校验时间
-    * queueList  资源队列列表
+    * month  **参数解释**： 计划月份。 **取值范围**： 不涉及。
+    * day  **参数解释**： 计划日期。 **取值范围**： 不涉及。
+    * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
+    * stageId  **参数解释**： 计划阶段ID。 **取值范围**： 不涉及。
+    * stageName  **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+    * nextValidTime  **参数解释**： 下次校验时间。 **取值范围**： 不涉及。
+    * queueList  **参数解释**： 资源队列列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * month  计划月份。
-    * day  计划日期。
-    * planId  计划ID。
-    * stageId  计划阶段ID。
-    * stageName  计划阶段名称。
-    * startTime  计划开始时间。
-    * endTime  计划结束时间
-    * nextValidTime  下次校验时间
-    * queueList  资源队列列表
+    * month  **参数解释**： 计划月份。 **取值范围**： 不涉及。
+    * day  **参数解释**： 计划日期。 **取值范围**： 不涉及。
+    * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
+    * stageId  **参数解释**： 计划阶段ID。 **取值范围**： 不涉及。
+    * stageName  **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+    * nextValidTime  **参数解释**： 下次校验时间。 **取值范围**： 不涉及。
+    * queueList  **参数解释**： 资源队列列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class PlanStage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * month  计划月份。
-    * day  计划日期。
-    * planId  计划ID。
-    * stageId  计划阶段ID。
-    * stageName  计划阶段名称。
-    * startTime  计划开始时间。
-    * endTime  计划结束时间
-    * nextValidTime  下次校验时间
-    * queueList  资源队列列表
+    * month  **参数解释**： 计划月份。 **取值范围**： 不涉及。
+    * day  **参数解释**： 计划日期。 **取值范围**： 不涉及。
+    * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
+    * stageId  **参数解释**： 计划阶段ID。 **取值范围**： 不涉及。
+    * stageName  **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+    * nextValidTime  **参数解释**： 下次校验时间。 **取值范围**： 不涉及。
+    * queueList  **参数解释**： 资源队列列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * month  计划月份。
-    * day  计划日期。
-    * planId  计划ID。
-    * stageId  计划阶段ID。
-    * stageName  计划阶段名称。
-    * startTime  计划开始时间。
-    * endTime  计划结束时间
-    * nextValidTime  下次校验时间
-    * queueList  资源队列列表
+    * month  **参数解释**： 计划月份。 **取值范围**： 不涉及。
+    * day  **参数解释**： 计划日期。 **取值范围**： 不涉及。
+    * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
+    * stageId  **参数解释**： 计划阶段ID。 **取值范围**： 不涉及。
+    * stageName  **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+    * nextValidTime  **参数解释**： 下次校验时间。 **取值范围**： 不涉及。
+    * queueList  **参数解释**： 资源队列列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * month  计划月份。
-    * day  计划日期。
-    * planId  计划ID。
-    * stageId  计划阶段ID。
-    * stageName  计划阶段名称。
-    * startTime  计划开始时间。
-    * endTime  计划结束时间
-    * nextValidTime  下次校验时间
-    * queueList  资源队列列表
+    * month  **参数解释**： 计划月份。 **取值范围**： 不涉及。
+    * day  **参数解释**： 计划日期。 **取值范围**： 不涉及。
+    * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
+    * stageId  **参数解释**： 计划阶段ID。 **取值范围**： 不涉及。
+    * stageName  **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+    * nextValidTime  **参数解释**： 下次校验时间。 **取值范围**： 不涉及。
+    * queueList  **参数解释**： 资源队列列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -277,7 +277,7 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Gets month
-    *  计划月份。
+    *  **参数解释**： 计划月份。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -289,7 +289,7 @@ class PlanStage implements ModelInterface, ArrayAccess
     /**
     * Sets month
     *
-    * @param string $month 计划月份。
+    * @param string $month **参数解释**： 计划月份。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Gets day
-    *  计划日期。
+    *  **参数解释**： 计划日期。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -313,7 +313,7 @@ class PlanStage implements ModelInterface, ArrayAccess
     /**
     * Sets day
     *
-    * @param string $day 计划日期。
+    * @param string $day **参数解释**： 计划日期。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Gets planId
-    *  计划ID。
+    *  **参数解释**： 计划ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -337,7 +337,7 @@ class PlanStage implements ModelInterface, ArrayAccess
     /**
     * Sets planId
     *
-    * @param string $planId 计划ID。
+    * @param string $planId **参数解释**： 计划ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Gets stageId
-    *  计划阶段ID。
+    *  **参数解释**： 计划阶段ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -361,7 +361,7 @@ class PlanStage implements ModelInterface, ArrayAccess
     /**
     * Sets stageId
     *
-    * @param string $stageId 计划阶段ID。
+    * @param string $stageId **参数解释**： 计划阶段ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -373,7 +373,7 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Gets stageName
-    *  计划阶段名称。
+    *  **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -385,7 +385,7 @@ class PlanStage implements ModelInterface, ArrayAccess
     /**
     * Sets stageName
     *
-    * @param string $stageName 计划阶段名称。
+    * @param string $stageName **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -397,7 +397,7 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  计划开始时间。
+    *  **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -409,7 +409,7 @@ class PlanStage implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 计划开始时间。
+    * @param string|null $startTime **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -421,7 +421,7 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  计划结束时间
+    *  **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -433,7 +433,7 @@ class PlanStage implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 计划结束时间
+    * @param string|null $endTime **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -445,7 +445,7 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextValidTime
-    *  下次校验时间
+    *  **参数解释**： 下次校验时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -457,7 +457,7 @@ class PlanStage implements ModelInterface, ArrayAccess
     /**
     * Sets nextValidTime
     *
-    * @param string|null $nextValidTime 下次校验时间
+    * @param string|null $nextValidTime **参数解释**： 下次校验时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -469,7 +469,7 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueList
-    *  资源队列列表
+    *  **参数解释**： 资源队列列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\QueueResourceItem[]|null
     */
@@ -481,7 +481,7 @@ class PlanStage implements ModelInterface, ArrayAccess
     /**
     * Sets queueList
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\QueueResourceItem[]|null $queueList 资源队列列表
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\QueueResourceItem[]|null $queueList **参数解释**： 资源队列列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

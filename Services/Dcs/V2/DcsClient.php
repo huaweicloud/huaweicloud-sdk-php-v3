@@ -4586,6 +4586,9 @@ class DcsClient extends Client
         if ($localVarParams['endTime'] !== null) {
             $queryParams['end_time'] = $localVarParams['endTime'];
         }
+        if ($localVarParams['role'] !== null) {
+            $queryParams['role'] = $localVarParams['role'];
+        }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ecs\V2\Model;
+namespace HuaweiCloud\SDK\Swr\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowRecycleBinServerRequest implements ModelInterface, ArrayAccess
+class DeleteInstanceResourceTagsRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,34 @@ class ShowRecycleBinServerRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowRecycleBinServerRequest';
+    protected static $openAPIModelName = 'DeleteInstanceResourceTagsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serverId  云服务器ID。
+    * resourceType  资源类型，支持的资源类型为：instances
+    * resourceId  资源id
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'serverId' => 'string'
+            'resourceType' => 'string',
+            'resourceId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Swr\V2\Model\DeleteResourceTagsRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serverId  云服务器ID。
+    * resourceType  资源类型，支持的资源类型为：instances
+    * resourceId  资源id
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'serverId' => null
+        'resourceType' => null,
+        'resourceId' => null,
+        'body' => null
     ];
 
     /**
@@ -61,32 +69,44 @@ class ShowRecycleBinServerRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serverId  云服务器ID。
+    * resourceType  资源类型，支持的资源类型为：instances
+    * resourceId  资源id
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'serverId' => 'server_id'
+            'resourceType' => 'resource_type',
+            'resourceId' => 'resource_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serverId  云服务器ID。
+    * resourceType  资源类型，支持的资源类型为：instances
+    * resourceId  资源id
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'serverId' => 'setServerId'
+            'resourceType' => 'setResourceType',
+            'resourceId' => 'setResourceId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serverId  云服务器ID。
+    * resourceType  资源类型，支持的资源类型为：instances
+    * resourceId  资源id
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'serverId' => 'getServerId'
+            'resourceType' => 'getResourceType',
+            'resourceId' => 'getResourceId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -129,7 +149,20 @@ class ShowRecycleBinServerRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RESOURCE_TYPE_INSTANCES = 'instances';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceTypeAllowableValues()
+    {
+        return [
+            self::RESOURCE_TYPE_INSTANCES,
+        ];
+    }
 
 
     /**
@@ -147,7 +180,9 @@ class ShowRecycleBinServerRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
+        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
+        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -158,8 +193,19 @@ class ShowRecycleBinServerRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['serverId'] === null) {
-            $invalidProperties[] = "'serverId' can't be null";
+        if ($this->container['resourceType'] === null) {
+            $invalidProperties[] = "'resourceType' can't be null";
+        }
+            $allowedValues = $this->getResourceTypeAllowableValues();
+                if (!is_null($this->container['resourceType']) && !in_array($this->container['resourceType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+        if ($this->container['resourceId'] === null) {
+            $invalidProperties[] = "'resourceId' can't be null";
         }
         return $invalidProperties;
     }
@@ -176,26 +222,74 @@ class ShowRecycleBinServerRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets serverId
-    *  云服务器ID。
+    * Gets resourceType
+    *  资源类型，支持的资源类型为：instances
     *
     * @return string
     */
-    public function getServerId()
+    public function getResourceType()
     {
-        return $this->container['serverId'];
+        return $this->container['resourceType'];
     }
 
     /**
-    * Sets serverId
+    * Sets resourceType
     *
-    * @param string $serverId 云服务器ID。
+    * @param string $resourceType 资源类型，支持的资源类型为：instances
     *
     * @return $this
     */
-    public function setServerId($serverId)
+    public function setResourceType($resourceType)
     {
-        $this->container['serverId'] = $serverId;
+        $this->container['resourceType'] = $resourceType;
+        return $this;
+    }
+
+    /**
+    * Gets resourceId
+    *  资源id
+    *
+    * @return string
+    */
+    public function getResourceId()
+    {
+        return $this->container['resourceId'];
+    }
+
+    /**
+    * Sets resourceId
+    *
+    * @param string $resourceId 资源id
+    *
+    * @return $this
+    */
+    public function setResourceId($resourceId)
+    {
+        $this->container['resourceId'] = $resourceId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Swr\V2\Model\DeleteResourceTagsRequestBody|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\DeleteResourceTagsRequestBody|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

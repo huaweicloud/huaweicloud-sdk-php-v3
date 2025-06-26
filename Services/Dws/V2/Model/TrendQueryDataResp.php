@@ -20,12 +20,12 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * queryTime  查询时间。
-    * indicatorName  监控指标名称。
-    * objectId  监控对象id。
-    * unit  单位。
-    * subObjectId  次级监控id。
-    * dataPoints  节点数据。
+    * queryTime  **参数解释**： 查询时间。 **取值范围**： 不涉及。
+    * indicatorName  **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
+    * objectId  **参数解释**： 监控对象ID。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 单位。 **取值范围**： 不涉及。
+    * subObjectId  **参数解释**： 次级监控ID。 **取值范围**： 不涉及。
+    * dataPoints  **参数解释**： 节点数据。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * queryTime  查询时间。
-    * indicatorName  监控指标名称。
-    * objectId  监控对象id。
-    * unit  单位。
-    * subObjectId  次级监控id。
-    * dataPoints  节点数据。
+    * queryTime  **参数解释**： 查询时间。 **取值范围**： 不涉及。
+    * indicatorName  **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
+    * objectId  **参数解释**： 监控对象ID。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 单位。 **取值范围**： 不涉及。
+    * subObjectId  **参数解释**： 次级监控ID。 **取值范围**： 不涉及。
+    * dataPoints  **参数解释**： 节点数据。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * queryTime  查询时间。
-    * indicatorName  监控指标名称。
-    * objectId  监控对象id。
-    * unit  单位。
-    * subObjectId  次级监控id。
-    * dataPoints  节点数据。
+    * queryTime  **参数解释**： 查询时间。 **取值范围**： 不涉及。
+    * indicatorName  **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
+    * objectId  **参数解释**： 监控对象ID。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 单位。 **取值范围**： 不涉及。
+    * subObjectId  **参数解释**： 次级监控ID。 **取值范围**： 不涉及。
+    * dataPoints  **参数解释**： 节点数据。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * queryTime  查询时间。
-    * indicatorName  监控指标名称。
-    * objectId  监控对象id。
-    * unit  单位。
-    * subObjectId  次级监控id。
-    * dataPoints  节点数据。
+    * queryTime  **参数解释**： 查询时间。 **取值范围**： 不涉及。
+    * indicatorName  **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
+    * objectId  **参数解释**： 监控对象ID。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 单位。 **取值范围**： 不涉及。
+    * subObjectId  **参数解释**： 次级监控ID。 **取值范围**： 不涉及。
+    * dataPoints  **参数解释**： 节点数据。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * queryTime  查询时间。
-    * indicatorName  监控指标名称。
-    * objectId  监控对象id。
-    * unit  单位。
-    * subObjectId  次级监控id。
-    * dataPoints  节点数据。
+    * queryTime  **参数解释**： 查询时间。 **取值范围**： 不涉及。
+    * indicatorName  **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
+    * objectId  **参数解释**： 监控对象ID。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 单位。 **取值范围**： 不涉及。
+    * subObjectId  **参数解释**： 次级监控ID。 **取值范围**： 不涉及。
+    * dataPoints  **参数解释**： 节点数据。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryTime
-    *  查询时间。
+    *  **参数解释**： 查询时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -241,7 +241,7 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
     /**
     * Sets queryTime
     *
-    * @param int|null $queryTime 查询时间。
+    * @param int|null $queryTime **参数解释**： 查询时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets indicatorName
-    *  监控指标名称。
+    *  **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
     /**
     * Sets indicatorName
     *
-    * @param string|null $indicatorName 监控指标名称。
+    * @param string|null $indicatorName **参数解释**： 监控指标名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  监控对象id。
+    *  **参数解释**： 监控对象ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 监控对象id。
+    * @param string|null $objectId **参数解释**： 监控对象ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  单位。
+    *  **参数解释**： 单位。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string|null $unit 单位。
+    * @param string|null $unit **参数解释**： 单位。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets subObjectId
-    *  次级监控id。
+    *  **参数解释**： 次级监控ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
     /**
     * Sets subObjectId
     *
-    * @param string|null $subObjectId 次级监控id。
+    * @param string|null $subObjectId **参数解释**： 次级监控ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataPoints
-    *  节点数据。
+    *  **参数解释**： 节点数据。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\TrendQueryData[]|null
     */
@@ -361,7 +361,7 @@ class TrendQueryDataResp implements ModelInterface, ArrayAccess
     /**
     * Sets dataPoints
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\TrendQueryData[]|null $dataPoints 节点数据。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\TrendQueryData[]|null $dataPoints **参数解释**： 节点数据。 **取值范围**： 不涉及。
     *
     * @return $this
     */

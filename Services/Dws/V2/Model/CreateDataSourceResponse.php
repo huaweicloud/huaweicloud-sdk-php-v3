@@ -21,8 +21,8 @@ class CreateDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  数据源id。
-    * jobId  创建数据源job_id。
+    * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 创建数据源任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class CreateDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  数据源id。
-    * jobId  创建数据源job_id。
+    * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 创建数据源任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class CreateDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  数据源id。
-    * jobId  创建数据源job_id。
+    * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 创建数据源任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class CreateDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  数据源id。
-    * jobId  创建数据源job_id。
+    * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 创建数据源任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class CreateDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  数据源id。
-    * jobId  创建数据源job_id。
+    * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 创建数据源任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class CreateDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  数据源id。
+    *  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class CreateDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 数据源id。
+    * @param string|null $id **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class CreateDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  创建数据源job_id。
+    *  **参数解释**： 创建数据源任务ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class CreateDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 创建数据源job_id。
+    * @param string|null $jobId **参数解释**： 创建数据源任务ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

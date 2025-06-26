@@ -20,8 +20,8 @@ class ObjectAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  对象名称
-    * roleAuthority  角色权限集合
+    * name  **参数解释**： 对象名称。 **取值范围**： 不涉及。
+    * roleAuthority  **参数解释**： 角色权限集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ObjectAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  对象名称
-    * roleAuthority  角色权限集合
+    * name  **参数解释**： 对象名称。 **取值范围**： 不涉及。
+    * roleAuthority  **参数解释**： 角色权限集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ObjectAuthority implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  对象名称
-    * roleAuthority  角色权限集合
+    * name  **参数解释**： 对象名称。 **取值范围**： 不涉及。
+    * roleAuthority  **参数解释**： 角色权限集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ObjectAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  对象名称
-    * roleAuthority  角色权限集合
+    * name  **参数解释**： 对象名称。 **取值范围**： 不涉及。
+    * roleAuthority  **参数解释**： 角色权限集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ObjectAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  对象名称
-    * roleAuthority  角色权限集合
+    * name  **参数解释**： 对象名称。 **取值范围**： 不涉及。
+    * roleAuthority  **参数解释**： 角色权限集合。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ObjectAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  对象名称
+    *  **参数解释**： 对象名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ObjectAuthority implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 对象名称
+    * @param string|null $name **参数解释**： 对象名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ObjectAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Gets roleAuthority
-    *  角色权限集合
+    *  **参数解释**： 角色权限集合。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\RoleAuthority[]|null
     */
@@ -221,7 +221,7 @@ class ObjectAuthority implements ModelInterface, ArrayAccess
     /**
     * Sets roleAuthority
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\RoleAuthority[]|null $roleAuthority 角色权限集合
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\RoleAuthority[]|null $roleAuthority **参数解释**： 角色权限集合。 **取值范围**： 不涉及。
     *
     * @return $this
     */

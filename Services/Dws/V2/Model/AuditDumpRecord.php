@@ -21,13 +21,13 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * executorTime  执行时间。
-    * beginTime  开始时间。
-    * endTime  结束时间。
-    * bucketName  桶名。
-    * locationPrefix  前缀。
-    * result  结果。
-    * failedReason  失败原因。
+    * executorTime  **参数解释**： 执行时间。 **取值范围**： 不涉及。
+    * beginTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * bucketName  **参数解释**： 桶名。 **取值范围**： 不涉及。
+    * locationPrefix  **参数解释**： 前缀。 **取值范围**： 不涉及。
+    * result  **参数解释**： 结果。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -45,13 +45,13 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * executorTime  执行时间。
-    * beginTime  开始时间。
-    * endTime  结束时间。
-    * bucketName  桶名。
-    * locationPrefix  前缀。
-    * result  结果。
-    * failedReason  失败原因。
+    * executorTime  **参数解释**： 执行时间。 **取值范围**： 不涉及。
+    * beginTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * bucketName  **参数解释**： 桶名。 **取值范围**： 不涉及。
+    * locationPrefix  **参数解释**： 前缀。 **取值范围**： 不涉及。
+    * result  **参数解释**： 结果。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,13 +90,13 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * executorTime  执行时间。
-    * beginTime  开始时间。
-    * endTime  结束时间。
-    * bucketName  桶名。
-    * locationPrefix  前缀。
-    * result  结果。
-    * failedReason  失败原因。
+    * executorTime  **参数解释**： 执行时间。 **取值范围**： 不涉及。
+    * beginTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * bucketName  **参数解释**： 桶名。 **取值范围**： 不涉及。
+    * locationPrefix  **参数解释**： 前缀。 **取值范围**： 不涉及。
+    * result  **参数解释**： 结果。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -114,13 +114,13 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * executorTime  执行时间。
-    * beginTime  开始时间。
-    * endTime  结束时间。
-    * bucketName  桶名。
-    * locationPrefix  前缀。
-    * result  结果。
-    * failedReason  失败原因。
+    * executorTime  **参数解释**： 执行时间。 **取值范围**： 不涉及。
+    * beginTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * bucketName  **参数解释**： 桶名。 **取值范围**： 不涉及。
+    * locationPrefix  **参数解释**： 前缀。 **取值范围**： 不涉及。
+    * result  **参数解释**： 结果。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -138,13 +138,13 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * executorTime  执行时间。
-    * beginTime  开始时间。
-    * endTime  结束时间。
-    * bucketName  桶名。
-    * locationPrefix  前缀。
-    * result  结果。
-    * failedReason  失败原因。
+    * executorTime  **参数解释**： 执行时间。 **取值范围**： 不涉及。
+    * beginTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * bucketName  **参数解释**： 桶名。 **取值范围**： 不涉及。
+    * locationPrefix  **参数解释**： 前缀。 **取值范围**： 不涉及。
+    * result  **参数解释**： 结果。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -275,7 +275,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets executorTime
-    *  执行时间。
+    *  **参数解释**： 执行时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -287,7 +287,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Sets executorTime
     *
-    * @param string|null $executorTime 执行时间。
+    * @param string|null $executorTime **参数解释**： 执行时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  开始时间。
+    *  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param string|null $beginTime 开始时间。
+    * @param string|null $beginTime **参数解释**： 开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间。
+    *  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 结束时间。
+    * @param string|null $endTime **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets bucketName
-    *  桶名。
+    *  **参数解释**： 桶名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Sets bucketName
     *
-    * @param string|null $bucketName 桶名。
+    * @param string|null $bucketName **参数解释**： 桶名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets locationPrefix
-    *  前缀。
+    *  **参数解释**： 前缀。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Sets locationPrefix
     *
-    * @param string|null $locationPrefix 前缀。
+    * @param string|null $locationPrefix **参数解释**： 前缀。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  结果。
+    *  **参数解释**： 结果。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 结果。
+    * @param string|null $result **参数解释**： 结果。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedReason
-    *  失败原因。
+    *  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class AuditDumpRecord implements ModelInterface, ArrayAccess
     /**
     * Sets failedReason
     *
-    * @param string|null $failedReason 失败原因。
+    * @param string|null $failedReason **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @return $this
     */

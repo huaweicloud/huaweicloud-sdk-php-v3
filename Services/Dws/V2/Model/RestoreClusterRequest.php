@@ -20,7 +20,7 @@ class RestoreClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * snapshotId  待恢复的快照ID。
+    * snapshotId  **参数解释**： 待恢复的快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class RestoreClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * snapshotId  待恢复的快照ID。
+    * snapshotId  **参数解释**： 待恢复的快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class RestoreClusterRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * snapshotId  待恢复的快照ID。
+    * snapshotId  **参数解释**： 待恢复的快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class RestoreClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * snapshotId  待恢复的快照ID。
+    * snapshotId  **参数解释**： 待恢复的快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class RestoreClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * snapshotId  待恢复的快照ID。
+    * snapshotId  **参数解释**： 待恢复的快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -188,7 +188,7 @@ class RestoreClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotId
-    *  待恢复的快照ID。
+    *  **参数解释**： 待恢复的快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class RestoreClusterRequest implements ModelInterface, ArrayAccess
     /**
     * Sets snapshotId
     *
-    * @param string $snapshotId 待恢复的快照ID。
+    * @param string $snapshotId **参数解释**： 待恢复的快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

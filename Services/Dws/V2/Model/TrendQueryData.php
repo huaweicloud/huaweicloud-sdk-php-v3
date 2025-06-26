@@ -20,8 +20,8 @@ class TrendQueryData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  查询结果。
-    * timestamp  时间戳。
+    * result  **参数解释**： 查询结果。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 时间戳。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TrendQueryData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  查询结果。
-    * timestamp  时间戳。
+    * result  **参数解释**： 查询结果。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 时间戳。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TrendQueryData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  查询结果。
-    * timestamp  时间戳。
+    * result  **参数解释**： 查询结果。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 时间戳。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TrendQueryData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  查询结果。
-    * timestamp  时间戳。
+    * result  **参数解释**： 查询结果。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 时间戳。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TrendQueryData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  查询结果。
-    * timestamp  时间戳。
+    * result  **参数解释**： 查询结果。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 时间戳。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class TrendQueryData implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  查询结果。
+    *  **参数解释**： 查询结果。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class TrendQueryData implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 查询结果。
+    * @param string|null $result **参数解释**： 查询结果。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class TrendQueryData implements ModelInterface, ArrayAccess
 
     /**
     * Gets timestamp
-    *  时间戳。
+    *  **参数解释**： 时间戳。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class TrendQueryData implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param int|null $timestamp 时间戳。
+    * @param int|null $timestamp **参数解释**： 时间戳。 **取值范围**： 不涉及。
     *
     * @return $this
     */

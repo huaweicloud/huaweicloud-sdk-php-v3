@@ -20,15 +20,15 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * itemId  升级项目ID
-    * status  升级状态
-    * recordType  升级类型
-    * fromVersion  升级前版本
-    * toVersion  目标版本
-    * startTime  开始时间
-    * endTime  结束时间
-    * jobId  升级任务ID
-    * failedReason  失败原因
+    * itemId  **参数解释**： 升级项目ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级状态。 **取值范围**： 不涉及。
+    * recordType  **参数解释**： 升级类型。 **取值范围**： 不涉及。
+    * fromVersion  **参数解释**： 升级前版本。 **取值范围**： 不涉及。
+    * toVersion  **参数解释**： 目标版本。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * itemId  升级项目ID
-    * status  升级状态
-    * recordType  升级类型
-    * fromVersion  升级前版本
-    * toVersion  目标版本
-    * startTime  开始时间
-    * endTime  结束时间
-    * jobId  升级任务ID
-    * failedReason  失败原因
+    * itemId  **参数解释**： 升级项目ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级状态。 **取值范围**： 不涉及。
+    * recordType  **参数解释**： 升级类型。 **取值范围**： 不涉及。
+    * fromVersion  **参数解释**： 升级前版本。 **取值范围**： 不涉及。
+    * toVersion  **参数解释**： 目标版本。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * itemId  升级项目ID
-    * status  升级状态
-    * recordType  升级类型
-    * fromVersion  升级前版本
-    * toVersion  目标版本
-    * startTime  开始时间
-    * endTime  结束时间
-    * jobId  升级任务ID
-    * failedReason  失败原因
+    * itemId  **参数解释**： 升级项目ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级状态。 **取值范围**： 不涉及。
+    * recordType  **参数解释**： 升级类型。 **取值范围**： 不涉及。
+    * fromVersion  **参数解释**： 升级前版本。 **取值范围**： 不涉及。
+    * toVersion  **参数解释**： 目标版本。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * itemId  升级项目ID
-    * status  升级状态
-    * recordType  升级类型
-    * fromVersion  升级前版本
-    * toVersion  目标版本
-    * startTime  开始时间
-    * endTime  结束时间
-    * jobId  升级任务ID
-    * failedReason  失败原因
+    * itemId  **参数解释**： 升级项目ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级状态。 **取值范围**： 不涉及。
+    * recordType  **参数解释**： 升级类型。 **取值范围**： 不涉及。
+    * fromVersion  **参数解释**： 升级前版本。 **取值范围**： 不涉及。
+    * toVersion  **参数解释**： 目标版本。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * itemId  升级项目ID
-    * status  升级状态
-    * recordType  升级类型
-    * fromVersion  升级前版本
-    * toVersion  目标版本
-    * startTime  开始时间
-    * endTime  结束时间
-    * jobId  升级任务ID
-    * failedReason  失败原因
+    * itemId  **参数解释**： 升级项目ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级状态。 **取值范围**： 不涉及。
+    * recordType  **参数解释**： 升级类型。 **取值范围**： 不涉及。
+    * fromVersion  **参数解释**： 升级前版本。 **取值范围**： 不涉及。
+    * toVersion  **参数解释**： 目标版本。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
+    * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets itemId
-    *  升级项目ID
+    *  **参数解释**： 升级项目ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Sets itemId
     *
-    * @param string|null $itemId 升级项目ID
+    * @param string|null $itemId **参数解释**： 升级项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  升级状态
+    *  **参数解释**： 升级状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 升级状态
+    * @param string|null $status **参数解释**： 升级状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordType
-    *  升级类型
+    *  **参数解释**： 升级类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Sets recordType
     *
-    * @param string|null $recordType 升级类型
+    * @param string|null $recordType **参数解释**： 升级类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets fromVersion
-    *  升级前版本
+    *  **参数解释**： 升级前版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Sets fromVersion
     *
-    * @param string|null $fromVersion 升级前版本
+    * @param string|null $fromVersion **参数解释**： 升级前版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets toVersion
-    *  目标版本
+    *  **参数解释**： 目标版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Sets toVersion
     *
-    * @param string|null $toVersion 目标版本
+    * @param string|null $toVersion **参数解释**： 目标版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间
+    *  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 开始时间
+    * @param string|null $startTime **参数解释**： 开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -418,7 +418,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 结束时间
+    * @param string|null $endTime **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  升级任务ID
+    *  **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 升级任务ID
+    * @param string|null $jobId **参数解释**： 升级任务ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedReason
-    *  失败原因
+    *  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Sets failedReason
     *
-    * @param string|null $failedReason 失败原因
+    * @param string|null $failedReason **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @return $this
     */

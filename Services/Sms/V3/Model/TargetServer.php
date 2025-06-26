@@ -20,17 +20,17 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  源端在SMS数据库中的ID
-    * ip  源端服务器IP，注册源端时必选，更新非必选
-    * name  用来区分不同源端服务器的名称
-    * hostname  源端主机名，注册源端必选，更新非必选
-    * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
+    * id  服务器在SMS数据库中的ID
+    * ip  服务器IP，注册源端时必选，更新非必选
+    * name  用来区分不同服务器的名称
+    * hostname  主机名，注册源端必选，更新非必选
+    * osType  服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
-    * firmware  源端服务器启动类型，如BIOS或者UEFI
+    * firmware  服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
-    * networks  源端服务器的网卡信息
+    * btrfsList  Linux 必选，服务器的Btrfs信息。如果不存在Btrfs，则为[]
+    * networks  服务器的网卡信息
     * domainId  租户的domainId
     * hasRsync  是否安装rsync组件，Linux系统此参数为必选
     * paravirtualization  Linux场景必选，源端是否是半虚拟化
@@ -82,17 +82,17 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  源端在SMS数据库中的ID
-    * ip  源端服务器IP，注册源端时必选，更新非必选
-    * name  用来区分不同源端服务器的名称
-    * hostname  源端主机名，注册源端必选，更新非必选
-    * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
+    * id  服务器在SMS数据库中的ID
+    * ip  服务器IP，注册源端时必选，更新非必选
+    * name  用来区分不同服务器的名称
+    * hostname  主机名，注册源端必选，更新非必选
+    * osType  服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
-    * firmware  源端服务器启动类型，如BIOS或者UEFI
+    * firmware  服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
-    * networks  源端服务器的网卡信息
+    * btrfsList  Linux 必选，服务器的Btrfs信息。如果不存在Btrfs，则为[]
+    * networks  服务器的网卡信息
     * domainId  租户的domainId
     * hasRsync  是否安装rsync组件，Linux系统此参数为必选
     * paravirtualization  Linux场景必选，源端是否是半虚拟化
@@ -165,17 +165,17 @@ class TargetServer implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  源端在SMS数据库中的ID
-    * ip  源端服务器IP，注册源端时必选，更新非必选
-    * name  用来区分不同源端服务器的名称
-    * hostname  源端主机名，注册源端必选，更新非必选
-    * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
+    * id  服务器在SMS数据库中的ID
+    * ip  服务器IP，注册源端时必选，更新非必选
+    * name  用来区分不同服务器的名称
+    * hostname  主机名，注册源端必选，更新非必选
+    * osType  服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
-    * firmware  源端服务器启动类型，如BIOS或者UEFI
+    * firmware  服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
-    * networks  源端服务器的网卡信息
+    * btrfsList  Linux 必选，服务器的Btrfs信息。如果不存在Btrfs，则为[]
+    * networks  服务器的网卡信息
     * domainId  租户的domainId
     * hasRsync  是否安装rsync组件，Linux系统此参数为必选
     * paravirtualization  Linux场景必选，源端是否是半虚拟化
@@ -227,17 +227,17 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  源端在SMS数据库中的ID
-    * ip  源端服务器IP，注册源端时必选，更新非必选
-    * name  用来区分不同源端服务器的名称
-    * hostname  源端主机名，注册源端必选，更新非必选
-    * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
+    * id  服务器在SMS数据库中的ID
+    * ip  服务器IP，注册源端时必选，更新非必选
+    * name  用来区分不同服务器的名称
+    * hostname  主机名，注册源端必选，更新非必选
+    * osType  服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
-    * firmware  源端服务器启动类型，如BIOS或者UEFI
+    * firmware  服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
-    * networks  源端服务器的网卡信息
+    * btrfsList  Linux 必选，服务器的Btrfs信息。如果不存在Btrfs，则为[]
+    * networks  服务器的网卡信息
     * domainId  租户的domainId
     * hasRsync  是否安装rsync组件，Linux系统此参数为必选
     * paravirtualization  Linux场景必选，源端是否是半虚拟化
@@ -289,17 +289,17 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  源端在SMS数据库中的ID
-    * ip  源端服务器IP，注册源端时必选，更新非必选
-    * name  用来区分不同源端服务器的名称
-    * hostname  源端主机名，注册源端必选，更新非必选
-    * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
+    * id  服务器在SMS数据库中的ID
+    * ip  服务器IP，注册源端时必选，更新非必选
+    * name  用来区分不同服务器的名称
+    * hostname  主机名，注册源端必选，更新非必选
+    * osType  服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
-    * firmware  源端服务器启动类型，如BIOS或者UEFI
+    * firmware  服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
-    * networks  源端服务器的网卡信息
+    * btrfsList  Linux 必选，服务器的Btrfs信息。如果不存在Btrfs，则为[]
+    * networks  服务器的网卡信息
     * domainId  租户的domainId
     * hasRsync  是否安装rsync组件，Linux系统此参数为必选
     * paravirtualization  Linux场景必选，源端是否是半虚拟化
@@ -643,7 +643,7 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  源端在SMS数据库中的ID
+    *  服务器在SMS数据库中的ID
     *
     * @return string|null
     */
@@ -655,7 +655,7 @@ class TargetServer implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 源端在SMS数据库中的ID
+    * @param string|null $id 服务器在SMS数据库中的ID
     *
     * @return $this
     */
@@ -667,7 +667,7 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets ip
-    *  源端服务器IP，注册源端时必选，更新非必选
+    *  服务器IP，注册源端时必选，更新非必选
     *
     * @return string
     */
@@ -679,7 +679,7 @@ class TargetServer implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string $ip 源端服务器IP，注册源端时必选，更新非必选
+    * @param string $ip 服务器IP，注册源端时必选，更新非必选
     *
     * @return $this
     */
@@ -691,7 +691,7 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  用来区分不同源端服务器的名称
+    *  用来区分不同服务器的名称
     *
     * @return string
     */
@@ -703,7 +703,7 @@ class TargetServer implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 用来区分不同源端服务器的名称
+    * @param string $name 用来区分不同服务器的名称
     *
     * @return $this
     */
@@ -715,7 +715,7 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostname
-    *  源端主机名，注册源端必选，更新非必选
+    *  主机名，注册源端必选，更新非必选
     *
     * @return string|null
     */
@@ -727,7 +727,7 @@ class TargetServer implements ModelInterface, ArrayAccess
     /**
     * Sets hostname
     *
-    * @param string|null $hostname 源端主机名，注册源端必选，更新非必选
+    * @param string|null $hostname 主机名，注册源端必选，更新非必选
     *
     * @return $this
     */
@@ -739,7 +739,7 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
+    *  服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     *
     * @return string
     */
@@ -751,7 +751,7 @@ class TargetServer implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string $osType 源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
+    * @param string $osType 服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     *
     * @return $this
     */
@@ -787,7 +787,7 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets firmware
-    *  源端服务器启动类型，如BIOS或者UEFI
+    *  服务器启动类型，如BIOS或者UEFI
     *
     * @return string|null
     */
@@ -799,7 +799,7 @@ class TargetServer implements ModelInterface, ArrayAccess
     /**
     * Sets firmware
     *
-    * @param string|null $firmware 源端服务器启动类型，如BIOS或者UEFI
+    * @param string|null $firmware 服务器启动类型，如BIOS或者UEFI
     *
     * @return $this
     */
@@ -859,7 +859,7 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets btrfsList
-    *  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
+    *  Linux 必选，服务器的Btrfs信息。如果不存在Btrfs，则为[]
     *
     * @return \HuaweiCloud\SDK\Sms\V3\Model\BtrfsFileSystem[]|null
     */
@@ -871,7 +871,7 @@ class TargetServer implements ModelInterface, ArrayAccess
     /**
     * Sets btrfsList
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\BtrfsFileSystem[]|null $btrfsList Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\BtrfsFileSystem[]|null $btrfsList Linux 必选，服务器的Btrfs信息。如果不存在Btrfs，则为[]
     *
     * @return $this
     */
@@ -883,7 +883,7 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets networks
-    *  源端服务器的网卡信息
+    *  服务器的网卡信息
     *
     * @return \HuaweiCloud\SDK\Sms\V3\Model\NetWork[]|null
     */
@@ -895,7 +895,7 @@ class TargetServer implements ModelInterface, ArrayAccess
     /**
     * Sets networks
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\NetWork[]|null $networks 源端服务器的网卡信息
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\NetWork[]|null $networks 服务器的网卡信息
     *
     * @return $this
     */

@@ -20,15 +20,15 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  事件配置ID
-    * name  事件配置定义名称
-    * displayName  事件配置显示名称
-    * description  事件配置描述
-    * subject  事件主题
-    * category  事件类别
-    * severity  事件级别
-    * sourceType  事件源类型
-    * nameSpace  所属服务
+    * id  **参数解释**： 事件配置ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 事件配置定义名称。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
+    * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  事件配置ID
-    * name  事件配置定义名称
-    * displayName  事件配置显示名称
-    * description  事件配置描述
-    * subject  事件主题
-    * category  事件类别
-    * severity  事件级别
-    * sourceType  事件源类型
-    * nameSpace  所属服务
+    * id  **参数解释**： 事件配置ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 事件配置定义名称。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
+    * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  事件配置ID
-    * name  事件配置定义名称
-    * displayName  事件配置显示名称
-    * description  事件配置描述
-    * subject  事件主题
-    * category  事件类别
-    * severity  事件级别
-    * sourceType  事件源类型
-    * nameSpace  所属服务
+    * id  **参数解释**： 事件配置ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 事件配置定义名称。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
+    * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  事件配置ID
-    * name  事件配置定义名称
-    * displayName  事件配置显示名称
-    * description  事件配置描述
-    * subject  事件主题
-    * category  事件类别
-    * severity  事件级别
-    * sourceType  事件源类型
-    * nameSpace  所属服务
+    * id  **参数解释**： 事件配置ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 事件配置定义名称。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
+    * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  事件配置ID
-    * name  事件配置定义名称
-    * displayName  事件配置显示名称
-    * description  事件配置描述
-    * subject  事件主题
-    * category  事件类别
-    * severity  事件级别
-    * sourceType  事件源类型
-    * nameSpace  所属服务
+    * id  **参数解释**： 事件配置ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 事件配置定义名称。 **取值范围**： 不涉及。
+    * displayName  **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
+    * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  事件配置ID
+    *  **参数解释**： 事件配置ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 事件配置ID
+    * @param string|null $id **参数解释**： 事件配置ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  事件配置定义名称
+    *  **参数解释**： 事件配置定义名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 事件配置定义名称
+    * @param string|null $name **参数解释**： 事件配置定义名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
-    *  事件配置显示名称
+    *  **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 事件配置显示名称
+    * @param string|null $displayName **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  事件配置描述
+    *  **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 事件配置描述
+    * @param string|null $description **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subject
-    *  事件主题
+    *  **参数解释**： 事件主题。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subject
     *
-    * @param string|null $subject 事件主题
+    * @param string|null $subject **参数解释**： 事件主题。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  事件类别
+    *  **参数解释**： 事件类别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 事件类别
+    * @param string|null $category **参数解释**： 事件类别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  事件级别
+    *  **参数解释**： 事件级别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -418,7 +418,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 事件级别
+    * @param string|null $severity **参数解释**： 事件级别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  事件源类型
+    *  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param string|null $sourceType 事件源类型
+    * @param string|null $sourceType **参数解释**： 事件源类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameSpace
-    *  所属服务
+    *  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nameSpace
     *
-    * @param string|null $nameSpace 所属服务
+    * @param string|null $nameSpace **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -20,13 +20,13 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dbName  数据库名称。
-    * schemaName  schema名称。
-    * tableName  表名。
-    * tableOwner  所属用户。
-    * tableSize  表大小。
-    * skewRate  表倾斜率。
-    * dirtyPageRate  脏页率。
+    * dbName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * schemaName  **参数解释**： 模式名称。 **取值范围**： 不涉及。
+    * tableName  **参数解释**： 表名。 **取值范围**： 不涉及。
+    * tableOwner  **参数解释**： 所属用户。 **取值范围**： 不涉及。
+    * tableSize  **参数解释**： 表大小。 **取值范围**： 不涉及。
+    * skewRate  **参数解释**： 表倾斜率。 **取值范围**： 不涉及。
+    * dirtyPageRate  **参数解释**： 脏页率。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dbName  数据库名称。
-    * schemaName  schema名称。
-    * tableName  表名。
-    * tableOwner  所属用户。
-    * tableSize  表大小。
-    * skewRate  表倾斜率。
-    * dirtyPageRate  脏页率。
+    * dbName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * schemaName  **参数解释**： 模式名称。 **取值范围**： 不涉及。
+    * tableName  **参数解释**： 表名。 **取值范围**： 不涉及。
+    * tableOwner  **参数解释**： 所属用户。 **取值范围**： 不涉及。
+    * tableSize  **参数解释**： 表大小。 **取值范围**： 不涉及。
+    * skewRate  **参数解释**： 表倾斜率。 **取值范围**： 不涉及。
+    * dirtyPageRate  **参数解释**： 脏页率。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dbName  数据库名称。
-    * schemaName  schema名称。
-    * tableName  表名。
-    * tableOwner  所属用户。
-    * tableSize  表大小。
-    * skewRate  表倾斜率。
-    * dirtyPageRate  脏页率。
+    * dbName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * schemaName  **参数解释**： 模式名称。 **取值范围**： 不涉及。
+    * tableName  **参数解释**： 表名。 **取值范围**： 不涉及。
+    * tableOwner  **参数解释**： 所属用户。 **取值范围**： 不涉及。
+    * tableSize  **参数解释**： 表大小。 **取值范围**： 不涉及。
+    * skewRate  **参数解释**： 表倾斜率。 **取值范围**： 不涉及。
+    * dirtyPageRate  **参数解释**： 脏页率。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dbName  数据库名称。
-    * schemaName  schema名称。
-    * tableName  表名。
-    * tableOwner  所属用户。
-    * tableSize  表大小。
-    * skewRate  表倾斜率。
-    * dirtyPageRate  脏页率。
+    * dbName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * schemaName  **参数解释**： 模式名称。 **取值范围**： 不涉及。
+    * tableName  **参数解释**： 表名。 **取值范围**： 不涉及。
+    * tableOwner  **参数解释**： 所属用户。 **取值范围**： 不涉及。
+    * tableSize  **参数解释**： 表大小。 **取值范围**： 不涉及。
+    * skewRate  **参数解释**： 表倾斜率。 **取值范围**： 不涉及。
+    * dirtyPageRate  **参数解释**： 脏页率。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dbName  数据库名称。
-    * schemaName  schema名称。
-    * tableName  表名。
-    * tableOwner  所属用户。
-    * tableSize  表大小。
-    * skewRate  表倾斜率。
-    * dirtyPageRate  脏页率。
+    * dbName  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
+    * schemaName  **参数解释**： 模式名称。 **取值范围**： 不涉及。
+    * tableName  **参数解释**： 表名。 **取值范围**： 不涉及。
+    * tableOwner  **参数解释**： 所属用户。 **取值范围**： 不涉及。
+    * tableSize  **参数解释**： 表大小。 **取值范围**： 不涉及。
+    * skewRate  **参数解释**： 表倾斜率。 **取值范围**： 不涉及。
+    * dirtyPageRate  **参数解释**： 脏页率。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbName
-    *  数据库名称。
+    *  **参数解释**： 数据库名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
     /**
     * Sets dbName
     *
-    * @param string|null $dbName 数据库名称。
+    * @param string|null $dbName **参数解释**： 数据库名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets schemaName
-    *  schema名称。
+    *  **参数解释**： 模式名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
     /**
     * Sets schemaName
     *
-    * @param string|null $schemaName schema名称。
+    * @param string|null $schemaName **参数解释**： 模式名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableName
-    *  表名。
+    *  **参数解释**： 表名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
     /**
     * Sets tableName
     *
-    * @param string|null $tableName 表名。
+    * @param string|null $tableName **参数解释**： 表名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableOwner
-    *  所属用户。
+    *  **参数解释**： 所属用户。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
     /**
     * Sets tableOwner
     *
-    * @param string|null $tableOwner 所属用户。
+    * @param string|null $tableOwner **参数解释**： 所属用户。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableSize
-    *  表大小。
+    *  **参数解释**： 表大小。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
     /**
     * Sets tableSize
     *
-    * @param string|null $tableSize 表大小。
+    * @param string|null $tableSize **参数解释**： 表大小。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets skewRate
-    *  表倾斜率。
+    *  **参数解释**： 表倾斜率。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -372,7 +372,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
     /**
     * Sets skewRate
     *
-    * @param double|null $skewRate 表倾斜率。
+    * @param double|null $skewRate **参数解释**： 表倾斜率。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets dirtyPageRate
-    *  脏页率。
+    *  **参数解释**： 脏页率。 **取值范围**： 不涉及。
     *
     * @return double|null
     */
@@ -396,7 +396,7 @@ class ListTablesStatisticDto implements ModelInterface, ArrayAccess
     /**
     * Sets dirtyPageRate
     *
-    * @param double|null $dirtyPageRate 脏页率。
+    * @param double|null $dirtyPageRate **参数解释**： 脏页率。 **取值范围**： 不涉及。
     *
     * @return $this
     */

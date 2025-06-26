@@ -20,17 +20,17 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  告警订阅ID
-    * name  告警订阅名称
-    * enable  是否开启订阅
-    * alarmLevel  告警级别
-    * projectId  租户凭证ID
-    * nameSpace  所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
-    * notificationTarget  消息主题地址
-    * notificationTargetName  消息主题名称
-    * notificationTargetType  消息主题类型
-    * language  语言
-    * timeZone  时区
+    * id  **参数解释**： 告警订阅ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 告警订阅名称。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  告警订阅ID
-    * name  告警订阅名称
-    * enable  是否开启订阅
-    * alarmLevel  告警级别
-    * projectId  租户凭证ID
-    * nameSpace  所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
-    * notificationTarget  消息主题地址
-    * notificationTargetName  消息主题名称
-    * notificationTargetType  消息主题类型
-    * language  语言
-    * timeZone  时区
+    * id  **参数解释**： 告警订阅ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 告警订阅名称。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  告警订阅ID
-    * name  告警订阅名称
-    * enable  是否开启订阅
-    * alarmLevel  告警级别
-    * projectId  租户凭证ID
-    * nameSpace  所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
-    * notificationTarget  消息主题地址
-    * notificationTargetName  消息主题名称
-    * notificationTargetType  消息主题类型
-    * language  语言
-    * timeZone  时区
+    * id  **参数解释**： 告警订阅ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 告警订阅名称。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  告警订阅ID
-    * name  告警订阅名称
-    * enable  是否开启订阅
-    * alarmLevel  告警级别
-    * projectId  租户凭证ID
-    * nameSpace  所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
-    * notificationTarget  消息主题地址
-    * notificationTargetName  消息主题名称
-    * notificationTargetType  消息主题类型
-    * language  语言
-    * timeZone  时区
+    * id  **参数解释**： 告警订阅ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 告警订阅名称。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  告警订阅ID
-    * name  告警订阅名称
-    * enable  是否开启订阅
-    * alarmLevel  告警级别
-    * projectId  租户凭证ID
-    * nameSpace  所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
-    * notificationTarget  消息主题地址
-    * notificationTargetName  消息主题名称
-    * notificationTargetType  消息主题类型
-    * language  语言
-    * timeZone  时区
+    * id  **参数解释**： 告警订阅ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 告警订阅名称。 **取值范围**： 不涉及。
+    * enable  **参数解释**： 是否开启订阅。 **取值范围**： 不涉及。
+    * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
+    * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
+    * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
+    * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -284,7 +284,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  告警订阅ID
+    *  **参数解释**： 告警订阅ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -296,7 +296,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 告警订阅ID
+    * @param string|null $id **参数解释**： 告警订阅ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  告警订阅名称
+    *  **参数解释**： 告警订阅名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 告警订阅名称
+    * @param string|null $name **参数解释**： 告警订阅名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  是否开启订阅
+    *  **参数解释**： 是否开启订阅。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -344,7 +344,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param int|null $enable 是否开启订阅
+    * @param int|null $enable **参数解释**： 是否开启订阅。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmLevel
-    *  告警级别
+    *  **参数解释**： 告警级别。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmLevel
     *
-    * @param string|null $alarmLevel 告警级别
+    * @param string|null $alarmLevel **参数解释**： 告警级别。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  租户凭证ID
+    *  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 租户凭证ID
+    * @param string|null $projectId **参数解释**： 项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameSpace
-    *  所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
+    *  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -416,7 +416,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nameSpace
     *
-    * @param string|null $nameSpace 所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
+    * @param string|null $nameSpace **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTarget
-    *  消息主题地址
+    *  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTarget
     *
-    * @param string|null $notificationTarget 消息主题地址
+    * @param string|null $notificationTarget **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTargetName
-    *  消息主题名称
+    *  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -464,7 +464,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTargetName
     *
-    * @param string|null $notificationTargetName 消息主题名称
+    * @param string|null $notificationTargetName **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -476,7 +476,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTargetType
-    *  消息主题类型
+    *  **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -488,7 +488,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTargetType
     *
-    * @param string|null $notificationTargetType 消息主题类型
+    * @param string|null $notificationTargetType **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -500,7 +500,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  语言
+    *  **参数解释**： 语言。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -512,7 +512,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 语言
+    * @param string|null $language **参数解释**： 语言。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeZone
-    *  时区
+    *  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -536,7 +536,7 @@ class AlarmSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets timeZone
     *
-    * @param string|null $timeZone 时区
+    * @param string|null $timeZone **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @return $this
     */

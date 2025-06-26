@@ -20,17 +20,17 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  弹性负载均衡ID
+    * id  **参数解释**： 弹性负载均衡ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * name  弹性负载均衡名称
-    * description  弹性负载均衡描述
-    * vipAddress  弹性负载均衡地址
-    * vipSubnetId  子网ID
-    * tenantId  租户ID
-    * type  弹性负载均衡类型。枚举值：Internal,External
-    * adminStateUp  弹性负载均衡的管理状态。枚举值：ACTIVE,PENDING_CREATE,ERROR
-    * bandwidth  绑定状态： 0为未绑定，1为已绑定
-    * vpcId  虚拟私有云ID
+    * name  **参数解释**： 弹性负载均衡名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 弹性负载均衡描述。 **取值范围**： 不涉及。
+    * vipAddress  **参数解释**： 弹性负载均衡地址。 **取值范围**： 不涉及。
+    * vipSubnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * tenantId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 弹性负载均衡类型。 **取值范围**： Internal：独享型。 External：共享型。
+    * adminStateUp  **参数解释**： 弹性负载均衡的管理状态。 **取值范围**： ACTIVE：使用中 PENDING_CREATE：创建中 ERROR：表示当前策略与同一监听器下的其他策略存在相同的规格配置。
+    * bandwidth  **参数解释**： 带宽信息。 **取值范围**： 大于等于0的正整数。
+    * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  弹性负载均衡ID
+    * id  **参数解释**： 弹性负载均衡ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * name  弹性负载均衡名称
-    * description  弹性负载均衡描述
-    * vipAddress  弹性负载均衡地址
-    * vipSubnetId  子网ID
-    * tenantId  租户ID
-    * type  弹性负载均衡类型。枚举值：Internal,External
-    * adminStateUp  弹性负载均衡的管理状态。枚举值：ACTIVE,PENDING_CREATE,ERROR
-    * bandwidth  绑定状态： 0为未绑定，1为已绑定
-    * vpcId  虚拟私有云ID
+    * name  **参数解释**： 弹性负载均衡名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 弹性负载均衡描述。 **取值范围**： 不涉及。
+    * vipAddress  **参数解释**： 弹性负载均衡地址。 **取值范围**： 不涉及。
+    * vipSubnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * tenantId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 弹性负载均衡类型。 **取值范围**： Internal：独享型。 External：共享型。
+    * adminStateUp  **参数解释**： 弹性负载均衡的管理状态。 **取值范围**： ACTIVE：使用中 PENDING_CREATE：创建中 ERROR：表示当前策略与同一监听器下的其他策略存在相同的规格配置。
+    * bandwidth  **参数解释**： 带宽信息。 **取值范围**： 大于等于0的正整数。
+    * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  弹性负载均衡ID
+    * id  **参数解释**： 弹性负载均衡ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * name  弹性负载均衡名称
-    * description  弹性负载均衡描述
-    * vipAddress  弹性负载均衡地址
-    * vipSubnetId  子网ID
-    * tenantId  租户ID
-    * type  弹性负载均衡类型。枚举值：Internal,External
-    * adminStateUp  弹性负载均衡的管理状态。枚举值：ACTIVE,PENDING_CREATE,ERROR
-    * bandwidth  绑定状态： 0为未绑定，1为已绑定
-    * vpcId  虚拟私有云ID
+    * name  **参数解释**： 弹性负载均衡名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 弹性负载均衡描述。 **取值范围**： 不涉及。
+    * vipAddress  **参数解释**： 弹性负载均衡地址。 **取值范围**： 不涉及。
+    * vipSubnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * tenantId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 弹性负载均衡类型。 **取值范围**： Internal：独享型。 External：共享型。
+    * adminStateUp  **参数解释**： 弹性负载均衡的管理状态。 **取值范围**： ACTIVE：使用中 PENDING_CREATE：创建中 ERROR：表示当前策略与同一监听器下的其他策略存在相同的规格配置。
+    * bandwidth  **参数解释**： 带宽信息。 **取值范围**： 大于等于0的正整数。
+    * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  弹性负载均衡ID
+    * id  **参数解释**： 弹性负载均衡ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * name  弹性负载均衡名称
-    * description  弹性负载均衡描述
-    * vipAddress  弹性负载均衡地址
-    * vipSubnetId  子网ID
-    * tenantId  租户ID
-    * type  弹性负载均衡类型。枚举值：Internal,External
-    * adminStateUp  弹性负载均衡的管理状态。枚举值：ACTIVE,PENDING_CREATE,ERROR
-    * bandwidth  绑定状态： 0为未绑定，1为已绑定
-    * vpcId  虚拟私有云ID
+    * name  **参数解释**： 弹性负载均衡名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 弹性负载均衡描述。 **取值范围**： 不涉及。
+    * vipAddress  **参数解释**： 弹性负载均衡地址。 **取值范围**： 不涉及。
+    * vipSubnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * tenantId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 弹性负载均衡类型。 **取值范围**： Internal：独享型。 External：共享型。
+    * adminStateUp  **参数解释**： 弹性负载均衡的管理状态。 **取值范围**： ACTIVE：使用中 PENDING_CREATE：创建中 ERROR：表示当前策略与同一监听器下的其他策略存在相同的规格配置。
+    * bandwidth  **参数解释**： 带宽信息。 **取值范围**： 大于等于0的正整数。
+    * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  弹性负载均衡ID
+    * id  **参数解释**： 弹性负载均衡ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * name  弹性负载均衡名称
-    * description  弹性负载均衡描述
-    * vipAddress  弹性负载均衡地址
-    * vipSubnetId  子网ID
-    * tenantId  租户ID
-    * type  弹性负载均衡类型。枚举值：Internal,External
-    * adminStateUp  弹性负载均衡的管理状态。枚举值：ACTIVE,PENDING_CREATE,ERROR
-    * bandwidth  绑定状态： 0为未绑定，1为已绑定
-    * vpcId  虚拟私有云ID
+    * name  **参数解释**： 弹性负载均衡名称。 **取值范围**： 不涉及。
+    * description  **参数解释**： 弹性负载均衡描述。 **取值范围**： 不涉及。
+    * vipAddress  **参数解释**： 弹性负载均衡地址。 **取值范围**： 不涉及。
+    * vipSubnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * tenantId  **参数解释**： 租户ID。 **取值范围**： 不涉及。
+    * type  **参数解释**： 弹性负载均衡类型。 **取值范围**： Internal：独享型。 External：共享型。
+    * adminStateUp  **参数解释**： 弹性负载均衡的管理状态。 **取值范围**： ACTIVE：使用中 PENDING_CREATE：创建中 ERROR：表示当前策略与同一监听器下的其他策略存在相同的规格配置。
+    * bandwidth  **参数解释**： 带宽信息。 **取值范围**： 大于等于0的正整数。
+    * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -284,7 +284,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  弹性负载均衡ID
+    *  **参数解释**： 弹性负载均衡ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -296,7 +296,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 弹性负载均衡ID
+    * @param string|null $id **参数解释**： 弹性负载均衡ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  弹性负载均衡名称
+    *  **参数解释**： 弹性负载均衡名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 弹性负载均衡名称
+    * @param string|null $name **参数解释**： 弹性负载均衡名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  弹性负载均衡描述
+    *  **参数解释**： 弹性负载均衡描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 弹性负载均衡描述
+    * @param string|null $description **参数解释**： 弹性负载均衡描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vipAddress
-    *  弹性负载均衡地址
+    *  **参数解释**： 弹性负载均衡地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vipAddress
     *
-    * @param string|null $vipAddress 弹性负载均衡地址
+    * @param string|null $vipAddress **参数解释**： 弹性负载均衡地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vipSubnetId
-    *  子网ID
+    *  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -416,7 +416,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vipSubnetId
     *
-    * @param string|null $vipSubnetId 子网ID
+    * @param string|null $vipSubnetId **参数解释**： 子网ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
-    *  租户ID
+    *  **参数解释**： 租户ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId 租户ID
+    * @param string|null $tenantId **参数解释**： 租户ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  弹性负载均衡类型。枚举值：Internal,External
+    *  **参数解释**： 弹性负载均衡类型。 **取值范围**： Internal：独享型。 External：共享型。
     *
     * @return string|null
     */
@@ -464,7 +464,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 弹性负载均衡类型。枚举值：Internal,External
+    * @param string|null $type **参数解释**： 弹性负载均衡类型。 **取值范围**： Internal：独享型。 External：共享型。
     *
     * @return $this
     */
@@ -476,7 +476,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
-    *  弹性负载均衡的管理状态。枚举值：ACTIVE,PENDING_CREATE,ERROR
+    *  **参数解释**： 弹性负载均衡的管理状态。 **取值范围**： ACTIVE：使用中 PENDING_CREATE：创建中 ERROR：表示当前策略与同一监听器下的其他策略存在相同的规格配置。
     *
     * @return bool|null
     */
@@ -488,7 +488,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Sets adminStateUp
     *
-    * @param bool|null $adminStateUp 弹性负载均衡的管理状态。枚举值：ACTIVE,PENDING_CREATE,ERROR
+    * @param bool|null $adminStateUp **参数解释**： 弹性负载均衡的管理状态。 **取值范围**： ACTIVE：使用中 PENDING_CREATE：创建中 ERROR：表示当前策略与同一监听器下的其他策略存在相同的规格配置。
     *
     * @return $this
     */
@@ -500,7 +500,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidth
-    *  绑定状态： 0为未绑定，1为已绑定
+    *  **参数解释**： 带宽信息。 **取值范围**： 大于等于0的正整数。
     *
     * @return int|null
     */
@@ -512,7 +512,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidth
     *
-    * @param int|null $bandwidth 绑定状态： 0为未绑定，1为已绑定
+    * @param int|null $bandwidth **参数解释**： 带宽信息。 **取值范围**： 大于等于0的正整数。
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  虚拟私有云ID
+    *  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -536,7 +536,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId 虚拟私有云ID
+    * @param string|null $vpcId **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -479,6 +479,12 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['agentDiskIo']) && ($this->container['agentDiskIo'] < 0)) {
                 $invalidProperties[] = "invalid value for 'agentDiskIo', must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['agentTime']) && (mb_strlen($this->container['agentTime']) > 30)) {
+                $invalidProperties[] = "invalid value for 'agentTime', the character length must be smaller than or equal to 30.";
+            }
+            if (!is_null($this->container['agentTime']) && (mb_strlen($this->container['agentTime']) < 0)) {
+                $invalidProperties[] = "invalid value for 'agentTime', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

@@ -20,11 +20,11 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * destinationProjectId  目的项目ID
-    * destinationRegion  目的区域
-    * status  状态
-    * backKeepDay  保留天数
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * destinationProjectId  **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
+    * destinationRegion  **参数解释**： 目的区域。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * backKeepDay  **参数解释**： 保留天数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * destinationProjectId  目的项目ID
-    * destinationRegion  目的区域
-    * status  状态
-    * backKeepDay  保留天数
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * destinationProjectId  **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
+    * destinationRegion  **参数解释**： 目的区域。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * backKeepDay  **参数解释**： 保留天数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * destinationProjectId  目的项目ID
-    * destinationRegion  目的区域
-    * status  状态
-    * backKeepDay  保留天数
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * destinationProjectId  **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
+    * destinationRegion  **参数解释**： 目的区域。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * backKeepDay  **参数解释**： 保留天数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * destinationProjectId  目的项目ID
-    * destinationRegion  目的区域
-    * status  状态
-    * backKeepDay  保留天数
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * destinationProjectId  **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
+    * destinationRegion  **参数解释**： 目的区域。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * backKeepDay  **参数解释**： 保留天数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
-    * destinationProjectId  目的项目ID
-    * destinationRegion  目的区域
-    * status  状态
-    * backKeepDay  保留天数
+    * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * destinationProjectId  **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
+    * destinationRegion  **参数解释**： 目的区域。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * backKeepDay  **参数解释**： 保留天数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -233,7 +233,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets clusterId
-    *  **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    *  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets clusterId
     *
-    * @param string $clusterId **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+    * @param string $clusterId **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -257,7 +257,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets destinationProjectId
-    *  目的项目ID
+    *  **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -269,7 +269,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets destinationProjectId
     *
-    * @param string $destinationProjectId 目的项目ID
+    * @param string $destinationProjectId **参数解释**： 目的项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -281,7 +281,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets destinationRegion
-    *  目的区域
+    *  **参数解释**： 目的区域。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -293,7 +293,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets destinationRegion
     *
-    * @param string $destinationRegion 目的区域
+    * @param string $destinationRegion **参数解释**： 目的区域。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return bool
     */
@@ -317,7 +317,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets status
     *
-    * @param bool $status 状态
+    * @param bool $status **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets backKeepDay
-    *  保留天数
+    *  **参数解释**： 保留天数。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -341,7 +341,7 @@ class AddSnapshotCrossRegionPolicyRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets backKeepDay
     *
-    * @param int $backKeepDay 保留天数
+    * @param int $backKeepDay **参数解释**： 保留天数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

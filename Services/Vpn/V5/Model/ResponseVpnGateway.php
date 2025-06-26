@@ -49,6 +49,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * eip1  eip1
     * eip2  eip2
     * createdAt  创建时间
+    * appliedAt  生效时间
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
     * supportedFlavors  网关可升配到的目标规格
@@ -87,6 +88,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'eip1' => '\HuaweiCloud\SDK\Vpn\V5\Model\ResponseEip',
             'eip2' => '\HuaweiCloud\SDK\Vpn\V5\Model\ResponseEip',
             'createdAt' => '\DateTime',
+            'appliedAt' => '\DateTime',
             'updatedAt' => '\DateTime',
             'policyTemplate' => '\HuaweiCloud\SDK\Vpn\V5\Model\PolicyTemplate',
             'supportedFlavors' => 'string[]',
@@ -125,6 +127,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * eip1  eip1
     * eip2  eip2
     * createdAt  创建时间
+    * appliedAt  生效时间
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
     * supportedFlavors  网关可升配到的目标规格
@@ -163,6 +166,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
         'eip1' => null,
         'eip2' => null,
         'createdAt' => 'date-time',
+        'appliedAt' => 'date-time',
         'updatedAt' => 'date-time',
         'policyTemplate' => null,
         'supportedFlavors' => null,
@@ -222,6 +226,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * eip1  eip1
     * eip2  eip2
     * createdAt  创建时间
+    * appliedAt  生效时间
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
     * supportedFlavors  网关可升配到的目标规格
@@ -260,6 +265,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'eip1' => 'eip1',
             'eip2' => 'eip2',
             'createdAt' => 'created_at',
+            'appliedAt' => 'applied_at',
             'updatedAt' => 'updated_at',
             'policyTemplate' => 'policy_template',
             'supportedFlavors' => 'supported_flavors',
@@ -298,6 +304,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * eip1  eip1
     * eip2  eip2
     * createdAt  创建时间
+    * appliedAt  生效时间
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
     * supportedFlavors  网关可升配到的目标规格
@@ -336,6 +343,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'eip1' => 'setEip1',
             'eip2' => 'setEip2',
             'createdAt' => 'setCreatedAt',
+            'appliedAt' => 'setAppliedAt',
             'updatedAt' => 'setUpdatedAt',
             'policyTemplate' => 'setPolicyTemplate',
             'supportedFlavors' => 'setSupportedFlavors',
@@ -374,6 +382,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     * eip1  eip1
     * eip2  eip2
     * createdAt  创建时间
+    * appliedAt  生效时间
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
     * supportedFlavors  网关可升配到的目标规格
@@ -412,6 +421,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
             'eip1' => 'getEip1',
             'eip2' => 'getEip2',
             'createdAt' => 'getCreatedAt',
+            'appliedAt' => 'getAppliedAt',
             'updatedAt' => 'getUpdatedAt',
             'policyTemplate' => 'getPolicyTemplate',
             'supportedFlavors' => 'getSupportedFlavors',
@@ -551,6 +561,7 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
         $this->container['eip1'] = isset($data['eip1']) ? $data['eip1'] : null;
         $this->container['eip2'] = isset($data['eip2']) ? $data['eip2'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['appliedAt'] = isset($data['appliedAt']) ? $data['appliedAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['policyTemplate'] = isset($data['policyTemplate']) ? $data['policyTemplate'] : null;
         $this->container['supportedFlavors'] = isset($data['supportedFlavors']) ? $data['supportedFlavors'] : null;
@@ -1339,6 +1350,30 @@ class ResponseVpnGateway implements ModelInterface, ArrayAccess
     public function setCreatedAt($createdAt)
     {
         $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets appliedAt
+    *  生效时间
+    *
+    * @return \DateTime|null
+    */
+    public function getAppliedAt()
+    {
+        return $this->container['appliedAt'];
+    }
+
+    /**
+    * Sets appliedAt
+    *
+    * @param \DateTime|null $appliedAt 生效时间
+    *
+    * @return $this
+    */
+    public function setAppliedAt($appliedAt)
+    {
+        $this->container['appliedAt'] = $appliedAt;
         return $this;
     }
 

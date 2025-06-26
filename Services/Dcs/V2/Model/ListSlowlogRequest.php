@@ -27,6 +27,7 @@ class ListSlowlogRequest implements ModelInterface, ArrayAccess
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）
     * startTime  查询开始时间，时间为UTC时间的Unix时间戳。如：1598803200000。
     * endTime  查询结束时间，时间为UTC时间的Unix时间戳。如：1599494399000。
+    * role  查询节点，分为proxy和server。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ListSlowlogRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'string',
             'sortDir' => 'string',
             'startTime' => 'string',
-            'endTime' => 'string'
+            'endTime' => 'string',
+            'role' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ListSlowlogRequest implements ModelInterface, ArrayAccess
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）
     * startTime  查询开始时间，时间为UTC时间的Unix时间戳。如：1598803200000。
     * endTime  查询结束时间，时间为UTC时间的Unix时间戳。如：1599494399000。
+    * role  查询节点，分为proxy和server。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListSlowlogRequest implements ModelInterface, ArrayAccess
         'sortKey' => null,
         'sortDir' => null,
         'startTime' => null,
-        'endTime' => null
+        'endTime' => null,
+        'role' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ListSlowlogRequest implements ModelInterface, ArrayAccess
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）
     * startTime  查询开始时间，时间为UTC时间的Unix时间戳。如：1598803200000。
     * endTime  查询结束时间，时间为UTC时间的Unix时间戳。如：1599494399000。
+    * role  查询节点，分为proxy和server。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ListSlowlogRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
             'startTime' => 'start_time',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'role' => 'role'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ListSlowlogRequest implements ModelInterface, ArrayAccess
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）
     * startTime  查询开始时间，时间为UTC时间的Unix时间戳。如：1598803200000。
     * endTime  查询结束时间，时间为UTC时间的Unix时间戳。如：1599494399000。
+    * role  查询节点，分为proxy和server。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ListSlowlogRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
             'startTime' => 'setStartTime',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'role' => 'setRole'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ListSlowlogRequest implements ModelInterface, ArrayAccess
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）
     * startTime  查询开始时间，时间为UTC时间的Unix时间戳。如：1598803200000。
     * endTime  查询结束时间，时间为UTC时间的Unix时间戳。如：1599494399000。
+    * role  查询节点，分为proxy和server。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListSlowlogRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
             'startTime' => 'getStartTime',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'role' => 'getRole'
     ];
 
     /**
@@ -244,6 +254,7 @@ class ListSlowlogRequest implements ModelInterface, ArrayAccess
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
     }
 
     /**
@@ -458,6 +469,30 @@ class ListSlowlogRequest implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets role
+    *  查询节点，分为proxy和server。
+    *
+    * @return string|null
+    */
+    public function getRole()
+    {
+        return $this->container['role'];
+    }
+
+    /**
+    * Sets role
+    *
+    * @param string|null $role 查询节点，分为proxy和server。
+    *
+    * @return $this
+    */
+    public function setRole($role)
+    {
+        $this->container['role'] = $role;
         return $this;
     }
 

@@ -20,11 +20,11 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policyId  策略ID。
-    * policyName  策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。
-    * backupStrategy  执行策略。添加备份策略时为必选字段。符合Cron表达式格式。
-    * backupType  备份类型： - full：全量。 - increment：增量。
-    * backupLevel  备份级别： - cluster：集群级。
+    * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
+    * policyName  **参数解释**： 策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。 **取值范围**： 不涉及。
+    * backupStrategy  **参数解释**： 执行策略。添加备份策略时为必选字段。符合Cron表达式格式。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： full：全量。 increment：增量。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policyId  策略ID。
-    * policyName  策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。
-    * backupStrategy  执行策略。添加备份策略时为必选字段。符合Cron表达式格式。
-    * backupType  备份类型： - full：全量。 - increment：增量。
-    * backupLevel  备份级别： - cluster：集群级。
+    * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
+    * policyName  **参数解释**： 策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。 **取值范围**： 不涉及。
+    * backupStrategy  **参数解释**： 执行策略。添加备份策略时为必选字段。符合Cron表达式格式。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： full：全量。 increment：增量。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policyId  策略ID。
-    * policyName  策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。
-    * backupStrategy  执行策略。添加备份策略时为必选字段。符合Cron表达式格式。
-    * backupType  备份类型： - full：全量。 - increment：增量。
-    * backupLevel  备份级别： - cluster：集群级。
+    * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
+    * policyName  **参数解释**： 策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。 **取值范围**： 不涉及。
+    * backupStrategy  **参数解释**： 执行策略。添加备份策略时为必选字段。符合Cron表达式格式。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： full：全量。 increment：增量。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policyId  策略ID。
-    * policyName  策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。
-    * backupStrategy  执行策略。添加备份策略时为必选字段。符合Cron表达式格式。
-    * backupType  备份类型： - full：全量。 - increment：增量。
-    * backupLevel  备份级别： - cluster：集群级。
+    * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
+    * policyName  **参数解释**： 策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。 **取值范围**： 不涉及。
+    * backupStrategy  **参数解释**： 执行策略。添加备份策略时为必选字段。符合Cron表达式格式。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： full：全量。 increment：增量。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policyId  策略ID。
-    * policyName  策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。
-    * backupStrategy  执行策略。添加备份策略时为必选字段。符合Cron表达式格式。
-    * backupType  备份类型： - full：全量。 - increment：增量。
-    * backupLevel  备份级别： - cluster：集群级。
+    * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
+    * policyName  **参数解释**： 策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。 **取值范围**： 不涉及。
+    * backupStrategy  **参数解释**： 执行策略。添加备份策略时为必选字段。符合Cron表达式格式。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： full：全量。 increment：增量。
+    * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyId
-    *  策略ID。
+    *  **参数解释**： 策略ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets policyId
     *
-    * @param string|null $policyId 策略ID。
+    * @param string|null $policyId **参数解释**： 策略ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyName
-    *  策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。
+    *  **参数解释**： 策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets policyName
     *
-    * @param string|null $policyName 策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。
+    * @param string|null $policyName **参数解释**： 策略名称。添加备份策略时为必选字段。策略名称在4位到92位之间，必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他特殊字符，并且名称唯一。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupStrategy
-    *  执行策略。添加备份策略时为必选字段。符合Cron表达式格式。
+    *  **参数解释**： 执行策略。添加备份策略时为必选字段。符合Cron表达式格式。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets backupStrategy
     *
-    * @param string|null $backupStrategy 执行策略。添加备份策略时为必选字段。符合Cron表达式格式。
+    * @param string|null $backupStrategy **参数解释**： 执行策略。添加备份策略时为必选字段。符合Cron表达式格式。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupType
-    *  备份类型： - full：全量。 - increment：增量。
+    *  **参数解释**： 备份类型。 **取值范围**： full：全量。 increment：增量。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets backupType
     *
-    * @param string|null $backupType 备份类型： - full：全量。 - increment：增量。
+    * @param string|null $backupType **参数解释**： 备份类型。 **取值范围**： full：全量。 increment：增量。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupLevel
-    *  备份级别： - cluster：集群级。
+    *  **参数解释**： 备份级别。 **取值范围**： cluster：集群级。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class BackupStrategyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets backupLevel
     *
-    * @param string|null $backupLevel 备份级别： - cluster：集群级。
+    * @param string|null $backupLevel **参数解释**： 备份级别。 **取值范围**： cluster：集群级。
     *
     * @return $this
     */

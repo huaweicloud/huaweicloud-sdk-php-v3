@@ -21,8 +21,8 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * snapshots  快照对象列表。
-    * count  快照对象列表总数
+    * snapshots  **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * snapshots  快照对象列表。
-    * count  快照对象列表总数
+    * snapshots  **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * snapshots  快照对象列表。
-    * count  快照对象列表总数
+    * snapshots  **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * snapshots  快照对象列表。
-    * count  快照对象列表总数
+    * snapshots  **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * snapshots  快照对象列表。
-    * count  快照对象列表总数
+    * snapshots  **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshots
-    *  快照对象列表。
+    *  **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\Snapshots[]|null
     */
@@ -198,7 +198,7 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets snapshots
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\Snapshots[]|null $snapshots 快照对象列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\Snapshots[]|null $snapshots **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  快照对象列表总数
+    *  **参数解释**： 列表总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 快照对象列表总数
+    * @param int|null $count **参数解释**： 列表总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

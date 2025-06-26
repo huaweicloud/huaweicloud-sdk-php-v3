@@ -25,6 +25,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
+    * frozenOperateType  |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
             'budgetAmount' => 'double',
             'cancelPartnerFrozen' => 'string',
             'indirectPartnerId' => 'string',
-            'budgetType' => 'string'
+            'budgetType' => 'string',
+            'frozenOperateType' => 'int'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
+    * frozenOperateType  |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
         'budgetAmount' => 'double',
         'cancelPartnerFrozen' => null,
         'indirectPartnerId' => null,
-        'budgetType' => null
+        'budgetType' => null,
+        'frozenOperateType' => 'int32'
     ];
 
     /**
@@ -82,6 +86,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
+    * frozenOperateType  |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
             'budgetAmount' => 'budget_amount',
             'cancelPartnerFrozen' => 'cancel_partner_frozen',
             'indirectPartnerId' => 'indirect_partner_id',
-            'budgetType' => 'budget_type'
+            'budgetType' => 'budget_type',
+            'frozenOperateType' => 'frozen_operate_type'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
+    * frozenOperateType  |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
             'budgetAmount' => 'setBudgetAmount',
             'cancelPartnerFrozen' => 'setCancelPartnerFrozen',
             'indirectPartnerId' => 'setIndirectPartnerId',
-            'budgetType' => 'setBudgetType'
+            'budgetType' => 'setBudgetType',
+            'frozenOperateType' => 'setFrozenOperateType'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
+    * frozenOperateType  |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
             'budgetAmount' => 'getBudgetAmount',
             'cancelPartnerFrozen' => 'getCancelPartnerFrozen',
             'indirectPartnerId' => 'getIndirectPartnerId',
-            'budgetType' => 'getBudgetType'
+            'budgetType' => 'getBudgetType',
+            'frozenOperateType' => 'getFrozenOperateType'
     ];
 
     /**
@@ -207,6 +217,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
         $this->container['cancelPartnerFrozen'] = isset($data['cancelPartnerFrozen']) ? $data['cancelPartnerFrozen'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
         $this->container['budgetType'] = isset($data['budgetType']) ? $data['budgetType'] : null;
+        $this->container['frozenOperateType'] = isset($data['frozenOperateType']) ? $data['frozenOperateType'] : null;
     }
 
     /**
@@ -255,6 +266,12 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['frozenOperateType']) && ($this->container['frozenOperateType'] > 1)) {
+                $invalidProperties[] = "invalid value for 'frozenOperateType', must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['frozenOperateType']) && ($this->container['frozenOperateType'] < 0)) {
+                $invalidProperties[] = "invalid value for 'frozenOperateType', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -386,6 +403,30 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     public function setBudgetType($budgetType)
     {
         $this->container['budgetType'] = $budgetType;
+        return $this;
+    }
+
+    /**
+    * Gets frozenOperateType
+    *  |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
+    *
+    * @return int|null
+    */
+    public function getFrozenOperateType()
+    {
+        return $this->container['frozenOperateType'];
+    }
+
+    /**
+    * Sets frozenOperateType
+    *
+    * @param int|null $frozenOperateType |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
+    *
+    * @return $this
+    */
+    public function setFrozenOperateType($frozenOperateType)
+    {
+        $this->container['frozenOperateType'] = $frozenOperateType;
         return $this;
     }
 

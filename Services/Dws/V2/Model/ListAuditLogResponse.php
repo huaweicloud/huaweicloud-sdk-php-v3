@@ -21,9 +21,9 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * records  审计日志列表。
+    * records  **参数解释**： 审计日志列表。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * count  总数。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * records  审计日志列表。
+    * records  **参数解释**： 审计日志列表。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * count  总数。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * records  审计日志列表。
+    * records  **参数解释**： 审计日志列表。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * count  总数。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * records  审计日志列表。
+    * records  **参数解释**： 审计日志列表。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * count  总数。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * records  审计日志列表。
+    * records  **参数解释**： 审计日志列表。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * count  总数。
+    * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets records
-    *  审计日志列表。
+    *  **参数解释**： 审计日志列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\AuditDumpRecord[]|null
     */
@@ -209,7 +209,7 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\AuditDumpRecord[]|null $records 审计日志列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\AuditDumpRecord[]|null $records **参数解释**： 审计日志列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  总数。
+    *  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -257,7 +257,7 @@ class ListAuditLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 总数。
+    * @param int|null $count **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

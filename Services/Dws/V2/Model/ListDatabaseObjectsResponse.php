@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ecs\V2\Model;
+namespace HuaweiCloud\SDK\Dws\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowRecycleBinServerResponse implements ModelInterface, ArrayAccess
+class ListDatabaseObjectsResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,26 +17,34 @@ class ShowRecycleBinServerResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowRecycleBinServerResponse';
+    protected static $openAPIModelName = 'ListDatabaseObjectsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * server  server
+    * type  **参数解释**： 类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP
+    * objectList  **参数解释**： 对象列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 对象总条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'server' => '\HuaweiCloud\SDK\Ecs\V2\Model\ServerDetail'
+            'type' => 'string',
+            'objectList' => '\HuaweiCloud\SDK\Dws\V2\Model\DatabaseObjectInfo[]',
+            'count' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * server  server
+    * type  **参数解释**： 类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP
+    * objectList  **参数解释**： 对象列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 对象总条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'server' => null
+        'type' => null,
+        'objectList' => null,
+        'count' => null
     ];
 
     /**
@@ -62,32 +70,44 @@ class ShowRecycleBinServerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * server  server
+    * type  **参数解释**： 类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP
+    * objectList  **参数解释**： 对象列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 对象总条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'server' => 'server'
+            'type' => 'type',
+            'objectList' => 'object_list',
+            'count' => 'count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * server  server
+    * type  **参数解释**： 类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP
+    * objectList  **参数解释**： 对象列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 对象总条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'server' => 'setServer'
+            'type' => 'setType',
+            'objectList' => 'setObjectList',
+            'count' => 'setCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * server  server
+    * type  **参数解释**： 类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP
+    * objectList  **参数解释**： 对象列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 对象总条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'server' => 'getServer'
+            'type' => 'getType',
+            'objectList' => 'getObjectList',
+            'count' => 'getCount'
     ];
 
     /**
@@ -148,7 +168,9 @@ class ShowRecycleBinServerResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['server'] = isset($data['server']) ? $data['server'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['objectList'] = isset($data['objectList']) ? $data['objectList'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
     }
 
     /**
@@ -174,26 +196,74 @@ class ShowRecycleBinServerResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets server
-    *  server
+    * Gets type
+    *  **参数解释**： 类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP
     *
-    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ServerDetail|null
+    * @return string|null
     */
-    public function getServer()
+    public function getType()
     {
-        return $this->container['server'];
+        return $this->container['type'];
     }
 
     /**
-    * Sets server
+    * Sets type
     *
-    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ServerDetail|null $server server
+    * @param string|null $type **参数解释**： 类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP
     *
     * @return $this
     */
-    public function setServer($server)
+    public function setType($type)
     {
-        $this->container['server'] = $server;
+        $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets objectList
+    *  **参数解释**： 对象列表。 **取值范围**： 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\DatabaseObjectInfo[]|null
+    */
+    public function getObjectList()
+    {
+        return $this->container['objectList'];
+    }
+
+    /**
+    * Sets objectList
+    *
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\DatabaseObjectInfo[]|null $objectList **参数解释**： 对象列表。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setObjectList($objectList)
+    {
+        $this->container['objectList'] = $objectList;
+        return $this;
+    }
+
+    /**
+    * Gets count
+    *  **参数解释**： 对象总条数。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getCount()
+    {
+        return $this->container['count'];
+    }
+
+    /**
+    * Sets count
+    *
+    * @param string|null $count **参数解释**： 对象总条数。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setCount($count)
+    {
+        $this->container['count'] = $count;
         return $this;
     }
 

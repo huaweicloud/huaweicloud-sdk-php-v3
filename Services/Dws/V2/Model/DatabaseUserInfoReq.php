@@ -20,18 +20,18 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * login  是否可以登陆
-    * createrole  创建角色权限
-    * createdb  创建数据库权限
-    * systemadmin  系统管理员
-    * auditadmin  审计管理员
-    * inherit  继承所在组权限
-    * useft  访问外表权限
-    * connLimit  连接数限制
-    * replication  是否允许流复制
-    * validBegin  角色生效时间 yyyy-MM-ddTHH:mm:ssZ
-    * validUntil  角色过期时间 yyyy-MM-ddTHH:mm:ssZ
-    * lock  是否锁定
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * createrole  **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
+    * createdb  **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
+    * systemadmin  **参数解释**： 系统管理员。 **取值范围**： 不涉及。
+    * auditadmin  **参数解释**： 审计管理员。 **取值范围**： 不涉及。
+    * inherit  **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
+    * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
+    * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
+    * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * login  是否可以登陆
-    * createrole  创建角色权限
-    * createdb  创建数据库权限
-    * systemadmin  系统管理员
-    * auditadmin  审计管理员
-    * inherit  继承所在组权限
-    * useft  访问外表权限
-    * connLimit  连接数限制
-    * replication  是否允许流复制
-    * validBegin  角色生效时间 yyyy-MM-ddTHH:mm:ssZ
-    * validUntil  角色过期时间 yyyy-MM-ddTHH:mm:ssZ
-    * lock  是否锁定
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * createrole  **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
+    * createdb  **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
+    * systemadmin  **参数解释**： 系统管理员。 **取值范围**： 不涉及。
+    * auditadmin  **参数解释**： 审计管理员。 **取值范围**： 不涉及。
+    * inherit  **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
+    * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
+    * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
+    * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * login  是否可以登陆
-    * createrole  创建角色权限
-    * createdb  创建数据库权限
-    * systemadmin  系统管理员
-    * auditadmin  审计管理员
-    * inherit  继承所在组权限
-    * useft  访问外表权限
-    * connLimit  连接数限制
-    * replication  是否允许流复制
-    * validBegin  角色生效时间 yyyy-MM-ddTHH:mm:ssZ
-    * validUntil  角色过期时间 yyyy-MM-ddTHH:mm:ssZ
-    * lock  是否锁定
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * createrole  **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
+    * createdb  **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
+    * systemadmin  **参数解释**： 系统管理员。 **取值范围**： 不涉及。
+    * auditadmin  **参数解释**： 审计管理员。 **取值范围**： 不涉及。
+    * inherit  **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
+    * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
+    * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
+    * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * login  是否可以登陆
-    * createrole  创建角色权限
-    * createdb  创建数据库权限
-    * systemadmin  系统管理员
-    * auditadmin  审计管理员
-    * inherit  继承所在组权限
-    * useft  访问外表权限
-    * connLimit  连接数限制
-    * replication  是否允许流复制
-    * validBegin  角色生效时间 yyyy-MM-ddTHH:mm:ssZ
-    * validUntil  角色过期时间 yyyy-MM-ddTHH:mm:ssZ
-    * lock  是否锁定
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * createrole  **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
+    * createdb  **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
+    * systemadmin  **参数解释**： 系统管理员。 **取值范围**： 不涉及。
+    * auditadmin  **参数解释**： 审计管理员。 **取值范围**： 不涉及。
+    * inherit  **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
+    * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
+    * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
+    * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * login  是否可以登陆
-    * createrole  创建角色权限
-    * createdb  创建数据库权限
-    * systemadmin  系统管理员
-    * auditadmin  审计管理员
-    * inherit  继承所在组权限
-    * useft  访问外表权限
-    * connLimit  连接数限制
-    * replication  是否允许流复制
-    * validBegin  角色生效时间 yyyy-MM-ddTHH:mm:ssZ
-    * validUntil  角色过期时间 yyyy-MM-ddTHH:mm:ssZ
-    * lock  是否锁定
+    * login  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
+    * createrole  **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
+    * createdb  **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
+    * systemadmin  **参数解释**： 系统管理员。 **取值范围**： 不涉及。
+    * auditadmin  **参数解释**： 审计管理员。 **取值范围**： 不涉及。
+    * inherit  **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
+    * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
+    * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
+    * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -295,7 +295,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets login
-    *  是否可以登陆
+    *  **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -307,7 +307,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets login
     *
-    * @param bool|null $login 是否可以登陆
+    * @param bool|null $login **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets createrole
-    *  创建角色权限
+    *  **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -331,7 +331,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets createrole
     *
-    * @param bool|null $createrole 创建角色权限
+    * @param bool|null $createrole **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdb
-    *  创建数据库权限
+    *  **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -355,7 +355,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets createdb
     *
-    * @param bool|null $createdb 创建数据库权限
+    * @param bool|null $createdb **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets systemadmin
-    *  系统管理员
+    *  **参数解释**： 系统管理员。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -379,7 +379,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets systemadmin
     *
-    * @param bool|null $systemadmin 系统管理员
+    * @param bool|null $systemadmin **参数解释**： 系统管理员。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets auditadmin
-    *  审计管理员
+    *  **参数解释**： 审计管理员。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -403,7 +403,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets auditadmin
     *
-    * @param bool|null $auditadmin 审计管理员
+    * @param bool|null $auditadmin **参数解释**： 审计管理员。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -415,7 +415,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets inherit
-    *  继承所在组权限
+    *  **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -427,7 +427,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets inherit
     *
-    * @param bool|null $inherit 继承所在组权限
+    * @param bool|null $inherit **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -439,7 +439,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets useft
-    *  访问外表权限
+    *  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -451,7 +451,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets useft
     *
-    * @param bool|null $useft 访问外表权限
+    * @param bool|null $useft **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets connLimit
-    *  连接数限制
+    *  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -475,7 +475,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets connLimit
     *
-    * @param int|null $connLimit 连接数限制
+    * @param int|null $connLimit **参数解释**： 连接数限制。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets replication
-    *  是否允许流复制
+    *  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -499,7 +499,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets replication
     *
-    * @param bool|null $replication 是否允许流复制
+    * @param bool|null $replication **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets validBegin
-    *  角色生效时间 yyyy-MM-ddTHH:mm:ssZ
+    *  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -523,7 +523,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets validBegin
     *
-    * @param string|null $validBegin 角色生效时间 yyyy-MM-ddTHH:mm:ssZ
+    * @param string|null $validBegin **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets validUntil
-    *  角色过期时间 yyyy-MM-ddTHH:mm:ssZ
+    *  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -547,7 +547,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets validUntil
     *
-    * @param string|null $validUntil 角色过期时间 yyyy-MM-ddTHH:mm:ssZ
+    * @param string|null $validUntil **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -559,7 +559,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets lock
-    *  是否锁定
+    *  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -571,7 +571,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets lock
     *
-    * @param bool|null $lock 是否锁定
+    * @param bool|null $lock **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @return $this
     */

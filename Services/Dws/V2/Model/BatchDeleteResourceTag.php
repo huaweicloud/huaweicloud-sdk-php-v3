@@ -20,8 +20,8 @@ class BatchDeleteResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键。
-    * value  标签值。
+    * key  **参数解释**： 标签键。 **取值范围**： 不涉及。
+    * value  **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchDeleteResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键。
-    * value  标签值。
+    * key  **参数解释**： 标签键。 **取值范围**： 不涉及。
+    * value  **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchDeleteResourceTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键。
-    * value  标签值。
+    * key  **参数解释**： 标签键。 **取值范围**： 不涉及。
+    * value  **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchDeleteResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键。
-    * value  标签值。
+    * key  **参数解释**： 标签键。 **取值范围**： 不涉及。
+    * value  **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchDeleteResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键。
-    * value  标签值。
+    * key  **参数解释**： 标签键。 **取值范围**： 不涉及。
+    * value  **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class BatchDeleteResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标签键。
+    *  **参数解释**： 标签键。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class BatchDeleteResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 标签键。
+    * @param string $key **参数解释**： 标签键。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class BatchDeleteResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  标签值。
+    *  **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class BatchDeleteResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 标签值。
+    * @param string $value **参数解释**： 标签值。 **取值范围**： 不涉及。
     *
     * @return $this
     */

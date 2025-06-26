@@ -34,6 +34,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * isSupportVcProcess  是否支持vc。
     * isSupportThaiAutoSplit  是否支持泰语文本自动分句。
     * isFlexus  是否是Flexus版本声音。
+    * isEnhanceRhythm  是否增强韵律
+    * age  音色年龄段：青年、中年、老年
     *
     * @var string[]
     */
@@ -51,7 +53,9 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'externalVoiceMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ExternalVoiceAssetMeta',
             'isSupportVcProcess' => 'bool',
             'isSupportThaiAutoSplit' => 'bool',
-            'isFlexus' => 'bool'
+            'isFlexus' => 'bool',
+            'isEnhanceRhythm' => 'bool',
+            'age' => 'string'
     ];
 
     /**
@@ -70,6 +74,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * isSupportVcProcess  是否支持vc。
     * isSupportThaiAutoSplit  是否支持泰语文本自动分句。
     * isFlexus  是否是Flexus版本声音。
+    * isEnhanceRhythm  是否增强韵律
+    * age  音色年龄段：青年、中年、老年
     *
     * @var string[]
     */
@@ -87,7 +93,9 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
         'externalVoiceMeta' => null,
         'isSupportVcProcess' => null,
         'isSupportThaiAutoSplit' => null,
-        'isFlexus' => null
+        'isFlexus' => null,
+        'isEnhanceRhythm' => null,
+        'age' => null
     ];
 
     /**
@@ -127,6 +135,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * isSupportVcProcess  是否支持vc。
     * isSupportThaiAutoSplit  是否支持泰语文本自动分句。
     * isFlexus  是否是Flexus版本声音。
+    * isEnhanceRhythm  是否增强韵律
+    * age  音色年龄段：青年、中年、老年
     *
     * @var string[]
     */
@@ -144,7 +154,9 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'externalVoiceMeta' => 'external_voice_meta',
             'isSupportVcProcess' => 'is_support_vc_process',
             'isSupportThaiAutoSplit' => 'is_support_thai_auto_split',
-            'isFlexus' => 'is_flexus'
+            'isFlexus' => 'is_flexus',
+            'isEnhanceRhythm' => 'is_enhance_rhythm',
+            'age' => 'age'
     ];
 
     /**
@@ -163,6 +175,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * isSupportVcProcess  是否支持vc。
     * isSupportThaiAutoSplit  是否支持泰语文本自动分句。
     * isFlexus  是否是Flexus版本声音。
+    * isEnhanceRhythm  是否增强韵律
+    * age  音色年龄段：青年、中年、老年
     *
     * @var string[]
     */
@@ -180,7 +194,9 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'externalVoiceMeta' => 'setExternalVoiceMeta',
             'isSupportVcProcess' => 'setIsSupportVcProcess',
             'isSupportThaiAutoSplit' => 'setIsSupportThaiAutoSplit',
-            'isFlexus' => 'setIsFlexus'
+            'isFlexus' => 'setIsFlexus',
+            'isEnhanceRhythm' => 'setIsEnhanceRhythm',
+            'age' => 'setAge'
     ];
 
     /**
@@ -199,6 +215,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * isSupportVcProcess  是否支持vc。
     * isSupportThaiAutoSplit  是否支持泰语文本自动分句。
     * isFlexus  是否是Flexus版本声音。
+    * isEnhanceRhythm  是否增强韵律
+    * age  音色年龄段：青年、中年、老年
     *
     * @var string[]
     */
@@ -216,7 +234,9 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'externalVoiceMeta' => 'getExternalVoiceMeta',
             'isSupportVcProcess' => 'getIsSupportVcProcess',
             'isSupportThaiAutoSplit' => 'getIsSupportThaiAutoSplit',
-            'isFlexus' => 'getIsFlexus'
+            'isFlexus' => 'getIsFlexus',
+            'isEnhanceRhythm' => 'getIsEnhanceRhythm',
+            'age' => 'getAge'
     ];
 
     /**
@@ -388,6 +408,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
         $this->container['isSupportVcProcess'] = isset($data['isSupportVcProcess']) ? $data['isSupportVcProcess'] : null;
         $this->container['isSupportThaiAutoSplit'] = isset($data['isSupportThaiAutoSplit']) ? $data['isSupportThaiAutoSplit'] : null;
         $this->container['isFlexus'] = isset($data['isFlexus']) ? $data['isFlexus'] : null;
+        $this->container['isEnhanceRhythm'] = isset($data['isEnhanceRhythm']) ? $data['isEnhanceRhythm'] : null;
+        $this->container['age'] = isset($data['age']) ? $data['age'] : null;
     }
 
     /**
@@ -463,6 +485,12 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['style']) && (mb_strlen($this->container['style']) < 1)) {
                 $invalidProperties[] = "invalid value for 'style', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['age']) && (mb_strlen($this->container['age']) > 64)) {
+                $invalidProperties[] = "invalid value for 'age', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['age']) && (mb_strlen($this->container['age']) < 1)) {
+                $invalidProperties[] = "invalid value for 'age', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -811,6 +839,54 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     public function setIsFlexus($isFlexus)
     {
         $this->container['isFlexus'] = $isFlexus;
+        return $this;
+    }
+
+    /**
+    * Gets isEnhanceRhythm
+    *  是否增强韵律
+    *
+    * @return bool|null
+    */
+    public function getIsEnhanceRhythm()
+    {
+        return $this->container['isEnhanceRhythm'];
+    }
+
+    /**
+    * Sets isEnhanceRhythm
+    *
+    * @param bool|null $isEnhanceRhythm 是否增强韵律
+    *
+    * @return $this
+    */
+    public function setIsEnhanceRhythm($isEnhanceRhythm)
+    {
+        $this->container['isEnhanceRhythm'] = $isEnhanceRhythm;
+        return $this;
+    }
+
+    /**
+    * Gets age
+    *  音色年龄段：青年、中年、老年
+    *
+    * @return string|null
+    */
+    public function getAge()
+    {
+        return $this->container['age'];
+    }
+
+    /**
+    * Sets age
+    *
+    * @param string|null $age 音色年龄段：青年、中年、老年
+    *
+    * @return $this
+    */
+    public function setAge($age)
+    {
+        $this->container['age'] = $age;
         return $this;
     }
 

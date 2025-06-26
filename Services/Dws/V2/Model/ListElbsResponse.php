@@ -21,7 +21,7 @@ class ListElbsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * elbs  弹性负载均衡列表
+    * elbs  **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListElbsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * elbs  弹性负载均衡列表
+    * elbs  **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListElbsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * elbs  弹性负载均衡列表
+    * elbs  **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListElbsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * elbs  弹性负载均衡列表
+    * elbs  **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListElbsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * elbs  弹性负载均衡列表
+    * elbs  **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListElbsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets elbs
-    *  弹性负载均衡列表
+    *  **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterElbInfo[]|null
     */
@@ -187,7 +187,7 @@ class ListElbsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets elbs
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterElbInfo[]|null $elbs 弹性负载均衡列表
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterElbInfo[]|null $elbs **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

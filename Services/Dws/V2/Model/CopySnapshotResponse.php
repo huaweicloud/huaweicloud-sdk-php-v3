@@ -21,7 +21,7 @@ class CopySnapshotResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * snapshotId  快照id。
+    * snapshotId  **参数解释**： 快照ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CopySnapshotResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * snapshotId  快照id。
+    * snapshotId  **参数解释**： 快照ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CopySnapshotResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * snapshotId  快照id。
+    * snapshotId  **参数解释**： 快照ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CopySnapshotResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * snapshotId  快照id。
+    * snapshotId  **参数解释**： 快照ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CopySnapshotResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * snapshotId  快照id。
+    * snapshotId  **参数解释**： 快照ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CopySnapshotResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotId
-    *  快照id。
+    *  **参数解释**： 快照ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class CopySnapshotResponse implements ModelInterface, ArrayAccess
     /**
     * Sets snapshotId
     *
-    * @param string|null $snapshotId 快照id。
+    * @param string|null $snapshotId **参数解释**： 快照ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -165,8 +165,8 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     const OPERATION_CLONE_TEST = 'clone_test';
     const OPERATION_RESTART = 'restart';
     const OPERATION_NETWORK_CHECK = 'network_check';
-    const OPERATION_SKIP = 'skip';
     const OPERATION_CLEAR = 'clear';
+    const OPERATION_SKIP = 'skip';
     const OPERATION_MIGRATION_TEST = 'migration_test';
     
 
@@ -184,8 +184,8 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
             self::OPERATION_CLONE_TEST,
             self::OPERATION_RESTART,
             self::OPERATION_NETWORK_CHECK,
-            self::OPERATION_SKIP,
             self::OPERATION_CLEAR,
+            self::OPERATION_SKIP,
             self::OPERATION_MIGRATION_TEST,
         ];
     }

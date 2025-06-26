@@ -21,7 +21,7 @@ class ListDisasterRecoverResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * disasterRecovery  容灾对象
+    * disasterRecovery  **参数解释**： 容灾对象。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListDisasterRecoverResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * disasterRecovery  容灾对象
+    * disasterRecovery  **参数解释**： 容灾对象。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListDisasterRecoverResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * disasterRecovery  容灾对象
+    * disasterRecovery  **参数解释**： 容灾对象。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListDisasterRecoverResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * disasterRecovery  容灾对象
+    * disasterRecovery  **参数解释**： 容灾对象。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListDisasterRecoverResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * disasterRecovery  容灾对象
+    * disasterRecovery  **参数解释**： 容灾对象。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListDisasterRecoverResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets disasterRecovery
-    *  容灾对象
+    *  **参数解释**： 容灾对象。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\DisasterRecovery[]|null
     */
@@ -187,7 +187,7 @@ class ListDisasterRecoverResponse implements ModelInterface, ArrayAccess
     /**
     * Sets disasterRecovery
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\DisasterRecovery[]|null $disasterRecovery 容灾对象
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\DisasterRecovery[]|null $disasterRecovery **参数解释**： 容灾对象。 **取值范围**： 不涉及。
     *
     * @return $this
     */

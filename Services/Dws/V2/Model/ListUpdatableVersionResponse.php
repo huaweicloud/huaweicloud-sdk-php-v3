@@ -21,8 +21,8 @@ class ListUpdatableVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  集群升级路径总条数
-    * items  集群升级路径列表
+    * count  **参数解释**： 集群升级路径总条数。 **取值范围**： 不涉及。
+    * items  **参数解释**： 集群升级路径列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListUpdatableVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  集群升级路径总条数
-    * items  集群升级路径列表
+    * count  **参数解释**： 集群升级路径总条数。 **取值范围**： 不涉及。
+    * items  **参数解释**： 集群升级路径列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListUpdatableVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  集群升级路径总条数
-    * items  集群升级路径列表
+    * count  **参数解释**： 集群升级路径总条数。 **取值范围**： 不涉及。
+    * items  **参数解释**： 集群升级路径列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListUpdatableVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  集群升级路径总条数
-    * items  集群升级路径列表
+    * count  **参数解释**： 集群升级路径总条数。 **取值范围**： 不涉及。
+    * items  **参数解释**： 集群升级路径列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListUpdatableVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  集群升级路径总条数
-    * items  集群升级路径列表
+    * count  **参数解释**： 集群升级路径总条数。 **取值范围**： 不涉及。
+    * items  **参数解释**： 集群升级路径列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListUpdatableVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  集群升级路径总条数
+    *  **参数解释**： 集群升级路径总条数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListUpdatableVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 集群升级路径总条数
+    * @param int|null $count **参数解释**： 集群升级路径总条数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListUpdatableVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  集群升级路径列表
+    *  **参数解释**： 集群升级路径列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\UpdateItemResp[]|null
     */
@@ -222,7 +222,7 @@ class ListUpdatableVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\UpdateItemResp[]|null $items 集群升级路径列表
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\UpdateItemResp[]|null $items **参数解释**： 集群升级路径列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

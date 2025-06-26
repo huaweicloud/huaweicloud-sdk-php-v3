@@ -20,10 +20,10 @@ class PlanLog implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * execTime  执行时间
-    * stageInfo  执行计划阶段
-    * execResult  执行结果。
-    * execLog  执行日志。
+    * execTime  **参数解释**： 执行时间。 **取值范围**： 不涉及。
+    * stageInfo  **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
+    * execResult  **参数解释**： 执行结果。 **取值范围**： 不涉及。
+    * execLog  **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class PlanLog implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * execTime  执行时间
-    * stageInfo  执行计划阶段
-    * execResult  执行结果。
-    * execLog  执行日志。
+    * execTime  **参数解释**： 执行时间。 **取值范围**： 不涉及。
+    * stageInfo  **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
+    * execResult  **参数解释**： 执行结果。 **取值范围**： 不涉及。
+    * execLog  **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class PlanLog implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * execTime  执行时间
-    * stageInfo  执行计划阶段
-    * execResult  执行结果。
-    * execLog  执行日志。
+    * execTime  **参数解释**： 执行时间。 **取值范围**： 不涉及。
+    * stageInfo  **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
+    * execResult  **参数解释**： 执行结果。 **取值范围**： 不涉及。
+    * execLog  **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class PlanLog implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * execTime  执行时间
-    * stageInfo  执行计划阶段
-    * execResult  执行结果。
-    * execLog  执行日志。
+    * execTime  **参数解释**： 执行时间。 **取值范围**： 不涉及。
+    * stageInfo  **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
+    * execResult  **参数解释**： 执行结果。 **取值范围**： 不涉及。
+    * execLog  **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class PlanLog implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * execTime  执行时间
-    * stageInfo  执行计划阶段
-    * execResult  执行结果。
-    * execLog  执行日志。
+    * execTime  **参数解释**： 执行时间。 **取值范围**： 不涉及。
+    * stageInfo  **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
+    * execResult  **参数解释**： 执行结果。 **取值范围**： 不涉及。
+    * execLog  **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class PlanLog implements ModelInterface, ArrayAccess
 
     /**
     * Gets execTime
-    *  执行时间
+    *  **参数解释**： 执行时间。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class PlanLog implements ModelInterface, ArrayAccess
     /**
     * Sets execTime
     *
-    * @param string $execTime 执行时间
+    * @param string $execTime **参数解释**： 执行时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class PlanLog implements ModelInterface, ArrayAccess
 
     /**
     * Gets stageInfo
-    *  执行计划阶段
+    *  **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class PlanLog implements ModelInterface, ArrayAccess
     /**
     * Sets stageInfo
     *
-    * @param string $stageInfo 执行计划阶段
+    * @param string $stageInfo **参数解释**： 执行计划阶段。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class PlanLog implements ModelInterface, ArrayAccess
 
     /**
     * Gets execResult
-    *  执行结果。
+    *  **参数解释**： 执行结果。 **取值范围**： 不涉及。
     *
     * @return int
     */
@@ -279,7 +279,7 @@ class PlanLog implements ModelInterface, ArrayAccess
     /**
     * Sets execResult
     *
-    * @param int $execResult 执行结果。
+    * @param int $execResult **参数解释**： 执行结果。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class PlanLog implements ModelInterface, ArrayAccess
 
     /**
     * Gets execLog
-    *  执行日志。
+    *  **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -303,7 +303,7 @@ class PlanLog implements ModelInterface, ArrayAccess
     /**
     * Sets execLog
     *
-    * @param string $execLog 执行日志。
+    * @param string $execLog **参数解释**： 执行日志。 **取值范围**： 不涉及。
     *
     * @return $this
     */

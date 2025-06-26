@@ -20,9 +20,9 @@ class ConfigurationParameterUnit implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  参数类型，包括：cn、dn。
-    * value  参数值。
-    * defaultValue  参数默认值。
+    * type  **参数解释**： 参数类型。包括：cn、dn。 **取值范围**： cn、dn。
+    * value  **参数解释**： 参数值。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 参数默认值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ConfigurationParameterUnit implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  参数类型，包括：cn、dn。
-    * value  参数值。
-    * defaultValue  参数默认值。
+    * type  **参数解释**： 参数类型。包括：cn、dn。 **取值范围**： cn、dn。
+    * value  **参数解释**： 参数值。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 参数默认值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ConfigurationParameterUnit implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  参数类型，包括：cn、dn。
-    * value  参数值。
-    * defaultValue  参数默认值。
+    * type  **参数解释**： 参数类型。包括：cn、dn。 **取值范围**： cn、dn。
+    * value  **参数解释**： 参数值。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 参数默认值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ConfigurationParameterUnit implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  参数类型，包括：cn、dn。
-    * value  参数值。
-    * defaultValue  参数默认值。
+    * type  **参数解释**： 参数类型。包括：cn、dn。 **取值范围**： cn、dn。
+    * value  **参数解释**： 参数值。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 参数默认值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ConfigurationParameterUnit implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  参数类型，包括：cn、dn。
-    * value  参数值。
-    * defaultValue  参数默认值。
+    * type  **参数解释**： 参数类型。包括：cn、dn。 **取值范围**： cn、dn。
+    * value  **参数解释**： 参数值。 **取值范围**： 不涉及。
+    * defaultValue  **参数解释**： 参数默认值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class ConfigurationParameterUnit implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  参数类型，包括：cn、dn。
+    *  **参数解释**： 参数类型。包括：cn、dn。 **取值范围**： cn、dn。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class ConfigurationParameterUnit implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 参数类型，包括：cn、dn。
+    * @param string $type **参数解释**： 参数类型。包括：cn、dn。 **取值范围**： cn、dn。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class ConfigurationParameterUnit implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  参数值。
+    *  **参数解释**： 参数值。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class ConfigurationParameterUnit implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 参数值。
+    * @param string $value **参数解释**： 参数值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class ConfigurationParameterUnit implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultValue
-    *  参数默认值。
+    *  **参数解释**： 参数默认值。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class ConfigurationParameterUnit implements ModelInterface, ArrayAccess
     /**
     * Sets defaultValue
     *
-    * @param string $defaultValue 参数默认值。
+    * @param string $defaultValue **参数解释**： 参数默认值。 **取值范围**： 不涉及。
     *
     * @return $this
     */

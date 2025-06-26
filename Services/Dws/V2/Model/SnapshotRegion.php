@@ -20,7 +20,7 @@ class SnapshotRegion implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionId  区域ID
+    * regionId  **参数解释**： 区域ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class SnapshotRegion implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionId  区域ID
+    * regionId  **参数解释**： 区域ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class SnapshotRegion implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionId  区域ID
+    * regionId  **参数解释**： 区域ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SnapshotRegion implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionId  区域ID
+    * regionId  **参数解释**： 区域ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class SnapshotRegion implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionId  区域ID
+    * regionId  **参数解释**： 区域ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class SnapshotRegion implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  区域ID
+    *  **参数解释**： 区域ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class SnapshotRegion implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string|null $regionId 区域ID
+    * @param string|null $regionId **参数解释**： 区域ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

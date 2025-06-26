@@ -21,7 +21,7 @@ class ListHostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  openApi查询主机概览
+    * body  **参数解释**： 查询主机概览响应。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListHostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  openApi查询主机概览
+    * body  **参数解释**： 查询主机概览响应。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListHostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  openApi查询主机概览
+    * body  **参数解释**： 查询主机概览响应。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListHostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  openApi查询主机概览
+    * body  **参数解释**： 查询主机概览响应。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListHostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  openApi查询主机概览
+    * body  **参数解释**： 查询主机概览响应。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListHostOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  openApi查询主机概览
+    *  **参数解释**： 查询主机概览响应。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\HostOverviewResponse[]|null
     */
@@ -187,7 +187,7 @@ class ListHostOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\HostOverviewResponse[]|null $body openApi查询主机概览
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\HostOverviewResponse[]|null $body **参数解释**： 查询主机概览响应。 **取值范围**： 不涉及。
     *
     * @return $this
     */

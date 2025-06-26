@@ -20,9 +20,9 @@ class Snapshot implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  快照名称，要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。
-    * clusterId  指定创建快照的集群ID
-    * description  快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。
+    * name  **参数解释**： 快照名称。要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 指定创建快照的集群ID。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class Snapshot implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  快照名称，要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。
-    * clusterId  指定创建快照的集群ID
-    * description  快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。
+    * name  **参数解释**： 快照名称。要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 指定创建快照的集群ID。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class Snapshot implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  快照名称，要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。
-    * clusterId  指定创建快照的集群ID
-    * description  快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。
+    * name  **参数解释**： 快照名称。要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 指定创建快照的集群ID。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class Snapshot implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  快照名称，要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。
-    * clusterId  指定创建快照的集群ID
-    * description  快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。
+    * name  **参数解释**： 快照名称。要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 指定创建快照的集群ID。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class Snapshot implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  快照名称，要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。
-    * clusterId  指定创建快照的集群ID
-    * description  快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。
+    * name  **参数解释**： 快照名称。要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 指定创建快照的集群ID。 **取值范围**： 不涉及。
+    * description  **参数解释**： 快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -202,7 +202,7 @@ class Snapshot implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  快照名称，要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。
+    *  **参数解释**： 快照名称。要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class Snapshot implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 快照名称，要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。
+    * @param string $name **参数解释**： 快照名称。要求唯一性且必须以字母开头，不区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符，长度为4～64个字符。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class Snapshot implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  指定创建快照的集群ID
+    *  **参数解释**： 指定创建快照的集群ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class Snapshot implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 指定创建快照的集群ID
+    * @param string $clusterId **参数解释**： 指定创建快照的集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -250,7 +250,7 @@ class Snapshot implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。
+    *  **参数解释**： 快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -262,7 +262,7 @@ class Snapshot implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。
+    * @param string|null $description **参数解释**： 快照描述，若不指定，描述为空。快照描述的字符长度不能超过256个字符，且不支持特殊字符!<>'=&\"。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -20,12 +20,12 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * drSyncPeriod  容灾同步周期
-    * sendRequest  是否发送请求
-    * primaryToRole  主集群角色
-    * resetAction  设置容灾动作
-    * standbyToRole  备集群角色
-    * drStatus  容灾状态
+    * drSyncPeriod  **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
+    * sendRequest  **参数解释**： 是否发送请求。 **取值范围**： 不涉及。
+    * primaryToRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
+    * resetAction  **参数解释**： 设置容灾动作。 **取值范围**： 不涉及。
+    * standbyToRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
+    * drStatus  **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * drSyncPeriod  容灾同步周期
-    * sendRequest  是否发送请求
-    * primaryToRole  主集群角色
-    * resetAction  设置容灾动作
-    * standbyToRole  备集群角色
-    * drStatus  容灾状态
+    * drSyncPeriod  **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
+    * sendRequest  **参数解释**： 是否发送请求。 **取值范围**： 不涉及。
+    * primaryToRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
+    * resetAction  **参数解释**： 设置容灾动作。 **取值范围**： 不涉及。
+    * standbyToRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
+    * drStatus  **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * drSyncPeriod  容灾同步周期
-    * sendRequest  是否发送请求
-    * primaryToRole  主集群角色
-    * resetAction  设置容灾动作
-    * standbyToRole  备集群角色
-    * drStatus  容灾状态
+    * drSyncPeriod  **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
+    * sendRequest  **参数解释**： 是否发送请求。 **取值范围**： 不涉及。
+    * primaryToRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
+    * resetAction  **参数解释**： 设置容灾动作。 **取值范围**： 不涉及。
+    * standbyToRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
+    * drStatus  **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * drSyncPeriod  容灾同步周期
-    * sendRequest  是否发送请求
-    * primaryToRole  主集群角色
-    * resetAction  设置容灾动作
-    * standbyToRole  备集群角色
-    * drStatus  容灾状态
+    * drSyncPeriod  **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
+    * sendRequest  **参数解释**： 是否发送请求。 **取值范围**： 不涉及。
+    * primaryToRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
+    * resetAction  **参数解释**： 设置容灾动作。 **取值范围**： 不涉及。
+    * standbyToRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
+    * drStatus  **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * drSyncPeriod  容灾同步周期
-    * sendRequest  是否发送请求
-    * primaryToRole  主集群角色
-    * resetAction  设置容灾动作
-    * standbyToRole  备集群角色
-    * drStatus  容灾状态
+    * drSyncPeriod  **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
+    * sendRequest  **参数解释**： 是否发送请求。 **取值范围**： 不涉及。
+    * primaryToRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
+    * resetAction  **参数解释**： 设置容灾动作。 **取值范围**： 不涉及。
+    * standbyToRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
+    * drStatus  **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -235,7 +235,7 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets drSyncPeriod
-    *  容灾同步周期
+    *  **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -247,7 +247,7 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
     /**
     * Sets drSyncPeriod
     *
-    * @param string|null $drSyncPeriod 容灾同步周期
+    * @param string|null $drSyncPeriod **参数解释**： 容灾同步周期。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -259,7 +259,7 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets sendRequest
-    *  是否发送请求
+    *  **参数解释**： 是否发送请求。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -271,7 +271,7 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
     /**
     * Sets sendRequest
     *
-    * @param int|null $sendRequest 是否发送请求
+    * @param int|null $sendRequest **参数解释**： 是否发送请求。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -283,7 +283,7 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryToRole
-    *  主集群角色
+    *  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -295,7 +295,7 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
     /**
     * Sets primaryToRole
     *
-    * @param string|null $primaryToRole 主集群角色
+    * @param string|null $primaryToRole **参数解释**： 主集群角色。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -307,7 +307,7 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets resetAction
-    *  设置容灾动作
+    *  **参数解释**： 设置容灾动作。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -319,7 +319,7 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
     /**
     * Sets resetAction
     *
-    * @param string|null $resetAction 设置容灾动作
+    * @param string|null $resetAction **参数解释**： 设置容灾动作。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -331,7 +331,7 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets standbyToRole
-    *  备集群角色
+    *  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -343,7 +343,7 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
     /**
     * Sets standbyToRole
     *
-    * @param string|null $standbyToRole 备集群角色
+    * @param string|null $standbyToRole **参数解释**： 备集群角色。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets drStatus
-    *  容灾状态
+    *  **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -367,7 +367,7 @@ class UpdateDisasterRecoveryReq implements ModelInterface, ArrayAccess
     /**
     * Sets drStatus
     *
-    * @param string|null $drStatus 容灾状态
+    * @param string|null $drStatus **参数解释**： 容灾状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */

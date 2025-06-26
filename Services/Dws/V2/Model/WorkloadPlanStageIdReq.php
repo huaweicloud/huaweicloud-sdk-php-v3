@@ -20,7 +20,7 @@ class WorkloadPlanStageIdReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * stageId  计划阶段ID
+    * stageId  **参数解释**： 资源管理计划阶段ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class WorkloadPlanStageIdReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * stageId  计划阶段ID
+    * stageId  **参数解释**： 资源管理计划阶段ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class WorkloadPlanStageIdReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * stageId  计划阶段ID
+    * stageId  **参数解释**： 资源管理计划阶段ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class WorkloadPlanStageIdReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * stageId  计划阶段ID
+    * stageId  **参数解释**： 资源管理计划阶段ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class WorkloadPlanStageIdReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * stageId  计划阶段ID
+    * stageId  **参数解释**： 资源管理计划阶段ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class WorkloadPlanStageIdReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets stageId
-    *  计划阶段ID
+    *  **参数解释**： 资源管理计划阶段ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class WorkloadPlanStageIdReq implements ModelInterface, ArrayAccess
     /**
     * Sets stageId
     *
-    * @param string $stageId 计划阶段ID
+    * @param string $stageId **参数解释**： 资源管理计划阶段ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

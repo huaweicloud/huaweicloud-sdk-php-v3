@@ -20,11 +20,11 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  参数组ID。
-    * name  参数组名称。
-    * type  参数组类型。
-    * status  集群参数状态。 - In-Sync：已同步。 - Applying：应用中。 - Pending-Reboot：需重启生效。 - Sync-Failure：应用失败。
-    * failReason  参数应用失败原因。
+    * id  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 参数组名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 参数组类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群参数状态。 **取值范围**： In-Sync：已同步。 Applying：应用中。 Pending-Reboot：需重启生效。 Sync-Failure：应用失败。
+    * failReason  **参数解释**： 参数应用失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  参数组ID。
-    * name  参数组名称。
-    * type  参数组类型。
-    * status  集群参数状态。 - In-Sync：已同步。 - Applying：应用中。 - Pending-Reboot：需重启生效。 - Sync-Failure：应用失败。
-    * failReason  参数应用失败原因。
+    * id  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 参数组名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 参数组类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群参数状态。 **取值范围**： In-Sync：已同步。 Applying：应用中。 Pending-Reboot：需重启生效。 Sync-Failure：应用失败。
+    * failReason  **参数解释**： 参数应用失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  参数组ID。
-    * name  参数组名称。
-    * type  参数组类型。
-    * status  集群参数状态。 - In-Sync：已同步。 - Applying：应用中。 - Pending-Reboot：需重启生效。 - Sync-Failure：应用失败。
-    * failReason  参数应用失败原因。
+    * id  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 参数组名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 参数组类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群参数状态。 **取值范围**： In-Sync：已同步。 Applying：应用中。 Pending-Reboot：需重启生效。 Sync-Failure：应用失败。
+    * failReason  **参数解释**： 参数应用失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  参数组ID。
-    * name  参数组名称。
-    * type  参数组类型。
-    * status  集群参数状态。 - In-Sync：已同步。 - Applying：应用中。 - Pending-Reboot：需重启生效。 - Sync-Failure：应用失败。
-    * failReason  参数应用失败原因。
+    * id  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 参数组名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 参数组类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群参数状态。 **取值范围**： In-Sync：已同步。 Applying：应用中。 Pending-Reboot：需重启生效。 Sync-Failure：应用失败。
+    * failReason  **参数解释**： 参数应用失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  参数组ID。
-    * name  参数组名称。
-    * type  参数组类型。
-    * status  集群参数状态。 - In-Sync：已同步。 - Applying：应用中。 - Pending-Reboot：需重启生效。 - Sync-Failure：应用失败。
-    * failReason  参数应用失败原因。
+    * id  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
+    * name  **参数解释**： 参数组名称。 **取值范围**： 不涉及。
+    * type  **参数解释**： 参数组类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 集群参数状态。 **取值范围**： In-Sync：已同步。 Applying：应用中。 Pending-Reboot：需重启生效。 Sync-Failure：应用失败。
+    * failReason  **参数解释**： 参数应用失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -233,7 +233,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  参数组ID。
+    *  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 参数组ID。
+    * @param string $id **参数解释**： 参数组ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -257,7 +257,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数组名称。
+    *  **参数解释**： 参数组名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -269,7 +269,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 参数组名称。
+    * @param string $name **参数解释**： 参数组名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -281,7 +281,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  参数组类型。
+    *  **参数解释**： 参数组类型。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -293,7 +293,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 参数组类型。
+    * @param string $type **参数解释**： 参数组类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  集群参数状态。 - In-Sync：已同步。 - Applying：应用中。 - Pending-Reboot：需重启生效。 - Sync-Failure：应用失败。
+    *  **参数解释**： 集群参数状态。 **取值范围**： In-Sync：已同步。 Applying：应用中。 Pending-Reboot：需重启生效。 Sync-Failure：应用失败。
     *
     * @return string
     */
@@ -317,7 +317,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 集群参数状态。 - In-Sync：已同步。 - Applying：应用中。 - Pending-Reboot：需重启生效。 - Sync-Failure：应用失败。
+    * @param string $status **参数解释**： 集群参数状态。 **取值范围**： In-Sync：已同步。 Applying：应用中。 Pending-Reboot：需重启生效。 Sync-Failure：应用失败。
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
 
     /**
     * Gets failReason
-    *  参数应用失败原因。
+    *  **参数解释**： 参数应用失败原因。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -341,7 +341,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
     /**
     * Sets failReason
     *
-    * @param string $failReason 参数应用失败原因。
+    * @param string $failReason **参数解释**： 参数应用失败原因。 **取值范围**： 不涉及。
     *
     * @return $this
     */

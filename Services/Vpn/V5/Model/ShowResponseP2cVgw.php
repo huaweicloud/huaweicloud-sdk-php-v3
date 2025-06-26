@@ -38,6 +38,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * version  网关版本
     * createdAt  创建时间
     * updatedAt  更新时间
+    * appliedAt  生效时间
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             'frozenEffect' => 'int',
             'version' => 'string',
             'createdAt' => '\DateTime',
-            'updatedAt' => '\DateTime'
+            'updatedAt' => '\DateTime',
+            'appliedAt' => '\DateTime'
     ];
 
     /**
@@ -82,6 +84,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * version  网关版本
     * createdAt  创建时间
     * updatedAt  更新时间
+    * appliedAt  生效时间
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
         'frozenEffect' => null,
         'version' => null,
         'createdAt' => 'date-time',
-        'updatedAt' => 'date-time'
+        'updatedAt' => 'date-time',
+        'appliedAt' => 'date-time'
     ];
 
     /**
@@ -147,6 +151,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * version  网关版本
     * createdAt  创建时间
     * updatedAt  更新时间
+    * appliedAt  生效时间
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             'frozenEffect' => 'frozen_effect',
             'version' => 'version',
             'createdAt' => 'created_at',
-            'updatedAt' => 'updated_at'
+            'updatedAt' => 'updated_at',
+            'appliedAt' => 'applied_at'
     ];
 
     /**
@@ -191,6 +197,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * version  网关版本
     * createdAt  创建时间
     * updatedAt  更新时间
+    * appliedAt  生效时间
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             'frozenEffect' => 'setFrozenEffect',
             'version' => 'setVersion',
             'createdAt' => 'setCreatedAt',
-            'updatedAt' => 'setUpdatedAt'
+            'updatedAt' => 'setUpdatedAt',
+            'appliedAt' => 'setAppliedAt'
     ];
 
     /**
@@ -235,6 +243,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     * version  网关版本
     * createdAt  创建时间
     * updatedAt  更新时间
+    * appliedAt  生效时间
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
             'frozenEffect' => 'getFrozenEffect',
             'version' => 'getVersion',
             'createdAt' => 'getCreatedAt',
-            'updatedAt' => 'getUpdatedAt'
+            'updatedAt' => 'getUpdatedAt',
+            'appliedAt' => 'getAppliedAt'
     ];
 
     /**
@@ -335,6 +345,7 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['appliedAt'] = isset($data['appliedAt']) ? $data['appliedAt'] : null;
     }
 
     /**
@@ -803,6 +814,30 @@ class ShowResponseP2cVgw implements ModelInterface, ArrayAccess
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets appliedAt
+    *  生效时间
+    *
+    * @return \DateTime|null
+    */
+    public function getAppliedAt()
+    {
+        return $this->container['appliedAt'];
+    }
+
+    /**
+    * Sets appliedAt
+    *
+    * @param \DateTime|null $appliedAt 生效时间
+    *
+    * @return $this
+    */
+    public function setAppliedAt($appliedAt)
+    {
+        $this->container['appliedAt'] = $appliedAt;
         return $this;
     }
 

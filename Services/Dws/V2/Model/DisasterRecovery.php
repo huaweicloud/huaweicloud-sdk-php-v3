@@ -20,25 +20,25 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * status  状态
-    * name  名称
-    * drType  容灾类型
-    * primaryClusterId  主集群ID
-    * primaryClusterName  主集群名称
-    * standbyClusterId  备集群ID
-    * standbyClusterName  备集群名称
-    * primaryClusterRole  主集群角色
-    * standbyClusterRole  备集群角色
-    * primaryClusterStatus  主集群状态
-    * standbyClusterStatus  备集群状态
-    * primaryClusterRegion  主集群region
-    * standbyClusterRegion  备集群region
-    * primaryClusterProjectId  主集群project_id
-    * standbyClusterProjectId  备集群project_id
-    * lastDisasterTime  最近同步时间
-    * startTime  启动时间
-    * createTime  创建时间
+    * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
+    * primaryClusterName  **参数解释**： 主集群名称。 **取值范围**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
+    * standbyClusterName  **参数解释**： 备集群名称。 **取值范围**： 不涉及。
+    * primaryClusterRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
+    * standbyClusterRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
+    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： 不涉及。
+    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： 不涉及。
+    * primaryClusterRegion  **参数解释**： 主集群region。 **取值范围**： 不涉及。
+    * standbyClusterRegion  **参数解释**： 备集群region。 **取值范围**： 不涉及。
+    * primaryClusterProjectId  **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
+    * standbyClusterProjectId  **参数解释**： 备集群项目ID。 **取值范围**： 不涉及。
+    * lastDisasterTime  **参数解释**： 最近同步时间。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,25 +66,25 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * status  状态
-    * name  名称
-    * drType  容灾类型
-    * primaryClusterId  主集群ID
-    * primaryClusterName  主集群名称
-    * standbyClusterId  备集群ID
-    * standbyClusterName  备集群名称
-    * primaryClusterRole  主集群角色
-    * standbyClusterRole  备集群角色
-    * primaryClusterStatus  主集群状态
-    * standbyClusterStatus  备集群状态
-    * primaryClusterRegion  主集群region
-    * standbyClusterRegion  备集群region
-    * primaryClusterProjectId  主集群project_id
-    * standbyClusterProjectId  备集群project_id
-    * lastDisasterTime  最近同步时间
-    * startTime  启动时间
-    * createTime  创建时间
+    * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
+    * primaryClusterName  **参数解释**： 主集群名称。 **取值范围**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
+    * standbyClusterName  **参数解释**： 备集群名称。 **取值范围**： 不涉及。
+    * primaryClusterRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
+    * standbyClusterRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
+    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： 不涉及。
+    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： 不涉及。
+    * primaryClusterRegion  **参数解释**： 主集群region。 **取值范围**： 不涉及。
+    * standbyClusterRegion  **参数解释**： 备集群region。 **取值范围**： 不涉及。
+    * primaryClusterProjectId  **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
+    * standbyClusterProjectId  **参数解释**： 备集群项目ID。 **取值范围**： 不涉及。
+    * lastDisasterTime  **参数解释**： 最近同步时间。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -133,25 +133,25 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * status  状态
-    * name  名称
-    * drType  容灾类型
-    * primaryClusterId  主集群ID
-    * primaryClusterName  主集群名称
-    * standbyClusterId  备集群ID
-    * standbyClusterName  备集群名称
-    * primaryClusterRole  主集群角色
-    * standbyClusterRole  备集群角色
-    * primaryClusterStatus  主集群状态
-    * standbyClusterStatus  备集群状态
-    * primaryClusterRegion  主集群region
-    * standbyClusterRegion  备集群region
-    * primaryClusterProjectId  主集群project_id
-    * standbyClusterProjectId  备集群project_id
-    * lastDisasterTime  最近同步时间
-    * startTime  启动时间
-    * createTime  创建时间
+    * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
+    * primaryClusterName  **参数解释**： 主集群名称。 **取值范围**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
+    * standbyClusterName  **参数解释**： 备集群名称。 **取值范围**： 不涉及。
+    * primaryClusterRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
+    * standbyClusterRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
+    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： 不涉及。
+    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： 不涉及。
+    * primaryClusterRegion  **参数解释**： 主集群region。 **取值范围**： 不涉及。
+    * standbyClusterRegion  **参数解释**： 备集群region。 **取值范围**： 不涉及。
+    * primaryClusterProjectId  **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
+    * standbyClusterProjectId  **参数解释**： 备集群项目ID。 **取值范围**： 不涉及。
+    * lastDisasterTime  **参数解释**： 最近同步时间。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -179,25 +179,25 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * status  状态
-    * name  名称
-    * drType  容灾类型
-    * primaryClusterId  主集群ID
-    * primaryClusterName  主集群名称
-    * standbyClusterId  备集群ID
-    * standbyClusterName  备集群名称
-    * primaryClusterRole  主集群角色
-    * standbyClusterRole  备集群角色
-    * primaryClusterStatus  主集群状态
-    * standbyClusterStatus  备集群状态
-    * primaryClusterRegion  主集群region
-    * standbyClusterRegion  备集群region
-    * primaryClusterProjectId  主集群project_id
-    * standbyClusterProjectId  备集群project_id
-    * lastDisasterTime  最近同步时间
-    * startTime  启动时间
-    * createTime  创建时间
+    * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
+    * primaryClusterName  **参数解释**： 主集群名称。 **取值范围**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
+    * standbyClusterName  **参数解释**： 备集群名称。 **取值范围**： 不涉及。
+    * primaryClusterRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
+    * standbyClusterRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
+    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： 不涉及。
+    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： 不涉及。
+    * primaryClusterRegion  **参数解释**： 主集群region。 **取值范围**： 不涉及。
+    * standbyClusterRegion  **参数解释**： 备集群region。 **取值范围**： 不涉及。
+    * primaryClusterProjectId  **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
+    * standbyClusterProjectId  **参数解释**： 备集群项目ID。 **取值范围**： 不涉及。
+    * lastDisasterTime  **参数解释**： 最近同步时间。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -225,25 +225,25 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * status  状态
-    * name  名称
-    * drType  容灾类型
-    * primaryClusterId  主集群ID
-    * primaryClusterName  主集群名称
-    * standbyClusterId  备集群ID
-    * standbyClusterName  备集群名称
-    * primaryClusterRole  主集群角色
-    * standbyClusterRole  备集群角色
-    * primaryClusterStatus  主集群状态
-    * standbyClusterStatus  备集群状态
-    * primaryClusterRegion  主集群region
-    * standbyClusterRegion  备集群region
-    * primaryClusterProjectId  主集群project_id
-    * standbyClusterProjectId  备集群project_id
-    * lastDisasterTime  最近同步时间
-    * startTime  启动时间
-    * createTime  创建时间
+    * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * name  **参数解释**： 名称。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
+    * primaryClusterName  **参数解释**： 主集群名称。 **取值范围**： 不涉及。
+    * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
+    * standbyClusterName  **参数解释**： 备集群名称。 **取值范围**： 不涉及。
+    * primaryClusterRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
+    * standbyClusterRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
+    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： 不涉及。
+    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： 不涉及。
+    * primaryClusterRegion  **参数解释**： 主集群region。 **取值范围**： 不涉及。
+    * standbyClusterRegion  **参数解释**： 备集群region。 **取值范围**： 不涉及。
+    * primaryClusterProjectId  **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
+    * standbyClusterProjectId  **参数解释**： 备集群项目ID。 **取值范围**： 不涉及。
+    * lastDisasterTime  **参数解释**： 最近同步时间。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 启动时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -372,7 +372,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id **参数解释**： 容灾ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -408,7 +408,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**： 名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -432,7 +432,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释**： 名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -444,7 +444,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets drType
-    *  容灾类型
+    *  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -456,7 +456,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets drType
     *
-    * @param string|null $drType 容灾类型
+    * @param string|null $drType **参数解释**： 容灾类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -468,7 +468,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryClusterId
-    *  主集群ID
+    *  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -480,7 +480,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets primaryClusterId
     *
-    * @param string|null $primaryClusterId 主集群ID
+    * @param string|null $primaryClusterId **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -492,7 +492,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryClusterName
-    *  主集群名称
+    *  **参数解释**： 主集群名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -504,7 +504,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets primaryClusterName
     *
-    * @param string|null $primaryClusterName 主集群名称
+    * @param string|null $primaryClusterName **参数解释**： 主集群名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -516,7 +516,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets standbyClusterId
-    *  备集群ID
+    *  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -528,7 +528,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets standbyClusterId
     *
-    * @param string|null $standbyClusterId 备集群ID
+    * @param string|null $standbyClusterId **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -540,7 +540,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets standbyClusterName
-    *  备集群名称
+    *  **参数解释**： 备集群名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -552,7 +552,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets standbyClusterName
     *
-    * @param string|null $standbyClusterName 备集群名称
+    * @param string|null $standbyClusterName **参数解释**： 备集群名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -564,7 +564,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryClusterRole
-    *  主集群角色
+    *  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -576,7 +576,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets primaryClusterRole
     *
-    * @param string|null $primaryClusterRole 主集群角色
+    * @param string|null $primaryClusterRole **参数解释**： 主集群角色。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -588,7 +588,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets standbyClusterRole
-    *  备集群角色
+    *  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -600,7 +600,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets standbyClusterRole
     *
-    * @param string|null $standbyClusterRole 备集群角色
+    * @param string|null $standbyClusterRole **参数解释**： 备集群角色。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -612,7 +612,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryClusterStatus
-    *  主集群状态
+    *  **参数解释**： 主集群状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -624,7 +624,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets primaryClusterStatus
     *
-    * @param string|null $primaryClusterStatus 主集群状态
+    * @param string|null $primaryClusterStatus **参数解释**： 主集群状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -636,7 +636,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets standbyClusterStatus
-    *  备集群状态
+    *  **参数解释**： 备集群状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -648,7 +648,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets standbyClusterStatus
     *
-    * @param string|null $standbyClusterStatus 备集群状态
+    * @param string|null $standbyClusterStatus **参数解释**： 备集群状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -660,7 +660,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryClusterRegion
-    *  主集群region
+    *  **参数解释**： 主集群region。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -672,7 +672,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets primaryClusterRegion
     *
-    * @param string|null $primaryClusterRegion 主集群region
+    * @param string|null $primaryClusterRegion **参数解释**： 主集群region。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -684,7 +684,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets standbyClusterRegion
-    *  备集群region
+    *  **参数解释**： 备集群region。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -696,7 +696,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets standbyClusterRegion
     *
-    * @param string|null $standbyClusterRegion 备集群region
+    * @param string|null $standbyClusterRegion **参数解释**： 备集群region。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -708,7 +708,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryClusterProjectId
-    *  主集群project_id
+    *  **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -720,7 +720,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets primaryClusterProjectId
     *
-    * @param string|null $primaryClusterProjectId 主集群project_id
+    * @param string|null $primaryClusterProjectId **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -732,7 +732,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets standbyClusterProjectId
-    *  备集群project_id
+    *  **参数解释**： 备集群项目ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -744,7 +744,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets standbyClusterProjectId
     *
-    * @param string|null $standbyClusterProjectId 备集群project_id
+    * @param string|null $standbyClusterProjectId **参数解释**： 备集群项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -756,7 +756,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastDisasterTime
-    *  最近同步时间
+    *  **参数解释**： 最近同步时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -768,7 +768,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets lastDisasterTime
     *
-    * @param string|null $lastDisasterTime 最近同步时间
+    * @param string|null $lastDisasterTime **参数解释**： 最近同步时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -780,7 +780,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  启动时间
+    *  **参数解释**： 启动时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -792,7 +792,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 启动时间
+    * @param string|null $startTime **参数解释**： 启动时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -804,7 +804,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -816,7 +816,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 创建时间
+    * @param string|null $createTime **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

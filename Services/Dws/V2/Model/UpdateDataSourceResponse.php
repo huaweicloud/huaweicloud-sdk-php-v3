@@ -21,8 +21,8 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  更新数据源job_id。
-    * dataSourceId  数据源id。
+    * jobId  **参数解释**： 更新数据源任务ID。 **取值范围**： 不涉及。
+    * dataSourceId  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  更新数据源job_id。
-    * dataSourceId  数据源id。
+    * jobId  **参数解释**： 更新数据源任务ID。 **取值范围**： 不涉及。
+    * dataSourceId  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  更新数据源job_id。
-    * dataSourceId  数据源id。
+    * jobId  **参数解释**： 更新数据源任务ID。 **取值范围**： 不涉及。
+    * dataSourceId  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  更新数据源job_id。
-    * dataSourceId  数据源id。
+    * jobId  **参数解释**： 更新数据源任务ID。 **取值范围**： 不涉及。
+    * dataSourceId  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  更新数据源job_id。
-    * dataSourceId  数据源id。
+    * jobId  **参数解释**： 更新数据源任务ID。 **取值范围**： 不涉及。
+    * dataSourceId  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  更新数据源job_id。
+    *  **参数解释**： 更新数据源任务ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 更新数据源job_id。
+    * @param string|null $jobId **参数解释**： 更新数据源任务ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataSourceId
-    *  数据源id。
+    *  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class UpdateDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataSourceId
     *
-    * @param string|null $dataSourceId 数据源id。
+    * @param string|null $dataSourceId **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -21,14 +21,14 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  任务ID
-    * jobName  任务名称
-    * beginTime  任务开始时间
-    * endTime  任务结束时间
-    * status  任务当前状态
-    * failedCode  任务失败错误码
-    * failedDetail  任务失败错误详情
-    * progress  任务进度
+    * jobId  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * jobName  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * beginTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+    * failedCode  **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
+    * failedDetail  **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 任务进度。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -45,14 +45,14 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  任务ID
-    * jobName  任务名称
-    * beginTime  任务开始时间
-    * endTime  任务结束时间
-    * status  任务当前状态
-    * failedCode  任务失败错误码
-    * failedDetail  任务失败错误详情
-    * progress  任务进度
+    * jobId  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * jobName  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * beginTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+    * failedCode  **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
+    * failedDetail  **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 任务进度。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,14 +90,14 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  任务ID
-    * jobName  任务名称
-    * beginTime  任务开始时间
-    * endTime  任务结束时间
-    * status  任务当前状态
-    * failedCode  任务失败错误码
-    * failedDetail  任务失败错误详情
-    * progress  任务进度
+    * jobId  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * jobName  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * beginTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+    * failedCode  **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
+    * failedDetail  **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 任务进度。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -114,14 +114,14 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  任务ID
-    * jobName  任务名称
-    * beginTime  任务开始时间
-    * endTime  任务结束时间
-    * status  任务当前状态
-    * failedCode  任务失败错误码
-    * failedDetail  任务失败错误详情
-    * progress  任务进度
+    * jobId  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * jobName  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * beginTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+    * failedCode  **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
+    * failedDetail  **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 任务进度。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -138,14 +138,14 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  任务ID
-    * jobName  任务名称
-    * beginTime  任务开始时间
-    * endTime  任务结束时间
-    * status  任务当前状态
-    * failedCode  任务失败错误码
-    * failedDetail  任务失败错误详情
-    * progress  任务进度
+    * jobId  **参数解释**： 任务ID。 **取值范围**： 不涉及。
+    * jobName  **参数解释**： 任务名称。 **取值范围**： 不涉及。
+    * beginTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
+    * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+    * failedCode  **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
+    * failedDetail  **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
+    * progress  **参数解释**： 任务进度。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -252,7 +252,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务ID
+    *  **参数解释**： 任务ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -264,7 +264,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 任务ID
+    * @param string|null $jobId **参数解释**： 任务ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobName
-    *  任务名称
+    *  **参数解释**： 任务名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobName
     *
-    * @param string|null $jobName 任务名称
+    * @param string|null $jobName **参数解释**： 任务名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  任务开始时间
+    *  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -312,7 +312,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param string|null $beginTime 任务开始时间
+    * @param string|null $beginTime **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  任务结束时间
+    *  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -336,7 +336,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 任务结束时间
+    * @param string|null $endTime **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  任务当前状态
+    *  **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -360,7 +360,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 任务当前状态
+    * @param string|null $status **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedCode
-    *  任务失败错误码
+    *  **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets failedCode
     *
-    * @param string|null $failedCode 任务失败错误码
+    * @param string|null $failedCode **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedDetail
-    *  任务失败错误详情
+    *  **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -408,7 +408,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets failedDetail
     *
-    * @param string|null $failedDetail 任务失败错误详情
+    * @param string|null $failedDetail **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets progress
-    *  任务进度
+    *  **参数解释**： 任务进度。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -432,7 +432,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets progress
     *
-    * @param string|null $progress 任务进度
+    * @param string|null $progress **参数解释**： 任务进度。 **取值范围**： 不涉及。
     *
     * @return $this
     */

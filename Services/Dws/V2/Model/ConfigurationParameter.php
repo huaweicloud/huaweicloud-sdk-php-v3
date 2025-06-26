@@ -20,14 +20,14 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  参数名称。
-    * values  参数值。
-    * unit  参数单位。
-    * type  参数类型，包括boolean、string、integer、float、list。
-    * readonly  是否只读。
-    * valueRange  参数值范围。
-    * restartRequired  是否需要重启。
-    * description  参数描述。
+    * name  **参数解释**： 参数名称。 **取值范围**： 不涉及。
+    * values  **参数解释**： 参数值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 参数单位。 **取值范围**： 不涉及。
+    * type  **参数解释**： 参数类型。 **取值范围**： 包括boolean、string、integer、float、list。
+    * readonly  **参数解释**： 是否只读。 **取值范围**： 不涉及。
+    * valueRange  **参数解释**： 参数值范围。 **取值范围**： 不涉及。
+    * restartRequired  **参数解释**： 是否需要重启。 **取值范围**： 不涉及。
+    * description  **参数解释**： 参数描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  参数名称。
-    * values  参数值。
-    * unit  参数单位。
-    * type  参数类型，包括boolean、string、integer、float、list。
-    * readonly  是否只读。
-    * valueRange  参数值范围。
-    * restartRequired  是否需要重启。
-    * description  参数描述。
+    * name  **参数解释**： 参数名称。 **取值范围**： 不涉及。
+    * values  **参数解释**： 参数值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 参数单位。 **取值范围**： 不涉及。
+    * type  **参数解释**： 参数类型。 **取值范围**： 包括boolean、string、integer、float、list。
+    * readonly  **参数解释**： 是否只读。 **取值范围**： 不涉及。
+    * valueRange  **参数解释**： 参数值范围。 **取值范围**： 不涉及。
+    * restartRequired  **参数解释**： 是否需要重启。 **取值范围**： 不涉及。
+    * description  **参数解释**： 参数描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  参数名称。
-    * values  参数值。
-    * unit  参数单位。
-    * type  参数类型，包括boolean、string、integer、float、list。
-    * readonly  是否只读。
-    * valueRange  参数值范围。
-    * restartRequired  是否需要重启。
-    * description  参数描述。
+    * name  **参数解释**： 参数名称。 **取值范围**： 不涉及。
+    * values  **参数解释**： 参数值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 参数单位。 **取值范围**： 不涉及。
+    * type  **参数解释**： 参数类型。 **取值范围**： 包括boolean、string、integer、float、list。
+    * readonly  **参数解释**： 是否只读。 **取值范围**： 不涉及。
+    * valueRange  **参数解释**： 参数值范围。 **取值范围**： 不涉及。
+    * restartRequired  **参数解释**： 是否需要重启。 **取值范围**： 不涉及。
+    * description  **参数解释**： 参数描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  参数名称。
-    * values  参数值。
-    * unit  参数单位。
-    * type  参数类型，包括boolean、string、integer、float、list。
-    * readonly  是否只读。
-    * valueRange  参数值范围。
-    * restartRequired  是否需要重启。
-    * description  参数描述。
+    * name  **参数解释**： 参数名称。 **取值范围**： 不涉及。
+    * values  **参数解释**： 参数值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 参数单位。 **取值范围**： 不涉及。
+    * type  **参数解释**： 参数类型。 **取值范围**： 包括boolean、string、integer、float、list。
+    * readonly  **参数解释**： 是否只读。 **取值范围**： 不涉及。
+    * valueRange  **参数解释**： 参数值范围。 **取值范围**： 不涉及。
+    * restartRequired  **参数解释**： 是否需要重启。 **取值范围**： 不涉及。
+    * description  **参数解释**： 参数描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  参数名称。
-    * values  参数值。
-    * unit  参数单位。
-    * type  参数类型，包括boolean、string、integer、float、list。
-    * readonly  是否只读。
-    * valueRange  参数值范围。
-    * restartRequired  是否需要重启。
-    * description  参数描述。
+    * name  **参数解释**： 参数名称。 **取值范围**： 不涉及。
+    * values  **参数解释**： 参数值。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 参数单位。 **取值范围**： 不涉及。
+    * type  **参数解释**： 参数类型。 **取值范围**： 包括boolean、string、integer、float、list。
+    * readonly  **参数解释**： 是否只读。 **取值范围**： 不涉及。
+    * valueRange  **参数解释**： 参数值范围。 **取值范围**： 不涉及。
+    * restartRequired  **参数解释**： 是否需要重启。 **取值范围**： 不涉及。
+    * description  **参数解释**： 参数描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -275,7 +275,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数名称。
+    *  **参数解释**： 参数名称。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -287,7 +287,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 参数名称。
+    * @param string $name **参数解释**： 参数名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  参数值。
+    *  **参数解释**： 参数值。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ConfigurationParameterUnit[]
     */
@@ -311,7 +311,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ConfigurationParameterUnit[] $values 参数值。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ConfigurationParameterUnit[] $values **参数解释**： 参数值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  参数单位。
+    *  **参数解释**： 参数单位。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -335,7 +335,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string $unit 参数单位。
+    * @param string $unit **参数解释**： 参数单位。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  参数类型，包括boolean、string、integer、float、list。
+    *  **参数解释**： 参数类型。 **取值范围**： 包括boolean、string、integer、float、list。
     *
     * @return string
     */
@@ -359,7 +359,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 参数类型，包括boolean、string、integer、float、list。
+    * @param string $type **参数解释**： 参数类型。 **取值范围**： 包括boolean、string、integer、float、list。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
 
     /**
     * Gets readonly
-    *  是否只读。
+    *  **参数解释**： 是否只读。 **取值范围**： 不涉及。
     *
     * @return bool
     */
@@ -383,7 +383,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets readonly
     *
-    * @param bool $readonly 是否只读。
+    * @param bool $readonly **参数解释**： 是否只读。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
 
     /**
     * Gets valueRange
-    *  参数值范围。
+    *  **参数解释**： 参数值范围。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -407,7 +407,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets valueRange
     *
-    * @param string $valueRange 参数值范围。
+    * @param string $valueRange **参数解释**： 参数值范围。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
 
     /**
     * Gets restartRequired
-    *  是否需要重启。
+    *  **参数解释**： 是否需要重启。 **取值范围**： 不涉及。
     *
     * @return bool
     */
@@ -431,7 +431,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets restartRequired
     *
-    * @param bool $restartRequired 是否需要重启。
+    * @param bool $restartRequired **参数解释**： 是否需要重启。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -443,7 +443,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数描述。
+    *  **参数解释**： 参数描述。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -455,7 +455,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 参数描述。
+    * @param string $description **参数解释**： 参数描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */

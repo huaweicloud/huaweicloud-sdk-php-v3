@@ -21,8 +21,8 @@ class ListAlarmSubsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  告警订阅总数
-    * alarmSubscriptions  告警订阅列表
+    * count  **参数解释**： 告警订阅总数。 **取值范围**： 不涉及。
+    * alarmSubscriptions  **参数解释**： 告警订阅列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListAlarmSubsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  告警订阅总数
-    * alarmSubscriptions  告警订阅列表
+    * count  **参数解释**： 告警订阅总数。 **取值范围**： 不涉及。
+    * alarmSubscriptions  **参数解释**： 告警订阅列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAlarmSubsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  告警订阅总数
-    * alarmSubscriptions  告警订阅列表
+    * count  **参数解释**： 告警订阅总数。 **取值范围**： 不涉及。
+    * alarmSubscriptions  **参数解释**： 告警订阅列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAlarmSubsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  告警订阅总数
-    * alarmSubscriptions  告警订阅列表
+    * count  **参数解释**： 告警订阅总数。 **取值范围**： 不涉及。
+    * alarmSubscriptions  **参数解释**： 告警订阅列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAlarmSubsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  告警订阅总数
-    * alarmSubscriptions  告警订阅列表
+    * count  **参数解释**： 告警订阅总数。 **取值范围**： 不涉及。
+    * alarmSubscriptions  **参数解释**： 告警订阅列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListAlarmSubsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  告警订阅总数
+    *  **参数解释**： 告警订阅总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListAlarmSubsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 告警订阅总数
+    * @param int|null $count **参数解释**： 告警订阅总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListAlarmSubsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmSubscriptions
-    *  告警订阅列表
+    *  **参数解释**： 告警订阅列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\AlarmSubscriptionResponse[]|null
     */
@@ -222,7 +222,7 @@ class ListAlarmSubsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmSubscriptions
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\AlarmSubscriptionResponse[]|null $alarmSubscriptions 告警订阅列表
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\AlarmSubscriptionResponse[]|null $alarmSubscriptions **参数解释**： 告警订阅列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

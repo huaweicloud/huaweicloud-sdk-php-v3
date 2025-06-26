@@ -21,10 +21,10 @@ class ListClusterSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * snapshots  快照对象列表。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * snapshots  **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * count  快照对象列表总数
+    * count  **参数解释**： 快照对象列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ListClusterSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * snapshots  快照对象列表。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * snapshots  **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * count  快照对象列表总数
+    * count  **参数解释**： 快照对象列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ListClusterSnapshotsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * snapshots  快照对象列表。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * snapshots  **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * count  快照对象列表总数
+    * count  **参数解释**： 快照对象列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ListClusterSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * snapshots  快照对象列表。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * snapshots  **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * count  快照对象列表总数
+    * count  **参数解释**： 快照对象列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ListClusterSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * snapshots  快照对象列表。
-    * projectId  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * snapshots  **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * count  快照对象列表总数
+    * count  **参数解释**： 快照对象列表总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ListClusterSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshots
-    *  快照对象列表。
+    *  **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterSnapshots[]|null
     */
@@ -220,7 +220,7 @@ class ListClusterSnapshotsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets snapshots
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterSnapshots[]|null $snapshots 快照对象列表。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterSnapshots[]|null $snapshots **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ListClusterSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class ListClusterSnapshotsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string|null $projectId **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ListClusterSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  快照对象列表总数
+    *  **参数解释**： 快照对象列表总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -292,7 +292,7 @@ class ListClusterSnapshotsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 快照对象列表总数
+    * @param int|null $count **参数解释**： 快照对象列表总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
