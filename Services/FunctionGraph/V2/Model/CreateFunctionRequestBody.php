@@ -55,6 +55,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
+    * domainNames  vpc中配置的内网域名。在函数配置调用DNS服务的接口解析内网域名时，则函数必须具备读取DNS资源权限的委托。
+    * tags  函数标签。
     *
     * @var string[]
     */
@@ -93,7 +95,9 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'enableLtsLog' => 'bool',
             'ltsCustomTag' => 'map[string,string]',
             'userDataEncryptKmsKeyId' => 'string',
-            'codeEncryptKmsKeyId' => 'string'
+            'codeEncryptKmsKeyId' => 'string',
+            'domainNames' => 'string',
+            'tags' => 'string'
     ];
 
     /**
@@ -133,6 +137,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
+    * domainNames  vpc中配置的内网域名。在函数配置调用DNS服务的接口解析内网域名时，则函数必须具备读取DNS资源权限的委托。
+    * tags  函数标签。
     *
     * @var string[]
     */
@@ -171,7 +177,9 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
         'enableLtsLog' => null,
         'ltsCustomTag' => null,
         'userDataEncryptKmsKeyId' => null,
-        'codeEncryptKmsKeyId' => null
+        'codeEncryptKmsKeyId' => null,
+        'domainNames' => null,
+        'tags' => null
     ];
 
     /**
@@ -232,6 +240,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
+    * domainNames  vpc中配置的内网域名。在函数配置调用DNS服务的接口解析内网域名时，则函数必须具备读取DNS资源权限的委托。
+    * tags  函数标签。
     *
     * @var string[]
     */
@@ -270,7 +280,9 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'enableLtsLog' => 'enable_lts_log',
             'ltsCustomTag' => 'lts_custom_tag',
             'userDataEncryptKmsKeyId' => 'user_data_encrypt_kms_key_id',
-            'codeEncryptKmsKeyId' => 'code_encrypt_kms_key_id'
+            'codeEncryptKmsKeyId' => 'code_encrypt_kms_key_id',
+            'domainNames' => 'domain_names',
+            'tags' => 'tags'
     ];
 
     /**
@@ -310,6 +322,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
+    * domainNames  vpc中配置的内网域名。在函数配置调用DNS服务的接口解析内网域名时，则函数必须具备读取DNS资源权限的委托。
+    * tags  函数标签。
     *
     * @var string[]
     */
@@ -348,7 +362,9 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'enableLtsLog' => 'setEnableLtsLog',
             'ltsCustomTag' => 'setLtsCustomTag',
             'userDataEncryptKmsKeyId' => 'setUserDataEncryptKmsKeyId',
-            'codeEncryptKmsKeyId' => 'setCodeEncryptKmsKeyId'
+            'codeEncryptKmsKeyId' => 'setCodeEncryptKmsKeyId',
+            'domainNames' => 'setDomainNames',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -388,6 +404,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * ltsCustomTag  自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
     * userDataEncryptKmsKeyId  用于环境变量加密的kms主秘钥ID。
     * codeEncryptKmsKeyId  用于用户代码加密的kms主秘钥ID。
+    * domainNames  vpc中配置的内网域名。在函数配置调用DNS服务的接口解析内网域名时，则函数必须具备读取DNS资源权限的委托。
+    * tags  函数标签。
     *
     * @var string[]
     */
@@ -426,7 +444,9 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'enableLtsLog' => 'getEnableLtsLog',
             'ltsCustomTag' => 'getLtsCustomTag',
             'userDataEncryptKmsKeyId' => 'getUserDataEncryptKmsKeyId',
-            'codeEncryptKmsKeyId' => 'getCodeEncryptKmsKeyId'
+            'codeEncryptKmsKeyId' => 'getCodeEncryptKmsKeyId',
+            'domainNames' => 'getDomainNames',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -619,6 +639,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
         $this->container['ltsCustomTag'] = isset($data['ltsCustomTag']) ? $data['ltsCustomTag'] : null;
         $this->container['userDataEncryptKmsKeyId'] = isset($data['userDataEncryptKmsKeyId']) ? $data['userDataEncryptKmsKeyId'] : null;
         $this->container['codeEncryptKmsKeyId'] = isset($data['codeEncryptKmsKeyId']) ? $data['codeEncryptKmsKeyId'] : null;
+        $this->container['domainNames'] = isset($data['domainNames']) ? $data['domainNames'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -1522,6 +1544,54 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     public function setCodeEncryptKmsKeyId($codeEncryptKmsKeyId)
     {
         $this->container['codeEncryptKmsKeyId'] = $codeEncryptKmsKeyId;
+        return $this;
+    }
+
+    /**
+    * Gets domainNames
+    *  vpc中配置的内网域名。在函数配置调用DNS服务的接口解析内网域名时，则函数必须具备读取DNS资源权限的委托。
+    *
+    * @return string|null
+    */
+    public function getDomainNames()
+    {
+        return $this->container['domainNames'];
+    }
+
+    /**
+    * Sets domainNames
+    *
+    * @param string|null $domainNames vpc中配置的内网域名。在函数配置调用DNS服务的接口解析内网域名时，则函数必须具备读取DNS资源权限的委托。
+    *
+    * @return $this
+    */
+    public function setDomainNames($domainNames)
+    {
+        $this->container['domainNames'] = $domainNames;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  函数标签。
+    *
+    * @return string|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string|null $tags 函数标签。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

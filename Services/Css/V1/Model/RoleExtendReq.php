@@ -72,7 +72,7 @@ class RoleExtendReq implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'grow' => 'grow',
-            'isAutoPay' => 'isAutoPay'
+            'isAutoPay' => 'is_auto_pay'
     ];
 
     /**

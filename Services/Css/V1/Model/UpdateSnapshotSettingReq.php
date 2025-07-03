@@ -78,7 +78,7 @@ class UpdateSnapshotSettingReq implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'bucket' => 'bucket',
             'agency' => 'agency',
-            'basePath' => 'basePath'
+            'basePath' => 'base_path'
     ];
 
     /**

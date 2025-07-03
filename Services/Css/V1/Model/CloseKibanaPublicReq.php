@@ -71,8 +71,8 @@ class CloseKibanaPublicReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'eipSize' => 'eipSize',
-            'elbWhiteList' => 'elbWhiteList'
+            'eipSize' => 'eip_size',
+            'elbWhiteList' => 'elb_white_list'
     ];
 
     /**

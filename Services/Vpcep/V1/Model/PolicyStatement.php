@@ -23,13 +23,15 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     * effect  - Allow，允许控制访问权限 - Deny，拒绝控制访问权限
     * action  obs访问权限
     * resource  obs对象
+    * condition  statement生效的条件
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'effect' => 'string',
             'action' => 'string[]',
-            'resource' => 'string[]'
+            'resource' => 'string[]',
+            'condition' => 'object'
     ];
 
     /**
@@ -37,13 +39,15 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     * effect  - Allow，允许控制访问权限 - Deny，拒绝控制访问权限
     * action  obs访问权限
     * resource  obs对象
+    * condition  statement生效的条件
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'effect' => null,
         'action' => null,
-        'resource' => null
+        'resource' => null,
+        'condition' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     * effect  - Allow，允许控制访问权限 - Deny，拒绝控制访问权限
     * action  obs访问权限
     * resource  obs对象
+    * condition  statement生效的条件
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'effect' => 'Effect',
             'action' => 'Action',
-            'resource' => 'Resource'
+            'resource' => 'Resource',
+            'condition' => 'Condition'
     ];
 
     /**
@@ -86,13 +92,15 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     * effect  - Allow，允许控制访问权限 - Deny，拒绝控制访问权限
     * action  obs访问权限
     * resource  obs对象
+    * condition  statement生效的条件
     *
     * @var string[]
     */
     protected static $setters = [
             'effect' => 'setEffect',
             'action' => 'setAction',
-            'resource' => 'setResource'
+            'resource' => 'setResource',
+            'condition' => 'setCondition'
     ];
 
     /**
@@ -100,13 +108,15 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     * effect  - Allow，允许控制访问权限 - Deny，拒绝控制访问权限
     * action  obs访问权限
     * resource  obs对象
+    * condition  statement生效的条件
     *
     * @var string[]
     */
     protected static $getters = [
             'effect' => 'getEffect',
             'action' => 'getAction',
-            'resource' => 'getResource'
+            'resource' => 'getResource',
+            'condition' => 'getCondition'
     ];
 
     /**
@@ -185,6 +195,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
         $this->container['effect'] = isset($data['effect']) ? $data['effect'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['resource'] = isset($data['resource']) ? $data['resource'] : null;
+        $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
     }
 
     /**
@@ -295,6 +306,30 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     public function setResource($resource)
     {
         $this->container['resource'] = $resource;
+        return $this;
+    }
+
+    /**
+    * Gets condition
+    *  statement生效的条件
+    *
+    * @return object|null
+    */
+    public function getCondition()
+    {
+        return $this->container['condition'];
+    }
+
+    /**
+    * Sets condition
+    *
+    * @param object|null $condition statement生效的条件
+    *
+    * @return $this
+    */
+    public function setCondition($condition)
+    {
+        $this->container['condition'] = $condition;
         return $this;
     }
 

@@ -21,21 +21,29 @@ class ListConfsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  指定查询集群ID。
+    * start  指定查询起始值，默认值为1。
+    * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'clusterId' => 'string'
+            'clusterId' => 'string',
+            'start' => 'string',
+            'limit' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  指定查询集群ID。
+    * start  指定查询起始值，默认值为1。
+    * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'clusterId' => null
+        'clusterId' => null,
+        'start' => null,
+        'limit' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class ListConfsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  指定查询集群ID。
+    * start  指定查询起始值，默认值为1。
+    * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'clusterId' => 'cluster_id'
+            'clusterId' => 'cluster_id',
+            'start' => 'start',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  指定查询集群ID。
+    * start  指定查询起始值，默认值为1。
+    * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $setters = [
-            'clusterId' => 'setClusterId'
+            'clusterId' => 'setClusterId',
+            'start' => 'setStart',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  指定查询集群ID。
+    * start  指定查询起始值，默认值为1。
+    * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $getters = [
-            'clusterId' => 'getClusterId'
+            'clusterId' => 'getClusterId',
+            'start' => 'getStart',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ListConfsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -196,6 +218,54 @@ class ListConfsRequest implements ModelInterface, ArrayAccess
     public function setClusterId($clusterId)
     {
         $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets start
+    *  指定查询起始值，默认值为1。
+    *
+    * @return string|null
+    */
+    public function getStart()
+    {
+        return $this->container['start'];
+    }
+
+    /**
+    * Sets start
+    *
+    * @param string|null $start 指定查询起始值，默认值为1。
+    *
+    * @return $this
+    */
+    public function setStart($start)
+    {
+        $this->container['start'] = $start;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  指定查询个数，默认值为10。
+    *
+    * @return string|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param string|null $limit 指定查询个数，默认值为10。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

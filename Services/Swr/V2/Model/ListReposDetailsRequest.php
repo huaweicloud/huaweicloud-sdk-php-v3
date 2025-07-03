@@ -23,7 +23,7 @@ class ListReposDetailsRequest implements ModelInterface, ArrayAccess
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
     * name  镜像仓库名称。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
     * category  镜像仓库分类，可设置为app_server, linux, framework_app, database, lang, other, windows, arm。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
-    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * limit  返回条数，默认情况下返回100条记录，最多返回1000条记录。注意：offset和limit参数需要配套使用。
     * offset  起始索引。注意：offset和limit参数需要配套使用。
     * orderColumn  按列排序，可设置为updated_at（按更新时间排序）。注意：order_column和order_type参数需要配套使用。
     * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
@@ -47,7 +47,7 @@ class ListReposDetailsRequest implements ModelInterface, ArrayAccess
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
     * name  镜像仓库名称。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
     * category  镜像仓库分类，可设置为app_server, linux, framework_app, database, lang, other, windows, arm。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
-    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * limit  返回条数，默认情况下返回100条记录，最多返回1000条记录。注意：offset和limit参数需要配套使用。
     * offset  起始索引。注意：offset和limit参数需要配套使用。
     * orderColumn  按列排序，可设置为updated_at（按更新时间排序）。注意：order_column和order_type参数需要配套使用。
     * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
@@ -92,7 +92,7 @@ class ListReposDetailsRequest implements ModelInterface, ArrayAccess
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
     * name  镜像仓库名称。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
     * category  镜像仓库分类，可设置为app_server, linux, framework_app, database, lang, other, windows, arm。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
-    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * limit  返回条数，默认情况下返回100条记录，最多返回1000条记录。注意：offset和limit参数需要配套使用。
     * offset  起始索引。注意：offset和limit参数需要配套使用。
     * orderColumn  按列排序，可设置为updated_at（按更新时间排序）。注意：order_column和order_type参数需要配套使用。
     * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
@@ -116,7 +116,7 @@ class ListReposDetailsRequest implements ModelInterface, ArrayAccess
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
     * name  镜像仓库名称。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
     * category  镜像仓库分类，可设置为app_server, linux, framework_app, database, lang, other, windows, arm。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
-    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * limit  返回条数，默认情况下返回100条记录，最多返回1000条记录。注意：offset和limit参数需要配套使用。
     * offset  起始索引。注意：offset和limit参数需要配套使用。
     * orderColumn  按列排序，可设置为updated_at（按更新时间排序）。注意：order_column和order_type参数需要配套使用。
     * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
@@ -140,7 +140,7 @@ class ListReposDetailsRequest implements ModelInterface, ArrayAccess
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
     * name  镜像仓库名称。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
     * category  镜像仓库分类，可设置为app_server, linux, framework_app, database, lang, other, windows, arm。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
-    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * limit  返回条数，默认情况下返回100条记录，最多返回1000条记录。注意：offset和limit参数需要配套使用。
     * offset  起始索引。注意：offset和limit参数需要配套使用。
     * orderColumn  按列排序，可设置为updated_at（按更新时间排序）。注意：order_column和order_type参数需要配套使用。
     * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
@@ -323,7 +323,7 @@ class ListReposDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  返回条数。注意：offset和limit参数需要配套使用。
+    *  返回条数，默认情况下返回100条记录，最多返回1000条记录。注意：offset和limit参数需要配套使用。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class ListReposDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 返回条数。注意：offset和limit参数需要配套使用。
+    * @param string|null $limit 返回条数，默认情况下返回100条记录，最多返回1000条记录。注意：offset和limit参数需要配套使用。
     *
     * @return $this
     */

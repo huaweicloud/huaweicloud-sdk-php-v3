@@ -22,7 +22,6 @@ class RunAuthorizationActionRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * userName  被赋权的用户名称，该用户将有权访问指定的DLI资源权限，被收回或者更新访问权限。
     * projectId  被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将有权访问指定的数据库或数据表。
-    * grantProjectId  被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将 有权访问指定的DLI资源权限，被收回或者更新访问权限。
     * action  指定赋权或回收。值为：grant，revoke或update。  说明：当用户同时拥有grant和revoke权限的时候才有权限使用update操作。
     * privileges  赋权信息。具体参数请参考Privilege参数。
     *
@@ -31,7 +30,6 @@ class RunAuthorizationActionRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'userName' => 'string',
             'projectId' => 'string',
-            'grantProjectId' => 'string',
             'action' => 'string',
             'privileges' => '\HuaweiCloud\SDK\Dli\V1\Model\Privilege[]'
     ];
@@ -40,7 +38,6 @@ class RunAuthorizationActionRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * userName  被赋权的用户名称，该用户将有权访问指定的DLI资源权限，被收回或者更新访问权限。
     * projectId  被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将有权访问指定的数据库或数据表。
-    * grantProjectId  被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将 有权访问指定的DLI资源权限，被收回或者更新访问权限。
     * action  指定赋权或回收。值为：grant，revoke或update。  说明：当用户同时拥有grant和revoke权限的时候才有权限使用update操作。
     * privileges  赋权信息。具体参数请参考Privilege参数。
     *
@@ -49,7 +46,6 @@ class RunAuthorizationActionRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'userName' => null,
         'projectId' => null,
-        'grantProjectId' => null,
         'action' => null,
         'privileges' => null
     ];
@@ -79,7 +75,6 @@ class RunAuthorizationActionRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * userName  被赋权的用户名称，该用户将有权访问指定的DLI资源权限，被收回或者更新访问权限。
     * projectId  被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将有权访问指定的数据库或数据表。
-    * grantProjectId  被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将 有权访问指定的DLI资源权限，被收回或者更新访问权限。
     * action  指定赋权或回收。值为：grant，revoke或update。  说明：当用户同时拥有grant和revoke权限的时候才有权限使用update操作。
     * privileges  赋权信息。具体参数请参考Privilege参数。
     *
@@ -88,7 +83,6 @@ class RunAuthorizationActionRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'userName' => 'user_name',
             'projectId' => 'projectId',
-            'grantProjectId' => 'grant_project_id',
             'action' => 'action',
             'privileges' => 'privileges'
     ];
@@ -97,7 +91,6 @@ class RunAuthorizationActionRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * userName  被赋权的用户名称，该用户将有权访问指定的DLI资源权限，被收回或者更新访问权限。
     * projectId  被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将有权访问指定的数据库或数据表。
-    * grantProjectId  被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将 有权访问指定的DLI资源权限，被收回或者更新访问权限。
     * action  指定赋权或回收。值为：grant，revoke或update。  说明：当用户同时拥有grant和revoke权限的时候才有权限使用update操作。
     * privileges  赋权信息。具体参数请参考Privilege参数。
     *
@@ -106,7 +99,6 @@ class RunAuthorizationActionRequestBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'userName' => 'setUserName',
             'projectId' => 'setProjectId',
-            'grantProjectId' => 'setGrantProjectId',
             'action' => 'setAction',
             'privileges' => 'setPrivileges'
     ];
@@ -115,7 +107,6 @@ class RunAuthorizationActionRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * userName  被赋权的用户名称，该用户将有权访问指定的DLI资源权限，被收回或者更新访问权限。
     * projectId  被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将有权访问指定的数据库或数据表。
-    * grantProjectId  被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将 有权访问指定的DLI资源权限，被收回或者更新访问权限。
     * action  指定赋权或回收。值为：grant，revoke或update。  说明：当用户同时拥有grant和revoke权限的时候才有权限使用update操作。
     * privileges  赋权信息。具体参数请参考Privilege参数。
     *
@@ -124,7 +115,6 @@ class RunAuthorizationActionRequestBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'userName' => 'getUserName',
             'projectId' => 'getProjectId',
-            'grantProjectId' => 'getGrantProjectId',
             'action' => 'getAction',
             'privileges' => 'getPrivileges'
     ];
@@ -206,7 +196,6 @@ class RunAuthorizationActionRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['grantProjectId'] = isset($data['grantProjectId']) ? $data['grantProjectId'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['privileges'] = isset($data['privileges']) ? $data['privileges'] : null;
     }
@@ -292,30 +281,6 @@ class RunAuthorizationActionRequestBody implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
-        return $this;
-    }
-
-    /**
-    * Gets grantProjectId
-    *  被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将 有权访问指定的DLI资源权限，被收回或者更新访问权限。
-    *
-    * @return string|null
-    */
-    public function getGrantProjectId()
-    {
-        return $this->container['grantProjectId'];
-    }
-
-    /**
-    * Sets grantProjectId
-    *
-    * @param string|null $grantProjectId 被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将 有权访问指定的DLI资源权限，被收回或者更新访问权限。
-    *
-    * @return $this
-    */
-    public function setGrantProjectId($grantProjectId)
-    {
-        $this->container['grantProjectId'] = $grantProjectId;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class ListTicketParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * stringFilters  字符串搜索条件
+    * stringFilters  字符串搜索条件，可根据该条件搜索到具体的工单。
     * sortFilter  sortFilter
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ListTicketParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * stringFilters  字符串搜索条件
+    * stringFilters  字符串搜索条件，可根据该条件搜索到具体的工单。
     * sortFilter  sortFilter
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ListTicketParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * stringFilters  字符串搜索条件
+    * stringFilters  字符串搜索条件，可根据该条件搜索到具体的工单。
     * sortFilter  sortFilter
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ListTicketParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * stringFilters  字符串搜索条件
+    * stringFilters  字符串搜索条件，可根据该条件搜索到具体的工单。
     * sortFilter  sortFilter
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ListTicketParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * stringFilters  字符串搜索条件
+    * stringFilters  字符串搜索条件，可根据该条件搜索到具体的工单。
     * sortFilter  sortFilter
     *
     * @var string[]
@@ -188,7 +188,7 @@ class ListTicketParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets stringFilters
-    *  字符串搜索条件
+    *  字符串搜索条件，可根据该条件搜索到具体的工单。
     *
     * @return \HuaweiCloud\SDK\Coc\V1\Model\ObjectFilter[]
     */
@@ -200,7 +200,7 @@ class ListTicketParams implements ModelInterface, ArrayAccess
     /**
     * Sets stringFilters
     *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\ObjectFilter[] $stringFilters 字符串搜索条件
+    * @param \HuaweiCloud\SDK\Coc\V1\Model\ObjectFilter[] $stringFilters 字符串搜索条件，可根据该条件搜索到具体的工单。
     *
     * @return $this
     */

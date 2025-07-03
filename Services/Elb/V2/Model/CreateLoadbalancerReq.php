@@ -30,6 +30,7 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。创建负载均衡器时，给负载均衡器绑定企业项目ID。取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参见《企业管理用户指南》。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
             'adminStateUp' => 'bool',
             'enterpriseProjectId' => 'string',
             'protectionStatus' => 'string',
-            'protectionReason' => 'string'
+            'protectionReason' => 'string',
+            'prepaidOptions' => '\HuaweiCloud\SDK\Elb\V2\Model\PrepaidCreateOption'
     ];
 
     /**
@@ -58,6 +60,7 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。创建负载均衡器时，给负载均衡器绑定企业项目ID。取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参见《企业管理用户指南》。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
         'adminStateUp' => null,
         'enterpriseProjectId' => null,
         'protectionStatus' => null,
-        'protectionReason' => null
+        'protectionReason' => null,
+        'prepaidOptions' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。创建负载均衡器时，给负载均衡器绑定企业项目ID。取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参见《企业管理用户指南》。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
             'adminStateUp' => 'admin_state_up',
             'enterpriseProjectId' => 'enterprise_project_id',
             'protectionStatus' => 'protection_status',
-            'protectionReason' => 'protection_reason'
+            'protectionReason' => 'protection_reason',
+            'prepaidOptions' => 'prepaid_options'
     ];
 
     /**
@@ -135,6 +141,7 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。创建负载均衡器时，给负载均衡器绑定企业项目ID。取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参见《企业管理用户指南》。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
             'adminStateUp' => 'setAdminStateUp',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'protectionStatus' => 'setProtectionStatus',
-            'protectionReason' => 'setProtectionReason'
+            'protectionReason' => 'setProtectionReason',
+            'prepaidOptions' => 'setPrepaidOptions'
     ];
 
     /**
@@ -163,6 +171,7 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。创建负载均衡器时，给负载均衡器绑定企业项目ID。取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参见《企业管理用户指南》。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
             'adminStateUp' => 'getAdminStateUp',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'protectionStatus' => 'getProtectionStatus',
-            'protectionReason' => 'getProtectionReason'
+            'protectionReason' => 'getProtectionReason',
+            'prepaidOptions' => 'getPrepaidOptions'
     ];
 
     /**
@@ -275,6 +285,7 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
         $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
+        $this->container['prepaidOptions'] = isset($data['prepaidOptions']) ? $data['prepaidOptions'] : null;
     }
 
     /**
@@ -579,6 +590,30 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     public function setProtectionReason($protectionReason)
     {
         $this->container['protectionReason'] = $protectionReason;
+        return $this;
+    }
+
+    /**
+    * Gets prepaidOptions
+    *  prepaidOptions
+    *
+    * @return \HuaweiCloud\SDK\Elb\V2\Model\PrepaidCreateOption|null
+    */
+    public function getPrepaidOptions()
+    {
+        return $this->container['prepaidOptions'];
+    }
+
+    /**
+    * Sets prepaidOptions
+    *
+    * @param \HuaweiCloud\SDK\Elb\V2\Model\PrepaidCreateOption|null $prepaidOptions prepaidOptions
+    *
+    * @return $this
+    */
+    public function setPrepaidOptions($prepaidOptions)
+    {
+        $this->container['prepaidOptions'] = $prepaidOptions;
         return $this;
     }
 

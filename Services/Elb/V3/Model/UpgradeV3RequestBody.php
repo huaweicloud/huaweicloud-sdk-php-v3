@@ -27,7 +27,6 @@ class UpgradeV3RequestBody implements ModelInterface, ArrayAccess
     * ipv6VipVirsubnetId  双栈类型负载均衡器所在子网的IPv6网络ID。 若实例升级到独享型后期望使用IPv6功能，则升级时该字段必传。  可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的id得到。  使用说明： ipv6_vip_virsubnet_id需要属于原共享型实例所属VPC。 ipv6_vip_virsubnet_id所属子网需要开启IPv6。  [不支持IPv6，请勿使用。](tag:dt)
     * ipv6VipAddress  负载均衡器的IPv6虚拟IP。该地址必须包含在所在子网的IPv6网段内，且未被占用。  使用说明：  传入ipv6_vip_address时必须传入ipv6_vip_virsubnet_id。 不传入ipv6_vip_address，但传入ipv6_vip_virsubnet_id，则自动分配IPv6虚拟IP。 不传入ipv6_vip_address，且不传ipv6_vip_virsubnet_id，则不分配虚拟IP，ipv6_vip_address=null。  [不支持IPv6，请勿使用。](tag:dt)
     * elbVirsubnetIds  下联面子网的网络ID列表。仅action为start时生效。 可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到。  若不指定该字段，则选择vip_subnet_cidr_id子网对应的网络ID。  下联面子网必须属于该LB所在的VPC。
-    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -38,8 +37,7 @@ class UpgradeV3RequestBody implements ModelInterface, ArrayAccess
             'availabilityZoneList' => 'string[]',
             'ipv6VipVirsubnetId' => 'string',
             'ipv6VipAddress' => 'string',
-            'elbVirsubnetIds' => 'string[]',
-            'prepaidOptions' => '\HuaweiCloud\SDK\Elb\V3\Model\UpgradePrepaidOption'
+            'elbVirsubnetIds' => 'string[]'
     ];
 
     /**
@@ -51,7 +49,6 @@ class UpgradeV3RequestBody implements ModelInterface, ArrayAccess
     * ipv6VipVirsubnetId  双栈类型负载均衡器所在子网的IPv6网络ID。 若实例升级到独享型后期望使用IPv6功能，则升级时该字段必传。  可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的id得到。  使用说明： ipv6_vip_virsubnet_id需要属于原共享型实例所属VPC。 ipv6_vip_virsubnet_id所属子网需要开启IPv6。  [不支持IPv6，请勿使用。](tag:dt)
     * ipv6VipAddress  负载均衡器的IPv6虚拟IP。该地址必须包含在所在子网的IPv6网段内，且未被占用。  使用说明：  传入ipv6_vip_address时必须传入ipv6_vip_virsubnet_id。 不传入ipv6_vip_address，但传入ipv6_vip_virsubnet_id，则自动分配IPv6虚拟IP。 不传入ipv6_vip_address，且不传ipv6_vip_virsubnet_id，则不分配虚拟IP，ipv6_vip_address=null。  [不支持IPv6，请勿使用。](tag:dt)
     * elbVirsubnetIds  下联面子网的网络ID列表。仅action为start时生效。 可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到。  若不指定该字段，则选择vip_subnet_cidr_id子网对应的网络ID。  下联面子网必须属于该LB所在的VPC。
-    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -62,8 +59,7 @@ class UpgradeV3RequestBody implements ModelInterface, ArrayAccess
         'availabilityZoneList' => null,
         'ipv6VipVirsubnetId' => null,
         'ipv6VipAddress' => null,
-        'elbVirsubnetIds' => null,
-        'prepaidOptions' => null
+        'elbVirsubnetIds' => null
     ];
 
     /**
@@ -96,7 +92,6 @@ class UpgradeV3RequestBody implements ModelInterface, ArrayAccess
     * ipv6VipVirsubnetId  双栈类型负载均衡器所在子网的IPv6网络ID。 若实例升级到独享型后期望使用IPv6功能，则升级时该字段必传。  可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的id得到。  使用说明： ipv6_vip_virsubnet_id需要属于原共享型实例所属VPC。 ipv6_vip_virsubnet_id所属子网需要开启IPv6。  [不支持IPv6，请勿使用。](tag:dt)
     * ipv6VipAddress  负载均衡器的IPv6虚拟IP。该地址必须包含在所在子网的IPv6网段内，且未被占用。  使用说明：  传入ipv6_vip_address时必须传入ipv6_vip_virsubnet_id。 不传入ipv6_vip_address，但传入ipv6_vip_virsubnet_id，则自动分配IPv6虚拟IP。 不传入ipv6_vip_address，且不传ipv6_vip_virsubnet_id，则不分配虚拟IP，ipv6_vip_address=null。  [不支持IPv6，请勿使用。](tag:dt)
     * elbVirsubnetIds  下联面子网的网络ID列表。仅action为start时生效。 可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到。  若不指定该字段，则选择vip_subnet_cidr_id子网对应的网络ID。  下联面子网必须属于该LB所在的VPC。
-    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -107,8 +102,7 @@ class UpgradeV3RequestBody implements ModelInterface, ArrayAccess
             'availabilityZoneList' => 'availability_zone_list',
             'ipv6VipVirsubnetId' => 'ipv6_vip_virsubnet_id',
             'ipv6VipAddress' => 'ipv6_vip_address',
-            'elbVirsubnetIds' => 'elb_virsubnet_ids',
-            'prepaidOptions' => 'prepaid_options'
+            'elbVirsubnetIds' => 'elb_virsubnet_ids'
     ];
 
     /**
@@ -120,7 +114,6 @@ class UpgradeV3RequestBody implements ModelInterface, ArrayAccess
     * ipv6VipVirsubnetId  双栈类型负载均衡器所在子网的IPv6网络ID。 若实例升级到独享型后期望使用IPv6功能，则升级时该字段必传。  可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的id得到。  使用说明： ipv6_vip_virsubnet_id需要属于原共享型实例所属VPC。 ipv6_vip_virsubnet_id所属子网需要开启IPv6。  [不支持IPv6，请勿使用。](tag:dt)
     * ipv6VipAddress  负载均衡器的IPv6虚拟IP。该地址必须包含在所在子网的IPv6网段内，且未被占用。  使用说明：  传入ipv6_vip_address时必须传入ipv6_vip_virsubnet_id。 不传入ipv6_vip_address，但传入ipv6_vip_virsubnet_id，则自动分配IPv6虚拟IP。 不传入ipv6_vip_address，且不传ipv6_vip_virsubnet_id，则不分配虚拟IP，ipv6_vip_address=null。  [不支持IPv6，请勿使用。](tag:dt)
     * elbVirsubnetIds  下联面子网的网络ID列表。仅action为start时生效。 可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到。  若不指定该字段，则选择vip_subnet_cidr_id子网对应的网络ID。  下联面子网必须属于该LB所在的VPC。
-    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -131,8 +124,7 @@ class UpgradeV3RequestBody implements ModelInterface, ArrayAccess
             'availabilityZoneList' => 'setAvailabilityZoneList',
             'ipv6VipVirsubnetId' => 'setIpv6VipVirsubnetId',
             'ipv6VipAddress' => 'setIpv6VipAddress',
-            'elbVirsubnetIds' => 'setElbVirsubnetIds',
-            'prepaidOptions' => 'setPrepaidOptions'
+            'elbVirsubnetIds' => 'setElbVirsubnetIds'
     ];
 
     /**
@@ -144,7 +136,6 @@ class UpgradeV3RequestBody implements ModelInterface, ArrayAccess
     * ipv6VipVirsubnetId  双栈类型负载均衡器所在子网的IPv6网络ID。 若实例升级到独享型后期望使用IPv6功能，则升级时该字段必传。  可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的id得到。  使用说明： ipv6_vip_virsubnet_id需要属于原共享型实例所属VPC。 ipv6_vip_virsubnet_id所属子网需要开启IPv6。  [不支持IPv6，请勿使用。](tag:dt)
     * ipv6VipAddress  负载均衡器的IPv6虚拟IP。该地址必须包含在所在子网的IPv6网段内，且未被占用。  使用说明：  传入ipv6_vip_address时必须传入ipv6_vip_virsubnet_id。 不传入ipv6_vip_address，但传入ipv6_vip_virsubnet_id，则自动分配IPv6虚拟IP。 不传入ipv6_vip_address，且不传ipv6_vip_virsubnet_id，则不分配虚拟IP，ipv6_vip_address=null。  [不支持IPv6，请勿使用。](tag:dt)
     * elbVirsubnetIds  下联面子网的网络ID列表。仅action为start时生效。 可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到。  若不指定该字段，则选择vip_subnet_cidr_id子网对应的网络ID。  下联面子网必须属于该LB所在的VPC。
-    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -155,8 +146,7 @@ class UpgradeV3RequestBody implements ModelInterface, ArrayAccess
             'availabilityZoneList' => 'getAvailabilityZoneList',
             'ipv6VipVirsubnetId' => 'getIpv6VipVirsubnetId',
             'ipv6VipAddress' => 'getIpv6VipAddress',
-            'elbVirsubnetIds' => 'getElbVirsubnetIds',
-            'prepaidOptions' => 'getPrepaidOptions'
+            'elbVirsubnetIds' => 'getElbVirsubnetIds'
     ];
 
     /**
@@ -241,7 +231,6 @@ class UpgradeV3RequestBody implements ModelInterface, ArrayAccess
         $this->container['ipv6VipVirsubnetId'] = isset($data['ipv6VipVirsubnetId']) ? $data['ipv6VipVirsubnetId'] : null;
         $this->container['ipv6VipAddress'] = isset($data['ipv6VipAddress']) ? $data['ipv6VipAddress'] : null;
         $this->container['elbVirsubnetIds'] = isset($data['elbVirsubnetIds']) ? $data['elbVirsubnetIds'] : null;
-        $this->container['prepaidOptions'] = isset($data['prepaidOptions']) ? $data['prepaidOptions'] : null;
     }
 
     /**
@@ -442,30 +431,6 @@ class UpgradeV3RequestBody implements ModelInterface, ArrayAccess
     public function setElbVirsubnetIds($elbVirsubnetIds)
     {
         $this->container['elbVirsubnetIds'] = $elbVirsubnetIds;
-        return $this;
-    }
-
-    /**
-    * Gets prepaidOptions
-    *  prepaidOptions
-    *
-    * @return \HuaweiCloud\SDK\Elb\V3\Model\UpgradePrepaidOption|null
-    */
-    public function getPrepaidOptions()
-    {
-        return $this->container['prepaidOptions'];
-    }
-
-    /**
-    * Sets prepaidOptions
-    *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\UpgradePrepaidOption|null $prepaidOptions prepaidOptions
-    *
-    * @return $this
-    */
-    public function setPrepaidOptions($prepaidOptions)
-    {
-        $this->container['prepaidOptions'] = $prepaidOptions;
         return $this;
     }
 

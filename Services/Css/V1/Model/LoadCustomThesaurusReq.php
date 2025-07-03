@@ -21,9 +21,13 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * bucketName  词库文件存放的OBS桶（桶类型必须为标准存储或者低频存储，不支持归档存储）。
-    * mainObject  主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 mainObject, stopObject, synonymObject三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
-    * stopObject  停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
-    * synonymObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
+    * mainObject  主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 main_object, stop_object, synonym_object三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
+    * stopObject  停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
+    * synonymObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
+    * staticMainObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * staticStopObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * extraMainObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * extraStopObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
     *
     * @var string[]
     */
@@ -31,15 +35,23 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
             'bucketName' => 'string',
             'mainObject' => 'string',
             'stopObject' => 'string',
-            'synonymObject' => 'string'
+            'synonymObject' => 'string',
+            'staticMainObject' => 'string',
+            'staticStopObject' => 'string',
+            'extraMainObject' => 'string',
+            'extraStopObject' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bucketName  词库文件存放的OBS桶（桶类型必须为标准存储或者低频存储，不支持归档存储）。
-    * mainObject  主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 mainObject, stopObject, synonymObject三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
-    * stopObject  停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
-    * synonymObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
+    * mainObject  主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 main_object, stop_object, synonym_object三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
+    * stopObject  停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
+    * synonymObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
+    * staticMainObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * staticStopObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * extraMainObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * extraStopObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
     *
     * @var string[]
     */
@@ -47,7 +59,11 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
         'bucketName' => null,
         'mainObject' => null,
         'stopObject' => null,
-        'synonymObject' => null
+        'synonymObject' => null,
+        'staticMainObject' => null,
+        'staticStopObject' => null,
+        'extraMainObject' => null,
+        'extraStopObject' => null
     ];
 
     /**
@@ -74,25 +90,37 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * bucketName  词库文件存放的OBS桶（桶类型必须为标准存储或者低频存储，不支持归档存储）。
-    * mainObject  主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 mainObject, stopObject, synonymObject三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
-    * stopObject  停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
-    * synonymObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
+    * mainObject  主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 main_object, stop_object, synonym_object三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
+    * stopObject  停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
+    * synonymObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
+    * staticMainObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * staticStopObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * extraMainObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * extraStopObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'bucketName' => 'bucketName',
-            'mainObject' => 'mainObject',
-            'stopObject' => 'stopObject',
-            'synonymObject' => 'synonymObject'
+            'bucketName' => 'bucket_name',
+            'mainObject' => 'main_object',
+            'stopObject' => 'stop_object',
+            'synonymObject' => 'synonym_object',
+            'staticMainObject' => 'static_main_object',
+            'staticStopObject' => 'static_stop_object',
+            'extraMainObject' => 'extra_main_object',
+            'extraStopObject' => 'extra_stop_object'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bucketName  词库文件存放的OBS桶（桶类型必须为标准存储或者低频存储，不支持归档存储）。
-    * mainObject  主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 mainObject, stopObject, synonymObject三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
-    * stopObject  停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
-    * synonymObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
+    * mainObject  主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 main_object, stop_object, synonym_object三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
+    * stopObject  停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
+    * synonymObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
+    * staticMainObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * staticStopObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * extraMainObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * extraStopObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
     *
     * @var string[]
     */
@@ -100,15 +128,23 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
             'bucketName' => 'setBucketName',
             'mainObject' => 'setMainObject',
             'stopObject' => 'setStopObject',
-            'synonymObject' => 'setSynonymObject'
+            'synonymObject' => 'setSynonymObject',
+            'staticMainObject' => 'setStaticMainObject',
+            'staticStopObject' => 'setStaticStopObject',
+            'extraMainObject' => 'setExtraMainObject',
+            'extraStopObject' => 'setExtraStopObject'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bucketName  词库文件存放的OBS桶（桶类型必须为标准存储或者低频存储，不支持归档存储）。
-    * mainObject  主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 mainObject, stopObject, synonymObject三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
-    * stopObject  停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
-    * synonymObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
+    * mainObject  主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 main_object, stop_object, synonym_object三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
+    * stopObject  停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
+    * synonymObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
+    * staticMainObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * staticStopObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * extraMainObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    * extraStopObject  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
     *
     * @var string[]
     */
@@ -116,7 +152,11 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
             'bucketName' => 'getBucketName',
             'mainObject' => 'getMainObject',
             'stopObject' => 'getStopObject',
-            'synonymObject' => 'getSynonymObject'
+            'synonymObject' => 'getSynonymObject',
+            'staticMainObject' => 'getStaticMainObject',
+            'staticStopObject' => 'getStaticStopObject',
+            'extraMainObject' => 'getExtraMainObject',
+            'extraStopObject' => 'getExtraStopObject'
     ];
 
     /**
@@ -181,6 +221,10 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
         $this->container['mainObject'] = isset($data['mainObject']) ? $data['mainObject'] : null;
         $this->container['stopObject'] = isset($data['stopObject']) ? $data['stopObject'] : null;
         $this->container['synonymObject'] = isset($data['synonymObject']) ? $data['synonymObject'] : null;
+        $this->container['staticMainObject'] = isset($data['staticMainObject']) ? $data['staticMainObject'] : null;
+        $this->container['staticStopObject'] = isset($data['staticStopObject']) ? $data['staticStopObject'] : null;
+        $this->container['extraMainObject'] = isset($data['extraMainObject']) ? $data['extraMainObject'] : null;
+        $this->container['extraStopObject'] = isset($data['extraStopObject']) ? $data['extraStopObject'] : null;
     }
 
     /**
@@ -234,7 +278,7 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets mainObject
-    *  主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 mainObject, stopObject, synonymObject三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
+    *  主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 main_object, stop_object, synonym_object三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
     *
     * @return string|null
     */
@@ -246,7 +290,7 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
     /**
     * Sets mainObject
     *
-    * @param string|null $mainObject 主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 mainObject, stopObject, synonymObject三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
+    * @param string|null $mainObject 主词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。 main_object, stop_object, synonym_object三个参数至少要填写一个。  >一次只能加载一个主词库，不支持同时加载多个主词库。
     *
     * @return $this
     */
@@ -258,7 +302,7 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets stopObject
-    *  停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
+    *  停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
     *
     * @return string|null
     */
@@ -270,7 +314,7 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
     /**
     * Sets stopObject
     *
-    * @param string|null $stopObject 停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
+    * @param string|null $stopObject 停词词库文件对象，必须为UTF-8无BOM编码的文本文件，一行一个分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
     *
     * @return $this
     */
@@ -282,7 +326,7 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets synonymObject
-    *  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
+    *  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
     *
     * @return string|null
     */
@@ -294,13 +338,109 @@ class LoadCustomThesaurusReq implements ModelInterface, ArrayAccess
     /**
     * Sets synonymObject
     *
-    * @param string|null $synonymObject 同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持20M。  mainObject, stopObject, synonymObject三个参数至少要填写一个。
+    * @param string|null $synonymObject 同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。  main_object, stop_object, synonym_object三个参数至少要填写一个。
     *
     * @return $this
     */
     public function setSynonymObject($synonymObject)
     {
         $this->container['synonymObject'] = $synonymObject;
+        return $this;
+    }
+
+    /**
+    * Gets staticMainObject
+    *  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    *
+    * @return string|null
+    */
+    public function getStaticMainObject()
+    {
+        return $this->container['staticMainObject'];
+    }
+
+    /**
+    * Sets staticMainObject
+    *
+    * @param string|null $staticMainObject 同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    *
+    * @return $this
+    */
+    public function setStaticMainObject($staticMainObject)
+    {
+        $this->container['staticMainObject'] = $staticMainObject;
+        return $this;
+    }
+
+    /**
+    * Gets staticStopObject
+    *  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    *
+    * @return string|null
+    */
+    public function getStaticStopObject()
+    {
+        return $this->container['staticStopObject'];
+    }
+
+    /**
+    * Sets staticStopObject
+    *
+    * @param string|null $staticStopObject 同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    *
+    * @return $this
+    */
+    public function setStaticStopObject($staticStopObject)
+    {
+        $this->container['staticStopObject'] = $staticStopObject;
+        return $this;
+    }
+
+    /**
+    * Gets extraMainObject
+    *  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    *
+    * @return string|null
+    */
+    public function getExtraMainObject()
+    {
+        return $this->container['extraMainObject'];
+    }
+
+    /**
+    * Sets extraMainObject
+    *
+    * @param string|null $extraMainObject 同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    *
+    * @return $this
+    */
+    public function setExtraMainObject($extraMainObject)
+    {
+        $this->container['extraMainObject'] = $extraMainObject;
+        return $this;
+    }
+
+    /**
+    * Gets extraStopObject
+    *  同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    *
+    * @return string|null
+    */
+    public function getExtraStopObject()
+    {
+        return $this->container['extraStopObject'];
+    }
+
+    /**
+    * Sets extraStopObject
+    *
+    * @param string|null $extraStopObject 同义词词库文件，必须为UTF-8无BOM编码的文本文件，一行一组分词，文件大小最大支持100M。
+    *
+    * @return $this
+    */
+    public function setExtraStopObject($extraStopObject)
+    {
+        $this->container['extraStopObject'] = $extraStopObject;
         return $this;
     }
 

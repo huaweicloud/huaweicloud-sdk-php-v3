@@ -35,6 +35,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * source  证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
     * protectionStatus  修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
     * protectionReason  设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
+    * enterpriseProjectId  参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:certificates:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'fingerprint' => 'string[]',
             'source' => 'string[]',
             'protectionStatus' => 'string[]',
-            'protectionReason' => 'string[]'
+            'protectionReason' => 'string[]',
+            'enterpriseProjectId' => 'string[]'
     ];
 
     /**
@@ -73,6 +75,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * source  证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
     * protectionStatus  修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
     * protectionReason  设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
+    * enterpriseProjectId  参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:certificates:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         'fingerprint' => null,
         'source' => null,
         'protectionStatus' => null,
-        'protectionReason' => null
+        'protectionReason' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * source  证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
     * protectionStatus  修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
     * protectionReason  设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
+    * enterpriseProjectId  参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:certificates:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'fingerprint' => 'fingerprint',
             'source' => 'source',
             'protectionStatus' => 'protection_status',
-            'protectionReason' => 'protection_reason'
+            'protectionReason' => 'protection_reason',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -170,6 +176,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * source  证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
     * protectionStatus  修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
     * protectionReason  设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
+    * enterpriseProjectId  参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:certificates:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'fingerprint' => 'setFingerprint',
             'source' => 'setSource',
             'protectionStatus' => 'setProtectionStatus',
-            'protectionReason' => 'setProtectionReason'
+            'protectionReason' => 'setProtectionReason',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -208,6 +216,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * source  证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
     * protectionStatus  修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
     * protectionReason  设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
+    * enterpriseProjectId  参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:certificates:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'fingerprint' => 'getFingerprint',
             'source' => 'getSource',
             'protectionStatus' => 'getProtectionStatus',
-            'protectionReason' => 'getProtectionReason'
+            'protectionReason' => 'getProtectionReason',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -302,6 +312,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
         $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -689,6 +700,30 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     public function setProtectionReason($protectionReason)
     {
         $this->container['protectionReason'] = $protectionReason;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:certificates:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    *
+    * @return string[]|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string[]|null $enterpriseProjectId 参数解释：所属的企业项目ID。 如果enterprise_project_id不传值，默认查询所有企业项目下的资源，鉴权按照细粒度权限鉴权，必须在用户组下分配elb:certificates:list权限。 如果enterprise_project_id传值，鉴权按照企业项目权限鉴权，分为传入具体eps_id和all_granted_eps两种场景，前者查询指定eps_id的eps下的资源，后者查询的是所有有list权限的eps下的资源。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

@@ -76,9 +76,9 @@ class StartKibanaPublicReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'eipSize' => 'eipSize',
-            'elbWhiteList' => 'elbWhiteList',
-            'isAutoPay' => 'isAutoPay'
+            'eipSize' => 'eip_size',
+            'elbWhiteList' => 'elb_white_list',
+            'isAutoPay' => 'is_auto_pay'
     ];
 
     /**

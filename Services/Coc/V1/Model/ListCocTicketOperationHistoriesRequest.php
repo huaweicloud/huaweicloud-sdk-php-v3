@@ -20,7 +20,7 @@ class ListCocTicketOperationHistoriesRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ticketType  工单类型:incident,issues_mgmt
+    * ticketType  需要查询的工单类型，事件单传值为incident，问题单传值为issues_mgmt。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ListCocTicketOperationHistoriesRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ticketType  工单类型:incident,issues_mgmt
+    * ticketType  需要查询的工单类型，事件单传值为incident，问题单传值为issues_mgmt。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ListCocTicketOperationHistoriesRequest implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ticketType  工单类型:incident,issues_mgmt
+    * ticketType  需要查询的工单类型，事件单传值为incident，问题单传值为issues_mgmt。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ListCocTicketOperationHistoriesRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ticketType  工单类型:incident,issues_mgmt
+    * ticketType  需要查询的工单类型，事件单传值为incident，问题单传值为issues_mgmt。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ListCocTicketOperationHistoriesRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ticketType  工单类型:incident,issues_mgmt
+    * ticketType  需要查询的工单类型，事件单传值为incident，问题单传值为issues_mgmt。
     * body  body
     *
     * @var string[]
@@ -211,7 +211,7 @@ class ListCocTicketOperationHistoriesRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets ticketType
-    *  工单类型:incident,issues_mgmt
+    *  需要查询的工单类型，事件单传值为incident，问题单传值为issues_mgmt。
     *
     * @return string
     */
@@ -223,7 +223,7 @@ class ListCocTicketOperationHistoriesRequest implements ModelInterface, ArrayAcc
     /**
     * Sets ticketType
     *
-    * @param string $ticketType 工单类型:incident,issues_mgmt
+    * @param string $ticketType 需要查询的工单类型，事件单传值为incident，问题单传值为issues_mgmt。
     *
     * @return $this
     */

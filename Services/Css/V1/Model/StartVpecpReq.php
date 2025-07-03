@@ -66,7 +66,7 @@ class StartVpecpReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'endpointWithDnsName' => 'endpointWithDnsName'
+            'endpointWithDnsName' => 'endpoint_with_dns_name'
     ];
 
     /**

@@ -25,7 +25,7 @@ class DeleteInstanceRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'float'
+            'instanceId' => 'int'
     ];
 
     /**
@@ -35,7 +35,7 @@ class DeleteInstanceRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null
+        'instanceId' => 'int64'
     ];
 
     /**
@@ -185,7 +185,7 @@ class DeleteInstanceRequest implements ModelInterface, ArrayAccess
     * Gets instanceId
     *  删除故障云堡垒机实例id。
     *
-    * @return float
+    * @return int
     */
     public function getInstanceId()
     {
@@ -195,7 +195,7 @@ class DeleteInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param float $instanceId 删除故障云堡垒机实例id。
+    * @param int $instanceId 删除故障云堡垒机实例id。
     *
     * @return $this
     */

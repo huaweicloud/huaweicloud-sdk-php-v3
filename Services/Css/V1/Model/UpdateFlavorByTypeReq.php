@@ -76,9 +76,9 @@ class UpdateFlavorByTypeReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'needCheckReplica' => 'needCheckReplica',
-            'newFlavorId' => 'newFlavorId',
-            'isAutoPay' => 'isAutoPay'
+            'needCheckReplica' => 'need_check_replica',
+            'newFlavorId' => 'new_flavor_id',
+            'isAutoPay' => 'is_auto_pay'
     ];
 
     /**

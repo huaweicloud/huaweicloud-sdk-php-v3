@@ -5303,6 +5303,77 @@ class CloudtestAsyncClient extends Client
     }
 
     /**
+     * 设置测试套结果
+     *
+     * 设置测试套结果
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setTaskResultAsync($request)
+    {
+        return $this->setTaskResultAsyncWithHttpInfo($request);
+    }
+    
+    public function setTaskResultAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v4/{project_uuid}/tasks/{task_uri}/results';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectUuid'] !== null) {
+            $pathParams['project_uuid'] = $localVarParams['projectUuid'];
+        }
+        if ($localVarParams['taskUri'] !== null) {
+            $pathParams['task_uri'] = $localVarParams['taskUri'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\SetTaskResultResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\SetTaskResultRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询任务配置
      *
      * 查询任务配置

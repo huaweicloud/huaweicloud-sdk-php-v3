@@ -2711,6 +2711,9 @@ class ElbClient extends Client
         if ($localVarParams['protectionReason'] !== null) {
             $queryParams['protection_reason'] = $localVarParams['protectionReason'];
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=UTF-8', 'application/json']
@@ -5115,6 +5118,83 @@ class ElbClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ShowLoadBalancerResponse',
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ShowLoadBalancerRequest');
+    }
+
+    /**
+     * 查询负载均衡器占用的port列表
+     *
+     * 查询负载均衡器内部转发占用的port列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLoadBalancerPorts($request)
+    {
+        return $this->showLoadBalancerPortsWithHttpInfo($request);
+    }
+
+    public function showLoadBalancerPortsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/elb/loadbalancers/{loadbalancer_id}/local-ports';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $queryParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($localVarParams['ipAddress'] !== null) {
+            $queryParams['ip_address'] = $localVarParams['ipAddress'];
+        }
+        if ($localVarParams['ipv6Address'] !== null) {
+            $queryParams['ipv6_address'] = $localVarParams['ipv6Address'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['virsubnetId'] !== null) {
+            $queryParams['virsubnet_id'] = $localVarParams['virsubnetId'];
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ShowLoadBalancerPortsResponse',
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ShowLoadBalancerPortsRequest');
     }
 
     /**

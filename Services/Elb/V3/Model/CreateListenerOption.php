@@ -49,7 +49,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * gzipEnable  参数解释：ELB是否开启gzip压缩。  [约束限制：仅HTTP/HTTPS类型监听器支持配置。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt) [约束限制：仅HTTP/HTTPS/QUIC类型监听器支持配置。](tag:hws,hws_hk,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,ocb,ctc,cmcc,ct,sbc,hws_ocb,hk_sbc)  取值范围：true，false  默认取值：false
-    * portRanges  参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protoco_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
+    * portRanges  参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protocol_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
     * sslEarlyDataEnable  参数解释：监听器0-RTT能力开关。  约束限制：仅HTTPS类型监听器支持配置，需要依赖TLSv1.3安全策略协议。开启 ssl_early_data 后，有重放攻击的风险，请谨慎开启。  取值范围：true，false  默认取值：false
     * cps  参数解释：监听器新建限速。  约束限制：当该限速值大于LB的限速值时，以LB的限速值生效  取值范围：0-1000000  默认取值：0，表示不限速。
     * connection  参数解释：监听器并发限速  约束限制：当该限速值大于LB的限速值时，以LB的限速值生效  取值范围：0-1000000  默认取值：0，表示不限速。
@@ -125,7 +125,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * gzipEnable  参数解释：ELB是否开启gzip压缩。  [约束限制：仅HTTP/HTTPS类型监听器支持配置。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt) [约束限制：仅HTTP/HTTPS/QUIC类型监听器支持配置。](tag:hws,hws_hk,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,ocb,ctc,cmcc,ct,sbc,hws_ocb,hk_sbc)  取值范围：true，false  默认取值：false
-    * portRanges  参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protoco_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
+    * portRanges  参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protocol_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
     * sslEarlyDataEnable  参数解释：监听器0-RTT能力开关。  约束限制：仅HTTPS类型监听器支持配置，需要依赖TLSv1.3安全策略协议。开启 ssl_early_data 后，有重放攻击的风险，请谨慎开启。  取值范围：true，false  默认取值：false
     * cps  参数解释：监听器新建限速。  约束限制：当该限速值大于LB的限速值时，以LB的限速值生效  取值范围：0-1000000  默认取值：0，表示不限速。
     * connection  参数解释：监听器并发限速  约束限制：当该限速值大于LB的限速值时，以LB的限速值生效  取值范围：0-1000000  默认取值：0，表示不限速。
@@ -222,7 +222,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * gzipEnable  参数解释：ELB是否开启gzip压缩。  [约束限制：仅HTTP/HTTPS类型监听器支持配置。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt) [约束限制：仅HTTP/HTTPS/QUIC类型监听器支持配置。](tag:hws,hws_hk,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,ocb,ctc,cmcc,ct,sbc,hws_ocb,hk_sbc)  取值范围：true，false  默认取值：false
-    * portRanges  参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protoco_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
+    * portRanges  参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protocol_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
     * sslEarlyDataEnable  参数解释：监听器0-RTT能力开关。  约束限制：仅HTTPS类型监听器支持配置，需要依赖TLSv1.3安全策略协议。开启 ssl_early_data 后，有重放攻击的风险，请谨慎开启。  取值范围：true，false  默认取值：false
     * cps  参数解释：监听器新建限速。  约束限制：当该限速值大于LB的限速值时，以LB的限速值生效  取值范围：0-1000000  默认取值：0，表示不限速。
     * connection  参数解释：监听器并发限速  约束限制：当该限速值大于LB的限速值时，以LB的限速值生效  取值范围：0-1000000  默认取值：0，表示不限速。
@@ -298,7 +298,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * gzipEnable  参数解释：ELB是否开启gzip压缩。  [约束限制：仅HTTP/HTTPS类型监听器支持配置。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt) [约束限制：仅HTTP/HTTPS/QUIC类型监听器支持配置。](tag:hws,hws_hk,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,ocb,ctc,cmcc,ct,sbc,hws_ocb,hk_sbc)  取值范围：true，false  默认取值：false
-    * portRanges  参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protoco_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
+    * portRanges  参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protocol_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
     * sslEarlyDataEnable  参数解释：监听器0-RTT能力开关。  约束限制：仅HTTPS类型监听器支持配置，需要依赖TLSv1.3安全策略协议。开启 ssl_early_data 后，有重放攻击的风险，请谨慎开启。  取值范围：true，false  默认取值：false
     * cps  参数解释：监听器新建限速。  约束限制：当该限速值大于LB的限速值时，以LB的限速值生效  取值范围：0-1000000  默认取值：0，表示不限速。
     * connection  参数解释：监听器并发限速  约束限制：当该限速值大于LB的限速值时，以LB的限速值生效  取值范围：0-1000000  默认取值：0，表示不限速。
@@ -374,7 +374,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
     * gzipEnable  参数解释：ELB是否开启gzip压缩。  [约束限制：仅HTTP/HTTPS类型监听器支持配置。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt) [约束限制：仅HTTP/HTTPS/QUIC类型监听器支持配置。](tag:hws,hws_hk,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,ocb,ctc,cmcc,ct,sbc,hws_ocb,hk_sbc)  取值范围：true，false  默认取值：false
-    * portRanges  参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protoco_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
+    * portRanges  参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protocol_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
     * sslEarlyDataEnable  参数解释：监听器0-RTT能力开关。  约束限制：仅HTTPS类型监听器支持配置，需要依赖TLSv1.3安全策略协议。开启 ssl_early_data 后，有重放攻击的风险，请谨慎开启。  取值范围：true，false  默认取值：false
     * cps  参数解释：监听器新建限速。  约束限制：当该限速值大于LB的限速值时，以LB的限速值生效  取值范围：0-1000000  默认取值：0，表示不限速。
     * connection  参数解释：监听器并发限速  约束限制：当该限速值大于LB的限速值时，以LB的限速值生效  取值范围：0-1000000  默认取值：0，表示不限速。
@@ -1343,7 +1343,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets portRanges
-    *  参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protoco_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
+    *  参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protocol_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\PortRange[]|null
     */
@@ -1355,7 +1355,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     /**
     * Sets portRanges
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\PortRange[]|null $portRanges 参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protoco_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\PortRange[]|null $portRanges 参数解释：端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分。  约束限制： - 仅当protocol_port为0或未传入protocol_port时可以传入该字段。 - 仅TCP, UDP，TLS监听支持该字段
     *
     * @return $this
     */

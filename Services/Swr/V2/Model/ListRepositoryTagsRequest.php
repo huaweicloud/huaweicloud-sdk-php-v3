@@ -22,7 +22,7 @@ class ListRepositoryTagsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
-    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * limit  返回条数,默认返回100条，最多返回1000条数据。注意：offset和limit参数需要配套使用。
     * offset  起始索引。注意：offset和limit参数需要配套使用。
     * orderColumn  按列排序，可设置为updated_at（按更新时间排序）。注意：order_column和order_type参数需要配套使用。
     * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
@@ -46,7 +46,7 @@ class ListRepositoryTagsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
-    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * limit  返回条数,默认返回100条，最多返回1000条数据。注意：offset和limit参数需要配套使用。
     * offset  起始索引。注意：offset和limit参数需要配套使用。
     * orderColumn  按列排序，可设置为updated_at（按更新时间排序）。注意：order_column和order_type参数需要配套使用。
     * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
@@ -91,7 +91,7 @@ class ListRepositoryTagsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
-    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * limit  返回条数,默认返回100条，最多返回1000条数据。注意：offset和limit参数需要配套使用。
     * offset  起始索引。注意：offset和limit参数需要配套使用。
     * orderColumn  按列排序，可设置为updated_at（按更新时间排序）。注意：order_column和order_type参数需要配套使用。
     * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
@@ -115,7 +115,7 @@ class ListRepositoryTagsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
-    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * limit  返回条数,默认返回100条，最多返回1000条数据。注意：offset和limit参数需要配套使用。
     * offset  起始索引。注意：offset和limit参数需要配套使用。
     * orderColumn  按列排序，可设置为updated_at（按更新时间排序）。注意：order_column和order_type参数需要配套使用。
     * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
@@ -139,7 +139,7 @@ class ListRepositoryTagsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
-    * limit  返回条数。注意：offset和limit参数需要配套使用。
+    * limit  返回条数,默认返回100条，最多返回1000条数据。注意：offset和limit参数需要配套使用。
     * offset  起始索引。注意：offset和limit参数需要配套使用。
     * orderColumn  按列排序，可设置为updated_at（按更新时间排序）。注意：order_column和order_type参数需要配套使用。
     * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
@@ -305,7 +305,7 @@ class ListRepositoryTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  返回条数。注意：offset和limit参数需要配套使用。
+    *  返回条数,默认返回100条，最多返回1000条数据。注意：offset和limit参数需要配套使用。
     *
     * @return string|null
     */
@@ -317,7 +317,7 @@ class ListRepositoryTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 返回条数。注意：offset和limit参数需要配套使用。
+    * @param string|null $limit 返回条数,默认返回100条，最多返回1000条数据。注意：offset和limit参数需要配套使用。
     *
     * @return $this
     */

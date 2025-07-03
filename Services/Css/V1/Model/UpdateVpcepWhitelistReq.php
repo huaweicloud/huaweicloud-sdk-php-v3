@@ -66,7 +66,7 @@ class UpdateVpcepWhitelistReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'vpcPermissions' => 'vpcPermissions'
+            'vpcPermissions' => 'vpc_permissions'
     ];
 
     /**

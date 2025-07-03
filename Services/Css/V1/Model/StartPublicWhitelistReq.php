@@ -66,7 +66,7 @@ class StartPublicWhitelistReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'whiteList' => 'whiteList'
+            'whiteList' => 'white_list'
     ];
 
     /**

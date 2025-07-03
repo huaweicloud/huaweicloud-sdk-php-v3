@@ -23,7 +23,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -65,7 +65,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -128,7 +128,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -170,7 +170,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -212,7 +212,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * alarmId  告警规则id，以al开头，包含22个数字或字母
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     * policies  告警策略
     * resources  资源列表，关联资源需要使用查询告警规则资源接口获取
     * type  type
@@ -502,7 +502,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    *  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     *
     * @return string|null
     */
@@ -514,7 +514,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     *
     * @return $this
     */

@@ -66,7 +66,7 @@ class UpdateClusterNameReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'displayName' => 'displayName'
+            'displayName' => 'display_name'
     ];
 
     /**

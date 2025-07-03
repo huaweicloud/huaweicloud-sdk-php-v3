@@ -213,6 +213,68 @@ class LiveClient extends Client
     }
 
     /**
+     * 创建流
+     *
+     * 创建流
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createFlows($request)
+    {
+        return $this->createFlowsWithHttpInfo($request);
+    }
+
+    public function createFlowsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/flows';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8'],
+                ['application/json;charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\CreateFlowsResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\CreateFlowsRequest');
+    }
+
+    /**
      * 创建录制回调配置
      *
      * 创建录制回调配置接口
@@ -898,6 +960,68 @@ class LiveClient extends Client
     }
 
     /**
+     * 删除流
+     *
+     * 删除流
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteFlow($request)
+    {
+        return $this->deleteFlowWithHttpInfo($request);
+    }
+
+    public function deleteFlowWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/flows';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['flowId'] !== null) {
+            $queryParams['flow_id'] = $localVarParams['flowId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteFlowResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteFlowRequest');
+    }
+
+    /**
      * 删除直播推流通知配置
      *
      * 删除直播推流通知配置
@@ -1465,6 +1589,71 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListDelayConfigResponse',
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListDelayConfigRequest');
+    }
+
+    /**
+     * 获取流列表
+     *
+     * 获取流列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFlows($request)
+    {
+        return $this->listFlowsWithHttpInfo($request);
+    }
+
+    public function listFlowsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/flows';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListFlowsResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListFlowsRequest');
     }
 
     /**
@@ -2320,6 +2509,198 @@ class LiveClient extends Client
     }
 
     /**
+     * 修改流来源
+     *
+     * 修改流来源
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyFlowSources($request)
+    {
+        return $this->modifyFlowSourcesWithHttpInfo($request);
+    }
+
+    public function modifyFlowSourcesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/flows/sources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['flowId'] !== null) {
+            $queryParams['flow_id'] = $localVarParams['flowId'];
+        }
+        if ($localVarParams['sourceName'] !== null) {
+            $queryParams['source_name'] = $localVarParams['sourceName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8'],
+                ['application/json;charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ModifyFlowSourcesResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ModifyFlowSourcesRequest');
+    }
+
+    /**
+     * 启动流任务
+     *
+     * 启动流任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyFlowStart($request)
+    {
+        return $this->modifyFlowStartWithHttpInfo($request);
+    }
+
+    public function modifyFlowStartWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/flows/start';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['flowId'] !== null) {
+            $queryParams['flow_id'] = $localVarParams['flowId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ModifyFlowStartResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ModifyFlowStartRequest');
+    }
+
+    /**
+     * 停止流任务
+     *
+     * 停止流任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyFlowStop($request)
+    {
+        return $this->modifyFlowStopWithHttpInfo($request);
+    }
+
+    public function modifyFlowStopWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/flows/stop';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['flowId'] !== null) {
+            $queryParams['flow_id'] = $localVarParams['flowId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ModifyFlowStopResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ModifyFlowStopRequest');
+    }
+
+    /**
      * 提交录制控制命令
      *
      * 对单条流的实时录制控制接口。
@@ -2571,6 +2952,68 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowDomainKeyChainResponse',
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowDomainKeyChainRequest');
+    }
+
+    /**
+     * 获取流详情
+     *
+     * 获取流详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFlowDetail($request)
+    {
+        return $this->showFlowDetailWithHttpInfo($request);
+    }
+
+    public function showFlowDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/flows/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['flowId'] !== null) {
+            $queryParams['flow_id'] = $localVarParams['flowId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowFlowDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowFlowDetailRequest');
     }
 
     /**

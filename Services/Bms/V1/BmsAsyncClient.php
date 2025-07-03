@@ -1458,71 +1458,6 @@ class BmsAsyncClient extends Client
     }
 
     /**
-     * 查询裸金属服务器元数据配置
-     *
-     * 查询云服务器元数据配置，通过本接口，您可以查询指裸金属服务器的元数据配置。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showBaremetalServerMetadataOptionsAsync($request)
-    {
-        return $this->showBaremetalServerMetadataOptionsAsyncWithHttpInfo($request);
-    }
-    
-    public function showBaremetalServerMetadataOptionsAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/baremetalservers/{server_id}/metadata-options';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['serverId'] !== null) {
-            $pathParams['server_id'] = $localVarParams['serverId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Bms\V1\Model\ShowBaremetalServerMetadataOptionsResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Bms\V1\Model\ShowBaremetalServerMetadataOptionsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 查询裸金属服务器标签
      *
      * - 查询指定云服务器的标签信息。
@@ -1649,6 +1584,71 @@ class BmsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Bms\V1\Model\ShowBaremetalServerVolumeInfoResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bms\V1\Model\ShowBaremetalServerVolumeInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询裸金属服务器元数据配置
+     *
+     * 查询云服务器元数据配置，通过本接口，您可以查询指裸金属服务器的元数据配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMetadataOptionsAsync($request)
+    {
+        return $this->showMetadataOptionsAsyncWithHttpInfo($request);
+    }
+    
+    public function showMetadataOptionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/baremetalservers/{server_id}/metadata-options';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bms\V1\Model\ShowMetadataOptionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bms\V1\Model\ShowMetadataOptionsRequest',
             $asyncRequest = true);
     }
 
@@ -2059,12 +2059,12 @@ class BmsAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function updateBaremetalServerMetadataOptionsAsync($request)
+    public function updateMetadataOptionsAsync($request)
     {
-        return $this->updateBaremetalServerMetadataOptionsAsyncWithHttpInfo($request);
+        return $this->updateMetadataOptionsAsyncWithHttpInfo($request);
     }
     
-    public function updateBaremetalServerMetadataOptionsAsyncWithHttpInfo($request){
+    public function updateMetadataOptionsAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/baremetalservers/{server_id}/metadata-options';
         $formParams = [];
@@ -2111,9 +2111,9 @@ class BmsAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Bms\V1\Model\UpdateBaremetalServerMetadataOptionsResponse',
+            $responseType='\HuaweiCloud\SDK\Bms\V1\Model\UpdateMetadataOptionsResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Bms\V1\Model\UpdateBaremetalServerMetadataOptionsRequest',
+            $requestType='\HuaweiCloud\SDK\Bms\V1\Model\UpdateMetadataOptionsRequest',
             $asyncRequest = true);
     }
 

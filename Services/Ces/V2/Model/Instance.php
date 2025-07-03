@@ -198,11 +198,11 @@ class Instance implements ModelInterface, ArrayAccess
         if ($this->container['productName'] === null) {
             $invalidProperties[] = "'productName' can't be null";
         }
-            if ((mb_strlen($this->container['productName']) > 16)) {
-                $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 16.";
+            if ((mb_strlen($this->container['productName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['productName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 1.";
+            if ((mb_strlen($this->container['productName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['logicalOperator'] === null) {
             $invalidProperties[] = "'logicalOperator' can't be null";

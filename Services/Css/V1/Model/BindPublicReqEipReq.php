@@ -71,8 +71,8 @@ class BindPublicReqEipReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'bandWidth' => 'bandWidth',
-            'isAutoPay' => 'isAutoPay'
+            'bandWidth' => 'band_width',
+            'isAutoPay' => 'is_auto_pay'
     ];
 
     /**

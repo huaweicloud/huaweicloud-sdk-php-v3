@@ -77,8 +77,8 @@ class UpdateLogSettingReq implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'agency' => 'agency',
-            'logBasePath' => 'logBasePath',
-            'logBucket' => 'logBucket'
+            'logBasePath' => 'log_base_path',
+            'logBucket' => 'log_bucket'
     ];
 
     /**

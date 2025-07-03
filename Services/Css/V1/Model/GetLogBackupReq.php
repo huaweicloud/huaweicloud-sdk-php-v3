@@ -76,9 +76,9 @@ class GetLogBackupReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceName' => 'instanceName',
+            'instanceName' => 'instance_name',
             'level' => 'level',
-            'logType' => 'logType'
+            'logType' => 'log_type'
     ];
 
     /**

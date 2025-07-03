@@ -30,8 +30,8 @@ class Member implements ModelInterface, ArrayAccess
     * weight  参数解释：后端服务器的权重，请求将根据pool配置的负载均衡算法和后端服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  约束限制：若所在pool的lb_algorithm取值为SOURCE_IP或QUIC_CID，该字段无效。  取值范围：0-100  默认取值：1。
     * address  参数解释：后端服务器对应的IP地址。  约束限制： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为**私网IPv4**地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址必须在subnet_cidr_id对应的子网网段中，可以是**私网IPv4**或IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * ipVersion  参数解释：当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。  取值范围：v4、v6。
-    * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
-    * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * reason  reason
     * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -72,8 +72,8 @@ class Member implements ModelInterface, ArrayAccess
     * weight  参数解释：后端服务器的权重，请求将根据pool配置的负载均衡算法和后端服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  约束限制：若所在pool的lb_algorithm取值为SOURCE_IP或QUIC_CID，该字段无效。  取值范围：0-100  默认取值：1。
     * address  参数解释：后端服务器对应的IP地址。  约束限制： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为**私网IPv4**地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址必须在subnet_cidr_id对应的子网网段中，可以是**私网IPv4**或IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * ipVersion  参数解释：当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。  取值范围：v4、v6。
-    * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
-    * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * reason  reason
     * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -135,8 +135,8 @@ class Member implements ModelInterface, ArrayAccess
     * weight  参数解释：后端服务器的权重，请求将根据pool配置的负载均衡算法和后端服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  约束限制：若所在pool的lb_algorithm取值为SOURCE_IP或QUIC_CID，该字段无效。  取值范围：0-100  默认取值：1。
     * address  参数解释：后端服务器对应的IP地址。  约束限制： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为**私网IPv4**地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址必须在subnet_cidr_id对应的子网网段中，可以是**私网IPv4**或IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * ipVersion  参数解释：当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。  取值范围：v4、v6。
-    * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
-    * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * reason  reason
     * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -177,8 +177,8 @@ class Member implements ModelInterface, ArrayAccess
     * weight  参数解释：后端服务器的权重，请求将根据pool配置的负载均衡算法和后端服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  约束限制：若所在pool的lb_algorithm取值为SOURCE_IP或QUIC_CID，该字段无效。  取值范围：0-100  默认取值：1。
     * address  参数解释：后端服务器对应的IP地址。  约束限制： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为**私网IPv4**地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址必须在subnet_cidr_id对应的子网网段中，可以是**私网IPv4**或IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * ipVersion  参数解释：当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。  取值范围：v4、v6。
-    * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
-    * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * reason  reason
     * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -219,8 +219,8 @@ class Member implements ModelInterface, ArrayAccess
     * weight  参数解释：后端服务器的权重，请求将根据pool配置的负载均衡算法和后端服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  约束限制：若所在pool的lb_algorithm取值为SOURCE_IP或QUIC_CID，该字段无效。  取值范围：0-100  默认取值：1。
     * address  参数解释：后端服务器对应的IP地址。  约束限制： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为**私网IPv4**地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址必须在subnet_cidr_id对应的子网网段中，可以是**私网IPv4**或IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * ipVersion  参数解释：当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。  取值范围：v4、v6。
-    * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
-    * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    * operatingStatus  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * status  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * reason  reason
     * createdAt  参数解释：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  参数解释：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -635,7 +635,7 @@ class Member implements ModelInterface, ArrayAccess
 
     /**
     * Gets operatingStatus
-    *  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    *  参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
     *
     * @return string
     */
@@ -647,7 +647,7 @@ class Member implements ModelInterface, ArrayAccess
     /**
     * Sets operatingStatus
     *
-    * @param string $operatingStatus 参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+    * @param string $operatingStatus 参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
     *
     * @return $this
     */
@@ -659,7 +659,7 @@ class Member implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    *  参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\MemberStatus[]
     */
@@ -671,7 +671,7 @@ class Member implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\MemberStatus[] $status 参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\MemberStatus[] $status 参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     *
     * @return $this
     */

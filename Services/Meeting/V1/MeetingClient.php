@@ -784,6 +784,74 @@ class MeetingClient extends Client
     }
 
     /**
+     * 主持人允许观众入会
+     *
+     * 主持人通过接口控制是否允许观众入会。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function allowAudienceJoin($request)
+    {
+        return $this->allowAudienceJoinWithHttpInfo($request);
+    }
+
+    public function allowAudienceJoinWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/mmc/control/conferences/allowAudience';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['conferenceId'] !== null) {
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
+        }
+        if ($localVarParams['xConferenceAuthorization'] !== null) {
+            $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\AllowAudienceJoinResponse',
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\AllowAudienceJoinRequest');
+    }
+
+    /**
      * 允许客户端录制
      *
      * 该接口用于设置允许/禁止与会者客户端本地录制（非云端录制）。
@@ -1545,6 +1613,74 @@ class MeetingClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\BatchHandResponse',
             $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\BatchHandRequest');
+    }
+
+    /**
+     * 批量移入等候室
+     *
+     * 主持人通过该接口批量移动用户到等候室。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchMoveToWaitingRoom($request)
+    {
+        return $this->batchMoveToWaitingRoomWithHttpInfo($request);
+    }
+
+    public function batchMoveToWaitingRoomWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/mmc/control/conferences/batchMoveToWaitingRoom';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['conferenceId'] !== null) {
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
+        }
+        if ($localVarParams['xConferenceAuthorization'] !== null) {
+            $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\BatchMoveToWaitingRoomResponse',
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\BatchMoveToWaitingRoomRequest');
     }
 
     /**
@@ -5312,6 +5448,74 @@ class MeetingClient extends Client
     }
 
     /**
+     * 主持人暂停/取消暂停会议
+     *
+     * 主持人通过接口控制暂停/取消暂停。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function pauseConference($request)
+    {
+        return $this->pauseConferenceWithHttpInfo($request);
+    }
+
+    public function pauseConferenceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/mmc/control/conferences/pause';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['conferenceId'] !== null) {
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
+        }
+        if ($localVarParams['xConferenceAuthorization'] !== null) {
+            $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\PauseConferenceResponse',
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\PauseConferenceRequest');
+    }
+
+    /**
      * 延长会议
      *
      * 该接口用于延长会议时间。默认会议自动延长。
@@ -8501,6 +8705,142 @@ class MeetingClient extends Client
     }
 
     /**
+     * 启动/停止Mmr会议直播
+     *
+     * 使用场景：会议主持人可以通过该接口启动/停止Mmr会议直播 功能描述：提供启动/停止会议Mmr直播的能力
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setMmrLive($request)
+    {
+        return $this->setMmrLiveWithHttpInfo($request);
+    }
+
+    public function setMmrLiveWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/mmc/control/conferences/mmrLive';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['conferenceId'] !== null) {
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
+        }
+        if ($localVarParams['xConferenceAuthorization'] !== null) {
+            $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\SetMmrLiveResponse',
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\SetMmrLiveRequest');
+    }
+
+    /**
+     * 启动/暂停/停止mmr会议录制
+     *
+     * 使用场景：管理员或UC账号主席可以通过该接口启动/停止mmr会议录制 功能描述：提供启动/暂停/停止MMR会议录制的能力
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setMmrRecord($request)
+    {
+        return $this->setMmrRecordWithHttpInfo($request);
+    }
+
+    public function setMmrRecordWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/mmc/control/conferences/mmrRecord';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['conferenceId'] !== null) {
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
+        }
+        if ($localVarParams['xConferenceAuthorization'] !== null) {
+            $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\SetMmrRecordResponse',
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\SetMmrRecordRequest');
+    }
+
+    /**
      * 设置多画面
      *
      * 设置会议多画面。该接口废弃不用，请使用“[[设置自定义多画面](https://support.huaweicloud.com/api-meeting/meeting_21_0418.html)](tag:hws)[[设置自定义多画面](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0418.html)](tag:hk)”接口。
@@ -10026,6 +10366,68 @@ class MeetingClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\ShowMeetingFileListResponse',
             $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\ShowMeetingFileListRequest');
+    }
+
+    /**
+     * 查询会管状态
+     *
+     * 终端通过会控查询会管状态。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMgmtSiteStatus($request)
+    {
+        return $this->showMgmtSiteStatusWithHttpInfo($request);
+    }
+
+    public function showMgmtSiteStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/mmc/control/confmaintain/queryMgmtSiteStatus';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSchemaType'] !== null) {
+            $headerParams[$arr['xSchemaType']] = $localVarParams['xSchemaType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\ShowMgmtSiteStatusResponse',
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\ShowMgmtSiteStatusRequest');
     }
 
     /**

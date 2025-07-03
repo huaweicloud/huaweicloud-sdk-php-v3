@@ -22,28 +22,24 @@ class BatchAddOrDeleteTagOnClusterReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * action  操作类型。通过该属性标识当前所需的操作类型。  - create：批量添加标签。 - delete：批量删除标签。
     * tags  标签列表。
-    * sysTags  系统标签列表。 - key固定为：_sys_enterprise_project_id。 - value是UUID或0,value为0表示默认企业项目。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'action' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Css\V1\Model\Tag[]',
-            'sysTags' => '\HuaweiCloud\SDK\Css\V1\Model\SysTags[]'
+            'tags' => '\HuaweiCloud\SDK\Css\V1\Model\Tag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  操作类型。通过该属性标识当前所需的操作类型。  - create：批量添加标签。 - delete：批量删除标签。
     * tags  标签列表。
-    * sysTags  系统标签列表。 - key固定为：_sys_enterprise_project_id。 - value是UUID或0,value为0表示默认企业项目。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'action' => null,
-        'tags' => null,
-        'sysTags' => null
+        'tags' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class BatchAddOrDeleteTagOnClusterReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * action  操作类型。通过该属性标识当前所需的操作类型。  - create：批量添加标签。 - delete：批量删除标签。
     * tags  标签列表。
-    * sysTags  系统标签列表。 - key固定为：_sys_enterprise_project_id。 - value是UUID或0,value为0表示默认企业项目。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'action' => 'action',
-            'tags' => 'tags',
-            'sysTags' => 'sysTags'
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  操作类型。通过该属性标识当前所需的操作类型。  - create：批量添加标签。 - delete：批量删除标签。
     * tags  标签列表。
-    * sysTags  系统标签列表。 - key固定为：_sys_enterprise_project_id。 - value是UUID或0,value为0表示默认企业项目。
     *
     * @var string[]
     */
     protected static $setters = [
             'action' => 'setAction',
-            'tags' => 'setTags',
-            'sysTags' => 'setSysTags'
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  操作类型。通过该属性标识当前所需的操作类型。  - create：批量添加标签。 - delete：批量删除标签。
     * tags  标签列表。
-    * sysTags  系统标签列表。 - key固定为：_sys_enterprise_project_id。 - value是UUID或0,value为0表示默认企业项目。
     *
     * @var string[]
     */
     protected static $getters = [
             'action' => 'getAction',
-            'tags' => 'getTags',
-            'sysTags' => 'getSysTags'
+            'tags' => 'getTags'
     ];
 
     /**
@@ -169,7 +159,6 @@ class BatchAddOrDeleteTagOnClusterReq implements ModelInterface, ArrayAccess
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
     }
 
     /**
@@ -245,30 +234,6 @@ class BatchAddOrDeleteTagOnClusterReq implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets sysTags
-    *  系统标签列表。 - key固定为：_sys_enterprise_project_id。 - value是UUID或0,value为0表示默认企业项目。
-    *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\SysTags[]|null
-    */
-    public function getSysTags()
-    {
-        return $this->container['sysTags'];
-    }
-
-    /**
-    * Sets sysTags
-    *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\SysTags[]|null $sysTags 系统标签列表。 - key固定为：_sys_enterprise_project_id。 - value是UUID或0,value为0表示默认企业项目。
-    *
-    * @return $this
-    */
-    public function setSysTags($sysTags)
-    {
-        $this->container['sysTags'] = $sysTags;
         return $this;
     }
 

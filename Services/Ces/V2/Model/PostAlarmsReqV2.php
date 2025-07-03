@@ -22,7 +22,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
@@ -66,7 +66,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
@@ -131,7 +131,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
@@ -175,7 +175,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
@@ -219,7 +219,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
     * description  告警描述，长度0-256
-    * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
@@ -513,7 +513,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    *  查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     *
     * @return string
     */
@@ -525,7 +525,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+    * @param string $namespace 查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
     *
     * @return $this
     */

@@ -26,7 +26,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     * mainObj  主词库文件对象。
     * stopObj  停词词库文件对象。
     * synonymObj  同义词词库文件对象。
-    * updateTime  词库最近更新时间。
     * updateDetails  更新详情。
     * clusterId  指定配置自定义词库的集群ID。
     * operateStatus  操作状态。
@@ -40,7 +39,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
             'mainObj' => 'string',
             'stopObj' => 'string',
             'synonymObj' => 'string',
-            'updateTime' => 'string',
             'updateDetails' => 'string',
             'clusterId' => 'string',
             'operateStatus' => 'string',
@@ -54,7 +52,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     * mainObj  主词库文件对象。
     * stopObj  停词词库文件对象。
     * synonymObj  同义词词库文件对象。
-    * updateTime  词库最近更新时间。
     * updateDetails  更新详情。
     * clusterId  指定配置自定义词库的集群ID。
     * operateStatus  操作状态。
@@ -68,7 +65,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
         'mainObj' => null,
         'stopObj' => null,
         'synonymObj' => null,
-        'updateTime' => null,
         'updateDetails' => null,
         'clusterId' => null,
         'operateStatus' => null,
@@ -103,7 +99,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     * mainObj  主词库文件对象。
     * stopObj  停词词库文件对象。
     * synonymObj  同义词词库文件对象。
-    * updateTime  词库最近更新时间。
     * updateDetails  更新详情。
     * clusterId  指定配置自定义词库的集群ID。
     * operateStatus  操作状态。
@@ -117,7 +112,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
             'mainObj' => 'mainObj',
             'stopObj' => 'stopObj',
             'synonymObj' => 'synonymObj',
-            'updateTime' => 'updateTime',
             'updateDetails' => 'updateDetails',
             'clusterId' => 'clusterId',
             'operateStatus' => 'operateStatus',
@@ -131,7 +125,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     * mainObj  主词库文件对象。
     * stopObj  停词词库文件对象。
     * synonymObj  同义词词库文件对象。
-    * updateTime  词库最近更新时间。
     * updateDetails  更新详情。
     * clusterId  指定配置自定义词库的集群ID。
     * operateStatus  操作状态。
@@ -145,7 +138,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
             'mainObj' => 'setMainObj',
             'stopObj' => 'setStopObj',
             'synonymObj' => 'setSynonymObj',
-            'updateTime' => 'setUpdateTime',
             'updateDetails' => 'setUpdateDetails',
             'clusterId' => 'setClusterId',
             'operateStatus' => 'setOperateStatus',
@@ -159,7 +151,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     * mainObj  主词库文件对象。
     * stopObj  停词词库文件对象。
     * synonymObj  同义词词库文件对象。
-    * updateTime  词库最近更新时间。
     * updateDetails  更新详情。
     * clusterId  指定配置自定义词库的集群ID。
     * operateStatus  操作状态。
@@ -173,7 +164,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
             'mainObj' => 'getMainObj',
             'stopObj' => 'getStopObj',
             'synonymObj' => 'getSynonymObj',
-            'updateTime' => 'getUpdateTime',
             'updateDetails' => 'getUpdateDetails',
             'clusterId' => 'getClusterId',
             'operateStatus' => 'getOperateStatus',
@@ -243,7 +233,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
         $this->container['mainObj'] = isset($data['mainObj']) ? $data['mainObj'] : null;
         $this->container['stopObj'] = isset($data['stopObj']) ? $data['stopObj'] : null;
         $this->container['synonymObj'] = isset($data['synonymObj']) ? $data['synonymObj'] : null;
-        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['updateDetails'] = isset($data['updateDetails']) ? $data['updateDetails'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['operateStatus'] = isset($data['operateStatus']) ? $data['operateStatus'] : null;
@@ -389,30 +378,6 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     public function setSynonymObj($synonymObj)
     {
         $this->container['synonymObj'] = $synonymObj;
-        return $this;
-    }
-
-    /**
-    * Gets updateTime
-    *  词库最近更新时间。
-    *
-    * @return string|null
-    */
-    public function getUpdateTime()
-    {
-        return $this->container['updateTime'];
-    }
-
-    /**
-    * Sets updateTime
-    *
-    * @param string|null $updateTime 词库最近更新时间。
-    *
-    * @return $this
-    */
-    public function setUpdateTime($updateTime)
-    {
-        $this->container['updateTime'] = $updateTime;
         return $this;
     }
 

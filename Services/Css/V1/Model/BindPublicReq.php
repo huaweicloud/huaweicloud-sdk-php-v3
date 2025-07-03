@@ -72,7 +72,7 @@ class BindPublicReq implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'eip' => 'eip',
-            'isAutoPay' => 'isAutoPay'
+            'isAutoPay' => 'is_auto_pay'
     ];
 
     /**

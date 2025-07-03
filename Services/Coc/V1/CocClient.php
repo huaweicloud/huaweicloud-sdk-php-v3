@@ -27,157 +27,6 @@ class CocClient extends Client
 
 
     /**
-     * 查询应用
-     *
-     * 查询应用
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listApplications($request)
-    {
-        return $this->listApplicationsWithHttpInfo($request);
-    }
-
-    public function listApplicationsWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/applications';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['idList'] !== null) {
-            $queryParams['id_list'] = $localVarParams['idList'];
-        }
-        if ($localVarParams['parentId'] !== null) {
-            $queryParams['parent_id'] = $localVarParams['parentId'];
-        }
-        if ($localVarParams['nameLike'] !== null) {
-            $queryParams['name_like'] = $localVarParams['nameLike'];
-        }
-        if ($localVarParams['code'] !== null) {
-            $queryParams['code'] = $localVarParams['code'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListApplicationsResponse',
-            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListApplicationsRequest');
-    }
-
-    /**
-     * 查询下一级的子应用、组件、分组
-     *
-     * 查询下一级的子应用、组件、分组
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listApplicationModel($request)
-    {
-        return $this->listApplicationModelWithHttpInfo($request);
-    }
-
-    public function listApplicationModelWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/application-model/next';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['applicationId'] !== null) {
-            $queryParams['application_id'] = $localVarParams['applicationId'];
-        }
-        if ($localVarParams['componentId'] !== null) {
-            $queryParams['component_id'] = $localVarParams['componentId'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
-        }
-        if ($localVarParams['pageNo'] !== null) {
-            $queryParams['page_no'] = $localVarParams['pageNo'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListApplicationModelResponse',
-            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListApplicationModelRequest');
-    }
-
-    /**
      * 批量创建应用视图
      *
      * 批量创建应用视图
@@ -237,6 +86,260 @@ class CocClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewResponse',
             $requestType='\HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewRequest');
+    }
+
+    /**
+     * HandleIncident 处理事件单
+     *
+     * HandleIncident 处理事件单
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function handleIncident($request)
+    {
+        return $this->handleIncidentWithHttpInfo($request);
+    }
+
+    public function handleIncidentWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/incidents/{incident_id}/actions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['incidentId'] !== null) {
+            $pathParams['incident_id'] = $localVarParams['incidentId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\HandleIncidentResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\HandleIncidentRequest');
+    }
+
+    /**
+     * ListIncidents 查询事件单列表
+     *
+     * ListIncidents 查询事件单列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listIncidents($request)
+    {
+        return $this->listIncidentsWithHttpInfo($request);
+    }
+
+    public function listIncidentsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/incidents/list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListIncidentsResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListIncidentsRequest');
+    }
+
+    /**
+     * ListIncidentsHistories 获取事件单历史
+     *
+     * ListIncidentsHistories  获取事件单历史
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listIncidentsHistories($request)
+    {
+        return $this->listIncidentsHistoriesWithHttpInfo($request);
+    }
+
+    public function listIncidentsHistoriesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/incidents/{incident_id}/histories';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['incidentId'] !== null) {
+            $pathParams['incident_id'] = $localVarParams['incidentId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListIncidentsHistoriesResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListIncidentsHistoriesRequest');
+    }
+
+    /**
+     * ShowIncidentTask 获取事件任务
+     *
+     * ShowIncidentTask 获取事件任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showIncidentTask($request)
+    {
+        return $this->showIncidentTaskWithHttpInfo($request);
+    }
+
+    public function showIncidentTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/incidents/{incident_id}/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['incidentId'] !== null) {
+            $pathParams['incident_id'] = $localVarParams['incidentId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ShowIncidentTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ShowIncidentTaskRequest');
     }
 
     /**
@@ -1973,6 +2076,73 @@ class CocClient extends Client
     }
 
     /**
+     * 上传附件
+     *
+     * 上传附件，创建事件单的场景下，如需上传附件，需要先调用该接口将文件上传到obs。上传成功时，该接口将返回文档唯一id。支持文件类型：.jpg,.png,.docx,.txt,.pdf，且文本大小不超10M
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createExternalCocAttachment($request)
+    {
+        return $this->createExternalCocAttachmentWithHttpInfo($request);
+    }
+
+    public function createExternalCocAttachmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/external/incident/attachments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['multipart/form-data']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\CreateExternalCocAttachmentResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\CreateExternalCocAttachmentRequest');
+    }
+
+    /**
      * HandleCocIncident处理事件单
      *
      * HandleCocIncident 处理事件单
@@ -2097,6 +2267,71 @@ class CocClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListCocTicketOperationHistoriesResponse',
             $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListCocTicketOperationHistoriesRequest');
+    }
+
+    /**
+     * 查询简易版事件单列表
+     *
+     * 该接口可分页查询到事件单列表信息，分页参数为limit与offset。该接口不支持对事件单进行除分页参数外的条件过滤，且返回的列表字段相对简单，只有事件单标题、事件单单号、描述信息、工单状态、事件级别、企业项目ID、事件单来源、创建人及责任人。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listIncidentSimpleTickets($request)
+    {
+        return $this->listIncidentSimpleTicketsWithHttpInfo($request);
+    }
+
+    public function listIncidentSimpleTicketsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/incident-tickets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListIncidentSimpleTicketsResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListIncidentSimpleTicketsRequest');
     }
 
     /**
@@ -2286,6 +2521,141 @@ class CocClient extends Client
     }
 
     /**
+     * 上传附件
+     *
+     * 上传附件，创建工单（事件单、变更单、问题单）的场景下，如需上传附件，需要先调用该接口将文件上传到obs。上传成功时，该接口将返回文档唯一id。支持文件类型：.jpg,.png,.docx,.txt,.pdf，且文本大小不超10M。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAttachment($request)
+    {
+        return $this->createAttachmentWithHttpInfo($request);
+    }
+
+    public function createAttachmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{ticket_type}/attachments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['ticketType'] !== null) {
+            $pathParams['ticket_type'] = $localVarParams['ticketType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['multipart/form-data']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\CreateAttachmentResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\CreateAttachmentRequest');
+    }
+
+    /**
+     * 新建工单
+     *
+     * 创建变更单或问题单的接口，通过路径参数ticket_type区分需要创建的工单类型。ticket_type为change表示要创建变更单，ticket_type为issues_mgmt为创建问题单。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTicket($request)
+    {
+        return $this->createTicketWithHttpInfo($request);
+    }
+
+    public function createTicketWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{ticket_type}/tickets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['ticketType'] !== null) {
+            $pathParams['ticket_type'] = $localVarParams['ticketType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\CreateTicketResponse',
+            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\CreateTicketRequest');
+    }
+
+    /**
      * 查询COC可授权单列表
      *
      * 查询COC可授权单列表（变更单号、事件单号、warroom和告警）
@@ -2345,86 +2715,6 @@ class CocClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListAuthorizableTicketsExternalResponse',
             $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListAuthorizableTicketsExternalRequest');
-    }
-
-    /**
-     * 查询用户在云厂商中的资源
-     *
-     * 查询用户在云厂商中的资源
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listMultiCloudResources($request)
-    {
-        return $this->listMultiCloudResourcesWithHttpInfo($request);
-    }
-
-    public function listMultiCloudResourcesWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/multicloud-resources';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['vendor'] !== null) {
-            $queryParams['vendor'] = $localVarParams['vendor'];
-        }
-        if ($localVarParams['type'] !== null) {
-            $queryParams['type'] = $localVarParams['type'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
-        }
-        if ($localVarParams['resourceIdList'] !== null) {
-            $queryParams['resource_id_list'] = $localVarParams['resourceIdList'];
-        }
-        if ($localVarParams['nameList'] !== null) {
-            $queryParams['name_list'] = $localVarParams['nameList'];
-        }
-        if ($localVarParams['regionIdList'] !== null) {
-            $queryParams['region_id_list'] = $localVarParams['regionIdList'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Coc\V1\Model\ListMultiCloudResourcesResponse',
-            $requestType='\HuaweiCloud\SDK\Coc\V1\Model\ListMultiCloudResourcesRequest');
     }
 
     /**

@@ -86,11 +86,11 @@ class PeriodReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'periodType' => 'periodType',
-            'periodNum' => 'periodNum',
-            'isAutoRenew' => 'isAutoRenew',
-            'isAutoPay' => 'isAutoPay',
-            'consoleUrl' => 'consoleURL'
+            'periodType' => 'period_type',
+            'periodNum' => 'period_num',
+            'isAutoRenew' => 'is_auto_renew',
+            'isAutoPay' => 'is_auto_pay',
+            'consoleUrl' => 'console_url'
     ];
 
     /**

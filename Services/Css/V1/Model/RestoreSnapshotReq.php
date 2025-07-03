@@ -86,10 +86,10 @@ class RestoreSnapshotReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'targetCluster' => 'targetCluster',
+            'targetCluster' => 'target_cluster',
             'indices' => 'indices',
-            'renamePattern' => 'renamePattern',
-            'renameReplacement' => 'renameReplacement',
+            'renamePattern' => 'rename_pattern',
+            'renameReplacement' => 'rename_replacement',
             'replaceExistIndices' => 'replace_exist_indices'
     ];
 

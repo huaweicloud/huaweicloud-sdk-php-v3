@@ -25,7 +25,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'float'
+            'instanceId' => 'int'
     ];
 
     /**
@@ -35,7 +35,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null
+        'instanceId' => 'int64'
     ];
 
     /**
@@ -182,7 +182,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * Gets instanceId
     *  云堡垒机实例ID。（非必传，需要查询单个实例详情时传入）
     *
-    * @return float|null
+    * @return int|null
     */
     public function getInstanceId()
     {
@@ -192,7 +192,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param float|null $instanceId 云堡垒机实例ID。（非必传，需要查询单个实例详情时传入）
+    * @param int|null $instanceId 云堡垒机实例ID。（非必传，需要查询单个实例详情时传入）
     *
     * @return $this
     */

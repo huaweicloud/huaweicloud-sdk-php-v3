@@ -22,7 +22,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groupName  资源分组的名称，只能为字母、数字、汉字、-、_，最大长度为128
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,不传为手动添加
+    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,COMB（组合匹配）,Manual（手动添加）
     * tags  标签动态匹配时的关联标签,type为TAG时必传
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
     * providers  云服务名称,格式为\"dcs,ecs\",支持的云服务providers请参考https://support.huaweicloud.com/api-rms/rms_06_0100.html
@@ -56,7 +56,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * groupName  资源分组的名称，只能为字母、数字、汉字、-、_，最大长度为128
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,不传为手动添加
+    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,COMB（组合匹配）,Manual（手动添加）
     * tags  标签动态匹配时的关联标签,type为TAG时必传
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
     * providers  云服务名称,格式为\"dcs,ecs\",支持的云服务providers请参考https://support.huaweicloud.com/api-rms/rms_06_0100.html
@@ -111,7 +111,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groupName  资源分组的名称，只能为字母、数字、汉字、-、_，最大长度为128
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,不传为手动添加
+    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,COMB（组合匹配）,Manual（手动添加）
     * tags  标签动态匹配时的关联标签,type为TAG时必传
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
     * providers  云服务名称,格式为\"dcs,ecs\",支持的云服务providers请参考https://support.huaweicloud.com/api-rms/rms_06_0100.html
@@ -145,7 +145,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * groupName  资源分组的名称，只能为字母、数字、汉字、-、_，最大长度为128
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,不传为手动添加
+    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,COMB（组合匹配）,Manual（手动添加）
     * tags  标签动态匹配时的关联标签,type为TAG时必传
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
     * providers  云服务名称,格式为\"dcs,ecs\",支持的云服务providers请参考https://support.huaweicloud.com/api-rms/rms_06_0100.html
@@ -179,7 +179,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * groupName  资源分组的名称，只能为字母、数字、汉字、-、_，最大长度为128
     * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,不传为手动添加
+    * type  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,COMB（组合匹配）,Manual（手动添加）
     * tags  标签动态匹配时的关联标签,type为TAG时必传
     * associationEpIds  该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
     * providers  云服务名称,格式为\"dcs,ecs\",支持的云服务providers请参考https://support.huaweicloud.com/api-rms/rms_06_0100.html
@@ -407,7 +407,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,不传为手动添加
+    *  资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,COMB（组合匹配）,Manual（手动添加）
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,不传为手动添加
+    * @param string|null $type 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,COMB（组合匹配）,Manual（手动添加）
     *
     * @return $this
     */

@@ -96,7 +96,7 @@ class SetRDSBackupCnfReq implements ModelInterface, ArrayAccess
             'period' => 'period',
             'keepday' => 'keepday',
             'enable' => 'enable',
-            'deleteAuto' => 'deleteAuto'
+            'deleteAuto' => 'delete_auto'
     ];
 
     /**

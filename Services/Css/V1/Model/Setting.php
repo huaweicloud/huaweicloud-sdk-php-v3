@@ -92,11 +92,11 @@ class Setting implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'workers' => 'workers',
-            'batchSize' => 'batchSize',
-            'batchDelayMs' => 'batchDelayMs',
-            'queueType' => 'queueType',
-            'queueCheckPointWrites' => 'queueCheckPointWrites',
-            'queueMaxBytesMb' => 'queueMaxBytesMb'
+            'batchSize' => 'batch_size',
+            'batchDelayMs' => 'batch_delay_ms',
+            'queueType' => 'queue_type',
+            'queueCheckPointWrites' => 'queue_check_point_writes',
+            'queueMaxBytesMb' => 'queue_max_bytes_mb'
     ];
 
     /**

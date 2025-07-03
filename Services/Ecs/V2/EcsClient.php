@@ -27,6 +27,70 @@ class EcsClient extends Client
 
 
     /**
+     * 接受并授权执行计划事件操作
+     *
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function acceptScheduledEvent($request)
+    {
+        return $this->acceptScheduledEventWithHttpInfo($request);
+    }
+
+    public function acceptScheduledEventWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instance-scheduled-events/{id}/actions/accept';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\AcceptScheduledEventResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\AcceptScheduledEventRequest');
+    }
+
+    /**
      * 添加云服务器组成员
      *
      * 将云服务器加入云服务器组。添加成功后，如果该云服务器组是反亲和性策略的，则该云服务器与云服务器组中的其他成员尽量分散地创建在不同主机上。如果该云服务器时故障域类型的，则该云服务器会拥有故障域属性。
@@ -1426,6 +1490,68 @@ class EcsClient extends Client
     }
 
     /**
+     * 删除模板
+     *
+     * 删除启动模板。删除一个启动模板。并同时删除模板下所有的版本。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteLaunchTemplates($request)
+    {
+        return $this->deleteLaunchTemplatesWithHttpInfo($request);
+    }
+
+    public function deleteLaunchTemplatesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/launch-templates/{launch_template_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['launchTemplateId'] !== null) {
+            $pathParams['launch_template_id'] = $localVarParams['launchTemplateId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteLaunchTemplatesResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteLaunchTemplatesRequest');
+    }
+
+    /**
      * 删除回收站中虚拟机
      *
      * 
@@ -2218,6 +2344,83 @@ class EcsClient extends Client
     }
 
     /**
+     * 查询模板版本列表
+     *
+     * 根据用户请求条件从数据库筛选、查询启动模板的版本相关信息，支持按照image_id和flavor_id进行过滤。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLaunchTemplateVersions($request)
+    {
+        return $this->listLaunchTemplateVersionsWithHttpInfo($request);
+    }
+
+    public function listLaunchTemplateVersionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/launch-template-versions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['launchTemplateId'] !== null) {
+            $queryParams['launch_template_id'] = $localVarParams['launchTemplateId'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $queryParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['flavorId'] !== null) {
+            $queryParams['flavor_id'] = $localVarParams['flavorId'];
+        }
+        if ($localVarParams['version'] !== null) {
+            $queryParams['version'] = $localVarParams['version'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListLaunchTemplateVersionsResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListLaunchTemplateVersionsRequest');
+    }
+
+    /**
      * 查询回收站中虚拟机列表
      *
      * 
@@ -3005,6 +3208,77 @@ class EcsClient extends Client
     }
 
     /**
+     * 查询模板列表
+     *
+     * 根据用户请求条件从数据库筛选、查询启动模板相关信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTemplates($request)
+    {
+        return $this->listTemplatesWithHttpInfo($request);
+    }
+
+    public function listTemplatesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/launch-templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['launchTemplateId'] !== null) {
+            $queryParams['launch_template_id'] = $localVarParams['launchTemplateId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListTemplatesResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListTemplatesRequest');
+    }
+
+    /**
      * 冷迁移云服务器
      *
      * - 将部署在专属主机上的弹性云服务器迁移至其他专属主机。
@@ -3715,6 +3989,107 @@ class EcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListServerSecurityGroupsResponse',
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListServerSecurityGroupsRequest');
+    }
+
+    /**
+     * 查询云服务器列表
+     *
+     * 查询云服务器信息列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function novaListServers($request)
+    {
+        return $this->novaListServersWithHttpInfo($request);
+    }
+
+    public function novaListServersWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/{project_id}/servers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['changesSince'] !== null) {
+            $queryParams['changes-since'] = $localVarParams['changesSince'];
+        }
+        if ($localVarParams['flavor'] !== null) {
+            $queryParams['flavor'] = $localVarParams['flavor'];
+        }
+        if ($localVarParams['host'] !== null) {
+            $queryParams['host'] = $localVarParams['host'];
+        }
+        if ($localVarParams['image'] !== null) {
+            $queryParams['image'] = $localVarParams['image'];
+        }
+        if ($localVarParams['ip'] !== null) {
+            $queryParams['ip'] = $localVarParams['ip'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['notTags'] !== null) {
+            $queryParams['not-tags'] = $localVarParams['notTags'];
+        }
+        if ($localVarParams['reservationId'] !== null) {
+            $queryParams['reservation_id'] = $localVarParams['reservationId'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['openStackApiVersion'] !== null) {
+            $headerParams[$arr['openStackApiVersion']] = $localVarParams['openStackApiVersion'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListServersResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListServersRequest');
     }
 
     /**
@@ -4543,6 +4918,68 @@ class EcsClient extends Client
     }
 
     /**
+     * 查询云服务器元数据配置
+     *
+     * 查询云服务器元数据配置，通过本接口，您可以查询指定云服务器的元数据配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMetadataOptions($request)
+    {
+        return $this->showMetadataOptionsWithHttpInfo($request);
+    }
+
+    public function showMetadataOptionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/metadata-options';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowMetadataOptionsResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowMetadataOptionsRequest');
+    }
+
+    /**
      * 查询回收站配置
      *
      * 查询回收站配置
@@ -4916,68 +5353,6 @@ class EcsClient extends Client
     }
 
     /**
-     * 查询云服务器元数据配置
-     *
-     * 查询云服务器元数据配置，通过本接口，您可以查询指定云服务器的元数据配置。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showServerMetadataOptions($request)
-    {
-        return $this->showServerMetadataOptionsWithHttpInfo($request);
-    }
-
-    public function showServerMetadataOptionsWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/metadata-options';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['serverId'] !== null) {
-            $pathParams['server_id'] = $localVarParams['serverId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerMetadataOptionsResponse',
-            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerMetadataOptionsRequest');
-    }
-
-    /**
      * 云服务器获取密码(企业项目)
      *
      * 当通过支持Cloudbase-init功能的镜像创建Windows云服务器时，获取云服务器初始安装时系统生成的管理员帐户（Administrator帐户或Cloudbase-init设置的帐户）随机密码。
@@ -5169,6 +5544,71 @@ class EcsClient extends Client
     }
 
     /**
+     * 更新云服务器元数据配置
+     *
+     * 更新云服务器元数据配置，通过本接口，您可以选择启用或关闭IMDS服务，也可以选择IMDS服务的版本。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateMetadataOptions($request)
+    {
+        return $this->updateMetadataOptionsWithHttpInfo($request);
+    }
+
+    public function updateMetadataOptionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/metadata-options';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateMetadataOptionsResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateMetadataOptionsRequest');
+    }
+
+    /**
      * 更新回收站配置
      *
      * 更新回收站属性信息
@@ -5290,6 +5730,70 @@ class EcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateRecycleBinPolicyResponse',
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateRecycleBinPolicyRequest');
+    }
+
+    /**
+     * 更新计划事件
+     *
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateScheduledEvent($request)
+    {
+        return $this->updateScheduledEventWithHttpInfo($request);
+    }
+
+    public function updateScheduledEventWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instance-scheduled-events/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateScheduledEventResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateScheduledEventRequest');
     }
 
     /**
@@ -5629,71 +6133,6 @@ class EcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerMetadataResponse',
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerMetadataRequest');
-    }
-
-    /**
-     * 更新云服务器元数据配置
-     *
-     * 更新云服务器元数据配置，通过本接口，您可以选择启用或关闭IMDS服务，也可以选择IMDS服务的版本。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateServerMetadataOptions($request)
-    {
-        return $this->updateServerMetadataOptionsWithHttpInfo($request);
-    }
-
-    public function updateServerMetadataOptionsWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/metadata-options';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['serverId'] !== null) {
-            $pathParams['server_id'] = $localVarParams['serverId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                ['application/json;charset=UTF-8']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerMetadataOptionsResponse',
-            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerMetadataOptionsRequest');
     }
 
     /**

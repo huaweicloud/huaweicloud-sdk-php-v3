@@ -72,7 +72,7 @@ class UpdateVpcepConnectionReq implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'action' => 'action',
-            'endpointIdList' => 'endpointIdList'
+            'endpointIdList' => 'endpoint_id_list'
     ];
 
     /**

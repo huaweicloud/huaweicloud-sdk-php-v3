@@ -29,6 +29,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCciService  是否支持对接cci服务
     * enableImageLabel  是否支持镜像标签
     * enablePipeline  是否支持流水线服务
+    * enableListV3  是否支持list v3接口
     *
     * @var string[]
     */
@@ -40,7 +41,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableImageSync' => 'bool',
             'enableCciService' => 'bool',
             'enableImageLabel' => 'bool',
-            'enablePipeline' => 'bool'
+            'enablePipeline' => 'bool',
+            'enableListV3' => 'bool'
     ];
 
     /**
@@ -53,6 +55,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCciService  是否支持对接cci服务
     * enableImageLabel  是否支持镜像标签
     * enablePipeline  是否支持流水线服务
+    * enableListV3  是否支持list v3接口
     *
     * @var string[]
     */
@@ -64,7 +67,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
         'enableImageSync' => null,
         'enableCciService' => null,
         'enableImageLabel' => null,
-        'enablePipeline' => null
+        'enablePipeline' => null,
+        'enableListV3' => null
     ];
 
     /**
@@ -98,6 +102,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCciService  是否支持对接cci服务
     * enableImageLabel  是否支持镜像标签
     * enablePipeline  是否支持流水线服务
+    * enableListV3  是否支持list v3接口
     *
     * @var string[]
     */
@@ -109,7 +114,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableImageSync' => 'enable_image_sync',
             'enableCciService' => 'enable_cci_service',
             'enableImageLabel' => 'enable_image_label',
-            'enablePipeline' => 'enable_pipeline'
+            'enablePipeline' => 'enable_pipeline',
+            'enableListV3' => 'enable_list_v3'
     ];
 
     /**
@@ -122,6 +128,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCciService  是否支持对接cci服务
     * enableImageLabel  是否支持镜像标签
     * enablePipeline  是否支持流水线服务
+    * enableListV3  是否支持list v3接口
     *
     * @var string[]
     */
@@ -133,7 +140,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableImageSync' => 'setEnableImageSync',
             'enableCciService' => 'setEnableCciService',
             'enableImageLabel' => 'setEnableImageLabel',
-            'enablePipeline' => 'setEnablePipeline'
+            'enablePipeline' => 'setEnablePipeline',
+            'enableListV3' => 'setEnableListV3'
     ];
 
     /**
@@ -146,6 +154,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCciService  是否支持对接cci服务
     * enableImageLabel  是否支持镜像标签
     * enablePipeline  是否支持流水线服务
+    * enableListV3  是否支持list v3接口
     *
     * @var string[]
     */
@@ -157,7 +166,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableImageSync' => 'getEnableImageSync',
             'enableCciService' => 'getEnableCciService',
             'enableImageLabel' => 'getEnableImageLabel',
-            'enablePipeline' => 'getEnablePipeline'
+            'enablePipeline' => 'getEnablePipeline',
+            'enableListV3' => 'getEnableListV3'
     ];
 
     /**
@@ -226,6 +236,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
         $this->container['enableCciService'] = isset($data['enableCciService']) ? $data['enableCciService'] : null;
         $this->container['enableImageLabel'] = isset($data['enableImageLabel']) ? $data['enableImageLabel'] : null;
         $this->container['enablePipeline'] = isset($data['enablePipeline']) ? $data['enablePipeline'] : null;
+        $this->container['enableListV3'] = isset($data['enableListV3']) ? $data['enableListV3'] : null;
     }
 
     /**
@@ -439,6 +450,30 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     public function setEnablePipeline($enablePipeline)
     {
         $this->container['enablePipeline'] = $enablePipeline;
+        return $this;
+    }
+
+    /**
+    * Gets enableListV3
+    *  是否支持list v3接口
+    *
+    * @return bool|null
+    */
+    public function getEnableListV3()
+    {
+        return $this->container['enableListV3'];
+    }
+
+    /**
+    * Sets enableListV3
+    *
+    * @param bool|null $enableListV3 是否支持list v3接口
+    *
+    * @return $this
+    */
+    public function setEnableListV3($enableListV3)
+    {
+        $this->container['enableListV3'] = $enableListV3;
         return $this;
     }
 

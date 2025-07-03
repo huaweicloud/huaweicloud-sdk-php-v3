@@ -92,8 +92,8 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'agency' => 'agency',
-            'logBasePath' => 'logBasePath',
-            'logBucket' => 'logBucket',
+            'logBasePath' => 'log_base_path',
+            'logBucket' => 'log_bucket',
             'indexPrefix' => 'index_prefix',
             'keepDays' => 'keep_days',
             'targetClusterId' => 'target_cluster_id'

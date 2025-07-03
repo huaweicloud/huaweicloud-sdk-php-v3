@@ -22,24 +22,32 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  待升级的集群的ID。
     * upgradeType  升级目标版本类型： - same：相同版本。 - cross： 跨版本。
+    * start  指定查询起始值，默认值为0。
+    * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
-            'upgradeType' => 'string'
+            'upgradeType' => 'string',
+            'start' => 'string',
+            'limit' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  待升级的集群的ID。
     * upgradeType  升级目标版本类型： - same：相同版本。 - cross： 跨版本。
+    * start  指定查询起始值，默认值为0。
+    * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
-        'upgradeType' => null
+        'upgradeType' => null,
+        'start' => null,
+        'limit' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterId  待升级的集群的ID。
     * upgradeType  升级目标版本类型： - same：相同版本。 - cross： 跨版本。
+    * start  指定查询起始值，默认值为0。
+    * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
-            'upgradeType' => 'upgrade_type'
+            'upgradeType' => 'upgrade_type',
+            'start' => 'start',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  待升级的集群的ID。
     * upgradeType  升级目标版本类型： - same：相同版本。 - cross： 跨版本。
+    * start  指定查询起始值，默认值为0。
+    * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
-            'upgradeType' => 'setUpgradeType'
+            'upgradeType' => 'setUpgradeType',
+            'start' => 'setStart',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  待升级的集群的ID。
     * upgradeType  升级目标版本类型： - same：相同版本。 - cross： 跨版本。
+    * start  指定查询起始值，默认值为0。
+    * limit  指定查询个数，默认值为10。
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
-            'upgradeType' => 'getUpgradeType'
+            'upgradeType' => 'getUpgradeType',
+            'start' => 'getStart',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -159,6 +179,8 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['upgradeType'] = isset($data['upgradeType']) ? $data['upgradeType'] : null;
+        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -234,6 +256,54 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     public function setUpgradeType($upgradeType)
     {
         $this->container['upgradeType'] = $upgradeType;
+        return $this;
+    }
+
+    /**
+    * Gets start
+    *  指定查询起始值，默认值为0。
+    *
+    * @return string|null
+    */
+    public function getStart()
+    {
+        return $this->container['start'];
+    }
+
+    /**
+    * Sets start
+    *
+    * @param string|null $start 指定查询起始值，默认值为0。
+    *
+    * @return $this
+    */
+    public function setStart($start)
+    {
+        $this->container['start'] = $start;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  指定查询个数，默认值为10。
+    *
+    * @return string|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param string|null $limit 指定查询个数，默认值为10。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

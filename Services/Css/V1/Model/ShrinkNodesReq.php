@@ -72,7 +72,7 @@ class ShrinkNodesReq implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'migrateData' => 'migrate_data',
-            'shrinkNodes' => 'shrinkNodes'
+            'shrinkNodes' => 'shrink_nodes'
     ];
 
     /**

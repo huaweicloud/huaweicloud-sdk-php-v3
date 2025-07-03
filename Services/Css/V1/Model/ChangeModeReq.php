@@ -76,9 +76,9 @@ class ChangeModeReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'authorityEnable' => 'authorityEnable',
-            'adminPwd' => 'adminPwd',
-            'httpsEnable' => 'httpsEnable'
+            'authorityEnable' => 'authority_enable',
+            'adminPwd' => 'admin_pwd',
+            'httpsEnable' => 'https_enable'
     ];
 
     /**

@@ -1396,68 +1396,6 @@ class BmsClient extends Client
     }
 
     /**
-     * 查询裸金属服务器元数据配置
-     *
-     * 查询云服务器元数据配置，通过本接口，您可以查询指裸金属服务器的元数据配置。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showBaremetalServerMetadataOptions($request)
-    {
-        return $this->showBaremetalServerMetadataOptionsWithHttpInfo($request);
-    }
-
-    public function showBaremetalServerMetadataOptionsWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/baremetalservers/{server_id}/metadata-options';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['serverId'] !== null) {
-            $pathParams['server_id'] = $localVarParams['serverId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Bms\V1\Model\ShowBaremetalServerMetadataOptionsResponse',
-            $requestType='\HuaweiCloud\SDK\Bms\V1\Model\ShowBaremetalServerMetadataOptionsRequest');
-    }
-
-    /**
      * 查询裸金属服务器标签
      *
      * - 查询指定云服务器的标签信息。
@@ -1579,6 +1517,68 @@ class BmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bms\V1\Model\ShowBaremetalServerVolumeInfoResponse',
             $requestType='\HuaweiCloud\SDK\Bms\V1\Model\ShowBaremetalServerVolumeInfoRequest');
+    }
+
+    /**
+     * 查询裸金属服务器元数据配置
+     *
+     * 查询云服务器元数据配置，通过本接口，您可以查询指裸金属服务器的元数据配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMetadataOptions($request)
+    {
+        return $this->showMetadataOptionsWithHttpInfo($request);
+    }
+
+    public function showMetadataOptionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/baremetalservers/{server_id}/metadata-options';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bms\V1\Model\ShowMetadataOptionsResponse',
+            $requestType='\HuaweiCloud\SDK\Bms\V1\Model\ShowMetadataOptionsRequest');
     }
 
     /**
@@ -1970,12 +1970,12 @@ class BmsClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function updateBaremetalServerMetadataOptions($request)
+    public function updateMetadataOptions($request)
     {
-        return $this->updateBaremetalServerMetadataOptionsWithHttpInfo($request);
+        return $this->updateMetadataOptionsWithHttpInfo($request);
     }
 
-    public function updateBaremetalServerMetadataOptionsWithHttpInfo($request)
+    public function updateMetadataOptionsWithHttpInfo($request)
     {
         $resourcePath = '/v1/{project_id}/baremetalservers/{server_id}/metadata-options';
         $formParams = [];
@@ -2021,8 +2021,8 @@ class BmsClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Bms\V1\Model\UpdateBaremetalServerMetadataOptionsResponse',
-            $requestType='\HuaweiCloud\SDK\Bms\V1\Model\UpdateBaremetalServerMetadataOptionsRequest');
+            $responseType='\HuaweiCloud\SDK\Bms\V1\Model\UpdateMetadataOptionsResponse',
+            $requestType='\HuaweiCloud\SDK\Bms\V1\Model\UpdateMetadataOptionsRequest');
     }
 
     /**

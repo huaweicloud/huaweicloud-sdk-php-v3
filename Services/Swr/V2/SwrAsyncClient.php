@@ -1676,6 +1676,86 @@ class SwrAsyncClient extends Client
     }
 
     /**
+     * 查询镜像仓库列表详情
+     *
+     * 查询镜像仓库列表详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRepoDetailsAsync($request)
+    {
+        return $this->listRepoDetailsAsyncWithHttpInfo($request);
+    }
+    
+    public function listRepoDetailsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/manage/repos';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['isPublic'] !== null) {
+            $queryParams['is_public'] = $localVarParams['isPublic'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ListRepoDetailsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ListRepoDetailsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取共享帐号列表
      *
      * 获取共享帐号列表
@@ -1826,6 +1906,86 @@ class SwrAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ListReposDetailsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ListReposDetailsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询镜像tag列表详情
+     *
+     * 查询镜像tag列表详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRepositoryTagAsync($request)
+    {
+        return $this->listRepositoryTagAsyncWithHttpInfo($request);
+    }
+    
+    public function listRepositoryTagAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/manage/namespaces/{namespace}/repos/{repository}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['tag'] !== null) {
+            $queryParams['tag'] = $localVarParams['tag'];
+        }
+        if ($localVarParams['withManifest'] !== null) {
+            $queryParams['with_manifest'] = $localVarParams['withManifest'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $pathParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['repository'] !== null) {
+            $pathParams['repository'] = $localVarParams['repository'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ListRepositoryTagResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ListRepositoryTagRequest',
             $asyncRequest = true);
     }
 
@@ -2051,6 +2211,86 @@ class SwrAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ListRetentionsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ListRetentionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询共享镜像列表详情
+     *
+     * 查询共享镜像列表详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSharedRepoDetailsAsync($request)
+    {
+        return $this->listSharedRepoDetailsAsyncWithHttpInfo($request);
+    }
+    
+    public function listSharedRepoDetailsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/manage/shared-repositories';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['sharedBy'] !== null) {
+            $queryParams['shared_by'] = $localVarParams['sharedBy'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ListSharedRepoDetailsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ListSharedRepoDetailsRequest',
             $asyncRequest = true);
     }
 
@@ -2536,6 +2776,77 @@ class SwrAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ShowNamespaceAuthResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ShowNamespaceAuthRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询指定tag的镜像详情
+     *
+     * 查询镜像仓库中指定tag的镜像
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRepoTagAsync($request)
+    {
+        return $this->showRepoTagAsyncWithHttpInfo($request);
+    }
+    
+    public function showRepoTagAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/manage/namespaces/{namespace}/repos/{repository}/tags/{tag}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $pathParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['repository'] !== null) {
+            $pathParams['repository'] = $localVarParams['repository'];
+        }
+        if ($localVarParams['tag'] !== null) {
+            $pathParams['tag'] = $localVarParams['tag'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ShowRepoTagResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ShowRepoTagRequest',
             $asyncRequest = true);
     }
 

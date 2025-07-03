@@ -20,8 +20,8 @@ class SyncResourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * provider  资源提供者
-    * type  资源类型
+    * provider  资源提供者。
+    * type  资源类型。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class SyncResourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * provider  资源提供者
-    * type  资源类型
+    * provider  资源提供者。
+    * type  资源类型。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class SyncResourceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * provider  资源提供者
-    * type  资源类型
+    * provider  资源提供者。
+    * type  资源类型。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class SyncResourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * provider  资源提供者
-    * type  资源类型
+    * provider  资源提供者。
+    * type  资源类型。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class SyncResourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * provider  资源提供者
-    * type  资源类型
+    * provider  资源提供者。
+    * type  资源类型。
     *
     * @var string[]
     */
@@ -169,12 +169,6 @@ class SyncResourceReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['provider'] === null) {
-            $invalidProperties[] = "'provider' can't be null";
-        }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -191,9 +185,9 @@ class SyncResourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets provider
-    *  资源提供者
+    *  资源提供者。
     *
-    * @return string
+    * @return string|null
     */
     public function getProvider()
     {
@@ -203,7 +197,7 @@ class SyncResourceReq implements ModelInterface, ArrayAccess
     /**
     * Sets provider
     *
-    * @param string $provider 资源提供者
+    * @param string|null $provider 资源提供者。
     *
     * @return $this
     */
@@ -215,9 +209,9 @@ class SyncResourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资源类型
+    *  资源类型。
     *
-    * @return string
+    * @return string|null
     */
     public function getType()
     {
@@ -227,7 +221,7 @@ class SyncResourceReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 资源类型
+    * @param string|null $type 资源类型。
     *
     * @return $this
     */

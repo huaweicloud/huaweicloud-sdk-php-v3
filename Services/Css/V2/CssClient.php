@@ -172,7 +172,7 @@ class CssClient extends Client
 
     public function rollingRestartWithHttpInfo($request)
     {
-        $resourcePath = '/v2.0/{project_id}/clusters/{cluster_id}/rolling_restart';
+        $resourcePath = '/v2.0/{project_id}/clusters/{cluster_id}/rolling-restart';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

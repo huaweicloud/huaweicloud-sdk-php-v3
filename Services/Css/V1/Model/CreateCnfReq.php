@@ -82,7 +82,7 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'confContent' => 'confContent',
+            'confContent' => 'conf_content',
             'setting' => 'setting',
             'sensitiveWords' => 'sensitive_words'
     ];

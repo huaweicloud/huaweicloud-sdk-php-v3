@@ -71,8 +71,8 @@ class StartKibanaPublicReqElbWhitelist implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'enableWhiteList' => 'enableWhiteList',
-            'whiteList' => 'whiteList'
+            'enableWhiteList' => 'enable_white_list',
+            'whiteList' => 'white_list'
     ];
 
     /**
