@@ -29,6 +29,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * actionTagMap  动作标签映射。
     * isFlexus  是否是Flexus版本分身数字人。
+    * voiceAssetId  形象关联的声音资产ID。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             'deviceNames' => 'string[]',
             'isWithActionLibrary' => 'bool',
             'actionTagMap' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ActionTagInfo[]',
-            'isFlexus' => 'bool'
+            'isFlexus' => 'bool',
+            'voiceAssetId' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * actionTagMap  动作标签映射。
     * isFlexus  是否是Flexus版本分身数字人。
+    * voiceAssetId  形象关联的声音资产ID。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
         'deviceNames' => null,
         'isWithActionLibrary' => null,
         'actionTagMap' => null,
-        'isFlexus' => null
+        'isFlexus' => null,
+        'voiceAssetId' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * actionTagMap  动作标签映射。
     * isFlexus  是否是Flexus版本分身数字人。
+    * voiceAssetId  形象关联的声音资产ID。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             'deviceNames' => 'device_names',
             'isWithActionLibrary' => 'is_with_action_library',
             'actionTagMap' => 'action_tag_map',
-            'isFlexus' => 'is_flexus'
+            'isFlexus' => 'is_flexus',
+            'voiceAssetId' => 'voice_asset_id'
     ];
 
     /**
@@ -128,6 +134,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * actionTagMap  动作标签映射。
     * isFlexus  是否是Flexus版本分身数字人。
+    * voiceAssetId  形象关联的声音资产ID。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             'deviceNames' => 'setDeviceNames',
             'isWithActionLibrary' => 'setIsWithActionLibrary',
             'actionTagMap' => 'setActionTagMap',
-            'isFlexus' => 'setIsFlexus'
+            'isFlexus' => 'setIsFlexus',
+            'voiceAssetId' => 'setVoiceAssetId'
     ];
 
     /**
@@ -154,6 +162,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * actionTagMap  动作标签映射。
     * isFlexus  是否是Flexus版本分身数字人。
+    * voiceAssetId  形象关联的声音资产ID。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             'deviceNames' => 'getDeviceNames',
             'isWithActionLibrary' => 'getIsWithActionLibrary',
             'actionTagMap' => 'getActionTagMap',
-            'isFlexus' => 'getIsFlexus'
+            'isFlexus' => 'getIsFlexus',
+            'voiceAssetId' => 'getVoiceAssetId'
     ];
 
     /**
@@ -255,6 +265,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
         $this->container['isWithActionLibrary'] = isset($data['isWithActionLibrary']) ? $data['isWithActionLibrary'] : null;
         $this->container['actionTagMap'] = isset($data['actionTagMap']) ? $data['actionTagMap'] : null;
         $this->container['isFlexus'] = isset($data['isFlexus']) ? $data['isFlexus'] : null;
+        $this->container['voiceAssetId'] = isset($data['voiceAssetId']) ? $data['voiceAssetId'] : null;
     }
 
     /**
@@ -284,6 +295,12 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['modelResolution']) && (mb_strlen($this->container['modelResolution']) < 0)) {
                 $invalidProperties[] = "invalid value for 'modelResolution', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['voiceAssetId']) && (mb_strlen($this->container['voiceAssetId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'voiceAssetId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['voiceAssetId']) && (mb_strlen($this->container['voiceAssetId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'voiceAssetId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -512,6 +529,30 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     public function setIsFlexus($isFlexus)
     {
         $this->container['isFlexus'] = $isFlexus;
+        return $this;
+    }
+
+    /**
+    * Gets voiceAssetId
+    *  形象关联的声音资产ID。
+    *
+    * @return string|null
+    */
+    public function getVoiceAssetId()
+    {
+        return $this->container['voiceAssetId'];
+    }
+
+    /**
+    * Sets voiceAssetId
+    *
+    * @param string|null $voiceAssetId 形象关联的声音资产ID。
+    *
+    * @return $this
+    */
+    public function setVoiceAssetId($voiceAssetId)
+    {
+        $this->container['voiceAssetId'] = $voiceAssetId;
         return $this;
     }
 

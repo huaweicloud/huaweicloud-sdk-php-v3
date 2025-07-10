@@ -22,24 +22,32 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * flavorId  规格id
+    * limit  limit
+    * marker  marker
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'availabilityZone' => 'string',
-            'flavorId' => 'string'
+            'flavorId' => 'string',
+            'limit' => 'int',
+            'marker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * flavorId  规格id
+    * limit  limit
+    * marker  marker
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'availabilityZone' => null,
-        'flavorId' => null
+        'flavorId' => null,
+        'limit' => 'int32',
+        'marker' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * flavorId  规格id
+    * limit  limit
+    * marker  marker
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'availabilityZone' => 'availability_zone',
-            'flavorId' => 'flavor_id'
+            'flavorId' => 'flavor_id',
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * flavorId  规格id
+    * limit  limit
+    * marker  marker
     *
     * @var string[]
     */
     protected static $setters = [
             'availabilityZone' => 'setAvailabilityZone',
-            'flavorId' => 'setFlavorId'
+            'flavorId' => 'setFlavorId',
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * flavorId  规格id
+    * limit  limit
+    * marker  marker
     *
     * @var string[]
     */
     protected static $getters = [
             'availabilityZone' => 'getAvailabilityZone',
-            'flavorId' => 'getFlavorId'
+            'flavorId' => 'getFlavorId',
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -159,6 +179,8 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['flavorId'] = isset($data['flavorId']) ? $data['flavorId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -228,6 +250,54 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     public function setFlavorId($flavorId)
     {
         $this->container['flavorId'] = $flavorId;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  limit
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit limit
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  marker
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker marker
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

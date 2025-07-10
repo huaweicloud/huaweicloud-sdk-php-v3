@@ -22,25 +22,27 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  数字人智能交互对话任务ID。
-    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
+    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * DELETING: 删除中
     * duration  数字人智能交互对话时长，单位秒。
     * startTime  数字人智能交互对话任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * errorInfo  errorInfo
     * createTime  数字人智能交互对话任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastupdateTime  数字人智能交互对话任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
     * voiceConfigList  语音配置参数列表。
-    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
-    * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
-    * chatAccessAddress  智能交互接入地址。
-    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * clientId  clientId
+    * isPoolMode  是否是资源池模式
+    * jobFinishReason  对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
+    * rtcRoomInfo  rtcRoomInfo
+    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    * language  language
+    * chatAccessAddress  智能交互接入地址。
+    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -54,43 +56,47 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'errorInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse',
             'createTime' => 'string',
             'lastupdateTime' => 'string',
-            'rtcRoomInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCRoomInfoList',
             'chatSubtitleConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatSubtitleConfig',
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatVideoConfig',
             'voiceConfigList' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatVoiceConfig[]',
-            'chatState' => 'int',
-            'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'chatVideoType' => 'string',
-            'chatAccessAddress' => 'string',
-            'chatAccessRestAddress' => 'string',
             'isTransparent' => 'bool',
             'defaultLanguage' => 'string',
             'clientId' => 'string',
+            'isPoolMode' => 'bool',
+            'jobFinishReason' => 'string',
+            'rtcRoomInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCRoomInfoList',
+            'chatState' => 'int',
+            'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
+            'chatAccessAddress' => 'string',
+            'chatAccessRestAddress' => 'string',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  数字人智能交互对话任务ID。
-    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
+    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * DELETING: 删除中
     * duration  数字人智能交互对话时长，单位秒。
     * startTime  数字人智能交互对话任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * errorInfo  errorInfo
     * createTime  数字人智能交互对话任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastupdateTime  数字人智能交互对话任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
     * voiceConfigList  语音配置参数列表。
-    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
-    * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
-    * chatAccessAddress  智能交互接入地址。
-    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * clientId  clientId
+    * isPoolMode  是否是资源池模式
+    * jobFinishReason  对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
+    * rtcRoomInfo  rtcRoomInfo
+    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    * language  language
+    * chatAccessAddress  智能交互接入地址。
+    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -104,18 +110,20 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
         'errorInfo' => null,
         'createTime' => null,
         'lastupdateTime' => null,
-        'rtcRoomInfo' => null,
         'chatSubtitleConfig' => null,
         'videoConfig' => null,
         'voiceConfigList' => null,
-        'chatState' => null,
-        'language' => null,
         'chatVideoType' => null,
-        'chatAccessAddress' => null,
-        'chatAccessRestAddress' => null,
         'isTransparent' => null,
         'defaultLanguage' => null,
         'clientId' => null,
+        'isPoolMode' => null,
+        'jobFinishReason' => null,
+        'rtcRoomInfo' => null,
+        'chatState' => null,
+        'language' => null,
+        'chatAccessAddress' => null,
+        'chatAccessRestAddress' => null,
         'xRequestId' => null
     ];
 
@@ -143,25 +151,27 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  数字人智能交互对话任务ID。
-    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
+    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * DELETING: 删除中
     * duration  数字人智能交互对话时长，单位秒。
     * startTime  数字人智能交互对话任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * errorInfo  errorInfo
     * createTime  数字人智能交互对话任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastupdateTime  数字人智能交互对话任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
     * voiceConfigList  语音配置参数列表。
-    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
-    * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
-    * chatAccessAddress  智能交互接入地址。
-    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * clientId  clientId
+    * isPoolMode  是否是资源池模式
+    * jobFinishReason  对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
+    * rtcRoomInfo  rtcRoomInfo
+    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    * language  language
+    * chatAccessAddress  智能交互接入地址。
+    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -175,43 +185,47 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'errorInfo' => 'error_info',
             'createTime' => 'create_time',
             'lastupdateTime' => 'lastupdate_time',
-            'rtcRoomInfo' => 'rtc_room_info',
             'chatSubtitleConfig' => 'chat_subtitle_config',
             'videoConfig' => 'video_config',
             'voiceConfigList' => 'voice_config_list',
-            'chatState' => 'chat_state',
-            'language' => 'language',
             'chatVideoType' => 'chat_video_type',
-            'chatAccessAddress' => 'chat_access_address',
-            'chatAccessRestAddress' => 'chat_access_rest_address',
             'isTransparent' => 'is_transparent',
             'defaultLanguage' => 'default_language',
             'clientId' => 'client_id',
+            'isPoolMode' => 'is_pool_mode',
+            'jobFinishReason' => 'job_finish_reason',
+            'rtcRoomInfo' => 'rtc_room_info',
+            'chatState' => 'chat_state',
+            'language' => 'language',
+            'chatAccessAddress' => 'chat_access_address',
+            'chatAccessRestAddress' => 'chat_access_rest_address',
             'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  数字人智能交互对话任务ID。
-    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
+    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * DELETING: 删除中
     * duration  数字人智能交互对话时长，单位秒。
     * startTime  数字人智能交互对话任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * errorInfo  errorInfo
     * createTime  数字人智能交互对话任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastupdateTime  数字人智能交互对话任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
     * voiceConfigList  语音配置参数列表。
-    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
-    * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
-    * chatAccessAddress  智能交互接入地址。
-    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * clientId  clientId
+    * isPoolMode  是否是资源池模式
+    * jobFinishReason  对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
+    * rtcRoomInfo  rtcRoomInfo
+    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    * language  language
+    * chatAccessAddress  智能交互接入地址。
+    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -225,43 +239,47 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'errorInfo' => 'setErrorInfo',
             'createTime' => 'setCreateTime',
             'lastupdateTime' => 'setLastupdateTime',
-            'rtcRoomInfo' => 'setRtcRoomInfo',
             'chatSubtitleConfig' => 'setChatSubtitleConfig',
             'videoConfig' => 'setVideoConfig',
             'voiceConfigList' => 'setVoiceConfigList',
-            'chatState' => 'setChatState',
-            'language' => 'setLanguage',
             'chatVideoType' => 'setChatVideoType',
-            'chatAccessAddress' => 'setChatAccessAddress',
-            'chatAccessRestAddress' => 'setChatAccessRestAddress',
             'isTransparent' => 'setIsTransparent',
             'defaultLanguage' => 'setDefaultLanguage',
             'clientId' => 'setClientId',
+            'isPoolMode' => 'setIsPoolMode',
+            'jobFinishReason' => 'setJobFinishReason',
+            'rtcRoomInfo' => 'setRtcRoomInfo',
+            'chatState' => 'setChatState',
+            'language' => 'setLanguage',
+            'chatAccessAddress' => 'setChatAccessAddress',
+            'chatAccessRestAddress' => 'setChatAccessRestAddress',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  数字人智能交互对话任务ID。
-    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
+    * state  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * DELETING: 删除中
     * duration  数字人智能交互对话时长，单位秒。
     * startTime  数字人智能交互对话任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * errorInfo  errorInfo
     * createTime  数字人智能交互对话任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastupdateTime  数字人智能交互对话任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
     * voiceConfigList  语音配置参数列表。
-    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
-    * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
-    * chatAccessAddress  智能交互接入地址。
-    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
     * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     * clientId  clientId
+    * isPoolMode  是否是资源池模式
+    * jobFinishReason  对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
+    * rtcRoomInfo  rtcRoomInfo
+    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    * language  language
+    * chatAccessAddress  智能交互接入地址。
+    * chatAccessRestAddress  智能交互Rest接口接入地址。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -275,18 +293,20 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'errorInfo' => 'getErrorInfo',
             'createTime' => 'getCreateTime',
             'lastupdateTime' => 'getLastupdateTime',
-            'rtcRoomInfo' => 'getRtcRoomInfo',
             'chatSubtitleConfig' => 'getChatSubtitleConfig',
             'videoConfig' => 'getVideoConfig',
             'voiceConfigList' => 'getVoiceConfigList',
-            'chatState' => 'getChatState',
-            'language' => 'getLanguage',
             'chatVideoType' => 'getChatVideoType',
-            'chatAccessAddress' => 'getChatAccessAddress',
-            'chatAccessRestAddress' => 'getChatAccessRestAddress',
             'isTransparent' => 'getIsTransparent',
             'defaultLanguage' => 'getDefaultLanguage',
             'clientId' => 'getClientId',
+            'isPoolMode' => 'getIsPoolMode',
+            'jobFinishReason' => 'getJobFinishReason',
+            'rtcRoomInfo' => 'getRtcRoomInfo',
+            'chatState' => 'getChatState',
+            'language' => 'getLanguage',
+            'chatAccessAddress' => 'getChatAccessAddress',
+            'chatAccessRestAddress' => 'getChatAccessRestAddress',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -347,6 +367,8 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     const DEFAULT_LANGUAGE_POR = 'por';
     const DEFAULT_LANGUAGE_ARABIC = 'Arabic';
     const DEFAULT_LANGUAGE_THAI = 'Thai';
+    const JOB_FINISH_REASON_NORMAL = 'NORMAL';
+    const JOB_FINISH_REASON_MUTE_TIMEOUT = 'MUTE_TIMEOUT';
     
 
     /**
@@ -399,6 +421,19 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getJobFinishReasonAllowableValues()
+    {
+        return [
+            self::JOB_FINISH_REASON_NORMAL,
+            self::JOB_FINISH_REASON_MUTE_TIMEOUT,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -423,18 +458,20 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
         $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['lastupdateTime'] = isset($data['lastupdateTime']) ? $data['lastupdateTime'] : null;
-        $this->container['rtcRoomInfo'] = isset($data['rtcRoomInfo']) ? $data['rtcRoomInfo'] : null;
         $this->container['chatSubtitleConfig'] = isset($data['chatSubtitleConfig']) ? $data['chatSubtitleConfig'] : null;
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
         $this->container['voiceConfigList'] = isset($data['voiceConfigList']) ? $data['voiceConfigList'] : null;
-        $this->container['chatState'] = isset($data['chatState']) ? $data['chatState'] : null;
-        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['chatVideoType'] = isset($data['chatVideoType']) ? $data['chatVideoType'] : null;
-        $this->container['chatAccessAddress'] = isset($data['chatAccessAddress']) ? $data['chatAccessAddress'] : null;
-        $this->container['chatAccessRestAddress'] = isset($data['chatAccessRestAddress']) ? $data['chatAccessRestAddress'] : null;
         $this->container['isTransparent'] = isset($data['isTransparent']) ? $data['isTransparent'] : null;
         $this->container['defaultLanguage'] = isset($data['defaultLanguage']) ? $data['defaultLanguage'] : null;
         $this->container['clientId'] = isset($data['clientId']) ? $data['clientId'] : null;
+        $this->container['isPoolMode'] = isset($data['isPoolMode']) ? $data['isPoolMode'] : null;
+        $this->container['jobFinishReason'] = isset($data['jobFinishReason']) ? $data['jobFinishReason'] : null;
+        $this->container['rtcRoomInfo'] = isset($data['rtcRoomInfo']) ? $data['rtcRoomInfo'] : null;
+        $this->container['chatState'] = isset($data['chatState']) ? $data['chatState'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['chatAccessAddress'] = isset($data['chatAccessAddress']) ? $data['chatAccessAddress'] : null;
+        $this->container['chatAccessRestAddress'] = isset($data['chatAccessRestAddress']) ? $data['chatAccessRestAddress'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -496,12 +533,6 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['lastupdateTime']) && (mb_strlen($this->container['lastupdateTime']) < 20)) {
                 $invalidProperties[] = "invalid value for 'lastupdateTime', the character length must be bigger than or equal to 20.";
             }
-            if (!is_null($this->container['chatState']) && ($this->container['chatState'] > 32)) {
-                $invalidProperties[] = "invalid value for 'chatState', must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['chatState']) && ($this->container['chatState'] < 0)) {
-                $invalidProperties[] = "invalid value for 'chatState', must be bigger than or equal to 0.";
-            }
             $allowedValues = $this->getChatVideoTypeAllowableValues();
                 if (!is_null($this->container['chatVideoType']) && !in_array($this->container['chatVideoType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -516,18 +547,6 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['chatVideoType']) && (mb_strlen($this->container['chatVideoType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'chatVideoType', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['chatAccessAddress']) && (mb_strlen($this->container['chatAccessAddress']) > 128)) {
-                $invalidProperties[] = "invalid value for 'chatAccessAddress', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['chatAccessAddress']) && (mb_strlen($this->container['chatAccessAddress']) < 1)) {
-                $invalidProperties[] = "invalid value for 'chatAccessAddress', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['chatAccessRestAddress']) && (mb_strlen($this->container['chatAccessRestAddress']) > 128)) {
-                $invalidProperties[] = "invalid value for 'chatAccessRestAddress', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['chatAccessRestAddress']) && (mb_strlen($this->container['chatAccessRestAddress']) < 1)) {
-                $invalidProperties[] = "invalid value for 'chatAccessRestAddress', the character length must be bigger than or equal to 1.";
-            }
             $allowedValues = $this->getDefaultLanguageAllowableValues();
                 if (!is_null($this->container['defaultLanguage']) && !in_array($this->container['defaultLanguage'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -541,6 +560,32 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['clientId']) && (mb_strlen($this->container['clientId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'clientId', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getJobFinishReasonAllowableValues();
+                if (!is_null($this->container['jobFinishReason']) && !in_array($this->container['jobFinishReason'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'jobFinishReason', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['chatState']) && ($this->container['chatState'] > 32)) {
+                $invalidProperties[] = "invalid value for 'chatState', must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['chatState']) && ($this->container['chatState'] < 0)) {
+                $invalidProperties[] = "invalid value for 'chatState', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['chatAccessAddress']) && (mb_strlen($this->container['chatAccessAddress']) > 128)) {
+                $invalidProperties[] = "invalid value for 'chatAccessAddress', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['chatAccessAddress']) && (mb_strlen($this->container['chatAccessAddress']) < 1)) {
+                $invalidProperties[] = "invalid value for 'chatAccessAddress', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['chatAccessRestAddress']) && (mb_strlen($this->container['chatAccessRestAddress']) > 128)) {
+                $invalidProperties[] = "invalid value for 'chatAccessRestAddress', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['chatAccessRestAddress']) && (mb_strlen($this->container['chatAccessRestAddress']) < 1)) {
+                $invalidProperties[] = "invalid value for 'chatAccessRestAddress', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -582,7 +627,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
+    *  数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * DELETING: 删除中
     *
     * @return string|null
     */
@@ -594,7 +639,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
+    * @param string|null $state 数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * DELETING: 删除中
     *
     * @return $this
     */
@@ -749,30 +794,6 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets rtcRoomInfo
-    *  rtcRoomInfo
-    *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\RTCRoomInfoList|null
-    */
-    public function getRtcRoomInfo()
-    {
-        return $this->container['rtcRoomInfo'];
-    }
-
-    /**
-    * Sets rtcRoomInfo
-    *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\RTCRoomInfoList|null $rtcRoomInfo rtcRoomInfo
-    *
-    * @return $this
-    */
-    public function setRtcRoomInfo($rtcRoomInfo)
-    {
-        $this->container['rtcRoomInfo'] = $rtcRoomInfo;
-        return $this;
-    }
-
-    /**
     * Gets chatSubtitleConfig
     *  chatSubtitleConfig
     *
@@ -845,54 +866,6 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets chatState
-    *  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
-    *
-    * @return int|null
-    */
-    public function getChatState()
-    {
-        return $this->container['chatState'];
-    }
-
-    /**
-    * Sets chatState
-    *
-    * @param int|null $chatState 数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
-    *
-    * @return $this
-    */
-    public function setChatState($chatState)
-    {
-        $this->container['chatState'] = $chatState;
-        return $this;
-    }
-
-    /**
-    * Gets language
-    *  language
-    *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null
-    */
-    public function getLanguage()
-    {
-        return $this->container['language'];
-    }
-
-    /**
-    * Sets language
-    *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null $language language
-    *
-    * @return $this
-    */
-    public function setLanguage($language)
-    {
-        $this->container['language'] = $language;
-        return $this;
-    }
-
-    /**
     * Gets chatVideoType
     *  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     *
@@ -913,54 +886,6 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     public function setChatVideoType($chatVideoType)
     {
         $this->container['chatVideoType'] = $chatVideoType;
-        return $this;
-    }
-
-    /**
-    * Gets chatAccessAddress
-    *  智能交互接入地址。
-    *
-    * @return string|null
-    */
-    public function getChatAccessAddress()
-    {
-        return $this->container['chatAccessAddress'];
-    }
-
-    /**
-    * Sets chatAccessAddress
-    *
-    * @param string|null $chatAccessAddress 智能交互接入地址。
-    *
-    * @return $this
-    */
-    public function setChatAccessAddress($chatAccessAddress)
-    {
-        $this->container['chatAccessAddress'] = $chatAccessAddress;
-        return $this;
-    }
-
-    /**
-    * Gets chatAccessRestAddress
-    *  智能交互Rest接口接入地址。
-    *
-    * @return string|null
-    */
-    public function getChatAccessRestAddress()
-    {
-        return $this->container['chatAccessRestAddress'];
-    }
-
-    /**
-    * Sets chatAccessRestAddress
-    *
-    * @param string|null $chatAccessRestAddress 智能交互Rest接口接入地址。
-    *
-    * @return $this
-    */
-    public function setChatAccessRestAddress($chatAccessRestAddress)
-    {
-        $this->container['chatAccessRestAddress'] = $chatAccessRestAddress;
         return $this;
     }
 
@@ -1033,6 +958,174 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     public function setClientId($clientId)
     {
         $this->container['clientId'] = $clientId;
+        return $this;
+    }
+
+    /**
+    * Gets isPoolMode
+    *  是否是资源池模式
+    *
+    * @return bool|null
+    */
+    public function getIsPoolMode()
+    {
+        return $this->container['isPoolMode'];
+    }
+
+    /**
+    * Sets isPoolMode
+    *
+    * @param bool|null $isPoolMode 是否是资源池模式
+    *
+    * @return $this
+    */
+    public function setIsPoolMode($isPoolMode)
+    {
+        $this->container['isPoolMode'] = $isPoolMode;
+        return $this;
+    }
+
+    /**
+    * Gets jobFinishReason
+    *  对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
+    *
+    * @return string|null
+    */
+    public function getJobFinishReason()
+    {
+        return $this->container['jobFinishReason'];
+    }
+
+    /**
+    * Sets jobFinishReason
+    *
+    * @param string|null $jobFinishReason 对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
+    *
+    * @return $this
+    */
+    public function setJobFinishReason($jobFinishReason)
+    {
+        $this->container['jobFinishReason'] = $jobFinishReason;
+        return $this;
+    }
+
+    /**
+    * Gets rtcRoomInfo
+    *  rtcRoomInfo
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\RTCRoomInfoList|null
+    */
+    public function getRtcRoomInfo()
+    {
+        return $this->container['rtcRoomInfo'];
+    }
+
+    /**
+    * Sets rtcRoomInfo
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\RTCRoomInfoList|null $rtcRoomInfo rtcRoomInfo
+    *
+    * @return $this
+    */
+    public function setRtcRoomInfo($rtcRoomInfo)
+    {
+        $this->container['rtcRoomInfo'] = $rtcRoomInfo;
+        return $this;
+    }
+
+    /**
+    * Gets chatState
+    *  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    *
+    * @return int|null
+    */
+    public function getChatState()
+    {
+        return $this->container['chatState'];
+    }
+
+    /**
+    * Sets chatState
+    *
+    * @param int|null $chatState 数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    *
+    * @return $this
+    */
+    public function setChatState($chatState)
+    {
+        $this->container['chatState'] = $chatState;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  language
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null $language language
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
+        return $this;
+    }
+
+    /**
+    * Gets chatAccessAddress
+    *  智能交互接入地址。
+    *
+    * @return string|null
+    */
+    public function getChatAccessAddress()
+    {
+        return $this->container['chatAccessAddress'];
+    }
+
+    /**
+    * Sets chatAccessAddress
+    *
+    * @param string|null $chatAccessAddress 智能交互接入地址。
+    *
+    * @return $this
+    */
+    public function setChatAccessAddress($chatAccessAddress)
+    {
+        $this->container['chatAccessAddress'] = $chatAccessAddress;
+        return $this;
+    }
+
+    /**
+    * Gets chatAccessRestAddress
+    *  智能交互Rest接口接入地址。
+    *
+    * @return string|null
+    */
+    public function getChatAccessRestAddress()
+    {
+        return $this->container['chatAccessRestAddress'];
+    }
+
+    /**
+    * Sets chatAccessRestAddress
+    *
+    * @param string|null $chatAccessRestAddress 智能交互Rest接口接入地址。
+    *
+    * @return $this
+    */
+    public function setChatAccessRestAddress($chatAccessRestAddress)
+    {
+        $this->container['chatAccessRestAddress'] = $chatAccessRestAddress;
         return $this;
     }
 

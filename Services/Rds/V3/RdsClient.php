@@ -2426,6 +2426,95 @@ class RdsClient extends Client
     }
 
     /**
+     * 查询转储任务列表
+     *
+     * 查询转储任务列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBackupTransfers($request)
+    {
+        return $this->listBackupTransfersWithHttpInfo($request);
+    }
+
+    public function listBackupTransfersWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/transfer-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['orderField'] !== null) {
+            $queryParams['order_field'] = $localVarParams['orderField'];
+        }
+        if ($localVarParams['orderRule'] !== null) {
+            $queryParams['order_rule'] = $localVarParams['orderRule'];
+        }
+        if ($localVarParams['filterField'] !== null) {
+            $queryParams['filter_field'] = $localVarParams['filterField'];
+        }
+        if ($localVarParams['filterContent'] !== null) {
+            $queryParams['filter_content'] = $localVarParams['filterContent'];
+        }
+        if ($localVarParams['beginTime'] !== null) {
+            $queryParams['begin_time'] = $localVarParams['beginTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['transferType'] !== null) {
+            $queryParams['transfer_type'] = $localVarParams['transferType'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListBackupTransfersResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListBackupTransfersRequest');
+    }
+
+    /**
      * 获取备份列表
      *
      * 获取备份列表。
@@ -7346,6 +7435,71 @@ class RdsClient extends Client
     }
 
     /**
+     * 设置自动转储策略
+     *
+     * 设置自动转储策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setTransferPolicy($request)
+    {
+        return $this->setTransferPolicyWithHttpInfo($request);
+    }
+
+    public function setTransferPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/backups/transfer/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\SetTransferPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\SetTransferPolicyRequest');
+    }
+
+    /**
      * 生成审计日志下载链接
      *
      * 生成审计日志下载链接。
@@ -8838,6 +8992,68 @@ class RdsClient extends Client
     }
 
     /**
+     * 查询自动转储策略
+     *
+     * 查询自动转储策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTransferPolicy($request)
+    {
+        return $this->showTransferPolicyWithHttpInfo($request);
+    }
+
+    public function showTransferPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/transfer/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ShowTransferPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ShowTransferPolicyRequest');
+    }
+
+    /**
      * 
      *
      * 查询大版本检查状态或升级状态。
@@ -9704,6 +9920,74 @@ class RdsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\SwitchSslResponse',
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\SwitchSslRequest');
+    }
+
+    /**
+     * 手动转储备份
+     *
+     * 手动转储备份
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function transferBackup($request)
+    {
+        return $this->transferBackupWithHttpInfo($request);
+    }
+
+    public function transferBackupWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/backups/transfer';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\TransferBackupResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\TransferBackupRequest');
     }
 
     /**

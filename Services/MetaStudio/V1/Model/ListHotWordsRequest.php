@@ -28,7 +28,8 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
+    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * hotWordsType  * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'robotId' => 'string',
             'region' => 'int',
-            'language' => 'string'
+            'language' => 'string',
+            'hotWordsType' => 'string'
     ];
 
     /**
@@ -54,7 +56,8 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
+    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * hotWordsType  * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
         'limit' => 'uint32',
         'robotId' => null,
         'region' => null,
-        'language' => null
+        'language' => null,
+        'hotWordsType' => null
     ];
 
     /**
@@ -101,7 +105,8 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
+    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * hotWordsType  * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'robotId' => 'robot_id',
             'region' => 'region',
-            'language' => 'language'
+            'language' => 'language',
+            'hotWordsType' => 'hot_words_type'
     ];
 
     /**
@@ -127,7 +133,8 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
+    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * hotWordsType  * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'robotId' => 'setRobotId',
             'region' => 'setRegion',
-            'language' => 'setLanguage'
+            'language' => 'setLanguage',
+            'hotWordsType' => 'setHotWordsType'
     ];
 
     /**
@@ -153,7 +161,8 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
+    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * hotWordsType  * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'robotId' => 'getRobotId',
             'region' => 'getRegion',
-            'language' => 'getLanguage'
+            'language' => 'getLanguage',
+            'hotWordsType' => 'getHotWordsType'
     ];
 
     /**
@@ -213,6 +223,12 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     const LANGUAGE_EN_US = 'en_US';
     const LANGUAGE_CN = 'CN';
     const LANGUAGE_EN = 'EN';
+    const LANGUAGE_ESP = 'ESP';
+    const LANGUAGE_POR = 'por';
+    const LANGUAGE_ARABIC = 'Arabic';
+    const LANGUAGE_THAI = 'Thai';
+    const HOT_WORDS_TYPE_SIS = 'SIS';
+    const HOT_WORDS_TYPE_MOBVOI = 'MOBVOI';
     
 
     /**
@@ -227,6 +243,23 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
             self::LANGUAGE_EN_US,
             self::LANGUAGE_CN,
             self::LANGUAGE_EN,
+            self::LANGUAGE_ESP,
+            self::LANGUAGE_POR,
+            self::LANGUAGE_ARABIC,
+            self::LANGUAGE_THAI,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getHotWordsTypeAllowableValues()
+    {
+        return [
+            self::HOT_WORDS_TYPE_SIS,
+            self::HOT_WORDS_TYPE_MOBVOI,
         ];
     }
 
@@ -255,6 +288,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['hotWordsType'] = isset($data['hotWordsType']) ? $data['hotWordsType'] : null;
     }
 
     /**
@@ -320,6 +354,14 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'language', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getHotWordsTypeAllowableValues();
+                if (!is_null($this->container['hotWordsType']) && !in_array($this->container['hotWordsType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'hotWordsType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -532,7 +574,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
+    *  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     *
     * @return string|null
     */
@@ -544,13 +586,37 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
+    * @param string|null $language 智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
     *
     * @return $this
     */
     public function setLanguage($language)
     {
         $this->container['language'] = $language;
+        return $this;
+    }
+
+    /**
+    * Gets hotWordsType
+    *  * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
+    *
+    * @return string|null
+    */
+    public function getHotWordsType()
+    {
+        return $this->container['hotWordsType'];
+    }
+
+    /**
+    * Sets hotWordsType
+    *
+    * @param string|null $hotWordsType * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
+    *
+    * @return $this
+    */
+    public function setHotWordsType($hotWordsType)
+    {
+        $this->container['hotWordsType'] = $hotWordsType;
         return $this;
     }
 

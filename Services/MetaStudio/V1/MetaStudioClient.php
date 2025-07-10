@@ -743,6 +743,89 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 查询数字人智能交互任务列表
+     *
+     * 该接口用于查询数字人智能交互任务列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSmartChatJob($request)
+    {
+        return $this->listSmartChatJobWithHttpInfo($request);
+    }
+
+    public function listSmartChatJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/digital-human-chat/smart-chat-rooms/{room_id}/smart-chat-jobs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['state'] !== null) {
+            $queryParams['state'] = $localVarParams['state'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['roomId'] !== null) {
+            $pathParams['room_id'] = $localVarParams['roomId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListSmartChatJobResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListSmartChatJobRequest');
+    }
+
+    /**
      * 查询数字人智能交互任务
      *
      * 该接口用于查询数字人智能交互任务。
@@ -1703,9 +1786,6 @@ class MetaStudioClient extends Client
         }
         if ($localVarParams['accurateQueryField'] !== null) {
             $queryParams['accurate_query_field'] = $localVarParams['accurateQueryField'];
-        }
-        if ($localVarParams['renderEngine'] !== null) {
-            $queryParams['render_engine'] = $localVarParams['renderEngine'];
         }
         if ($localVarParams['assetId'] !== null) {
             $queryParams['asset_id'] = $localVarParams['assetId'];
@@ -4044,6 +4124,9 @@ class MetaStudioClient extends Client
         }
         if ($localVarParams['language'] !== null) {
             $queryParams['language'] = $localVarParams['language'];
+        }
+        if ($localVarParams['hotWordsType'] !== null) {
+            $queryParams['hot_words_type'] = $localVarParams['hotWordsType'];
         }
         if ($localVarParams['authorization'] !== null) {
             $headerParams[$arr['authorization']] = $localVarParams['authorization'];
@@ -12859,7 +12942,7 @@ class MetaStudioClient extends Client
     /**
      * 创建TTS异步任务
      *
-     * 该接口用于对外生成音频文件。每个预制音色的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
+     * 该接口用于对外生成音频文件。每个预置音色的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
      * 
      * &gt; 使用本接口前，需要在MetaStudio控制台服务概览页面，开通“声音合成”的按需计费。
      * &gt; 详细操作为：单击“声音合成”卡片中的“去开通”，在弹出的“开通按需计费服务提示”对话框中，勾选同意协议。单击“确定”，开通按需计费。

@@ -2413,6 +2413,12 @@ class EcsAsyncClient extends Client
         if ($localVarParams['flavorId'] !== null) {
             $queryParams['flavor_id'] = $localVarParams['flavorId'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

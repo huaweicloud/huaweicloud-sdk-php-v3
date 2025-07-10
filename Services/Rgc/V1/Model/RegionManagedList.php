@@ -16,7 +16,7 @@ class RegionManagedList implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'regionManagedList';
+    protected static $openAPIModelName = 'RegionManagedList';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

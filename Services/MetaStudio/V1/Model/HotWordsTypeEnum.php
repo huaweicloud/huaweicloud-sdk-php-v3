@@ -11,6 +11,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
      * Possible values of this enum
      */
     const SIS = 'SIS';
+    const MOBVOI = 'MOBVOI';
     
     /**
      * Gets allowable values of the enum
@@ -20,6 +21,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     {
         return [
             self::SIS,
+            self::MOBVOI,
         ];
     }
 }

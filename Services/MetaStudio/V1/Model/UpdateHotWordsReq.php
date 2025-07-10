@@ -22,24 +22,28 @@ class UpdateHotWordsReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * hotWordsType  hotWordsType
     * sisHotWords  sisHotWords
+    * mobvoiHotWords  mobvoiHotWords
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'hotWordsType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\HotWordsTypeEnum',
-            'sisHotWords' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateSisHotWords'
+            'sisHotWords' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateSisHotWords',
+            'mobvoiHotWords' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateMobvoiHotWords'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * hotWordsType  hotWordsType
     * sisHotWords  sisHotWords
+    * mobvoiHotWords  mobvoiHotWords
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'hotWordsType' => null,
-        'sisHotWords' => null
+        'sisHotWords' => null,
+        'mobvoiHotWords' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class UpdateHotWordsReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * hotWordsType  hotWordsType
     * sisHotWords  sisHotWords
+    * mobvoiHotWords  mobvoiHotWords
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'hotWordsType' => 'hot_words_type',
-            'sisHotWords' => 'sis_hot_words'
+            'sisHotWords' => 'sis_hot_words',
+            'mobvoiHotWords' => 'mobvoi_hot_words'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * hotWordsType  hotWordsType
     * sisHotWords  sisHotWords
+    * mobvoiHotWords  mobvoiHotWords
     *
     * @var string[]
     */
     protected static $setters = [
             'hotWordsType' => 'setHotWordsType',
-            'sisHotWords' => 'setSisHotWords'
+            'sisHotWords' => 'setSisHotWords',
+            'mobvoiHotWords' => 'setMobvoiHotWords'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * hotWordsType  hotWordsType
     * sisHotWords  sisHotWords
+    * mobvoiHotWords  mobvoiHotWords
     *
     * @var string[]
     */
     protected static $getters = [
             'hotWordsType' => 'getHotWordsType',
-            'sisHotWords' => 'getSisHotWords'
+            'sisHotWords' => 'getSisHotWords',
+            'mobvoiHotWords' => 'getMobvoiHotWords'
     ];
 
     /**
@@ -159,6 +169,7 @@ class UpdateHotWordsReq implements ModelInterface, ArrayAccess
     {
         $this->container['hotWordsType'] = isset($data['hotWordsType']) ? $data['hotWordsType'] : null;
         $this->container['sisHotWords'] = isset($data['sisHotWords']) ? $data['sisHotWords'] : null;
+        $this->container['mobvoiHotWords'] = isset($data['mobvoiHotWords']) ? $data['mobvoiHotWords'] : null;
     }
 
     /**
@@ -171,9 +182,6 @@ class UpdateHotWordsReq implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['hotWordsType'] === null) {
             $invalidProperties[] = "'hotWordsType' can't be null";
-        }
-        if ($this->container['sisHotWords'] === null) {
-            $invalidProperties[] = "'sisHotWords' can't be null";
         }
         return $invalidProperties;
     }
@@ -217,7 +225,7 @@ class UpdateHotWordsReq implements ModelInterface, ArrayAccess
     * Gets sisHotWords
     *  sisHotWords
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateSisHotWords
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateSisHotWords|null
     */
     public function getSisHotWords()
     {
@@ -227,13 +235,37 @@ class UpdateHotWordsReq implements ModelInterface, ArrayAccess
     /**
     * Sets sisHotWords
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateSisHotWords $sisHotWords sisHotWords
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateSisHotWords|null $sisHotWords sisHotWords
     *
     * @return $this
     */
     public function setSisHotWords($sisHotWords)
     {
         $this->container['sisHotWords'] = $sisHotWords;
+        return $this;
+    }
+
+    /**
+    * Gets mobvoiHotWords
+    *  mobvoiHotWords
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateMobvoiHotWords|null
+    */
+    public function getMobvoiHotWords()
+    {
+        return $this->container['mobvoiHotWords'];
+    }
+
+    /**
+    * Sets mobvoiHotWords
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateMobvoiHotWords|null $mobvoiHotWords mobvoiHotWords
+    *
+    * @return $this
+    */
+    public function setMobvoiHotWords($mobvoiHotWords)
+    {
+        $this->container['mobvoiHotWords'] = $mobvoiHotWords;
         return $this;
     }
 

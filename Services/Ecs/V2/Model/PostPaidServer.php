@@ -47,6 +47,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * securityOptions  securityOptions
     * serialConsoleOptions  serialConsoleOptions
     * metadataOptions  metadataOptions
+    * enclaveOptions  enclaveOptions
     *
     * @var string[]
     */
@@ -77,7 +78,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'cpuOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions',
             'securityOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\SecurityOptions',
             'serialConsoleOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\SerialConsoleOptions',
-            'metadataOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerMetadataOptionsRequestBody'
+            'metadataOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerMetadataOptionsRequestBody',
+            'enclaveOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\EnclaveOptions'
     ];
 
     /**
@@ -109,6 +111,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * securityOptions  securityOptions
     * serialConsoleOptions  serialConsoleOptions
     * metadataOptions  metadataOptions
+    * enclaveOptions  enclaveOptions
     *
     * @var string[]
     */
@@ -139,7 +142,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
         'cpuOptions' => null,
         'securityOptions' => null,
         'serialConsoleOptions' => null,
-        'metadataOptions' => null
+        'metadataOptions' => null,
+        'enclaveOptions' => null
     ];
 
     /**
@@ -192,6 +196,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * securityOptions  securityOptions
     * serialConsoleOptions  serialConsoleOptions
     * metadataOptions  metadataOptions
+    * enclaveOptions  enclaveOptions
     *
     * @var string[]
     */
@@ -222,7 +227,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'cpuOptions' => 'cpu_options',
             'securityOptions' => 'security_options',
             'serialConsoleOptions' => 'serial_console_options',
-            'metadataOptions' => 'metadata_options'
+            'metadataOptions' => 'metadata_options',
+            'enclaveOptions' => 'enclave_options'
     ];
 
     /**
@@ -254,6 +260,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * securityOptions  securityOptions
     * serialConsoleOptions  serialConsoleOptions
     * metadataOptions  metadataOptions
+    * enclaveOptions  enclaveOptions
     *
     * @var string[]
     */
@@ -284,7 +291,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'cpuOptions' => 'setCpuOptions',
             'securityOptions' => 'setSecurityOptions',
             'serialConsoleOptions' => 'setSerialConsoleOptions',
-            'metadataOptions' => 'setMetadataOptions'
+            'metadataOptions' => 'setMetadataOptions',
+            'enclaveOptions' => 'setEnclaveOptions'
     ];
 
     /**
@@ -316,6 +324,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * securityOptions  securityOptions
     * serialConsoleOptions  serialConsoleOptions
     * metadataOptions  metadataOptions
+    * enclaveOptions  enclaveOptions
     *
     * @var string[]
     */
@@ -346,7 +355,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'cpuOptions' => 'getCpuOptions',
             'securityOptions' => 'getSecurityOptions',
             'serialConsoleOptions' => 'getSerialConsoleOptions',
-            'metadataOptions' => 'getMetadataOptions'
+            'metadataOptions' => 'getMetadataOptions',
+            'enclaveOptions' => 'getEnclaveOptions'
     ];
 
     /**
@@ -434,6 +444,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
         $this->container['securityOptions'] = isset($data['securityOptions']) ? $data['securityOptions'] : null;
         $this->container['serialConsoleOptions'] = isset($data['serialConsoleOptions']) ? $data['serialConsoleOptions'] : null;
         $this->container['metadataOptions'] = isset($data['metadataOptions']) ? $data['metadataOptions'] : null;
+        $this->container['enclaveOptions'] = isset($data['enclaveOptions']) ? $data['enclaveOptions'] : null;
     }
 
     /**
@@ -1148,6 +1159,30 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     public function setMetadataOptions($metadataOptions)
     {
         $this->container['metadataOptions'] = $metadataOptions;
+        return $this;
+    }
+
+    /**
+    * Gets enclaveOptions
+    *  enclaveOptions
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\EnclaveOptions|null
+    */
+    public function getEnclaveOptions()
+    {
+        return $this->container['enclaveOptions'];
+    }
+
+    /**
+    * Sets enclaveOptions
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\EnclaveOptions|null $enclaveOptions enclaveOptions
+    *
+    * @return $this
+    */
+    public function setEnclaveOptions($enclaveOptions)
+    {
+        $this->container['enclaveOptions'] = $enclaveOptions;
         return $this;
     }
 

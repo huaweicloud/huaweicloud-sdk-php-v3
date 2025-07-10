@@ -6190,6 +6190,71 @@ class CloudtestAsyncClient extends Client
     }
 
     /**
+     * 查询指定表的内容
+     *
+     * 查询指定表的内容
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showEtlDataAsync($request)
+    {
+        return $this->showEtlDataAsyncWithHttpInfo($request);
+    }
+    
+    public function showEtlDataAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v4/testhub/etl/query-data';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\ShowEtlDataResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\ShowEtlDataRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 根据目录查询因子
      *
      * 根据目录查询因子

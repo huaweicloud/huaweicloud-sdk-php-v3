@@ -27,7 +27,7 @@ class GetJobInfoResponseBodyJob implements ModelInterface, ArrayAccess
     * ended  结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * process  任务执行进度。执行中状态才返回执行进度，例如60%，否则返回“”。
     * instance  instance
-    * entities  根据不同的任务，显示不同的内容。
+    * entities  entities
     * failReason  任务执行失败时的错误信息。
     *
     * @var string[]
@@ -40,7 +40,7 @@ class GetJobInfoResponseBodyJob implements ModelInterface, ArrayAccess
             'ended' => 'string',
             'process' => 'string',
             'instance' => '\HuaweiCloud\SDK\Rds\V3\Model\GetTaskDetailListRspJobsInstance',
-            'entities' => 'object',
+            'entities' => '\HuaweiCloud\SDK\Rds\V3\Model\GetJobInfoResponseBodyJobEntities',
             'failReason' => 'string'
     ];
 
@@ -53,7 +53,7 @@ class GetJobInfoResponseBodyJob implements ModelInterface, ArrayAccess
     * ended  结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * process  任务执行进度。执行中状态才返回执行进度，例如60%，否则返回“”。
     * instance  instance
-    * entities  根据不同的任务，显示不同的内容。
+    * entities  entities
     * failReason  任务执行失败时的错误信息。
     *
     * @var string[]
@@ -100,7 +100,7 @@ class GetJobInfoResponseBodyJob implements ModelInterface, ArrayAccess
     * ended  结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * process  任务执行进度。执行中状态才返回执行进度，例如60%，否则返回“”。
     * instance  instance
-    * entities  根据不同的任务，显示不同的内容。
+    * entities  entities
     * failReason  任务执行失败时的错误信息。
     *
     * @var string[]
@@ -126,7 +126,7 @@ class GetJobInfoResponseBodyJob implements ModelInterface, ArrayAccess
     * ended  结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * process  任务执行进度。执行中状态才返回执行进度，例如60%，否则返回“”。
     * instance  instance
-    * entities  根据不同的任务，显示不同的内容。
+    * entities  entities
     * failReason  任务执行失败时的错误信息。
     *
     * @var string[]
@@ -152,7 +152,7 @@ class GetJobInfoResponseBodyJob implements ModelInterface, ArrayAccess
     * ended  结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * process  任务执行进度。执行中状态才返回执行进度，例如60%，否则返回“”。
     * instance  instance
-    * entities  根据不同的任务，显示不同的内容。
+    * entities  entities
     * failReason  任务执行失败时的错误信息。
     *
     * @var string[]
@@ -470,9 +470,9 @@ class GetJobInfoResponseBodyJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets entities
-    *  根据不同的任务，显示不同的内容。
+    *  entities
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\GetJobInfoResponseBodyJobEntities|null
     */
     public function getEntities()
     {
@@ -482,7 +482,7 @@ class GetJobInfoResponseBodyJob implements ModelInterface, ArrayAccess
     /**
     * Sets entities
     *
-    * @param object|null $entities 根据不同的任务，显示不同的内容。
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\GetJobInfoResponseBodyJobEntities|null $entities entities
     *
     * @return $this
     */

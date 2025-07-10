@@ -21,30 +21,38 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)
+    * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)。当存在该字段时，会返回以下文件的下载链接。
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
-    * audioInfoFileUrl  字幕文件下载链接，有效期为1个小时。
+    * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
+    * audioSrtFileUrl  字幕文件下载链接，有效期为1个小时。
+    * audioActionFileUrl  动作信息文件下载链接，有效期为1个小时。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'state' => 'string',
             'audioFileUrl' => 'string',
-            'audioInfoFileUrl' => 'string'
+            'audioInfoFileUrl' => 'string',
+            'audioSrtFileUrl' => 'string',
+            'audioActionFileUrl' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)
+    * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)。当存在该字段时，会返回以下文件的下载链接。
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
-    * audioInfoFileUrl  字幕文件下载链接，有效期为1个小时。
+    * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
+    * audioSrtFileUrl  字幕文件下载链接，有效期为1个小时。
+    * audioActionFileUrl  动作信息文件下载链接，有效期为1个小时。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'state' => null,
         'audioFileUrl' => null,
-        'audioInfoFileUrl' => null
+        'audioInfoFileUrl' => null,
+        'audioSrtFileUrl' => null,
+        'audioActionFileUrl' => null
     ];
 
     /**
@@ -70,44 +78,56 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)
+    * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)。当存在该字段时，会返回以下文件的下载链接。
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
-    * audioInfoFileUrl  字幕文件下载链接，有效期为1个小时。
+    * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
+    * audioSrtFileUrl  字幕文件下载链接，有效期为1个小时。
+    * audioActionFileUrl  动作信息文件下载链接，有效期为1个小时。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'state' => 'state',
             'audioFileUrl' => 'audio_file_url',
-            'audioInfoFileUrl' => 'audio_info_file_url'
+            'audioInfoFileUrl' => 'audio_info_file_url',
+            'audioSrtFileUrl' => 'audio_srt_file_url',
+            'audioActionFileUrl' => 'audio_action_file_url'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)
+    * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)。当存在该字段时，会返回以下文件的下载链接。
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
-    * audioInfoFileUrl  字幕文件下载链接，有效期为1个小时。
+    * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
+    * audioSrtFileUrl  字幕文件下载链接，有效期为1个小时。
+    * audioActionFileUrl  动作信息文件下载链接，有效期为1个小时。
     *
     * @var string[]
     */
     protected static $setters = [
             'state' => 'setState',
             'audioFileUrl' => 'setAudioFileUrl',
-            'audioInfoFileUrl' => 'setAudioInfoFileUrl'
+            'audioInfoFileUrl' => 'setAudioInfoFileUrl',
+            'audioSrtFileUrl' => 'setAudioSrtFileUrl',
+            'audioActionFileUrl' => 'setAudioActionFileUrl'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)
+    * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)。当存在该字段时，会返回以下文件的下载链接。
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
-    * audioInfoFileUrl  字幕文件下载链接，有效期为1个小时。
+    * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
+    * audioSrtFileUrl  字幕文件下载链接，有效期为1个小时。
+    * audioActionFileUrl  动作信息文件下载链接，有效期为1个小时。
     *
     * @var string[]
     */
     protected static $getters = [
             'state' => 'getState',
             'audioFileUrl' => 'getAudioFileUrl',
-            'audioInfoFileUrl' => 'getAudioInfoFileUrl'
+            'audioInfoFileUrl' => 'getAudioInfoFileUrl',
+            'audioSrtFileUrl' => 'getAudioSrtFileUrl',
+            'audioActionFileUrl' => 'getAudioActionFileUrl'
     ];
 
     /**
@@ -171,6 +191,8 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['audioFileUrl'] = isset($data['audioFileUrl']) ? $data['audioFileUrl'] : null;
         $this->container['audioInfoFileUrl'] = isset($data['audioInfoFileUrl']) ? $data['audioInfoFileUrl'] : null;
+        $this->container['audioSrtFileUrl'] = isset($data['audioSrtFileUrl']) ? $data['audioSrtFileUrl'] : null;
+        $this->container['audioActionFileUrl'] = isset($data['audioActionFileUrl']) ? $data['audioActionFileUrl'] : null;
     }
 
     /**
@@ -199,6 +221,18 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['audioInfoFileUrl']) && (mb_strlen($this->container['audioInfoFileUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'audioInfoFileUrl', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['audioSrtFileUrl']) && (mb_strlen($this->container['audioSrtFileUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'audioSrtFileUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['audioSrtFileUrl']) && (mb_strlen($this->container['audioSrtFileUrl']) < 0)) {
+                $invalidProperties[] = "invalid value for 'audioSrtFileUrl', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['audioActionFileUrl']) && (mb_strlen($this->container['audioActionFileUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'audioActionFileUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['audioActionFileUrl']) && (mb_strlen($this->container['audioActionFileUrl']) < 0)) {
+                $invalidProperties[] = "invalid value for 'audioActionFileUrl', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -215,7 +249,7 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)
+    *  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)。当存在该字段时，会返回以下文件的下载链接。
     *
     * @return string|null
     */
@@ -227,7 +261,7 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)
+    * @param string|null $state 音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)。当存在该字段时，会返回以下文件的下载链接。
     *
     * @return $this
     */
@@ -263,7 +297,7 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets audioInfoFileUrl
-    *  字幕文件下载链接，有效期为1个小时。
+    *  音频信息文件下载链接，有效期为1个小时。
     *
     * @return string|null
     */
@@ -275,13 +309,61 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets audioInfoFileUrl
     *
-    * @param string|null $audioInfoFileUrl 字幕文件下载链接，有效期为1个小时。
+    * @param string|null $audioInfoFileUrl 音频信息文件下载链接，有效期为1个小时。
     *
     * @return $this
     */
     public function setAudioInfoFileUrl($audioInfoFileUrl)
     {
         $this->container['audioInfoFileUrl'] = $audioInfoFileUrl;
+        return $this;
+    }
+
+    /**
+    * Gets audioSrtFileUrl
+    *  字幕文件下载链接，有效期为1个小时。
+    *
+    * @return string|null
+    */
+    public function getAudioSrtFileUrl()
+    {
+        return $this->container['audioSrtFileUrl'];
+    }
+
+    /**
+    * Sets audioSrtFileUrl
+    *
+    * @param string|null $audioSrtFileUrl 字幕文件下载链接，有效期为1个小时。
+    *
+    * @return $this
+    */
+    public function setAudioSrtFileUrl($audioSrtFileUrl)
+    {
+        $this->container['audioSrtFileUrl'] = $audioSrtFileUrl;
+        return $this;
+    }
+
+    /**
+    * Gets audioActionFileUrl
+    *  动作信息文件下载链接，有效期为1个小时。
+    *
+    * @return string|null
+    */
+    public function getAudioActionFileUrl()
+    {
+        return $this->container['audioActionFileUrl'];
+    }
+
+    /**
+    * Sets audioActionFileUrl
+    *
+    * @param string|null $audioActionFileUrl 动作信息文件下载链接，有效期为1个小时。
+    *
+    * @return $this
+    */
+    public function setAudioActionFileUrl($audioActionFileUrl)
+    {
+        $this->container['audioActionFileUrl'] = $audioActionFileUrl;
         return $this;
     }
 

@@ -68,6 +68,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * cpuOptions  cpuOptions
     * securityOptions  securityOptions
     * hypervisor  hypervisor
+    * networkInterfaces  网卡信息
     *
     * @var string[]
     */
@@ -119,7 +120,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'sysTags' => '\HuaweiCloud\SDK\Ecs\V2\Model\ServerSystemTag[]',
             'cpuOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions',
             'securityOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\SecurityOptions',
-            'hypervisor' => '\HuaweiCloud\SDK\Ecs\V2\Model\Hypervisor'
+            'hypervisor' => '\HuaweiCloud\SDK\Ecs\V2\Model\Hypervisor',
+            'networkInterfaces' => '\HuaweiCloud\SDK\Ecs\V2\Model\NetworkInterfaces[]'
     ];
 
     /**
@@ -172,6 +174,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * cpuOptions  cpuOptions
     * securityOptions  securityOptions
     * hypervisor  hypervisor
+    * networkInterfaces  网卡信息
     *
     * @var string[]
     */
@@ -223,7 +226,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
         'sysTags' => null,
         'cpuOptions' => null,
         'securityOptions' => null,
-        'hypervisor' => null
+        'hypervisor' => null,
+        'networkInterfaces' => null
     ];
 
     /**
@@ -297,6 +301,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * cpuOptions  cpuOptions
     * securityOptions  securityOptions
     * hypervisor  hypervisor
+    * networkInterfaces  网卡信息
     *
     * @var string[]
     */
@@ -348,7 +353,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'sysTags' => 'sys_tags',
             'cpuOptions' => 'cpu_options',
             'securityOptions' => 'security_options',
-            'hypervisor' => 'hypervisor'
+            'hypervisor' => 'hypervisor',
+            'networkInterfaces' => 'network_interfaces'
     ];
 
     /**
@@ -401,6 +407,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * cpuOptions  cpuOptions
     * securityOptions  securityOptions
     * hypervisor  hypervisor
+    * networkInterfaces  网卡信息
     *
     * @var string[]
     */
@@ -452,7 +459,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'sysTags' => 'setSysTags',
             'cpuOptions' => 'setCpuOptions',
             'securityOptions' => 'setSecurityOptions',
-            'hypervisor' => 'setHypervisor'
+            'hypervisor' => 'setHypervisor',
+            'networkInterfaces' => 'setNetworkInterfaces'
     ];
 
     /**
@@ -505,6 +513,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * cpuOptions  cpuOptions
     * securityOptions  securityOptions
     * hypervisor  hypervisor
+    * networkInterfaces  网卡信息
     *
     * @var string[]
     */
@@ -556,7 +565,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'sysTags' => 'getSysTags',
             'cpuOptions' => 'getCpuOptions',
             'securityOptions' => 'getSecurityOptions',
-            'hypervisor' => 'getHypervisor'
+            'hypervisor' => 'getHypervisor',
+            'networkInterfaces' => 'getNetworkInterfaces'
     ];
 
     /**
@@ -665,6 +675,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
         $this->container['cpuOptions'] = isset($data['cpuOptions']) ? $data['cpuOptions'] : null;
         $this->container['securityOptions'] = isset($data['securityOptions']) ? $data['securityOptions'] : null;
         $this->container['hypervisor'] = isset($data['hypervisor']) ? $data['hypervisor'] : null;
+        $this->container['networkInterfaces'] = isset($data['networkInterfaces']) ? $data['networkInterfaces'] : null;
     }
 
     /**
@@ -1943,6 +1954,30 @@ class ServerDetail implements ModelInterface, ArrayAccess
     public function setHypervisor($hypervisor)
     {
         $this->container['hypervisor'] = $hypervisor;
+        return $this;
+    }
+
+    /**
+    * Gets networkInterfaces
+    *  网卡信息
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\NetworkInterfaces[]|null
+    */
+    public function getNetworkInterfaces()
+    {
+        return $this->container['networkInterfaces'];
+    }
+
+    /**
+    * Sets networkInterfaces
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\NetworkInterfaces[]|null $networkInterfaces 网卡信息
+    *
+    * @return $this
+    */
+    public function setNetworkInterfaces($networkInterfaces)
+    {
+        $this->container['networkInterfaces'] = $networkInterfaces;
         return $this;
     }
 

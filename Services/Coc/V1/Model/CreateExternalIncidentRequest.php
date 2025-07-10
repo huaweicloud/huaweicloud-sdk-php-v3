@@ -33,6 +33,8 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
     * assigneeScene  排班场景，责任人和排班角色不能同时为空
     * assigneeRole  排班角色，排班场景和责任人不能同时为空
     * creator  创单人
+    * incidentOwnership  事件归属
+    * startTime  故障发生时间戳
     *
     * @var string[]
     */
@@ -49,7 +51,9 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
             'incidentAssignee' => 'string[]',
             'assigneeScene' => 'string',
             'assigneeRole' => 'string',
-            'creator' => 'string'
+            'creator' => 'string',
+            'incidentOwnership' => 'string',
+            'startTime' => 'int'
     ];
 
     /**
@@ -67,6 +71,8 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
     * assigneeScene  排班场景，责任人和排班角色不能同时为空
     * assigneeRole  排班角色，排班场景和责任人不能同时为空
     * creator  创单人
+    * incidentOwnership  事件归属
+    * startTime  故障发生时间戳
     *
     * @var string[]
     */
@@ -83,7 +89,9 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
         'incidentAssignee' => null,
         'assigneeScene' => null,
         'assigneeRole' => null,
-        'creator' => null
+        'creator' => null,
+        'incidentOwnership' => null,
+        'startTime' => 'int64'
     ];
 
     /**
@@ -122,6 +130,8 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
     * assigneeScene  排班场景，责任人和排班角色不能同时为空
     * assigneeRole  排班角色，排班场景和责任人不能同时为空
     * creator  创单人
+    * incidentOwnership  事件归属
+    * startTime  故障发生时间戳
     *
     * @var string[]
     */
@@ -138,7 +148,9 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
             'incidentAssignee' => 'incident_assignee',
             'assigneeScene' => 'assignee_scene',
             'assigneeRole' => 'assignee_role',
-            'creator' => 'creator'
+            'creator' => 'creator',
+            'incidentOwnership' => 'incident_ownership',
+            'startTime' => 'start_time'
     ];
 
     /**
@@ -156,6 +168,8 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
     * assigneeScene  排班场景，责任人和排班角色不能同时为空
     * assigneeRole  排班角色，排班场景和责任人不能同时为空
     * creator  创单人
+    * incidentOwnership  事件归属
+    * startTime  故障发生时间戳
     *
     * @var string[]
     */
@@ -172,7 +186,9 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
             'incidentAssignee' => 'setIncidentAssignee',
             'assigneeScene' => 'setAssigneeScene',
             'assigneeRole' => 'setAssigneeRole',
-            'creator' => 'setCreator'
+            'creator' => 'setCreator',
+            'incidentOwnership' => 'setIncidentOwnership',
+            'startTime' => 'setStartTime'
     ];
 
     /**
@@ -190,6 +206,8 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
     * assigneeScene  排班场景，责任人和排班角色不能同时为空
     * assigneeRole  排班角色，排班场景和责任人不能同时为空
     * creator  创单人
+    * incidentOwnership  事件归属
+    * startTime  故障发生时间戳
     *
     * @var string[]
     */
@@ -206,7 +224,9 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
             'incidentAssignee' => 'getIncidentAssignee',
             'assigneeScene' => 'getAssigneeScene',
             'assigneeRole' => 'getAssigneeRole',
-            'creator' => 'getCreator'
+            'creator' => 'getCreator',
+            'incidentOwnership' => 'getIncidentOwnership',
+            'startTime' => 'getStartTime'
     ];
 
     /**
@@ -280,6 +300,8 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
         $this->container['assigneeScene'] = isset($data['assigneeScene']) ? $data['assigneeScene'] : null;
         $this->container['assigneeRole'] = isset($data['assigneeRole']) ? $data['assigneeRole'] : null;
         $this->container['creator'] = isset($data['creator']) ? $data['creator'] : null;
+        $this->container['incidentOwnership'] = isset($data['incidentOwnership']) ? $data['incidentOwnership'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
     }
 
     /**
@@ -355,6 +377,18 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['creator']) < 0)) {
                 $invalidProperties[] = "invalid value for 'creator', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['incidentOwnership']) && (mb_strlen($this->container['incidentOwnership']) > 50)) {
+                $invalidProperties[] = "invalid value for 'incidentOwnership', the character length must be smaller than or equal to 50.";
+            }
+            if (!is_null($this->container['incidentOwnership']) && (mb_strlen($this->container['incidentOwnership']) < 1)) {
+                $invalidProperties[] = "invalid value for 'incidentOwnership', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 9999999999999.";
+            }
+            if (!is_null($this->container['startTime']) && ($this->container['startTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -679,6 +713,54 @@ class CreateExternalIncidentRequest implements ModelInterface, ArrayAccess
     public function setCreator($creator)
     {
         $this->container['creator'] = $creator;
+        return $this;
+    }
+
+    /**
+    * Gets incidentOwnership
+    *  事件归属
+    *
+    * @return string|null
+    */
+    public function getIncidentOwnership()
+    {
+        return $this->container['incidentOwnership'];
+    }
+
+    /**
+    * Sets incidentOwnership
+    *
+    * @param string|null $incidentOwnership 事件归属
+    *
+    * @return $this
+    */
+    public function setIncidentOwnership($incidentOwnership)
+    {
+        $this->container['incidentOwnership'] = $incidentOwnership;
+        return $this;
+    }
+
+    /**
+    * Gets startTime
+    *  故障发生时间戳
+    *
+    * @return int|null
+    */
+    public function getStartTime()
+    {
+        return $this->container['startTime'];
+    }
+
+    /**
+    * Sets startTime
+    *
+    * @param int|null $startTime 故障发生时间戳
+    *
+    * @return $this
+    */
+    public function setStartTime($startTime)
+    {
+        $this->container['startTime'] = $startTime;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * text  待合成文本
     * ttsText  发送给tts的待合成文本
-    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。  不同Region的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
     * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。
     * volume  音量。
@@ -41,6 +41,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     * isVocabularyConfigEnable  是否应用当前租户的读法配置
     * isConcurrentResource  是否使用包周期路数资源进行计费
+    * priority  优先级（0-10），0为最高优先级，默认5
     *
     * @var string[]
     */
@@ -65,14 +66,15 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'srtOutputExternalUrl' => 'string',
             'actionOutputExternalUrl' => 'string',
             'isVocabularyConfigEnable' => 'bool',
-            'isConcurrentResource' => 'bool'
+            'isConcurrentResource' => 'bool',
+            'priority' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * text  待合成文本
     * ttsText  发送给tts的待合成文本
-    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。  不同Region的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
     * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。
     * volume  音量。
@@ -91,6 +93,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     * isVocabularyConfigEnable  是否应用当前租户的读法配置
     * isConcurrentResource  是否使用包周期路数资源进行计费
+    * priority  优先级（0-10），0为最高优先级，默认5
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
         'srtOutputExternalUrl' => null,
         'actionOutputExternalUrl' => null,
         'isVocabularyConfigEnable' => null,
-        'isConcurrentResource' => null
+        'isConcurrentResource' => null,
+        'priority' => 'int32'
     ];
 
     /**
@@ -143,7 +147,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * text  待合成文本
     * ttsText  发送给tts的待合成文本
-    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。  不同Region的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
     * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。
     * volume  音量。
@@ -162,6 +166,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     * isVocabularyConfigEnable  是否应用当前租户的读法配置
     * isConcurrentResource  是否使用包周期路数资源进行计费
+    * priority  优先级（0-10），0为最高优先级，默认5
     *
     * @var string[]
     */
@@ -186,14 +191,15 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'srtOutputExternalUrl' => 'srt_output_external_url',
             'actionOutputExternalUrl' => 'action_output_external_url',
             'isVocabularyConfigEnable' => 'is_vocabulary_config_enable',
-            'isConcurrentResource' => 'is_concurrent_resource'
+            'isConcurrentResource' => 'is_concurrent_resource',
+            'priority' => 'priority'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * text  待合成文本
     * ttsText  发送给tts的待合成文本
-    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。  不同Region的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
     * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。
     * volume  音量。
@@ -212,6 +218,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     * isVocabularyConfigEnable  是否应用当前租户的读法配置
     * isConcurrentResource  是否使用包周期路数资源进行计费
+    * priority  优先级（0-10），0为最高优先级，默认5
     *
     * @var string[]
     */
@@ -236,14 +243,15 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'srtOutputExternalUrl' => 'setSrtOutputExternalUrl',
             'actionOutputExternalUrl' => 'setActionOutputExternalUrl',
             'isVocabularyConfigEnable' => 'setIsVocabularyConfigEnable',
-            'isConcurrentResource' => 'setIsConcurrentResource'
+            'isConcurrentResource' => 'setIsConcurrentResource',
+            'priority' => 'setPriority'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * text  待合成文本
     * ttsText  发送给tts的待合成文本
-    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * voiceAssetId  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。  不同Region的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
     * speed  语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。
     * volume  音量。
@@ -262,6 +270,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     * actionOutputExternalUrl  动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
     * isVocabularyConfigEnable  是否应用当前租户的读法配置
     * isConcurrentResource  是否使用包周期路数资源进行计费
+    * priority  优先级（0-10），0为最高优先级，默认5
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             'srtOutputExternalUrl' => 'getSrtOutputExternalUrl',
             'actionOutputExternalUrl' => 'getActionOutputExternalUrl',
             'isVocabularyConfigEnable' => 'getIsVocabularyConfigEnable',
-            'isConcurrentResource' => 'getIsConcurrentResource'
+            'isConcurrentResource' => 'getIsConcurrentResource',
+            'priority' => 'getPriority'
     ];
 
     /**
@@ -383,6 +393,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['actionOutputExternalUrl'] = isset($data['actionOutputExternalUrl']) ? $data['actionOutputExternalUrl'] : null;
         $this->container['isVocabularyConfigEnable'] = isset($data['isVocabularyConfigEnable']) ? $data['isVocabularyConfigEnable'] : null;
         $this->container['isConcurrentResource'] = isset($data['isConcurrentResource']) ? $data['isConcurrentResource'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
     }
 
     /**
@@ -488,6 +499,12 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['actionOutputExternalUrl']) && (mb_strlen($this->container['actionOutputExternalUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'actionOutputExternalUrl', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['priority']) && ($this->container['priority'] > 10)) {
+                $invalidProperties[] = "invalid value for 'priority', must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['priority']) && ($this->container['priority'] < 0)) {
+                $invalidProperties[] = "invalid value for 'priority', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -552,7 +569,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets voiceAssetId
-    *  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    *  音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。  不同Region的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
     *
     * @return string
     */
@@ -564,7 +581,7 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets voiceAssetId
     *
-    * @param string $voiceAssetId 音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+    * @param string $voiceAssetId 音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。  不同Region的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
     *
     * @return $this
     */
@@ -1003,6 +1020,30 @@ class CreateAsyncTtsJobRequestBody implements ModelInterface, ArrayAccess
     public function setIsConcurrentResource($isConcurrentResource)
     {
         $this->container['isConcurrentResource'] = $isConcurrentResource;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  优先级（0-10），0为最高优先级，默认5
+    *
+    * @return int|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param int|null $priority 优先级（0-10），0为最高优先级，默认5
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
         return $this;
     }
 

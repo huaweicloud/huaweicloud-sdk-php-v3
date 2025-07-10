@@ -21,7 +21,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。
+    * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
     * message  异常信息。
     * files  试听文件列表。
     *
@@ -35,7 +35,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。
+    * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
     * message  异常信息。
     * files  试听文件列表。
     *
@@ -70,7 +70,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。
+    * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
     * message  异常信息。
     * files  试听文件列表。
     *
@@ -84,7 +84,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。
+    * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
     * message  异常信息。
     * files  试听文件列表。
     *
@@ -98,7 +98,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。
+    * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
     * message  异常信息。
     * files  试听文件列表。
     *
@@ -203,7 +203,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFileComplete
-    *  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。
+    *  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
     *
     * @return bool|null
     */
@@ -215,7 +215,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isFileComplete
     *
-    * @param bool|null $isFileComplete 试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。
+    * @param bool|null $isFileComplete 试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
     *
     * @return $this
     */

@@ -157,6 +157,74 @@ class CdnAsyncClient extends Client
     }
 
     /**
+     * 批量更新规则状态及优先级
+     *
+     * 批量更新规则状态及优先级。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpdateRuleStatusAsync($request)
+    {
+        return $this->batchUpdateRuleStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function batchUpdateRuleStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/configuration/domains/{domain_name}/rules/batch-update';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $pathParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\BatchUpdateRuleStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\BatchUpdateRuleStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建加速域名
      *
      * 创建加速域名。
@@ -358,6 +426,143 @@ class CdnAsyncClient extends Client
     }
 
     /**
+     * 创建规则引擎规则
+     *
+     * 规则引擎功能通过图形化的方式实现各种规则配置，实现更加灵活、细粒度的规则配置。通过限制触发条件，控制当前配置生效的资源范围，满足多种场景的配置需求。
+     * - 请提交工单开通规则引擎功能后再使用当前接口。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createRuleNewAsync($request)
+    {
+        return $this->createRuleNewAsyncWithHttpInfo($request);
+    }
+    
+    public function createRuleNewAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/configuration/domains/{domain_name}/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $pathParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\CreateRuleNewResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\CreateRuleNewRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建共享缓存组
+     *
+     * 配置共享缓存组，将一个域名设置为主域名，组内其他域名共享该域名的缓存，提高缓存命中率。
+     * - 只有缓存规则中“URL参数”的配置为“忽略参数”或者“不忽略参数”的域名才能加入共享缓存组。
+     * - 每个账号最多配置500个共享缓存组。
+     * - 单租户调用频率：5次/s。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createShareCacheGroupsAsync($request)
+    {
+        return $this->createShareCacheGroupsAsyncWithHttpInfo($request);
+    }
+    
+    public function createShareCacheGroupsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/configuration/share-cache-groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\CreateShareCacheGroupsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\CreateShareCacheGroupsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建资源标签配置接口
      *
      * 用于创建资源标签。
@@ -487,6 +692,141 @@ class CdnAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteDomainResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteDomainRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除规则引擎规则
+     *
+     * 删除规则引擎规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteRuleNewAsync($request)
+    {
+        return $this->deleteRuleNewAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteRuleNewAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/configuration/domains/{domain_name}/rules/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $pathParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteRuleNewResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteRuleNewRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除共享缓存组
+     *
+     * 删除新共享缓存组。
+     * - 共享缓存组内不包含关联域名时才可以删除。
+     * - 单租户调用频率：5次/s。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteShareCacheGroupsAsync($request)
+    {
+        return $this->deleteShareCacheGroupsAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteShareCacheGroupsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/configuration/share-cache-groups/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteShareCacheGroupsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\DeleteShareCacheGroupsRequest',
             $asyncRequest = true);
     }
 
@@ -999,6 +1339,140 @@ class CdnAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ListDomainsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ListDomainsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询规则引擎列表
+     *
+     * 查询规则引擎列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRuleDetailsAsync($request)
+    {
+        return $this->listRuleDetailsAsyncWithHttpInfo($request);
+    }
+    
+    public function listRuleDetailsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/configuration/domains/{domain_name}/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $pathParams['domain_name'] = $localVarParams['domainName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ListRuleDetailsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ListRuleDetailsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询共享缓存组列表
+     *
+     * 查询共享缓存组列表。
+     * - 单租户调用频率：5次/s。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listShareCacheGroupsAsync($request)
+    {
+        return $this->listShareCacheGroupsAsyncWithHttpInfo($request);
+    }
+    
+    public function listShareCacheGroupsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/configuration/share-cache-groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ListShareCacheGroupsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ListShareCacheGroupsRequest',
             $asyncRequest = true);
     }
 
@@ -2660,6 +3134,74 @@ class CdnAsyncClient extends Client
     }
 
     /**
+     * 全量更新规则引擎规则
+     *
+     * 全量更新规则引擎规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateFullRuleAsync($request)
+    {
+        return $this->updateFullRuleAsyncWithHttpInfo($request);
+    }
+    
+    public function updateFullRuleAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/configuration/domains/{domain_name}/rules/full-update';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $pathParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateFullRuleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateFullRuleRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改私有桶开启关闭状态
      *
      * 修改私有桶开启关闭状态。
@@ -2727,6 +3269,146 @@ class CdnAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdatePrivateBucketAccessResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdatePrivateBucketAccessRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新规则引擎规则
+     *
+     * 更新规则引擎规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateRuleNewAsync($request)
+    {
+        return $this->updateRuleNewAsyncWithHttpInfo($request);
+    }
+    
+    public function updateRuleNewAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/configuration/domains/{domain_name}/rules/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $pathParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateRuleNewResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateRuleNewRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新共享缓存组
+     *
+     * 更新共享缓存组。
+     * - 单租户调用频率：5次/s。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateShareCacheGroupsAsync($request)
+    {
+        return $this->updateShareCacheGroupsAsyncWithHttpInfo($request);
+    }
+    
+    public function updateShareCacheGroupsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/configuration/share-cache-groups/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateShareCacheGroupsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateShareCacheGroupsRequest',
             $asyncRequest = true);
     }
 

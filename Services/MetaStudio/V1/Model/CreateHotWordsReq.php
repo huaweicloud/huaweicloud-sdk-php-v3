@@ -23,13 +23,15 @@ class CreateHotWordsReq implements ModelInterface, ArrayAccess
     * hotWordsType  hotWordsType
     * robotId  应用ID。
     * sisHotWords  sisHotWords
+    * mobvoiHotWords  mobvoiHotWords
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'hotWordsType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\HotWordsTypeEnum',
             'robotId' => 'string',
-            'sisHotWords' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateSisHotWords'
+            'sisHotWords' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateSisHotWords',
+            'mobvoiHotWords' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateMobvoiHotWords'
     ];
 
     /**
@@ -37,13 +39,15 @@ class CreateHotWordsReq implements ModelInterface, ArrayAccess
     * hotWordsType  hotWordsType
     * robotId  应用ID。
     * sisHotWords  sisHotWords
+    * mobvoiHotWords  mobvoiHotWords
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'hotWordsType' => null,
         'robotId' => null,
-        'sisHotWords' => null
+        'sisHotWords' => null,
+        'mobvoiHotWords' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class CreateHotWordsReq implements ModelInterface, ArrayAccess
     * hotWordsType  hotWordsType
     * robotId  应用ID。
     * sisHotWords  sisHotWords
+    * mobvoiHotWords  mobvoiHotWords
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'hotWordsType' => 'hot_words_type',
             'robotId' => 'robot_id',
-            'sisHotWords' => 'sis_hot_words'
+            'sisHotWords' => 'sis_hot_words',
+            'mobvoiHotWords' => 'mobvoi_hot_words'
     ];
 
     /**
@@ -86,13 +92,15 @@ class CreateHotWordsReq implements ModelInterface, ArrayAccess
     * hotWordsType  hotWordsType
     * robotId  应用ID。
     * sisHotWords  sisHotWords
+    * mobvoiHotWords  mobvoiHotWords
     *
     * @var string[]
     */
     protected static $setters = [
             'hotWordsType' => 'setHotWordsType',
             'robotId' => 'setRobotId',
-            'sisHotWords' => 'setSisHotWords'
+            'sisHotWords' => 'setSisHotWords',
+            'mobvoiHotWords' => 'setMobvoiHotWords'
     ];
 
     /**
@@ -100,13 +108,15 @@ class CreateHotWordsReq implements ModelInterface, ArrayAccess
     * hotWordsType  hotWordsType
     * robotId  应用ID。
     * sisHotWords  sisHotWords
+    * mobvoiHotWords  mobvoiHotWords
     *
     * @var string[]
     */
     protected static $getters = [
             'hotWordsType' => 'getHotWordsType',
             'robotId' => 'getRobotId',
-            'sisHotWords' => 'getSisHotWords'
+            'sisHotWords' => 'getSisHotWords',
+            'mobvoiHotWords' => 'getMobvoiHotWords'
     ];
 
     /**
@@ -170,6 +180,7 @@ class CreateHotWordsReq implements ModelInterface, ArrayAccess
         $this->container['hotWordsType'] = isset($data['hotWordsType']) ? $data['hotWordsType'] : null;
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
         $this->container['sisHotWords'] = isset($data['sisHotWords']) ? $data['sisHotWords'] : null;
+        $this->container['mobvoiHotWords'] = isset($data['mobvoiHotWords']) ? $data['mobvoiHotWords'] : null;
     }
 
     /**
@@ -192,9 +203,6 @@ class CreateHotWordsReq implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['robotId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'robotId', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['sisHotWords'] === null) {
-            $invalidProperties[] = "'sisHotWords' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -261,7 +269,7 @@ class CreateHotWordsReq implements ModelInterface, ArrayAccess
     * Gets sisHotWords
     *  sisHotWords
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CreateSisHotWords
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CreateSisHotWords|null
     */
     public function getSisHotWords()
     {
@@ -271,13 +279,37 @@ class CreateHotWordsReq implements ModelInterface, ArrayAccess
     /**
     * Sets sisHotWords
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CreateSisHotWords $sisHotWords sisHotWords
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CreateSisHotWords|null $sisHotWords sisHotWords
     *
     * @return $this
     */
     public function setSisHotWords($sisHotWords)
     {
         $this->container['sisHotWords'] = $sisHotWords;
+        return $this;
+    }
+
+    /**
+    * Gets mobvoiHotWords
+    *  mobvoiHotWords
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CreateMobvoiHotWords|null
+    */
+    public function getMobvoiHotWords()
+    {
+        return $this->container['mobvoiHotWords'];
+    }
+
+    /**
+    * Sets mobvoiHotWords
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CreateMobvoiHotWords|null $mobvoiHotWords mobvoiHotWords
+    *
+    * @return $this
+    */
+    public function setMobvoiHotWords($mobvoiHotWords)
+    {
+        $this->container['mobvoiHotWords'] = $mobvoiHotWords;
         return $this;
     }
 

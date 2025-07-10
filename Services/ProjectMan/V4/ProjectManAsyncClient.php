@@ -1921,6 +1921,426 @@ class ProjectManAsyncClient extends Client
     }
 
     /**
+     * 查询字段模板列表
+     *
+     * 工作项类型中查询字段模板列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listIssueFieldsAsync($request)
+    {
+        return $this->listIssueFieldsAsyncWithHttpInfo($request);
+    }
+    
+    public function listIssueFieldsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/ipdprojectservice/projects/{project_id}/categories/{category_id}/field/templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['size'] !== null) {
+            $queryParams['size'] = $localVarParams['size'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['categoryId'] !== null) {
+            $pathParams['category_id'] = $localVarParams['categoryId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ListIssueFieldsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ListIssueFieldsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询工作项状态
+     *
+     * 根据工作项查询工作项下的状态信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listIssueStatuesAsync($request)
+    {
+        return $this->listIssueStatuesAsyncWithHttpInfo($request);
+    }
+    
+    public function listIssueStatuesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/ipdprojectservice/projects/{project_id}/category/{category_id}/statuses';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['categoryId'] !== null) {
+            $pathParams['category_id'] = $localVarParams['categoryId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ListIssueStatuesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ListIssueStatuesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询工作流字段配置信息
+     *
+     * 查询工作流字段配置信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showIssueConfigFieldsAsync($request)
+    {
+        return $this->showIssueConfigFieldsAsyncWithHttpInfo($request);
+    }
+    
+    public function showIssueConfigFieldsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/ipdprojectservice/projects/{project_id}/workflow-template/issue/fields';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['issueCategory'] !== null) {
+            $queryParams['issue_category'] = $localVarParams['issueCategory'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ShowIssueConfigFieldsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ShowIssueConfigFieldsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询工作项详情
+     *
+     * 查询工作项详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showIssueDetailAsync($request)
+    {
+        return $this->showIssueDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function showIssueDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/ipdprojectservice/projects/{project_id}/issues/{issue_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['issueType'] !== null) {
+            $queryParams['issue_type'] = $localVarParams['issueType'];
+        }
+        if ($localVarParams['domainId'] !== null) {
+            $queryParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['issueId'] !== null) {
+            $pathParams['issue_id'] = $localVarParams['issueId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ShowIssueDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ShowIssueDetailRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取工作流的详情及每条流转线的详情
+     *
+     * 获取工作流的详情及每条流转线的详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showWorkflowTemplateAsync($request)
+    {
+        return $this->showWorkflowTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function showWorkflowTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/ipdprojectservice/projects/{project_id}/workflow-template';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['issueCategory'] !== null) {
+            $queryParams['issue_category'] = $localVarParams['issueCategory'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ShowWorkflowTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\ShowWorkflowTemplateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改工作项的状态
+     *
+     * 工作项流程流转
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function transferWorkItemFlowAsync($request)
+    {
+        return $this->transferWorkItemFlowAsyncWithHttpInfo($request);
+    }
+    
+    public function transferWorkItemFlowAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/ipdprojectservice/projects/{project_id}/work-item/flow/transfer';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\TransferWorkItemFlowResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\TransferWorkItemFlowRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 添加指定工作项工时
      *
      * 添加指定工作项工时

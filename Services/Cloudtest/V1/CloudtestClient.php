@@ -5924,6 +5924,68 @@ class CloudtestClient extends Client
     }
 
     /**
+     * 查询指定表的内容
+     *
+     * 查询指定表的内容
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showEtlData($request)
+    {
+        return $this->showEtlDataWithHttpInfo($request);
+    }
+
+    public function showEtlDataWithHttpInfo($request)
+    {
+        $resourcePath = '/v4/testhub/etl/query-data';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\ShowEtlDataResponse',
+            $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\ShowEtlDataRequest');
+    }
+
+    /**
      * 根据目录查询因子
      *
      * 根据目录查询因子
