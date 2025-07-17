@@ -21,21 +21,25 @@ class AggregationAuthorizationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * authorizedAccountId  要授权的资源聚合器的帐号ID。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'authorizedAccountId' => 'string'
+            'authorizedAccountId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * authorizedAccountId  要授权的资源聚合器的帐号ID。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'authorizedAccountId' => null
+        'authorizedAccountId' => null,
+        'tags' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class AggregationAuthorizationRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * authorizedAccountId  要授权的资源聚合器的帐号ID。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'authorizedAccountId' => 'authorized_account_id'
+            'authorizedAccountId' => 'authorized_account_id',
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * authorizedAccountId  要授权的资源聚合器的帐号ID。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'authorizedAccountId' => 'setAuthorizedAccountId'
+            'authorizedAccountId' => 'setAuthorizedAccountId',
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * authorizedAccountId  要授权的资源聚合器的帐号ID。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'authorizedAccountId' => 'getAuthorizedAccountId'
+            'authorizedAccountId' => 'getAuthorizedAccountId',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -148,6 +158,7 @@ class AggregationAuthorizationRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['authorizedAccountId'] = isset($data['authorizedAccountId']) ? $data['authorizedAccountId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -205,6 +216,30 @@ class AggregationAuthorizationRequest implements ModelInterface, ArrayAccess
     public function setAuthorizedAccountId($authorizedAccountId)
     {
         $this->container['authorizedAccountId'] = $authorizedAccountId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

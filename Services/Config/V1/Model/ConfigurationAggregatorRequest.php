@@ -23,13 +23,15 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
     * aggregatorName  资源聚合器名称。
     * aggregatorType  聚合器类型（ACCOUNT | ORGANIZATION）。
     * accountAggregationSources  accountAggregationSources
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'aggregatorName' => 'string',
             'aggregatorType' => 'string',
-            'accountAggregationSources' => '\HuaweiCloud\SDK\Config\V1\Model\AccountAggregationSource'
+            'accountAggregationSources' => '\HuaweiCloud\SDK\Config\V1\Model\AccountAggregationSource',
+            'tags' => '\HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
     * aggregatorName  资源聚合器名称。
     * aggregatorType  聚合器类型（ACCOUNT | ORGANIZATION）。
     * accountAggregationSources  accountAggregationSources
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'aggregatorName' => null,
         'aggregatorType' => null,
-        'accountAggregationSources' => null
+        'accountAggregationSources' => null,
+        'tags' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
     * aggregatorName  资源聚合器名称。
     * aggregatorType  聚合器类型（ACCOUNT | ORGANIZATION）。
     * accountAggregationSources  accountAggregationSources
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'aggregatorName' => 'aggregator_name',
             'aggregatorType' => 'aggregator_type',
-            'accountAggregationSources' => 'account_aggregation_sources'
+            'accountAggregationSources' => 'account_aggregation_sources',
+            'tags' => 'tags'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
     * aggregatorName  资源聚合器名称。
     * aggregatorType  聚合器类型（ACCOUNT | ORGANIZATION）。
     * accountAggregationSources  accountAggregationSources
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $setters = [
             'aggregatorName' => 'setAggregatorName',
             'aggregatorType' => 'setAggregatorType',
-            'accountAggregationSources' => 'setAccountAggregationSources'
+            'accountAggregationSources' => 'setAccountAggregationSources',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
     * aggregatorName  资源聚合器名称。
     * aggregatorType  聚合器类型（ACCOUNT | ORGANIZATION）。
     * accountAggregationSources  accountAggregationSources
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $getters = [
             'aggregatorName' => 'getAggregatorName',
             'aggregatorType' => 'getAggregatorType',
-            'accountAggregationSources' => 'getAccountAggregationSources'
+            'accountAggregationSources' => 'getAccountAggregationSources',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
         $this->container['aggregatorName'] = isset($data['aggregatorName']) ? $data['aggregatorName'] : null;
         $this->container['aggregatorType'] = isset($data['aggregatorType']) ? $data['aggregatorType'] : null;
         $this->container['accountAggregationSources'] = isset($data['accountAggregationSources']) ? $data['accountAggregationSources'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -278,6 +289,30 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
     public function setAccountAggregationSources($accountAggregationSources)
     {
         $this->container['accountAggregationSources'] = $accountAggregationSources;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

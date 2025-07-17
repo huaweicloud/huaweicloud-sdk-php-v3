@@ -24,13 +24,15 @@ class CreateAggregationAuthorizationResponse implements ModelInterface, ArrayAcc
     * aggregationAuthorizationUrn  资源聚合器授权标识符。
     * authorizedAccountId  授权的资源聚合器的帐号ID。
     * createdAt  资源聚合器授权的创建时间。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'aggregationAuthorizationUrn' => 'string',
             'authorizedAccountId' => 'string',
-            'createdAt' => 'string'
+            'createdAt' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]'
     ];
 
     /**
@@ -38,13 +40,15 @@ class CreateAggregationAuthorizationResponse implements ModelInterface, ArrayAcc
     * aggregationAuthorizationUrn  资源聚合器授权标识符。
     * authorizedAccountId  授权的资源聚合器的帐号ID。
     * createdAt  资源聚合器授权的创建时间。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'aggregationAuthorizationUrn' => null,
         'authorizedAccountId' => null,
-        'createdAt' => null
+        'createdAt' => null,
+        'tags' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class CreateAggregationAuthorizationResponse implements ModelInterface, ArrayAcc
     * aggregationAuthorizationUrn  资源聚合器授权标识符。
     * authorizedAccountId  授权的资源聚合器的帐号ID。
     * createdAt  资源聚合器授权的创建时间。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'aggregationAuthorizationUrn' => 'aggregation_authorization_urn',
             'authorizedAccountId' => 'authorized_account_id',
-            'createdAt' => 'created_at'
+            'createdAt' => 'created_at',
+            'tags' => 'tags'
     ];
 
     /**
@@ -87,13 +93,15 @@ class CreateAggregationAuthorizationResponse implements ModelInterface, ArrayAcc
     * aggregationAuthorizationUrn  资源聚合器授权标识符。
     * authorizedAccountId  授权的资源聚合器的帐号ID。
     * createdAt  资源聚合器授权的创建时间。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $setters = [
             'aggregationAuthorizationUrn' => 'setAggregationAuthorizationUrn',
             'authorizedAccountId' => 'setAuthorizedAccountId',
-            'createdAt' => 'setCreatedAt'
+            'createdAt' => 'setCreatedAt',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -101,13 +109,15 @@ class CreateAggregationAuthorizationResponse implements ModelInterface, ArrayAcc
     * aggregationAuthorizationUrn  资源聚合器授权标识符。
     * authorizedAccountId  授权的资源聚合器的帐号ID。
     * createdAt  资源聚合器授权的创建时间。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $getters = [
             'aggregationAuthorizationUrn' => 'getAggregationAuthorizationUrn',
             'authorizedAccountId' => 'getAuthorizedAccountId',
-            'createdAt' => 'getCreatedAt'
+            'createdAt' => 'getCreatedAt',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -171,6 +181,7 @@ class CreateAggregationAuthorizationResponse implements ModelInterface, ArrayAcc
         $this->container['aggregationAuthorizationUrn'] = isset($data['aggregationAuthorizationUrn']) ? $data['aggregationAuthorizationUrn'] : null;
         $this->container['authorizedAccountId'] = isset($data['authorizedAccountId']) ? $data['authorizedAccountId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class CreateAggregationAuthorizationResponse implements ModelInterface, ArrayAcc
     public function setCreatedAt($createdAt)
     {
         $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

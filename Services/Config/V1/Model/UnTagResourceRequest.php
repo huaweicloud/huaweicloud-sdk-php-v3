@@ -150,6 +150,8 @@ class UnTagResourceRequest implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const RESOURCE_TYPE_CONFIGPOLICY_ASSIGNMENTS = 'config:policyAssignments';
+    const RESOURCE_TYPE_CONFIGAGGREGATORS = 'config:aggregators';
+    const RESOURCE_TYPE_CONFIGAGGREGATION_AUTHORIZATIONS = 'config:aggregationAuthorizations';
     
 
     /**
@@ -161,6 +163,8 @@ class UnTagResourceRequest implements ModelInterface, ArrayAccess
     {
         return [
             self::RESOURCE_TYPE_CONFIGPOLICY_ASSIGNMENTS,
+            self::RESOURCE_TYPE_CONFIGAGGREGATORS,
+            self::RESOURCE_TYPE_CONFIGAGGREGATION_AUTHORIZATIONS,
         ];
     }
 

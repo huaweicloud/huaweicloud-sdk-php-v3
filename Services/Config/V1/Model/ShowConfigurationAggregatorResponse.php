@@ -28,6 +28,7 @@ class ShowConfigurationAggregatorResponse implements ModelInterface, ArrayAccess
     * accountAggregationSources  accountAggregationSources
     * updatedAt  资源聚合器更新时间。
     * createdAt  资源聚合器创建时间。
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -38,7 +39,8 @@ class ShowConfigurationAggregatorResponse implements ModelInterface, ArrayAccess
             'aggregatorType' => 'string',
             'accountAggregationSources' => '\HuaweiCloud\SDK\Config\V1\Model\AccountAggregationSource',
             'updatedAt' => 'string',
-            'createdAt' => 'string'
+            'createdAt' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]'
     ];
 
     /**
@@ -50,6 +52,7 @@ class ShowConfigurationAggregatorResponse implements ModelInterface, ArrayAccess
     * accountAggregationSources  accountAggregationSources
     * updatedAt  资源聚合器更新时间。
     * createdAt  资源聚合器创建时间。
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -60,7 +63,8 @@ class ShowConfigurationAggregatorResponse implements ModelInterface, ArrayAccess
         'aggregatorType' => null,
         'accountAggregationSources' => null,
         'updatedAt' => null,
-        'createdAt' => null
+        'createdAt' => null,
+        'tags' => null
     ];
 
     /**
@@ -93,6 +97,7 @@ class ShowConfigurationAggregatorResponse implements ModelInterface, ArrayAccess
     * accountAggregationSources  accountAggregationSources
     * updatedAt  资源聚合器更新时间。
     * createdAt  资源聚合器创建时间。
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -103,7 +108,8 @@ class ShowConfigurationAggregatorResponse implements ModelInterface, ArrayAccess
             'aggregatorType' => 'aggregator_type',
             'accountAggregationSources' => 'account_aggregation_sources',
             'updatedAt' => 'updated_at',
-            'createdAt' => 'created_at'
+            'createdAt' => 'created_at',
+            'tags' => 'tags'
     ];
 
     /**
@@ -115,6 +121,7 @@ class ShowConfigurationAggregatorResponse implements ModelInterface, ArrayAccess
     * accountAggregationSources  accountAggregationSources
     * updatedAt  资源聚合器更新时间。
     * createdAt  资源聚合器创建时间。
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -125,7 +132,8 @@ class ShowConfigurationAggregatorResponse implements ModelInterface, ArrayAccess
             'aggregatorType' => 'setAggregatorType',
             'accountAggregationSources' => 'setAccountAggregationSources',
             'updatedAt' => 'setUpdatedAt',
-            'createdAt' => 'setCreatedAt'
+            'createdAt' => 'setCreatedAt',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -137,6 +145,7 @@ class ShowConfigurationAggregatorResponse implements ModelInterface, ArrayAccess
     * accountAggregationSources  accountAggregationSources
     * updatedAt  资源聚合器更新时间。
     * createdAt  资源聚合器创建时间。
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -147,7 +156,8 @@ class ShowConfigurationAggregatorResponse implements ModelInterface, ArrayAccess
             'aggregatorType' => 'getAggregatorType',
             'accountAggregationSources' => 'getAccountAggregationSources',
             'updatedAt' => 'getUpdatedAt',
-            'createdAt' => 'getCreatedAt'
+            'createdAt' => 'getCreatedAt',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -215,6 +225,7 @@ class ShowConfigurationAggregatorResponse implements ModelInterface, ArrayAccess
         $this->container['accountAggregationSources'] = isset($data['accountAggregationSources']) ? $data['accountAggregationSources'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -404,6 +415,30 @@ class ShowConfigurationAggregatorResponse implements ModelInterface, ArrayAccess
     public function setCreatedAt($createdAt)
     {
         $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 
