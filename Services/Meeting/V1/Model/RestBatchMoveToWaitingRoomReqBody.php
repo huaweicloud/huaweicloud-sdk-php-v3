@@ -158,6 +158,9 @@ class RestBatchMoveToWaitingRoomReqBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['batchParticipants'] === null) {
+            $invalidProperties[] = "'batchParticipants' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class RestBatchMoveToWaitingRoomReqBody implements ModelInterface, ArrayAccess
     * Gets batchParticipants
     *  需要移入等候室的全部与会者pid
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getBatchParticipants()
     {
@@ -186,7 +189,7 @@ class RestBatchMoveToWaitingRoomReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets batchParticipants
     *
-    * @param string[]|null $batchParticipants 需要移入等候室的全部与会者pid
+    * @param string[] $batchParticipants 需要移入等候室的全部与会者pid
     *
     * @return $this
     */

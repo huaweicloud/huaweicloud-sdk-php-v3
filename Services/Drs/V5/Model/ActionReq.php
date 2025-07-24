@@ -166,9 +166,9 @@ class ActionReq implements ModelInterface, ArrayAccess
     const ACTION_NAME_SET_WRITABLE = 'set_writable';
     const ACTION_NAME_CLOUD_CONNECTION = 'cloud_connection';
     const ACTION_NAME_SET_READONLY = 'set_readonly';
-    const ACTION_NAME_DIAGNOSIS = 'diagnosis：一键诊断。';
-    const ACTION_NAME_START_REPAIR = 'start_repair：开始数据修复。';
-    const ACTION_NAME_STOP_REPAIR = 'stop_repair：停止数据修复。';
+    const ACTION_NAME_DIAGNOSIS = 'diagnosis';
+    const ACTION_NAME_START_REPAIR = 'start_repair';
+    const ACTION_NAME_STOP_REPAIR = 'stop_repair';
     
 
     /**

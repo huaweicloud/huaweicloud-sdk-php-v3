@@ -35,7 +35,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
     * region  SFS Turbo文件系统所在区域。
     * securityGroupId  用户指定的安全组ID。
-    * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
+    * shareProto  SFS Turbo文件系统的协议类型，当前为NFS或 CIFS。
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
     * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
@@ -101,7 +101,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
     * region  SFS Turbo文件系统所在区域。
     * securityGroupId  用户指定的安全组ID。
-    * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
+    * shareProto  SFS Turbo文件系统的协议类型，当前为NFS或 CIFS。
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
     * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
@@ -188,7 +188,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
     * region  SFS Turbo文件系统所在区域。
     * securityGroupId  用户指定的安全组ID。
-    * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
+    * shareProto  SFS Turbo文件系统的协议类型，当前为NFS或 CIFS。
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
     * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
@@ -254,7 +254,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
     * region  SFS Turbo文件系统所在区域。
     * securityGroupId  用户指定的安全组ID。
-    * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
+    * shareProto  SFS Turbo文件系统的协议类型，当前为NFS或 CIFS。
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
     * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
@@ -320,7 +320,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
     * region  SFS Turbo文件系统所在区域。
     * securityGroupId  用户指定的安全组ID。
-    * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
+    * shareProto  SFS Turbo文件系统的协议类型，当前为NFS或 CIFS。
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
     * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
@@ -842,7 +842,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets shareProto
-    *  SFS Turbo文件系统的协议类型，当前为NFS
+    *  SFS Turbo文件系统的协议类型，当前为NFS或 CIFS。
     *
     * @return string|null
     */
@@ -854,7 +854,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     /**
     * Sets shareProto
     *
-    * @param string|null $shareProto SFS Turbo文件系统的协议类型，当前为NFS
+    * @param string|null $shareProto SFS Turbo文件系统的协议类型，当前为NFS或 CIFS。
     *
     * @return $this
     */

@@ -21,22 +21,26 @@ class DeleteLdapConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+    * jobId  LDAP异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobId' => 'string'
+            'jobId' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+    * jobId  LDAP异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'jobId' => null
+        'jobId' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class DeleteLdapConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+    * jobId  LDAP异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobId' => 'jobId'
+            'jobId' => 'jobId',
+            'xRequestId' => 'X-request-id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+    * jobId  LDAP异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'jobId' => 'setJobId'
+            'jobId' => 'setJobId',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+    * jobId  LDAP异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'jobId' => 'getJobId'
+            'jobId' => 'getJobId',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class DeleteLdapConfigResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -175,7 +186,7 @@ class DeleteLdapConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+    *  LDAP异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
     *
     * @return string|null
     */
@@ -187,13 +198,37 @@ class DeleteLdapConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+    * @param string|null $jobId LDAP异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
     *
     * @return $this
     */
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

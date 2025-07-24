@@ -38,8 +38,8 @@ class ListSharesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'limit' => 'int64',
-        'offset' => 'int64'
+        'limit' => 'int32',
+        'offset' => 'int32'
     ];
 
     /**
@@ -169,8 +169,8 @@ class ListSharesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['limit']) && ($this->container['limit'] >= 200)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than 200.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] >= 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than 2000.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";

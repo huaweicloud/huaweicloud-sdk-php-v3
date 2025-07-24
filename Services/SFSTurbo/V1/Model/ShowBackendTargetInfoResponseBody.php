@@ -20,7 +20,7 @@ class ShowBackendTargetInfoResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * targetId  绑定关系id
+    * targetId  绑定关系ID
     * creationTime  绑定关系创建时间
     * fileSystemPath  联动目录名称
     * failureDetails  failureDetails
@@ -40,7 +40,7 @@ class ShowBackendTargetInfoResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * targetId  绑定关系id
+    * targetId  绑定关系ID
     * creationTime  绑定关系创建时间
     * fileSystemPath  联动目录名称
     * failureDetails  failureDetails
@@ -81,7 +81,7 @@ class ShowBackendTargetInfoResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * targetId  绑定关系id
+    * targetId  绑定关系ID
     * creationTime  绑定关系创建时间
     * fileSystemPath  联动目录名称
     * failureDetails  failureDetails
@@ -101,7 +101,7 @@ class ShowBackendTargetInfoResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * targetId  绑定关系id
+    * targetId  绑定关系ID
     * creationTime  绑定关系创建时间
     * fileSystemPath  联动目录名称
     * failureDetails  failureDetails
@@ -121,7 +121,7 @@ class ShowBackendTargetInfoResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * targetId  绑定关系id
+    * targetId  绑定关系ID
     * creationTime  绑定关系创建时间
     * fileSystemPath  联动目录名称
     * failureDetails  failureDetails
@@ -258,7 +258,7 @@ class ShowBackendTargetInfoResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetId
-    *  绑定关系id
+    *  绑定关系ID
     *
     * @return string|null
     */
@@ -270,7 +270,7 @@ class ShowBackendTargetInfoResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets targetId
     *
-    * @param string|null $targetId 绑定关系id
+    * @param string|null $targetId 绑定关系ID
     *
     * @return $this
     */

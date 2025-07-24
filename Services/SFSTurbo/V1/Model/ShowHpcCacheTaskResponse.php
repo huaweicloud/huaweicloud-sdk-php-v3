@@ -233,6 +233,7 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
     const STATUS_SUCCESS = 'SUCCESS';
     const STATUS_DOING = 'DOING';
     const STATUS_FAIL = 'FAIL';
+    const STATUS_DELETING = 'DELETING';
     
 
     /**
@@ -246,6 +247,7 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
             self::STATUS_SUCCESS,
             self::STATUS_DOING,
             self::STATUS_FAIL,
+            self::STATUS_DELETING,
         ];
     }
 

@@ -22,8 +22,8 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * flavorId  规格id
-    * limit  limit
-    * marker  marker
+    * limit  查询返回云服务器规格列表当前页面的数量。默认为1000
+    * marker  从marker指定的flavor_id的下一条数据开始查询
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * flavorId  规格id
-    * limit  limit
-    * marker  marker
+    * limit  查询返回云服务器规格列表当前页面的数量。默认为1000
+    * marker  从marker指定的flavor_id的下一条数据开始查询
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * flavorId  规格id
-    * limit  limit
-    * marker  marker
+    * limit  查询返回云服务器规格列表当前页面的数量。默认为1000
+    * marker  从marker指定的flavor_id的下一条数据开始查询
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * flavorId  规格id
-    * limit  limit
-    * marker  marker
+    * limit  查询返回云服务器规格列表当前页面的数量。默认为1000
+    * marker  从marker指定的flavor_id的下一条数据开始查询
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * flavorId  规格id
-    * limit  limit
-    * marker  marker
+    * limit  查询返回云服务器规格列表当前页面的数量。默认为1000
+    * marker  从marker指定的flavor_id的下一条数据开始查询
     *
     * @var string[]
     */
@@ -255,7 +255,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  limit
+    *  查询返回云服务器规格列表当前页面的数量。默认为1000
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 查询返回云服务器规格列表当前页面的数量。默认为1000
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  marker
+    *  从marker指定的flavor_id的下一条数据开始查询
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 从marker指定的flavor_id的下一条数据开始查询
     *
     * @return $this
     */

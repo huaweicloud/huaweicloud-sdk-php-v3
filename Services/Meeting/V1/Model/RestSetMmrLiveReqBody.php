@@ -158,6 +158,9 @@ class RestSetMmrLiveReqBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['liveState'] === null) {
+            $invalidProperties[] = "'liveState' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class RestSetMmrLiveReqBody implements ModelInterface, ArrayAccess
     * Gets liveState
     *  0：停止Mmr会议直播 1：启动Mmr会议直播
     *
-    * @return int|null
+    * @return int
     */
     public function getLiveState()
     {
@@ -186,7 +189,7 @@ class RestSetMmrLiveReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets liveState
     *
-    * @param int|null $liveState 0：停止Mmr会议直播 1：启动Mmr会议直播
+    * @param int $liveState 0：停止Mmr会议直播 1：启动Mmr会议直播
     *
     * @return $this
     */

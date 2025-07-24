@@ -22,7 +22,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
-    * marker  marker，取值为task_id
+    * marker  marker填写为上一页返回的最后一条记录的task_id，作为下一次分页的起始值。比如，marker为d651ea2b-2b20-4c6d-8bbf-2adcec18dac9，limit为100，表示从d651ea2b-2b20-4c6d-8bbf-2adcec18dac9后返回最多100条满足查询条件的记录。
     * limit  limit, 取值为正整数. 默认为20，最大值为100
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
-    * marker  marker，取值为task_id
+    * marker  marker填写为上一页返回的最后一条记录的task_id，作为下一次分页的起始值。比如，marker为d651ea2b-2b20-4c6d-8bbf-2adcec18dac9，limit为100，表示从d651ea2b-2b20-4c6d-8bbf-2adcec18dac9后返回最多100条满足查询条件的记录。
     * limit  limit, 取值为正整数. 默认为20，最大值为100
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
-    * marker  marker，取值为task_id
+    * marker  marker填写为上一页返回的最后一条记录的task_id，作为下一次分页的起始值。比如，marker为d651ea2b-2b20-4c6d-8bbf-2adcec18dac9，limit为100，表示从d651ea2b-2b20-4c6d-8bbf-2adcec18dac9后返回最多100条满足查询条件的记录。
     * limit  limit, 取值为正整数. 默认为20，最大值为100
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
-    * marker  marker，取值为task_id
+    * marker  marker填写为上一页返回的最后一条记录的task_id，作为下一次分页的起始值。比如，marker为d651ea2b-2b20-4c6d-8bbf-2adcec18dac9，limit为100，表示从d651ea2b-2b20-4c6d-8bbf-2adcec18dac9后返回最多100条满足查询条件的记录。
     * limit  limit, 取值为正整数. 默认为20，最大值为100
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
-    * marker  marker，取值为task_id
+    * marker  marker填写为上一页返回的最后一条记录的task_id，作为下一次分页的起始值。比如，marker为d651ea2b-2b20-4c6d-8bbf-2adcec18dac9，limit为100，表示从d651ea2b-2b20-4c6d-8bbf-2adcec18dac9后返回最多100条满足查询条件的记录。
     * limit  limit, 取值为正整数. 默认为20，最大值为100
     *
     * @var string[]
@@ -261,7 +261,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  marker，取值为task_id
+    *  marker填写为上一页返回的最后一条记录的task_id，作为下一次分页的起始值。比如，marker为d651ea2b-2b20-4c6d-8bbf-2adcec18dac9，limit为100，表示从d651ea2b-2b20-4c6d-8bbf-2adcec18dac9后返回最多100条满足查询条件的记录。
     *
     * @return string|null
     */
@@ -273,7 +273,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker，取值为task_id
+    * @param string|null $marker marker填写为上一页返回的最后一条记录的task_id，作为下一次分页的起始值。比如，marker为d651ea2b-2b20-4c6d-8bbf-2adcec18dac9，limit为100，表示从d651ea2b-2b20-4c6d-8bbf-2adcec18dac9后返回最多100条满足查询条件的记录。
     *
     * @return $this
     */

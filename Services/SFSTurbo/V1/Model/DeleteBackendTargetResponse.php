@@ -21,7 +21,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * targetId  绑定关系id
+    * targetId  绑定关系ID
     * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
     * lifecycle  绑定状态。只支持DELETING和FAILED
     * xRequestId  xRequestId
@@ -37,7 +37,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * targetId  绑定关系id
+    * targetId  绑定关系ID
     * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
     * lifecycle  绑定状态。只支持DELETING和FAILED
     * xRequestId  xRequestId
@@ -74,7 +74,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * targetId  绑定关系id
+    * targetId  绑定关系ID
     * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
     * lifecycle  绑定状态。只支持DELETING和FAILED
     * xRequestId  xRequestId
@@ -90,7 +90,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * targetId  绑定关系id
+    * targetId  绑定关系ID
     * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
     * lifecycle  绑定状态。只支持DELETING和FAILED
     * xRequestId  xRequestId
@@ -106,7 +106,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * targetId  绑定关系id
+    * targetId  绑定关系ID
     * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
     * lifecycle  绑定状态。只支持DELETING和FAILED
     * xRequestId  xRequestId
@@ -161,9 +161,6 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const LIFECYCLE_DELETING = 'DELETING';
-    const LIFECYCLE_AVAILABLE = 'AVAILABLE';
-    const LIFECYCLE_MISCONFIGURED = 'MISCONFIGURED';
-    const LIFECYCLE_CREATING = 'CREATING';
     const LIFECYCLE_FAILED = 'FAILED';
     
 
@@ -176,9 +173,6 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
     {
         return [
             self::LIFECYCLE_DELETING,
-            self::LIFECYCLE_AVAILABLE,
-            self::LIFECYCLE_MISCONFIGURED,
-            self::LIFECYCLE_CREATING,
             self::LIFECYCLE_FAILED,
         ];
     }
@@ -237,7 +231,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetId
-    *  绑定关系id
+    *  绑定关系ID
     *
     * @return string|null
     */
@@ -249,7 +243,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets targetId
     *
-    * @param string|null $targetId 绑定关系id
+    * @param string|null $targetId 绑定关系ID
     *
     * @return $this
     */

@@ -412,6 +412,68 @@ class DbssClient extends Client
     }
 
     /**
+     * 获取实例告警配置
+     *
+     * 获取实例告警配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAlarmTopicConfigInfo($request)
+    {
+        return $this->listAlarmTopicConfigInfoWithHttpInfo($request);
+    }
+
+    public function listAlarmTopicConfigInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/{instance_id}/audit/alarm/topic';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dbss\V1\Model\ListAlarmTopicConfigInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dbss\V1\Model\ListAlarmTopicConfigInfoRequest');
+    }
+
+    /**
      * 查询审计告警信息
      *
      * 查询审计告警信息
@@ -1384,6 +1446,71 @@ class DbssClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dbss\V1\Model\RebootAuditInstanceResponse',
             $requestType='\HuaweiCloud\SDK\Dbss\V1\Model\RebootAuditInstanceRequest');
+    }
+
+    /**
+     * 设置实例告警配置
+     *
+     * 设置实例告警配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setAlarmTopicConfigInfo($request)
+    {
+        return $this->setAlarmTopicConfigInfoWithHttpInfo($request);
+    }
+
+    public function setAlarmTopicConfigInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/{instance_id}/audit/alarm/topic';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dbss\V1\Model\SetAlarmTopicConfigInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dbss\V1\Model\SetAlarmTopicConfigInfoRequest');
     }
 
     /**

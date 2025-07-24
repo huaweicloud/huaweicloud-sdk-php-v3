@@ -20,8 +20,8 @@ class UpdateObsTargetAttributesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * shareId  文件系统id
-    * targetId  绑定关系id
+    * shareId  文件系统ID
+    * targetId  绑定关系ID
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class UpdateObsTargetAttributesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * shareId  文件系统id
-    * targetId  绑定关系id
+    * shareId  文件系统ID
+    * targetId  绑定关系ID
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class UpdateObsTargetAttributesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * shareId  文件系统id
-    * targetId  绑定关系id
+    * shareId  文件系统ID
+    * targetId  绑定关系ID
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class UpdateObsTargetAttributesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * shareId  文件系统id
-    * targetId  绑定关系id
+    * shareId  文件系统ID
+    * targetId  绑定关系ID
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class UpdateObsTargetAttributesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * shareId  文件系统id
-    * targetId  绑定关系id
+    * shareId  文件系统ID
+    * targetId  绑定关系ID
     * body  body
     *
     * @var string[]
@@ -202,7 +202,7 @@ class UpdateObsTargetAttributesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets shareId
-    *  文件系统id
+    *  文件系统ID
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class UpdateObsTargetAttributesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets shareId
     *
-    * @param string $shareId 文件系统id
+    * @param string $shareId 文件系统ID
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class UpdateObsTargetAttributesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetId
-    *  绑定关系id
+    *  绑定关系ID
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class UpdateObsTargetAttributesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets targetId
     *
-    * @param string $targetId 绑定关系id
+    * @param string $targetId 绑定关系ID
     *
     * @return $this
     */

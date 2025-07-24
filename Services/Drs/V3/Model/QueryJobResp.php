@@ -45,7 +45,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * filterDdlPolicy  过滤DDL策略 - drop_database：过滤drop_database - drop_databasefilter_all：过滤所有ddl - \"\"：不过滤
     * speedLimit  迁移速度限制。
     * schemaType  迁移方案 - Replication-主从复制 - Tungsten-日志解析 - PGBaseBackup-PG备份
-    * nodeNum  节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
+    * nodeNum  节点个数。
     * objectSwitch  对象选择开关
     * masterJobId  主任务Id。
     * fullMode  全量快照模式。
@@ -175,7 +175,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * filterDdlPolicy  过滤DDL策略 - drop_database：过滤drop_database - drop_databasefilter_all：过滤所有ddl - \"\"：不过滤
     * speedLimit  迁移速度限制。
     * schemaType  迁移方案 - Replication-主从复制 - Tungsten-日志解析 - PGBaseBackup-PG备份
-    * nodeNum  节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
+    * nodeNum  节点个数。
     * objectSwitch  对象选择开关
     * masterJobId  主任务Id。
     * fullMode  全量快照模式。
@@ -326,7 +326,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * filterDdlPolicy  过滤DDL策略 - drop_database：过滤drop_database - drop_databasefilter_all：过滤所有ddl - \"\"：不过滤
     * speedLimit  迁移速度限制。
     * schemaType  迁移方案 - Replication-主从复制 - Tungsten-日志解析 - PGBaseBackup-PG备份
-    * nodeNum  节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
+    * nodeNum  节点个数。
     * objectSwitch  对象选择开关
     * masterJobId  主任务Id。
     * fullMode  全量快照模式。
@@ -456,7 +456,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * filterDdlPolicy  过滤DDL策略 - drop_database：过滤drop_database - drop_databasefilter_all：过滤所有ddl - \"\"：不过滤
     * speedLimit  迁移速度限制。
     * schemaType  迁移方案 - Replication-主从复制 - Tungsten-日志解析 - PGBaseBackup-PG备份
-    * nodeNum  节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
+    * nodeNum  节点个数。
     * objectSwitch  对象选择开关
     * masterJobId  主任务Id。
     * fullMode  全量快照模式。
@@ -586,7 +586,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * filterDdlPolicy  过滤DDL策略 - drop_database：过滤drop_database - drop_databasefilter_all：过滤所有ddl - \"\"：不过滤
     * speedLimit  迁移速度限制。
     * schemaType  迁移方案 - Replication-主从复制 - Tungsten-日志解析 - PGBaseBackup-PG备份
-    * nodeNum  节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
+    * nodeNum  节点个数。
     * objectSwitch  对象选择开关
     * masterJobId  主任务Id。
     * fullMode  全量快照模式。
@@ -1062,11 +1062,8 @@ class QueryJobResp implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['nodeNum']) && ($this->container['nodeNum'] > 32)) {
-                $invalidProperties[] = "invalid value for 'nodeNum', must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['nodeNum']) && ($this->container['nodeNum'] < 1)) {
-                $invalidProperties[] = "invalid value for 'nodeNum', must be bigger than or equal to 1.";
+            if (!is_null($this->container['nodeNum']) && ($this->container['nodeNum'] < 0)) {
+                $invalidProperties[] = "invalid value for 'nodeNum', must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getOriginalJobDirectionAllowableValues();
                 if (!is_null($this->container['originalJobDirection']) && !in_array($this->container['originalJobDirection'], $allowedValues, true)) {
@@ -1692,7 +1689,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeNum
-    *  节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
+    *  节点个数。
     *
     * @return int|null
     */
@@ -1704,7 +1701,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets nodeNum
     *
-    * @param int|null $nodeNum 节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
+    * @param int|null $nodeNum 节点个数。
     *
     * @return $this
     */

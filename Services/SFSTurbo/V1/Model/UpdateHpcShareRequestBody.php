@@ -20,7 +20,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  更新文件系统的操作类型。当前仅支持取值 config_gc_time
+    * action  更新文件系统的操作类型。当前仅支持取值 config_gc_time。
     * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。系统默认为 60 小时
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  更新文件系统的操作类型。当前仅支持取值 config_gc_time
+    * action  更新文件系统的操作类型。当前仅支持取值 config_gc_time。
     * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。系统默认为 60 小时
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  更新文件系统的操作类型。当前仅支持取值 config_gc_time
+    * action  更新文件系统的操作类型。当前仅支持取值 config_gc_time。
     * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。系统默认为 60 小时
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  更新文件系统的操作类型。当前仅支持取值 config_gc_time
+    * action  更新文件系统的操作类型。当前仅支持取值 config_gc_time。
     * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。系统默认为 60 小时
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  更新文件系统的操作类型。当前仅支持取值 config_gc_time
+    * action  更新文件系统的操作类型。当前仅支持取值 config_gc_time。
     * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。系统默认为 60 小时
     *
     * @var string[]
@@ -191,7 +191,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  更新文件系统的操作类型。当前仅支持取值 config_gc_time
+    *  更新文件系统的操作类型。当前仅支持取值 config_gc_time。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 更新文件系统的操作类型。当前仅支持取值 config_gc_time
+    * @param string $action 更新文件系统的操作类型。当前仅支持取值 config_gc_time。
     *
     * @return $this
     */

@@ -26,6 +26,7 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
     * dirUsage  dirUsage
     * beginTime  任务开始时间，UTC时间，例如：2006-01-02 15:04:05'
     * endTime  任务结束时间，UTC时间，例如：2006-01-02 15:04:06'
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -34,7 +35,8 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
             'status' => 'string',
             'dirUsage' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\FsDuInfo',
             'beginTime' => 'string',
-            'endTime' => 'string'
+            'endTime' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
@@ -44,6 +46,7 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
     * dirUsage  dirUsage
     * beginTime  任务开始时间，UTC时间，例如：2006-01-02 15:04:05'
     * endTime  任务结束时间，UTC时间，例如：2006-01-02 15:04:06'
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -52,7 +55,8 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
         'status' => null,
         'dirUsage' => null,
         'beginTime' => null,
-        'endTime' => null
+        'endTime' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -83,6 +87,7 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
     * dirUsage  dirUsage
     * beginTime  任务开始时间，UTC时间，例如：2006-01-02 15:04:05'
     * endTime  任务结束时间，UTC时间，例如：2006-01-02 15:04:06'
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -91,7 +96,8 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
             'status' => 'status',
             'dirUsage' => 'dir_usage',
             'beginTime' => 'begin_time',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'xRequestId' => 'X-request-id'
     ];
 
     /**
@@ -101,6 +107,7 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
     * dirUsage  dirUsage
     * beginTime  任务开始时间，UTC时间，例如：2006-01-02 15:04:05'
     * endTime  任务结束时间，UTC时间，例如：2006-01-02 15:04:06'
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -109,7 +116,8 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'dirUsage' => 'setDirUsage',
             'beginTime' => 'setBeginTime',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
@@ -119,6 +127,7 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
     * dirUsage  dirUsage
     * beginTime  任务开始时间，UTC时间，例如：2006-01-02 15:04:05'
     * endTime  任务结束时间，UTC时间，例如：2006-01-02 15:04:06'
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -127,7 +136,8 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'dirUsage' => 'getDirUsage',
             'beginTime' => 'getBeginTime',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -210,6 +220,7 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
         $this->container['dirUsage'] = isset($data['dirUsage']) ? $data['dirUsage'] : null;
         $this->container['beginTime'] = isset($data['beginTime']) ? $data['beginTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -365,6 +376,30 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

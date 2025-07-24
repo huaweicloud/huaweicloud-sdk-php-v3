@@ -21,8 +21,8 @@ class CreateFsDirQuotaRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * path  合法的已存在的目录的全路径
-    * capacity  目录的容量大小，单位：MB; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
-    * inode  目录的inode数量限制; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
+    * capacity  目录的容量大小，单位：MB; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
+    * inode  目录的inode数量限制; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class CreateFsDirQuotaRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * path  合法的已存在的目录的全路径
-    * capacity  目录的容量大小，单位：MB; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
-    * inode  目录的inode数量限制; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
+    * capacity  目录的容量大小，单位：MB; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
+    * inode  目录的inode数量限制; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class CreateFsDirQuotaRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * path  合法的已存在的目录的全路径
-    * capacity  目录的容量大小，单位：MB; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
-    * inode  目录的inode数量限制; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
+    * capacity  目录的容量大小，单位：MB; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
+    * inode  目录的inode数量限制; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class CreateFsDirQuotaRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * path  合法的已存在的目录的全路径
-    * capacity  目录的容量大小，单位：MB; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
-    * inode  目录的inode数量限制; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
+    * capacity  目录的容量大小，单位：MB; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
+    * inode  目录的inode数量限制; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class CreateFsDirQuotaRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * path  合法的已存在的目录的全路径
-    * capacity  目录的容量大小，单位：MB; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
-    * inode  目录的inode数量限制; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
+    * capacity  目录的容量大小，单位：MB; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
+    * inode  目录的inode数量限制; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
     *
     * @var string[]
     */
@@ -223,7 +223,7 @@ class CreateFsDirQuotaRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets capacity
-    *  目录的容量大小，单位：MB; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
+    *  目录的容量大小，单位：MB; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
     *
     * @return int|null
     */
@@ -235,7 +235,7 @@ class CreateFsDirQuotaRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets capacity
     *
-    * @param int|null $capacity 目录的容量大小，单位：MB; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
+    * @param int|null $capacity 目录的容量大小，单位：MB; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class CreateFsDirQuotaRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets inode
-    *  目录的inode数量限制; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
+    *  目录的inode数量限制; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
     *
     * @return int|null
     */
@@ -259,7 +259,7 @@ class CreateFsDirQuotaRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets inode
     *
-    * @param int|null $inode 目录的inode数量限制; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
+    * @param int|null $inode 目录的inode数量限制; 不填写则默认为0，会导致数据无法写入目录; capacity和quota至少二选一。
     *
     * @return $this
     */

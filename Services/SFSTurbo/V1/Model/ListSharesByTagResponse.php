@@ -22,7 +22,7 @@ class ListSharesByTagResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resources  通过标签查询文件系统的资源列表
-    * totalCount  设置返回的文件系统的偏移量
+    * totalCount  返回的文件系统的总量
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ListSharesByTagResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resources  通过标签查询文件系统的资源列表
-    * totalCount  设置返回的文件系统的偏移量
+    * totalCount  返回的文件系统的总量
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListSharesByTagResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resources  通过标签查询文件系统的资源列表
-    * totalCount  设置返回的文件系统的偏移量
+    * totalCount  返回的文件系统的总量
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListSharesByTagResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resources  通过标签查询文件系统的资源列表
-    * totalCount  设置返回的文件系统的偏移量
+    * totalCount  返回的文件系统的总量
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListSharesByTagResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resources  通过标签查询文件系统的资源列表
-    * totalCount  设置返回的文件系统的偏移量
+    * totalCount  返回的文件系统的总量
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -221,7 +221,7 @@ class ListSharesByTagResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  设置返回的文件系统的偏移量
+    *  返回的文件系统的总量
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ListSharesByTagResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount 设置返回的文件系统的偏移量
+    * @param int|null $totalCount 返回的文件系统的总量
     *
     * @return $this
     */

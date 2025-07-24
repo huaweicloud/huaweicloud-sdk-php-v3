@@ -158,6 +158,9 @@ class RestAllowAudienceReqBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['allowAudience'] === null) {
+            $invalidProperties[] = "'allowAudience' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class RestAllowAudienceReqBody implements ModelInterface, ArrayAccess
     * Gets allowAudience
     *  主持人是否允许入会 1：允许入会
     *
-    * @return int|null
+    * @return int
     */
     public function getAllowAudience()
     {
@@ -186,7 +189,7 @@ class RestAllowAudienceReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets allowAudience
     *
-    * @param int|null $allowAudience 主持人是否允许入会 1：允许入会
+    * @param int $allowAudience 主持人是否允许入会 1：允许入会
     *
     * @return $this
     */

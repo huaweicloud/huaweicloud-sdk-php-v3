@@ -24,6 +24,7 @@ class NetworkInterfaces implements ModelInterface, ArrayAccess
     * primary  是否是主网卡
     * ipAddresses  ipv4地址
     * ipv6Addresses  ipv6地址
+    * subnetId  子网id
     * association  association
     *
     * @var string[]
@@ -33,6 +34,7 @@ class NetworkInterfaces implements ModelInterface, ArrayAccess
             'primary' => 'bool',
             'ipAddresses' => 'string[]',
             'ipv6Addresses' => 'string[]',
+            'subnetId' => 'string',
             'association' => '\HuaweiCloud\SDK\Ecs\V2\Model\Association'
     ];
 
@@ -42,6 +44,7 @@ class NetworkInterfaces implements ModelInterface, ArrayAccess
     * primary  是否是主网卡
     * ipAddresses  ipv4地址
     * ipv6Addresses  ipv6地址
+    * subnetId  子网id
     * association  association
     *
     * @var string[]
@@ -51,6 +54,7 @@ class NetworkInterfaces implements ModelInterface, ArrayAccess
         'primary' => null,
         'ipAddresses' => null,
         'ipv6Addresses' => null,
+        'subnetId' => null,
         'association' => null
     ];
 
@@ -81,6 +85,7 @@ class NetworkInterfaces implements ModelInterface, ArrayAccess
     * primary  是否是主网卡
     * ipAddresses  ipv4地址
     * ipv6Addresses  ipv6地址
+    * subnetId  子网id
     * association  association
     *
     * @var string[]
@@ -90,6 +95,7 @@ class NetworkInterfaces implements ModelInterface, ArrayAccess
             'primary' => 'primary',
             'ipAddresses' => 'ip_addresses',
             'ipv6Addresses' => 'ipv6_addresses',
+            'subnetId' => 'subnet_id',
             'association' => 'association'
     ];
 
@@ -99,6 +105,7 @@ class NetworkInterfaces implements ModelInterface, ArrayAccess
     * primary  是否是主网卡
     * ipAddresses  ipv4地址
     * ipv6Addresses  ipv6地址
+    * subnetId  子网id
     * association  association
     *
     * @var string[]
@@ -108,6 +115,7 @@ class NetworkInterfaces implements ModelInterface, ArrayAccess
             'primary' => 'setPrimary',
             'ipAddresses' => 'setIpAddresses',
             'ipv6Addresses' => 'setIpv6Addresses',
+            'subnetId' => 'setSubnetId',
             'association' => 'setAssociation'
     ];
 
@@ -117,6 +125,7 @@ class NetworkInterfaces implements ModelInterface, ArrayAccess
     * primary  是否是主网卡
     * ipAddresses  ipv4地址
     * ipv6Addresses  ipv6地址
+    * subnetId  子网id
     * association  association
     *
     * @var string[]
@@ -126,6 +135,7 @@ class NetworkInterfaces implements ModelInterface, ArrayAccess
             'primary' => 'getPrimary',
             'ipAddresses' => 'getIpAddresses',
             'ipv6Addresses' => 'getIpv6Addresses',
+            'subnetId' => 'getSubnetId',
             'association' => 'getAssociation'
     ];
 
@@ -191,6 +201,7 @@ class NetworkInterfaces implements ModelInterface, ArrayAccess
         $this->container['primary'] = isset($data['primary']) ? $data['primary'] : null;
         $this->container['ipAddresses'] = isset($data['ipAddresses']) ? $data['ipAddresses'] : null;
         $this->container['ipv6Addresses'] = isset($data['ipv6Addresses']) ? $data['ipv6Addresses'] : null;
+        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['association'] = isset($data['association']) ? $data['association'] : null;
     }
 
@@ -309,6 +320,30 @@ class NetworkInterfaces implements ModelInterface, ArrayAccess
     public function setIpv6Addresses($ipv6Addresses)
     {
         $this->container['ipv6Addresses'] = $ipv6Addresses;
+        return $this;
+    }
+
+    /**
+    * Gets subnetId
+    *  子网id
+    *
+    * @return string|null
+    */
+    public function getSubnetId()
+    {
+        return $this->container['subnetId'];
+    }
+
+    /**
+    * Sets subnetId
+    *
+    * @param string|null $subnetId 子网id
+    *
+    * @return $this
+    */
+    public function setSubnetId($subnetId)
+    {
+        $this->container['subnetId'] = $subnetId;
         return $this;
     }
 

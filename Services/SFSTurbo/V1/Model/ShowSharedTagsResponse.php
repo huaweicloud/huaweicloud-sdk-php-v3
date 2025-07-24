@@ -22,25 +22,21 @@ class ShowSharedTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * tags  tag标签的列表。
-    * sysTags  仅op_service权限才可以获取此字段。  1.  目前只包含一个resource_tag结构体 key：_sys_enterprise_project_id  2.  目前key下面只包含一个value，0表示默认企业项目。  非op_service场景不能返回此字段。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]',
-            'sysTags' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]'
+            'tags' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * tags  tag标签的列表。
-    * sysTags  仅op_service权限才可以获取此字段。  1.  目前只包含一个resource_tag结构体 key：_sys_enterprise_project_id  2.  目前key下面只包含一个value，0表示默认企业项目。  非op_service场景不能返回此字段。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'tags' => null,
-        'sysTags' => null
+        'tags' => null
     ];
 
     /**
@@ -67,37 +63,31 @@ class ShowSharedTagsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * tags  tag标签的列表。
-    * sysTags  仅op_service权限才可以获取此字段。  1.  目前只包含一个resource_tag结构体 key：_sys_enterprise_project_id  2.  目前key下面只包含一个value，0表示默认企业项目。  非op_service场景不能返回此字段。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'tags' => 'tags',
-            'sysTags' => 'sys_tags'
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * tags  tag标签的列表。
-    * sysTags  仅op_service权限才可以获取此字段。  1.  目前只包含一个resource_tag结构体 key：_sys_enterprise_project_id  2.  目前key下面只包含一个value，0表示默认企业项目。  非op_service场景不能返回此字段。
     *
     * @var string[]
     */
     protected static $setters = [
-            'tags' => 'setTags',
-            'sysTags' => 'setSysTags'
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * tags  tag标签的列表。
-    * sysTags  仅op_service权限才可以获取此字段。  1.  目前只包含一个resource_tag结构体 key：_sys_enterprise_project_id  2.  目前key下面只包含一个value，0表示默认企业项目。  非op_service场景不能返回此字段。
     *
     * @var string[]
     */
     protected static $getters = [
-            'tags' => 'getTags',
-            'sysTags' => 'getSysTags'
+            'tags' => 'getTags'
     ];
 
     /**
@@ -159,7 +149,6 @@ class ShowSharedTagsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
     }
 
     /**
@@ -205,30 +194,6 @@ class ShowSharedTagsResponse implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets sysTags
-    *  仅op_service权限才可以获取此字段。  1.  目前只包含一个resource_tag结构体 key：_sys_enterprise_project_id  2.  目前key下面只包含一个value，0表示默认企业项目。  非op_service场景不能返回此字段。
-    *
-    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]|null
-    */
-    public function getSysTags()
-    {
-        return $this->container['sysTags'];
-    }
-
-    /**
-    * Sets sysTags
-    *
-    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]|null $sysTags 仅op_service权限才可以获取此字段。  1.  目前只包含一个resource_tag结构体 key：_sys_enterprise_project_id  2.  目前key下面只包含一个value，0表示默认企业项目。  非op_service场景不能返回此字段。
-    *
-    * @return $this
-    */
-    public function setSysTags($sysTags)
-    {
-        $this->container['sysTags'] = $sysTags;
         return $this;
     }
 

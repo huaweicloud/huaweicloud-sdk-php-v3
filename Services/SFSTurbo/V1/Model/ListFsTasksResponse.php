@@ -22,21 +22,25 @@ class ListFsTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * tasks  任务列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tasks' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\OneFsTaskResp[]'
+            'tasks' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\OneFsTaskResp[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * tasks  任务列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'tasks' => null
+        'tasks' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListFsTasksResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * tasks  任务列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'tasks' => 'tasks'
+            'tasks' => 'tasks',
+            'xRequestId' => 'X-request-id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * tasks  任务列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'tasks' => 'setTasks'
+            'tasks' => 'setTasks',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * tasks  任务列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'tasks' => 'getTasks'
+            'tasks' => 'getTasks',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListFsTasksResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['tasks'] = isset($data['tasks']) ? $data['tasks'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListFsTasksResponse implements ModelInterface, ArrayAccess
     public function setTasks($tasks)
     {
         $this->container['tasks'] = $tasks;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

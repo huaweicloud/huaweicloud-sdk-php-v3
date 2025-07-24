@@ -21,29 +21,25 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * action  操作标识，取值范围为：create。 为指定共享批量添加标签时使用create。
-    * tags  标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
-    * sysTags  系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
+    * tags  标签列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'action' => 'string',
-            'tags' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]',
-            'sysTags' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]'
+            'tags' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  操作标识，取值范围为：create。 为指定共享批量添加标签时使用create。
-    * tags  标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
-    * sysTags  系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
+    * tags  标签列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'action' => null,
-        'tags' => null,
-        'sysTags' => null
+        'tags' => null
     ];
 
     /**
@@ -70,43 +66,37 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * action  操作标识，取值范围为：create。 为指定共享批量添加标签时使用create。
-    * tags  标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
-    * sysTags  系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
+    * tags  标签列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'action' => 'action',
-            'tags' => 'tags',
-            'sysTags' => 'sys_tags'
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  操作标识，取值范围为：create。 为指定共享批量添加标签时使用create。
-    * tags  标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
-    * sysTags  系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
+    * tags  标签列表。
     *
     * @var string[]
     */
     protected static $setters = [
             'action' => 'setAction',
-            'tags' => 'setTags',
-            'sysTags' => 'setSysTags'
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  操作标识，取值范围为：create。 为指定共享批量添加标签时使用create。
-    * tags  标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
-    * sysTags  系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
+    * tags  标签列表。
     *
     * @var string[]
     */
     protected static $getters = [
             'action' => 'getAction',
-            'tags' => 'getTags',
-            'sysTags' => 'getSysTags'
+            'tags' => 'getTags'
     ];
 
     /**
@@ -182,7 +172,6 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
     }
 
     /**
@@ -204,6 +193,9 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -244,9 +236,9 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
+    *  标签列表。
     *
-    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]|null
+    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]
     */
     public function getTags()
     {
@@ -256,37 +248,13 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]|null $tags 标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[] $tags 标签列表。
     *
     * @return $this
     */
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets sysTags
-    *  系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
-    *
-    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]|null
-    */
-    public function getSysTags()
-    {
-        return $this->container['sysTags'];
-    }
-
-    /**
-    * Sets sysTags
-    *
-    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]|null $sysTags 系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
-    *
-    * @return $this
-    */
-    public function setSysTags($sysTags)
-    {
-        $this->container['sysTags'] = $sysTags;
         return $this;
     }
 

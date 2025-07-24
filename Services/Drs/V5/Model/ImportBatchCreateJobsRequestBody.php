@@ -21,21 +21,25 @@ class ImportBatchCreateJobsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * file  待上传的模板文件。
+    * type  任务类型，迁移，同步，灾备等。 - migration - sync - cloudDataGuard
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'file' => '\SplFileObject'
+            'file' => '\SplFileObject',
+            'type' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * file  待上传的模板文件。
+    * type  任务类型，迁移，同步，灾备等。 - migration - sync - cloudDataGuard
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'file' => 'binary'
+        'file' => 'binary',
+        'type' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ImportBatchCreateJobsRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * file  待上传的模板文件。
+    * type  任务类型，迁移，同步，灾备等。 - migration - sync - cloudDataGuard
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'file' => 'file'
+            'file' => 'file',
+            'type' => 'type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * file  待上传的模板文件。
+    * type  任务类型，迁移，同步，灾备等。 - migration - sync - cloudDataGuard
     *
     * @var string[]
     */
     protected static $setters = [
-            'file' => 'setFile'
+            'file' => 'setFile',
+            'type' => 'setType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * file  待上传的模板文件。
+    * type  任务类型，迁移，同步，灾备等。 - migration - sync - cloudDataGuard
     *
     * @var string[]
     */
     protected static $getters = [
-            'file' => 'getFile'
+            'file' => 'getFile',
+            'type' => 'getType'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ImportBatchCreateJobsRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['file'] = isset($data['file']) ? $data['file'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class ImportBatchCreateJobsRequestBody implements ModelInterface, ArrayAccess
     public function setFile($file)
     {
         $this->container['file'] = $file;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  任务类型，迁移，同步，灾备等。 - migration - sync - cloudDataGuard
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 任务类型，迁移，同步，灾备等。 - migration - sync - cloudDataGuard
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

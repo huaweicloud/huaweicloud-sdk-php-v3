@@ -158,6 +158,9 @@ class PauseConferenceReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['pause'] === null) {
+            $invalidProperties[] = "'pause' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class PauseConferenceReq implements ModelInterface, ArrayAccess
     * Gets pause
     *  主持人暂停/取消暂停会议 0：会议正常 1：会议暂停
     *
-    * @return int|null
+    * @return int
     */
     public function getPause()
     {
@@ -186,7 +189,7 @@ class PauseConferenceReq implements ModelInterface, ArrayAccess
     /**
     * Sets pause
     *
-    * @param int|null $pause 主持人暂停/取消暂停会议 0：会议正常 1：会议暂停
+    * @param int $pause 主持人暂停/取消暂停会议 0：会议正常 1：会议暂停
     *
     * @return $this
     */

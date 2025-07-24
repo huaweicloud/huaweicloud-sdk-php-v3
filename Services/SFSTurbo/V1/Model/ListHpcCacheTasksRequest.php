@@ -24,7 +24,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     * type  任务类型
     * status  任务状态
     * offset  offset，默认值为 0
-    * limit  limit，默认值为 20
+    * limit  limit，默认值为 1000
     * startTime  start_time
     * endTime  end_time
     *
@@ -46,7 +46,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     * type  任务类型
     * status  任务状态
     * offset  offset，默认值为 0
-    * limit  limit，默认值为 20
+    * limit  limit，默认值为 1000
     * startTime  start_time
     * endTime  end_time
     *
@@ -89,7 +89,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     * type  任务类型
     * status  任务状态
     * offset  offset，默认值为 0
-    * limit  limit，默认值为 20
+    * limit  limit，默认值为 1000
     * startTime  start_time
     * endTime  end_time
     *
@@ -111,7 +111,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     * type  任务类型
     * status  任务状态
     * offset  offset，默认值为 0
-    * limit  limit，默认值为 20
+    * limit  limit，默认值为 1000
     * startTime  start_time
     * endTime  end_time
     *
@@ -133,7 +133,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     * type  任务类型
     * status  任务状态
     * offset  offset，默认值为 0
-    * limit  limit，默认值为 20
+    * limit  limit，默认值为 1000
     * startTime  start_time
     * endTime  end_time
     *
@@ -339,7 +339,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  limit，默认值为 20
+    *  limit，默认值为 1000
     *
     * @return int|null
     */
@@ -351,7 +351,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit，默认值为 20
+    * @param int|null $limit limit，默认值为 1000
     *
     * @return $this
     */

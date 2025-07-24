@@ -180,6 +180,15 @@ class OnePermRuleRequestInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['ipCidr'] === null) {
+            $invalidProperties[] = "'ipCidr' can't be null";
+        }
+        if ($this->container['rwType'] === null) {
+            $invalidProperties[] = "'rwType' can't be null";
+        }
+        if ($this->container['userType'] === null) {
+            $invalidProperties[] = "'userType' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -198,7 +207,7 @@ class OnePermRuleRequestInfo implements ModelInterface, ArrayAccess
     * Gets ipCidr
     *  授权对象的IP地址或网段，设置后不支持修改
     *
-    * @return string|null
+    * @return string
     */
     public function getIpCidr()
     {
@@ -208,7 +217,7 @@ class OnePermRuleRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ipCidr
     *
-    * @param string|null $ipCidr 授权对象的IP地址或网段，设置后不支持修改
+    * @param string $ipCidr 授权对象的IP地址或网段，设置后不支持修改
     *
     * @return $this
     */
@@ -222,7 +231,7 @@ class OnePermRuleRequestInfo implements ModelInterface, ArrayAccess
     * Gets rwType
     *  授权对象的读写权限   - rw：默认选项，以读写的方式共享   - ro：以只读的方式共享   - none: 没有权限
     *
-    * @return string|null
+    * @return string
     */
     public function getRwType()
     {
@@ -232,7 +241,7 @@ class OnePermRuleRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rwType
     *
-    * @param string|null $rwType 授权对象的读写权限   - rw：默认选项，以读写的方式共享   - ro：以只读的方式共享   - none: 没有权限
+    * @param string $rwType 授权对象的读写权限   - rw：默认选项，以读写的方式共享   - ro：以只读的方式共享   - none: 没有权限
     *
     * @return $this
     */
@@ -246,7 +255,7 @@ class OnePermRuleRequestInfo implements ModelInterface, ArrayAccess
     * Gets userType
     *  授权对象的系统用户对文件系统的访问权限。取值如下：  - no_root_squash：默认选项。客户端使用包括root用户在内的任何用户，NFS服务器都保持客户端使用的用户，不做映射。  - root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。客户端使用非root用户时，NFS服务器保持客户端使用的用户，不做映射。  - all_squash：所有访问NFS服务器的客户端的用户都映射为匿名用户。
     *
-    * @return string|null
+    * @return string
     */
     public function getUserType()
     {
@@ -256,7 +265,7 @@ class OnePermRuleRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userType
     *
-    * @param string|null $userType 授权对象的系统用户对文件系统的访问权限。取值如下：  - no_root_squash：默认选项。客户端使用包括root用户在内的任何用户，NFS服务器都保持客户端使用的用户，不做映射。  - root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。客户端使用非root用户时，NFS服务器保持客户端使用的用户，不做映射。  - all_squash：所有访问NFS服务器的客户端的用户都映射为匿名用户。
+    * @param string $userType 授权对象的系统用户对文件系统的访问权限。取值如下：  - no_root_squash：默认选项。客户端使用包括root用户在内的任何用户，NFS服务器都保持客户端使用的用户，不做映射。  - root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。客户端使用非root用户时，NFS服务器保持客户端使用的用户，不做映射。  - all_squash：所有访问NFS服务器的客户端的用户都映射为匿名用户。
     *
     * @return $this
     */

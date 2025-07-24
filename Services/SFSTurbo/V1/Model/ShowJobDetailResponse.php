@@ -21,14 +21,14 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行
+    * status  job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行。
     * jobId  job的ID。
     * jobType  job的类型。
-    * beginTime  job开始时间。UTC时间，格式：'2016-01-02 15:04:05'
-    * endTime  job结束时间。UTC时间，格式：'2016-01-02 15:04:05'
-    * errorCode  job执行失败时的错误码
-    * failReason  job执行失败时的错误原因
-    * subJobs  子任务列表
+    * beginTime  job开始时间。UTC时间，格式：'2016-01-02 15:04:05'。
+    * endTime  job结束时间。UTC时间，格式：'2016-01-02 15:04:05'。
+    * errorCode  job执行失败时的错误码。
+    * failReason  job执行失败时的错误原因。
+    * subJobs  子任务列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -47,14 +47,14 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行
+    * status  job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行。
     * jobId  job的ID。
     * jobType  job的类型。
-    * beginTime  job开始时间。UTC时间，格式：'2016-01-02 15:04:05'
-    * endTime  job结束时间。UTC时间，格式：'2016-01-02 15:04:05'
-    * errorCode  job执行失败时的错误码
-    * failReason  job执行失败时的错误原因
-    * subJobs  子任务列表
+    * beginTime  job开始时间。UTC时间，格式：'2016-01-02 15:04:05'。
+    * endTime  job结束时间。UTC时间，格式：'2016-01-02 15:04:05'。
+    * errorCode  job执行失败时的错误码。
+    * failReason  job执行失败时的错误原因。
+    * subJobs  子任务列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -94,14 +94,14 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行
+    * status  job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行。
     * jobId  job的ID。
     * jobType  job的类型。
-    * beginTime  job开始时间。UTC时间，格式：'2016-01-02 15:04:05'
-    * endTime  job结束时间。UTC时间，格式：'2016-01-02 15:04:05'
-    * errorCode  job执行失败时的错误码
-    * failReason  job执行失败时的错误原因
-    * subJobs  子任务列表
+    * beginTime  job开始时间。UTC时间，格式：'2016-01-02 15:04:05'。
+    * endTime  job结束时间。UTC时间，格式：'2016-01-02 15:04:05'。
+    * errorCode  job执行失败时的错误码。
+    * failReason  job执行失败时的错误原因。
+    * subJobs  子任务列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -120,14 +120,14 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行
+    * status  job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行。
     * jobId  job的ID。
     * jobType  job的类型。
-    * beginTime  job开始时间。UTC时间，格式：'2016-01-02 15:04:05'
-    * endTime  job结束时间。UTC时间，格式：'2016-01-02 15:04:05'
-    * errorCode  job执行失败时的错误码
-    * failReason  job执行失败时的错误原因
-    * subJobs  子任务列表
+    * beginTime  job开始时间。UTC时间，格式：'2016-01-02 15:04:05'。
+    * endTime  job结束时间。UTC时间，格式：'2016-01-02 15:04:05'。
+    * errorCode  job执行失败时的错误码。
+    * failReason  job执行失败时的错误原因。
+    * subJobs  子任务列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -146,14 +146,14 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行
+    * status  job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行。
     * jobId  job的ID。
     * jobType  job的类型。
-    * beginTime  job开始时间。UTC时间，格式：'2016-01-02 15:04:05'
-    * endTime  job结束时间。UTC时间，格式：'2016-01-02 15:04:05'
-    * errorCode  job执行失败时的错误码
-    * failReason  job执行失败时的错误原因
-    * subJobs  子任务列表
+    * beginTime  job开始时间。UTC时间，格式：'2016-01-02 15:04:05'。
+    * endTime  job结束时间。UTC时间，格式：'2016-01-02 15:04:05'。
+    * errorCode  job执行失败时的错误码。
+    * failReason  job执行失败时的错误原因。
+    * subJobs  子任务列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -290,7 +290,7 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行
+    *  job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行
+    * @param string|null $status job的状态。success：成功。running：运行中。failed：失败。waiting：等待执行。
     *
     * @return $this
     */
@@ -362,7 +362,7 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  job开始时间。UTC时间，格式：'2016-01-02 15:04:05'
+    *  job开始时间。UTC时间，格式：'2016-01-02 15:04:05'。
     *
     * @return string|null
     */
@@ -374,7 +374,7 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param string|null $beginTime job开始时间。UTC时间，格式：'2016-01-02 15:04:05'
+    * @param string|null $beginTime job开始时间。UTC时间，格式：'2016-01-02 15:04:05'。
     *
     * @return $this
     */
@@ -386,7 +386,7 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  job结束时间。UTC时间，格式：'2016-01-02 15:04:05'
+    *  job结束时间。UTC时间，格式：'2016-01-02 15:04:05'。
     *
     * @return string|null
     */
@@ -398,7 +398,7 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime job结束时间。UTC时间，格式：'2016-01-02 15:04:05'
+    * @param string|null $endTime job结束时间。UTC时间，格式：'2016-01-02 15:04:05'。
     *
     * @return $this
     */
@@ -410,7 +410,7 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  job执行失败时的错误码
+    *  job执行失败时的错误码。
     *
     * @return string|null
     */
@@ -422,7 +422,7 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode job执行失败时的错误码
+    * @param string|null $errorCode job执行失败时的错误码。
     *
     * @return $this
     */
@@ -434,7 +434,7 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets failReason
-    *  job执行失败时的错误原因
+    *  job执行失败时的错误原因。
     *
     * @return string|null
     */
@@ -446,7 +446,7 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets failReason
     *
-    * @param string|null $failReason job执行失败时的错误原因
+    * @param string|null $failReason job执行失败时的错误原因。
     *
     * @return $this
     */
@@ -458,7 +458,7 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subJobs
-    *  子任务列表
+    *  子任务列表。
     *
     * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\GetSubJobDetail[]|null
     */
@@ -470,7 +470,7 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subJobs
     *
-    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\GetSubJobDetail[]|null $subJobs 子任务列表
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\GetSubJobDetail[]|null $subJobs 子任务列表。
     *
     * @return $this
     */

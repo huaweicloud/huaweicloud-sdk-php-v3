@@ -20,7 +20,7 @@ class UpdatePermRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * shareId  文件系统id
+    * shareId  文件系统ID
     * ruleId  权限规则id
     * body  body
     *
@@ -29,12 +29,12 @@ class UpdatePermRuleRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'shareId' => 'string',
             'ruleId' => 'string',
-            'body' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\OnePermRuleRequestInfo'
+            'body' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateOnePermRuleRequestInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * shareId  文件系统id
+    * shareId  文件系统ID
     * ruleId  权限规则id
     * body  body
     *
@@ -69,7 +69,7 @@ class UpdatePermRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * shareId  文件系统id
+    * shareId  文件系统ID
     * ruleId  权限规则id
     * body  body
     *
@@ -83,7 +83,7 @@ class UpdatePermRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * shareId  文件系统id
+    * shareId  文件系统ID
     * ruleId  权限规则id
     * body  body
     *
@@ -97,7 +97,7 @@ class UpdatePermRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * shareId  文件系统id
+    * shareId  文件系统ID
     * ruleId  权限规则id
     * body  body
     *
@@ -202,7 +202,7 @@ class UpdatePermRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets shareId
-    *  文件系统id
+    *  文件系统ID
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class UpdatePermRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets shareId
     *
-    * @param string $shareId 文件系统id
+    * @param string $shareId 文件系统ID
     *
     * @return $this
     */
@@ -252,7 +252,7 @@ class UpdatePermRuleRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\OnePermRuleRequestInfo|null
+    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateOnePermRuleRequestInfo|null
     */
     public function getBody()
     {
@@ -262,7 +262,7 @@ class UpdatePermRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\OnePermRuleRequestInfo|null $body body
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateOnePermRuleRequestInfo|null $body body
     *
     * @return $this
     */

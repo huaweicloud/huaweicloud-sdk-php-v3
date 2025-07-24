@@ -22,21 +22,25 @@ class CreateFsTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * taskId  任务ID
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'taskId' => 'string'
+            'taskId' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * taskId  任务ID
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'taskId' => null
+        'taskId' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class CreateFsTaskResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * taskId  任务ID
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'taskId' => 'task_id'
+            'taskId' => 'task_id',
+            'xRequestId' => 'X-request-id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * taskId  任务ID
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'taskId' => 'setTaskId'
+            'taskId' => 'setTaskId',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * taskId  任务ID
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'taskId' => 'getTaskId'
+            'taskId' => 'getTaskId',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class CreateFsTaskResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class CreateFsTaskResponse implements ModelInterface, ArrayAccess
     public function setTaskId($taskId)
     {
         $this->container['taskId'] = $taskId;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

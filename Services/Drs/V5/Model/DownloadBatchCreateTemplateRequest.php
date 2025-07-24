@@ -21,21 +21,25 @@ class DownloadBatchCreateTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  请求语言类型。
+    * engineType  数据库引擎。 - postgresql
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'xLanguage' => 'string'
+            'xLanguage' => 'string',
+            'engineType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  请求语言类型。
+    * engineType  数据库引擎。 - postgresql
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'xLanguage' => null
+        'xLanguage' => null,
+        'engineType' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class DownloadBatchCreateTemplateRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * xLanguage  请求语言类型。
+    * engineType  数据库引擎。 - postgresql
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'xLanguage' => 'X-Language'
+            'xLanguage' => 'X-Language',
+            'engineType' => 'engine_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  请求语言类型。
+    * engineType  数据库引擎。 - postgresql
     *
     * @var string[]
     */
     protected static $setters = [
-            'xLanguage' => 'setXLanguage'
+            'xLanguage' => 'setXLanguage',
+            'engineType' => 'setEngineType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  请求语言类型。
+    * engineType  数据库引擎。 - postgresql
     *
     * @var string[]
     */
     protected static $getters = [
-            'xLanguage' => 'getXLanguage'
+            'xLanguage' => 'getXLanguage',
+            'engineType' => 'getEngineType'
     ];
 
     /**
@@ -163,6 +173,7 @@ class DownloadBatchCreateTemplateRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['engineType'] = isset($data['engineType']) ? $data['engineType'] : null;
     }
 
     /**
@@ -216,6 +227,30 @@ class DownloadBatchCreateTemplateRequest implements ModelInterface, ArrayAccess
     public function setXLanguage($xLanguage)
     {
         $this->container['xLanguage'] = $xLanguage;
+        return $this;
+    }
+
+    /**
+    * Gets engineType
+    *  数据库引擎。 - postgresql
+    *
+    * @return string|null
+    */
+    public function getEngineType()
+    {
+        return $this->container['engineType'];
+    }
+
+    /**
+    * Sets engineType
+    *
+    * @param string|null $engineType 数据库引擎。 - postgresql
+    *
+    * @return $this
+    */
+    public function setEngineType($engineType)
+    {
+        $this->container['engineType'] = $engineType;
         return $this;
     }
 

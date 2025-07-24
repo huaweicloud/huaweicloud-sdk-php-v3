@@ -20,10 +20,10 @@ class BssInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isAutoRenew  是否自动续费
+    * isAutoRenew  是否自动续费。0表示不自动续费，1表示自动续费。
     * periodNum  包周期订购的周期数
     * periodType  包周期的类型，可选包年或包月，2 表示包月，3 表示包年
-    * isAutoPay  是否生成订单后自动扣款
+    * isAutoPay  是否生成订单后自动扣款。0表示不自动续费，1表示自动续费。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class BssInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isAutoRenew  是否自动续费
+    * isAutoRenew  是否自动续费。0表示不自动续费，1表示自动续费。
     * periodNum  包周期订购的周期数
     * periodType  包周期的类型，可选包年或包月，2 表示包月，3 表示包年
-    * isAutoPay  是否生成订单后自动扣款
+    * isAutoPay  是否生成订单后自动扣款。0表示不自动续费，1表示自动续费。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class BssInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isAutoRenew  是否自动续费
+    * isAutoRenew  是否自动续费。0表示不自动续费，1表示自动续费。
     * periodNum  包周期订购的周期数
     * periodType  包周期的类型，可选包年或包月，2 表示包月，3 表示包年
-    * isAutoPay  是否生成订单后自动扣款
+    * isAutoPay  是否生成订单后自动扣款。0表示不自动续费，1表示自动续费。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class BssInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isAutoRenew  是否自动续费
+    * isAutoRenew  是否自动续费。0表示不自动续费，1表示自动续费。
     * periodNum  包周期订购的周期数
     * periodType  包周期的类型，可选包年或包月，2 表示包月，3 表示包年
-    * isAutoPay  是否生成订单后自动扣款
+    * isAutoPay  是否生成订单后自动扣款。0表示不自动续费，1表示自动续费。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class BssInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isAutoRenew  是否自动续费
+    * isAutoRenew  是否自动续费。0表示不自动续费，1表示自动续费。
     * periodNum  包周期订购的周期数
     * periodType  包周期的类型，可选包年或包月，2 表示包月，3 表示包年
-    * isAutoPay  是否生成订单后自动扣款
+    * isAutoPay  是否生成订单后自动扣款。0表示不自动续费，1表示自动续费。
     *
     * @var string[]
     */
@@ -288,7 +288,7 @@ class BssInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoRenew
-    *  是否自动续费
+    *  是否自动续费。0表示不自动续费，1表示自动续费。
     *
     * @return int|null
     */
@@ -300,7 +300,7 @@ class BssInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoRenew
     *
-    * @param int|null $isAutoRenew 是否自动续费
+    * @param int|null $isAutoRenew 是否自动续费。0表示不自动续费，1表示自动续费。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class BssInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoPay
-    *  是否生成订单后自动扣款
+    *  是否生成订单后自动扣款。0表示不自动续费，1表示自动续费。
     *
     * @return int|null
     */
@@ -372,7 +372,7 @@ class BssInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param int|null $isAutoPay 是否生成订单后自动扣款
+    * @param int|null $isAutoPay 是否生成订单后自动扣款。0表示不自动续费，1表示自动续费。
     *
     * @return $this
     */

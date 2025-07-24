@@ -209,8 +209,8 @@ class ShowIssueDetailRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 32)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 18)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 18.";
             }
         return $invalidProperties;
     }

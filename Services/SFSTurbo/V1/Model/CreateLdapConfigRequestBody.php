@@ -20,16 +20,15 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * url  ldap服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    * url  LDAP服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
     * baseDn  数据库中的域
     * userDn  用户区别名
-    * password  ldap认证密码
-    * vpcId  一般不涉及。仅在SFSTurbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
+    * password  LDAP认证密码
+    * vpcId  一般不涉及。仅在SFS Turbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
     * filterCondition  过滤条件。保留字段，暂不支持
-    * backupUrl  ldap备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
-    * schema  ldap的schema，不填写则默认为RFC2307
-    * searchTimeout  ldap搜索的超时时间，单位为秒。不填写则默认为3秒
-    * allowLocalUser  访问ldap服务器失败后是否允许使用本地用户鉴权
+    * backupUrl  LDAP备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    * schema  LDAP的schema，不填写则默认为RFC2307
+    * searchTimeout  LDAP搜索的超时时间，单位为秒。不填写则默认为3秒
     *
     * @var string[]
     */
@@ -42,22 +41,20 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
             'filterCondition' => 'string',
             'backupUrl' => 'string',
             'schema' => 'string',
-            'searchTimeout' => 'int',
-            'allowLocalUser' => 'string'
+            'searchTimeout' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * url  ldap服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    * url  LDAP服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
     * baseDn  数据库中的域
     * userDn  用户区别名
-    * password  ldap认证密码
-    * vpcId  一般不涉及。仅在SFSTurbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
+    * password  LDAP认证密码
+    * vpcId  一般不涉及。仅在SFS Turbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
     * filterCondition  过滤条件。保留字段，暂不支持
-    * backupUrl  ldap备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
-    * schema  ldap的schema，不填写则默认为RFC2307
-    * searchTimeout  ldap搜索的超时时间，单位为秒。不填写则默认为3秒
-    * allowLocalUser  访问ldap服务器失败后是否允许使用本地用户鉴权
+    * backupUrl  LDAP备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    * schema  LDAP的schema，不填写则默认为RFC2307
+    * searchTimeout  LDAP搜索的超时时间，单位为秒。不填写则默认为3秒
     *
     * @var string[]
     */
@@ -70,8 +67,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
         'filterCondition' => null,
         'backupUrl' => null,
         'schema' => null,
-        'searchTimeout' => 'int32',
-        'allowLocalUser' => null
+        'searchTimeout' => 'int32'
     ];
 
     /**
@@ -97,16 +93,15 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * url  ldap服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    * url  LDAP服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
     * baseDn  数据库中的域
     * userDn  用户区别名
-    * password  ldap认证密码
-    * vpcId  一般不涉及。仅在SFSTurbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
+    * password  LDAP认证密码
+    * vpcId  一般不涉及。仅在SFS Turbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
     * filterCondition  过滤条件。保留字段，暂不支持
-    * backupUrl  ldap备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
-    * schema  ldap的schema，不填写则默认为RFC2307
-    * searchTimeout  ldap搜索的超时时间，单位为秒。不填写则默认为3秒
-    * allowLocalUser  访问ldap服务器失败后是否允许使用本地用户鉴权
+    * backupUrl  LDAP备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    * schema  LDAP的schema，不填写则默认为RFC2307
+    * searchTimeout  LDAP搜索的超时时间，单位为秒。不填写则默认为3秒
     *
     * @var string[]
     */
@@ -119,22 +114,20 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
             'filterCondition' => 'filter_condition',
             'backupUrl' => 'backup_url',
             'schema' => 'schema',
-            'searchTimeout' => 'search_timeout',
-            'allowLocalUser' => 'allow_local_user'
+            'searchTimeout' => 'search_timeout'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * url  ldap服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    * url  LDAP服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
     * baseDn  数据库中的域
     * userDn  用户区别名
-    * password  ldap认证密码
-    * vpcId  一般不涉及。仅在SFSTurbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
+    * password  LDAP认证密码
+    * vpcId  一般不涉及。仅在SFS Turbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
     * filterCondition  过滤条件。保留字段，暂不支持
-    * backupUrl  ldap备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
-    * schema  ldap的schema，不填写则默认为RFC2307
-    * searchTimeout  ldap搜索的超时时间，单位为秒。不填写则默认为3秒
-    * allowLocalUser  访问ldap服务器失败后是否允许使用本地用户鉴权
+    * backupUrl  LDAP备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    * schema  LDAP的schema，不填写则默认为RFC2307
+    * searchTimeout  LDAP搜索的超时时间，单位为秒。不填写则默认为3秒
     *
     * @var string[]
     */
@@ -147,22 +140,20 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
             'filterCondition' => 'setFilterCondition',
             'backupUrl' => 'setBackupUrl',
             'schema' => 'setSchema',
-            'searchTimeout' => 'setSearchTimeout',
-            'allowLocalUser' => 'setAllowLocalUser'
+            'searchTimeout' => 'setSearchTimeout'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * url  ldap服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    * url  LDAP服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
     * baseDn  数据库中的域
     * userDn  用户区别名
-    * password  ldap认证密码
-    * vpcId  一般不涉及。仅在SFSTurbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
+    * password  LDAP认证密码
+    * vpcId  一般不涉及。仅在SFS Turbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
     * filterCondition  过滤条件。保留字段，暂不支持
-    * backupUrl  ldap备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
-    * schema  ldap的schema，不填写则默认为RFC2307
-    * searchTimeout  ldap搜索的超时时间，单位为秒。不填写则默认为3秒
-    * allowLocalUser  访问ldap服务器失败后是否允许使用本地用户鉴权
+    * backupUrl  LDAP备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    * schema  LDAP的schema，不填写则默认为RFC2307
+    * searchTimeout  LDAP搜索的超时时间，单位为秒。不填写则默认为3秒
     *
     * @var string[]
     */
@@ -175,8 +166,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
             'filterCondition' => 'getFilterCondition',
             'backupUrl' => 'getBackupUrl',
             'schema' => 'getSchema',
-            'searchTimeout' => 'getSearchTimeout',
-            'allowLocalUser' => 'getAllowLocalUser'
+            'searchTimeout' => 'getSearchTimeout'
     ];
 
     /**
@@ -219,22 +209,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ALLOW_LOCAL_USER_YES = 'Yes';
-    const ALLOW_LOCAL_USER_NO = 'No';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getAllowLocalUserAllowableValues()
-    {
-        return [
-            self::ALLOW_LOCAL_USER_YES,
-            self::ALLOW_LOCAL_USER_NO,
-        ];
-    }
 
 
     /**
@@ -261,7 +236,6 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['backupUrl'] = isset($data['backupUrl']) ? $data['backupUrl'] : null;
         $this->container['schema'] = isset($data['schema']) ? $data['schema'] : null;
         $this->container['searchTimeout'] = isset($data['searchTimeout']) ? $data['searchTimeout'] : null;
-        $this->container['allowLocalUser'] = isset($data['allowLocalUser']) ? $data['allowLocalUser'] : null;
     }
 
     /**
@@ -278,14 +252,6 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['baseDn'] === null) {
             $invalidProperties[] = "'baseDn' can't be null";
         }
-            $allowedValues = $this->getAllowLocalUserAllowableValues();
-                if (!is_null($this->container['allowLocalUser']) && !in_array($this->container['allowLocalUser'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'allowLocalUser', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -302,7 +268,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  ldap服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    *  LDAP服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
     *
     * @return string
     */
@@ -314,7 +280,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string $url ldap服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    * @param string $url LDAP服务器的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
     *
     * @return $this
     */
@@ -374,7 +340,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
-    *  ldap认证密码
+    *  LDAP认证密码
     *
     * @return string|null
     */
@@ -386,7 +352,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string|null $password ldap认证密码
+    * @param string|null $password LDAP认证密码
     *
     * @return $this
     */
@@ -398,7 +364,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  一般不涉及。仅在SFSTurbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
+    *  一般不涉及。仅在SFS Turbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
     *
     * @return string|null
     */
@@ -410,7 +376,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId 一般不涉及。仅在SFSTurbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
+    * @param string|null $vpcId 一般不涉及。仅在SFS Turbo支持多VPC的场景下，需要指定LDAP服务器可连通的VPC的id。
     *
     * @return $this
     */
@@ -446,7 +412,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupUrl
-    *  ldap备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    *  LDAP备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
     *
     * @return string|null
     */
@@ -458,7 +424,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets backupUrl
     *
-    * @param string|null $backupUrl ldap备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
+    * @param string|null $backupUrl LDAP备节点的url，固定格式为 ldap://{ip_address}:{port_number} 或 ldaps://{ip_address}:{port_number}，例如ldap://192.168.xx.xx:60000
     *
     * @return $this
     */
@@ -470,7 +436,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets schema
-    *  ldap的schema，不填写则默认为RFC2307
+    *  LDAP的schema，不填写则默认为RFC2307
     *
     * @return string|null
     */
@@ -482,7 +448,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets schema
     *
-    * @param string|null $schema ldap的schema，不填写则默认为RFC2307
+    * @param string|null $schema LDAP的schema，不填写则默认为RFC2307
     *
     * @return $this
     */
@@ -494,7 +460,7 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchTimeout
-    *  ldap搜索的超时时间，单位为秒。不填写则默认为3秒
+    *  LDAP搜索的超时时间，单位为秒。不填写则默认为3秒
     *
     * @return int|null
     */
@@ -506,37 +472,13 @@ class CreateLdapConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets searchTimeout
     *
-    * @param int|null $searchTimeout ldap搜索的超时时间，单位为秒。不填写则默认为3秒
+    * @param int|null $searchTimeout LDAP搜索的超时时间，单位为秒。不填写则默认为3秒
     *
     * @return $this
     */
     public function setSearchTimeout($searchTimeout)
     {
         $this->container['searchTimeout'] = $searchTimeout;
-        return $this;
-    }
-
-    /**
-    * Gets allowLocalUser
-    *  访问ldap服务器失败后是否允许使用本地用户鉴权
-    *
-    * @return string|null
-    */
-    public function getAllowLocalUser()
-    {
-        return $this->container['allowLocalUser'];
-    }
-
-    /**
-    * Sets allowLocalUser
-    *
-    * @param string|null $allowLocalUser 访问ldap服务器失败后是否允许使用本地用户鉴权
-    *
-    * @return $this
-    */
-    public function setAllowLocalUser($allowLocalUser)
-    {
-        $this->container['allowLocalUser'] = $allowLocalUser;
         return $this;
     }
 

@@ -228,6 +228,9 @@ class ListSharesByTagRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['action'] === null) {
+            $invalidProperties[] = "'action' can't be null";
+        }
             $allowedValues = $this->getActionAllowableValues();
                 if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -254,7 +257,7 @@ class ListSharesByTagRequestBody implements ModelInterface, ArrayAccess
     * Gets action
     *  通过标签查询文件系统列表的操作类型。仅支持取值为\"filter\" 或 \"count\"。
     *
-    * @return string|null
+    * @return string
     */
     public function getAction()
     {
@@ -264,7 +267,7 @@ class ListSharesByTagRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 通过标签查询文件系统列表的操作类型。仅支持取值为\"filter\" 或 \"count\"。
+    * @param string $action 通过标签查询文件系统列表的操作类型。仅支持取值为\"filter\" 或 \"count\"。
     *
     * @return $this
     */

@@ -31,6 +31,10 @@ class NodeContentCompareDetailResult implements ModelInterface, ArrayAccess
     * contentCompareResult  内容对比结果。 - true：一致 - false：不一致
     * message  附加信息。
     * compareLineConfigFilter  行过滤配置条件
+    * status  全量比对状态。 -1：对比中 -2：已完成 -3：待对比 -4：已取消
+    * completeShardCount  已对比分片数。
+    * totalShardCount  总分片数。
+    * progress  比对进度。
     *
     * @var string[]
     */
@@ -45,7 +49,11 @@ class NodeContentCompareDetailResult implements ModelInterface, ArrayAccess
             'lineCompareResult' => 'bool',
             'contentCompareResult' => 'bool',
             'message' => 'string',
-            'compareLineConfigFilter' => 'string'
+            'compareLineConfigFilter' => 'string',
+            'status' => 'int',
+            'completeShardCount' => 'int',
+            'totalShardCount' => 'int',
+            'progress' => 'double'
     ];
 
     /**
@@ -61,6 +69,10 @@ class NodeContentCompareDetailResult implements ModelInterface, ArrayAccess
     * contentCompareResult  内容对比结果。 - true：一致 - false：不一致
     * message  附加信息。
     * compareLineConfigFilter  行过滤配置条件
+    * status  全量比对状态。 -1：对比中 -2：已完成 -3：待对比 -4：已取消
+    * completeShardCount  已对比分片数。
+    * totalShardCount  总分片数。
+    * progress  比对进度。
     *
     * @var string[]
     */
@@ -75,7 +87,11 @@ class NodeContentCompareDetailResult implements ModelInterface, ArrayAccess
         'lineCompareResult' => null,
         'contentCompareResult' => null,
         'message' => null,
-        'compareLineConfigFilter' => null
+        'compareLineConfigFilter' => null,
+        'status' => 'int32',
+        'completeShardCount' => 'int32',
+        'totalShardCount' => 'int32',
+        'progress' => 'double'
     ];
 
     /**
@@ -112,6 +128,10 @@ class NodeContentCompareDetailResult implements ModelInterface, ArrayAccess
     * contentCompareResult  内容对比结果。 - true：一致 - false：不一致
     * message  附加信息。
     * compareLineConfigFilter  行过滤配置条件
+    * status  全量比对状态。 -1：对比中 -2：已完成 -3：待对比 -4：已取消
+    * completeShardCount  已对比分片数。
+    * totalShardCount  总分片数。
+    * progress  比对进度。
     *
     * @var string[]
     */
@@ -126,7 +146,11 @@ class NodeContentCompareDetailResult implements ModelInterface, ArrayAccess
             'lineCompareResult' => 'line_compare_result',
             'contentCompareResult' => 'content_compare_result',
             'message' => 'message',
-            'compareLineConfigFilter' => 'compare_line_config_filter'
+            'compareLineConfigFilter' => 'compare_line_config_filter',
+            'status' => 'status',
+            'completeShardCount' => 'complete_shard_count',
+            'totalShardCount' => 'total_shard_count',
+            'progress' => 'progress'
     ];
 
     /**
@@ -142,6 +166,10 @@ class NodeContentCompareDetailResult implements ModelInterface, ArrayAccess
     * contentCompareResult  内容对比结果。 - true：一致 - false：不一致
     * message  附加信息。
     * compareLineConfigFilter  行过滤配置条件
+    * status  全量比对状态。 -1：对比中 -2：已完成 -3：待对比 -4：已取消
+    * completeShardCount  已对比分片数。
+    * totalShardCount  总分片数。
+    * progress  比对进度。
     *
     * @var string[]
     */
@@ -156,7 +184,11 @@ class NodeContentCompareDetailResult implements ModelInterface, ArrayAccess
             'lineCompareResult' => 'setLineCompareResult',
             'contentCompareResult' => 'setContentCompareResult',
             'message' => 'setMessage',
-            'compareLineConfigFilter' => 'setCompareLineConfigFilter'
+            'compareLineConfigFilter' => 'setCompareLineConfigFilter',
+            'status' => 'setStatus',
+            'completeShardCount' => 'setCompleteShardCount',
+            'totalShardCount' => 'setTotalShardCount',
+            'progress' => 'setProgress'
     ];
 
     /**
@@ -172,6 +204,10 @@ class NodeContentCompareDetailResult implements ModelInterface, ArrayAccess
     * contentCompareResult  内容对比结果。 - true：一致 - false：不一致
     * message  附加信息。
     * compareLineConfigFilter  行过滤配置条件
+    * status  全量比对状态。 -1：对比中 -2：已完成 -3：待对比 -4：已取消
+    * completeShardCount  已对比分片数。
+    * totalShardCount  总分片数。
+    * progress  比对进度。
     *
     * @var string[]
     */
@@ -186,7 +222,11 @@ class NodeContentCompareDetailResult implements ModelInterface, ArrayAccess
             'lineCompareResult' => 'getLineCompareResult',
             'contentCompareResult' => 'getContentCompareResult',
             'message' => 'getMessage',
-            'compareLineConfigFilter' => 'getCompareLineConfigFilter'
+            'compareLineConfigFilter' => 'getCompareLineConfigFilter',
+            'status' => 'getStatus',
+            'completeShardCount' => 'getCompleteShardCount',
+            'totalShardCount' => 'getTotalShardCount',
+            'progress' => 'getProgress'
     ];
 
     /**
@@ -258,6 +298,10 @@ class NodeContentCompareDetailResult implements ModelInterface, ArrayAccess
         $this->container['contentCompareResult'] = isset($data['contentCompareResult']) ? $data['contentCompareResult'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['compareLineConfigFilter'] = isset($data['compareLineConfigFilter']) ? $data['compareLineConfigFilter'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['completeShardCount'] = isset($data['completeShardCount']) ? $data['completeShardCount'] : null;
+        $this->container['totalShardCount'] = isset($data['totalShardCount']) ? $data['totalShardCount'] : null;
+        $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
     }
 
     /**
@@ -543,6 +587,102 @@ class NodeContentCompareDetailResult implements ModelInterface, ArrayAccess
     public function setCompareLineConfigFilter($compareLineConfigFilter)
     {
         $this->container['compareLineConfigFilter'] = $compareLineConfigFilter;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  全量比对状态。 -1：对比中 -2：已完成 -3：待对比 -4：已取消
+    *
+    * @return int|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param int|null $status 全量比对状态。 -1：对比中 -2：已完成 -3：待对比 -4：已取消
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets completeShardCount
+    *  已对比分片数。
+    *
+    * @return int|null
+    */
+    public function getCompleteShardCount()
+    {
+        return $this->container['completeShardCount'];
+    }
+
+    /**
+    * Sets completeShardCount
+    *
+    * @param int|null $completeShardCount 已对比分片数。
+    *
+    * @return $this
+    */
+    public function setCompleteShardCount($completeShardCount)
+    {
+        $this->container['completeShardCount'] = $completeShardCount;
+        return $this;
+    }
+
+    /**
+    * Gets totalShardCount
+    *  总分片数。
+    *
+    * @return int|null
+    */
+    public function getTotalShardCount()
+    {
+        return $this->container['totalShardCount'];
+    }
+
+    /**
+    * Sets totalShardCount
+    *
+    * @param int|null $totalShardCount 总分片数。
+    *
+    * @return $this
+    */
+    public function setTotalShardCount($totalShardCount)
+    {
+        $this->container['totalShardCount'] = $totalShardCount;
+        return $this;
+    }
+
+    /**
+    * Gets progress
+    *  比对进度。
+    *
+    * @return double|null
+    */
+    public function getProgress()
+    {
+        return $this->container['progress'];
+    }
+
+    /**
+    * Sets progress
+    *
+    * @param double|null $progress 比对进度。
+    *
+    * @return $this
+    */
+    public function setProgress($progress)
+    {
+        $this->container['progress'] = $progress;
         return $this;
     }
 

@@ -21,21 +21,29 @@ class AutoExportPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * events  后端存储自动导出到OBS桶的数据更新类型。 - NEW：表示新增数据，SFS Turbo联动目录下创建的文件，及之后对这些文件进行的元数据和数据修改，会被自动同步到OBS桶里。 - CHANGED：表示修改数据，从OBS桶里导入到SFS Turbo联动目录下的文件，在SFS Turbo上对这些文件所进行的数据和元数据的修改，会被自动同步到OBS桶里。 - DELETED：表示删除数据，在SFS Turbo联动目录下删除文件，OBS桶对应的对象也会被删除，只有被SFS Turbo写入的OBS对象才会被删除。
+    * prefix  后端存储内对象匹配前缀
+    * suffix  后端存储内对象匹配后缀
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'events' => 'string[]'
+            'events' => 'string[]',
+            'prefix' => 'string',
+            'suffix' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * events  后端存储自动导出到OBS桶的数据更新类型。 - NEW：表示新增数据，SFS Turbo联动目录下创建的文件，及之后对这些文件进行的元数据和数据修改，会被自动同步到OBS桶里。 - CHANGED：表示修改数据，从OBS桶里导入到SFS Turbo联动目录下的文件，在SFS Turbo上对这些文件所进行的数据和元数据的修改，会被自动同步到OBS桶里。 - DELETED：表示删除数据，在SFS Turbo联动目录下删除文件，OBS桶对应的对象也会被删除，只有被SFS Turbo写入的OBS对象才会被删除。
+    * prefix  后端存储内对象匹配前缀
+    * suffix  后端存储内对象匹配后缀
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'events' => null
+        'events' => null,
+        'prefix' => null,
+        'suffix' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class AutoExportPolicy implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * events  后端存储自动导出到OBS桶的数据更新类型。 - NEW：表示新增数据，SFS Turbo联动目录下创建的文件，及之后对这些文件进行的元数据和数据修改，会被自动同步到OBS桶里。 - CHANGED：表示修改数据，从OBS桶里导入到SFS Turbo联动目录下的文件，在SFS Turbo上对这些文件所进行的数据和元数据的修改，会被自动同步到OBS桶里。 - DELETED：表示删除数据，在SFS Turbo联动目录下删除文件，OBS桶对应的对象也会被删除，只有被SFS Turbo写入的OBS对象才会被删除。
+    * prefix  后端存储内对象匹配前缀
+    * suffix  后端存储内对象匹配后缀
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'events' => 'events'
+            'events' => 'events',
+            'prefix' => 'prefix',
+            'suffix' => 'suffix'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * events  后端存储自动导出到OBS桶的数据更新类型。 - NEW：表示新增数据，SFS Turbo联动目录下创建的文件，及之后对这些文件进行的元数据和数据修改，会被自动同步到OBS桶里。 - CHANGED：表示修改数据，从OBS桶里导入到SFS Turbo联动目录下的文件，在SFS Turbo上对这些文件所进行的数据和元数据的修改，会被自动同步到OBS桶里。 - DELETED：表示删除数据，在SFS Turbo联动目录下删除文件，OBS桶对应的对象也会被删除，只有被SFS Turbo写入的OBS对象才会被删除。
+    * prefix  后端存储内对象匹配前缀
+    * suffix  后端存储内对象匹配后缀
     *
     * @var string[]
     */
     protected static $setters = [
-            'events' => 'setEvents'
+            'events' => 'setEvents',
+            'prefix' => 'setPrefix',
+            'suffix' => 'setSuffix'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * events  后端存储自动导出到OBS桶的数据更新类型。 - NEW：表示新增数据，SFS Turbo联动目录下创建的文件，及之后对这些文件进行的元数据和数据修改，会被自动同步到OBS桶里。 - CHANGED：表示修改数据，从OBS桶里导入到SFS Turbo联动目录下的文件，在SFS Turbo上对这些文件所进行的数据和元数据的修改，会被自动同步到OBS桶里。 - DELETED：表示删除数据，在SFS Turbo联动目录下删除文件，OBS桶对应的对象也会被删除，只有被SFS Turbo写入的OBS对象才会被删除。
+    * prefix  后端存储内对象匹配前缀
+    * suffix  后端存储内对象匹配后缀
     *
     * @var string[]
     */
     protected static $getters = [
-            'events' => 'getEvents'
+            'events' => 'getEvents',
+            'prefix' => 'getPrefix',
+            'suffix' => 'getSuffix'
     ];
 
     /**
@@ -165,6 +185,8 @@ class AutoExportPolicy implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['events'] = isset($data['events']) ? $data['events'] : null;
+        $this->container['prefix'] = isset($data['prefix']) ? $data['prefix'] : null;
+        $this->container['suffix'] = isset($data['suffix']) ? $data['suffix'] : null;
     }
 
     /**
@@ -210,6 +232,54 @@ class AutoExportPolicy implements ModelInterface, ArrayAccess
     public function setEvents($events)
     {
         $this->container['events'] = $events;
+        return $this;
+    }
+
+    /**
+    * Gets prefix
+    *  后端存储内对象匹配前缀
+    *
+    * @return string|null
+    */
+    public function getPrefix()
+    {
+        return $this->container['prefix'];
+    }
+
+    /**
+    * Sets prefix
+    *
+    * @param string|null $prefix 后端存储内对象匹配前缀
+    *
+    * @return $this
+    */
+    public function setPrefix($prefix)
+    {
+        $this->container['prefix'] = $prefix;
+        return $this;
+    }
+
+    /**
+    * Gets suffix
+    *  后端存储内对象匹配后缀
+    *
+    * @return string|null
+    */
+    public function getSuffix()
+    {
+        return $this->container['suffix'];
+    }
+
+    /**
+    * Sets suffix
+    *
+    * @param string|null $suffix 后端存储内对象匹配后缀
+    *
+    * @return $this
+    */
+    public function setSuffix($suffix)
+    {
+        $this->container['suffix'] = $suffix;
         return $this;
     }
 

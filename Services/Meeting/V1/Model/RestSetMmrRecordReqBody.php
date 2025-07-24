@@ -158,6 +158,9 @@ class RestSetMmrRecordReqBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['recordType'] === null) {
+            $invalidProperties[] = "'recordType' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class RestSetMmrRecordReqBody implements ModelInterface, ArrayAccess
     * Gets recordType
     *  0：暂停MMR会议录制 1：启动MMR会议录制 2：停止MMR会议录制
     *
-    * @return int|null
+    * @return int
     */
     public function getRecordType()
     {
@@ -186,7 +189,7 @@ class RestSetMmrRecordReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets recordType
     *
-    * @param int|null $recordType 0：暂停MMR会议录制 1：启动MMR会议录制 2：停止MMR会议录制
+    * @param int $recordType 0：暂停MMR会议录制 1：启动MMR会议录制 2：停止MMR会议录制
     *
     * @return $this
     */
